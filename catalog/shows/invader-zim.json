@@ -3,7 +3,7 @@
   "slug": "invader-zim",
   "type": "Animated",
   "network": "Nickelodeon",
-  "matchedAt": "2026-10-16T07:56:26.284Z",
+  "matchedAt": "2026-10-19T04:10:35.479Z",
   "addedAt": "2026-10-15T12:07:41.165Z",
   "tvmaze": {
     "id": 409,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 46,
-    "live": 7,
-    "review": 17,
-    "missing": 22,
-    "pct": 52
+    "live": 28,
+    "review": 11,
+    "missing": 7,
+    "pct": 85
   },
   "seasons": [
     {
@@ -30,18 +30,31 @@
           "state": "LIVE",
           "file": {
             "conf": 1,
-            "why": "absolute episode number + title match",
-            "item": "ytvinvaderzimvideos",
-            "itemTitle": "YTV Invader Zim Videos (YouTube)",
-            "file": "Invader Zim - The Nightmare Begins - Ep 1.mp4",
-            "name": "Invader Zim - The Nightmare Begins - Ep 1",
-            "url": "https://archive.org/download/ytvinvaderzimvideos/Invader%20Zim%20-%20The%20Nightmare%20Begins%20-%20Ep%201.mp4",
+            "why": "S/E in filename + title match",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E01 The Nightmare Begins.mp4",
+            "name": "Season 1/Invader Zim S01E01 The Nightmare Begins",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E01%20The%20Nightmare%20Begins.mp4",
             "seconds": 1463,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 152
+            "sizeMB": 174
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "absolute episode number + title match",
+              "item": "ytvinvaderzimvideos",
+              "itemTitle": "YTV Invader Zim Videos (YouTube)",
+              "file": "Invader Zim - The Nightmare Begins - Ep 1.mp4",
+              "name": "Invader Zim - The Nightmare Begins - Ep 1",
+              "url": "https://archive.org/download/ytvinvaderzimvideos/Invader%20Zim%20-%20The%20Nightmare%20Begins%20-%20Ep%201.mp4",
+              "seconds": 1463,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            },
             {
               "conf": 1,
               "why": "S/E in filename + title match",
@@ -68,19 +81,6 @@
               "playable": true,
               "codecRisk": "video (x265)",
               "sizeMB": 146
-            },
-            {
-              "conf": 1,
-              "why": "absolute episode number + title match",
-              "item": "202103230237-45",
-              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
-              "file": "Invader ZIM - EP 01 The Nightmare Begins (Parts 1 and 2).mp4",
-              "name": "Invader ZIM - EP 01 The Nightmare Begins (Parts 1 and 2)",
-              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2001%20The%20Nightmare%20Begins%20(Parts%201%20and%202).mp4",
-              "seconds": 1780,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 90
             }
           ]
         },
@@ -88,145 +88,419 @@
           "number": 2,
           "name": "Parent Teacher Night",
           "airdate": "2001-04-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E02 Bestest Friend & NanoZim.mp4",
+            "name": "Season 1/Invader Zim S01E02 Bestest Friend & NanoZim",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E02%20Bestest%20Friend%20%26%20NanoZim.mp4",
+            "seconds": 1464,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 190
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Parent Teacher Night\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E03 Parent-Teacher Night & Walk of Doom.mp4",
+              "name": "Season 1/Invader Zim S01E03 Parent-Teacher Night & Walk of Doom",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E03%20Parent-Teacher%20Night%20%26%20Walk%20of%20Doom.mp4",
+              "seconds": 1463,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 194
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 02 Bestest Friends & Nano ZIM (Part 1).mp4",
+              "name": "Invader ZIM - EP 02 Bestest Friends & Nano ZIM (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2002%20Bestest%20Friends%20%26%20Nano%20ZIM%20(Part%201).mp4",
+              "seconds": 1320,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 195
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Walk of Doom",
           "airdate": "2001-04-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E03 Parent-Teacher Night & Walk of Doom.mp4",
+            "name": "Season 1/Invader Zim S01E03 Parent-Teacher Night & Walk of Doom",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E03%20Parent-Teacher%20Night%20%26%20Walk%20of%20Doom.mp4",
+            "seconds": 1463,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 194
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Bestest Friend",
           "airdate": "2001-04-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "202103230237-45",
-            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
-            "file": "Invader ZIM - EP 04 Germs & Dark Harvest (Part 1).mp4",
-            "name": "Invader ZIM - EP 04 Germs & Dark Harvest (Part 1)",
-            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2004%20Germs%20%26%20Dark%20Harvest%20(Part%201).mp4",
-            "seconds": 1324,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E04 Germs & Dark Harvest.mp4",
+            "name": "Season 1/Invader Zim S01E04 Germs & Dark Harvest",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E04%20Germs%20%26%20Dark%20Harvest.mp4",
+            "seconds": 1462,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 166
+            "sizeMB": 165
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Bestest Friend\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E02 Bestest Friend & NanoZim.mp4",
+              "name": "Season 1/Invader Zim S01E02 Bestest Friend & NanoZim",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E02%20Bestest%20Friend%20%26%20NanoZim.mp4",
+              "seconds": 1464,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 190
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 04 Germs & Dark Harvest (Part 1).mp4",
+              "name": "Invader ZIM - EP 04 Germs & Dark Harvest (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2004%20Germs%20%26%20Dark%20Harvest%20(Part%201).mp4",
+              "seconds": 1324,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 166
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Bestest Friend\" (0.61)",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 02 Bestest Friends & Nano ZIM (Part 1).mp4",
+              "name": "Invader ZIM - EP 02 Bestest Friends & Nano ZIM (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2002%20Bestest%20Friends%20%26%20Nano%20ZIM%20(Part%201).mp4",
+              "seconds": 1320,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 195
+            }
+          ]
         },
         {
           "number": 5,
           "name": "NanoZIM",
           "airdate": "2001-04-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E05 Attack of the Saucer Morons & The Wettening.mp4",
+            "name": "Season 1/Invader Zim S01E05 Attack of the Saucer Morons & The Wettening",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E05%20Attack%20of%20the%20Saucer%20Morons%20%26%20The%20Wettening.mp4",
+            "seconds": 1464,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 222
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Germs",
           "airdate": "2001-04-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Germs\" (0.95)",
-            "item": "202103230237-45",
-            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
-            "file": "Invader ZIM - EP 04 Germs & Dark Harvest (Part 1).mp4",
-            "name": "Invader ZIM - EP 04 Germs & Dark Harvest (Part 1)",
-            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2004%20Germs%20%26%20Dark%20Harvest%20(Part%201).mp4",
-            "seconds": 1324,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E06 Career Day & Battle-Dib.mp4",
+            "name": "Season 1/Invader Zim S01E06 Career Day & Battle-Dib",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E06%20Career%20Day%20%26%20Battle-Dib.mp4",
+            "seconds": 1446,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 166
+            "sizeMB": 224
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Germs\" (0.95)",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 04 Germs & Dark Harvest (Part 1).mp4",
+              "name": "Invader ZIM - EP 04 Germs & Dark Harvest (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2004%20Germs%20%26%20Dark%20Harvest%20(Part%201).mp4",
+              "seconds": 1324,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 166
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Germs\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E04 Germs & Dark Harvest.mp4",
+              "name": "Season 1/Invader Zim S01E04 Germs & Dark Harvest",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E04%20Germs%20%26%20Dark%20Harvest.mp4",
+              "seconds": 1462,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 165
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Dark Harvest",
           "airdate": "2001-04-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "202103230237-45",
-            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
-            "file": "Invader ZIM - EP 07  Planet Jackers & Rise of the Zitboy (Part 1).mp4",
-            "name": "Invader ZIM - EP 07  Planet Jackers & Rise of the Zitboy (Part 1)",
-            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2007%20%20Planet%20Jackers%20%26%20Rise%20of%20the%20Zitboy%20(Part%201).mp4",
-            "seconds": 1292,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E07 Planet Jackers & Rise Of The Zitboy .mp4",
+            "name": "Season 1/Invader Zim S01E07 Planet Jackers & Rise Of The Zitboy ",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E07%20Planet%20Jackers%20%26%20Rise%20Of%20The%20Zitboy%20.mp4",
+            "seconds": 1411,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 196
+            "sizeMB": 185
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 07  Planet Jackers & Rise of the Zitboy (Part 1).mp4",
+              "name": "Invader ZIM - EP 07  Planet Jackers & Rise of the Zitboy (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2007%20%20Planet%20Jackers%20%26%20Rise%20of%20the%20Zitboy%20(Part%201).mp4",
+              "seconds": 1292,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 196
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Attack of the Saucer Morons",
           "airdate": "2001-04-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E08 Invasion of the Idiot Dog Brain & Bad, Bad Rubber Piggy.mp4",
+            "name": "Season 1/Invader Zim S01E08 Invasion of the Idiot Dog Brain & Bad, Bad Rubber Piggy",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E08%20Invasion%20of%20the%20Idiot%20Dog%20Brain%20%26%20Bad%2C%20Bad%20Rubber%20Piggy.mp4",
+            "seconds": 1464,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 231
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Attack of the Saucer Morons\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E05 Attack of the Saucer Morons & The Wettening.mp4",
+              "name": "Season 1/Invader Zim S01E05 Attack of the Saucer Morons & The Wettening",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E05%20Attack%20of%20the%20Saucer%20Morons%20%26%20The%20Wettening.mp4",
+              "seconds": 1464,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 222
+            }
+          ]
         },
         {
           "number": 9,
           "name": "The Wettening",
           "airdate": "2001-04-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E09 A Room with a Moose & Hamstergeddon.mp4",
+            "name": "Season 1/Invader Zim S01E09 A Room with a Moose & Hamstergeddon",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E09%20A%20Room%20with%20a%20Moose%20%26%20Hamstergeddon.mp4",
+            "seconds": 1465,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 210
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Career Day",
           "airdate": "2001-05-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E10 Plague Of Babies & Bloaty's Pizza Hog.mp4",
+            "name": "Season 1/Invader Zim S01E10 Plague Of Babies & Bloaty's Pizza Hog",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E10%20Plague%20Of%20Babies%20%26%20Bloaty's%20Pizza%20Hog.mp4",
+            "seconds": 1436,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 184
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Career Day\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E06 Career Day & Battle-Dib.mp4",
+              "name": "Season 1/Invader Zim S01E06 Career Day & Battle-Dib",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E06%20Career%20Day%20%26%20Battle-Dib.mp4",
+              "seconds": 1446,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 224
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Battle-Dib",
           "airdate": "2001-05-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "202103230237-45",
-            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
-            "file": "Invader ZIM - EP 11 Door to Door & FBI Warning of Doom (Part 1).mp4",
-            "name": "Invader ZIM - EP 11 Door to Door & FBI Warning of Doom (Part 1)",
-            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2011%20Door%20to%20Door%20%26%20FBI%20Warning%20of%20Doom%20(Part%201).mp4",
-            "seconds": 1264,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E11 Door to Door & FBI Warning Of Doom.mp4",
+            "name": "Season 1/Invader Zim S01E11 Door to Door & FBI Warning Of Doom",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E11%20Door%20to%20Door%20%26%20FBI%20Warning%20Of%20Doom.mp4",
+            "seconds": 1470,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 234
+            "sizeMB": 190
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 11 Door to Door & FBI Warning of Doom (Part 1).mp4",
+              "name": "Invader ZIM - EP 11 Door to Door & FBI Warning of Doom (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2011%20Door%20to%20Door%20%26%20FBI%20Warning%20of%20Doom%20(Part%201).mp4",
+              "seconds": 1264,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 234
+            }
+          ]
         },
         {
           "number": 12,
           "name": "A Room with a Moose",
           "airdate": "2001-08-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E12 Bolognius Maximus & Game Slave 2.mp4",
+            "name": "Season 1/Invader Zim S01E12 Bolognius Maximus & Game Slave 2",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E12%20Bolognius%20Maximus%20%26%20Game%20Slave%202.mp4",
+            "seconds": 1464,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 190
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"A Room with a Moose\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E09 A Room with a Moose & Hamstergeddon.mp4",
+              "name": "Season 1/Invader Zim S01E09 A Room with a Moose & Hamstergeddon",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E09%20A%20Room%20with%20a%20Moose%20%26%20Hamstergeddon.mp4",
+              "seconds": 1465,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 210
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Hamstergeddon",
           "airdate": "2001-08-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E13 Battle of the Planets.mp4",
+            "name": "Season 1/Invader Zim S01E13 Battle of the Planets",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E13%20Battle%20of%20the%20Planets.mp4",
+            "seconds": 1466,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 217
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hnbt_invaderzim",
+              "itemTitle": "Invader Zim complete series MKV + ISO",
+              "file": "24 - Battle of the Planets [1x13].mp4",
+              "name": "24 - Battle of the Planets [1x13]",
+              "url": "https://archive.org/download/hnbt_invaderzim/24%20-%20Battle%20of%20the%20Planets%20%5B1x13%5D.mp4",
+              "seconds": 1466,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 14,
@@ -234,79 +508,173 @@
           "airdate": "2001-08-24",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "hnbt_invaderzim",
-            "itemTitle": "Invader Zim complete series MKV + ISO",
-            "file": "25 - Halloween Spectacular of Spooky Doom [1x14].mp4",
-            "name": "25 - Halloween Spectacular of Spooky Doom [1x14]",
-            "url": "https://archive.org/download/hnbt_invaderzim/25%20-%20Halloween%20Spectacular%20of%20Spooky%20Doom%20%5B1x14%5D.mp4",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E14 Halloween Spectacular of Spooky Doom.mp4",
+            "name": "Season 1/Invader Zim S01E14 Halloween Spectacular of Spooky Doom",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E14%20Halloween%20Spectacular%20of%20Spooky%20Doom.mp4",
             "seconds": 1426,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 142
+            "sizeMB": 180
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hnbt_invaderzim",
+              "itemTitle": "Invader Zim complete series MKV + ISO",
+              "file": "25 - Halloween Spectacular of Spooky Doom [1x14].mp4",
+              "name": "25 - Halloween Spectacular of Spooky Doom [1x14]",
+              "url": "https://archive.org/download/hnbt_invaderzim/25%20-%20Halloween%20Spectacular%20of%20Spooky%20Doom%20%5B1x14%5D.mp4",
+              "seconds": 1426,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Invasion of the Idiot Dog Brain\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E08 Invasion of the Idiot Dog Brain & Bad, Bad Rubber Piggy.mp4",
+              "name": "Season 1/Invader Zim S01E08 Invasion of the Idiot Dog Brain & Bad, Bad Rubber Piggy",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E08%20Invasion%20of%20the%20Idiot%20Dog%20Brain%20%26%20Bad%2C%20Bad%20Rubber%20Piggy.mp4",
+              "seconds": 1464,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 231
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Bad, Bad Rubber Piggy",
           "airdate": "2001-08-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "202103230237-45",
-            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
-            "file": "Invader ZIM - EP 15 Mysterious Mysteries & Future Dib (Part 1).mp4",
-            "name": "Invader ZIM - EP 15 Mysterious Mysteries & Future Dib (Part 1)",
-            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2015%20Mysterious%20Mysteries%20%26%20Future%20Dib%20(Part%201).mp4",
-            "seconds": 1267,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E15 Mysterious Mysteries & Future Dib.mp4",
+            "name": "Season 1/Invader Zim S01E15 Mysterious Mysteries & Future Dib",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E15%20Mysterious%20Mysteries%20%26%20Future%20Dib.mp4",
+            "seconds": 1453,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 191
+            "sizeMB": 162
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 15 Mysterious Mysteries & Future Dib (Part 1).mp4",
+              "name": "Invader ZIM - EP 15 Mysterious Mysteries & Future Dib (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2015%20Mysterious%20Mysteries%20%26%20Future%20Dib%20(Part%201).mp4",
+              "seconds": 1267,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 191
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Planet Jackers",
           "airdate": "2001-08-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Planet Jackers\" (0.95)",
-            "item": "202103230237-45",
-            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
-            "file": "Invader ZIM - EP 07  Planet Jackers & Rise of the Zitboy (Part 1).mp4",
-            "name": "Invader ZIM - EP 07  Planet Jackers & Rise of the Zitboy (Part 1)",
-            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2007%20%20Planet%20Jackers%20%26%20Rise%20of%20the%20Zitboy%20(Part%201).mp4",
-            "seconds": 1292,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E16 Hobo 13 & Walk For Your Lives.mp4",
+            "name": "Season 1/Invader Zim S01E16 Hobo 13 & Walk For Your Lives",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E16%20Hobo%2013%20%26%20Walk%20For%20Your%20Lives.mp4",
+            "seconds": 1447,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 196
+            "sizeMB": 190
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Planet Jackers\" (0.95)",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 07  Planet Jackers & Rise of the Zitboy (Part 1).mp4",
+              "name": "Invader ZIM - EP 07  Planet Jackers & Rise of the Zitboy (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2007%20%20Planet%20Jackers%20%26%20Rise%20of%20the%20Zitboy%20(Part%201).mp4",
+              "seconds": 1292,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 196
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Planet Jackers\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E07 Planet Jackers & Rise Of The Zitboy .mp4",
+              "name": "Season 1/Invader Zim S01E07 Planet Jackers & Rise Of The Zitboy ",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E07%20Planet%20Jackers%20%26%20Rise%20Of%20The%20Zitboy%20.mp4",
+              "seconds": 1411,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 185
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 16 Hobo 13 & Walk For Your Lives (Part 1).mp4",
+              "name": "Invader ZIM - EP 16 Hobo 13 & Walk For Your Lives (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2016%20Hobo%2013%20%26%20Walk%20For%20Your%20Lives%20(Part%201).mp4",
+              "seconds": 1268,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 214
+            }
+          ]
         },
         {
           "number": 17,
           "name": "Rise of the Zitboy",
           "airdate": "2001-08-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "202103230237-45",
-            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
-            "file": "Invader ZIM - EP 17 Medgadoomer & Lice (Part 1).mp4",
-            "name": "Invader ZIM - EP 17 Medgadoomer & Lice (Part 1)",
-            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2017%20Medgadoomer%20%26%20Lice%20(Part%201).mp4",
-            "seconds": 1274,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E17 Megadoomer & Lice.mp4",
+            "name": "Season 1/Invader Zim S01E17 Megadoomer & Lice",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E17%20Megadoomer%20%26%20Lice.mp4",
+            "seconds": 1453,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 205
+            "sizeMB": 207
           },
           "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 17 Medgadoomer & Lice (Part 1).mp4",
+              "name": "Invader ZIM - EP 17 Medgadoomer & Lice (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2017%20Medgadoomer%20%26%20Lice%20(Part%201).mp4",
+              "seconds": 1274,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 205
+            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -326,29 +694,81 @@
           "number": 18,
           "name": "Plague of Babies",
           "airdate": "2001-09-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E18 Abducted & The Sad, Sad Tale Of Chickenfoot.mp4",
+            "name": "Season 1/Invader Zim S01E18 Abducted & The Sad, Sad Tale Of Chickenfoot",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E18%20Abducted%20%26%20The%20Sad%2C%20Sad%20Tale%20Of%20Chickenfoot.mp4",
+            "seconds": 1475,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 200
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Plague of Babies\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E10 Plague Of Babies & Bloaty's Pizza Hog.mp4",
+              "name": "Season 1/Invader Zim S01E10 Plague Of Babies & Bloaty's Pizza Hog",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E10%20Plague%20Of%20Babies%20%26%20Bloaty's%20Pizza%20Hog.mp4",
+              "seconds": 1436,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 184
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 18 Abducted & The Sad, Sad Tale of Chickenfoot (Part 1).mp4",
+              "name": "Invader ZIM - EP 18 Abducted & The Sad, Sad Tale of Chickenfoot (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2018%20Abducted%20%26%20The%20Sad%2C%20Sad%20Tale%20of%20Chickenfoot%20(Part%201).mp4",
+              "seconds": 1276,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 214
+            }
+          ]
         },
         {
           "number": 19,
           "name": "Bloaty's Pizza Hog",
           "airdate": "2001-09-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "202103230237-45",
-            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
-            "file": "Invader ZIM - EP 19 Gir Goes Crazy and Stuff & The Wonderful Life of Doom (Part 1).mp4",
-            "name": "Invader ZIM - EP 19 Gir Goes Crazy and Stuff & The Wonderful Life of Doom (Part 1)",
-            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2019%20Gir%20Goes%20Crazy%20and%20Stuff%20%26%20The%20Wonderful%20Life%20of%20Doom%20(Part%201).mp4",
-            "seconds": 1411,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E19 GIR Goes Crazy and Stuff & Dib's Wonderful Life of Doom.mp4",
+            "name": "Season 1/Invader Zim S01E19 GIR Goes Crazy and Stuff & Dib's Wonderful Life of Doom",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E19%20GIR%20Goes%20Crazy%20and%20Stuff%20%26%20Dib's%20Wonderful%20Life%20of%20Doom.mp4",
+            "seconds": 1464,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 208
+            "sizeMB": 202
           },
           "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 19 Gir Goes Crazy and Stuff & The Wonderful Life of Doom (Part 1).mp4",
+              "name": "Invader ZIM - EP 19 Gir Goes Crazy and Stuff & The Wonderful Life of Doom (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2019%20Gir%20Goes%20Crazy%20and%20Stuff%20%26%20The%20Wonderful%20Life%20of%20Doom%20(Part%201).mp4",
+              "seconds": 1411,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 208
+            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -368,16 +788,40 @@
           "number": 20,
           "name": "Bolognius Maximus",
           "airdate": "2001-09-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Bolognius Maximus\" (0.95)",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E12 Bolognius Maximus & Game Slave 2.mp4",
+            "name": "Season 1/Invader Zim S01E12 Bolognius Maximus & Game Slave 2",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E12%20Bolognius%20Maximus%20%26%20Game%20Slave%202.mp4",
+            "seconds": 1464,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 190
+          },
           "alternates": []
         },
         {
           "number": 21,
           "name": "Game Slave 2",
           "airdate": "2001-09-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "202103230237-45",
+            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+            "file": "Invader ZIM - EP 21 Backseat Drivers from Beyond the Stars (Part 1).mp4",
+            "name": "Invader ZIM - EP 21 Backseat Drivers from Beyond the Stars (Part 1)",
+            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2021%20Backseat%20Drivers%20from%20Beyond%20the%20Stars%20(Part%201).mp4",
+            "seconds": 1278,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 201
+          },
           "alternates": []
         },
         {
@@ -400,6 +844,19 @@
             "sizeMB": 143
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Halloween Spectacular of Spooky Doom\" (1.00)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E14 Halloween Spectacular of Spooky Doom.mp4",
+              "name": "Season 1/Invader Zim S01E14 Halloween Spectacular of Spooky Doom",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E14%20Halloween%20Spectacular%20of%20Spooky%20Doom.mp4",
+              "seconds": 1426,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 180
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Halloween Spectacular of Spooky Doom\" (0.97)",
@@ -446,7 +903,21 @@
             "playable": true,
             "sizeMB": 191
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Mysterious Mysteries\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E15 Mysterious Mysteries & Future Dib.mp4",
+              "name": "Season 1/Invader Zim S01E15 Mysterious Mysteries & Future Dib",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E15%20Mysterious%20Mysteries%20%26%20Future%20Dib.mp4",
+              "seconds": 1453,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 162
+            }
+          ]
         },
         {
           "number": 24,
@@ -487,6 +958,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 234
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Door to Door\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E11 Door to Door & FBI Warning Of Doom.mp4",
+              "name": "Season 1/Invader Zim S01E11 Door to Door & FBI Warning Of Doom",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E11%20Door%20to%20Door%20%26%20FBI%20Warning%20Of%20Doom.mp4",
+              "seconds": 1470,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 190
             }
           ]
         },
@@ -517,15 +1001,68 @@
             "codecRisk": "video (x265)",
             "sizeMB": 146
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Battle of the Planets\" (1.00)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E13 Battle of the Planets.mp4",
+              "name": "Season 1/Invader Zim S01E13 Battle of the Planets",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E13%20Battle%20of%20the%20Planets.mp4",
+              "seconds": 1466,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 217
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Battle of the Planets\" (0.95)",
+              "item": "hnbt_invaderzim",
+              "itemTitle": "Invader Zim complete series MKV + ISO",
+              "file": "24 - Battle of the Planets [1x13].mp4",
+              "name": "24 - Battle of the Planets [1x13]",
+              "url": "https://archive.org/download/hnbt_invaderzim/24%20-%20Battle%20of%20the%20Planets%20%5B1x13%5D.mp4",
+              "seconds": 1466,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 28,
           "name": "Abducted",
           "airdate": "2002-04-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Abducted\" (0.95)",
+            "item": "202103230237-45",
+            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+            "file": "Invader ZIM - EP 18 Abducted & The Sad, Sad Tale of Chickenfoot (Part 1).mp4",
+            "name": "Invader ZIM - EP 18 Abducted & The Sad, Sad Tale of Chickenfoot (Part 1)",
+            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2018%20Abducted%20%26%20The%20Sad%2C%20Sad%20Tale%20of%20Chickenfoot%20(Part%201).mp4",
+            "seconds": 1276,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 214
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Abducted\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E18 Abducted & The Sad, Sad Tale Of Chickenfoot.mp4",
+              "name": "Season 1/Invader Zim S01E18 Abducted & The Sad, Sad Tale Of Chickenfoot",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E18%20Abducted%20%26%20The%20Sad%2C%20Sad%20Tale%20Of%20Chickenfoot.mp4",
+              "seconds": 1475,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 200
+            }
+          ]
         },
         {
           "number": 29,
@@ -543,17 +1080,31 @@
           "file": {
             "conf": 0.8,
             "why": "title ~ \"Megadoomer\" (0.95)",
-            "item": "ytvinvaderzimvideos",
-            "itemTitle": "YTV Invader Zim Videos (YouTube)",
-            "file": "Invader Zim - Megadoomer _ Lice - Ep 17.mp4",
-            "name": "Invader Zim - Megadoomer _ Lice - Ep 17",
-            "url": "https://archive.org/download/ytvinvaderzimvideos/Invader%20Zim%20-%20Megadoomer%20_%20Lice%20-%20Ep%2017.mp4",
-            "seconds": 1446,
-            "format": "h.264",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 1/Invader Zim S01E17 Megadoomer & Lice.mp4",
+            "name": "Season 1/Invader Zim S01E17 Megadoomer & Lice",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E17%20Megadoomer%20%26%20Lice.mp4",
+            "seconds": 1453,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 150
+            "sizeMB": 207
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Megadoomer\" (0.95)",
+              "item": "ytvinvaderzimvideos",
+              "itemTitle": "YTV Invader Zim Videos (YouTube)",
+              "file": "Invader Zim - Megadoomer _ Lice - Ep 17.mp4",
+              "name": "Invader Zim - Megadoomer _ Lice - Ep 17",
+              "url": "https://archive.org/download/ytvinvaderzimvideos/Invader%20Zim%20-%20Megadoomer%20_%20Lice%20-%20Ep%2017.mp4",
+              "seconds": 1446,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 150
+            }
+          ]
         },
         {
           "number": 31,
@@ -610,6 +1161,19 @@
             },
             {
               "conf": 0.8,
+              "why": "title ~ \"TAK: The Hideous New Girl\" (1.00)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E20 Tak The Hideous New Girl.mp4",
+              "name": "Season 1/Invader Zim S01E20 Tak The Hideous New Girl",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E20%20Tak%20The%20Hideous%20New%20Girl.mp4",
+              "seconds": 1466,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 206
+            },
+            {
+              "conf": 0.8,
               "why": "title ~ \"TAK: The Hideous New Girl\" (0.95)",
               "item": "ytvinvaderzimvideos",
               "itemTitle": "YTV Invader Zim Videos (YouTube)",
@@ -645,6 +1209,19 @@
             {
               "conf": 0.8,
               "why": "title ~ \"GIR Goes Crazy and Stuff\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E19 GIR Goes Crazy and Stuff & Dib's Wonderful Life of Doom.mp4",
+              "name": "Season 1/Invader Zim S01E19 GIR Goes Crazy and Stuff & Dib's Wonderful Life of Doom",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E19%20GIR%20Goes%20Crazy%20and%20Stuff%20%26%20Dib's%20Wonderful%20Life%20of%20Doom.mp4",
+              "seconds": 1464,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 202
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"GIR Goes Crazy and Stuff\" (0.95)",
               "item": "ytvinvaderzimvideos",
               "itemTitle": "YTV Invader Zim Videos (YouTube)",
               "file": "Invader Zim - GIR Goes Crazy and Stuff _ Dib's Wonderful Life of Doom - Ep 19.mp4",
@@ -669,9 +1246,35 @@
           "number": 35,
           "name": "Hobo 13",
           "airdate": "2002-07-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Hobo 13\" (0.95)",
+            "item": "202103230237-45",
+            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+            "file": "Invader ZIM - EP 16 Hobo 13 & Walk For Your Lives (Part 1).mp4",
+            "name": "Invader ZIM - EP 16 Hobo 13 & Walk For Your Lives (Part 1)",
+            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2016%20Hobo%2013%20%26%20Walk%20For%20Your%20Lives%20(Part%201).mp4",
+            "seconds": 1268,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 214
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Hobo 13\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 1/Invader Zim S01E16 Hobo 13 & Walk For Your Lives.mp4",
+              "name": "Season 1/Invader Zim S01E16 Hobo 13 & Walk For Your Lives",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%201%2FInvader%20Zim%20S01E16%20Hobo%2013%20%26%20Walk%20For%20Your%20Lives.mp4",
+              "seconds": 1447,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 190
+            }
+          ]
         },
         {
           "number": 36,
@@ -690,68 +1293,187 @@
           "number": 1,
           "name": "The Most Horrible X-mas Ever",
           "airdate": "2002-12-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Most Horrible X-mas Ever\" (0.95)",
-            "item": "hnbt_invaderzim",
-            "itemTitle": "Invader Zim complete series MKV + ISO",
-            "file": "46 - The Most Horrible X-Mas Ever [2x07].mp4",
-            "name": "46 - The Most Horrible X-Mas Ever [2x07]",
-            "url": "https://archive.org/download/hnbt_invaderzim/46%20-%20The%20Most%20Horrible%20X-Mas%20Ever%20%5B2x07%5D.mp4",
-            "seconds": 1481,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 2/Invader Zim S02E01 Backseat Drivers from Beyond the Stars.mp4",
+            "name": "Season 2/Invader Zim S02E01 Backseat Drivers from Beyond the Stars",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E01%20Backseat%20Drivers%20from%20Beyond%20the%20Stars.mp4",
+            "seconds": 1467,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 147
+            "sizeMB": 197
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hnbt_invaderzim",
+              "itemTitle": "Invader Zim complete series MKV + ISO",
+              "file": "37 - Backseat Drivers from Beyond the Stars [2x01].mp4",
+              "name": "37 - Backseat Drivers from Beyond the Stars [2x01]",
+              "url": "https://archive.org/download/hnbt_invaderzim/37%20-%20Backseat%20Drivers%20from%20Beyond%20the%20Stars%20%5B2x01%5D.mp4",
+              "seconds": 1467,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Most Horrible X-mas Ever\" (1.00)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 2/Invader Zim S02E07 The Most Horrible X-Mas Ever.mp4",
+              "name": "Season 2/Invader Zim S02E07 The Most Horrible X-Mas Ever",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E07%20The%20Most%20Horrible%20X-Mas%20Ever.mp4",
+              "seconds": 1481,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 239
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Most Horrible X-mas Ever\" (0.95)",
+              "item": "hnbt_invaderzim",
+              "itemTitle": "Invader Zim complete series MKV + ISO",
+              "file": "46 - The Most Horrible X-Mas Ever [2x07].mp4",
+              "name": "46 - The Most Horrible X-Mas Ever [2x07]",
+              "url": "https://archive.org/download/hnbt_invaderzim/46%20-%20The%20Most%20Horrible%20X-Mas%20Ever%20%5B2x07%5D.mp4",
+              "seconds": 1481,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 147
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Backseat Drivers from Beyond the Stars",
           "airdate": "2006-06-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Backseat Drivers from Beyond the Stars\" (0.95)",
-            "item": "202103230237-45",
-            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
-            "file": "Invader ZIM - EP 21 Backseat Drivers from Beyond the Stars (Part 1).mp4",
-            "name": "Invader ZIM - EP 21 Backseat Drivers from Beyond the Stars (Part 1)",
-            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2021%20Backseat%20Drivers%20from%20Beyond%20the%20Stars%20(Part%201).mp4",
-            "seconds": 1278,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 2/Invader Zim S02E02 Mortos der Soulstealer & Zim Eats Waffles.mp4",
+            "name": "Season 2/Invader Zim S02E02 Mortos der Soulstealer & Zim Eats Waffles",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E02%20Mortos%20der%20Soulstealer%20%26%20Zim%20Eats%20Waffles.mp4",
+            "seconds": 1462,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 201
+            "sizeMB": 196
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Backseat Drivers from Beyond the Stars\" (0.95)",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 21 Backseat Drivers from Beyond the Stars (Part 1).mp4",
+              "name": "Invader ZIM - EP 21 Backseat Drivers from Beyond the Stars (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2021%20Backseat%20Drivers%20from%20Beyond%20the%20Stars%20(Part%201).mp4",
+              "seconds": 1278,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 201
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Backseat Drivers from Beyond the Stars\" (1.00)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 2/Invader Zim S02E01 Backseat Drivers from Beyond the Stars.mp4",
+              "name": "Season 2/Invader Zim S02E01 Backseat Drivers from Beyond the Stars",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E01%20Backseat%20Drivers%20from%20Beyond%20the%20Stars.mp4",
+              "seconds": 1467,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 197
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Backseat Drivers from Beyond the Stars\" (0.97)",
+              "item": "hnbt_invaderzim",
+              "itemTitle": "Invader Zim complete series MKV + ISO",
+              "file": "37 - Backseat Drivers from Beyond the Stars [2x01].mp4",
+              "name": "37 - Backseat Drivers from Beyond the Stars [2x01]",
+              "url": "https://archive.org/download/hnbt_invaderzim/37%20-%20Backseat%20Drivers%20from%20Beyond%20the%20Stars%20%5B2x01%5D.mp4",
+              "seconds": 1467,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Mortos der Soulstealer",
           "airdate": "2006-06-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Mortos der Soulstealer\" (0.95)",
-            "item": "202103230237-45",
-            "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
-            "file": "Invader ZIM - EP 22 Mortos der Soulstealer & Zim Eats Waffles (Part 1).mp4",
-            "name": "Invader ZIM - EP 22 Mortos der Soulstealer & Zim Eats Waffles (Part 1)",
-            "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2022%20Mortos%20der%20Soulstealer%20%26%20Zim%20Eats%20Waffles%20(Part%201).mp4",
-            "seconds": 1307,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 2/Invader Zim S02E03 The Girl Who Cried Gnome & Dibship Rising.mp4",
+            "name": "Season 2/Invader Zim S02E03 The Girl Who Cried Gnome & Dibship Rising",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E03%20The%20Girl%20Who%20Cried%20Gnome%20%26%20Dibship%20Rising.mp4",
+            "seconds": 1451,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 246
+            "sizeMB": 214
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Mortos der Soulstealer\" (0.95)",
+              "item": "202103230237-45",
+              "itemTitle": "*REDUX* Invader ZIM on Nicktoons Broadcast (February 2021)",
+              "file": "Invader ZIM - EP 22 Mortos der Soulstealer & Zim Eats Waffles (Part 1).mp4",
+              "name": "Invader ZIM - EP 22 Mortos der Soulstealer & Zim Eats Waffles (Part 1)",
+              "url": "https://archive.org/download/202103230237-45/Invader%20ZIM%20-%20EP%2022%20Mortos%20der%20Soulstealer%20%26%20Zim%20Eats%20Waffles%20(Part%201).mp4",
+              "seconds": 1307,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 246
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Mortos der Soulstealer\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 2/Invader Zim S02E02 Mortos der Soulstealer & Zim Eats Waffles.mp4",
+              "name": "Season 2/Invader Zim S02E02 Mortos der Soulstealer & Zim Eats Waffles",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E02%20Mortos%20der%20Soulstealer%20%26%20Zim%20Eats%20Waffles.mp4",
+              "seconds": 1462,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 196
+            }
+          ]
         },
         {
           "number": 4,
           "name": "ZIM Eats Waffles",
           "airdate": "2006-06-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 2/Invader Zim S02E04 Vindicated! & The Voting Of The Doomed.mp4",
+            "name": "Season 2/Invader Zim S02E04 Vindicated! & The Voting Of The Doomed",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E04%20Vindicated!%20%26%20The%20Voting%20Of%20The%20Doomed.mp4",
+            "seconds": 1462,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 205
+          },
           "alternates": []
         },
         {
@@ -760,19 +1482,46 @@
           "airdate": "2006-07-15",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "hnbt_invaderzim",
-            "itemTitle": "Invader Zim complete series MKV + ISO",
-            "file": "44 - Gaz, Taster of Pork [2x05].mp4",
-            "name": "44 - Gaz, Taster of Pork [2x05]",
-            "url": "https://archive.org/download/hnbt_invaderzim/44%20-%20Gaz%2C%20Taster%20of%20Pork%20%5B2x05%5D.mp4",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 2/Invader Zim S02E05 Gaz, Taster Of Pork.mp4",
+            "name": "Season 2/Invader Zim S02E05 Gaz, Taster Of Pork",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E05%20Gaz%2C%20Taster%20Of%20Pork.mp4",
             "seconds": 1432,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 143
+            "sizeMB": 174
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hnbt_invaderzim",
+              "itemTitle": "Invader Zim complete series MKV + ISO",
+              "file": "44 - Gaz, Taster of Pork [2x05].mp4",
+              "name": "44 - Gaz, Taster of Pork [2x05]",
+              "url": "https://archive.org/download/hnbt_invaderzim/44%20-%20Gaz%2C%20Taster%20of%20Pork%20%5B2x05%5D.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Girl Who Cried Gnome\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 2/Invader Zim S02E03 The Girl Who Cried Gnome & Dibship Rising.mp4",
+              "name": "Season 2/Invader Zim S02E03 The Girl Who Cried Gnome & Dibship Rising",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E03%20The%20Girl%20Who%20Cried%20Gnome%20%26%20Dibship%20Rising.mp4",
+              "seconds": 1451,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 214
+            }
+          ]
         },
         {
           "number": 6,
@@ -788,19 +1537,46 @@
           "airdate": "2006-07-22",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "hnbt_invaderzim",
-            "itemTitle": "Invader Zim complete series MKV + ISO",
-            "file": "46 - The Most Horrible X-Mas Ever [2x07].mp4",
-            "name": "46 - The Most Horrible X-Mas Ever [2x07]",
-            "url": "https://archive.org/download/hnbt_invaderzim/46%20-%20The%20Most%20Horrible%20X-Mas%20Ever%20%5B2x07%5D.mp4",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 2/Invader Zim S02E07 The Most Horrible X-Mas Ever.mp4",
+            "name": "Season 2/Invader Zim S02E07 The Most Horrible X-Mas Ever",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E07%20The%20Most%20Horrible%20X-Mas%20Ever.mp4",
             "seconds": 1481,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 147
+            "sizeMB": 239
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "hnbt_invaderzim",
+              "itemTitle": "Invader Zim complete series MKV + ISO",
+              "file": "46 - The Most Horrible X-Mas Ever [2x07].mp4",
+              "name": "46 - The Most Horrible X-Mas Ever [2x07]",
+              "url": "https://archive.org/download/hnbt_invaderzim/46%20-%20The%20Most%20Horrible%20X-Mas%20Ever%20%5B2x07%5D.mp4",
+              "seconds": 1481,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 147
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Vindicated!\" (0.95)",
+              "item": "invader-zim-seasons-1-2-full-series",
+              "itemTitle": "Invader Zim Full Series Seasons 1-2",
+              "file": "Season 2/Invader Zim S02E04 Vindicated! & The Voting Of The Doomed.mp4",
+              "name": "Season 2/Invader Zim S02E04 Vindicated! & The Voting Of The Doomed",
+              "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E04%20Vindicated!%20%26%20The%20Voting%20Of%20The%20Doomed.mp4",
+              "seconds": 1462,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 205
+            }
+          ]
         },
         {
           "number": 8,
@@ -816,26 +1592,52 @@
           "airdate": "2006-08-12",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Gaz, Taster of Pork\" (0.95)",
-            "item": "hnbt_invaderzim",
-            "itemTitle": "Invader Zim complete series MKV + ISO",
-            "file": "44 - Gaz, Taster of Pork [2x05].mp4",
-            "name": "44 - Gaz, Taster of Pork [2x05]",
-            "url": "https://archive.org/download/hnbt_invaderzim/44%20-%20Gaz%2C%20Taster%20of%20Pork%20%5B2x05%5D.mp4",
+            "conf": 0.8,
+            "why": "title ~ \"Gaz, Taster of Pork\" (1.00)",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 2/Invader Zim S02E05 Gaz, Taster Of Pork.mp4",
+            "name": "Season 2/Invader Zim S02E05 Gaz, Taster Of Pork",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E05%20Gaz%2C%20Taster%20Of%20Pork.mp4",
             "seconds": 1432,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 143
+            "sizeMB": 174
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Gaz, Taster of Pork\" (0.95)",
+              "item": "hnbt_invaderzim",
+              "itemTitle": "Invader Zim complete series MKV + ISO",
+              "file": "44 - Gaz, Taster of Pork [2x05].mp4",
+              "name": "44 - Gaz, Taster of Pork [2x05]",
+              "url": "https://archive.org/download/hnbt_invaderzim/44%20-%20Gaz%2C%20Taster%20of%20Pork%20%5B2x05%5D.mp4",
+              "seconds": 1432,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 10,
           "name": "The Frycook What Came from All That Space",
           "airdate": "2006-08-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Frycook What Came from All That Space\" (1.00)",
+            "item": "invader-zim-seasons-1-2-full-series",
+            "itemTitle": "Invader Zim Full Series Seasons 1-2",
+            "file": "Season 2/Invader Zim S02E06 The Frycook What Came from All That Space.mp4",
+            "name": "Season 2/Invader Zim S02E06 The Frycook What Came from All That Space",
+            "url": "https://archive.org/download/invader-zim-seasons-1-2-full-series/Season%202%2FInvader%20Zim%20S02E06%20The%20Frycook%20What%20Came%20from%20All%20That%20Space.mp4",
+            "seconds": 1435,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 218
+          },
           "alternates": []
         }
       ]

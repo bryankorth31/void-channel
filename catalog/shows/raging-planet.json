@@ -3,7 +3,7 @@
   "slug": "raging-planet",
   "type": "Documentary & Geographic",
   "network": "Discovery",
-  "matchedAt": "2026-10-16T07:58:09.609Z",
+  "matchedAt": "2026-10-19T04:12:13.035Z",
   "addedAt": "2026-10-15T12:08:38.221Z",
   "tvmaze": {
     "id": 29759,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 18,
     "live": 0,
-    "review": 1,
-    "missing": 17,
-    "pct": 6
+    "review": 0,
+    "missing": 18,
+    "pct": 0
   },
   "seasons": [
     {
@@ -83,20 +83,8 @@
           "number": 8,
           "name": "Tidal Wave",
           "airdate": "1997-11-28",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Tidal Wave\" (0.95)",
-            "item": "raging-planet-tidal-wave-dc-1997",
-            "itemTitle": "Raging Planet Tidal Wave DC 1997",
-            "file": "Raging Planet Tidal Wave DC 1997.mp4",
-            "name": "Raging Planet Tidal Wave DC 1997",
-            "url": "https://archive.org/download/raging-planet-tidal-wave-dc-1997/Raging%20Planet%20Tidal%20Wave%20DC%201997.mp4",
-            "seconds": 2832,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 274
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

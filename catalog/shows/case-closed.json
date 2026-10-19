@@ -3,7 +3,8 @@
   "slug": "case-closed",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:36.975Z",
+  "matchedAt": "2026-10-19T04:11:39.245Z",
+  "addedAt": "2026-10-19T04:11:39.250Z",
   "tvmaze": {
     "id": 19216,
     "name": "D.B. Cooper: Case Closed?",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 2,
     "live": 0,
-    "review": 0,
-    "missing": 2,
-    "pct": 0
+    "review": 1,
+    "missing": 1,
+    "pct": 50
   },
   "seasons": [
     {
@@ -34,9 +35,35 @@
           "number": 2,
           "name": "Part 2",
           "airdate": "2016-07-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Part 2\" (0.95)",
+            "item": "9-11-israel-trump-connection-case-closed-2-johnny-gat-mirror",
+            "itemTitle": "911, Israel, Trump Connection, CASE CLOSED 2 - Johnny Gat",
+            "file": "9 11, Israel, Trump Connection CASE CLOSED 2 (Johnny Gat Mirror).mp4",
+            "name": "9 11, Israel, Trump Connection CASE CLOSED 2 (Johnny Gat Mirror)",
+            "url": "https://archive.org/download/9-11-israel-trump-connection-case-closed-2-johnny-gat-mirror/9%2011%2C%20Israel%2C%20Trump%20Connection%20CASE%20CLOSED%202%20(Johnny%20Gat%20Mirror).mp4",
+            "seconds": 5399,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 314
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Part 2\" (0.95)",
+              "item": "9-11-trump-and-the-jews-part-2",
+              "itemTitle": "Donald Trump and 9/11 Case Closed, Part 2",
+              "file": "9_11, Trump and the Jews Part 2.mp4",
+              "name": "9_11, Trump and the Jews Part 2",
+              "url": "https://archive.org/download/9-11-trump-and-the-jews-part-2/9_11%2C%20Trump%20and%20the%20Jews%20Part%202.mp4",
+              "seconds": 5399,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 167
+            }
+          ]
         }
       ]
     }

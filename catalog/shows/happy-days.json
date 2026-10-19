@@ -3,7 +3,7 @@
   "slug": "happy-days",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-16T07:58:20.225Z",
+  "matchedAt": "2026-10-19T04:12:21.871Z",
   "addedAt": "2026-10-15T12:08:54.063Z",
   "tvmaze": {
     "id": 1474,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 255,
-    "live": 15,
-    "review": 2,
-    "missing": 238,
-    "pct": 7
+    "live": 19,
+    "review": 5,
+    "missing": 231,
+    "pct": 9
   },
   "seasons": [
     {
@@ -41,7 +41,34 @@
             "playable": true,
             "sizeMB": 804
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+              "item": "happy-days-s-3-d-1",
+              "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+              "file": "Happy Days S3 D12.mp4",
+              "name": "Happy Days S3 D12",
+              "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D12.mp4",
+              "seconds": 1799,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 174
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D12.mp4",
+              "name": "Happy Days S2 D12",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D12.mp4",
+              "seconds": 1527,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 148
+            }
+          ]
         },
         {
           "number": 2,
@@ -61,7 +88,34 @@
             "playable": true,
             "sizeMB": 806
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+              "item": "happy-days-s-3-d-1",
+              "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+              "file": "Happy Days S3 D13.mp4",
+              "name": "Happy Days S3 D13",
+              "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D13.mp4",
+              "seconds": 1599,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 155
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D13.mp4",
+              "name": "Happy Days S2 D13",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D13.mp4",
+              "seconds": 1515,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 148
+            }
+          ]
         },
         {
           "number": 3,
@@ -81,15 +135,81 @@
             "playable": true,
             "sizeMB": 802
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+              "item": "happy-days-s-3-d-1",
+              "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+              "file": "Happy Days S3 D14.mp4",
+              "name": "Happy Days S3 D14",
+              "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D14.mp4",
+              "seconds": 1627,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 158
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D14.mp4",
+              "name": "Happy Days S2 D14",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D14.mp4",
+              "seconds": 1512,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Guess Who's Coming to Visit",
           "airdate": "1974-02-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "fonz-and-the-happy-days-gang",
+            "itemTitle": "Fonz and the Happy Days Gang",
+            "file": "Fonz and the Happy Days Gang - S01E04 (Bye Bye Blackbeard).mp4",
+            "name": "Fonz and the Happy Days Gang - S01E04 (Bye Bye Blackbeard)",
+            "url": "https://archive.org/download/fonz-and-the-happy-days-gang/Fonz%20and%20the%20Happy%20Days%20Gang%20-%20S01E04%20(Bye%20Bye%20Blackbeard).mp4",
+            "seconds": 1560,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 815
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+              "item": "happy-days-s-3-d-1",
+              "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+              "file": "Happy Days S3 D15.mp4",
+              "name": "Happy Days S3 D15",
+              "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D15.mp4",
+              "seconds": 1800,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 175
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D15.mp4",
+              "name": "Happy Days S2 D15",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D15.mp4",
+              "seconds": 1498,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 5,
@@ -109,7 +229,34 @@
             "playable": true,
             "sizeMB": 810
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+              "item": "happy-days-s-3-d-1",
+              "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+              "file": "Happy Days S3 D16.mp4",
+              "name": "Happy Days S3 D16",
+              "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D16.mp4",
+              "seconds": 1800,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 175
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D16.mp4",
+              "name": "Happy Days S2 D16",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D16.mp4",
+              "seconds": 1505,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 6,
@@ -129,15 +276,81 @@
             "playable": true,
             "sizeMB": 814
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+              "item": "happy-days-s-3-d-1",
+              "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+              "file": "Happy Days S3 D17.mp4",
+              "name": "Happy Days S3 D17",
+              "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D17.mp4",
+              "seconds": 1801,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 175
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D17.mp4",
+              "name": "Happy Days S2 D17",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D17.mp4",
+              "seconds": 1507,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Fonzie Drops In",
           "airdate": "1974-02-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "fonz-and-the-happy-days-gang",
+            "itemTitle": "Fonz and the Happy Days Gang",
+            "file": "Fonz and the Happy Days Gang - S01E07 (The Vampire Strikes Back).mp4",
+            "name": "Fonz and the Happy Days Gang - S01E07 (The Vampire Strikes Back)",
+            "url": "https://archive.org/download/fonz-and-the-happy-days-gang/Fonz%20and%20the%20Happy%20Days%20Gang%20-%20S01E07%20(The%20Vampire%20Strikes%20Back).mp4",
+            "seconds": 1551,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 810
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+              "item": "happy-days-s-3-d-1",
+              "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+              "file": "Happy Days S3 D22.mp4",
+              "name": "Happy Days S3 D22",
+              "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D22.mp4",
+              "seconds": 1621,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 157
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D22.mp4",
+              "name": "Happy Days S2 D22",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D22.mp4",
+              "seconds": 1524,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 148
+            }
+          ]
         },
         {
           "number": 8,
@@ -157,7 +370,34 @@
             "playable": true,
             "sizeMB": 807
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+              "item": "happy-days-s-3-d-1",
+              "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+              "file": "Happy Days S3 D23.mp4",
+              "name": "Happy Days S3 D23",
+              "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D23.mp4",
+              "seconds": 1793,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 174
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D23.mp4",
+              "name": "Happy Days S2 D23",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D23.mp4",
+              "seconds": 1509,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 147
+            }
+          ]
         },
         {
           "number": 9,
@@ -177,15 +417,68 @@
             "playable": true,
             "sizeMB": 815
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+              "item": "happy-days-s-3-d-1",
+              "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+              "file": "Happy Days S3 D24.mp4",
+              "name": "Happy Days S3 D24",
+              "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D24.mp4",
+              "seconds": 1622,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 157
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D24.mp4",
+              "name": "Happy Days S2 D24",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D24.mp4",
+              "seconds": 1532,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 149
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Give the Band a Hand",
           "airdate": "1974-03-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 10 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+            "item": "happy-days-s-3-d-1",
+            "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+            "file": "Happy Days S3 D25.mp4",
+            "name": "Happy Days S3 D25",
+            "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D25.mp4",
+            "seconds": 1674,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 163
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D25.mp4",
+              "name": "Happy Days S2 D25",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D25.mp4",
+              "seconds": 1528,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 148
+            }
+          ]
         },
         {
           "number": 11,
@@ -205,7 +498,34 @@
             "playable": true,
             "sizeMB": 799
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+              "item": "happy-days-s-3-d-1",
+              "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+              "file": "Happy Days S3 D26.mp4",
+              "name": "Happy Days S3 D26",
+              "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D26.mp4",
+              "seconds": 1793,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 174
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D26.mp4",
+              "name": "Happy Days S2 D26",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D26.mp4",
+              "seconds": 1483,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 12,
@@ -225,7 +545,34 @@
             "playable": true,
             "sizeMB": 799
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+              "item": "happy-days-s-3-d-1",
+              "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+              "file": "Happy Days S3 D27.mp4",
+              "name": "Happy Days S3 D27",
+              "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D27.mp4",
+              "seconds": 1562,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D27.mp4",
+              "name": "Happy Days S2 D27",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D27.mp4",
+              "seconds": 1507,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 13,
@@ -245,31 +592,136 @@
             "playable": true,
             "sizeMB": 807
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+              "item": "happy-days-s-3-d-1",
+              "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+              "file": "Happy Days S3 D32.mp4",
+              "name": "Happy Days S3 D32",
+              "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D32.mp4",
+              "seconds": 1794,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 174
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D32.mp4",
+              "name": "Happy Days S2 D32",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D32.mp4",
+              "seconds": 1527,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 148
+            }
+          ]
         },
         {
           "number": 14,
           "name": "The Best Man",
           "airdate": "1974-04-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 14 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+            "item": "happy-days-s-3-d-1",
+            "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+            "file": "Happy Days S3 D33.mp4",
+            "name": "Happy Days S3 D33",
+            "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D33.mp4",
+            "seconds": 1793,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 174
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D33.mp4",
+              "name": "Happy Days S2 D33",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D33.mp4",
+              "seconds": 1507,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Knock Around the Block",
           "airdate": "1974-04-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 15 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+            "item": "happy-days-s-3-d-1",
+            "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+            "file": "Happy Days S3 D34.mp4",
+            "name": "Happy Days S3 D34",
+            "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D34.mp4",
+            "seconds": 1619,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 157
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 15 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D34.mp4",
+              "name": "Happy Days S2 D34",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D34.mp4",
+              "seconds": 1508,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Be the First on Your Block",
           "airdate": "1974-05-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 16 of 24 in \"Happy Days: The Third Season (DVD ISO)\"",
+            "item": "happy-days-s-3-d-1",
+            "itemTitle": "Happy Days: The Third Season (DVD ISO)",
+            "file": "Happy Days S3 D35.mp4",
+            "name": "Happy Days S3 D35",
+            "url": "https://archive.org/download/happy-days-s-3-d-1/Happy%20Days%20S3%20D35.mp4",
+            "seconds": 1792,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 174
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 16 of 23 in \"Happy Days: The Second Season\"",
+              "item": "happy-days-s-2",
+              "itemTitle": "Happy Days: The Second Season",
+              "file": "Happy Days S2 D35.mp4",
+              "name": "Happy Days S2 D35",
+              "url": "https://archive.org/download/happy-days-s-2/Happy%20Days%20S2%20D35.mp4",
+              "seconds": 1522,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 148
+            }
+          ]
         }
       ]
     },
@@ -361,8 +813,20 @@
           "number": 5,
           "name": "R.O.T.C.",
           "airdate": "1974-10-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "fonz-and-the-happy-days-gang",
+            "itemTitle": "Fonz and the Happy Days Gang",
+            "file": "Fonz and the Happy Days Gang - S02E05 (Double Jeopardy).mp4",
+            "name": "Fonz and the Happy Days Gang - S02E05 (Double Jeopardy)",
+            "url": "https://archive.org/download/fonz-and-the-happy-days-gang/Fonz%20and%20the%20Happy%20Days%20Gang%20-%20S02E05%20(Double%20Jeopardy).mp4",
+            "seconds": 1504,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 777
+          },
           "alternates": []
         },
         {
@@ -409,8 +873,20 @@
           "number": 8,
           "name": "Not with My Sister, You Don't",
           "airdate": "1974-11-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "fonz-and-the-happy-days-gang",
+            "itemTitle": "Fonz and the Happy Days Gang",
+            "file": "Fonz and the Happy Days Gang - S02E08 (Perilous Pauline).mp4",
+            "name": "Fonz and the Happy Days Gang - S02E08 (Perilous Pauline)",
+            "url": "https://archive.org/download/fonz-and-the-happy-days-gang/Fonz%20and%20the%20Happy%20Days%20Gang%20-%20S02E08%20(Perilous%20Pauline).mp4",
+            "seconds": 1497,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 775
+          },
           "alternates": []
         },
         {
@@ -2017,20 +2493,8 @@
           "number": 9,
           "name": "There's No Business Like No Business",
           "airdate": "1982-12-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"There's No Business Like No Business\" (0.63)",
-            "item": "fonz-and-the-happy-days-gang",
-            "itemTitle": "Fonz and the Happy Days Gang",
-            "file": "Fonz and the Happy Days Gang - S02E07 (There's No Place Like Rome).mp4",
-            "name": "Fonz and the Happy Days Gang - S02E07 (There's No Place Like Rome)",
-            "url": "https://archive.org/download/fonz-and-the-happy-days-gang/Fonz%20and%20the%20Happy%20Days%20Gang%20-%20S02E07%20(There's%20No%20Place%20Like%20Rome).mp4",
-            "seconds": 1509,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 785
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

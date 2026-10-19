@@ -3,7 +3,7 @@
   "slug": "eve",
   "type": "2000s and Later Sitcoms",
   "network": "UPN",
-  "matchedAt": "2026-10-16T07:56:22.645Z",
+  "matchedAt": "2026-10-19T04:10:32.824Z",
   "addedAt": "2026-10-15T13:05:30.113Z",
   "tvmaze": {
     "id": 61812,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 16,
     "live": 0,
-    "review": 9,
-    "missing": 7,
-    "pct": 56
+    "review": 0,
+    "missing": 16,
+    "pct": 0
   },
   "seasons": [
     {
@@ -27,180 +27,72 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2022-06-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 9 in \"1993\"",
-            "item": "01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1",
-            "itemTitle": "1993",
-            "file": "06.03 Dynamite Kansai & Mayumi Ozaki vs. Takako Inoue & Yumiko Hotta AJW.ia.mp4",
-            "name": "06.03 Dynamite Kansai & Mayumi Ozaki vs",
-            "url": "https://archive.org/download/01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1/06.03%20Dynamite%20Kansai%20%26%20Mayumi%20Ozaki%20vs.%20Takako%20Inoue%20%26%20Yumiko%20Hotta%20AJW.ia.mp4",
-            "seconds": 4206,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 492
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2022-06-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 9 in \"1993\"",
-            "item": "01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1",
-            "itemTitle": "1993",
-            "file": "06.03 Dynamite Kansai & Mayumi Ozaki vs. Takako Inoue & Yumiko Hotta AJW.mp4",
-            "name": "06.03 Dynamite Kansai & Mayumi Ozaki vs. Takako Inoue & Yumiko Hotta AJW",
-            "url": "https://archive.org/download/01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1/06.03%20Dynamite%20Kansai%20%26%20Mayumi%20Ozaki%20vs.%20Takako%20Inoue%20%26%20Yumiko%20Hotta%20AJW.mp4",
-            "seconds": 4206,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 492
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Episode 3",
           "airdate": "2022-06-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 9 in \"1993\"",
-            "item": "01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1",
-            "itemTitle": "1993",
-            "file": "07.16 Corazon de Leon & Ultimo Dragon vs. El Dandy & Negro Casas CMLL on Televisa.ia.mp4",
-            "name": "07.16 Corazon de Leon & Ultimo Dragon vs",
-            "url": "https://archive.org/download/01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1/07.16%20Corazon%20de%20Leon%20%26%20Ultimo%20Dragon%20vs.%20El%20Dandy%20%26%20Negro%20Casas%20CMLL%20on%20Televisa.ia.mp4",
-            "seconds": 2695,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 406
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Episode 4",
           "airdate": "2022-06-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 9 in \"1993\"",
-            "item": "01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1",
-            "itemTitle": "1993",
-            "file": "07.31 Aja Kong, Kyoko Inoue, Sakie Hasegawa & Takako Inoue vs. Cutie Suzuki, Dynamite Kansai, Hikari Fukuoka & Mayumi Ozaki JWP Thunder Queen Battle In Yokohama.ia.mp4",
-            "name": "07.31 Aja Kong, Kyoko Inoue, Sakie Hasegawa & Takako Inoue vs",
-            "url": "https://archive.org/download/01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1/07.31%20Aja%20Kong%2C%20Kyoko%20Inoue%2C%20Sakie%20Hasegawa%20%26%20Takako%20Inoue%20vs.%20Cutie%20Suzuki%2C%20Dynamite%20Kansai%2C%20Hikari%20Fukuoka%20%26%20Mayumi%20Ozaki%20JWP%20Thunder%20Queen%20Battle%20In%20Yokohama.ia.mp4",
-            "seconds": 4473,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 508
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "2022-06-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 9 in \"1993\"",
-            "item": "01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1",
-            "itemTitle": "1993",
-            "file": "07.31 Aja Kong, Kyoko Inoue, Sakie Hasegawa & Takako Inoue vs. Cutie Suzuki, Dynamite Kansai, Hikari Fukuoka & Mayumi Ozaki JWP Thunder Queen Battle In Yokohama.mp4",
-            "name": "07.31 Aja Kong, Kyoko Inoue, Sakie Hasegawa & Takako Inoue vs. Cutie Suzuki, Dynamite Kansai, Hikari Fukuoka & Mayumi Ozaki JWP Thunder Queen Battle In Yokohama",
-            "url": "https://archive.org/download/01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1/07.31%20Aja%20Kong%2C%20Kyoko%20Inoue%2C%20Sakie%20Hasegawa%20%26%20Takako%20Inoue%20vs.%20Cutie%20Suzuki%2C%20Dynamite%20Kansai%2C%20Hikari%20Fukuoka%20%26%20Mayumi%20Ozaki%20JWP%20Thunder%20Queen%20Battle%20In%20Yokohama.mp4",
-            "seconds": 4473,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 508
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Episode 6",
           "airdate": "2022-06-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 6 of 9 in \"1993\"",
-            "item": "01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1",
-            "itemTitle": "1993",
-            "file": "11.06 Eddy Guerrero & Love Machine vs. El Hijo del Santo & Octagon AAA .ia.mp4",
-            "name": "11.06 Eddy Guerrero & Love Machine vs",
-            "url": "https://archive.org/download/01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1/11.06%20Eddy%20Guerrero%20%26%20Love%20Machine%20vs.%20El%20Hijo%20del%20Santo%20%26%20Octagon%20AAA%20.ia.mp4",
-            "seconds": 2694,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 298
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "Episode 7",
           "airdate": "2022-06-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 7 of 9 in \"1993\"",
-            "item": "01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1",
-            "itemTitle": "1993",
-            "file": "11.06 Eddy Guerrero & Love Machine vs. El Hijo del Santo & Octagon AAA .mp4",
-            "name": "11.06 Eddy Guerrero & Love Machine vs. El Hijo del Santo & Octagon AAA ",
-            "url": "https://archive.org/download/01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1/11.06%20Eddy%20Guerrero%20%26%20Love%20Machine%20vs.%20El%20Hijo%20del%20Santo%20%26%20Octagon%20AAA%20.mp4",
-            "seconds": 2694,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 298
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
           "name": "Episode 8",
           "airdate": "2022-06-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 8 of 9 in \"1993\"",
-            "item": "01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1",
-            "itemTitle": "1993",
-            "file": "12.05 Nobuhiko Takada vs. Super Vader UWF-I Pro Wrestling World Heavyweight Championship.ia.mp4",
-            "name": "12.05 Nobuhiko Takada vs",
-            "url": "https://archive.org/download/01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1/12.05%20Nobuhiko%20Takada%20vs.%20Super%20Vader%20UWF-I%20Pro%20Wrestling%20World%20Heavyweight%20Championship.ia.mp4",
-            "seconds": 2541,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 504
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
           "name": "Episode 9",
           "airdate": "2022-06-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 9 of 9 in \"1993\"",
-            "item": "01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1",
-            "itemTitle": "1993",
-            "file": "12.06 Dynamite Kansai & Mayumi Ozaki vs. Manami Toyota & Toshiyo Yamada AJW St. Battle Final 1993.mp4",
-            "name": "12.06 Dynamite Kansai & Mayumi Ozaki vs. Manami Toyota & Toshiyo Yamada AJW St. Battle Final 1993",
-            "url": "https://archive.org/download/01.02-jun-akiyama-vs.-steve-williams-ajpw-new-year-giant-series-1993-tag-1/12.06%20Dynamite%20Kansai%20%26%20Mayumi%20Ozaki%20vs.%20Manami%20Toyota%20%26%20Toshiyo%20Yamada%20AJW%20St.%20Battle%20Final%201993.mp4",
-            "seconds": 2676,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1739
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "planet-earth",
   "type": "British and Beyond",
   "network": "GB",
-  "matchedAt": "2026-10-16T07:57:09.802Z",
+  "matchedAt": "2026-10-19T04:11:17.205Z",
   "addedAt": "2026-10-16T07:57:09.802Z",
   "tvmaze": {
     "id": 768,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 11,
-    "live": 1,
+    "live": 3,
     "review": 0,
-    "missing": 10,
-    "pct": 9
+    "missing": 8,
+    "pct": 27
   },
   "seasons": [
     {
@@ -43,9 +43,48 @@
           "number": 3,
           "name": "Fresh Water",
           "airdate": "2006-03-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "PlanetEarth1986",
+            "itemTitle": "Planet Earth (1986) DVD ISOs",
+            "file": "Planet.Earth.S01E03.The.Climate.Change.1986.Planet.Earth.S01E04.Tales.from.Other.Worlds.19862.mp4",
+            "name": "Planet.Earth.S01E03.The.Climate.Change.1986.Planet.Earth.S01E04.Tales.from.Other.Worlds.19862",
+            "url": "https://archive.org/download/PlanetEarth1986/Planet.Earth.S01E03.The.Climate.Change.1986.Planet.Earth.S01E04.Tales.from.Other.Worlds.19862.mp4",
+            "seconds": 3385,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 331
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "PlanetEarth1986",
+              "itemTitle": "Planet Earth (1986) DVD ISOs",
+              "file": "Planet.Earth.S01E03.The.Climate.Change.1986.Planet.Earth.S01E04.Tales.from.Other.Worlds.19863.mp4",
+              "name": "Planet.Earth.S01E03.The.Climate.Change.1986.Planet.Earth.S01E04.Tales.from.Other.Worlds.19863",
+              "url": "https://archive.org/download/PlanetEarth1986/Planet.Earth.S01E03.The.Climate.Change.1986.Planet.Earth.S01E04.Tales.from.Other.Worlds.19863.mp4",
+              "seconds": 3375,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 330
+            },
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "PlanetEarth1986",
+              "itemTitle": "Planet Earth (1986) DVD ISOs",
+              "file": "Planet.Earth.S01E03.The.Climate.Change.1986.Planet.Earth.S01E04.Tales.from.Other.Worlds.1986.mp4",
+              "name": "Planet.Earth.S01E03.The.Climate.Change.1986.Planet.Earth.S01E04.Tales.from.Other.Worlds.1986",
+              "url": "https://archive.org/download/PlanetEarth1986/Planet.Earth.S01E03.The.Climate.Change.1986.Planet.Earth.S01E04.Tales.from.Other.Worlds.1986.mp4",
+              "seconds": 6761,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 661
+            }
+          ]
         },
         {
           "number": 4,
@@ -101,9 +140,35 @@
           "number": 7,
           "name": "Great Plains",
           "airdate": "2006-11-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "PlanetEarth1986",
+            "itemTitle": "Planet Earth (1986) DVD ISOs",
+            "file": "Planet.Earth.S01E07.Fate.of.the.Earth.1986.Angry.Planet.S01E05.African.Hellhole.2008.mp4",
+            "name": "Planet.Earth.S01E07.Fate.of.the.Earth.1986.Angry.Planet.S01E05.African.Hellhole.2008",
+            "url": "https://archive.org/download/PlanetEarth1986/Planet.Earth.S01E07.Fate.of.the.Earth.1986.Angry.Planet.S01E05.African.Hellhole.2008.mp4",
+            "seconds": 3383,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 331
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "PlanetEarth1986",
+              "itemTitle": "Planet Earth (1986) DVD ISOs",
+              "file": "Planet.Earth.S01E07.Fate.of.the.Earth.1986.Angry.Planet.S01E05.African.Hellhole.20082.mp4",
+              "name": "Planet.Earth.S01E07.Fate.of.the.Earth.1986.Angry.Planet.S01E05.African.Hellhole.20082",
+              "url": "https://archive.org/download/PlanetEarth1986/Planet.Earth.S01E07.Fate.of.the.Earth.1986.Angry.Planet.S01E05.African.Hellhole.20082.mp4",
+              "seconds": 3383,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 331
+            }
+          ]
         },
         {
           "number": 8,

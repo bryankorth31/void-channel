@@ -3,7 +3,7 @@
   "slug": "beavis-and-butt-head",
   "type": "Animated",
   "network": "MTV",
-  "matchedAt": "2026-10-16T07:56:24.264Z",
+  "matchedAt": "2026-10-19T04:10:34.024Z",
   "addedAt": "2026-10-15T12:07:39.820Z",
   "tvmaze": {
     "id": 910,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 210,
-    "live": 12,
-    "review": 104,
-    "missing": 94,
-    "pct": 55
+    "live": 119,
+    "review": 10,
+    "missing": 81,
+    "pct": 61
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "Door-to-Door",
           "airdate": "1993-03-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -42,6 +42,19 @@
             "sizeMB": 80
           },
           "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Door-to-Door\" (0.95)",
+              "item": "beavis-and-butthead-complete",
+              "itemTitle": "Beavis and Butt-Head Complete Series (1992 - Present) [Final]",
+              "file": "S01 (1993) - E01 - Door-to-Door.mp4",
+              "name": "S01 (1993) - E01 - Door-to-Door",
+              "url": "https://archive.org/download/beavis-and-butthead-complete/S01%20(1993)%20-%20E01%20-%20Door-to-Door.mp4",
+              "seconds": 803,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 80
+            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
@@ -62,9 +75,9 @@
           "number": 2,
           "name": "Give Blood",
           "airdate": "1993-03-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -77,6 +90,19 @@
             "sizeMB": 104
           },
           "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Give Blood\" (0.95)",
+              "item": "beavis-and-butthead-complete",
+              "itemTitle": "Beavis and Butt-Head Complete Series (1992 - Present) [Final]",
+              "file": "S01 (1993) - E02 - Give Blood.mp4",
+              "name": "S01 (1993) - E02 - Give Blood",
+              "url": "https://archive.org/download/beavis-and-butthead-complete/S01%20(1993)%20-%20E02%20-%20Give%20Blood.mp4",
+              "seconds": 1074,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 104
+            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
@@ -97,9 +123,9 @@
           "number": 3,
           "name": "Balloon",
           "airdate": "1993-03-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -112,6 +138,19 @@
             "sizeMB": 85
           },
           "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Balloon\" (0.95)",
+              "item": "beavis-and-butthead-complete",
+              "itemTitle": "Beavis and Butt-Head Complete Series (1992 - Present) [Final]",
+              "file": "S01 (1993) - E03 - Balloon.mp4",
+              "name": "S01 (1993) - E03 - Balloon",
+              "url": "https://archive.org/download/beavis-and-butthead-complete/S01%20(1993)%20-%20E03%20-%20Balloon.mp4",
+              "seconds": 879,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 85
+            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
@@ -137,9 +176,9 @@
           "number": 1,
           "name": "Scientific Stuff",
           "airdate": "1993-05-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
             "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
@@ -157,9 +196,9 @@
           "number": 2,
           "name": "Good Credit",
           "airdate": "1993-05-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
             "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
@@ -173,7 +212,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
               "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
@@ -186,7 +225,7 @@
               "sizeMB": 71
             },
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "beavis-butt-head-1992-97",
               "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -199,17 +238,16 @@
               "sizeMB": 64
             },
             {
-              "conf": 0.55,
-              "why": "S/E in filename",
-              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-              "file": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Beavis and Butt-Head - 2x02 - Hay credito [DVD+VHS by JP+ALCOHOLMAN+ XeTe].mp4",
-              "name": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Beavis and Butt-Head - 2x02 - Hay credito [DVD+VHS by JP+ALCOHOLMAN+ XeTe]",
-              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Beavis%20and%20Butt-Head%20Serie%20(T0-11)%20(Ing-Esp)%2FTemporada%202%20%5B26-26%5D%20(1993)%2FBeavis%20and%20Butt-Head%20-%202x02%20-%20Hay%20credito%20%5BDVD%2BVHS%20by%20JP%2BALCOHOLMAN%2B%20XeTe%5D.mp4",
+              "conf": 0.75,
+              "why": "title ~ \"Good Credit\" (0.95)",
+              "item": "beavis-and-butthead-complete",
+              "itemTitle": "Beavis and Butt-Head Complete Series (1992 - Present) [Final]",
+              "file": "Season 2 (1993) - E02 - Good Credit.mp4",
+              "name": "Season 2 (1993) - E02 - Good Credit",
+              "url": "https://archive.org/download/beavis-and-butthead-complete/Season%202%20(1993)%20-%20E02%20-%20Good%20Credit.mp4",
               "seconds": 667,
               "format": "h.264",
               "playable": true,
-              "langRisk": true,
               "sizeMB": 64
             }
           ]
@@ -218,9 +256,9 @@
           "number": 3,
           "name": "Burger World",
           "airdate": "1993-05-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
             "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
@@ -234,13 +272,26 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "beavis-butt-head-1992-97",
               "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
               "file": "Beavis and Butt-Head (1992 - 97)/02 Season 2 (1993)/S02E03 Burger World.mp4",
               "name": "Beavis and Butt-Head (1992 - 97)/02 Season 2 (1993)/S02E03 Burger World",
               "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F02%20Season%202%20(1993)%2FS02E03%20Burger%20World.mp4",
+              "seconds": 641,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 63
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Burger World\" (0.95)",
+              "item": "beavis-and-butthead-complete",
+              "itemTitle": "Beavis and Butt-Head Complete Series (1992 - Present) [Final]",
+              "file": "Season 2 (1993) - E03 - Burger World.mp4",
+              "name": "Season 2 (1993) - E03 - Burger World",
+              "url": "https://archive.org/download/beavis-and-butthead-complete/Season%202%20(1993)%20-%20E03%20-%20Burger%20World.mp4",
               "seconds": 641,
               "format": "h.264",
               "playable": true,
@@ -268,35 +319,21 @@
           "airdate": "1993-05-18",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Episodios Faltantes T2 (Inglés)/Beavis and Butt-Head - 2x04 - Baby Makes Uh, Three.mp4",
-            "name": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Episodios Faltantes T2 (Inglés)/Beavis and Butt-Head - 2x04 - Baby Makes Uh, Three",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Beavis%20and%20Butt-Head%20Serie%20(T0-11)%20(Ing-Esp)%2FTemporada%202%20%5B26-26%5D%20(1993)%2FEpisodios%20Faltantes%20T2%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%202x04%20-%20Baby%20Makes%20Uh%2C%20Three.mp4",
-            "seconds": 656,
+            "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
+            "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
+            "file": "Beavis and Butt-Head (Project Buffcoat) S02E04 - Baby Makes Uh, Three.mp4",
+            "name": "Beavis and Butt-Head (Project Buffcoat) S02E04 - Baby Makes Uh, Three",
+            "url": "https://archive.org/download/beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction/Beavis%20and%20Butt-Head%20(Project%20Buffcoat)%20S02E04%20-%20Baby%20Makes%20Uh%2C%20Three.mp4",
+            "seconds": 702,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 65
+            "sizeMB": 72
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
-              "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
-              "file": "Beavis and Butt-Head (Project Buffcoat) S02E04 - Baby Makes Uh, Three.mp4",
-              "name": "Beavis and Butt-Head (Project Buffcoat) S02E04 - Baby Makes Uh, Three",
-              "url": "https://archive.org/download/beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction/Beavis%20and%20Butt-Head%20(Project%20Buffcoat)%20S02E04%20-%20Baby%20Makes%20Uh%2C%20Three.mp4",
-              "seconds": 702,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 72
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "beavis-butt-head-1992-97",
               "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -307,6 +344,33 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 66
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Episodios Faltantes T2 (Inglés)/Beavis and Butt-Head - 2x04 - Baby Makes Uh, Three.mp4",
+              "name": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Episodios Faltantes T2 (Inglés)/Beavis and Butt-Head - 2x04 - Baby Makes Uh, Three",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Beavis%20and%20Butt-Head%20Serie%20(T0-11)%20(Ing-Esp)%2FTemporada%202%20%5B26-26%5D%20(1993)%2FEpisodios%20Faltantes%20T2%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%202x04%20-%20Baby%20Makes%20Uh%2C%20Three.mp4",
+              "seconds": 656,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 65
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Baby Makes Uh, Three\" (0.95)",
+              "item": "beavis-and-butthead-complete",
+              "itemTitle": "Beavis and Butt-Head Complete Series (1992 - Present) [Final]",
+              "file": "Season 2 (1993) - E04 - Baby Makes Uh Three.mp4",
+              "name": "Season 2 (1993) - E04 - Baby Makes Uh Three",
+              "url": "https://archive.org/download/beavis-and-butthead-complete/Season%202%20(1993)%20-%20E04%20-%20Baby%20Makes%20Uh%20Three.mp4",
+              "seconds": 656,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 65
             }
           ]
         },
@@ -314,17 +378,29 @@
           "number": 5,
           "name": "Beware of the Butt",
           "airdate": "1993-05-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
+            "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
+            "file": "Beavis and Butt-Head (Project Buffcoat) S02E05 - Beware of the Butt.mp4",
+            "name": "Beavis and Butt-Head (Project Buffcoat) S02E05 - Beware of the Butt",
+            "url": "https://archive.org/download/beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction/Beavis%20and%20Butt-Head%20(Project%20Buffcoat)%20S02E05%20-%20Beware%20of%20the%20Butt.mp4",
+            "seconds": 668,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 68
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "At the Sideshow",
           "airdate": "1993-05-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
             "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
@@ -338,7 +414,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "beavis-butt-head-1992-97",
               "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -351,7 +427,7 @@
               "sizeMB": 78
             },
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
               "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
@@ -364,18 +440,17 @@
               "sizeMB": 69
             },
             {
-              "conf": 0.55,
+              "conf": 0.9,
               "why": "S/E in filename",
-              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-              "file": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Beavis and Butt-Head - 2x06 - En la feria [DVD+VHS by JP+ALCOHOLMAN+ XeTe].mp4",
-              "name": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Beavis and Butt-Head - 2x06 - En la feria [DVD+VHS by JP+ALCOHOLMAN+ XeTe]",
-              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Beavis%20and%20Butt-Head%20Serie%20(T0-11)%20(Ing-Esp)%2FTemporada%202%20%5B26-26%5D%20(1993)%2FBeavis%20and%20Butt-Head%20-%202x06%20-%20En%20la%20feria%20%5BDVD%2BVHS%20by%20JP%2BALCOHOLMAN%2B%20XeTe%5D.mp4",
-              "seconds": 802,
-              "format": "h.264",
+              "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
+              "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
+              "file": "Beavis and Butt-Head (Project Buffcoat) S02E06.2 - At the Sideshow (Golden Earring Version).ia.mp4",
+              "name": "Beavis and Butt-Head (Project Buffcoat) S02E06",
+              "url": "https://archive.org/download/beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction/Beavis%20and%20Butt-Head%20(Project%20Buffcoat)%20S02E06.2%20-%20At%20the%20Sideshow%20(Golden%20Earring%20Version).ia.mp4",
+              "seconds": 700,
+              "format": "h.264 IA",
               "playable": true,
-              "langRisk": true,
-              "sizeMB": 78
+              "sizeMB": 375
             }
           ]
         },
@@ -383,9 +458,9 @@
           "number": 7,
           "name": "Customers Suck",
           "airdate": "1993-05-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
             "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
@@ -403,9 +478,9 @@
           "number": 8,
           "name": "Sick",
           "airdate": "1993-05-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -418,6 +493,33 @@
             "sizeMB": 64
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
+              "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
+              "file": "Beavis and Butt-Head (Project Buffcoat) S02E08 - Sick (Dual Audio).mp4",
+              "name": "Beavis and Butt-Head (Project Buffcoat) S02E08 - Sick (Dual Audio)",
+              "url": "https://archive.org/download/beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction/Beavis%20and%20Butt-Head%20(Project%20Buffcoat)%20S02E08%20-%20Sick%20(Dual%20Audio).mp4",
+              "seconds": 695,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 394
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Sick\" (0.95)",
+              "item": "beavis-and-butthead-complete",
+              "itemTitle": "Beavis and Butt-Head Complete Series (1992 - Present) [Final]",
+              "file": "Season 2 (1993) - E08 - Sick.mp4",
+              "name": "Season 2 (1993) - E08 - Sick",
+              "url": "https://archive.org/download/beavis-and-butthead-complete/Season%202%20(1993)%20-%20E08%20-%20Sick.mp4",
+              "seconds": 643,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 64
+            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
@@ -438,9 +540,9 @@
           "number": 9,
           "name": "Home Improvement",
           "airdate": "1993-05-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
             "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
@@ -454,7 +556,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "beavis-butt-head-1992-97",
               "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -502,9 +604,9 @@
           "number": 12,
           "name": "At the Movies",
           "airdate": "1993-05-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
             "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
@@ -538,30 +640,57 @@
           "number": 15,
           "name": "The Butt-Head Experience",
           "airdate": "1993-06-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Beavis and Butt-Head - 2x15 - Experiencia Butt-Head [DVD+VHS by JP+ALCOHOLMAN+ XeTe].mp4",
-            "name": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Beavis and Butt-Head - 2x15 - Experiencia Butt-Head [DVD+VHS by JP+ALCOHOLMAN+ XeTe]",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Beavis%20and%20Butt-Head%20Serie%20(T0-11)%20(Ing-Esp)%2FTemporada%202%20%5B26-26%5D%20(1993)%2FBeavis%20and%20Butt-Head%20-%202x15%20-%20Experiencia%20Butt-Head%20%5BDVD%2BVHS%20by%20JP%2BALCOHOLMAN%2B%20XeTe%5D.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/02 Season 2 (1993)/S02E15 The Butt-Head Experience.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/02 Season 2 (1993)/S02E15 The Butt-Head Experience",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F02%20Season%202%20(1993)%2FS02E15%20The%20Butt-Head%20Experience.mp4",
             "seconds": 650,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 62
+            "sizeMB": 63
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
+              "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
+              "file": "Beavis and Butt-Head (Project Buffcoat) S02E15 - The Butt-Head Experience.mp4",
+              "name": "Beavis and Butt-Head (Project Buffcoat) S02E15 - The Butt-Head Experience",
+              "url": "https://archive.org/download/beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction/Beavis%20and%20Butt-Head%20(Project%20Buffcoat)%20S02E15%20-%20The%20Butt-Head%20Experience.mp4",
+              "seconds": 694,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 539
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Beavis and Butt-Head - 2x15 - Experiencia Butt-Head [DVD+VHS by JP+ALCOHOLMAN+ XeTe].mp4",
+              "name": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Beavis and Butt-Head - 2x15 - Experiencia Butt-Head [DVD+VHS by JP+ALCOHOLMAN+ XeTe]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Beavis%20and%20Butt-Head%20Serie%20(T0-11)%20(Ing-Esp)%2FTemporada%202%20%5B26-26%5D%20(1993)%2FBeavis%20and%20Butt-Head%20-%202x15%20-%20Experiencia%20Butt-Head%20%5BDVD%2BVHS%20by%20JP%2BALCOHOLMAN%2B%20XeTe%5D.mp4",
+              "seconds": 650,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 62
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Lawn & Garden",
           "airdate": "1993-06-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
             "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
@@ -575,7 +704,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "beavis-butt-head-1992-97",
               "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -607,9 +736,9 @@
           "number": 17,
           "name": "Stewart's House",
           "airdate": "1993-06-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
             "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
@@ -645,32 +774,32 @@
           "airdate": "1993-06-23",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Episodios Faltantes T2 (Inglés)/Beavis and Butt-Head - 2x20 - Babes R Us.mp4",
-            "name": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Episodios Faltantes T2 (Inglés)/Beavis and Butt-Head - 2x20 - Babes R Us",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Beavis%20and%20Butt-Head%20Serie%20(T0-11)%20(Ing-Esp)%2FTemporada%202%20%5B26-26%5D%20(1993)%2FEpisodios%20Faltantes%20T2%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%202x20%20-%20Babes%20R%20Us.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/02 Season 2 (1993)/S02E20 Babes 'R' Us.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/02 Season 2 (1993)/S02E20 Babes 'R' Us",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F02%20Season%202%20(1993)%2FS02E20%20Babes%20'R'%20Us.mp4",
             "seconds": 726,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 71
+            "sizeMB": 72
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
-              "item": "beavis-butt-head-1992-97",
-              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
-              "file": "Beavis and Butt-Head (1992 - 97)/02 Season 2 (1993)/S02E20 Babes 'R' Us.mp4",
-              "name": "Beavis and Butt-Head (1992 - 97)/02 Season 2 (1993)/S02E20 Babes 'R' Us",
-              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F02%20Season%202%20(1993)%2FS02E20%20Babes%20'R'%20Us.mp4",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Episodios Faltantes T2 (Inglés)/Beavis and Butt-Head - 2x20 - Babes R Us.mp4",
+              "name": "Beavis and Butt-Head Serie (T0-11) (Ing-Esp)/Temporada 2 [26-26] (1993)/Episodios Faltantes T2 (Inglés)/Beavis and Butt-Head - 2x20 - Babes R Us",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Beavis%20and%20Butt-Head%20Serie%20(T0-11)%20(Ing-Esp)%2FTemporada%202%20%5B26-26%5D%20(1993)%2FEpisodios%20Faltantes%20T2%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%202x20%20-%20Babes%20R%20Us.mp4",
               "seconds": 726,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 72
+              "langRisk": true,
+              "sizeMB": 71
             }
           ]
         },
@@ -678,9 +807,9 @@
           "number": 21,
           "name": "Yogurt's Cool",
           "airdate": "1993-06-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -721,9 +850,9 @@
           "number": 23,
           "name": "Sign Here",
           "airdate": "1993-07-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -756,9 +885,9 @@
           "number": 24,
           "name": "Washing the Dog",
           "airdate": "1993-07-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -791,9 +920,9 @@
           "number": 25,
           "name": "Friday Night",
           "airdate": "1993-07-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -826,9 +955,9 @@
           "number": 26,
           "name": "Be All You Can Be",
           "airdate": "1993-07-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -866,9 +995,9 @@
           "number": 1,
           "name": "Comedians",
           "airdate": "1993-09-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -882,8 +1011,8 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "301-comedians",
               "itemTitle": "Beavis & Butt-Head Comedians (Better quality)",
               "file": "301 comedians.mp4",
@@ -914,9 +1043,9 @@
           "number": 2,
           "name": "Car Wash",
           "airdate": "1993-09-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -963,9 +1092,9 @@
           "number": 3,
           "name": "Couch-Fishing",
           "airdate": "1993-09-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1000,32 +1129,32 @@
           "airdate": "1993-09-08",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 3 [31-31] (1993-1994)/Episodios Faltantes T3 (Inglés)/Beavis and Butt-Head - 3x04 - Incognito.mp4",
-            "name": "Temporada 3 [31-31] (1993-1994)/Episodios Faltantes T3 (Inglés)/Beavis and Butt-Head - 3x04 - Incognito",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FEpisodios%20Faltantes%20T3%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%203x04%20-%20Incognito.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E04 Incognito.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E04 Incognito",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E04%20Incognito.mp4",
             "seconds": 635,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 63
+            "sizeMB": 64
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
-              "item": "beavis-butt-head-1992-97",
-              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
-              "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E04 Incognito.mp4",
-              "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E04 Incognito",
-              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E04%20Incognito.mp4",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 3 [31-31] (1993-1994)/Episodios Faltantes T3 (Inglés)/Beavis and Butt-Head - 3x04 - Incognito.mp4",
+              "name": "Temporada 3 [31-31] (1993-1994)/Episodios Faltantes T3 (Inglés)/Beavis and Butt-Head - 3x04 - Incognito",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FEpisodios%20Faltantes%20T3%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%203x04%20-%20Incognito.mp4",
               "seconds": 635,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 64
+              "langRisk": true,
+              "sizeMB": 63
             }
           ]
         },
@@ -1041,66 +1170,130 @@
           "number": 6,
           "name": "Naked Colony",
           "airdate": "1993-09-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Naked Colony\" (1.00)",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E07 Naked Colony.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E07 Naked Colony",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E07%20Naked%20Colony.mp4",
+            "seconds": 631,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 64
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Tornado",
           "airdate": "1993-09-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x07 - Colonia nudista [DVD+VHS by JP+ALCOHOLMAN+XeTe].mp4",
-            "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x07 - Colonia nudista [DVD+VHS by JP+ALCOHOLMAN+XeTe]",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x07%20-%20Colonia%20nudista%20%5BDVD%2BVHS%20by%20JP%2BALCOHOLMAN%2BXeTe%5D.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E07 Naked Colony.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E07 Naked Colony",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E07%20Naked%20Colony.mp4",
             "seconds": 631,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 61
+            "sizeMB": 64
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x07 - Colonia nudista [DVD+VHS by JP+ALCOHOLMAN+XeTe].mp4",
+              "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x07 - Colonia nudista [DVD+VHS by JP+ALCOHOLMAN+XeTe]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x07%20-%20Colonia%20nudista%20%5BDVD%2BVHS%20by%20JP%2BALCOHOLMAN%2BXeTe%5D.mp4",
+              "seconds": 631,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 61
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Cleaning House",
           "airdate": "1993-09-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Cleaning House\" (1.00)",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E09 Cleaning House.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E09 Cleaning House",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E09%20Cleaning%20House.mp4",
+            "seconds": 658,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 66
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "Scratch 'N' Win",
           "airdate": "1993-09-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x09 - Limpiando la casa [DVD+VHS by JP y XeTe].mp4",
-            "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x09 - Limpiando la casa [DVD+VHS by JP y XeTe]",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x09%20-%20Limpiando%20la%20casa%20%5BDVD%2BVHS%20by%20JP%20y%20XeTe%5D.mp4",
-            "seconds": 657,
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E09 Cleaning House.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E09 Cleaning House",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E09%20Cleaning%20House.mp4",
+            "seconds": 658,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 64
+            "sizeMB": 66
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x09 - Limpiando la casa [DVD+VHS by JP y XeTe].mp4",
+              "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x09 - Limpiando la casa [DVD+VHS by JP y XeTe]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x09%20-%20Limpiando%20la%20casa%20%5BDVD%2BVHS%20by%20JP%20y%20XeTe%5D.mp4",
+              "seconds": 657,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 64
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Scared Straight",
           "airdate": "1993-09-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Scared Straight\" (1.00)",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E11 Scared Straight.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E11 Scared Straight",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E11%20Scared%20Straight.mp4",
+            "seconds": 767,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 77
+          },
           "alternates": []
         },
         {
@@ -1136,58 +1329,123 @@
           "number": 13,
           "name": "Sperm Bank",
           "airdate": "1993-10-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sperm Bank\" (1.00)",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E14 Sperm Bank.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E14 Sperm Bank",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E14%20Sperm%20Bank.mp4",
+            "seconds": 639,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "Buff 'N' Stuff",
           "airdate": "1993-10-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x14 - Banco de esperma [DVD+VHS by JP+JUANITOPOWER y XeTe].mp4",
-            "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x14 - Banco de esperma [DVD+VHS by JP+JUANITOPOWER y XeTe]",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x14%20-%20Banco%20de%20esperma%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%20y%20XeTe%5D.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E14 Sperm Bank.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E14 Sperm Bank",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E14%20Sperm%20Bank.mp4",
             "seconds": 639,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 62
+            "sizeMB": 65
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Buff 'N' Stuff\" (1.00)",
+              "item": "beavis-butt-head-1992-97",
+              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+              "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E15 Buff 'n' Stuff.mp4",
+              "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E15 Buff 'n' Stuff",
+              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E15%20Buff%20'n'%20Stuff.mp4",
+              "seconds": 644,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 66
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x14 - Banco de esperma [DVD+VHS by JP+JUANITOPOWER y XeTe].mp4",
+              "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x14 - Banco de esperma [DVD+VHS by JP+JUANITOPOWER y XeTe]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x14%20-%20Banco%20de%20esperma%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%20y%20XeTe%5D.mp4",
+              "seconds": 639,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 62
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Citizen Butt-Head",
           "airdate": "1993-10-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 3 [31-31] (1993-1994)/Episodios Faltantes T3 (Inglés)/Beavis and Butt-Head - 3x15 - Buff 'N' Stuff.mp4",
-            "name": "Temporada 3 [31-31] (1993-1994)/Episodios Faltantes T3 (Inglés)/Beavis and Butt-Head - 3x15 - Buff 'N' Stuff",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FEpisodios%20Faltantes%20T3%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%203x15%20-%20Buff%20'N'%20Stuff.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E15 Buff 'n' Stuff.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E15 Buff 'n' Stuff",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E15%20Buff%20'n'%20Stuff.mp4",
             "seconds": 644,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 65
+            "sizeMB": 66
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 3 [31-31] (1993-1994)/Episodios Faltantes T3 (Inglés)/Beavis and Butt-Head - 3x15 - Buff 'N' Stuff.mp4",
+              "name": "Temporada 3 [31-31] (1993-1994)/Episodios Faltantes T3 (Inglés)/Beavis and Butt-Head - 3x15 - Buff 'N' Stuff",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FEpisodios%20Faltantes%20T3%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%203x15%20-%20Buff%20'N'%20Stuff.mp4",
+              "seconds": 644,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 65
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Politically Correct",
           "airdate": "1993-10-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Politically Correct\" (1.00)",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E18 Politically Correct.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E18 Politically Correct",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E18%20Politically%20Correct.mp4",
+            "seconds": 633,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 66
+          },
           "alternates": []
         },
         {
@@ -1209,139 +1467,364 @@
             "langRisk": true,
             "sizeMB": 66
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Ball Breakers\" (1.00)",
+              "item": "beavis-butt-head-1992-97",
+              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+              "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E19 Ball Breakers.mp4",
+              "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E19 Ball Breakers",
+              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E19%20Ball%20Breakers.mp4",
+              "seconds": 657,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 67
+            }
+          ]
         },
         {
           "number": 18,
           "name": "Beavis and Butt-Head Meet God",
           "airdate": "1993-10-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x18 - Politicamente correcto [DVD+VHS by JP+JUANITOPOWER y XeTe].mp4",
-            "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x18 - Politicamente correcto [DVD+VHS by JP+JUANITOPOWER y XeTe]",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x18%20-%20Politicamente%20correcto%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%20y%20XeTe%5D.mp4",
-            "seconds": 632,
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E18 Politically Correct.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E18 Politically Correct",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E18%20Politically%20Correct.mp4",
+            "seconds": 633,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 61
+            "sizeMB": 66
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x18 - Politicamente correcto [DVD+VHS by JP+JUANITOPOWER y XeTe].mp4",
+              "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x18 - Politicamente correcto [DVD+VHS by JP+JUANITOPOWER y XeTe]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x18%20-%20Politicamente%20correcto%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%20y%20XeTe%5D.mp4",
+              "seconds": 632,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 61
+            }
+          ]
         },
         {
           "number": 19,
           "name": "True Crime",
           "airdate": "1993-11-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E19 Ball Breakers.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E19 Ball Breakers",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E19%20Ball%20Breakers.mp4",
+            "seconds": 657,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 67
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"True Crime\" (1.00)",
+              "item": "beavis-butt-head-1992-97",
+              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+              "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E22 True Crime.mp4",
+              "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E22 True Crime",
+              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E22%20True%20Crime.mp4",
+              "seconds": 647,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 62
+            }
+          ]
         },
         {
           "number": 20,
           "name": "The Trial",
           "airdate": "1993-11-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Trial\" (1.00)",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E23 The Trial.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E23 The Trial",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E23%20The%20Trial.mp4",
+            "seconds": 661,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 67
+          },
           "alternates": []
         },
         {
           "number": 21,
           "name": "The Crush",
           "airdate": "1993-11-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Crush\" (1.00)",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E24 The Crush.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E24 The Crush",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E24%20The%20Crush.mp4",
+            "seconds": 701,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 70
+          },
           "alternates": []
         },
         {
           "number": 22,
           "name": "Plate Frisbee",
           "airdate": "1993-11-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x22 - True crime [DVD+VHS by Grox + JP].mp4",
-            "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x22 - True crime [DVD+VHS by Grox + JP]",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x22%20-%20True%20crime%20%5BDVD%2BVHS%20by%20Grox%20%2B%20JP%5D.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E22 True Crime.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E22 True Crime",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E22%20True%20Crime.mp4",
             "seconds": 647,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 63
+            "sizeMB": 62
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Plate Frisbee\" (1.00)",
+              "item": "beavis-butt-head-1992-97",
+              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+              "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E25 Plate Frisbee.mp4",
+              "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E25 Plate Frisbee",
+              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E25%20Plate%20Frisbee.mp4",
+              "seconds": 640,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 64
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x22 - True crime [DVD+VHS by Grox + JP].mp4",
+              "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x22 - True crime [DVD+VHS by Grox + JP]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x22%20-%20True%20crime%20%5BDVD%2BVHS%20by%20Grox%20%2B%20JP%5D.mp4",
+              "seconds": 647,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 63
+            }
+          ]
         },
         {
           "number": 23,
           "name": "Canoe",
           "airdate": "1993-11-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x23 - El juicio [DVD+VHS by JP+JUANITOPOWER+ XeTe].mp4",
-            "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x23 - El juicio [DVD+VHS by JP+JUANITOPOWER+ XeTe]",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x23%20-%20El%20juicio%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%2B%20XeTe%5D.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E23 The Trial.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E23 The Trial",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E23%20The%20Trial.mp4",
             "seconds": 661,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 63
+            "sizeMB": 67
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Canoe\" (1.00)",
+              "item": "beavis-butt-head-1992-97",
+              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+              "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E26 Canoe.mp4",
+              "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E26 Canoe",
+              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E26%20Canoe.mp4",
+              "seconds": 689,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 70
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x23 - El juicio [DVD+VHS by JP+JUANITOPOWER+ XeTe].mp4",
+              "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x23 - El juicio [DVD+VHS by JP+JUANITOPOWER+ XeTe]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x23%20-%20El%20juicio%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%2B%20XeTe%5D.mp4",
+              "seconds": 661,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 63
+            }
+          ]
         },
         {
           "number": 24,
           "name": "Young, Gifted & Crude",
           "airdate": "1993-11-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E24 The Crush.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E24 The Crush",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E24%20The%20Crush.mp4",
+            "seconds": 701,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 70
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Young, Gifted & Crude\" (1.00)",
+              "item": "beavis-butt-head-1992-97",
+              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+              "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E27 Young, Gifted, & Crude.mp4",
+              "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E27 Young, Gifted, & Crude",
+              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E27%20Young%2C%20Gifted%2C%20%26%20Crude.mp4",
+              "seconds": 635,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 61
+            }
+          ]
         },
         {
           "number": 25,
           "name": "Foreign Exchange",
           "airdate": "1993-12-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E25 Plate Frisbee.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E25 Plate Frisbee",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E25%20Plate%20Frisbee.mp4",
+            "seconds": 640,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 64
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Foreign Exchange\" (1.00)",
+              "item": "beavis-butt-head-1992-97",
+              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+              "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E28 Foreign Exchange.mp4",
+              "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E28 Foreign Exchange",
+              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E28%20Foreign%20Exchange.mp4",
+              "seconds": 667,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 66
+            }
+          ]
         },
         {
           "number": 27,
           "name": "Closing Time",
           "airdate": "1993-12-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E27 Young, Gifted, & Crude.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E27 Young, Gifted, & Crude",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E27%20Young%2C%20Gifted%2C%20%26%20Crude.mp4",
+            "seconds": 635,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 61
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 3 [31-31] (1993-1994)/Episodios Faltantes T3 (Inglés)/Beavis and Butt-Head - 3x27 - Young, Gifted & Crude.mp4",
+              "name": "Temporada 3 [31-31] (1993-1994)/Episodios Faltantes T3 (Inglés)/Beavis and Butt-Head - 3x27 - Young, Gifted & Crude",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FEpisodios%20Faltantes%20T3%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%203x27%20-%20Young%2C%20Gifted%20%26%20Crude.mp4",
+              "seconds": 635,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 61
+            }
+          ]
         },
         {
           "number": 28,
           "name": "Most Wanted",
           "airdate": "1994-03-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x28 - Intercambio de estudiantes [DVD+VHS by Grox + JP].mp4",
-            "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x28 - Intercambio de estudiantes [DVD+VHS by Grox + JP]",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x28%20-%20Intercambio%20de%20estudiantes%20%5BDVD%2BVHS%20by%20Grox%20%2B%20JP%5D.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E28 Foreign Exchange.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/03 Season 3 (1993 - 94)/S03E28 Foreign Exchange",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F03%20Season%203%20(1993%20-%2094)%2FS03E28%20Foreign%20Exchange.mp4",
             "seconds": 667,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 65
+            "sizeMB": 66
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x28 - Intercambio de estudiantes [DVD+VHS by Grox + JP].mp4",
+              "name": "Temporada 3 [31-31] (1993-1994)/Beavis and Butt-Head - 3x28 - Intercambio de estudiantes [DVD+VHS by Grox + JP]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%203%20%5B31-31%5D%20(1993-1994)%2FBeavis%20and%20Butt-Head%20-%203x28%20-%20Intercambio%20de%20estudiantes%20%5BDVD%2BVHS%20by%20Grox%20%2B%20JP%5D.mp4",
+              "seconds": 667,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 65
+            }
+          ]
         }
       ]
     },
@@ -1354,32 +1837,32 @@
           "airdate": "1994-03-14",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 4 [32-32] (1994)/Episodios Faltantes T4 (Inglés)/Beavis and Butt-Head - 4x01 - Wall Of Youth.mp4",
-            "name": "Temporada 4 [32-32] (1994)/Episodios Faltantes T4 (Inglés)/Beavis and Butt-Head - 4x01 - Wall Of Youth",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FEpisodios%20Faltantes%20T4%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%204x01%20-%20Wall%20Of%20Youth.mp4",
-            "seconds": 691,
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E01 Wall of Youth.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E01 Wall of Youth",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F04%20Season%204%20(1994)%2FS04E01%20Wall%20of%20Youth.mp4",
+            "seconds": 662,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 69
+            "sizeMB": 67
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
-              "item": "beavis-butt-head-1992-97",
-              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
-              "file": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E01 Wall of Youth.mp4",
-              "name": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E01 Wall of Youth",
-              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F04%20Season%204%20(1994)%2FS04E01%20Wall%20of%20Youth.mp4",
-              "seconds": 662,
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 4 [32-32] (1994)/Episodios Faltantes T4 (Inglés)/Beavis and Butt-Head - 4x01 - Wall Of Youth.mp4",
+              "name": "Temporada 4 [32-32] (1994)/Episodios Faltantes T4 (Inglés)/Beavis and Butt-Head - 4x01 - Wall Of Youth",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FEpisodios%20Faltantes%20T4%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%204x01%20-%20Wall%20Of%20Youth.mp4",
+              "seconds": 691,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 67
+              "langRisk": true,
+              "sizeMB": 69
             }
           ]
         },
@@ -1389,32 +1872,32 @@
           "airdate": "1994-03-15",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 4 [32-32] (1994)/Episodios Faltantes T4 (Inglés)/Beavis and Butt-Head - 4x02 - Cow Tipping.mp4",
-            "name": "Temporada 4 [32-32] (1994)/Episodios Faltantes T4 (Inglés)/Beavis and Butt-Head - 4x02 - Cow Tipping",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FEpisodios%20Faltantes%20T4%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%204x02%20-%20Cow%20Tipping.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E02 Cow Tipping.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E02 Cow Tipping",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F04%20Season%204%20(1994)%2FS04E02%20Cow%20Tipping.mp4",
             "seconds": 649,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 62
+            "sizeMB": 63
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
-              "item": "beavis-butt-head-1992-97",
-              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
-              "file": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E02 Cow Tipping.mp4",
-              "name": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E02 Cow Tipping",
-              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F04%20Season%204%20(1994)%2FS04E02%20Cow%20Tipping.mp4",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 4 [32-32] (1994)/Episodios Faltantes T4 (Inglés)/Beavis and Butt-Head - 4x02 - Cow Tipping.mp4",
+              "name": "Temporada 4 [32-32] (1994)/Episodios Faltantes T4 (Inglés)/Beavis and Butt-Head - 4x02 - Cow Tipping",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FEpisodios%20Faltantes%20T4%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%204x02%20-%20Cow%20Tipping.mp4",
               "seconds": 649,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 63
+              "langRisk": true,
+              "sizeMB": 62
             }
           ]
         },
@@ -1424,32 +1907,32 @@
           "airdate": "1994-03-17",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 4 [32-32] (1994)/Episodios Faltantes T4 (Inglés)/Beavis and Butt-Head - 4x03 - Trouble Urinating.mp4",
-            "name": "Temporada 4 [32-32] (1994)/Episodios Faltantes T4 (Inglés)/Beavis and Butt-Head - 4x03 - Trouble Urinating",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FEpisodios%20Faltantes%20T4%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%204x03%20-%20Trouble%20Urinating.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E03 Trouble Urinating.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E03 Trouble Urinating",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F04%20Season%204%20(1994)%2FS04E03%20Trouble%20Urinating.mp4",
             "seconds": 656,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 65
+            "sizeMB": 66
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
-              "item": "beavis-butt-head-1992-97",
-              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
-              "file": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E03 Trouble Urinating.mp4",
-              "name": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E03 Trouble Urinating",
-              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F04%20Season%204%20(1994)%2FS04E03%20Trouble%20Urinating.mp4",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 4 [32-32] (1994)/Episodios Faltantes T4 (Inglés)/Beavis and Butt-Head - 4x03 - Trouble Urinating.mp4",
+              "name": "Temporada 4 [32-32] (1994)/Episodios Faltantes T4 (Inglés)/Beavis and Butt-Head - 4x03 - Trouble Urinating",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FEpisodios%20Faltantes%20T4%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%204x03%20-%20Trouble%20Urinating.mp4",
               "seconds": 656,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 66
+              "langRisk": true,
+              "sizeMB": 65
             }
           ]
         },
@@ -1457,9 +1940,9 @@
           "number": 4,
           "name": "Rabies Scare",
           "airdate": "1994-03-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1492,9 +1975,9 @@
           "number": 5,
           "name": "They're Coming to Take Me Away, Huh Huh",
           "airdate": "1994-03-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1527,9 +2010,9 @@
           "number": 6,
           "name": "Jump!",
           "airdate": "1994-03-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1562,9 +2045,9 @@
           "number": 7,
           "name": "Pumping Iron",
           "airdate": "1994-03-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1597,9 +2080,9 @@
           "number": 8,
           "name": "Let's Clean It Up",
           "airdate": "1994-03-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1632,30 +2115,44 @@
           "number": 9,
           "name": "1-900-BEAVIS",
           "airdate": "1994-04-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x09 - Linea caliente [DVD+VHS by JP+JUANITOPOWER+XeTe].mp4",
-            "name": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x09 - Linea caliente [DVD+VHS by JP+JUANITOPOWER+XeTe]",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FBeavis%20and%20Butt-Head%20-%204x09%20-%20Linea%20caliente%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%2BXeTe%5D.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E09 1-900-BEAVIS.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E09 1-900-BEAVIS",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F04%20Season%204%20(1994)%2FS04E09%201-900-BEAVIS.mp4",
             "seconds": 640,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 61
+            "sizeMB": 63
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x09 - Linea caliente [DVD+VHS by JP+JUANITOPOWER+XeTe].mp4",
+              "name": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x09 - Linea caliente [DVD+VHS by JP+JUANITOPOWER+XeTe]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FBeavis%20and%20Butt-Head%20-%204x09%20-%20Linea%20caliente%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%2BXeTe%5D.mp4",
+              "seconds": 640,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 61
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Water Safety",
           "airdate": "1994-04-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1688,9 +2185,9 @@
           "number": 11,
           "name": "Blackout!",
           "airdate": "1994-04-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1723,8 +2220,20 @@
           "number": 12,
           "name": "Late Night with Butt-Head",
           "airdate": "1994-04-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E12 Late Night with Butt-Head.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E12 Late Night with Butt-Head",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F04%20Season%204%20(1994)%2FS04E12%20Late%20Night%20with%20Butt-Head.mp4",
+            "seconds": 645,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65
+          },
           "alternates": []
         },
         {
@@ -1739,9 +2248,9 @@
           "number": 14,
           "name": "Pool Toys",
           "airdate": "1994-04-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1782,30 +2291,44 @@
           "number": 16,
           "name": "Beavis and Butt-Head's Island",
           "airdate": "1994-04-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x16 - La isla de Beavis y Butt-Head [DVD+VHS by JP+JUANITOPOWER+XeTe].mp4",
-            "name": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x16 - La isla de Beavis y Butt-Head [DVD+VHS by JP+JUANITOPOWER+XeTe]",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FBeavis%20and%20Butt-Head%20-%204x16%20-%20La%20isla%20de%20Beavis%20y%20Butt-Head%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%2BXeTe%5D.mp4",
-            "seconds": 641,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E16 Beavis and Butt-Head's Island.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E16 Beavis and Butt-Head's Island",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F04%20Season%204%20(1994)%2FS04E16%20Beavis%20and%20Butt-Head's%20Island.mp4",
+            "seconds": 642,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 62
+            "sizeMB": 65
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x16 - La isla de Beavis y Butt-Head [DVD+VHS by JP+JUANITOPOWER+XeTe].mp4",
+              "name": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x16 - La isla de Beavis y Butt-Head [DVD+VHS by JP+JUANITOPOWER+XeTe]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FBeavis%20and%20Butt-Head%20-%204x16%20-%20La%20isla%20de%20Beavis%20y%20Butt-Head%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%2BXeTe%5D.mp4",
+              "seconds": 641,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 62
+            }
+          ]
         },
         {
           "number": 17,
           "name": "Figure Drawing",
           "airdate": "1994-05-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1838,9 +2361,9 @@
           "number": 18,
           "name": "Date Bait",
           "airdate": "1994-05-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1873,22 +2396,36 @@
           "number": 19,
           "name": "Butt Is It Art?",
           "airdate": "1994-05-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x19 - ¿El culo es un arte [DVD+VHS by JP+JUANITOPOWER+XeTe].mp4",
-            "name": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x19 - ¿El culo es un arte [DVD+VHS by JP+JUANITOPOWER+XeTe]",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FBeavis%20and%20Butt-Head%20-%204x19%20-%20%C2%BFEl%20culo%20es%20un%20arte%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%2BXeTe%5D.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E19 Butt Is It Art.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/04 Season 4 (1994)/S04E19 Butt Is It Art",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F04%20Season%204%20(1994)%2FS04E19%20Butt%20Is%20It%20Art.mp4",
             "seconds": 645,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 61
+            "sizeMB": 65
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x19 - ¿El culo es un arte [DVD+VHS by JP+JUANITOPOWER+XeTe].mp4",
+              "name": "Temporada 4 [32-32] (1994)/Beavis and Butt-Head - 4x19 - ¿El culo es un arte [DVD+VHS by JP+JUANITOPOWER+XeTe]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%204%20%5B32-32%5D%20(1994)%2FBeavis%20and%20Butt-Head%20-%204x19%20-%20%C2%BFEl%20culo%20es%20un%20arte%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%2BXeTe%5D.mp4",
+              "seconds": 645,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 61
+            }
+          ]
         },
         {
           "number": 20,
@@ -1902,9 +2439,9 @@
           "number": 21,
           "name": "Manners Suck",
           "airdate": "1994-05-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1937,9 +2474,9 @@
           "number": 22,
           "name": "The Pipe of Doom",
           "airdate": "1994-05-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -1980,9 +2517,9 @@
           "number": 24,
           "name": "Mr. Anderson's Balls",
           "airdate": "1994-07-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2023,9 +2560,9 @@
           "number": 26,
           "name": "Teen Talk",
           "airdate": "1994-07-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2058,9 +2595,9 @@
           "number": 27,
           "name": "Crisis Line",
           "airdate": "1994-07-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2093,9 +2630,9 @@
           "number": 28,
           "name": "Vs. the Vending Machine",
           "airdate": "1994-07-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2113,9 +2650,9 @@
           "number": 29,
           "name": "Generation in Crisis",
           "airdate": "1994-07-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2148,9 +2685,9 @@
           "number": 30,
           "name": "Radio Sweethearts",
           "airdate": "1994-07-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2183,9 +2720,9 @@
           "number": 31,
           "name": "The Great Cornholio",
           "airdate": "1994-07-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2218,9 +2755,9 @@
           "number": 32,
           "name": "Liar! Liar!",
           "airdate": "1994-07-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2258,29 +2795,17 @@
           "number": 1,
           "name": "Held Back",
           "airdate": "1994-10-31",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Held Back\" (0.95)",
-            "item": "beavis-and-butt-head-held-back",
-            "itemTitle": "Beavis & Butt-Head on MTV2 July 2005",
-            "file": "Beavis and Butt-head Held Back.mp4",
-            "name": "Beavis and Butt-head Held Back",
-            "url": "https://archive.org/download/beavis-and-butt-head-held-back/Beavis%20and%20Butt-head%20Held%20Back.mp4",
-            "seconds": 879,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 284
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Killing Time",
           "airdate": "1994-10-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2337,9 +2862,9 @@
           "number": 6,
           "name": "Hard Sell",
           "airdate": "1994-11-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2372,9 +2897,9 @@
           "number": 7,
           "name": "Walkathon",
           "airdate": "1994-12-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2407,9 +2932,9 @@
           "number": 8,
           "name": "Temporary Insanity",
           "airdate": "1994-12-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2442,9 +2967,9 @@
           "number": 9,
           "name": "Dude, a Reward",
           "airdate": "1994-12-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2485,9 +3010,9 @@
           "number": 11,
           "name": "Career Day",
           "airdate": "1994-12-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2520,9 +3045,9 @@
           "number": 12,
           "name": "Plastic Surgin'",
           "airdate": "1994-12-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2555,9 +3080,9 @@
           "number": 13,
           "name": "Take a Number",
           "airdate": "1994-12-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2590,9 +3115,9 @@
           "number": 14,
           "name": "Beaverly Buttbillies",
           "airdate": "1994-12-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2633,9 +3158,9 @@
           "number": 16,
           "name": "Stewart Moves Away",
           "airdate": "1995-01-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2653,9 +3178,9 @@
           "number": 17,
           "name": "Top O' the Mountain",
           "airdate": "1995-01-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2688,9 +3213,9 @@
           "number": 18,
           "name": "Party",
           "airdate": "1995-01-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2723,9 +3248,9 @@
           "number": 19,
           "name": "Wet Behind the Rears",
           "airdate": "1995-01-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2758,9 +3283,9 @@
           "number": 20,
           "name": "Bad Dog",
           "airdate": "1995-02-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2801,9 +3326,9 @@
           "number": 22,
           "name": "Dream On",
           "airdate": "1995-02-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2816,6 +3341,19 @@
             "sizeMB": 65
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Dream On\" (0.95)",
+              "item": "beavis-butt-head-1992-97",
+              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+              "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E28 I Dream of Beavis.mp4",
+              "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E28 I Dream of Beavis",
+              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E28%20I%20Dream%20of%20Beavis.mp4",
+              "seconds": 639,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 65
+            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
@@ -2836,9 +3374,9 @@
           "number": 23,
           "name": "Candy Sale",
           "airdate": "1995-04-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2871,9 +3409,9 @@
           "number": 24,
           "name": "Animation Sucks",
           "airdate": "1995-04-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2910,29 +3448,29 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "beavis-and-butthead-s-05-e-25-whats-the-deal",
-            "itemTitle": "Beavis and Butthead S05E25 What's the Deal",
-            "file": "Beavis and Butthead S05E25 What's the Deal.mp4",
-            "name": "Beavis and Butthead S05E25 What's the Deal",
-            "url": "https://archive.org/download/beavis-and-butthead-s-05-e-25-whats-the-deal/Beavis%20and%20Butthead%20S05E25%20What's%20the%20Deal.mp4",
-            "seconds": 656,
-            "format": "MPEG4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E25 What's the Deal.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E25 What's the Deal",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E25%20What's%20the%20Deal.mp4",
+            "seconds": 635,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 17
+            "sizeMB": 63
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "beavis-butt-head-1992-97",
-              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
-              "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E25 What's the Deal.mp4",
-              "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E25 What's the Deal",
-              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E25%20What's%20the%20Deal.mp4",
-              "seconds": 635,
-              "format": "h.264",
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "beavis-and-butthead-s-05-e-25-whats-the-deal",
+              "itemTitle": "Beavis and Butthead S05E25 What's the Deal",
+              "file": "Beavis and Butthead S05E25 What's the Deal.mp4",
+              "name": "Beavis and Butthead S05E25 What's the Deal",
+              "url": "https://archive.org/download/beavis-and-butthead-s-05-e-25-whats-the-deal/Beavis%20and%20Butthead%20S05E25%20What's%20the%20Deal.mp4",
+              "seconds": 656,
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 63
+              "sizeMB": 17
             },
             {
               "conf": 0.55,
@@ -2954,9 +3492,9 @@
           "number": 26,
           "name": "The History of Women",
           "airdate": "1995-06-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -2976,32 +3514,32 @@
           "airdate": "1995-06-06",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x27 - To The Rescue.mp4",
-            "name": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x27 - To The Rescue",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%205%20%5B50-50%5D%20(1994-1995)%2FEpisodios%20Faltantes%20T5%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%205x27%20-%20To%20The%20Rescue.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E27 To the Rescue.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E27 To the Rescue",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E27%20To%20the%20Rescue.mp4",
             "seconds": 634,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 62
+            "sizeMB": 64
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
-              "item": "beavis-butt-head-1992-97",
-              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
-              "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E27 To the Rescue.mp4",
-              "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E27 To the Rescue",
-              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E27%20To%20the%20Rescue.mp4",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x27 - To The Rescue.mp4",
+              "name": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x27 - To The Rescue",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%205%20%5B50-50%5D%20(1994-1995)%2FEpisodios%20Faltantes%20T5%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%205x27%20-%20To%20The%20Rescue.mp4",
               "seconds": 634,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 64
+              "langRisk": true,
+              "sizeMB": 62
             }
           ]
         },
@@ -3009,17 +3547,44 @@
           "number": 28,
           "name": "I Dream of Beavis",
           "airdate": "1995-06-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E28 I Dream of Beavis.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E28 I Dream of Beavis",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E28%20I%20Dream%20of%20Beavis.mp4",
+            "seconds": 639,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 65
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 5 [50-50] (1994-1995)/Beavis and Butt-Head - 5x28 - Sueño con Beavis [DVD+VHS by JP+JUANITOPOWER].mp4",
+              "name": "Temporada 5 [50-50] (1994-1995)/Beavis and Butt-Head - 5x28 - Sueño con Beavis [DVD+VHS by JP+JUANITOPOWER]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%205%20%5B50-50%5D%20(1994-1995)%2FBeavis%20and%20Butt-Head%20-%205x28%20-%20Sue%C3%B1o%20con%20Beavis%20%5BDVD%2BVHS%20by%20JP%2BJUANITOPOWER%5D.mp4",
+              "seconds": 639,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 61
+            }
+          ]
         },
         {
           "number": 29,
           "name": "Pregnant Pause",
           "airdate": "1995-06-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3052,9 +3617,9 @@
           "number": 30,
           "name": "Here Comes the Bride's Butt",
           "airdate": "1995-06-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3089,32 +3654,32 @@
           "airdate": "1995-07-10",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x31 - Screamers.mp4",
-            "name": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x31 - Screamers",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%205%20%5B50-50%5D%20(1994-1995)%2FEpisodios%20Faltantes%20T5%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%205x31%20-%20Screamers.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E31 Screamers.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E31 Screamers",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E31%20Screamers.mp4",
             "seconds": 647,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 64
+            "sizeMB": 65
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
-              "item": "beavis-butt-head-1992-97",
-              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
-              "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E31 Screamers.mp4",
-              "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E31 Screamers",
-              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E31%20Screamers.mp4",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x31 - Screamers.mp4",
+              "name": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x31 - Screamers",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%205%20%5B50-50%5D%20(1994-1995)%2FEpisodios%20Faltantes%20T5%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%205x31%20-%20Screamers.mp4",
               "seconds": 647,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 65
+              "langRisk": true,
+              "sizeMB": 64
             }
           ]
         },
@@ -3122,9 +3687,9 @@
           "number": 32,
           "name": "Beavis, Can You Spare a Dime?",
           "airdate": "1995-07-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3159,32 +3724,32 @@
           "airdate": "1995-07-11",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x33 - Skin Trade.mp4",
-            "name": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x33 - Skin Trade",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%205%20%5B50-50%5D%20(1994-1995)%2FEpisodios%20Faltantes%20T5%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%205x33%20-%20Skin%20Trade.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E33 Skin Trade.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E33 Skin Trade",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E33%20Skin%20Trade.mp4",
             "seconds": 637,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 63
+            "sizeMB": 65
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
-              "item": "beavis-butt-head-1992-97",
-              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
-              "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E33 Skin Trade.mp4",
-              "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E33 Skin Trade",
-              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E33%20Skin%20Trade.mp4",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x33 - Skin Trade.mp4",
+              "name": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x33 - Skin Trade",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%205%20%5B50-50%5D%20(1994-1995)%2FEpisodios%20Faltantes%20T5%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%205x33%20-%20Skin%20Trade.mp4",
               "seconds": 637,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 65
+              "langRisk": true,
+              "sizeMB": 63
             }
           ]
         },
@@ -3192,9 +3757,9 @@
           "number": 34,
           "name": "Oil Change",
           "airdate": "1995-07-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3227,9 +3792,9 @@
           "number": 35,
           "name": "Buttniks",
           "airdate": "1995-07-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3247,9 +3812,9 @@
           "number": 36,
           "name": "Bang the Drum Slowly, Dumbass",
           "airdate": "1995-08-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3267,9 +3832,9 @@
           "number": 37,
           "name": "Another Friday Night",
           "airdate": "1995-08-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3287,9 +3852,9 @@
           "number": 38,
           "name": "Tired",
           "airdate": "1995-08-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3307,9 +3872,9 @@
           "number": 39,
           "name": "Close Encounters",
           "airdate": "1995-08-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3327,9 +3892,9 @@
           "number": 40,
           "name": "Womyn",
           "airdate": "1995-08-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3347,9 +3912,9 @@
           "number": 41,
           "name": "Premature Evacuation",
           "airdate": "1995-09-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3367,9 +3932,9 @@
           "number": 42,
           "name": "Whiplash",
           "airdate": "1995-09-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3387,9 +3952,9 @@
           "number": 43,
           "name": "Spare Me",
           "airdate": "1995-09-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3415,9 +3980,9 @@
           "number": 45,
           "name": "Murder Site",
           "airdate": "1995-09-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3435,9 +4000,9 @@
           "number": 46,
           "name": "Spanish Fly",
           "airdate": "1995-10-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3455,9 +4020,9 @@
           "number": 47,
           "name": "Sexual Harrassment",
           "airdate": "1995-10-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3475,9 +4040,9 @@
           "number": 48,
           "name": "Bus Trip",
           "airdate": "1995-10-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3495,9 +4060,9 @@
           "number": 49,
           "name": "Green Thumbs",
           "airdate": "1995-10-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3517,32 +4082,32 @@
           "airdate": "1995-10-12",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
-            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
-            "file": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x50 - Steamroller.mp4",
-            "name": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x50 - Steamroller",
-            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%205%20%5B50-50%5D%20(1994-1995)%2FEpisodios%20Faltantes%20T5%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%205x50%20-%20Steamroller.mp4",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E50 Steamroller.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E50 Steamroller",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E50%20Steamroller.mp4",
             "seconds": 644,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 63
+            "sizeMB": 64
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
-              "item": "beavis-butt-head-1992-97",
-              "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
-              "file": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E50 Steamroller.mp4",
-              "name": "Beavis and Butt-Head (1992 - 97)/05 Season 5 (1994 - 95)/S05E50 Steamroller",
-              "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F05%20Season%205%20(1994%20-%2095)%2FS05E50%20Steamroller.mp4",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x50 - Steamroller.mp4",
+              "name": "Temporada 5 [50-50] (1994-1995)/Episodios Faltantes T5 (Inglés)/Beavis and Butt-Head - 5x50 - Steamroller",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%205%20%5B50-50%5D%20(1994-1995)%2FEpisodios%20Faltantes%20T5%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%205x50%20-%20Steamroller.mp4",
               "seconds": 644,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 64
+              "langRisk": true,
+              "sizeMB": 63
             }
           ]
         }
@@ -3555,17 +4120,30 @@
           "number": 1,
           "name": "Bungholio - Lord of the Harvest",
           "airdate": "1995-10-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+            "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+            "file": "Temporada 6 [20-20] (1995-1996)/Beavis and Butt-Head - 6x01 - Bungholio señor de la cosecha  [DVDRIP+SUB by JP].mp4",
+            "name": "Temporada 6 [20-20] (1995-1996)/Beavis and Butt-Head - 6x01 - Bungholio señor de la cosecha  [DVDRIP+SUB by JP]",
+            "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%206%20%5B20-20%5D%20(1995-1996)%2FBeavis%20and%20Butt-Head%20-%206x01%20-%20Bungholio%20se%C3%B1or%20de%20la%20cosecha%20%20%5BDVDRIP%2BSUB%20by%20JP%5D.mp4",
+            "seconds": 916,
+            "format": "h.264",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 89
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "The Mystery of Morning Wood",
           "airdate": "1995-11-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3583,9 +4161,9 @@
           "number": 3,
           "name": "U.S. History",
           "airdate": "1995-11-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3603,9 +4181,9 @@
           "number": 4,
           "name": "Feel a Cop",
           "airdate": "1995-11-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3623,9 +4201,9 @@
           "number": 5,
           "name": "Date Watchers",
           "airdate": "1995-11-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3643,9 +4221,9 @@
           "number": 6,
           "name": "Blood Pressure",
           "airdate": "1995-11-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3679,9 +4257,9 @@
           "number": 9,
           "name": "Babysitting",
           "airdate": "1996-01-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3699,9 +4277,9 @@
           "number": 10,
           "name": "Vidiots",
           "airdate": "1996-01-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3713,15 +4291,30 @@
             "playable": true,
             "sizeMB": 64
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 6 [20-20] (1995-1996)/Beavis and Butt-Head - 6x10 - Vidiotas [DVD+VHS by JP].mp4",
+              "name": "Temporada 6 [20-20] (1995-1996)/Beavis and Butt-Head - 6x10 - Vidiotas [DVD+VHS by JP]",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%206%20%5B20-20%5D%20(1995-1996)%2FBeavis%20and%20Butt-Head%20-%206x10%20-%20Vidiotas%20%5BDVD%2BVHS%20by%20JP%5D.mp4",
+              "seconds": 639,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 63
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Stewart Is Missing",
           "airdate": "1996-01-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3755,9 +4348,9 @@
           "number": 14,
           "name": "Prank Call",
           "airdate": "1996-01-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3775,9 +4368,9 @@
           "number": 15,
           "name": "No Service",
           "airdate": "1996-01-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3789,15 +4382,30 @@
             "playable": true,
             "sizeMB": 62
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 6 [20-20] (1995-1996)/Episodios Faltantes T6 (Inglés)/Beavis and Butt-Head - S06E15 - No Service.mp4",
+              "name": "Temporada 6 [20-20] (1995-1996)/Episodios Faltantes T6 (Inglés)/Beavis and Butt-Head - S06E15 - No Service",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%206%20%5B20-20%5D%20(1995-1996)%2FEpisodios%20Faltantes%20T6%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%20S06E15%20-%20No%20Service.mp4",
+              "seconds": 633,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 63
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Yard Sale",
           "airdate": "1996-03-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "beavis-butt-head-1992-97",
             "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
@@ -3809,7 +4417,22 @@
             "playable": true,
             "sizeMB": 63
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607",
+              "itemTitle": "BEAVIS AND BUTT-HEAD SERIE COMPLETA DE MTV EN ESPAÑOL(S0-S8) [@typezeroytc]",
+              "file": "Temporada 6 [20-20] (1995-1996)/Episodios Faltantes T6 (Inglés)/Beavis and Butt-Head - S06E16 - Yard Sale.mp4",
+              "name": "Temporada 6 [20-20] (1995-1996)/Episodios Faltantes T6 (Inglés)/Beavis and Butt-Head - S06E16 - Yard Sale",
+              "url": "https://archive.org/download/twlr-zs-5-kd-wrn-zxmu-qm-vhdmlz-lm-fu-zc-5-cd-xr-0-luhl-ywqu-uz-az.part-1_202607/Temporada%206%20%5B20-20%5D%20(1995-1996)%2FEpisodios%20Faltantes%20T6%20(Ingl%C3%A9s)%2FBeavis%20and%20Butt-Head%20-%20S06E16%20-%20Yard%20Sale.mp4",
+              "seconds": 633,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 63
+            }
+          ]
         },
         {
           "number": 17,
@@ -3948,20 +4571,8 @@
           "number": 13,
           "name": "Pierced",
           "airdate": "1997-02-28",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Pierced\" (1.00)",
-            "item": "pierced_202210",
-            "itemTitle": "Beavis & Butt-Head on Comedy Central June 23, 2022",
-            "file": "Pierced.mp4",
-            "name": "Pierced",
-            "url": "https://archive.org/download/pierced_202210/Pierced.mp4",
-            "seconds": 750,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 232
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -4021,8 +4632,20 @@
           "number": 1,
           "name": "Bride of Butt-Head",
           "airdate": "1997-07-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Bride of Butt-Head\" (0.60)",
+            "item": "beavis-butt-head-1992-97",
+            "itemTitle": "Beavis and Butt-Head (1992 - 97) Complete Classic Series & Film Restored",
+            "file": "Beavis and Butt-Head (1992 - 97)/08 Season 7 (1997)/S07E20 Bride of Butt-Head.mp4",
+            "name": "Beavis and Butt-Head (1992 - 97)/08 Season 7 (1997)/S07E20 Bride of Butt-Head",
+            "url": "https://archive.org/download/beavis-butt-head-1992-97/Beavis%20and%20Butt-Head%20(1992%20-%2097)%2F08%20Season%207%20(1997)%2FS07E20%20Bride%20of%20Butt-Head.mp4",
+            "seconds": 825,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 82
+          },
           "alternates": []
         },
         {
@@ -4085,20 +4708,8 @@
           "number": 9,
           "name": "Shopping Cart",
           "airdate": "1997-08-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Shopping Cart\" (1.00)",
-            "item": "butt-butt-hike",
-            "itemTitle": "Beavis & Butt-Head on Comedy Central June 24, 2022",
-            "file": "Shopping Cart.mp4",
-            "name": "Shopping Cart",
-            "url": "https://archive.org/download/butt-butt-hike/Shopping%20Cart.mp4",
-            "seconds": 719,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 222
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

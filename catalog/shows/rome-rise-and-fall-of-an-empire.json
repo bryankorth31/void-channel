@@ -3,7 +3,7 @@
   "slug": "rome-rise-and-fall-of-an-empire",
   "type": "Documentary & Geographic",
   "network": "History",
-  "matchedAt": "2026-10-16T07:58:11.454Z",
+  "matchedAt": "2026-10-19T04:12:15.087Z",
   "addedAt": "2026-10-16T07:58:11.454Z",
   "tvmaze": {
     "id": 23836,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 13,
     "live": 0,
-    "review": 8,
-    "missing": 5,
-    "pct": 62
+    "review": 12,
+    "missing": 1,
+    "pct": 92
   },
   "seasons": [
     {
@@ -47,8 +47,20 @@
           "number": 2,
           "name": "Spartacus",
           "airdate": "2008-10-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Spartacus\" (0.95)",
+            "item": "RomeRiseAndFallOfAnEmpireEPt.1",
+            "itemTitle": "Rome ● Rise And Fall Of An Empire ● Pt. 1",
+            "file": "02 Spartacus.mp4",
+            "name": "02 Spartacus",
+            "url": "https://archive.org/download/RomeRiseAndFallOfAnEmpireEPt.1/02%20Spartacus.mp4",
+            "seconds": 2696,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 281
+          },
           "alternates": []
         },
         {
@@ -83,8 +95,20 @@
           "number": 5,
           "name": "The Invasion of Britain",
           "airdate": "2008-10-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Invasion of Britain\" (0.95)",
+            "item": "RomeRiseAndFallOfAnEmpireEPt.2",
+            "itemTitle": "Rome ● Rise And Fall Of An Empire ● Pt. 2",
+            "file": "05 The Invasion of Britain.mp4",
+            "name": "05 The Invasion of Britain",
+            "url": "https://archive.org/download/RomeRiseAndFallOfAnEmpireEPt.2/05%20The%20Invasion%20of%20Britain.mp4",
+            "seconds": 2571,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 267
+          },
           "alternates": []
         },
         {
@@ -111,8 +135,20 @@
           "number": 7,
           "name": "Rebellion and Betrayal",
           "airdate": "2008-11-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Rebellion and Betrayal\" (0.95)",
+            "item": "RomeRiseAndFallOfAnEmpireEPt.2",
+            "itemTitle": "Rome ● Rise And Fall Of An Empire ● Pt. 2",
+            "file": "07 Rebellion and Betrayal.mp4",
+            "name": "07 Rebellion and Betrayal",
+            "url": "https://archive.org/download/RomeRiseAndFallOfAnEmpireEPt.2/07%20Rebellion%20and%20Betrayal.mp4",
+            "seconds": 2620,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 273
+          },
           "alternates": []
         },
         {
@@ -159,8 +195,20 @@
           "number": 10,
           "name": "Constantine the Great",
           "airdate": "2008-12-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Constantine the Great\" (0.95)",
+            "item": "RomeRiseAndFallOfAnEmpireEPt.3",
+            "itemTitle": "Rome ● Rise And Fall Of An Empire ● Pt. 3",
+            "file": "10 Constantine the Great.mp4",
+            "name": "10 Constantine the Great",
+            "url": "https://archive.org/download/RomeRiseAndFallOfAnEmpireEPt.3/10%20Constantine%20the%20Great.mp4",
+            "seconds": 2620,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 273
+          },
           "alternates": []
         },
         {

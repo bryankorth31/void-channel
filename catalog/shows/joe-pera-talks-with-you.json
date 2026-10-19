@@ -3,21 +3,21 @@
   "slug": "joe-pera-talks-with-you",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-16T07:58:47.555Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:12:44.276Z",
+  "addedAt": "2026-10-16T07:58:47.555Z",
   "tvmaze": {
-    "id": null,
+    "id": 36715,
     "name": "Joe Pera Talks with You",
-    "runtime": null,
-    "premiered": null,
+    "runtime": 15,
+    "premiered": "2018-05-20",
     "network": "Adult Swim"
   },
   "coverage": {
-    "total": 33,
-    "live": 0,
-    "review": 33,
-    "missing": 0,
-    "pct": 100
+    "total": 31,
+    "live": 28,
+    "review": 0,
+    "missing": 3,
+    "pct": 90
   },
   "seasons": [
     {
@@ -25,9 +25,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "shows iron",
-          "state": "REVIEW",
+          "name": "Joe Pera Shows You Iron",
+          "airdate": "2018-05-20",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 1/S1E1 Joe Pera Shows You Iron.mp4",
@@ -36,21 +39,18 @@
             "seconds": 678,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 108,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 108
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "takes to breakfast",
-          "state": "REVIEW",
+          "name": "Joe Pera Takes You to Breakfast",
+          "airdate": "2018-05-20",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 1/S1E2 Joe Pera Takes You to Breakfast.mp4",
@@ -59,21 +59,18 @@
             "seconds": 654,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 47,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 47
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "takes on a fall drive",
-          "state": "REVIEW",
+          "name": "Joe Pera Takes You on a Fall Drive",
+          "airdate": "2018-05-27",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 1/S1E3 Joe Pera Takes You on a Fall Drive.mp4",
@@ -82,21 +79,18 @@
             "seconds": 677,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 60,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 60
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "shows how to dance",
-          "state": "REVIEW",
+          "name": "Joe Pera Shows You How to Dance",
+          "airdate": "2018-05-27",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 1/S1E4 Joe Pera Shows You How to Dance.mp4",
@@ -105,21 +99,18 @@
             "seconds": 677,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 68,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 68
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "back to sleep",
-          "state": "REVIEW",
+          "name": "Joe Pera Talks You Back to Sleep",
+          "airdate": "2018-06-03",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 1/S1E5 Joe Pera Talks You Back to Sleep.mp4",
@@ -128,21 +119,18 @@
             "seconds": 673,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 100,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 100
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "reads the church announcements",
-          "state": "REVIEW",
+          "name": "Joe Pera Reads You the Church Announcements",
+          "airdate": "2018-06-03",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 1/S1E6 Joe Pera Reads You the Church Announcements.mp4",
@@ -151,21 +139,18 @@
             "seconds": 660,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 103,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 103
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "lights up the night with",
-          "state": "REVIEW",
+          "name": "Joe Pera Lights Up the Night with You",
+          "airdate": "2018-06-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 1/S1E7 Joe Pera Lights Up the Night With You.mp4",
@@ -174,21 +159,18 @@
             "seconds": 677,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 205,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 205
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "to about the rat wars of alberta canada present day",
-          "state": "REVIEW",
+          "name": "Joe Pera Talks to You About the Rat Wars of Alberta, Canada, 1950 - Present Day",
+          "airdate": "2018-06-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 1/S1E8 Joe Pera Talks to You About the Rat Wars of Alberta, Canada (1950-Present Day).mp4",
@@ -197,97 +179,16 @@
             "seconds": 678,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 213,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 213
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "answers your questions about cold weather sports",
-          "state": "REVIEW",
-          "file": {
-            "item": "joe-pera-talks-with-you",
-            "itemTitle": "Joe Pera Talks With You",
-            "file": "Joe Pera Talks With You/Joe Pera Season 1/S1E9 Joe Pera Answers Your Questions About Cold Weather Sports.mp4",
-            "name": "Joe Pera Talks With You/Joe Pera Season 1/S1E9 Joe Pera Answers Your Questions About Cold Weather Sports",
-            "url": "https://archive.org/download/joe-pera-talks-with-you/Joe%20Pera%20Talks%20With%20You%2FJoe%20Pera%20Season%201%2FS1E9%20Joe%20Pera%20Answers%20Your%20Questions%20About%20Cold%20Weather%20Sports.mp4",
-            "seconds": 1399,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 213,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "helps find the perfect christmas tree",
-          "state": "REVIEW",
-          "file": {
-            "item": "joe-pera-talks-with-you",
-            "itemTitle": "Joe Pera Talks With You",
-            "file": "Joe Pera Talks With You/(2016) Joe Pera Helps You Find the Perfect Christmas Tree.mp4",
-            "name": "Joe Pera Talks With You/(2016) Joe Pera Helps You Find the Perfect Christmas Tree",
-            "url": "https://archive.org/download/joe-pera-talks-with-you/Joe%20Pera%20Talks%20With%20You%2F(2016)%20Joe%20Pera%20Helps%20You%20Find%20the%20Perfect%20Christmas%20Tree.mp4",
-            "seconds": 1356,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 96,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "to sleep",
-          "state": "REVIEW",
-          "file": {
-            "item": "joe-pera-talks-with-you",
-            "itemTitle": "Joe Pera Talks With You",
-            "file": "Joe Pera Talks With You/(2016) Joe Pera Talks You to Sleep.mp4",
-            "name": "Joe Pera Talks With You/(2016) Joe Pera Talks You to Sleep",
-            "url": "https://archive.org/download/joe-pera-talks-with-you/Joe%20Pera%20Talks%20With%20You%2F(2016)%20Joe%20Pera%20Talks%20You%20to%20Sleep.mp4",
-            "seconds": 692,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 54,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "relaxing old footage with",
-          "state": "REVIEW",
-          "file": {
-            "item": "joe-pera-talks-with-you",
-            "itemTitle": "Joe Pera Talks With You",
-            "file": "Joe Pera Talks With You/(2020) Relaxing Old Footage with Joe Pera.mp4",
-            "name": "Joe Pera Talks With You/(2020) Relaxing Old Footage with Joe Pera",
-            "url": "https://archive.org/download/joe-pera-talks-with-you/Joe%20Pera%20Talks%20With%20You%2F(2020)%20Relaxing%20Old%20Footage%20with%20Joe%20Pera.mp4",
-            "seconds": 1333,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 98,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Joe Pera Answers Your Questions About Cold Weather Sports",
+          "airdate": "2018-06-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -297,9 +198,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "with about beans",
-          "state": "REVIEW",
+          "name": "Joe Pera Talks with You About Beans",
+          "airdate": "2019-12-06",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E1 Joe Pera Talks with You About Beans.mp4",
@@ -308,21 +212,18 @@
             "seconds": 671,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 224,
-            "ep": {
-              "season": 2,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 224
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "takes on a hike",
-          "state": "REVIEW",
+          "name": "Joe Pera Takes You on a Hike",
+          "airdate": "2019-12-06",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E2 Joe Pera Takes You on a Hike.mp4",
@@ -331,21 +232,18 @@
             "seconds": 678,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 220,
-            "ep": {
-              "season": 2,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 220
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "waits with",
-          "state": "REVIEW",
+          "name": "Joe Pera Waits with You",
+          "airdate": "2019-12-13",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E3 Joe Pera Waits with You.mp4",
@@ -354,21 +252,18 @@
             "seconds": 654,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 175,
-            "ep": {
-              "season": 2,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 175
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "guides through the dark",
-          "state": "REVIEW",
+          "name": "Joe Pera Guides You Through the Dark",
+          "airdate": "2019-12-13",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E4 Joe Pera Guides You Through the Dark.mp4",
@@ -377,21 +272,18 @@
             "seconds": 662,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 151,
-            "ep": {
-              "season": 2,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 151
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "takes to the grocery store",
-          "state": "REVIEW",
+          "name": "Joe Pera Takes You to the Grocery Store",
+          "airdate": "2020-01-03",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E5 Joe Pera Takes You to the Grocery Store.mp4",
@@ -400,21 +292,18 @@
             "seconds": 678,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 223,
-            "ep": {
-              "season": 2,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 223
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "goes to dave wojceks bachelor party with",
-          "state": "REVIEW",
+          "name": "Joe Pera Goes to Dave Wojcek's Bachelor Party with You",
+          "airdate": "2020-01-03",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E6 Joe Pera Goes to Dave Wojcek's Bachelor Party with You.mp4",
@@ -423,21 +312,18 @@
             "seconds": 673,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 232,
-            "ep": {
-              "season": 2,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 232
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "gives piano lessons",
-          "state": "REVIEW",
+          "name": "Joe Pera Gives You Piano Lessons",
+          "airdate": "2020-01-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E7 Joe Pera Gives You Piano Lessons.mp4",
@@ -446,21 +332,18 @@
             "seconds": 667,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 203,
-            "ep": {
-              "season": 2,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 203
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "watches internet videos with",
-          "state": "REVIEW",
+          "name": "Joe Pera Watches Internet Videos with You",
+          "airdate": "2020-01-10",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E8 Joe Pera Watches Internet Videos With You.mp4",
@@ -469,21 +352,18 @@
             "seconds": 663,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 208,
-            "ep": {
-              "season": 2,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 208
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "has a surprise for",
-          "state": "REVIEW",
+          "name": "Joe Pera Has a Surprise for You",
+          "airdate": "2020-01-17",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E9 Joe Pera Has a Surprise For You.mp4",
@@ -492,21 +372,18 @@
             "seconds": 679,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 203,
-            "ep": {
-              "season": 2,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 203
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "helps write an obituary",
-          "state": "REVIEW",
+          "name": "Joe Pera Helps You Write",
+          "airdate": "2020-01-17",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E10 Joe Pera Helps You Write an Obituary.mp4",
@@ -515,44 +392,26 @@
             "seconds": 738,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 185,
-            "ep": {
-              "season": 2,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 185
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "shows how to do good fashion",
-          "state": "REVIEW",
-          "file": {
-            "item": "joe-pera-talks-with-you",
-            "itemTitle": "Joe Pera Talks With You",
-            "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E11 Joe Pera Shows You How to Do Good Fashion.mp4",
-            "name": "Joe Pera Talks With You/Joe Pera Season 2/S2E11 Joe Pera Shows You How to Do Good Fashion",
-            "url": "https://archive.org/download/joe-pera-talks-with-you/Joe%20Pera%20Talks%20With%20You%2FJoe%20Pera%20Season%202%2FS2E11%20Joe%20Pera%20Shows%20You%20How%20to%20Do%20Good%20Fashion.mp4",
-            "seconds": 1349,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 409,
-            "ep": {
-              "season": 2,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Joe Pera Shows You How to Do Good Fashion",
+          "airdate": "2020-01-24",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "shows how to pack a lunch",
-          "state": "REVIEW",
+          "name": "Joe Pera Shows You How to Pack a Lunch",
+          "airdate": "2020-01-31",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E12 Joe Pera Shows You How To Pack a Lunch.mp4",
@@ -561,21 +420,18 @@
             "seconds": 675,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 159,
-            "ep": {
-              "season": 2,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 159
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "with on the first day of school",
-          "state": "REVIEW",
+          "name": "Joe Pera Talks with You on the First Day of School",
+          "airdate": "2020-01-31",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 2/S2E13 Joe Pera Talks With You on the First Day of School.mp4",
@@ -584,13 +440,7 @@
             "seconds": 672,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 178,
-            "ep": {
-              "season": 2,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 178
           },
           "alternates": []
         }
@@ -601,9 +451,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "sits with",
-          "state": "REVIEW",
+          "name": "Joe Pera Sits with You",
+          "airdate": "2021-11-07",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 3/S3E1 Joe Pera Sits with You.mp4",
@@ -612,21 +465,18 @@
             "seconds": 676,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 192,
-            "ep": {
-              "season": 3,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 192
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "shows how to build a fire",
-          "state": "REVIEW",
+          "name": "Joe Pera Shows You How to Build a Fire",
+          "airdate": "2021-11-07",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 3/S3E2 Joe Pera Shows You How to Build a Fire.mp4",
@@ -635,21 +485,18 @@
             "seconds": 683,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 202,
-            "ep": {
-              "season": 3,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 202
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "shows his second fridge",
-          "state": "REVIEW",
+          "name": "Joe Pera Shows You His Second Fridge",
+          "airdate": "2021-11-14",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 3/S3E3 Joe Pera Shows You His Second Fridge.mp4",
@@ -658,21 +505,18 @@
             "seconds": 676,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 194,
-            "ep": {
-              "season": 3,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 194
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "listens to your drunk story",
-          "state": "REVIEW",
+          "name": "Joe Pera Listens to Your Drunk Story",
+          "airdate": "2021-11-14",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 3/S3E4 Joe Pera Listens to Your Drunk Story.mp4",
@@ -681,21 +525,18 @@
             "seconds": 669,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 192,
-            "ep": {
-              "season": 3,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 192
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "discusses school appropriate entertainment with",
-          "state": "REVIEW",
+          "name": "Joe Pera Discusses School-Appropriate Entertainment with You",
+          "airdate": "2021-11-21",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 3/S3E5 Joe Pera Discusses School-Appropriate Entertainment with You.mp4",
@@ -704,21 +545,18 @@
             "seconds": 651,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 195,
-            "ep": {
-              "season": 3,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 195
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "takes for a flight",
-          "state": "REVIEW",
+          "name": "Joe Pera Takes You for a Flight",
+          "airdate": "2021-11-21",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 3/S3E6 Joe Pera Takes You for a Flight.mp4",
@@ -727,21 +565,18 @@
             "seconds": 676,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 252,
-            "ep": {
-              "season": 3,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 252
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "shows how to keep functioning in mid late winter",
-          "state": "REVIEW",
+          "name": "Joe Pera Shows You How to Keep Functioning in Mid-Late Winter",
+          "airdate": "2021-12-05",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 3/S3E7 Joe Pera Shows You How to Keep Functioning in Mid-Late Winter.mp4",
@@ -750,21 +585,18 @@
             "seconds": 675,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 211,
-            "ep": {
-              "season": 3,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 211
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "with about legacy",
-          "state": "REVIEW",
+          "name": "Joe Pera Talks With You About Legacy",
+          "airdate": "2021-12-05",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "joe-pera-talks-with-you",
             "itemTitle": "Joe Pera Talks With You",
             "file": "Joe Pera Talks With You/Joe Pera Season 3/S3E8 Joe Pera Talks With You About Legacy.mp4",
@@ -773,22 +605,19 @@
             "seconds": 648,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214,
-            "ep": {
-              "season": 3,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 214
           },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Joe Pera Builds a Chair With You",
+          "airdate": "2021-12-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 36715,
-    "name": "Joe Pera Talks with You",
-    "placed": 7
-  }
+  ]
 }

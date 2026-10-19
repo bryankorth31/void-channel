@@ -3,7 +3,7 @@
   "slug": "hazbin-hotel",
   "type": "Internet Comedy",
   "network": "Web",
-  "matchedAt": "2026-10-16T07:57:27.812Z",
+  "matchedAt": "2026-10-19T04:11:31.897Z",
   "addedAt": "2026-10-15T12:08:10.807Z",
   "tvmaze": {
     "id": 43094,
@@ -41,7 +41,34 @@
             "playable": true,
             "sizeMB": 147
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Overture\" (0.95)",
+              "item": "hazbin1_overture",
+              "itemTitle": "Hazbin Hotel season 1",
+              "file": "hazbin1_overture.mp4",
+              "name": "hazbin1_overture",
+              "url": "https://archive.org/download/hazbin1_overture/hazbin1_overture.mp4",
+              "seconds": 1483,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 147
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 7 in \"Hazbin Hotel Season 1\"",
+              "item": "hazbin-hotel-s1",
+              "itemTitle": "Hazbin Hotel Season 1",
+              "file": "Hazbin Hotel - Ep. 2.mp4",
+              "name": "Hazbin Hotel - Ep. 2",
+              "url": "https://archive.org/download/hazbin-hotel-s1/Hazbin%20Hotel%20-%20Ep.%202.mp4",
+              "seconds": 1472,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 2,
@@ -61,7 +88,34 @@
             "playable": true,
             "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Radio Killed the Video Star\" (0.86)",
+              "item": "hazbin1_overture",
+              "itemTitle": "Hazbin Hotel season 1",
+              "file": "hazbin2-radiokilledthevideostar.mp4",
+              "name": "hazbin2-radiokilledthevideostar",
+              "url": "https://archive.org/download/hazbin1_overture/hazbin2-radiokilledthevideostar.mp4",
+              "seconds": 1472,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 138
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 7 in \"Hazbin Hotel Season 1\"",
+              "item": "hazbin-hotel-s1",
+              "itemTitle": "Hazbin Hotel Season 1",
+              "file": "Hazbin Hotel - Ep. 3.mp4",
+              "name": "Hazbin Hotel - Ep. 3",
+              "url": "https://archive.org/download/hazbin-hotel-s1/Hazbin%20Hotel%20-%20Ep.%203.mp4",
+              "seconds": 1468,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 3,
@@ -70,18 +124,45 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "title ~ \"Scrambled Eggs\" (0.77)",
-            "item": "hazmatmotel",
-            "itemTitle": "Hazbin Hotel",
-            "file": "hazbin3-scrambledeggs.mp4",
-            "name": "hazbin3-scrambledeggs",
-            "url": "https://archive.org/download/hazmatmotel/hazbin3-scrambledeggs.mp4",
-            "seconds": 1468,
-            "format": "MPEG4",
+            "why": "sequence guess: file 3 of 7 in \"Hazbin Hotel Season 1\"",
+            "item": "hazbin-hotel-s1",
+            "itemTitle": "Hazbin Hotel Season 1",
+            "file": "Hazbin Hotel - Ep. 4.mp4",
+            "name": "Hazbin Hotel - Ep. 4",
+            "url": "https://archive.org/download/hazbin-hotel-s1/Hazbin%20Hotel%20-%20Ep.%204.mp4",
+            "seconds": 1466,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 128
+            "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Scrambled Eggs\" (0.77)",
+              "item": "hazmatmotel",
+              "itemTitle": "Hazbin Hotel",
+              "file": "hazbin3-scrambledeggs.mp4",
+              "name": "hazbin3-scrambledeggs",
+              "url": "https://archive.org/download/hazmatmotel/hazbin3-scrambledeggs.mp4",
+              "seconds": 1468,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 128
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Scrambled Eggs\" (0.77)",
+              "item": "hazbin1_overture",
+              "itemTitle": "Hazbin Hotel season 1",
+              "file": "hazbin3-scrambledeggs.mp4",
+              "name": "hazbin3-scrambledeggs",
+              "url": "https://archive.org/download/hazbin1_overture/hazbin3-scrambledeggs.mp4",
+              "seconds": 1468,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 4,
@@ -101,7 +182,34 @@
             "playable": true,
             "sizeMB": 148
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Masquerade\" (0.95)",
+              "item": "hazbin1_overture",
+              "itemTitle": "Hazbin Hotel season 1",
+              "file": "hazbin4-masquerade.mp4",
+              "name": "hazbin4-masquerade",
+              "url": "https://archive.org/download/hazbin1_overture/hazbin4-masquerade.mp4",
+              "seconds": 1466,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 148
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 7 in \"Hazbin Hotel Season 1\"",
+              "item": "hazbin-hotel-s1",
+              "itemTitle": "Hazbin Hotel Season 1",
+              "file": "Hazbin Hotel - Ep. 5.mp4",
+              "name": "Hazbin Hotel - Ep. 5",
+              "url": "https://archive.org/download/hazbin-hotel-s1/Hazbin%20Hotel%20-%20Ep.%205.mp4",
+              "seconds": 1480,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1058
+            }
+          ]
         },
         {
           "number": 5,
@@ -110,18 +218,45 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "title ~ \"Dad Beat Dad\" (0.67)",
-            "item": "hazmatmotel",
-            "itemTitle": "Hazbin Hotel",
-            "file": "hazbin5_dadbeatdad.mp4",
-            "name": "hazbin5_dadbeatdad",
-            "url": "https://archive.org/download/hazmatmotel/hazbin5_dadbeatdad.mp4",
-            "seconds": 1480,
+            "why": "sequence guess: file 5 of 7 in \"Hazbin Hotel Season 1\"",
+            "item": "hazbin-hotel-s1",
+            "itemTitle": "Hazbin Hotel Season 1",
+            "file": "Hazbin Hotel - Ep. 6.mp4",
+            "name": "Hazbin Hotel - Ep. 6",
+            "url": "https://archive.org/download/hazbin-hotel-s1/Hazbin%20Hotel%20-%20Ep.%206.mp4",
+            "seconds": 1483,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 424
+            "sizeMB": 1053
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Dad Beat Dad\" (0.67)",
+              "item": "hazmatmotel",
+              "itemTitle": "Hazbin Hotel",
+              "file": "hazbin5_dadbeatdad.mp4",
+              "name": "hazbin5_dadbeatdad",
+              "url": "https://archive.org/download/hazmatmotel/hazbin5_dadbeatdad.mp4",
+              "seconds": 1480,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 424
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Dad Beat Dad\" (0.67)",
+              "item": "hazbin1_overture",
+              "itemTitle": "Hazbin Hotel season 1",
+              "file": "hazbin5_dadbeatdad.mp4",
+              "name": "hazbin5_dadbeatdad",
+              "url": "https://archive.org/download/hazbin1_overture/hazbin5_dadbeatdad.mp4",
+              "seconds": 1480,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 424
+            }
+          ]
         },
         {
           "number": 6,
@@ -141,7 +276,34 @@
             "playable": true,
             "sizeMB": 361
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Welcome to Heaven\" (0.80)",
+              "item": "hazbin1_overture",
+              "itemTitle": "Hazbin Hotel season 1",
+              "file": "hazbin6_welcometoheaven.mp4",
+              "name": "hazbin6_welcometoheaven",
+              "url": "https://archive.org/download/hazbin1_overture/hazbin6_welcometoheaven.mp4",
+              "seconds": 1483,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 361
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 7 in \"Hazbin Hotel Season 1\"",
+              "item": "hazbin-hotel-s1",
+              "itemTitle": "Hazbin Hotel Season 1",
+              "file": "Hazbin Hotel - Ep. 7.mp4",
+              "name": "Hazbin Hotel - Ep. 7",
+              "url": "https://archive.org/download/hazbin-hotel-s1/Hazbin%20Hotel%20-%20Ep.%207.mp4",
+              "seconds": 1482,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 7,
@@ -161,7 +323,34 @@
             "playable": true,
             "sizeMB": 307
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Hello Rosie!\" (0.72)",
+              "item": "hazbin1_overture",
+              "itemTitle": "Hazbin Hotel season 1",
+              "file": "hazbin7_hellorosie.mp4",
+              "name": "hazbin7_hellorosie",
+              "url": "https://archive.org/download/hazbin1_overture/hazbin7_hellorosie.mp4",
+              "seconds": 1482,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 307
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 7 in \"Hazbin Hotel Season 1\"",
+              "item": "hazbin-hotel-s1",
+              "itemTitle": "Hazbin Hotel Season 1",
+              "file": "Hazbin Hotel - Ep. 8.mp4",
+              "name": "Hazbin Hotel - Ep. 8",
+              "url": "https://archive.org/download/hazbin-hotel-s1/Hazbin%20Hotel%20-%20Ep.%208.mp4",
+              "seconds": 1488,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 8,
@@ -181,7 +370,21 @@
             "playable": true,
             "sizeMB": 155
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Show Must Go On\" (0.80)",
+              "item": "hazbin1_overture",
+              "itemTitle": "Hazbin Hotel season 1",
+              "file": "hazbin8_theshowmustgoon.mp4",
+              "name": "hazbin8_theshowmustgoon",
+              "url": "https://archive.org/download/hazbin1_overture/hazbin8_theshowmustgoon.mp4",
+              "seconds": 1489,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 155
+            }
+          ]
         }
       ]
     },

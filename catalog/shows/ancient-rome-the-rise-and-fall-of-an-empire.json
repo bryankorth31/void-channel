@@ -3,7 +3,7 @@
   "slug": "ancient-rome-the-rise-and-fall-of-an-empire",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-17T10:54:41.079Z",
+  "matchedAt": "2026-10-19T04:12:52.634Z",
   "addedAt": "2026-10-17T10:54:41.080Z",
   "tvmaze": {
     "id": 23839,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 6,
     "live": 0,
-    "review": 3,
-    "missing": 3,
-    "pct": 50
+    "review": 5,
+    "missing": 1,
+    "pct": 83
   },
   "seasons": [
     {
@@ -67,8 +67,20 @@
           "number": 3,
           "name": "Revolution",
           "airdate": "2006-10-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Revolution\" (1.00)",
+            "item": "ancient-rome-the-rise-and-fall-of-an-empire",
+            "itemTitle": "Ancient Rome The Rise And Fall Of An Empire",
+            "file": "Revolution (1080p).mp4",
+            "name": "Revolution (1080p)",
+            "url": "https://archive.org/download/ancient-rome-the-rise-and-fall-of-an-empire/Revolution%20(1080p).mp4",
+            "seconds": 3084,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1001
+          },
           "alternates": []
         },
         {
@@ -95,8 +107,20 @@
           "number": 5,
           "name": "Constantine",
           "airdate": "2006-10-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Constantine\" (1.00)",
+            "item": "ancient-rome-the-rise-and-fall-of-an-empire",
+            "itemTitle": "Ancient Rome The Rise And Fall Of An Empire",
+            "file": "Constantine (1080p).mp4",
+            "name": "Constantine (1080p)",
+            "url": "https://archive.org/download/ancient-rome-the-rise-and-fall-of-an-empire/Constantine%20(1080p).mp4",
+            "seconds": 3030,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 882
+          },
           "alternates": []
         },
         {

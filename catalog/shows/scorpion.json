@@ -3,7 +3,7 @@
   "slug": "scorpion",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:56.699Z",
+  "matchedAt": "2026-10-19T04:11:01.041Z",
   "addedAt": "2026-10-15T12:07:55.214Z",
   "tvmaze": {
     "id": 44,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 93,
     "live": 0,
-    "review": 5,
-    "missing": 88,
-    "pct": 5
+    "review": 0,
+    "missing": 93,
+    "pct": 0
   },
   "seasons": [
     {
@@ -27,100 +27,40 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "2014-09-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 5 in \"Scorpion Tales (complete series)\"",
-            "item": "scorpion-tales-1-easterman",
-            "itemTitle": "Scorpion Tales (complete series)",
-            "file": "Scorpion Tales 1  Easterman.mp4",
-            "name": "Scorpion Tales 1  Easterman",
-            "url": "https://archive.org/download/scorpion-tales-1-easterman/Scorpion%20Tales%201%20%20Easterman.mp4",
-            "seconds": 3107,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 224
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Single Point of Failure",
           "airdate": "2014-09-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 5 in \"Scorpion Tales (complete series)\"",
-            "item": "scorpion-tales-1-easterman",
-            "itemTitle": "Scorpion Tales (complete series)",
-            "file": "Scorpion Tales 3   Great Albert.mp4",
-            "name": "Scorpion Tales 3   Great Albert",
-            "url": "https://archive.org/download/scorpion-tales-1-easterman/Scorpion%20Tales%203%20%20%20Great%20Albert.mp4",
-            "seconds": 3040,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 221
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "A Cyclone",
           "airdate": "2014-10-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 5 in \"Scorpion Tales (complete series)\"",
-            "item": "scorpion-tales-1-easterman",
-            "itemTitle": "Scorpion Tales (complete series)",
-            "file": "Scorpion Tales 4  Ghost in Pale Blue Dress.mp4",
-            "name": "Scorpion Tales 4  Ghost in Pale Blue Dress",
-            "url": "https://archive.org/download/scorpion-tales-1-easterman/Scorpion%20Tales%204%20%20Ghost%20in%20Pale%20Blue%20Dress.mp4",
-            "seconds": 3133,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 204
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Shorthanded",
           "airdate": "2014-10-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 5 in \"Scorpion Tales (complete series)\"",
-            "item": "scorpion-tales-1-easterman",
-            "itemTitle": "Scorpion Tales (complete series)",
-            "file": "Scorpion Tales 5   Crimes of Persuasion.mp4",
-            "name": "Scorpion Tales 5   Crimes of Persuasion",
-            "url": "https://archive.org/download/scorpion-tales-1-easterman/Scorpion%20Tales%205%20%20%20Crimes%20of%20Persuasion.mp4",
-            "seconds": 3154,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 220
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Plutonium Is Forever",
           "airdate": "2014-10-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 5 in \"Scorpion Tales (complete series)\"",
-            "item": "scorpion-tales-1-easterman",
-            "itemTitle": "Scorpion Tales (complete series)",
-            "file": "Scorpion Tales 6   Truth or Consequence.mp4",
-            "name": "Scorpion Tales 6   Truth or Consequence",
-            "url": "https://archive.org/download/scorpion-tales-1-easterman/Scorpion%20Tales%206%20%20%20Truth%20or%20Consequence.mp4",
-            "seconds": 3138,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 193
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

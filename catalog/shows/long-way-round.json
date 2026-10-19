@@ -3,7 +3,7 @@
   "slug": "long-way-round",
   "type": "Documentary & Geographic",
   "network": "Sky One",
-  "matchedAt": "2026-10-16T07:58:07.129Z",
+  "matchedAt": "2026-10-19T04:12:11.060Z",
   "addedAt": "2026-10-16T07:58:07.129Z",
   "tvmaze": {
     "id": 2249,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 7,
     "live": 0,
-    "review": 2,
-    "missing": 5,
-    "pct": 29
+    "review": 0,
+    "missing": 7,
+    "pct": 0
   },
   "seasons": [
     {
@@ -27,20 +27,8 @@
           "number": 1,
           "name": "Preparation",
           "airdate": "2004-10-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Preparation\" (0.95)",
-            "item": "longwayroundmf",
-            "itemTitle": "Long Way Round MF Edit",
-            "file": "1 Preparation.mp4",
-            "name": "1 Preparation",
-            "url": "https://archive.org/download/longwayroundmf/1%20Preparation.mp4",
-            "seconds": 3362,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 988
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -55,20 +43,8 @@
           "number": 3,
           "name": "Kazakhstan",
           "airdate": "2004-11-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Kazakhstan\" (0.95)",
-            "item": "longwayroundmf",
-            "itemTitle": "Long Way Round MF Edit",
-            "file": "3 Kazakhstan.mp4",
-            "name": "3 Kazakhstan",
-            "url": "https://archive.org/download/longwayroundmf/3%20Kazakhstan.mp4",
-            "seconds": 2659,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 650
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

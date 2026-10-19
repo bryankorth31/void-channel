@@ -3,7 +3,7 @@
   "slug": "courage-the-cowardly-dog",
   "type": "Animated",
   "network": "Cartoon Network",
-  "matchedAt": "2026-10-16T07:56:26.097Z",
+  "matchedAt": "2026-10-19T04:10:35.330Z",
   "addedAt": "2026-10-15T12:07:41.034Z",
   "tvmaze": {
     "id": 1956,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 53,
-    "live": 0,
-    "review": 50,
-    "missing": 3,
-    "pct": 94
+    "live": 52,
+    "review": 0,
+    "missing": 1,
+    "pct": 98
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "A Night at the Katz Motel/Cajun Granny Stew",
           "airdate": "1999-11-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -43,8 +43,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E01.mp4",
+              "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E01",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E01.mp4",
+              "seconds": 1355,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 137
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 1/Ep1 A Night at the Katz Motel-Cajun Granny Stew.mp4",
@@ -61,9 +74,9 @@
           "number": 2,
           "name": "The Shadow of Courage/Dr. Le Quack Amnesia Specialist",
           "airdate": "1999-11-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -77,8 +90,34 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E02.mp4",
+              "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E02",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E02.mp4",
+              "seconds": 1359,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 132
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
+              "itemTitle": "Courage the Cowardly Dog full series dvd rip",
+              "file": "season 1/S1 E02 · The Shadow of Courage, Dr. Le Quack Amnesia Specialist.ia.mp4",
+              "name": "season 1/S1 E02 · The Shadow of Courage, Dr",
+              "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%201%2FS1%20E02%20%C2%B7%20The%20Shadow%20of%20Courage%2C%20Dr.%20Le%20Quack%20Amnesia%20Specialist.ia.mp4",
+              "seconds": 1359,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 212
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 1/Ep2 The Shadow of Courage-Dr. Le Quack, Amnesia Specialist.mp4",
@@ -95,9 +134,9 @@
           "number": 3,
           "name": "Courage Meets Bigfoot/Hothead",
           "airdate": "1999-11-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -109,15 +148,42 @@
             "playable": true,
             "sizeMB": 270
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E03.mp4",
+              "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E03",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E03.mp4",
+              "seconds": 1356,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 139
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-show",
+              "itemTitle": "Courage The Cowardly Dog Show Complete",
+              "file": "Season 1/Ep3  Courage Meets Bigfoot-Hothead.mp4",
+              "name": "Season 1/Ep3  Courage Meets Bigfoot-Hothead",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-show/Season%201%2FEp3%20%20Courage%20Meets%20Bigfoot-Hothead.mp4",
+              "seconds": 1356,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 86
+            }
+          ]
         },
         {
           "number": 4,
           "name": "The Demon in the Mattress/Freaky Fred",
           "airdate": "1999-12-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -131,8 +197,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E04.mp4",
+              "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E04",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E04.mp4",
+              "seconds": 1346,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 131
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 1/Ep4 The Demon in the Mattress-Freaky Fred.mp4",
@@ -149,33 +228,33 @@
           "number": 5,
           "name": "Mother's Day/Night of the Weremole",
           "airdate": "1999-12-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename + title match",
-            "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
-            "itemTitle": "Courage the Cowardly Dog full series dvd rip",
-            "file": "season 1/S1 E05 · Night of the Weremole, Mother's Day.mp4",
-            "name": "season 1/S1 E05 · Night of the Weremole, Mother's Day",
-            "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%201%2FS1%20E05%20%C2%B7%20Night%20of%20the%20Weremole%2C%20Mother's%20Day.mp4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+            "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+            "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E05.mp4",
+            "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E05",
+            "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E05.mp4",
             "seconds": 1351,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 226
+            "sizeMB": 137
           },
           "alternates": [
             {
               "conf": 0.55,
               "why": "S/E in filename + title match",
-              "item": "courage-the-cowardly-dog-show",
-              "itemTitle": "Courage The Cowardly Dog Show Complete",
-              "file": "Season 1/Ep5  Night of the Weremole -Mother's Day.mp4",
-              "name": "Season 1/Ep5  Night of the Weremole -Mother's Day",
-              "url": "https://archive.org/download/courage-the-cowardly-dog-show/Season%201%2FEp5%20%20Night%20of%20the%20Weremole%20-Mother's%20Day.mp4",
+              "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
+              "itemTitle": "Courage the Cowardly Dog full series dvd rip",
+              "file": "season 1/S1 E05 · Night of the Weremole, Mother's Day.mp4",
+              "name": "season 1/S1 E05 · Night of the Weremole, Mother's Day",
+              "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%201%2FS1%20E05%20%C2%B7%20Night%20of%20the%20Weremole%2C%20Mother's%20Day.mp4",
               "seconds": 1351,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 85
+              "sizeMB": 226
             }
           ]
         },
@@ -183,9 +262,9 @@
           "number": 6,
           "name": "The Duck Brothers/Shirley the Medium",
           "airdate": "2000-01-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -199,8 +278,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E06.mp4",
+              "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E06",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E06.mp4",
+              "seconds": 1357,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 137
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 1/Ep6  The Duck Brothers-Shirley the Medium.mp4",
@@ -217,9 +309,9 @@
           "number": 7,
           "name": "King Ramses' Curse/The Clutching Foot",
           "airdate": "2000-01-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -233,8 +325,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E07.mp4",
+              "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E07",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E07.mp4",
+              "seconds": 1362,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 133
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 1/Ep7  King Ramses' Curse-The Clutching Foot.mp4",
@@ -251,9 +356,9 @@
           "number": 8,
           "name": "The Hunchback of Nowhere/The Gods Must Be Goosey",
           "airdate": "2000-01-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -267,8 +372,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E08.mp4",
+              "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E08",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E08.mp4",
+              "seconds": 1339,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 1/Ep8 The Hunchback of Nowhere-The Gods Must Be Goosey.mp4",
@@ -285,9 +403,9 @@
           "number": 9,
           "name": "Queen of the Black Puddle/Everyone Wants to Direct",
           "airdate": "2000-03-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -301,8 +419,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E09.mp4",
+              "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E09",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E09.mp4",
+              "seconds": 1344,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 1/Ep9 Queen of the Black Puddle-Everyone Wants to Direct.mp4",
@@ -319,9 +450,9 @@
           "number": 10,
           "name": "The Snowman Cometh/The Precious, Wonderful, Adorable, Loveable Duckling",
           "airdate": "2000-03-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -335,8 +466,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E10.mp4",
+              "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E10",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E10.mp4",
+              "seconds": 1336,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 1/Ep10 The Snowman ComethThe Precious-Wonderful, Adorable, Lovable Duckling.mp4",
@@ -353,9 +497,9 @@
           "number": 11,
           "name": "Heads of Beef/Klub Katz",
           "airdate": "2000-03-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -369,8 +513,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E11.mp4",
+              "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E11",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E11.mp4",
+              "seconds": 1332,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 1/Ep11  Heads of Beef-Klub Katz.mp4",
@@ -387,9 +544,9 @@
           "number": 12,
           "name": "Revenge of the Chicken from Outer Space/Journey to the Center of Nowhere",
           "airdate": "2000-03-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -403,8 +560,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E12.mp4",
+              "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E12",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E12.mp4",
+              "seconds": 1353,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 1/Ep12 The Revenge of the Chicken From Outer Space-Journey to the Center of Nowhere.mp4",
@@ -421,9 +591,9 @@
           "number": 13,
           "name": "Little Muriel/The Great Fusilli",
           "airdate": "2000-03-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -437,8 +607,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E13.mp4",
+              "name": "Courage The Cowardly Dog/Season 1/Courage the Cowardly Dog - S01E13",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%201%2FCourage%20the%20Cowardly%20Dog%20-%20S01E13.mp4",
+              "seconds": 1357,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 1/Ep13 Little Muriel-The Great Fusilli.mp4",
@@ -460,9 +643,9 @@
           "number": 1,
           "name": "The Magic Tree of Nowhere/ Robot Randy",
           "airdate": "2000-10-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -476,8 +659,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E01.mp4",
+              "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E01",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E01.mp4",
+              "seconds": 1362,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 2/Ep1 The Magic Tree of Nowhere-Robot Randy.mp4",
@@ -494,9 +690,9 @@
           "number": 2,
           "name": "Curse of Shirley/Courage in the Big Stinkin' City",
           "airdate": "2000-11-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -510,8 +706,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E02.mp4",
+              "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E02",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E02.mp4",
+              "seconds": 1361,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 134
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 2/Ep2 The Curse of Shirley-Courage in the Big Stinkin’ City.mp4",
@@ -528,17 +737,29 @@
           "number": 3,
           "name": "Family Business/1000 Years of Courage",
           "airdate": "2000-11-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+            "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+            "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E03.mp4",
+            "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E03",
+            "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E03.mp4",
+            "seconds": 1365,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 135
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Courage Meets the Mummy/Invisible Muriel",
           "airdate": "2001-01-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -552,8 +773,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E04.mp4",
+              "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E04",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E04.mp4",
+              "seconds": 1365,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 2/Ep4  Courage Meets the Mummy-Invisible Muriel.mp4",
@@ -570,9 +804,9 @@
           "number": 5,
           "name": "Human Habitrail/Mission to the Sun",
           "airdate": "2001-02-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -586,8 +820,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E05.mp4",
+              "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E05",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E05.mp4",
+              "seconds": 1366,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 2/Ep5 Human Habitrail-Mission to the Sun.mp4",
@@ -604,17 +851,56 @@
           "number": 6,
           "name": "Courage the Fly/Katz Kandy",
           "airdate": "2001-03-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
+            "itemTitle": "Courage the Cowardly Dog full series dvd rip",
+            "file": "season 2/S2 E06 · Courage the Fly; Katz Kandy.mp4",
+            "name": "season 2/S2 E06 · Courage the Fly; Katz Kandy",
+            "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%202%2FS2%20E06%20%C2%B7%20Courage%20the%20Fly%3B%20Katz%20Kandy.mp4",
+            "seconds": 1365,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 178
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E06.mp4",
+              "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E06",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E06.mp4",
+              "seconds": 1365,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-show",
+              "itemTitle": "Courage The Cowardly Dog Show Complete",
+              "file": "Season 2/Ep6 Courage the Fly-Katz Kandy.mp4",
+              "name": "Season 2/Ep6 Courage the Fly-Katz Kandy",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-show/Season%202%2FEp6%20Courage%20the%20Fly-Katz%20Kandy.mp4",
+              "seconds": 1356,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 105
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Nowhere TV/Mega Muriel the Magnificent",
           "airdate": "2001-04-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -628,8 +914,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E07.mp4",
+              "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E07",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E07.mp4",
+              "seconds": 1363,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 2/Ep7 Nowhere TV-Mega Muriel the Magnificent.mp4",
@@ -646,33 +945,33 @@
           "number": 8,
           "name": "Bad Hair Day/Forbidden Hat of Gold",
           "airdate": "2001-04-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename + title match",
-            "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
-            "itemTitle": "Courage the Cowardly Dog full series dvd rip",
-            "file": "season 2/S2 E08 · Bad Hair Day; The Forbidden Hat of Gold.mp4",
-            "name": "season 2/S2 E08 · Bad Hair Day; The Forbidden Hat of Gold",
-            "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%202%2FS2%20E08%20%C2%B7%20Bad%20Hair%20Day%3B%20The%20Forbidden%20Hat%20of%20Gold.mp4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+            "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+            "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E08.mp4",
+            "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E08",
+            "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E08.mp4",
             "seconds": 1368,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 147
+            "sizeMB": 137
           },
           "alternates": [
             {
               "conf": 0.55,
               "why": "S/E in filename + title match",
-              "item": "courage-the-cowardly-dog-show",
-              "itemTitle": "Courage The Cowardly Dog Show Complete",
-              "file": "Season 2/Ep8 Bad Hair Day-Forbidden Hat of Gold.mp4",
-              "name": "Season 2/Ep8 Bad Hair Day-Forbidden Hat of Gold",
-              "url": "https://archive.org/download/courage-the-cowardly-dog-show/Season%202%2FEp8%20Bad%20Hair%20Day-Forbidden%20Hat%20of%20Gold.mp4",
-              "seconds": 1358,
+              "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
+              "itemTitle": "Courage the Cowardly Dog full series dvd rip",
+              "file": "season 2/S2 E08 · Bad Hair Day; The Forbidden Hat of Gold.mp4",
+              "name": "season 2/S2 E08 · Bad Hair Day; The Forbidden Hat of Gold",
+              "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%202%2FS2%20E08%20%C2%B7%20Bad%20Hair%20Day%3B%20The%20Forbidden%20Hat%20of%20Gold.mp4",
+              "seconds": 1368,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 105
+              "sizeMB": 147
             }
           ]
         },
@@ -680,9 +979,9 @@
           "number": 9,
           "name": "Serpent of Evil River/The Transplant",
           "airdate": "2001-04-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -696,7 +995,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "2x-12-the-house-of-discontent-the-sand-whale-strikes",
               "itemTitle": "Courage the Cowardly Dog Seasons 1-2 (TVRips) (2005-2007)",
@@ -709,8 +1008,21 @@
               "sizeMB": 134
             },
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E09.mp4",
+              "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E09",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E09.mp4",
+              "seconds": 1366,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 2/Ep9 Serpent of the Evil River-The Transplant.mp4",
@@ -727,9 +1039,9 @@
           "number": 10,
           "name": "Car Broke, Phone Yes/Cowboy Courage",
           "airdate": "2001-10-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -743,8 +1055,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E10.mp4",
+              "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E10",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E10.mp4",
+              "seconds": 1366,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 137
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 2/Ep10 Car Broke, Phone Yes-Cowboy Courage.mp4",
@@ -761,9 +1086,9 @@
           "number": 11,
           "name": "Evil Weevil/McPhearson Phantom",
           "airdate": "2001-11-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "2x-12-the-house-of-discontent-the-sand-whale-strikes",
             "itemTitle": "Courage the Cowardly Dog Seasons 1-2 (TVRips) (2005-2007)",
@@ -777,7 +1102,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
               "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -790,8 +1115,21 @@
               "sizeMB": 122
             },
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E11.mp4",
+              "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E11",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E11.mp4",
+              "seconds": 1368,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 137
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 2/Ep11 Evil Weevil-McPhearson Phantom.mp4",
@@ -808,9 +1146,9 @@
           "number": 12,
           "name": "The House of Discontent/The Sand Whale Strikes",
           "airdate": "2001-11-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -824,7 +1162,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "2x-12-the-house-of-discontent-the-sand-whale-strikes",
               "itemTitle": "Courage the Cowardly Dog Seasons 1-2 (TVRips) (2005-2007)",
@@ -837,8 +1175,21 @@
               "sizeMB": 136
             },
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E12.mp4",
+              "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E12",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E12.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 2/Ep12 The House of Discontent-The Sand Whale Strikes.mp4",
@@ -855,37 +1206,50 @@
           "number": 13,
           "name": "The Tower of Dr. Zalost",
           "airdate": "2001-11-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "2x-12-the-house-of-discontent-the-sand-whale-strikes",
-            "itemTitle": "Courage the Cowardly Dog Seasons 1-2 (TVRips) (2005-2007)",
-            "file": "2x13 - The Tower of Dr. Zalost.mp4",
-            "name": "2x13 - The Tower of Dr. Zalost",
-            "url": "https://archive.org/download/2x-12-the-house-of-discontent-the-sand-whale-strikes/2x13%20-%20The%20Tower%20of%20Dr.%20Zalost.mp4",
-            "seconds": 1354,
-            "format": "h.264",
+            "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
+            "itemTitle": "Courage the Cowardly Dog full series dvd rip",
+            "file": "season 2/S2 E13 · The Tower of Dr Zalost.mp4",
+            "name": "season 2/S2 E13 · The Tower of Dr Zalost",
+            "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%202%2FS2%20E13%20%C2%B7%20The%20Tower%20of%20Dr%20Zalost.mp4",
+            "seconds": 1365,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 136
+            "sizeMB": 188
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
-              "itemTitle": "Courage the Cowardly Dog full series dvd rip",
-              "file": "season 2/S2 E13 · The Tower of Dr Zalost.mp4",
-              "name": "season 2/S2 E13 · The Tower of Dr Zalost",
-              "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%202%2FS2%20E13%20%C2%B7%20The%20Tower%20of%20Dr%20Zalost.mp4",
+              "item": "2x-12-the-house-of-discontent-the-sand-whale-strikes",
+              "itemTitle": "Courage the Cowardly Dog Seasons 1-2 (TVRips) (2005-2007)",
+              "file": "2x13 - The Tower of Dr. Zalost.mp4",
+              "name": "2x13 - The Tower of Dr. Zalost",
+              "url": "https://archive.org/download/2x-12-the-house-of-discontent-the-sand-whale-strikes/2x13%20-%20The%20Tower%20of%20Dr.%20Zalost.mp4",
+              "seconds": 1354,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E13.mp4",
+              "name": "Courage The Cowardly Dog/Season 2/Courage the Cowardly Dog - S02E13",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%202%2FCourage%20the%20Cowardly%20Dog%20-%20S02E13.mp4",
               "seconds": 1365,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 188
+              "sizeMB": 137
             },
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 2/Ep13 The Tower of Dr. Zalost.mp4",
@@ -907,29 +1271,69 @@
           "number": 1,
           "name": "Muriel Meets Her Match/Courage vs. Mecha Courage",
           "airdate": "2002-01-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
-            "file": "season 3/S3 E01 · Muriel Meets Her Match  Courage vs. Mecha-Courage.mp4",
-            "name": "season 3/S3 E01 · Muriel Meets Her Match  Courage vs. Mecha-Courage",
-            "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%203%2FS3%20E01%20%C2%B7%20Muriel%20Meets%20Her%20Match%20%20Courage%20vs.%20Mecha-Courage.mp4",
+            "file": "season 3/S3 E01 · Muriel Meets Her Match  Courage vs. Mecha-Courage.ia.mp4",
+            "name": "season 3/S3 E01 · Muriel Meets Her Match  Courage vs",
+            "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%203%2FS3%20E01%20%C2%B7%20Muriel%20Meets%20Her%20Match%20%20Courage%20vs.%20Mecha-Courage.ia.mp4",
             "seconds": 1365,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 155
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
+              "itemTitle": "Courage the Cowardly Dog full series dvd rip",
+              "file": "season 3/S3 E01 · Muriel Meets Her Match  Courage vs. Mecha-Courage.mp4",
+              "name": "season 3/S3 E01 · Muriel Meets Her Match  Courage vs. Mecha-Courage",
+              "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%203%2FS3%20E01%20%C2%B7%20Muriel%20Meets%20Her%20Match%20%20Courage%20vs.%20Mecha-Courage.mp4",
+              "seconds": 1365,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 155
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E01.mp4",
+              "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E01",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E01.mp4",
+              "seconds": 1365,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-show",
+              "itemTitle": "Courage The Cowardly Dog Show Complete",
+              "file": "Season 3/Ep1 Muriel Meets Her Match-Courage vs. Mecha-Courage.mp4",
+              "name": "Season 3/Ep1 Muriel Meets Her Match-Courage vs. Mecha-Courage",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-show/Season%203%2FEp1%20Muriel%20Meets%20Her%20Match-Courage%20vs.%20Mecha-Courage.mp4",
+              "seconds": 1365,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 121
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Campsite of Terror/The Record Deal",
           "airdate": "2002-02-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -943,8 +1347,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E02.mp4",
+              "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E02",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E02.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 3/Ep2 Campsite of Terror-Record Deal.mp4",
@@ -961,9 +1378,9 @@
           "number": 3,
           "name": "Stormy Weather/The Sandman Sleeps",
           "airdate": "2002-03-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -977,8 +1394,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E03.mp4",
+              "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E03",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E03.mp4",
+              "seconds": 1373,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 137
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 3/Ep3 Stormy Weather-The Sandman Sleeps.mp4",
@@ -995,9 +1425,9 @@
           "number": 4,
           "name": "Hard Drive Courage/The Ride of the Valkyries",
           "airdate": "2002-06-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1011,8 +1441,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E04.mp4",
+              "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E04",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E04.mp4",
+              "seconds": 1366,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 3/Ep4 Hard Drive Courage-The Ride of the Valkyries.mp4",
@@ -1029,9 +1472,9 @@
           "number": 5,
           "name": "Scuba Scuba Doo/Conway the Contaminationist",
           "airdate": "2002-06-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1045,8 +1488,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E05.mp4",
+              "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E05",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E05.mp4",
+              "seconds": 1368,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 3/Ep5 Scuba Scuba Doo-Conway the Contaminationist.mp4",
@@ -1063,9 +1519,9 @@
           "number": 6,
           "name": "Katz Under the Sea/Curtain of Cruelty",
           "airdate": "2002-06-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1079,8 +1535,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E06.mp4",
+              "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E06",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E06.mp4",
+              "seconds": 1360,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 3/Ep6  Katz Under the Sea-Curtain of Cruelty.mp4",
@@ -1097,9 +1566,9 @@
           "number": 7,
           "name": "Feast of the Bullfrogs/Tulip's Worm",
           "airdate": "2002-06-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1113,8 +1582,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E07.mp4",
+              "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E07",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E07.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 3/Ep7 Feast of the Bullfrogs-Tulip's Worm.mp4",
@@ -1131,33 +1613,33 @@
           "number": 8,
           "name": "So in Louvre Are We Two/Night of the Scarecrow",
           "airdate": "2002-07-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename + title match",
-            "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
-            "itemTitle": "Courage the Cowardly Dog full series dvd rip",
-            "file": "season 3/S3 E08 · So in Louvres Are We Two; Night of the Scarecrow.mp4",
-            "name": "season 3/S3 E08 · So in Louvres Are We Two; Night of the Scarecrow",
-            "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%203%2FS3%20E08%20%C2%B7%20So%20in%20Louvres%20Are%20We%20Two%3B%20Night%20of%20the%20Scarecrow.mp4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+            "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+            "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E08.mp4",
+            "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E08",
+            "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E08.mp4",
             "seconds": 1370,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 161
+            "sizeMB": 136
           },
           "alternates": [
             {
               "conf": 0.55,
               "why": "S/E in filename + title match",
-              "item": "courage-the-cowardly-dog-show",
-              "itemTitle": "Courage The Cowardly Dog Show Complete",
-              "file": "Season 3/Ep8 So in Louvres Are We Two-Night of the Scarecrow.mp4",
-              "name": "Season 3/Ep8 So in Louvres Are We Two-Night of the Scarecrow",
-              "url": "https://archive.org/download/courage-the-cowardly-dog-show/Season%203%2FEp8%20So%20in%20Louvres%20Are%20We%20Two-Night%20of%20the%20Scarecrow.mp4",
+              "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
+              "itemTitle": "Courage the Cowardly Dog full series dvd rip",
+              "file": "season 3/S3 E08 · So in Louvres Are We Two; Night of the Scarecrow.mp4",
+              "name": "season 3/S3 E08 · So in Louvres Are We Two; Night of the Scarecrow",
+              "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%203%2FS3%20E08%20%C2%B7%20So%20in%20Louvres%20Are%20We%20Two%3B%20Night%20of%20the%20Scarecrow.mp4",
               "seconds": 1370,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 122
+              "sizeMB": 161
             }
           ]
         },
@@ -1165,9 +1647,9 @@
           "number": 9,
           "name": "Mondo Magic/Watch the Birdies",
           "airdate": "2002-07-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1181,8 +1663,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E09.mp4",
+              "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E09",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E09.mp4",
+              "seconds": 1367,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 3/Ep9 Mondo Magic-Watch the Birdie.mp4",
@@ -1199,9 +1694,9 @@
           "number": 10,
           "name": "Fishy Business/Angry Nasty People",
           "airdate": "2002-07-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1215,8 +1710,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E10.mp4",
+              "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E10",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E10.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 137
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 3/Ep10 Fishy Business-Angry Nasty People.mp4",
@@ -1233,9 +1741,9 @@
           "number": 11,
           "name": "Dome of Doom/Snowman's Revenge",
           "airdate": "2002-07-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1249,8 +1757,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E11.mp4",
+              "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E11",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E11.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 137
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 3/Ep11 Dome of Doom-Snowman's Revenge.mp4",
@@ -1267,9 +1788,9 @@
           "number": 12,
           "name": "The Quilt Club/Swindlin' Wind",
           "airdate": "2002-08-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1283,8 +1804,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E12.mp4",
+              "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E12",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E12.mp4",
+              "seconds": 1365,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 3/Ep12 The Quilt Club-Swindlin' Wind.mp4",
@@ -1301,21 +1835,35 @@
           "number": 13,
           "name": "The King of Flan/Courage Under the Volcano",
           "airdate": "2002-08-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename + title match",
-            "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
-            "itemTitle": "Courage the Cowardly Dog full series dvd rip",
-            "file": "season 3/S3 E13 · King of Flan  Courage Under the Volcano.mp4",
-            "name": "season 3/S3 E13 · King of Flan  Courage Under the Volcano",
-            "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%203%2FS3%20E13%20%C2%B7%20King%20of%20Flan%20%20Courage%20Under%20the%20Volcano.mp4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+            "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+            "file": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E13.mp4",
+            "name": "Courage The Cowardly Dog/Season 3/Courage the Cowardly Dog - S03E13",
+            "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%203%2FCourage%20the%20Cowardly%20Dog%20-%20S03E13.mp4",
             "seconds": 1367,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 181
+            "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
+              "itemTitle": "Courage the Cowardly Dog full series dvd rip",
+              "file": "season 3/S3 E13 · King of Flan  Courage Under the Volcano.mp4",
+              "name": "season 3/S3 E13 · King of Flan  Courage Under the Volcano",
+              "url": "https://archive.org/download/s-1-e-03-.-courage-meets-big-foot-hothead/season%203%2FS3%20E13%20%C2%B7%20King%20of%20Flan%20%20Courage%20Under%20the%20Volcano.mp4",
+              "seconds": 1367,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 181
+            }
+          ]
         },
         {
           "number": 14,
@@ -1334,9 +1882,9 @@
           "number": 1,
           "name": "A Beaver's Tale/The Nutcracker",
           "airdate": "2002-09-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1350,8 +1898,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E01.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E01",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E01.mp4",
+              "seconds": 1370,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 4/Ep1  A Beaver's Tale-The Nutcracker.mp4",
@@ -1368,9 +1929,9 @@
           "number": 2,
           "name": "Rumpledkiltskin/Housecalls",
           "airdate": "2002-09-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1384,8 +1945,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E02.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E02",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E02.mp4",
+              "seconds": 1368,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 4/Ep2  Rumpledkiltskin-Housecalls.mp4",
@@ -1402,9 +1976,9 @@
           "number": 3,
           "name": "Le Quack Balloon/Windmill Vandals",
           "airdate": "2002-09-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1418,8 +1992,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E03.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E03",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E03.mp4",
+              "seconds": 1363,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 4/Ep3 Le Quack Balloon-Windmill Vandals.mp4",
@@ -1436,9 +2023,9 @@
           "number": 4,
           "name": "The Uncommon Cold/Farmer-Hunter, Farmer-Hunted",
           "airdate": "2002-09-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1452,8 +2039,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E04.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E04",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E04.mp4",
+              "seconds": 1364,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 134
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 4/Ep4 The Uncommon Cold-Farmer-Hunter, Farmer-Hunted.mp4",
@@ -1470,9 +2070,9 @@
           "number": 5,
           "name": "Bride of the Swamp Monster/Goat Pain",
           "airdate": "2002-10-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1486,8 +2086,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E05.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E05",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E05.mp4",
+              "seconds": 1368,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 4/Ep5 Bride of Swamp Monster-Goat Pain.mp4",
@@ -1504,9 +2117,9 @@
           "number": 6,
           "name": "Muriel Blows Up/Profiles in Courage",
           "airdate": "2002-10-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1520,8 +2133,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E06.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E06",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E06.mp4",
+              "seconds": 1366,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 4/Ep6 Muriel Blows Up-Profiles in Courage.mp4",
@@ -1538,9 +2164,9 @@
           "number": 7,
           "name": "The Mask",
           "airdate": "2002-10-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1554,8 +2180,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E07.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E07",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E07.mp4",
+              "seconds": 1368,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 134
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 4/Ep7 The Mask.mp4",
@@ -1572,9 +2211,9 @@
           "number": 8,
           "name": "Squatting Tiger, Hidden Dog/Muted Muriel",
           "airdate": "2002-10-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1588,8 +2227,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E08.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E08",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E08.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 4/Ep8 Squatting Tiger, Hidden Dog-Muted Muriel.mp4",
@@ -1606,9 +2258,9 @@
           "number": 9,
           "name": "Aqua-Farmer/Food of the Dragon",
           "airdate": "2002-10-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1622,8 +2274,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E09.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E09",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E09.mp4",
+              "seconds": 1368,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 4/Ep9 Aqua-Farmer  -Food of the Dragon.mp4",
@@ -1640,9 +2305,9 @@
           "number": 10,
           "name": "The Last Starmakers/Son of the Chicken from Outer Space",
           "airdate": "2002-11-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1656,8 +2321,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E10.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E10",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E10.mp4",
+              "seconds": 1364,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 134
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 4/Ep10  The Last of the Starmakers-Son of the Chicken from Outer Space.mp4",
@@ -1674,9 +2352,9 @@
           "number": 11,
           "name": "Courageous Cure/Ball of Revenge",
           "airdate": "2002-11-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1690,8 +2368,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E11.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E11",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E11.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 4/Ep11 Courageous Cure-Ball of Revenge.mp4",
@@ -1708,9 +2399,9 @@
           "number": 12,
           "name": "Cabaret Courage/Wrath of the Librarian",
           "airdate": "2002-11-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1722,15 +2413,42 @@
             "playable": true,
             "sizeMB": 150
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E12.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E12",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E12.mp4",
+              "seconds": 1373,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-show",
+              "itemTitle": "Courage The Cowardly Dog Show Complete",
+              "file": "Season 4/Ep12  Cabaret Courage-Wrath of the Librarian.mp4",
+              "name": "Season 4/Ep12  Cabaret Courage-Wrath of the Librarian",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-show/Season%204%2FEp12%20%20Cabaret%20Courage-Wrath%20of%20the%20Librarian.mp4",
+              "seconds": 1374,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 102
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Remembrance of Courage Past/Perfect",
           "airdate": "2002-11-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-1-e-03-.-courage-meets-big-foot-hothead",
             "itemTitle": "Courage the Cowardly Dog full series dvd rip",
@@ -1744,8 +2462,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "courage-the-cowardly-dog-s-01-e-03_202602",
+              "itemTitle": "Courage The Cowardly Dog: The Complete Series",
+              "file": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E13.mp4",
+              "name": "Courage The Cowardly Dog/Season 4/Courage the Cowardly Dog - S04E13",
+              "url": "https://archive.org/download/courage-the-cowardly-dog-s-01-e-03_202602/Courage%20The%20Cowardly%20Dog%2FSeason%204%2FCourage%20the%20Cowardly%20Dog%20-%20S04E13.mp4",
+              "seconds": 1365,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 134
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "courage-the-cowardly-dog-show",
               "itemTitle": "Courage The Cowardly Dog Show Complete",
               "file": "Season 4/Ep13 Remembrance of Courage Past-Perfect.mp4",

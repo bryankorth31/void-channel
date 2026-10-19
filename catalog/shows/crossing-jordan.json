@@ -3,7 +3,7 @@
   "slug": "crossing-jordan",
   "type": "Drama",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:47.688Z",
+  "matchedAt": "2026-10-19T04:10:53.384Z",
   "addedAt": "2026-10-15T21:48:42.352Z",
   "tvmaze": {
     "id": 948,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 117,
     "live": 0,
-    "review": 4,
-    "missing": 113,
-    "pct": 3
+    "review": 5,
+    "missing": 112,
+    "pct": 4
   },
   "seasons": [
     {
@@ -67,8 +67,20 @@
           "number": 3,
           "name": "The Ties That Bind",
           "airdate": "2001-10-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Ties That Bind\" (0.95)",
+            "item": "crossing-jordan-reunion-2020_202605",
+            "itemTitle": "Crossing Jordan (2001–07) + Reunion (2020)",
+            "file": "Crossing Jordan S1, E03 - The Ties That Bind - ac71ef6e4d -wootly.mp4",
+            "name": "Crossing Jordan S1, E03 - The Ties That Bind - ac71ef6e4d -wootly",
+            "url": "https://archive.org/download/crossing-jordan-reunion-2020_202605/Crossing%20Jordan%20S1%2C%20E03%20-%20The%20Ties%20That%20Bind%20-%20ac71ef6e4d%20-wootly.mp4",
+            "seconds": 2690,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 335
+          },
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "unsolved-history",
   "type": "Documentary & Geographic",
   "network": "Discovery",
-  "matchedAt": "2026-10-16T07:58:04.916Z",
+  "matchedAt": "2026-10-19T04:12:09.133Z",
   "addedAt": "2026-10-15T12:08:36.201Z",
   "tvmaze": {
     "id": 66464,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 46,
     "live": 0,
-    "review": 1,
-    "missing": 45,
-    "pct": 2
+    "review": 0,
+    "missing": 46,
+    "pct": 0
   },
   "seasons": [
     {
@@ -59,20 +59,8 @@
           "number": 5,
           "name": "Custer's Last Stand",
           "airdate": "2002-11-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Custer's Last Stand\" (1.00)",
-            "item": "unsolved-history-custers-last-stand",
-            "itemTitle": "Unsolved History Custers Last Stand",
-            "file": "Unsolved History Custers Last Stand.mp4",
-            "name": "Unsolved History Custers Last Stand",
-            "url": "https://archive.org/download/unsolved-history-custers-last-stand/Unsolved%20History%20Custers%20Last%20Stand.mp4",
-            "seconds": 3601,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 247
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

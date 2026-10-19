@@ -3,7 +3,7 @@
   "slug": "project-runway",
   "type": "Reality & Talk",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:54.716Z",
+  "matchedAt": "2026-10-19T04:11:59.792Z",
   "addedAt": "2026-10-15T12:08:28.009Z",
   "tvmaze": {
     "id": 687,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 303,
-    "live": 1,
+    "live": 2,
     "review": 0,
-    "missing": 302,
-    "pct": 0
+    "missing": 301,
+    "pct": 1
   },
   "seasons": [
     {
@@ -684,8 +684,20 @@
           "number": 13,
           "name": "Finale, Part 1",
           "airdate": "2009-11-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "project-runaway-season-6-episode-13",
+            "itemTitle": "Project Runway Season 6 Episode 13",
+            "file": "Project Runaway Season 6 Episode 13.mp4",
+            "name": "Project Runaway Season 6 Episode 13",
+            "url": "https://archive.org/download/project-runaway-season-6-episode-13/Project%20Runaway%20Season%206%20Episode%2013.mp4",
+            "seconds": 2596,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 159
+          },
           "alternates": []
         },
         {

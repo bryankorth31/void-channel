@@ -3,7 +3,7 @@
   "slug": "zero-punctuation",
   "type": "Internet Comedy",
   "network": "The Escapist",
-  "matchedAt": "2026-10-16T07:57:32.720Z",
+  "matchedAt": "2026-10-19T04:11:35.262Z",
   "addedAt": "2026-10-15T12:08:14.092Z",
   "tvmaze": {
     "id": 74308,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 1240,
     "live": 0,
-    "review": 721,
-    "missing": 519,
-    "pct": 58
+    "review": 733,
+    "missing": 507,
+    "pct": 59
   },
   "seasons": [
     {
@@ -1702,18 +1702,32 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.8,
-            "why": "title ~ \"Duke Nukem Forever\" (1.00)",
+            "why": "title ~ \"Duke Nukem Forever\" (0.95)",
             "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
             "itemTitle": "Every Episode of Zero Punctuation",
-            "file": "DUKE NUKEM FOREVER (Zero Punctuation).mp4",
-            "name": "DUKE NUKEM FOREVER (Zero Punctuation)",
-            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/DUKE%20NUKEM%20FOREVER%20(Zero%20Punctuation).mp4",
-            "seconds": 275,
+            "file": "VIEWER'S CHOICE DUKE NUKEM FOREVER (Zero Punctuation).mp4",
+            "name": "VIEWER'S CHOICE DUKE NUKEM FOREVER (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/VIEWER'S%20CHOICE%20DUKE%20NUKEM%20FOREVER%20(Zero%20Punctuation).mp4",
+            "seconds": 274,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 8
+            "sizeMB": 9
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Duke Nukem Forever\" (1.00)",
+              "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+              "itemTitle": "Every Episode of Zero Punctuation",
+              "file": "DUKE NUKEM FOREVER (Zero Punctuation).mp4",
+              "name": "DUKE NUKEM FOREVER (Zero Punctuation)",
+              "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/DUKE%20NUKEM%20FOREVER%20(Zero%20Punctuation).mp4",
+              "seconds": 275,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 8
+            }
+          ]
         },
         {
           "number": 22,
@@ -5023,7 +5037,21 @@
             "playable": true,
             "sizeMB": 10
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Half-Life\" (0.95)",
+              "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+              "itemTitle": "Every Episode of Zero Punctuation",
+              "file": "Half Life 2 Update - Gravity Gun vs Modern FPS (Zero Punctuation).mp4",
+              "name": "Half Life 2 Update - Gravity Gun vs Modern FPS (Zero Punctuation)",
+              "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Half%20Life%202%20Update%20-%20Gravity%20Gun%20vs%20Modern%20FPS%20(Zero%20Punctuation).mp4",
+              "seconds": 314,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 10
+            }
+          ]
         },
         {
           "number": 33,
@@ -5701,18 +5729,32 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.8,
-            "why": "title ~ \"The Cave\" (1.00)",
+            "why": "title ~ \"The Cave\" (0.95)",
             "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
             "itemTitle": "Every Episode of Zero Punctuation",
-            "file": "THE CAVE (Zero Punctuation).mp4",
-            "name": "THE CAVE (Zero Punctuation)",
-            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/THE%20CAVE%20(Zero%20Punctuation).mp4",
-            "seconds": 315,
+            "file": "Cave Story - Heart & Art (Zero Punctuation).mp4",
+            "name": "Cave Story - Heart & Art (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Cave%20Story%20-%20Heart%20%26%20Art%20(Zero%20Punctuation).mp4",
+            "seconds": 317,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 10
+            "sizeMB": 13
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Cave\" (1.00)",
+              "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+              "itemTitle": "Every Episode of Zero Punctuation",
+              "file": "THE CAVE (Zero Punctuation).mp4",
+              "name": "THE CAVE (Zero Punctuation)",
+              "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/THE%20CAVE%20(Zero%20Punctuation).mp4",
+              "seconds": 315,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 10
+            }
+          ]
         },
         {
           "number": 7,
@@ -7795,8 +7837,20 @@
           "number": 38,
           "name": "The Sims 4",
           "airdate": "2014-09-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Sims 4\" (0.95)",
+            "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+            "itemTitle": "Every Episode of Zero Punctuation",
+            "file": "The Sims 4 - Player First! (Zero Punctuation).mp4",
+            "name": "The Sims 4 - Player First! (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/The%20Sims%204%20-%20Player%20First!%20(Zero%20Punctuation).mp4",
+            "seconds": 307,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 11
+          },
           "alternates": []
         },
         {
@@ -7843,8 +7897,20 @@
           "number": 41,
           "name": "Hyrule Warriors",
           "airdate": "2014-10-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Hyrule Warriors\" (0.95)",
+            "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+            "itemTitle": "Every Episode of Zero Punctuation",
+            "file": "Hyrule Warriors - Nintendo Holding Pattern (Zero Punctuation).mp4",
+            "name": "Hyrule Warriors - Nintendo Holding Pattern (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Hyrule%20Warriors%20-%20Nintendo%20Holding%20Pattern%20(Zero%20Punctuation).mp4",
+            "seconds": 302,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 11
+          },
           "alternates": []
         },
         {
@@ -7933,8 +7999,20 @@
           "number": 46,
           "name": "Sunset Overdrive",
           "airdate": "2014-11-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sunset Overdrive\" (0.95)",
+            "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+            "itemTitle": "Every Episode of Zero Punctuation",
+            "file": "Sunset Overdrive - Trying Too Hard (Zero Punctuation).mp4",
+            "name": "Sunset Overdrive - Trying Too Hard (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Sunset%20Overdrive%20-%20Trying%20Too%20Hard%20(Zero%20Punctuation).mp4",
+            "seconds": 322,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 13
+          },
           "alternates": []
         },
         {
@@ -8001,8 +8079,20 @@
           "number": 50,
           "name": "Dragon Age: Inquisition",
           "airdate": "2014-12-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Dragon Age: Inquisition\" (0.95)",
+            "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+            "itemTitle": "Every Episode of Zero Punctuation",
+            "file": "Dragon Age Inquisition - Fantasy Commander Shepard (Zero Punctuation).mp4",
+            "name": "Dragon Age Inquisition - Fantasy Commander Shepard (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Dragon%20Age%20Inquisition%20-%20Fantasy%20Commander%20Shepard%20(Zero%20Punctuation).mp4",
+            "seconds": 316,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 11
+          },
           "alternates": []
         },
         {
@@ -8612,8 +8702,20 @@
           "number": 8,
           "name": "Evolve",
           "airdate": "2015-02-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Evolve\" (0.95)",
+            "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+            "itemTitle": "Every Episode of Zero Punctuation",
+            "file": "Evolve - One vs Multiplayer (Zero Punctuation).mp4",
+            "name": "Evolve - One vs Multiplayer (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Evolve%20-%20One%20vs%20Multiplayer%20(Zero%20Punctuation).mp4",
+            "seconds": 296,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 11
+          },
           "alternates": []
         },
         {
@@ -8970,8 +9072,20 @@
           "number": 30,
           "name": "Godzilla",
           "airdate": "2015-07-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Godzilla\" (0.95)",
+            "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+            "itemTitle": "Every Episode of Zero Punctuation",
+            "file": "Godzilla - God-Awful-Zilla (Zero Punctuation).mp4",
+            "name": "Godzilla - God-Awful-Zilla (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Godzilla%20-%20God-Awful-Zilla%20(Zero%20Punctuation).mp4",
+            "seconds": 306,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 19
+          },
           "alternates": []
         },
         {
@@ -11818,8 +11932,20 @@
           "number": 34,
           "name": "Hellblade",
           "airdate": "2017-08-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Hellblade\" (0.95)",
+            "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+            "itemTitle": "Every Episode of Zero Punctuation",
+            "file": "Hellblade Senua's Sacrifice (Zero Punctuation).mp4",
+            "name": "Hellblade Senua's Sacrifice (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Hellblade%20Senua's%20Sacrifice%20(Zero%20Punctuation).mp4",
+            "seconds": 323,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 14
+          },
           "alternates": []
         },
         {
@@ -11866,8 +11992,20 @@
           "number": 37,
           "name": "Mario + Rabbids",
           "airdate": "2017-09-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Mario + Rabbids\" (0.95)",
+            "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+            "itemTitle": "Every Episode of Zero Punctuation",
+            "file": "Mario & Rabbids Kingdom Battle (Zero Punctuation).mp4",
+            "name": "Mario & Rabbids Kingdom Battle (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Mario%20%26%20Rabbids%20Kingdom%20Battle%20(Zero%20Punctuation).mp4",
+            "seconds": 311,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 15
+          },
           "alternates": []
         },
         {
@@ -11954,8 +12092,20 @@
           "number": 42,
           "name": "Hob and Hat in Time",
           "airdate": "2017-10-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Hob and Hat in Time\" (0.95)",
+            "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+            "itemTitle": "Every Episode of Zero Punctuation",
+            "file": "Hob & A Hat In Time (Zero Punctuation).mp4",
+            "name": "Hob & A Hat In Time (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Hob%20%26%20A%20Hat%20In%20Time%20(Zero%20Punctuation).mp4",
+            "seconds": 328,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 16
+          },
           "alternates": []
         },
         {
@@ -12593,8 +12743,20 @@
           "number": 15,
           "name": "Ni No Kuni 2",
           "airdate": "2018-04-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Ni No Kuni 2\" (0.95)",
+            "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+            "itemTitle": "Every Episode of Zero Punctuation",
+            "file": "Ni No Kuni 2 Revenant Kingdom (Zero Punctuation).mp4",
+            "name": "Ni No Kuni 2 Revenant Kingdom (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Ni%20No%20Kuni%202%20Revenant%20Kingdom%20(Zero%20Punctuation).mp4",
+            "seconds": 346,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 18
+          },
           "alternates": []
         },
         {
@@ -13290,8 +13452,20 @@
           "number": 2,
           "name": "Super Smash Bros. Ultimate",
           "airdate": "2019-01-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Super Smash Bros. Ultimate\" (0.90)",
+            "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+            "itemTitle": "Every Episode of Zero Punctuation",
+            "file": "Super Smash Brothers Ultimate (Zero Punctuation).mp4",
+            "name": "Super Smash Brothers Ultimate (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Super%20Smash%20Brothers%20Ultimate%20(Zero%20Punctuation).mp4",
+            "seconds": 337,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 16
+          },
           "alternates": []
         },
         {
@@ -13928,8 +14102,20 @@
           "number": 35,
           "name": "Control",
           "airdate": "2019-08-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Control\" (1.00)",
+            "item": "yahtzee-goes-to-gdc-2023-zero-punctuation_202311",
+            "itemTitle": "Every Episode of Zero Punctuation",
+            "file": "Control (Zero Punctuation).mp4",
+            "name": "Control (Zero Punctuation)",
+            "url": "https://archive.org/download/yahtzee-goes-to-gdc-2023-zero-punctuation_202311/Control%20(Zero%20Punctuation).mp4",
+            "seconds": 344,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 17
+          },
           "alternates": []
         },
         {

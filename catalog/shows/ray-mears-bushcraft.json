@@ -3,7 +3,7 @@
   "slug": "ray-mears-bushcraft",
   "type": "Documentary & Geographic",
   "network": "Discovery",
-  "matchedAt": "2026-10-17T11:15:47.476Z",
+  "matchedAt": "2026-10-19T04:12:53.668Z",
   "addedAt": "2026-10-17T11:15:47.477Z",
   "tvmaze": {
     "id": 18695,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 10,
-    "live": 7,
+    "live": 9,
     "review": 0,
-    "missing": 3,
-    "pct": 70
+    "missing": 1,
+    "pct": 90
   },
   "seasons": [
     {
@@ -90,16 +90,42 @@
           "number": 4,
           "name": "Episode 4",
           "airdate": "2004-09-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "ray-mears-collection_202610",
+            "itemTitle": "Ray Mears Collection",
+            "file": "Ray.Mears'.Bushcraft.COMPLETE.10bit.DVDRip.x265-budgetbits/Ray.Mears'.Bushcraft.S01E04.Africa.Camp.10bit.DVDRip.x265-budgetbits.mp4",
+            "name": "Ray.Mears'.Bushcraft.COMPLETE.10bit.DVDRip.x265-budgetbits/Ray.Mears'.Bushcraft.S01E04.Africa.Camp.10bit.DVDRip.x265-budgetbits",
+            "url": "https://archive.org/download/ray-mears-collection_202610/Ray.Mears'.Bushcraft.COMPLETE.10bit.DVDRip.x265-budgetbits%2FRay.Mears'.Bushcraft.S01E04.Africa.Camp.10bit.DVDRip.x265-budgetbits.mp4",
+            "seconds": 3551,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (10bit)",
+            "sizeMB": 350
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "2004-10-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "ray-mears-collection_202610",
+            "itemTitle": "Ray Mears Collection",
+            "file": "Ray.Mears'.Bushcraft.COMPLETE.10bit.DVDRip.x265-budgetbits/Ray.Mears'.Bushcraft.S01E05.Africa.Safari.10bit.DVDRip.x265-budgetbits.mp4",
+            "name": "Ray.Mears'.Bushcraft.COMPLETE.10bit.DVDRip.x265-budgetbits/Ray.Mears'.Bushcraft.S01E05.Africa.Safari.10bit.DVDRip.x265-budgetbits",
+            "url": "https://archive.org/download/ray-mears-collection_202610/Ray.Mears'.Bushcraft.COMPLETE.10bit.DVDRip.x265-budgetbits%2FRay.Mears'.Bushcraft.S01E05.Africa.Safari.10bit.DVDRip.x265-budgetbits.mp4",
+            "seconds": 3545,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (10bit)",
+            "sizeMB": 346
+          },
           "alternates": []
         }
       ]

@@ -3,7 +3,7 @@
   "slug": "moonlighting",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-16T07:58:22.967Z",
+  "matchedAt": "2026-10-19T04:12:23.594Z",
   "addedAt": "2026-10-15T12:08:56.077Z",
   "tvmaze": {
     "id": 1487,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 67,
-    "live": 24,
+    "live": 25,
     "review": 3,
-    "missing": 40,
-    "pct": 40
+    "missing": 39,
+    "pct": 42
   },
   "seasons": [
     {
@@ -47,8 +47,20 @@
           "number": 2,
           "name": "Moonlighting",
           "airdate": "1985-03-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "sk_20251022",
+            "itemTitle": "Moonlighting",
+            "file": "Moonlighting S01E02 Gunfight at the So So Corral.mp4",
+            "name": "Moonlighting S01E02 Gunfight at the So So Corral",
+            "url": "https://archive.org/download/sk_20251022/Moonlighting%20S01E02%20Gunfight%20at%20the%20So%20So%20Corral.mp4",
+            "seconds": 3420,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 161
+          },
           "alternates": []
         },
         {

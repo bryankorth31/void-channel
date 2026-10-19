@@ -3,7 +3,7 @@
   "slug": "saltys-lighthouse",
   "type": "Documentary & Geographic",
   "network": "TLC",
-  "matchedAt": "2026-10-17T10:51:12.545Z",
+  "matchedAt": "2026-10-19T04:12:52.407Z",
   "addedAt": "2026-10-17T10:51:12.545Z",
   "tvmaze": {
     "id": 70757,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 40,
     "live": 0,
-    "review": 35,
-    "missing": 5,
-    "pct": 88
+    "review": 38,
+    "missing": 2,
+    "pct": 95
   },
   "seasons": [
     {
@@ -27,8 +27,20 @@
           "number": 1,
           "name": "Mixed Signals!",
           "airdate": "1997-10-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Mixed Signals!\" (0.95)",
+            "item": "saltys-lighthouse-series",
+            "itemTitle": "Salty's Lighthouse - Full Series",
+            "file": "S01 -E01 - Mixed Signals-492579.mp4",
+            "name": "S01 -E01 - Mixed Signals-492579",
+            "url": "https://archive.org/download/saltys-lighthouse-series/S01%20-E01%20-%20Mixed%20Signals-492579.mp4",
+            "seconds": 1345,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 347
+          },
           "alternates": []
         },
         {
@@ -55,8 +67,20 @@
           "number": 3,
           "name": "Taking Off!",
           "airdate": "1997-10-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Taking Off!\" (0.95)",
+            "item": "saltys-lighthouse-series",
+            "itemTitle": "Salty's Lighthouse - Full Series",
+            "file": "S01 -E02 - Taking Off-492580.mp4",
+            "name": "S01 -E02 - Taking Off-492580",
+            "url": "https://archive.org/download/saltys-lighthouse-series/S01%20-E02%20-%20Taking%20Off-492580.mp4",
+            "seconds": 1345,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 348
+          },
           "alternates": []
         },
         {
@@ -363,8 +387,20 @@
           "number": 19,
           "name": "Strike Up the Band",
           "airdate": "1998-02-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Strike Up the Band\" (0.95)",
+            "item": "saltys-lighthouse-series",
+            "itemTitle": "Salty's Lighthouse - Full Series",
+            "file": "S01 -E10 - Strike Up the Band-492588.mp4",
+            "name": "S01 -E10 - Strike Up the Band-492588",
+            "url": "https://archive.org/download/saltys-lighthouse-series/S01%20-E10%20-%20Strike%20Up%20the%20Band-492588.mp4",
+            "seconds": 1314,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 340
+          },
           "alternates": []
         },
         {

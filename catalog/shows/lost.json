@@ -3,7 +3,7 @@
   "slug": "lost",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-16T07:56:42.788Z",
+  "matchedAt": "2026-10-19T04:10:49.139Z",
   "addedAt": "2026-10-15T12:07:46.266Z",
   "tvmaze": {
     "id": 123,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 121,
-    "live": 1,
-    "review": 5,
-    "missing": 115,
-    "pct": 5
+    "live": 4,
+    "review": 0,
+    "missing": 117,
+    "pct": 3
   },
   "seasons": [
     {
@@ -27,79 +27,43 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "2004-09-22",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 5 in \"LOST DCIGS/DCIGSCOMEDY YOUTUBE VIDEOS\"",
-            "item": "2012-prank-call-esther-returnsby",
-            "itemTitle": "LOST DCIGS/DCIGSCOMEDY YOUTUBE VIDEOS",
-            "file": "Slog 56- Siggy Niggy Returns, Machinima Conference.mp4",
-            "name": "Slog 56- Siggy Niggy Returns, Machinima Conference",
-            "url": "https://archive.org/download/2012-prank-call-esther-returnsby/Slog%2056-%20Siggy%20Niggy%20Returns%2C%20Machinima%20Conference.mp4",
-            "seconds": 3463,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 655
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Pilot",
           "airdate": "2004-09-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 5 in \"LOST DCIGS/DCIGSCOMEDY YOUTUBE VIDEOS\"",
-            "item": "2012-prank-call-esther-returnsby",
-            "itemTitle": "LOST DCIGS/DCIGSCOMEDY YOUTUBE VIDEOS",
-            "file": "slog 68 back in jail.mp4",
-            "name": "slog 68 back in jail",
-            "url": "https://archive.org/download/2012-prank-call-esther-returnsby/slog%2068%20back%20in%20jail.mp4",
-            "seconds": 2730,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 251
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Tabula Rasa",
           "airdate": "2004-10-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 5 in \"LOST DCIGS/DCIGSCOMEDY YOUTUBE VIDEOS\"",
-            "item": "2012-prank-call-esther-returnsby",
-            "itemTitle": "LOST DCIGS/DCIGSCOMEDY YOUTUBE VIDEOS",
-            "file": "SLOG 93- axe a sigga.mp4",
-            "name": "SLOG 93- axe a sigga",
-            "url": "https://archive.org/download/2012-prank-call-esther-returnsby/SLOG%2093-%20axe%20a%20sigga.mp4",
-            "seconds": 3624,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 341
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Walkabout",
           "airdate": "2004-10-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 5 in \"LOST DCIGS/DCIGSCOMEDY YOUTUBE VIDEOS\"",
-            "item": "2012-prank-call-esther-returnsby",
-            "itemTitle": "LOST DCIGS/DCIGSCOMEDY YOUTUBE VIDEOS",
-            "file": "SLOG 246 FULLOLIES JOB FUTURE.mp4",
-            "name": "SLOG 246 FULLOLIES JOB FUTURE",
-            "url": "https://archive.org/download/2012-prank-call-esther-returnsby/SLOG%20246%20FULLOLIES%20JOB%20FUTURE.mp4",
-            "seconds": 3189,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "007-the-lost-history-of-flat-earth-season-1-episode-7.ia",
+            "itemTitle": "The Lost History Of Flat Earth Season 1",
+            "file": "004 The Lost History of Flat Earth - Season 1, Episode 4.ia.mp4",
+            "name": "004 The Lost History of Flat Earth - Season 1, Episode 4",
+            "url": "https://archive.org/download/007-the-lost-history-of-flat-earth-season-1-episode-7.ia/004%20The%20Lost%20History%20of%20Flat%20Earth%20-%20Season%201%2C%20Episode%204.ia.mp4",
+            "seconds": 3391,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 162
+            "sizeMB": 572
           },
           "alternates": []
         },
@@ -107,19 +71,19 @@
           "number": 5,
           "name": "White Rabbit",
           "airdate": "2004-10-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 5 in \"LOST DCIGS/DCIGSCOMEDY YOUTUBE VIDEOS\"",
-            "item": "2012-prank-call-esther-returnsby",
-            "itemTitle": "LOST DCIGS/DCIGSCOMEDY YOUTUBE VIDEOS",
-            "file": "slog- facebook questions axe a sigga edition.mp4",
-            "name": "slog- facebook questions axe a sigga edition",
-            "url": "https://archive.org/download/2012-prank-call-esther-returnsby/slog-%20facebook%20questions%20axe%20a%20sigga%20edition.mp4",
-            "seconds": 2739,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "007-the-lost-history-of-flat-earth-season-1-episode-7.ia",
+            "itemTitle": "The Lost History Of Flat Earth Season 1",
+            "file": "005 The Lost History of Flat Earth - Season 1, Episode 5.ia.mp4",
+            "name": "005 The Lost History of Flat Earth - Season 1, Episode 5",
+            "url": "https://archive.org/download/007-the-lost-history-of-flat-earth-season-1-episode-7.ia/005%20The%20Lost%20History%20of%20Flat%20Earth%20-%20Season%201%2C%20Episode%205.ia.mp4",
+            "seconds": 4316,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 586
+            "sizeMB": 672
           },
           "alternates": []
         },
@@ -127,8 +91,20 @@
           "number": 6,
           "name": "House of the Rising Sun",
           "airdate": "2004-10-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "007-the-lost-history-of-flat-earth-season-1-episode-7.ia",
+            "itemTitle": "The Lost History Of Flat Earth Season 1",
+            "file": "006 The Lost History of Flat Earth - Season 1, Episode 6.ia.mp4",
+            "name": "006 The Lost History of Flat Earth - Season 1, Episode 6",
+            "url": "https://archive.org/download/007-the-lost-history-of-flat-earth-season-1-episode-7.ia/006%20The%20Lost%20History%20of%20Flat%20Earth%20-%20Season%201%2C%20Episode%206.ia.mp4",
+            "seconds": 3874,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 582
+          },
           "alternates": []
         },
         {

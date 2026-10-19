@@ -3,7 +3,7 @@
   "slug": "cartoon-sushi",
   "type": "MTV",
   "network": "MTV",
-  "matchedAt": "2026-10-16T07:56:41.696Z",
+  "matchedAt": "2026-10-19T04:10:47.502Z",
   "addedAt": "2026-10-15T12:07:45.501Z",
   "tvmaze": {
     "id": 73629,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 11,
     "live": 1,
-    "review": 3,
-    "missing": 7,
-    "pct": 36
+    "review": 5,
+    "missing": 5,
+    "pct": 55
   },
   "seasons": [
     {
@@ -41,14 +41,40 @@
             "playable": true,
             "sizeMB": 184
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 5 in \"Cartoon Sushi (MTV) - various episodes\"",
+              "item": "cartoonsushi-episodes",
+              "itemTitle": "Cartoon Sushi (MTV) - various episodes",
+              "file": "sushi01.mp4",
+              "name": "sushi01",
+              "url": "https://archive.org/download/cartoonsushi-episodes/sushi01.mp4",
+              "seconds": 1262,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 111
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "1997-10-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 5 in \"Cartoon Sushi (MTV) - various episodes\"",
+            "item": "cartoonsushi-episodes",
+            "itemTitle": "Cartoon Sushi (MTV) - various episodes",
+            "file": "sushi02.mp4",
+            "name": "sushi02",
+            "url": "https://archive.org/download/cartoonsushi-episodes/sushi02.mp4",
+            "seconds": 1348,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
@@ -69,7 +95,21 @@
             "playable": true,
             "sizeMB": 217
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 5 in \"Cartoon Sushi (MTV) - various episodes\"",
+              "item": "cartoonsushi-episodes",
+              "itemTitle": "Cartoon Sushi (MTV) - various episodes",
+              "file": "sushi06.mp4",
+              "name": "sushi06",
+              "url": "https://archive.org/download/cartoonsushi-episodes/sushi06.mp4",
+              "seconds": 1274,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 76
+            }
+          ]
         },
         {
           "number": 4,
@@ -89,14 +129,40 @@
             "playable": true,
             "sizeMB": 408
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 5 in \"Cartoon Sushi (MTV) - various episodes\"",
+              "item": "cartoonsushi-episodes",
+              "itemTitle": "Cartoon Sushi (MTV) - various episodes",
+              "file": "sushi10.mp4",
+              "name": "sushi10",
+              "url": "https://archive.org/download/cartoonsushi-episodes/sushi10.mp4",
+              "seconds": 1366,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 61
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "1998-01-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 5 in \"Cartoon Sushi (MTV) - various episodes\"",
+            "item": "cartoonsushi-episodes",
+            "itemTitle": "Cartoon Sushi (MTV) - various episodes",
+            "file": "sushi11.mp4",
+            "name": "sushi11",
+            "url": "https://archive.org/download/cartoonsushi-episodes/sushi11.mp4",
+            "seconds": 1266,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 48
+          },
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "the-facts-of-life",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:25.293Z",
+  "matchedAt": "2026-10-19T04:12:25.526Z",
   "addedAt": "2026-10-15T12:08:57.817Z",
   "tvmaze": {
     "id": 4607,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 200,
     "live": 0,
-    "review": 1,
-    "missing": 199,
-    "pct": 1
+    "review": 0,
+    "missing": 200,
+    "pct": 0
   },
   "seasons": [
     {
@@ -1177,20 +1177,8 @@
           "number": 13,
           "name": "Christmas Baby",
           "airdate": "1985-12-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Christmas Baby\" (0.70)",
-            "item": "FactsOfLifeChristmasTVEP",
-            "itemTitle": "Facts Of Life Christmas TV EP",
-            "file": "Facts Of Life Christmas TV EP.mp4",
-            "name": "Facts Of Life Christmas TV EP",
-            "url": "https://archive.org/download/FactsOfLifeChristmasTVEP/Facts%20Of%20Life%20Christmas%20TV%20EP.mp4",
-            "seconds": 1500,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 67
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

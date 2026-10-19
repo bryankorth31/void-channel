@@ -3,7 +3,7 @@
   "slug": "animaniacs",
   "type": "Animated",
   "network": "The WB",
-  "matchedAt": "2026-10-16T07:56:25.210Z",
+  "matchedAt": "2026-10-19T04:10:34.805Z",
   "addedAt": "2026-10-16T07:56:25.209Z",
   "tvmaze": {
     "id": 6806,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 274,
     "live": 0,
-    "review": 6,
-    "missing": 268,
-    "pct": 2
+    "review": 8,
+    "missing": 266,
+    "pct": 3
   },
   "seasons": [
     {
@@ -2115,8 +2115,20 @@
           "number": 7,
           "name": "Cute First (Ask Questions Later)",
           "airdate": "1997-10-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Cute First (Ask Questions Later)\" (0.95)",
+            "item": "animaniacs-hooray-for-north-hollywood-part-2",
+            "itemTitle": "Animaniacs Season 5 (1997-1998)",
+            "file": "Animaniacs-Cute-First-Ask-Questions-Later-Acquaintances-Here-Comes-Attila-Boo-Wonder.mp4",
+            "name": "Animaniacs-Cute-First-Ask-Questions-Later-Acquaintances-Here-Comes-Attila-Boo-Wonder",
+            "url": "https://archive.org/download/animaniacs-hooray-for-north-hollywood-part-2/Animaniacs-Cute-First-Ask-Questions-Later-Acquaintances-Here-Comes-Attila-Boo-Wonder.mp4",
+            "seconds": 1308,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 180
+          },
           "alternates": []
         },
         {
@@ -2259,8 +2271,20 @@
           "number": 19,
           "name": "Magic Time",
           "airdate": "1998-05-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Magic Time\" (0.95)",
+            "item": "animaniacs-hooray-for-north-hollywood-part-2",
+            "itemTitle": "Animaniacs Season 5 (1997-1998)",
+            "file": "Animaniacs-Magic-Time-The-Brains-Apprentice.mp4",
+            "name": "Animaniacs-Magic-Time-The-Brains-Apprentice",
+            "url": "https://archive.org/download/animaniacs-hooray-for-north-hollywood-part-2/Animaniacs-Magic-Time-The-Brains-Apprentice.mp4",
+            "seconds": 1309,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 180
+          },
           "alternates": []
         },
         {

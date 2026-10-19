@@ -3,7 +3,7 @@
   "slug": "you-bet-your-life",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:40.470Z",
+  "matchedAt": "2026-10-19T04:12:36.688Z",
   "addedAt": "2026-10-15T12:09:08.704Z",
   "tvmaze": {
     "id": 2197,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 174,
     "live": 2,
-    "review": 0,
-    "missing": 172,
-    "pct": 1
+    "review": 1,
+    "missing": 171,
+    "pct": 2
   },
   "seasons": [
     {
@@ -415,9 +415,35 @@
           "number": 17,
           "name": "Water",
           "airdate": "1955-01-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Water\" (0.95)",
+            "item": "Groucho_Marx_Water",
+            "itemTitle": "'You Bet Your Life' - Secret Word: Water",
+            "file": "Water_Groucho.mp4",
+            "name": "Water_Groucho",
+            "url": "https://archive.org/download/Groucho_Marx_Water/Water_Groucho.mp4",
+            "seconds": 1621,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 121
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Water\" (0.95)",
+              "item": "Groucho_Marx_Water",
+              "itemTitle": "'You Bet Your Life' - Secret Word: Water",
+              "file": "Water_Groucho_512kb.mp4",
+              "name": "Water_Groucho_512kb",
+              "url": "https://archive.org/download/Groucho_Marx_Water/Water_Groucho_512kb.mp4",
+              "seconds": 1621,
+              "format": "512Kb MPEG4",
+              "playable": true,
+              "sizeMB": 118
+            }
+          ]
         },
         {
           "number": 18,

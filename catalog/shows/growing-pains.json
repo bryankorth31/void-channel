@@ -3,7 +3,7 @@
   "slug": "growing-pains",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-16T07:58:22.876Z",
+  "matchedAt": "2026-10-19T04:12:23.504Z",
   "addedAt": "2026-10-15T12:08:56.009Z",
   "tvmaze": {
     "id": 4083,
@@ -14,9 +14,9 @@
   },
   "coverage": {
     "total": 166,
-    "live": 162,
-    "review": 2,
-    "missing": 2,
+    "live": 164,
+    "review": 1,
+    "missing": 1,
     "pct": 99
   },
   "seasons": [
@@ -2275,8 +2275,20 @@
           "number": 21,
           "name": "Future Shock",
           "airdate": "1990-02-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "growing-pains-complete-series",
+            "itemTitle": "Growing Pains: The Complete Series",
+            "file": "Growing Pains S05E21 - Maggie's Dream.mp4",
+            "name": "Growing Pains S05E21 - Maggie's Dream",
+            "url": "https://archive.org/download/growing-pains-complete-series/Growing%20Pains%20S05E21%20-%20Maggie's%20Dream.mp4",
+            "seconds": 1374,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 57
+          },
           "alternates": []
         },
         {
@@ -3073,9 +3085,9 @@
           "number": 11,
           "name": "Bad Day Cafe",
           "airdate": "1991-11-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "growing-pains-complete-series",
             "itemTitle": "Growing Pains: The Complete Series",

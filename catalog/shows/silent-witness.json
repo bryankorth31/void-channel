@@ -3,7 +3,8 @@
   "slug": "silent-witness",
   "type": "British and Beyond",
   "network": "GB",
-  "matchedAt": "2026-10-16T07:57:10.108Z",
+  "matchedAt": "2026-10-19T04:11:17.515Z",
+  "addedAt": "2026-10-19T04:11:17.520Z",
   "tvmaze": {
     "id": 938,
     "name": "Silent Witness",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 268,
     "live": 0,
-    "review": 0,
-    "missing": 268,
-    "pct": 0
+    "review": 8,
+    "missing": 260,
+    "pct": 3
   },
   "seasons": [
     {
@@ -26,56 +27,147 @@
           "number": 1,
           "name": "Buried Lies, Part One",
           "airdate": "1996-02-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 7 in \"Silent. Witness. Season. 12. Episode. 12\"",
+            "item": "silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips",
+            "itemTitle": "Silent. Witness. Season. 12. Episode. 12. Finding. Rachel. Part. 2. H 265.1080p. WEBRip. Ezz Rips",
+            "file": "24.Season.3.Episode.5.Day.3.5.00.p.m.-.6.00.p.m.H265.1080p.WEBRip.EzzRips/24.Season.3.Episode.5.Day.3.5.00.p.m.-6.00.p.m.H265.1080p.WEBRip.EzzRips.m4v",
+            "name": "24.Season.3.Episode.5.Day.3.5.00.p.m.-.6.00.p.m.H265.1080p.WEBRip.EzzRips/24.Season.3.Episode.5.Day.3.5.00.p.m.-6.00.p.m.H265.1080p.WEBRip.EzzRips",
+            "url": "https://archive.org/download/silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips/24.Season.3.Episode.5.Day.3.5.00.p.m.-.6.00.p.m.H265.1080p.WEBRip.EzzRips%2F24.Season.3.Episode.5.Day.3.5.00.p.m.-6.00.p.m.H265.1080p.WEBRip.EzzRips.m4v",
+            "seconds": 2637,
+            "format": "MPEG4",
+            "playable": true,
+            "codecRisk": "video (H265)",
+            "sizeMB": 709
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Buried Lies, Part Two",
           "airdate": "1996-02-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 7 in \"Silent. Witness. Season. 12. Episode. 12\"",
+            "item": "silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips",
+            "itemTitle": "Silent. Witness. Season. 12. Episode. 12. Finding. Rachel. Part. 2. H 265.1080p. WEBRip. Ezz Rips",
+            "file": "24.Season.3.Episode.6.Day.3.6.00.p.m.-7.00.p.m.H265.1080p.WEBRip.EzzRips/24.Season.3.Episode.6.Day.3.6.00.p.m.-.7.00.p.m.H265.1080p.WEBRip.EzzRips.m4v",
+            "name": "24.Season.3.Episode.6.Day.3.6.00.p.m.-7.00.p.m.H265.1080p.WEBRip.EzzRips/24.Season.3.Episode.6.Day.3.6.00.p.m.-.7.00.p.m.H265.1080p.WEBRip.EzzRips",
+            "url": "https://archive.org/download/silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips/24.Season.3.Episode.6.Day.3.6.00.p.m.-7.00.p.m.H265.1080p.WEBRip.EzzRips%2F24.Season.3.Episode.6.Day.3.6.00.p.m.-.7.00.p.m.H265.1080p.WEBRip.EzzRips.m4v",
+            "seconds": 2618,
+            "format": "MPEG4",
+            "playable": true,
+            "codecRisk": "video (H265)",
+            "sizeMB": 705
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Long Days, Short Nights, Part One",
           "airdate": "1996-02-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 7 in \"Silent. Witness. Season. 12. Episode. 12\"",
+            "item": "silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips",
+            "itemTitle": "Silent. Witness. Season. 12. Episode. 12. Finding. Rachel. Part. 2. H 265.1080p. WEBRip. Ezz Rips",
+            "file": "Better.Than.Us.Season.1.Episode.4.H265.1080p.WEBRip.EzzRips/Better.Than.Us.Season.1.Episode.4.H265.1080p.WEBRip.EzzRips.m4v",
+            "name": "Better.Than.Us.Season.1.Episode.4.H265.1080p.WEBRip.EzzRips/Better.Than.Us.Season.1.Episode.4.H265.1080p.WEBRip.EzzRips",
+            "url": "https://archive.org/download/silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips/Better.Than.Us.Season.1.Episode.4.H265.1080p.WEBRip.EzzRips%2FBetter.Than.Us.Season.1.Episode.4.H265.1080p.WEBRip.EzzRips.m4v",
+            "seconds": 3155,
+            "format": "MPEG4",
+            "playable": true,
+            "codecRisk": "video (H265)",
+            "sizeMB": 847
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Long Days, Short Nights, Part Two",
           "airdate": "1996-02-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 7 in \"Silent. Witness. Season. 12. Episode. 12\"",
+            "item": "silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips",
+            "itemTitle": "Silent. Witness. Season. 12. Episode. 12. Finding. Rachel. Part. 2. H 265.1080p. WEBRip. Ezz Rips",
+            "file": "Losing.Alice.Season.1.Episode.6.The.Bad.Reader.H265.1080p.WEBRip.EzzRips/Losing.Alice.Season.1.Episode.6.The.Bad.Reader.H265.1080p.WEBRip.EzzRips.mp4",
+            "name": "Losing.Alice.Season.1.Episode.6.The.Bad.Reader.H265.1080p.WEBRip.EzzRips/Losing.Alice.Season.1.Episode.6.The.Bad.Reader.H265.1080p.WEBRip.EzzRips",
+            "url": "https://archive.org/download/silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips/Losing.Alice.Season.1.Episode.6.The.Bad.Reader.H265.1080p.WEBRip.EzzRips%2FLosing.Alice.Season.1.Episode.6.The.Bad.Reader.H265.1080p.WEBRip.EzzRips.mp4",
+            "seconds": 2977,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (H265)",
+            "sizeMB": 286
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Darkness Visible, Part One",
           "airdate": "1996-03-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 7 in \"Silent. Witness. Season. 12. Episode. 12\"",
+            "item": "silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips",
+            "itemTitle": "Silent. Witness. Season. 12. Episode. 12. Finding. Rachel. Part. 2. H 265.1080p. WEBRip. Ezz Rips",
+            "file": "Losing.Alice.Season.1.Episode.7.The.Scene.H265.1080p.WEBRip.EzzRips/Losing.Alice.Season.1.Episode.7.The.Scene.H265.1080p.WEBRip.EzzRips.mp4",
+            "name": "Losing.Alice.Season.1.Episode.7.The.Scene.H265.1080p.WEBRip.EzzRips/Losing.Alice.Season.1.Episode.7.The.Scene.H265.1080p.WEBRip.EzzRips",
+            "url": "https://archive.org/download/silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips/Losing.Alice.Season.1.Episode.7.The.Scene.H265.1080p.WEBRip.EzzRips%2FLosing.Alice.Season.1.Episode.7.The.Scene.H265.1080p.WEBRip.EzzRips.mp4",
+            "seconds": 2977,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (H265)",
+            "sizeMB": 286
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Darkness Visible, Part Two",
           "airdate": "1996-03-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 7 in \"Silent. Witness. Season. 12. Episode. 12\"",
+            "item": "silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips",
+            "itemTitle": "Silent. Witness. Season. 12. Episode. 12. Finding. Rachel. Part. 2. H 265.1080p. WEBRip. Ezz Rips",
+            "file": "Police.Interceptors.Season.1.Episode.3.H265.1080p.WEBRip.EzzRips/Police.Interceptors.Season.1.Episode.3.H265.1080p.WEBRip.EzzRips.m4v",
+            "name": "Police.Interceptors.Season.1.Episode.3.H265.1080p.WEBRip.EzzRips/Police.Interceptors.Season.1.Episode.3.H265.1080p.WEBRip.EzzRips",
+            "url": "https://archive.org/download/silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips/Police.Interceptors.Season.1.Episode.3.H265.1080p.WEBRip.EzzRips%2FPolice.Interceptors.Season.1.Episode.3.H265.1080p.WEBRip.EzzRips.m4v",
+            "seconds": 2697,
+            "format": "MPEG4",
+            "playable": true,
+            "codecRisk": "video (H265)",
+            "sizeMB": 732
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Sins of the Fathers, Part One",
           "airdate": "1996-03-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 7 in \"Silent. Witness. Season. 12. Episode. 12\"",
+            "item": "silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips",
+            "itemTitle": "Silent. Witness. Season. 12. Episode. 12. Finding. Rachel. Part. 2. H 265.1080p. WEBRip. Ezz Rips",
+            "file": "The.Lazarus.Project.Season.1.Episode.5.H265.1080p.WEBRip.EzzRips/The.Lazarus.Project.Season.1.Episode.5.H265.1080p.WEBRip.EzzRips.m4v",
+            "name": "The.Lazarus.Project.Season.1.Episode.5.H265.1080p.WEBRip.EzzRips/The.Lazarus.Project.Season.1.Episode.5.H265.1080p.WEBRip.EzzRips",
+            "url": "https://archive.org/download/silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips/The.Lazarus.Project.Season.1.Episode.5.H265.1080p.WEBRip.EzzRips%2FThe.Lazarus.Project.Season.1.Episode.5.H265.1080p.WEBRip.EzzRips.m4v",
+            "seconds": 2562,
+            "format": "MPEG4",
+            "playable": true,
+            "codecRisk": "video (H265)",
+            "sizeMB": 769
+          },
           "alternates": []
         },
         {
@@ -865,9 +957,37 @@
           "number": 11,
           "name": "Finding Rachel, Part One",
           "airdate": "2008-11-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Finding Rachel, Part One\" (0.68)",
+            "item": "silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips",
+            "itemTitle": "Silent. Witness. Season. 12. Episode. 12. Finding. Rachel. Part. 2. H 265.1080p. WEBRip. Ezz Rips",
+            "file": "Silent.Witness.Season.12.Episode.12.Finding.Rachel.Part.2.H265.1080p.WEBRip.EzzRips/Silent.Witness.Season.12.Episode.12.Finding.Rachel.Part.2.H265.1080p.WEBRip.EzzRips.m4v",
+            "name": "Silent.Witness.Season.12.Episode.12.Finding.Rachel.Part.2.H265.1080p.WEBRip.EzzRips/Silent.Witness.Season.12.Episode.12.Finding.Rachel.Part.2.H265.1080p.WEBRip.EzzRips",
+            "url": "https://archive.org/download/silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips/Silent.Witness.Season.12.Episode.12.Finding.Rachel.Part.2.H265.1080p.WEBRip.EzzRips%2FSilent.Witness.Season.12.Episode.12.Finding.Rachel.Part.2.H265.1080p.WEBRip.EzzRips.m4v",
+            "seconds": 3565,
+            "format": "MPEG4",
+            "playable": true,
+            "codecRisk": "video (H265)",
+            "sizeMB": 2480
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Finding Rachel, Part One\" (0.67)",
+              "item": "silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips",
+              "itemTitle": "Silent. Witness. Season. 12. Episode. 12. Finding. Rachel. Part. 2. H 265.1080p. WEBRip. Ezz Rips",
+              "file": "Silent.Witness.Season.12.Episode.11.Finding.Rachel.Part.1.H265.1080p.WEBRip.EzzRips/Silent.Witness.Season.12.Episode.11.Finding.Rachel.Part.1.H265.1080p.WEBRip.EzzRips.m4v",
+              "name": "Silent.Witness.Season.12.Episode.11.Finding.Rachel.Part.1.H265.1080p.WEBRip.EzzRips/Silent.Witness.Season.12.Episode.11.Finding.Rachel.Part.1.H265.1080p.WEBRip.EzzRips",
+              "url": "https://archive.org/download/silent.-witness.-season.-12.-episode.-12.-finding.-rachel.-part.-2.-h-265.1080p.-webrip.-ezz-rips/Silent.Witness.Season.12.Episode.11.Finding.Rachel.Part.1.H265.1080p.WEBRip.EzzRips%2FSilent.Witness.Season.12.Episode.11.Finding.Rachel.Part.1.H265.1080p.WEBRip.EzzRips.m4v",
+              "seconds": 3529,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (H265)",
+              "sizeMB": 2455
+            }
+          ]
         },
         {
           "number": 12,

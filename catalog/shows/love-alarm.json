@@ -3,7 +3,7 @@
   "slug": "love-alarm",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-16T07:57:45.014Z",
+  "matchedAt": "2026-10-19T04:11:47.441Z",
   "addedAt": "2026-10-15T12:08:22.596Z",
   "tvmaze": {
     "id": 26152,
@@ -57,19 +57,6 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 1 of 5 in \"Love Alarm 2da\"",
-              "item": "laovealarm2",
-              "itemTitle": "Love Alarm 2da",
-              "file": "LAlarmdos01.mp4",
-              "name": "LAlarmdos01",
-              "url": "https://archive.org/download/laovealarm2/LAlarmdos01.mp4",
-              "seconds": 3652,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 368
-            },
-            {
-              "conf": 0.55,
               "why": "sequence guess: file 1 of 8 in \"Love Alarm 1\"",
               "item": "lAlarmuno",
               "itemTitle": "Love Alarm 1",
@@ -80,6 +67,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 347
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 8 in \"01 Love Alarm\"",
+              "item": "01-love-alarm",
+              "itemTitle": "01 Love Alarm",
+              "file": "01 Love Alarm .mp4",
+              "name": "01 Love Alarm ",
+              "url": "https://archive.org/download/01-love-alarm/01%20Love%20Alarm%20.mp4",
+              "seconds": 3340,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 71
             }
           ]
         },
@@ -130,16 +130,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 2 of 5 in \"Love Alarm 2da\"",
-              "item": "laovealarm2",
-              "itemTitle": "Love Alarm 2da",
-              "file": "LAlarmdos02.mp4",
-              "name": "LAlarmdos02",
-              "url": "https://archive.org/download/laovealarm2/LAlarmdos02.mp4",
-              "seconds": 2417,
+              "why": "sequence guess: file 2 of 8 in \"01 Love Alarm\"",
+              "item": "01-love-alarm",
+              "itemTitle": "01 Love Alarm",
+              "file": "02 Love Alarm .mp4",
+              "name": "02 Love Alarm ",
+              "url": "https://archive.org/download/01-love-alarm/02%20Love%20Alarm%20.mp4",
+              "seconds": 3048,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 246
+              "sizeMB": 51
             }
           ]
         },
@@ -162,19 +162,6 @@
             "sizeMB": 292
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 5 in \"Love Alarm 2da\"",
-              "item": "laovealarm2",
-              "itemTitle": "Love Alarm 2da",
-              "file": "LAlarmdos03.mp4",
-              "name": "LAlarmdos03",
-              "url": "https://archive.org/download/laovealarm2/LAlarmdos03.mp4",
-              "seconds": 3104,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 326
-            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 3 of 8 in \"Love Alarm 1\"",
@@ -224,19 +211,6 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 4 of 5 in \"Love Alarm 2da\"",
-              "item": "laovealarm2",
-              "itemTitle": "Love Alarm 2da",
-              "file": "LAlarmdos04.mp4",
-              "name": "LAlarmdos04",
-              "url": "https://archive.org/download/laovealarm2/LAlarmdos04.mp4",
-              "seconds": 3140,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 316
-            },
-            {
-              "conf": 0.55,
               "why": "sequence guess: file 4 of 8 in \"Love Alarm 1\"",
               "item": "lAlarmuno",
               "itemTitle": "Love Alarm 1",
@@ -282,19 +256,6 @@
             "sizeMB": 308
           },
           "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 5 in \"Love Alarm 2da\"",
-              "item": "laovealarm2",
-              "itemTitle": "Love Alarm 2da",
-              "file": "LAlarmdos05.mp4",
-              "name": "LAlarmdos05",
-              "url": "https://archive.org/download/laovealarm2/LAlarmdos05.mp4",
-              "seconds": 3212,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 335
-            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 5 of 8 in \"Love Alarm 1\"",

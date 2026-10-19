@@ -3,7 +3,7 @@
   "slug": "trading-spaces",
   "type": "Documentary & Geographic",
   "network": "TLC",
-  "matchedAt": "2026-10-16T07:58:09.155Z",
+  "matchedAt": "2026-10-19T04:12:12.524Z",
   "addedAt": "2026-10-15T12:08:37.905Z",
   "tvmaze": {
     "id": 14949,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 357,
     "live": 0,
-    "review": 2,
-    "missing": 355,
-    "pct": 1
+    "review": 10,
+    "missing": 347,
+    "pct": 3
   },
   "seasons": [
     {
@@ -400,8 +400,20 @@
           "number": 7,
           "name": "Boston: Ashfield Street",
           "airdate": "2001-11-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Boston: Ashfield Street\" (0.95)",
+            "item": "trading-spaces-dvd-episode-collection",
+            "itemTitle": "Trading Spaces - DVD Episode Collection + Bonus Footage",
+            "file": "Trading Spaces - Viewers' Choice DVD - Disc 1 - Full Episode - Boston Ashfield Street.mp4",
+            "name": "Trading Spaces - Viewers' Choice DVD - Disc 1 - Full Episode - Boston Ashfield Street",
+            "url": "https://archive.org/download/trading-spaces-dvd-episode-collection/Trading%20Spaces%20-%20Viewers'%20Choice%20DVD%20-%20Disc%201%20-%20Full%20Episode%20-%20Boston%20Ashfield%20Street.mp4",
+            "seconds": 2769,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 272
+          },
           "alternates": []
         },
         {
@@ -484,9 +496,35 @@
           "number": 16,
           "name": "Chicago: Fairview Avenue",
           "airdate": "2001-12-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Chicago: Fairview Avenue\" (0.95)",
+            "item": "trading-spaces-dvd-episode-collection",
+            "itemTitle": "Trading Spaces - DVD Episode Collection + Bonus Footage",
+            "file": "Trading Spaces - Viewers' Choice DVD - Disc 2 - Full Episode -  Chicago Fairview Avenue.mp4",
+            "name": "Trading Spaces - Viewers' Choice DVD - Disc 2 - Full Episode -  Chicago Fairview Avenue",
+            "url": "https://archive.org/download/trading-spaces-dvd-episode-collection/Trading%20Spaces%20-%20Viewers'%20Choice%20DVD%20-%20Disc%202%20-%20Full%20Episode%20-%20%20Chicago%20Fairview%20Avenue.mp4",
+            "seconds": 2771,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 272
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Chicago: Fairview Avenue\" (0.95)",
+              "item": "trading-spaces-dvd-episode-collection",
+              "itemTitle": "Trading Spaces - DVD Episode Collection + Bonus Footage",
+              "file": "Trading Spaces - Great Kitchen Designs And More! DVD - Full Episode - Chicago Fairview Avenue.mp4",
+              "name": "Trading Spaces - Great Kitchen Designs And More! DVD - Full Episode - Chicago Fairview Avenue",
+              "url": "https://archive.org/download/trading-spaces-dvd-episode-collection/Trading%20Spaces%20-%20Great%20Kitchen%20Designs%20And%20More!%20DVD%20-%20Full%20Episode%20-%20Chicago%20Fairview%20Avenue.mp4",
+              "seconds": 2706,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 266
+            }
+          ]
         },
         {
           "number": 17,
@@ -524,8 +562,20 @@
           "number": 21,
           "name": "Seattle: 137th Street",
           "airdate": "2002-01-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Seattle: 137th Street\" (0.95)",
+            "item": "trading-spaces-dvd-episode-collection",
+            "itemTitle": "Trading Spaces - DVD Episode Collection + Bonus Footage",
+            "file": "Trading Spaces - Viewers' Choice DVD - Disc 1 - Full Episode - Seattle 137th Street.mp4",
+            "name": "Trading Spaces - Viewers' Choice DVD - Disc 1 - Full Episode - Seattle 137th Street",
+            "url": "https://archive.org/download/trading-spaces-dvd-episode-collection/Trading%20Spaces%20-%20Viewers'%20Choice%20DVD%20-%20Disc%201%20-%20Full%20Episode%20-%20Seattle%20137th%20Street.mp4",
+            "seconds": 2769,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 272
+          },
           "alternates": []
         },
         {
@@ -568,8 +618,20 @@
           "number": 25,
           "name": "Oregon: Alsea Court",
           "airdate": "2002-02-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Oregon: Alsea Court\" (0.95)",
+            "item": "trading-spaces-dvd-episode-collection",
+            "itemTitle": "Trading Spaces - DVD Episode Collection + Bonus Footage",
+            "file": "Trading Spaces - Viewers' Choice DVD - Disc 2 - Full Episode - Oregon Alsea Court.mp4",
+            "name": "Trading Spaces - Viewers' Choice DVD - Disc 2 - Full Episode - Oregon Alsea Court",
+            "url": "https://archive.org/download/trading-spaces-dvd-episode-collection/Trading%20Spaces%20-%20Viewers'%20Choice%20DVD%20-%20Disc%202%20-%20Full%20Episode%20-%20Oregon%20Alsea%20Court.mp4",
+            "seconds": 2769,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 271
+          },
           "alternates": []
         },
         {
@@ -973,8 +1035,20 @@
           "number": 31,
           "name": "Austin: Wyoming Valley Drive",
           "airdate": "2003-01-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Austin: Wyoming Valley Drive\" (0.95)",
+            "item": "trading-spaces-dvd-episode-collection",
+            "itemTitle": "Trading Spaces - DVD Episode Collection + Bonus Footage",
+            "file": "Trading Spaces - Great Kitchen Designs And More! DVD - Full Episode - Austin Wyoming Valley Drive.mp4",
+            "name": "Trading Spaces - Great Kitchen Designs And More! DVD - Full Episode - Austin Wyoming Valley Drive",
+            "url": "https://archive.org/download/trading-spaces-dvd-episode-collection/Trading%20Spaces%20-%20Great%20Kitchen%20Designs%20And%20More!%20DVD%20-%20Full%20Episode%20-%20Austin%20Wyoming%20Valley%20Drive.mp4",
+            "seconds": 2702,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 265
+          },
           "alternates": []
         },
         {
@@ -1109,8 +1183,20 @@
           "number": 48,
           "name": "Miramar: Avenue 164",
           "airdate": "2003-04-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Miramar: Avenue 164\" (0.63)",
+            "item": "trading-spaces-dvd-episode-collection",
+            "itemTitle": "Trading Spaces - DVD Episode Collection + Bonus Footage",
+            "file": "Trading Spaces - Great Kitchen Designs And More! DVD - Full Episode - Miramar Avenue 164.mp4",
+            "name": "Trading Spaces - Great Kitchen Designs And More! DVD - Full Episode - Miramar Avenue 164",
+            "url": "https://archive.org/download/trading-spaces-dvd-episode-collection/Trading%20Spaces%20-%20Great%20Kitchen%20Designs%20And%20More!%20DVD%20-%20Full%20Episode%20-%20Miramar%20Avenue%20164.mp4",
+            "seconds": 2702,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 264
+          },
           "alternates": []
         },
         {
@@ -1306,8 +1392,20 @@
           "number": 12,
           "name": "Massachusetts: Indian Ridge Road",
           "airdate": "2003-10-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Massachusetts: Indian Ridge Road\" (0.95)",
+            "item": "trading-spaces-dvd-episode-collection",
+            "itemTitle": "Trading Spaces - DVD Episode Collection + Bonus Footage",
+            "file": "Trading Spaces - Great Kitchen Designs And More! DVD - Full Episode - Massachusetts Indian Ridge Road.mp4",
+            "name": "Trading Spaces - Great Kitchen Designs And More! DVD - Full Episode - Massachusetts Indian Ridge Road",
+            "url": "https://archive.org/download/trading-spaces-dvd-episode-collection/Trading%20Spaces%20-%20Great%20Kitchen%20Designs%20And%20More!%20DVD%20-%20Full%20Episode%20-%20Massachusetts%20Indian%20Ridge%20Road.mp4",
+            "seconds": 2696,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 266
+          },
           "alternates": []
         },
         {
@@ -1322,8 +1420,20 @@
           "number": 14,
           "name": "New York: Taft Avenue",
           "airdate": "2003-10-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"New York: Taft Avenue\" (0.95)",
+            "item": "trading-spaces-dvd-episode-collection",
+            "itemTitle": "Trading Spaces - DVD Episode Collection + Bonus Footage",
+            "file": "Trading Spaces - Great Kitchen Designs And More! DVD - Full Episode - New York Taft Avenue.mp4",
+            "name": "Trading Spaces - Great Kitchen Designs And More! DVD - Full Episode - New York Taft Avenue",
+            "url": "https://archive.org/download/trading-spaces-dvd-episode-collection/Trading%20Spaces%20-%20Great%20Kitchen%20Designs%20And%20More!%20DVD%20-%20Full%20Episode%20-%20New%20York%20Taft%20Avenue.mp4",
+            "seconds": 2695,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 266
+          },
           "alternates": []
         },
         {

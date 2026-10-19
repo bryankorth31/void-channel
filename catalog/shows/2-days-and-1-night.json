@@ -3,7 +3,8 @@
   "slug": "2-days-and-1-night",
   "type": "Reality & Talk",
   "network": "KR",
-  "matchedAt": "2026-10-16T07:57:56.610Z",
+  "matchedAt": "2026-10-19T04:12:01.574Z",
+  "addedAt": "2026-10-19T04:12:01.580Z",
   "tvmaze": {
     "id": 17912,
     "name": "1 Night 2 Days",
@@ -14,8 +15,8 @@
   "coverage": {
     "total": 918,
     "live": 0,
-    "review": 0,
-    "missing": 918,
+    "review": 1,
+    "missing": 917,
     "pct": 0
   },
   "seasons": [
@@ -3220,8 +3221,20 @@
           "number": 78,
           "name": "Friendship Trip (3)",
           "airdate": "2015-06-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Friendship Trip (3)\" (0.95)",
+            "item": "2Days1NightSeason3FriendshipTripPart2",
+            "itemTitle": "2 Days & 1 Night Season 3 Friendship Trip, Part 2",
+            "file": "2 Days & 1 Night - Season 3 - Friendship Trip, part 2.mp4",
+            "name": "2 Days & 1 Night - Season 3 - Friendship Trip, part 2",
+            "url": "https://archive.org/download/2Days1NightSeason3FriendshipTripPart2/2%20Days%20%26%201%20Night%20-%20Season%203%20-%20Friendship%20Trip%2C%20part%202.mp4",
+            "seconds": 4758,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1339
+          },
           "alternates": []
         },
         {

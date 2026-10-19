@@ -3,7 +3,7 @@
   "slug": "squid-game",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-16T07:57:44.010Z",
+  "matchedAt": "2026-10-19T04:11:46.689Z",
   "addedAt": "2026-10-15T12:08:21.929Z",
   "tvmaze": {
     "id": 43687,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 22,
     "live": 10,
-    "review": 9,
-    "missing": 3,
-    "pct": 86
+    "review": 11,
+    "missing": 1,
+    "pct": 95
   },
   "seasons": [
     {
@@ -205,8 +205,20 @@
           "number": 9,
           "name": "One Lucky Day",
           "airdate": "2021-09-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"One Lucky Day\" (0.95)",
+            "item": "squid-game-full-movie",
+            "itemTitle": "squid-game-full-movie",
+            "file": "09 squid game one lucky day.mp4",
+            "name": "09 squid game one lucky day",
+            "url": "https://archive.org/download/squid-game-full-movie/09%20squid%20game%20one%20lucky%20day.mp4",
+            "seconds": 3330,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 370
+          },
           "alternates": []
         }
       ]
@@ -312,8 +324,20 @@
           "number": 5,
           "name": "One More Game",
           "airdate": "2024-12-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"One More Game\" (0.67)",
+            "item": "squid-game-full-movie",
+            "itemTitle": "squid-game-full-movie",
+            "file": "14 squid game one more game.mp4",
+            "name": "14 squid game one more game",
+            "url": "https://archive.org/download/squid-game-full-movie/14%20squid%20game%20one%20more%20game.mp4",
+            "seconds": 4564,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 430
+          },
           "alternates": []
         },
         {
@@ -441,7 +465,21 @@
             "playable": true,
             "sizeMB": 1209
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Starry Night\" (0.95)",
+              "item": "squid-game-full-movie",
+              "itemTitle": "squid-game-full-movie",
+              "file": "18 squid game season the starry night.mp4",
+              "name": "18 squid game season the starry night",
+              "url": "https://archive.org/download/squid-game-full-movie/18%20squid%20game%20season%20the%20starry%20night.mp4",
+              "seconds": 3602,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 281
+            }
+          ]
         },
         {
           "number": 3,

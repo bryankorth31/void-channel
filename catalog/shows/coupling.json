@@ -3,21 +3,21 @@
   "slug": "coupling",
   "type": "British and Beyond",
   "network": "BBC Two",
-  "matchedAt": "2026-10-16T07:57:04.140Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:11:11.170Z",
+  "addedAt": "2026-10-16T07:57:04.140Z",
   "tvmaze": {
-    "id": null,
+    "id": 1085,
     "name": "Coupling",
-    "runtime": null,
-    "premiered": null,
-    "network": "BBC Two"
+    "runtime": 30,
+    "premiered": "2000-05-12",
+    "network": "BBC Three"
   },
   "coverage": {
-    "total": 29,
-    "live": 0,
-    "review": 29,
-    "missing": 0,
-    "pct": 100
+    "total": 28,
+    "live": 3,
+    "review": 22,
+    "missing": 3,
+    "pct": 89
   },
   "seasons": [
     {
@@ -25,9 +25,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "youtuber the viewing room",
-          "state": "REVIEW",
+          "name": "Flushed",
+          "airdate": "2000-05-12",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "Coupling (2003) S01 E01   - youtuber The Viewing Room.mp4",
@@ -36,61 +39,32 @@
             "seconds": 1344,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 77,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 77
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Flushed\" (0.95)",
+              "item": "coupling-2000-04",
+              "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
+              "file": "coupling_season_1_-_episode_01_Flushed.mp4",
+              "name": "coupling_season_1_-_episode_01_Flushed",
+              "url": "https://archive.org/download/coupling-2000-04/coupling_season_1_-_episode_01_Flushed.mp4",
+              "seconds": 1760,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "tape",
+          "name": "Size Matters",
+          "airdate": "2000-05-19",
           "state": "REVIEW",
           "file": {
-            "item": "Coupling_S01E01_S01E02_Rough_Cut_Tape",
-            "itemTitle": " Coupling S01E01 S01E02 Rough Cut Tape",
-            "file": "Coupling_S01E01_S01E02_Rough_Cut_Tape.mp4",
-            "name": "Coupling_S01E01_S01E02_Rough_Cut_Tape",
-            "url": "https://archive.org/download/Coupling_S01E01_S01E02_Rough_Cut_Tape/Coupling_S01E01_S01E02_Rough_Cut_Tape.mp4",
-            "seconds": 2678,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 279,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "1 01 flushed",
-          "state": "REVIEW",
-          "file": {
-            "item": "coupling-2000-04",
-            "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
-            "file": "coupling_season_1_-_episode_01_Flushed.mp4",
-            "name": "coupling_season_1_-_episode_01_Flushed",
-            "url": "https://archive.org/download/coupling-2000-04/coupling_season_1_-_episode_01_Flushed.mp4",
-            "seconds": 1760,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 142,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "1 02 size matters",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Size Matters\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_1_-_episode_02__Size Matters.mp4",
@@ -99,18 +73,18 @@
             "seconds": 1741,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 128,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 128
           },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "1 03 sex death and nudity",
+          "number": 3,
+          "name": "Sex, Death & Nudity",
+          "airdate": "2000-05-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sex, Death & Nudity\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_1_-_episode_03__Sex, Death and Nudity.mp4",
@@ -119,18 +93,18 @@
             "seconds": 1753,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 125,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 125
           },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "1 04 inferno",
+          "number": 4,
+          "name": "Inferno",
+          "airdate": "2000-06-02",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Inferno\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_1_-_episode_04__Inferno.mp4",
@@ -139,18 +113,18 @@
             "seconds": 1756,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 108,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 108
           },
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "1 05 the girl with two breasts",
+          "number": 5,
+          "name": "The Girl with Two Breasts",
+          "airdate": "2000-06-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Girl with Two Breasts\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_1_-_episode_05__The Girl with Two Breasts.mp4",
@@ -159,18 +133,18 @@
             "seconds": 1730,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 131,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 131
           },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "1 06 the cupboard of patricks love",
+          "number": 6,
+          "name": "The Cupboard of Patrick's Love",
+          "airdate": "2000-06-16",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Cupboard of Patrick's Love\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_1_-_episode_06__The Cupboard of Patrick's Love.mp4",
@@ -179,18 +153,23 @@
             "seconds": 1750,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 116,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 116
           },
           "alternates": []
-        },
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
         {
-          "number": 9,
-          "name": "2 01 the man with two legs",
+          "number": 1,
+          "name": "The Man with Two Legs",
+          "airdate": "2001-09-03",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Man with Two Legs\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_2_-_episode_01__The Man with Two Legs.mp4",
@@ -199,18 +178,18 @@
             "seconds": 1749,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 137
           },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "2 02 my dinner in hell",
+          "number": 2,
+          "name": "My Dinner in Hell",
+          "airdate": "2001-09-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"My Dinner in Hell\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_2_-_episode_02__My Dinner in Hell.mp4",
@@ -219,18 +198,18 @@
             "seconds": 1753,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 121,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 121
           },
           "alternates": []
         },
         {
-          "number": 11,
-          "name": "2 03 her best friends bottom",
+          "number": 3,
+          "name": "Her Best Friend's Bottom",
+          "airdate": "2001-09-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Her Best Friend's Bottom\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_2_-_episode_03__Her Best Friend's Bottom.mp4",
@@ -239,18 +218,18 @@
             "seconds": 1717,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 115,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 115
           },
           "alternates": []
         },
         {
-          "number": 12,
-          "name": "2 04 the melty man cometh",
+          "number": 4,
+          "name": "The Melty Man Cometh",
+          "airdate": "2001-09-24",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Melty Man Cometh\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_2_-_episode_04_ The Melty Man Cometh.mp4",
@@ -259,18 +238,18 @@
             "seconds": 1750,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 131,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 131
           },
           "alternates": []
         },
         {
-          "number": 13,
-          "name": "2 05 jane and the truth snake",
+          "number": 5,
+          "name": "Jane and the Truth Snake",
+          "airdate": "2001-10-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Jane and the Truth Snake\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_2_-_episode_05__Jane and the Truth Snake.mp4",
@@ -279,18 +258,18 @@
             "seconds": 1755,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 141
           },
           "alternates": []
         },
         {
-          "number": 14,
-          "name": "2 06 gotcha",
+          "number": 6,
+          "name": "Gotcha",
+          "airdate": "2001-10-08",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Gotcha\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_2_-_episode_06___Gotcha.mp4",
@@ -299,18 +278,18 @@
             "seconds": 1754,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 118,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 118
           },
           "alternates": []
         },
         {
-          "number": 15,
-          "name": "2 07 dressed",
+          "number": 7,
+          "name": "Dressed",
+          "airdate": "2001-10-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Dressed\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_2_-_episode_07__Dressed.mp4",
@@ -319,38 +298,93 @@
             "seconds": 1752,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 123,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 123
           },
           "alternates": []
         },
         {
-          "number": 16,
-          "name": "2 09 the end of the line",
-          "state": "REVIEW",
+          "number": 8,
+          "name": "Naked",
+          "airdate": "2001-10-22",
+          "state": "LIVE",
           "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
-            "file": "coupling_season_2_-_episode_09___The End of the Line.mp4",
-            "name": "coupling_season_2_-_episode_09___The End of the Line",
-            "url": "https://archive.org/download/coupling-2000-04/coupling_season_2_-_episode_09___The%20End%20of%20the%20Line.mp4",
+            "file": "coupling_season_2_-_episode_08 - Naked- S02E08 VOSTFR - Dailymotioner 'Boodream'.mp4",
+            "name": "coupling_season_2_-_episode_08 - Naked- S02E08 VOSTFR - Dailymotioner 'Boodream'",
+            "url": "https://archive.org/download/coupling-2000-04/coupling_season_2_-_episode_08%20-%20Naked-%20S02E08%20VOSTFR%20-%20Dailymotioner%20'Boodream'.mp4",
+            "seconds": 1759,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 466
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Naked\" (0.95)",
+              "item": "coupling-2000-04",
+              "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
+              "file": "coupling_season_4_-_episode_05__The Naked Living Room.mp4",
+              "name": "coupling_season_4_-_episode_05__The Naked Living Room",
+              "url": "https://archive.org/download/coupling-2000-04/coupling_season_4_-_episode_05__The%20Naked%20Living%20Room.mp4",
+              "seconds": 1736,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 108
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "name": "The End of the Line",
+          "airdate": "2001-10-29",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "coupling-2000-04",
+            "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
+            "file": "coupling_season_2_-_episode_09 - The End of the Line - S02E09 VOSTFR - Dailymotioner 'Boodream'.mp4",
+            "name": "coupling_season_2_-_episode_09 - The End of the Line - S02E09 VOSTFR - Dailymotioner 'Boodream'",
+            "url": "https://archive.org/download/coupling-2000-04/coupling_season_2_-_episode_09%20-%20The%20End%20of%20the%20Line%20-%20S02E09%20VOSTFR%20-%20Dailymotioner%20'Boodream'.mp4",
             "seconds": 1756,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 124,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "langRisk": true,
+            "sizeMB": 467
           },
-          "alternates": []
-        },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The End of the Line\" (0.95)",
+              "item": "coupling-2000-04",
+              "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
+              "file": "coupling_season_2_-_episode_09___The End of the Line.mp4",
+              "name": "coupling_season_2_-_episode_09___The End of the Line",
+              "url": "https://archive.org/download/coupling-2000-04/coupling_season_2_-_episode_09___The%20End%20of%20the%20Line.mp4",
+              "seconds": 1756,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
         {
-          "number": 17,
-          "name": "3 01 split",
+          "number": 1,
+          "name": "Split",
+          "airdate": "2002-09-23",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Split\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_3_-_episode_01__Split.mp4",
@@ -359,18 +393,18 @@
             "seconds": 1756,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 117,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 117
           },
           "alternates": []
         },
         {
-          "number": 18,
-          "name": "3 02 faithless",
+          "number": 2,
+          "name": "Faithless",
+          "airdate": "2002-09-30",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Faithless\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_3_-_episode_02__Faithless.mp4",
@@ -379,18 +413,18 @@
             "seconds": 1743,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 104,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 104
           },
           "alternates": []
         },
         {
-          "number": 19,
-          "name": "3 03 unconditional sex",
+          "number": 3,
+          "name": "Unconditional Sex",
+          "airdate": "2002-10-07",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Unconditional Sex\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_3_-_episode_03__Unconditional Sex.mp4",
@@ -399,18 +433,18 @@
             "seconds": 1750,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 119
           },
           "alternates": []
         },
         {
-          "number": 20,
-          "name": "3 04 remember this",
+          "number": 4,
+          "name": "Remember This",
+          "airdate": "2002-10-14",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Remember This\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_3_-_episode_04__Remember This.mp4",
@@ -419,18 +453,18 @@
             "seconds": 1758,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 118,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 118
           },
           "alternates": []
         },
         {
-          "number": 21,
-          "name": "3 05 the freckle the key and the couple who werent",
+          "number": 5,
+          "name": "The Freckle, The Key and the Couple Who Weren't",
+          "airdate": "2002-10-21",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Freckle, The Key and the Couple Who Weren't\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_3_-_episode_05__The Freckle, the Key, and the Couple Who Weren't.mp4",
@@ -439,18 +473,18 @@
             "seconds": 1755,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 109,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 109
           },
           "alternates": []
         },
         {
-          "number": 22,
-          "name": "3 06 the girl with one heart",
+          "number": 6,
+          "name": "The Girl with One Heart",
+          "airdate": "2002-10-28",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Girl with One Heart\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_3_-_episode_06___The Girl with One Heart.mp4",
@@ -459,18 +493,18 @@
             "seconds": 1758,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 108,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 108
           },
           "alternates": []
         },
         {
-          "number": 23,
-          "name": "3 07 perhaps perhaps perhaps",
+          "number": 7,
+          "name": "Perhaps, Perhaps, Perhaps",
+          "airdate": "2002-11-04",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Perhaps, Perhaps, Perhaps\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_3_-_episode_07__Perhaps, Perhaps, Perhaps.mp4",
@@ -479,38 +513,31 @@
             "seconds": 1757,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 102,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 102
           },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "9 1/2 Minutes",
+          "airdate": "2004-05-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 24,
-          "name": "4 01 nine and a half minutes",
+          "number": 2,
+          "name": "Nightlines",
+          "airdate": "2004-05-17",
           "state": "REVIEW",
           "file": {
-            "item": "coupling-2000-04",
-            "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
-            "file": "coupling_season_4_-_episode_01___Nine and a Half Minutes.mp4",
-            "name": "coupling_season_4_-_episode_01___Nine and a Half Minutes",
-            "url": "https://archive.org/download/coupling-2000-04/coupling_season_4_-_episode_01___Nine%20and%20a%20Half%20Minutes.mp4",
-            "seconds": 1755,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 123,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "4 02 nightlines",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Nightlines\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_4_-_episode_02___Nightlines.mp4",
@@ -519,18 +546,18 @@
             "seconds": 1751,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 93,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 93
           },
           "alternates": []
         },
         {
-          "number": 26,
-          "name": "4 03 bed time",
+          "number": 3,
+          "name": "Bed Time",
+          "airdate": "2004-05-24",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Bed Time\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_4_-_episode_03__Bed Time.mp4",
@@ -539,18 +566,18 @@
             "seconds": 1696,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 109,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 109
           },
           "alternates": []
         },
         {
-          "number": 27,
-          "name": "4 04 circus of the epidurals",
+          "number": 4,
+          "name": "Circus of the Epidurals",
+          "airdate": "2004-05-31",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Circus of the Epidurals\" (0.95)",
             "item": "coupling-2000-04",
             "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
             "file": "coupling_season_4_-_episode_04___Circus of the Epidurals.mp4",
@@ -559,59 +586,27 @@
             "seconds": 1751,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 110,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 110
           },
           "alternates": []
         },
         {
-          "number": 28,
-          "name": "4 05 the naked living room",
-          "state": "REVIEW",
-          "file": {
-            "item": "coupling-2000-04",
-            "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
-            "file": "coupling_season_4_-_episode_05__The Naked Living Room.mp4",
-            "name": "coupling_season_4_-_episode_05__The Naked Living Room",
-            "url": "https://archive.org/download/coupling-2000-04/coupling_season_4_-_episode_05__The%20Naked%20Living%20Room.mp4",
-            "seconds": 1736,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 108,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 5,
+          "name": "The Naked Living Room",
+          "airdate": "2004-06-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 29,
-          "name": "4 06 nine and a half months finale",
-          "state": "REVIEW",
-          "file": {
-            "item": "coupling-2000-04",
-            "itemTitle": "Coupling (2000-04)  UK Comedy - all 28 eps",
-            "file": "coupling_season_4_-_episode_06__Nine and a Half Months -_finale.mp4",
-            "name": "coupling_season_4_-_episode_06__Nine and a Half Months -_finale",
-            "url": "https://archive.org/download/coupling-2000-04/coupling_season_4_-_episode_06__Nine%20and%20a%20Half%20Months%20-_finale.mp4",
-            "seconds": 1755,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 104,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 6,
+          "name": "9 1/2 Months",
+          "airdate": "2004-06-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 1085,
-    "name": "Coupling",
-    "placed": 1
-  }
+  ]
 }

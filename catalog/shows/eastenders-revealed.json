@@ -3,7 +3,7 @@
   "slug": "eastenders-revealed",
   "type": "Documentary & Geographic",
   "network": "BBC Three",
-  "matchedAt": "2026-10-17T09:51:21.419Z",
+  "matchedAt": "2026-10-19T04:12:49.070Z",
   "addedAt": "2026-10-17T09:51:21.420Z",
   "tvmaze": {
     "id": 82386,
@@ -15,8 +15,8 @@
   "coverage": {
     "total": 143,
     "live": 0,
-    "review": 1,
-    "missing": 142,
+    "review": 2,
+    "missing": 141,
     "pct": 1
   },
   "seasons": [
@@ -1177,8 +1177,20 @@
           "number": 4,
           "name": "Kat and Alfie's Return",
           "airdate": "2010-09-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Kat and Alfie's Return\" (0.95)",
+            "item": "bbc-three-eastenders-kat-and-alfies-return-1-1-1-1-1",
+            "itemTitle": "BBC Three: Eastenders Revealed: Kat And Alfie's Return",
+            "file": "Bbc Three Eastenders Kat And Alfie's Return-1-1(1)-1-1.m4v",
+            "name": "Bbc Three Eastenders Kat And Alfie's Return-1-1(1)-1-1",
+            "url": "https://archive.org/download/bbc-three-eastenders-kat-and-alfies-return-1-1-1-1-1/Bbc%20Three%20Eastenders%20Kat%20And%20Alfie's%20Return-1-1(1)-1-1.m4v",
+            "seconds": 3423,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1046
+          },
           "alternates": []
         },
         {

@@ -3,19 +3,19 @@
   "slug": "frozen-planet",
   "type": "Streaming Era",
   "network": "GB",
-  "matchedAt": "2026-10-16T07:57:01.391Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:11:07.105Z",
+  "addedAt": "2026-10-16T07:57:01.391Z",
   "tvmaze": {
-    "id": null,
+    "id": 4000,
     "name": "Frozen Planet",
-    "runtime": null,
-    "premiered": null,
-    "network": "GB"
+    "runtime": 50,
+    "premiered": "2011-10-26",
+    "network": "BBC One"
   },
   "coverage": {
-    "total": 30,
-    "live": 0,
-    "review": 30,
+    "total": 7,
+    "live": 7,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -25,9 +25,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "ep1 to the ends of the earth bbc three airing 13 09",
-          "state": "REVIEW",
+          "name": "To the Ends of the Earth",
+          "airdate": "2011-10-26",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "frozen-planet-2011-bbc-three-airing-2023",
             "itemTitle": "Frozen Planet (2011) (BBC THREE Airing 2023)",
             "file": "Frozen Planet - Ep1 To the Ends of the Earth (BBC THREE Airing - 13-09-2023).mp4",
@@ -36,21 +39,58 @@
             "seconds": 3705,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 5636,
-            "ep": {
-              "season": null,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 5636
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "bbcdavidattenborough",
+              "itemTitle": "David Attenborough",
+              "file": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E01.720p.HDTV.x264.YIFY.mp4",
+              "name": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E01.720p.HDTV.x264.YIFY",
+              "url": "https://archive.org/download/bbcdavidattenborough/BBC%20-%20Frozen%20Planet%20%5B720p%5D%2FFrozen.Planet.S01E01.720p.HDTV.x264.YIFY.mp4",
+              "seconds": 3532,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 368
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"To the Ends of the Earth\" (0.97)",
+              "item": "frozen-planet",
+              "itemTitle": "Frozen Planet ★ BBC Nature Series with Subtitles, MKV, 2 Languages",
+              "file": "1 To the Ends of the Earth.mp4",
+              "name": "1 To the Ends of the Earth",
+              "url": "https://archive.org/download/frozen-planet/1%20To%20the%20Ends%20of%20the%20Earth.mp4",
+              "seconds": 3514,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 936
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"To the Ends of the Earth\" (0.97)",
+              "item": "frozen-planet-BBC-2011",
+              "itemTitle": "Frozen Planet (2011 TV documentary series)",
+              "file": "(1) To The Ends of the Earth.mp4",
+              "name": "(1) To The Ends of the Earth",
+              "url": "https://archive.org/download/frozen-planet-BBC-2011/(1)%20To%20The%20Ends%20of%20the%20Earth.mp4",
+              "seconds": 3511,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 849
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "ep2 spring bbc three airing 14 09",
-          "state": "REVIEW",
+          "name": "Spring",
+          "airdate": "2011-11-02",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "frozen-planet-2011-bbc-three-airing-2023",
             "itemTitle": "Frozen Planet (2011) (BBC THREE Airing 2023)",
             "file": "Frozen Planet - Ep2 Spring (BBC THREE Airing - 14-09-2023).mp4",
@@ -59,21 +99,58 @@
             "seconds": 3684,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 5604,
-            "ep": {
-              "season": null,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 5604
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "bbcdavidattenborough",
+              "itemTitle": "David Attenborough",
+              "file": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E02.720p.HDTV.x264.YIFY.mp4",
+              "name": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E02.720p.HDTV.x264.YIFY",
+              "url": "https://archive.org/download/bbcdavidattenborough/BBC%20-%20Frozen%20Planet%20%5B720p%5D%2FFrozen.Planet.S01E02.720p.HDTV.x264.YIFY.mp4",
+              "seconds": 3498,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 368
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Spring\" (0.95)",
+              "item": "frozen-planet",
+              "itemTitle": "Frozen Planet ★ BBC Nature Series with Subtitles, MKV, 2 Languages",
+              "file": "2 Spring.mp4",
+              "name": "2 Spring",
+              "url": "https://archive.org/download/frozen-planet/2%20Spring.mp4",
+              "seconds": 3461,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 879
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Spring\" (0.95)",
+              "item": "frozen-planet-BBC-2011",
+              "itemTitle": "Frozen Planet (2011 TV documentary series)",
+              "file": "(2) Spring.mp4",
+              "name": "(2) Spring",
+              "url": "https://archive.org/download/frozen-planet-BBC-2011/(2)%20Spring.mp4",
+              "seconds": 3459,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 837
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "ep3 summer bbc three airing 18 09",
-          "state": "REVIEW",
+          "name": "Summer",
+          "airdate": "2011-11-09",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "frozen-planet-2011-bbc-three-airing-2023",
             "itemTitle": "Frozen Planet (2011) (BBC THREE Airing 2023)",
             "file": "Frozen Planet - Ep3 Summer (BBC THREE Airing - 18-09-2023).mp4",
@@ -82,21 +159,58 @@
             "seconds": 3657,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 5564,
-            "ep": {
-              "season": null,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 5564
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "bbcdavidattenborough",
+              "itemTitle": "David Attenborough",
+              "file": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E03.720p.HDTV.x264.YIFY.mp4",
+              "name": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E03.720p.HDTV.x264.YIFY",
+              "url": "https://archive.org/download/bbcdavidattenborough/BBC%20-%20Frozen%20Planet%20%5B720p%5D%2FFrozen.Planet.S01E03.720p.HDTV.x264.YIFY.mp4",
+              "seconds": 3535,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 368
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Summer\" (0.95)",
+              "item": "frozen-planet",
+              "itemTitle": "Frozen Planet ★ BBC Nature Series with Subtitles, MKV, 2 Languages",
+              "file": "3 Summer.mp4",
+              "name": "3 Summer",
+              "url": "https://archive.org/download/frozen-planet/3%20Summer.mp4",
+              "seconds": 3517,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1061
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Summer\" (0.95)",
+              "item": "frozen-planet-BBC-2011",
+              "itemTitle": "Frozen Planet (2011 TV documentary series)",
+              "file": "(3) Summer.mp4",
+              "name": "(3) Summer",
+              "url": "https://archive.org/download/frozen-planet-BBC-2011/(3)%20Summer.mp4",
+              "seconds": 3514,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 850
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "ep4 autumn bbc three airing 19 09",
-          "state": "REVIEW",
+          "name": "Autumn",
+          "airdate": "2011-11-16",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "frozen-planet-2011-bbc-three-airing-2023",
             "itemTitle": "Frozen Planet (2011) (BBC THREE Airing 2023)",
             "file": "Frozen Planet - Ep4 Autumn (BBC THREE Airing - 19-09-2023).mp4",
@@ -105,21 +219,58 @@
             "seconds": 3651,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 5456,
-            "ep": {
-              "season": null,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 5456
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "bbcdavidattenborough",
+              "itemTitle": "David Attenborough",
+              "file": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E04.720p.HDTV.x264.YIFY.mp4",
+              "name": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E04.720p.HDTV.x264.YIFY",
+              "url": "https://archive.org/download/bbcdavidattenborough/BBC%20-%20Frozen%20Planet%20%5B720p%5D%2FFrozen.Planet.S01E04.720p.HDTV.x264.YIFY.mp4",
+              "seconds": 3495,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 368
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Autumn\" (0.95)",
+              "item": "frozen-planet",
+              "itemTitle": "Frozen Planet ★ BBC Nature Series with Subtitles, MKV, 2 Languages",
+              "file": "4 Autumn.mp4",
+              "name": "4 Autumn",
+              "url": "https://archive.org/download/frozen-planet/4%20Autumn.mp4",
+              "seconds": 3458,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 973
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Autumn\" (0.95)",
+              "item": "frozen-planet-BBC-2011",
+              "itemTitle": "Frozen Planet (2011 TV documentary series)",
+              "file": "(4) Autumn.mp4",
+              "name": "(4) Autumn",
+              "url": "https://archive.org/download/frozen-planet-BBC-2011/(4)%20Autumn.mp4",
+              "seconds": 3456,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 836
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "ep5 winter bbc three airing 20 09",
-          "state": "REVIEW",
+          "name": "Winter",
+          "airdate": "2011-11-23",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "frozen-planet-2011-bbc-three-airing-2023",
             "itemTitle": "Frozen Planet (2011) (BBC THREE Airing 2023)",
             "file": "Frozen Planet - Ep5 Winter (BBC THREE Airing - 20-09-2023).mp4",
@@ -128,21 +279,58 @@
             "seconds": 3670,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 5584,
-            "ep": {
-              "season": null,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 5584
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "bbcdavidattenborough",
+              "itemTitle": "David Attenborough",
+              "file": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E05.720p.HDTV.x264.YIFY.mp4",
+              "name": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E05.720p.HDTV.x264.YIFY",
+              "url": "https://archive.org/download/bbcdavidattenborough/BBC%20-%20Frozen%20Planet%20%5B720p%5D%2FFrozen.Planet.S01E05.720p.HDTV.x264.YIFY.mp4",
+              "seconds": 3467,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 368
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Winter\" (0.95)",
+              "item": "frozen-planet",
+              "itemTitle": "Frozen Planet ★ BBC Nature Series with Subtitles, MKV, 2 Languages",
+              "file": "5 Winter.mp4",
+              "name": "5 Winter",
+              "url": "https://archive.org/download/frozen-planet/5%20Winter.mp4",
+              "seconds": 3448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 865
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Winter\" (0.95)",
+              "item": "frozen-planet-BBC-2011",
+              "itemTitle": "Frozen Planet (2011 TV documentary series)",
+              "file": "(5) Winter.mp4",
+              "name": "(5) Winter",
+              "url": "https://archive.org/download/frozen-planet-BBC-2011/(5)%20Winter.mp4",
+              "seconds": 3446,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 834
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "ep6 the last frontier bbc three airing 21 09",
-          "state": "REVIEW",
+          "name": "The Last Frontier",
+          "airdate": "2011-11-30",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "frozen-planet-2011-bbc-three-airing-2023",
             "itemTitle": "Frozen Planet (2011) (BBC THREE Airing 2023)",
             "file": "Frozen Planet - Ep6 The Last Frontier (BBC THREE Airing - 21-09-2023).mp4",
@@ -151,21 +339,45 @@
             "seconds": 3696,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 5623,
-            "ep": {
-              "season": null,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 5623
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "bbcdavidattenborough",
+              "itemTitle": "David Attenborough",
+              "file": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E06.720p.HDTV.x264.YIFY.mp4",
+              "name": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E06.720p.HDTV.x264.YIFY",
+              "url": "https://archive.org/download/bbcdavidattenborough/BBC%20-%20Frozen%20Planet%20%5B720p%5D%2FFrozen.Planet.S01E06.720p.HDTV.x264.YIFY.mp4",
+              "seconds": 2874,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 369
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 6 in \"Frozen Planet II ★ Sequel to BBC Earth F\"",
+              "item": "frozen-planet-ii",
+              "itemTitle": "Frozen Planet II ★ Sequel to BBC Earth Frozen Planet - with MKV",
+              "file": "06 Our Frozen Planet.mp4",
+              "name": "06 Our Frozen Planet",
+              "url": "https://archive.org/download/frozen-planet-ii/06%20Our%20Frozen%20Planet.mp4",
+              "seconds": 3629,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 758
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "ep7 on thin ice bbc three airing 22 09",
-          "state": "REVIEW",
+          "name": "On Thin Ice",
+          "airdate": "2011-12-07",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "frozen-planet-2011-bbc-three-airing-2023",
             "itemTitle": "Frozen Planet (2011) (BBC THREE Airing 2023)",
             "file": "Frozen Planet - Ep7 On Thin Ice (BBC THREE Airing - 22-09-2023).mp4",
@@ -174,482 +386,51 @@
             "seconds": 3871,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 5888,
-            "ep": {
-              "season": null,
-              "episode": 7
+            "sizeMB": 5888
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "bbcdavidattenborough",
+              "itemTitle": "David Attenborough",
+              "file": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E07.720p.HDTV.x264.YIFY.mp4",
+              "name": "BBC - Frozen Planet [720p]/Frozen.Planet.S01E07.720p.HDTV.x264.YIFY",
+              "url": "https://archive.org/download/bbcdavidattenborough/BBC%20-%20Frozen%20Planet%20%5B720p%5D%2FFrozen.Planet.S01E07.720p.HDTV.x264.YIFY.mp4",
+              "seconds": 2771,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 367
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "1 worlds",
-          "state": "REVIEW",
-          "file": {
-            "item": "FrozenPlanetIIBBC",
-            "itemTitle": "Frozen Planet II (2022-2023 TV documentary miniseries)",
-            "file": "(1) Frozen Worlds.mp4",
-            "name": "(1) Frozen Worlds",
-            "url": "https://archive.org/download/FrozenPlanetIIBBC/(1)%20Frozen%20Worlds.mp4",
-            "seconds": 3569,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 863,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "1 to the ends of the earth",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-BBC-2011",
-            "itemTitle": "Frozen Planet (2011 TV documentary series)",
-            "file": "(1) To The Ends of the Earth.mp4",
-            "name": "(1) To The Ends of the Earth",
-            "url": "https://archive.org/download/frozen-planet-BBC-2011/(1)%20To%20The%20Ends%20of%20the%20Earth.mp4",
-            "seconds": 3511,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 849,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "2 ocean",
-          "state": "REVIEW",
-          "file": {
-            "item": "FrozenPlanetIIBBC",
-            "itemTitle": "Frozen Planet II (2022-2023 TV documentary miniseries)",
-            "file": "(2) Frozen Ocean.mp4",
-            "name": "(2) Frozen Ocean",
-            "url": "https://archive.org/download/FrozenPlanetIIBBC/(2)%20Frozen%20Ocean.mp4",
-            "seconds": 3583,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1851,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "2 spring",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-BBC-2011",
-            "itemTitle": "Frozen Planet (2011 TV documentary series)",
-            "file": "(2) Spring.mp4",
-            "name": "(2) Spring",
-            "url": "https://archive.org/download/frozen-planet-BBC-2011/(2)%20Spring.mp4",
-            "seconds": 3459,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 837,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "3 peaks",
-          "state": "REVIEW",
-          "file": {
-            "item": "FrozenPlanetIIBBC",
-            "itemTitle": "Frozen Planet II (2022-2023 TV documentary miniseries)",
-            "file": "(3) Frozen Peaks.mp4",
-            "name": "(3) Frozen Peaks",
-            "url": "https://archive.org/download/FrozenPlanetIIBBC/(3)%20Frozen%20Peaks.mp4",
-            "seconds": 3592,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 868,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "3 summer",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-BBC-2011",
-            "itemTitle": "Frozen Planet (2011 TV documentary series)",
-            "file": "(3) Summer.mp4",
-            "name": "(3) Summer",
-            "url": "https://archive.org/download/frozen-planet-BBC-2011/(3)%20Summer.mp4",
-            "seconds": 3514,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 850,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "4 autumn",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-BBC-2011",
-            "itemTitle": "Frozen Planet (2011 TV documentary series)",
-            "file": "(4) Autumn.mp4",
-            "name": "(4) Autumn",
-            "url": "https://archive.org/download/frozen-planet-BBC-2011/(4)%20Autumn.mp4",
-            "seconds": 3456,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 836,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "4 south",
-          "state": "REVIEW",
-          "file": {
-            "item": "FrozenPlanetIIBBC",
-            "itemTitle": "Frozen Planet II (2022-2023 TV documentary miniseries)",
-            "file": "(4) Frozen South.mp4",
-            "name": "(4) Frozen South",
-            "url": "https://archive.org/download/FrozenPlanetIIBBC/(4)%20Frozen%20South.mp4",
-            "seconds": 3585,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1852,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "5 lands",
-          "state": "REVIEW",
-          "file": {
-            "item": "FrozenPlanetIIBBC",
-            "itemTitle": "Frozen Planet II (2022-2023 TV documentary miniseries)",
-            "file": "(5) Frozen Lands.mp4",
-            "name": "(5) Frozen Lands",
-            "url": "https://archive.org/download/FrozenPlanetIIBBC/(5)%20Frozen%20Lands.mp4",
-            "seconds": 3579,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1849,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "5 winter",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-BBC-2011",
-            "itemTitle": "Frozen Planet (2011 TV documentary series)",
-            "file": "(5) Winter.mp4",
-            "name": "(5) Winter",
-            "url": "https://archive.org/download/frozen-planet-BBC-2011/(5)%20Winter.mp4",
-            "seconds": 3446,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 834,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Episode 18",
-          "state": "REVIEW",
-          "file": {
-            "item": "FrozenPlanetIIBBC",
-            "itemTitle": "Frozen Planet II (2022-2023 TV documentary miniseries)",
-            "file": "(6) Frozen Planet.mp4",
-            "name": "(6) Frozen Planet",
-            "url": "https://archive.org/download/FrozenPlanetIIBBC/(6)%20Frozen%20Planet.mp4",
-            "seconds": 3626,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1873,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "6 the last frontier",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-BBC-2011",
-            "itemTitle": "Frozen Planet (2011 TV documentary series)",
-            "file": "(6) The Last Frontier.mp4",
-            "name": "(6) The Last Frontier",
-            "url": "https://archive.org/download/frozen-planet-BBC-2011/(6)%20The%20Last%20Frontier.mp4",
-            "seconds": 3461,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 837,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "7 on thin ice",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-BBC-2011",
-            "itemTitle": "Frozen Planet (2011 TV documentary series)",
-            "file": "(7) On Thin Ice.mp4",
-            "name": "(7) On Thin Ice",
-            "url": "https://archive.org/download/frozen-planet-BBC-2011/(7)%20On%20Thin%20Ice.mp4",
-            "seconds": 3468,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 839,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "01 worlds",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-ii",
-            "itemTitle": "Frozen Planet II ★ Sequel to BBC Earth Frozen Planet - with MKV",
-            "file": "01 Frozen Worlds.mp4",
-            "name": "01 Frozen Worlds",
-            "url": "https://archive.org/download/frozen-planet-ii/01%20Frozen%20Worlds.mp4",
-            "seconds": 3573,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 761,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "02 ocean",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-ii",
-            "itemTitle": "Frozen Planet II ★ Sequel to BBC Earth Frozen Planet - with MKV",
-            "file": "02 Frozen Ocean.mp4",
-            "name": "02 Frozen Ocean",
-            "url": "https://archive.org/download/frozen-planet-ii/02%20Frozen%20Ocean.mp4",
-            "seconds": 3586,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 804,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "03 peaks",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-ii",
-            "itemTitle": "Frozen Planet II ★ Sequel to BBC Earth Frozen Planet - with MKV",
-            "file": "03 Frozen Peaks.mp4",
-            "name": "03 Frozen Peaks",
-            "url": "https://archive.org/download/frozen-planet-ii/03%20Frozen%20Peaks.mp4",
-            "seconds": 3595,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 789,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "04 south",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-ii",
-            "itemTitle": "Frozen Planet II ★ Sequel to BBC Earth Frozen Planet - with MKV",
-            "file": "04 Frozen South.mp4",
-            "name": "04 Frozen South",
-            "url": "https://archive.org/download/frozen-planet-ii/04%20Frozen%20South.mp4",
-            "seconds": 3588,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 779,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "05 lands",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-ii",
-            "itemTitle": "Frozen Planet II ★ Sequel to BBC Earth Frozen Planet - with MKV",
-            "file": "05 Frozen Lands.mp4",
-            "name": "05 Frozen Lands",
-            "url": "https://archive.org/download/frozen-planet-ii/05%20Frozen%20Lands.mp4",
-            "seconds": 3582,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 800,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "06 our",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-ii",
-            "itemTitle": "Frozen Planet II ★ Sequel to BBC Earth Frozen Planet - with MKV",
-            "file": "06 Our Frozen Planet.mp4",
-            "name": "06 Our Frozen Planet",
-            "url": "https://archive.org/download/frozen-planet-ii/06%20Our%20Frozen%20Planet.mp4",
-            "seconds": 3629,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 758,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "8 the epic journey",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet",
-            "itemTitle": "Frozen Planet ★ BBC Nature Series with Subtitles, MKV, 2 Languages",
-            "file": "8 The Epic Journey.mp4",
-            "name": "8 The Epic Journey",
-            "url": "https://archive.org/download/frozen-planet/8%20The%20Epic%20Journey.mp4",
-            "seconds": 3544,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 946,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "9 science at the end of the earth",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet",
-            "itemTitle": "Frozen Planet ★ BBC Nature Series with Subtitles, MKV, 2 Languages",
-            "file": "9 Science at the End of the Earth.mp4",
-            "name": "9 Science at the End of the Earth",
-            "url": "https://archive.org/download/frozen-planet/9%20Science%20at%20the%20End%20of%20the%20Earth.mp4",
-            "seconds": 1272,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 148,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "the epic journey",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-BBC-2011",
-            "itemTitle": "Frozen Planet (2011 TV documentary series)",
-            "file": "Frozen Planet_ The Epic Journey.mp4",
-            "name": "Frozen Planet_ The Epic Journey",
-            "url": "https://archive.org/download/frozen-planet-BBC-2011/Frozen%20Planet_%20The%20Epic%20Journey.mp4",
-            "seconds": 3541,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1831,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "science at the end of the earth",
-          "state": "REVIEW",
-          "file": {
-            "item": "frozen-planet-BBC-2011",
-            "itemTitle": "Frozen Planet (2011 TV documentary series)",
-            "file": "Science at the End of the Earth.mp4",
-            "name": "Science at the End of the Earth",
-            "url": "https://archive.org/download/frozen-planet-BBC-2011/Science%20at%20the%20End%20of%20the%20Earth.mp4",
-            "seconds": 1272,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 308,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
+            {
+              "conf": 0.75,
+              "why": "title ~ \"On Thin Ice\" (0.95)",
+              "item": "frozen-planet-BBC-2011",
+              "itemTitle": "Frozen Planet (2011 TV documentary series)",
+              "file": "(7) On Thin Ice.mp4",
+              "name": "(7) On Thin Ice",
+              "url": "https://archive.org/download/frozen-planet-BBC-2011/(7)%20On%20Thin%20Ice.mp4",
+              "seconds": 3468,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 839
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"On Thin Ice\" (0.95)",
+              "item": "frozen-planet",
+              "itemTitle": "Frozen Planet ★ BBC Nature Series with Subtitles, MKV, 2 Languages",
+              "file": "7 On Thin Ice.mp4",
+              "name": "7 On Thin Ice",
+              "url": "https://archive.org/download/frozen-planet/7%20On%20Thin%20Ice.mp4",
+              "seconds": 3470,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 797
+            }
+          ]
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 4000,
-    "name": "Frozen Planet",
-    "placed": 7
-  }
+  ]
 }

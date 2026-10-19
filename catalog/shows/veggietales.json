@@ -3,7 +3,7 @@
   "slug": "veggietales",
   "type": "Animated",
   "network": "Big Idea",
-  "matchedAt": "2026-10-16T07:56:37.293Z",
+  "matchedAt": "2026-10-19T04:10:43.738Z",
   "addedAt": "2026-10-15T12:07:42.477Z",
   "tvmaze": {
     "id": 11375,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 51,
     "live": 0,
-    "review": 1,
-    "missing": 50,
-    "pct": 2
+    "review": 0,
+    "missing": 51,
+    "pct": 0
   },
   "seasons": [
     {
@@ -67,20 +67,8 @@
           "number": 6,
           "name": "The Toy That Saved Christmas",
           "airdate": "1996-10-04",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Toy That Saved Christmas\" (0.95)",
-            "item": "veggie-tales-the-toy-that-saved-christmas-1996-vhs-new-animation",
-            "itemTitle": "VeggieTales The Toy That Saved Christmas (1996 VHS) (New Animation)",
-            "file": "VeggieTales The Toy That Saved Christmas (1996 VHS) (New Animation).mp4",
-            "name": "VeggieTales The Toy That Saved Christmas (1996 VHS) (New Animation)",
-            "url": "https://archive.org/download/veggie-tales-the-toy-that-saved-christmas-1996-vhs-new-animation/VeggieTales%20The%20Toy%20That%20Saved%20Christmas%20(1996%20VHS)%20(New%20Animation).mp4",
-            "seconds": 2007,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 187
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

@@ -3,7 +3,8 @@
   "slug": "silo",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:57.602Z",
+  "matchedAt": "2026-10-19T04:11:02.153Z",
+  "addedAt": "2026-10-19T04:11:02.158Z",
   "tvmaze": {
     "id": 38052,
     "name": "Silo",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 31,
     "live": 0,
-    "review": 0,
-    "missing": 31,
-    "pct": 0
+    "review": 3,
+    "missing": 28,
+    "pct": 10
   },
   "seasons": [
     {
@@ -111,24 +112,63 @@
           "number": 1,
           "name": "The Engineer",
           "airdate": "2024-11-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "title ~ \"The Engineer\" (0.95) | not browser-playable: container (Matroska)",
+            "item": "Silo_Season-2",
+            "itemTitle": "Silo - Season 2 | An Apple Original",
+            "file": "E01 - The Engineer.mkv.mkv",
+            "name": "E01 - The Engineer.mkv",
+            "url": "https://archive.org/download/Silo_Season-2/E01%20-%20The%20Engineer.mkv.mkv",
+            "seconds": 2720,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 937
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Order",
           "airdate": "2024-11-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "title ~ \"Order\" (0.95) | not browser-playable: container (Matroska)",
+            "item": "Silo_Season-2",
+            "itemTitle": "Silo - Season 2 | An Apple Original",
+            "file": "E02 - Order.mkv.mkv",
+            "name": "E02 - Order.mkv",
+            "url": "https://archive.org/download/Silo_Season-2/E02%20-%20Order.mkv.mkv",
+            "seconds": 2485,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 639
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Solo",
           "airdate": "2024-11-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "title ~ \"Solo\" (0.95) | not browser-playable: container (Matroska)",
+            "item": "Silo_Season-2",
+            "itemTitle": "Silo - Season 2 | An Apple Original",
+            "file": "E03 - Solo.mkv.mkv",
+            "name": "E03 - Solo.mkv",
+            "url": "https://archive.org/download/Silo_Season-2/E03%20-%20Solo.mkv.mkv",
+            "seconds": 3270,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 586
+          },
           "alternates": []
         },
         {

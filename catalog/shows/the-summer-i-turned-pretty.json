@@ -3,7 +3,7 @@
   "slug": "the-summer-i-turned-pretty",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:59.785Z",
+  "matchedAt": "2026-10-19T04:11:04.948Z",
   "addedAt": "2026-10-16T02:45:36.540Z",
   "tvmaze": {
     "id": 53443,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 26,
-    "live": 19,
-    "review": 4,
-    "missing": 3,
-    "pct": 88
+    "live": 22,
+    "review": 3,
+    "missing": 1,
+    "pct": 96
   },
   "seasons": [
     {
@@ -294,9 +294,9 @@
           "number": 7,
           "name": "Love Affair",
           "airdate": "2023-08-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-summer-i-turned-pretty_202605",
             "itemTitle": "The Summer I Turned Pretty Full Series",
@@ -314,9 +314,9 @@
           "number": 8,
           "name": "Love Triangle",
           "airdate": "2023-08-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-summer-i-turned-pretty_202605",
             "itemTitle": "The Summer I Turned Pretty Full Series",
@@ -339,8 +339,20 @@
           "number": 1,
           "name": "Last Season",
           "airdate": "2025-07-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "the-summer-i-turned-pretty_202605",
+            "itemTitle": "The Summer I Turned Pretty Full Series",
+            "file": "S03E01 Last Season.mp4",
+            "name": "S03E01 Last Season",
+            "url": "https://archive.org/download/the-summer-i-turned-pretty_202605/S03E01%20Last%20Season.mp4",
+            "seconds": 3616,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 728
+          },
           "alternates": []
         },
         {
@@ -527,8 +539,20 @@
           "number": 11,
           "name": "At Last",
           "airdate": "2025-09-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"At Last\" (0.95)",
+            "item": "the-summer-i-turned-pretty_202605",
+            "itemTitle": "The Summer I Turned Pretty Full Series",
+            "file": "S03E01 Last Season.mp4",
+            "name": "S03E01 Last Season",
+            "url": "https://archive.org/download/the-summer-i-turned-pretty_202605/S03E01%20Last%20Season.mp4",
+            "seconds": 3616,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 728
+          },
           "alternates": []
         }
       ]

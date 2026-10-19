@@ -3,7 +3,7 @@
   "slug": "voltron-the-third-dimension",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:37.269Z",
+  "matchedAt": "2026-10-19T04:10:43.692Z",
   "addedAt": "2026-10-15T19:48:16.648Z",
   "tvmaze": {
     "id": 24889,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 26,
-    "live": 24,
+    "live": 23,
     "review": 2,
-    "missing": 0,
-    "pct": 100
+    "missing": 1,
+    "pct": 96
   },
   "seasons": [
     {
@@ -951,48 +951,9 @@
           "number": 3,
           "name": "Gladiators",
           "airdate": "1999-10-30",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "absolute episode number + title match",
-            "item": "voltron-the-third-dimension_202509",
-            "itemTitle": "Voltron: The Third Dimension",
-            "file": "Voltron - The Third Dimension - Episode 20 - Gladiators.mp4",
-            "name": "Voltron - The Third Dimension - Episode 20 - Gladiators",
-            "url": "https://archive.org/download/voltron-the-third-dimension_202509/Voltron%20-%20The%20Third%20Dimension%20-%20Episode%2020%20-%20Gladiators.mp4",
-            "seconds": 1399,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 485
-          },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "absolute episode number + title match",
-              "item": "voltron-the-third-dimension",
-              "itemTitle": "Voltron The Third Dimension 1998 Series",
-              "file": "Voltron - The Third Dimension - Episode 20 - Gladiators.mp4",
-              "name": "Voltron - The Third Dimension - Episode 20 - Gladiators",
-              "url": "https://archive.org/download/voltron-the-third-dimension/Voltron%20-%20The%20Third%20Dimension%20-%20Episode%2020%20-%20Gladiators.mp4",
-              "seconds": 1399,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 485
-            },
-            {
-              "conf": 1,
-              "why": "absolute episode number + title match",
-              "item": "voltron-the-third-dimension-episode-24-mind-games",
-              "itemTitle": "[Bad Quality Version] Voltron: The Third Dimension",
-              "file": "Voltron The Third Dimension Episode 20 – Gladiators.mp4",
-              "name": "Voltron The Third Dimension Episode 20 – Gladiators",
-              "url": "https://archive.org/download/voltron-the-third-dimension-episode-24-mind-games/Voltron%20The%20Third%20Dimension%20Episode%2020%20%E2%80%93%20Gladiators.mp4",
-              "seconds": 1402,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 51
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 4,

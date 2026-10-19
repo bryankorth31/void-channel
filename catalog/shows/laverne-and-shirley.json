@@ -3,7 +3,7 @@
   "slug": "laverne-and-shirley",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-16T07:58:20.309Z",
+  "matchedAt": "2026-10-19T04:12:21.936Z",
   "addedAt": "2026-10-15T12:08:54.117Z",
   "tvmaze": {
     "id": 5814,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 178,
-    "live": 17,
+    "live": 20,
     "review": 0,
-    "missing": 161,
-    "pct": 10
+    "missing": 158,
+    "pct": 11
   },
   "seasons": [
     {
@@ -27,9 +27,35 @@
           "number": 1,
           "name": "The Society Party",
           "airdate": "1976-01-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "laverne-and-shirley-in-the-army_202605",
+            "itemTitle": "Laverne and Shirley in the Army",
+            "file": "Laverne and Shirley in the Army S01E01 (Invasion of the Boobie Hatchers).mp4",
+            "name": "Laverne and Shirley in the Army S01E01 (Invasion of the Boobie Hatchers)",
+            "url": "https://archive.org/download/laverne-and-shirley-in-the-army_202605/Laverne%20and%20Shirley%20in%20the%20Army%20S01E01%20(Invasion%20of%20the%20Boobie%20Hatchers).mp4",
+            "seconds": 1409,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 738
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "laverne-and-shirley-in-the-army",
+              "itemTitle": "Laverne & Shirley in the Army",
+              "file": "Laverne & Shirley In The Army 1x01 Invasion Of The Booby Hatchers [Animated80s].mp4",
+              "name": "Laverne & Shirley In The Army 1x01 Invasion Of The Booby Hatchers [Animated80s]",
+              "url": "https://archive.org/download/laverne-and-shirley-in-the-army/Laverne%20%26%20Shirley%20In%20The%20Army%201x01%20Invasion%20Of%20The%20Booby%20Hatchers%20%5BAnimated80s%5D.mp4",
+              "seconds": 1287,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 126
+            }
+          ]
         },
         {
           "number": 2,
@@ -484,8 +510,20 @@
           "number": 2,
           "name": "Angels of Mercy",
           "airdate": "1976-10-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "laverne-and-shirley-in-the-army_202605",
+            "itemTitle": "Laverne and Shirley in the Army",
+            "file": "Laverne and Shirley in the Army S02E02 Swamp Monsters Speak With Forked Face.mp4",
+            "name": "Laverne and Shirley in the Army S02E02 Swamp Monsters Speak With Forked Face",
+            "url": "https://archive.org/download/laverne-and-shirley-in-the-army_202605/Laverne%20and%20Shirley%20in%20the%20Army%20S02E02%20Swamp%20Monsters%20Speak%20With%20Forked%20Face.mp4",
+            "seconds": 1321,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 184
+          },
           "alternates": []
         },
         {
@@ -546,8 +584,20 @@
           "number": 5,
           "name": "Bridal Shower",
           "airdate": "1976-11-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "laverne-and-shirley-in-the-army_202605",
+            "itemTitle": "Laverne and Shirley in the Army",
+            "file": "Laverne and Shirley in the Army S02E05 The Robot Recruit.mp4",
+            "name": "Laverne and Shirley in the Army S02E05 The Robot Recruit",
+            "url": "https://archive.org/download/laverne-and-shirley-in-the-army_202605/Laverne%20and%20Shirley%20in%20the%20Army%20S02E05%20The%20Robot%20Recruit.mp4",
+            "seconds": 1322,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 223
+          },
           "alternates": []
         },
         {

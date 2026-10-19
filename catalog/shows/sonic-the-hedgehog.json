@@ -3,7 +3,7 @@
   "slug": "sonic-the-hedgehog",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:36.050Z",
+  "matchedAt": "2026-10-19T04:10:42.685Z",
   "selfListed": true,
   "tvmaze": {
     "id": null,
@@ -13,9 +13,9 @@
     "network": "Cartoon"
   },
   "coverage": {
-    "total": 118,
-    "live": 0,
-    "review": 118,
+    "total": 116,
+    "live": 13,
+    "review": 103,
     "missing": 0,
     "pct": 100
   },
@@ -23,29 +23,6 @@
     {
       "season": 1,
       "episodes": [
-        {
-          "number": 1,
-          "name": "02 boom",
-          "state": "REVIEW",
-          "file": {
-            "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
-            "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
-            "file": "02. S1E1 Sonic Boom.mp4",
-            "name": "02. S1E1 Sonic Boom",
-            "url": "https://archive.org/download/Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored/02.%20S1E1%20Sonic%20Boom.mp4",
-            "seconds": 1354,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 120,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
         {
           "number": 2,
           "name": "03 and sally",
@@ -187,7 +164,7 @@
         {
           "number": 8,
           "name": "09 harmonic",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -202,8 +179,8 @@
               "season": 1,
               "episode": 8
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
@@ -1524,26 +1501,6 @@
         },
         {
           "number": 74,
-          "name": "adventures of s t h aosth 35 the last resort",
-          "state": "REVIEW",
-          "file": {
-            "item": "adventures-of-sonic-the-hedgehog-the-complete-collection",
-            "itemTitle": "Adventures of Sonic the Hedgehog - The Complete Collection",
-            "file": "Adventures of S.T.H (AoStH) - Ep. 35 - The Last Resort (720p WebRip).mp4",
-            "name": "Adventures of S.T.H (AoStH) - Ep. 35 - The Last Resort (720p WebRip)",
-            "url": "https://archive.org/download/adventures-of-sonic-the-hedgehog-the-complete-collection/Adventures%20of%20S.T.H%20(AoStH)%20-%20Ep.%2035%20-%20The%20Last%20Resort%20(720p%20WebRip).mp4",
-            "seconds": 1315,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 215,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 75,
           "name": "adventures of s t h aosth 36 robotniks rival",
           "state": "REVIEW",
           "file": {
@@ -1563,7 +1520,7 @@
           "alternates": []
         },
         {
-          "number": 76,
+          "number": 75,
           "name": "adventures of s t h aosth 37 the magic hassle",
           "state": "REVIEW",
           "file": {
@@ -1583,7 +1540,7 @@
           "alternates": []
         },
         {
-          "number": 77,
+          "number": 76,
           "name": "adventures of s t h aosth 38 the matchmaker",
           "state": "REVIEW",
           "file": {
@@ -1603,7 +1560,7 @@
           "alternates": []
         },
         {
-          "number": 78,
+          "number": 77,
           "name": "adventures of s t h aosth 39 tails prevails",
           "state": "REVIEW",
           "file": {
@@ -1623,7 +1580,7 @@
           "alternates": []
         },
         {
-          "number": 79,
+          "number": 78,
           "name": "adventures of s t h aosth 40 zoobotnik",
           "state": "REVIEW",
           "file": {
@@ -1643,7 +1600,7 @@
           "alternates": []
         },
         {
-          "number": 80,
+          "number": 79,
           "name": "adventures of s t h aosth 41 attack on the pinball fortress",
           "state": "REVIEW",
           "file": {
@@ -1663,7 +1620,7 @@
           "alternates": []
         },
         {
-          "number": 81,
+          "number": 80,
           "name": "adventures of s t h aosth 42 mass transit trouble",
           "state": "REVIEW",
           "file": {
@@ -1683,7 +1640,7 @@
           "alternates": []
         },
         {
-          "number": 82,
+          "number": 81,
           "name": "adventures of s t h aosth 43 coachnik",
           "state": "REVIEW",
           "file": {
@@ -1703,7 +1660,7 @@
           "alternates": []
         },
         {
-          "number": 83,
+          "number": 82,
           "name": "adventures of s t h aosth 44 untouchable",
           "state": "REVIEW",
           "file": {
@@ -1723,7 +1680,7 @@
           "alternates": []
         },
         {
-          "number": 84,
+          "number": 83,
           "name": "adventures of s t h aosth 45 super robotnik",
           "state": "REVIEW",
           "file": {
@@ -1743,7 +1700,7 @@
           "alternates": []
         },
         {
-          "number": 85,
+          "number": 84,
           "name": "adventures of s t h aosth 46 robolympics",
           "state": "REVIEW",
           "file": {
@@ -1763,7 +1720,7 @@
           "alternates": []
         },
         {
-          "number": 86,
+          "number": 85,
           "name": "adventures of s t h aosth 47 magnificent",
           "state": "REVIEW",
           "file": {
@@ -1783,7 +1740,7 @@
           "alternates": []
         },
         {
-          "number": 87,
+          "number": 86,
           "name": "adventures of s t h aosth 48 black bot the pirate",
           "state": "REVIEW",
           "file": {
@@ -1803,7 +1760,7 @@
           "alternates": []
         },
         {
-          "number": 88,
+          "number": 87,
           "name": "adventures of s t h aosth 49 of the hound table",
           "state": "REVIEW",
           "file": {
@@ -1823,7 +1780,7 @@
           "alternates": []
         },
         {
-          "number": 89,
+          "number": 88,
           "name": "adventures of s t h aosth 50 robotniks pyramid scheme",
           "state": "REVIEW",
           "file": {
@@ -1843,7 +1800,7 @@
           "alternates": []
         },
         {
-          "number": 90,
+          "number": 89,
           "name": "adventures of s t h aosth 51 prehistoric",
           "state": "REVIEW",
           "file": {
@@ -1863,7 +1820,7 @@
           "alternates": []
         },
         {
-          "number": 91,
+          "number": 90,
           "name": "adventures of s t h aosth 52 baby sitter jitters",
           "state": "REVIEW",
           "file": {
@@ -1883,7 +1840,7 @@
           "alternates": []
         },
         {
-          "number": 92,
+          "number": 91,
           "name": "adventures of s t h aosth 53 honey i shrunk the",
           "state": "REVIEW",
           "file": {
@@ -1903,7 +1860,7 @@
           "alternates": []
         },
         {
-          "number": 93,
+          "number": 92,
           "name": "adventures of s t h aosth 54 robotnikland",
           "state": "REVIEW",
           "file": {
@@ -1923,7 +1880,7 @@
           "alternates": []
         },
         {
-          "number": 94,
+          "number": 93,
           "name": "adventures of s t h aosth 55 the mobius",
           "state": "REVIEW",
           "file": {
@@ -1943,7 +1900,7 @@
           "alternates": []
         },
         {
-          "number": 95,
+          "number": 94,
           "name": "adventures of s t h aosth 56 the little merhog",
           "state": "REVIEW",
           "file": {
@@ -1963,7 +1920,7 @@
           "alternates": []
         },
         {
-          "number": 96,
+          "number": 95,
           "name": "adventures of s t h aosth 57 road hog",
           "state": "REVIEW",
           "file": {
@@ -1983,7 +1940,7 @@
           "alternates": []
         },
         {
-          "number": 97,
+          "number": 96,
           "name": "adventures of s t h aosth 58 the robots robot",
           "state": "REVIEW",
           "file": {
@@ -2003,7 +1960,7 @@
           "alternates": []
         },
         {
-          "number": 98,
+          "number": 97,
           "name": "adventures of s t h aosth 59 tails tale",
           "state": "REVIEW",
           "file": {
@@ -2023,7 +1980,7 @@
           "alternates": []
         },
         {
-          "number": 99,
+          "number": 98,
           "name": "adventures of s t h aosth 60 hero of the year",
           "state": "REVIEW",
           "file": {
@@ -2043,7 +2000,7 @@
           "alternates": []
         },
         {
-          "number": 100,
+          "number": 99,
           "name": "adventures of s t h aosth 61 fast and easy",
           "state": "REVIEW",
           "file": {
@@ -2063,7 +2020,7 @@
           "alternates": []
         },
         {
-          "number": 101,
+          "number": 100,
           "name": "adventures of s t h aosth 62 lifestyles of the sick and twisted",
           "state": "REVIEW",
           "file": {
@@ -2083,7 +2040,7 @@
           "alternates": []
         },
         {
-          "number": 102,
+          "number": 101,
           "name": "adventures of s t h aosth 63 is running",
           "state": "REVIEW",
           "file": {
@@ -2103,7 +2060,7 @@
           "alternates": []
         },
         {
-          "number": 103,
+          "number": 102,
           "name": "adventures of s t h aosth 64 robo ninjas",
           "state": "REVIEW",
           "file": {
@@ -2123,7 +2080,7 @@
           "alternates": []
         },
         {
-          "number": 104,
+          "number": 103,
           "name": "adventures of s t h aosth 65 sonically ever after",
           "state": "REVIEW",
           "file": {
@@ -2143,7 +2100,7 @@
           "alternates": []
         },
         {
-          "number": 105,
+          "number": 104,
           "name": "adventures of s t h aosth special christmas blast",
           "state": "REVIEW",
           "file": {
@@ -2170,7 +2127,7 @@
         {
           "number": 1,
           "name": "14 conversion",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -2185,15 +2142,15 @@
               "season": 2,
               "episode": 1
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 2,
           "name": "15 game guy",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -2208,15 +2165,15 @@
               "season": 2,
               "episode": 2
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 3,
           "name": "16 no brainer",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -2231,15 +2188,15 @@
               "season": 2,
               "episode": 3
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 4,
           "name": "17 blast to past part 1",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -2254,15 +2211,15 @@
               "season": 2,
               "episode": 4
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 5,
           "name": "18 blast to past part 2",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -2277,15 +2234,15 @@
               "season": 2,
               "episode": 5
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 6,
           "name": "19 fed up with antonie ghost busted",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -2300,15 +2257,15 @@
               "season": 2,
               "episode": 6
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 7,
           "name": "20 dulcy",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -2323,15 +2280,15 @@
               "season": 2,
               "episode": 7
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 8,
           "name": "21 the void",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -2346,8 +2303,8 @@
               "season": 2,
               "episode": 8
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
@@ -2377,7 +2334,7 @@
         {
           "number": 10,
           "name": "23 cry of the wolf",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -2392,15 +2349,15 @@
               "season": 2,
               "episode": 10
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 11,
           "name": "24 drood henge",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -2415,15 +2372,15 @@
               "season": 2,
               "episode": 11
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 12,
           "name": "25 spyhog",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -2438,15 +2395,15 @@
               "season": 2,
               "episode": 12
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 13,
           "name": "26 the doomsday project",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "Sonic-the-Hedgehog-SatAM-The-Complete-Series-Restored",
             "itemTitle": "Sonic the Hedgehog (SatAM) The Complete Series with restored audio and video",
@@ -2461,8 +2418,8 @@
               "season": 2,
               "episode": 13
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         }

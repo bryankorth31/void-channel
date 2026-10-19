@@ -3,7 +3,8 @@
   "slug": "oz",
   "type": "Drama",
   "network": "HBO",
-  "matchedAt": "2026-10-16T07:56:46.018Z",
+  "matchedAt": "2026-10-19T04:10:51.631Z",
+  "addedAt": "2026-10-19T04:10:51.635Z",
   "tvmaze": {
     "id": 748,
     "name": "Oz",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 56,
     "live": 0,
-    "review": 0,
-    "missing": 56,
-    "pct": 0
+    "review": 1,
+    "missing": 55,
+    "pct": 2
   },
   "seasons": [
     {
@@ -26,8 +27,20 @@
           "number": 1,
           "name": "The Routine",
           "airdate": "1997-07-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "q-and-a-ozmo",
+            "itemTitle": "12. oz mouse Q and A 7/20/20",
+            "file": "Q-A and Ep 1.mp4",
+            "name": "Q-A and Ep 1",
+            "url": "https://archive.org/download/q-and-a-ozmo/Q-A%20and%20Ep%201.mp4",
+            "seconds": 3936,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2380
+          },
           "alternates": []
         },
         {

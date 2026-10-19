@@ -3,7 +3,7 @@
   "slug": "the-twilight-zone",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:58:13.451Z",
+  "matchedAt": "2026-10-19T04:12:17.101Z",
   "addedAt": "2026-10-15T12:08:45.257Z",
   "tvmaze": {
     "id": 787,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 156,
-    "live": 111,
-    "review": 39,
-    "missing": 6,
-    "pct": 96
+    "live": 116,
+    "review": 40,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -42,7 +42,21 @@
             "langRisk": true,
             "sizeMB": 250
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D1.mp4",
+              "name": "Twilight Zone_D1",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D1.mp4",
+              "seconds": 1461,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 2,
@@ -63,23 +77,91 @@
             "langRisk": true,
             "sizeMB": 192
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D2.mp4",
+              "name": "Twilight Zone_D2",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D2.mp4",
+              "seconds": 1455,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Mr. Denton on Doomsday",
           "airdate": "1959-10-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S1E03 - La Seconde Chance (Mr. Denton on Doomsday).mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S1E03 - La Seconde Chance (Mr. Denton on Doomsday)",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S1E03%20-%20La%20Seconde%20Chance%20(Mr.%20Denton%20on%20Doomsday).mp4",
+            "seconds": 1471,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 153
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D3.mp4",
+              "name": "Twilight Zone_D3",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D3.mp4",
+              "seconds": 1455,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 4,
           "name": "The Sixteen-Millimeter Shrine",
           "airdate": "1959-10-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S1E04 - Du Succès au Déclin (The Sixteen-Millimeter Shrine).mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S1E04 - Du Succès au Déclin (The Sixteen-Millimeter Shrine)",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S1E04%20-%20Du%20Succ%C3%A8s%20au%20D%C3%A9clin%20(The%20Sixteen-Millimeter%20Shrine).mp4",
+            "seconds": 1512,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 204
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D4.mp4",
+              "name": "Twilight Zone_D4",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D4.mp4",
+              "seconds": 1493,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 147
+            }
+          ]
         },
         {
           "number": 5,
@@ -100,7 +182,21 @@
             "langRisk": true,
             "sizeMB": 288
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D5.mp4",
+              "name": "Twilight Zone_D5",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D5.mp4",
+              "seconds": 1452,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 6,
@@ -121,7 +217,21 @@
             "langRisk": true,
             "sizeMB": 156
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D6.mp4",
+              "name": "Twilight Zone_D6",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D6.mp4",
+              "seconds": 1453,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 7,
@@ -142,7 +252,21 @@
             "langRisk": true,
             "sizeMB": 191
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D11.mp4",
+              "name": "Twilight Zone_D11",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D11.mp4",
+              "seconds": 1436,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 8,
@@ -163,7 +287,21 @@
             "langRisk": true,
             "sizeMB": 195
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D12.mp4",
+              "name": "Twilight Zone_D12",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D12.mp4",
+              "seconds": 1440,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 9,
@@ -184,7 +322,21 @@
             "langRisk": true,
             "sizeMB": 203
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D14.mp4",
+              "name": "Twilight Zone_D14",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D14.mp4",
+              "seconds": 1451,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 10,
@@ -205,7 +357,21 @@
             "langRisk": true,
             "sizeMB": 206
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D15.mp4",
+              "name": "Twilight Zone_D15",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D15.mp4",
+              "seconds": 1446,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 11,
@@ -226,7 +392,21 @@
             "langRisk": true,
             "sizeMB": 191
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D16.mp4",
+              "name": "Twilight Zone_D16",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D16.mp4",
+              "seconds": 1450,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 12,
@@ -247,7 +427,21 @@
             "langRisk": true,
             "sizeMB": 198
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D21.mp4",
+              "name": "Twilight Zone_D21",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D21.mp4",
+              "seconds": 1448,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 13,
@@ -268,7 +462,21 @@
             "langRisk": true,
             "sizeMB": 199
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D23.mp4",
+              "name": "Twilight Zone_D23",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D23.mp4",
+              "seconds": 1433,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 14,
@@ -289,7 +497,21 @@
             "langRisk": true,
             "sizeMB": 192
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D24.mp4",
+              "name": "Twilight Zone_D24",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D24.mp4",
+              "seconds": 1447,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 15,
@@ -310,7 +532,21 @@
             "langRisk": true,
             "sizeMB": 142
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 15 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D25.mp4",
+              "name": "Twilight Zone_D25",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D25.mp4",
+              "seconds": 1448,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 16,
@@ -331,7 +567,21 @@
             "langRisk": true,
             "sizeMB": 220
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 16 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D26.mp4",
+              "name": "Twilight Zone_D26",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D26.mp4",
+              "seconds": 1448,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 17,
@@ -352,7 +602,21 @@
             "langRisk": true,
             "sizeMB": 205
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 17 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D31.mp4",
+              "name": "Twilight Zone_D31",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D31.mp4",
+              "seconds": 1451,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 18,
@@ -373,7 +637,21 @@
             "langRisk": true,
             "sizeMB": 271
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 18 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D33.mp4",
+              "name": "Twilight Zone_D33",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D33.mp4",
+              "seconds": 1441,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 19,
@@ -394,15 +672,56 @@
             "langRisk": true,
             "sizeMB": 185
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 19 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D34.mp4",
+              "name": "Twilight Zone_D34",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D34.mp4",
+              "seconds": 1448,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 20,
           "name": "Elegy",
           "airdate": "1960-02-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S1E20 - Requiem (Elegy).mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S1E20 - Requiem (Elegy)",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S1E20%20-%20Requiem%20(Elegy).mp4",
+            "seconds": 1425,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 199
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 20 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D35.mp4",
+              "name": "Twilight Zone_D35",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D35.mp4",
+              "seconds": 1431,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 21,
@@ -423,7 +742,21 @@
             "langRisk": true,
             "sizeMB": 174
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 21 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D36.mp4",
+              "name": "Twilight Zone_D36",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D36.mp4",
+              "seconds": 1440,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 22,
@@ -444,7 +777,21 @@
             "langRisk": true,
             "sizeMB": 255
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 22 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D41.mp4",
+              "name": "Twilight Zone_D41",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D41.mp4",
+              "seconds": 1438,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 23,
@@ -465,7 +812,21 @@
             "langRisk": true,
             "sizeMB": 175
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 23 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D42.mp4",
+              "name": "Twilight Zone_D42",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D42.mp4",
+              "seconds": 1431,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 24,
@@ -487,6 +848,19 @@
             "sizeMB": 122
           },
           "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 24 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D43.mp4",
+              "name": "Twilight Zone_D43",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D43.mp4",
+              "seconds": 1435,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
@@ -536,6 +910,19 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 236
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 25 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D44.mp4",
+              "name": "Twilight Zone_D44",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D44.mp4",
+              "seconds": 1448,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
             }
           ]
         },
@@ -558,7 +945,21 @@
             "langRisk": true,
             "sizeMB": 182
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 26 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D45.mp4",
+              "name": "Twilight Zone_D45",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D45.mp4",
+              "seconds": 1443,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 27,
@@ -579,7 +980,21 @@
             "langRisk": true,
             "sizeMB": 149
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 27 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D51.mp4",
+              "name": "Twilight Zone_D51",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D51.mp4",
+              "seconds": 1450,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 28,
@@ -600,7 +1015,21 @@
             "langRisk": true,
             "sizeMB": 179
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 28 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D53.mp4",
+              "name": "Twilight Zone_D53",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D53.mp4",
+              "seconds": 1444,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 29,
@@ -621,7 +1050,21 @@
             "langRisk": true,
             "sizeMB": 192
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 29 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D54.mp4",
+              "name": "Twilight Zone_D54",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D54.mp4",
+              "seconds": 1451,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 30,
@@ -642,7 +1085,21 @@
             "langRisk": true,
             "sizeMB": 179
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 30 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D55.mp4",
+              "name": "Twilight Zone_D55",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D55.mp4",
+              "seconds": 1442,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 31,
@@ -663,7 +1120,21 @@
             "langRisk": true,
             "sizeMB": 189
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 31 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D56.mp4",
+              "name": "Twilight Zone_D56",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D56.mp4",
+              "seconds": 1443,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 32,
@@ -684,7 +1155,21 @@
             "langRisk": true,
             "sizeMB": 190
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 32 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D61.mp4",
+              "name": "Twilight Zone_D61",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D61.mp4",
+              "seconds": 1443,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 33,
@@ -706,6 +1191,19 @@
             "sizeMB": 186
           },
           "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 33 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D63.mp4",
+              "name": "Twilight Zone_D63",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D63.mp4",
+              "seconds": 1452,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
@@ -741,7 +1239,21 @@
             "langRisk": true,
             "sizeMB": 257
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 34 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D64.mp4",
+              "name": "Twilight Zone_D64",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D64.mp4",
+              "seconds": 1452,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 35,
@@ -762,7 +1274,21 @@
             "langRisk": true,
             "sizeMB": 238
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 35 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D65.mp4",
+              "name": "Twilight Zone_D65",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D65.mp4",
+              "seconds": 1446,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 36,
@@ -783,7 +1309,21 @@
             "langRisk": true,
             "sizeMB": 154
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 36 of 37 in \"The Twilight Zone - The Original Series \"",
+              "item": "twilight-zone-season-one-DVD",
+              "itemTitle": "The Twilight Zone - The Original Series - Season One DVD",
+              "file": "Twilight Zone_D66.mp4",
+              "name": "Twilight Zone_D66",
+              "url": "https://archive.org/download/twilight-zone-season-one-DVD/Twilight%20Zone_D66.mp4",
+              "seconds": 1451,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         }
       ]
     },
@@ -913,7 +1453,22 @@
             "playable": true,
             "sizeMB": 155
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+              "file": "Twilight Zone - (La Quatrième Dimension) - S2E04 - Allez-Vous-En, Finchley ! (A Thing About Machines).mp4",
+              "name": "Twilight Zone - (La Quatrième Dimension) - S2E04 - Allez-Vous-En, Finchley ! (A Thing About Machines)",
+              "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S2E04%20-%20Allez-Vous-En%2C%20Finchley%20!%20(A%20Thing%20About%20Machines).mp4",
+              "seconds": 1486,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 181
+            }
+          ]
         },
         {
           "number": 5,
@@ -2163,7 +2718,22 @@
             "playable": true,
             "sizeMB": 152
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+              "file": "Twilight Zone - (La Quatrième Dimension) - S3E11 - La Vallée Immobile (Still Valley).mp4",
+              "name": "Twilight Zone - (La Quatrième Dimension) - S3E11 - La Vallée Immobile (Still Valley)",
+              "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S3E11%20-%20La%20Vall%C3%A9e%20Immobile%20(Still%20Valley).mp4",
+              "seconds": 1498,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 191
+            }
+          ]
         },
         {
           "number": 12,
@@ -2819,7 +3389,22 @@
             "playable": true,
             "sizeMB": 150
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+              "file": "Twilight Zone - (La Quatrième Dimension) - S3E31 - L'Échange (The Trade-Ins).mp4",
+              "name": "Twilight Zone - (La Quatrième Dimension) - S3E31 - L'Échange (The Trade-Ins)",
+              "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S3E31%20-%20L'%C3%89change%20(The%20Trade-Ins).mp4",
+              "seconds": 1513,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 191
+            }
+          ]
         },
         {
           "number": 32,
@@ -3406,7 +3991,22 @@
             "langRisk": true,
             "sizeMB": 224
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.5,
+              "why": "S/E in filename",
+              "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
+              "file": "S5E01 - Le Jour de La Déchirure (Shatterday).mp4",
+              "name": "S5E01 - Le Jour de La Déchirure (Shatterday)",
+              "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S5E01%20-%20Le%20Jour%20de%20La%20D%C3%A9chirure%20(Shatterday).mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 223
+            }
+          ]
         },
         {
           "number": 2,
@@ -3526,9 +4126,37 @@
           "number": 6,
           "name": "Living Doll",
           "airdate": "1963-11-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S5E06 - La Poupée Vivante (Living Doll).mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S5E06 - La Poupée Vivante (Living Doll)",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S5E06%20-%20La%20Poup%C3%A9e%20Vivante%20(Living%20Doll).mp4",
+            "seconds": 1515,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 192
+          },
+          "alternates": [
+            {
+              "conf": 0.5,
+              "why": "S/E in filename",
+              "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
+              "file": "S5E06 - Le Guerisseur (Healer).mp4",
+              "name": "S5E06 - Le Guerisseur (Healer)",
+              "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S5E06%20-%20Le%20Guerisseur%20(Healer).mp4",
+              "seconds": 1327,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 216
+            }
+          ]
         },
         {
           "number": 7,
@@ -3675,22 +4303,37 @@
           "number": 13,
           "name": "Ring-a-Ding Girl",
           "airdate": "1963-12-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.5,
-            "why": "S/E in filename",
-            "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
-            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
-            "file": "S5E13 - L'Amour Deçu de Cupidon (Ye gods).mp4",
-            "name": "S5E13 - L'Amour Deçu de Cupidon (Ye gods)",
-            "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S5E13%20-%20L'Amour%20De%C3%A7u%20de%20Cupidon%20(Ye%20gods).mp4",
-            "seconds": 1710,
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S5E13 - Retour en Force (Ring a Ding Girl).mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S5E13 - Retour en Force (Ring a Ding Girl)",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S5E13%20-%20Retour%20en%20Force%20(Ring%20a%20Ding%20Girl).mp4",
+            "seconds": 1443,
             "format": "MPEG4",
             "playable": true,
             "langRisk": true,
-            "sizeMB": 215
+            "sizeMB": 226
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.5,
+              "why": "S/E in filename",
+              "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
+              "file": "S5E13 - L'Amour Deçu de Cupidon (Ye gods).mp4",
+              "name": "S5E13 - L'Amour Deçu de Cupidon (Ye gods)",
+              "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S5E13%20-%20L'Amour%20De%C3%A7u%20de%20Cupidon%20(Ye%20gods).mp4",
+              "seconds": 1710,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 215
+            }
+          ]
         },
         {
           "number": 14,
@@ -3732,7 +4375,22 @@
             "langRisk": true,
             "sizeMB": 222
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.5,
+              "why": "S/E in filename",
+              "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
+              "file": "S5E15 - Le Futur des Passés (A message from charity).mp4",
+              "name": "S5E15 - Le Futur des Passés (A message from charity)",
+              "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S5E15%20-%20Le%20Futur%20des%20Pass%C3%A9s%20(A%20message%20from%20charity).mp4",
+              "seconds": 2295,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 242
+            }
+          ]
         },
         {
           "number": 16,
@@ -3816,8 +4474,21 @@
           "number": 19,
           "name": "Night Call",
           "airdate": "1964-02-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S5E19 - Appel Nocturne.mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S5E19 - Appel Nocturne",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S5E19%20-%20Appel%20Nocturne.mp4",
+            "seconds": 1418,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 182
+          },
           "alternates": []
         },
         {
@@ -3839,7 +4510,22 @@
             "langRisk": true,
             "sizeMB": 180
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.5,
+              "why": "S/E in filename",
+              "item": "the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1985-2020",
+              "file": "S5E20 - Un Pacte avec le Diable (Dealer's choice).mp4",
+              "name": "S5E20 - Un Pacte avec le Diable (Dealer's choice)",
+              "url": "https://archive.org/download/the-twilight-zone-la-quatrieme-dimension-v.f.-1985-2020/S5E20%20-%20Un%20Pacte%20avec%20le%20Diable%20(Dealer's%20choice).mp4",
+              "seconds": 1334,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 198
+            }
+          ]
         },
         {
           "number": 21,
@@ -4136,9 +4822,37 @@
           "number": 32,
           "name": "Mr. Garrity and the Graves",
           "airdate": "1964-05-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "S/E in filename + title match",
+            "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+            "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+            "file": "Twilight Zone - (La Quatrième Dimension) - S5E32 - La Resurrection (M.Garrity and the Graves).mp4",
+            "name": "Twilight Zone - (La Quatrième Dimension) - S5E32 - La Resurrection (M.Garrity and the Graves)",
+            "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S5E32%20-%20La%20Resurrection%20(M.Garrity%20and%20the%20Graves).mp4",
+            "seconds": 1486,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 188
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958",
+              "itemTitle": "The Twilight Zone ☆ La Quatrième Dimension ☆ V.F. ☆ 1959-1964",
+              "file": "Twilight Zone - (La Quatrième Dimension) - S5E32 - La Resurrection (M.Garrity and the Graves).ia.mp4",
+              "name": "Twilight Zone - (La Quatrième Dimension) - S5E32 - La Resurrection (M",
+              "url": "https://archive.org/download/twilight-zone-la-quatrieme-dimension-s-1-e-00-the-time-element-ep-pilote-vost-fr-1958/Twilight%20Zone%20-%20(La%20Quatri%C3%A8me%20Dimension)%20-%20S5E32%20-%20La%20Resurrection%20(M.Garrity%20and%20the%20Graves).ia.mp4",
+              "seconds": 1486,
+              "format": "h.264 IA",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 33,

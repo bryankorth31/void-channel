@@ -3,7 +3,7 @@
   "slug": "seconds-from-disaster",
   "type": "Documentary & Geographic",
   "network": "National Geographic",
-  "matchedAt": "2026-10-17T10:33:20.875Z",
+  "matchedAt": "2026-10-19T04:12:51.360Z",
   "addedAt": "2026-10-17T10:33:20.876Z",
   "tvmaze": {
     "id": 6002,
@@ -67,20 +67,8 @@
           "number": 6,
           "name": "Wreck of the Sunset Limited",
           "airdate": "2004-08-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Wreck of the Sunset Limited\" (0.98)",
-            "item": "seconds-from-disaster-the-wreck-of-the-sunset-limited",
-            "itemTitle": "Seconds From Disaster The Wreck Of The Sunset Limited",
-            "file": "Seconds from disaster The wreck of The Sunset Limited.mp4",
-            "name": "Seconds from disaster The wreck of The Sunset Limited",
-            "url": "https://archive.org/download/seconds-from-disaster-the-wreck-of-the-sunset-limited/Seconds%20from%20disaster%20The%20wreck%20of%20The%20Sunset%20Limited.mp4",
-            "seconds": 2766,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 283
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -156,8 +144,20 @@
           "number": 2,
           "name": "Alpine Tsunami",
           "airdate": "2005-07-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Alpine Tsunami\" (0.95)",
+            "item": "seconds-from-disaster-season-2-episode-02-alpine-tsunami_360",
+            "itemTitle": "Seconds from Disaster Alpine Tsunami US narration",
+            "file": "seconds-from-disaster-season-2-episode-02-alpine-tsunami_360.mp4",
+            "name": "seconds-from-disaster-season-2-episode-02-alpine-tsunami_360",
+            "url": "https://archive.org/download/seconds-from-disaster-season-2-episode-02-alpine-tsunami_360/seconds-from-disaster-season-2-episode-02-alpine-tsunami_360.mp4",
+            "seconds": 3600,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 209
+          },
           "alternates": []
         },
         {

@@ -3,7 +3,8 @@
   "slug": "from",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:56.680Z",
+  "matchedAt": "2026-10-19T04:11:00.980Z",
+  "addedAt": "2026-10-19T04:11:00.987Z",
   "tvmaze": {
     "id": 54723,
     "name": "FROM",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 40,
     "live": 0,
-    "review": 0,
-    "missing": 40,
-    "pct": 0
+    "review": 1,
+    "missing": 39,
+    "pct": 3
   },
   "seasons": [
     {
@@ -26,8 +27,20 @@
           "number": 1,
           "name": "Long Day's Journey Into Night",
           "airdate": "2022-02-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "ep1_20250331",
+            "itemTitle": "FROM SEASON 1",
+            "file": "ep1.mp4",
+            "name": "ep1",
+            "url": "https://archive.org/download/ep1_20250331/ep1.mp4",
+            "seconds": 3155,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 274
+          },
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "viva-la-bam",
   "type": "MTV",
   "network": "MTV",
-  "matchedAt": "2026-10-16T07:56:41.820Z",
+  "matchedAt": "2026-10-19T04:10:47.833Z",
   "selfListed": true,
   "tvmaze": {
     "id": null,
@@ -13,9 +13,9 @@
     "network": "MTV"
   },
   "coverage": {
-    "total": 161,
-    "live": 0,
-    "review": 161,
+    "total": 126,
+    "live": 2,
+    "review": 124,
     "missing": 0,
     "pct": 100
   },
@@ -65,30 +65,6 @@
             "ep": {
               "season": 1,
               "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "the family reunion fqm",
-          "state": "REVIEW",
-          "file": {
-            "item": "vivalabam",
-            "itemTitle": "Viva La Bam complete series",
-            "file": "Viva La Bam/S01/viva.la.bam.s01e03.the.family.reunion.dvdrip.xvid-fqm.mp4",
-            "name": "Viva La Bam/S01/viva.la.bam.s01e03.the.family.reunion.dvdrip.xvid-fqm",
-            "url": "https://archive.org/download/vivalabam/Viva%20La%20Bam%2FS01%2Fviva.la.bam.s01e03.the.family.reunion.dvdrip.xvid-fqm.mp4",
-            "seconds": 1118,
-            "format": "h.264",
-            "playable": true,
-            "codecRisk": "video (xvid)",
-            "sizeMB": 109,
-            "ep": {
-              "season": 1,
-              "episode": 3
             },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
@@ -194,7 +170,7 @@
         {
           "number": 8,
           "name": "the scavenger hunt fqm",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "vivalabam",
             "itemTitle": "Viva La Bam complete series",
@@ -210,293 +186,13 @@
               "season": 1,
               "episode": 8
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "bams unholy union d1",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D1.mp4",
-            "name": "Bam's Unholy Union D1",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D1.mp4",
-            "seconds": 7383,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 718,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "bams unholy union d2",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D2.mp4",
-            "name": "Bam's Unholy Union D2",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D2.mp4",
-            "seconds": 3534,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 346,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "bams unholy union d12",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D12.mp4",
-            "name": "Bam's Unholy Union D12",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D12.mp4",
-            "seconds": 1222,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "bams unholy union d13",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D13.mp4",
-            "name": "Bam's Unholy Union D13",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D13.mp4",
-            "seconds": 1238,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 121,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "bams unholy union d14",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D14.mp4",
-            "name": "Bam's Unholy Union D14",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D14.mp4",
-            "seconds": 1234,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "bams unholy union d15",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D15.mp4",
-            "name": "Bam's Unholy Union D15",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D15.mp4",
-            "seconds": 1231,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 120,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "bams unholy union d16",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D16.mp4",
-            "name": "Bam's Unholy Union D16",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D16.mp4",
-            "seconds": 1235,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "bams unholy union d17",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D17.mp4",
-            "name": "Bam's Unholy Union D17",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D17.mp4",
-            "seconds": 1223,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "bams unholy union d21",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D21.mp4",
-            "name": "Bam's Unholy Union D21",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D21.mp4",
-            "seconds": 2436,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 236,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "bams unholy union d22",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D22.mp4",
-            "name": "Bam's Unholy Union D22",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D22.mp4",
-            "seconds": 2647,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 255,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "bams unholy union d23",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D23.mp4",
-            "name": "Bam's Unholy Union D23",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D23.mp4",
-            "seconds": 1228,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 119,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "bams unholy union d24",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D24.mp4",
-            "name": "Bam's Unholy Union D24",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D24.mp4",
-            "seconds": 1208,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 117,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "bams unholy union d25",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D25.mp4",
-            "name": "Bam's Unholy Union D25",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D25.mp4",
-            "seconds": 2647,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 255,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "bams unholy union d238",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "Bam's Unholy Union D238.mp4",
-            "name": "Bam's Unholy Union D238",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/Bam's%20Unholy%20Union%20D238.mp4",
-            "seconds": 1267,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 129,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
           "name": "e1 castle",
           "state": "REVIEW",
           "file": {
@@ -516,7 +212,7 @@
           "alternates": []
         },
         {
-          "number": 24,
+          "number": 10,
           "name": "e2 dating don vito",
           "state": "REVIEW",
           "file": {
@@ -536,27 +232,7 @@
           "alternates": []
         },
         {
-          "number": 25,
-          "name": "e3 fat boy face off",
-          "state": "REVIEW",
-          "file": {
-            "item": "vivalabams2dvdrip",
-            "itemTitle": "Viva La Bam Season 2 DVDRip",
-            "file": "Season 2/E3 Fat Boy Face Off.mp4",
-            "name": "Season 2/E3 Fat Boy Face Off",
-            "url": "https://archive.org/download/vivalabams2dvdrip/Season%202%2FE3%20Fat%20Boy%20Face%20Off.mp4",
-            "seconds": 1176,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 319,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
+          "number": 11,
           "name": "e4 mardi gras pt 1",
           "state": "REVIEW",
           "file": {
@@ -576,7 +252,7 @@
           "alternates": []
         },
         {
-          "number": 27,
+          "number": 12,
           "name": "e5 mardi gras pt 2",
           "state": "REVIEW",
           "file": {
@@ -596,7 +272,7 @@
           "alternates": []
         },
         {
-          "number": 28,
+          "number": 13,
           "name": "e6 community disservice",
           "state": "REVIEW",
           "file": {
@@ -616,7 +292,7 @@
           "alternates": []
         },
         {
-          "number": 29,
+          "number": 14,
           "name": "e7 tree top casino",
           "state": "REVIEW",
           "file": {
@@ -636,7 +312,7 @@
           "alternates": []
         },
         {
-          "number": 30,
+          "number": 15,
           "name": "e8 demo derby",
           "state": "REVIEW",
           "file": {
@@ -656,7 +332,7 @@
           "alternates": []
         },
         {
-          "number": 31,
+          "number": 16,
           "name": "e1 driveway skatepark",
           "state": "REVIEW",
           "file": {
@@ -676,7 +352,7 @@
           "alternates": []
         },
         {
-          "number": 32,
+          "number": 17,
           "name": "e2 uncivil war",
           "state": "REVIEW",
           "file": {
@@ -696,7 +372,7 @@
           "alternates": []
         },
         {
-          "number": 33,
+          "number": 18,
           "name": "e3 fort knoxville",
           "state": "REVIEW",
           "file": {
@@ -716,7 +392,7 @@
           "alternates": []
         },
         {
-          "number": 34,
+          "number": 19,
           "name": "e4 rockstars",
           "state": "REVIEW",
           "file": {
@@ -736,7 +412,7 @@
           "alternates": []
         },
         {
-          "number": 35,
+          "number": 20,
           "name": "e5 mutiny on the",
           "state": "REVIEW",
           "file": {
@@ -756,7 +432,7 @@
           "alternates": []
         },
         {
-          "number": 36,
+          "number": 21,
           "name": "e6 angry ape",
           "state": "REVIEW",
           "file": {
@@ -776,7 +452,7 @@
           "alternates": []
         },
         {
-          "number": 37,
+          "number": 22,
           "name": "e7 mall of",
           "state": "REVIEW",
           "file": {
@@ -796,7 +472,7 @@
           "alternates": []
         },
         {
-          "number": 38,
+          "number": 23,
           "name": "e8 bamiture golf",
           "state": "REVIEW",
           "file": {
@@ -816,7 +492,7 @@
           "alternates": []
         },
         {
-          "number": 39,
+          "number": 24,
           "name": "e1 brazil",
           "state": "REVIEW",
           "file": {
@@ -836,7 +512,7 @@
           "alternates": []
         },
         {
-          "number": 40,
+          "number": 25,
           "name": "e2 apes surprise",
           "state": "REVIEW",
           "file": {
@@ -856,7 +532,7 @@
           "alternates": []
         },
         {
-          "number": 41,
+          "number": 26,
           "name": "e3 vitos revenge",
           "state": "REVIEW",
           "file": {
@@ -876,7 +552,7 @@
           "alternates": []
         },
         {
-          "number": 42,
+          "number": 27,
           "name": "e4 metal mulisha",
           "state": "REVIEW",
           "file": {
@@ -896,7 +572,7 @@
           "alternates": []
         },
         {
-          "number": 43,
+          "number": 28,
           "name": "e5 limo vs lambo",
           "state": "REVIEW",
           "file": {
@@ -916,7 +592,7 @@
           "alternates": []
         },
         {
-          "number": 44,
+          "number": 29,
           "name": "e6 wheres vito",
           "state": "REVIEW",
           "file": {
@@ -936,7 +612,7 @@
           "alternates": []
         },
         {
-          "number": 45,
+          "number": 30,
           "name": "e7 on the river",
           "state": "REVIEW",
           "file": {
@@ -956,7 +632,7 @@
           "alternates": []
         },
         {
-          "number": 46,
+          "number": 31,
           "name": "e8 finlandia",
           "state": "REVIEW",
           "file": {
@@ -976,48 +652,8 @@
           "alternates": []
         },
         {
-          "number": 47,
-          "name": "Episode 47",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S1 D1.mp4",
-            "name": "VIVA LA BAM S1 D1",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S1%20D1.mp4",
-            "seconds": 9319,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 907,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 48,
-          "name": "Episode 48",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S1 D2.mp4",
-            "name": "VIVA LA BAM S1 D2",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S1%20D2.mp4",
-            "seconds": 4968,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 486,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 49,
-          "name": "Episode 49",
+          "number": 32,
+          "name": "Episode 32",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1036,8 +672,8 @@
           "alternates": []
         },
         {
-          "number": 50,
-          "name": "Episode 50",
+          "number": 33,
+          "name": "Episode 33",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1056,8 +692,8 @@
           "alternates": []
         },
         {
-          "number": 51,
-          "name": "Episode 51",
+          "number": 34,
+          "name": "Episode 34",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1076,8 +712,8 @@
           "alternates": []
         },
         {
-          "number": 52,
-          "name": "Episode 52",
+          "number": 35,
+          "name": "Episode 35",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1096,8 +732,8 @@
           "alternates": []
         },
         {
-          "number": 53,
-          "name": "Episode 53",
+          "number": 36,
+          "name": "Episode 36",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1116,8 +752,8 @@
           "alternates": []
         },
         {
-          "number": 54,
-          "name": "Episode 54",
+          "number": 37,
+          "name": "Episode 37",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1136,8 +772,8 @@
           "alternates": []
         },
         {
-          "number": 55,
-          "name": "Episode 55",
+          "number": 38,
+          "name": "Episode 38",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1156,8 +792,8 @@
           "alternates": []
         },
         {
-          "number": 56,
-          "name": "Episode 56",
+          "number": 39,
+          "name": "Episode 39",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1176,28 +812,8 @@
           "alternates": []
         },
         {
-          "number": 57,
-          "name": "Episode 57",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S1 D22.mp4",
-            "name": "VIVA LA BAM S1 D22",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S1%20D22.mp4",
-            "seconds": 843,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 82,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 58,
-          "name": "Episode 58",
+          "number": 40,
+          "name": "Episode 40",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1216,88 +832,8 @@
           "alternates": []
         },
         {
-          "number": 59,
-          "name": "Episode 59",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S1 D217.mp4",
-            "name": "VIVA LA BAM S1 D217",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S1%20D217.mp4",
-            "seconds": 899,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 91,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 60,
-          "name": "Episode 60",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S2-3 D1.mp4",
-            "name": "VIVA LA BAM S2-3 D1",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S2-3%20D1.mp4",
-            "seconds": 9556,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 954,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 61,
-          "name": "Episode 61",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S2-3 D2.mp4",
-            "name": "VIVA LA BAM S2-3 D2",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S2-3%20D2.mp4",
-            "seconds": 9583,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 953,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 62,
-          "name": "Episode 62",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S2-3 D3.mp4",
-            "name": "VIVA LA BAM S2-3 D3",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S2-3%20D3.mp4",
-            "seconds": 4528,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 467,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 63,
-          "name": "Episode 63",
+          "number": 41,
+          "name": "Episode 41",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1316,8 +852,8 @@
           "alternates": []
         },
         {
-          "number": 64,
-          "name": "Episode 64",
+          "number": 42,
+          "name": "Episode 42",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1336,8 +872,8 @@
           "alternates": []
         },
         {
-          "number": 65,
-          "name": "Episode 65",
+          "number": 43,
+          "name": "Episode 43",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1356,8 +892,8 @@
           "alternates": []
         },
         {
-          "number": 66,
-          "name": "Episode 66",
+          "number": 44,
+          "name": "Episode 44",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1376,8 +912,8 @@
           "alternates": []
         },
         {
-          "number": 67,
-          "name": "Episode 67",
+          "number": 45,
+          "name": "Episode 45",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1396,8 +932,8 @@
           "alternates": []
         },
         {
-          "number": 68,
-          "name": "Episode 68",
+          "number": 46,
+          "name": "Episode 46",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1416,8 +952,8 @@
           "alternates": []
         },
         {
-          "number": 69,
-          "name": "Episode 69",
+          "number": 47,
+          "name": "Episode 47",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1436,8 +972,8 @@
           "alternates": []
         },
         {
-          "number": 70,
-          "name": "Episode 70",
+          "number": 48,
+          "name": "Episode 48",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1456,8 +992,8 @@
           "alternates": []
         },
         {
-          "number": 71,
-          "name": "Episode 71",
+          "number": 49,
+          "name": "Episode 49",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1476,8 +1012,8 @@
           "alternates": []
         },
         {
-          "number": 72,
-          "name": "Episode 72",
+          "number": 50,
+          "name": "Episode 50",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1496,8 +1032,8 @@
           "alternates": []
         },
         {
-          "number": 73,
-          "name": "Episode 73",
+          "number": 51,
+          "name": "Episode 51",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1516,8 +1052,8 @@
           "alternates": []
         },
         {
-          "number": 74,
-          "name": "Episode 74",
+          "number": 52,
+          "name": "Episode 52",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1536,8 +1072,8 @@
           "alternates": []
         },
         {
-          "number": 75,
-          "name": "Episode 75",
+          "number": 53,
+          "name": "Episode 53",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1556,8 +1092,8 @@
           "alternates": []
         },
         {
-          "number": 76,
-          "name": "Episode 76",
+          "number": 54,
+          "name": "Episode 54",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1576,8 +1112,8 @@
           "alternates": []
         },
         {
-          "number": 77,
-          "name": "Episode 77",
+          "number": 55,
+          "name": "Episode 55",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1596,8 +1132,8 @@
           "alternates": []
         },
         {
-          "number": 78,
-          "name": "Episode 78",
+          "number": 56,
+          "name": "Episode 56",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1616,8 +1152,8 @@
           "alternates": []
         },
         {
-          "number": 79,
-          "name": "Episode 79",
+          "number": 57,
+          "name": "Episode 57",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1636,8 +1172,8 @@
           "alternates": []
         },
         {
-          "number": 80,
-          "name": "Episode 80",
+          "number": 58,
+          "name": "Episode 58",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1656,28 +1192,8 @@
           "alternates": []
         },
         {
-          "number": 81,
-          "name": "Episode 81",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S2-3 D34.mp4",
-            "name": "VIVA LA BAM S2-3 D34",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S2-3%20D34.mp4",
-            "seconds": 4528,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 467,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 82,
-          "name": "Episode 82",
+          "number": 59,
+          "name": "Episode 59",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1696,8 +1212,8 @@
           "alternates": []
         },
         {
-          "number": 83,
-          "name": "Episode 83",
+          "number": 60,
+          "name": "Episode 60",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1716,8 +1232,8 @@
           "alternates": []
         },
         {
-          "number": 84,
-          "name": "Episode 84",
+          "number": 61,
+          "name": "Episode 61",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1736,8 +1252,8 @@
           "alternates": []
         },
         {
-          "number": 85,
-          "name": "Episode 85",
+          "number": 62,
+          "name": "Episode 62",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1756,68 +1272,8 @@
           "alternates": []
         },
         {
-          "number": 86,
-          "name": "Episode 86",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S4-5 D1.mp4",
-            "name": "VIVA LA BAM S4-5 D1",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S4-5%20D1.mp4",
-            "seconds": 9706,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 969,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 87,
-          "name": "Episode 87",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S4-5 D2.mp4",
-            "name": "VIVA LA BAM S4-5 D2",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S4-5%20D2.mp4",
-            "seconds": 9719,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 971,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 88,
-          "name": "Episode 88",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S4-5 D3.mp4",
-            "name": "VIVA LA BAM S4-5 D3",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S4-5%20D3.mp4",
-            "seconds": 2590,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 267,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 89,
-          "name": "Episode 89",
+          "number": 63,
+          "name": "Episode 63",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1836,8 +1292,8 @@
           "alternates": []
         },
         {
-          "number": 90,
-          "name": "Episode 90",
+          "number": 64,
+          "name": "Episode 64",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1856,8 +1312,8 @@
           "alternates": []
         },
         {
-          "number": 91,
-          "name": "Episode 91",
+          "number": 65,
+          "name": "Episode 65",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1876,8 +1332,8 @@
           "alternates": []
         },
         {
-          "number": 92,
-          "name": "Episode 92",
+          "number": 66,
+          "name": "Episode 66",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1896,8 +1352,8 @@
           "alternates": []
         },
         {
-          "number": 93,
-          "name": "Episode 93",
+          "number": 67,
+          "name": "Episode 67",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1916,8 +1372,8 @@
           "alternates": []
         },
         {
-          "number": 94,
-          "name": "Episode 94",
+          "number": 68,
+          "name": "Episode 68",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1936,8 +1392,8 @@
           "alternates": []
         },
         {
-          "number": 95,
-          "name": "Episode 95",
+          "number": 69,
+          "name": "Episode 69",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1956,8 +1412,8 @@
           "alternates": []
         },
         {
-          "number": 96,
-          "name": "Episode 96",
+          "number": 70,
+          "name": "Episode 70",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1976,8 +1432,8 @@
           "alternates": []
         },
         {
-          "number": 97,
-          "name": "Episode 97",
+          "number": 71,
+          "name": "Episode 71",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -1996,8 +1452,8 @@
           "alternates": []
         },
         {
-          "number": 98,
-          "name": "Episode 98",
+          "number": 72,
+          "name": "Episode 72",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -2016,8 +1472,8 @@
           "alternates": []
         },
         {
-          "number": 99,
-          "name": "Episode 99",
+          "number": 73,
+          "name": "Episode 73",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -2036,8 +1492,8 @@
           "alternates": []
         },
         {
-          "number": 100,
-          "name": "Episode 100",
+          "number": 74,
+          "name": "Episode 74",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -2056,8 +1512,8 @@
           "alternates": []
         },
         {
-          "number": 101,
-          "name": "Episode 101",
+          "number": 75,
+          "name": "Episode 75",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -2076,8 +1532,8 @@
           "alternates": []
         },
         {
-          "number": 102,
-          "name": "Episode 102",
+          "number": 76,
+          "name": "Episode 76",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -2096,8 +1552,8 @@
           "alternates": []
         },
         {
-          "number": 103,
-          "name": "Episode 103",
+          "number": 77,
+          "name": "Episode 77",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -2116,8 +1572,8 @@
           "alternates": []
         },
         {
-          "number": 104,
-          "name": "Episode 104",
+          "number": 78,
+          "name": "Episode 78",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -2136,68 +1592,8 @@
           "alternates": []
         },
         {
-          "number": 105,
-          "name": "Episode 105",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S4-5 D32.mp4",
-            "name": "VIVA LA BAM S4-5 D32",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S4-5%20D32.mp4",
-            "seconds": 2590,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 267,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 106,
-          "name": "Episode 106",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S4-5 D33.mp4",
-            "name": "VIVA LA BAM S4-5 D33",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S4-5%20D33.mp4",
-            "seconds": 2563,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 265,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 107,
-          "name": "Episode 107",
-          "state": "REVIEW",
-          "file": {
-            "item": "bams-unholy-union-d-2",
-            "itemTitle": "Viva La Bam 1-5 DVD Collection & Bam's Unholy Union [DVD ISO]",
-            "file": "VIVA LA BAM S4-5 D34.mp4",
-            "name": "VIVA LA BAM S4-5 D34",
-            "url": "https://archive.org/download/bams-unholy-union-d-2/VIVA%20LA%20BAM%20S4-5%20D34.mp4",
-            "seconds": 2563,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 265,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 108,
-          "name": "Episode 108",
+          "number": 79,
+          "name": "Episode 79",
           "state": "REVIEW",
           "file": {
             "item": "bams-unholy-union-d-2",
@@ -2216,47 +1612,7 @@
           "alternates": []
         },
         {
-          "number": 109,
-          "name": "4 and 5 1",
-          "state": "REVIEW",
-          "file": {
-            "item": "viva-la-bam-s4-s5",
-            "itemTitle": "Viva La Bam: Complete Seasons 4 & 5",
-            "file": "VIVA_LA_BAM_SEASON_4_AND_5_DISC_1.mp4",
-            "name": "VIVA_LA_BAM_SEASON_4_AND_5_DISC_1",
-            "url": "https://archive.org/download/viva-la-bam-s4-s5/VIVA_LA_BAM_SEASON_4_AND_5_DISC_1.mp4",
-            "seconds": 9748,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 968,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 110,
-          "name": "4 and 5 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "viva-la-bam-s4-s5",
-            "itemTitle": "Viva La Bam: Complete Seasons 4 & 5",
-            "file": "VIVA_LA_BAM_SEASON_4_AND_5_DISC_2.mp4",
-            "name": "VIVA_LA_BAM_SEASON_4_AND_5_DISC_2",
-            "url": "https://archive.org/download/viva-la-bam-s4-s5/VIVA_LA_BAM_SEASON_4_AND_5_DISC_2.mp4",
-            "seconds": 10017,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 997,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 111,
+          "number": 80,
           "name": "4 and 5 11",
           "state": "REVIEW",
           "file": {
@@ -2276,7 +1632,7 @@
           "alternates": []
         },
         {
-          "number": 112,
+          "number": 81,
           "name": "4 and 5 12",
           "state": "REVIEW",
           "file": {
@@ -2296,7 +1652,7 @@
           "alternates": []
         },
         {
-          "number": 113,
+          "number": 82,
           "name": "4 and 5 13",
           "state": "REVIEW",
           "file": {
@@ -2316,7 +1672,7 @@
           "alternates": []
         },
         {
-          "number": 114,
+          "number": 83,
           "name": "4 and 5 14",
           "state": "REVIEW",
           "file": {
@@ -2336,7 +1692,7 @@
           "alternates": []
         },
         {
-          "number": 115,
+          "number": 84,
           "name": "4 and 5 15",
           "state": "REVIEW",
           "file": {
@@ -2356,7 +1712,7 @@
           "alternates": []
         },
         {
-          "number": 116,
+          "number": 85,
           "name": "4 and 5 16",
           "state": "REVIEW",
           "file": {
@@ -2376,7 +1732,7 @@
           "alternates": []
         },
         {
-          "number": 117,
+          "number": 86,
           "name": "4 and 5 17",
           "state": "REVIEW",
           "file": {
@@ -2396,7 +1752,7 @@
           "alternates": []
         },
         {
-          "number": 118,
+          "number": 87,
           "name": "4 and 5 18",
           "state": "REVIEW",
           "file": {
@@ -2416,7 +1772,7 @@
           "alternates": []
         },
         {
-          "number": 119,
+          "number": 88,
           "name": "4 and 5 21",
           "state": "REVIEW",
           "file": {
@@ -2436,7 +1792,7 @@
           "alternates": []
         },
         {
-          "number": 120,
+          "number": 89,
           "name": "4 and 5 22",
           "state": "REVIEW",
           "file": {
@@ -2456,7 +1812,7 @@
           "alternates": []
         },
         {
-          "number": 121,
+          "number": 90,
           "name": "4 and 5 23",
           "state": "REVIEW",
           "file": {
@@ -2476,7 +1832,7 @@
           "alternates": []
         },
         {
-          "number": 122,
+          "number": 91,
           "name": "4 and 5 24",
           "state": "REVIEW",
           "file": {
@@ -2496,7 +1852,7 @@
           "alternates": []
         },
         {
-          "number": 123,
+          "number": 92,
           "name": "4 and 5 25",
           "state": "REVIEW",
           "file": {
@@ -2516,7 +1872,7 @@
           "alternates": []
         },
         {
-          "number": 124,
+          "number": 93,
           "name": "4 and 5 26",
           "state": "REVIEW",
           "file": {
@@ -2536,7 +1892,7 @@
           "alternates": []
         },
         {
-          "number": 125,
+          "number": 94,
           "name": "4 and 5 27",
           "state": "REVIEW",
           "file": {
@@ -2556,7 +1912,7 @@
           "alternates": []
         },
         {
-          "number": 126,
+          "number": 95,
           "name": "4 and 5 28",
           "state": "REVIEW",
           "file": {
@@ -2576,47 +1932,7 @@
           "alternates": []
         },
         {
-          "number": 127,
-          "name": "4 and 5 32",
-          "state": "REVIEW",
-          "file": {
-            "item": "viva-la-bam-s4-s5",
-            "itemTitle": "Viva La Bam: Complete Seasons 4 & 5",
-            "file": "VIVA_LA_BAM_SEASON_4_AND_5_DISC_32.mp4",
-            "name": "VIVA_LA_BAM_SEASON_4_AND_5_DISC_32",
-            "url": "https://archive.org/download/viva-la-bam-s4-s5/VIVA_LA_BAM_SEASON_4_AND_5_DISC_32.mp4",
-            "seconds": 2619,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 270,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 128,
-          "name": "4 and 5 34",
-          "state": "REVIEW",
-          "file": {
-            "item": "viva-la-bam-s4-s5",
-            "itemTitle": "Viva La Bam: Complete Seasons 4 & 5",
-            "file": "VIVA_LA_BAM_SEASON_4_AND_5_DISC_34.mp4",
-            "name": "VIVA_LA_BAM_SEASON_4_AND_5_DISC_34",
-            "url": "https://archive.org/download/viva-la-bam-s4-s5/VIVA_LA_BAM_SEASON_4_AND_5_DISC_34.mp4",
-            "seconds": 2670,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 275,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 129,
+          "number": 96,
           "name": "4 and 5 38",
           "state": "REVIEW",
           "file": {
@@ -2682,30 +1998,6 @@
             "ep": {
               "season": 2,
               "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "fat boy face off fov",
-          "state": "REVIEW",
-          "file": {
-            "item": "vivalabam",
-            "itemTitle": "Viva La Bam complete series",
-            "file": "Viva La Bam/S02/viva_la_bam.2x03.fat_boy_face-off.dvdrip_xvid-fov.mp4",
-            "name": "Viva La Bam/S02/viva_la_bam.2x03.fat_boy_face-off.dvdrip_xvid-fov",
-            "url": "https://archive.org/download/vivalabam/Viva%20La%20Bam%2FS02%2Fviva_la_bam.2x03.fat_boy_face-off.dvdrip_xvid-fov.mp4",
-            "seconds": 1177,
-            "format": "h.264",
-            "playable": true,
-            "codecRisk": "video (xvid)",
-            "sizeMB": 115,
-            "ep": {
-              "season": 2,
-              "episode": 3
             },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
@@ -3402,7 +2694,7 @@
         {
           "number": 8,
           "name": "topaz",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "vivalabam",
             "itemTitle": "Viva La Bam complete series",
@@ -3418,8 +2710,8 @@
               "season": 5,
               "episode": 8
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 0.9,
+            "why": "S/E in filename | kept LIVE inside the self-list"
           },
           "alternates": []
         }

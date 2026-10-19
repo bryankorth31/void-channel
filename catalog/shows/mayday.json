@@ -3,7 +3,7 @@
   "slug": "mayday",
   "type": "British and Beyond",
   "network": "CA",
-  "matchedAt": "2026-10-16T07:57:10.067Z",
+  "matchedAt": "2026-10-19T04:11:17.458Z",
   "selfListed": true,
   "tvmaze": {
     "id": null,
@@ -13,9 +13,9 @@
     "network": "CA"
   },
   "coverage": {
-    "total": 199,
-    "live": 0,
-    "review": 199,
+    "total": 189,
+    "live": 3,
+    "review": 186,
     "missing": 0,
     "pct": 100
   },
@@ -26,7 +26,7 @@
         {
           "number": 1,
           "name": "air crash investigation racing the storm dd5 1",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "mayday-aci",
             "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
@@ -42,15 +42,15 @@
               "season": 1,
               "episode": 1
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 0.85,
+            "why": "S/E in filename | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 2,
           "name": "air crash investigation unlocking disaster dd5 1",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "mayday-aci",
             "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
@@ -66,15 +66,15 @@
               "season": 1,
               "episode": 2
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 0.85,
+            "why": "S/E in filename | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 3,
           "name": "air crash investigation flying on empty dd5 1",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "mayday-aci",
             "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
@@ -90,56 +90,8 @@
               "season": 1,
               "episode": 3
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "air crash investigation fire on board dd5 1",
-          "state": "REVIEW",
-          "file": {
-            "item": "mayday-aci",
-            "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
-            "file": "Air.Crash.Investigation.S01E04.Fire.On.Board.720p.HDTV.DD5.1.x264.mp4",
-            "name": "Air.Crash.Investigation.S01E04.Fire.On.Board.720p.HDTV.DD5.1.x264",
-            "url": "https://archive.org/download/mayday-aci/Air.Crash.Investigation.S01E04.Fire.On.Board.720p.HDTV.DD5.1.x264.mp4",
-            "seconds": 2690,
-            "format": "h.264",
-            "playable": true,
-            "codecRisk": "audio (DD5 1)",
-            "sizeMB": 271,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "air crash investigation flying blind dd5 1",
-          "state": "REVIEW",
-          "file": {
-            "item": "mayday-aci",
-            "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
-            "file": "Air.Crash.Investigation.S01E05.Flying.Blind.720p.HDTV.DD5.1.x264.mp4",
-            "name": "Air.Crash.Investigation.S01E05.Flying.Blind.720p.HDTV.DD5.1.x264",
-            "url": "https://archive.org/download/mayday-aci/Air.Crash.Investigation.S01E05.Flying.Blind.720p.HDTV.DD5.1.x264.mp4",
-            "seconds": 2675,
-            "format": "h.264",
-            "playable": true,
-            "codecRisk": "audio (DD5 1)",
-            "sizeMB": 268,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 0.85,
+            "why": "S/E in filename | kept LIVE inside the self-list"
           },
           "alternates": []
         },
@@ -438,30 +390,6 @@
       "season": 2,
       "episodes": [
         {
-          "number": 1,
-          "name": "air crash investigations blow out netherealm",
-          "state": "REVIEW",
-          "file": {
-            "item": "mayday-aci",
-            "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
-            "file": "Air.Crash.Investigations.S02E01.Blow.Out.REPACK.Netherealm.XviD.mp4",
-            "name": "Air.Crash.Investigations.S02E01.Blow.Out.REPACK.Netherealm.XviD",
-            "url": "https://archive.org/download/mayday-aci/Air.Crash.Investigations.S02E01.Blow.Out.REPACK.Netherealm.XviD.mp4",
-            "seconds": 2816,
-            "format": "h.264",
-            "playable": true,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 270,
-            "ep": {
-              "season": 2,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
           "number": 2,
           "name": "air crash investigations a wounded bird",
           "state": "REVIEW",
@@ -672,29 +600,6 @@
             "ep": {
               "season": 3,
               "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "air crash investigation bomb on board",
-          "state": "REVIEW",
-          "file": {
-            "item": "mayday-aci",
-            "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
-            "file": "Mayday (Air Crash Investigation) S03E05 - Bomb on Board.mp4",
-            "name": "Mayday (Air Crash Investigation) S03E05 - Bomb on Board",
-            "url": "https://archive.org/download/mayday-aci/Mayday%20(Air%20Crash%20Investigation)%20S03E05%20-%20Bomb%20on%20Board.mp4",
-            "seconds": 2762,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 281,
-            "ep": {
-              "season": 3,
-              "episode": 5
             },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
@@ -1368,80 +1273,6 @@
       ]
     },
     {
-      "season": 6,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "air crash investigation special report ripped apart",
-          "state": "REVIEW",
-          "file": {
-            "item": "mayday-aci",
-            "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
-            "file": "Mayday (Air Crash Investigation) S06E01 - (Special Report) Ripped Apart.mp4",
-            "name": "Mayday (Air Crash Investigation) S06E01 - (Special Report) Ripped Apart",
-            "url": "https://archive.org/download/mayday-aci/Mayday%20(Air%20Crash%20Investigation)%20S06E01%20-%20(Special%20Report)%20Ripped%20Apart.mp4",
-            "seconds": 2693,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 270,
-            "ep": {
-              "season": 6,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "air crash investigation special report fatal flaw",
-          "state": "REVIEW",
-          "file": {
-            "item": "mayday-aci",
-            "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
-            "file": "Mayday (Air Crash Investigation) S06E02 - (Special Report) Fatal Flaw.mp4",
-            "name": "Mayday (Air Crash Investigation) S06E02 - (Special Report) Fatal Flaw",
-            "url": "https://archive.org/download/mayday-aci/Mayday%20(Air%20Crash%20Investigation)%20S06E02%20-%20(Special%20Report)%20Fatal%20Flaw.mp4",
-            "seconds": 2693,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 271,
-            "ep": {
-              "season": 6,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "air crash investigation special report whos flying the plane",
-          "state": "REVIEW",
-          "file": {
-            "item": "mayday-aci",
-            "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
-            "file": "Mayday (Air Crash Investigation) S06E03 - (Special Report) Who's Flying The Plane.mp4",
-            "name": "Mayday (Air Crash Investigation) S06E03 - (Special Report) Who's Flying The Plane",
-            "url": "https://archive.org/download/mayday-aci/Mayday%20(Air%20Crash%20Investigation)%20S06E03%20-%20(Special%20Report)%20Who's%20Flying%20The%20Plane.mp4",
-            "seconds": 2690,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 271,
-            "ep": {
-              "season": 6,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        }
-      ]
-    },
-    {
       "season": 7,
       "episodes": [
         {
@@ -1622,57 +1453,6 @@
             "ep": {
               "season": 7,
               "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 8,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "air crash investigation special report system breakdown",
-          "state": "REVIEW",
-          "file": {
-            "item": "mayday-aci",
-            "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
-            "file": "Mayday (Air Crash Investigation) S08E01 - (Special Report) System Breakdown.mp4",
-            "name": "Mayday (Air Crash Investigation) S08E01 - (Special Report) System Breakdown",
-            "url": "https://archive.org/download/mayday-aci/Mayday%20(Air%20Crash%20Investigation)%20S08E01%20-%20(Special%20Report)%20System%20Breakdown.mp4",
-            "seconds": 2693,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 272,
-            "ep": {
-              "season": 8,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "air crash investigation special report cruel skies",
-          "state": "REVIEW",
-          "file": {
-            "item": "mayday-aci",
-            "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
-            "file": "Mayday (Air Crash Investigation) S08E02 - (Special Report) Cruel Skies.mp4",
-            "name": "Mayday (Air Crash Investigation) S08E02 - (Special Report) Cruel Skies",
-            "url": "https://archive.org/download/mayday-aci/Mayday%20(Air%20Crash%20Investigation)%20S08E02%20-%20(Special%20Report)%20Cruel%20Skies.mp4",
-            "seconds": 2677,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 269,
-            "ep": {
-              "season": 8,
-              "episode": 2
             },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
@@ -3962,29 +3742,6 @@
             "ep": {
               "season": 19,
               "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "air crash investigation slam dunk aac2 0 nogrp",
-          "state": "REVIEW",
-          "file": {
-            "item": "mayday-aci",
-            "itemTitle": "Mayday - Air Crash Investigation (S01-S22)",
-            "file": "Air.Crash.Investigation.S19E10.Slam.Dunk.1080p.HDTV.AAC2.0.x264-NOGRP.mp4",
-            "name": "Air.Crash.Investigation.S19E10.Slam.Dunk.1080p.HDTV.AAC2.0.x264-NOGRP",
-            "url": "https://archive.org/download/mayday-aci/Air.Crash.Investigation.S19E10.Slam.Dunk.1080p.HDTV.AAC2.0.x264-NOGRP.mp4",
-            "seconds": 2635,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 266,
-            "ep": {
-              "season": 19,
-              "episode": 10
             },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"

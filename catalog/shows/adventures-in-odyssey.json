@@ -3,7 +3,7 @@
   "slug": "adventures-in-odyssey",
   "type": "Animated",
   "network": "Focus on the Family",
-  "matchedAt": "2026-10-16T07:56:37.323Z",
+  "matchedAt": "2026-10-19T04:10:43.765Z",
   "addedAt": "2026-10-16T07:56:37.322Z",
   "tvmaze": {
     "id": 39008,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 17,
     "live": 0,
-    "review": 15,
-    "missing": 2,
-    "pct": 88
+    "review": 17,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -27,8 +27,20 @@
           "number": 1,
           "name": "The Knight Travellers",
           "airdate": "1991-08-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Knight Travellers\" (0.87)",
+            "item": "twist-time",
+            "itemTitle": "The Adventures In Odyssey Video Series Collection.",
+            "file": "Adventures In Odyssey - #01. The Knight Travelers 1991.mp4",
+            "name": "Adventures In Odyssey - #01. The Knight Travelers 1991",
+            "url": "https://archive.org/download/twist-time/Adventures%20In%20Odyssey%20-%20%2301.%20The%20Knight%20Travelers%201991.mp4",
+            "seconds": 1635,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 422
+          },
           "alternates": []
         },
         {
@@ -95,8 +107,20 @@
           "number": 5,
           "name": "Star Quest",
           "airdate": "1993-08-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Star Quest\" (0.95)",
+            "item": "twist-time",
+            "itemTitle": "The Adventures In Odyssey Video Series Collection.",
+            "file": "Adventures In Odyssey - #05 Star Quest 1993.mp4",
+            "name": "Adventures In Odyssey - #05 Star Quest 1993",
+            "url": "https://archive.org/download/twist-time/Adventures%20In%20Odyssey%20-%20%2305%20Star%20Quest%201993.mp4",
+            "seconds": 1693,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 437
+          },
           "alternates": []
         },
         {

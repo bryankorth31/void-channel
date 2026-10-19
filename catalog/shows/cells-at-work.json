@@ -3,7 +3,7 @@
   "slug": "cells-at-work",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:39.922Z",
+  "matchedAt": "2026-10-19T04:11:42.023Z",
   "addedAt": "2026-10-15T12:08:19.139Z",
   "tvmaze": {
     "id": 36915,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 21,
-    "live": 0,
-    "review": 1,
-    "missing": 20,
-    "pct": 5
+    "live": 2,
+    "review": 0,
+    "missing": 19,
+    "pct": 10
   },
   "seasons": [
     {
@@ -59,8 +59,20 @@
           "number": 5,
           "name": "Cedar Pollen Allergies",
           "airdate": "2018-08-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "cells-at-work-season-1-episode-5-cedar-pollen-allergy",
+            "itemTitle": "Cells At Work! Season 1 Episode 5 Cedar Pollen Allergy",
+            "file": "Cells at Work! - Season 1 Episode 5 Cedar Pollen Allergy.mp4",
+            "name": "Cells at Work! - Season 1 Episode 5 Cedar Pollen Allergy",
+            "url": "https://archive.org/download/cells-at-work-season-1-episode-5-cedar-pollen-allergy/Cells%20at%20Work!%20-%20Season%201%20Episode%205%20Cedar%20Pollen%20Allergy.mp4",
+            "seconds": 1420,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 354
+          },
           "alternates": []
         },
         {
@@ -83,9 +95,9 @@
           "number": 8,
           "name": "Blood Circulation",
           "airdate": "2018-08-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "cells-at-work-season-1-episode-8-blood-circulation",
             "itemTitle": "Cells At Work! Season 1 Episode 8 Blood Circulation",

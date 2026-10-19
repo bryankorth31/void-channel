@@ -3,7 +3,7 @@
   "slug": "the-bernie-mac-show",
   "type": "2000s and Later Sitcoms",
   "network": "FOX",
-  "matchedAt": "2026-10-16T07:56:20.277Z",
+  "matchedAt": "2026-10-19T04:10:30.355Z",
   "addedAt": "2026-10-15T12:07:37.208Z",
   "tvmaze": {
     "id": 6836,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 104,
-    "live": 100,
-    "review": 1,
+    "live": 101,
+    "review": 0,
     "missing": 3,
     "pct": 97
   },
@@ -1136,21 +1136,34 @@
           "number": 21,
           "name": "Meet the Grandparents",
           "airdate": "2003-05-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Meet the Grandparents\" (0.95)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "bernie-mac-season-2",
             "itemTitle": "The Bernie Mac Show: Season 2",
-            "file": "The.Bernie.Mac.Show.S02E20.Meet.the.Grandparents.720p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
-            "name": "The.Bernie.Mac.Show.S02E20.Meet.the.Grandparents.720p.TUBI.WEB-DL.AAC2.0.H.264",
-            "url": "https://archive.org/download/bernie-mac-season-2/The.Bernie.Mac.Show.S02E20.Meet.the.Grandparents.720p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
+            "file": "The.Bernie.Mac.Show.S02E21.The.Other.Sister.720p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
+            "name": "The.Bernie.Mac.Show.S02E21.The.Other.Sister.720p.TUBI.WEB-DL.AAC2.0.H.264",
+            "url": "https://archive.org/download/bernie-mac-season-2/The.Bernie.Mac.Show.S02E21.The.Other.Sister.720p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
             "seconds": 1318,
             "format": "h.264",
             "playable": true,
             "sizeMB": 130
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Meet the Grandparents\" (0.95)",
+              "item": "bernie-mac-season-2",
+              "itemTitle": "The Bernie Mac Show: Season 2",
+              "file": "The.Bernie.Mac.Show.S02E20.Meet.the.Grandparents.720p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
+              "name": "The.Bernie.Mac.Show.S02E20.Meet.the.Grandparents.720p.TUBI.WEB-DL.AAC2.0.H.264",
+              "url": "https://archive.org/download/bernie-mac-season-2/The.Bernie.Mac.Show.S02E20.Meet.the.Grandparents.720p.TUBI.WEB-DL.AAC2.0.H.264.mp4",
+              "seconds": 1318,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Meet the Grandparents\" (0.95)",
@@ -2415,6 +2428,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 60
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 8 in \"The Bernie Mac Show Season 5\"",
+              "item": "the-bernie-mac-show-s05",
+              "itemTitle": "The Bernie Mac Show Season 5",
+              "file": "the-bernie-mac-show-s05-e03-marathon-mac-480p-nf-web-dl-y2bs.mp4",
+              "name": "the-bernie-mac-show-s05-e03-marathon-mac-480p-nf-web-dl-y2bs",
+              "url": "https://archive.org/download/the-bernie-mac-show-s05/the-bernie-mac-show-s05-e03-marathon-mac-480p-nf-web-dl-y2bs.mp4",
+              "seconds": 1318,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 61
             }
           ]
         },
@@ -2449,6 +2475,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 59
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 8 in \"The Bernie Mac Show Season 5\"",
+              "item": "the-bernie-mac-show-s05",
+              "itemTitle": "The Bernie Mac Show Season 5",
+              "file": "the-bernie-mac-show-s05-e04-kimoitv.com-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s05-e04-kimoitv.com-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s05/the-bernie-mac-show-s05-e04-kimoitv.com-y2bs.com.mp4",
+              "seconds": 1312,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 104
             }
           ]
         },
@@ -2470,7 +2509,21 @@
             "playable": true,
             "sizeMB": 129
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 8 in \"The Bernie Mac Show Season 5\"",
+              "item": "the-bernie-mac-show-s05",
+              "itemTitle": "The Bernie Mac Show Season 5",
+              "file": "the-bernie-mac-show-s05-e05-kimoitv.com-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s05-e05-kimoitv.com-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s05/the-bernie-mac-show-s05-e05-kimoitv.com-y2bs.com.mp4",
+              "seconds": 1320,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 104
+            }
+          ]
         },
         {
           "number": 4,
@@ -2490,7 +2543,21 @@
             "playable": true,
             "sizeMB": 129
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 8 in \"The Bernie Mac Show Season 5\"",
+              "item": "the-bernie-mac-show-s05",
+              "itemTitle": "The Bernie Mac Show Season 5",
+              "file": "the-bernie-mac-show-s05-e06-kimoitv.com-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s05-e06-kimoitv.com-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s05/the-bernie-mac-show-s05-e06-kimoitv.com-y2bs.com.mp4",
+              "seconds": 1297,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 103
+            }
+          ]
         },
         {
           "number": 5,
@@ -2510,7 +2577,21 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 8 in \"The Bernie Mac Show Season 5\"",
+              "item": "the-bernie-mac-show-s05",
+              "itemTitle": "The Bernie Mac Show Season 5",
+              "file": "the-bernie-mac-show-s05-e09-kimoitv.com-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s05-e09-kimoitv.com-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s05/the-bernie-mac-show-s05-e09-kimoitv.com-y2bs.com.mp4",
+              "seconds": 1320,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 103
+            }
+          ]
         },
         {
           "number": 6,
@@ -2530,7 +2611,21 @@
             "playable": true,
             "sizeMB": 128
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 8 in \"The Bernie Mac Show Season 5\"",
+              "item": "the-bernie-mac-show-s05",
+              "itemTitle": "The Bernie Mac Show Season 5",
+              "file": "the-bernie-mac-show-s05-e15-kimoitv.com-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s05-e15-kimoitv.com-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s05/the-bernie-mac-show-s05-e15-kimoitv.com-y2bs.com.mp4",
+              "seconds": 1320,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 104
+            }
+          ]
         },
         {
           "number": 7,
@@ -2563,6 +2658,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 61
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 8 in \"The Bernie Mac Show Season 5\"",
+              "item": "the-bernie-mac-show-s05",
+              "itemTitle": "The Bernie Mac Show Season 5",
+              "file": "the-bernie-mac-show-s05-e19-kimoitv.com-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s05-e19-kimoitv.com-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s05/the-bernie-mac-show-s05-e19-kimoitv.com-y2bs.com.mp4",
+              "seconds": 1310,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 104
             }
           ]
         },
@@ -2597,6 +2705,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 61
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 8 in \"The Bernie Mac Show Season 5\"",
+              "item": "the-bernie-mac-show-s05",
+              "itemTitle": "The Bernie Mac Show Season 5",
+              "file": "the-bernie-mac-show-s05-e22-bernie-s-angels-480p-nf-web-dl-y2bs.com.mp4",
+              "name": "the-bernie-mac-show-s05-e22-bernie-s-angels-480p-nf-web-dl-y2bs.com",
+              "url": "https://archive.org/download/the-bernie-mac-show-s05/the-bernie-mac-show-s05-e22-bernie-s-angels-480p-nf-web-dl-y2bs.com.mp4",
+              "seconds": 1321,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 60
             }
           ]
         },

@@ -3,7 +3,7 @@
   "slug": "inside-no-9",
   "type": "Streaming Era",
   "network": "GB",
-  "matchedAt": "2026-10-16T07:57:01.940Z",
+  "matchedAt": "2026-10-19T04:11:07.531Z",
   "addedAt": "2026-10-15T12:07:57.691Z",
   "tvmaze": {
     "id": 374,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 54,
     "live": 0,
-    "review": 46,
-    "missing": 8,
-    "pct": 85
+    "review": 47,
+    "missing": 7,
+    "pct": 87
   },
   "seasons": [
     {
@@ -734,8 +734,20 @@
           "number": 5,
           "name": "How Do You Plead",
           "airdate": "2021-06-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"How Do You Plead\" (0.95)",
+            "item": "Inside_No_9",
+            "itemTitle": "Inside No. 9",
+            "file": "S6/Inside_No._9_Series_6_-_05._How_Do_You_Plead_p099tnwk_other.mp4",
+            "name": "S6/Inside_No._9_Series_6_-_05._How_Do_You_Plead_p099tnwk_other",
+            "url": "https://archive.org/download/Inside_No_9/S6%2FInside_No._9_Series_6_-_05._How_Do_You_Plead_p099tnwk_other.mp4",
+            "seconds": 1743,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1126
+          },
           "alternates": []
         },
         {

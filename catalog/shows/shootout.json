@@ -3,7 +3,7 @@
   "slug": "shootout",
   "type": "Documentary & Geographic",
   "network": "History",
-  "matchedAt": "2026-10-16T07:58:10.466Z",
+  "matchedAt": "2026-10-19T04:12:14.050Z",
   "addedAt": "2026-10-15T12:08:38.803Z",
   "tvmaze": {
     "id": 4555,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 22,
-    "live": 18,
-    "review": 4,
+    "live": 20,
+    "review": 2,
     "missing": 0,
     "pct": 100
   },
@@ -306,21 +306,35 @@
           "number": 1,
           "name": "Iwo Jima: Fight to the Death",
           "airdate": "2006-11-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Iwo Jima: Fight to the Death\" (1.00)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shootout-season02",
             "itemTitle": "Shootout! Season 02",
-            "file": "Shootout! - 02x02 - Iwo Jima - Fight to the Death.mp4",
-            "name": "Shootout! - 02x02 - Iwo Jima - Fight to the Death",
-            "url": "https://archive.org/download/shootout-season02/Shootout!%20-%2002x02%20-%20Iwo%20Jima%20-%20Fight%20to%20the%20Death.mp4",
-            "seconds": 2674,
+            "file": "Shootout! - 02x01 - Iraq's Most Wanted.mp4",
+            "name": "Shootout! - 02x01 - Iraq's Most Wanted",
+            "url": "https://archive.org/download/shootout-season02/Shootout!%20-%2002x01%20-%20Iraq's%20Most%20Wanted.mp4",
+            "seconds": 2690,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 267
+            "sizeMB": 269
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Iwo Jima: Fight to the Death\" (1.00)",
+              "item": "shootout-season02",
+              "itemTitle": "Shootout! Season 02",
+              "file": "Shootout! - 02x02 - Iwo Jima - Fight to the Death.mp4",
+              "name": "Shootout! - 02x02 - Iwo Jima - Fight to the Death",
+              "url": "https://archive.org/download/shootout-season02/Shootout!%20-%2002x02%20-%20Iwo%20Jima%20-%20Fight%20to%20the%20Death.mp4",
+              "seconds": 2674,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 267
+            }
+          ]
         },
         {
           "number": 2,
@@ -394,21 +408,35 @@
           "number": 4,
           "name": "Okinawa: Last Battle of WWII",
           "airdate": "2006-11-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Okinawa: Last Battle of WWII\" (0.75)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "shootout-season02",
             "itemTitle": "Shootout! Season 02",
-            "file": "Shootout! - 02x05 - Okinawa - The Last Battle of World War II.mp4",
-            "name": "Shootout! - 02x05 - Okinawa - The Last Battle of World War II",
-            "url": "https://archive.org/download/shootout-season02/Shootout!%20-%2002x05%20-%20Okinawa%20-%20The%20Last%20Battle%20of%20World%20War%20II.mp4",
-            "seconds": 2687,
+            "file": "Shootout! - 02x04 - Iraq's Most Wanted - Terror at the Border.mp4",
+            "name": "Shootout! - 02x04 - Iraq's Most Wanted - Terror at the Border",
+            "url": "https://archive.org/download/shootout-season02/Shootout!%20-%2002x04%20-%20Iraq's%20Most%20Wanted%20-%20Terror%20at%20the%20Border.mp4",
+            "seconds": 2686,
             "format": "h.264",
             "playable": true,
             "sizeMB": 268
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Okinawa: Last Battle of WWII\" (0.75)",
+              "item": "shootout-season02",
+              "itemTitle": "Shootout! Season 02",
+              "file": "Shootout! - 02x05 - Okinawa - The Last Battle of World War II.mp4",
+              "name": "Shootout! - 02x05 - Okinawa - The Last Battle of World War II",
+              "url": "https://archive.org/download/shootout-season02/Shootout!%20-%2002x05%20-%20Okinawa%20-%20The%20Last%20Battle%20of%20World%20War%20II.mp4",
+              "seconds": 2687,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 268
+            }
+          ]
         },
         {
           "number": 5,

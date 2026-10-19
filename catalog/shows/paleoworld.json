@@ -3,7 +3,7 @@
   "slug": "paleoworld",
   "type": "Documentary & Geographic",
   "network": "TLC",
-  "matchedAt": "2026-10-16T07:58:07.869Z",
+  "matchedAt": "2026-10-19T04:12:11.645Z",
   "addedAt": "2026-10-15T12:08:36.975Z",
   "tvmaze": {
     "id": 47147,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 50,
     "live": 0,
-    "review": 18,
-    "missing": 32,
-    "pct": 36
+    "review": 31,
+    "missing": 19,
+    "pct": 62
   },
   "seasons": [
     {
@@ -41,7 +41,21 @@
             "playable": true,
             "sizeMB": 149
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 7 in \"4. Jurassica [aka Paleoworld] (1994-1997\"",
+              "item": "jurassica101riseofthepredators",
+              "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+              "file": "Jurassica 2-04 Neanderthal.mp4",
+              "name": "Jurassica 2-04 Neanderthal",
+              "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%202-04%20Neanderthal.mp4",
+              "seconds": 1422,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 148
+            }
+          ]
         },
         {
           "number": 2,
@@ -61,7 +75,21 @@
             "playable": true,
             "sizeMB": 150
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 7 in \"4. Jurassica [aka Paleoworld] (1994-1997\"",
+              "item": "jurassica101riseofthepredators",
+              "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+              "file": "Jurassica 2-08 Mammoth.mp4",
+              "name": "Jurassica 2-08 Mammoth",
+              "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%202-08%20Mammoth.mp4",
+              "seconds": 1450,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
           "number": 3,
@@ -81,7 +109,21 @@
             "playable": true,
             "sizeMB": 149
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 7 in \"4. Jurassica [aka Paleoworld] (1994-1997\"",
+              "item": "jurassica101riseofthepredators",
+              "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+              "file": "Jurassica 3-03 Bone Heads [Pachycephalosaurus].mp4",
+              "name": "Jurassica 3-03 Bone Heads [Pachycephalosaurus]",
+              "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%203-03%20Bone%20Heads%20%5BPachycephalosaurus%5D.mp4",
+              "seconds": 1425,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 148
+            }
+          ]
         },
         {
           "number": 4,
@@ -101,23 +143,75 @@
             "playable": true,
             "sizeMB": 149
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 7 in \"4. Jurassica [aka Paleoworld] (1994-1997\"",
+              "item": "jurassica101riseofthepredators",
+              "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+              "file": "Jurassica 3-06 Armoured Dinos [Stegosaurus].mp4",
+              "name": "Jurassica 3-06 Armoured Dinos [Stegosaurus]",
+              "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%203-06%20Armoured%20Dinos%20%5BStegosaurus%5D.mp4",
+              "seconds": 1438,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 149
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Missing Links",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 7 in \"4. Jurassica [aka Paleoworld] (1994-1997\"",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 3-07 Flesh on the Bones [Deltadromeus].mp4",
+            "name": "Jurassica 3-07 Flesh on the Bones [Deltadromeus]",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%203-07%20Flesh%20on%20the%20Bones%20%5BDeltadromeus%5D.mp4",
+            "seconds": 1441,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 150
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Sea Monsters",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Sea Monsters\" (0.95)",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 1-06 Sea Monsters.mp4",
+            "name": "Jurassica 1-06 Sea Monsters",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%201-06%20Sea%20Monsters.mp4",
+            "seconds": 1442,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 150
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 7 in \"4. Jurassica [aka Paleoworld] (1994-1997\"",
+              "item": "jurassica101riseofthepredators",
+              "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+              "file": "Jurassica 3-11 Dinosaur Diet.mp4",
+              "name": "Jurassica 3-11 Dinosaur Diet",
+              "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%203-11%20Dinosaur%20Diet.mp4",
+              "seconds": 1437,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 149
+            }
+          ]
         },
         {
           "number": 7,
@@ -137,7 +231,21 @@
             "playable": true,
             "sizeMB": 150
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 7 in \"4. Jurassica [aka Paleoworld] (1994-1997\"",
+              "item": "jurassica101riseofthepredators",
+              "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+              "file": "Jurassica 3-12 Dwarf Dinosaurs {Romania} [Struthiosaurus].mp4",
+              "name": "Jurassica 3-12 Dwarf Dinosaurs {Romania} [Struthiosaurus]",
+              "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%203-12%20Dwarf%20Dinosaurs%20%7BRomania%7D%20%5BStruthiosaurus%5D.mp4",
+              "seconds": 1444,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 150
+            }
+          ]
         },
         {
           "number": 8,
@@ -183,16 +291,40 @@
           "number": 10,
           "name": "Mistaken Identity",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Mistaken Identity\" (0.95)",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 1-10 Mistaken Identity.mp4",
+            "name": "Jurassica 1-10 Mistaken Identity",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%201-10%20Mistaken%20Identity.mp4",
+            "seconds": 1448,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 150
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "The Legendary T-rex",
           "airdate": "1994-11-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Legendary T-rex\" (0.95)",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 1-11 The Legendary T-Rex.mp4",
+            "name": "Jurassica 1-11 The Legendary T-Rex",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%201-11%20The%20Legendary%20T-Rex.mp4",
+            "seconds": 1440,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 150
+          },
           "alternates": []
         },
         {
@@ -244,16 +376,40 @@
           "number": 1,
           "name": "African Graveyard I: Hunting Dinosaurs",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"African Graveyard I: Hunting Dinosaurs\" (0.84)",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 2-01 African Graveyard 1 - Hunting Dinosaurs.mp4",
+            "name": "Jurassica 2-01 African Graveyard 1 - Hunting Dinosaurs",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%202-01%20African%20Graveyard%201%20-%20Hunting%20Dinosaurs.mp4",
+            "seconds": 1427,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "African Graveyard II: Discovering Dinos",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"African Graveyard II: Discovering Dinos\" (0.76)",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 2-02 African Graveyard 2 - Discovering Dinosaurs.mp4",
+            "name": "Jurassica 2-02 African Graveyard 2 - Discovering Dinosaurs",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%202-02%20African%20Graveyard%202%20-%20Discovering%20Dinosaurs.mp4",
+            "seconds": 1436,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149
+          },
           "alternates": []
         },
         {
@@ -288,24 +444,60 @@
           "number": 5,
           "name": "Monsters on the Move",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Monsters on the Move\" (0.95)",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 2-05 Monsters on the Move.mp4",
+            "name": "Jurassica 2-05 Monsters on the Move",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%202-05%20Monsters%20on%20the%20Move.mp4",
+            "seconds": 1439,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 150
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Mystery of Dinosaur Cove",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Mystery of Dinosaur Cove\" (0.95)",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 2-06 Mystery of Dinosaur Cove.mp4",
+            "name": "Jurassica 2-06 Mystery of Dinosaur Cove",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%202-06%20Mystery%20of%20Dinosaur%20Cove.mp4",
+            "seconds": 1404,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 146
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Dinos in the Air",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Dinos in the Air\" (0.61)",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 2-07 Dinosaurs in the Air.mp4",
+            "name": "Jurassica 2-07 Dinosaurs in the Air",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%202-07%20Dinosaurs%20in%20the%20Air.mp4",
+            "seconds": 1440,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149
+          },
           "alternates": []
         },
         {
@@ -380,16 +572,40 @@
           "number": 12,
           "name": "Island of the Giant Rats",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Island of the Giant Rats\" (0.95)",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 2-12 Island of the Giant Rats.mp4",
+            "name": "Jurassica 2-12 Island of the Giant Rats",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%202-12%20Island%20of%20the%20Giant%20Rats.mp4",
+            "seconds": 1429,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Troodon: Dinosaur Genius",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Troodon: Dinosaur Genius\" (0.95)",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 2-13 Troodon-Dinosaur Genius.mp4",
+            "name": "Jurassica 2-13 Troodon-Dinosaur Genius",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%202-13%20Troodon-Dinosaur%20Genius.mp4",
+            "seconds": 1435,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149
+          },
           "alternates": []
         }
       ]
@@ -401,8 +617,20 @@
           "number": 1,
           "name": "Ancient Crocodiles",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Ancient Crocodiles\" (0.95)",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 3-01 Ancient Crocodiles [Deinosuchus & Purussaurus].mp4",
+            "name": "Jurassica 3-01 Ancient Crocodiles [Deinosuchus & Purussaurus]",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%203-01%20Ancient%20Crocodiles%20%5BDeinosuchus%20%26%20Purussaurus%5D.mp4",
+            "seconds": 1445,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 150
+          },
           "alternates": []
         },
         {
@@ -437,8 +665,20 @@
           "number": 4,
           "name": "Amber Hunters",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Amber Hunters\" (0.95)",
+            "item": "jurassica101riseofthepredators",
+            "itemTitle": "4. Jurassica [aka Paleoworld] (1994-1997)",
+            "file": "Jurassica 3-04 Amber Hunters [Toxorhynchites].mp4",
+            "name": "Jurassica 3-04 Amber Hunters [Toxorhynchites]",
+            "url": "https://archive.org/download/jurassica101riseofthepredators/Jurassica%203-04%20Amber%20Hunters%20%5BToxorhynchites%5D.mp4",
+            "seconds": 1434,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149
+          },
           "alternates": []
         },
         {

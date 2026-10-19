@@ -3,7 +3,7 @@
   "slug": "dragons-race-to-the-edge",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:00.693Z",
+  "matchedAt": "2026-10-19T04:11:06.249Z",
   "addedAt": "2026-10-16T05:42:57.906Z",
   "tvmaze": {
     "id": 25322,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 78,
-    "live": 55,
-    "review": 16,
-    "missing": 7,
-    "pct": 91
+    "live": 68,
+    "review": 5,
+    "missing": 5,
+    "pct": 94
   },
   "seasons": [
     {
@@ -81,9 +81,9 @@
           "number": 3,
           "name": "Imperfect Harmony",
           "airdate": "2015-06-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
             "itemTitle": "Dragons: Race to the Edge",
@@ -101,9 +101,9 @@
           "number": 4,
           "name": "When Darkness Falls",
           "airdate": "2015-06-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
             "itemTitle": "Dragons: Race to the Edge",
@@ -502,9 +502,9 @@
           "number": 10,
           "name": "Shock and Awe",
           "airdate": "2016-01-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
             "itemTitle": "Dragons: Race to the Edge",
@@ -781,9 +781,9 @@
           "number": 10,
           "name": "Between a Rock and a Hard Place",
           "airdate": "2016-06-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
             "itemTitle": "Dragons: Race to the Edge",
@@ -829,9 +829,9 @@
           "number": 13,
           "name": "Defenders of the Wing, Part 1",
           "airdate": "2016-06-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
             "itemTitle": "Dragons: Race to the Edge",
@@ -843,7 +843,21 @@
             "playable": true,
             "sizeMB": 118
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Defenders of the Wing, Part 1\" (0.85)",
+              "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
+              "itemTitle": "Dragons: Race to the Edge",
+              "file": "DRttE; 04x01; Defenders of the Wing Part 02.mp4",
+              "name": "DRttE; 04x01; Defenders of the Wing Part 02",
+              "url": "https://archive.org/download/drtt-e-01x-01-dragon-eye-of-the-beholder-part-01/DRttE%3B%2004x01%3B%20Defenders%20of%20the%20Wing%20Part%2002.mp4",
+              "seconds": 1367,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 120
+            }
+          ]
         }
       ]
     },
@@ -854,8 +868,20 @@
           "number": 1,
           "name": "Defenders of the Wing, Part 2",
           "airdate": "2017-02-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
+            "itemTitle": "Dragons: Race to the Edge",
+            "file": "DRttE; 04x01; Defenders of the Wing Part 02.mp4",
+            "name": "DRttE; 04x01; Defenders of the Wing Part 02",
+            "url": "https://archive.org/download/drtt-e-01x-01-dragon-eye-of-the-beholder-part-01/DRttE%3B%2004x01%3B%20Defenders%20of%20the%20Wing%20Part%2002.mp4",
+            "seconds": 1367,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 120
+          },
           "alternates": []
         },
         {
@@ -1062,9 +1088,9 @@
           "number": 12,
           "name": "Shell Shocked, Part 1",
           "airdate": "2017-02-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
             "itemTitle": "Dragons: Race to the Edge",
@@ -1076,14 +1102,40 @@
             "playable": true,
             "sizeMB": 109
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Shell Shocked, Part 1\" (0.80)",
+              "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
+              "itemTitle": "Dragons: Race to the Edge",
+              "file": "DRttE; 04x13; Shell Shocked Part 02.mp4",
+              "name": "DRttE; 04x13; Shell Shocked Part 02",
+              "url": "https://archive.org/download/drtt-e-01x-01-dragon-eye-of-the-beholder-part-01/DRttE%3B%2004x13%3B%20Shell%20Shocked%20Part%2002.mp4",
+              "seconds": 1367,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Shell Shocked, Part 2",
           "airdate": "2017-02-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
+            "itemTitle": "Dragons: Race to the Edge",
+            "file": "DRttE; 04x13; Shell Shocked Part 02.mp4",
+            "name": "DRttE; 04x13; Shell Shocked Part 02",
+            "url": "https://archive.org/download/drtt-e-01x-01-dragon-eye-of-the-beholder-part-01/DRttE%3B%2004x13%3B%20Shell%20Shocked%20Part%2002.mp4",
+            "seconds": 1367,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 133
+          },
           "alternates": []
         }
       ]
@@ -1103,9 +1155,9 @@
           "number": 2,
           "name": "Sandbusted",
           "airdate": "2017-08-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
             "itemTitle": "Dragons: Race to the Edge",
@@ -1123,9 +1175,9 @@
           "number": 3,
           "name": "Something Rotten on Berserker Island",
           "airdate": "2017-08-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
             "itemTitle": "Dragons: Race to the Edge",
@@ -1317,9 +1369,9 @@
           "number": 12,
           "name": "Searching for Oswald... and Chicken",
           "airdate": "2017-08-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
             "itemTitle": "Dragons: Race to the Edge",
@@ -1462,9 +1514,9 @@
           "number": 6,
           "name": "Mi Amore Wing",
           "airdate": "2018-02-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
             "itemTitle": "Dragons: Race to the Edge",
@@ -1562,9 +1614,9 @@
           "number": 11,
           "name": "Guardians of Vanaheim",
           "airdate": "2018-02-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "drtt-e-01x-01-dragon-eye-of-the-beholder-part-01",
             "itemTitle": "Dragons: Race to the Edge",

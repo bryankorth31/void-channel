@@ -3,7 +3,7 @@
   "slug": "the-steve-harvey-show",
   "type": "90s Sitcoms",
   "network": "The WB",
-  "matchedAt": "2026-10-16T07:56:15.630Z",
+  "matchedAt": "2026-10-19T04:10:27.344Z",
   "addedAt": "2026-10-15T15:05:40.048Z",
   "tvmaze": {
     "id": 12299,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 122,
     "live": 1,
-    "review": 1,
-    "missing": 120,
-    "pct": 2
+    "review": 0,
+    "missing": 121,
+    "pct": 1
   },
   "seasons": [
     {
@@ -958,20 +958,8 @@
           "number": 2,
           "name": "Do Not Duplicate",
           "airdate": "2001-10-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Do Not Duplicate\" (1.00)",
-            "item": "SteveHarveyShowDoNotDuplicate",
-            "itemTitle": "Steve Harvey Show Do Not Duplicate",
-            "file": "Steve Harvey Show Do Not Duplicate.mp4",
-            "name": "Steve Harvey Show Do Not Duplicate",
-            "url": "https://archive.org/download/SteveHarveyShowDoNotDuplicate/Steve%20Harvey%20Show%20Do%20Not%20Duplicate.mp4",
-            "seconds": 1251,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 63
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

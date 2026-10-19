@@ -3,7 +3,7 @@
   "slug": "dr-stone",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:34.862Z",
+  "matchedAt": "2026-10-19T04:11:36.904Z",
   "addedAt": "2026-10-15T12:08:15.558Z",
   "tvmaze": {
     "id": 42372,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 94,
-    "live": 62,
-    "review": 1,
-    "missing": 31,
-    "pct": 67
+    "live": 67,
+    "review": 0,
+    "missing": 27,
+    "pct": 71
   },
   "seasons": [
     {
@@ -353,21 +353,35 @@
           "number": 11,
           "name": "Clear World",
           "airdate": "2019-09-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "dr-stone-s-01-ep-10",
-            "itemTitle": "Dr Stone S01",
-            "file": "Dr Stone S01 EP011.mp4",
-            "name": "Dr Stone S01 EP011",
-            "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP011.mp4",
-            "seconds": 1448,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "15.dr.-stone-86031",
+            "itemTitle": "15.Dr. Stone - 86031",
+            "file": "Dr. Stone - 1x11 - Mundo claro.mp4",
+            "name": "Dr. Stone - 1x11 - Mundo claro",
+            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%201x11%20-%20Mundo%20claro.mp4",
+            "seconds": 1442,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 112
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dr-stone-s-01-ep-10",
+              "itemTitle": "Dr Stone S01",
+              "file": "Dr Stone S01 EP011.mp4",
+              "name": "Dr Stone S01 EP011",
+              "url": "https://archive.org/download/dr-stone-s-01-ep-10/Dr%20Stone%20S01%20EP011.mp4",
+              "seconds": 1448,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 112
+            }
+          ]
         },
         {
           "number": 12,
@@ -679,8 +693,20 @@
           "number": 21,
           "name": "Spartan Crafts Club",
           "airdate": "2019-11-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "15.dr.-stone-86031",
+            "itemTitle": "15.Dr. Stone - 86031",
+            "file": "Dr. Stone - 1x21 - Club de manualidades pesadas.mp4",
+            "name": "Dr. Stone - 1x21 - Club de manualidades pesadas",
+            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%201x21%20-%20Club%20de%20manualidades%20pesadas.mp4",
+            "seconds": 1442,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 168
+          },
           "alternates": []
         },
         {
@@ -756,17 +782,31 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "15.dr.-stone-86031",
-            "itemTitle": "15.Dr. Stone - 86031",
-            "file": "Dr. Stone - 2x01 - Comienza la Stone Wars.mp4",
-            "name": "Dr. Stone - 2x01 - Comienza la Stone Wars",
-            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%202x01%20-%20Comienza%20la%20Stone%20Wars.mp4",
+            "item": "dr.-stone-stone-wars-season-2-episode-1-subtitle-bahasa-indonesia",
+            "itemTitle": "BAJOTZ21 Dr. Stone Stone Wars [ Season 2] Episode 1 Subtitle Bahasa Indonesia",
+            "file": "Dr. Stone Stone Wars [Season 2] Episode 1 Subtitle Bahasa Indonesia.mp4",
+            "name": "Dr. Stone Stone Wars [Season 2] Episode 1 Subtitle Bahasa Indonesia",
+            "url": "https://archive.org/download/dr.-stone-stone-wars-season-2-episode-1-subtitle-bahasa-indonesia/Dr.%20Stone%20Stone%20Wars%20%5BSeason%202%5D%20Episode%201%20Subtitle%20Bahasa%20Indonesia.mp4",
             "seconds": 1440,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168
+            "sizeMB": 238
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "15.dr.-stone-86031",
+              "itemTitle": "15.Dr. Stone - 86031",
+              "file": "Dr. Stone - 2x01 - Comienza la Stone Wars.mp4",
+              "name": "Dr. Stone - 2x01 - Comienza la Stone Wars",
+              "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%202x01%20-%20Comienza%20la%20Stone%20Wars.mp4",
+              "seconds": 1440,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 168
+            }
+          ]
         },
         {
           "number": 2,
@@ -1057,8 +1097,20 @@
           "number": 5,
           "name": "Science Vessel Perseus",
           "airdate": "2023-05-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "15.dr.-stone-86031",
+            "itemTitle": "15.Dr. Stone - 86031",
+            "file": "Dr. Stone - 3x05 - El barco científico Perseo.mp4",
+            "name": "Dr. Stone - 3x05 - El barco científico Perseo",
+            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%203x05%20-%20El%20barco%20cient%C3%ADfico%20Perseo.mp4",
+            "seconds": 1440,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 168
+          },
           "alternates": []
         },
         {
@@ -1105,8 +1157,20 @@
           "number": 8,
           "name": "The Trump Card Aboard the Vessel of Science",
           "airdate": "2023-05-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "15.dr.-stone-86031",
+            "itemTitle": "15.Dr. Stone - 86031",
+            "file": "Dr. Stone - 3x08 - El as está en el barco científico.mp4",
+            "name": "Dr. Stone - 3x08 - El as está en el barco científico",
+            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%203x08%20-%20El%20as%20est%C3%A1%20en%20el%20barco%20cient%C3%ADfico.mp4",
+            "seconds": 1440,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 168
+          },
           "alternates": []
         },
         {
@@ -1173,8 +1237,20 @@
           "number": 12,
           "name": "The Kingdom of Science Strikes Back",
           "airdate": "2023-10-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "15.dr.-stone-86031",
+            "itemTitle": "15.Dr. Stone - 86031",
+            "file": "Dr. Stone - 3x12 - El reino científico contraataca.mp4",
+            "name": "Dr. Stone - 3x12 - El reino científico contraataca",
+            "url": "https://archive.org/download/15.dr.-stone-86031/Dr.%20Stone%20-%203x12%20-%20El%20reino%20cient%C3%ADfico%20contraataca.mp4",
+            "seconds": 1440,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 168
+          },
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "classroom-of-the-elite",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:36.080Z",
+  "matchedAt": "2026-10-19T04:11:38.658Z",
   "addedAt": "2026-10-16T07:57:36.079Z",
   "tvmaze": {
     "id": 29180,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 54,
-    "live": 0,
-    "review": 12,
+    "live": 12,
+    "review": 0,
     "missing": 42,
     "pct": 22
   },
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "What is evil? Whatever springs from weakness.",
           "airdate": "2017-07-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
@@ -43,17 +43,44 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
-              "item": "bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301",
-              "itemTitle": "[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)",
-              "file": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.1/YOUZITSU_1/BDMV/STREAM/00003.mp4",
-              "name": "[ok] [BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)/Vol.1/YOUZITSU_1/BDMV/STREAM/00003",
-              "url": "https://archive.org/download/bdmv-jp-vol.-1-4-fin-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-classroom-of-the-elite_202301/%5Bok%5D%20%5BBDMV_JP%5D%20%5BVol.1-4%20Fin%5D%20%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E5%AE%9F%E5%8A%9B%E8%87%B3%E4%B8%8A%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%95%99%E5%AE%A4%E3%81%B8%20Youkoso%20Jitsuryoku%20Shijou%20Shugi%20no%20Kyoushitsu%20e%20(Classroom%20of%20the%20Elite)%2FVol.1%2FYOUZITSU_1%2FBDMV%2FSTREAM%2F00003.mp4",
-              "seconds": 1442,
-              "format": "h.264",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "classroom-of-the-elite-season-1-episode-1-japanese",
+              "itemTitle": "Classroom Of The Elite Season 1 Episode 1 Japanese",
+              "file": "Classroom of the Elite Season 1 Episode 1 Japanese.mp4",
+              "name": "Classroom of the Elite Season 1 Episode 1 Japanese",
+              "url": "https://archive.org/download/classroom-of-the-elite-season-1-episode-1-japanese/Classroom%20of%20the%20Elite%20Season%201%20Episode%201%20Japanese.mp4",
+              "seconds": 1440,
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 145
+              "sizeMB": 1459
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "episode-11_202602",
+              "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+              "file": "Classroom of the Elite/Season 1/Episode 1.ia.mp4",
+              "name": "Classroom of the Elite/Season 1/Episode 1",
+              "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2FEpisode%201.ia.mp4",
+              "seconds": 1441,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 241
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "classroom-of-the-elite-season-1-episode-1-espanol-la",
+              "itemTitle": "Classroom Of The Elite Season 1 Episode 1 Español ( LA)",
+              "file": "Classroom of the Elite Season 1 Episode 1 Español (LA).mp4",
+              "name": "Classroom of the Elite Season 1 Episode 1 Español (LA)",
+              "url": "https://archive.org/download/classroom-of-the-elite-season-1-episode-1-espanol-la/Classroom%20of%20the%20Elite%20Season%201%20Episode%201%20Espa%C3%B1ol%20(LA).mp4",
+              "seconds": 1440,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 1456
             }
           ]
         },
@@ -61,9 +88,9 @@
           "number": 2,
           "name": "It takes a great talent and skill to conceal one's talent and skill.",
           "airdate": "2017-07-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
@@ -76,6 +103,19 @@
             "sizeMB": 208
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "episode-11_202602",
+              "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+              "file": "Classroom of the Elite/Season 1/Episode 2.ia.mp4",
+              "name": "Classroom of the Elite/Season 1/Episode 2",
+              "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2FEpisode%202.ia.mp4",
+              "seconds": 1441,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 208
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 2 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
@@ -95,9 +135,9 @@
           "number": 3,
           "name": "Man is an animal that makes bargains: no other animal does this - no dog exchanges bones with another.",
           "airdate": "2017-07-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
@@ -110,6 +150,19 @@
             "sizeMB": 226
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "episode-11_202602",
+              "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+              "file": "Classroom of the Elite/Season 1/Episode 3.ia.mp4",
+              "name": "Classroom of the Elite/Season 1/Episode 3",
+              "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2FEpisode%203.ia.mp4",
+              "seconds": 1441,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 226
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 3 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
@@ -129,9 +182,9 @@
           "number": 4,
           "name": "We should not be upset that others hide the truth from us, when we hide it so often from ourselves.",
           "airdate": "2017-08-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
@@ -144,6 +197,19 @@
             "sizeMB": 255
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "episode-11_202602",
+              "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+              "file": "Classroom of the Elite/Season 1/Episode 4.ia.mp4",
+              "name": "Classroom of the Elite/Season 1/Episode 4",
+              "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2FEpisode%204.ia.mp4",
+              "seconds": 1441,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 255
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 4 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
@@ -163,9 +229,9 @@
           "number": 5,
           "name": "Hell is other people.",
           "airdate": "2017-08-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
@@ -178,6 +244,19 @@
             "sizeMB": 221
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "episode-11_202602",
+              "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+              "file": "Classroom of the Elite/Season 1/Episode 5.ia.mp4",
+              "name": "Classroom of the Elite/Season 1/Episode 5",
+              "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2FEpisode%205.ia.mp4",
+              "seconds": 1441,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 221
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 5 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
@@ -197,9 +276,9 @@
           "number": 6,
           "name": "There are two kinds of lies; one concerns an accomplished fact, the other concerns a future duty.",
           "airdate": "2017-08-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
@@ -212,6 +291,19 @@
             "sizeMB": 251
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "episode-11_202602",
+              "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+              "file": "Classroom of the Elite/Season 1/Episode 6.ia.mp4",
+              "name": "Classroom of the Elite/Season 1/Episode 6",
+              "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2FEpisode%206.ia.mp4",
+              "seconds": 1441,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 251
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 6 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
@@ -231,9 +323,9 @@
           "number": 7,
           "name": "Nothing is as dangerous as an ignorant friend; a wise enemy is to be preferred.",
           "airdate": "2017-08-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
@@ -246,6 +338,19 @@
             "sizeMB": 245
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "episode-11_202602",
+              "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+              "file": "Classroom of the Elite/Season 1/Episode 7.ia.mp4",
+              "name": "Classroom of the Elite/Season 1/Episode 7",
+              "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2FEpisode%207.ia.mp4",
+              "seconds": 1441,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 245
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 7 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
@@ -265,9 +370,9 @@
           "number": 8,
           "name": "Abandon all hope, ye who enter here.",
           "airdate": "2017-08-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
@@ -280,6 +385,19 @@
             "sizeMB": 241
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "episode-11_202602",
+              "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+              "file": "Classroom of the Elite/Season 1/Episode 8.ia.mp4",
+              "name": "Classroom of the Elite/Season 1/Episode 8",
+              "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2FEpisode%208.ia.mp4",
+              "seconds": 1441,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 241
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 8 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
@@ -299,9 +417,9 @@
           "number": 9,
           "name": "Man is condemned to be free.",
           "airdate": "2017-09-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
@@ -314,6 +432,19 @@
             "sizeMB": 211
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "episode-11_202602",
+              "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+              "file": "Classroom of the Elite/Season 1/Episode 9.ia.mp4",
+              "name": "Classroom of the Elite/Season 1/Episode 9",
+              "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2FEpisode%209.ia.mp4",
+              "seconds": 1441,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 211
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 9 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
@@ -333,9 +464,9 @@
           "number": 10,
           "name": "Every man has in himself the most dangerous traitor of all.",
           "airdate": "2017-09-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
@@ -348,6 +479,19 @@
             "sizeMB": 231
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "episode-11_202602",
+              "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+              "file": "Classroom of the Elite/Season 1/Episode 10.ia.mp4",
+              "name": "Classroom of the Elite/Season 1/Episode 10",
+              "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2FEpisode%2010.ia.mp4",
+              "seconds": 1441,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 231
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 10 of 10 in \"[BDMV_JP] [Vol.1-4 Fin] ようこそ実力至上主義の教室へ Y\"",
@@ -367,9 +511,9 @@
           "number": 11,
           "name": "What People Commonly Call Fate Is Mostly Their Own Stupidity.",
           "airdate": "2017-09-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
@@ -381,15 +525,29 @@
             "playable": true,
             "sizeMB": 280
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "episode-11_202602",
+              "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+              "file": "Classroom of the Elite/Season 1/Episode 11.ia.mp4",
+              "name": "Classroom of the Elite/Season 1/Episode 11",
+              "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2FEpisode%2011.ia.mp4",
+              "seconds": 1440,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 280
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Genius lives only one story above madness.",
           "airdate": "2017-09-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "episode-11_202602",
             "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
@@ -401,7 +559,21 @@
             "playable": true,
             "sizeMB": 207
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "episode-11_202602",
+              "itemTitle": "Classroom of the Elite Season 1 (English Dub)",
+              "file": "Classroom of the Elite/Season 1/Episode 12.ia.mp4",
+              "name": "Classroom of the Elite/Season 1/Episode 12",
+              "url": "https://archive.org/download/episode-11_202602/Classroom%20of%20the%20Elite%2FSeason%201%2FEpisode%2012.ia.mp4",
+              "seconds": 1436,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 207
+            }
+          ]
         }
       ]
     },

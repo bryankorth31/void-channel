@@ -3,7 +3,7 @@
   "slug": "only-fools-and-horses",
   "type": "Classic TV",
   "network": "BBC One",
-  "matchedAt": "2026-10-16T07:58:29.359Z",
+  "matchedAt": "2026-10-19T04:12:28.287Z",
   "addedAt": "2026-10-15T12:09:01.003Z",
   "tvmaze": {
     "id": 2094,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 45,
-    "live": 9,
-    "review": 3,
+    "live": 12,
+    "review": 0,
     "missing": 33,
     "pct": 27
   },
@@ -457,9 +457,9 @@
           "number": 4,
           "name": "The Unlucky Winner Is...",
           "airdate": "1989-01-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "Onlyfoolsandhorsesseries",
             "itemTitle": "Only Fools and Horses Full Series",
@@ -473,13 +473,26 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "only-fools-series-6-uncut",
               "itemTitle": "Only Fools & Horses Series 6 and specials (Uncut)",
               "file": "S06E04. The Unlucky Winner Is.mp4",
               "name": "S06E04. The Unlucky Winner Is",
               "url": "https://archive.org/download/only-fools-series-6-uncut/S06E04.%20The%20Unlucky%20Winner%20Is.mp4",
+              "seconds": 2975,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Unlucky Winner Is...\" (0.97)",
+              "item": "only-fools-series-6-uncut",
+              "itemTitle": "Only Fools & Horses Series 6 and specials (Uncut)",
+              "file": "4. The Unlucky Winner Is.mp4",
+              "name": "4. The Unlucky Winner Is",
+              "url": "https://archive.org/download/only-fools-series-6-uncut/4.%20The%20Unlucky%20Winner%20Is.mp4",
               "seconds": 2975,
               "format": "h.264",
               "playable": true,
@@ -637,9 +650,9 @@
           "number": 2,
           "name": "The Chance of a Lunchtime",
           "airdate": "1991-01-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "Onlyfoolsandhorsesseries",
             "itemTitle": "Only Fools and Horses Full Series",
@@ -651,7 +664,35 @@
             "playable": true,
             "sizeMB": 171
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Chance of a Lunchtime\" (0.95)",
+              "item": "only-fools-series-7",
+              "itemTitle": "Only Fools & Horses Series 7 (Uncut)",
+              "file": "7-2. The Chance Of A Lunchtime.mp4",
+              "name": "7-2. The Chance Of A Lunchtime",
+              "url": "https://archive.org/download/only-fools-series-7/7-2.%20The%20Chance%20Of%20A%20Lunchtime.mp4",
+              "seconds": 2964,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 290
+            },
+            {
+              "conf": 0.65,
+              "why": "title ~ \"The Chance of a Lunchtime\" (0.97)",
+              "item": "only-fools-series-7",
+              "itemTitle": "Only Fools & Horses Series 7 (Uncut)",
+              "file": "2. The Chance Of A Lunchtime.mpg",
+              "name": "2. The Chance Of A Lunchtime",
+              "url": "https://archive.org/download/only-fools-series-7/2.%20The%20Chance%20Of%20A%20Lunchtime.mpg",
+              "seconds": 2964,
+              "format": "MPEG2",
+              "playable": false,
+              "codecRisk": "container (MPEG2)",
+              "sizeMB": 1279
+            }
+          ]
         },
         {
           "number": 3,
@@ -801,9 +842,9 @@
           "number": 6,
           "name": "Three Men, a Woman, and a Baby",
           "airdate": "1991-02-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "Onlyfoolsandhorsesseries",
             "itemTitle": "Only Fools and Horses Full Series",
@@ -815,7 +856,35 @@
             "playable": true,
             "sizeMB": 285
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Three Men, a Woman, and a Baby\" (0.95)",
+              "item": "only-fools-series-7",
+              "itemTitle": "Only Fools & Horses Series 7 (Uncut)",
+              "file": "7-6. Three Men, A Woman And A Baby.mp4",
+              "name": "7-6. Three Men, A Woman And A Baby",
+              "url": "https://archive.org/download/only-fools-series-7/7-6.%20Three%20Men%2C%20A%20Woman%20And%20A%20Baby.mp4",
+              "seconds": 2949,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 289
+            },
+            {
+              "conf": 0.65,
+              "why": "title ~ \"Three Men, a Woman, and a Baby\" (0.97)",
+              "item": "only-fools-series-7",
+              "itemTitle": "Only Fools & Horses Series 7 (Uncut)",
+              "file": "6. Three Men, A Woman And A Baby.mpg",
+              "name": "6. Three Men, A Woman And A Baby",
+              "url": "https://archive.org/download/only-fools-series-7/6.%20Three%20Men%2C%20A%20Woman%20And%20A%20Baby.mpg",
+              "seconds": 2948,
+              "format": "MPEG2",
+              "playable": false,
+              "codecRisk": "container (MPEG2)",
+              "sizeMB": 1299
+            }
+          ]
         }
       ]
     }

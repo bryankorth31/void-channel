@@ -3,7 +3,7 @@
   "slug": "the-tick",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:31.603Z",
+  "matchedAt": "2026-10-19T04:10:39.636Z",
   "addedAt": "2026-10-15T17:22:35.205Z",
   "tvmaze": {
     "id": 14116,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 22,
-    "live": 15,
-    "review": 5,
-    "missing": 2,
-    "pct": 91
+    "live": 19,
+    "review": 3,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -71,7 +71,7 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 1 of 11 in \"The Tick (Full Series)\"",
+              "why": "sequence guess: file 1 of 12 in \"The Tick (Full Series)\"",
               "item": "the-tick-full-series",
               "itemTitle": "The Tick (Full Series)",
               "file": "S1E13 - The Tick vs. Arthur's Bank Account.mp4",
@@ -91,7 +91,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 2 of 11 in \"The Tick (Full Series)\"",
+            "why": "sequence guess: file 2 of 12 in \"The Tick (Full Series)\"",
             "item": "the-tick-full-series",
             "itemTitle": "The Tick (Full Series)",
             "file": "S2E11 - Tick vs. The Big Nothing.mp4",
@@ -105,7 +105,21 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 2 of 13 in \"The Tick\"",
+              "why": "sequence guess: file 2 of 14 in \"The Tick 1994 The Animated Series Comple\"",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S02E11 - Tick vs. the Big Nothing (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S02E11 - Tick vs. the Big Nothing (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S02E11%20-%20Tick%20vs.%20the%20Big%20Nothing%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1230,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 119
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 14 in \"The Tick\"",
               "item": "ds-store_20260105_1106",
               "itemTitle": "The Tick",
               "file": "The Tick/2/S02E11 - Tick vs. the Big Nothing.mp4",
@@ -122,33 +136,60 @@
           "number": 3,
           "name": "Secret / Identity",
           "airdate": "2017-08-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 11 in \"The Tick (Full Series)\"",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "the-tick-full-series",
             "itemTitle": "The Tick (Full Series)",
-            "file": "S3E01 - That Mustache Feeling.mp4",
-            "name": "S3E01 - That Mustache Feeling",
-            "url": "https://archive.org/download/the-tick-full-series/S3E01%20-%20That%20Mustache%20Feeling.mp4",
-            "seconds": 1203,
+            "file": "S1E03 - The Tick vs. Dinosaur Neil.mp4",
+            "name": "S1E03 - The Tick vs. Dinosaur Neil",
+            "url": "https://archive.org/download/the-tick-full-series/S1E03%20-%20The%20Tick%20vs.%20Dinosaur%20Neil.mp4",
+            "seconds": 1270,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 326
+            "sizeMB": 475
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 13 in \"The Tick\"",
-              "item": "ds-store_20260105_1106",
-              "itemTitle": "The Tick",
-              "file": "The Tick/2/S02E12 - Tick vs. Reno, Nevada.mp4",
-              "name": "The Tick/2/S02E12 - Tick vs. Reno, Nevada",
-              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E12%20-%20Tick%20vs.%20Reno%2C%20Nevada.mp4",
-              "seconds": 1230,
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S01E03 - The Tick vs. Dinosaur Neil (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S01E03 - The Tick vs. Dinosaur Neil (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S01E03%20-%20The%20Tick%20vs.%20Dinosaur%20Neil%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1270,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 119
+              "codecRisk": "video (x265)",
+              "sizeMB": 123
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/1/S01E03 - The Tick vs. Dinosaur Neil.mp4",
+              "name": "The Tick/1/S01E03 - The Tick vs. Dinosaur Neil",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F1%2FS01E03%20-%20The%20Tick%20vs.%20Dinosaur%20Neil.mp4",
+              "seconds": 1270,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 123
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 12 in \"The Tick (Full Series)\"",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S3E01 - That Mustache Feeling.mp4",
+              "name": "S3E01 - That Mustache Feeling",
+              "url": "https://archive.org/download/the-tick-full-series/S3E01%20-%20That%20Mustache%20Feeling.mp4",
+              "seconds": 1203,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 326
             }
           ]
         },
@@ -159,7 +200,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 4 of 11 in \"The Tick (Full Series)\"",
+            "why": "sequence guess: file 4 of 12 in \"The Tick (Full Series)\"",
             "item": "the-tick-full-series",
             "itemTitle": "The Tick (Full Series)",
             "file": "S3E02 - The Tick vs. Dot and Neil's Wedding.mp4",
@@ -173,7 +214,21 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 4 of 13 in \"The Tick\"",
+              "why": "sequence guess: file 4 of 14 in \"The Tick 1994 The Animated Series Comple\"",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S02E13 - Grandpa Wore Tights (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S02E13 - Grandpa Wore Tights (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S02E13%20-%20Grandpa%20Wore%20Tights%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1227,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 122
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 14 in \"The Tick\"",
               "item": "ds-store_20260105_1106",
               "itemTitle": "The Tick",
               "file": "The Tick/2/S02E13 - Grandpa Wore Tights.mp4",
@@ -193,7 +248,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 5 of 11 in \"The Tick (Full Series)\"",
+            "why": "sequence guess: file 5 of 12 in \"The Tick (Full Series)\"",
             "item": "the-tick-full-series",
             "itemTitle": "The Tick (Full Series)",
             "file": "S3E03 - Sidekicks Don't Kiss.mp4",
@@ -207,7 +262,21 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 5 of 13 in \"The Tick\"",
+              "why": "sequence guess: file 5 of 14 in \"The Tick 1994 The Animated Series Comple\"",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S03E01 - That Mustache Feeling (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S03E01 - That Mustache Feeling (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S03E01%20-%20That%20Mustache%20Feeling%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1203,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 120
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 14 in \"The Tick\"",
               "item": "ds-store_20260105_1106",
               "itemTitle": "The Tick",
               "file": "The Tick/3/S03E01 - That Mustache Feeling.mp4",
@@ -268,7 +337,7 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 6 of 11 in \"The Tick (Full Series)\"",
+              "why": "sequence guess: file 6 of 12 in \"The Tick (Full Series)\"",
               "item": "the-tick-full-series",
               "itemTitle": "The Tick (Full Series)",
               "file": "S3E04 - Tick vs. Arthur.mp4",
@@ -329,16 +398,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 7 of 11 in \"The Tick (Full Series)\"",
+              "why": "sequence guess: file 7 of 12 in \"The Tick (Full Series)\"",
               "item": "the-tick-full-series",
               "itemTitle": "The Tick (Full Series)",
-              "file": "S3E06 - Tick vs. Filth.mp4",
-              "name": "S3E06 - Tick vs. Filth",
-              "url": "https://archive.org/download/the-tick-full-series/S3E06%20-%20Tick%20vs.%20Filth.mp4",
-              "seconds": 1201,
+              "file": "S3E05 - Devil in Diapers.mp4",
+              "name": "S3E05 - Devil in Diapers",
+              "url": "https://archive.org/download/the-tick-full-series/S3E05%20-%20Devil%20in%20Diapers.mp4",
+              "seconds": 1200,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 400
+              "sizeMB": 496
             }
           ]
         },
@@ -390,16 +459,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 8 of 11 in \"The Tick (Full Series)\"",
+              "why": "sequence guess: file 8 of 12 in \"The Tick (Full Series)\"",
               "item": "the-tick-full-series",
               "itemTitle": "The Tick (Full Series)",
-              "file": "S3E07 - Tick vs. Europe.mp4",
-              "name": "S3E07 - Tick vs. Europe",
-              "url": "https://archive.org/download/the-tick-full-series/S3E07%20-%20Tick%20vs.%20Europe.mp4",
+              "file": "S3E06 - Tick vs. Filth.mp4",
+              "name": "S3E06 - Tick vs. Filth",
+              "url": "https://archive.org/download/the-tick-full-series/S3E06%20-%20Tick%20vs.%20Filth.mp4",
               "seconds": 1201,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 483
+              "sizeMB": 400
             }
           ]
         },
@@ -451,16 +520,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 9 of 11 in \"The Tick (Full Series)\"",
+              "why": "sequence guess: file 9 of 12 in \"The Tick (Full Series)\"",
               "item": "the-tick-full-series",
               "itemTitle": "The Tick (Full Series)",
-              "file": "S3E08 - Tick vs. Science.mp4",
-              "name": "S3E08 - Tick vs. Science",
-              "url": "https://archive.org/download/the-tick-full-series/S3E08%20-%20Tick%20vs.%20Science.mp4",
-              "seconds": 1202,
+              "file": "S3E07 - Tick vs. Europe.mp4",
+              "name": "S3E07 - Tick vs. Europe",
+              "url": "https://archive.org/download/the-tick-full-series/S3E07%20-%20Tick%20vs.%20Europe.mp4",
+              "seconds": 1201,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 479
+              "sizeMB": 483
             }
           ]
         },
@@ -512,16 +581,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 10 of 11 in \"The Tick (Full Series)\"",
+              "why": "sequence guess: file 10 of 12 in \"The Tick (Full Series)\"",
               "item": "the-tick-full-series",
               "itemTitle": "The Tick (Full Series)",
-              "file": "S3E09 - Tick vs. Prehistory.mp4",
-              "name": "S3E09 - Tick vs. Prehistory",
-              "url": "https://archive.org/download/the-tick-full-series/S3E09%20-%20Tick%20vs.%20Prehistory.mp4",
-              "seconds": 1203,
+              "file": "S3E08 - Tick vs. Science.mp4",
+              "name": "S3E08 - Tick vs. Science",
+              "url": "https://archive.org/download/the-tick-full-series/S3E08%20-%20Tick%20vs.%20Science.mp4",
+              "seconds": 1202,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 494
+              "sizeMB": 479
             }
           ]
         },
@@ -573,7 +642,68 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 11 of 11 in \"The Tick (Full Series)\"",
+              "why": "sequence guess: file 11 of 12 in \"The Tick (Full Series)\"",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S3E09 - Tick vs. Prehistory.mp4",
+              "name": "S3E09 - Tick vs. Prehistory",
+              "url": "https://archive.org/download/the-tick-full-series/S3E09%20-%20Tick%20vs.%20Prehistory.mp4",
+              "seconds": 1203,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 494
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "name": "The End of the Beginning (Of the Start of the Dawn of the Age of Superheroes)",
+          "airdate": "2018-02-23",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-full-series",
+            "itemTitle": "The Tick (Full Series)",
+            "file": "S1E12 - The Tick vs. The Proto-Clown.mp4",
+            "name": "S1E12 - The Tick vs. The Proto-Clown",
+            "url": "https://archive.org/download/the-tick-full-series/S1E12%20-%20The%20Tick%20vs.%20The%20Proto-Clown.mp4",
+            "seconds": 1233,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 502
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-tick-1994-animated-complete",
+              "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+              "file": "The Tick (1994) - S01E12 - The Tick vs. The Proto Clown (576p DVD x265 Ghost).mp4",
+              "name": "The Tick (1994) - S01E12 - The Tick vs. The Proto Clown (576p DVD x265 Ghost)",
+              "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S01E12%20-%20The%20Tick%20vs.%20The%20Proto%20Clown%20(576p%20DVD%20x265%20Ghost).mp4",
+              "seconds": 1233,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 120
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/1/S01E12 - The Tick vs. The Proto Clown.mp4",
+              "name": "The Tick/1/S01E12 - The Tick vs. The Proto Clown",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F1%2FS01E12%20-%20The%20Tick%20vs.%20The%20Proto%20Clown.mp4",
+              "seconds": 1233,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 120
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 12 in \"The Tick (Full Series)\"",
               "item": "the-tick-full-series",
               "itemTitle": "The Tick (Full Series)",
               "file": "S3E10 - Tick vs. Education.mp4",
@@ -585,26 +715,6 @@
               "sizeMB": 478
             }
           ]
-        },
-        {
-          "number": 12,
-          "name": "The End of the Beginning (Of the Start of the Dawn of the Age of Superheroes)",
-          "airdate": "2018-02-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 12 of 13 in \"The Tick\"",
-            "item": "ds-store_20260105_1106",
-            "itemTitle": "The Tick",
-            "file": "The Tick/3/S03E09 - Tick vs. Prehistory.mp4",
-            "name": "The Tick/3/S03E09 - Tick vs. Prehistory",
-            "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F3%2FS03E09%20-%20Tick%20vs.%20Prehistory.mp4",
-            "seconds": 1203,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 117
-          },
-          "alternates": []
         }
       ]
     },
@@ -663,9 +773,49 @@
           "number": 2,
           "name": "A.E.G.I.S and You",
           "airdate": "2019-04-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-1994-animated-complete",
+            "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+            "file": "The Tick (1994) - S02E02 - Alone Together (576p DVD x265 Ghost).mp4",
+            "name": "The Tick (1994) - S02E02 - Alone Together (576p DVD x265 Ghost)",
+            "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S02E02%20-%20Alone%20Together%20(576p%20DVD%20x265%20Ghost).mp4",
+            "seconds": 1231,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (x265)",
+            "sizeMB": 123
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/2/S02E02 - Alone Together.mp4",
+              "name": "The Tick/2/S02E02 - Alone Together",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E02%20-%20Alone%20Together.mp4",
+              "seconds": 1231,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 123
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S2E02 - Alone Together.mp4",
+              "name": "S2E02 - Alone Together",
+              "url": "https://archive.org/download/the-tick-full-series/S2E02%20-%20Alone%20Together.mp4",
+              "seconds": 1231,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 396
+            }
+          ]
         },
         {
           "number": 3,
@@ -870,9 +1020,49 @@
           "number": 8,
           "name": "Joan!",
           "airdate": "2019-04-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-tick-1994-animated-complete",
+            "itemTitle": "The Tick 1994 The Animated Series Complete With Missing Episodes From The DVDs",
+            "file": "The Tick (1994) - S02E08 - Heroes (576p DVD x265 Ghost).mp4",
+            "name": "The Tick (1994) - S02E08 - Heroes (576p DVD x265 Ghost)",
+            "url": "https://archive.org/download/the-tick-1994-animated-complete/The%20Tick%20(1994)%20-%20S02E08%20-%20Heroes%20(576p%20DVD%20x265%20Ghost).mp4",
+            "seconds": 1231,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (x265)",
+            "sizeMB": 121
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ds-store_20260105_1106",
+              "itemTitle": "The Tick",
+              "file": "The Tick/2/S02E08 - Heroes.mp4",
+              "name": "The Tick/2/S02E08 - Heroes",
+              "url": "https://archive.org/download/ds-store_20260105_1106/The%20Tick%2F2%2FS02E08%20-%20Heroes.mp4",
+              "seconds": 1231,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 121
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "the-tick-full-series",
+              "itemTitle": "The Tick (Full Series)",
+              "file": "S2E08 - Heroes.mp4",
+              "name": "S2E08 - Heroes",
+              "url": "https://archive.org/download/the-tick-full-series/S2E08%20-%20Heroes.mp4",
+              "seconds": 1231,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 438
+            }
+          ]
         },
         {
           "number": 9,

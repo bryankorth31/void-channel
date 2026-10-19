@@ -3,7 +3,7 @@
   "slug": "taxi-driver",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-17T08:30:50.366Z",
+  "matchedAt": "2026-10-19T04:11:51.154Z",
   "addedAt": "2026-10-17T08:30:50.367Z",
   "tvmaze": {
     "id": 52770,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 48,
     "live": 2,
-    "review": 4,
-    "missing": 42,
-    "pct": 13
+    "review": 5,
+    "missing": 41,
+    "pct": 15
   },
   "seasons": [
     {
@@ -44,7 +44,7 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 1 of 5 in \"A Taxi Driver ( 2017)\"",
+              "why": "sequence guess: file 1 of 6 in \"A Taxi Driver ( 2017)\"",
               "item": "a-taxi-driver-2017_202601",
               "itemTitle": "A Taxi Driver ( 2017)",
               "file": "A Woman Deceived (2017) 720p HD.mp4",
@@ -64,7 +64,27 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 2 of 5 in \"A Taxi Driver ( 2017)\"",
+            "why": "sequence guess: file 2 of 6 in \"A Taxi Driver ( 2017)\"",
+            "item": "a-taxi-driver-2017_202601",
+            "itemTitle": "A Taxi Driver ( 2017)",
+            "file": "Abandoned Dead (2015.mp4",
+            "name": "Abandoned Dead (2015",
+            "url": "https://archive.org/download/a-taxi-driver-2017_202601/Abandoned%20Dead%20(2015.mp4",
+            "seconds": 4653,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1216
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "A Victim of a School Violence/My Pictures Are In The Bag",
+          "airdate": "2021-04-16",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 6 in \"A Taxi Driver ( 2017)\"",
             "item": "a-taxi-driver-2017_202601",
             "itemTitle": "A Taxi Driver ( 2017)",
             "file": "Abducted The Jocelyn Shaker Story 720p.HDTV-[My-Film].mp4",
@@ -78,13 +98,13 @@
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "A Victim of a School Violence/My Pictures Are In The Bag",
-          "airdate": "2021-04-16",
+          "number": 4,
+          "name": "The Deluxe Taxi Appears/Teacher vs Students",
+          "airdate": "2021-04-17",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 3 of 5 in \"A Taxi Driver ( 2017)\"",
+            "why": "sequence guess: file 4 of 6 in \"A Taxi Driver ( 2017)\"",
             "item": "a-taxi-driver-2017_202601",
             "itemTitle": "A Taxi Driver ( 2017)",
             "file": "Acts Of Vengeance (2017) WEB-DL.x264-FGT.ia.mp4",
@@ -98,13 +118,13 @@
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "The Deluxe Taxi Appears/Teacher vs Students",
-          "airdate": "2021-04-17",
+          "number": 5,
+          "name": "The Case of Young Min/The Evil Businessman",
+          "airdate": "2021-04-23",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 4 of 5 in \"A Taxi Driver ( 2017)\"",
+            "why": "sequence guess: file 5 of 6 in \"A Taxi Driver ( 2017)\"",
             "item": "a-taxi-driver-2017_202601",
             "itemTitle": "A Taxi Driver ( 2017)",
             "file": "Acts Of Vengeance (2017) WEB-DL.x264-FGT.mp4",
@@ -118,13 +138,13 @@
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "The Case of Young Min/The Evil Businessman",
-          "airdate": "2021-04-23",
+          "number": 6,
+          "name": "First Day of Work/Into the Strategic Planning Team",
+          "airdate": "2021-04-24",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 5 of 5 in \"A Taxi Driver ( 2017)\"",
+            "why": "sequence guess: file 6 of 6 in \"A Taxi Driver ( 2017)\"",
             "item": "a-taxi-driver-2017_202601",
             "itemTitle": "A Taxi Driver ( 2017)",
             "file": "Acts of Violence (2018) 720p WEB DL MkvCage .mp4",
@@ -135,14 +155,6 @@
             "playable": true,
             "sizeMB": 520
           },
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "First Day of Work/Into the Strategic Planning Team",
-          "airdate": "2021-04-24",
-          "state": "MISSING",
-          "file": null,
           "alternates": []
         },
         {

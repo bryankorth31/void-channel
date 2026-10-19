@@ -3,7 +3,7 @@
   "slug": "power-book-iv-force",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-17T07:30:49.981Z",
+  "matchedAt": "2026-10-19T04:11:07.879Z",
   "addedAt": "2026-10-17T07:30:49.981Z",
   "tvmaze": {
     "id": 46213,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 30,
-    "live": 29,
+    "live": 30,
     "review": 0,
-    "missing": 1,
-    "pct": 97
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -785,9 +785,35 @@
           "number": 3,
           "name": "There's Always a Price to Pay",
           "airdate": "2025-11-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "powerforce",
+            "itemTitle": "Power Book IV: Force FULL EPISODES",
+            "file": "Power Book IV (Force) - 2025-11-21 - Ep. 303 - There's Always A Prince To Pay.mp4",
+            "name": "Power Book IV (Force) - 2025-11-21 - Ep. 303 - There's Always A Prince To Pay",
+            "url": "https://archive.org/download/powerforce/Power%20Book%20IV%20(Force)%20-%202025-11-21%20-%20Ep.%20303%20-%20There's%20Always%20A%20Prince%20To%20Pay.mp4",
+            "seconds": 3459,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 217
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "powerforce",
+              "itemTitle": "Power Book IV: Force FULL EPISODES",
+              "file": "Power Book IV (Force) - 2025-11-21 - Ep. 303 - There's Always A Prince To Pay.mp4",
+              "name": "Power Book IV (Force) - 2025-11-21 - Ep. 303 - There's Always A Prince To Pay",
+              "url": "https://archive.org/download/powerforce/Power%20Book%20IV%20(Force)%20-%202025-11-21%20-%20Ep.%20303%20-%20There's%20Always%20A%20Prince%20To%20Pay.mp4",
+              "seconds": 3459,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 217
+            }
+          ]
         },
         {
           "number": 4,
@@ -888,6 +914,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 271
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Asset Forfeiture\" (0.95)",
+              "item": "powerforce-reupload",
+              "itemTitle": "Power Book IV: Force",
+              "file": "power-book-iv-force-season-3-episode-06-asset-forfeiture_480.mp4",
+              "name": "power-book-iv-force-season-3-episode-06-asset-forfeiture_480",
+              "url": "https://archive.org/download/powerforce-reupload/power-book-iv-force-season-3-episode-06-asset-forfeiture_480.mp4",
+              "seconds": 3416,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 271
             }
           ]
         },
@@ -956,6 +995,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 275
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Build Back Better\" (0.95)",
+              "item": "powerforce-reupload",
+              "itemTitle": "Power Book IV: Force",
+              "file": "power-book-iv-force-season-3-episode-08-build-back-better_480.mp4",
+              "name": "power-book-iv-force-season-3-episode-08-build-back-better_480",
+              "url": "https://archive.org/download/powerforce-reupload/power-book-iv-force-season-3-episode-08-build-back-better_480.mp4",
+              "seconds": 3474,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 275
             }
           ]
         },
@@ -1020,6 +1072,19 @@
               "file": "Power Book IV (Force) - 2026-01-16 - Ep. 310 - Beginning Of The End.mp4",
               "name": "Power Book IV (Force) - 2026-01-16 - Ep. 310 - Beginning Of The End",
               "url": "https://archive.org/download/powerforce/Power%20Book%20IV%20(Force)%20-%202026-01-16%20-%20Ep.%20310%20-%20Beginning%20Of%20The%20End.mp4",
+              "seconds": 3733,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 296
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Beginning of the End\" (0.95)",
+              "item": "powerforce-reupload",
+              "itemTitle": "Power Book IV: Force",
+              "file": "power-book-iv-force-season-3-episode-10-beginning-of-the-end_480.mp4",
+              "name": "power-book-iv-force-season-3-episode-10-beginning-of-the-end_480",
+              "url": "https://archive.org/download/powerforce-reupload/power-book-iv-force-season-3-episode-10-beginning-of-the-end_480.mp4",
               "seconds": 3733,
               "format": "MPEG4",
               "playable": true,

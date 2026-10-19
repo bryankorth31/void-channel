@@ -3,7 +3,7 @@
   "slug": "chainsaw-man",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:34.058Z",
+  "matchedAt": "2026-10-19T04:11:36.336Z",
   "addedAt": "2026-10-15T12:08:15.012Z",
   "tvmaze": {
     "id": 63451,
@@ -41,7 +41,21 @@
             "playable": true,
             "sizeMB": 169
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 12 in \"Chainsaw Man Season 1\"",
+              "item": "ep-03-cm",
+              "itemTitle": "Chainsaw Man Season 1",
+              "file": "EP01CM.mp4",
+              "name": "EP01CM",
+              "url": "https://archive.org/download/ep-03-cm/EP01CM.mp4",
+              "seconds": 1525,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 229
+            }
+          ]
         },
         {
           "number": 2,
@@ -49,19 +63,46 @@
           "airdate": "2022-10-18",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "csm-anime",
-            "itemTitle": "Chainsaw Man Anime",
-            "file": "CSM EP 2.mp4",
-            "name": "CSM EP 2",
-            "url": "https://archive.org/download/csm-anime/CSM%20EP%202.mp4",
-            "seconds": 1435,
+            "conf": 0.8,
+            "why": "title ~ \"Arrival in Tokyo\" (0.95)",
+            "item": "10.-bruised-battered",
+            "itemTitle": "Chainsaw Man Season 1 Dub",
+            "file": "Chainsaw Man Season 1/02. Arrival in Tokyo.mp4",
+            "name": "Chainsaw Man Season 1/02. Arrival in Tokyo",
+            "url": "https://archive.org/download/10.-bruised-battered/Chainsaw%20Man%20Season%201%2F02.%20Arrival%20in%20Tokyo.mp4",
+            "seconds": 1437,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 154
+            "sizeMB": 141
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "csm-anime",
+              "itemTitle": "Chainsaw Man Anime",
+              "file": "CSM EP 2.mp4",
+              "name": "CSM EP 2",
+              "url": "https://archive.org/download/csm-anime/CSM%20EP%202.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 154
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 12 in \"Chainsaw Man Season 1\"",
+              "item": "ep-03-cm",
+              "itemTitle": "Chainsaw Man Season 1",
+              "file": "EP02CM.mp4",
+              "name": "EP02CM",
+              "url": "https://archive.org/download/ep-03-cm/EP02CM.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 207
+            }
+          ]
         },
         {
           "number": 3,
@@ -69,19 +110,46 @@
           "airdate": "2022-10-25",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "csm-anime",
-            "itemTitle": "Chainsaw Man Anime",
-            "file": "CSM EP 3.mp4",
-            "name": "CSM EP 3",
-            "url": "https://archive.org/download/csm-anime/CSM%20EP%203.mp4",
-            "seconds": 1435,
+            "conf": 0.8,
+            "why": "title ~ \"Meowy's Whereabouts\" (0.95)",
+            "item": "10.-bruised-battered",
+            "itemTitle": "Chainsaw Man Season 1 Dub",
+            "file": "Chainsaw Man Season 1/03. Meowy's Whereabouts.mp4",
+            "name": "Chainsaw Man Season 1/03. Meowy's Whereabouts",
+            "url": "https://archive.org/download/10.-bruised-battered/Chainsaw%20Man%20Season%201%2F03.%20Meowy's%20Whereabouts.mp4",
+            "seconds": 1437,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 206
+            "sizeMB": 194
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "csm-anime",
+              "itemTitle": "Chainsaw Man Anime",
+              "file": "CSM EP 3.mp4",
+              "name": "CSM EP 3",
+              "url": "https://archive.org/download/csm-anime/CSM%20EP%203.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 206
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 12 in \"Chainsaw Man Season 1\"",
+              "item": "ep-03-cm",
+              "itemTitle": "Chainsaw Man Season 1",
+              "file": "EP03CM.mp4",
+              "name": "EP03CM",
+              "url": "https://archive.org/download/ep-03-cm/EP03CM.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 283
+            }
+          ]
         },
         {
           "number": 4,
@@ -89,19 +157,46 @@
           "airdate": "2022-11-01",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "csm-anime",
-            "itemTitle": "Chainsaw Man Anime",
-            "file": "CSM EP 4.mp4",
-            "name": "CSM EP 4",
-            "url": "https://archive.org/download/csm-anime/CSM%20EP%204.mp4",
-            "seconds": 1435,
+            "conf": 0.8,
+            "why": "title ~ \"Rescue\" (0.95)",
+            "item": "10.-bruised-battered",
+            "itemTitle": "Chainsaw Man Season 1 Dub",
+            "file": "Chainsaw Man Season 1/04. Rescue.mp4",
+            "name": "Chainsaw Man Season 1/04. Rescue",
+            "url": "https://archive.org/download/10.-bruised-battered/Chainsaw%20Man%20Season%201%2F04.%20Rescue.mp4",
+            "seconds": 1437,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 200
+            "sizeMB": 187
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "csm-anime",
+              "itemTitle": "Chainsaw Man Anime",
+              "file": "CSM EP 4.mp4",
+              "name": "CSM EP 4",
+              "url": "https://archive.org/download/csm-anime/CSM%20EP%204.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 200
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 12 in \"Chainsaw Man Season 1\"",
+              "item": "ep-03-cm",
+              "itemTitle": "Chainsaw Man Season 1",
+              "file": "EP04CM.mp4",
+              "name": "EP04CM",
+              "url": "https://archive.org/download/ep-03-cm/EP04CM.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 281
+            }
+          ]
         },
         {
           "number": 5,
@@ -109,19 +204,46 @@
           "airdate": "2022-11-08",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "csm-anime",
-            "itemTitle": "Chainsaw Man Anime",
-            "file": "CSM EP 5.mp4",
-            "name": "CSM EP 5",
-            "url": "https://archive.org/download/csm-anime/CSM%20EP%205.mp4",
-            "seconds": 1435,
+            "conf": 0.8,
+            "why": "title ~ \"Gun Devil\" (0.95)",
+            "item": "10.-bruised-battered",
+            "itemTitle": "Chainsaw Man Season 1 Dub",
+            "file": "Chainsaw Man Season 1/05. Gun Devil.mp4",
+            "name": "Chainsaw Man Season 1/05. Gun Devil",
+            "url": "https://archive.org/download/10.-bruised-battered/Chainsaw%20Man%20Season%201%2F05.%20Gun%20Devil.mp4",
+            "seconds": 1437,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 209
+            "sizeMB": 192
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "csm-anime",
+              "itemTitle": "Chainsaw Man Anime",
+              "file": "CSM EP 5.mp4",
+              "name": "CSM EP 5",
+              "url": "https://archive.org/download/csm-anime/CSM%20EP%205.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 209
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 12 in \"Chainsaw Man Season 1\"",
+              "item": "ep-03-cm",
+              "itemTitle": "Chainsaw Man Season 1",
+              "file": "EP05CM.mp4",
+              "name": "EP05CM",
+              "url": "https://archive.org/download/ep-03-cm/EP05CM.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 261
+            }
+          ]
         },
         {
           "number": 6,
@@ -129,19 +251,46 @@
           "airdate": "2022-11-15",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "csm-anime",
-            "itemTitle": "Chainsaw Man Anime",
-            "file": "CSM EP 6.mp4",
-            "name": "CSM EP 6",
-            "url": "https://archive.org/download/csm-anime/CSM%20EP%206.mp4",
-            "seconds": 1435,
+            "conf": 0.8,
+            "why": "title ~ \"Kill Denji\" (0.95)",
+            "item": "10.-bruised-battered",
+            "itemTitle": "Chainsaw Man Season 1 Dub",
+            "file": "Chainsaw Man Season 1/06. Kill Denji.mp4",
+            "name": "Chainsaw Man Season 1/06. Kill Denji",
+            "url": "https://archive.org/download/10.-bruised-battered/Chainsaw%20Man%20Season%201%2F06.%20Kill%20Denji.mp4",
+            "seconds": 1437,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 189
+            "sizeMB": 165
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "csm-anime",
+              "itemTitle": "Chainsaw Man Anime",
+              "file": "CSM EP 6.mp4",
+              "name": "CSM EP 6",
+              "url": "https://archive.org/download/csm-anime/CSM%20EP%206.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 189
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 12 in \"Chainsaw Man Season 1\"",
+              "item": "ep-03-cm",
+              "itemTitle": "Chainsaw Man Season 1",
+              "file": "EP06CM.mp4",
+              "name": "EP06CM",
+              "url": "https://archive.org/download/ep-03-cm/EP06CM.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 247
+            }
+          ]
         },
         {
           "number": 7,
@@ -149,19 +298,46 @@
           "airdate": "2022-11-22",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "csm-anime",
-            "itemTitle": "Chainsaw Man Anime",
-            "file": "CSM EP 7.mp4",
-            "name": "CSM EP 7",
-            "url": "https://archive.org/download/csm-anime/CSM%20EP%207.mp4",
-            "seconds": 1435,
+            "conf": 0.8,
+            "why": "title ~ \"The Taste of a Kiss\" (0.95)",
+            "item": "10.-bruised-battered",
+            "itemTitle": "Chainsaw Man Season 1 Dub",
+            "file": "Chainsaw Man Season 1/07. The Taste of a Kiss.mp4",
+            "name": "Chainsaw Man Season 1/07. The Taste of a Kiss",
+            "url": "https://archive.org/download/10.-bruised-battered/Chainsaw%20Man%20Season%201%2F07.%20The%20Taste%20of%20a%20Kiss.mp4",
+            "seconds": 1437,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 161
+            "sizeMB": 148
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "csm-anime",
+              "itemTitle": "Chainsaw Man Anime",
+              "file": "CSM EP 7.mp4",
+              "name": "CSM EP 7",
+              "url": "https://archive.org/download/csm-anime/CSM%20EP%207.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 161
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 12 in \"Chainsaw Man Season 1\"",
+              "item": "ep-03-cm",
+              "itemTitle": "Chainsaw Man Season 1",
+              "file": "EP07CM.mp4",
+              "name": "EP07CM",
+              "url": "https://archive.org/download/ep-03-cm/EP07CM.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 233
+            }
+          ]
         },
         {
           "number": 8,
@@ -169,19 +345,46 @@
           "airdate": "2022-11-29",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "csm-anime",
-            "itemTitle": "Chainsaw Man Anime",
-            "file": "CSM EP 8.mp4",
-            "name": "CSM EP 8",
-            "url": "https://archive.org/download/csm-anime/CSM%20EP%208.mp4",
-            "seconds": 1435,
+            "conf": 0.8,
+            "why": "title ~ \"Gunfire\" (0.95)",
+            "item": "10.-bruised-battered",
+            "itemTitle": "Chainsaw Man Season 1 Dub",
+            "file": "Chainsaw Man Season 1/08. Gunfire.mp4",
+            "name": "Chainsaw Man Season 1/08. Gunfire",
+            "url": "https://archive.org/download/10.-bruised-battered/Chainsaw%20Man%20Season%201%2F08.%20Gunfire.mp4",
+            "seconds": 1437,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 144
+            "sizeMB": 135
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "csm-anime",
+              "itemTitle": "Chainsaw Man Anime",
+              "file": "CSM EP 8.mp4",
+              "name": "CSM EP 8",
+              "url": "https://archive.org/download/csm-anime/CSM%20EP%208.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 12 in \"Chainsaw Man Season 1\"",
+              "item": "ep-03-cm",
+              "itemTitle": "Chainsaw Man Season 1",
+              "file": "EP08CM.mp4",
+              "name": "EP08CM",
+              "url": "https://archive.org/download/ep-03-cm/EP08CM.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 213
+            }
+          ]
         },
         {
           "number": 9,
@@ -189,19 +392,46 @@
           "airdate": "2022-12-06",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "csm-anime",
-            "itemTitle": "Chainsaw Man Anime",
-            "file": "CSM EP 9.mp4",
-            "name": "CSM EP 9",
-            "url": "https://archive.org/download/csm-anime/CSM%20EP%209.mp4",
-            "seconds": 1435,
+            "conf": 0.8,
+            "why": "title ~ \"From Kyoto\" (0.95)",
+            "item": "10.-bruised-battered",
+            "itemTitle": "Chainsaw Man Season 1 Dub",
+            "file": "Chainsaw Man Season 1/09. From Kyoto.mp4",
+            "name": "Chainsaw Man Season 1/09. From Kyoto",
+            "url": "https://archive.org/download/10.-bruised-battered/Chainsaw%20Man%20Season%201%2F09.%20From%20Kyoto.mp4",
+            "seconds": 1437,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 203
+            "sizeMB": 182
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "csm-anime",
+              "itemTitle": "Chainsaw Man Anime",
+              "file": "CSM EP 9.mp4",
+              "name": "CSM EP 9",
+              "url": "https://archive.org/download/csm-anime/CSM%20EP%209.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 203
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 12 in \"Chainsaw Man Season 1\"",
+              "item": "ep-03-cm",
+              "itemTitle": "Chainsaw Man Season 1",
+              "file": "EP09CM.mp4",
+              "name": "EP09CM",
+              "url": "https://archive.org/download/ep-03-cm/EP09CM.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 265
+            }
+          ]
         },
         {
           "number": 10,
@@ -209,19 +439,46 @@
           "airdate": "2022-12-13",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "csm-anime",
-            "itemTitle": "Chainsaw Man Anime",
-            "file": "CSM EP 10.mp4",
-            "name": "CSM EP 10",
-            "url": "https://archive.org/download/csm-anime/CSM%20EP%2010.mp4",
-            "seconds": 1525,
+            "conf": 0.8,
+            "why": "title ~ \"Bruised & Battered\" (0.95)",
+            "item": "10.-bruised-battered",
+            "itemTitle": "Chainsaw Man Season 1 Dub",
+            "file": "Chainsaw Man Season 1/10. Bruised & Battered.mp4",
+            "name": "Chainsaw Man Season 1/10. Bruised & Battered",
+            "url": "https://archive.org/download/10.-bruised-battered/Chainsaw%20Man%20Season%201%2F10.%20Bruised%20%26%20Battered.mp4",
+            "seconds": 1527,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 237
+            "sizeMB": 226
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "csm-anime",
+              "itemTitle": "Chainsaw Man Anime",
+              "file": "CSM EP 10.mp4",
+              "name": "CSM EP 10",
+              "url": "https://archive.org/download/csm-anime/CSM%20EP%2010.mp4",
+              "seconds": 1525,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 237
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 12 in \"Chainsaw Man Season 1\"",
+              "item": "ep-03-cm",
+              "itemTitle": "Chainsaw Man Season 1",
+              "file": "EP10CM.mp4",
+              "name": "EP10CM",
+              "url": "https://archive.org/download/ep-03-cm/EP10CM.mp4",
+              "seconds": 1525,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 294
+            }
+          ]
         },
         {
           "number": 11,
@@ -229,19 +486,46 @@
           "airdate": "2022-12-20",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "csm-anime",
-            "itemTitle": "Chainsaw Man Anime",
-            "file": "CSM EP 11.mp4",
-            "name": "CSM EP 11",
-            "url": "https://archive.org/download/csm-anime/CSM%20EP%2011.mp4",
-            "seconds": 1435,
+            "conf": 0.8,
+            "why": "title ~ \"Mission Start\" (0.95)",
+            "item": "10.-bruised-battered",
+            "itemTitle": "Chainsaw Man Season 1 Dub",
+            "file": "Chainsaw Man Season 1/11. Mission Start.mp4",
+            "name": "Chainsaw Man Season 1/11. Mission Start",
+            "url": "https://archive.org/download/10.-bruised-battered/Chainsaw%20Man%20Season%201%2F11.%20Mission%20Start.mp4",
+            "seconds": 1437,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 155
+            "sizeMB": 143
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "csm-anime",
+              "itemTitle": "Chainsaw Man Anime",
+              "file": "CSM EP 11.mp4",
+              "name": "CSM EP 11",
+              "url": "https://archive.org/download/csm-anime/CSM%20EP%2011.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 155
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 12 in \"Chainsaw Man Season 1\"",
+              "item": "ep-03-cm",
+              "itemTitle": "Chainsaw Man Season 1",
+              "file": "EP11CM.mp4",
+              "name": "EP11CM",
+              "url": "https://archive.org/download/ep-03-cm/EP11CM.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 220
+            }
+          ]
         },
         {
           "number": 12,
@@ -261,7 +545,34 @@
             "playable": true,
             "sizeMB": 181
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Katana vs. Chainsaw\" (0.63)",
+              "item": "10.-bruised-battered",
+              "itemTitle": "Chainsaw Man Season 1 Dub",
+              "file": "Chainsaw Man Season 1/12. Katana vs. Chainsaw.mp4",
+              "name": "Chainsaw Man Season 1/12. Katana vs. Chainsaw",
+              "url": "https://archive.org/download/10.-bruised-battered/Chainsaw%20Man%20Season%201%2F12.%20Katana%20vs.%20Chainsaw.mp4",
+              "seconds": 1437,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 165
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 12 in \"Chainsaw Man Season 1\"",
+              "item": "ep-03-cm",
+              "itemTitle": "Chainsaw Man Season 1",
+              "file": "EP12CM.mp4",
+              "name": "EP12CM",
+              "url": "https://archive.org/download/ep-03-cm/EP12CM.mp4",
+              "seconds": 1435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 242
+            }
+          ]
         }
       ]
     }

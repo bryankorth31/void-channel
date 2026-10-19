@@ -3,7 +3,7 @@
   "slug": "helluva-boss",
   "type": "Internet Comedy",
   "network": "Web",
-  "matchedAt": "2026-10-16T07:57:27.785Z",
+  "matchedAt": "2026-10-19T04:11:31.871Z",
   "addedAt": "2026-10-15T12:08:10.788Z",
   "tvmaze": {
     "id": 45397,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 26,
     "live": 17,
-    "review": 0,
-    "missing": 9,
-    "pct": 65
+    "review": 1,
+    "missing": 8,
+    "pct": 69
   },
   "seasons": [
     {
@@ -27,8 +27,20 @@
           "number": 1,
           "name": "Murder Family",
           "airdate": "2020-10-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "helluva-boss-pilot-60fps",
+            "itemTitle": "HELLUVA BOSS",
+            "file": "HELLUVA BOSS - THE CIRCUS  S2 Episode 1.mp4",
+            "name": "HELLUVA BOSS - THE CIRCUS  S2 Episode 1",
+            "url": "https://archive.org/download/helluva-boss-pilot-60fps/HELLUVA%20BOSS%20-%20THE%20CIRCUS%20%20S2%20Episode%201.mp4",
+            "seconds": 1385,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 79
+          },
           "alternates": []
         },
         {

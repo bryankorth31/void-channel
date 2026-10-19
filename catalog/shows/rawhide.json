@@ -3,7 +3,7 @@
   "slug": "rawhide",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:58:17.928Z",
+  "matchedAt": "2026-10-19T04:12:20.206Z",
   "addedAt": "2026-10-15T12:08:52.439Z",
   "tvmaze": {
     "id": 3488,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 218,
     "live": 0,
-    "review": 7,
-    "missing": 211,
-    "pct": 3
+    "review": 5,
+    "missing": 213,
+    "pct": 2
   },
   "seasons": [
     {
@@ -41,68 +41,15 @@
             "playable": true,
             "sizeMB": 460
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 5 in \"RAWHIDE DISK 1\"",
-              "item": "vts-02-1_20220111_2151",
-              "itemTitle": "RAWHIDE DISK 1",
-              "file": "VTS_02_1.mp4",
-              "name": "VTS_02_1",
-              "url": "https://archive.org/download/vts-02-1_20220111_2151/VTS_02_1.mp4",
-              "seconds": 3277,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 318
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 5 in \"RAWHIDE DISK 5\"",
-              "item": "vts-05-1_20220111_1955",
-              "itemTitle": "RAWHIDE DISK 5",
-              "file": "VTS_01_1.mp4",
-              "name": "VTS_01_1",
-              "url": "https://archive.org/download/vts-05-1_20220111_1955/VTS_01_1.mp4",
-              "seconds": 2673,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 262
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
           "name": "Incident at Alabaster Plain",
           "airdate": "1959-01-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 5 in \"RAWHIDE DISK 1\"",
-            "item": "vts-02-1_20220111_2151",
-            "itemTitle": "RAWHIDE DISK 1",
-            "file": "VTS_03_1.mp4",
-            "name": "VTS_03_1",
-            "url": "https://archive.org/download/vts-02-1_20220111_2151/VTS_03_1.mp4",
-            "seconds": 2822,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 274
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 5 in \"RAWHIDE DISK 5\"",
-              "item": "vts-05-1_20220111_1955",
-              "itemTitle": "RAWHIDE DISK 5",
-              "file": "VTS_02_1.mp4",
-              "name": "VTS_02_1",
-              "url": "https://archive.org/download/vts-05-1_20220111_1955/VTS_02_1.mp4",
-              "seconds": 2694,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 265
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 3,
@@ -122,34 +69,7 @@
             "playable": true,
             "sizeMB": 381
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 5 in \"RAWHIDE DISK 1\"",
-              "item": "vts-02-1_20220111_2151",
-              "itemTitle": "RAWHIDE DISK 1",
-              "file": "VTS_04_1.mp4",
-              "name": "VTS_04_1",
-              "url": "https://archive.org/download/vts-02-1_20220111_2151/VTS_04_1.mp4",
-              "seconds": 3130,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 304
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 5 in \"RAWHIDE DISK 5\"",
-              "item": "vts-05-1_20220111_1955",
-              "itemTitle": "RAWHIDE DISK 5",
-              "file": "VTS_03_1.mp4",
-              "name": "VTS_03_1",
-              "url": "https://archive.org/download/vts-05-1_20220111_1955/VTS_03_1.mp4",
-              "seconds": 2683,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 262
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -169,68 +89,15 @@
             "playable": true,
             "sizeMB": 431
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 5 in \"RAWHIDE DISK 1\"",
-              "item": "vts-02-1_20220111_2151",
-              "itemTitle": "RAWHIDE DISK 1",
-              "file": "VTS_05_1.mp4",
-              "name": "VTS_05_1",
-              "url": "https://archive.org/download/vts-02-1_20220111_2151/VTS_05_1.mp4",
-              "seconds": 2730,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 264
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 5 in \"RAWHIDE DISK 5\"",
-              "item": "vts-05-1_20220111_1955",
-              "itemTitle": "RAWHIDE DISK 5",
-              "file": "VTS_04_1.mp4",
-              "name": "VTS_04_1",
-              "url": "https://archive.org/download/vts-05-1_20220111_1955/VTS_04_1.mp4",
-              "seconds": 2693,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 264
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
           "name": "Incident on the Edge of Madness",
           "airdate": "1959-02-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 5 in \"RAWHIDE DISK 5\"",
-            "item": "vts-05-1_20220111_1955",
-            "itemTitle": "RAWHIDE DISK 5",
-            "file": "VTS_05_1.mp4",
-            "name": "VTS_05_1",
-            "url": "https://archive.org/download/vts-05-1_20220111_1955/VTS_05_1.mp4",
-            "seconds": 3060,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 306
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 5 in \"RAWHIDE DISK 1\"",
-              "item": "vts-02-1_20220111_2151",
-              "itemTitle": "RAWHIDE DISK 1",
-              "file": "VTS_06_1.mp4",
-              "name": "VTS_06_1",
-              "url": "https://archive.org/download/vts-02-1_20220111_2151/VTS_06_1.mp4",
-              "seconds": 2704,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 261
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 6,

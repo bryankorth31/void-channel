@@ -3,7 +3,7 @@
   "slug": "dynasties",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-16T07:58:04.234Z",
+  "matchedAt": "2026-10-19T04:12:08.475Z",
   "addedAt": "2026-10-16T07:58:04.234Z",
   "tvmaze": {
     "id": 38980,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 9,
-    "live": 4,
-    "review": 5,
+    "live": 5,
+    "review": 4,
     "missing": 0,
     "pct": 100
   },
@@ -43,20 +43,7 @@
           },
           "alternates": [
             {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018",
-              "itemTitle": "BBC Dynasties I & II (David Attenborough)",
-              "file": "BBC-Dynasties II Ep 1 of 6 Puma (20 Mar 2022).m4v",
-              "name": "BBC-Dynasties II Ep 1 of 6 Puma (20 Mar 2022)",
-              "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20II%20Ep%201%20of%206%20Puma%20(20%20Mar%202022).m4v",
-              "seconds": 3461,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 659
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "03theracetobreed",
               "itemTitle": "Planets and Animals",
@@ -68,6 +55,32 @@
               "playable": true,
               "codecRisk": "video (x265)",
               "sizeMB": 265
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Chimpanzee\" (0.95)",
+              "item": "Dynasties_Series_1_-_1._Chimpanzee_p06mvpsw_signed",
+              "itemTitle": " Dynasties Series 1   1. Chimpanzee p06mvpsw signed",
+              "file": "Dynasties_Series_1_-_1._Chimpanzee_p06mvpsw_signed.mp4",
+              "name": "Dynasties_Series_1_-_1._Chimpanzee_p06mvpsw_signed",
+              "url": "https://archive.org/download/Dynasties_Series_1_-_1._Chimpanzee_p06mvpsw_signed/Dynasties_Series_1_-_1._Chimpanzee_p06mvpsw_signed.mp4",
+              "seconds": 3544,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2329
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Chimpanzee\" (0.95)",
+              "item": "bbc-dynasties-1",
+              "itemTitle": "BBC Dynasties ★ A Nature Documentary Series with Subtitles and MKV",
+              "file": "01 Chimpanzee.mp4",
+              "name": "01 Chimpanzee",
+              "url": "https://archive.org/download/bbc-dynasties-1/01%20Chimpanzee.mp4",
+              "seconds": 3178,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 787
             }
           ]
         },
@@ -75,23 +88,23 @@
           "number": 2,
           "name": "Emperor",
           "airdate": "2018-11-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
+            "conf": 1,
+            "why": "absolute episode number + title match",
             "item": "bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018",
             "itemTitle": "BBC Dynasties I & II (David Attenborough)",
-            "file": "BBC-Dynasties II Ep 2 of 6 Elephant (27 Mar 2022).m4v",
-            "name": "BBC-Dynasties II Ep 2 of 6 Elephant (27 Mar 2022)",
-            "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20II%20Ep%202%20of%206%20Elephant%20(27%20Mar%202022).m4v",
-            "seconds": 2852,
+            "file": "BBC-Dynasties Ep 2 of 5 Emperor (Penguin) (18 Nov 2018).m4v",
+            "name": "BBC-Dynasties Ep 2 of 5 Emperor (Penguin) (18 Nov 2018)",
+            "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20Ep%202%20of%205%20Emperor%20(Penguin)%20(18%20Nov%202018).m4v",
+            "seconds": 3470,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 623
+            "sizeMB": 385
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "03theracetobreed",
               "itemTitle": "Planets and Animals",
@@ -103,6 +116,32 @@
               "playable": true,
               "codecRisk": "video (x265)",
               "sizeMB": 258
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Emperor\" (0.95)",
+              "item": "Dynasties_Series_1_-_2._Emperor_p06mvqjc_signed",
+              "itemTitle": " Dynasties Series 1   2. Emperor p06mvqjc signed",
+              "file": "Dynasties_Series_1_-_2._Emperor_p06mvqjc_signed.mp4",
+              "name": "Dynasties_Series_1_-_2._Emperor_p06mvqjc_signed",
+              "url": "https://archive.org/download/Dynasties_Series_1_-_2._Emperor_p06mvqjc_signed/Dynasties_Series_1_-_2._Emperor_p06mvqjc_signed.mp4",
+              "seconds": 3471,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2134
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Emperor\" (0.95)",
+              "item": "bbc-dynasties-1",
+              "itemTitle": "BBC Dynasties ★ A Nature Documentary Series with Subtitles and MKV",
+              "file": "02 Emperor.mp4",
+              "name": "02 Emperor",
+              "url": "https://archive.org/download/bbc-dynasties-1/02%20Emperor.mp4",
+              "seconds": 3108,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 520
             }
           ]
         },
@@ -126,20 +165,7 @@
           },
           "alternates": [
             {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018",
-              "itemTitle": "BBC Dynasties I & II (David Attenborough)",
-              "file": "BBC-Dynasties II Ep 3 of 6 Cheetah (3 Apr 2022).mp4",
-              "name": "BBC-Dynasties II Ep 3 of 6 Cheetah (3 Apr 2022)",
-              "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20II%20Ep%203%20of%206%20Cheetah%20(3%20Apr%202022).mp4",
-              "seconds": 3477,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 716
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "03theracetobreed",
               "itemTitle": "Planets and Animals",
@@ -151,6 +177,32 @@
               "playable": true,
               "codecRisk": "video (x265)",
               "sizeMB": 263
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Lion\" (0.95)",
+              "item": "bbc-dynasties-1",
+              "itemTitle": "BBC Dynasties ★ A Nature Documentary Series with Subtitles and MKV",
+              "file": "03 Lion.mp4",
+              "name": "03 Lion",
+              "url": "https://archive.org/download/bbc-dynasties-1/03%20Lion.mp4",
+              "seconds": 3149,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 723
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018",
+              "itemTitle": "BBC Dynasties I & II (David Attenborough)",
+              "file": "BBC-Dynasties II Ep 3 of 6 Cheetah (3 Apr 2022).mp4",
+              "name": "BBC-Dynasties II Ep 3 of 6 Cheetah (3 Apr 2022)",
+              "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20II%20Ep%203%20of%206%20Cheetah%20(3%20Apr%202022).mp4",
+              "seconds": 3477,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 716
             }
           ]
         },
@@ -174,20 +226,7 @@
           },
           "alternates": [
             {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018",
-              "itemTitle": "BBC Dynasties I & II (David Attenborough)",
-              "file": "BBC-Dynasties II Ep 4 of 6 Hyena (10 Apr 2022).m4v",
-              "name": "BBC-Dynasties II Ep 4 of 6 Hyena (10 Apr 2022)",
-              "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20II%20Ep%204%20of%206%20Hyena%20(10%20Apr%202022).m4v",
-              "seconds": 3471,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 607
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "03theracetobreed",
               "itemTitle": "Planets and Animals",
@@ -199,6 +238,32 @@
               "playable": true,
               "codecRisk": "video (x265)",
               "sizeMB": 259
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Painted Wolf\" (0.95)",
+              "item": "bbc-dynasties-1",
+              "itemTitle": "BBC Dynasties ★ A Nature Documentary Series with Subtitles and MKV",
+              "file": "04 Painted Wolf.mp4",
+              "name": "04 Painted Wolf",
+              "url": "https://archive.org/download/bbc-dynasties-1/04%20Painted%20Wolf.mp4",
+              "seconds": 3100,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 614
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018",
+              "itemTitle": "BBC Dynasties I & II (David Attenborough)",
+              "file": "BBC-Dynasties II Ep 4 of 6 Hyena (10 Apr 2022).m4v",
+              "name": "BBC-Dynasties II Ep 4 of 6 Hyena (10 Apr 2022)",
+              "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20II%20Ep%204%20of%206%20Hyena%20(10%20Apr%202022).m4v",
+              "seconds": 3471,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 607
             }
           ]
         },
@@ -222,20 +287,7 @@
           },
           "alternates": [
             {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018",
-              "itemTitle": "BBC Dynasties I & II (David Attenborough)",
-              "file": "BBC-Dynasties II Ep 5 of 6 Meerkat (21 May 2022).mp4",
-              "name": "BBC-Dynasties II Ep 5 of 6 Meerkat (21 May 2022)",
-              "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20II%20Ep%205%20of%206%20Meerkat%20(21%20May%202022).mp4",
-              "seconds": 3493,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 568
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "03theracetobreed",
               "itemTitle": "Planets and Animals",
@@ -247,6 +299,32 @@
               "playable": true,
               "codecRisk": "video (x265)",
               "sizeMB": 256
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Tiger\" (0.95)",
+              "item": "bbc-dynasties-1",
+              "itemTitle": "BBC Dynasties ★ A Nature Documentary Series with Subtitles and MKV",
+              "file": "05 Tiger.mp4",
+              "name": "05 Tiger",
+              "url": "https://archive.org/download/bbc-dynasties-1/05%20Tiger.mp4",
+              "seconds": 3076,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 718
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018",
+              "itemTitle": "BBC Dynasties I & II (David Attenborough)",
+              "file": "BBC-Dynasties II Ep 5 of 6 Meerkat (21 May 2022).mp4",
+              "name": "BBC-Dynasties II Ep 5 of 6 Meerkat (21 May 2022)",
+              "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20II%20Ep%205%20of%206%20Meerkat%20(21%20May%202022).mp4",
+              "seconds": 3493,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 568
             }
           ]
         }
@@ -261,32 +339,19 @@
           "airdate": "2022-03-20",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
+            "conf": 0.75,
             "why": "title ~ \"Puma\" (0.95)",
-            "item": "bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018",
-            "itemTitle": "BBC Dynasties I & II (David Attenborough)",
-            "file": "BBC-Dynasties II Ep 1 of 6 Puma (20 Mar 2022).m4v",
-            "name": "BBC-Dynasties II Ep 1 of 6 Puma (20 Mar 2022)",
-            "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20II%20Ep%201%20of%206%20Puma%20(20%20Mar%202022).m4v",
-            "seconds": 3461,
+            "item": "bbc-dynasties-2",
+            "itemTitle": "BBC Dynasties 2 ★ Sequel to the BBC Series - with Subtitles and MKV",
+            "file": "01 Puma.mp4",
+            "name": "01 Puma",
+            "url": "https://archive.org/download/bbc-dynasties-2/01%20Puma.mp4",
+            "seconds": 3609,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 659
+            "sizeMB": 856
           },
           "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Puma\" (0.95)",
-              "item": "bbc-dynasties-2",
-              "itemTitle": "BBC Dynasties 2 ★ Sequel to the BBC Series - with Subtitles and MKV",
-              "file": "01 Puma.mp4",
-              "name": "01 Puma",
-              "url": "https://archive.org/download/bbc-dynasties-2/01%20Puma.mp4",
-              "seconds": 3609,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 856
-            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -308,33 +373,19 @@
           "airdate": "2022-03-27",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
+            "conf": 0.75,
             "why": "title ~ \"Elephant\" (0.95)",
-            "item": "bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018",
-            "itemTitle": "BBC Dynasties I & II (David Attenborough)",
-            "file": "BBC-Dynasties II Ep 2 of 6 Elephant (27 Mar 2022).m4v",
-            "name": "BBC-Dynasties II Ep 2 of 6 Elephant (27 Mar 2022)",
-            "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20II%20Ep%202%20of%206%20Elephant%20(27%20Mar%202022).m4v",
-            "seconds": 2852,
+            "item": "bbc-dynasties-2",
+            "itemTitle": "BBC Dynasties 2 ★ Sequel to the BBC Series - with Subtitles and MKV",
+            "file": "02 Elephant.mp4",
+            "name": "02 Elephant",
+            "url": "https://archive.org/download/bbc-dynasties-2/02%20Elephant.mp4",
+            "seconds": 3597,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 623
+            "sizeMB": 869
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Elephant\" (0.95)",
-              "item": "bbc-dynasties-2",
-              "itemTitle": "BBC Dynasties 2 ★ Sequel to the BBC Series - with Subtitles and MKV",
-              "file": "02 Elephant.mp4",
-              "name": "02 Elephant",
-              "url": "https://archive.org/download/bbc-dynasties-2/02%20Elephant.mp4",
-              "seconds": 3597,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 869
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -342,33 +393,19 @@
           "airdate": "2022-04-03",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
+            "conf": 0.75,
             "why": "title ~ \"Cheetah\" (0.95)",
-            "item": "bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018",
-            "itemTitle": "BBC Dynasties I & II (David Attenborough)",
-            "file": "BBC-Dynasties II Ep 3 of 6 Cheetah (3 Apr 2022).mp4",
-            "name": "BBC-Dynasties II Ep 3 of 6 Cheetah (3 Apr 2022)",
-            "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20II%20Ep%203%20of%206%20Cheetah%20(3%20Apr%202022).mp4",
-            "seconds": 3477,
+            "item": "bbc-dynasties-2",
+            "itemTitle": "BBC Dynasties 2 ★ Sequel to the BBC Series - with Subtitles and MKV",
+            "file": "03 Cheetah.mp4",
+            "name": "03 Cheetah",
+            "url": "https://archive.org/download/bbc-dynasties-2/03%20Cheetah.mp4",
+            "seconds": 3626,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 716
+            "sizeMB": 898
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Cheetah\" (0.95)",
-              "item": "bbc-dynasties-2",
-              "itemTitle": "BBC Dynasties 2 ★ Sequel to the BBC Series - with Subtitles and MKV",
-              "file": "03 Cheetah.mp4",
-              "name": "03 Cheetah",
-              "url": "https://archive.org/download/bbc-dynasties-2/03%20Cheetah.mp4",
-              "seconds": 3626,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 898
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -376,33 +413,19 @@
           "airdate": "2022-04-10",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
+            "conf": 0.75,
             "why": "title ~ \"Hyena\" (0.95)",
-            "item": "bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018",
-            "itemTitle": "BBC Dynasties I & II (David Attenborough)",
-            "file": "BBC-Dynasties II Ep 4 of 6 Hyena (10 Apr 2022).m4v",
-            "name": "BBC-Dynasties II Ep 4 of 6 Hyena (10 Apr 2022)",
-            "url": "https://archive.org/download/bbc-dynasties-ep-1-of-5-chimpanzee-11-nov-2018/BBC-Dynasties%20II%20Ep%204%20of%206%20Hyena%20(10%20Apr%202022).m4v",
-            "seconds": 3471,
+            "item": "bbc-dynasties-2",
+            "itemTitle": "BBC Dynasties 2 ★ Sequel to the BBC Series - with Subtitles and MKV",
+            "file": "04 Hyena.mp4",
+            "name": "04 Hyena",
+            "url": "https://archive.org/download/bbc-dynasties-2/04%20Hyena.mp4",
+            "seconds": 3619,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 607
+            "sizeMB": 817
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Hyena\" (0.95)",
-              "item": "bbc-dynasties-2",
-              "itemTitle": "BBC Dynasties 2 ★ Sequel to the BBC Series - with Subtitles and MKV",
-              "file": "04 Hyena.mp4",
-              "name": "04 Hyena",
-              "url": "https://archive.org/download/bbc-dynasties-2/04%20Hyena.mp4",
-              "seconds": 3619,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 817
-            }
-          ]
+          "alternates": []
         }
       ]
     }

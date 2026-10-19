@@ -3,7 +3,7 @@
   "slug": "diagnosis-murder",
   "type": "Drama",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:56:48.371Z",
+  "matchedAt": "2026-10-19T04:10:54.385Z",
   "addedAt": "2026-10-15T12:35:34.299Z",
   "tvmaze": {
     "id": 3307,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 178,
-    "live": 0,
-    "review": 1,
-    "missing": 177,
-    "pct": 1
+    "live": 1,
+    "review": 2,
+    "missing": 175,
+    "pct": 2
   },
   "seasons": [
     {
@@ -47,8 +47,22 @@
           "number": 2,
           "name": "Amnesia",
           "airdate": "1993-11-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.5,
+            "why": "S/E in filename",
+            "item": "inspector-rex-diagnosis-murder",
+            "itemTitle": "Inspector Rex S01E07 Diagnosis: Murder",
+            "file": "Inspector.Rex.1994.S01E02.A.Perfect.Murder.German.1080p.AMZN.WEB-DL.DDP2.0.H.264-AOS.mp4",
+            "name": "Inspector.Rex.1994.S01E02.A.Perfect.Murder.German.1080p.AMZN.WEB-DL.DDP2.0.H.264-AOS",
+            "url": "https://archive.org/download/inspector-rex-diagnosis-murder/Inspector.Rex.1994.S01E02.A.Perfect.Murder.German.1080p.AMZN.WEB-DL.DDP2.0.H.264-AOS.mp4",
+            "seconds": 2848,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (DDP2)",
+            "langRisk": true,
+            "sizeMB": 275
+          },
           "alternates": []
         },
         {
@@ -867,9 +881,35 @@
           "number": 17,
           "name": "Baby Boom",
           "airdate": "1998-02-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "1998.02.05-kfmb-diagnosis-murder-s05e17-barbara-whinnery-u",
+            "itemTitle": "KFMB - Diagnosis Murder S05E17 - Barbara Whinnery - February 5th, 1998",
+            "file": "1998.02.05 - KFMB - Diagnosis Murder S05E17 - Barbara Whinnery [U].mp4",
+            "name": "1998.02.05 - KFMB - Diagnosis Murder S05E17 - Barbara Whinnery [U]",
+            "url": "https://archive.org/download/1998.02.05-kfmb-diagnosis-murder-s05e17-barbara-whinnery-u/1998.02.05%20-%20KFMB%20-%20Diagnosis%20Murder%20S05E17%20-%20Barbara%20Whinnery%20%5BU%5D.mp4",
+            "seconds": 3594,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 371
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "1998.02.05-kfmb-diagnosis-murder-s05e17-barbara-whinnery-u",
+              "itemTitle": "KFMB - Diagnosis Murder S05E17 - Barbara Whinnery - February 5th, 1998",
+              "file": "1998.02.05 - KFMB - Diagnosis Murder S05E17 - Barbara Whinnery [U].mp4",
+              "name": "1998.02.05 - KFMB - Diagnosis Murder S05E17 - Barbara Whinnery [U]",
+              "url": "https://archive.org/download/1998.02.05-kfmb-diagnosis-murder-s05e17-barbara-whinnery-u/1998.02.05%20-%20KFMB%20-%20Diagnosis%20Murder%20S05E17%20-%20Barbara%20Whinnery%20%5BU%5D.mp4",
+              "seconds": 3594,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 371
+            }
+          ]
         },
         {
           "number": 18,

@@ -3,7 +3,7 @@
   "slug": "eek-the-cat",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:36.106Z",
+  "matchedAt": "2026-10-19T04:10:42.755Z",
   "addedAt": "2026-10-15T19:10:06.389Z",
   "tvmaze": {
     "id": 12825,
@@ -31,29 +31,29 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "eek-the-cat-season-01",
-            "itemTitle": "Eek! The Cat Season 01",
-            "file": "Eek! The Cat S01 E01 Misereek.mp4",
-            "name": "Eek! The Cat S01 E01 Misereek",
-            "url": "https://archive.org/download/eek-the-cat-season-01/Eek!%20The%20Cat%20S01%20E01%20Misereek.mp4",
+            "item": "eekthecats01e01misereekextendedcut",
+            "itemTitle": "Eek! The Cat",
+            "file": "Eek the Cat/Eek! The Cat - S01E01 - Misereek [Extended Cut].mp4",
+            "name": "Eek the Cat/Eek! The Cat - S01E01 - Misereek [Extended Cut]",
+            "url": "https://archive.org/download/eekthecats01e01misereekextendedcut/Eek%20the%20Cat%2FEek!%20The%20Cat%20-%20S01E01%20-%20Misereek%20%5BExtended%20Cut%5D.mp4",
             "seconds": 1308,
-            "format": "MPEG4",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 80
+            "sizeMB": 136
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "eekthecats01e01misereekextendedcut",
-              "itemTitle": "Eek! The Cat",
-              "file": "Eek the Cat/Eek! The Cat - S01E01 - Misereek [Extended Cut].mp4",
-              "name": "Eek the Cat/Eek! The Cat - S01E01 - Misereek [Extended Cut]",
-              "url": "https://archive.org/download/eekthecats01e01misereekextendedcut/Eek%20the%20Cat%2FEek!%20The%20Cat%20-%20S01E01%20-%20Misereek%20%5BExtended%20Cut%5D.mp4",
+              "item": "eek-the-cat-season-01",
+              "itemTitle": "Eek! The Cat Season 01",
+              "file": "Eek! The Cat S01 E01 Misereek.mp4",
+              "name": "Eek! The Cat S01 E01 Misereek",
+              "url": "https://archive.org/download/eek-the-cat-season-01/Eek!%20The%20Cat%20S01%20E01%20Misereek.mp4",
               "seconds": 1308,
-              "format": "h.264",
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 136
+              "sizeMB": 80
             }
           ]
         },

@@ -3,7 +3,7 @@
   "slug": "nova",
   "type": "Documentary & Geographic",
   "network": "PBS",
-  "matchedAt": "2026-10-16T07:58:00.378Z",
+  "matchedAt": "2026-10-19T04:12:05.545Z",
   "addedAt": "2026-10-15T12:08:32.879Z",
   "tvmaze": {
     "id": 3321,
@@ -14,9 +14,9 @@
   },
   "coverage": {
     "total": 1014,
-    "live": 2,
+    "live": 3,
     "review": 90,
-    "missing": 922,
+    "missing": 921,
     "pct": 9
   },
   "seasons": [
@@ -27,33 +27,163 @@
           "number": 1,
           "name": "The Making of a Natural History Film",
           "airdate": "1974-03-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S44 EP1 Secrets of the Sky Tombs.mp4",
+            "name": "NOVA/NOVA S44 EP1 Secrets of the Sky Tombs",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S44%20EP1%20Secrets%20of%20the%20Sky%20Tombs.mp4",
+            "seconds": 3213,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1016
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "pbsnovadocs",
+              "itemTitle": "PBS Nova Documentaries",
+              "file": "PBS Empires - Rome in the 1st Century - Episode 1 - Order from Chaos.mp4",
+              "name": "PBS Empires - Rome in the 1st Century - Episode 1 - Order from Chaos",
+              "url": "https://archive.org/download/pbsnovadocs/PBS%20Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%201%20-%20Order%20from%20Chaos.mp4",
+              "seconds": 3257,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 324
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "pbsnovadocs",
+              "itemTitle": "PBS Nova Documentaries",
+              "file": "Empires - Rome in the 1st Century - Episode 1 - Order from Chaos.mp4",
+              "name": "Empires - Rome in the 1st Century - Episode 1 - Order from Chaos",
+              "url": "https://archive.org/download/pbsnovadocs/Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%201%20-%20Order%20from%20Chaos.mp4",
+              "seconds": 3257,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 181
+            },
+            {
+              "conf": 0.6,
+              "why": "absolute episode number",
+              "item": "nova-pbs-documentaries",
+              "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+              "file": "NOVA/NOVA S45 EP1 Black Hole Apocalypse.mp4",
+              "name": "NOVA/NOVA S45 EP1 Black Hole Apocalypse",
+              "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S45%20EP1%20Black%20Hole%20Apocalypse.mp4",
+              "seconds": 6766,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2623
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Where Did the Colorado Go?",
           "airdate": "1974-03-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Empires - Rome in the 1st Century - Episode 2 - Years of Trial.mp4",
+            "name": "PBS Empires - Rome in the 1st Century - Episode 2 - Years of Trial",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%202%20-%20Years%20of%20Trial.mp4",
+            "seconds": 3306,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 327
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "pbsnovadocs",
+              "itemTitle": "PBS Nova Documentaries",
+              "file": "Empires - Rome in the 1st Century - Episode 2 - Years of Trial.mp4",
+              "name": "Empires - Rome in the 1st Century - Episode 2 - Years of Trial",
+              "url": "https://archive.org/download/pbsnovadocs/Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%202%20-%20Years%20of%20Trial.mp4",
+              "seconds": 3306,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 182
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Whales, Dolphins, and Men",
           "airdate": "1974-03-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Empires - Rome in the 1st Century - Episode 3 - Winds of Change.mp4",
+            "name": "PBS Empires - Rome in the 1st Century - Episode 3 - Winds of Change",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%203%20-%20Winds%20of%20Change.mp4",
+            "seconds": 3306,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 329
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "pbsnovadocs",
+              "itemTitle": "PBS Nova Documentaries",
+              "file": "Empires - Rome in the 1st Century - Episode 3 - Winds of Change.mp4",
+              "name": "Empires - Rome in the 1st Century - Episode 3 - Winds of Change",
+              "url": "https://archive.org/download/pbsnovadocs/Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%203%20-%20Winds%20of%20Change.mp4",
+              "seconds": 3306,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 184
+            }
+          ]
         },
         {
           "number": 4,
           "name": "The Search for Life",
           "airdate": "1974-03-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Empires - Rome in the 1st Century - Episode 4 - Years of Eruption.mp4",
+            "name": "PBS Empires - Rome in the 1st Century - Episode 4 - Years of Eruption",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%204%20-%20Years%20of%20Eruption.mp4",
+            "seconds": 3307,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 329
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "pbsnovadocs",
+              "itemTitle": "PBS Nova Documentaries",
+              "file": "Empires - Rome in the 1st Century - Episode 4 - Years of Eruption.mp4",
+              "name": "Empires - Rome in the 1st Century - Episode 4 - Years of Eruption",
+              "url": "https://archive.org/download/pbsnovadocs/Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%204%20-%20Years%20of%20Eruption.mp4",
+              "seconds": 3307,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 180
+            }
+          ]
         },
         {
           "number": 5,
@@ -139,7 +269,21 @@
             "playable": true,
             "sizeMB": 2655
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "absolute episode number",
+              "item": "nova-pbs-documentaries",
+              "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+              "file": "NOVA/NOVA S43 EP10 Vikings Unearthed.mp4",
+              "name": "NOVA/NOVA S43 EP10 Vikings Unearthed",
+              "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S43%20EP10%20Vikings%20Unearthed.mp4",
+              "seconds": 6772,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2135
+            }
+          ]
         },
         {
           "number": 11,
@@ -187,19 +331,46 @@
           "airdate": "1974-05-26",
           "state": "REVIEW",
           "file": {
-            "conf": 0.6,
+            "conf": 0.7,
             "why": "absolute episode number",
             "item": "nova-pbs-documentaries",
             "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
-            "file": "NOVA/NOVA S38 EP13 Finding Life Beyond Earth.mp4",
-            "name": "NOVA/NOVA S38 EP13 Finding Life Beyond Earth",
-            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S38%20EP13%20Finding%20Life%20Beyond%20Earth.mp4",
-            "seconds": 6196,
+            "file": "NOVA/NOVA S44 EP13 Secrets Of The Shining Knight.mp4",
+            "name": "NOVA/NOVA S44 EP13 Secrets Of The Shining Knight",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S44%20EP13%20Secrets%20Of%20The%20Shining%20Knight.mp4",
+            "seconds": 3213,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 2052
+            "sizeMB": 1246
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "nova-pbs-documentaries",
+              "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+              "file": "NOVA/NOVA S39 EP13 Secrets Of The Viking Sword.mp4",
+              "name": "NOVA/NOVA S39 EP13 Secrets Of The Viking Sword",
+              "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S39%20EP13%20Secrets%20Of%20The%20Viking%20Sword.mp4",
+              "seconds": 3173,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1004
+            },
+            {
+              "conf": 0.6,
+              "why": "absolute episode number",
+              "item": "nova-pbs-documentaries",
+              "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+              "file": "NOVA/NOVA S38 EP13 Finding Life Beyond Earth.mp4",
+              "name": "NOVA/NOVA S38 EP13 Finding Life Beyond Earth",
+              "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S38%20EP13%20Finding%20Life%20Beyond%20Earth.mp4",
+              "seconds": 6196,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2052
+            }
+          ]
         }
       ]
     },
@@ -210,8 +381,20 @@
           "number": 1,
           "name": "Why Do Birds Sing?",
           "airdate": "1974-11-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S44 EP14 Ghosts Of Stonehenge.mp4",
+            "name": "NOVA/NOVA S44 EP14 Ghosts Of Stonehenge",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S44%20EP14%20Ghosts%20Of%20Stonehenge.mp4",
+            "seconds": 3216,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1247
+          },
           "alternates": []
         },
         {
@@ -220,19 +403,32 @@
           "airdate": "1974-11-10",
           "state": "REVIEW",
           "file": {
-            "conf": 0.6,
+            "conf": 0.7,
             "why": "absolute episode number",
             "item": "nova-pbs-documentaries",
             "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
-            "file": "NOVA/NOVA S43 EP15 School Of The Future - Spanish Version.mp4",
-            "name": "NOVA/NOVA S43 EP15 School Of The Future - Spanish Version",
-            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S43%20EP15%20School%20Of%20The%20Future%20-%20Spanish%20Version.mp4",
-            "seconds": 6805,
+            "file": "NOVA/NOVA S44 EP15 Secrets Of The Forbidden City.mp4",
+            "name": "NOVA/NOVA S44 EP15 Secrets Of The Forbidden City",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S44%20EP15%20Secrets%20Of%20The%20Forbidden%20City.mp4",
+            "seconds": 3213,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 5571
+            "sizeMB": 1246
           },
           "alternates": [
+            {
+              "conf": 0.6,
+              "why": "absolute episode number",
+              "item": "nova-pbs-documentaries",
+              "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+              "file": "NOVA/NOVA S43 EP15 School Of The Future - Spanish Version.mp4",
+              "name": "NOVA/NOVA S43 EP15 School Of The Future - Spanish Version",
+              "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S43%20EP15%20School%20Of%20The%20Future%20-%20Spanish%20Version.mp4",
+              "seconds": 6805,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 5571
+            },
             {
               "conf": 0.6,
               "why": "absolute episode number",
@@ -279,7 +475,21 @@
             "playable": true,
             "sizeMB": 1257
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "nova-pbs-documentaries",
+              "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+              "file": "NOVA/NOVA S43 EP16 15 Years Of Terror.mp4",
+              "name": "NOVA/NOVA S43 EP16 15 Years Of Terror",
+              "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S43%20EP16%2015%20Years%20Of%20Terror.mp4",
+              "seconds": 3271,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1034
+            }
+          ]
         },
         {
           "number": 4,
@@ -374,15 +584,28 @@
             "why": "absolute episode number",
             "item": "nova-pbs-documentaries",
             "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
-            "file": "NOVA/NOVA S41 EP21 Killer Landslides.mp4",
-            "name": "NOVA/NOVA S41 EP21 Killer Landslides",
-            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S41%20EP21%20Killer%20Landslides.mp4",
-            "seconds": 3172,
+            "file": "NOVA/NOVA S44 EP21 Day The Dinosaurs Died.mp4",
+            "name": "NOVA/NOVA S44 EP21 Day The Dinosaurs Died",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S44%20EP21%20Day%20The%20Dinosaurs%20Died.mp4",
+            "seconds": 3210,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1230
+            "sizeMB": 1244
           },
           "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "nova-pbs-documentaries",
+              "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+              "file": "NOVA/NOVA S41 EP21 Killer Landslides.mp4",
+              "name": "NOVA/NOVA S41 EP21 Killer Landslides",
+              "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S41%20EP21%20Killer%20Landslides.mp4",
+              "seconds": 3172,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1230
+            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -410,8 +633,20 @@
           "number": 10,
           "name": "The Rise and Fall of DDT",
           "airdate": "1975-01-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S42 EP23 Inside Einstein's Mind.mp4",
+            "name": "NOVA/NOVA S42 EP23 Inside Einstein's Mind",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S42%20EP23%20Inside%20Einstein's%20Mind.mp4",
+            "seconds": 3188,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2612
+          },
           "alternates": []
         },
         {
@@ -668,20 +903,8 @@
           "number": 4,
           "name": "The Sunspot Mystery",
           "airdate": "1977-02-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Sunspot Mystery\" (1.00)",
-            "item": "pbsnovadocs",
-            "itemTitle": "PBS Nova Documentaries",
-            "file": "The Sunspot Mystery (1977).mp4",
-            "name": "The Sunspot Mystery (1977)",
-            "url": "https://archive.org/download/pbsnovadocs/The%20Sunspot%20Mystery%20(1977).mp4",
-            "seconds": 3661,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 531
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1685,19 +1908,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 346
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Miracle of Life\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "The Miracle of Life.mp4",
-              "name": "The Miracle of Life",
-              "url": "https://archive.org/download/pbsnovadocs/The%20Miracle%20of%20Life.mp4",
-              "seconds": 3429,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 512
             }
           ]
         },
@@ -2077,21 +2287,7 @@
             "playable": true,
             "sizeMB": 332
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Shape of Things\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "The Shape of Things.mp4",
-              "name": "The Shape of Things",
-              "url": "https://archive.org/download/pbsnovadocs/The%20Shape%20of%20Things.mp4",
-              "seconds": 3382,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 313
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -2105,20 +2301,8 @@
           "number": 8,
           "name": "The Mathematical Mystery Tour",
           "airdate": "1985-03-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Mathematical Mystery Tour\" (0.98)",
-            "item": "pbsnovadocs",
-            "itemTitle": "PBS Nova Documentaries",
-            "file": "A Mathematical Mystery Tour (1985).mp4",
-            "name": "A Mathematical Mystery Tour (1985)",
-            "url": "https://archive.org/download/pbsnovadocs/A%20Mathematical%20Mystery%20Tour%20(1985).mp4",
-            "seconds": 3400,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 488
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3119,20 +3303,8 @@
           "number": 12,
           "name": "Return to Mt. St. Helens",
           "airdate": "1991-01-08",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "title ~ \"Return to Mt. St. Helens\" (0.62)",
-            "item": "pbsnovadocs",
-            "itemTitle": "PBS Nova Documentaries",
-            "file": "Mount St. Helens.mp4",
-            "name": "Mount St. Helens",
-            "url": "https://archive.org/download/pbsnovadocs/Mount%20St.%20Helens.mp4",
-            "seconds": 3206,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1257
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3994,21 +4166,7 @@
             "playable": true,
             "sizeMB": 320
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"B-29 Frozen in Time\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "B-29 - Frozen in Time.mp4",
-              "name": "B-29 - Frozen in Time",
-              "url": "https://archive.org/download/pbsnovadocs/B-29%20-%20Frozen%20in%20Time.mp4",
-              "seconds": 3234,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 388
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
@@ -4302,21 +4460,7 @@
             "playable": true,
             "sizeMB": 1065
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Proof\" (0.95)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "The Proof - Andrew Wiles & Fermat's Last Theorem (1997).mp4",
-              "name": "The Proof - Andrew Wiles & Fermat's Last Theorem (1997)",
-              "url": "https://archive.org/download/pbsnovadocs/The%20Proof%20-%20Andrew%20Wiles%20%26%20Fermat's%20Last%20Theorem%20(1997).mp4",
-              "seconds": 3181,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 461
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -4370,33 +4514,34 @@
           "number": 11,
           "name": "Mysterious Mummies of China",
           "airdate": "1998-01-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Mysterious Mummies of China\" (0.96)",
-            "item": "pbsnovadocs",
-            "itemTitle": "PBS Nova Documentaries",
-            "file": "PBS Nova - Mysterious Mummies of China (1998).mp4",
-            "name": "PBS Nova - Mysterious Mummies of China (1998)",
-            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Mysterious%20Mummies%20of%20China%20(1998).mp4",
-            "seconds": 3186,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "LostatSeaTheSearchforLongitude",
+            "itemTitle": "Lost at Sea : The Search for Longitude",
+            "file": "NOVA.S25E11.Lost.at.Sea.The.Search.For.Longitude.1998.DVDRip.DD2.0.x264-astro.mp4",
+            "name": "NOVA.S25E11.Lost.at.Sea.The.Search.For.Longitude.1998.DVDRip.DD2.0.x264-astro",
+            "url": "https://archive.org/download/LostatSeaTheSearchforLongitude/NOVA.S25E11.Lost.at.Sea.The.Search.For.Longitude.1998.DVDRip.DD2.0.x264-astro.mp4",
+            "seconds": 3263,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 325
+            "codecRisk": "audio (DD2 0)",
+            "sizeMB": 341
           },
           "alternates": [
             {
-              "conf": 0.75,
-              "why": "title ~ \"Mysterious Mummies of China\" (1.00)",
+              "conf": 0.8,
+              "why": "title ~ \"Mysterious Mummies of China\" (0.96)",
               "item": "pbsnovadocs",
               "itemTitle": "PBS Nova Documentaries",
-              "file": "Mysterious Mummies of China (1998).mp4",
-              "name": "Mysterious Mummies of China (1998)",
-              "url": "https://archive.org/download/pbsnovadocs/Mysterious%20Mummies%20of%20China%20(1998).mp4",
+              "file": "PBS Nova - Mysterious Mummies of China (1998).mp4",
+              "name": "PBS Nova - Mysterious Mummies of China (1998)",
+              "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Mysterious%20Mummies%20of%20China%20(1998).mp4",
               "seconds": 3186,
-              "format": "MPEG4",
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 379
+              "sizeMB": 325
             }
           ]
         },
@@ -4678,21 +4823,7 @@
             "playable": true,
             "sizeMB": 323
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Volcanoes of the Deep\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Volcanoes of the Deep.mp4",
-              "name": "Volcanoes of the Deep",
-              "url": "https://archive.org/download/pbsnovadocs/Volcanoes%20of%20the%20Deep.mp4",
-              "seconds": 3246,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 287
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 21,
@@ -4919,9 +5050,35 @@
           "number": 21,
           "name": "The Vikings",
           "airdate": "2000-05-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "title ~ \"The Vikings\" (0.95)",
+            "item": "nova-pbs-documentaries",
+            "itemTitle": "PBS Content (Nova Episodes, Documentaries)",
+            "file": "NOVA/NOVA S43 EP10 Vikings Unearthed.mp4",
+            "name": "NOVA/NOVA S43 EP10 Vikings Unearthed",
+            "url": "https://archive.org/download/nova-pbs-documentaries/NOVA%2FNOVA%20S43%20EP10%20Vikings%20Unearthed.mp4",
+            "seconds": 6772,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2135
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"The Vikings\" (0.95)",
+              "item": "pbsnovadocs",
+              "itemTitle": "PBS Nova Documentaries",
+              "file": "PBS Nova - Vikings Unearthed.mp4",
+              "name": "PBS Nova - Vikings Unearthed",
+              "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Vikings%20Unearthed.mp4",
+              "seconds": 6787,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 682
+            }
+          ]
         }
       ]
     },
@@ -5272,21 +5429,7 @@
             "playable": true,
             "sizeMB": 327
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Mysterious Life of Caves\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Mysterious Life of Caves.mp4",
-              "name": "Mysterious Life of Caves",
-              "url": "https://archive.org/download/pbsnovadocs/Mysterious%20Life%20of%20Caves.mp4",
-              "seconds": 3273,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 255
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -5306,40 +5449,14 @@
             "playable": true,
             "sizeMB": 310
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Lost Roman Treasure\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Lost Roman Treasure.mp4",
-              "name": "Lost Roman Treasure",
-              "url": "https://archive.org/download/pbsnovadocs/Lost%20Roman%20Treasure.mp4",
-              "seconds": 3117,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 402
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Galileo's Battle for the Heavens",
           "airdate": "2002-10-29",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "title ~ \"Galileo's Battle for the Heavens\" (1.00)",
-            "item": "pbsnovadocs",
-            "itemTitle": "PBS Nova Documentaries",
-            "file": "Galileo's Battle for the Heavens (2002).mp4",
-            "name": "Galileo's Battle for the Heavens (2002)",
-            "url": "https://archive.org/download/pbsnovadocs/Galileo's%20Battle%20for%20the%20Heavens%20(2002).mp4",
-            "seconds": 6776,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 976
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -5448,21 +5565,7 @@
             "playable": true,
             "sizeMB": 319
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Lost Treasures of Tibet\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Lost Treasures of Tibet.mp4",
-              "name": "Lost Treasures of Tibet",
-              "url": "https://archive.org/download/pbsnovadocs/Lost%20Treasures%20of%20Tibet.mp4",
-              "seconds": 3212,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 468
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 14,
@@ -5571,21 +5674,7 @@
             "playable": true,
             "sizeMB": 325
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Magnetic Storm\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Magnetic Storm.mp4",
-              "name": "Magnetic Storm",
-              "url": "https://archive.org/download/pbsnovadocs/Magnetic%20Storm.mp4",
-              "seconds": 3234,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 252
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -5809,20 +5898,8 @@
           "number": 1,
           "name": "Mystery of the Megaflood",
           "airdate": "2005-09-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Mystery of the Megaflood\" (1.00)",
-            "item": "pbsnovadocs",
-            "itemTitle": "PBS Nova Documentaries",
-            "file": "Mystery of the Megaflood (2005).mp4",
-            "name": "Mystery of the Megaflood (2005)",
-            "url": "https://archive.org/download/pbsnovadocs/Mystery%20of%20the%20Megaflood%20(2005).mp4",
-            "seconds": 3012,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 436
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -5845,20 +5922,8 @@
           "number": 4,
           "name": "Volcano Under the City",
           "airdate": "2005-11-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Volcano Under the City\" (1.00)",
-            "item": "pbsnovadocs",
-            "itemTitle": "PBS Nova Documentaries",
-            "file": "Volcano Under the City.mp4",
-            "name": "Volcano Under the City",
-            "url": "https://archive.org/download/pbsnovadocs/Volcano%20Under%20the%20City.mp4",
-            "seconds": 3214,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 189
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -5943,7 +6008,21 @@
             "playable": true,
             "sizeMB": 318
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Arctic Passage: Prisoners of the Ice\" (0.71)",
+              "item": "pbsnovadocs",
+              "itemTitle": "PBS Nova Documentaries",
+              "file": "PBS Nova - Arctic Passage, Ice Survivors.mp4",
+              "name": "PBS Nova - Arctic Passage, Ice Survivors",
+              "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Arctic%20Passage%2C%20Ice%20Survivors.mp4",
+              "seconds": 2980,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 299
+            }
+          ]
         },
         {
           "number": 14,
@@ -6205,21 +6284,7 @@
             "playable": true,
             "sizeMB": 315
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Absolute Zero: The Race for Absolute Zero (2)\" (0.95)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Absolute Zero - Part 2 of 2 - The Race for Absolute Zero.mp4",
-              "name": "Absolute Zero - Part 2 of 2 - The Race for Absolute Zero",
-              "url": "https://archive.org/download/pbsnovadocs/Absolute%20Zero%20-%20Part%202%20of%202%20-%20The%20Race%20for%20Absolute%20Zero.mp4",
-              "seconds": 3170,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 863
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
@@ -6283,21 +6348,7 @@
             "playable": true,
             "sizeMB": 341
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Cracking the Maya Code\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Cracking the Maya Code.mp4",
-              "name": "Cracking the Maya Code",
-              "url": "https://archive.org/download/pbsnovadocs/Cracking%20the%20Maya%20Code.mp4",
-              "seconds": 3395,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 546
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 15,
@@ -6418,21 +6469,7 @@
             "playable": true,
             "sizeMB": 325
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Incredible Journey of the Butterflies\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "The Incredible Journey of the Butterflies.mp4",
-              "name": "The Incredible Journey of the Butterflies",
-              "url": "https://archive.org/download/pbsnovadocs/The%20Incredible%20Journey%20of%20the%20Butterflies.mp4",
-              "seconds": 3226,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1129
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
@@ -6692,8 +6729,20 @@
           "number": 5,
           "name": "Secrets of Stonehenge",
           "airdate": "2010-11-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secrets of Stonehenge\" (0.95)",
+            "item": "pbsnovadocs",
+            "itemTitle": "PBS Nova Documentaries",
+            "file": "PBS Nova - Secrets of Lost Empires - Stonehenge.mp4",
+            "name": "PBS Nova - Secrets of Lost Empires - Stonehenge",
+            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Secrets%20of%20Lost%20Empires%20-%20Stonehenge.mp4",
+            "seconds": 3253,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 326
+          },
           "alternates": []
         },
         {
@@ -7114,21 +7163,7 @@
             "playable": true,
             "sizeMB": 333
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Ancient Computer\" (0.95)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Ancient Computer - The Antikythera Mechanism (2012).mp4",
-              "name": "Ancient Computer - The Antikythera Mechanism (2012)",
-              "url": "https://archive.org/download/pbsnovadocs/Ancient%20Computer%20-%20The%20Antikythera%20Mechanism%20(2012).mp4",
-              "seconds": 3199,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1236
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 15,
@@ -7257,21 +7292,7 @@
             "playable": true,
             "sizeMB": 319
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"At the Edge of Space\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "At the Edge of Space.mp4",
-              "name": "At the Edge of Space",
-              "url": "https://archive.org/download/pbsnovadocs/At%20the%20Edge%20of%20Space.mp4",
-              "seconds": 3200,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 690
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -7339,21 +7360,7 @@
             "playable": true,
             "sizeMB": 318
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Great Cathedral Mystery\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Great Cathedral Mystery.mp4",
-              "name": "Great Cathedral Mystery",
-              "url": "https://archive.org/download/pbsnovadocs/Great%20Cathedral%20Mystery.mp4",
-              "seconds": 3175,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 844
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 16,
@@ -7474,21 +7481,7 @@
             "playable": true,
             "sizeMB": 358
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"First Air War\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "First Air War.mp4",
-              "name": "First Air War",
-              "url": "https://archive.org/download/pbsnovadocs/First%20Air%20War.mp4",
-              "seconds": 3582,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 551
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -7596,21 +7589,7 @@
             "playable": true,
             "sizeMB": 320
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Petra: Lost City of Stone\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Petra, Lost City of Stone.mp4",
-              "name": "Petra, Lost City of Stone",
-              "url": "https://archive.org/download/pbsnovadocs/Petra%2C%20Lost%20City%20of%20Stone.mp4",
-              "seconds": 3236,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 580
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 16,
@@ -7651,19 +7630,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 321
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Great Math Mystery\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "The Great Math Mystery.mp4",
-              "name": "The Great Math Mystery",
-              "url": "https://archive.org/download/pbsnovadocs/The%20Great%20Math%20Mystery.mp4",
-              "seconds": 3231,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1144
             }
           ]
         },
@@ -8061,21 +8027,7 @@
             "playable": true,
             "sizeMB": 317
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Treasures of the Earth: Metals\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Treasures of the Earth - Metals.mp4",
-              "name": "Treasures of the Earth - Metals",
-              "url": "https://archive.org/download/pbsnovadocs/Treasures%20of%20the%20Earth%20-%20Metals.mp4",
-              "seconds": 3171,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1228
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -8232,19 +8184,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 319
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Eclipse Over America\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Eclipse Over America.mp4",
-              "name": "Eclipse Over America",
-              "url": "https://archive.org/download/pbsnovadocs/Eclipse%20Over%20America.mp4",
-              "seconds": 3182,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1023
             }
           ]
         },
@@ -8428,21 +8367,7 @@
             "playable": true,
             "sizeMB": 318
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Bird Brain\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Bird Brain.mp4",
-              "name": "Bird Brain",
-              "url": "https://archive.org/download/pbsnovadocs/Bird%20Brain.mp4",
-              "seconds": 3166,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 855
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 28,
@@ -8704,21 +8629,7 @@
             "playable": true,
             "sizeMB": 319
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The Next Pompeii\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "The Next Pompeii.mp4",
-              "name": "The Next Pompeii",
-              "url": "https://archive.org/download/pbsnovadocs/The%20Next%20Pompeii.mp4",
-              "seconds": 3181,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 680
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -8762,21 +8673,7 @@
             "playable": true,
             "sizeMB": 325
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Lost Viking Army\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Lost Viking Army.mp4",
-              "name": "Lost Viking Army",
-              "url": "https://archive.org/download/pbsnovadocs/Lost%20Viking%20Army.mp4",
-              "seconds": 3189,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 845
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
@@ -8876,21 +8773,7 @@
             "playable": true,
             "sizeMB": 303
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Decoding da Vinci\" (1.00)",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Decoding da Vinci (2019).mp4",
-              "name": "Decoding da Vinci (2019)",
-              "url": "https://archive.org/download/pbsnovadocs/Decoding%20da%20Vinci%20(2019).mp4",
-              "seconds": 3049,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 907
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 22,
@@ -9516,20 +9399,8 @@
           "number": 13,
           "name": "Ancient Earth: Life Rising",
           "airdate": "2023-10-18",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "title ~ \"Ancient Earth: Life Rising\" (0.63)",
-            "item": "pbsnovadocs",
-            "itemTitle": "PBS Nova Documentaries",
-            "file": "The Ancient Mariners.mp4",
-            "name": "The Ancient Mariners",
-            "url": "https://archive.org/download/pbsnovadocs/The%20Ancient%20Mariners.mp4",
-            "seconds": 3480,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 286
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

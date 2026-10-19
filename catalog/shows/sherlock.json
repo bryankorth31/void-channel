@@ -3,7 +3,7 @@
   "slug": "sherlock",
   "type": "British and Beyond",
   "network": "BBC One",
-  "matchedAt": "2026-10-16T07:57:07.118Z",
+  "matchedAt": "2026-10-19T04:11:14.809Z",
   "addedAt": "2026-10-15T23:53:00.428Z",
   "tvmaze": {
     "id": 335,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 12,
-    "live": 10,
-    "review": 2,
+    "live": 11,
+    "review": 1,
     "missing": 0,
     "pct": 100
   },
@@ -92,9 +92,9 @@
           "number": 1,
           "name": "A Scandal in Belgravia",
           "airdate": "2012-01-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BBC_Sherlock2010",
             "itemTitle": "BBC Sherlock (2010)",
@@ -236,7 +236,21 @@
             "playable": true,
             "sizeMB": 826
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "granada-holmes",
+              "itemTitle": "Granada Series Sherlock Holmes",
+              "file": "The Adventures Of Sherlock Holmes Season 1 to 7 Mp4 1080p/Season 4/Sherlock Holmes S04E01 The Sign Of Four.mp4",
+              "name": "The Adventures Of Sherlock Holmes Season 1 to 7 Mp4 1080p/Season 4/Sherlock Holmes S04E01 The Sign Of Four",
+              "url": "https://archive.org/download/granada-holmes/The%20Adventures%20Of%20Sherlock%20Holmes%20Season%201%20to%207%20Mp4%201080p%2FSeason%204%2FSherlock%20Holmes%20S04E01%20The%20Sign%20Of%20Four.mp4",
+              "seconds": 6456,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3207
+            }
+          ]
         },
         {
           "number": 2,

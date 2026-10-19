@@ -3,7 +3,7 @@
   "slug": "the-nanny",
   "type": "90s Sitcoms",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:56:11.621Z",
+  "matchedAt": "2026-10-19T04:10:24.855Z",
   "addedAt": "2026-10-15T12:07:31.883Z",
   "tvmaze": {
     "id": 1119,
@@ -42,6 +42,19 @@
             "sizeMB": 149
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "nanny-911-the-rock-family-s-1-e-1-2004",
+              "itemTitle": "Nanny 911: The Rock Family (S1 E1) (2004)",
+              "file": "Nanny 911 - The Rock Family (S1 E1) (2004).mp4",
+              "name": "Nanny 911 - The Rock Family (S1 E1) (2004)",
+              "url": "https://archive.org/download/nanny-911-the-rock-family-s-1-e-1-2004/Nanny%20911%20-%20The%20Rock%20Family%20(S1%20E1)%20(2004).mp4",
+              "seconds": 2399,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 506
+            },
             {
               "conf": 0.95,
               "why": "airdate in filename",
@@ -296,7 +309,21 @@
             "playable": true,
             "sizeMB": 143
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "nanny-911-s-01-e-13-the-king-family",
+              "itemTitle": "Nanny 911- S01 E13 The King Family",
+              "file": "Nanny 911- S01 E13 The King Family.mp4",
+              "name": "Nanny 911- S01 E13 The King Family",
+              "url": "https://archive.org/download/nanny-911-s-01-e-13-the-king-family/Nanny%20911-%20S01%20E13%20The%20King%20Family.mp4",
+              "seconds": 2397,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 549
+            }
+          ]
         },
         {
           "number": 14,
@@ -2947,15 +2974,29 @@
             "why": "airdate in filename",
             "item": "the-nanny-complete-series_20260128",
             "itemTitle": "The Nanny Complete Series",
-            "file": "The-Nanny_1999.06.23_S06E22_The-Baby-Shower_BWDIF-bob_MPEG2.mp4",
-            "name": "The-Nanny_1999.06.23_S06E22_The-Baby-Shower_BWDIF-bob_MPEG2",
-            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1999.06.23_S06E22_The-Baby-Shower_BWDIF-bob_MPEG2.mp4",
-            "seconds": 1324,
+            "file": "The-Nanny_1999.06.23_S06E21_Maggies-Wedding_BWDIF-bob_MPEG2.mp4",
+            "name": "The-Nanny_1999.06.23_S06E21_Maggies-Wedding_BWDIF-bob_MPEG2",
+            "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1999.06.23_S06E21_Maggies-Wedding_BWDIF-bob_MPEG2.mp4",
+            "seconds": 1357,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 132
+            "sizeMB": 135
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "the-nanny-complete-series_20260128",
+              "itemTitle": "The Nanny Complete Series",
+              "file": "The-Nanny_1999.06.23_S06E22_The-Baby-Shower_BWDIF-bob_MPEG2.mp4",
+              "name": "The-Nanny_1999.06.23_S06E22_The-Baby-Shower_BWDIF-bob_MPEG2",
+              "url": "https://archive.org/download/the-nanny-complete-series_20260128/The-Nanny_1999.06.23_S06E22_The-Baby-Shower_BWDIF-bob_MPEG2.mp4",
+              "seconds": 1324,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 132
+            }
+          ]
         }
       ]
     }

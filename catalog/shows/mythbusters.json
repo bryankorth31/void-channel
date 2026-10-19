@@ -3,7 +3,7 @@
   "slug": "mythbusters",
   "type": "Documentary & Geographic",
   "network": "Discovery",
-  "matchedAt": "2026-10-16T07:58:02.653Z",
+  "matchedAt": "2026-10-19T04:12:07.397Z",
   "addedAt": "2026-10-15T12:08:34.450Z",
   "tvmaze": {
     "id": 379,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 273,
     "live": 1,
-    "review": 80,
-    "missing": 192,
-    "pct": 30
+    "review": 124,
+    "missing": 148,
+    "pct": 46
   },
   "seasons": [
     {
@@ -54,6 +54,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 3328
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 6 in \"Mythbusters - Complete Season 1\"",
+              "item": "mythbusters-season-1",
+              "itemTitle": "Mythbusters - Complete Season 1",
+              "file": "Mythbusters - Breakstep Bridge - Row Skiing - Toothbrush Surprise.mp4",
+              "name": "Mythbusters - Breakstep Bridge - Row Skiing - Toothbrush Surprise",
+              "url": "https://archive.org/download/mythbusters-season-1/Mythbusters%20-%20Breakstep%20Bridge%20-%20Row%20Skiing%20-%20Toothbrush%20Surprise.mp4",
+              "seconds": 2979,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3383
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 13 in \"Mythbusters: Season 1\"",
+              "item": "mythbusters-s1",
+              "itemTitle": "Mythbusters: Season 1",
+              "file": "MYTHBUSTERS_DISC1.mp4",
+              "name": "MYTHBUSTERS_DISC1",
+              "url": "https://archive.org/download/mythbusters-s1/MYTHBUSTERS_DISC1.mp4",
+              "seconds": 3032,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 301
             }
           ]
         },
@@ -61,17 +87,69 @@
           "number": 2,
           "name": "Stuck on You, Biscuit Bullet, Falling Lawyer (Pilot 2)",
           "airdate": "2003-01-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 6 in \"Mythbusters - Complete Season 1\"",
+            "item": "mythbusters-season-1",
+            "itemTitle": "Mythbusters - Complete Season 1",
+            "file": "Mythbusters - Buried Alive - Bridge Jump - Cola.mp4",
+            "name": "Mythbusters - Buried Alive - Bridge Jump - Cola",
+            "url": "https://archive.org/download/mythbusters-season-1/Mythbusters%20-%20Buried%20Alive%20-%20Bridge%20Jump%20-%20Cola.mp4",
+            "seconds": 3013,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3308
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 13 in \"Mythbusters: Season 1\"",
+              "item": "mythbusters-s1",
+              "itemTitle": "Mythbusters: Season 1",
+              "file": "MYTHBUSTERS_DISC2.mp4",
+              "name": "MYTHBUSTERS_DISC2",
+              "url": "https://archive.org/download/mythbusters-s1/MYTHBUSTERS_DISC2.mp4",
+              "seconds": 3037,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 301
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Poppy-Seed Drug Test",
           "airdate": "2003-03-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 6 in \"Mythbusters - Complete Season 1\"",
+            "item": "mythbusters-season-1",
+            "itemTitle": "Mythbusters - Complete Season 1",
+            "file": "Mythbusters - Jet Assisted Take Off Chevy - Pop Rocks And Coke.mp4",
+            "name": "Mythbusters - Jet Assisted Take Off Chevy - Pop Rocks And Coke",
+            "url": "https://archive.org/download/mythbusters-season-1/Mythbusters%20-%20Jet%20Assisted%20Take%20Off%20Chevy%20-%20Pop%20Rocks%20And%20Coke.mp4",
+            "seconds": 3011,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3380
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 13 in \"Mythbusters: Season 1\"",
+              "item": "mythbusters-s1",
+              "itemTitle": "Mythbusters: Season 1",
+              "file": "MYTHBUSTERS_DISC3.mp4",
+              "name": "MYTHBUSTERS_DISC3",
+              "url": "https://archive.org/download/mythbusters-s1/MYTHBUSTERS_DISC3.mp4",
+              "seconds": 3014,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 300
+            }
+          ]
         }
       ]
     },
@@ -82,16 +160,54 @@
           "number": 1,
           "name": "Exploding Toilet, Is It Worth Running in the Rain?, Ice Bullet",
           "airdate": "2003-09-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Exploding Toilet, Is It Worth Running in the Rain?, Ice Bullet\" (0.67)",
+            "item": "mythbusters-season-1",
+            "itemTitle": "Mythbusters - Complete Season 1",
+            "file": "Mythbusters - Exploding Toilet - The Assassin's Ice Bullet.mp4",
+            "name": "Mythbusters - Exploding Toilet - The Assassin's Ice Bullet",
+            "url": "https://archive.org/download/mythbusters-season-1/Mythbusters%20-%20Exploding%20Toilet%20-%20The%20Assassin's%20Ice%20Bullet.mp4",
+            "seconds": 2970,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3246
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 11 in \"Mythbusters: Season 2\"",
+              "item": "mythbusters-s2",
+              "itemTitle": "Mythbusters: Season 2",
+              "file": "MYTHBUSTERS_S2_DISC1.mp4",
+              "name": "MYTHBUSTERS_S2_DISC1",
+              "url": "https://archive.org/download/mythbusters-s2/MYTHBUSTERS_S2_DISC1.mp4",
+              "seconds": 2671,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 265
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Cell Phone+Gas Station=Explosion??, Exploding Implants, Exploding CDs",
           "airdate": "2003-10-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 11 in \"Mythbusters: Season 2\"",
+            "item": "mythbusters-s2",
+            "itemTitle": "Mythbusters: Season 2",
+            "file": "MYTHBUSTERS_S2_DISC2.mp4",
+            "name": "MYTHBUSTERS_S2_DISC2",
+            "url": "https://archive.org/download/mythbusters-s2/MYTHBUSTERS_S2_DISC2.mp4",
+            "seconds": 2611,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 260
+          },
           "alternates": []
         },
         {
@@ -112,7 +228,21 @@
             "playable": true,
             "sizeMB": 3389
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 11 in \"Mythbusters: Season 2\"",
+              "item": "mythbusters-s2",
+              "itemTitle": "Mythbusters: Season 2",
+              "file": "MYTHBUSTERS_S2_DISC3.mp4",
+              "name": "MYTHBUSTERS_S2_DISC3",
+              "url": "https://archive.org/download/mythbusters-s2/MYTHBUSTERS_S2_DISC3.mp4",
+              "seconds": 2574,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 256
+            }
+          ]
         },
         {
           "number": 4,
@@ -132,14 +262,40 @@
             "playable": true,
             "sizeMB": 3257
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 11 in \"Mythbusters: Season 2\"",
+              "item": "mythbusters-s2",
+              "itemTitle": "Mythbusters: Season 2",
+              "file": "MYTHBUSTERS_S2_DISC4.mp4",
+              "name": "MYTHBUSTERS_S2_DISC4",
+              "url": "https://archive.org/download/mythbusters-s2/MYTHBUSTERS_S2_DISC4.mp4",
+              "seconds": 2560,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 254
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Buried Alive!!!, 101 Uses for Cola, Hammer Jump",
           "airdate": "2003-10-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 11 in \"Mythbusters: Season 2\"",
+            "item": "mythbusters-s2",
+            "itemTitle": "Mythbusters: Season 2",
+            "file": "MYTHBUSTERS_S2_DISC12.mp4",
+            "name": "MYTHBUSTERS_S2_DISC12",
+            "url": "https://archive.org/download/mythbusters-s2/MYTHBUSTERS_S2_DISC12.mp4",
+            "seconds": 2592,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 258
+          },
           "alternates": []
         },
         {
@@ -160,7 +316,21 @@
             "playable": true,
             "sizeMB": 3291
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 11 in \"Mythbusters: Season 2\"",
+              "item": "mythbusters-s2",
+              "itemTitle": "Mythbusters: Season 2",
+              "file": "MYTHBUSTERS_S2_DISC16.mp4",
+              "name": "MYTHBUSTERS_S2_DISC16",
+              "url": "https://archive.org/download/mythbusters-s2/MYTHBUSTERS_S2_DISC16.mp4",
+              "seconds": 2600,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 258
+            }
+          ]
         },
         {
           "number": 7,
@@ -180,14 +350,40 @@
             "playable": true,
             "sizeMB": 3357
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 11 in \"Mythbusters: Season 2\"",
+              "item": "mythbusters-s2",
+              "itemTitle": "Mythbusters: Season 2",
+              "file": "MYTHBUSTERS_S2_DISC24.mp4",
+              "name": "MYTHBUSTERS_S2_DISC24",
+              "url": "https://archive.org/download/mythbusters-s2/MYTHBUSTERS_S2_DISC24.mp4",
+              "seconds": 2663,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 265
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Escape from Alcatraz, Does a Duck's Quack Echo?, Mind Control Chips",
           "airdate": "2003-12-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 11 in \"Mythbusters: Season 2\"",
+            "item": "mythbusters-s2",
+            "itemTitle": "Mythbusters: Season 2",
+            "file": "MYTHBUSTERS_S2_DISC26.mp4",
+            "name": "MYTHBUSTERS_S2_DISC26",
+            "url": "https://archive.org/download/mythbusters-s2/MYTHBUSTERS_S2_DISC26.mp4",
+            "seconds": 2638,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 262
+          },
           "alternates": []
         },
         {
@@ -208,7 +404,21 @@
             "playable": true,
             "sizeMB": 3299
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 11 in \"Mythbusters: Season 2\"",
+              "item": "mythbusters-s2",
+              "itemTitle": "Mythbusters: Season 2",
+              "file": "MYTHBUSTERS_S2_DISC32.mp4",
+              "name": "MYTHBUSTERS_S2_DISC32",
+              "url": "https://archive.org/download/mythbusters-s2/MYTHBUSTERS_S2_DISC32.mp4",
+              "seconds": 2557,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 254
+            }
+          ]
         },
         {
           "number": 10,
@@ -228,14 +438,40 @@
             "playable": true,
             "sizeMB": 3368
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 11 in \"Mythbusters: Season 2\"",
+              "item": "mythbusters-s2",
+              "itemTitle": "Mythbusters: Season 2",
+              "file": "MYTHBUSTERS_S2_DISC36.mp4",
+              "name": "MYTHBUSTERS_S2_DISC36",
+              "url": "https://archive.org/download/mythbusters-s2/MYTHBUSTERS_S2_DISC36.mp4",
+              "seconds": 2612,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 259
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Break Step Bridge",
           "airdate": "2004-01-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 11 in \"Mythbusters: Season 2\"",
+            "item": "mythbusters-s2",
+            "itemTitle": "Mythbusters: Season 2",
+            "file": "MYTHBUSTERS_S2_DISC44.mp4",
+            "name": "MYTHBUSTERS_S2_DISC44",
+            "url": "https://archive.org/download/mythbusters-s2/MYTHBUSTERS_S2_DISC44.mp4",
+            "seconds": 2547,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 253
+          },
           "alternates": []
         },
         {
@@ -281,39 +517,157 @@
             "why": "title ~ \"Myths Revisited\" (0.95)",
             "item": "mythbusters-season-3",
             "itemTitle": "Mythbusters - Complete Season 3",
-            "file": "Mythbusters - Myths Revisited - Splitting Arrow - Confederate Rocket - Bullets Fired Underwater.mp4",
-            "name": "Mythbusters - Myths Revisited - Splitting Arrow - Confederate Rocket - Bullets Fired Underwater",
-            "url": "https://archive.org/download/mythbusters-season-3/Mythbusters%20-%20Myths%20Revisited%20-%20Splitting%20Arrow%20-%20Confederate%20Rocket%20-%20Bullets%20Fired%20Underwater.mp4",
+            "file": "Mythbusters - Myths Revisited - Salami Rocket - Rough Road - Pottery - Tailgate - Sword Vs Machine - Gun Barrel.mp4",
+            "name": "Mythbusters - Myths Revisited - Salami Rocket - Rough Road - Pottery - Tailgate - Sword Vs Machine - Gun Barrel",
+            "url": "https://archive.org/download/mythbusters-season-3/Mythbusters%20-%20Myths%20Revisited%20-%20Salami%20Rocket%20-%20Rough%20Road%20-%20Pottery%20-%20Tailgate%20-%20Sword%20Vs%20Machine%20-%20Gun%20Barrel.mp4",
             "seconds": 3008,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 3306
+            "sizeMB": 3310
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Myths Revisited\" (0.95)",
+              "item": "mythbusters-season-3",
+              "itemTitle": "Mythbusters - Complete Season 3",
+              "file": "Mythbusters - Myths Revisited - Splitting Arrow - Confederate Rocket - Bullets Fired Underwater.mp4",
+              "name": "Mythbusters - Myths Revisited - Splitting Arrow - Confederate Rocket - Bullets Fired Underwater",
+              "url": "https://archive.org/download/mythbusters-season-3/Mythbusters%20-%20Myths%20Revisited%20-%20Splitting%20Arrow%20-%20Confederate%20Rocket%20-%20Bullets%20Fired%20Underwater.mp4",
+              "seconds": 3008,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3306
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 8 in \"Mythbusters - Complete Season 3\"",
+              "item": "mythbusters-season-3",
+              "itemTitle": "Mythbusters - Complete Season 3",
+              "file": "Mythbusters - 22,000 Feet Fall - Lights On Or Off.mp4",
+              "name": "Mythbusters - 22,000 Feet Fall - Lights On Or Off",
+              "url": "https://archive.org/download/mythbusters-season-3/Mythbusters%20-%2022%2C000%20Feet%20Fall%20-%20Lights%20On%20Or%20Off.mp4",
+              "seconds": 3011,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3299
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 15 in \"Mythbusters: Season 3\"",
+              "item": "mythbusters-s3",
+              "itemTitle": "Mythbusters: Season 3",
+              "file": "MYTHBUSTERS_S3_DISC1.mp4",
+              "name": "MYTHBUSTERS_S3_DISC1",
+              "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC1.mp4",
+              "seconds": 3003,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 298
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Scuba Diver, Car Capers",
           "airdate": "2004-07-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 8 in \"Mythbusters - Complete Season 3\"",
+            "item": "mythbusters-season-3",
+            "itemTitle": "Mythbusters - Complete Season 3",
+            "file": "Mythbusters - Disposable Lighter Explosion - Gunslinger.mp4",
+            "name": "Mythbusters - Disposable Lighter Explosion - Gunslinger",
+            "url": "https://archive.org/download/mythbusters-season-3/Mythbusters%20-%20Disposable%20Lighter%20Explosion%20-%20Gunslinger.mp4",
+            "seconds": 3011,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3366
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 15 in \"Mythbusters: Season 3\"",
+              "item": "mythbusters-s3",
+              "itemTitle": "Mythbusters: Season 3",
+              "file": "MYTHBUSTERS_S3_DISC2.mp4",
+              "name": "MYTHBUSTERS_S3_DISC2",
+              "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC2.mp4",
+              "seconds": 3002,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 298
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Ancient Death Ray, Skunk Cleaning, What Is Bulletproof?",
           "airdate": "2004-09-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 8 in \"Mythbusters - Complete Season 3\"",
+            "item": "mythbusters-season-3",
+            "itemTitle": "Mythbusters - Complete Season 3",
+            "file": "Mythbusters - Exploding Trousers - The Great Gas Conspiracy.mp4",
+            "name": "Mythbusters - Exploding Trousers - The Great Gas Conspiracy",
+            "url": "https://archive.org/download/mythbusters-season-3/Mythbusters%20-%20Exploding%20Trousers%20-%20The%20Great%20Gas%20Conspiracy.mp4",
+            "seconds": 3008,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3415
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 15 in \"Mythbusters: Season 3\"",
+              "item": "mythbusters-s3",
+              "itemTitle": "Mythbusters: Season 3",
+              "file": "MYTHBUSTERS_S3_DISC3.mp4",
+              "name": "MYTHBUSTERS_S3_DISC3",
+              "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC3.mp4",
+              "seconds": 3062,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 303
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Elevator of Death, Levitation Machine",
           "airdate": "2004-10-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 8 in \"Mythbusters - Complete Season 3\"",
+            "item": "mythbusters-season-3",
+            "itemTitle": "Mythbusters - Complete Season 3",
+            "file": "Mythbusters - Frankin's Kite - Facts About Flatulence.mp4",
+            "name": "Mythbusters - Frankin's Kite - Facts About Flatulence",
+            "url": "https://archive.org/download/mythbusters-season-3/Mythbusters%20-%20Frankin's%20Kite%20-%20Facts%20About%20Flatulence.mp4",
+            "seconds": 3008,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3299
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 15 in \"Mythbusters: Season 3\"",
+              "item": "mythbusters-s3",
+              "itemTitle": "Mythbusters: Season 3",
+              "file": "MYTHBUSTERS_S3_DISC12.mp4",
+              "name": "MYTHBUSTERS_S3_DISC12",
+              "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC12.mp4",
+              "seconds": 3003,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 298
+            }
+          ]
         },
         {
           "number": 5,
@@ -333,86 +687,275 @@
             "playable": true,
             "sizeMB": 3260
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 8 in \"Mythbusters - Complete Season 3\"",
+              "item": "mythbusters-season-3",
+              "itemTitle": "Mythbusters - Complete Season 3",
+              "file": "Mythbusters - Helium Raft - Cell Phones And Planes.mp4",
+              "name": "Mythbusters - Helium Raft - Cell Phones And Planes",
+              "url": "https://archive.org/download/mythbusters-season-3/Mythbusters%20-%20Helium%20Raft%20-%20Cell%20Phones%20And%20Planes.mp4",
+              "seconds": 3008,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3410
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 15 in \"Mythbusters: Season 3\"",
+              "item": "mythbusters-s3",
+              "itemTitle": "Mythbusters: Season 3",
+              "file": "MYTHBUSTERS_S3_DISC13.mp4",
+              "name": "MYTHBUSTERS_S3_DISC13",
+              "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC13.mp4",
+              "seconds": 3003,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 298
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Quicksand",
           "airdate": "2004-10-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 8 in \"Mythbusters - Complete Season 3\"",
+            "item": "mythbusters-season-3",
+            "itemTitle": "Mythbusters - Complete Season 3",
+            "file": "Mythbusters - Mentos And Soda - Postage Stamp On A Helicopter.mp4",
+            "name": "Mythbusters - Mentos And Soda - Postage Stamp On A Helicopter",
+            "url": "https://archive.org/download/mythbusters-season-3/Mythbusters%20-%20Mentos%20And%20Soda%20-%20Postage%20Stamp%20On%20A%20Helicopter.mp4",
+            "seconds": 3008,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3406
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 15 in \"Mythbusters: Season 3\"",
+              "item": "mythbusters-s3",
+              "itemTitle": "Mythbusters: Season 3",
+              "file": "MYTHBUSTERS_S3_DISC14.mp4",
+              "name": "MYTHBUSTERS_S3_DISC14",
+              "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC14.mp4",
+              "seconds": 3063,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 305
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Exploding Jawbreaker",
           "airdate": "2004-10-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 8 in \"Mythbusters - Complete Season 3\"",
+            "item": "mythbusters-season-3",
+            "itemTitle": "Mythbusters - Complete Season 3",
+            "file": "Mythbusters - Sea Sickness - Tailgate Up Or Down - Finger In A Barrel.mp4",
+            "name": "Mythbusters - Sea Sickness - Tailgate Up Or Down - Finger In A Barrel",
+            "url": "https://archive.org/download/mythbusters-season-3/Mythbusters%20-%20Sea%20Sickness%20-%20Tailgate%20Up%20Or%20Down%20-%20Finger%20In%20A%20Barrel.mp4",
+            "seconds": 3009,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3323
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 15 in \"Mythbusters: Season 3\"",
+              "item": "mythbusters-s3",
+              "itemTitle": "Mythbusters: Season 3",
+              "file": "MYTHBUSTERS_S3_DISC15.mp4",
+              "name": "MYTHBUSTERS_S3_DISC15",
+              "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC15.mp4",
+              "seconds": 3003,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 299
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Pingpong Rescue",
           "airdate": "2004-11-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 8 in \"Mythbusters - Complete Season 3\"",
+            "item": "mythbusters-season-3",
+            "itemTitle": "Mythbusters - Complete Season 3",
+            "file": "Mythbusters - Straw Through A Palm Tree - Primary Perception.mp4",
+            "name": "Mythbusters - Straw Through A Palm Tree - Primary Perception",
+            "url": "https://archive.org/download/mythbusters-season-3/Mythbusters%20-%20Straw%20Through%20A%20Palm%20Tree%20-%20Primary%20Perception.mp4",
+            "seconds": 3008,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3285
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 15 in \"Mythbusters: Season 3\"",
+              "item": "mythbusters-s3",
+              "itemTitle": "Mythbusters: Season 3",
+              "file": "MYTHBUSTERS_S3_DISC22.mp4",
+              "name": "MYTHBUSTERS_S3_DISC22",
+              "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC22.mp4",
+              "seconds": 3001,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 297
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Boom-Lift Catapult",
           "airdate": "2004-11-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 9 of 15 in \"Mythbusters: Season 3\"",
+            "item": "mythbusters-s3",
+            "itemTitle": "Mythbusters: Season 3",
+            "file": "MYTHBUSTERS_S3_DISC27.mp4",
+            "name": "MYTHBUSTERS_S3_DISC27",
+            "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC27.mp4",
+            "seconds": 3062,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 304
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Exploding House",
           "airdate": "2004-11-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 10 of 15 in \"Mythbusters: Season 3\"",
+            "item": "mythbusters-s3",
+            "itemTitle": "Mythbusters: Season 3",
+            "file": "MYTHBUSTERS_S3_DISC28.mp4",
+            "name": "MYTHBUSTERS_S3_DISC28",
+            "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC28.mp4",
+            "seconds": 3001,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 297
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Ming Dynasty Astronaut",
           "airdate": "2004-11-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 15 in \"Mythbusters: Season 3\"",
+            "item": "mythbusters-s3",
+            "itemTitle": "Mythbusters: Season 3",
+            "file": "MYTHBUSTERS_S3_DISC29.mp4",
+            "name": "MYTHBUSTERS_S3_DISC29",
+            "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC29.mp4",
+            "seconds": 3002,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 298
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Brown Note",
           "airdate": "2004-12-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 12 of 15 in \"Mythbusters: Season 3\"",
+            "item": "mythbusters-s3",
+            "itemTitle": "Mythbusters: Season 3",
+            "file": "MYTHBUSTERS_S3_DISC32.mp4",
+            "name": "MYTHBUSTERS_S3_DISC32",
+            "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC32.mp4",
+            "seconds": 3001,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 296
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Salsa Escape",
           "airdate": "2004-12-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 13 of 15 in \"Mythbusters: Season 3\"",
+            "item": "mythbusters-s3",
+            "itemTitle": "Mythbusters: Season 3",
+            "file": "MYTHBUSTERS_S3_DISC37.mp4",
+            "name": "MYTHBUSTERS_S3_DISC37",
+            "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC37.mp4",
+            "seconds": 3002,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 296
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "Exploding Port-a-Potty",
           "airdate": "2004-12-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 14 of 15 in \"Mythbusters: Season 3\"",
+            "item": "mythbusters-s3",
+            "itemTitle": "Mythbusters: Season 3",
+            "file": "MYTHBUSTERS_S3_DISC38.mp4",
+            "name": "MYTHBUSTERS_S3_DISC38",
+            "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC38.mp4",
+            "seconds": 3062,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 303
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Is Yawning Contagious?",
           "airdate": "2004-12-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 15 of 15 in \"Mythbusters: Season 3\"",
+            "item": "mythbusters-s3",
+            "itemTitle": "Mythbusters: Season 3",
+            "file": "MYTHBUSTERS_S3_DISC39.mp4",
+            "name": "MYTHBUSTERS_S3_DISC39",
+            "url": "https://archive.org/download/mythbusters-s3/MYTHBUSTERS_S3_DISC39.mp4",
+            "seconds": 3002,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 296
+          },
           "alternates": []
         },
         {
@@ -726,7 +1269,21 @@
             "playable": true,
             "sizeMB": 3332
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Mind Control\" (0.95)",
+              "item": "mythbusters-season-1",
+              "itemTitle": "Mythbusters - Complete Season 1",
+              "file": "Mythbusters - Escape From Alcatraz - Duck's Quacks - Don't Echo - Mind Control Chips.mp4",
+              "name": "Mythbusters - Escape From Alcatraz - Duck's Quacks - Don't Echo - Mind Control Chips",
+              "url": "https://archive.org/download/mythbusters-season-1/Mythbusters%20-%20Escape%20From%20Alcatraz%20-%20Duck's%20Quacks%20-%20Don't%20Echo%20-%20Mind%20Control%20Chips.mp4",
+              "seconds": 2979,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3236
+            }
+          ]
         },
         {
           "number": 14,
@@ -740,8 +1297,20 @@
           "number": 15,
           "name": "Steam Cannon / Breakfast Cereal",
           "airdate": "2006-02-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Steam Cannon / Breakfast Cereal\" (0.71)",
+            "item": "mythbusters-season-3",
+            "itemTitle": "Mythbusters - Complete Season 3",
+            "file": "Mythbusters - Archimedes Steam Cannon - Cereal Or The Box - Teeth Challenge.mp4",
+            "name": "Mythbusters - Archimedes Steam Cannon - Cereal Or The Box - Teeth Challenge",
+            "url": "https://archive.org/download/mythbusters-season-3/Mythbusters%20-%20Archimedes%20Steam%20Cannon%20-%20Cereal%20Or%20The%20Box%20-%20Teeth%20Challenge.mp4",
+            "seconds": 3008,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3355
+          },
           "alternates": []
         },
         {
@@ -832,8 +1401,20 @@
           "number": 22,
           "name": "Diet Coke and Mentos",
           "airdate": "2006-03-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Diet Coke and Mentos\" (0.63)",
+            "item": "mythbusters-season-4",
+            "itemTitle": "Mythbusters - Complete Season 4",
+            "file": "Mythbusters - Hollywood Hand Grenade Heroes - Self-Hypnosis - Coke and Mentos Exploding Stomach.mp4",
+            "name": "Mythbusters - Hollywood Hand Grenade Heroes - Self-Hypnosis - Coke and Mentos Exploding Stomach",
+            "url": "https://archive.org/download/mythbusters-season-4/Mythbusters%20-%20Hollywood%20Hand%20Grenade%20Heroes%20-%20Self-Hypnosis%20-%20Coke%20and%20Mentos%20Exploding%20Stomach.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3400
+          },
           "alternates": []
         },
         {
@@ -1444,104 +2025,260 @@
           "number": 1,
           "name": "Alaska Special",
           "airdate": "2008-04-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - 360 Ricochet - Conifer Catapult.mp4",
+            "name": "Mythbusters - 360 Ricochet - Conifer Catapult",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20360%20Ricochet%20-%20Conifer%20Catapult.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3304
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "NASA Moon Landing",
           "airdate": "2008-08-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - Archimedes Solar Ray 3.0 - Car Flip.ia.mp4",
+            "name": "Mythbusters - Archimedes Solar Ray 3",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20Archimedes%20Solar%20Ray%203.0%20-%20Car%20Flip.ia.mp4",
+            "seconds": 2951,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 296
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Exploding Steak",
           "airdate": "2008-08-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - Archimedes Solar Ray 3.0 - Car Flip.mp4",
+            "name": "Mythbusters - Archimedes Solar Ray 3.0 - Car Flip",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20Archimedes%20Solar%20Ray%203.0%20-%20Car%20Flip.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3330
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Ninjas 2",
           "airdate": "2008-08-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - Beat the Bloodhound Part 2 - Beat the Sniffer Dog.mp4",
+            "name": "Mythbusters - Beat the Bloodhound Part 2 - Beat the Sniffer Dog",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20Beat%20the%20Bloodhound%20Part%202%20-%20Beat%20the%20Sniffer%20Dog.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3467
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Blind Driving",
           "airdate": "2008-08-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - Cup vs. Car - Fall Guys.ia.mp4",
+            "name": "Mythbusters - Cup vs",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20Cup%20vs.%20Car%20-%20Fall%20Guys.ia.mp4",
+            "seconds": 2951,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 295
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Viral Hour",
           "airdate": "2008-09-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - Fever Pitch - Tornado Decapitation.mp4",
+            "name": "Mythbusters - Fever Pitch - Tornado Decapitation",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20Fever%20Pitch%20-%20Tornado%20Decapitation.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3006
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Phone Book Friction",
           "airdate": "2008-09-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - Laptop Lift - Fly vs. Water.ia.mp4",
+            "name": "Mythbusters - Laptop Lift - Fly vs",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20Laptop%20Lift%20-%20Fly%20vs.%20Water.ia.mp4",
+            "seconds": 2951,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 295
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Water Stun Gun",
           "airdate": "2008-09-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - Laptop Lift - Fly vs. Water.mp4",
+            "name": "Mythbusters - Laptop Lift - Fly vs. Water",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20Laptop%20Lift%20-%20Fly%20vs.%20Water.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3204
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "Alcohol Myths",
           "airdate": "2008-09-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 9 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - Mythbusters Request Fest.mp4",
+            "name": "Mythbusters - Mythbusters Request Fest",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20Mythbusters%20Request%20Fest.mp4",
+            "seconds": 2912,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3136
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Motorcycle Flip",
           "airdate": "2008-10-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 10 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - Rat Pee Soda - Car Skip.mp4",
+            "name": "Mythbusters - Rat Pee Soda - Car Skip",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20Rat%20Pee%20Soda%20-%20Car%20Skip.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3279
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Coffin Punch",
           "airdate": "2008-10-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - Tornado Special.mp4",
+            "name": "Mythbusters - Tornado Special",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20Tornado%20Special.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3236
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "End with a Bang",
           "airdate": "2008-10-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 12 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - Turn Turtle Car - Gas Room Boom.mp4",
+            "name": "Mythbusters - Turn Turtle Car - Gas Room Boom",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20Turn%20Turtle%20Car%20-%20Gas%20Room%20Boom.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3176
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Viewer Special Threequel",
           "airdate": "2008-10-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 13 of 13 in \"Mythbusters - Complete Season 6\"",
+            "item": "mythbusters-season-6",
+            "itemTitle": "Mythbusters - Complete Season 6",
+            "file": "Mythbusters - Valkyrie Boom - Slap Some Sense.mp4",
+            "name": "Mythbusters - Valkyrie Boom - Slap Some Sense",
+            "url": "https://archive.org/download/mythbusters-season-6/Mythbusters%20-%20Valkyrie%20Boom%20-%20Slap%20Some%20Sense.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3155
+          },
           "alternates": []
         }
       ]
@@ -1553,48 +2290,120 @@
           "number": 1,
           "name": "Demolition Derby Special",
           "airdate": "2009-04-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 6 in \"Mythbusters - Complete Season 7 (Collect\"",
+            "item": "mythbusters-season-7",
+            "itemTitle": "Mythbusters - Complete Season 7 (Collection 1 & 2)",
+            "file": "Mythbusters - Bubble Boy - Bond Car Flip.mp4",
+            "name": "Mythbusters - Bubble Boy - Bond Car Flip",
+            "url": "https://archive.org/download/mythbusters-season-7/Mythbusters%20-%20Bubble%20Boy%20-%20Bond%20Car%20Flip.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3273
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Alaska Special 2",
           "airdate": "2009-04-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 6 in \"Mythbusters - Complete Season 7 (Collect\"",
+            "item": "mythbusters-season-7",
+            "itemTitle": "Mythbusters - Complete Season 7 (Collection 1 & 2)",
+            "file": "Mythbusters - Driving Dangerously - Super Adhesive Heroics.mp4",
+            "name": "Mythbusters - Driving Dangerously - Super Adhesive Heroics",
+            "url": "https://archive.org/download/mythbusters-season-7/Mythbusters%20-%20Driving%20Dangerously%20-%20Super%20Adhesive%20Heroics.mp4",
+            "seconds": 2952,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3319
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Banana Slip, Double Dip",
           "airdate": "2009-04-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 6 in \"Mythbusters - Complete Season 7 (Collect\"",
+            "item": "mythbusters-season-7",
+            "itemTitle": "Mythbusters - Complete Season 7 (Collection 1 & 2)",
+            "file": "Mythbusters - Mattress Mayhem.mp4",
+            "name": "Mythbusters - Mattress Mayhem",
+            "url": "https://archive.org/download/mythbusters-season-7/Mythbusters%20-%20Mattress%20Mayhem.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3350
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "YouTube Special",
           "airdate": "2009-04-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 6 in \"Mythbusters - Complete Season 7 (Collect\"",
+            "item": "mythbusters-season-7",
+            "itemTitle": "Mythbusters - Complete Season 7 (Collection 1 & 2)",
+            "file": "Mythbusters - Pirate Swing - Ballistic Barrel.mp4",
+            "name": "Mythbusters - Pirate Swing - Ballistic Barrel",
+            "url": "https://archive.org/download/mythbusters-season-7/Mythbusters%20-%20Pirate%20Swing%20-%20Ballistic%20Barrel.mp4",
+            "seconds": 2952,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3314
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Swimming in Syrup",
           "airdate": "2009-05-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 6 in \"Mythbusters - Complete Season 7 (Collect\"",
+            "item": "mythbusters-season-7",
+            "itemTitle": "Mythbusters - Complete Season 7 (Collection 1 & 2)",
+            "file": "Mythbusters - Walking Straight - Binary Fender Bender.mp4",
+            "name": "Mythbusters - Walking Straight - Binary Fender Bender",
+            "url": "https://archive.org/download/mythbusters-season-7/Mythbusters%20-%20Walking%20Straight%20-%20Binary%20Fender%20Bender.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3165
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Exploding Bumper",
           "airdate": "2009-05-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 6 in \"Mythbusters - Complete Season 7 (Collect\"",
+            "item": "mythbusters-season-7",
+            "itemTitle": "Mythbusters - Complete Season 7 (Collection 1 & 2)",
+            "file": "Mythbusters - Wrecking Ball Baloney - Bird Balance.mp4",
+            "name": "Mythbusters - Wrecking Ball Baloney - Bird Balance",
+            "url": "https://archive.org/download/mythbusters-season-7/Mythbusters%20-%20Wrecking%20Ball%20Baloney%20-%20Bird%20Balance.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3115
+          },
           "alternates": []
         },
         {
@@ -1891,6 +2700,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 3204
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Spy Car Escape\" (0.63)",
+              "item": "mythbusters-season-7",
+              "itemTitle": "Mythbusters - Complete Season 7 (Collection 1 & 2)",
+              "file": "Mythbusters - Spy Car The Revenge - Spinning Ice Bullet.mp4",
+              "name": "Mythbusters - Spy Car The Revenge - Spinning Ice Bullet",
+              "url": "https://archive.org/download/mythbusters-season-7/Mythbusters%20-%20Spy%20Car%20The%20Revenge%20-%20Spinning%20Ice%20Bullet.mp4",
+              "seconds": 2951,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2997
             }
           ]
         },
@@ -2290,8 +3112,20 @@
           "number": 6,
           "name": "Blow Your Own Sail",
           "airdate": "2011-05-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Blow Your Own Sail\" (0.95)",
+            "item": "mythbusters-season-7",
+            "itemTitle": "Mythbusters - Complete Season 7 (Collection 1 & 2)",
+            "file": "Mythbusters - Sounds Bogus - Blow Your Own Sail.mp4",
+            "name": "Mythbusters - Sounds Bogus - Blow Your Own Sail",
+            "url": "https://archive.org/download/mythbusters-season-7/Mythbusters%20-%20Sounds%20Bogus%20-%20Blow%20Your%20Own%20Sail.mp4",
+            "seconds": 2912,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3085
+          },
           "alternates": []
         },
         {
@@ -2306,8 +3140,20 @@
           "number": 8,
           "name": "Dodge a Bullet",
           "airdate": "2011-06-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Dodge a Bullet\" (0.95)",
+            "item": "mythbusters-season-7",
+            "itemTitle": "Mythbusters - Complete Season 7 (Collection 1 & 2)",
+            "file": "Mythbusters - Dodge A Bullet - Is Water Really as hard as Pavement.mp4",
+            "name": "Mythbusters - Dodge A Bullet - Is Water Really as hard as Pavement",
+            "url": "https://archive.org/download/mythbusters-season-7/Mythbusters%20-%20Dodge%20A%20Bullet%20-%20Is%20Water%20Really%20as%20hard%20as%20Pavement.mp4",
+            "seconds": 2951,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2887
+          },
           "alternates": []
         },
         {
@@ -2733,8 +3579,20 @@
           "number": 3,
           "name": "Hail Hijinx",
           "airdate": "2012-10-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Hail Hijinx\" (0.95)",
+            "item": "mythbusters-season-7",
+            "itemTitle": "Mythbusters - Complete Season 7 (Collection 1 & 2)",
+            "file": "Mythbusters - Cliffhanger Bridge Drop - Hail Hijinx.mp4",
+            "name": "Mythbusters - Cliffhanger Bridge Drop - Hail Hijinx",
+            "url": "https://archive.org/download/mythbusters-season-7/Mythbusters%20-%20Cliffhanger%20Bridge%20Drop%20-%20Hail%20Hijinx.mp4",
+            "seconds": 2952,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3404
+          },
           "alternates": []
         },
         {

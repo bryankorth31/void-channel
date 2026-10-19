@@ -3,7 +3,7 @@
   "slug": "the-jokers-wild",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:58:41.200Z",
+  "matchedAt": "2026-10-19T04:12:37.459Z",
   "selfListed": true,
   "tvmaze": {
     "id": null,
@@ -13,9 +13,9 @@
     "network": "CBS"
   },
   "coverage": {
-    "total": 35,
-    "live": 0,
-    "review": 35,
+    "total": 34,
+    "live": 1,
+    "review": 33,
     "missing": 0,
     "pct": 100
   },
@@ -26,7 +26,7 @@
         {
           "number": 1,
           "name": "Episode 1",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
             "item": "jokers-wild-s-01-e-01",
             "itemTitle": "Jokers Wild (1969-1974)",
@@ -41,8 +41,8 @@
               "season": 1,
               "episode": 1
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 0.9,
+            "why": "S/E in filename | kept LIVE inside the self-list"
           },
           "alternates": []
         },
@@ -478,26 +478,6 @@
               "season": 1,
               "episode": 0
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "ultra cinema",
-          "state": "REVIEW",
-          "file": {
-            "item": "jokers-wild.-ultra-cinema.",
-            "itemTitle": "Jokers Wild. ULTRA-CINEMA.",
-            "file": "Jokers Wild. Ultra-Cinema..mp4",
-            "name": "Jokers Wild. Ultra-Cinema.",
-            "url": "https://archive.org/download/jokers-wild.-ultra-cinema./Jokers%20Wild.%20Ultra-Cinema..mp4",
-            "seconds": 784,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 733,
-            "ep": null,
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
           },

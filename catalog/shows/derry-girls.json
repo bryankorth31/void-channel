@@ -3,7 +3,7 @@
   "slug": "derry-girls",
   "type": "British and Beyond",
   "network": "Channel 4",
-  "matchedAt": "2026-10-16T07:57:04.691Z",
+  "matchedAt": "2026-10-19T04:11:11.691Z",
   "addedAt": "2026-10-16T07:57:04.691Z",
   "tvmaze": {
     "id": 33320,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 19,
     "live": 0,
-    "review": 0,
-    "missing": 19,
-    "pct": 0
+    "review": 17,
+    "missing": 2,
+    "pct": 89
   },
   "seasons": [
     {
@@ -27,48 +27,120 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2018-01-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 6 in \"Derry Girls - Season 1\"",
+            "item": "1-1._20231214",
+            "itemTitle": "Derry Girls - Season 1",
+            "file": "1-1..mp4",
+            "name": "1-1.",
+            "url": "https://archive.org/download/1-1._20231214/1-1..mp4",
+            "seconds": 1388,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2018-01-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 6 in \"Derry Girls - Season 1\"",
+            "item": "1-1._20231214",
+            "itemTitle": "Derry Girls - Season 1",
+            "file": "1-2..mp4",
+            "name": "1-2.",
+            "url": "https://archive.org/download/1-1._20231214/1-2..mp4",
+            "seconds": 1382,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Episode 3",
           "airdate": "2018-01-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 6 in \"Derry Girls - Season 1\"",
+            "item": "1-1._20231214",
+            "itemTitle": "Derry Girls - Season 1",
+            "file": "1-3..mp4",
+            "name": "1-3.",
+            "url": "https://archive.org/download/1-1._20231214/1-3..mp4",
+            "seconds": 1458,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 143
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Episode 4",
           "airdate": "2018-01-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 6 in \"Derry Girls - Season 1\"",
+            "item": "1-1._20231214",
+            "itemTitle": "Derry Girls - Season 1",
+            "file": "1-4..mp4",
+            "name": "1-4.",
+            "url": "https://archive.org/download/1-1._20231214/1-4..mp4",
+            "seconds": 1377,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "2018-02-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 6 in \"Derry Girls - Season 1\"",
+            "item": "1-1._20231214",
+            "itemTitle": "Derry Girls - Season 1",
+            "file": "1-5..mp4",
+            "name": "1-5.",
+            "url": "https://archive.org/download/1-1._20231214/1-5..mp4",
+            "seconds": 1422,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Episode 6",
           "airdate": "2018-02-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 6 in \"Derry Girls - Season 1\"",
+            "item": "1-1._20231214",
+            "itemTitle": "Derry Girls - Season 1",
+            "file": "1-6..mp4",
+            "name": "1-6.",
+            "url": "https://archive.org/download/1-1._20231214/1-6..mp4",
+            "seconds": 1478,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 144
+          },
           "alternates": []
         }
       ]
@@ -80,16 +152,40 @@
           "number": 1,
           "name": "Across the Barricade",
           "airdate": "2019-03-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Across the Barricade\" (0.95)",
+            "item": "2-5.-the-prom",
+            "itemTitle": "Derry Girls Season 2",
+            "file": "2-1. Across the barricade.mp4",
+            "name": "2-1. Across the barricade",
+            "url": "https://archive.org/download/2-5.-the-prom/2-1.%20Across%20the%20barricade.mp4",
+            "seconds": 1462,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Ms. De Brún and the Child of Prague",
           "airdate": "2019-03-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Ms. De Brún and the Child of Prague\" (0.91)",
+            "item": "2-5.-the-prom",
+            "itemTitle": "Derry Girls Season 2",
+            "file": "2-2. Ms De Brun and the child of Prague.mp4",
+            "name": "2-2. Ms De Brun and the child of Prague",
+            "url": "https://archive.org/download/2-5.-the-prom/2-2.%20Ms%20De%20Brun%20and%20the%20child%20of%20Prague.mp4",
+            "seconds": 1350,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
@@ -104,24 +200,60 @@
           "number": 4,
           "name": "The Curse",
           "airdate": "2019-03-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Curse\" (0.95)",
+            "item": "2-5.-the-prom",
+            "itemTitle": "Derry Girls Season 2",
+            "file": "2-4. The curse.mp4",
+            "name": "2-4. The curse",
+            "url": "https://archive.org/download/2-5.-the-prom/2-4.%20The%20curse.mp4",
+            "seconds": 1364,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 132
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "The Prom",
           "airdate": "2019-04-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Prom\" (0.95)",
+            "item": "2-5.-the-prom",
+            "itemTitle": "Derry Girls Season 2",
+            "file": "2-5. The prom.mp4",
+            "name": "2-5. The prom",
+            "url": "https://archive.org/download/2-5.-the-prom/2-5.%20The%20prom.mp4",
+            "seconds": 1457,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "The President",
           "airdate": "2019-04-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The President\" (0.95)",
+            "item": "2-5.-the-prom",
+            "itemTitle": "Derry Girls Season 2",
+            "file": "2-6. The president.mp4",
+            "name": "2-6. The president",
+            "url": "https://archive.org/download/2-5.-the-prom/2-6.%20The%20president.mp4",
+            "seconds": 1444,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138
+          },
           "alternates": []
         }
       ]
@@ -133,48 +265,120 @@
           "number": 1,
           "name": "The Night Before",
           "airdate": "2022-04-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Night Before\" (0.95)",
+            "item": "3-7.-the-agreement",
+            "itemTitle": "Derry Girls - Season 3",
+            "file": "3-1. The night before.mp4",
+            "name": "3-1. The night before",
+            "url": "https://archive.org/download/3-7.-the-agreement/3-1.%20The%20night%20before.mp4",
+            "seconds": 1516,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 146
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "The Affair",
           "airdate": "2022-04-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Affair\" (0.95)",
+            "item": "3-7.-the-agreement",
+            "itemTitle": "Derry Girls - Season 3",
+            "file": "3-2. The affair.mp4",
+            "name": "3-2. The affair",
+            "url": "https://archive.org/download/3-7.-the-agreement/3-2.%20The%20affair.mp4",
+            "seconds": 1533,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Stranger on a Train",
           "airdate": "2022-04-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Stranger on a Train\" (0.95)",
+            "item": "3-7.-the-agreement",
+            "itemTitle": "Derry Girls - Season 3",
+            "file": "3-3. Stranger on a train.mp4",
+            "name": "3-3. Stranger on a train",
+            "url": "https://archive.org/download/3-7.-the-agreement/3-3.%20Stranger%20on%20a%20train.mp4",
+            "seconds": 1520,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "The Haunting",
           "airdate": "2022-05-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Haunting\" (0.95)",
+            "item": "3-7.-the-agreement",
+            "itemTitle": "Derry Girls - Season 3",
+            "file": "3-4. The haunting.mp4",
+            "name": "3-4. The haunting",
+            "url": "https://archive.org/download/3-7.-the-agreement/3-4.%20The%20haunting.mp4",
+            "seconds": 1588,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 154
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "The Reunion",
           "airdate": "2022-05-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Reunion\" (0.95)",
+            "item": "3-7.-the-agreement",
+            "itemTitle": "Derry Girls - Season 3",
+            "file": "3-5. The reunion.mp4",
+            "name": "3-5. The reunion",
+            "url": "https://archive.org/download/3-7.-the-agreement/3-5.%20The%20reunion.mp4",
+            "seconds": 1597,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 155
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Halloween",
           "airdate": "2022-05-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Halloween\" (0.95)",
+            "item": "3-7.-the-agreement",
+            "itemTitle": "Derry Girls - Season 3",
+            "file": "3-6. Halloween.mp4",
+            "name": "3-6. Halloween",
+            "url": "https://archive.org/download/3-7.-the-agreement/3-6.%20Halloween.mp4",
+            "seconds": 1559,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 151
+          },
           "alternates": []
         },
         {

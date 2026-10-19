@@ -3,7 +3,7 @@
   "slug": "the-midnight-special",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:45.553Z",
+  "matchedAt": "2026-10-19T04:12:40.991Z",
   "addedAt": "2026-10-15T12:09:12.093Z",
   "tvmaze": {
     "id": 60511,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 350,
     "live": 0,
-    "review": 1,
-    "missing": 349,
-    "pct": 0
+    "review": 3,
+    "missing": 347,
+    "pct": 1
   },
   "seasons": [
     {
@@ -448,8 +448,20 @@
           "number": 20,
           "name": "Host: Steve Miller",
           "airdate": "1974-01-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "ep-53-february-1-1974-helen-reddy-franklin-ajaye-the-impressions-curtis-mayfield",
+            "itemTitle": "The Midnight Special (Febuary 1, 1974) Helen Reddy, Franklin Ajaye, The Impressions, Curtis Mayfield, Kenny Rankin, Rare Earth, Ike And Tina Turner",
+            "file": "Ep 53 - February 1, 1974 - Helen Reddy, Franklin Ajaye, The Impressions, Curtis Mayfield, Kenny Rankin, Rare Earth, Ike and Tina Turner.mp4",
+            "name": "Ep 53 - February 1, 1974 - Helen Reddy, Franklin Ajaye, The Impressions, Curtis Mayfield, Kenny Rankin, Rare Earth, Ike and Tina Turner",
+            "url": "https://archive.org/download/ep-53-february-1-1974-helen-reddy-franklin-ajaye-the-impressions-curtis-mayfield/Ep%2053%20-%20February%201%2C%201974%20-%20Helen%20Reddy%2C%20Franklin%20Ajaye%2C%20The%20Impressions%2C%20Curtis%20Mayfield%2C%20Kenny%20Rankin%2C%20Rare%20Earth%2C%20Ike%20and%20Tina%20Turner.mp4",
+            "seconds": 4078,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1618
+          },
           "alternates": []
         },
         {
@@ -464,8 +476,20 @@
           "number": 22,
           "name": "Hosts: Ike and Tina Turner",
           "airdate": "1974-02-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Hosts: Ike and Tina Turner\" (0.71)",
+            "item": "ep-53-february-1-1974-helen-reddy-franklin-ajaye-the-impressions-curtis-mayfield",
+            "itemTitle": "The Midnight Special (Febuary 1, 1974) Helen Reddy, Franklin Ajaye, The Impressions, Curtis Mayfield, Kenny Rankin, Rare Earth, Ike And Tina Turner",
+            "file": "Ep 53 - February 1, 1974 - Helen Reddy, Franklin Ajaye, The Impressions, Curtis Mayfield, Kenny Rankin, Rare Earth, Ike and Tina Turner.mp4",
+            "name": "Ep 53 - February 1, 1974 - Helen Reddy, Franklin Ajaye, The Impressions, Curtis Mayfield, Kenny Rankin, Rare Earth, Ike and Tina Turner",
+            "url": "https://archive.org/download/ep-53-february-1-1974-helen-reddy-franklin-ajaye-the-impressions-curtis-mayfield/Ep%2053%20-%20February%201%2C%201974%20-%20Helen%20Reddy%2C%20Franklin%20Ajaye%2C%20The%20Impressions%2C%20Curtis%20Mayfield%2C%20Kenny%20Rankin%2C%20Rare%20Earth%2C%20Ike%20and%20Tina%20Turner.mp4",
+            "seconds": 4078,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1618
+          },
           "alternates": []
         },
         {

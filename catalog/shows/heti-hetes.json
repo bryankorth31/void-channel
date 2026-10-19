@@ -3,7 +3,7 @@
   "slug": "heti-hetes",
   "type": "Reality & Talk",
   "network": "HU",
-  "matchedAt": "2026-10-16T07:57:58.661Z",
+  "matchedAt": "2026-10-19T04:12:04.050Z",
   "addedAt": "2026-10-15T12:53:47.286Z",
   "tvmaze": {
     "id": 23169,
@@ -14,9 +14,9 @@
   },
   "coverage": {
     "total": 673,
-    "live": 5,
+    "live": 6,
     "review": 0,
-    "missing": 668,
+    "missing": 667,
     "pct": 1
   },
   "seasons": [
@@ -83,8 +83,20 @@
           "number": 5,
           "name": "Episode 5",
           "airdate": "1999-10-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "indavideo-HETI_HETES_S01E05",
+            "itemTitle": "Heti Hetes, 1999. október 8.",
+            "file": "Heti_Hetes_1999-10-08.mp4",
+            "name": "Heti_Hetes_1999-10-08",
+            "url": "https://archive.org/download/indavideo-HETI_HETES_S01E05/Heti_Hetes_1999-10-08.mp4",
+            "seconds": 2946,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 330
+          },
           "alternates": []
         },
         {

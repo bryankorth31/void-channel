@@ -3,7 +3,7 @@
   "slug": "bts-in-the-soop",
   "type": "Reality & Talk",
   "network": "KR",
-  "matchedAt": "2026-10-16T07:57:47.045Z",
+  "matchedAt": "2026-10-19T04:11:53.685Z",
   "addedAt": "2026-10-15T12:08:25.026Z",
   "tvmaze": {
     "id": 49801,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 13,
-    "live": 0,
-    "review": 8,
+    "live": 1,
+    "review": 7,
     "missing": 5,
     "pct": 62
   },
@@ -289,21 +289,35 @@
           "number": 1,
           "name": "Again In the Soop",
           "airdate": "2021-10-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "title ~ \"Again In the Soop\" (0.70)",
-            "item": "ep-1.-again-in-the-soop",
-            "itemTitle": "bts in the soop 2 ep.1 arabic sub",
-            "file": "EP1. Again IN THE SOOP.mp4",
-            "name": "EP1. Again IN THE SOOP",
-            "url": "https://archive.org/download/ep-1.-again-in-the-soop/EP1.%20Again%20IN%20THE%20SOOP.mp4",
-            "seconds": 4435,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bts-in-the-soop-2-episode-1-eng-sub-snehaot-7448-360-p",
+            "itemTitle": "BTS IN THE SOOP 2",
+            "file": "IN THE SOOP BTS_ bts in the soop season 2 full episode 1[eng sub](360P).mp4",
+            "name": "IN THE SOOP BTS_ bts in the soop season 2 full episode 1[eng sub](360P)",
+            "url": "https://archive.org/download/bts-in-the-soop-2-episode-1-eng-sub-snehaot-7448-360-p/IN%20THE%20SOOP%20BTS_%20bts%20in%20the%20soop%20season%202%20full%20episode%201%5Beng%20sub%5D(360P).mp4",
+            "seconds": 3937,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 2337
+            "sizeMB": 200
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Again In the Soop\" (0.70)",
+              "item": "ep-1.-again-in-the-soop",
+              "itemTitle": "bts in the soop 2 ep.1 arabic sub",
+              "file": "EP1. Again IN THE SOOP.mp4",
+              "name": "EP1. Again IN THE SOOP",
+              "url": "https://archive.org/download/ep-1.-again-in-the-soop/EP1.%20Again%20IN%20THE%20SOOP.mp4",
+              "seconds": 4435,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2337
+            }
+          ]
         },
         {
           "number": 2,

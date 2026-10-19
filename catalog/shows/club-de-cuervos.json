@@ -3,7 +3,7 @@
   "slug": "club-de-cuervos",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:01.795Z",
+  "matchedAt": "2026-10-19T04:11:07.367Z",
   "addedAt": "2026-10-16T07:16:39.425Z",
   "tvmaze": {
     "id": 2682,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 45,
-    "live": 34,
+    "live": 43,
     "review": 1,
-    "missing": 10,
-    "pct": 78
+    "missing": 1,
+    "pct": 98
   },
   "seasons": [
     {
@@ -41,7 +41,21 @@
             "playable": true,
             "sizeMB": 386
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "club-de-cuervos-S01",
+              "itemTitle": "Club De Cuervos",
+              "file": "S01/Club de Cuervos - S01E01.mp4",
+              "name": "S01/Club de Cuervos - S01E01",
+              "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E01.mp4",
+              "seconds": 2633,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 257
+            }
+          ]
         },
         {
           "number": 2,
@@ -74,6 +88,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 352
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "club-de-cuervos-S01",
+              "itemTitle": "Club De Cuervos",
+              "file": "S01/Club de Cuervos - S01E02.mp4",
+              "name": "S01/Club de Cuervos - S01E02",
+              "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E02.mp4",
+              "seconds": 2625,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 254
             }
           ]
         },
@@ -95,22 +122,60 @@
             "playable": true,
             "sizeMB": 333
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "club-de-cuervos-S01",
+              "itemTitle": "Club De Cuervos",
+              "file": "S01/Club de Cuervos - S01E03.mp4",
+              "name": "S01/Club de Cuervos - S01E03",
+              "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E03.mp4",
+              "seconds": 2443,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 237
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Bofetada",
           "airdate": "2015-08-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "club-de-cuervos-S01",
+            "itemTitle": "Club De Cuervos",
+            "file": "S01/Club de Cuervos - S01E04.mp4",
+            "name": "S01/Club de Cuervos - S01E04",
+            "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E04.mp4",
+            "seconds": 2323,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 224
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Barreras para salir",
           "airdate": "2015-08-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "club-de-cuervos-S01",
+            "itemTitle": "Club De Cuervos",
+            "file": "S01/Club de Cuervos - S01E05.mp4",
+            "name": "S01/Club de Cuervos - S01E05",
+            "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E05.mp4",
+            "seconds": 2501,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 241
+          },
           "alternates": []
         },
         {
@@ -144,6 +209,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 351
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "club-de-cuervos-S01",
+              "itemTitle": "Club De Cuervos",
+              "file": "S01/Club de Cuervos - S01E06.mp4",
+              "name": "S01/Club de Cuervos - S01E06",
+              "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E06.mp4",
+              "seconds": 2485,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 239
             }
           ]
         },
@@ -151,56 +229,140 @@
           "number": 7,
           "name": "Nuestro Guggenheim",
           "airdate": "2015-08-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "club-de-cuervos-S01",
+            "itemTitle": "Club De Cuervos",
+            "file": "S01/Club de Cuervos - S01E07.mp4",
+            "name": "S01/Club de Cuervos - S01E07",
+            "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E07.mp4",
+            "seconds": 2717,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 264
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Aitor",
           "airdate": "2015-08-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "club-de-cuervos-S01",
+            "itemTitle": "Club De Cuervos",
+            "file": "S01/Club de Cuervos - S01E08.mp4",
+            "name": "S01/Club de Cuervos - S01E08",
+            "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E08.mp4",
+            "seconds": 2195,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 210
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "Fiebre española",
           "airdate": "2015-08-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "club-de-cuervos-S01",
+            "itemTitle": "Club De Cuervos",
+            "file": "S01/Club de Cuervos - S01E09.mp4",
+            "name": "S01/Club de Cuervos - S01E09",
+            "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E09.mp4",
+            "seconds": 2273,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 220
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Nuevo padrote en el pueblo",
           "airdate": "2015-08-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "club-de-cuervos-S01",
+            "itemTitle": "Club De Cuervos",
+            "file": "S01/Club de Cuervos - S01E10.mp4",
+            "name": "S01/Club de Cuervos - S01E10",
+            "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E10.mp4",
+            "seconds": 2379,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 229
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Empuja",
           "airdate": "2015-08-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "club-de-cuervos-S01",
+            "itemTitle": "Club De Cuervos",
+            "file": "S01/Club de Cuervos - S01E11.mp4",
+            "name": "S01/Club de Cuervos - S01E11",
+            "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E11.mp4",
+            "seconds": 2589,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 252
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Feliz cumpleaños, Sr. Presidente",
           "airdate": "2015-08-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "club-de-cuervos-S01",
+            "itemTitle": "Club De Cuervos",
+            "file": "S01/Club de Cuervos - S01E12.mp4",
+            "name": "S01/Club de Cuervos - S01E12",
+            "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E12.mp4",
+            "seconds": 2627,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 254
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Iglesias vs. Iglesias",
           "airdate": "2015-08-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "club-de-cuervos-S01",
+            "itemTitle": "Club De Cuervos",
+            "file": "S01/Club de Cuervos - S01E13.mp4",
+            "name": "S01/Club de Cuervos - S01E13",
+            "url": "https://archive.org/download/club-de-cuervos-S01/S01%2FClub%20de%20Cuervos%20-%20S01E13.mp4",
+            "seconds": 2317,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 223
+          },
           "alternates": []
         }
       ]

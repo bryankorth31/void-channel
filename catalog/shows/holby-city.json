@@ -3,7 +3,8 @@
   "slug": "holby-city",
   "type": "Reality & Talk",
   "network": "GB",
-  "matchedAt": "2026-10-16T07:57:56.261Z",
+  "matchedAt": "2026-10-19T04:12:01.141Z",
+  "addedAt": "2026-10-19T04:12:01.145Z",
   "tvmaze": {
     "id": 3549,
     "name": "Holby City",
@@ -14,8 +15,8 @@
   "coverage": {
     "total": 1102,
     "live": 0,
-    "review": 0,
-    "missing": 1102,
+    "review": 1,
+    "missing": 1101,
     "pct": 0
   },
   "seasons": [
@@ -689,8 +690,20 @@
           "number": 27,
           "name": "Change of Heart",
           "airdate": "2002-04-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Change of Heart\" (0.95)",
+            "item": "holby-city-change-of-heart-9-apr-2002-full-episode",
+            "itemTitle": "Holby City: Change Of Heart (9 Apr 2002, FULL Episode) [BoB BBC1 Airing]",
+            "file": "Change of Heart 9 Apr 2002 8pm.mp4",
+            "name": "Change of Heart 9 Apr 2002 8pm",
+            "url": "https://archive.org/download/holby-city-change-of-heart-9-apr-2002-full-episode/Change%20of%20Heart%209%20Apr%202002%208pm.mp4",
+            "seconds": 3759,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 770
+          },
           "alternates": []
         },
         {

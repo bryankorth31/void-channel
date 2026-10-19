@@ -3,7 +3,7 @@
   "slug": "sanford-and-son",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:19.837Z",
+  "matchedAt": "2026-10-19T04:12:21.561Z",
   "addedAt": "2026-10-15T12:08:53.795Z",
   "tvmaze": {
     "id": 7513,
@@ -31,17 +31,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "od-and-so-n-06-r-01",
-            "itemTitle": "Sanford and Son (1972) (TV Series) Incomplete",
-            "file": "Sanford and Son S01E01 Crossed Swords.mp4",
-            "name": "Sanford and Son S01E01 Crossed Swords",
-            "url": "https://archive.org/download/od-and-so-n-06-r-01/Sanford%20and%20Son%20S01E01%20Crossed%20Swords.mp4",
+            "item": "SanfordSonSeason1Episode01CrossedSwords",
+            "itemTitle": "Sanford and Son S01E01 Crossed Swords",
+            "file": "Sanford & Son - Season 1 Episode 01 - Crossed Swords.mp4",
+            "name": "Sanford & Son - Season 1 Episode 01 - Crossed Swords",
+            "url": "https://archive.org/download/SanfordSonSeason1Episode01CrossedSwords/Sanford%20%26%20Son%20-%20Season%201%20Episode%2001%20-%20Crossed%20Swords.mp4",
             "seconds": 1564,
-            "format": "MPEG4",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 82
+            "sizeMB": 162
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "od-and-so-n-06-r-01",
+              "itemTitle": "Sanford and Son (1972) (TV Series) Incomplete",
+              "file": "Sanford and Son S01E01 Crossed Swords.mp4",
+              "name": "Sanford and Son S01E01 Crossed Swords",
+              "url": "https://archive.org/download/od-and-so-n-06-r-01/Sanford%20and%20Son%20S01E01%20Crossed%20Swords.mp4",
+              "seconds": 1564,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 82
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Crossed Swords\" (1.00)",
@@ -56,17 +69,17 @@
               "sizeMB": 134
             },
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "SanfordSonSeason1Episode01CrossedSwords",
-              "itemTitle": "Sanford and Son S01E01 Crossed Swords",
-              "file": "Sanford & Son - Season 1 Episode 01 - Crossed Swords.mp4",
-              "name": "Sanford & Son - Season 1 Episode 01 - Crossed Swords",
-              "url": "https://archive.org/download/SanfordSonSeason1Episode01CrossedSwords/Sanford%20%26%20Son%20-%20Season%201%20Episode%2001%20-%20Crossed%20Swords.mp4",
-              "seconds": 1564,
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas1.mp4",
+              "name": "sas1",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas1.mp4",
+              "seconds": 1565,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 162
+              "sizeMB": 151
             }
           ]
         },
@@ -78,29 +91,42 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "od-and-so-n-06-r-01",
-            "itemTitle": "Sanford and Son (1972) (TV Series) Incomplete",
-            "file": "Sanford and Son S01E02 Happy Birthday, Pop.mp4",
-            "name": "Sanford and Son S01E02 Happy Birthday, Pop",
-            "url": "https://archive.org/download/od-and-so-n-06-r-01/Sanford%20and%20Son%20S01E02%20Happy%20Birthday%2C%20Pop.mp4",
+            "item": "SanfordSonSeason1Episode02HappyBirthdayPop",
+            "itemTitle": "Sanford and Son S01E02 Happy Birthday, Pop",
+            "file": "Sanford & Son - Season 1 Episode 02 - Happy Birthday, Pop.mp4",
+            "name": "Sanford & Son - Season 1 Episode 02 - Happy Birthday, Pop",
+            "url": "https://archive.org/download/SanfordSonSeason1Episode02HappyBirthdayPop/Sanford%20%26%20Son%20-%20Season%201%20Episode%2002%20-%20Happy%20Birthday%2C%20Pop.mp4",
             "seconds": 1564,
-            "format": "MPEG4",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 90
+            "sizeMB": 162
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "SanfordSonSeason1Episode02HappyBirthdayPop",
-              "itemTitle": "Sanford and Son S01E02 Happy Birthday, Pop",
-              "file": "Sanford & Son - Season 1 Episode 02 - Happy Birthday, Pop.mp4",
-              "name": "Sanford & Son - Season 1 Episode 02 - Happy Birthday, Pop",
-              "url": "https://archive.org/download/SanfordSonSeason1Episode02HappyBirthdayPop/Sanford%20%26%20Son%20-%20Season%201%20Episode%2002%20-%20Happy%20Birthday%2C%20Pop.mp4",
+              "item": "od-and-so-n-06-r-01",
+              "itemTitle": "Sanford and Son (1972) (TV Series) Incomplete",
+              "file": "Sanford and Son S01E02 Happy Birthday, Pop.mp4",
+              "name": "Sanford and Son S01E02 Happy Birthday, Pop",
+              "url": "https://archive.org/download/od-and-so-n-06-r-01/Sanford%20and%20Son%20S01E02%20Happy%20Birthday%2C%20Pop.mp4",
               "seconds": 1564,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 90
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas2.mp4",
+              "name": "sas2",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas2.mp4",
+              "seconds": 1565,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 162
+              "sizeMB": 151
             }
           ]
         },
@@ -122,7 +148,21 @@
             "playable": true,
             "sizeMB": 91
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas12.mp4",
+              "name": "sas12",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas12.mp4",
+              "seconds": 1565,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
           "number": 4,
@@ -142,7 +182,21 @@
             "playable": true,
             "sizeMB": 97
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas13.mp4",
+              "name": "sas13",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas13.mp4",
+              "seconds": 1557,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 150
+            }
+          ]
         },
         {
           "number": 5,
@@ -162,7 +216,21 @@
             "playable": true,
             "sizeMB": 101
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas14.mp4",
+              "name": "sas14",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas14.mp4",
+              "seconds": 1563,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 150
+            }
+          ]
         },
         {
           "number": 6,
@@ -182,7 +250,21 @@
             "playable": true,
             "sizeMB": 93
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas15.mp4",
+              "name": "sas15",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas15.mp4",
+              "seconds": 1561,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
           "number": 7,
@@ -202,7 +284,21 @@
             "playable": true,
             "sizeMB": 86
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas16.mp4",
+              "name": "sas16",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas16.mp4",
+              "seconds": 1565,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
           "number": 8,
@@ -222,7 +318,21 @@
             "playable": true,
             "sizeMB": 78
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas17.mp4",
+              "name": "sas17",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas17.mp4",
+              "seconds": 1561,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
           "number": 9,
@@ -242,7 +352,21 @@
             "playable": true,
             "sizeMB": 121
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas21.mp4",
+              "name": "sas21",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas21.mp4",
+              "seconds": 1547,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 150
+            }
+          ]
         },
         {
           "number": 10,
@@ -275,6 +399,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 117
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas22.mp4",
+              "name": "sas22",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas22.mp4",
+              "seconds": 1558,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
             }
           ]
         },
@@ -296,7 +433,21 @@
             "playable": true,
             "sizeMB": 123
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas23.mp4",
+              "name": "sas23",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas23.mp4",
+              "seconds": 1560,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 150
+            }
+          ]
         },
         {
           "number": 12,
@@ -316,7 +467,21 @@
             "playable": true,
             "sizeMB": 118
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas24.mp4",
+              "name": "sas24",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas24.mp4",
+              "seconds": 1558,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 150
+            }
+          ]
         },
         {
           "number": 13,
@@ -336,7 +501,21 @@
             "playable": true,
             "sizeMB": 117
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas25.mp4",
+              "name": "sas25",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas25.mp4",
+              "seconds": 1559,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 150
+            }
+          ]
         },
         {
           "number": 14,
@@ -356,7 +535,21 @@
             "playable": true,
             "sizeMB": 100
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 14 in \"Sanford and Son: The First Season\"",
+              "item": "sanford-and-son-s1",
+              "itemTitle": "Sanford and Son: The First Season",
+              "file": "sas26.mp4",
+              "name": "sas26",
+              "url": "https://archive.org/download/sanford-and-son-s1/sas26.mp4",
+              "seconds": 1563,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         }
       ]
     },

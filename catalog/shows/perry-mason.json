@@ -3,7 +3,7 @@
   "slug": "perry-mason",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:58:14.075Z",
+  "matchedAt": "2026-10-19T04:12:17.512Z",
   "addedAt": "2026-10-15T12:08:46.659Z",
   "tvmaze": {
     "id": 40420,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 16,
-    "live": 3,
+    "live": 5,
     "review": 2,
-    "missing": 11,
-    "pct": 31
+    "missing": 9,
+    "pct": 44
   },
   "seasons": [
     {
@@ -44,7 +44,7 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 1 of 5 in \"The New Perry Mason\"",
+              "why": "sequence guess: file 1 of 7 in \"The New Perry Mason\"",
               "item": "se_20251128",
               "itemTitle": "The New Perry Mason",
               "file": "The New Perry Mason S01E09 The Case of the Cagey Cager.mp4",
@@ -78,16 +78,16 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 2 of 5 in \"The New Perry Mason\"",
+              "why": "sequence guess: file 2 of 7 in \"The New Perry Mason\"",
               "item": "se_20251128",
               "itemTitle": "The New Perry Mason",
-              "file": "The New Perry Mason S01E11 The Case of the Spurious Spouse.mp4",
-              "name": "The New Perry Mason S01E11 The Case of the Spurious Spouse",
-              "url": "https://archive.org/download/se_20251128/The%20New%20Perry%20Mason%20S01E11%20The%20Case%20of%20the%20Spurious%20Spouse.mp4",
-              "seconds": 2991,
+              "file": "The New Perry Mason S01E10 The Case of the Jailed Justice.mp4",
+              "name": "The New Perry Mason S01E10 The Case of the Jailed Justice",
+              "url": "https://archive.org/download/se_20251128/The%20New%20Perry%20Mason%20S01E10%20The%20Case%20of%20the%20Jailed%20Justice.mp4",
+              "seconds": 2997,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 215
+              "sizeMB": 149
             }
           ]
         },
@@ -98,16 +98,16 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 3 of 5 in \"The New Perry Mason\"",
+            "why": "sequence guess: file 3 of 7 in \"The New Perry Mason\"",
             "item": "se_20251128",
             "itemTitle": "The New Perry Mason",
-            "file": "The New Perry Mason S01E12 The Case of the Frenzied Feminist.mp4",
-            "name": "The New Perry Mason S01E12 The Case of the Frenzied Feminist",
-            "url": "https://archive.org/download/se_20251128/The%20New%20Perry%20Mason%20S01E12%20The%20Case%20of%20the%20Frenzied%20Feminist.mp4",
-            "seconds": 2990,
+            "file": "The New Perry Mason S01E11 The Case of the Spurious Spouse.mp4",
+            "name": "The New Perry Mason S01E11 The Case of the Spurious Spouse",
+            "url": "https://archive.org/download/se_20251128/The%20New%20Perry%20Mason%20S01E11%20The%20Case%20of%20the%20Spurious%20Spouse.mp4",
+            "seconds": 2991,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 154
+            "sizeMB": 215
           },
           "alternates": []
         },
@@ -115,21 +115,35 @@
           "number": 4,
           "name": "Chapter Four",
           "airdate": "2020-07-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 5 in \"The New Perry Mason\"",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "se_20251128",
             "itemTitle": "The New Perry Mason",
-            "file": "The New Perry Mason S01E13 The Case of the Perilous Pen.mp4",
-            "name": "The New Perry Mason S01E13 The Case of the Perilous Pen",
-            "url": "https://archive.org/download/se_20251128/The%20New%20Perry%20Mason%20S01E13%20The%20Case%20of%20the%20Perilous%20Pen.mp4",
-            "seconds": 2994,
+            "file": "The New Perry Mason S01E04 The Case of The Wistful Widower.mp4",
+            "name": "The New Perry Mason S01E04 The Case of The Wistful Widower",
+            "url": "https://archive.org/download/se_20251128/The%20New%20Perry%20Mason%20S01E04%20The%20Case%20of%20The%20Wistful%20Widower.mp4",
+            "seconds": 2997,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 165
+            "sizeMB": 145
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 7 in \"The New Perry Mason\"",
+              "item": "se_20251128",
+              "itemTitle": "The New Perry Mason",
+              "file": "The New Perry Mason S01E12 The Case of the Frenzied Feminist.mp4",
+              "name": "The New Perry Mason S01E12 The Case of the Frenzied Feminist",
+              "url": "https://archive.org/download/se_20251128/The%20New%20Perry%20Mason%20S01E12%20The%20Case%20of%20the%20Frenzied%20Feminist.mp4",
+              "seconds": 2990,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 154
+            }
+          ]
         },
         {
           "number": 5,
@@ -152,16 +166,16 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 5 of 5 in \"The New Perry Mason\"",
+              "why": "sequence guess: file 5 of 7 in \"The New Perry Mason\"",
               "item": "se_20251128",
               "itemTitle": "The New Perry Mason",
-              "file": "The New Perry Mason S01E14 The Case of the Tortured Titan.mp4",
-              "name": "The New Perry Mason S01E14 The Case of the Tortured Titan",
-              "url": "https://archive.org/download/se_20251128/The%20New%20Perry%20Mason%20S01E14%20The%20Case%20of%20the%20Tortured%20Titan.mp4",
-              "seconds": 2846,
+              "file": "The New Perry Mason S01E13 The Case of the Perilous Pen.mp4",
+              "name": "The New Perry Mason S01E13 The Case of the Perilous Pen",
+              "url": "https://archive.org/download/se_20251128/The%20New%20Perry%20Mason%20S01E13%20The%20Case%20of%20the%20Perilous%20Pen.mp4",
+              "seconds": 2994,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 112
+              "sizeMB": 165
             }
           ]
         },
@@ -169,17 +183,55 @@
           "number": 6,
           "name": "Chapter Six",
           "airdate": "2020-07-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 7 in \"The New Perry Mason\"",
+            "item": "se_20251128",
+            "itemTitle": "The New Perry Mason",
+            "file": "The New Perry Mason S01E14 The Case of the Tortured Titan.mp4",
+            "name": "The New Perry Mason S01E14 The Case of the Tortured Titan",
+            "url": "https://archive.org/download/se_20251128/The%20New%20Perry%20Mason%20S01E14%20The%20Case%20of%20the%20Tortured%20Titan.mp4",
+            "seconds": 2846,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 112
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Chapter Seven",
           "airdate": "2020-08-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "se_20251128",
+            "itemTitle": "The New Perry Mason",
+            "file": "The New Perry Mason S01E07 The Case of the Murdered Murderer.mp4",
+            "name": "The New Perry Mason S01E07 The Case of the Murdered Murderer",
+            "url": "https://archive.org/download/se_20251128/The%20New%20Perry%20Mason%20S01E07%20The%20Case%20of%20the%20Murdered%20Murderer.mp4",
+            "seconds": 2985,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 173
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 7 in \"The New Perry Mason\"",
+              "item": "se_20251128",
+              "itemTitle": "The New Perry Mason",
+              "file": "The New Perry Mason S01E15 The Case of the Violent Valley.mp4",
+              "name": "The New Perry Mason S01E15 The Case of the Violent Valley",
+              "url": "https://archive.org/download/se_20251128/The%20New%20Perry%20Mason%20S01E15%20The%20Case%20of%20the%20Violent%20Valley.mp4",
+              "seconds": 2994,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 134
+            }
+          ]
         },
         {
           "number": 8,

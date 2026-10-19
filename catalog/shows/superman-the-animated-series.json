@@ -3,7 +3,7 @@
   "slug": "superman-the-animated-series",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:29.859Z",
+  "matchedAt": "2026-10-19T04:10:38.567Z",
   "addedAt": "2026-10-15T16:54:52.874Z",
   "tvmaze": {
     "id": 1957,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 54,
-    "live": 0,
-    "review": 8,
-    "missing": 46,
-    "pct": 15
+    "live": 11,
+    "review": 1,
+    "missing": 42,
+    "pct": 22
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "The Last Son of Krypton Part I",
           "airdate": "1996-09-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "superman-the-animated-series-season-1",
             "itemTitle": "Superman the Animated Series Season 1",
@@ -41,31 +41,82 @@
             "playable": true,
             "sizeMB": 86
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Last Son of Krypton Part I\" (0.91)",
+              "item": "superman-the-animated-series-season-1",
+              "itemTitle": "Superman the Animated Series Season 1",
+              "file": "Season 1 Episode 3 The Last Son of Krypton, Part 3.mp4",
+              "name": "Season 1 Episode 3 The Last Son of Krypton, Part 3",
+              "url": "https://archive.org/download/superman-the-animated-series-season-1/Season%201%20Episode%203%20The%20Last%20Son%20of%20Krypton%2C%20Part%203.mp4",
+              "seconds": 1350,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 112
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Last Son of Krypton Part I\" (0.91)",
+              "item": "superman-the-animated-series-season-1",
+              "itemTitle": "Superman the Animated Series Season 1",
+              "file": "Season 1 Episode 2 The Last Son of Krypton, Part 2.mp4",
+              "name": "Season 1 Episode 2 The Last Son of Krypton, Part 2",
+              "url": "https://archive.org/download/superman-the-animated-series-season-1/Season%201%20Episode%202%20The%20Last%20Son%20of%20Krypton%2C%20Part%202.mp4",
+              "seconds": 1269,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 91
+            }
+          ]
         },
         {
           "number": 2,
           "name": "The Last Son of Krypton Part II",
           "airdate": "1996-09-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "superman-the-animated-series-season-1",
+            "itemTitle": "Superman the Animated Series Season 1",
+            "file": "Season 1 Episode 2 The Last Son of Krypton, Part 2.mp4",
+            "name": "Season 1 Episode 2 The Last Son of Krypton, Part 2",
+            "url": "https://archive.org/download/superman-the-animated-series-season-1/Season%201%20Episode%202%20The%20Last%20Son%20of%20Krypton%2C%20Part%202.mp4",
+            "seconds": 1269,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 91
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "The Last Son of Krypton Part III",
           "airdate": "1996-09-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "superman-the-animated-series-season-1",
+            "itemTitle": "Superman the Animated Series Season 1",
+            "file": "Season 1 Episode 3 The Last Son of Krypton, Part 3.mp4",
+            "name": "Season 1 Episode 3 The Last Son of Krypton, Part 3",
+            "url": "https://archive.org/download/superman-the-animated-series-season-1/Season%201%20Episode%203%20The%20Last%20Son%20of%20Krypton%2C%20Part%203.mp4",
+            "seconds": 1350,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 112
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Fun and Games",
           "airdate": "1996-09-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "superman-the-animated-series-season-1",
             "itemTitle": "Superman the Animated Series Season 1",
@@ -83,9 +134,9 @@
           "number": 5,
           "name": "A Little Piece of Home",
           "airdate": "1996-09-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "superman-the-animated-series-season-1",
             "itemTitle": "Superman the Animated Series Season 1",
@@ -103,9 +154,9 @@
           "number": 6,
           "name": "Feeding Time",
           "airdate": "1996-09-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "superman-the-animated-series-season-1",
             "itemTitle": "Superman the Animated Series Season 1",
@@ -123,9 +174,9 @@
           "number": 7,
           "name": "The Way of All Flesh",
           "airdate": "1996-10-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "superman-the-animated-series-season-1",
             "itemTitle": "Superman the Animated Series Season 1",
@@ -151,25 +202,49 @@
           "number": 9,
           "name": "The Main Man Part I",
           "airdate": "1996-11-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Main Man Part I\" (0.83)",
+            "item": "superman-the-animated-series-season-1",
+            "itemTitle": "Superman the Animated Series Season 1",
+            "file": "Season 1 Episode 10 The Main Man, Part 2.mp4",
+            "name": "Season 1 Episode 10 The Main Man, Part 2",
+            "url": "https://archive.org/download/superman-the-animated-series-season-1/Season%201%20Episode%2010%20The%20Main%20Man%2C%20Part%202.mp4",
+            "seconds": 1277,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 102
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "The Main Man Part II",
           "airdate": "1996-11-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "superman-the-animated-series-season-1",
+            "itemTitle": "Superman the Animated Series Season 1",
+            "file": "Season 1 Episode 10 The Main Man, Part 2.mp4",
+            "name": "Season 1 Episode 10 The Main Man, Part 2",
+            "url": "https://archive.org/download/superman-the-animated-series-season-1/Season%201%20Episode%2010%20The%20Main%20Man%2C%20Part%202.mp4",
+            "seconds": 1277,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 102
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "My Girl",
           "airdate": "1996-11-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "superman-the-animated-series-season-1",
             "itemTitle": "Superman the Animated Series Season 1",
@@ -187,9 +262,9 @@
           "number": 12,
           "name": "Tools of the Trade",
           "airdate": "1997-02-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "superman-the-animated-series-season-1",
             "itemTitle": "Superman the Animated Series Season 1",
@@ -207,9 +282,9 @@
           "number": 13,
           "name": "Two's a Crowd",
           "airdate": "1997-02-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "superman-the-animated-series-season-1",
             "itemTitle": "Superman the Animated Series Season 1",

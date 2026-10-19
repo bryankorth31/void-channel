@@ -3,7 +3,7 @@
   "slug": "life-on-our-planet",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-17T07:33:37.319Z",
+  "matchedAt": "2026-10-19T04:11:08.004Z",
   "addedAt": "2026-10-17T07:33:37.318Z",
   "tvmaze": {
     "id": 65182,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 8,
     "live": 0,
-    "review": 1,
-    "missing": 7,
-    "pct": 13
+    "review": 2,
+    "missing": 6,
+    "pct": 25
   },
   "seasons": [
     {
@@ -43,8 +43,20 @@
           "number": 3,
           "name": "Chapter 3: Invaders of the Land",
           "airdate": "2023-10-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Chapter 3: Invaders of the Land\" (0.62)",
+            "item": "life-on-our-planet-prehistoric-cut",
+            "itemTitle": "Life on Our Planet (2023) - Prehistoric Cut",
+            "file": "LifeOnOurPlanet_E02_InvadersOfTheLand.mp4",
+            "name": "LifeOnOurPlanet_E02_InvadersOfTheLand",
+            "url": "https://archive.org/download/life-on-our-planet-prehistoric-cut/LifeOnOurPlanet_E02_InvadersOfTheLand.mp4",
+            "seconds": 2291,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 221
+          },
           "alternates": []
         },
         {

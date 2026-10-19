@@ -3,21 +3,21 @@
   "slug": "the-blue-planet",
   "type": "British and Beyond",
   "network": "GB",
-  "matchedAt": "2026-10-16T07:57:09.869Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:11:17.288Z",
+  "addedAt": "2026-10-16T07:57:09.869Z",
   "tvmaze": {
-    "id": null,
+    "id": 7103,
     "name": "The Blue Planet",
-    "runtime": null,
-    "premiered": null,
-    "network": "GB"
+    "runtime": 58,
+    "premiered": "2001-09-12",
+    "network": "BBC One"
   },
   "coverage": {
-    "total": 45,
+    "total": 8,
     "live": 0,
-    "review": 45,
-    "missing": 0,
-    "pct": 100
+    "review": 7,
+    "missing": 1,
+    "pct": 88
   },
   "seasons": [
     {
@@ -25,809 +25,20 @@
       "episodes": [
         {
           "number": 1,
-          "name": "1 ocean world",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheBluePlanetBBC",
-            "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
-            "file": "(1) Ocean World.mp4",
-            "name": "(1) Ocean World",
-            "url": "https://archive.org/download/TheBluePlanetBBC/(1)%20Ocean%20World.mp4",
-            "seconds": 2923,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 707,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Introduction",
+          "airdate": "2001-09-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "1 one ocean",
+          "name": "The Deep",
+          "airdate": "2001-09-19",
           "state": "REVIEW",
           "file": {
-            "item": "BluePlanetIIBBCTVminiseries",
-            "itemTitle": "Blue Planet II (2017 TV documentary miniseries)",
-            "file": "(1) One Ocean.mp4",
-            "name": "(1) One Ocean",
-            "url": "https://archive.org/download/BluePlanetIIBBCTVminiseries/(1)%20One%20Ocean.mp4",
-            "seconds": 3618,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 875,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "2 the deep",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheBluePlanetBBC",
-            "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
-            "file": "(2) The Deep.mp4",
-            "name": "(2) The Deep",
-            "url": "https://archive.org/download/TheBluePlanetBBC/(2)%20The%20Deep.mp4",
-            "seconds": 2932,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 709,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "3 coral reefs",
-          "state": "REVIEW",
-          "file": {
-            "item": "BluePlanetIIBBCTVminiseries",
-            "itemTitle": "Blue Planet II (2017 TV documentary miniseries)",
-            "file": "(3) Coral Reefs.mp4",
-            "name": "(3) Coral Reefs",
-            "url": "https://archive.org/download/BluePlanetIIBBCTVminiseries/(3)%20Coral%20Reefs.mp4",
-            "seconds": 3627,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 877,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "3 open ocean",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheBluePlanetBBC",
-            "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
-            "file": "(3) Open Ocean.mp4",
-            "name": "(3) Open Ocean",
-            "url": "https://archive.org/download/TheBluePlanetBBC/(3)%20Open%20Ocean.mp4",
-            "seconds": 2895,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 701,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "4 big",
-          "state": "REVIEW",
-          "file": {
-            "item": "BluePlanetIIBBCTVminiseries",
-            "itemTitle": "Blue Planet II (2017 TV documentary miniseries)",
-            "file": "(4) Big Blue.mp4",
-            "name": "(4) Big Blue",
-            "url": "https://archive.org/download/BluePlanetIIBBCTVminiseries/(4)%20Big%20Blue.mp4",
-            "seconds": 3633,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 879,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "4 frozen seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheBluePlanetBBC",
-            "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
-            "file": "(4) Frozen Seas.mp4",
-            "name": "(4) Frozen Seas",
-            "url": "https://archive.org/download/TheBluePlanetBBC/(4)%20Frozen%20Seas.mp4",
-            "seconds": 2926,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 708,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "5 green seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "BluePlanetIIBBCTVminiseries",
-            "itemTitle": "Blue Planet II (2017 TV documentary miniseries)",
-            "file": "(5) Green Seas.mp4",
-            "name": "(5) Green Seas",
-            "url": "https://archive.org/download/BluePlanetIIBBCTVminiseries/(5)%20Green%20Seas.mp4",
-            "seconds": 3628,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 878,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "5 seasonal seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheBluePlanetBBC",
-            "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
-            "file": "(5) Seasonal Seas.mp4",
-            "name": "(5) Seasonal Seas",
-            "url": "https://archive.org/download/TheBluePlanetBBC/(5)%20Seasonal%20Seas.mp4",
-            "seconds": 2921,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 707,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "6 coasts",
-          "state": "REVIEW",
-          "file": {
-            "item": "BluePlanetIIBBCTVminiseries",
-            "itemTitle": "Blue Planet II (2017 TV documentary miniseries)",
-            "file": "(6) Coasts.mp4",
-            "name": "(6) Coasts",
-            "url": "https://archive.org/download/BluePlanetIIBBCTVminiseries/(6)%20Coasts.mp4",
-            "seconds": 3612,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1866,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "6 coral seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheBluePlanetBBC",
-            "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
-            "file": "(6) Coral Seas.mp4",
-            "name": "(6) Coral Seas",
-            "url": "https://archive.org/download/TheBluePlanetBBC/(6)%20Coral%20Seas.mp4",
-            "seconds": 2922,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 707,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "7 our",
-          "state": "REVIEW",
-          "file": {
-            "item": "BluePlanetIIBBCTVminiseries",
-            "itemTitle": "Blue Planet II (2017 TV documentary miniseries)",
-            "file": "(7) Our Blue Planet.mp4",
-            "name": "(7) Our Blue Planet",
-            "url": "https://archive.org/download/BluePlanetIIBBCTVminiseries/(7)%20Our%20Blue%20Planet.mp4",
-            "seconds": 3611,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1865,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "7 tidal seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheBluePlanetBBC",
-            "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
-            "file": "(7) Tidal Seas.mp4",
-            "name": "(7) Tidal Seas",
-            "url": "https://archive.org/download/TheBluePlanetBBC/(7)%20Tidal%20Seas.mp4",
-            "seconds": 2921,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 707,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "8 coasts",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheBluePlanetBBC",
-            "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
-            "file": "(8) Coasts.mp4",
-            "name": "(8) Coasts",
-            "url": "https://archive.org/download/TheBluePlanetBBC/(8)%20Coasts.mp4",
-            "seconds": 2908,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 953,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "coral seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "blue-planet-coral-seas",
-            "itemTitle": "Blue Planet - Coral Seas",
-            "file": "Blue Planet - Coral Seas.mp4",
-            "name": "Blue Planet - Coral Seas",
-            "url": "https://archive.org/download/blue-planet-coral-seas/Blue%20Planet%20-%20Coral%20Seas.mp4",
-            "seconds": 2695,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 473,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "ocean world",
-          "state": "REVIEW",
-          "file": {
-            "item": "blue-planet-ocean-world",
-            "itemTitle": "Blue Planet - Ocean World",
-            "file": "Blue Planet - Ocean World.mp4",
-            "name": "Blue Planet - Ocean World",
-            "url": "https://archive.org/download/blue-planet-ocean-world/Blue%20Planet%20-%20Ocean%20World.mp4",
-            "seconds": 2654,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 505,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "ii 01 one ocean",
-          "state": "REVIEW",
-          "file": {
-            "item": "blue-planet-ii",
-            "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
-            "file": "blue_planet_ii_01_one_ocean.mp4",
-            "name": "blue_planet_ii_01_one_ocean",
-            "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_01_one_ocean.mp4",
-            "seconds": 3621,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1066,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "ii 02 the deep",
-          "state": "REVIEW",
-          "file": {
-            "item": "blue-planet-ii",
-            "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
-            "file": "blue_planet_ii_02_the_deep.mp4",
-            "name": "blue_planet_ii_02_the_deep",
-            "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_02_the_deep.mp4",
-            "seconds": 3636,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 682,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "ii 03 coral reefs",
-          "state": "REVIEW",
-          "file": {
-            "item": "blue-planet-ii",
-            "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
-            "file": "blue_planet_ii_03_coral_reefs.mp4",
-            "name": "blue_planet_ii_03_coral_reefs",
-            "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_03_coral_reefs.mp4",
-            "seconds": 3630,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1035,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "ii 04 big",
-          "state": "REVIEW",
-          "file": {
-            "item": "blue-planet-ii",
-            "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
-            "file": "blue_planet_ii_04_big_blue.mp4",
-            "name": "blue_planet_ii_04_big_blue",
-            "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_04_big_blue.mp4",
-            "seconds": 3636,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1050,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "ii 05 green seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "blue-planet-ii",
-            "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
-            "file": "blue_planet_ii_05_green_seas.mp4",
-            "name": "blue_planet_ii_05_green_seas",
-            "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_05_green_seas.mp4",
-            "seconds": 3631,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1206,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "ii 06 coasts",
-          "state": "REVIEW",
-          "file": {
-            "item": "blue-planet-ii",
-            "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
-            "file": "blue_planet_ii_06_coasts.mp4",
-            "name": "blue_planet_ii_06_coasts",
-            "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_06_coasts.mp4",
-            "seconds": 3616,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1112,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "ii 07 our",
-          "state": "REVIEW",
-          "file": {
-            "item": "blue-planet-ii",
-            "itemTitle": "(Repaired) Blue Planet II ★ Complete BBC Series with Subtitles and MKV",
-            "file": "blue_planet_ii_07_our_blue_planet.mp4",
-            "name": "blue_planet_ii_07_our_blue_planet",
-            "url": "https://archive.org/download/blue-planet-ii/blue_planet_ii_07_our_blue_planet.mp4",
-            "seconds": 3615,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 875,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "deep trouble",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheBluePlanetBBC",
-            "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
-            "file": "Deep Trouble.mp4",
-            "name": "Deep Trouble",
-            "url": "https://archive.org/download/TheBluePlanetBBC/Deep%20Trouble.mp4",
-            "seconds": 2944,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 712,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "the e01 ocean world",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-blue-planet_202601",
-            "itemTitle": "The Blue Planet (2001) Complete Series",
-            "file": "The Blue Planet  E01 - Ocean World.mp4",
-            "name": "The Blue Planet  E01 - Ocean World",
-            "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E01%20-%20Ocean%20World.mp4",
-            "seconds": 3077,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 644,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "the e02 frozen seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-blue-planet_202601",
-            "itemTitle": "The Blue Planet (2001) Complete Series",
-            "file": "The Blue Planet  E02 - Frozen Seas.mp4",
-            "name": "The Blue Planet  E02 - Frozen Seas",
-            "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E02%20-%20Frozen%20Seas.mp4",
-            "seconds": 3060,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 600,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "the e03 open ocean",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-blue-planet_202601",
-            "itemTitle": "The Blue Planet (2001) Complete Series",
-            "file": "The Blue Planet  E03 - Open Ocean.mp4",
-            "name": "The Blue Planet  E03 - Open Ocean",
-            "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E03%20-%20Open%20Ocean.mp4",
-            "seconds": 3021,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 566,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "the e04 the deep",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-blue-planet_202601",
-            "itemTitle": "The Blue Planet (2001) Complete Series",
-            "file": "The Blue Planet  E04 - The Deep.mp4",
-            "name": "The Blue Planet  E04 - The Deep",
-            "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E04%20-%20The%20Deep.mp4",
-            "seconds": 3054,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 585,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "the e05 seasonal seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-blue-planet_202601",
-            "itemTitle": "The Blue Planet (2001) Complete Series",
-            "file": "The Blue Planet  E05 - Seasonal Seas.mp4",
-            "name": "The Blue Planet  E05 - Seasonal Seas",
-            "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E05%20-%20Seasonal%20Seas.mp4",
-            "seconds": 3048,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 598,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "the e06 coral seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-blue-planet_202601",
-            "itemTitle": "The Blue Planet (2001) Complete Series",
-            "file": "The Blue Planet  E06 - Coral Seas.mp4",
-            "name": "The Blue Planet  E06 - Coral Seas",
-            "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E06%20-%20Coral%20Seas.mp4",
-            "seconds": 3049,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 579,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "the e07 tidal seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-blue-planet_202601",
-            "itemTitle": "The Blue Planet (2001) Complete Series",
-            "file": "The Blue Planet  E07 - Tidal Seas.mp4",
-            "name": "The Blue Planet  E07 - Tidal Seas",
-            "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E07%20-%20Tidal%20Seas.mp4",
-            "seconds": 3049,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 640,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "the e08 coasts",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-blue-planet_202601",
-            "itemTitle": "The Blue Planet (2001) Complete Series",
-            "file": "The Blue Planet  E08 - Coasts.mp4",
-            "name": "The Blue Planet  E08 - Coasts",
-            "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E08%20-%20Coasts.mp4",
-            "seconds": 3035,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 677,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "the 01 ocean world",
-          "state": "REVIEW",
-          "file": {
-            "item": "the_blue_planet",
-            "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
-            "file": "the_blue_planet_01_ocean_world.mp4",
-            "name": "the_blue_planet_01_ocean_world",
-            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_01_ocean_world.mp4",
-            "seconds": 2926,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 902,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "the 02 frozen seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "the_blue_planet",
-            "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
-            "file": "the_blue_planet_02_frozen_seas.mp4",
-            "name": "the_blue_planet_02_frozen_seas",
-            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_02_frozen_seas.mp4",
-            "seconds": 2929,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 588,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "the 03 open ocean",
-          "state": "REVIEW",
-          "file": {
-            "item": "the_blue_planet",
-            "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
-            "file": "the_blue_planet_03_open_ocean.mp4",
-            "name": "the_blue_planet_03_open_ocean",
-            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_03_open_ocean.mp4",
-            "seconds": 2897,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 700,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 36,
-          "name": "the 04 the deep",
-          "state": "REVIEW",
-          "file": {
-            "item": "the_blue_planet",
-            "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
-            "file": "the_blue_planet_04_the_deep.mp4",
-            "name": "the_blue_planet_04_the_deep",
-            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_04_the_deep.mp4",
-            "seconds": 2935,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 414,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "the 05 seasonal seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "the_blue_planet",
-            "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
-            "file": "the_blue_planet_05_seasonal_seas.mp4",
-            "name": "the_blue_planet_05_seasonal_seas",
-            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_05_seasonal_seas.mp4",
-            "seconds": 2923,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 623,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "the 06 coral seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "the_blue_planet",
-            "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
-            "file": "the_blue_planet_06_coral_seas.mp4",
-            "name": "the_blue_planet_06_coral_seas",
-            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_06_coral_seas.mp4",
-            "seconds": 2924,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 673,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 39,
-          "name": "the 07 tidal seas",
-          "state": "REVIEW",
-          "file": {
-            "item": "the_blue_planet",
-            "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
-            "file": "the_blue_planet_07_tidal_seas.mp4",
-            "name": "the_blue_planet_07_tidal_seas",
-            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_07_tidal_seas.mp4",
-            "seconds": 2915,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 760,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 40,
-          "name": "the 08 coasts",
-          "state": "REVIEW",
-          "file": {
-            "item": "the_blue_planet",
-            "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
-            "file": "the_blue_planet_08_coasts.mp4",
-            "name": "the_blue_planet_08_coasts",
-            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_08_coasts.mp4",
-            "seconds": 2907,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 903,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 41,
-          "name": "the 09 deep trouble",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Deep\" (0.95)",
             "item": "the_blue_planet",
             "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
             "file": "the_blue_planet_09_deep_trouble.mp4",
@@ -836,99 +47,346 @@
             "seconds": 2942,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 758,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 758
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Deep\" (0.95)",
+              "item": "the-blue-planet_202601",
+              "itemTitle": "The Blue Planet (2001) Complete Series",
+              "file": "The Blue Planet  E04 - The Deep.mp4",
+              "name": "The Blue Planet  E04 - The Deep",
+              "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E04%20-%20The%20Deep.mp4",
+              "seconds": 3054,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 585
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Deep\" (0.95)",
+              "item": "the_blue_planet",
+              "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
+              "file": "the_blue_planet_04_the_deep.mp4",
+              "name": "the_blue_planet_04_the_deep",
+              "url": "https://archive.org/download/the_blue_planet/the_blue_planet_04_the_deep.mp4",
+              "seconds": 2935,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 414
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Deep\" (0.95)",
+              "item": "TheBluePlanetBBC",
+              "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
+              "file": "Deep Trouble.mp4",
+              "name": "Deep Trouble",
+              "url": "https://archive.org/download/TheBluePlanetBBC/Deep%20Trouble.mp4",
+              "seconds": 2944,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 712
+            }
+          ]
         },
         {
-          "number": 42,
-          "name": "the 10 amazon abyss",
+          "number": 3,
+          "name": "Open Ocean",
+          "airdate": "2001-09-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Open Ocean\" (0.95)",
             "item": "the_blue_planet",
             "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
-            "file": "the_blue_planet_10_amazon_abyss.mp4",
-            "name": "the_blue_planet_10_amazon_abyss",
-            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_10_amazon_abyss.mp4",
-            "seconds": 3109,
+            "file": "the_blue_planet_03_open_ocean.mp4",
+            "name": "the_blue_planet_03_open_ocean",
+            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_03_open_ocean.mp4",
+            "seconds": 2897,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 649,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 700
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Open Ocean\" (0.95)",
+              "item": "the-blue-planet_202601",
+              "itemTitle": "The Blue Planet (2001) Complete Series",
+              "file": "The Blue Planet  E03 - Open Ocean.mp4",
+              "name": "The Blue Planet  E03 - Open Ocean",
+              "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E03%20-%20Open%20Ocean.mp4",
+              "seconds": 3021,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 566
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Open Ocean\" (0.95)",
+              "item": "TheBluePlanetBBC",
+              "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
+              "file": "(3) Open Ocean.mp4",
+              "name": "(3) Open Ocean",
+              "url": "https://archive.org/download/TheBluePlanetBBC/(3)%20Open%20Ocean.mp4",
+              "seconds": 2895,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 701
+            }
+          ]
         },
         {
-          "number": 43,
-          "name": "the 11 dive to shark volcano",
+          "number": 4,
+          "name": "Frozen Seas",
+          "airdate": "2001-10-03",
           "state": "REVIEW",
           "file": {
-            "item": "the_blue_planet",
-            "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
-            "file": "the_blue_planet_11_dive_to_shark_volcano.mp4",
-            "name": "the_blue_planet_11_dive_to_shark_volcano",
-            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_11_dive_to_shark_volcano.mp4",
-            "seconds": 3079,
+            "conf": 0.8,
+            "why": "title ~ \"Frozen Seas\" (0.95)",
+            "item": "the-blue-planet_202601",
+            "itemTitle": "The Blue Planet (2001) Complete Series",
+            "file": "The Blue Planet  E02 - Frozen Seas.mp4",
+            "name": "The Blue Planet  E02 - Frozen Seas",
+            "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E02%20-%20Frozen%20Seas.mp4",
+            "seconds": 3060,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 502,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 600
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Frozen Seas\" (0.95)",
+              "item": "the_blue_planet",
+              "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
+              "file": "the_blue_planet_02_frozen_seas.mp4",
+              "name": "the_blue_planet_02_frozen_seas",
+              "url": "https://archive.org/download/the_blue_planet/the_blue_planet_02_frozen_seas.mp4",
+              "seconds": 2929,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 588
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Frozen Seas\" (0.95)",
+              "item": "TheBluePlanetBBC",
+              "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
+              "file": "(4) Frozen Seas.mp4",
+              "name": "(4) Frozen Seas",
+              "url": "https://archive.org/download/TheBluePlanetBBC/(4)%20Frozen%20Seas.mp4",
+              "seconds": 2926,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 708
+            }
+          ]
         },
         {
-          "number": 44,
-          "name": "the 12 being there antarctica",
+          "number": 5,
+          "name": "Seasonal Seas",
+          "airdate": "2001-10-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Seasonal Seas\" (0.95)",
             "item": "the_blue_planet",
             "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
-            "file": "the_blue_planet_12_being_there_antarctica.mp4",
-            "name": "the_blue_planet_12_being_there_antarctica",
-            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_12_being_there_antarctica.mp4",
-            "seconds": 1788,
+            "file": "the_blue_planet_05_seasonal_seas.mp4",
+            "name": "the_blue_planet_05_seasonal_seas",
+            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_05_seasonal_seas.mp4",
+            "seconds": 2923,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 355,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 623
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Seasonal Seas\" (0.95)",
+              "item": "the-blue-planet_202601",
+              "itemTitle": "The Blue Planet (2001) Complete Series",
+              "file": "The Blue Planet  E05 - Seasonal Seas.mp4",
+              "name": "The Blue Planet  E05 - Seasonal Seas",
+              "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E05%20-%20Seasonal%20Seas.mp4",
+              "seconds": 3048,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 598
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Seasonal Seas\" (0.95)",
+              "item": "TheBluePlanetBBC",
+              "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
+              "file": "(5) Seasonal Seas.mp4",
+              "name": "(5) Seasonal Seas",
+              "url": "https://archive.org/download/TheBluePlanetBBC/(5)%20Seasonal%20Seas.mp4",
+              "seconds": 2921,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 707
+            }
+          ]
         },
         {
-          "number": 45,
-          "name": "the 13 being there between the tides",
+          "number": 6,
+          "name": "Coral Seas",
+          "airdate": "2001-10-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Coral Seas\" (0.95)",
             "item": "the_blue_planet",
             "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
-            "file": "the_blue_planet_13_being_there_between_the_tides.mp4",
-            "name": "the_blue_planet_13_being_there_between_the_tides",
-            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_13_being_there_between_the_tides.mp4",
-            "seconds": 1742,
+            "file": "the_blue_planet_06_coral_seas.mp4",
+            "name": "the_blue_planet_06_coral_seas",
+            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_06_coral_seas.mp4",
+            "seconds": 2924,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 299,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 673
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Coral Seas\" (0.95)",
+              "item": "the-blue-planet_202601",
+              "itemTitle": "The Blue Planet (2001) Complete Series",
+              "file": "The Blue Planet  E06 - Coral Seas.mp4",
+              "name": "The Blue Planet  E06 - Coral Seas",
+              "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E06%20-%20Coral%20Seas.mp4",
+              "seconds": 3049,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 579
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Coral Seas\" (1.00)",
+              "item": "blue-planet-coral-seas",
+              "itemTitle": "Blue Planet - Coral Seas",
+              "file": "Blue Planet - Coral Seas.mp4",
+              "name": "Blue Planet - Coral Seas",
+              "url": "https://archive.org/download/blue-planet-coral-seas/Blue%20Planet%20-%20Coral%20Seas.mp4",
+              "seconds": 2695,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 473
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Coral Seas\" (0.95)",
+              "item": "TheBluePlanetBBC",
+              "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
+              "file": "(6) Coral Seas.mp4",
+              "name": "(6) Coral Seas",
+              "url": "https://archive.org/download/TheBluePlanetBBC/(6)%20Coral%20Seas.mp4",
+              "seconds": 2922,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 707
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "name": "Tidal Seas",
+          "airdate": "2001-10-24",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Tidal Seas\" (0.95)",
+            "item": "the_blue_planet",
+            "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
+            "file": "the_blue_planet_07_tidal_seas.mp4",
+            "name": "the_blue_planet_07_tidal_seas",
+            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_07_tidal_seas.mp4",
+            "seconds": 2915,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 760
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Tidal Seas\" (0.95)",
+              "item": "the-blue-planet_202601",
+              "itemTitle": "The Blue Planet (2001) Complete Series",
+              "file": "The Blue Planet  E07 - Tidal Seas.mp4",
+              "name": "The Blue Planet  E07 - Tidal Seas",
+              "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E07%20-%20Tidal%20Seas.mp4",
+              "seconds": 3049,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 640
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Tidal Seas\" (0.95)",
+              "item": "TheBluePlanetBBC",
+              "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
+              "file": "(7) Tidal Seas.mp4",
+              "name": "(7) Tidal Seas",
+              "url": "https://archive.org/download/TheBluePlanetBBC/(7)%20Tidal%20Seas.mp4",
+              "seconds": 2921,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 707
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "name": "Coasts",
+          "airdate": "2001-10-31",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Coasts\" (0.95)",
+            "item": "the_blue_planet",
+            "itemTitle": "The Blue Planet I ★ BBC Earth with English Closed Captions and MKV",
+            "file": "the_blue_planet_08_coasts.mp4",
+            "name": "the_blue_planet_08_coasts",
+            "url": "https://archive.org/download/the_blue_planet/the_blue_planet_08_coasts.mp4",
+            "seconds": 2907,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 903
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Coasts\" (0.95)",
+              "item": "the-blue-planet_202601",
+              "itemTitle": "The Blue Planet (2001) Complete Series",
+              "file": "The Blue Planet  E08 - Coasts.mp4",
+              "name": "The Blue Planet  E08 - Coasts",
+              "url": "https://archive.org/download/the-blue-planet_202601/The%20Blue%20Planet%20%20E08%20-%20Coasts.mp4",
+              "seconds": 3035,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 677
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Coasts\" (0.95)",
+              "item": "TheBluePlanetBBC",
+              "itemTitle": "The Blue Planet: Seas of Life (2001 TV documentary series)",
+              "file": "(8) Coasts.mp4",
+              "name": "(8) Coasts",
+              "url": "https://archive.org/download/TheBluePlanetBBC/(8)%20Coasts.mp4",
+              "seconds": 2908,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 953
+            }
+          ]
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 7103,
-    "name": "The Blue Planet",
-    "placed": 7
-  }
+  ]
 }

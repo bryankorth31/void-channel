@@ -3,7 +3,7 @@
   "slug": "the-trap",
   "type": "World TV",
   "network": "DE",
-  "matchedAt": "2026-10-17T09:15:59.165Z",
+  "matchedAt": "2026-10-19T04:11:52.664Z",
   "addedAt": "2026-10-17T09:15:59.166Z",
   "tvmaze": {
     "id": 5656,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 40,
     "live": 18,
-    "review": 1,
-    "missing": 21,
-    "pct": 48
+    "review": 0,
+    "missing": 22,
+    "pct": 45
   },
   "seasons": [
     {
@@ -75,20 +75,8 @@
           "number": 7,
           "name": "The Big Thing",
           "airdate": "1986-10-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Big Thing\" (0.95)",
-            "item": "TheTrapDoorCompleteSeries_201801",
-            "itemTitle": "The Trap Door (Complete Series)",
-            "file": "The Trap Door - S2 E15 - The Big Red Thing.mp4",
-            "name": "The Trap Door - S2 E15 - The Big Red Thing",
-            "url": "https://archive.org/download/TheTrapDoorCompleteSeries_201801/The%20Trap%20Door%20-%20S2%20E15%20-%20The%20Big%20Red%20Thing.mp4",
-            "seconds": 248,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 47
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -113,8 +101,8 @@
           "airdate": "1986-10-17",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S1 E10 - The Thingy.mp4",
@@ -133,8 +121,8 @@
           "airdate": "1986-10-20",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S1 E11 - Don't Let The Bed Bugs Bite.mp4",
@@ -257,8 +245,8 @@
           "airdate": "1986-11-07",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S1 E25 - Bye Bye Berk.mp4",
@@ -302,8 +290,8 @@
           "airdate": "1986-11-09",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E2 - Oh Globbits.mp4",
@@ -322,8 +310,8 @@
           "airdate": "1986-11-10",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E3 - Moany Boni.mp4",
@@ -342,8 +330,8 @@
           "airdate": "1986-11-11",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E4 - The Horrible Thing.mp4",
@@ -362,8 +350,8 @@
           "airdate": "1986-11-12",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E5 - Not Very Nice.mp4",
@@ -382,8 +370,8 @@
           "airdate": "1986-11-13",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E6 - Bugs.mp4",
@@ -402,8 +390,8 @@
           "airdate": "1986-11-14",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E7 - Yum Yum.mp4",
@@ -422,8 +410,8 @@
           "airdate": "1986-11-15",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E8 - Birthday Surprise.mp4",
@@ -442,8 +430,8 @@
           "airdate": "1986-11-16",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E9 - The Stupid Thing.mp4",
@@ -462,8 +450,8 @@
           "airdate": "1986-11-17",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E10 - Boo.mp4",
@@ -482,8 +470,8 @@
           "airdate": "1986-11-18",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E11 - The Lump.mp4",
@@ -502,8 +490,8 @@
           "airdate": "1986-11-19",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E12 - The Splund.mp4",
@@ -522,8 +510,8 @@
           "airdate": "1986-11-20",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E13 - Nasty Beastie.mp4",
@@ -542,8 +530,8 @@
           "airdate": "1986-11-21",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "TheTrapDoorCompleteSeries_201801",
             "itemTitle": "The Trap Door (Complete Series)",
             "file": "The Trap Door - S2 E14 - What a Weirdo.mp4",

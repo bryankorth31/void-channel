@@ -3,7 +3,7 @@
   "slug": "off-the-air",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-16T07:56:41.041Z",
+  "matchedAt": "2026-10-19T04:10:46.802Z",
   "addedAt": "2026-10-15T12:07:45.073Z",
   "tvmaze": {
     "id": 3971,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 55,
     "live": 1,
-    "review": 23,
-    "missing": 31,
-    "pct": 44
+    "review": 24,
+    "missing": 30,
+    "pct": 45
   },
   "seasons": [
     {
@@ -1038,8 +1038,20 @@
           "number": 2,
           "name": "Drugs",
           "airdate": "2023-12-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Drugs\" (0.95)",
+            "item": "drugs-off-the-air-fanmade-2017-runawaysplace",
+            "itemTitle": "Drugs | Off The Air | Fanmade",
+            "file": "Drugs Off The Air Fanmade (2017 runawaysplace).mp4",
+            "name": "Drugs Off The Air Fanmade (2017 runawaysplace)",
+            "url": "https://archive.org/download/drugs-off-the-air-fanmade-2017-runawaysplace/Drugs%20Off%20The%20Air%20Fanmade%20(2017%20runawaysplace).mp4",
+            "seconds": 1033,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 553
+          },
           "alternates": []
         },
         {

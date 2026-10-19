@@ -3,7 +3,7 @@
   "slug": "tokyo-revengers",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:35.145Z",
+  "matchedAt": "2026-10-19T04:11:37.215Z",
   "addedAt": "2026-10-15T12:08:15.754Z",
   "tvmaze": {
     "id": 53689,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 63,
-    "live": 48,
+    "live": 50,
     "review": 0,
-    "missing": 15,
-    "pct": 76
+    "missing": 13,
+    "pct": 79
   },
   "seasons": [
     {
@@ -321,8 +321,20 @@
           "number": 15,
           "name": "No Pain, no gain",
           "airdate": "2021-07-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "51.tokyo-revengers-105009",
+            "itemTitle": "51.Tokyo Revengers - 105009",
+            "file": "Tokyo Revengers - 1x15 - Sin dolor no hay victoria.mp4",
+            "name": "Tokyo Revengers - 1x15 - Sin dolor no hay victoria",
+            "url": "https://archive.org/download/51.tokyo-revengers-105009/Tokyo%20Revengers%20-%201x15%20-%20Sin%20dolor%20no%20hay%20victoria.mp4",
+            "seconds": 1422,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 165
+          },
           "alternates": []
         },
         {
@@ -769,8 +781,20 @@
           "number": 38,
           "name": "The Longest Day",
           "airdate": "2023-10-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "51.tokyo-revengers-105009",
+            "itemTitle": "51.Tokyo Revengers - 105009",
+            "file": "Tokyo Revengers - 1x38 - El día más largo.mp4",
+            "name": "Tokyo Revengers - 1x38 - El día más largo",
+            "url": "https://archive.org/download/51.tokyo-revengers-105009/Tokyo%20Revengers%20-%201x38%20-%20El%20d%C3%ADa%20m%C3%A1s%20largo.mp4",
+            "seconds": 1422,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 148
+          },
           "alternates": []
         },
         {

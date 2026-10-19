@@ -3,7 +3,7 @@
   "slug": "upright-citizens-brigade",
   "type": "Sketch and Comedy",
   "network": "Comedy Central",
-  "matchedAt": "2026-10-16T07:58:47.761Z",
+  "matchedAt": "2026-10-19T04:12:44.703Z",
   "addedAt": "2026-10-15T12:09:13.673Z",
   "tvmaze": {
     "id": 6250,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 30,
-    "live": 7,
-    "review": 13,
-    "missing": 10,
-    "pct": 67
+    "live": 29,
+    "review": 0,
+    "missing": 1,
+    "pct": 97
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "Bucket of Truth",
           "airdate": "1998-08-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -47,9 +47,9 @@
           "number": 2,
           "name": "Poo Stick",
           "airdate": "1998-09-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -67,17 +67,29 @@
           "number": 3,
           "name": "Saigon Suicide Show",
           "airdate": "1998-09-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 01/UCB 103 - Hong Kong Danger Duo.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 01/UCB 103 - Hong Kong Danger Duo",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2001%2FUCB%20103%20-%20Hong%20Kong%20Danger%20Duo.mp4",
+            "seconds": 1336,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 132
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Power Marketing",
           "airdate": "1998-09-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -95,9 +107,9 @@
           "number": 5,
           "name": "Children's Revolution",
           "airdate": "1998-09-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -115,9 +127,9 @@
           "number": 6,
           "name": "Story of the Toad",
           "airdate": "1998-08-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -135,9 +147,9 @@
           "number": 7,
           "name": "Lady of the Lake",
           "airdate": "1998-10-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -155,9 +167,9 @@
           "number": 8,
           "name": "Time Machine",
           "airdate": "1998-10-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -169,15 +181,29 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Time Machine\" (0.95)",
+              "item": "upright-citizens-brigade-tv-series-1998-2000",
+              "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+              "file": "Upright Citizens Brigade (TV Series 1998–2000)/Extras/UCB extra ~ Time Machine.mp4",
+              "name": "Upright Citizens Brigade (TV Series 1998–2000)/Extras/UCB extra ~ Time Machine",
+              "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FExtras%2FUCB%20extra%20~%20Time%20Machine.mp4",
+              "seconds": 1510,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 60
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Cyborgs",
           "airdate": "1998-10-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -195,8 +221,20 @@
           "number": 10,
           "name": "Little Donny Foundation",
           "airdate": "1998-10-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 01/UCB 110 + Little Donny.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 01/UCB 110 + Little Donny",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2001%2FUCB%20110%20%2B%20Little%20Donny.mp4",
+            "seconds": 1330,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
           "alternates": []
         }
       ]
@@ -208,8 +246,20 @@
           "number": 1,
           "name": "Master Dialectitian",
           "airdate": "1999-06-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 201 + Competition.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 201 + Competition",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2002%2FUCB%20201%20%2B%20Competition.mp4",
+            "seconds": 1332,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 132
+          },
           "alternates": []
         },
         {
@@ -224,17 +274,29 @@
           "number": 3,
           "name": "Mogomra vs. the Fart Monster",
           "airdate": "1999-06-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 203 + Japanese Culture.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 203 + Japanese Culture",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2002%2FUCB%20203%20%2B%20Japanese%20Culture.mp4",
+            "seconds": 1321,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Real World",
           "airdate": "1999-07-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -252,49 +314,109 @@
           "number": 5,
           "name": "Eli's Face Therapy",
           "airdate": "1999-07-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 205 + Anger.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 205 + Anger",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2002%2FUCB%20205%20%2B%20Anger.mp4",
+            "seconds": 1326,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Infested with Friars",
           "airdate": "1999-07-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 206 + A Side of Fun.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 206 + A Side of Fun",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2002%2FUCB%20206%20%2B%20A%20Side%20of%20Fun.mp4",
+            "seconds": 1323,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Spaghetti Jesus",
           "airdate": "1999-08-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 207 + Religion.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 207 + Religion",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2002%2FUCB%20207%20%2B%20Religion.mp4",
+            "seconds": 1322,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Big City",
           "airdate": "1999-08-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 208 + Town Party.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 208 + Town Party",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2002%2FUCB%20208%20%2B%20Town%20Party.mp4",
+            "seconds": 1323,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 133
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "Hurricane",
           "airdate": "1999-08-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 209 + Weather.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 02/UCB 209 + Weather",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2002%2FUCB%20209%20%2B%20Weather.mp4",
+            "seconds": 1322,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Supercool",
           "airdate": "1999-08-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -331,15 +453,29 @@
             "playable": true,
             "sizeMB": 127
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "upright-citizens-brigade-tv-series-1998-2000",
+              "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+              "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 301 + Head Wearers.mp4",
+              "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 301 + Head Wearers",
+              "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20301%20%2B%20Head%20Wearers.mp4",
+              "seconds": 1335,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 131
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Mafia",
           "airdate": "2000-01-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -361,29 +497,29 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "upright-citizens-brigade-303-hospital",
-            "itemTitle": "Upright Citizens Brigade - Season 3 Episode 3 - \"Hospital\"",
-            "file": "Upright Citizens Brigade 303 - Hospital.mp4",
-            "name": "Upright Citizens Brigade 303 - Hospital",
-            "url": "https://archive.org/download/upright-citizens-brigade-303-hospital/Upright%20Citizens%20Brigade%20303%20-%20Hospital.mp4",
-            "seconds": 1316,
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 303 + Hospital.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 303 + Hospital",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20303%20%2B%20Hospital.mp4",
+            "seconds": 1335,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 128
+            "sizeMB": 131
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "upright-citizens-brigade-tv-series-1998-2000",
-              "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
-              "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 303 + Hospital.mp4",
-              "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 303 + Hospital",
-              "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20303%20%2B%20Hospital.mp4",
-              "seconds": 1335,
+              "item": "upright-citizens-brigade-303-hospital",
+              "itemTitle": "Upright Citizens Brigade - Season 3 Episode 3 - \"Hospital\"",
+              "file": "Upright Citizens Brigade 303 - Hospital.mp4",
+              "name": "Upright Citizens Brigade 303 - Hospital",
+              "url": "https://archive.org/download/upright-citizens-brigade-303-hospital/Upright%20Citizens%20Brigade%20303%20-%20Hospital.mp4",
+              "seconds": 1316,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 131
+              "sizeMB": 128
             }
           ]
         },
@@ -395,29 +531,29 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "upright-citizens-brigade-304-music",
-            "itemTitle": "Upright Citizens Brigade - Season 3 Episode 4 - \"Band\"",
-            "file": "Upright Citizens Brigade 304 - Music.mp4",
-            "name": "Upright Citizens Brigade 304 - Music",
-            "url": "https://archive.org/download/upright-citizens-brigade-304-music/Upright%20Citizens%20Brigade%20304%20-%20Music.mp4",
-            "seconds": 1315,
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 304 - Music.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 304 - Music",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20304%20-%20Music.mp4",
+            "seconds": 1323,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 127
+            "sizeMB": 130
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "upright-citizens-brigade-tv-series-1998-2000",
-              "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
-              "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 304 - Music.mp4",
-              "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 304 - Music",
-              "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20304%20-%20Music.mp4",
-              "seconds": 1323,
+              "item": "upright-citizens-brigade-304-music",
+              "itemTitle": "Upright Citizens Brigade - Season 3 Episode 4 - \"Band\"",
+              "file": "Upright Citizens Brigade 304 - Music.mp4",
+              "name": "Upright Citizens Brigade 304 - Music",
+              "url": "https://archive.org/download/upright-citizens-brigade-304-music/Upright%20Citizens%20Brigade%20304%20-%20Music.mp4",
+              "seconds": 1315,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 130
+              "sizeMB": 127
             }
           ]
         },
@@ -425,9 +561,9 @@
           "number": 5,
           "name": "Food",
           "airdate": "2000-02-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -449,29 +585,29 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "upright-citizens-brigade-306-college",
-            "itemTitle": "Upright Citizens Brigade - Season 3 Episode 6 - \"College\"",
-            "file": "Upright Citizens Brigade 306 - College.mp4",
-            "name": "Upright Citizens Brigade 306 - College",
-            "url": "https://archive.org/download/upright-citizens-brigade-306-college/Upright%20Citizens%20Brigade%20306%20-%20College.mp4",
-            "seconds": 1316,
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 306 - College.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 306 - College",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20306%20-%20College.mp4",
+            "seconds": 1321,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 127
+            "sizeMB": 130
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "upright-citizens-brigade-tv-series-1998-2000",
-              "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
-              "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 306 - College.mp4",
-              "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 306 - College",
-              "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20306%20-%20College.mp4",
-              "seconds": 1321,
+              "item": "upright-citizens-brigade-306-college",
+              "itemTitle": "Upright Citizens Brigade - Season 3 Episode 6 - \"College\"",
+              "file": "Upright Citizens Brigade 306 - College.mp4",
+              "name": "Upright Citizens Brigade 306 - College",
+              "url": "https://archive.org/download/upright-citizens-brigade-306-college/Upright%20Citizens%20Brigade%20306%20-%20College.mp4",
+              "seconds": 1316,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 130
+              "sizeMB": 127
             }
           ]
         },
@@ -483,29 +619,29 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "upright-citizens-brigade-307-sex",
-            "itemTitle": "Upright Citizens Brigade - Season 3 Episode 7 - \"Sex\"",
-            "file": "Upright Citizens Brigade 307 - Sex.mp4",
-            "name": "Upright Citizens Brigade 307 - Sex",
-            "url": "https://archive.org/download/upright-citizens-brigade-307-sex/Upright%20Citizens%20Brigade%20307%20-%20Sex.mp4",
-            "seconds": 1314,
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 307 - Sex.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 307 - Sex",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20307%20-%20Sex.mp4",
+            "seconds": 1322,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 127
+            "sizeMB": 130
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "upright-citizens-brigade-tv-series-1998-2000",
-              "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
-              "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 307 - Sex.mp4",
-              "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 307 - Sex",
-              "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20307%20-%20Sex.mp4",
-              "seconds": 1322,
+              "item": "upright-citizens-brigade-307-sex",
+              "itemTitle": "Upright Citizens Brigade - Season 3 Episode 7 - \"Sex\"",
+              "file": "Upright Citizens Brigade 307 - Sex.mp4",
+              "name": "Upright Citizens Brigade 307 - Sex",
+              "url": "https://archive.org/download/upright-citizens-brigade-307-sex/Upright%20Citizens%20Brigade%20307%20-%20Sex.mp4",
+              "seconds": 1314,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 130
+              "sizeMB": 127
             }
           ]
         },
@@ -517,29 +653,29 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "upright-citizens-brigade-308-small-town",
-            "itemTitle": "Upright Citizens Brigade - Season 3 Episode 8 - \"Small Town\"",
-            "file": "Upright Citizens Brigade 308 - Small Town.mp4",
-            "name": "Upright Citizens Brigade 308 - Small Town",
-            "url": "https://archive.org/download/upright-citizens-brigade-308-small-town/Upright%20Citizens%20Brigade%20308%20-%20Small%20Town.mp4",
-            "seconds": 1332,
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 308 - Small Town.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 308 - Small Town",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20308%20-%20Small%20Town.mp4",
+            "seconds": 1337,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 128
+            "sizeMB": 131
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "upright-citizens-brigade-tv-series-1998-2000",
-              "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
-              "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 308 - Small Town.mp4",
-              "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 308 - Small Town",
-              "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20308%20-%20Small%20Town.mp4",
-              "seconds": 1337,
+              "item": "upright-citizens-brigade-308-small-town",
+              "itemTitle": "Upright Citizens Brigade - Season 3 Episode 8 - \"Small Town\"",
+              "file": "Upright Citizens Brigade 308 - Small Town.mp4",
+              "name": "Upright Citizens Brigade 308 - Small Town",
+              "url": "https://archive.org/download/upright-citizens-brigade-308-small-town/Upright%20Citizens%20Brigade%20308%20-%20Small%20Town.mp4",
+              "seconds": 1332,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 131
+              "sizeMB": 128
             }
           ]
         },
@@ -547,9 +683,9 @@
           "number": 9,
           "name": "Technology",
           "airdate": "2000-03-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "upright-citizens-brigade-tv-series-1998-2000",
             "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
@@ -571,17 +707,31 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "upright-citizens-brigade-310-thunderball",
-            "itemTitle": "Upright Citizens Brigade - Season 3 Episode 10 - \"Pro Thunderball\"",
-            "file": "Upright Citizens Brigade 310 - Thunderball.mp4",
-            "name": "Upright Citizens Brigade 310 - Thunderball",
-            "url": "https://archive.org/download/upright-citizens-brigade-310-thunderball/Upright%20Citizens%20Brigade%20310%20-%20Thunderball.mp4",
-            "seconds": 1329,
+            "item": "upright-citizens-brigade-tv-series-1998-2000",
+            "itemTitle": "Upright Citizens Brigade (TV Series 1998–2000)",
+            "file": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 310 + Thunderball.mp4",
+            "name": "Upright Citizens Brigade (TV Series 1998–2000)/Season 03/UCB 310 + Thunderball",
+            "url": "https://archive.org/download/upright-citizens-brigade-tv-series-1998-2000/Upright%20Citizens%20Brigade%20(TV%20Series%201998%E2%80%932000)%2FSeason%2003%2FUCB%20310%20%2B%20Thunderball.mp4",
+            "seconds": 1336,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 127
+            "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "upright-citizens-brigade-310-thunderball",
+              "itemTitle": "Upright Citizens Brigade - Season 3 Episode 10 - \"Pro Thunderball\"",
+              "file": "Upright Citizens Brigade 310 - Thunderball.mp4",
+              "name": "Upright Citizens Brigade 310 - Thunderball",
+              "url": "https://archive.org/download/upright-citizens-brigade-310-thunderball/Upright%20Citizens%20Brigade%20310%20-%20Thunderball.mp4",
+              "seconds": 1329,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 127
+            }
+          ]
         }
       ]
     }

@@ -3,7 +3,7 @@
   "slug": "street-sharks",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:34.664Z",
+  "matchedAt": "2026-10-19T04:10:41.789Z",
   "addedAt": "2026-10-16T07:56:34.663Z",
   "tvmaze": {
     "id": 8438,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 40,
-    "live": 19,
-    "review": 16,
-    "missing": 5,
-    "pct": 88
+    "live": 39,
+    "review": 0,
+    "missing": 1,
+    "pct": 98
   },
   "seasons": [
     {
@@ -69,7 +69,7 @@
               "sizeMB": 122
             },
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
               "itemTitle": "Street Sharks Shark- Episodes",
@@ -129,17 +129,17 @@
               "sizeMB": 116
             },
             {
-              "conf": 0.8,
-              "why": "title ~ \"Sharkbite\" (0.95)",
-              "item": "street-sharks-the-annotated-series-episode-1-shark-bait",
-              "itemTitle": "Street Sharks: The Annotated Series ",
-              "file": "Street Sharks_ The Annotated Series _ Episode 2_ Sharkbite.mp4",
-              "name": "Street Sharks_ The Annotated Series _ Episode 2_ Sharkbite",
-              "url": "https://archive.org/download/street-sharks-the-annotated-series-episode-1-shark-bait/Street%20Sharks_%20The%20Annotated%20Series%20_%20Episode%202_%20Sharkbite.mp4",
-              "seconds": 1240,
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+              "itemTitle": "Street Sharks Shark- Episodes",
+              "file": "Street Sharks- Sharkbite - Season 1 - Episode 2 - (Full episode).mp4",
+              "name": "Street Sharks- Sharkbite - Season 1 - Episode 2 - (Full episode)",
+              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Sharkbite%20-%20Season%201%20-%20Episode%202%20-%20(Full%20episode).mp4",
+              "seconds": 1309,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 148
+              "sizeMB": 70
             }
           ]
         },
@@ -189,7 +189,7 @@
               "sizeMB": 139
             },
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
               "itemTitle": "Street Sharks Shark- Episodes",
@@ -214,19 +214,32 @@
           "airdate": "1994-09-28",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S02 E01 - Jurassic Shark (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S02 E01 - Jurassic Shark (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E01%20-%20Jurassic%20Shark%20(480p%20-%20DVDRip).mp4",
-            "seconds": 1299,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Shark Quest - Season 2 - Episode 1 - (Full episode).mp4",
+            "name": "Street Sharks- Shark Quest - Season 2 - Episode 1 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Quest%20-%20Season%202%20-%20Episode%201%20-%20(Full%20episode).mp4",
+            "seconds": 1296,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 440
+            "sizeMB": 86
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S02 E01 - Jurassic Shark (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S02 E01 - Jurassic Shark (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E01%20-%20Jurassic%20Shark%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1299,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 440
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -252,19 +265,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 157
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Shark Quest\" (1.00)",
-              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-              "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S01 E04 - Shark Quest (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S01 E04 - Shark Quest (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S01%20E04%20-%20Shark%20Quest%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1296,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 317
             }
           ]
         },
@@ -274,19 +274,32 @@
           "airdate": "1994-10-07",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S02 E02 - Sir Shark-a-lot (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S02 E02 - Sir Shark-a-lot (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E02%20-%20Sir%20Shark-a-lot%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Lone Shark - Season 2 - Episode 2 - (Full episode).mp4",
+            "name": "Street Sharks- Lone Shark - Season 2 - Episode 2 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Lone%20Shark%20-%20Season%202%20-%20Episode%202%20-%20(Full%20episode).mp4",
             "seconds": 1297,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 425
+            "sizeMB": 93
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S02 E02 - Sir Shark-a-lot (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S02 E02 - Sir Shark-a-lot (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E02%20-%20Sir%20Shark-a-lot%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1297,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 425
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -312,19 +325,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 164
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Lone Shark\" (1.00)",
-              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-              "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S01 E05 - Lone Shark (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S01 E05 - Lone Shark (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S01%20E05%20-%20Lone%20Shark%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1298,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 336
             }
           ]
         },
@@ -334,19 +334,32 @@
           "airdate": "1994-10-14",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S02 E03 - Shark to the Future (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S02 E03 - Shark to the Future (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E03%20-%20Shark%20to%20the%20Future%20(480p%20-%20DVDRip).mp4",
-            "seconds": 1303,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Shark n' Roll - Season 2 - Episode 3 - (Full episode).mp4",
+            "name": "Street Sharks- Shark n' Roll - Season 2 - Episode 3 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20n'%20Roll%20-%20Season%202%20-%20Episode%203%20-%20(Full%20episode).mp4",
+            "seconds": 1305,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 414
+            "sizeMB": 102
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S02 E03 - Shark to the Future (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S02 E03 - Shark to the Future (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E03%20-%20Shark%20to%20the%20Future%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1303,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 414
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -372,19 +385,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 147
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Shark n' Roll\" (1.00)",
-              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-              "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S01 E06 - Shark n' Roll (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S01 E06 - Shark n' Roll (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S01%20E06%20-%20Shark%20n'%20Roll%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1305,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 360
             }
           ]
         },
@@ -421,6 +421,19 @@
               "sizeMB": 99
             },
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+              "itemTitle": "Street Sharks Shark- Episodes",
+              "file": "Street Sharks- Fresh Water Sharks - Season 2 - Episode 4 - (Full episode).mp4",
+              "name": "Street Sharks- Fresh Water Sharks - Season 2 - Episode 4 - (Full episode)",
+              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Fresh%20Water%20Sharks%20-%20Season%202%20-%20Episode%204%20-%20(Full%20episode).mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 87
+            },
+            {
               "conf": 0.85,
               "why": "S/E in filename",
               "item": "street-sharks_202107",
@@ -432,19 +445,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 99
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Shark Treatment\" (1.00)",
-              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-              "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S01 E08 - Shark Treatment (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S01 E08 - Shark Treatment (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S01%20E08%20-%20Shark%20Treatment%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1299,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 326
             }
           ]
         },
@@ -481,6 +481,19 @@
               "sizeMB": 103
             },
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+              "itemTitle": "Street Sharks Shark- Episodes",
+              "file": "Street Sharks- Shark Treatment - Season 2 - Episode 5 - (Full episode).mp4",
+              "name": "Street Sharks- Shark Treatment - Season 2 - Episode 5 - (Full episode)",
+              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Treatment%20-%20Season%202%20-%20Episode%205%20-%20(Full%20episode).mp4",
+              "seconds": 1299,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 99
+            },
+            {
               "conf": 0.85,
               "why": "S/E in filename",
               "item": "street-sharks_202107",
@@ -492,19 +505,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 103
-            },
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Fresh Water Sharks\" (0.78)",
-              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-              "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S01 E07 - Fresh Water Sharks (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S01 E07 - Fresh Water Sharks (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S01%20E07%20-%20Fresh%20Water%20Sharks%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1295,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 299
             }
           ]
         },
@@ -541,6 +541,19 @@
               "sizeMB": 122
             },
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+              "itemTitle": "Street Sharks Shark- Episodes",
+              "file": "Street Sharks- Road Sharks - Season 2 - Episode 6 - (Full episode).mp4",
+              "name": "Street Sharks- Road Sharks - Season 2 - Episode 6 - (Full episode)",
+              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Road%20Sharks%20-%20Season%202%20-%20Episode%206%20-%20(Full%20episode).mp4",
+              "seconds": 1293,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 95
+            },
+            {
               "conf": 0.85,
               "why": "S/E in filename",
               "item": "street-sharks_202107",
@@ -552,19 +565,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 122
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Road Shark\" (1.00)",
-              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-              "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S01 E09 - Road Shark (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S01 E09 - Road Shark (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S01%20E09%20-%20Road%20Shark%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1293,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 327
             }
           ]
         },
@@ -572,21 +572,34 @@
           "number": 7,
           "name": "Shark Fight",
           "airdate": "1994-11-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Shark Fight\" (1.00)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S01 E10 - Shark Fight (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S01 E10 - Shark Fight (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S01%20E10%20-%20Shark%20Fight%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Shark Fight - Season 2 - Episode 7 - (Full episode).mp4",
+            "name": "Street Sharks- Shark Fight - Season 2 - Episode 7 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Fight%20-%20Season%202%20-%20Episode%207%20-%20(Full%20episode).mp4",
             "seconds": 1301,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 293
+            "sizeMB": 98
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Shark Fight\" (1.00)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S01 E10 - Shark Fight (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S01 E10 - Shark Fight (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S01%20E10%20-%20Shark%20Fight%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1301,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 293
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Shark Fight\" (0.95)",
@@ -608,19 +621,6 @@
               "file": "Street Sharks/S01E10 - Shark Fight.mp4",
               "name": "Street Sharks/S01E10 - Shark Fight",
               "url": "https://archive.org/download/street-sharks-extreme-dinosaurs_202508/Street%20Sharks%2FS01E10%20-%20Shark%20Fight.mp4",
-              "seconds": 1301,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 124
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Shark Fight\" (1.00)",
-              "item": "street-sharks_202107",
-              "itemTitle": "Street Sharks (1994)",
-              "file": "S01E10 - Shark Fight.mp4",
-              "name": "S01E10 - Shark Fight",
-              "url": "https://archive.org/download/street-sharks_202107/S01E10%20-%20Shark%20Fight.mp4",
               "seconds": 1301,
               "format": "MPEG4",
               "playable": true,
@@ -647,6 +647,19 @@
             "sizeMB": 401
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+              "itemTitle": "Street Sharks Shark- Episodes",
+              "file": "Street Sharks- Sky Sharks - Season 2 - Episode 8 - (Full episode).mp4",
+              "name": "Street Sharks- Sky Sharks - Season 2 - Episode 8 - (Full episode)",
+              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Sky%20Sharks%20-%20Season%202%20-%20Episode%208%20-%20(Full%20episode).mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 100
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -708,6 +721,19 @@
               "sizeMB": 109
             },
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+              "itemTitle": "Street Sharks Shark- Episodes",
+              "file": "Street Sharks- Sharks of Steel - Season 2 - Episode 9 - (Full episode).mp4",
+              "name": "Street Sharks- Sharks of Steel - Season 2 - Episode 9 - (Full episode)",
+              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Sharks%20of%20Steel%20-%20Season%202%20-%20Episode%209%20-%20(Full%20episode).mp4",
+              "seconds": 1299,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 100
+            },
+            {
               "conf": 0.85,
               "why": "S/E in filename",
               "item": "street-sharks_202107",
@@ -719,19 +745,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 109
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Shark of Steel\" (1.00)",
-              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-              "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S01 E12 - Shark of Steel (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S01 E12 - Shark of Steel (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S01%20E12%20-%20Shark%20of%20Steel%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1300,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 290
             }
           ]
         },
@@ -741,19 +754,32 @@
           "airdate": "1994-11-28",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S02 E10 - Close Encounters of the Shark Kind (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S02 E10 - Close Encounters of the Shark Kind (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E10%20-%20Close%20Encounters%20of%20the%20Shark%20Kind%20(480p%20-%20DVDRip).mp4",
-            "seconds": 1302,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Shark Source - Season 2 - Episode 10 - (Full episode).mp4",
+            "name": "Street Sharks- Shark Source - Season 2 - Episode 10 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Source%20-%20Season%202%20-%20Episode%2010%20-%20(Full%20episode).mp4",
+            "seconds": 1292,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 457
+            "sizeMB": 71
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S02 E10 - Close Encounters of the Shark Kind (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S02 E10 - Close Encounters of the Shark Kind (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E10%20-%20Close%20Encounters%20of%20the%20Shark%20Kind%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1302,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 457
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -779,19 +805,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 93
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Shark Source\" (1.00)",
-              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-              "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S01 E13 - Shark Source (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S01 E13 - Shark Source (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S01%20E13%20-%20Shark%20Source%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1292,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 262
             }
           ]
         }
@@ -806,19 +819,32 @@
           "airdate": "1995-01-05",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S03 E01 - Ancient Sharkonauts (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S03 E01 - Ancient Sharkonauts (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E01%20-%20Ancient%20Sharkonauts%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Jurassic Shark - Season 3 - Episode 1 - (Full episode).mp4",
+            "name": "Street Sharks- Jurassic Shark - Season 3 - Episode 1 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Jurassic%20Shark%20-%20Season%203%20-%20Episode%201%20-%20(Full%20episode).mp4",
             "seconds": 1299,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 435
+            "sizeMB": 91
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S03 E01 - Ancient Sharkonauts (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S03 E01 - Ancient Sharkonauts (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E01%20-%20Ancient%20Sharkonauts%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1299,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 435
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -844,19 +870,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 67
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Jurassic Shark\" (1.00)",
-              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-              "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S02 E01 - Jurassic Shark (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S02 E01 - Jurassic Shark (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E01%20-%20Jurassic%20Shark%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1299,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 440
             }
           ]
         },
@@ -864,21 +877,34 @@
           "number": 2,
           "name": "Sir Shark-a-lot",
           "airdate": "1995-01-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Sir Shark-a-lot\" (1.00)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S02 E02 - Sir Shark-a-lot (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S02 E02 - Sir Shark-a-lot (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E02%20-%20Sir%20Shark-a-lot%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Sir Sharkalot - Season 3 - Episode 2 - (Full episode).mp4",
+            "name": "Street Sharks- Sir Sharkalot - Season 3 - Episode 2 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Sir%20Sharkalot%20-%20Season%203%20-%20Episode%202%20-%20(Full%20episode).mp4",
             "seconds": 1297,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 425
+            "sizeMB": 97
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Sir Shark-a-lot\" (1.00)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S02 E02 - Sir Shark-a-lot (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S02 E02 - Sir Shark-a-lot (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E02%20-%20Sir%20Shark-a-lot%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1297,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 425
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Sir Shark-a-lot\" (0.95)",
@@ -904,19 +930,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 164
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Sir Shark-a-lot\" (1.00)",
-              "item": "street-sharks_202107",
-              "itemTitle": "Street Sharks (1994)",
-              "file": "S02E02 - Sir Shark-a-lot.mp4",
-              "name": "S02E02 - Sir Shark-a-lot",
-              "url": "https://archive.org/download/street-sharks_202107/S02E02%20-%20Sir%20Shark-a-lot.mp4",
-              "seconds": 1297,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 164
             }
           ]
         },
@@ -926,19 +939,32 @@
           "airdate": "1995-01-19",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S03 E03 - Sand Sharks (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S03 E03 - Sand Sharks (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E03%20-%20Sand%20Sharks%20(480p%20-%20DVDRip).mp4",
-            "seconds": 1296,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Shark to the Future - Season 3 - Episode 3 - (Full episode).mp4",
+            "name": "Street Sharks- Shark to the Future - Season 3 - Episode 3 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20to%20the%20Future%20-%20Season%203%20-%20Episode%203%20-%20(Full%20episode).mp4",
+            "seconds": 1303,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 412
+            "sizeMB": 101
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S03 E03 - Sand Sharks (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S03 E03 - Sand Sharks (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E03%20-%20Sand%20Sharks%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 412
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -964,19 +990,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 70
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Shark to the Future\" (1.00)",
-              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-              "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S02 E03 - Shark to the Future (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S02 E03 - Shark to the Future (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E03%20-%20Shark%20to%20the%20Future%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1303,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 414
             }
           ]
         },
@@ -986,19 +999,32 @@
           "airdate": "1995-01-26",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S03 E04 - Shark Quake (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S03 E04 - Shark Quake (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E04%20-%20Shark%20Quake%20(480p%20-%20DVDRip).mp4",
-            "seconds": 1298,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- First Shark - Season 3 - Episode 4 - (Full episode).mp4",
+            "name": "Street Sharks- First Shark - Season 3 - Episode 4 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20First%20Shark%20-%20Season%203%20-%20Episode%204%20-%20(Full%20episode).mp4",
+            "seconds": 1300,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 413
+            "sizeMB": 87
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S03 E04 - Shark Quake (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S03 E04 - Shark Quake (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E04%20-%20Shark%20Quake%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1298,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 413
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -1024,19 +1050,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 137
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"First Shark\" (1.00)",
-              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-              "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S02 E04 - First Shark (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S02 E04 - First Shark (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E04%20-%20First%20Shark%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1300,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 413
             }
           ]
         },
@@ -1071,6 +1084,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 143
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+              "itemTitle": "Street Sharks Shark- Episodes",
+              "file": "Street Sharks- Rebel Sharks - Season 3 - Episode 5 - (Full episode).mp4",
+              "name": "Street Sharks- Rebel Sharks - Season 3 - Episode 5 - (Full episode)",
+              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Rebel%20Sharks%20-%20Season%203%20-%20Episode%205%20-%20(Full%20episode).mp4",
+              "seconds": 1300,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 91
             },
             {
               "conf": 0.85,
@@ -1120,6 +1146,19 @@
               "sizeMB": 109
             },
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+              "itemTitle": "Street Sharks Shark- Episodes",
+              "file": "Street Sharks- Space Sharks - Season 3 - Episode 6 - (Full episode).mp4",
+              "name": "Street Sharks- Space Sharks - Season 3 - Episode 6 - (Full episode)",
+              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Space%20Sharks%20-%20Season%203%20-%20Episode%206%20-%20(Full%20episode).mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 92
+            },
+            {
               "conf": 0.85,
               "why": "S/E in filename",
               "item": "street-sharks_202107",
@@ -1140,19 +1179,32 @@
           "airdate": "1995-02-19",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S03 E07 - Trojan Sharks (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S03 E07 - Trojan Sharks (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E07%20-%20Trojan%20Sharks%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- A Shark Among Us - Season 3 - Episode 7 - (Full episode).mp4",
+            "name": "Street Sharks- A Shark Among Us - Season 3 - Episode 7 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20A%20Shark%20Among%20Us%20-%20Season%203%20-%20Episode%207%20-%20(Full%20episode).mp4",
             "seconds": 1299,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 384
+            "sizeMB": 77
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S03 E07 - Trojan Sharks (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S03 E07 - Trojan Sharks (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E07%20-%20Trojan%20Sharks%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1299,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 384
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -1178,19 +1230,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 102
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"A Shark Among Us\" (1.00)",
-              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-              "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S02 E07 - A Shark Among Us (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S02 E07 - A Shark Among Us (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E07%20-%20A%20Shark%20Among%20Us%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1299,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 334
             }
           ]
         },
@@ -1200,57 +1239,57 @@
           "airdate": "1995-02-26",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S03 E08 - Shark-apolypse Now (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S03 E08 - Shark-apolypse Now (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E08%20-%20Shark-apolypse%20Now%20(480p%20-%20DVDRip).mp4",
-            "seconds": 1297,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- To Shark or Not to Shark - Season 3 - Episode 8 - (Full episode).mp4",
+            "name": "Street Sharks- To Shark or Not to Shark - Season 3 - Episode 8 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20To%20Shark%20or%20Not%20to%20Shark%20-%20Season%203%20-%20Episode%208%20-%20(Full%20episode).mp4",
+            "seconds": 1298,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 362
+            "sizeMB": 86
           },
           "alternates": [
             {
-              "conf": 0.8,
-              "why": "title ~ \"To Shark or Not to Shark\" (1.00)",
+              "conf": 0.9,
+              "why": "S/E in filename",
               "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
               "itemTitle": "Street Sharks",
-              "file": "STREET SHARKS - S02 E08 - To Shark or Not to Shark (480p - DVDRip).mp4",
-              "name": "STREET SHARKS - S02 E08 - To Shark or Not to Shark (480p - DVDRip)",
-              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E08%20-%20To%20Shark%20or%20Not%20to%20Shark%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1298,
+              "file": "STREET SHARKS - S03 E08 - Shark-apolypse Now (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S03 E08 - Shark-apolypse Now (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E08%20-%20Shark-apolypse%20Now%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1297,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 401
+              "sizeMB": 362
             },
             {
-              "conf": 0.8,
-              "why": "title ~ \"To Shark or Not to Shark\" (1.00)",
+              "conf": 0.9,
+              "why": "S/E in filename",
               "item": "street-sharks-extreme-dinosaurs_202508",
               "itemTitle": "Street Sharks & Extreme Dinosaurs",
-              "file": "Street Sharks/S02E08 - To Shark or Not to Shark.mp4",
-              "name": "Street Sharks/S02E08 - To Shark or Not to Shark",
-              "url": "https://archive.org/download/street-sharks-extreme-dinosaurs_202508/Street%20Sharks%2FS02E08%20-%20To%20Shark%20or%20Not%20to%20Shark.mp4",
-              "seconds": 1298,
+              "file": "Street Sharks/S03E08 - Shark-apocalypse Now!.mp4",
+              "name": "Street Sharks/S03E08 - Shark-apocalypse Now!",
+              "url": "https://archive.org/download/street-sharks-extreme-dinosaurs_202508/Street%20Sharks%2FS03E08%20-%20Shark-apocalypse%20Now!.mp4",
+              "seconds": 1297,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 61
+              "sizeMB": 110
             },
             {
-              "conf": 0.75,
-              "why": "title ~ \"To Shark or Not to Shark\" (1.00)",
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "street-sharks_202107",
               "itemTitle": "Street Sharks (1994)",
-              "file": "S02E08 - To Shark or Not to Shark.mp4",
-              "name": "S02E08 - To Shark or Not to Shark",
-              "url": "https://archive.org/download/street-sharks_202107/S02E08%20-%20To%20Shark%20or%20Not%20to%20Shark.mp4",
-              "seconds": 1298,
+              "file": "S03E08 - Shark-apocalypse Now!.mp4",
+              "name": "S03E08 - Shark-apocalypse Now!",
+              "url": "https://archive.org/download/street-sharks_202107/S03E08%20-%20Shark-apocalypse%20Now!.mp4",
+              "seconds": 1297,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 61
+              "sizeMB": 110
             }
           ]
         },
@@ -1258,21 +1297,34 @@
           "number": 9,
           "name": "Eco Sharks",
           "airdate": "1995-03-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Eco Sharks\" (0.93)",
-            "item": "street-sharks-extreme-dinosaurs_202508",
-            "itemTitle": "Street Sharks & Extreme Dinosaurs",
-            "file": "Street Sharks/S02E09 - Eco Shark.mp4",
-            "name": "Street Sharks/S02E09 - Eco Shark",
-            "url": "https://archive.org/download/street-sharks-extreme-dinosaurs_202508/Street%20Sharks%2FS02E09%20-%20Eco%20Shark.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Eco Shark - Season 3 - Episode 9 - (Full episode).mp4",
+            "name": "Street Sharks- Eco Shark - Season 3 - Episode 9 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Eco%20Shark%20-%20Season%203%20-%20Episode%209%20-%20(Full%20episode).mp4",
             "seconds": 1298,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 109
+            "sizeMB": 99
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Eco Sharks\" (0.93)",
+              "item": "street-sharks-extreme-dinosaurs_202508",
+              "itemTitle": "Street Sharks & Extreme Dinosaurs",
+              "file": "Street Sharks/S02E09 - Eco Shark.mp4",
+              "name": "Street Sharks/S02E09 - Eco Shark",
+              "url": "https://archive.org/download/street-sharks-extreme-dinosaurs_202508/Street%20Sharks%2FS02E09%20-%20Eco%20Shark.mp4",
+              "seconds": 1298,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 109
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Eco Sharks\" (0.93)",
@@ -1292,21 +1344,34 @@
           "number": 10,
           "name": "Close Encounters of the Shark Kind",
           "airdate": "1995-03-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Close Encounters of the Shark Kind\" (1.00)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S02 E10 - Close Encounters of the Shark Kind (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S02 E10 - Close Encounters of the Shark Kind (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E10%20-%20Close%20Encounters%20of%20the%20Shark%20Kind%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Close Encounters of the Shark Kind - Season 3 - Episode 10 - (Full episode).mp4",
+            "name": "Street Sharks- Close Encounters of the Shark Kind - Season 3 - Episode 10 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Close%20Encounters%20of%20the%20Shark%20Kind%20-%20Season%203%20-%20Episode%2010%20-%20(Full%20episode).mp4",
             "seconds": 1302,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 457
+            "sizeMB": 101
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Close Encounters of the Shark Kind\" (1.00)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S02 E10 - Close Encounters of the Shark Kind (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S02 E10 - Close Encounters of the Shark Kind (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E10%20-%20Close%20Encounters%20of%20the%20Shark%20Kind%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1302,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 457
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Close Encounters of the Shark Kind\" (1.00)",
@@ -1332,19 +1397,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 93
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
-              "itemTitle": "Street Sharks Shark- Episodes",
-              "file": "Street Sharks- Close Encounters of the Shark Kind - Season 3 - Episode 10 - (Full episode).mp4",
-              "name": "Street Sharks- Close Encounters of the Shark Kind - Season 3 - Episode 10 - (Full episode)",
-              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Close%20Encounters%20of%20the%20Shark%20Kind%20-%20Season%203%20-%20Episode%2010%20-%20(Full%20episode).mp4",
-              "seconds": 1302,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 101
             }
           ]
         },
@@ -1352,21 +1404,34 @@
           "number": 11,
           "name": "Satellite Sharks",
           "airdate": "1995-03-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Satellite Sharks\" (0.70)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S02 E11 - Satellite Sharks (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S02 E11 - Satellite Sharks (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E11%20-%20Satellite%20Sharks%20(480p%20-%20DVDRip).mp4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Satellite Sharks - Season 3 - Episode 11 - (Full episode).mp4",
+            "name": "Street Sharks- Satellite Sharks - Season 3 - Episode 11 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Satellite%20Sharks%20-%20Season%203%20-%20Episode%2011%20-%20(Full%20episode).mp4",
             "seconds": 1298,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 438
+            "sizeMB": 80
           },
           "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Satellite Sharks\" (0.70)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S02 E11 - Satellite Sharks (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S02 E11 - Satellite Sharks (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E11%20-%20Satellite%20Sharks%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1298,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 438
+            },
             {
               "conf": 0.6,
               "why": "title ~ \"Satellite Sharks\" (0.70)",
@@ -1399,29 +1464,54 @@
           "number": 12,
           "name": "Cave Sharks",
           "airdate": "1995-04-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Cave Sharks - Season 3 - Episode 12 - (Full episode).mp4",
+            "name": "Street Sharks- Cave Sharks - Season 3 - Episode 12 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Cave%20Sharks%20-%20Season%203%20-%20Episode%2012%20-%20(Full%20episode).mp4",
+            "seconds": 1297,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 93
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Shark Wars",
           "airdate": "1995-04-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Shark Wars\" (1.00)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S02 E13 - Shark Wars (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S02 E13 - Shark Wars (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E13%20-%20Shark%20Wars%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Shark Wars - Season 3 - Episode 13 - (Full episode).mp4",
+            "name": "Street Sharks- Shark Wars - Season 3 - Episode 13 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Wars%20-%20Season%203%20-%20Episode%2013%20-%20(Full%20episode).mp4",
             "seconds": 1294,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 494
+            "sizeMB": 116
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Shark Wars\" (1.00)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S02 E13 - Shark Wars (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S02 E13 - Shark Wars (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E13%20-%20Shark%20Wars%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1294,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 494
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Shark Wars\" (1.00)",
@@ -1447,19 +1537,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 86
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
-              "itemTitle": "Street Sharks Shark- Episodes",
-              "file": "Street Sharks- Shark Wars - Season 3 - Episode 13 - (Full episode).mp4",
-              "name": "Street Sharks- Shark Wars - Season 3 - Episode 13 - (Full episode)",
-              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Wars%20-%20Season%203%20-%20Episode%2013%20-%20(Full%20episode).mp4",
-              "seconds": 1294,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 116
             }
           ]
         },
@@ -1467,21 +1544,34 @@
           "number": 14,
           "name": "Shark Father",
           "airdate": "1996-04-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Shark Father\" (0.95)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S02 E14 - The Sharkfather (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S02 E14 - The Sharkfather (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E14%20-%20The%20Sharkfather%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Shark Father - Season 3 - Episode 14 - (Full episode).mp4",
+            "name": "Street Sharks- Shark Father - Season 3 - Episode 14 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Father%20-%20Season%203%20-%20Episode%2014%20-%20(Full%20episode).mp4",
             "seconds": 1298,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 399
+            "sizeMB": 93
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Shark Father\" (0.95)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S02 E14 - The Sharkfather (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S02 E14 - The Sharkfather (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E14%20-%20The%20Sharkfather%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1298,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 399
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Shark Father\" (1.00)",
@@ -1507,19 +1597,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 64
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
-              "itemTitle": "Street Sharks Shark- Episodes",
-              "file": "Street Sharks- Shark Father - Season 3 - Episode 14 - (Full episode).mp4",
-              "name": "Street Sharks- Shark Father - Season 3 - Episode 14 - (Full episode)",
-              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Father%20-%20Season%203%20-%20Episode%2014%20-%20(Full%20episode).mp4",
-              "seconds": 1298,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 93
             }
           ]
         },
@@ -1527,21 +1604,34 @@
           "number": 15,
           "name": "Shark Hunt",
           "airdate": "1996-04-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Shark Hunt\" (1.00)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S02 E15 - Shark Hunt (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S02 E15 - Shark Hunt (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E15%20-%20Shark%20Hunt%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Shark Hunt - Season 3 - Episode 15 - (Full episode).mp4",
+            "name": "Street Sharks- Shark Hunt - Season 3 - Episode 15 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Hunt%20-%20Season%203%20-%20Episode%2015%20-%20(Full%20episode).mp4",
             "seconds": 1298,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 413
+            "sizeMB": 88
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Shark Hunt\" (1.00)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S02 E15 - Shark Hunt (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S02 E15 - Shark Hunt (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E15%20-%20Shark%20Hunt%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1298,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 413
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Shark Hunt\" (1.00)",
@@ -1567,19 +1657,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 113
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
-              "itemTitle": "Street Sharks Shark- Episodes",
-              "file": "Street Sharks- Shark Hunt - Season 3 - Episode 15 - (Full episode).mp4",
-              "name": "Street Sharks- Shark Hunt - Season 3 - Episode 15 - (Full episode)",
-              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Hunt%20-%20Season%203%20-%20Episode%2015%20-%20(Full%20episode).mp4",
-              "seconds": 1298,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 88
             }
           ]
         },
@@ -1587,29 +1664,54 @@
           "number": 16,
           "name": "Card Sharks",
           "airdate": "1996-04-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Card Sharks - Season 3 - Episode 16 - (Full episode).mp4",
+            "name": "Street Sharks- Card Sharks - Season 3 - Episode 16 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Card%20Sharks%20-%20Season%203%20-%20Episode%2016%20-%20(Full%20episode).mp4",
+            "seconds": 1298,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 84
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "Shark Jacked",
           "airdate": "1996-04-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Shark Jacked\" (1.00)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S02 E17 - Shark Jacked (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S02 E17 - Shark Jacked (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E17%20-%20Shark%20Jacked%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Shark Jacked - Season 3 - Episode 17 - (Full episode).mp4",
+            "name": "Street Sharks- Shark Jacked - Season 3 - Episode 17 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Jacked%20-%20Season%203%20-%20Episode%2017%20-%20(Full%20episode).mp4",
             "seconds": 1300,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 414
+            "sizeMB": 90
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Shark Jacked\" (1.00)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S02 E17 - Shark Jacked (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S02 E17 - Shark Jacked (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E17%20-%20Shark%20Jacked%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1300,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 414
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Shark Jacked\" (0.95)",
@@ -1635,19 +1737,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 137
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Shark Jacked\" (1.00)",
-              "item": "street-sharks_202107",
-              "itemTitle": "Street Sharks (1994)",
-              "file": "S02E17 - Shark Jacked.mp4",
-              "name": "S02E17 - Shark Jacked",
-              "url": "https://archive.org/download/street-sharks_202107/S02E17%20-%20Shark%20Jacked.mp4",
-              "seconds": 1300,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 137
             }
           ]
         },
@@ -1655,29 +1744,54 @@
           "number": 18,
           "name": "Turbo Sharks",
           "airdate": "1996-05-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Turbo Sharks - Season 3 - Episode 18 - (Full episode).mp4",
+            "name": "Street Sharks- Turbo Sharks - Season 3 - Episode 18 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Turbo%20Sharks%20-%20Season%203%20-%20Episode%2018%20-%20(Full%20episode).mp4",
+            "seconds": 1298,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 90
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "20,000 Sharks Under the Sea",
           "airdate": "1996-05-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
-            "why": "title ~ \"20,000 Sharks Under the Sea\" (0.71)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S02 E19 - 20,000 Sharks Under the Sea (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S02 E19 - 20,000 Sharks Under the Sea (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E19%20-%2020%2C000%20Sharks%20Under%20the%20Sea%20(480p%20-%20DVDRip).mp4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- 20 000 Sharks Under the Sea - Season 3 - Episode 19 - (Full episode).mp4",
+            "name": "Street Sharks- 20 000 Sharks Under the Sea - Season 3 - Episode 19 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%2020%20000%20Sharks%20Under%20the%20Sea%20-%20Season%203%20-%20Episode%2019%20-%20(Full%20episode).mp4",
             "seconds": 1300,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 415
+            "sizeMB": 97
           },
           "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"20,000 Sharks Under the Sea\" (0.71)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S02 E19 - 20,000 Sharks Under the Sea (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S02 E19 - 20,000 Sharks Under the Sea (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S02%20E19%20-%2020%2C000%20Sharks%20Under%20the%20Sea%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1300,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 415
+            },
             {
               "conf": 0.6,
               "why": "title ~ \"20,000 Sharks Under the Sea\" (0.71)",
@@ -1710,21 +1824,34 @@
           "number": 20,
           "name": "Ancient Sharkonauts",
           "airdate": "1996-05-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Ancient Sharkonauts\" (1.00)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S03 E01 - Ancient Sharkonauts (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S03 E01 - Ancient Sharkonauts (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E01%20-%20Ancient%20Sharkonauts%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Ancient Sharkonauts - Season 3 - Episode 20 - (Full episode).mp4",
+            "name": "Street Sharks- Ancient Sharkonauts - Season 3 - Episode 20 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Ancient%20Sharkonauts%20-%20Season%203%20-%20Episode%2020%20-%20(Full%20episode).mp4",
             "seconds": 1299,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 435
+            "sizeMB": 90
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Ancient Sharkonauts\" (1.00)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S03 E01 - Ancient Sharkonauts (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S03 E01 - Ancient Sharkonauts (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E01%20-%20Ancient%20Sharkonauts%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1299,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 435
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Ancient Sharkonauts\" (1.00)",
@@ -1750,19 +1877,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 67
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
-              "itemTitle": "Street Sharks Shark- Episodes",
-              "file": "Street Sharks- Ancient Sharkonauts - Season 3 - Episode 20 - (Full episode).mp4",
-              "name": "Street Sharks- Ancient Sharkonauts - Season 3 - Episode 20 - (Full episode)",
-              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Ancient%20Sharkonauts%20-%20Season%203%20-%20Episode%2020%20-%20(Full%20episode).mp4",
-              "seconds": 1299,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 90
             }
           ]
         },
@@ -1778,29 +1892,54 @@
           "number": 22,
           "name": "Sand Sharks",
           "airdate": "1997-04-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Sand Sharks - Season 3 - Episode 22 - (Full episode).mp4",
+            "name": "Street Sharks- Sand Sharks - Season 3 - Episode 22 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Sand%20Sharks%20-%20Season%203%20-%20Episode%2022%20-%20(Full%20episode).mp4",
+            "seconds": 1296,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 85
+          },
           "alternates": []
         },
         {
           "number": 23,
           "name": "Shark Quake",
           "airdate": "1997-04-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Shark Quake\" (1.00)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S03 E04 - Shark Quake (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S03 E04 - Shark Quake (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E04%20-%20Shark%20Quake%20(480p%20-%20DVDRip).mp4",
-            "seconds": 1298,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Shark Quake - Season 3 - Episode 23 - (Full episode).mp4",
+            "name": "Street Sharks- Shark Quake - Season 3 - Episode 23 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Quake%20-%20Season%203%20-%20Episode%2023%20-%20(Full%20episode).mp4",
+            "seconds": 1297,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 413
+            "sizeMB": 83
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Shark Quake\" (1.00)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S03 E04 - Shark Quake (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S03 E04 - Shark Quake (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E04%20-%20Shark%20Quake%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1298,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 413
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Shark Quake\" (1.00)",
@@ -1826,19 +1965,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 137
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
-              "itemTitle": "Street Sharks Shark- Episodes",
-              "file": "Street Sharks- Shark Quake - Season 3 - Episode 23 - (Full episode).mp4",
-              "name": "Street Sharks- Shark Quake - Season 3 - Episode 23 - (Full episode)",
-              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark%20Quake%20-%20Season%203%20-%20Episode%2023%20-%20(Full%20episode).mp4",
-              "seconds": 1297,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 83
             }
           ]
         },
@@ -1846,21 +1972,34 @@
           "number": 24,
           "name": "Super Shark",
           "airdate": "1997-04-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Super Shark\" (1.00)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S03 E05 - Super Shark (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S03 E05 - Super Shark (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E05%20-%20Super%20Shark%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Super Shark - Season 3 - Episode 24 - (Full episode).mp4",
+            "name": "Street Sharks- Super Shark - Season 3 - Episode 24 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Super%20Shark%20-%20Season%203%20-%20Episode%2024%20-%20(Full%20episode).mp4",
             "seconds": 1294,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 402
+            "sizeMB": 99
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Super Shark\" (1.00)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S03 E05 - Super Shark (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S03 E05 - Super Shark (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E05%20-%20Super%20Shark%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1294,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 402
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Super Shark\" (1.00)",
@@ -1886,19 +2025,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 143
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
-              "itemTitle": "Street Sharks Shark- Episodes",
-              "file": "Street Sharks- Super Shark - Season 3 - Episode 24 - (Full episode).mp4",
-              "name": "Street Sharks- Super Shark - Season 3 - Episode 24 - (Full episode)",
-              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Super%20Shark%20-%20Season%203%20-%20Episode%2024%20-%20(Full%20episode).mp4",
-              "seconds": 1294,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 99
             }
           ]
         },
@@ -1906,21 +2032,34 @@
           "number": 25,
           "name": "Jungle Sharks",
           "airdate": "1997-05-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Jungle Sharks\" (0.63)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S03 E06 - Jungle Sharks (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S03 E06 - Jungle Sharks (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E06%20-%20Jungle%20Sharks%20(480p%20-%20DVDRip).mp4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Jungle Sharks - Season 3 - Episode 25 - (Full episode).mp4",
+            "name": "Street Sharks- Jungle Sharks - Season 3 - Episode 25 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Jungle%20Sharks%20-%20Season%203%20-%20Episode%2025%20-%20(Full%20episode).mp4",
             "seconds": 1293,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 389
+            "sizeMB": 88
           },
           "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Jungle Sharks\" (0.63)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S03 E06 - Jungle Sharks (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S03 E06 - Jungle Sharks (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E06%20-%20Jungle%20Sharks%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1293,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 389
+            },
             {
               "conf": 0.6,
               "why": "title ~ \"Jungle Sharks\" (0.63)",
@@ -1953,21 +2092,34 @@
           "number": 26,
           "name": "Trojan Sharks",
           "airdate": "1997-05-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Trojan Sharks\" (0.63)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S03 E07 - Trojan Sharks (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S03 E07 - Trojan Sharks (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E07%20-%20Trojan%20Sharks%20(480p%20-%20DVDRip).mp4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Trojan Sharks - Season 3 - Episode 26 - (Full episode).mp4",
+            "name": "Street Sharks- Trojan Sharks - Season 3 - Episode 26 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Trojan%20Sharks%20-%20Season%203%20-%20Episode%2026%20-%20(Full%20episode).mp4",
             "seconds": 1299,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 384
+            "sizeMB": 91
           },
           "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Trojan Sharks\" (0.63)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S03 E07 - Trojan Sharks (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S03 E07 - Trojan Sharks (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E07%20-%20Trojan%20Sharks%20(480p%20-%20DVDRip).mp4",
+              "seconds": 1299,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 384
+            },
             {
               "conf": 0.6,
               "why": "title ~ \"Trojan Sharks\" (0.63)",
@@ -2000,33 +2152,59 @@
           "number": 27,
           "name": "Shark-apolypse Now",
           "airdate": "1997-05-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Shark-apolypse Now\" (1.00)",
-            "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
-            "itemTitle": "Street Sharks",
-            "file": "STREET SHARKS - S03 E08 - Shark-apolypse Now (480p - DVDRip).mp4",
-            "name": "STREET SHARKS - S03 E08 - Shark-apolypse Now (480p - DVDRip)",
-            "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E08%20-%20Shark-apolypse%20Now%20(480p%20-%20DVDRip).mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
+            "itemTitle": "Street Sharks Shark- Episodes",
+            "file": "Street Sharks- Shark-apolypse Now! - Season 3 - Episode 27 - (Full episode).mp4",
+            "name": "Street Sharks- Shark-apolypse Now! - Season 3 - Episode 27 - (Full episode)",
+            "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark-apolypse%20Now!%20-%20Season%203%20-%20Episode%2027%20-%20(Full%20episode).mp4",
             "seconds": 1297,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 362
+            "sizeMB": 87
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "StreetSharksSharkWarsSeason3Episode13FullEpisode",
-              "itemTitle": "Street Sharks Shark- Episodes",
-              "file": "Street Sharks- Shark-apolypse Now! - Season 3 - Episode 27 - (Full episode).mp4",
-              "name": "Street Sharks- Shark-apolypse Now! - Season 3 - Episode 27 - (Full episode)",
-              "url": "https://archive.org/download/StreetSharksSharkWarsSeason3Episode13FullEpisode/Street%20Sharks-%20Shark-apolypse%20Now!%20-%20Season%203%20-%20Episode%2027%20-%20(Full%20episode).mp4",
+              "conf": 0.8,
+              "why": "title ~ \"Shark-apolypse Now\" (1.00)",
+              "item": "street-sharks-s-02-e-13-shark-wars-480p-dvdrip",
+              "itemTitle": "Street Sharks",
+              "file": "STREET SHARKS - S03 E08 - Shark-apolypse Now (480p - DVDRip).mp4",
+              "name": "STREET SHARKS - S03 E08 - Shark-apolypse Now (480p - DVDRip)",
+              "url": "https://archive.org/download/street-sharks-s-02-e-13-shark-wars-480p-dvdrip/STREET%20SHARKS%20-%20S03%20E08%20-%20Shark-apolypse%20Now%20(480p%20-%20DVDRip).mp4",
               "seconds": 1297,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 87
+              "sizeMB": 362
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Shark-apolypse Now\" (0.88)",
+              "item": "street-sharks-extreme-dinosaurs_202508",
+              "itemTitle": "Street Sharks & Extreme Dinosaurs",
+              "file": "Street Sharks/S03E08 - Shark-apocalypse Now!.mp4",
+              "name": "Street Sharks/S03E08 - Shark-apocalypse Now!",
+              "url": "https://archive.org/download/street-sharks-extreme-dinosaurs_202508/Street%20Sharks%2FS03E08%20-%20Shark-apocalypse%20Now!.mp4",
+              "seconds": 1297,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 110
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Shark-apolypse Now\" (0.88)",
+              "item": "street-sharks_202107",
+              "itemTitle": "Street Sharks (1994)",
+              "file": "S03E08 - Shark-apocalypse Now!.mp4",
+              "name": "S03E08 - Shark-apocalypse Now!",
+              "url": "https://archive.org/download/street-sharks_202107/S03E08%20-%20Shark-apocalypse%20Now!.mp4",
+              "seconds": 1297,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 110
             }
           ]
         }

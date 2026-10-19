@@ -3,7 +3,7 @@
   "slug": "biker-mice-from-mars",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:34.426Z",
+  "matchedAt": "2026-10-19T04:10:41.676Z",
   "addedAt": "2026-10-15T18:39:59.009Z",
   "tvmaze": {
     "id": 35866,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 28,
-    "live": 22,
-    "review": 6,
+    "live": 25,
+    "review": 3,
     "missing": 0,
     "pct": 100
   },
@@ -57,7 +57,7 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 1 of 13 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "why": "sequence guess: file 1 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
               "item": "biker-mice-from-mars_202507",
               "itemTitle": "Biker Mice From Mars (1993) Animated Series",
               "file": "Biker Mice From Mars S02E01 Steal of the Century.mp4",
@@ -74,30 +74,43 @@
           "number": 2,
           "name": "The Adventure Begins (2)",
           "airdate": "2006-09-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Adventure Begins (2)\" (0.95)",
-            "item": "biker-mice-from-mars-2006-06-between-rump-and-a-hard-place",
-            "itemTitle": "Biker Mice from Mars (2006)",
-            "file": "Biker Mice From Mars (2006) #02 - The Adventure Begins Part 2.mp4",
-            "name": "Biker Mice From Mars (2006) #02 - The Adventure Begins Part 2",
-            "url": "https://archive.org/download/biker-mice-from-mars-2006-06-between-rump-and-a-hard-place/Biker%20Mice%20From%20Mars%20(2006)%20%2302%20-%20The%20Adventure%20Begins%20Part%202.mp4",
-            "seconds": 1322,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "biker-mice-from-mars_202507",
+            "itemTitle": "Biker Mice From Mars (1993) Animated Series",
+            "file": "Biker Mice From Mars S01E02 The Reeking Reign of the Head Cheese (Part 1).mp4",
+            "name": "Biker Mice From Mars S01E02 The Reeking Reign of the Head Cheese (Part 1)",
+            "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S01E02%20The%20Reeking%20Reign%20of%20the%20Head%20Cheese%20(Part%201).mp4",
+            "seconds": 1311,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1571
+            "sizeMB": 129
           },
           "alternates": [
             {
+              "conf": 0.8,
+              "why": "title ~ \"The Adventure Begins (2)\" (0.95)",
+              "item": "biker-mice-from-mars-2006-06-between-rump-and-a-hard-place",
+              "itemTitle": "Biker Mice from Mars (2006)",
+              "file": "Biker Mice From Mars (2006) #02 - The Adventure Begins Part 2.mp4",
+              "name": "Biker Mice From Mars (2006) #02 - The Adventure Begins Part 2",
+              "url": "https://archive.org/download/biker-mice-from-mars-2006-06-between-rump-and-a-hard-place/Biker%20Mice%20From%20Mars%20(2006)%20%2302%20-%20The%20Adventure%20Begins%20Part%202.mp4",
+              "seconds": 1322,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1571
+            },
+            {
               "conf": 0.55,
-              "why": "sequence guess: file 2 of 13 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "why": "sequence guess: file 2 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
               "item": "biker-mice-from-mars_202507",
               "itemTitle": "Biker Mice From Mars (1993) Animated Series",
-              "file": "Biker Mice From Mars S02E03 Stone Broke.mp4",
-              "name": "Biker Mice From Mars S02E03 Stone Broke",
-              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E03%20Stone%20Broke.mp4",
-              "seconds": 1277,
+              "file": "Biker Mice From Mars S02E02 We're Going to Cheesyland.mp4",
+              "name": "Biker Mice From Mars S02E02 We're Going to Cheesyland",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E02%20We're%20Going%20to%20Cheesyland.mp4",
+              "seconds": 1279,
               "format": "h.264",
               "playable": true,
               "sizeMB": 126
@@ -108,21 +121,34 @@
           "number": 3,
           "name": "The British Invasion",
           "airdate": "2006-09-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The British Invasion\" (0.95)",
-            "item": "biker-mice-from-mars-2006-06-between-rump-and-a-hard-place",
-            "itemTitle": "Biker Mice from Mars (2006)",
-            "file": "Biker Mice From Mars (2006) #03 - The British Invasion.mp4",
-            "name": "Biker Mice From Mars (2006) #03 - The British Invasion",
-            "url": "https://archive.org/download/biker-mice-from-mars-2006-06-between-rump-and-a-hard-place/Biker%20Mice%20From%20Mars%20(2006)%20%2303%20-%20The%20British%20Invasion.mp4",
-            "seconds": 1359,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "biker-mice-from-mars_202507",
+            "itemTitle": "Biker Mice From Mars (1993) Animated Series",
+            "file": "Biker Mice From Mars S01E03 The Reeking Reign of the Head Cheese (Part 2).mp4",
+            "name": "Biker Mice From Mars S01E03 The Reeking Reign of the Head Cheese (Part 2)",
+            "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S01E03%20The%20Reeking%20Reign%20of%20the%20Head%20Cheese%20(Part%202).mp4",
+            "seconds": 1310,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1560
+            "sizeMB": 127
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The British Invasion\" (0.95)",
+              "item": "biker-mice-from-mars-2006-06-between-rump-and-a-hard-place",
+              "itemTitle": "Biker Mice from Mars (2006)",
+              "file": "Biker Mice From Mars (2006) #03 - The British Invasion.mp4",
+              "name": "Biker Mice From Mars (2006) #03 - The British Invasion",
+              "url": "https://archive.org/download/biker-mice-from-mars-2006-06-between-rump-and-a-hard-place/Biker%20Mice%20From%20Mars%20(2006)%20%2303%20-%20The%20British%20Invasion.mp4",
+              "seconds": 1359,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1560
+            },
             {
               "conf": 0.6,
               "why": "title ~ \"The British Invasion\" (0.60)",
@@ -138,16 +164,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 3 of 13 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "why": "sequence guess: file 3 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
               "item": "biker-mice-from-mars_202507",
               "itemTitle": "Biker Mice From Mars (1993) Animated Series",
-              "file": "Biker Mice From Mars S02E07 Back to Mars (Part 1).mp4",
-              "name": "Biker Mice From Mars S02E07 Back to Mars (Part 1)",
-              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E07%20Back%20to%20Mars%20(Part%201).mp4",
+              "file": "Biker Mice From Mars S02E03 Stone Broke.mp4",
+              "name": "Biker Mice From Mars S02E03 Stone Broke",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E03%20Stone%20Broke.mp4",
               "seconds": 1277,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 127
+              "sizeMB": 126
             }
           ]
         },
@@ -185,16 +211,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 4 of 13 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "why": "sequence guess: file 4 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
               "item": "biker-mice-from-mars_202507",
               "itemTitle": "Biker Mice From Mars (1993) Animated Series",
-              "file": "Biker Mice From Mars S02E08 Back to Mars (Part 2).mp4",
-              "name": "Biker Mice From Mars S02E08 Back to Mars (Part 2)",
-              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E08%20Back%20to%20Mars%20(Part%202).mp4",
-              "seconds": 1280,
+              "file": "Biker Mice From Mars S02E04 The Motor City Maniac.mp4",
+              "name": "Biker Mice From Mars S02E04 The Motor City Maniac",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E04%20The%20Motor%20City%20Maniac.mp4",
+              "seconds": 1278,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 127
+              "sizeMB": 126
             }
           ]
         },
@@ -245,16 +271,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 5 of 13 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "why": "sequence guess: file 5 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
               "item": "biker-mice-from-mars_202507",
               "itemTitle": "Biker Mice From Mars (1993) Animated Series",
-              "file": "Biker Mice From Mars S02E09 Back to Mars (Part 3).mp4",
-              "name": "Biker Mice From Mars S02E09 Back to Mars (Part 3)",
-              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E09%20Back%20to%20Mars%20(Part%203).mp4",
-              "seconds": 1279,
+              "file": "Biker Mice From Mars S02E06 Last Stand at Last Chance.mp4",
+              "name": "Biker Mice From Mars S02E06 Last Stand at Last Chance",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E06%20Last%20Stand%20at%20Last%20Chance.mp4",
+              "seconds": 1278,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 127
+              "sizeMB": 126
             }
           ]
         },
@@ -262,21 +288,61 @@
           "number": 6,
           "name": "Between Rump and a Hard Race",
           "airdate": "2006-10-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 6 of 13 in \"Biker Mice From Mars (1993) Animated Ser\"",
-            "item": "biker-mice-from-mars_202507",
-            "itemTitle": "Biker Mice From Mars (1993) Animated Series",
-            "file": "Biker Mice From Mars S02E10 The Tribunal.mp4",
-            "name": "Biker Mice From Mars S02E10 The Tribunal",
-            "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E10%20The%20Tribunal.mp4",
-            "seconds": 1278,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "biker-mice-from-mars-2006-encodes",
+            "itemTitle": "Biker Mice From Mars (2006) - Complete Series (TV Encodes)",
+            "file": "Biker Mice From Mars (2006) - 106 - Bewteen Rump and A Hard Place [Kingtut].mp4",
+            "name": "Biker Mice From Mars (2006) - 106 - Bewteen Rump and A Hard Place [Kingtut]",
+            "url": "https://archive.org/download/biker-mice-from-mars-2006-encodes/Biker%20Mice%20From%20Mars%20(2006)%20-%20106%20-%20Bewteen%20Rump%20and%20A%20Hard%20Place%20%5BKingtut%5D.mp4",
+            "seconds": 1340,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 126
+            "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "biker-mice-from-mars_202507",
+              "itemTitle": "Biker Mice From Mars (1993) Animated Series",
+              "file": "Biker Mice From Mars S01E06 Test of Friendship.mp4",
+              "name": "Biker Mice From Mars S01E06 Test of Friendship",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S01E06%20Test%20of%20Friendship.mp4",
+              "seconds": 1308,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 127
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Between Rump and a Hard Race\" (0.85)",
+              "item": "biker-mice-from-mars-2006-06-between-rump-and-a-hard-place",
+              "itemTitle": "Biker Mice from Mars (2006)",
+              "file": "Biker Mice From Mars (2006) #06 - Between Rump and A Hard Place.mp4",
+              "name": "Biker Mice From Mars (2006) #06 - Between Rump and A Hard Place",
+              "url": "https://archive.org/download/biker-mice-from-mars-2006-06-between-rump-and-a-hard-place/Biker%20Mice%20From%20Mars%20(2006)%20%2306%20-%20Between%20Rump%20and%20A%20Hard%20Place.mp4",
+              "seconds": 1359,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1683
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "item": "biker-mice-from-mars_202507",
+              "itemTitle": "Biker Mice From Mars (1993) Animated Series",
+              "file": "Biker Mice From Mars S02E07 Back to Mars (Part 1).mp4",
+              "name": "Biker Mice From Mars S02E07 Back to Mars (Part 1)",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E07%20Back%20to%20Mars%20(Part%201).mp4",
+              "seconds": 1277,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 7,
@@ -312,16 +378,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 7 of 13 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "why": "sequence guess: file 7 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
               "item": "biker-mice-from-mars_202507",
               "itemTitle": "Biker Mice From Mars (1993) Animated Series",
-              "file": "Biker Mice From Mars S02E11 Motocross Trap.mp4",
-              "name": "Biker Mice From Mars S02E11 Motocross Trap",
-              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E11%20Motocross%20Trap.mp4",
-              "seconds": 1278,
+              "file": "Biker Mice From Mars S02E08 Back to Mars (Part 2).mp4",
+              "name": "Biker Mice From Mars S02E08 Back to Mars (Part 2)",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E08%20Back%20to%20Mars%20(Part%202).mp4",
+              "seconds": 1280,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 128
+              "sizeMB": 127
             }
           ]
         },
@@ -372,16 +438,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 8 of 13 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "why": "sequence guess: file 8 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
               "item": "biker-mice-from-mars_202507",
               "itemTitle": "Biker Mice From Mars (1993) Animated Series",
-              "file": "Biker Mice From Mars S02E13 Bleu Cheese Bros.mp4",
-              "name": "Biker Mice From Mars S02E13 Bleu Cheese Bros",
-              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E13%20Bleu%20Cheese%20Bros.mp4",
-              "seconds": 1260,
+              "file": "Biker Mice From Mars S02E09 Back to Mars (Part 3).mp4",
+              "name": "Biker Mice From Mars S02E09 Back to Mars (Part 3)",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E09%20Back%20to%20Mars%20(Part%203).mp4",
+              "seconds": 1279,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 125
+              "sizeMB": 127
             }
           ]
         },
@@ -419,13 +485,13 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 9 of 13 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "why": "sequence guess: file 9 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
               "item": "biker-mice-from-mars_202507",
               "itemTitle": "Biker Mice From Mars (1993) Animated Series",
-              "file": "Biker Mice From Mars S02E20 Die Fledermice.mp4",
-              "name": "Biker Mice From Mars S02E20 Die Fledermice",
-              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E20%20Die%20Fledermice.mp4",
-              "seconds": 1261,
+              "file": "Biker Mice From Mars S02E10 The Tribunal.mp4",
+              "name": "Biker Mice From Mars S02E10 The Tribunal",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E10%20The%20Tribunal.mp4",
+              "seconds": 1278,
               "format": "h.264",
               "playable": true,
               "sizeMB": 126
@@ -479,16 +545,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 10 of 13 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "why": "sequence guess: file 10 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
               "item": "biker-mice-from-mars_202507",
               "itemTitle": "Biker Mice From Mars (1993) Animated Series",
-              "file": "Biker Mice From Mars S02E22 Danger Is Our Business.mp4",
-              "name": "Biker Mice From Mars S02E22 Danger Is Our Business",
-              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E22%20Danger%20Is%20Our%20Business.mp4",
-              "seconds": 1276,
+              "file": "Biker Mice From Mars S02E11 Motocross Trap.mp4",
+              "name": "Biker Mice From Mars S02E11 Motocross Trap",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E11%20Motocross%20Trap.mp4",
+              "seconds": 1278,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 127
+              "sizeMB": 128
             }
           ]
         },
@@ -526,16 +592,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 11 of 13 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "why": "sequence guess: file 11 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
               "item": "biker-mice-from-mars_202507",
               "itemTitle": "Biker Mice From Mars (1993) Animated Series",
-              "file": "Biker Mice From Mars S03E01 Biker Knights of the Round Table (Part 1).mp4",
-              "name": "Biker Mice From Mars S03E01 Biker Knights of the Round Table (Part 1)",
-              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S03E01%20Biker%20Knights%20of%20the%20Round%20Table%20(Part%201).mp4",
-              "seconds": 1277,
+              "file": "Biker Mice From Mars S02E13 Bleu Cheese Bros.mp4",
+              "name": "Biker Mice From Mars S02E13 Bleu Cheese Bros",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E13%20Bleu%20Cheese%20Bros.mp4",
+              "seconds": 1260,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 122
+              "sizeMB": 125
             }
           ]
         },
@@ -620,16 +686,16 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 13 of 13 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "why": "sequence guess: file 13 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
               "item": "biker-mice-from-mars_202507",
               "itemTitle": "Biker Mice From Mars (1993) Animated Series",
-              "file": "Biker Mice From Mars S03E08 Hit the Road, Jack.mp4",
-              "name": "Biker Mice From Mars S03E08 Hit the Road, Jack",
-              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S03E08%20Hit%20the%20Road%2C%20Jack.mp4",
-              "seconds": 1273,
+              "file": "Biker Mice From Mars S02E20 Die Fledermice.mp4",
+              "name": "Biker Mice From Mars S02E20 Die Fledermice",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E20%20Die%20Fledermice.mp4",
+              "seconds": 1261,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 121
+              "sizeMB": 126
             }
           ]
         },
@@ -664,6 +730,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1619
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "item": "biker-mice-from-mars_202507",
+              "itemTitle": "Biker Mice From Mars (1993) Animated Series",
+              "file": "Biker Mice From Mars S02E22 Danger Is Our Business.mp4",
+              "name": "Biker Mice From Mars S02E22 Danger Is Our Business",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E22%20Danger%20Is%20Our%20Business.mp4",
+              "seconds": 1276,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 127
             }
           ]
         },
@@ -698,6 +777,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1222
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 15 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "item": "biker-mice-from-mars_202507",
+              "itemTitle": "Biker Mice From Mars (1993) Animated Series",
+              "file": "Biker Mice From Mars S02E23 Mad Scientist Wanted.mp4",
+              "name": "Biker Mice From Mars S02E23 Mad Scientist Wanted",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E23%20Mad%20Scientist%20Wanted.mp4",
+              "seconds": 1277,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 128
             }
           ]
         },
@@ -732,6 +824,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1271
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 16 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "item": "biker-mice-from-mars_202507",
+              "itemTitle": "Biker Mice From Mars (1993) Animated Series",
+              "file": "Biker Mice From Mars S02E32 Vicious Cycles.mp4",
+              "name": "Biker Mice From Mars S02E32 Vicious Cycles",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S02E32%20Vicious%20Cycles.mp4",
+              "seconds": 1264,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 125
             }
           ]
         },
@@ -766,6 +871,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1599
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 17 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "item": "biker-mice-from-mars_202507",
+              "itemTitle": "Biker Mice From Mars (1993) Animated Series",
+              "file": "Biker Mice From Mars S03E01 Biker Knights of the Round Table (Part 1).mp4",
+              "name": "Biker Mice From Mars S03E01 Biker Knights of the Round Table (Part 1)",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S03E01%20Biker%20Knights%20of%20the%20Round%20Table%20(Part%201).mp4",
+              "seconds": 1277,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 122
             }
           ]
         },
@@ -787,7 +905,21 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 18 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "item": "biker-mice-from-mars_202507",
+              "itemTitle": "Biker Mice From Mars (1993) Animated Series",
+              "file": "Biker Mice From Mars S03E06 Rocketh and Rideth.mp4",
+              "name": "Biker Mice From Mars S03E06 Rocketh and Rideth",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S03E06%20Rocketh%20and%20Rideth.mp4",
+              "seconds": 1265,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 121
+            }
+          ]
         },
         {
           "number": 19,
@@ -807,7 +939,21 @@
             "playable": true,
             "sizeMB": 1647
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 19 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "item": "biker-mice-from-mars_202507",
+              "itemTitle": "Biker Mice From Mars (1993) Animated Series",
+              "file": "Biker Mice From Mars S03E08 Hit the Road, Jack.mp4",
+              "name": "Biker Mice From Mars S03E08 Hit the Road, Jack",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S03E08%20Hit%20the%20Road%2C%20Jack.mp4",
+              "seconds": 1273,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 121
+            }
+          ]
         },
         {
           "number": 20,
@@ -827,7 +973,21 @@
             "playable": true,
             "sizeMB": 1617
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 20 of 20 in \"Biker Mice From Mars (1993) Animated Ser\"",
+              "item": "biker-mice-from-mars_202507",
+              "itemTitle": "Biker Mice From Mars (1993) Animated Series",
+              "file": "Biker Mice From Mars S03E10 Where No Mouse Has Gone Before.mp4",
+              "name": "Biker Mice From Mars S03E10 Where No Mouse Has Gone Before",
+              "url": "https://archive.org/download/biker-mice-from-mars_202507/Biker%20Mice%20From%20Mars%20S03E10%20Where%20No%20Mouse%20Has%20Gone%20Before.mp4",
+              "seconds": 1281,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 123
+            }
+          ]
         },
         {
           "number": 21,

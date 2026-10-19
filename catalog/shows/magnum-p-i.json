@@ -3,7 +3,7 @@
   "slug": "magnum-p-i",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:00.978Z",
+  "matchedAt": "2026-10-19T04:11:06.732Z",
   "addedAt": "2026-10-16T06:55:02.421Z",
   "tvmaze": {
     "id": 956,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 162,
     "live": 2,
-    "review": 0,
-    "missing": 160,
-    "pct": 1
+    "review": 1,
+    "missing": 159,
+    "pct": 2
   },
   "seasons": [
     {
@@ -582,8 +582,20 @@
           "number": 4,
           "name": "Distant Relative",
           "airdate": "1983-10-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Distant Relative\" (0.95)",
+            "item": "magnum-p.-i.-season-4-episode-04-distant-relative-1542040354385",
+            "itemTitle": "Magnum P. I. Season 4 Episode 04 Distant Relative 1542040354385",
+            "file": "Magnum-P.I.-Season-4-Episode-04---Distant-Relative_1542040354385.mp4",
+            "name": "Magnum-P.I.-Season-4-Episode-04---Distant-Relative_1542040354385",
+            "url": "https://archive.org/download/magnum-p.-i.-season-4-episode-04-distant-relative-1542040354385/Magnum-P.I.-Season-4-Episode-04---Distant-Relative_1542040354385.mp4",
+            "seconds": 2868,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 275
+          },
           "alternates": []
         },
         {

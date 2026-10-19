@@ -3,7 +3,7 @@
   "slug": "the-undersea-world-of-jacques-cousteau",
   "type": "Documentary & Geographic",
   "network": "ABC",
-  "matchedAt": "2026-10-16T07:58:01.908Z",
+  "matchedAt": "2026-10-19T04:12:06.839Z",
   "addedAt": "2026-10-15T12:08:33.910Z",
   "tvmaze": {
     "id": 26058,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 36,
-    "live": 26,
-    "review": 10,
+    "live": 36,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -43,7 +43,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -55,6 +55,20 @@
               "playable": true,
               "codecRisk": "video (XviD)",
               "sizeMB": 271
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Sharks\" (0.95)",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E32 The Sleeping Sharks of Yucatan XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E32 The Sleeping Sharks of Yucatan XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E32%20The%20Sleeping%20Sharks%20of%20Yucatan%20XviD%20AC3%20MVGroup%20org.mp4",
+              "seconds": 2935,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 290
             }
           ]
         },
@@ -76,40 +90,55 @@
             "playable": true,
             "sizeMB": 414
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E02 Savage World of the Coral Jungle XviD C3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E02 Savage World of the Coral Jungle XviD C3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E02%20Savage%20World%20of%20the%20Coral%20Jungle%20XviD%20C3%20MVGroup%20org.mp4",
+              "seconds": 2858,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 279
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Search in the Deep",
           "airdate": "1968-04-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-undersea-world",
-            "itemTitle": "The Undersea World",
-            "file": "The Undersea World of Jacques Cousteau Collection S01E03 Search in the Deep XviD C3 MVGroup org.mp4",
-            "name": "The Undersea World of Jacques Cousteau Collection S01E03 Search in the Deep XviD C3 MVGroup org",
-            "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E03%20Search%20in%20the%20Deep%20XviD%20C3%20MVGroup%20org.mp4",
+            "item": "the-undersea-world-of-jacques-cousteau-1976",
+            "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
+            "file": "files/S01E03 - Search in the Deep.mp4",
+            "name": "files/S01E03 - Search in the Deep",
+            "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E03%20-%20Search%20in%20the%20Deep.mp4",
             "seconds": 2964,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 290
+            "sizeMB": 426
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "the-undersea-world-of-jacques-cousteau-1976",
-              "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
-              "file": "files/S01E03 - Search in the Deep.mp4",
-              "name": "files/S01E03 - Search in the Deep",
-              "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E03%20-%20Search%20in%20the%20Deep.mp4",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E03 Search in the Deep XviD C3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E03 Search in the Deep XviD C3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E03%20Search%20in%20the%20Deep%20XviD%20C3%20MVGroup%20org.mp4",
               "seconds": 2964,
-              "format": "MPEG4",
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 426
+              "codecRisk": "video (XviD)",
+              "sizeMB": 290
             }
           ]
         },
@@ -133,20 +162,7 @@
           },
           "alternates": [
             {
-              "conf": 0.75,
-              "why": "title ~ \"Whales\" (0.95)",
-              "item": "whales_201705",
-              "itemTitle": "The Undersea World of Jacques Cousteau: Whales",
-              "file": "whales_201705.mp4",
-              "name": "whales_201705",
-              "url": "https://archive.org/download/whales_201705/whales_201705.mp4",
-              "seconds": 3086,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 320
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -158,6 +174,33 @@
               "playable": true,
               "codecRisk": "audio (AC3)",
               "sizeMB": 275
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Whales\" (0.95)",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E08 The Desert Whales XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E08 The Desert Whales XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E08%20The%20Desert%20Whales%20XviD%20AC3%20MVGroup%20org.mp4",
+              "seconds": 2935,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 288
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Whales\" (0.95)",
+              "item": "whales_201705",
+              "itemTitle": "The Undersea World of Jacques Cousteau: Whales",
+              "file": "whales_201705.mp4",
+              "name": "whales_201705",
+              "url": "https://archive.org/download/whales_201705/whales_201705.mp4",
+              "seconds": 3086,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 320
             }
           ]
         },
@@ -165,34 +208,34 @@
           "number": 5,
           "name": "The Unexpected Voyage of Pepito and Cristobal",
           "airdate": "1969-01-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-undersea-world",
-            "itemTitle": "The Undersea World",
-            "file": "The Undersea World of Jacques Cousteau Collection S01E05 Unexpected Voyage of Pepito and Cristobal XviD AC3 MVGroup org.mp4",
-            "name": "The Undersea World of Jacques Cousteau Collection S01E05 Unexpected Voyage of Pepito and Cristobal XviD AC3 MVGroup org",
-            "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E05%20Unexpected%20Voyage%20of%20Pepito%20and%20Cristobal%20XviD%20AC3%20MVGroup%20org.mp4",
+            "item": "the-undersea-world-of-jacques-cousteau-1976",
+            "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
+            "file": "files/S01E05 - The Unexpected Voyage of Pepito and Cristobal.mp4",
+            "name": "files/S01E05 - The Unexpected Voyage of Pepito and Cristobal",
+            "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E05%20-%20The%20Unexpected%20Voyage%20of%20Pepito%20and%20Cristobal.mp4",
             "seconds": 2965,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (AC3)",
-            "sizeMB": 290
+            "sizeMB": 427
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "the-undersea-world-of-jacques-cousteau-1976",
-              "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
-              "file": "files/S01E05 - The Unexpected Voyage of Pepito and Cristobal.mp4",
-              "name": "files/S01E05 - The Unexpected Voyage of Pepito and Cristobal",
-              "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E05%20-%20The%20Unexpected%20Voyage%20of%20Pepito%20and%20Cristobal.mp4",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E05 Unexpected Voyage of Pepito and Cristobal XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E05 Unexpected Voyage of Pepito and Cristobal XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E05%20Unexpected%20Voyage%20of%20Pepito%20and%20Cristobal%20XviD%20AC3%20MVGroup%20org.mp4",
               "seconds": 2965,
-              "format": "MPEG4",
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 427
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 290
             }
           ]
         },
@@ -216,7 +259,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -251,7 +294,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -284,15 +327,30 @@
             "playable": true,
             "sizeMB": 424
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E08 The Desert Whales XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E08 The Desert Whales XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E08%20The%20Desert%20Whales%20XviD%20AC3%20MVGroup%20org.mp4",
+              "seconds": 2935,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 288
+            }
+          ]
         },
         {
           "number": 9,
           "name": "The Night of the Squid",
           "airdate": "1970-01-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-undersea-world",
             "itemTitle": "The Undersea World",
@@ -339,40 +397,55 @@
             "playable": true,
             "sizeMB": 414
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E10 Return of the Sea Elephants XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E10 Return of the Sea Elephants XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E10%20Return%20of%20the%20Sea%20Elephants%20XviD%20AC3%20MVGroup%20org.mp4",
+              "seconds": 2939,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 288
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Those Incredible Diving Machines",
           "airdate": "1970-03-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-undersea-world",
-            "itemTitle": "The Undersea World",
-            "file": "The Undersea World of Jacques Cousteau Collection S01E11 Those Incredible Diving Machines XviD AC3 MVGroup org.mp4",
-            "name": "The Undersea World of Jacques Cousteau Collection S01E11 Those Incredible Diving Machines XviD AC3 MVGroup org",
-            "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E11%20Those%20Incredible%20Diving%20Machines%20XviD%20AC3%20MVGroup%20org.mp4",
+            "item": "the-undersea-world-of-jacques-cousteau-1976",
+            "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
+            "file": "files/S01E11 - Those Incredible Diving Machines.mp4",
+            "name": "files/S01E11 - Those Incredible Diving Machines",
+            "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E11%20-%20Those%20Incredible%20Diving%20Machines.mp4",
             "seconds": 2941,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (AC3)",
-            "sizeMB": 288
+            "sizeMB": 420
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "the-undersea-world-of-jacques-cousteau-1976",
-              "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
-              "file": "files/S01E11 - Those Incredible Diving Machines.mp4",
-              "name": "files/S01E11 - Those Incredible Diving Machines",
-              "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E11%20-%20Those%20Incredible%20Diving%20Machines.mp4",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E11 Those Incredible Diving Machines XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E11 Those Incredible Diving Machines XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E11%20Those%20Incredible%20Diving%20Machines%20XviD%20AC3%20MVGroup%20org.mp4",
               "seconds": 2941,
-              "format": "MPEG4",
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 420
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 288
             }
           ]
         },
@@ -396,7 +469,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -431,7 +504,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -466,7 +539,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -501,7 +574,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -520,34 +593,34 @@
           "number": 16,
           "name": "Secrets of the Sunken Caves",
           "airdate": "1971-03-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-undersea-world",
-            "itemTitle": "The Undersea World",
-            "file": "The Undersea World of Jacques Cousteau Collection S01E16 Secrets of the Sunken Caves XviD AC3 MVGroup org.mp4",
-            "name": "The Undersea World of Jacques Cousteau Collection S01E16 Secrets of the Sunken Caves XviD AC3 MVGroup org",
-            "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E16%20Secrets%20of%20the%20Sunken%20Caves%20XviD%20AC3%20MVGroup%20org.mp4",
+            "item": "the-undersea-world-of-jacques-cousteau-1976",
+            "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
+            "file": "files/S01E16 - Secrets of the Sunken Caves.mp4",
+            "name": "files/S01E16 - Secrets of the Sunken Caves",
+            "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E16%20-%20Secrets%20of%20the%20Sunken%20Caves.mp4",
             "seconds": 2922,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (AC3)",
-            "sizeMB": 286
+            "sizeMB": 417
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "the-undersea-world-of-jacques-cousteau-1976",
-              "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
-              "file": "files/S01E16 - Secrets of the Sunken Caves.mp4",
-              "name": "files/S01E16 - Secrets of the Sunken Caves",
-              "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E16%20-%20Secrets%20of%20the%20Sunken%20Caves.mp4",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E16 Secrets of the Sunken Caves XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E16 Secrets of the Sunken Caves XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E16%20Secrets%20of%20the%20Sunken%20Caves%20XviD%20AC3%20MVGroup%20org.mp4",
               "seconds": 2922,
-              "format": "MPEG4",
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 417
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 286
             }
           ]
         },
@@ -571,7 +644,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -590,34 +663,34 @@
           "number": 18,
           "name": "The Forgotten Mermaids",
           "airdate": "1971-12-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-undersea-world",
-            "itemTitle": "The Undersea World",
-            "file": "The Undersea World of Jacques Cousteau Collection S01E18 The Forgotten Mermaids XviD C3 MVGroup org.mp4",
-            "name": "The Undersea World of Jacques Cousteau Collection S01E18 The Forgotten Mermaids XviD C3 MVGroup org",
-            "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E18%20The%20Forgotten%20Mermaids%20XviD%20C3%20MVGroup%20org.mp4",
+            "item": "the-undersea-world-of-jacques-cousteau-1976",
+            "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
+            "file": "files/S01E18 - The Forgotten Mermaids.mp4",
+            "name": "files/S01E18 - The Forgotten Mermaids",
+            "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E18%20-%20The%20Forgotten%20Mermaids.mp4",
             "seconds": 2923,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "video (XviD)",
-            "sizeMB": 288
+            "sizeMB": 416
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "the-undersea-world-of-jacques-cousteau-1976",
-              "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
-              "file": "files/S01E18 - The Forgotten Mermaids.mp4",
-              "name": "files/S01E18 - The Forgotten Mermaids",
-              "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E18%20-%20The%20Forgotten%20Mermaids.mp4",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E18 The Forgotten Mermaids XviD C3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E18 The Forgotten Mermaids XviD C3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E18%20The%20Forgotten%20Mermaids%20XviD%20C3%20MVGroup%20org.mp4",
               "seconds": 2923,
-              "format": "MPEG4",
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 416
+              "codecRisk": "video (XviD)",
+              "sizeMB": 288
             }
           ]
         },
@@ -641,20 +714,7 @@
           },
           "alternates": [
             {
-              "conf": 0.7,
-              "why": "title ~ \"Octopus, Octopus\" (0.95)",
-              "item": "Jacques_Cousteau-The_Undersea_World-Octopus_Octopus",
-              "itemTitle": "The Undersea World of Jacques Cousteau: Octopus, Octopus",
-              "file": "The Undersea World of Jacques Cousteau - Octopus, Octopus.mp4",
-              "name": "The Undersea World of Jacques Cousteau - Octopus, Octopus",
-              "url": "https://archive.org/download/Jacques_Cousteau-The_Undersea_World-Octopus_Octopus/The%20Undersea%20World%20of%20Jacques%20Cousteau%20-%20Octopus%2C%20Octopus.mp4",
-              "seconds": 7616,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 336
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -666,6 +726,19 @@
               "playable": true,
               "codecRisk": "audio (AC3)",
               "sizeMB": 287
+            },
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Octopus, Octopus\" (0.95)",
+              "item": "Jacques_Cousteau-The_Undersea_World-Octopus_Octopus",
+              "itemTitle": "The Undersea World of Jacques Cousteau: Octopus, Octopus",
+              "file": "The Undersea World of Jacques Cousteau - Octopus, Octopus.mp4",
+              "name": "The Undersea World of Jacques Cousteau - Octopus, Octopus",
+              "url": "https://archive.org/download/Jacques_Cousteau-The_Undersea_World-Octopus_Octopus/The%20Undersea%20World%20of%20Jacques%20Cousteau%20-%20Octopus%2C%20Octopus.mp4",
+              "seconds": 7616,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 336
             }
           ]
         },
@@ -689,7 +762,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -722,7 +795,22 @@
             "playable": true,
             "sizeMB": 487
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E21 500 Million Years Beneath the Sea XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E21 500 Million Years Beneath the Sea XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E21%20500%20Million%20Years%20Beneath%20the%20Sea%20XviD%20AC3%20MVGroup%20org.mp4",
+              "seconds": 2918,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 287
+            }
+          ]
         },
         {
           "number": 22,
@@ -744,7 +832,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -779,7 +867,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -814,7 +902,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -849,7 +937,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -868,34 +956,34 @@
           "number": 26,
           "name": "The Flight of Penguins",
           "airdate": "1974-01-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-undersea-world",
-            "itemTitle": "The Undersea World",
-            "file": "The Undersea World of Jacques Cousteau Collection S01E26 The Flight of Penguins XviD AC3 MVGroup org.mp4",
-            "name": "The Undersea World of Jacques Cousteau Collection S01E26 The Flight of Penguins XviD AC3 MVGroup org",
-            "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E26%20The%20Flight%20of%20Penguins%20XviD%20AC3%20MVGroup%20org.mp4",
+            "item": "the-undersea-world-of-jacques-cousteau-1976",
+            "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
+            "file": "files/S01E26 - The Flight of Penguins.mp4",
+            "name": "files/S01E26 - The Flight of Penguins",
+            "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E26%20-%20The%20Flight%20of%20Penguins.mp4",
             "seconds": 2932,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (AC3)",
-            "sizeMB": 286
+            "sizeMB": 489
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "the-undersea-world-of-jacques-cousteau-1976",
-              "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
-              "file": "files/S01E26 - The Flight of Penguins.mp4",
-              "name": "files/S01E26 - The Flight of Penguins",
-              "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E26%20-%20The%20Flight%20of%20Penguins.mp4",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E26 The Flight of Penguins XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E26 The Flight of Penguins XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E26%20The%20Flight%20of%20Penguins%20XviD%20AC3%20MVGroup%20org.mp4",
               "seconds": 2932,
-              "format": "MPEG4",
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 489
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 286
             }
           ]
         },
@@ -917,40 +1005,55 @@
             "playable": true,
             "sizeMB": 489
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E27 Beneath the Frozen World XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E27 Beneath the Frozen World XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E27%20Beneath%20the%20Frozen%20World%20XviD%20AC3%20MVGroup%20org.mp4",
+              "seconds": 2932,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 288
+            }
+          ]
         },
         {
           "number": 28,
           "name": "Blizzard at Hope Bay",
           "airdate": "1974-03-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-undersea-world",
-            "itemTitle": "The Undersea World",
-            "file": "The Undersea World of Jacques Cousteau Collection S01E28 Blizzard at Hope Bay XviD AC3 MVGroup org.mp4",
-            "name": "The Undersea World of Jacques Cousteau Collection S01E28 Blizzard at Hope Bay XviD AC3 MVGroup org",
-            "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E28%20Blizzard%20at%20Hope%20Bay%20XviD%20AC3%20MVGroup%20org.mp4",
+            "item": "the-undersea-world-of-jacques-cousteau-1976",
+            "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
+            "file": "files/S01E28 - Blizzard at Hope Bay.mp4",
+            "name": "files/S01E28 - Blizzard at Hope Bay",
+            "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E28%20-%20Blizzard%20at%20Hope%20Bay.mp4",
             "seconds": 2933,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (AC3)",
-            "sizeMB": 287
+            "sizeMB": 489
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "the-undersea-world-of-jacques-cousteau-1976",
-              "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
-              "file": "files/S01E28 - Blizzard at Hope Bay.mp4",
-              "name": "files/S01E28 - Blizzard at Hope Bay",
-              "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E28%20-%20Blizzard%20at%20Hope%20Bay.mp4",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E28 Blizzard at Hope Bay XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E28 Blizzard at Hope Bay XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E28%20Blizzard%20at%20Hope%20Bay%20XviD%20AC3%20MVGroup%20org.mp4",
               "seconds": 2933,
-              "format": "MPEG4",
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 489
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 287
             }
           ]
         },
@@ -972,7 +1075,22 @@
             "playable": true,
             "sizeMB": 488
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E29 Life at the End of the World XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E29 Life at the End of the World XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E29%20Life%20at%20the%20End%20of%20the%20World%20XviD%20AC3%20MVGroup%20org.mp4",
+              "seconds": 2928,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 287
+            }
+          ]
         },
         {
           "number": 30,
@@ -994,7 +1112,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -1029,7 +1147,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -1062,40 +1180,55 @@
             "playable": true,
             "sizeMB": 490
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E32 The Sleeping Sharks of Yucatan XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E32 The Sleeping Sharks of Yucatan XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E32%20The%20Sleeping%20Sharks%20of%20Yucatan%20XviD%20AC3%20MVGroup%20org.mp4",
+              "seconds": 2935,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 290
+            }
+          ]
         },
         {
           "number": 33,
           "name": "The Sea Birds of Isabela",
           "airdate": "1975-12-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-undersea-world",
-            "itemTitle": "The Undersea World",
-            "file": "The Undersea World of Jacques Cousteau Collection S01E33 The Sea Birds of Isabela XviD AC3 MVGroup org.mp4",
-            "name": "The Undersea World of Jacques Cousteau Collection S01E33 The Sea Birds of Isabela XviD AC3 MVGroup org",
-            "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E33%20The%20Sea%20Birds%20of%20Isabela%20XviD%20AC3%20MVGroup%20org.mp4",
+            "item": "the-undersea-world-of-jacques-cousteau-1976",
+            "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
+            "file": "files/S01E33 - The Sea Birds of Isabela.mp4",
+            "name": "files/S01E33 - The Sea Birds of Isabela",
+            "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E33%20-%20The%20Sea%20Birds%20of%20Isabela.mp4",
             "seconds": 2964,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (AC3)",
-            "sizeMB": 291
+            "sizeMB": 495
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "the-undersea-world-of-jacques-cousteau-1976",
-              "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
-              "file": "files/S01E33 - The Sea Birds of Isabela.mp4",
-              "name": "files/S01E33 - The Sea Birds of Isabela",
-              "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E33%20-%20The%20Sea%20Birds%20of%20Isabela.mp4",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E33 The Sea Birds of Isabela XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E33 The Sea Birds of Isabela XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E33%20The%20Sea%20Birds%20of%20Isabela%20XviD%20AC3%20MVGroup%20org.mp4",
               "seconds": 2964,
-              "format": "MPEG4",
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 495
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 291
             }
           ]
         },
@@ -1119,7 +1252,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",
@@ -1138,34 +1271,34 @@
           "number": 35,
           "name": "The Fish That Swallowed Jonah",
           "airdate": "1976-05-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "the-undersea-world",
-            "itemTitle": "The Undersea World",
-            "file": "The Undersea World of Jacques Cousteau Collection S01E35 The Fish That Swallowed Jonah XviD AC3 MVGroup org.mp4",
-            "name": "The Undersea World of Jacques Cousteau Collection S01E35 The Fish That Swallowed Jonah XviD AC3 MVGroup org",
-            "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E35%20The%20Fish%20That%20Swallowed%20Jonah%20XviD%20AC3%20MVGroup%20org.mp4",
+            "item": "the-undersea-world-of-jacques-cousteau-1976",
+            "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
+            "file": "files/S01E35 - The Fish That Swallowed Jonah.mp4",
+            "name": "files/S01E35 - The Fish That Swallowed Jonah",
+            "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E35%20-%20The%20Fish%20That%20Swallowed%20Jonah.mp4",
             "seconds": 2975,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (AC3)",
-            "sizeMB": 293
+            "sizeMB": 497
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "the-undersea-world-of-jacques-cousteau-1976",
-              "itemTitle": "The Undersea World of Jacques Cousteau (1976)",
-              "file": "files/S01E35 - The Fish That Swallowed Jonah.mp4",
-              "name": "files/S01E35 - The Fish That Swallowed Jonah",
-              "url": "https://archive.org/download/the-undersea-world-of-jacques-cousteau-1976/files%2FS01E35%20-%20The%20Fish%20That%20Swallowed%20Jonah.mp4",
+              "item": "the-undersea-world",
+              "itemTitle": "The Undersea World",
+              "file": "The Undersea World of Jacques Cousteau Collection S01E35 The Fish That Swallowed Jonah XviD AC3 MVGroup org.mp4",
+              "name": "The Undersea World of Jacques Cousteau Collection S01E35 The Fish That Swallowed Jonah XviD AC3 MVGroup org",
+              "url": "https://archive.org/download/the-undersea-world/The%20Undersea%20World%20of%20Jacques%20Cousteau%20Collection%20S01E35%20The%20Fish%20That%20Swallowed%20Jonah%20XviD%20AC3%20MVGroup%20org.mp4",
               "seconds": 2975,
-              "format": "MPEG4",
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 497
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 293
             }
           ]
         },
@@ -1189,7 +1322,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "the-undersea-world",
               "itemTitle": "The Undersea World",

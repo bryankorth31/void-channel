@@ -3,7 +3,7 @@
   "slug": "dinosaur-king",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:39.535Z",
+  "matchedAt": "2026-10-19T04:11:41.526Z",
   "addedAt": "2026-10-15T12:08:18.859Z",
   "tvmaze": {
     "id": 27105,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 79,
-    "live": 0,
-    "review": 76,
+    "live": 68,
+    "review": 8,
     "missing": 3,
     "pct": 96
   },
@@ -29,41 +29,27 @@
           "airdate": "2007-02-04",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-            "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-            "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-            "file": "Dinosaur King 01 RAW (DVD Rip 854x480).mp4",
-            "name": "Dinosaur King 01 RAW (DVD Rip 854x480)",
-            "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2001%20RAW%20(DVD%20Rip%20854x480).mp4",
-            "seconds": 1447,
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dinosaur-king-s-2-ep-8_202312",
+            "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+            "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP1.mp4",
+            "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP1",
+            "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP1.mp4",
+            "seconds": 1318,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 315
+            "sizeMB": 208
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 01 - [S^M][895036D4].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 01 - [S^M][895036D4]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2001%20-%20%5BS%5EM%5D%5B895036D4%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
           "name": "Battle at the Pyramids",
           "airdate": "2007-02-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -77,7 +63,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -90,30 +76,17 @@
               "sizeMB": 181
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 02 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 02 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2002%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP2.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP2",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP2.mp4",
+              "seconds": 1398,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 306
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 02 - [S^M][72EDA425].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 02 - [S^M][72EDA425]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2002%20-%20%5BS%5EM%5D%5B72EDA425%5D.mp4",
-              "seconds": 1465,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 208
+              "sizeMB": 210
             }
           ]
         },
@@ -123,41 +96,27 @@
           "airdate": "2007-02-18",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-            "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-            "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-            "file": "Dinosaur King 03 RAW (DVD Rip 854x480).mp4",
-            "name": "Dinosaur King 03 RAW (DVD Rip 854x480)",
-            "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2003%20RAW%20(DVD%20Rip%20854x480).mp4",
-            "seconds": 1447,
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dinosaur-king-s-2-ep-8_202312",
+            "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+            "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP3.mp4",
+            "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP3",
+            "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP3.mp4",
+            "seconds": 1331,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 307
+            "sizeMB": 201
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 03 - [S^M][1B3DE8A4].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 03 - [S^M][1B3DE8A4]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2003%20-%20%5BS%5EM%5D%5B1B3DE8A4%5D.mp4",
-              "seconds": 1443,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 204
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Bungle in the Jungle",
           "airdate": "2007-02-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -171,7 +130,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -184,30 +143,17 @@
               "sizeMB": 186
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 04 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 04 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2004%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP4.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP4",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP4.mp4",
+              "seconds": 1314,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 324
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 04 - [S^M][F5DCAEE0].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 04 - [S^M][F5DCAEE0]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2004%20-%20%5BS%5EM%5D%5BF5DCAEE0%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
+              "sizeMB": 172
             }
           ]
         },
@@ -215,9 +161,9 @@
           "number": 5,
           "name": "Rubble Trouble",
           "airdate": "2007-03-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -231,7 +177,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -244,30 +190,17 @@
               "sizeMB": 181
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 05 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 05 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2005%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP5.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP5",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP5.mp4",
+              "seconds": 1304,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 312
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 05 - [S^M][7AABC7C9].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 05 - [S^M][7AABC7C9]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2005%20-%20%5BS%5EM%5D%5B7AABC7C9%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
+              "sizeMB": 210
             }
           ]
         },
@@ -275,9 +208,9 @@
           "number": 6,
           "name": "Don't Mess with the Maiasaura",
           "airdate": "2007-03-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -291,7 +224,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -304,30 +237,17 @@
               "sizeMB": 178
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 06 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 06 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2006%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1432,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP6.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP6",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP6.mp4",
+              "seconds": 1302,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 296
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 06 - [S^M][CD2CBFC7].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 06 - [S^M][CD2CBFC7]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2006%20-%20%5BS%5EM%5D%5BCD2CBFC7%5D.mp4",
-              "seconds": 1443,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 203
+              "sizeMB": 211
             }
           ]
         },
@@ -335,9 +255,9 @@
           "number": 7,
           "name": "A Gameshow Showdown",
           "airdate": "2007-03-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -351,7 +271,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -364,30 +284,17 @@
               "sizeMB": 115
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 07 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 07 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2007%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1432,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP7.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP7",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP7.mp4",
+              "seconds": 1278,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 295
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 07 - [S^M][DC70734E].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 07 - [S^M][DC70734E]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2007%20-%20%5BS%5EM%5D%5BDC70734E%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
+              "sizeMB": 202
             }
           ]
         },
@@ -395,9 +302,9 @@
           "number": 8,
           "name": "Maui Owie!",
           "airdate": "2007-03-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -411,7 +318,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -424,30 +331,17 @@
               "sizeMB": 105
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 08 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 08 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2008%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1432,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP8.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP8",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP8.mp4",
+              "seconds": 1329,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 286
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 08 - [S^M][43453B9A].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 08 - [S^M][43453B9A]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2008%20-%20%5BS%5EM%5D%5B43453B9A%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
+              "sizeMB": 217
             }
           ]
         },
@@ -455,9 +349,9 @@
           "number": 9,
           "name": "Dino Snore",
           "airdate": "2007-04-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -471,7 +365,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -484,30 +378,17 @@
               "sizeMB": 109
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 09 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 09 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2009%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP9.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP9",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP9.mp4",
+              "seconds": 1334,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 313
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 09 - [S^M][BFD7042F].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 09 - [S^M][BFD7042F]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2009%20-%20%5BS%5EM%5D%5BBFD7042F%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
+              "sizeMB": 214
             }
           ]
         },
@@ -517,41 +398,27 @@
           "airdate": "2007-04-08",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 10 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-            "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-            "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-            "file": "Dinosaur King 10 RAW (DVD Rip 854x480).mp4",
-            "name": "Dinosaur King 10 RAW (DVD Rip 854x480)",
-            "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2010%20RAW%20(DVD%20Rip%20854x480).mp4",
-            "seconds": 1447,
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dinosaur-king-s-2-ep-8_202312",
+            "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+            "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP10.mp4",
+            "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP10",
+            "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP10.mp4",
+            "seconds": 1275,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 298
+            "sizeMB": 203
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 10 - [S^M][E0BAC7B6].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 10 - [S^M][E0BAC7B6]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2010%20-%20%5BS%5EM%5D%5BE0BAC7B6%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
           "name": "Alpha Bets It All",
           "airdate": "2007-04-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -565,7 +432,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -578,30 +445,17 @@
               "sizeMB": 175
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 11 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 11 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 11 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2011%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP11.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP11",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP11.mp4",
+              "seconds": 1321,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 277
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 11 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 11 - [S^M][44F3345D].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 11 - [S^M][44F3345D]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2011%20-%20%5BS%5EM%5D%5B44F3345D%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
+              "sizeMB": 209
             }
           ]
         },
@@ -609,9 +463,9 @@
           "number": 12,
           "name": "Alpha's Zeta Point",
           "airdate": "2007-04-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -625,7 +479,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -638,30 +492,17 @@
               "sizeMB": 200
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 12 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 12 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2012%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP12.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP12",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP12.mp4",
+              "seconds": 1301,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 322
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 12 - [S^M][4D33F5E0].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 12 - [S^M][4D33F5E0]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2012%20-%20%5BS%5EM%5D%5B4D33F5E0%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
+              "sizeMB": 155
             }
           ]
         },
@@ -669,9 +510,9 @@
           "number": 13,
           "name": "Escape from Zeta Point",
           "airdate": "2007-04-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -685,7 +526,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -698,30 +539,17 @@
               "sizeMB": 190
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 13 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 13 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 13 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2013%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP13.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP13",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP13.mp4",
+              "seconds": 1267,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 300
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 13 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 13 - [S^M][0A2D3941].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 13 - [S^M][0A2D3941]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2013%20-%20%5BS%5EM%5D%5B0A2D3941%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
+              "sizeMB": 156
             }
           ]
         },
@@ -729,9 +557,9 @@
           "number": 14,
           "name": "Child's Play",
           "airdate": "2007-05-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -745,7 +573,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -758,30 +586,17 @@
               "sizeMB": 192
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 14 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 14 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 14 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2014%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP14.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP14",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP14.mp4",
+              "seconds": 1329,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 312
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 14 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 14 - [S^M][366E171F].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 14 - [S^M][366E171F]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2014%20-%20%5BS%5EM%5D%5B366E171F%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
+              "sizeMB": 183
             }
           ]
         },
@@ -789,9 +604,9 @@
           "number": 15,
           "name": "Volcanic Panic",
           "airdate": "2007-05-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -805,7 +620,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -818,30 +633,17 @@
               "sizeMB": 184
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 15 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 15 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 15 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2015%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1442,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP15.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP15",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP15.mp4",
+              "seconds": 1340,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 307
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 15 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 15 - [S^M][F815F287].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 15 - [S^M][F815F287]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2015%20-%20%5BS%5EM%5D%5BF815F287%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
+              "sizeMB": 167
             }
           ]
         },
@@ -849,9 +651,9 @@
           "number": 16,
           "name": "All Fired Up!",
           "airdate": "2007-05-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -865,7 +667,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -878,30 +680,17 @@
               "sizeMB": 199
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 16 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 16 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 16 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2016%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP16.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP16",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP16.mp4",
+              "seconds": 1285,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 360
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 16 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 16 - [S^M][4EEC0E8D].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 16 - [S^M][4EEC0E8D]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2016%20-%20%5BS%5EM%5D%5B4EEC0E8D%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 205
+              "sizeMB": 160
             }
           ]
         },
@@ -909,9 +698,9 @@
           "number": 17,
           "name": "Field of Screams",
           "airdate": "2007-05-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -925,7 +714,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -938,30 +727,17 @@
               "sizeMB": 201
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 17 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 17 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 17 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2017%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP17.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP17",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP17.mp4",
+              "seconds": 1298,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 329
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 17 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 17 - [S^M][7AA9FED6].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 17 - [S^M][7AA9FED6]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2017%20-%20%5BS%5EM%5D%5B7AA9FED6%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 283
+              "sizeMB": 189
             }
           ]
         },
@@ -971,41 +747,27 @@
           "airdate": "2007-06-03",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 18 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-            "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-            "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-            "file": "Dinosaur King 18 RAW (DVD Rip 854x480).mp4",
-            "name": "Dinosaur King 18 RAW (DVD Rip 854x480)",
-            "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2018%20RAW%20(DVD%20Rip%20854x480).mp4",
-            "seconds": 1447,
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dinosaur-king-s-2-ep-8_202312",
+            "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+            "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP18.mp4",
+            "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP18",
+            "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP18.mp4",
+            "seconds": 1332,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 342
+            "sizeMB": 192
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 18 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 18 - [S^M][DBD97834].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 18 - [S^M][DBD97834]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2018%20-%20%5BS%5EM%5D%5BDBD97834%5D.mp4",
-              "seconds": 1465,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 186
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 19,
           "name": "The Big Apple Grapple",
           "airdate": "2007-06-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1019,7 +781,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1032,30 +794,17 @@
               "sizeMB": 152
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 19 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 19 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 19 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2019%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP19.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP19",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP19.mp4",
+              "seconds": 1305,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 260
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 19 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 19 - [S^M][CCB97F8E].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 19 - [S^M][CCB97F8E]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2019%20-%20%5BS%5EM%5D%5BCCB97F8E%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
+              "sizeMB": 174
             }
           ]
         },
@@ -1063,9 +812,9 @@
           "number": 20,
           "name": "Tee'd Off",
           "airdate": "2007-06-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1079,7 +828,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1092,30 +841,17 @@
               "sizeMB": 205
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 20 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 20 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 20 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2020%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP20.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP20",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP20.mp4",
+              "seconds": 1363,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 344
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 20 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 20 - [S^M][609EC40E].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 20 - [S^M][609EC40E]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2020%20-%20%5BS%5EM%5D%5B609EC40E%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
+              "sizeMB": 162
             }
           ]
         },
@@ -1125,41 +861,27 @@
           "airdate": "2007-07-08",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 21 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-            "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-            "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-            "file": "Dinosaur King 21 RAW (DVD Rip 854x480).mp4",
-            "name": "Dinosaur King 21 RAW (DVD Rip 854x480)",
-            "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2021%20RAW%20(DVD%20Rip%20854x480).mp4",
-            "seconds": 1447,
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dinosaur-king-s-2-ep-8_202312",
+            "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+            "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP21.mp4",
+            "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP21",
+            "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP21.mp4",
+            "seconds": 1333,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 306
+            "sizeMB": 201
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 21 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 21 - [S^M][4F33A73E].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 21 - [S^M][4F33A73E]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2021%20-%20%5BS%5EM%5D%5B4F33A73E%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 22,
           "name": "Just Plane Crazy",
           "airdate": "2007-07-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1173,7 +895,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1186,30 +908,17 @@
               "sizeMB": 161
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 22 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 22 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 22 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2022%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP22.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP22",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP22.mp4",
+              "seconds": 1271,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 271
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 22 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 22 - [S^M][62556BB9].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 22 - [S^M][62556BB9]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2022%20-%20%5BS%5EM%5D%5B62556BB9%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
+              "sizeMB": 148
             }
           ]
         },
@@ -1217,9 +926,9 @@
           "number": 23,
           "name": "A Loch Ness Mess",
           "airdate": "2007-07-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1233,7 +942,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1246,30 +955,17 @@
               "sizeMB": 173
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 23 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 23 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 23 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2023%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP23.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP23",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP23.mp4",
+              "seconds": 1265,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 299
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 23 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 23 - [S^M][C93EFA33].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 23 - [S^M][C93EFA33]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2023%20-%20%5BS%5EM%5D%5BC93EFA33%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
+              "sizeMB": 174
             }
           ]
         },
@@ -1277,9 +973,9 @@
           "number": 24,
           "name": "Fashion Victims",
           "airdate": "2007-07-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1293,7 +989,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1306,30 +1002,17 @@
               "sizeMB": 195
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 24 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 24 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 24 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2024%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP24.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP24",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP24.mp4",
+              "seconds": 1275,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 347
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 24 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 24 - [S^M][D3CACF28].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 24 - [S^M][D3CACF28]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2024%20-%20%5BS%5EM%5D%5BD3CACF28%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
+              "sizeMB": 162
             }
           ]
         },
@@ -1339,33 +1022,19 @@
           "airdate": "2007-08-05",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 25 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-            "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-            "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-            "file": "Dinosaur King 25 RAW (DVD Rip 854x480).mp4",
-            "name": "Dinosaur King 25 RAW (DVD Rip 854x480)",
-            "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2025%20RAW%20(DVD%20Rip%20854x480).mp4",
-            "seconds": 1447,
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dinosaur-king-s-2-ep-8_202312",
+            "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+            "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP25.mp4",
+            "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP25",
+            "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP25.mp4",
+            "seconds": 1278,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 334
+            "sizeMB": 192
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 25 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 25 - [S^M][AC6DFECC].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 25 - [S^M][AC6DFECC]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2025%20-%20%5BS%5EM%5D%5BAC6DFECC%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 26,
@@ -1373,41 +1042,27 @@
           "airdate": "2007-08-12",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 26 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-            "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-            "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-            "file": "Dinosaur King 26 RAW (DVD Rip 854x480).mp4",
-            "name": "Dinosaur King 26 RAW (DVD Rip 854x480)",
-            "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2026%20RAW%20(DVD%20Rip%20854x480).mp4",
-            "seconds": 1447,
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dinosaur-king-s-2-ep-8_202312",
+            "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+            "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP26.mp4",
+            "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP26",
+            "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP26.mp4",
+            "seconds": 1265,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 313
+            "sizeMB": 156
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 26 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 26 - [S^M][AB4B270E].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 26 - [S^M][AB4B270E]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2026%20-%20%5BS%5EM%5D%5BAB4B270E%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 27,
           "name": "Carnival of Chaos",
           "airdate": "2007-08-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1421,7 +1076,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1432,32 +1087,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 192
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 27 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 27 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 27 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2027%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 352
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 27 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 27 - [S^M][1FA8CB8A].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 27 - [S^M][1FA8CB8A]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2027%20-%20%5BS%5EM%5D%5B1FA8CB8A%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
             }
           ]
         },
@@ -1467,41 +1096,27 @@
           "airdate": "2007-08-26",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 28 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-            "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-            "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-            "file": "Dinosaur King 28 RAW (DVD Rip 854x480).mp4",
-            "name": "Dinosaur King 28 RAW (DVD Rip 854x480)",
-            "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2028%20RAW%20(DVD%20Rip%20854x480).mp4",
-            "seconds": 1447,
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dinosaur-king-s-2-ep-8_202312",
+            "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+            "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP28.mp4",
+            "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP28",
+            "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP28.mp4",
+            "seconds": 1367,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 318
+            "sizeMB": 187
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 28 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 28 - [S^M][38338D3C].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 28 - [S^M][38338D3C]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2028%20-%20%5BS%5EM%5D%5B38338D3C%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 29,
           "name": "Rhino or Dino?",
           "airdate": "2007-09-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1515,7 +1130,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1528,30 +1143,17 @@
               "sizeMB": 206
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 29 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 29 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 29 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2029%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP29.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP29",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP29.mp4",
+              "seconds": 1376,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 366
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 29 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 29 - [S^M][0F513391].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 29 - [S^M][0F513391]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2029%20-%20%5BS%5EM%5D%5B0F513391%5D.mp4",
-              "seconds": 1450,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
+              "sizeMB": 192
             }
           ]
         },
@@ -1559,33 +1161,46 @@
           "number": 30,
           "name": "Dinosaur Amour!",
           "airdate": "2007-09-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 30 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-            "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-            "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-            "file": "Dinosaur King 30 RAW (DVD Rip 854x480).mp4",
-            "name": "Dinosaur King 30 RAW (DVD Rip 854x480)",
-            "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2030%20RAW%20(DVD%20Rip%20854x480).mp4",
-            "seconds": 1447,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "dinosaur-king-season-1-2",
+            "itemTitle": "Dinosaur King Season 1 & 2",
+            "file": "Dinosaur King/Season 1/Dinosaur King Season 1 Episode 30 - Dinosaur Amour.mp4",
+            "name": "Dinosaur King/Season 1/Dinosaur King Season 1 Episode 30 - Dinosaur Amour",
+            "url": "https://archive.org/download/dinosaur-king-season-1-2/Dinosaur%20King%2FSeason%201%2FDinosaur%20King%20Season%201%20Episode%2030%20-%20Dinosaur%20Amour.mp4",
+            "seconds": 1263,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 330
+            "sizeMB": 73
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 30 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 30 - [E86D9E8A].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 30 - [E86D9E8A]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2030%20-%20%5BE86D9E8A%5D.mp4",
-              "seconds": 1440,
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "dinosaur-king-season-1",
+              "itemTitle": "Dinosaur King Season 1",
+              "file": "Season 1/Dinosaur King Season 1 Episode 30 - Dinosaur Amour.mp4",
+              "name": "Season 1/Dinosaur King Season 1 Episode 30 - Dinosaur Amour",
+              "url": "https://archive.org/download/dinosaur-king-season-1/Season%201%2FDinosaur%20King%20Season%201%20Episode%2030%20-%20Dinosaur%20Amour.mp4",
+              "seconds": 1263,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 183
+              "sizeMB": 73
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dinosaur-king-s-2-ep-8_202312",
+              "itemTitle": "dinosaur king uk pop max episode tv recordings collection",
+              "file": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP30.mp4",
+              "name": "dinosaur king pop max episode tv recordings collection/dinosaur king S2 EP30",
+              "url": "https://archive.org/download/dinosaur-king-s-2-ep-8_202312/dinosaur%20king%20pop%20max%20episode%20tv%20recordings%20collection%2Fdinosaur%20king%20S2%20EP30.mp4",
+              "seconds": 1324,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 194
             }
           ]
         },
@@ -1593,9 +1208,9 @@
           "number": 31,
           "name": "Temple Tempest",
           "airdate": "2007-09-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1609,7 +1224,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1620,32 +1235,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 166
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 31 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 31 - [5FE151C6].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 31 - [5FE151C6]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2031%20-%20%5B5FE151C6%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 393
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 31 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 31 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 31 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2031%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 315
             }
           ]
         },
@@ -1653,43 +1242,17 @@
           "number": 32,
           "name": "Falls Alarm!",
           "airdate": "2007-09-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 32 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-            "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-            "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-            "file": "Dinosaur King 32 RAW (DVD Rip 854x480).mp4",
-            "name": "Dinosaur King 32 RAW (DVD Rip 854x480)",
-            "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2032%20RAW%20(DVD%20Rip%20854x480).mp4",
-            "seconds": 1447,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 386
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 32 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 32 - [F85D0A52].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 32 - [F85D0A52]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2032%20-%20%5BF85D0A52%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 182
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 33,
           "name": "Battle Royal!",
           "airdate": "2007-09-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1703,7 +1266,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1714,32 +1277,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 171
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 33 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 33 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 33 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2033%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 284
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 33 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 33 - [0E208FFE].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 33 - [0E208FFE]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2033%20-%20%5B0E208FFE%5D.mp4",
-              "seconds": 1455,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 185
             }
           ]
         },
@@ -1747,9 +1284,9 @@
           "number": 34,
           "name": "Ninja Nightmare!",
           "airdate": "2007-10-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1763,7 +1300,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1774,32 +1311,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 124
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 34 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 34 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 34 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2034%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 350
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 34 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 34 - [8C9A3582].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 34 - [8C9A3582]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2034%20-%20%5B8C9A3582%5D.mp4",
-              "seconds": 1455,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 185
             }
           ]
         },
@@ -1807,9 +1318,9 @@
           "number": 35,
           "name": "Ruff and Ready",
           "airdate": "2007-10-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1823,7 +1334,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1834,32 +1345,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 200
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 35 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 35 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 35 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2035%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 347
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 35 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 35 - [DA07D61B].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 35 - [DA07D61B]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2035%20-%20%5BDA07D61B%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 183
             }
           ]
         },
@@ -1867,9 +1352,9 @@
           "number": 36,
           "name": "Metal Imbalance",
           "airdate": "2007-10-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1883,7 +1368,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1894,32 +1379,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 174
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 36 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 36 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 36 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2036%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 291
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 36 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 36 - [27004384].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 36 - [27004384]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2036%20-%20%5B27004384%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 183
             }
           ]
         },
@@ -1927,9 +1386,9 @@
           "number": 37,
           "name": "Dueling Dinos",
           "airdate": "2007-10-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -1943,7 +1402,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -1954,32 +1413,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 196
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 37 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 37 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 37 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2037%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 344
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 37 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 37 - [109AD789].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 37 - [109AD789]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2037%20-%20%5B109AD789%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 183
             }
           ]
         },
@@ -1987,9 +1420,9 @@
           "number": 38,
           "name": "Mythical Mix Up",
           "airdate": "2007-11-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2003,7 +1436,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -2014,32 +1447,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 192
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 38 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 38 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 38 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2038%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 332
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 38 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 38 - [B4402BFF].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 38 - [B4402BFF]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2038%20-%20%5BB4402BFF%5D.mp4",
-              "seconds": 1455,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 185
             }
           ]
         },
@@ -2047,9 +1454,9 @@
           "number": 39,
           "name": "Beast or Famine",
           "airdate": "2007-11-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2063,7 +1470,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -2074,32 +1481,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 205
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 39 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 39 - [B3785CC8].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 39 - [B3785CC8]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2039%20-%20%5BB3785CC8%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 393
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 39 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 39 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 39 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2039%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 336
             }
           ]
         },
@@ -2107,9 +1488,9 @@
           "number": 40,
           "name": "A Mesozoic Mess",
           "airdate": "2007-11-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2123,7 +1504,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -2134,32 +1515,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 188
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 40 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 40 - [220A0D8B].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 40 - [220A0D8B]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2040%20-%20%5B220A0D8B%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 393
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 40 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 40 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 40 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2040%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 328
             }
           ]
         },
@@ -2167,9 +1522,9 @@
           "number": 41,
           "name": "Lights, Camera, Destruction!",
           "airdate": "2007-11-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2183,7 +1538,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -2194,32 +1549,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 205
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 41 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 41 - [C6166CAC].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 41 - [C6166CAC]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2041%20-%20%5BC6166CAC%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 393
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 41 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 41 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 41 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2041%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 358
             }
           ]
         },
@@ -2227,9 +1556,9 @@
           "number": 42,
           "name": "Planes, Trains and Dinosaurs",
           "airdate": "2007-12-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2243,7 +1572,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -2254,32 +1583,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 196
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 42 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 42 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 42 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2042%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 331
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 42 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 42 - [B3117D6B].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 42 - [B3117D6B]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2042%20-%20%5BB3117D6B%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 183
             }
           ]
         },
@@ -2287,9 +1590,9 @@
           "number": 43,
           "name": "Vaccination Vacation",
           "airdate": "2007-12-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2303,7 +1606,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -2314,32 +1617,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 177
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 43 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 43 - [FEC92D82].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 43 - [FEC92D82]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2043%20-%20%5BFEC92D82%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 393
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 43 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 43 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 43 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2043%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 299
             }
           ]
         },
@@ -2347,9 +1624,9 @@
           "number": 44,
           "name": "A Kyoto Caper",
           "airdate": "2007-12-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2363,7 +1640,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -2374,32 +1651,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 203
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 44 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 44 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 44 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2044%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 335
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 44 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 44 - [DD8B9EE0].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 44 - [DD8B9EE0]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2044%20-%20%5BDD8B9EE0%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 183
             }
           ]
         },
@@ -2407,9 +1658,9 @@
           "number": 45,
           "name": "Santa Saurus!",
           "airdate": "2007-12-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2423,7 +1674,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -2434,32 +1685,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 186
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 45 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 45 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 45 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2045%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 330
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 45 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 45 - [0649B128].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 45 - [0649B128]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2045%20-%20%5B0649B128%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 183
             }
           ]
         },
@@ -2467,9 +1692,9 @@
           "number": 46,
           "name": "Full Scheme Ahead",
           "airdate": "2008-01-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2483,7 +1708,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -2494,32 +1719,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 172
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 46 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 46 - [83A1F6C6].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 46 - [83A1F6C6]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2046%20-%20%5B83A1F6C6%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 393
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 46 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 46 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 46 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2046%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 284
             }
           ]
         },
@@ -2527,9 +1726,9 @@
           "number": 47,
           "name": "Tricks of the Traitor",
           "airdate": "2008-01-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2543,7 +1742,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -2554,32 +1753,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 176
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 47 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 47 - [B62058F4].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 47 - [B62058F4]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2047%20-%20%5BB62058F4%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 393
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 47 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 47 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 47 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2047%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 317
             }
           ]
         },
@@ -2587,9 +1760,9 @@
           "number": 48,
           "name": "One Final Move",
           "airdate": "2008-01-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2603,7 +1776,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dinosaur-king-season-1",
               "itemTitle": "Dinosaur King Season 1",
@@ -2614,32 +1787,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 188
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 48 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-              "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-              "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-              "file": "Dinosaur King 48 RAW (DVD Rip 854x480).mp4",
-              "name": "Dinosaur King 48 RAW (DVD Rip 854x480)",
-              "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2048%20RAW%20(DVD%20Rip%20854x480).mp4",
-              "seconds": 1447,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 330
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 48 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 48 - [4FE983BB].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 48 - [4FE983BB]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2048%20-%20%5B4FE983BB%5D.mp4",
-              "seconds": 1440,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 183
             }
           ]
         },
@@ -2647,33 +1794,33 @@
           "number": 49,
           "name": "Dinosaur Wars!",
           "airdate": "2008-01-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 49 of 79 in \"Ancient Ruler Dinosaur King RAW Japanese\"",
-            "item": "ancient-ruler-dinosaur-king-japanese-dvd-encodes",
-            "itemTitle": "Ancient Ruler Dinosaur King RAW Japanese DVD Encodes",
-            "file": "Dinosaur King 49 RAW (DVD Rip 854x480).mp4",
-            "name": "Dinosaur King 49 RAW (DVD Rip 854x480)",
-            "url": "https://archive.org/download/ancient-ruler-dinosaur-king-japanese-dvd-encodes/Dinosaur%20King%2049%20RAW%20(DVD%20Rip%20854x480).mp4",
-            "seconds": 1447,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "dinosaur-king-season-1-2",
+            "itemTitle": "Dinosaur King Season 1 & 2",
+            "file": "Dinosaur King/Season 1/Dinosaur King Season 1 Episode 49 Final - Dinosaur War.mp4",
+            "name": "Dinosaur King/Season 1/Dinosaur King Season 1 Episode 49 Final - Dinosaur War",
+            "url": "https://archive.org/download/dinosaur-king-season-1-2/Dinosaur%20King%2FSeason%201%2FDinosaur%20King%20Season%201%20Episode%2049%20Final%20-%20Dinosaur%20War.mp4",
+            "seconds": 1321,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 368
+            "sizeMB": 213
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 49 of 49 in \"Dinosaur King Original Japanese version\"",
-              "item": "kodai-ouja-kyouryuu-king",
-              "itemTitle": "Dinosaur King Original Japanese version",
-              "file": "Kodai Ouja Kyouryuu King - 49 - [1D849D6B].mp4",
-              "name": "Kodai Ouja Kyouryuu King - 49 - [1D849D6B]",
-              "url": "https://archive.org/download/kodai-ouja-kyouryuu-king/Kodai%20Ouja%20Kyouryuu%20King%20-%2049%20-%20%5B1D849D6B%5D.mp4",
-              "seconds": 1440,
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "dinosaur-king-season-1",
+              "itemTitle": "Dinosaur King Season 1",
+              "file": "Season 1/Dinosaur King Season 1 Episode 49 Final - Dinosaur War.mp4",
+              "name": "Season 1/Dinosaur King Season 1 Episode 49 Final - Dinosaur War",
+              "url": "https://archive.org/download/dinosaur-king-season-1/Season%201%2FDinosaur%20King%20Season%201%20Episode%2049%20Final%20-%20Dinosaur%20War.mp4",
+              "seconds": 1321,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 183
+              "sizeMB": 213
             }
           ]
         }
@@ -2686,9 +1833,9 @@
           "number": 1,
           "name": "Alien Parent Trap",
           "airdate": "2008-02-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2706,9 +1853,9 @@
           "number": 2,
           "name": "Ancient Roman Holiday",
           "airdate": "2008-02-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2726,9 +1873,9 @@
           "number": 3,
           "name": "Desperately Seeking Spartacus",
           "airdate": "2008-02-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2746,9 +1893,9 @@
           "number": 4,
           "name": "Coliseum Clash",
           "airdate": "2008-02-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2766,9 +1913,9 @@
           "number": 5,
           "name": "There's No Place Like Rome",
           "airdate": "2008-03-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2786,9 +1933,9 @@
           "number": 6,
           "name": "Dinosaurs of the Caribbean",
           "airdate": "2008-03-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2806,9 +1953,9 @@
           "number": 7,
           "name": "X-treme Map Quest",
           "airdate": "2008-03-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2826,9 +1973,9 @@
           "number": 8,
           "name": "High Sea Chase",
           "airdate": "2008-03-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2846,9 +1993,9 @@
           "number": 9,
           "name": "Amazing Treasure Race",
           "airdate": "2008-03-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2866,9 +2013,9 @@
           "number": 10,
           "name": "Four Part Harmony",
           "airdate": "2008-04-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2886,9 +2033,9 @@
           "number": 11,
           "name": "Elements of Surprise",
           "airdate": "2008-04-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2906,9 +2053,9 @@
           "number": 12,
           "name": "Monk in the Middle",
           "airdate": "2008-04-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2926,9 +2073,9 @@
           "number": 13,
           "name": "The Third Cosmos Stone",
           "airdate": "2008-04-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2954,9 +2101,9 @@
           "number": 15,
           "name": "The No-Fun Shogun",
           "airdate": "2008-05-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2974,9 +2121,9 @@
           "number": 16,
           "name": "Dinosaurs, Ninjas and Bears! Oh My!",
           "airdate": "2008-05-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -2994,9 +2141,9 @@
           "number": 17,
           "name": "There's No Business Like Shogun Business",
           "airdate": "2008-05-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -3014,9 +2161,9 @@
           "number": 18,
           "name": "The 39 Thieves",
           "airdate": "2008-06-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -3034,9 +2181,9 @@
           "number": 19,
           "name": "Desert Heat",
           "airdate": "2008-06-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -3054,9 +2201,9 @@
           "number": 20,
           "name": "Princess of the City",
           "airdate": "2008-06-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -3074,9 +2221,9 @@
           "number": 21,
           "name": "Malice in the Palace",
           "airdate": "2008-06-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -3094,17 +2241,30 @@
           "number": 22,
           "name": "The French Conniption",
           "airdate": "2008-07-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename + title match",
+            "item": "dinosaur-king-season-1-2",
+            "itemTitle": "Dinosaur King Season 1 & 2",
+            "file": "Dinosaur King/Season 2/Dinosaur King Season 2 Episode 22 - The French Conniption.mp4",
+            "name": "Dinosaur King/Season 2/Dinosaur King Season 2 Episode 22 - The French Conniption",
+            "url": "https://archive.org/download/dinosaur-king-season-1-2/Dinosaur%20King%2FSeason%202%2FDinosaur%20King%20Season%202%20Episode%2022%20-%20The%20French%20Conniption.mp4",
+            "seconds": 1282,
+            "format": "h.264",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 128
+          },
           "alternates": []
         },
         {
           "number": 23,
           "name": "The Wee Musketeers",
           "airdate": "2008-07-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -3122,9 +2282,9 @@
           "number": 24,
           "name": "All For One",
           "airdate": "2008-07-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -3142,9 +2302,9 @@
           "number": 25,
           "name": "The Haunted Hunt",
           "airdate": "2008-07-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -3162,9 +2322,9 @@
           "number": 26,
           "name": "Bad Deal",
           "airdate": "2008-08-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -3190,9 +2350,9 @@
           "number": 28,
           "name": "The Search for the Last Cosmos Stone",
           "airdate": "2008-08-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -3210,9 +2370,9 @@
           "number": 29,
           "name": "Clash for the Cosmos Stones",
           "airdate": "2008-08-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",
@@ -3230,9 +2390,9 @@
           "number": 30,
           "name": "Fate of the Cosmos",
           "airdate": "2008-08-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "dinosaur-king-season-1-2",
             "itemTitle": "Dinosaur King Season 1 & 2",

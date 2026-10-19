@@ -3,7 +3,7 @@
   "slug": "cosmos",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:59.073Z",
+  "matchedAt": "2026-10-19T04:11:03.927Z",
   "addedAt": "2026-10-15T12:07:56.884Z",
   "tvmaze": {
     "id": 1128,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 39,
-    "live": 1,
-    "review": 12,
+    "live": 13,
+    "review": 0,
     "missing": 26,
     "pct": 33
   },
@@ -30,18 +30,31 @@
           "state": "LIVE",
           "file": {
             "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "Cosmos-1980-S01E01-The-Shores-Of-The-Cosmic-Ocean-720p-by-Vaibhav-khade",
-            "itemTitle": "cosmos 1980 S01E01 ( The Shores Of The Cosmic Ocean ) 720p by Vaibhav khade",
-            "file": "Cosmos.1980.S01E01 - The Shores of the Cosmic Ocean-MkvCage.ws.ia.mp4",
-            "name": "Cosmos.1980.S01E01 - The Shores of the Cosmic Ocean-MkvCage",
-            "url": "https://archive.org/download/Cosmos-1980-S01E01-The-Shores-Of-The-Cosmic-Ocean-720p-by-Vaibhav-khade/Cosmos.1980.S01E01%20-%20The%20Shores%20of%20the%20Cosmic%20Ocean-MkvCage.ws.ia.mp4",
+            "why": "absolute episode number + title match",
+            "item": "CosmosAPersonalVoyage",
+            "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+            "file": "1980 Cosmos (A Personal Voyage) - Ep 01 The Shores of the Cosmic Ocean.mp4",
+            "name": "1980 Cosmos (A Personal Voyage) - Ep 01 The Shores of the Cosmic Ocean",
+            "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2001%20The%20Shores%20of%20the%20Cosmic%20Ocean.mp4",
             "seconds": 3627,
-            "format": "h.264 IA",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 684
+            "sizeMB": 842
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "Cosmos-1980-S01E01-The-Shores-Of-The-Cosmic-Ocean-720p-by-Vaibhav-khade",
+              "itemTitle": "cosmos 1980 S01E01 ( The Shores Of The Cosmic Ocean ) 720p by Vaibhav khade",
+              "file": "Cosmos.1980.S01E01 - The Shores of the Cosmic Ocean-MkvCage.ws.ia.mp4",
+              "name": "Cosmos.1980.S01E01 - The Shores of the Cosmic Ocean-MkvCage",
+              "url": "https://archive.org/download/Cosmos-1980-S01E01-The-Shores-Of-The-Cosmic-Ocean-720p-by-Vaibhav-khade/Cosmos.1980.S01E01%20-%20The%20Shores%20of%20the%20Cosmic%20Ocean-MkvCage.ws.ia.mp4",
+              "seconds": 3627,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 684
+            },
             {
               "conf": 1,
               "why": "S/E in filename + title match",
@@ -56,7 +69,7 @@
               "sizeMB": 684
             },
             {
-              "conf": 0.75,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "cosmos_202209",
               "itemTitle": "Cosmos: A Personal Voyage [1980]",
@@ -67,19 +80,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 372
-            },
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "carl-sagan-cosmos-special-edition-1986-ep-01",
-              "itemTitle": "Carl Sagan Cosmos Special Edition 1986 Ep 01",
-              "file": "Carl Sagan Cosmos Special Edition 1986 ep01.mp4",
-              "name": "Carl Sagan Cosmos Special Edition 1986 ep01",
-              "url": "https://archive.org/download/carl-sagan-cosmos-special-edition-1986-ep-01/Carl%20Sagan%20Cosmos%20Special%20Edition%201986%20ep01.mp4",
-              "seconds": 2584,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 90
             }
           ]
         },
@@ -87,89 +87,197 @@
           "number": 2,
           "name": "One Voice in the Cosmic Fugue",
           "airdate": "1980-10-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename + title match",
-            "item": "cosmos_202209",
-            "itemTitle": "Cosmos: A Personal Voyage [1980]",
-            "file": "S01E02 - One Voice in the Cosmic Fugue.mp4",
-            "name": "S01E02 - One Voice in the Cosmic Fugue",
-            "url": "https://archive.org/download/cosmos_202209/S01E02%20-%20One%20Voice%20in%20the%20Cosmic%20Fugue.mp4",
-            "seconds": 3608,
-            "format": "h.264",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "CosmosAPersonalVoyage",
+            "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+            "file": "1980 Cosmos (A Personal Voyage) - Ep 02 One Voice in the Cosmic Fugue.mp4",
+            "name": "1980 Cosmos (A Personal Voyage) - Ep 02 One Voice in the Cosmic Fugue",
+            "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2002%20One%20Voice%20in%20the%20Cosmic%20Fugue.mp4",
+            "seconds": 3605,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 370
+            "sizeMB": 810
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "cosmos_202209",
+              "itemTitle": "Cosmos: A Personal Voyage [1980]",
+              "file": "S01E02 - One Voice in the Cosmic Fugue.mp4",
+              "name": "S01E02 - One Voice in the Cosmic Fugue",
+              "url": "https://archive.org/download/cosmos_202209/S01E02%20-%20One%20Voice%20in%20the%20Cosmic%20Fugue.mp4",
+              "seconds": 3608,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 370
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 14 in \"Cosmos: A Personal Voyage ★ Collected PB\"",
+              "item": "cosmos_1980",
+              "itemTitle": "Cosmos: A Personal Voyage ★ Collected PBS Science Series with Bonus Features - and MKV",
+              "file": "COSMOS_02.mp4",
+              "name": "COSMOS_02",
+              "url": "https://archive.org/download/cosmos_1980/COSMOS_02.mp4",
+              "seconds": 3608,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 620
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Harmony of the Worlds",
           "airdate": "1980-10-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename + title match",
-            "item": "cosmos_202209",
-            "itemTitle": "Cosmos: A Personal Voyage [1980]",
-            "file": "S01E03 -  Harmony of the Worlds.mp4",
-            "name": "S01E03 -  Harmony of the Worlds",
-            "url": "https://archive.org/download/cosmos_202209/S01E03%20-%20%20Harmony%20of%20the%20Worlds.mp4",
-            "seconds": 3519,
-            "format": "h.264",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "CosmosAPersonalVoyage",
+            "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+            "file": "1980 Cosmos (A Personal Voyage) - Ep 03 Harmony of the Worlds.mp4",
+            "name": "1980 Cosmos (A Personal Voyage) - Ep 03 Harmony of the Worlds",
+            "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2003%20Harmony%20of%20the%20Worlds.mp4",
+            "seconds": 3515,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 359
+            "sizeMB": 721
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "cosmos_202209",
+              "itemTitle": "Cosmos: A Personal Voyage [1980]",
+              "file": "S01E03 -  Harmony of the Worlds.mp4",
+              "name": "S01E03 -  Harmony of the Worlds",
+              "url": "https://archive.org/download/cosmos_202209/S01E03%20-%20%20Harmony%20of%20the%20Worlds.mp4",
+              "seconds": 3519,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 359
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 14 in \"Cosmos: A Personal Voyage ★ Collected PB\"",
+              "item": "cosmos_1980",
+              "itemTitle": "Cosmos: A Personal Voyage ★ Collected PBS Science Series with Bonus Features - and MKV",
+              "file": "COSMOS_03.mp4",
+              "name": "COSMOS_03",
+              "url": "https://archive.org/download/cosmos_1980/COSMOS_03.mp4",
+              "seconds": 3519,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 610
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Heaven and Hell",
           "airdate": "1980-10-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename + title match",
-            "item": "cosmos_202209",
-            "itemTitle": "Cosmos: A Personal Voyage [1980]",
-            "file": "S01E04 - Heaven and Hell.mp4",
-            "name": "S01E04 - Heaven and Hell",
-            "url": "https://archive.org/download/cosmos_202209/S01E04%20-%20Heaven%20and%20Hell.mp4",
-            "seconds": 3670,
-            "format": "h.264",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "CosmosAPersonalVoyage",
+            "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+            "file": "1980 Cosmos (A Personal Voyage) - Ep 04 Heaven and Hell.mp4",
+            "name": "1980 Cosmos (A Personal Voyage) - Ep 04 Heaven and Hell",
+            "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2004%20Heaven%20and%20Hell.mp4",
+            "seconds": 3668,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 376
+            "sizeMB": 876
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "cosmos_202209",
+              "itemTitle": "Cosmos: A Personal Voyage [1980]",
+              "file": "S01E04 - Heaven and Hell.mp4",
+              "name": "S01E04 - Heaven and Hell",
+              "url": "https://archive.org/download/cosmos_202209/S01E04%20-%20Heaven%20and%20Hell.mp4",
+              "seconds": 3670,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 376
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 14 in \"Cosmos: A Personal Voyage ★ Collected PB\"",
+              "item": "cosmos_1980",
+              "itemTitle": "Cosmos: A Personal Voyage ★ Collected PBS Science Series with Bonus Features - and MKV",
+              "file": "COSMOS_04.mp4",
+              "name": "COSMOS_04",
+              "url": "https://archive.org/download/cosmos_1980/COSMOS_04.mp4",
+              "seconds": 3670,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 626
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Blues for a Red Planet",
           "airdate": "1980-10-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename + title match",
-            "item": "cosmos_202209",
-            "itemTitle": "Cosmos: A Personal Voyage [1980]",
-            "file": "S01E05 - Blues for a Red Planet.mp4",
-            "name": "S01E05 - Blues for a Red Planet",
-            "url": "https://archive.org/download/cosmos_202209/S01E05%20-%20Blues%20for%20a%20Red%20Planet.mp4",
-            "seconds": 3697,
-            "format": "h.264",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "CosmosAPersonalVoyage",
+            "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+            "file": "1980 Cosmos (A Personal Voyage) - Ep 05 Blues for a Red Planet.mp4",
+            "name": "1980 Cosmos (A Personal Voyage) - Ep 05 Blues for a Red Planet",
+            "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2005%20Blues%20for%20a%20Red%20Planet.mp4",
+            "seconds": 3676,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 376
+            "sizeMB": 956
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 14 in \"Cosmos: A Personal Voyage ★ Collected PB\"",
+              "item": "cosmos_1980",
+              "itemTitle": "Cosmos: A Personal Voyage ★ Collected PBS Science Series with Bonus Features - and MKV",
+              "file": "COSMOS_05.mp4",
+              "name": "COSMOS_05",
+              "url": "https://archive.org/download/cosmos_1980/COSMOS_05.mp4",
+              "seconds": 3697,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 658
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "cosmos_202209",
+              "itemTitle": "Cosmos: A Personal Voyage [1980]",
+              "file": "S01E05 - Blues for a Red Planet.mp4",
+              "name": "S01E05 - Blues for a Red Planet",
+              "url": "https://archive.org/download/cosmos_202209/S01E05%20-%20Blues%20for%20a%20Red%20Planet.mp4",
+              "seconds": 3697,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 376
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Travelers' Tales",
           "airdate": "1980-11-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "cosmos_202209",
             "itemTitle": "Cosmos: A Personal Voyage [1980]",
@@ -181,115 +289,277 @@
             "playable": true,
             "sizeMB": 376
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "absolute episode number + title match",
+              "item": "CosmosAPersonalVoyage",
+              "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+              "file": "1980 Cosmos (A Personal Voyage) - Ep 06 Travellers' Tales.mp4",
+              "name": "1980 Cosmos (A Personal Voyage) - Ep 06 Travellers' Tales",
+              "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2006%20Travellers'%20Tales.mp4",
+              "seconds": 3671,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 932
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 14 in \"Cosmos: A Personal Voyage ★ Collected PB\"",
+              "item": "cosmos_1980",
+              "itemTitle": "Cosmos: A Personal Voyage ★ Collected PBS Science Series with Bonus Features - and MKV",
+              "file": "COSMOS_06.mp4",
+              "name": "COSMOS_06",
+              "url": "https://archive.org/download/cosmos_1980/COSMOS_06.mp4",
+              "seconds": 3674,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 609
+            }
+          ]
         },
         {
           "number": 7,
           "name": "The Backbone of Night",
           "airdate": "1980-11-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename + title match",
-            "item": "cosmos_202209",
-            "itemTitle": "Cosmos: A Personal Voyage [1980]",
-            "file": "S01E07 - The Backbone of Night.mp4",
-            "name": "S01E07 - The Backbone of Night",
-            "url": "https://archive.org/download/cosmos_202209/S01E07%20-%20The%20Backbone%20of%20Night.mp4",
-            "seconds": 3526,
-            "format": "h.264",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "CosmosAPersonalVoyage",
+            "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+            "file": "1980 Cosmos (A Personal Voyage) - Ep 07 The Backbone of Night.mp4",
+            "name": "1980 Cosmos (A Personal Voyage) - Ep 07 The Backbone of Night",
+            "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2007%20The%20Backbone%20of%20Night.mp4",
+            "seconds": 3523,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 361
+            "sizeMB": 982
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "cosmos_202209",
+              "itemTitle": "Cosmos: A Personal Voyage [1980]",
+              "file": "S01E07 - The Backbone of Night.mp4",
+              "name": "S01E07 - The Backbone of Night",
+              "url": "https://archive.org/download/cosmos_202209/S01E07%20-%20The%20Backbone%20of%20Night.mp4",
+              "seconds": 3526,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 361
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 14 in \"Cosmos: A Personal Voyage ★ Collected PB\"",
+              "item": "cosmos_1980",
+              "itemTitle": "Cosmos: A Personal Voyage ★ Collected PBS Science Series with Bonus Features - and MKV",
+              "file": "COSMOS_07.mp4",
+              "name": "COSMOS_07",
+              "url": "https://archive.org/download/cosmos_1980/COSMOS_07.mp4",
+              "seconds": 3526,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 757
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Journeys in Space and Time",
           "airdate": "1980-11-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename + title match",
-            "item": "cosmos_202209",
-            "itemTitle": "Cosmos: A Personal Voyage [1980]",
-            "file": "S01E08 - Journeys in Space and Time.mp4",
-            "name": "S01E08 - Journeys in Space and Time",
-            "url": "https://archive.org/download/cosmos_202209/S01E08%20-%20Journeys%20in%20Space%20and%20Time.mp4",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "CosmosAPersonalVoyage",
+            "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+            "file": "1980 Cosmos (A Personal Voyage) - Ep 08 Journeys in Space and Time.mp4",
+            "name": "1980 Cosmos (A Personal Voyage) - Ep 08 Journeys in Space and Time",
+            "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2008%20Journeys%20in%20Space%20and%20Time.mp4",
             "seconds": 3700,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 378
+            "sizeMB": 801
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "cosmos_202209",
+              "itemTitle": "Cosmos: A Personal Voyage [1980]",
+              "file": "S01E08 - Journeys in Space and Time.mp4",
+              "name": "S01E08 - Journeys in Space and Time",
+              "url": "https://archive.org/download/cosmos_202209/S01E08%20-%20Journeys%20in%20Space%20and%20Time.mp4",
+              "seconds": 3700,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 378
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 14 in \"Cosmos: A Personal Voyage ★ Collected PB\"",
+              "item": "cosmos_1980",
+              "itemTitle": "Cosmos: A Personal Voyage ★ Collected PBS Science Series with Bonus Features - and MKV",
+              "file": "COSMOS_08.mp4",
+              "name": "COSMOS_08",
+              "url": "https://archive.org/download/cosmos_1980/COSMOS_08.mp4",
+              "seconds": 3699,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 660
+            }
+          ]
         },
         {
           "number": 9,
           "name": "The Lives of the Stars",
           "airdate": "1980-11-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename + title match",
-            "item": "cosmos_202209",
-            "itemTitle": "Cosmos: A Personal Voyage [1980]",
-            "file": "S01E09 - The Lives of the Stars.mp4",
-            "name": "S01E09 - The Lives of the Stars",
-            "url": "https://archive.org/download/cosmos_202209/S01E09%20-%20The%20Lives%20of%20the%20Stars.mp4",
-            "seconds": 3582,
-            "format": "h.264",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "CosmosAPersonalVoyage",
+            "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+            "file": "1980 Cosmos (A Personal Voyage) - Ep 09 The Lives of the Stars.mp4",
+            "name": "1980 Cosmos (A Personal Voyage) - Ep 09 The Lives of the Stars",
+            "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2009%20The%20Lives%20of%20the%20Stars.mp4",
+            "seconds": 3581,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 364
+            "sizeMB": 726
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "cosmos_202209",
+              "itemTitle": "Cosmos: A Personal Voyage [1980]",
+              "file": "S01E09 - The Lives of the Stars.mp4",
+              "name": "S01E09 - The Lives of the Stars",
+              "url": "https://archive.org/download/cosmos_202209/S01E09%20-%20The%20Lives%20of%20the%20Stars.mp4",
+              "seconds": 3582,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 364
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 14 in \"Cosmos: A Personal Voyage ★ Collected PB\"",
+              "item": "cosmos_1980",
+              "itemTitle": "Cosmos: A Personal Voyage ★ Collected PBS Science Series with Bonus Features - and MKV",
+              "file": "COSMOS_09.mp4",
+              "name": "COSMOS_09",
+              "url": "https://archive.org/download/cosmos_1980/COSMOS_09.mp4",
+              "seconds": 3581,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 542
+            }
+          ]
         },
         {
           "number": 10,
           "name": "The Edge of Forever",
           "airdate": "1980-11-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename + title match",
-            "item": "cosmos_202209",
-            "itemTitle": "Cosmos: A Personal Voyage [1980]",
-            "file": "S01E10 - The Edge of Forever.mp4",
-            "name": "S01E10 - The Edge of Forever",
-            "url": "https://archive.org/download/cosmos_202209/S01E10%20-%20The%20Edge%20of%20Forever.mp4",
-            "seconds": 3791,
-            "format": "h.264",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "CosmosAPersonalVoyage",
+            "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+            "file": "1980 Cosmos (A Personal Voyage) - Ep 10 The Edge of Forever.mp4",
+            "name": "1980 Cosmos (A Personal Voyage) - Ep 10 The Edge of Forever",
+            "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2010%20The%20Edge%20of%20Forever.mp4",
+            "seconds": 3789,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 387
+            "sizeMB": 960
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "cosmos_202209",
+              "itemTitle": "Cosmos: A Personal Voyage [1980]",
+              "file": "S01E10 - The Edge of Forever.mp4",
+              "name": "S01E10 - The Edge of Forever",
+              "url": "https://archive.org/download/cosmos_202209/S01E10%20-%20The%20Edge%20of%20Forever.mp4",
+              "seconds": 3791,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 387
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 14 in \"Cosmos: A Personal Voyage ★ Collected PB\"",
+              "item": "cosmos_1980",
+              "itemTitle": "Cosmos: A Personal Voyage ★ Collected PBS Science Series with Bonus Features - and MKV",
+              "file": "COSMOS_10.mp4",
+              "name": "COSMOS_10",
+              "url": "https://archive.org/download/cosmos_1980/COSMOS_10.mp4",
+              "seconds": 3791,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 692
+            }
+          ]
         },
         {
           "number": 11,
           "name": "The Persistence of Memory",
           "airdate": "1980-12-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename + title match",
-            "item": "cosmos_202209",
-            "itemTitle": "Cosmos: A Personal Voyage [1980]",
-            "file": "S01E11 - The Persistence of Memory.mp4",
-            "name": "S01E11 - The Persistence of Memory",
-            "url": "https://archive.org/download/cosmos_202209/S01E11%20-%20The%20Persistence%20of%20Memory.mp4",
-            "seconds": 3520,
-            "format": "h.264",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "CosmosAPersonalVoyage",
+            "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+            "file": "1980 Cosmos (A Personal Voyage) - Ep 11 The Persistence of Memory.mp4",
+            "name": "1980 Cosmos (A Personal Voyage) - Ep 11 The Persistence of Memory",
+            "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2011%20The%20Persistence%20of%20Memory.mp4",
+            "seconds": 3518,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 360
+            "sizeMB": 1007
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "cosmos_202209",
+              "itemTitle": "Cosmos: A Personal Voyage [1980]",
+              "file": "S01E11 - The Persistence of Memory.mp4",
+              "name": "S01E11 - The Persistence of Memory",
+              "url": "https://archive.org/download/cosmos_202209/S01E11%20-%20The%20Persistence%20of%20Memory.mp4",
+              "seconds": 3520,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 360
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 14 in \"Cosmos: A Personal Voyage ★ Collected PB\"",
+              "item": "cosmos_1980",
+              "itemTitle": "Cosmos: A Personal Voyage ★ Collected PBS Science Series with Bonus Features - and MKV",
+              "file": "COSMOS_11.mp4",
+              "name": "COSMOS_11",
+              "url": "https://archive.org/download/cosmos_1980/COSMOS_11.mp4",
+              "seconds": 3520,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 733
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Encyclopedia Galactica",
           "airdate": "1980-12-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "cosmos_202209",
             "itemTitle": "Cosmos: A Personal Voyage [1980]",
@@ -301,27 +571,81 @@
             "playable": true,
             "sizeMB": 374
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "absolute episode number + title match",
+              "item": "CosmosAPersonalVoyage",
+              "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+              "file": "1980 Cosmos (A Personal Voyage) - Ep 12 Encyclopaedia Galactica.mp4",
+              "name": "1980 Cosmos (A Personal Voyage) - Ep 12 Encyclopaedia Galactica",
+              "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2012%20Encyclopaedia%20Galactica.mp4",
+              "seconds": 3654,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 836
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 14 in \"Cosmos: A Personal Voyage ★ Collected PB\"",
+              "item": "cosmos_1980",
+              "itemTitle": "Cosmos: A Personal Voyage ★ Collected PBS Science Series with Bonus Features - and MKV",
+              "file": "COSMOS_12.mp4",
+              "name": "COSMOS_12",
+              "url": "https://archive.org/download/cosmos_1980/COSMOS_12.mp4",
+              "seconds": 3653,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 620
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Who Speaks for Earth?",
           "airdate": "1980-12-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "S/E in filename + title match",
-            "item": "cosmos_202209",
-            "itemTitle": "Cosmos: A Personal Voyage [1980]",
-            "file": "S01E13 - Who Speaks for Earth.mp4",
-            "name": "S01E13 - Who Speaks for Earth",
-            "url": "https://archive.org/download/cosmos_202209/S01E13%20-%20Who%20Speaks%20for%20Earth.mp4",
-            "seconds": 3739,
-            "format": "h.264",
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "CosmosAPersonalVoyage",
+            "itemTitle": "Cosmos: A Personal Voyage (with Carl Sagan)",
+            "file": "1980 Cosmos (A Personal Voyage) - Ep 13 Who Speaks for Earth.mp4",
+            "name": "1980 Cosmos (A Personal Voyage) - Ep 13 Who Speaks for Earth",
+            "url": "https://archive.org/download/CosmosAPersonalVoyage/1980%20Cosmos%20(A%20Personal%20Voyage)%20-%20Ep%2013%20Who%20Speaks%20for%20Earth.mp4",
+            "seconds": 3734,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 382
+            "sizeMB": 1049
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "cosmos_202209",
+              "itemTitle": "Cosmos: A Personal Voyage [1980]",
+              "file": "S01E13 - Who Speaks for Earth.mp4",
+              "name": "S01E13 - Who Speaks for Earth",
+              "url": "https://archive.org/download/cosmos_202209/S01E13%20-%20Who%20Speaks%20for%20Earth.mp4",
+              "seconds": 3739,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 382
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 14 in \"Cosmos: A Personal Voyage ★ Collected PB\"",
+              "item": "cosmos_1980",
+              "itemTitle": "Cosmos: A Personal Voyage ★ Collected PBS Science Series with Bonus Features - and MKV",
+              "file": "COSMOS_13.mp4",
+              "name": "COSMOS_13",
+              "url": "https://archive.org/download/cosmos_1980/COSMOS_13.mp4",
+              "seconds": 3739,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 764
+            }
+          ]
         }
       ]
     },

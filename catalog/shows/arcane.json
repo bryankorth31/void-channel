@@ -3,7 +3,7 @@
   "slug": "arcane",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:56.538Z",
+  "matchedAt": "2026-10-19T04:11:00.761Z",
   "addedAt": "2026-10-15T12:07:55.096Z",
   "tvmaze": {
     "id": 55138,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 18,
-    "live": 0,
-    "review": 18,
+    "live": 9,
+    "review": 9,
     "missing": 0,
     "pct": 100
   },
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "Welcome to the Playground",
           "airdate": "2021-11-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "arcane-season-1-60fps",
             "itemTitle": "Arcane season 1 ( 60fps )",
@@ -43,6 +43,19 @@
             "sizeMB": 261
           },
           "alternates": [
+            {
+              "conf": 0.95,
+              "why": "absolute episode number + title match",
+              "item": "arcane_202411",
+              "itemTitle": "Arcane Seasons 1&2",
+              "file": "S1 EP1 - Welcome to the Playground.mp4",
+              "name": "S1 EP1 - Welcome to the Playground",
+              "url": "https://archive.org/download/arcane_202411/S1%20EP1%20-%20Welcome%20to%20the%20Playground.mp4",
+              "seconds": 2603,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 554
+            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
@@ -64,9 +77,9 @@
           "number": 2,
           "name": "Some Mysteries Are Better Left Unsolved",
           "airdate": "2021-11-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "arcane-season-1-60fps",
             "itemTitle": "Arcane season 1 ( 60fps )",
@@ -81,7 +94,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 0.95,
               "why": "absolute episode number + title match",
               "item": "arcane_202411",
               "itemTitle": "Arcane Seasons 1&2",
@@ -114,9 +127,9 @@
           "number": 3,
           "name": "The Base Violence Necessary for Change",
           "airdate": "2021-11-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "arcane-season-1-60fps",
             "itemTitle": "Arcane season 1 ( 60fps )",
@@ -151,9 +164,9 @@
           "number": 4,
           "name": "Happy Progress Day!",
           "airdate": "2021-11-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "arcane-season-1-60fps",
             "itemTitle": "Arcane season 1 ( 60fps )",
@@ -188,9 +201,9 @@
           "number": 5,
           "name": "Everybody Wants to Be My Enemy",
           "airdate": "2021-11-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "arcane-season-1-60fps",
             "itemTitle": "Arcane season 1 ( 60fps )",
@@ -225,9 +238,9 @@
           "number": 6,
           "name": "When These Walls Come Tumbling Down",
           "airdate": "2021-11-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "arcane-season-1-60fps",
             "itemTitle": "Arcane season 1 ( 60fps )",
@@ -262,9 +275,9 @@
           "number": 7,
           "name": "The Boy Savior",
           "airdate": "2021-11-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "arcane-season-1-60fps",
             "itemTitle": "Arcane season 1 ( 60fps )",
@@ -299,9 +312,9 @@
           "number": 8,
           "name": "Oil and Water",
           "airdate": "2021-11-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "arcane-season-1-60fps",
             "itemTitle": "Arcane season 1 ( 60fps )",
@@ -336,9 +349,9 @@
           "number": 9,
           "name": "The Monster You Created",
           "airdate": "2021-11-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "arcane-season-1-60fps",
             "itemTitle": "Arcane season 1 ( 60fps )",

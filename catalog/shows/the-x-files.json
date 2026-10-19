@@ -3,7 +3,7 @@
   "slug": "the-x-files",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "FOX",
-  "matchedAt": "2026-10-16T07:56:48.580Z",
+  "matchedAt": "2026-10-19T04:10:54.591Z",
   "addedAt": "2026-10-15T15:05:59.068Z",
   "tvmaze": {
     "id": 430,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 218,
-    "live": 0,
-    "review": 4,
-    "missing": 214,
-    "pct": 2
+    "live": 7,
+    "review": 1,
+    "missing": 210,
+    "pct": 4
   },
   "seasons": [
     {
@@ -634,8 +634,20 @@
           "number": 2,
           "name": "Home",
           "airdate": "1996-10-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Home\" (0.95)",
+            "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
+            "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
+            "file": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E04 Home Again.mp4",
+            "name": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E04 Home Again",
+            "url": "https://archive.org/download/the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c/The%20X-Files%201993%20Season%2010%20Complete%20720p%20BluRay%20x264%20%5Bi_c%5D%2FThe%20X-Files%20S10E04%20Home%20Again.mp4",
+            "seconds": 2640,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 260
+          },
           "alternates": []
         },
         {
@@ -1510,8 +1522,20 @@
           "number": 21,
           "name": "Existence",
           "airdate": "2001-05-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "X-Files_Season_8_Finale_WOC_2001-05-20",
+            "itemTitle": " X Files Season 8 Finale WOC 2001 05 20",
+            "file": "X-Files_Season_8_Finale_WOC_2001-05-20.mp4",
+            "name": "X-Files_Season_8_Finale_WOC_2001-05-20",
+            "url": "https://archive.org/download/X-Files_Season_8_Finale_WOC_2001-05-20/X-Files_Season_8_Finale_WOC_2001-05-20.mp4",
+            "seconds": 3480,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 362
+          },
           "alternates": []
         }
       ]
@@ -1688,9 +1712,9 @@
           "number": 1,
           "name": "My Struggle",
           "airdate": "2016-01-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
             "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
@@ -1702,15 +1726,29 @@
             "playable": true,
             "sizeMB": 261
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"My Struggle\" (0.95)",
+              "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
+              "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
+              "file": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E06 My Struggle II.mp4",
+              "name": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E06 My Struggle II",
+              "url": "https://archive.org/download/the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c/The%20X-Files%201993%20Season%2010%20Complete%20720p%20BluRay%20x264%20%5Bi_c%5D%2FThe%20X-Files%20S10E06%20My%20Struggle%20II.mp4",
+              "seconds": 2626,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 259
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Founder's Mutation",
           "airdate": "2016-01-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
             "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
@@ -1728,9 +1766,9 @@
           "number": 3,
           "name": "Mulder and Scully Meet the Were-Monster",
           "airdate": "2016-02-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
             "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
@@ -1748,17 +1786,29 @@
           "number": 4,
           "name": "Home Again",
           "airdate": "2016-02-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
+            "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
+            "file": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E04 Home Again.mp4",
+            "name": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E04 Home Again",
+            "url": "https://archive.org/download/the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c/The%20X-Files%201993%20Season%2010%20Complete%20720p%20BluRay%20x264%20%5Bi_c%5D%2FThe%20X-Files%20S10E04%20Home%20Again.mp4",
+            "seconds": 2640,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 260
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Babylon",
           "airdate": "2016-02-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
             "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
@@ -1776,8 +1826,20 @@
           "number": 6,
           "name": "My Struggle II",
           "airdate": "2016-02-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c",
+            "itemTitle": "The X Files 1993 Season 10 Complete 720p Blu Ray X 264 [i C]",
+            "file": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E06 My Struggle II.mp4",
+            "name": "The X-Files 1993 Season 10 Complete 720p BluRay x264 [i_c]/The X-Files S10E06 My Struggle II",
+            "url": "https://archive.org/download/the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c/The%20X-Files%201993%20Season%2010%20Complete%20720p%20BluRay%20x264%20%5Bi_c%5D%2FThe%20X-Files%20S10E06%20My%20Struggle%20II.mp4",
+            "seconds": 2626,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 259
+          },
           "alternates": []
         }
       ]

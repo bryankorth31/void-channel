@@ -3,7 +3,7 @@
   "slug": "degrassi",
   "type": "Reality & Talk",
   "network": "CA",
-  "matchedAt": "2026-10-16T07:57:54.703Z",
+  "matchedAt": "2026-10-19T04:11:59.769Z",
   "addedAt": "2026-10-15T12:08:27.999Z",
   "tvmaze": {
     "id": 3628,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 385,
-    "live": 47,
-    "review": 5,
-    "missing": 333,
-    "pct": 14
+    "live": 60,
+    "review": 1,
+    "missing": 324,
+    "pct": 16
   },
   "seasons": [
     {
@@ -47,8 +47,20 @@
           "number": 2,
           "name": "Mother and Child Reunion: Part 2",
           "airdate": "2001-10-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-jr-high-season-01_202208",
+            "itemTitle": "Degrassi Junior High Season 1",
+            "file": "Degrassi Jr High S01E02 - The Big Dance.mp4",
+            "name": "Degrassi Jr High S01E02 - The Big Dance",
+            "url": "https://archive.org/download/degrassi-jr-high-season-01_202208/Degrassi%20Jr%20High%20S01E02%20-%20The%20Big%20Dance.mp4",
+            "seconds": 1669,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 161
+          },
           "alternates": []
         },
         {
@@ -243,8 +255,20 @@
           "number": 13,
           "name": "Cabaret",
           "airdate": "2002-02-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-jr-high-season-01_202208",
+            "itemTitle": "Degrassi Junior High Season 1",
+            "file": "Degrassi Jr High S01E13 - Revolution.mp4",
+            "name": "Degrassi Jr High S01E13 - Revolution",
+            "url": "https://archive.org/download/degrassi-jr-high-season-01_202208/Degrassi%20Jr%20High%20S01E13%20-%20Revolution.mp4",
+            "seconds": 1677,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 162
+          },
           "alternates": []
         },
         {
@@ -320,9 +344,36 @@
           "number": 4,
           "name": "Karma Chameleon",
           "airdate": "2002-10-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-jr-high-s-02",
+            "itemTitle": "Degrassi Junior High Season 2",
+            "file": "Degrassi Jr High S02E04 - Dinner And A Show.m4v",
+            "name": "Degrassi Jr High S02E04 - Dinner And A Show",
+            "url": "https://archive.org/download/degrassi-jr-high-s-02/Degrassi%20Jr%20High%20S02E04%20-%20Dinner%20And%20A%20Show.m4v",
+            "seconds": 1601,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 244
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "degrassi-jr-high-s-02",
+              "itemTitle": "Degrassi Junior High Season 2",
+              "file": "Degrassi Jr High S02E04 - Dinner and a Show.mkv",
+              "name": "Degrassi Jr High S02E04 - Dinner and a Show",
+              "url": "https://archive.org/download/degrassi-jr-high-s-02/Degrassi%20Jr%20High%20S02E04%20-%20Dinner%20and%20a%20Show.mkv",
+              "seconds": 1601,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 275
+            }
+          ]
         },
         {
           "number": 5,
@@ -663,8 +714,20 @@
           "number": 4,
           "name": "Pride: Part 1",
           "airdate": "2003-10-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-junior-high-season-03",
+            "itemTitle": "Degrassi Junior High Season 3",
+            "file": "Degrassi Junior High S03E04 - Season's Greetings.mp4",
+            "name": "Degrassi Junior High S03E04 - Season's Greetings",
+            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E04%20-%20Season's%20Greetings.mp4",
+            "seconds": 1615,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 156
+          },
           "alternates": []
         },
         {
@@ -767,16 +830,40 @@
           "number": 11,
           "name": "This Charming Man",
           "airdate": "2003-12-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-junior-high-season-03",
+            "itemTitle": "Degrassi Junior High Season 3",
+            "file": "Degrassi Junior High S03E11 - Taking Off (Part 1).mp4",
+            "name": "Degrassi Junior High S03E11 - Taking Off (Part 1)",
+            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E11%20-%20Taking%20Off%20(Part%201).mp4",
+            "seconds": 1618,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 156
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Holiday: Part 1",
           "airdate": "2003-12-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-junior-high-season-03",
+            "itemTitle": "Degrassi Junior High Season 3",
+            "file": "Degrassi Junior High S03E12 - Taking Off (Part 2).mp4",
+            "name": "Degrassi Junior High S03E12 - Taking Off (Part 2)",
+            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E12%20-%20Taking%20Off%20(Part%202).mp4",
+            "seconds": 1618,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 157
+          },
           "alternates": []
         },
         {
@@ -1024,8 +1111,20 @@
           "number": 7,
           "name": "Time Stands Still: Part 1",
           "airdate": "2004-10-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-high-s-04",
+            "itemTitle": "Degrassi High Season 4",
+            "file": "Degrassi High S04E07 - Just Friends.mp4",
+            "name": "Degrassi High S04E07 - Just Friends",
+            "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E07%20-%20Just%20Friends.mp4",
+            "seconds": 1601,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 155
+          },
           "alternates": []
         },
         {
@@ -1092,16 +1191,40 @@
           "number": 11,
           "name": "Voices Carry: Part 1",
           "airdate": "2004-11-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-high-s-04",
+            "itemTitle": "Degrassi High Season 4",
+            "file": "Degrassi High S04E11 - All in a Good Cause.mp4",
+            "name": "Degrassi High S04E11 - All in a Good Cause",
+            "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E11%20-%20All%20in%20a%20Good%20Cause.mp4",
+            "seconds": 1603,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 155
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Voices Carry: Part 2",
           "airdate": "2004-11-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-high-s-04",
+            "itemTitle": "Degrassi High Season 4",
+            "file": "Degrassi High S04E12 - Natural Attraction.mp4",
+            "name": "Degrassi High S04E12 - Natural Attraction",
+            "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E12%20-%20Natural%20Attraction.mp4",
+            "seconds": 1599,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 155
+          },
           "alternates": []
         },
         {
@@ -1229,17 +1352,69 @@
           "number": 1,
           "name": "Venus: Part 1",
           "airdate": "2005-09-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-high-s-05",
+            "itemTitle": "Degrassi High Season 5",
+            "file": "Degrassi High S05e01 - Bad Blood (Part 1).m4v",
+            "name": "Degrassi High S05e01 - Bad Blood (Part 1)",
+            "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05e01%20-%20Bad%20Blood%20(Part%201).m4v",
+            "seconds": 1677,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 257
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "degrassi-high-s-05",
+              "itemTitle": "Degrassi High Season 5",
+              "file": "Degrassi High S05E01 - Bad Blood (Part 1).mp4",
+              "name": "Degrassi High S05E01 - Bad Blood (Part 1)",
+              "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05E01%20-%20Bad%20Blood%20(Part%201).mp4",
+              "seconds": 1677,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 163
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Venus: Part 2",
           "airdate": "2005-09-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-high-s-05",
+            "itemTitle": "Degrassi High Season 5",
+            "file": "Degrassi High S05e02 - Bad Blood (Part 2).m4v",
+            "name": "Degrassi High S05e02 - Bad Blood (Part 2)",
+            "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05e02%20-%20Bad%20Blood%20(Part%202).m4v",
+            "seconds": 1677,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 242
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "degrassi-high-s-05",
+              "itemTitle": "Degrassi High Season 5",
+              "file": "Degrassi High S05E02 - Bad Blood (Part 2).mp4",
+              "name": "Degrassi High S05E02 - Bad Blood (Part 2)",
+              "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05E02%20-%20Bad%20Blood%20(Part%202).mp4",
+              "seconds": 1677,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 163
+            }
+          ]
         },
         {
           "number": 3,
@@ -1381,9 +1556,35 @@
           "number": 7,
           "name": "Turned Out: Part 1",
           "airdate": "2005-10-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-high-s-05",
+            "itemTitle": "Degrassi High Season 5",
+            "file": "Degrassi High S05e07 - The All Nighter.m4v",
+            "name": "Degrassi High S05e07 - The All Nighter",
+            "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05e07%20-%20The%20All%20Nighter.m4v",
+            "seconds": 1601,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 254
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "degrassi-high-s-05",
+              "itemTitle": "Degrassi High Season 5",
+              "file": "Degrassi High S05E07 - The All Nighter.mp4",
+              "name": "Degrassi High S05E07 - The All Nighter",
+              "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05E07%20-%20The%20All%20Nighter.mp4",
+              "seconds": 1601,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 155
+            }
+          ]
         },
         {
           "number": 8,
@@ -1397,9 +1598,35 @@
           "number": 9,
           "name": "Tell It to My Heart",
           "airdate": "2005-11-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "degrassi-high-s-05",
+            "itemTitle": "Degrassi High Season 5",
+            "file": "Degrassi High S05e09 - Extracurricular Activities.m4v",
+            "name": "Degrassi High S05e09 - Extracurricular Activities",
+            "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05e09%20-%20Extracurricular%20Activities.m4v",
+            "seconds": 1602,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 251
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "degrassi-high-s-05",
+              "itemTitle": "Degrassi High Season 5",
+              "file": "Degrassi High S05E09 - Extracurricular Activities.mp4",
+              "name": "Degrassi High S05E09 - Extracurricular Activities",
+              "url": "https://archive.org/download/degrassi-high-s-05/Degrassi%20High%20S05E09%20-%20Extracurricular%20Activities.mp4",
+              "seconds": 1602,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 155
+            }
+          ]
         },
         {
           "number": 10,
@@ -1521,108 +1748,17 @@
           "number": 18,
           "name": "High Fidelity: Part 1",
           "airdate": "2006-03-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"High Fidelity: Part 1\" (0.63)",
-            "item": "degrassi-junior-high-season-03",
-            "itemTitle": "Degrassi Junior High Season 3",
-            "file": "Degrassi Junior High S03E01 - Can't Live With Em (Part 1).mp4",
-            "name": "Degrassi Junior High S03E01 - Can't Live With Em (Part 1)",
-            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E01%20-%20Can't%20Live%20With%20Em%20(Part%201).mp4",
-            "seconds": 1618,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157
-          },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"High Fidelity: Part 1\" (0.63)",
-              "item": "degrassi-high-s-04",
-              "itemTitle": "Degrassi High Season 4",
-              "file": "Degrassi High S04E01 - A New Start (Part 1).mp4",
-              "name": "Degrassi High S04E01 - A New Start (Part 1)",
-              "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E01%20-%20A%20New%20Start%20(Part%201).mp4",
-              "seconds": 1602,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 155
-            },
-            {
-              "conf": 0.6,
-              "why": "title ~ \"High Fidelity: Part 1\" (0.63)",
-              "item": "degrassi-high-s-04",
-              "itemTitle": "Degrassi High Season 4",
-              "file": "Degrassi High S04E09 - Sixteen (Part 1).mp4",
-              "name": "Degrassi High S04E09 - Sixteen (Part 1)",
-              "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E09%20-%20Sixteen%20(Part%201).mp4",
-              "seconds": 1602,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 155
-            },
-            {
-              "conf": 0.6,
-              "why": "title ~ \"High Fidelity: Part 1\" (0.63)",
-              "item": "degrassi-high-s-04",
-              "itemTitle": "Degrassi High Season 4",
-              "file": "Degrassi High S04E13 - Testing 1...2...3....mp4",
-              "name": "Degrassi High S04E13 - Testing 1...2...3...",
-              "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E13%20-%20Testing%201...2...3....mp4",
-              "seconds": 1596,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 154
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 19,
           "name": "High Fidelity: Part 2",
           "airdate": "2006-03-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"High Fidelity: Part 2\" (0.63)",
-            "item": "degrassi-junior-high-season-03",
-            "itemTitle": "Degrassi Junior High Season 3",
-            "file": "Degrassi Junior High S03E02 - Can't Live With Em (Part 2).mp4",
-            "name": "Degrassi Junior High S03E02 - Can't Live With Em (Part 2)",
-            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E02%20-%20Can't%20Live%20With%20Em%20(Part%202).mp4",
-            "seconds": 1618,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157
-          },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"High Fidelity: Part 2\" (0.63)",
-              "item": "degrassi-high-s-04",
-              "itemTitle": "Degrassi High Season 4",
-              "file": "Degrassi High S04E10 - Sixteen (Part 2).mp4",
-              "name": "Degrassi High S04E10 - Sixteen (Part 2)",
-              "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E10%20-%20Sixteen%20(Part%202).mp4",
-              "seconds": 1602,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 155
-            },
-            {
-              "conf": 0.6,
-              "why": "title ~ \"High Fidelity: Part 2\" (0.63)",
-              "item": "degrassi-high-s-04",
-              "itemTitle": "Degrassi High Season 4",
-              "file": "Degrassi High S04E02 - A New Start (Part 2).mp4",
-              "name": "Degrassi High S04E02 - A New Start (Part 2)",
-              "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E02%20-%20A%20New%20Start%20(Part%202).mp4",
-              "seconds": 1574,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 152
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         }
       ]
     },
@@ -1950,20 +2086,8 @@
           "number": 21,
           "name": "Everything She Wants",
           "airdate": "2008-06-02",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Everything She Wants\" (0.62)",
-            "item": "degrassi-high-s-04",
-            "itemTitle": "Degrassi High Season 4",
-            "file": "Degrassi High S04E05 - Everybody Wants Something.mp4",
-            "name": "Degrassi High S04E05 - Everybody Wants Something",
-            "url": "https://archive.org/download/degrassi-high-s-04/Degrassi%20High%20S04E05%20-%20Everybody%20Wants%20Something.mp4",
-            "seconds": 1602,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 155
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3528,20 +3652,8 @@
           "number": 15,
           "name": "Black or White",
           "airdate": "2013-11-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Black or White\" (0.63)",
-            "item": "degrassi-junior-high-season-03",
-            "itemTitle": "Degrassi Junior High Season 3",
-            "file": "Degrassi Junior High S03E14 - Black and White.mp4",
-            "name": "Degrassi Junior High S03E14 - Black and White",
-            "url": "https://archive.org/download/degrassi-junior-high-season-03/Degrassi%20Junior%20High%20S03E14%20-%20Black%20and%20White.mp4",
-            "seconds": 1618,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 157
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

@@ -3,7 +3,8 @@
   "slug": "batman-beyond",
   "type": "Animated",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:28.724Z",
+  "matchedAt": "2026-10-19T04:10:37.741Z",
+  "addedAt": "2026-10-19T04:10:37.744Z",
   "tvmaze": {
     "id": 504,
     "name": "Batman Beyond",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 52,
-    "live": 0,
+    "live": 1,
     "review": 0,
-    "missing": 52,
-    "pct": 0
+    "missing": 51,
+    "pct": 2
   },
   "seasons": [
     {
@@ -26,8 +27,20 @@
           "number": 1,
           "name": "Rebirth (1)",
           "airdate": "1999-01-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "batman-beyond-season-1-episode-1",
+            "itemTitle": "Batman Beyond Season 1 Episode 1",
+            "file": "Batman Beyond Season 1 Episode 1.mp4",
+            "name": "Batman Beyond Season 1 Episode 1",
+            "url": "https://archive.org/download/batman-beyond-season-1-episode-1/Batman%20Beyond%20Season%201%20Episode%201.mp4",
+            "seconds": 1322,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 366
+          },
           "alternates": []
         },
         {

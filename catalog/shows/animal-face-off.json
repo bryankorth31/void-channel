@@ -3,7 +3,7 @@
   "slug": "animal-face-off",
   "type": "Documentary & Geographic",
   "network": "Discovery",
-  "matchedAt": "2026-10-17T10:07:28.261Z",
+  "matchedAt": "2026-10-19T04:12:49.999Z",
   "addedAt": "2026-10-17T10:07:28.262Z",
   "tvmaze": {
     "id": 57526,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 12,
     "live": 0,
-    "review": 6,
-    "missing": 6,
-    "pct": 50
+    "review": 7,
+    "missing": 5,
+    "pct": 58
   },
   "seasons": [
     {
@@ -201,8 +201,20 @@
           "number": 12,
           "name": "Colossal Squid vs. Sperm Whale",
           "airdate": "2004-09-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Colossal Squid vs. Sperm Whale\" (0.95)",
+            "item": "animal-face-off-2004-ep-12-sperm-whale-vs-colossal-squid-part-2-full-episode",
+            "itemTitle": "Animal Face-Off [2004] Ep 12: Sperm Whale vs Colossal Squid Part 2 | Full Episode",
+            "file": "Animal Face-Off [2004] Ep 12_ Sperm Whale vs Colossal Squid Part 2 _ Full Episode.mp4",
+            "name": "Animal Face-Off [2004] Ep 12_ Sperm Whale vs Colossal Squid Part 2 _ Full Episode",
+            "url": "https://archive.org/download/animal-face-off-2004-ep-12-sperm-whale-vs-colossal-squid-part-2-full-episode/Animal%20Face-Off%20%5B2004%5D%20Ep%2012_%20Sperm%20Whale%20vs%20Colossal%20Squid%20Part%202%20_%20Full%20Episode.mp4",
+            "seconds": 2816,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 98
+          },
           "alternates": []
         }
       ]

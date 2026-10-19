@@ -3,7 +3,7 @@
   "slug": "pinky-and-the-brain",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:31.290Z",
+  "matchedAt": "2026-10-19T04:10:39.395Z",
   "addedAt": "2026-10-15T17:12:42.620Z",
   "tvmaze": {
     "id": 5067,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 95,
-    "live": 69,
-    "review": 8,
-    "missing": 18,
-    "pct": 81
+    "live": 80,
+    "review": 5,
+    "missing": 10,
+    "pct": 89
   },
   "seasons": [
     {
@@ -117,8 +117,20 @@
           "number": 4,
           "name": "That Smarts",
           "airdate": "1995-09-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-05-brainania_202608",
+            "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+            "file": "S01E04 Pinky and the Fog - Where No Mouse Has Gone Before - Cheese Roll Call.mp4",
+            "name": "S01E04 Pinky and the Fog - Where No Mouse Has Gone Before - Cheese Roll Call",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S01E04%20Pinky%20and%20the%20Fog%20-%20Where%20No%20Mouse%20Has%20Gone%20Before%20-%20Cheese%20Roll%20Call.mp4",
+            "seconds": 1285,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 189
+          },
           "alternates": []
         },
         {
@@ -165,9 +177,35 @@
           "number": 7,
           "name": "Where No Mouse Has Gone Before",
           "airdate": "1995-10-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-05-brainania_202608",
+            "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+            "file": "S01E07 Napoleon Brainaparte.mp4",
+            "name": "S01E07 Napoleon Brainaparte",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S01E07%20Napoleon%20Brainaparte.mp4",
+            "seconds": 1271,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 220
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Where No Mouse Has Gone Before\" (0.95)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S01E04 Pinky and the Fog - Where No Mouse Has Gone Before - Cheese Roll Call.mp4",
+              "name": "S01E04 Pinky and the Fog - Where No Mouse Has Gone Before - Cheese Roll Call",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S01E04%20Pinky%20and%20the%20Fog%20-%20Where%20No%20Mouse%20Has%20Gone%20Before%20-%20Cheese%20Roll%20Call.mp4",
+              "seconds": 1285,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 189
+            }
+          ]
         },
         {
           "number": 8,
@@ -317,6 +355,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 213
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Napoleon Brainaparte\" (1.00)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S01E07 Napoleon Brainaparte.mp4",
+              "name": "S01E07 Napoleon Brainaparte",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S01E07%20Napoleon%20Brainaparte.mp4",
+              "seconds": 1271,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 220
             }
           ]
         },
@@ -621,8 +672,20 @@
           "number": 3,
           "name": "Pinkasso",
           "airdate": "1996-09-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-05-brainania_202608",
+            "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+            "file": "S02E03 Plan Brain From Outer Space.mp4",
+            "name": "S02E03 Plan Brain From Outer Space",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S02E03%20Plan%20Brain%20From%20Outer%20Space.mp4",
+            "seconds": 1230,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 181
+          },
           "alternates": []
         },
         {
@@ -657,6 +720,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 213
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Plan Brain From Outer Space\" (0.87)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S02E03 Plan Brain From Outer Space.mp4",
+              "name": "S02E03 Plan Brain From Outer Space",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S02E03%20Plan%20Brain%20From%20Outer%20Space.mp4",
+              "seconds": 1230,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 181
             }
           ]
         },
@@ -734,6 +810,19 @@
             "sizeMB": 128
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S02E07 A Little Off the Top - Megalomaniacs Anonymous.mp4",
+              "name": "S02E07 A Little Off the Top - Megalomaniacs Anonymous",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S02E07%20A%20Little%20Off%20the%20Top%20-%20Megalomaniacs%20Anonymous.mp4",
+              "seconds": 1276,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 202
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"The Pink Candidate\" (1.00)",
@@ -818,6 +907,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S02E09 Two Mice and a Baby - The Maze.mp4",
+              "name": "S02E09 Two Mice and a Baby - The Maze",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S02E09%20Two%20Mice%20and%20a%20Baby%20-%20The%20Maze.mp4",
+              "seconds": 1285,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 200
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Welcome To The Jungle\" (1.00)",
               "item": "s-01-e-05-brainania_202608",
@@ -850,7 +952,21 @@
             "playable": true,
             "sizeMB": 187
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"A Little Off The Top\" (0.95)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S02E07 A Little Off the Top - Megalomaniacs Anonymous.mp4",
+              "name": "S02E07 A Little Off the Top - Megalomaniacs Anonymous",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S02E07%20A%20Little%20Off%20the%20Top%20-%20Megalomaniacs%20Anonymous.mp4",
+              "seconds": 1276,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 202
+            }
+          ]
         },
         {
           "number": 11,
@@ -890,7 +1006,21 @@
             "playable": true,
             "sizeMB": 207
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Two Mice and a Baby\" (0.95)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S02E09 Two Mice and a Baby - The Maze.mp4",
+              "name": "S02E09 Two Mice and a Baby - The Maze",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S02E09%20Two%20Mice%20and%20a%20Baby%20-%20The%20Maze.mp4",
+              "seconds": 1285,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 200
+            }
+          ]
         },
         {
           "number": 13,
@@ -1014,9 +1144,9 @@
           "number": 1,
           "name": "Leave It to Beavers",
           "airdate": "1997-09-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-01-e-05-brainania_202608",
             "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
@@ -1151,7 +1281,21 @@
             "codecRisk": "audio (DD 5 1)",
             "sizeMB": 124
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S03E05 My Feldmans My Friends.mp4",
+              "name": "S03E05 My Feldmans My Friends",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E05%20My%20Feldmans%20My%20Friends.mp4",
+              "seconds": 1278,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 199
+            }
+          ]
         },
         {
           "number": 6,
@@ -1239,6 +1383,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 201
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"My Feldmans, My Friends\" (1.00)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S03E05 My Feldmans My Friends.mp4",
+              "name": "S03E05 My Feldmans My Friends",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E05%20My%20Feldmans%20My%20Friends.mp4",
+              "seconds": 1278,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 199
             }
           ]
         },
@@ -1396,21 +1553,35 @@
           "number": 13,
           "name": "A Meticulous Analysis Of History",
           "airdate": "1997-09-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"A Meticulous Analysis Of History\" (0.95)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "s-01-e-05-brainania_202608",
             "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
-            "file": "S03E09 A Meticulous Analysis of History - Funny You Don't Look Rhennish.mp4",
-            "name": "S03E09 A Meticulous Analysis of History - Funny You Don't Look Rhennish",
-            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E09%20A%20Meticulous%20Analysis%20of%20History%20-%20Funny%20You%20Don't%20Look%20Rhennish.mp4",
-            "seconds": 1269,
+            "file": "S03E13 Pinky and the Brainmaker - Calvin Brain.mp4",
+            "name": "S03E13 Pinky and the Brainmaker - Calvin Brain",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E13%20Pinky%20and%20the%20Brainmaker%20-%20Calvin%20Brain.mp4",
+            "seconds": 1252,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 203
+            "sizeMB": 192
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"A Meticulous Analysis Of History\" (0.95)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S03E09 A Meticulous Analysis of History - Funny You Don't Look Rhennish.mp4",
+              "name": "S03E09 A Meticulous Analysis of History - Funny You Don't Look Rhennish",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E09%20A%20Meticulous%20Analysis%20of%20History%20-%20Funny%20You%20Don't%20Look%20Rhennish.mp4",
+              "seconds": 1269,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 203
+            }
+          ]
         },
         {
           "number": 14,
@@ -1655,29 +1826,55 @@
           "number": 21,
           "name": "Pinky Suavo",
           "airdate": "1997-10-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-05-brainania_202608",
+            "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+            "file": "S03E21 Operation Sea Lion - You Said a Mouseful.mp4",
+            "name": "S03E21 Operation Sea Lion - You Said a Mouseful",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E21%20Operation%20Sea%20Lion%20-%20You%20Said%20a%20Mouseful.mp4",
+            "seconds": 1295,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 208
+          },
           "alternates": []
         },
         {
           "number": 22,
           "name": "T.H.E.Y",
           "airdate": "1997-10-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"T.H.E.Y\" (0.95)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "s-01-e-05-brainania_202608",
             "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
-            "file": "S03E14 Pinky Suavo - T.H.E.Y..mp4",
-            "name": "S03E14 Pinky Suavo - T.H.E.Y.",
-            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E14%20Pinky%20Suavo%20-%20T.H.E.Y..mp4",
-            "seconds": 1284,
+            "file": "S03E22 The Tailor and the Mice - Bah Wilderness.mp4",
+            "name": "S03E22 The Tailor and the Mice - Bah Wilderness",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E22%20The%20Tailor%20and%20the%20Mice%20-%20Bah%20Wilderness.mp4",
+            "seconds": 1266,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 197
+            "sizeMB": 189
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"T.H.E.Y\" (0.95)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S03E14 Pinky Suavo - T.H.E.Y..mp4",
+              "name": "S03E14 Pinky Suavo - T.H.E.Y.",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E14%20Pinky%20Suavo%20-%20T.H.E.Y..mp4",
+              "seconds": 1284,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 197
+            }
+          ]
         },
         {
           "number": 23,
@@ -1875,28 +2072,54 @@
           "number": 27,
           "name": "Leggo My Ego",
           "airdate": "1997-11-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Leggo My Ego\" (0.95)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "s-01-e-05-brainania_202608",
             "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
-            "file": "S03E19 Leggo My Ego - Big in Japan.mp4",
-            "name": "S03E19 Leggo My Ego - Big in Japan",
-            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E19%20Leggo%20My%20Ego%20-%20Big%20in%20Japan.mp4",
-            "seconds": 1314,
+            "file": "S03E27 Brain's Night Off - Beach Blanket Brain.mp4",
+            "name": "S03E27 Brain's Night Off - Beach Blanket Brain",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E27%20Brain's%20Night%20Off%20-%20Beach%20Blanket%20Brain.mp4",
+            "seconds": 1272,
             "format": "MPEG4",
             "playable": true,
             "sizeMB": 210
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Leggo My Ego\" (0.95)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S03E19 Leggo My Ego - Big in Japan.mp4",
+              "name": "S03E19 Leggo My Ego - Big in Japan",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E19%20Leggo%20My%20Ego%20-%20Big%20in%20Japan.mp4",
+              "seconds": 1314,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 210
+            }
+          ]
         },
         {
           "number": 28,
           "name": "Big In Japan",
           "airdate": "1997-11-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-05-brainania_202608",
+            "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+            "file": "S03E28 The Family That Poits Together Narfs Together.mp4",
+            "name": "S03E28 The Family That Poits Together Narfs Together",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E28%20The%20Family%20That%20Poits%20Together%20Narfs%20Together.mp4",
+            "seconds": 1279,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 204
+          },
           "alternates": []
         },
         {
@@ -1920,6 +2143,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S03E29 Pinky's Turn - Your Friend Global Domination.mp4",
+              "name": "S03E29 Pinky's Turn - Your Friend Global Domination",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E29%20Pinky's%20Turn%20-%20Your%20Friend%20Global%20Domination.mp4",
+              "seconds": 1266,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 202
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"But, That's Not All Folks!\" (1.00)",
               "item": "s-01-e-05-brainania_202608",
@@ -1938,9 +2174,35 @@
           "number": 30,
           "name": "Operation Sea Lion",
           "airdate": "1997-11-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-05-brainania_202608",
+            "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+            "file": "S03E30 Youll Never Eat Food Pellets in This Town Again.mp4",
+            "name": "S03E30 Youll Never Eat Food Pellets in This Town Again",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E30%20Youll%20Never%20Eat%20Food%20Pellets%20in%20This%20Town%20Again.mp4",
+            "seconds": 1286,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 208
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Operation Sea Lion\" (0.95)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S03E21 Operation Sea Lion - You Said a Mouseful.mp4",
+              "name": "S03E21 Operation Sea Lion - You Said a Mouseful",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E21%20Operation%20Sea%20Lion%20-%20You%20Said%20a%20Mouseful.mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 208
+            }
+          ]
         },
         {
           "number": 31,
@@ -1980,7 +2242,21 @@
             "playable": true,
             "sizeMB": 207
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Tailor and The Mice\" (0.95)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S03E22 The Tailor and the Mice - Bah Wilderness.mp4",
+              "name": "S03E22 The Tailor and the Mice - Bah Wilderness",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E22%20The%20Tailor%20and%20the%20Mice%20-%20Bah%20Wilderness.mp4",
+              "seconds": 1266,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 189
+            }
+          ]
         },
         {
           "number": 33,
@@ -2148,8 +2424,20 @@
           "number": 40,
           "name": "Brain's Night Off",
           "airdate": "1998-02-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Brain's Night Off\" (0.95)",
+            "item": "s-01-e-05-brainania_202608",
+            "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+            "file": "S03E27 Brain's Night Off - Beach Blanket Brain.mp4",
+            "name": "S03E27 Brain's Night Off - Beach Blanket Brain",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E27%20Brain's%20Night%20Off%20-%20Beach%20Blanket%20Brain.mp4",
+            "seconds": 1272,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 210
+          },
           "alternates": []
         },
         {
@@ -2179,7 +2467,21 @@
             "codecRisk": "audio (DD 5 1)",
             "sizeMB": 126
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Family That Poits Together, Narfs Together\" (1.00)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S03E28 The Family That Poits Together Narfs Together.mp4",
+              "name": "S03E28 The Family That Poits Together Narfs Together",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E28%20The%20Family%20That%20Poits%20Together%20Narfs%20Together.mp4",
+              "seconds": 1279,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 204
+            }
+          ]
         },
         {
           "number": 43,
@@ -2213,6 +2515,19 @@
               "playable": true,
               "codecRisk": "audio (DD 5 1)",
               "sizeMB": 87
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Pinky's Turn\" (0.95)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S03E29 Pinky's Turn - Your Friend Global Domination.mp4",
+              "name": "S03E29 Pinky's Turn - Your Friend Global Domination",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E29%20Pinky's%20Turn%20-%20Your%20Friend%20Global%20Domination.mp4",
+              "seconds": 1266,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 202
             }
           ]
         },
@@ -2243,7 +2558,21 @@
             "codecRisk": "audio (DD 5 1)",
             "sizeMB": 126
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"You'll Never Eat Food Pellets In This Town, Again!\" (1.00)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S03E30 Youll Never Eat Food Pellets in This Town Again.mp4",
+              "name": "S03E30 Youll Never Eat Food Pellets in This Town Again",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S03E30%20Youll%20Never%20Eat%20Food%20Pellets%20in%20This%20Town%20Again.mp4",
+              "seconds": 1286,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 208
+            }
+          ]
         },
         {
           "number": 46,
@@ -2370,18 +2699,32 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc",
-            "itemTitle": "Pinky and the Brain - Full Series",
-            "file": "Pinky.and.the.Brain.S04E01.Brainwashed.1.Brain.Brain.Go.Away.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020.mp4",
-            "name": "Pinky.and.the.Brain.S04E01.Brainwashed.1.Brain.Brain.Go.Away.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020",
-            "url": "https://archive.org/download/pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc/Pinky.and.the.Brain.S04E01.Brainwashed.1.Brain.Brain.Go.Away.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020.mp4",
-            "seconds": 1280,
-            "format": "h.264",
+            "item": "s-01-e-05-brainania_202608",
+            "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+            "file": "S04E01 Brainwashed Pt 1 Brain Brain Go Away.mp4",
+            "name": "S04E01 Brainwashed Pt 1 Brain Brain Go Away",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S04E01%20Brainwashed%20Pt%201%20Brain%20Brain%20Go%20Away.mp4",
+            "seconds": 1278,
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (DD 5 1)",
-            "sizeMB": 126
+            "sizeMB": 209
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc",
+              "itemTitle": "Pinky and the Brain - Full Series",
+              "file": "Pinky.and.the.Brain.S04E01.Brainwashed.1.Brain.Brain.Go.Away.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020.mp4",
+              "name": "Pinky.and.the.Brain.S04E01.Brainwashed.1.Brain.Brain.Go.Away.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020",
+              "url": "https://archive.org/download/pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc/Pinky.and.the.Brain.S04E01.Brainwashed.1.Brain.Brain.Go.Away.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020.mp4",
+              "seconds": 1280,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DD 5 1)",
+              "sizeMB": 126
+            }
+          ]
         },
         {
           "number": 2,
@@ -2391,30 +2734,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc",
-            "itemTitle": "Pinky and the Brain - Full Series",
-            "file": "Pinky.and.the.Brain.S04E02.Brainwashed.2.I.am.Not.a.Hat.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020.mp4",
-            "name": "Pinky.and.the.Brain.S04E02.Brainwashed.2.I.am.Not.a.Hat.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020",
-            "url": "https://archive.org/download/pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc/Pinky.and.the.Brain.S04E02.Brainwashed.2.I.am.Not.a.Hat.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020.mp4",
-            "seconds": 1300,
-            "format": "h.264",
+            "item": "s-01-e-05-brainania_202608",
+            "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+            "file": "S04E02 Brainwashed Pt 2 I Am Not a Hat.mp4",
+            "name": "S04E02 Brainwashed Pt 2 I Am Not a Hat",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S04E02%20Brainwashed%20Pt%202%20I%20Am%20Not%20a%20Hat.mp4",
+            "seconds": 1299,
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (DD 5 1)",
-            "sizeMB": 128
+            "sizeMB": 211
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "s-01-e-05-brainania_202608",
-              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
-              "file": "S04E02 Brainwashed Pt 2 I Am Not a Hat.mp4",
-              "name": "S04E02 Brainwashed Pt 2 I Am Not a Hat",
-              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S04E02%20Brainwashed%20Pt%202%20I%20Am%20Not%20a%20Hat.mp4",
-              "seconds": 1299,
-              "format": "MPEG4",
+              "item": "pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc",
+              "itemTitle": "Pinky and the Brain - Full Series",
+              "file": "Pinky.and.the.Brain.S04E02.Brainwashed.2.I.am.Not.a.Hat.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020.mp4",
+              "name": "Pinky.and.the.Brain.S04E02.Brainwashed.2.I.am.Not.a.Hat.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020",
+              "url": "https://archive.org/download/pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc/Pinky.and.the.Brain.S04E02.Brainwashed.2.I.am.Not.a.Hat.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020.mp4",
+              "seconds": 1300,
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 211
+              "codecRisk": "audio (DD 5 1)",
+              "sizeMB": 128
             }
           ]
         },
@@ -2426,30 +2769,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc",
-            "itemTitle": "Pinky and the Brain - Full Series",
-            "file": "Pinky.and.the.Brain.S04E03.Brainwashed.3.Wash.Harder.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020.mp4",
-            "name": "Pinky.and.the.Brain.S04E03.Brainwashed.3.Wash.Harder.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020",
-            "url": "https://archive.org/download/pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc/Pinky.and.the.Brain.S04E03.Brainwashed.3.Wash.Harder.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020.mp4",
-            "seconds": 1276,
-            "format": "h.264",
+            "item": "s-01-e-05-brainania_202608",
+            "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+            "file": "S04E03 Brainwashed Pt 3 Wash Harder.mp4",
+            "name": "S04E03 Brainwashed Pt 3 Wash Harder",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S04E03%20Brainwashed%20Pt%203%20Wash%20Harder.mp4",
+            "seconds": 1275,
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (DD 5 1)",
-            "sizeMB": 125
+            "sizeMB": 197
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
-              "item": "s-01-e-05-brainania_202608",
-              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
-              "file": "S04E03 Brainwashed Pt 3 Wash Harder.mp4",
-              "name": "S04E03 Brainwashed Pt 3 Wash Harder",
-              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S04E03%20Brainwashed%20Pt%203%20Wash%20Harder.mp4",
-              "seconds": 1275,
-              "format": "MPEG4",
+              "item": "pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc",
+              "itemTitle": "Pinky and the Brain - Full Series",
+              "file": "Pinky.and.the.Brain.S04E03.Brainwashed.3.Wash.Harder.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020.mp4",
+              "name": "Pinky.and.the.Brain.S04E03.Brainwashed.3.Wash.Harder.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020",
+              "url": "https://archive.org/download/pinky.and.the.-brain.-s-01-e-12.-a.-pinky.and.the.-brain.-christmas.-1080p.-upsc/Pinky.and.the.Brain.S04E03.Brainwashed.3.Wash.Harder.1080p.UPSCALED.DD.5.1.H.265.-EDGE2020.mp4",
+              "seconds": 1276,
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 197
+              "codecRisk": "audio (DD 5 1)",
+              "sizeMB": 125
             }
           ]
         },
@@ -2492,8 +2835,20 @@
           "number": 5,
           "name": "Hickory Dickory Bonk",
           "airdate": "1998-09-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "s-01-e-05-brainania_202608",
+            "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+            "file": "S04E05 The Pinky and the Brain Reunion Special.mp4",
+            "name": "S04E05 The Pinky and the Brain Reunion Special",
+            "url": "https://archive.org/download/s-01-e-05-brainania_202608/S04E05%20The%20Pinky%20and%20the%20Brain%20Reunion%20Special.mp4",
+            "seconds": 1291,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 202
+          },
           "alternates": []
         },
         {
@@ -2516,6 +2871,19 @@
             "sizeMB": 127
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S04E06 A Legendary Tail - Project Brain.mp4",
+              "name": "S04E06 A Legendary Tail - Project Brain",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S04E06%20A%20Legendary%20Tail%20-%20Project%20Brain.mp4",
+              "seconds": 1269,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 200
+            },
             {
               "conf": 0.6,
               "why": "title ~ \"The Pinky And The Brain Reunion Special\" (0.73)",
@@ -2549,7 +2917,21 @@
             "playable": true,
             "sizeMB": 214
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"A Legendary Tail\" (0.95)",
+              "item": "s-01-e-05-brainania_202608",
+              "itemTitle": "Pinky and the Brain - The Complete Series (Tubi 720p)",
+              "file": "S04E06 A Legendary Tail - Project Brain.mp4",
+              "name": "S04E06 A Legendary Tail - Project Brain",
+              "url": "https://archive.org/download/s-01-e-05-brainania_202608/S04E06%20A%20Legendary%20Tail%20-%20Project%20Brain.mp4",
+              "seconds": 1269,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 200
+            }
+          ]
         },
         {
           "number": 8,

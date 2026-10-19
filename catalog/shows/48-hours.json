@@ -3,7 +3,7 @@
   "slug": "48-hours",
   "type": "Documentary & Geographic",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:58:05.151Z",
+  "matchedAt": "2026-10-19T04:12:09.485Z",
   "addedAt": "2026-10-14T07:28:44.133Z",
   "tvmaze": {
     "id": 4408,
@@ -15,8 +15,8 @@
   "coverage": {
     "total": 1018,
     "live": 0,
-    "review": 4,
-    "missing": 1014,
+    "review": 5,
+    "missing": 1013,
     "pct": 0
   },
   "seasons": [
@@ -2267,8 +2267,20 @@
           "number": 44,
           "name": "Middletown, U.S.A.",
           "airdate": "2002-08-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Middletown, U.S.A.\" (0.64)",
+            "item": "48-hours-behind-the-soaps-1989",
+            "itemTitle": "48 Hours - Dan Rather",
+            "file": "48 Hours - Hometown USA - 1990.mp4",
+            "name": "48 Hours - Hometown USA - 1990",
+            "url": "https://archive.org/download/48-hours-behind-the-soaps-1989/48%20Hours%20-%20Hometown%20USA%20-%201990.mp4",
+            "seconds": 2880,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1488
+          },
           "alternates": []
         }
       ]
@@ -4342,7 +4354,7 @@
         },
         {
           "number": 2,
-          "name": "Episode 2",
+          "name": "[email]",
           "airdate": "2010-10-09",
           "state": "MISSING",
           "file": null,

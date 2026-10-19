@@ -3,7 +3,7 @@
   "slug": "rugrats",
   "type": "Animated",
   "network": "Nickelodeon",
-  "matchedAt": "2026-10-16T07:56:24.367Z",
+  "matchedAt": "2026-10-19T04:10:34.134Z",
   "addedAt": "2026-10-15T12:07:39.889Z",
   "tvmaze": {
     "id": 421,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 166,
     "live": 1,
-    "review": 3,
-    "missing": 162,
-    "pct": 2
+    "review": 4,
+    "missing": 161,
+    "pct": 3
   },
   "seasons": [
     {
@@ -87,8 +87,20 @@
           "number": 4,
           "name": "Baby Commercial / Little Dude",
           "airdate": "1991-09-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "rugrats-pre-school-daze",
+            "itemTitle": "Rugrats Pre-School Daze (complete series)",
+            "file": "MP4/Rugrats_ Pre-School Daze episode 4 - Finder's Kreepers.mp4",
+            "name": "MP4/Rugrats_ Pre-School Daze episode 4 - Finder's Kreepers",
+            "url": "https://archive.org/download/rugrats-pre-school-daze/MP4%2FRugrats_%20Pre-School%20Daze%20episode%204%20-%20Finder's%20Kreepers.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 698
+          },
           "alternates": []
         },
         {
@@ -1359,6 +1371,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 146
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "rugrats-9x03-special-2-pre-school-daze-episode-2-of-4-tree-s-a-crowd",
+              "itemTitle": "Rugrats Pre-School Daze",
+              "file": "rugrats-9x03-special-2-pre-school-daze-episode-1-of-4-finder-s-kreepers.mp4",
+              "name": "rugrats-9x03-special-2-pre-school-daze-episode-1-of-4-finder-s-kreepers",
+              "url": "https://archive.org/download/rugrats-9x03-special-2-pre-school-daze-episode-2-of-4-tree-s-a-crowd/rugrats-9x03-special-2-pre-school-daze-episode-1-of-4-finder-s-kreepers.mp4",
+              "seconds": 1396,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 74
             }
           ]
         },

@@ -3,7 +3,8 @@
   "slug": "rizzoli-and-isles",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:00.585Z",
+  "matchedAt": "2026-10-19T04:11:06.155Z",
+  "addedAt": "2026-10-19T04:11:06.160Z",
   "tvmaze": {
     "id": 344,
     "name": "Rizzoli & Isles",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 105,
     "live": 0,
-    "review": 0,
-    "missing": 105,
-    "pct": 0
+    "review": 1,
+    "missing": 104,
+    "pct": 1
   },
   "seasons": [
     {
@@ -26,8 +27,20 @@
           "number": 1,
           "name": "See One. Do One. Teach One.",
           "airdate": "2010-07-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"See One. Do One. Teach One.\" (0.95)",
+            "item": "1-7.-born-to-run",
+            "itemTitle": "Rizzoli & Isles - Season 1",
+            "file": "1-1. See one. Do one. Teach one.mp4",
+            "name": "1-1. See one. Do one. Teach one",
+            "url": "https://archive.org/download/1-7.-born-to-run/1-1.%20See%20one.%20Do%20one.%20Teach%20one.mp4",
+            "seconds": 2934,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 288
+          },
           "alternates": []
         },
         {

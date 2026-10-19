@@ -3,7 +3,8 @@
   "slug": "donny-and-marie",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-16T07:58:45.722Z",
+  "matchedAt": "2026-10-19T04:12:41.229Z",
+  "addedAt": "2026-10-19T04:12:41.234Z",
   "tvmaze": {
     "id": 7090,
     "name": "Donny & Marie",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 71,
-    "live": 0,
+    "live": 1,
     "review": 0,
-    "missing": 71,
-    "pct": 0
+    "missing": 70,
+    "pct": 1
   },
   "seasons": [
     {
@@ -561,8 +562,20 @@
           "number": 8,
           "name": "Ruth Buzzi, Gavin MacLeod, Racquel Welch",
           "airdate": "1978-12-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "airdate in filename",
+            "item": "1978.12.08-wthr-donny-marie-rte-2-donnie-marie-1996.11.07-kiro-",
+            "itemTitle": "1978.12.08 - WTHR - Donny & Marie - RTE 2 - Donnie & Marie - 1996.11.07 - KIRO - News - Crook & Chase",
+            "file": "1978.12.08 - WTHR - Donny & Marie - RTE 2 - Donnie & Marie - 1996.11.07 - KIRO - News - Crook & Chase.mp4",
+            "name": "1978.12.08 - WTHR - Donny & Marie - RTE 2 - Donnie & Marie - 1996.11.07 - KIRO - News - Crook & Chase",
+            "url": "https://archive.org/download/1978.12.08-wthr-donny-marie-rte-2-donnie-marie-1996.11.07-kiro-/1978.12.08%20-%20WTHR%20-%20Donny%20%26%20Marie%20-%20RTE%202%20-%20Donnie%20%26%20Marie%20-%201996.11.07%20-%20KIRO%20-%20News%20-%20Crook%20%26%20Chase.mp4",
+            "seconds": 7398,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 727
+          },
           "alternates": []
         },
         {

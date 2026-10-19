@@ -3,7 +3,7 @@
   "slug": "star-trek-voyager",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "UPN",
-  "matchedAt": "2026-10-16T07:56:52.108Z",
+  "matchedAt": "2026-10-19T04:10:56.964Z",
   "addedAt": "2026-10-15T12:07:52.006Z",
   "tvmaze": {
     "id": 492,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 172,
-    "live": 49,
-    "review": 108,
-    "missing": 15,
-    "pct": 91
+    "live": 50,
+    "review": 115,
+    "missing": 7,
+    "pct": 96
   },
   "seasons": [
     {
@@ -57,20 +57,33 @@
           "airdate": "1995-01-23",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename + title match",
-            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
-            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
-            "file": "Star Trek Voyager 1x03 Parallax.mp4",
-            "name": "Star Trek Voyager 1x03 Parallax",
-            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x03%20Parallax.mp4",
-            "seconds": 2642,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-s-1-e-1-caretaker",
+            "itemTitle": "Star Trek: Voyager - The Complete First Season",
+            "file": "Star Trek Voyager S1 E3 - Time and Again.mp4",
+            "name": "Star Trek Voyager S1 E3 - Time and Again",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E3%20-%20Time%20and%20Again.mp4",
+            "seconds": 2754,
             "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 581
+            "sizeMB": 195
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x03 Parallax.mp4",
+              "name": "Star Trek Voyager 1x03 Parallax",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x03%20Parallax.mp4",
+              "seconds": 2642,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 581
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Parallax\" (1.00)",
@@ -117,6 +130,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 195
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x04 Encore et Encore.mp4",
+              "name": "Star Trek Voyager 1x04 Encore et Encore",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x04%20Encore%20et%20Encore.mp4",
+              "seconds": 2641,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 395
             }
           ]
         },
@@ -295,6 +322,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 177
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+              "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+              "file": "Star Trek Voyager 1x08 Une Fois L'Impossible Exclu.mp4",
+              "name": "Star Trek Voyager 1x08 Une Fois L'Impossible Exclu",
+              "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%201x08%20Une%20Fois%20L'Impossible%20Exclu.mp4",
+              "seconds": 2644,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 578
             }
           ]
         },
@@ -398,21 +439,34 @@
           "number": 11,
           "name": "State of Flux",
           "airdate": "1995-04-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"State of Flux\" (1.00)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "star-trek-voyager-s-1-e-1-caretaker",
             "itemTitle": "Star Trek: Voyager - The Complete First Season",
-            "file": "Star Trek Voyager S1 E10 - State of Flux.mp4",
-            "name": "Star Trek Voyager S1 E10 - State of Flux",
-            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E10%20-%20State%20of%20Flux.mp4",
-            "seconds": 2752,
+            "file": "Star Trek Voyager S1 E11 - Heroes and Demons.mp4",
+            "name": "Star Trek Voyager S1 E11 - Heroes and Demons",
+            "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E11%20-%20Heroes%20and%20Demons.mp4",
+            "seconds": 2751,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 167
+            "sizeMB": 209
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"State of Flux\" (1.00)",
+              "item": "star-trek-voyager-s-1-e-1-caretaker",
+              "itemTitle": "Star Trek: Voyager - The Complete First Season",
+              "file": "Star Trek Voyager S1 E10 - State of Flux.mp4",
+              "name": "Star Trek Voyager S1 E10 - State of Flux",
+              "url": "https://archive.org/download/star-trek-voyager-s-1-e-1-caretaker/Star%20Trek%20Voyager%20S1%20E10%20-%20State%20of%20Flux.mp4",
+              "seconds": 2752,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 167
+            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
@@ -854,8 +908,21 @@
           "number": 10,
           "name": "Cold Fire",
           "airdate": "1995-11-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 2x10 Froid Comme L'enfer.mp4",
+            "name": "Star Trek Voyager 2x10 Froid Comme L'enfer",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%202x10%20Froid%20Comme%20L'enfer.mp4",
+            "seconds": 2642,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 394
+          },
           "alternates": []
         },
         {
@@ -967,8 +1034,21 @@
           "number": 16,
           "name": "Meld",
           "airdate": "1996-02-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 2x16 Fusion Mentale.mp4",
+            "name": "Star Trek Voyager 2x16 Fusion Mentale",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%202x16%20Fusion%20Mentale.mp4",
+            "seconds": 2641,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 574
+          },
           "alternates": []
         },
         {
@@ -1017,8 +1097,21 @@
           "number": 19,
           "name": "Lifesigns",
           "airdate": "1996-02-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 2x19 Soins Et Passions.mp4",
+            "name": "Star Trek Voyager 2x19 Soins Et Passions",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%202x19%20Soins%20Et%20Passions.mp4",
+            "seconds": 2640,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 393
+          },
           "alternates": []
         },
         {
@@ -1695,8 +1788,21 @@
           "number": 25,
           "name": "Worst Case Scenario",
           "airdate": "1997-05-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 3x25 Scénario Catastrophe.mp4",
+            "name": "Star Trek Voyager 3x25 Scénario Catastrophe",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%203x25%20Sc%C3%A9nario%20Catastrophe.mp4",
+            "seconds": 2642,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 346
+          },
           "alternates": []
         },
         {
@@ -1771,8 +1877,21 @@
           "number": 3,
           "name": "Day of Honor",
           "airdate": "1997-09-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 4x03 Nemesis.mp4",
+            "name": "Star Trek Voyager 4x03 Nemesis",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%204x03%20Nemesis.mp4",
+            "seconds": 2645,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 568
+          },
           "alternates": []
         },
         {
@@ -2178,8 +2297,21 @@
           "number": 23,
           "name": "Living Witness",
           "airdate": "1998-04-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 4x23 La Preuve Vivante.mp4",
+            "name": "Star Trek Voyager 4x23 La Preuve Vivante",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%204x23%20La%20Preuve%20Vivante.mp4",
+            "seconds": 2643,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 357
+          },
           "alternates": []
         },
         {
@@ -3592,8 +3724,21 @@
           "number": 14,
           "name": "Prophecy",
           "airdate": "2001-02-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 7x14 Les Rouleaux de La Prophetie.mp4",
+            "name": "Star Trek Voyager 7x14 Les Rouleaux de La Prophetie",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%207x14%20Les%20Rouleaux%20de%20La%20Prophetie.mp4",
+            "seconds": 2525,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 545
+          },
           "alternates": []
         },
         {
@@ -3747,8 +3892,21 @@
           "number": 22,
           "name": "Natural Law",
           "airdate": "2001-05-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-voyager-la-serie-v.f.-1995-2001",
+            "itemTitle": "Star Trek ☆ Voyager ☆ La Série V.F. ☆ 1995-2001",
+            "file": "Star Trek Voyager 7x22 La Loi de La Nature.mp4",
+            "name": "Star Trek Voyager 7x22 La Loi de La Nature",
+            "url": "https://archive.org/download/star-trek-voyager-la-serie-v.f.-1995-2001/Star%20Trek%20Voyager%207x22%20La%20Loi%20de%20La%20Nature.mp4",
+            "seconds": 2525,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 549
+          },
           "alternates": []
         },
         {

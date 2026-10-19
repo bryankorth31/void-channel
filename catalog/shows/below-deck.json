@@ -3,7 +3,7 @@
   "slug": "below-deck",
   "type": "Reality & Talk",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:55.729Z",
+  "matchedAt": "2026-10-19T04:12:00.745Z",
   "addedAt": "2026-10-15T12:08:28.695Z",
   "tvmaze": {
     "id": 2900,
@@ -14,9 +14,9 @@
   },
   "coverage": {
     "total": 188,
-    "live": 13,
+    "live": 14,
     "review": 0,
-    "missing": 175,
+    "missing": 174,
     "pct": 7
   },
   "seasons": [
@@ -1381,8 +1381,20 @@
           "number": 5,
           "name": "Come on Eileen",
           "airdate": "2024-03-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "below-deck-mediterranean-s-11_202608",
+            "itemTitle": "Below Deck Mediterranean S11",
+            "file": "Below Deck Mediterranean S11E05 The Deckhand Cometh.mp4",
+            "name": "Below Deck Mediterranean S11E05 The Deckhand Cometh",
+            "url": "https://archive.org/download/below-deck-mediterranean-s-11_202608/Below%20Deck%20Mediterranean%20S11E05%20The%20Deckhand%20Cometh.mp4",
+            "seconds": 2555,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 325
+          },
           "alternates": []
         },
         {

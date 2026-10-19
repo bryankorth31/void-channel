@@ -3,7 +3,7 @@
   "slug": "victory-at-sea",
   "type": "Documentary & Geographic",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:04.404Z",
+  "matchedAt": "2026-10-19T04:12:08.695Z",
   "addedAt": "2026-10-15T12:08:35.752Z",
   "tvmaze": {
     "id": 16606,
@@ -54,6 +54,32 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 164
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 5 in \"VICTORY AT SEA part 2 of 4\"",
+              "item": "08marenostrum",
+              "itemTitle": "VICTORY AT SEA part 2 of 4",
+              "file": "08_Mare_Nostrum.MPEG4",
+              "name": "08_Mare_Nostrum",
+              "url": "https://archive.org/download/08marenostrum/08_Mare_Nostrum.MPEG4",
+              "seconds": 1587,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 124
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 5 in \"VICTORY AT SEA part 1 of 4\"",
+              "item": "01designforwar",
+              "itemTitle": "VICTORY AT SEA part 1 of 4",
+              "file": "01_Design_For_War.MPEG4.",
+              "name": "01_Design_For_War.MPEG4.",
+              "url": "https://archive.org/download/01designforwar/01_Design_For_War.MPEG4.",
+              "seconds": 1590,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 123
             }
           ]
         },
@@ -63,19 +89,59 @@
           "airdate": "1952-11-02",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 26 in \"VICTORY AT SEA 1952\"",
-            "item": "victory-at-sea-01",
-            "itemTitle": "VICTORY AT SEA 1952",
-            "file": "VICTORY_AT_SEA_02.mp4",
-            "name": "VICTORY_AT_SEA_02",
-            "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_02.mp4",
-            "seconds": 1643,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"The Pacific Boils Over: Pearl Harbor, December 7, 1941\" (0.92)",
+            "item": "victory-at-sea-1939-1941",
+            "itemTitle": "Victory at Sea",
+            "file": "02 The Pacific Boils Over Pearl Harbor, December 7, 1941.mp4",
+            "name": "02 The Pacific Boils Over Pearl Harbor, December 7, 1941",
+            "url": "https://archive.org/download/victory-at-sea-1939-1941/02%20The%20Pacific%20Boils%20Over%20Pearl%20Harbor%2C%20December%207%2C%201941.mp4",
+            "seconds": 1589,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 158
+            "sizeMB": 427
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 26 in \"VICTORY AT SEA 1952\"",
+              "item": "victory-at-sea-01",
+              "itemTitle": "VICTORY AT SEA 1952",
+              "file": "VICTORY_AT_SEA_02.mp4",
+              "name": "VICTORY_AT_SEA_02",
+              "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_02.mp4",
+              "seconds": 1643,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 158
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 5 in \"VICTORY AT SEA part 2 of 4\"",
+              "item": "08marenostrum",
+              "itemTitle": "VICTORY AT SEA part 2 of 4",
+              "file": "09_Sea_And_Sand.MPEG4",
+              "name": "09_Sea_And_Sand",
+              "url": "https://archive.org/download/08marenostrum/09_Sea_And_Sand.MPEG4",
+              "seconds": 1590,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 124
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 5 in \"VICTORY AT SEA part 1 of 4\"",
+              "item": "01designforwar",
+              "itemTitle": "VICTORY AT SEA part 1 of 4",
+              "file": "03_Sealing_The_Breach.MPEG4",
+              "name": "03_Sealing_The_Breach",
+              "url": "https://archive.org/download/01designforwar/03_Sealing_The_Breach.MPEG4",
+              "seconds": 1591,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 123
+            }
+          ]
         },
         {
           "number": 3,
@@ -98,6 +164,19 @@
           "alternates": [
             {
               "conf": 0.55,
+              "why": "sequence guess: file 3 of 5 in \"VICTORY AT SEA part 2 of 4\"",
+              "item": "08marenostrum",
+              "itemTitle": "VICTORY AT SEA part 2 of 4",
+              "file": "11_The_Magnetic_North.MPEG4",
+              "name": "11_The_Magnetic_North",
+              "url": "https://archive.org/download/08marenostrum/11_The_Magnetic_North.MPEG4",
+              "seconds": 1587,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 174
+            },
+            {
+              "conf": 0.55,
               "why": "sequence guess: file 3 of 26 in \"VICTORY AT SEA 1952\"",
               "item": "victory-at-sea-01",
               "itemTitle": "VICTORY AT SEA 1952",
@@ -108,6 +187,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 160
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 5 in \"VICTORY AT SEA part 1 of 4\"",
+              "item": "01designforwar",
+              "itemTitle": "VICTORY AT SEA part 1 of 4",
+              "file": "04_Midway_Is_East.MPEG4",
+              "name": "04_Midway_Is_East",
+              "url": "https://archive.org/download/01designforwar/04_Midway_Is_East.MPEG4",
+              "seconds": 1588,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 123
             }
           ]
         },
@@ -132,6 +224,19 @@
           "alternates": [
             {
               "conf": 0.55,
+              "why": "sequence guess: file 4 of 5 in \"VICTORY AT SEA part 2 of 4\"",
+              "item": "08marenostrum",
+              "itemTitle": "VICTORY AT SEA part 2 of 4",
+              "file": "12_Conquest_Of_Micronesia.MPEG4",
+              "name": "12_Conquest_Of_Micronesia",
+              "url": "https://archive.org/download/08marenostrum/12_Conquest_Of_Micronesia.MPEG4",
+              "seconds": 1583,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 176
+            },
+            {
+              "conf": 0.55,
               "why": "sequence guess: file 4 of 26 in \"VICTORY AT SEA 1952\"",
               "item": "victory-at-sea-01",
               "itemTitle": "VICTORY AT SEA 1952",
@@ -142,6 +247,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 159
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 5 in \"VICTORY AT SEA part 1 of 4\"",
+              "item": "01designforwar",
+              "itemTitle": "VICTORY AT SEA part 1 of 4",
+              "file": "05_Mediterranean_Mosaic.MPEG4",
+              "name": "05_Mediterranean_Mosaic",
+              "url": "https://archive.org/download/01designforwar/05_Mediterranean_Mosaic.MPEG4",
+              "seconds": 1589,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 123
             }
           ]
         },
@@ -151,19 +269,59 @@
           "airdate": "1952-11-30",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 26 in \"VICTORY AT SEA 1952\"",
-            "item": "victory-at-sea-01",
-            "itemTitle": "VICTORY AT SEA 1952",
-            "file": "VICTORY_AT_SEA_05.mp4",
-            "name": "VICTORY_AT_SEA_05",
-            "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_05.mp4",
-            "seconds": 1638,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Mediterranean Mosaic: Gibraltar, Allied & Enemy Fleets, Malta\" (0.98)",
+            "item": "victory-at-sea-1939-1941",
+            "itemTitle": "Victory at Sea",
+            "file": "05 Mediterranean Mosaic Gibraltar, Allied & Enemy Fleets, Malta.mp4",
+            "name": "05 Mediterranean Mosaic Gibraltar, Allied & Enemy Fleets, Malta",
+            "url": "https://archive.org/download/victory-at-sea-1939-1941/05%20Mediterranean%20Mosaic%20Gibraltar%2C%20Allied%20%26%20Enemy%20Fleets%2C%20Malta.mp4",
+            "seconds": 1589,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 158
+            "sizeMB": 428
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 5 in \"VICTORY AT SEA part 2 of 4\"",
+              "item": "08marenostrum",
+              "itemTitle": "VICTORY AT SEA part 2 of 4",
+              "file": "14_Roman_Renaissance.MPEG4",
+              "name": "14_Roman_Renaissance",
+              "url": "https://archive.org/download/08marenostrum/14_Roman_Renaissance.MPEG4",
+              "seconds": 1528,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 167
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 26 in \"VICTORY AT SEA 1952\"",
+              "item": "victory-at-sea-01",
+              "itemTitle": "VICTORY AT SEA 1952",
+              "file": "VICTORY_AT_SEA_05.mp4",
+              "name": "VICTORY_AT_SEA_05",
+              "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_05.mp4",
+              "seconds": 1638,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 158
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 5 in \"VICTORY AT SEA part 1 of 4\"",
+              "item": "01designforwar",
+              "itemTitle": "VICTORY AT SEA part 1 of 4",
+              "file": "07_Rings_Around_Rabaul.MPEG",
+              "name": "07_Rings_Around_Rabaul",
+              "url": "https://archive.org/download/01designforwar/07_Rings_Around_Rabaul.MPEG",
+              "seconds": 1582,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 123
+            }
+          ]
         },
         {
           "number": 6,
@@ -218,19 +376,33 @@
           "airdate": "1952-12-21",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 7 of 26 in \"VICTORY AT SEA 1952\"",
-            "item": "victory-at-sea-01",
-            "itemTitle": "VICTORY AT SEA 1952",
-            "file": "VICTORY_AT_SEA_07.mp4",
-            "name": "VICTORY_AT_SEA_07",
-            "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_07.mp4",
-            "seconds": 1628,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Rings Around Rabaul: Struggle for the Solomon Islands\" (0.98)",
+            "item": "victory-at-sea-1939-1941",
+            "itemTitle": "Victory at Sea",
+            "file": "07 Rings Around Rabaul Struggle for the Solomon Islands.mp4",
+            "name": "07 Rings Around Rabaul Struggle for the Solomon Islands",
+            "url": "https://archive.org/download/victory-at-sea-1939-1941/07%20Rings%20Around%20Rabaul%20Struggle%20for%20the%20Solomon%20Islands.mp4",
+            "seconds": 1582,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 156
+            "sizeMB": 421
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 26 in \"VICTORY AT SEA 1952\"",
+              "item": "victory-at-sea-01",
+              "itemTitle": "VICTORY AT SEA 1952",
+              "file": "VICTORY_AT_SEA_07.mp4",
+              "name": "VICTORY_AT_SEA_07",
+              "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_07.mp4",
+              "seconds": 1628,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 156
+            }
+          ]
         },
         {
           "number": 8,
@@ -272,19 +444,33 @@
           "airdate": "1953-01-04",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 9 of 26 in \"VICTORY AT SEA 1952\"",
-            "item": "victory-at-sea-01",
-            "itemTitle": "VICTORY AT SEA 1952",
-            "file": "VICTORY_AT_SEA_09.mp4",
-            "name": "VICTORY_AT_SEA_09",
-            "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_09.mp4",
-            "seconds": 1641,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Sea and Sand: Invasion of North Africa, 1942-1943\" (0.81)",
+            "item": "victory-at-sea-1939-1941",
+            "itemTitle": "Victory at Sea",
+            "file": "09 Sea and Sand Invasion of North Africa, 1942-1943.mp4",
+            "name": "09 Sea and Sand Invasion of North Africa, 1942-1943",
+            "url": "https://archive.org/download/victory-at-sea-1939-1941/09%20Sea%20and%20Sand%20Invasion%20of%20North%20Africa%2C%201942-1943.mp4",
+            "seconds": 1590,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 165
+            "sizeMB": 427
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 26 in \"VICTORY AT SEA 1952\"",
+              "item": "victory-at-sea-01",
+              "itemTitle": "VICTORY AT SEA 1952",
+              "file": "VICTORY_AT_SEA_09.mp4",
+              "name": "VICTORY_AT_SEA_09",
+              "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_09.mp4",
+              "seconds": 1641,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 165
+            }
+          ]
         },
         {
           "number": 10,
@@ -373,19 +559,33 @@
           "airdate": "1953-01-25",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 12 of 26 in \"VICTORY AT SEA 1952\"",
-            "item": "victory-at-sea-01",
-            "itemTitle": "VICTORY AT SEA 1952",
-            "file": "VICTORY_AT_SEA_12.mp4",
-            "name": "VICTORY_AT_SEA_12",
-            "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_12.mp4",
-            "seconds": 1644,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"The Conquest of Micronesia: Carrier Warfare--Gilberts and Marshalls\" (0.98)",
+            "item": "victory-at-sea-1939-1941",
+            "itemTitle": "Victory at Sea",
+            "file": "12 The Conquest of Micronesia Carrier Warfare--Gilberts and Marshalls.mp4",
+            "name": "12 The Conquest of Micronesia Carrier Warfare--Gilberts and Marshalls",
+            "url": "https://archive.org/download/victory-at-sea-1939-1941/12%20The%20Conquest%20of%20Micronesia%20Carrier%20Warfare--Gilberts%20and%20Marshalls.mp4",
+            "seconds": 1583,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 157
+            "sizeMB": 422
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 26 in \"VICTORY AT SEA 1952\"",
+              "item": "victory-at-sea-01",
+              "itemTitle": "VICTORY AT SEA 1952",
+              "file": "VICTORY_AT_SEA_12.mp4",
+              "name": "VICTORY_AT_SEA_12",
+              "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_12.mp4",
+              "seconds": 1644,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 157
+            }
+          ]
         },
         {
           "number": 13,
@@ -555,19 +755,33 @@
           "airdate": "1953-03-01",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 17 of 26 in \"VICTORY AT SEA 1952\"",
-            "item": "victory-at-sea-01",
-            "itemTitle": "VICTORY AT SEA 1952",
-            "file": "VICTORY_AT_SEA_17.mp4",
-            "name": "VICTORY_AT_SEA_17",
-            "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_17.mp4",
-            "seconds": 1658,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"The Turkey Shoot: Conquest of the Marianas\" (0.97)",
+            "item": "victory-at-sea-1939-1941",
+            "itemTitle": "Victory at Sea",
+            "file": "17 The Turkey Shoot Conquest of the Marianas.mp4",
+            "name": "17 The Turkey Shoot Conquest of the Marianas",
+            "url": "https://archive.org/download/victory-at-sea-1939-1941/17%20The%20Turkey%20Shoot%20Conquest%20of%20the%20Marianas.mp4",
+            "seconds": 1589,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 168
+            "sizeMB": 424
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 17 of 26 in \"VICTORY AT SEA 1952\"",
+              "item": "victory-at-sea-01",
+              "itemTitle": "VICTORY AT SEA 1952",
+              "file": "VICTORY_AT_SEA_17.mp4",
+              "name": "VICTORY_AT_SEA_17",
+              "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_17.mp4",
+              "seconds": 1658,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 168
+            }
+          ]
         },
         {
           "number": 18,
@@ -575,19 +789,33 @@
           "airdate": "1953-03-08",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 18 of 26 in \"VICTORY AT SEA 1952\"",
-            "item": "victory-at-sea-01",
-            "itemTitle": "VICTORY AT SEA 1952",
-            "file": "VICTORY_AT_SEA_18.mp4",
-            "name": "VICTORY_AT_SEA_18",
-            "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_18.mp4",
-            "seconds": 1655,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Two If by Sea: Peleliu and Angaur\" (0.84)",
+            "item": "victory-at-sea-1939-1941",
+            "itemTitle": "Victory at Sea",
+            "file": "18 Two If By Sea Peleliu and Angaur.mp4",
+            "name": "18 Two If By Sea Peleliu and Angaur",
+            "url": "https://archive.org/download/victory-at-sea-1939-1941/18%20Two%20If%20By%20Sea%20Peleliu%20and%20Angaur.mp4",
+            "seconds": 1588,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 167
+            "sizeMB": 423
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 18 of 26 in \"VICTORY AT SEA 1952\"",
+              "item": "victory-at-sea-01",
+              "itemTitle": "VICTORY AT SEA 1952",
+              "file": "VICTORY_AT_SEA_18.mp4",
+              "name": "VICTORY_AT_SEA_18",
+              "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_18.mp4",
+              "seconds": 1655,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 167
+            }
+          ]
         },
         {
           "number": 19,
@@ -924,19 +1152,33 @@
           "airdate": "1953-05-03",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 26 of 26 in \"VICTORY AT SEA 1952\"",
-            "item": "victory-at-sea-01",
-            "itemTitle": "VICTORY AT SEA 1952",
-            "file": "VICTORY_AT_SEA_26.mp4",
-            "name": "VICTORY_AT_SEA_26",
-            "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_26.mp4",
-            "seconds": 1686,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Design for Peace: Surrender of Japan & Aftermath of War\" (0.98)",
+            "item": "victory-at-sea-1939-1941",
+            "itemTitle": "Victory at Sea",
+            "file": "26 Design for Peace Surrender of Japan & Aftermath of War.mp4",
+            "name": "26 Design for Peace Surrender of Japan & Aftermath of War",
+            "url": "https://archive.org/download/victory-at-sea-1939-1941/26%20Design%20for%20Peace%20Surrender%20of%20Japan%20%26%20Aftermath%20of%20War.mp4",
+            "seconds": 1587,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 162
+            "sizeMB": 431
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 26 of 26 in \"VICTORY AT SEA 1952\"",
+              "item": "victory-at-sea-01",
+              "itemTitle": "VICTORY AT SEA 1952",
+              "file": "VICTORY_AT_SEA_26.mp4",
+              "name": "VICTORY_AT_SEA_26",
+              "url": "https://archive.org/download/victory-at-sea-01/VICTORY_AT_SEA_26.mp4",
+              "seconds": 1686,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 162
+            }
+          ]
         }
       ]
     }

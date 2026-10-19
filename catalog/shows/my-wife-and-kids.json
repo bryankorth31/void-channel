@@ -3,7 +3,7 @@
   "slug": "my-wife-and-kids",
   "type": "2000s and Later Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-16T07:56:19.987Z",
+  "matchedAt": "2026-10-19T04:10:30.176Z",
   "addedAt": "2026-10-15T12:07:36.997Z",
   "tvmaze": {
     "id": 952,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 123,
-    "live": 107,
+    "live": 108,
     "review": 1,
-    "missing": 15,
-    "pct": 88
+    "missing": 14,
+    "pct": 89
   },
   "seasons": [
     {
@@ -1951,8 +1951,20 @@
           "number": 3,
           "name": "Child-Care Class",
           "airdate": "2004-09-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "my-wife-and-kids-complete-series_202511",
+            "itemTitle": "My Wife & Kids: The Complete Series",
+            "file": "My Wife & Kids S05E03 - Resolutions.mp4",
+            "name": "My Wife & Kids S05E03 - Resolutions",
+            "url": "https://archive.org/download/my-wife-and-kids-complete-series_202511/My%20Wife%20%26%20Kids%20S05E03%20-%20Resolutions.mp4",
+            "seconds": 1261,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 252
+          },
           "alternates": []
         },
         {

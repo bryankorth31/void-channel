@@ -3,7 +3,7 @@
   "slug": "africa",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-16T07:58:04.188Z",
+  "matchedAt": "2026-10-19T04:12:08.387Z",
   "addedAt": "2026-10-15T15:06:52.689Z",
   "tvmaze": {
     "id": 4842,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 6,
     "live": 0,
-    "review": 0,
-    "missing": 6,
-    "pct": 0
+    "review": 6,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -27,48 +27,120 @@
           "number": 1,
           "name": "Kalahari",
           "airdate": "2013-01-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Kalahari\" (0.95)",
+            "item": "africa_2013",
+            "itemTitle": "Africa ★ BBC Wildlife Series with Subtitles, Extras, and MKV",
+            "file": "01 Kalahari.mp4",
+            "name": "01 Kalahari",
+            "url": "https://archive.org/download/africa_2013/01%20Kalahari.mp4",
+            "seconds": 3623,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 919
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Savannah",
           "airdate": "2013-01-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Savannah\" (0.95)",
+            "item": "africa_2013",
+            "itemTitle": "Africa ★ BBC Wildlife Series with Subtitles, Extras, and MKV",
+            "file": "02 Savannah.mp4",
+            "name": "02 Savannah",
+            "url": "https://archive.org/download/africa_2013/02%20Savannah.mp4",
+            "seconds": 3628,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 913
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Congo",
           "airdate": "2013-01-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Congo\" (0.95)",
+            "item": "africa_2013",
+            "itemTitle": "Africa ★ BBC Wildlife Series with Subtitles, Extras, and MKV",
+            "file": "03 Congo.mp4",
+            "name": "03 Congo",
+            "url": "https://archive.org/download/africa_2013/03%20Congo.mp4",
+            "seconds": 3590,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 875
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Cape",
           "airdate": "2013-01-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Cape\" (0.95)",
+            "item": "africa_2013",
+            "itemTitle": "Africa ★ BBC Wildlife Series with Subtitles, Extras, and MKV",
+            "file": "04 Cape.mp4",
+            "name": "04 Cape",
+            "url": "https://archive.org/download/africa_2013/04%20Cape.mp4",
+            "seconds": 3581,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 987
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Sahara",
           "airdate": "2013-01-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Sahara\" (0.95)",
+            "item": "africa_2013",
+            "itemTitle": "Africa ★ BBC Wildlife Series with Subtitles, Extras, and MKV",
+            "file": "05 Sahara.mp4",
+            "name": "05 Sahara",
+            "url": "https://archive.org/download/africa_2013/05%20Sahara.mp4",
+            "seconds": 3669,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 789
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "The Future",
           "airdate": "2013-02-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Future\" (0.95)",
+            "item": "africa_2013",
+            "itemTitle": "Africa ★ BBC Wildlife Series with Subtitles, Extras, and MKV",
+            "file": "06 The Future.mp4",
+            "name": "06 The Future",
+            "url": "https://archive.org/download/africa_2013/06%20The%20Future.mp4",
+            "seconds": 3663,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 957
+          },
           "alternates": []
         }
       ]

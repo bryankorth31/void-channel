@@ -3,7 +3,7 @@
   "slug": "corner-gas",
   "type": "British and Beyond",
   "network": "CTV",
-  "matchedAt": "2026-10-16T07:57:07.515Z",
+  "matchedAt": "2026-10-19T04:11:15.162Z",
   "addedAt": "2026-10-16T00:24:00.544Z",
   "tvmaze": {
     "id": 4641,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 107,
-    "live": 18,
-    "review": 86,
-    "missing": 3,
-    "pct": 97
+    "live": 107,
+    "review": 0,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "Ruby Reborn",
           "airdate": "2004-01-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -41,23 +41,65 @@
             "playable": true,
             "sizeMB": 134
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E01 - Bone Dry (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E01 - Bone Dry (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E01%20-%20Bone%20Dry%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Tax Man",
           "airdate": "2004-01-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "corner-gas-complete_202507",
+            "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+            "file": "Corner Gas Collection/Live Action/Corner Gas (2004) Season 1/Corner Gas - S01E02 - The Taxman.mp4",
+            "name": "Corner Gas Collection/Live Action/Corner Gas (2004) Season 1/Corner Gas - S01E02 - The Taxman",
+            "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FLive%20Action%2FCorner%20Gas%20(2004)%20Season%201%2FCorner%20Gas%20-%20S01E02%20-%20The%20Taxman.mp4",
+            "seconds": 1333,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E02 - Squatch Your Language (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E02 - Squatch Your Language (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E02%20-%20Squatch%20Your%20Language%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1298,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Pilates Twist",
           "airdate": "2004-02-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -69,15 +111,30 @@
             "playable": true,
             "sizeMB": 134
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E03 - None of Your Beefwax (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E03 - None of Your Beefwax (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E03%20-%20None%20of%20Your%20Beefwax%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Oh Baby",
           "airdate": "2004-02-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -89,15 +146,30 @@
             "playable": true,
             "sizeMB": 134
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E04 - Bait and Click (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E04 - Bait and Click (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E04%20-%20Bait%20and%20Click%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Grad '68",
           "airdate": "2004-02-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -109,15 +181,30 @@
             "playable": true,
             "sizeMB": 133
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E05 - Flush Photography (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E05 - Flush Photography (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E05%20-%20Flush%20Photography%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 6,
           "name": "World's Biggest Thing",
           "airdate": "2004-02-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -129,23 +216,65 @@
             "playable": true,
             "sizeMB": 134
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E06 - Shelter Skelter (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E06 - Shelter Skelter (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E06%20-%20Shelter%20Skelter%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 7,
           "name": "All My Ex's Live in Toronto",
           "airdate": "2004-03-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "corner-gas-complete_202507",
+            "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+            "file": "Corner Gas Collection/Live Action/Corner Gas (2004) Season 1/Corner Gas - S01E07 - All My Ex's.mp4",
+            "name": "Corner Gas Collection/Live Action/Corner Gas (2004) Season 1/Corner Gas - S01E07 - All My Ex's",
+            "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FLive%20Action%2FCorner%20Gas%20(2004)%20Season%201%2FCorner%20Gas%20-%20S01E07%20-%20All%20My%20Ex's.mp4",
+            "seconds": 1332,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E07 - Scary Cat Graffiti (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E07 - Scary Cat Graffiti (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E07%20-%20Scary%20Cat%20Graffiti%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Cousin Carl",
           "airdate": "2004-03-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -157,15 +286,30 @@
             "playable": true,
             "sizeMB": 134
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E08 - Rum Punch (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E08 - Rum Punch (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E08%20-%20Rum%20Punch%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Cell Phone",
           "airdate": "2004-03-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -177,15 +321,30 @@
             "playable": true,
             "sizeMB": 134
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E09 - Spy Me to the Moon (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E09 - Spy Me to the Moon (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E09%20-%20Spy%20Me%20to%20the%20Moon%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 130
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Comedy Night",
           "airdate": "2004-03-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -197,15 +356,30 @@
             "playable": true,
             "sizeMB": 134
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E10 - Retro Grade (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E10 - Retro Grade (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E10%20-%20Retro%20Grade%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Hook, Line and Sinker",
           "airdate": "2004-03-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -217,15 +391,30 @@
             "playable": true,
             "sizeMB": 134
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E11 - Smoke-a-Cola (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E11 - Smoke-a-Cola (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E11%20-%20Smoke-a-Cola%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Face Off",
           "airdate": "2004-04-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -237,15 +426,30 @@
             "playable": true,
             "sizeMB": 133
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E12 - Sunny and Share (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E12 - Sunny and Share (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E12%20-%20Sunny%20and%20Share%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 13,
           "name": "I Love Lacey",
           "airdate": "2004-04-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -257,7 +461,22 @@
             "playable": true,
             "sizeMB": 134
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E13 - Zip-A-Dee-Broom-Bah (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 1 S01 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S01E13 - Zip-A-Dee-Broom-Bah (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S01E13%20-%20Zip-A-Dee-Broom-Bah%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1301,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         }
       ]
     },
@@ -282,7 +501,22 @@
             "playable": true,
             "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E01 - Dream Waiver (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E01 - Dream Waiver (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%202%20S02%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S02E01%20-%20Dream%20Waiver%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1303,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 2,
@@ -304,7 +538,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "corner-gas-complete_202507",
               "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -315,6 +549,20 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 130
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E02 - Drone and Dumber (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E02 - Drone and Dumber (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%202%20S02%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S02E02%20-%20Drone%20and%20Dumber%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1303,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
             }
           ]
         },
@@ -372,7 +620,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "corner-gas-complete_202507",
               "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -383,6 +631,20 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 125
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E04 - Hedge Your Debts (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E04 - Hedge Your Debts (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%202%20S02%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S02E04%20-%20Hedge%20Your%20Debts%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1303,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
             }
           ]
         },
@@ -417,6 +679,20 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 140
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E05 - Paper Sashay (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E05 - Paper Sashay (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%202%20S02%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S02E05%20-%20Paper%20Sashay%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1303,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
             }
           ]
         },
@@ -440,7 +716,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "corner-gas-complete_202507",
               "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -451,6 +727,20 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 126
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E06 - Oedipus Hex (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E06 - Oedipus Hex (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%202%20S02%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S02E06%20-%20Oedipus%20Hex%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1303,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
             }
           ]
         },
@@ -485,6 +775,20 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 140
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E07 - Pioneer and Deer (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E07 - Pioneer and Deer (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%202%20S02%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S02E07%20-%20Pioneer%20and%20Deer%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1303,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 129
             }
           ]
         },
@@ -519,6 +823,20 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 140
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E08 - Bush League (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E08 - Bush League (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%202%20S02%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S02E08%20-%20Bush%20League%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1303,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 130
             }
           ]
         },
@@ -553,6 +871,20 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 140
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E09 - Tag You're I.T. (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E09 - Tag You're I.T. (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%202%20S02%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S02E09%20-%20Tag%20You're%20I.T.%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1303,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
             }
           ]
         },
@@ -574,7 +906,22 @@
             "playable": true,
             "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E10 - Anger Games (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E10 - Anger Games (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%202%20S02%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S02E10%20-%20Anger%20Games%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1303,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 11,
@@ -607,6 +954,20 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 140
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E11 - Doctors Without Borders (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 2 S02 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S02E11 - Doctors Without Borders (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%202%20S02%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S02E11%20-%20Doctors%20Without%20Borders%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1303,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
             }
           ]
         },
@@ -724,7 +1085,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "corner-gas-complete_202507",
               "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -787,9 +1148,9 @@
           "number": 1,
           "name": "Dress for Success",
           "airdate": "2005-09-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -801,15 +1162,30 @@
             "playable": true,
             "sizeMB": 129
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E01 - Pink Flood (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E01 - Pink Flood (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%203%20S03%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S03E01%20-%20Pink%20Flood%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1307,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Key to the Future",
           "airdate": "2005-09-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -821,15 +1197,30 @@
             "playable": true,
             "sizeMB": 129
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E02 - Remembers Only (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E02 - Remembers Only (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%203%20S03%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S03E02%20-%20Remembers%20Only%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1306,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 130
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Dog River Vice",
           "airdate": "2005-10-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -841,15 +1232,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E03 - Pact Rat (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E03 - Pact Rat (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%203%20S03%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S03E03%20-%20Pact%20Rat%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1306,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Will and Brent",
           "airdate": "2005-10-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -861,15 +1267,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E04 - Sound and Fury (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E04 - Sound and Fury (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%203%20S03%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S03E04%20-%20Sound%20and%20Fury%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1306,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 5,
           "name": "The Littlest Yarbo",
           "airdate": "2005-10-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -881,15 +1302,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E05 - Float Your Vote (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E05 - Float Your Vote (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%203%20S03%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S03E05%20-%20Float%20Your%20Vote%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1307,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Mail Fraud",
           "airdate": "2005-10-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -901,15 +1337,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E06 - Lock 'n Loaf (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E06 - Lock 'n Loaf (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%203%20S03%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S03E06%20-%20Lock%20'n%20Loaf%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1306,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Fun Run",
           "airdate": "2005-10-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -921,15 +1372,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E07 - Give Pizza Chants (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E07 - Give Pizza Chants (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%203%20S03%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S03E07%20-%20Give%20Pizza%20Chants%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1306,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Trees a Crowd",
           "airdate": "2005-11-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -941,15 +1407,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E08 - Band Aid (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E08 - Band Aid (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%203%20S03%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S03E08%20-%20Band%20Aid%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1306,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Picture Perfect",
           "airdate": "2005-11-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -961,15 +1442,30 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E09 - Bliss and Make-Up (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E09 - Bliss and Make-Up (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%203%20S03%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S03E09%20-%20Bliss%20and%20Make-Up%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1306,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Safety First",
           "airdate": "2005-11-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -981,15 +1477,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E10 - The Fat and The Furious (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E10 - The Fat and The Furious (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%203%20S03%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S03E10%20-%20The%20Fat%20and%20The%20Furious%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1306,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Hairloss",
           "airdate": "2005-11-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1001,15 +1512,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E11 - Tinsel-itis (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 3 S03 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S03E11 - Tinsel-itis (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%203%20S03%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S03E11%20-%20Tinsel-itis%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1307,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Ruby Newsday",
           "airdate": "2005-12-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1027,9 +1553,9 @@
           "number": 13,
           "name": "Merry Gasmas",
           "airdate": "2005-12-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1047,9 +1573,9 @@
           "number": 14,
           "name": "Friend of a Friend",
           "airdate": "2006-01-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1067,9 +1593,9 @@
           "number": 15,
           "name": "Block Party",
           "airdate": "2006-02-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1087,9 +1613,9 @@
           "number": 16,
           "name": "Physical Credit",
           "airdate": "2006-02-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1107,9 +1633,9 @@
           "number": 17,
           "name": "Telescope Trouble",
           "airdate": "2006-03-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1127,9 +1653,9 @@
           "number": 18,
           "name": "Bean There",
           "airdate": "2006-03-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1147,9 +1673,9 @@
           "number": 19,
           "name": "Road Worthy",
           "airdate": "2006-03-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1172,9 +1698,9 @@
           "number": 1,
           "name": "Hair Comes the Judge",
           "airdate": "2006-09-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1186,15 +1712,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E01 - Parachute The Messenger (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E01 - Parachute The Messenger (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E01%20-%20Parachute%20The%20Messenger%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1304,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Dog River Dave",
           "airdate": "2006-09-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1206,23 +1747,51 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E02 - Mother Father Figure (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E02 - Mother Father Figure (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E02%20-%20Mother%20Father%20Figure%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1304,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Two Degrees of Separation",
           "airdate": "2006-10-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "corner-gas-complete_202507",
+            "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+            "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E03 - Snake and Eggs (1080p AMZN WEB-DL x265 t3nzin).mp4",
+            "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E03 - Snake and Eggs (1080p AMZN WEB-DL x265 t3nzin)",
+            "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E03%20-%20Snake%20and%20Eggs%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+            "seconds": 1304,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (EAC3)",
+            "sizeMB": 128
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Just Brent and His Shadow",
           "airdate": "2006-10-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1234,15 +1803,30 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E04 - Trust Find (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E04 - Trust Find (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E04%20-%20Trust%20Find%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1304,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Demolition",
           "airdate": "2006-10-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1254,15 +1838,30 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E05 - A Lot to Be Desired (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E05 - A Lot to Be Desired (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E05%20-%20A%20Lot%20to%20Be%20Desired%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1304,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Jail House",
           "airdate": "2006-10-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1274,15 +1873,30 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E06 - Law & Quarter (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E06 - Law & Quarter (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E06%20-%20Law%20%26%20Quarter%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1304,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 7,
           "name": "I, Witness",
           "airdate": "2006-10-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1294,15 +1908,30 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E07 - The Fresh Prints of Bell Heir (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E07 - The Fresh Prints of Bell Heir (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E07%20-%20The%20Fresh%20Prints%20of%20Bell%20Heir%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1304,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Blog River",
           "airdate": "2006-11-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1314,15 +1943,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E08 - Swing and a Mist (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E08 - Swing and a Mist (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E08%20-%20Swing%20and%20a%20Mist%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1304,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Outside Joke",
           "airdate": "2006-11-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1334,15 +1978,30 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E09 - A Maze-ing Taste (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E09 - A Maze-ing Taste (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E09%20-%20A%20Maze-ing%20Taste%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1304,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 10,
           "name": "One Piano, Four Hands",
           "airdate": "2006-11-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1354,15 +2013,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E10 - Putt Putt Go (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E10 - Putt Putt Go (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E10%20-%20Putt%20Putt%20Go%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1304,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Kids Stuff",
           "airdate": "2006-11-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1374,15 +2048,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E11 - Plots and Plans (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E11 - Plots and Plans (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E11%20-%20Plots%20and%20Plans%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1304,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Mother's Day",
           "airdate": "2007-01-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1394,15 +2083,30 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E12 - The Haunt for Dread October (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E12 - The Haunt for Dread October (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E12%20-%20The%20Haunt%20for%20Dread%20October%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1304,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Census Sensibility",
           "airdate": "2007-01-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1414,15 +2118,30 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "corner-gas-complete_202507",
+              "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
+              "file": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E13 - Ruby Re-Burn (1080p AMZN WEB-DL x265 t3nzin).mp4",
+              "name": "Corner Gas Collection/Animated/Corner Gas Animated (2018) Season 4 S04 (1080p AMZN WEB-DL x265 HEVC 10bit EAC3 5.1 t3nzin)/Corner Gas Animated (2018) - S04E13 - Ruby Re-Burn (1080p AMZN WEB-DL x265 t3nzin)",
+              "url": "https://archive.org/download/corner-gas-complete_202507/Corner%20Gas%20Collection%2FAnimated%2FCorner%20Gas%20Animated%20(2018)%20Season%204%20S04%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)%2FCorner%20Gas%20Animated%20(2018)%20-%20S04E13%20-%20Ruby%20Re-Burn%20(1080p%20AMZN%20WEB-DL%20x265%20t3nzin).mp4",
+              "seconds": 1304,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (EAC3)",
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 14,
           "name": "The Good Old Table Hockey Game",
           "airdate": "2007-02-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1440,9 +2159,9 @@
           "number": 15,
           "name": "Lacey Borrows",
           "airdate": "2007-02-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1460,9 +2179,9 @@
           "number": 16,
           "name": "Potato Bowl",
           "airdate": "2007-02-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1480,9 +2199,9 @@
           "number": 17,
           "name": "Seeing Things",
           "airdate": "2007-02-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1500,9 +2219,9 @@
           "number": 18,
           "name": "Happy Campers",
           "airdate": "2007-03-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1520,9 +2239,9 @@
           "number": 19,
           "name": "Gopher It",
           "airdate": "2007-03-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1545,9 +2264,9 @@
           "number": 1,
           "name": "Cable Excess",
           "airdate": "2007-09-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1565,9 +2284,9 @@
           "number": 2,
           "name": "Spin Cycle",
           "airdate": "2007-10-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1585,9 +2304,9 @@
           "number": 3,
           "name": "Whiner Takes All",
           "airdate": "2007-10-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1605,9 +2324,9 @@
           "number": 4,
           "name": "Dark Circles",
           "airdate": "2007-10-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1625,9 +2344,9 @@
           "number": 5,
           "name": "Wash Me",
           "airdate": "2007-10-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1645,9 +2364,9 @@
           "number": 6,
           "name": "The Eight Samurai",
           "airdate": "2007-11-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1665,9 +2384,9 @@
           "number": 7,
           "name": "Buzz Driver",
           "airdate": "2007-11-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1685,9 +2404,9 @@
           "number": 8,
           "name": "Classical Gas",
           "airdate": "2008-01-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1705,9 +2424,9 @@
           "number": 9,
           "name": "Game, Set and Mouse",
           "airdate": "2008-01-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1725,9 +2444,9 @@
           "number": 10,
           "name": "Knit Wit of the Month",
           "airdate": "2008-01-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1745,9 +2464,9 @@
           "number": 11,
           "name": "Top Gum",
           "airdate": "2008-02-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1765,9 +2484,9 @@
           "number": 12,
           "name": "The J-Word",
           "airdate": "2008-02-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1785,9 +2504,9 @@
           "number": 13,
           "name": "Outside the Box",
           "airdate": "2008-02-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1805,9 +2524,9 @@
           "number": 14,
           "name": "Contagious Fortune",
           "airdate": "2008-03-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1825,9 +2544,9 @@
           "number": 15,
           "name": "No Time Like the Presents",
           "airdate": "2008-03-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1845,9 +2564,9 @@
           "number": 16,
           "name": "Coming Distractions",
           "airdate": "2008-03-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1865,9 +2584,9 @@
           "number": 17,
           "name": "The Accidental Cleanist",
           "airdate": "2008-04-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1885,9 +2604,9 @@
           "number": 18,
           "name": "Bed and Brake Fast",
           "airdate": "2008-04-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1905,9 +2624,9 @@
           "number": 19,
           "name": "Final Countdown",
           "airdate": "2008-04-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1930,9 +2649,9 @@
           "number": 1,
           "name": "Full Load",
           "airdate": "2008-10-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1950,9 +2669,9 @@
           "number": 2,
           "name": "Bend It Like Brent",
           "airdate": "2008-10-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1970,9 +2689,9 @@
           "number": 3,
           "name": "Self-Serving",
           "airdate": "2008-10-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -1990,9 +2709,9 @@
           "number": 4,
           "name": "Meat Wave",
           "airdate": "2008-11-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2010,9 +2729,9 @@
           "number": 5,
           "name": "All That and a Bag of Chips",
           "airdate": "2008-11-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2030,9 +2749,9 @@
           "number": 6,
           "name": "Good Tubbin'",
           "airdate": "2008-11-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2050,9 +2769,9 @@
           "number": 7,
           "name": "American Resolution",
           "airdate": "2009-01-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2070,9 +2789,9 @@
           "number": 8,
           "name": "Reader Pride",
           "airdate": "2009-01-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2090,9 +2809,9 @@
           "number": 9,
           "name": "Rock Stars",
           "airdate": "2009-01-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2110,9 +2829,9 @@
           "number": 10,
           "name": "Shirt Disturber",
           "airdate": "2009-02-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2130,9 +2849,9 @@
           "number": 11,
           "name": "Cat River Daze",
           "airdate": "2009-02-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2150,9 +2869,9 @@
           "number": 12,
           "name": "Super Sensitive",
           "airdate": "2009-02-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2170,9 +2889,9 @@
           "number": 13,
           "name": "TV Free Dog River",
           "airdate": "2009-03-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2190,9 +2909,9 @@
           "number": 14,
           "name": "Queasy Rider",
           "airdate": "2009-03-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2210,9 +2929,9 @@
           "number": 15,
           "name": "R2 BEE Too",
           "airdate": "2009-03-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2230,9 +2949,9 @@
           "number": 16,
           "name": "Crab Apple Cooler",
           "airdate": "2009-03-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2250,9 +2969,9 @@
           "number": 17,
           "name": "Happy Career Day to You",
           "airdate": "2009-03-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2270,9 +2989,9 @@
           "number": 18,
           "name": "Get the F Off My Lawn",
           "airdate": "2009-04-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",
@@ -2290,9 +3009,9 @@
           "number": 19,
           "name": "You've Been Great, Good Night",
           "airdate": "2009-04-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "corner-gas-complete_202507",
             "itemTitle": "Corner Gas (COMPLETE COLLECTION) [Slight W.I.P]",

@@ -3,7 +3,7 @@
   "slug": "have-gun-will-travel",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:58:19.584Z",
+  "matchedAt": "2026-10-19T04:12:21.205Z",
   "addedAt": "2026-10-15T12:08:53.609Z",
   "tvmaze": {
     "id": 3360,
@@ -14,9 +14,9 @@
   },
   "coverage": {
     "total": 225,
-    "live": 147,
+    "live": 148,
     "review": 75,
-    "missing": 3,
+    "missing": 2,
     "pct": 99
   },
   "seasons": [
@@ -2566,8 +2566,20 @@
           "number": 8,
           "name": "The Shooting of Jesse May",
           "airdate": "1960-10-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "e-n-ll-l-s-01.-e-30-e-ht-s",
+            "itemTitle": "Have Gun Will Travel Complete (1957 Western",
+            "file": "Have Gun - Will Travel S04E08 Killing of Jessie May.mp4",
+            "name": "Have Gun - Will Travel S04E08 Killing of Jessie May",
+            "url": "https://archive.org/download/e-n-ll-l-s-01.-e-30-e-ht-s/Have%20Gun%20-%20Will%20Travel%20S04E08%20Killing%20of%20Jessie%20May.mp4",
+            "seconds": 1544,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 507
+          },
           "alternates": []
         },
         {

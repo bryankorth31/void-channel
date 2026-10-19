@@ -3,7 +3,7 @@
   "slug": "home-movies",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-16T07:56:38.421Z",
+  "matchedAt": "2026-10-19T04:10:44.543Z",
   "addedAt": "2026-10-15T15:05:52.234Z",
   "tvmaze": {
     "id": 7760,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 52,
-    "live": 51,
-    "review": 1,
+    "live": 52,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -31,17 +31,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home.-movies-s-01e-01.-get.-away.-from.-my.-mom-1",
-            "itemTitle": "Home. Movies: Get. Away. From. My. Mom",
-            "file": "Home.Movies-S01e01.Get.Away.From.My.Mom-1.mp4",
-            "name": "Home.Movies-S01e01.Get.Away.From.My.Mom-1",
-            "url": "https://archive.org/download/home.-movies-s-01e-01.-get.-away.-from.-my.-mom-1/Home.Movies-S01e01.Get.Away.From.My.Mom-1.mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e01.Get.Away.From.My.Mom-1.m4v",
+            "name": "Season 1/Home.Movies-S01e01.Get.Away.From.My.Mom-1",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e01.Get.Away.From.My.Mom-1.m4v",
             "seconds": 1337,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 133
+            "sizeMB": 233
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "home.-movies-s-01e-01.-get.-away.-from.-my.-mom-1",
+              "itemTitle": "Home. Movies: Get. Away. From. My. Mom",
+              "file": "Home.Movies-S01e01.Get.Away.From.My.Mom-1.mp4",
+              "name": "Home.Movies-S01e01.Get.Away.From.My.Mom-1",
+              "url": "https://archive.org/download/home.-movies-s-01e-01.-get.-away.-from.-my.-mom-1/Home.Movies-S01e01.Get.Away.From.My.Mom-1.mp4",
+              "seconds": 1337,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 133
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename + title match",
@@ -68,19 +81,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 73
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Get Away From My Mom\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 1-1 - Get Away From My Mom (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 1-1 - Get Away From My Mom (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%201-1%20-%20Get%20Away%20From%20My%20Mom%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1337,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 114
             }
           ]
         },
@@ -92,17 +92,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home-movies-s-01-480p-dvd-rip-x-264",
-            "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
-            "file": "Home Movies S01E02 - I Don't Do Well in Parent-Teacher Conferences (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S01E02 - I Don't Do Well in Parent-Teacher Conferences (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E02%20-%20I%20Don't%20Do%20Well%20in%20Parent-Teacher%20Conferences%20(480p%20DVD%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e02.I.Don't.Do.Well.In.Parent-Teacher.Conferences-2.m4v",
+            "name": "Season 1/Home.Movies-S01e02.I.Don't.Do.Well.In.Parent-Teacher.Conferences-2",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e02.I.Don't.Do.Well.In.Parent-Teacher.Conferences-2.m4v",
             "seconds": 1345,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 135
+            "sizeMB": 227
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "home-movies-s-01-480p-dvd-rip-x-264",
+              "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
+              "file": "Home Movies S01E02 - I Don't Do Well in Parent-Teacher Conferences (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S01E02 - I Don't Do Well in Parent-Teacher Conferences (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E02%20-%20I%20Don't%20Do%20Well%20in%20Parent-Teacher%20Conferences%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1345,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 135
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -128,19 +141,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 96
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 1/Home.Movies-S01e02.I.Don't.Do.Well.In.Parent-Teacher.Conferences-2.m4v",
-              "name": "Season 1/Home.Movies-S01e02.I.Don't.Do.Well.In.Parent-Teacher.Conferences-2",
-              "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e02.I.Don't.Do.Well.In.Parent-Teacher.Conferences-2.m4v",
-              "seconds": 1345,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 227
             }
           ]
         },
@@ -152,17 +152,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home.-movies-s-01e-03.-the.-art.-of.-the.-sucker.-punch-3",
-            "itemTitle": "Home. Movies: The. Art. Of. The. Sucker. Punch",
-            "file": "Home.Movies-S01e03.The.Art.Of.The.Sucker.Punch-3.mp4",
-            "name": "Home.Movies-S01e03.The.Art.Of.The.Sucker.Punch-3",
-            "url": "https://archive.org/download/home.-movies-s-01e-03.-the.-art.-of.-the.-sucker.-punch-3/Home.Movies-S01e03.The.Art.Of.The.Sucker.Punch-3.mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e03.The.Art.Of.The.Sucker.Punch-3.m4v",
+            "name": "Season 1/Home.Movies-S01e03.The.Art.Of.The.Sucker.Punch-3",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e03.The.Art.Of.The.Sucker.Punch-3.m4v",
             "seconds": 1351,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 135
+            "sizeMB": 221
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "home.-movies-s-01e-03.-the.-art.-of.-the.-sucker.-punch-3",
+              "itemTitle": "Home. Movies: The. Art. Of. The. Sucker. Punch",
+              "file": "Home.Movies-S01e03.The.Art.Of.The.Sucker.Punch-3.mp4",
+              "name": "Home.Movies-S01e03.The.Art.Of.The.Sucker.Punch-3",
+              "url": "https://archive.org/download/home.-movies-s-01e-03.-the.-art.-of.-the.-sucker.-punch-3/Home.Movies-S01e03.The.Art.Of.The.Sucker.Punch-3.mp4",
+              "seconds": 1351,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename + title match",
@@ -189,19 +202,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 75
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Art of the Sucker Punch\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 1-3 - The Art of the Sucker Punch (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 1-3 - The Art of the Sucker Punch (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%201-3%20-%20The%20Art%20of%20the%20Sucker%20Punch%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1351,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 88
             }
           ]
         },
@@ -211,20 +211,33 @@
           "airdate": "1999-05-17",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home-movies-s-01-480p-dvd-rip-x-264",
-            "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
-            "file": "Home Movies S01E04 - Brendon Gets Rabies (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S01E04 - Brendon Gets Rabies (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E04%20-%20Brendon%20Gets%20Rabies%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e04.Brendon.Gets.Rabies-4.m4v",
+            "name": "Season 1/Home.Movies-S01e04.Brendon.Gets.Rabies-4",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e04.Brendon.Gets.Rabies-4.m4v",
             "seconds": 1332,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 135
+            "sizeMB": 223
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "home-movies-s-01-480p-dvd-rip-x-264",
+              "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
+              "file": "Home Movies S01E04 - Brendon Gets Rabies (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S01E04 - Brendon Gets Rabies (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E04%20-%20Brendon%20Gets%20Rabies%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1332,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 135
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -250,19 +263,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 93
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 1/Home.Movies-S01e04.Brendon.Gets.Rabies-4.m4v",
-              "name": "Season 1/Home.Movies-S01e04.Brendon.Gets.Rabies-4",
-              "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e04.Brendon.Gets.Rabies-4.m4v",
-              "seconds": 1332,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 223
             }
           ]
         },
@@ -272,20 +272,33 @@
           "airdate": "1999-05-24",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home-movies-s-01-480p-dvd-rip-x-264",
-            "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
-            "file": "Home Movies S01E05 - Yoko (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S01E05 - Yoko (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E05%20-%20Yoko%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e05.Yoko-5.m4v",
+            "name": "Season 1/Home.Movies-S01e05.Yoko-5",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e05.Yoko-5.m4v",
             "seconds": 1307,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 132
+            "sizeMB": 193
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "home-movies-s-01-480p-dvd-rip-x-264",
+              "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
+              "file": "Home Movies S01E05 - Yoko (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S01E05 - Yoko (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E05%20-%20Yoko%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1307,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 132
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -300,30 +313,18 @@
               "sizeMB": 85
             },
             {
-              "conf": 0.8,
-              "why": "title ~ \"Yoko\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 1-5 - Yoko (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 1-5 - Yoko (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%201-5%20-%20Yoko%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1307,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 74
-            },
-            {
-              "conf": 0.6,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 1/Home.Movies-S01e05.Yoko-5.m4v",
-              "name": "Season 1/Home.Movies-S01e05.Yoko-5",
-              "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e05.Yoko-5.m4v",
-              "seconds": 1307,
+              "item": "home-movies-CASTELLANO-VHSRIP",
+              "itemTitle": "Home Movies [Castellano Europeo]",
+              "file": "Home Movies - 01x05 - Yoko [Castellano europeo] [VHSRip].mp4",
+              "name": "Home Movies - 01x05 - Yoko [Castellano europeo] [VHSRip]",
+              "url": "https://archive.org/download/home-movies-CASTELLANO-VHSRIP/Home%20Movies%20-%2001x05%20-%20Yoko%20%5BCastellano%20europeo%5D%20%5BVHSRip%5D.mp4",
+              "seconds": 1288,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 193
+              "langRisk": true,
+              "sizeMB": 47
             }
           ]
         },
@@ -333,20 +334,33 @@
           "airdate": "2001-09-02",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home-movies-s-01-480p-dvd-rip-x-264",
-            "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
-            "file": "Home Movies S01E06 - Director's Cut (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S01E06 - Director's Cut (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E06%20-%20Director's%20Cut%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e06.Director's.Cut-6.m4v",
+            "name": "Season 1/Home.Movies-S01e06.Director's.Cut-6",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e06.Director's.Cut-6.m4v",
             "seconds": 1340,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 130
+            "sizeMB": 248
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "home-movies-s-01-480p-dvd-rip-x-264",
+              "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
+              "file": "Home Movies S01E06 - Director's Cut (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S01E06 - Director's Cut (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E06%20-%20Director's%20Cut%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1340,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 130
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -361,30 +375,18 @@
               "sizeMB": 77
             },
             {
-              "conf": 0.8,
-              "why": "title ~ \"Director's Cut\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 1-6 - Director's Cut (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 1-6 - Director's Cut (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%201-6%20-%20Director's%20Cut%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1340,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 113
-            },
-            {
-              "conf": 0.6,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 1/Home.Movies-S01e06.Director's.Cut-6.m4v",
-              "name": "Season 1/Home.Movies-S01e06.Director's.Cut-6",
-              "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e06.Director's.Cut-6.m4v",
-              "seconds": 1340,
+              "item": "home-movies-CASTELLANO-VHSRIP",
+              "itemTitle": "Home Movies [Castellano Europeo]",
+              "file": "Home Movies - 01x06 - El Montaje del Director (Director's Cut) [Castellano europeo] [VHSRip].mp4",
+              "name": "Home Movies - 01x06 - El Montaje del Director (Director's Cut) [Castellano europeo] [VHSRip]",
+              "url": "https://archive.org/download/home-movies-CASTELLANO-VHSRIP/Home%20Movies%20-%2001x06%20-%20El%20Montaje%20del%20Director%20(Director's%20Cut)%20%5BCastellano%20europeo%5D%20%5BVHSRip%5D.mp4",
+              "seconds": 1295,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 248
+              "langRisk": true,
+              "sizeMB": 66
             }
           ]
         },
@@ -394,20 +396,33 @@
           "airdate": "2001-09-09",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home-movies-s-01-480p-dvd-rip-x-264",
-            "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
-            "file": "Home Movies S01E07 - It Was Supposed to Be Funny (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S01E07 - It Was Supposed to Be Funny (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E07%20-%20It%20Was%20Supposed%20to%20Be%20Funny%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e07.It.Was.Supposed.To.Be.Funny-7.m4v",
+            "name": "Season 1/Home.Movies-S01e07.It.Was.Supposed.To.Be.Funny-7",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e07.It.Was.Supposed.To.Be.Funny-7.m4v",
             "seconds": 1351,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 137
+            "sizeMB": 262
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "home-movies-s-01-480p-dvd-rip-x-264",
+              "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
+              "file": "Home Movies S01E07 - It Was Supposed to Be Funny (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S01E07 - It Was Supposed to Be Funny (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E07%20-%20It%20Was%20Supposed%20to%20Be%20Funny%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1351,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 137
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -433,19 +448,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 121
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 1/Home.Movies-S01e07.It.Was.Supposed.To.Be.Funny-7.m4v",
-              "name": "Season 1/Home.Movies-S01e07.It.Was.Supposed.To.Be.Funny-7",
-              "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e07.It.Was.Supposed.To.Be.Funny-7.m4v",
-              "seconds": 1351,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 262
             }
           ]
         },
@@ -457,17 +459,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home-movies-s-01-480p-dvd-rip-x-264",
-            "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
-            "file": "Home Movies S01E08 - Method of Acting (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S01E08 - Method of Acting (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E08%20-%20Method%20of%20Acting%20(480p%20DVD%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e08.Method.Of.Acting-8.m4v",
+            "name": "Season 1/Home.Movies-S01e08.Method.Of.Acting-8",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e08.Method.Of.Acting-8.m4v",
             "seconds": 1261,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 127
+            "sizeMB": 230
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "home-movies-s-01-480p-dvd-rip-x-264",
+              "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
+              "file": "Home Movies S01E08 - Method of Acting (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S01E08 - Method of Acting (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E08%20-%20Method%20of%20Acting%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1261,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 127
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Method of Acting\" (0.95)",
@@ -482,30 +497,17 @@
               "sizeMB": 99
             },
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 1/Home.Movies-S01e08.Method.Of.Acting-8.m4v",
-              "name": "Season 1/Home.Movies-S01e08.Method.Of.Acting-8",
-              "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e08.Method.Of.Acting-8.m4v",
-              "seconds": 1261,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 230
-            },
-            {
               "conf": 0.55,
-              "why": "sequence guess: file 8 of 18 in \"Home Movies: The Complete Series [DVDISO\"",
-              "item": "home-movies-dvdiso",
-              "itemTitle": "Home Movies: The Complete Series [DVDISO]",
+              "why": "sequence guess: file 8 of 17 in \"Home Movies Season 1 DVDs\"",
+              "item": "home-movies-season-1-DVDs",
+              "itemTitle": "Home Movies Season 1 DVDs",
               "file": "HOMEMOVIES_DISC22.mp4",
               "name": "HOMEMOVIES_DISC22",
-              "url": "https://archive.org/download/home-movies-dvdiso/HOMEMOVIES_DISC22.mp4",
-              "seconds": 1382,
+              "url": "https://archive.org/download/home-movies-season-1-DVDs/HOMEMOVIES_DISC22.mp4",
+              "seconds": 1351,
               "format": "h.264",
               "playable": true,
-              "sizeMB": 139
+              "sizeMB": 140
             }
           ]
         },
@@ -517,17 +519,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home-movies-s-01-480p-dvd-rip-x-264",
-            "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
-            "file": "Home Movies S01E09 - Life Through a Fisheye Lens (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S01E09 - Life Through a Fisheye Lens (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E09%20-%20Life%20Through%20a%20Fisheye%20Lens%20(480p%20DVD%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e09.Life.Through.A.Fisheye.Lens-9.m4v",
+            "name": "Season 1/Home.Movies-S01e09.Life.Through.A.Fisheye.Lens-9",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e09.Life.Through.A.Fisheye.Lens-9.m4v",
             "seconds": 1260,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 124
+            "sizeMB": 264
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "home-movies-s-01-480p-dvd-rip-x-264",
+              "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
+              "file": "Home Movies S01E09 - Life Through a Fisheye Lens (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S01E09 - Life Through a Fisheye Lens (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E09%20-%20Life%20Through%20a%20Fisheye%20Lens%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1260,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 124
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -553,19 +568,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 125
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 1/Home.Movies-S01e09.Life.Through.A.Fisheye.Lens-9.m4v",
-              "name": "Season 1/Home.Movies-S01e09.Life.Through.A.Fisheye.Lens-9",
-              "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e09.Life.Through.A.Fisheye.Lens-9.m4v",
-              "seconds": 1260,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 264
             }
           ]
         },
@@ -575,20 +577,33 @@
           "airdate": "2001-09-30",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home-movies-s-01-480p-dvd-rip-x-264",
-            "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
-            "file": "Home Movies S01E10 - School Nurse (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S01E10 - School Nurse (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E10%20-%20School%20Nurse%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e10.School.Nurse-10.m4v",
+            "name": "Season 1/Home.Movies-S01e10.School.Nurse-10",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e10.School.Nurse-10.m4v",
             "seconds": 1355,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 136
+            "sizeMB": 305
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "home-movies-s-01-480p-dvd-rip-x-264",
+              "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
+              "file": "Home Movies S01E10 - School Nurse (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S01E10 - School Nurse (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E10%20-%20School%20Nurse%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1355,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 136
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -614,19 +629,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 132
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 1/Home.Movies-S01e10.School.Nurse-10.m4v",
-              "name": "Season 1/Home.Movies-S01e10.School.Nurse-10",
-              "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e10.School.Nurse-10.m4v",
-              "seconds": 1355,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 305
             }
           ]
         },
@@ -636,20 +638,33 @@
           "airdate": "2001-09-30",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home-movies-s-01-480p-dvd-rip-x-264",
-            "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
-            "file": "Home Movies S01E11 - Mortgages and Marbles (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S01E11 - Mortgages and Marbles (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E11%20-%20Mortgages%20and%20Marbles%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e11.Mortgages.And.Marbles-11.m4v",
+            "name": "Season 1/Home.Movies-S01e11.Mortgages.And.Marbles-11",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e11.Mortgages.And.Marbles-11.m4v",
             "seconds": 1330,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 132
+            "sizeMB": 286
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "home-movies-s-01-480p-dvd-rip-x-264",
+              "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
+              "file": "Home Movies S01E11 - Mortgages and Marbles (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S01E11 - Mortgages and Marbles (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E11%20-%20Mortgages%20and%20Marbles%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1330,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 132
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -675,19 +690,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 138
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 1/Home.Movies-S01e11.Mortgages.And.Marbles-11.m4v",
-              "name": "Season 1/Home.Movies-S01e11.Mortgages.And.Marbles-11",
-              "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e11.Mortgages.And.Marbles-11.m4v",
-              "seconds": 1330,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 286
             }
           ]
         },
@@ -699,17 +701,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home-movies-s-01-480p-dvd-rip-x-264",
-            "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
-            "file": "Home Movies S01E12 - Law and Boarder (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S01E12 - Law and Boarder (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E12%20-%20Law%20and%20Boarder%20(480p%20DVD%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e12.Law.And.Boarder-12.m4v",
+            "name": "Season 1/Home.Movies-S01e12.Law.And.Boarder-12",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e12.Law.And.Boarder-12.m4v",
             "seconds": 1355,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 136
+            "sizeMB": 275
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "home-movies-s-01-480p-dvd-rip-x-264",
+              "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
+              "file": "Home Movies S01E12 - Law and Boarder (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S01E12 - Law and Boarder (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E12%20-%20Law%20and%20Boarder%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1355,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -735,19 +750,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 135
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 1/Home.Movies-S01e12.Law.And.Boarder-12.m4v",
-              "name": "Season 1/Home.Movies-S01e12.Law.And.Boarder-12",
-              "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e12.Law.And.Boarder-12.m4v",
-              "seconds": 1355,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 275
             }
           ]
         },
@@ -757,20 +759,33 @@
           "airdate": "2001-10-07",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home-movies-s-01-480p-dvd-rip-x-264",
-            "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
-            "file": "Home Movies S01E13 - Brendon's Choice (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S01E13 - Brendon's Choice (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E13%20-%20Brendon's%20Choice%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 1/Home.Movies-S01e13.Brendon's.Choice-13.m4v",
+            "name": "Season 1/Home.Movies-S01e13.Brendon's.Choice-13",
+            "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e13.Brendon's.Choice-13.m4v",
             "seconds": 1319,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 132
+            "sizeMB": 326
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "home-movies-s-01-480p-dvd-rip-x-264",
+              "itemTitle": "Home Movies (1999) - Season One (DVD Rips w Subs/Commentaries)",
+              "file": "Home Movies S01E13 - Brendon's Choice (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S01E13 - Brendon's Choice (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/home-movies-s-01-480p-dvd-rip-x-264/Home%20Movies%20S01E13%20-%20Brendon's%20Choice%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1319,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 132
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -796,19 +811,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 145
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 1/Home.Movies-S01e13.Brendon's.Choice-13.m4v",
-              "name": "Season 1/Home.Movies-S01e13.Brendon's.Choice-13",
-              "url": "https://archive.org/download/home-movies/Season%201%2FHome.Movies-S01e13.Brendon's.Choice-13.m4v",
-              "seconds": 1319,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 326
             }
           ]
         }
@@ -823,19 +825,32 @@
           "airdate": "2002-01-06",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "HomeMoviesS2Complete",
-            "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S02E01 - Dad (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S02E01 - Dad (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E01%20-%20Dad%20(480p%20DVD%20x264%20AAC2.0).mp4",
-            "seconds": 1305,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 2/Home.Movies-S02e01.Politics-1.m4v",
+            "name": "Season 2/Home.Movies-S02e01.Politics-1",
+            "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e01.Politics-1.m4v",
+            "seconds": 1344,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 124
+            "sizeMB": 168
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "HomeMoviesS2Complete",
+              "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S02E01 - Dad (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S02E01 - Dad (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E01%20-%20Dad%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1305,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 124
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -861,19 +876,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 129
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Politics\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 2-1 - Politics (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 2-1 - Politics (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%202-1%20-%20Politics%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1344,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 82
             }
           ]
         },
@@ -883,19 +885,32 @@
           "airdate": "2002-01-13",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "HomeMoviesS2Complete",
-            "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S02E02 - Politics (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S02E02 - Politics (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E02%20-%20Politics%20(480p%20DVD%20x264%20AAC2.0).mp4",
-            "seconds": 1344,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 2/Home.Movies-S02e02.Identifying.A.Body-2.m4v",
+            "name": "Season 2/Home.Movies-S02e02.Identifying.A.Body-2",
+            "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e02.Identifying.A.Body-2.m4v",
+            "seconds": 1328,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 129
+            "sizeMB": 160
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "HomeMoviesS2Complete",
+              "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S02E02 - Politics (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S02E02 - Politics (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E02%20-%20Politics%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1344,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 129
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -921,19 +936,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 81
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 2/Home.Movies-S02e02.Identifying.A.Body-2.m4v",
-              "name": "Season 2/Home.Movies-S02e02.Identifying.A.Body-2",
-              "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e02.Identifying.A.Body-2.m4v",
-              "seconds": 1328,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 160
             }
           ]
         },
@@ -943,19 +945,32 @@
           "airdate": "2002-01-20",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "HomeMoviesJapaneseDub",
-            "itemTitle": "ホームムービーズ Home Movies (Japanese Dub) Complete",
-            "file": "【日本語版】ホームムービーズS2E03「踊る大墨西哥（メキシコ)」.mp4",
-            "name": "【日本語版】ホームムービーズS2E03「踊る大墨西哥（メキシコ)」",
-            "url": "https://archive.org/download/HomeMoviesJapaneseDub/%E3%80%90%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%E3%82%BAS2E03%E3%80%8C%E8%B8%8A%E3%82%8B%E5%A4%A7%E5%A2%A8%E8%A5%BF%E5%93%A5%EF%BC%88%E3%83%A1%E3%82%AD%E3%82%B7%E3%82%B3)%E3%80%8D.mp4",
-            "seconds": 1367,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 2/Home.Movies-S02e03.Hiatus-3.m4v",
+            "name": "Season 2/Home.Movies-S02e03.Hiatus-3",
+            "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e03.Hiatus-3.m4v",
+            "seconds": 1359,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 69
+            "sizeMB": 167
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "HomeMoviesJapaneseDub",
+              "itemTitle": "ホームムービーズ Home Movies (Japanese Dub) Complete",
+              "file": "【日本語版】ホームムービーズS2E03「踊る大墨西哥（メキシコ)」.mp4",
+              "name": "【日本語版】ホームムービーズS2E03「踊る大墨西哥（メキシコ)」",
+              "url": "https://archive.org/download/HomeMoviesJapaneseDub/%E3%80%90%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%E3%82%BAS2E03%E3%80%8C%E8%B8%8A%E3%82%8B%E5%A4%A7%E5%A2%A8%E8%A5%BF%E5%93%A5%EF%BC%88%E3%83%A1%E3%82%AD%E3%82%B7%E3%82%B3)%E3%80%8D.mp4",
+              "seconds": 1367,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 69
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Hiatus\" (0.95)",
@@ -968,19 +983,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 83
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 2/Home.Movies-S02e03.Hiatus-3.m4v",
-              "name": "Season 2/Home.Movies-S02e03.Hiatus-3",
-              "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e03.Hiatus-3.m4v",
-              "seconds": 1359,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 167
             },
             {
               "conf": 0.55,
@@ -1004,19 +1006,46 @@
           "airdate": "2002-01-27",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "HomeMoviesJapaneseDub",
-            "itemTitle": "ホームムービーズ Home Movies (Japanese Dub) Complete",
-            "file": "【日本語版】ホームムービーズS2E04「クッキーと積み木とビデオテープ」.mp4",
-            "name": "【日本語版】ホームムービーズS2E04「クッキーと積み木とビデオテープ」",
-            "url": "https://archive.org/download/HomeMoviesJapaneseDub/%E3%80%90%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%E3%82%BAS2E04%E3%80%8C%E3%82%AF%E3%83%83%E3%82%AD%E3%83%BC%E3%81%A8%E7%A9%8D%E3%81%BF%E6%9C%A8%E3%81%A8%E3%83%93%E3%83%87%E3%82%AA%E3%83%86%E3%83%BC%E3%83%97%E3%80%8D.mp4",
-            "seconds": 1349,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 2/Home.Movies-S02e04.Business.And.Pleasure-4.m4v",
+            "name": "Season 2/Home.Movies-S02e04.Business.And.Pleasure-4",
+            "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e04.Business.And.Pleasure-4.m4v",
+            "seconds": 1338,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 68
+            "sizeMB": 161
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "HomeMoviesJapaneseDub",
+              "itemTitle": "ホームムービーズ Home Movies (Japanese Dub) Complete",
+              "file": "【日本語版】ホームムービーズS2E04「クッキーと積み木とビデオテープ」.mp4",
+              "name": "【日本語版】ホームムービーズS2E04「クッキーと積み木とビデオテープ」",
+              "url": "https://archive.org/download/HomeMoviesJapaneseDub/%E3%80%90%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%E3%82%BAS2E04%E3%80%8C%E3%82%AF%E3%83%83%E3%82%AD%E3%83%BC%E3%81%A8%E7%A9%8D%E3%81%BF%E6%9C%A8%E3%81%A8%E3%83%93%E3%83%87%E3%82%AA%E3%83%86%E3%83%BC%E3%83%97%E3%80%8D.mp4",
+              "seconds": 1349,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 68
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "home-movies-CASTELLANO-VHSRIP",
+              "itemTitle": "Home Movies [Castellano Europeo]",
+              "file": "Home Movies - 02x04 - Negocios y Placer (Business & Pleasure) [Castellano europeo] [VHSRip].mp4",
+              "name": "Home Movies - 02x04 - Negocios y Placer (Business & Pleasure) [Castellano europeo] [VHSRip]",
+              "url": "https://archive.org/download/home-movies-CASTELLANO-VHSRIP/Home%20Movies%20-%2002x04%20-%20Negocios%20y%20Placer%20(Business%20%26%20Pleasure)%20%5BCastellano%20europeo%5D%20%5BVHSRip%5D.mp4",
+              "seconds": 1330,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 51
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Business & Pleasure\" (0.95)",
@@ -1029,32 +1058,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 133
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Business & Pleasure\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 2-4 - Business and Pleasure (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 2-4 - Business and Pleasure (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%202-4%20-%20Business%20and%20Pleasure%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1338,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 76
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 2/Home.Movies-S02e04.Business.And.Pleasure-4.m4v",
-              "name": "Season 2/Home.Movies-S02e04.Business.And.Pleasure-4",
-              "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e04.Business.And.Pleasure-4.m4v",
-              "seconds": 1338,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 161
             }
           ]
         },
@@ -1064,19 +1067,45 @@
           "airdate": "2002-02-03",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "HomeMoviesJapaneseDub",
-            "itemTitle": "ホームムービーズ Home Movies (Japanese Dub) Complete",
-            "file": "【日本語版】ホームムービーズS2E05「フェントンについて私が知っている二、三の事柄」.mp4",
-            "name": "【日本語版】ホームムービーズS2E05「フェントンについて私が知っている二、三の事柄」",
-            "url": "https://archive.org/download/HomeMoviesJapaneseDub/%E3%80%90%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%E3%82%BAS2E05%E3%80%8C%E3%83%95%E3%82%A7%E3%83%B3%E3%83%88%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E7%A7%81%E3%81%8C%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E4%BA%8C%E3%80%81%E4%B8%89%E3%81%AE%E4%BA%8B%E6%9F%84%E3%80%8D.mp4",
-            "seconds": 1347,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 2/Home.Movies-S02e05.The.Party-5.m4v",
+            "name": "Season 2/Home.Movies-S02e05.The.Party-5",
+            "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e05.The.Party-5.m4v",
+            "seconds": 1340,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 63
+            "sizeMB": 158
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "HomeMoviesS2Complete",
+              "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S02E05 - Business and Pleasure (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S02E05 - Business and Pleasure (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E05%20-%20Business%20and%20Pleasure%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1338,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "HomeMoviesJapaneseDub",
+              "itemTitle": "ホームムービーズ Home Movies (Japanese Dub) Complete",
+              "file": "【日本語版】ホームムービーズS2E05「フェントンについて私が知っている二、三の事柄」.mp4",
+              "name": "【日本語版】ホームムービーズS2E05「フェントンについて私が知っている二、三の事柄」",
+              "url": "https://archive.org/download/HomeMoviesJapaneseDub/%E3%80%90%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%E3%82%BAS2E05%E3%80%8C%E3%83%95%E3%82%A7%E3%83%B3%E3%83%88%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E7%A7%81%E3%81%8C%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E4%BA%8C%E3%80%81%E4%B8%89%E3%81%AE%E4%BA%8B%E6%9F%84%E3%80%8D.mp4",
+              "seconds": 1347,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 63
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"The Party\" (0.95)",
@@ -1089,19 +1118,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 82
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 2/Home.Movies-S02e05.The.Party-5.m4v",
-              "name": "Season 2/Home.Movies-S02e05.The.Party-5",
-              "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e05.The.Party-5.m4v",
-              "seconds": 1340,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 158
             }
           ]
         },
@@ -1111,19 +1127,32 @@
           "airdate": "2002-02-10",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "HomeMoviesJapaneseDub",
-            "itemTitle": "ホームムービーズ Home Movies (Japanese Dub) Complete",
-            "file": "【日本語版】ホームムービーズS2E06「スターボーイ」.mp4",
-            "name": "【日本語版】ホームムービーズS2E06「スターボーイ」",
-            "url": "https://archive.org/download/HomeMoviesJapaneseDub/%E3%80%90%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%E3%82%BAS2E06%E3%80%8C%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9C%E3%83%BC%E3%82%A4%E3%80%8D.mp4",
-            "seconds": 1377,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 2/Home.Movies-S02e06.Impressions-6.m4v",
+            "name": "Season 2/Home.Movies-S02e06.Impressions-6",
+            "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e06.Impressions-6.m4v",
+            "seconds": 1371,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 71
+            "sizeMB": 169
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "HomeMoviesJapaneseDub",
+              "itemTitle": "ホームムービーズ Home Movies (Japanese Dub) Complete",
+              "file": "【日本語版】ホームムービーズS2E06「スターボーイ」.mp4",
+              "name": "【日本語版】ホームムービーズS2E06「スターボーイ」",
+              "url": "https://archive.org/download/HomeMoviesJapaneseDub/%E3%80%90%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%E3%82%BAS2E06%E3%80%8C%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9C%E3%83%BC%E3%82%A4%E3%80%8D.mp4",
+              "seconds": 1377,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 71
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Impressions\" (0.95)",
@@ -1149,19 +1178,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 85
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 2/Home.Movies-S02e06.Impressions-6.m4v",
-              "name": "Season 2/Home.Movies-S02e06.Impressions-6",
-              "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e06.Impressions-6.m4v",
-              "seconds": 1371,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 169
             }
           ]
         },
@@ -1171,19 +1187,32 @@
           "airdate": "2002-02-17",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "HomeMoviesS2Complete",
-            "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S02E07 - Impressions (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S02E07 - Impressions (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E07%20-%20Impressions%20(480p%20DVD%20x264%20AAC2.0).mp4",
-            "seconds": 1371,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 2/Home.Movies-S02e07.Dad-7.m4v",
+            "name": "Season 2/Home.Movies-S02e07.Dad-7",
+            "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e07.Dad-7.m4v",
+            "seconds": 1305,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 131
+            "sizeMB": 130
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "HomeMoviesS2Complete",
+              "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S02E07 - Impressions (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S02E07 - Impressions (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E07%20-%20Impressions%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1371,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 131
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -1209,19 +1238,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 124
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Dad\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 2-7 - Dad (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 2-7 - Dad (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%202-7%20-%20Dad%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1305,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 45
             }
           ]
         },
@@ -1231,20 +1247,33 @@
           "airdate": "2002-02-24",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS2Complete",
-            "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S02E08 - Therapy (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S02E08 - Therapy (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E08%20-%20Therapy%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
-            "seconds": 1341,
-            "format": "h.264",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 2/Home.Movies-S02e08.Therapy-8.m4v",
+            "name": "Season 2/Home.Movies-S02e08.Therapy-8",
+            "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e08.Therapy-8.m4v",
+            "seconds": 1340,
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 127
+            "sizeMB": 120
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS2Complete",
+              "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S02E08 - Therapy (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S02E08 - Therapy (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E08%20-%20Therapy%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1341,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 127
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -1270,19 +1299,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 51
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 2/Home.Movies-S02e08.Therapy-8.m4v",
-              "name": "Season 2/Home.Movies-S02e08.Therapy-8",
-              "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e08.Therapy-8.m4v",
-              "seconds": 1340,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 120
             }
           ]
         },
@@ -1294,17 +1310,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS2Complete",
-            "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S02E09 - Class Trip (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S02E09 - Class Trip (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E09%20-%20Class%20Trip%20(480p%20DVD%20x264%20AAC2.0).mp4",
-            "seconds": 1285,
-            "format": "h.264",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 2/Home.Movies-S02e09.Class.Trip-9.m4v",
+            "name": "Season 2/Home.Movies-S02e09.Class.Trip-9",
+            "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e09.Class.Trip-9.m4v",
+            "seconds": 1284,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 121
+            "sizeMB": 133
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS2Complete",
+              "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S02E09 - Class Trip (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S02E09 - Class Trip (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E09%20-%20Class%20Trip%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1285,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 121
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -1330,19 +1359,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 61
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 2/Home.Movies-S02e09.Class.Trip-9.m4v",
-              "name": "Season 2/Home.Movies-S02e09.Class.Trip-9",
-              "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e09.Class.Trip-9.m4v",
-              "seconds": 1284,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 133
             }
           ]
         },
@@ -1352,20 +1368,33 @@
           "airdate": "2002-03-10",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS2Complete",
-            "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S02E10 - History (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S02E10 - History (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E10%20-%20History%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 2/Home.Movies-S02e10.History-10.m4v",
+            "name": "Season 2/Home.Movies-S02e10.History-10",
+            "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e10.History-10.m4v",
             "seconds": 1353,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 134
+            "sizeMB": 161
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS2Complete",
+              "itemTitle": "Home Movies (1999) - Season Two (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S02E10 - History (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S02E10 - History (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS2Complete/Home%20Movies%20S02E10%20-%20History%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1353,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 134
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -1380,30 +1409,18 @@
               "sizeMB": 73
             },
             {
-              "conf": 0.8,
-              "why": "title ~ \"History\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 2-10 - History (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 2-10 - History (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%202-10%20-%20History%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1353,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 74
-            },
-            {
-              "conf": 0.6,
+              "conf": 0.85,
               "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 2/Home.Movies-S02e10.History-10.m4v",
-              "name": "Season 2/Home.Movies-S02e10.History-10",
-              "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e10.History-10.m4v",
-              "seconds": 1353,
+              "item": "home-movies-CASTELLANO-VHSRIP",
+              "itemTitle": "Home Movies [Castellano Europeo]",
+              "file": "Home Movies - 02x10 - Historia (History) [Castellano europeo] [VHSRip].mp4",
+              "name": "Home Movies - 02x10 - Historia (History) [Castellano europeo] [VHSRip]",
+              "url": "https://archive.org/download/home-movies-CASTELLANO-VHSRIP/Home%20Movies%20-%2002x10%20-%20Historia%20(History)%20%5BCastellano%20europeo%5D%20%5BVHSRip%5D.mp4",
+              "seconds": 1342,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 161
+              "langRisk": true,
+              "sizeMB": 60
             }
           ]
         },
@@ -1426,6 +1443,19 @@
             "sizeMB": 127
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "home-movies",
+              "itemTitle": "Home Movies Complete Season 1-4",
+              "file": "Season 2/Home.Movies-S02e11.Writers.Block-11.m4v",
+              "name": "Season 2/Home.Movies-S02e11.Writers.Block-11",
+              "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e11.Writers.Block-11.m4v",
+              "seconds": 1348,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 118
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -1451,19 +1481,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 50
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 2/Home.Movies-S02e11.Writers.Block-11.m4v",
-              "name": "Season 2/Home.Movies-S02e11.Writers.Block-11",
-              "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e11.Writers.Block-11.m4v",
-              "seconds": 1348,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 118
             }
           ]
         },
@@ -1475,17 +1492,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home.-movies-s-02e-12.-pizza.-club-12",
-            "itemTitle": "Home. Movies: Pizza. Club",
-            "file": "Home.Movies-S02e12.Pizza.Club-12.mp4",
-            "name": "Home.Movies-S02e12.Pizza.Club-12",
-            "url": "https://archive.org/download/home.-movies-s-02e-12.-pizza.-club-12/Home.Movies-S02e12.Pizza.Club-12.mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 2/Home.Movies-S02e12.Pizza.Club-12.m4v",
+            "name": "Season 2/Home.Movies-S02e12.Pizza.Club-12",
+            "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e12.Pizza.Club-12.m4v",
             "seconds": 1348,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 132
+            "sizeMB": 148
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "home.-movies-s-02e-12.-pizza.-club-12",
+              "itemTitle": "Home. Movies: Pizza. Club",
+              "file": "Home.Movies-S02e12.Pizza.Club-12.mp4",
+              "name": "Home.Movies-S02e12.Pizza.Club-12",
+              "url": "https://archive.org/download/home.-movies-s-02e-12.-pizza.-club-12/Home.Movies-S02e12.Pizza.Club-12.mp4",
+              "seconds": 1348,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 132
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename + title match",
@@ -1512,19 +1542,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 66
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Pizza Club\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 2-12 - Pizza Club (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 2-12 - Pizza Club (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%202-12%20-%20Pizza%20Club%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1348,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 66
             }
           ]
         },
@@ -1536,17 +1553,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home.-movies-s-02e-13.-the.-wedding-13",
-            "itemTitle": "Home. Movies: The. Wedding",
-            "file": "Home.Movies-S02e13.The.Wedding-13.mp4",
-            "name": "Home.Movies-S02e13.The.Wedding-13",
-            "url": "https://archive.org/download/home.-movies-s-02e-13.-the.-wedding-13/Home.Movies-S02e13.The.Wedding-13.mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 2/Home.Movies-S02e13.The.Wedding-13.m4v",
+            "name": "Season 2/Home.Movies-S02e13.The.Wedding-13",
+            "url": "https://archive.org/download/home-movies/Season%202%2FHome.Movies-S02e13.The.Wedding-13.m4v",
             "seconds": 1390,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 133
+            "sizeMB": 137
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "home.-movies-s-02e-13.-the.-wedding-13",
+              "itemTitle": "Home. Movies: The. Wedding",
+              "file": "Home.Movies-S02e13.The.Wedding-13.mp4",
+              "name": "Home.Movies-S02e13.The.Wedding-13",
+              "url": "https://archive.org/download/home.-movies-s-02e-13.-the.-wedding-13/Home.Movies-S02e13.The.Wedding-13.mp4",
+              "seconds": 1390,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 133
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename + title match",
@@ -1573,19 +1603,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 70
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Wedding\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 2-13 - The Wedding (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 2-13 - The Wedding (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%202-13%20-%20The%20Wedding%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1390,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 67
             }
           ]
         }
@@ -1600,20 +1617,33 @@
           "airdate": "2002-08-04",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS03DVD",
-            "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S03E01 - Shore Leave (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S03E01 - Shore Leave (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E01%20-%20Shore%20Leave%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e01.Shore.Leave-1.m4v",
+            "name": "Season 3/Home.Movies-S03e01.Shore.Leave-1",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e01.Shore.Leave-1.m4v",
             "seconds": 1336,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 130
+            "sizeMB": 178
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS03DVD",
+              "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S03E01 - Shore Leave (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S03E01 - Shore Leave (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E01%20-%20Shore%20Leave%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1336,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 130
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -1639,19 +1669,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 76
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 3/Home.Movies-S03e01.Shore.Leave-1.m4v",
-              "name": "Season 3/Home.Movies-S03e01.Shore.Leave-1",
-              "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e01.Shore.Leave-1.m4v",
-              "seconds": 1336,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 178
             }
           ]
         },
@@ -1663,17 +1680,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS03DVD",
-            "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S03E02 - Breaking Up Is Hard To Do (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S03E02 - Breaking Up Is Hard To Do (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E02%20-%20Breaking%20Up%20Is%20Hard%20To%20Do%20(480p%20DVD%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e02.Breaking.Up.Is.Hard.To.Do-2.m4v",
+            "name": "Season 3/Home.Movies-S03e02.Breaking.Up.Is.Hard.To.Do-2",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e02.Breaking.Up.Is.Hard.To.Do-2.m4v",
             "seconds": 1328,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 127
+            "sizeMB": 147
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS03DVD",
+              "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S03E02 - Breaking Up Is Hard To Do (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S03E02 - Breaking Up Is Hard To Do (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E02%20-%20Breaking%20Up%20Is%20Hard%20To%20Do%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1328,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 127
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -1699,19 +1729,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 57
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 3/Home.Movies-S03e02.Breaking.Up.Is.Hard.To.Do-2.m4v",
-              "name": "Season 3/Home.Movies-S03e02.Breaking.Up.Is.Hard.To.Do-2",
-              "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e02.Breaking.Up.Is.Hard.To.Do-2.m4v",
-              "seconds": 1328,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 147
             }
           ]
         },
@@ -1721,20 +1738,33 @@
           "airdate": "2002-08-18",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS03DVD",
-            "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S03E03 - Bad Influences (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S03E03 - Bad Influences (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E03%20-%20Bad%20Influences%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e03.Bad.Influences-3.m4v",
+            "name": "Season 3/Home.Movies-S03e03.Bad.Influences-3",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e03.Bad.Influences-3.m4v",
             "seconds": 1340,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 133
+            "sizeMB": 164
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS03DVD",
+              "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S03E03 - Bad Influences (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S03E03 - Bad Influences (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E03%20-%20Bad%20Influences%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1340,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 133
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -1760,19 +1790,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 70
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 3/Home.Movies-S03e03.Bad.Influences-3.m4v",
-              "name": "Season 3/Home.Movies-S03e03.Bad.Influences-3",
-              "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e03.Bad.Influences-3.m4v",
-              "seconds": 1340,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 164
             }
           ]
         },
@@ -1784,17 +1801,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS03DVD",
-            "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S03E04 - Improving Your Life Through Improv (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S03E04 - Improving Your Life Through Improv (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E04%20-%20Improving%20Your%20Life%20Through%20Improv%20(480p%20DVD%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e04.Improving.Your.Life.Through.Improv-4.m4v",
+            "name": "Season 3/Home.Movies-S03e04.Improving.Your.Life.Through.Improv-4",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e04.Improving.Your.Life.Through.Improv-4.m4v",
             "seconds": 1348,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 128
+            "sizeMB": 154
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS03DVD",
+              "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S03E04 - Improving Your Life Through Improv (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S03E04 - Improving Your Life Through Improv (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E04%20-%20Improving%20Your%20Life%20Through%20Improv%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1348,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 128
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -1820,19 +1850,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 59
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 3/Home.Movies-S03e04.Improving.Your.Life.Through.Improv-4.m4v",
-              "name": "Season 3/Home.Movies-S03e04.Improving.Your.Life.Through.Improv-4",
-              "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e04.Improving.Your.Life.Through.Improv-4.m4v",
-              "seconds": 1348,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 154
             }
           ]
         },
@@ -1844,17 +1861,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS03DVD",
-            "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S03E05 - Fours Company (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S03E05 - Fours Company (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E05%20-%20Fours%20Company%20(480p%20DVD%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e05.Fours.Company-5.m4v",
+            "name": "Season 3/Home.Movies-S03e05.Fours.Company-5",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e05.Fours.Company-5.m4v",
             "seconds": 1361,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 130
+            "sizeMB": 155
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS03DVD",
+              "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S03E05 - Fours Company (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S03E05 - Fours Company (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E05%20-%20Fours%20Company%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1361,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -1880,19 +1910,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 132
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Four's Company\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 3-5 - Fours Company (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 3-5 - Fours Company (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%203-5%20-%20Fours%20Company%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1361,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 63
             }
           ]
         },
@@ -1902,20 +1919,33 @@
           "airdate": "2002-10-13",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS03DVD",
-            "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S03E06 - Renaissance (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S03E06 - Renaissance (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E06%20-%20Renaissance%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e06.Renaissance-6.m4v",
+            "name": "Season 3/Home.Movies-S03e06.Renaissance-6",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e06.Renaissance-6.m4v",
             "seconds": 1354,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 130
+            "sizeMB": 167
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS03DVD",
+              "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S03E06 - Renaissance (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S03E06 - Renaissance (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E06%20-%20Renaissance%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1354,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 130
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -1941,19 +1971,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 82
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 3/Home.Movies-S03e06.Renaissance-6.m4v",
-              "name": "Season 3/Home.Movies-S03e06.Renaissance-6",
-              "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e06.Renaissance-6.m4v",
-              "seconds": 1354,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 167
             }
           ]
         },
@@ -1965,17 +1982,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS03DVD",
-            "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S03E07 - My Cheatin Heart (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S03E07 - My Cheatin Heart (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E07%20-%20My%20Cheatin%20Heart%20(480p%20DVD%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e07.My.Cheatin.Heart-7.m4v",
+            "name": "Season 3/Home.Movies-S03e07.My.Cheatin.Heart-7",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e07.My.Cheatin.Heart-7.m4v",
             "seconds": 1354,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 130
+            "sizeMB": 152
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS03DVD",
+              "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S03E07 - My Cheatin Heart (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S03E07 - My Cheatin Heart (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E07%20-%20My%20Cheatin%20Heart%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1354,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -2001,19 +2031,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 56
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 3/Home.Movies-S03e07.My.Cheatin.Heart-7.m4v",
-              "name": "Season 3/Home.Movies-S03e07.My.Cheatin.Heart-7",
-              "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e07.My.Cheatin.Heart-7.m4v",
-              "seconds": 1354,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 152
             }
           ]
         },
@@ -2023,19 +2040,32 @@
           "airdate": "2002-10-27",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "HomeMoviesJapaneseDub",
-            "itemTitle": "ホームムービーズ Home Movies (Japanese Dub) Complete",
-            "file": "【日本語版】ホームムービーズS3E08「あの頃　ドゥエインと」.mp4",
-            "name": "【日本語版】ホームムービーズS3E08「あの頃　ドゥエインと」",
-            "url": "https://archive.org/download/HomeMoviesJapaneseDub/%E3%80%90%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%E3%82%BAS3E08%E3%80%8C%E3%81%82%E3%81%AE%E9%A0%83%E3%80%80%E3%83%89%E3%82%A5%E3%82%A8%E3%82%A4%E3%83%B3%E3%81%A8%E3%80%8D.mp4",
-            "seconds": 1378,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e08.Guitarmaggedon-8.m4v",
+            "name": "Season 3/Home.Movies-S03e08.Guitarmaggedon-8",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e08.Guitarmaggedon-8.m4v",
+            "seconds": 1363,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 63
+            "sizeMB": 150
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "HomeMoviesJapaneseDub",
+              "itemTitle": "ホームムービーズ Home Movies (Japanese Dub) Complete",
+              "file": "【日本語版】ホームムービーズS3E08「あの頃　ドゥエインと」.mp4",
+              "name": "【日本語版】ホームムービーズS3E08「あの頃　ドゥエインと」",
+              "url": "https://archive.org/download/HomeMoviesJapaneseDub/%E3%80%90%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%E3%82%BAS3E08%E3%80%8C%E3%81%82%E3%81%AE%E9%A0%83%E3%80%80%E3%83%89%E3%82%A5%E3%82%A8%E3%82%A4%E3%83%B3%E3%81%A8%E3%80%8D.mp4",
+              "seconds": 1378,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 63
+            },
             {
               "conf": 0.7,
               "why": "S/E in filename + title match",
@@ -2049,19 +2079,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 131
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 3/Home.Movies-S03e08.Guitarmaggedon-8.m4v",
-              "name": "Season 3/Home.Movies-S03e08.Guitarmaggedon-8",
-              "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e08.Guitarmaggedon-8.m4v",
-              "seconds": 1363,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 150
             },
             {
               "conf": 0.6,
@@ -2084,20 +2101,33 @@
           "airdate": "2002-11-03",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS03DVD",
-            "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S03E09 - Storm Warning (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S03E09 - Storm Warning (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E09%20-%20Storm%20Warning%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e09.Storm.Warning-9.m4v",
+            "name": "Season 3/Home.Movies-S03e09.Storm.Warning-9",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e09.Storm.Warning-9.m4v",
             "seconds": 1355,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 130
+            "sizeMB": 152
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS03DVD",
+              "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S03E09 - Storm Warning (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S03E09 - Storm Warning (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E09%20-%20Storm%20Warning%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1355,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 130
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -2123,19 +2153,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 71
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 3/Home.Movies-S03e09.Storm.Warning-9.m4v",
-              "name": "Season 3/Home.Movies-S03e09.Storm.Warning-9",
-              "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e09.Storm.Warning-9.m4v",
-              "seconds": 1355,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 152
             }
           ]
         },
@@ -2145,20 +2162,33 @@
           "airdate": "2002-11-10",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS03DVD",
-            "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S03E10 - Time to Pay the Price (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S03E10 - Time to Pay the Price (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E10%20-%20Time%20to%20Pay%20the%20Price%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e10.Time.To.Pay.The.Price-10.m4v",
+            "name": "Season 3/Home.Movies-S03e10.Time.To.Pay.The.Price-10",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e10.Time.To.Pay.The.Price-10.m4v",
             "seconds": 1331,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 132
+            "sizeMB": 150
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS03DVD",
+              "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S03E10 - Time to Pay the Price (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S03E10 - Time to Pay the Price (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E10%20-%20Time%20to%20Pay%20the%20Price%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1331,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 132
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -2184,19 +2214,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 65
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 3/Home.Movies-S03e10.Time.To.Pay.The.Price-10.m4v",
-              "name": "Season 3/Home.Movies-S03e10.Time.To.Pay.The.Price-10",
-              "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e10.Time.To.Pay.The.Price-10.m4v",
-              "seconds": 1331,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 150
             }
           ]
         },
@@ -2208,17 +2225,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS03DVD",
-            "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S03E11 - Broken Dreams (480p DVD x264 AAC2.0).mp4",
-            "name": "Home Movies S03E11 - Broken Dreams (480p DVD x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E11%20-%20Broken%20Dreams%20(480p%20DVD%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e11.Broken.Dreams-11.m4v",
+            "name": "Season 3/Home.Movies-S03e11.Broken.Dreams-11",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e11.Broken.Dreams-11.m4v",
             "seconds": 1357,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 131
+            "sizeMB": 154
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS03DVD",
+              "itemTitle": "Home Movies (1999) - Season Three (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S03E11 - Broken Dreams (480p DVD x264 AAC2.0).mp4",
+              "name": "Home Movies S03E11 - Broken Dreams (480p DVD x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS03DVD/Home%20Movies%20S03E11%20-%20Broken%20Dreams%20(480p%20DVD%20x264%20AAC2.0).mp4",
+              "seconds": 1357,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 131
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -2244,19 +2274,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 60
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 3/Home.Movies-S03e11.Broken.Dreams-11.m4v",
-              "name": "Season 3/Home.Movies-S03e11.Broken.Dreams-11",
-              "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e11.Broken.Dreams-11.m4v",
-              "seconds": 1357,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 154
             }
           ]
         },
@@ -2268,17 +2285,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home.-movies-s-03e-12.-stowaway-12",
-            "itemTitle": "Home. Movies: Stowaway",
-            "file": "Home.Movies-S03e12.Stowaway-12.mp4",
-            "name": "Home.Movies-S03e12.Stowaway-12",
-            "url": "https://archive.org/download/home.-movies-s-03e-12.-stowaway-12/Home.Movies-S03e12.Stowaway-12.mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e12.Stowaway-12.m4v",
+            "name": "Season 3/Home.Movies-S03e12.Stowaway-12",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e12.Stowaway-12.m4v",
             "seconds": 1360,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 133
+            "sizeMB": 143
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "home.-movies-s-03e-12.-stowaway-12",
+              "itemTitle": "Home. Movies: Stowaway",
+              "file": "Home.Movies-S03e12.Stowaway-12.mp4",
+              "name": "Home.Movies-S03e12.Stowaway-12",
+              "url": "https://archive.org/download/home.-movies-s-03e-12.-stowaway-12/Home.Movies-S03e12.Stowaway-12.mp4",
+              "seconds": 1360,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 133
+            },
             {
               "conf": 1,
               "why": "S/E in filename + title match",
@@ -2304,19 +2334,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 60
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Stowaway\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 3-12 - Stowaway (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 3-12 - Stowaway (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%203-12%20-%20Stowaway%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1360,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 97
             }
           ]
         },
@@ -2326,19 +2343,32 @@
           "airdate": "2003-05-25",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "HomeMoviesJapaneseDub",
-            "itemTitle": "ホームムービーズ Home Movies (Japanese Dub) Complete",
-            "file": "【日本語版】ホームムービーズS3E13「ナイトメア・ビフォア・バースデー」.mp4",
-            "name": "【日本語版】ホームムービーズS3E13「ナイトメア・ビフォア・バースデー」",
-            "url": "https://archive.org/download/HomeMoviesJapaneseDub/%E3%80%90%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%E3%82%BAS3E13%E3%80%8C%E3%83%8A%E3%82%A4%E3%83%88%E3%83%A1%E3%82%A2%E3%83%BB%E3%83%93%E3%83%95%E3%82%A9%E3%82%A2%E3%83%BB%E3%83%90%E3%83%BC%E3%82%B9%E3%83%87%E3%83%BC%E3%80%8D.mp4",
-            "seconds": 1353,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 3/Home.Movies-S03e13.Coffins.And.Cradels-13.m4v",
+            "name": "Season 3/Home.Movies-S03e13.Coffins.And.Cradels-13",
+            "url": "https://archive.org/download/home-movies/Season%203%2FHome.Movies-S03e13.Coffins.And.Cradels-13.m4v",
+            "seconds": 1360,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 65
+            "sizeMB": 152
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "HomeMoviesJapaneseDub",
+              "itemTitle": "ホームムービーズ Home Movies (Japanese Dub) Complete",
+              "file": "【日本語版】ホームムービーズS3E13「ナイトメア・ビフォア・バースデー」.mp4",
+              "name": "【日本語版】ホームムービーズS3E13「ナイトメア・ビフォア・バースデー」",
+              "url": "https://archive.org/download/HomeMoviesJapaneseDub/%E3%80%90%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%E3%82%BAS3E13%E3%80%8C%E3%83%8A%E3%82%A4%E3%83%88%E3%83%A1%E3%82%A2%E3%83%BB%E3%83%93%E3%83%95%E3%82%A9%E3%82%A2%E3%83%BB%E3%83%90%E3%83%BC%E3%82%B9%E3%83%87%E3%83%BC%E3%80%8D.mp4",
+              "seconds": 1353,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 65
+            },
             {
               "conf": 0.7,
               "why": "S/E in filename + title match",
@@ -2368,17 +2398,43 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "HomeMoviesS04DVDRips",
-            "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S04E01 - Camp (480p DVD TripleAudio x264 AAC2.0).mp4",
-            "name": "Home Movies S04E01 - Camp (480p DVD TripleAudio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E01%20-%20Camp%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e01.Camp-1.m4v",
+            "name": "Season 4/Home.Movies-S04e01.Camp-1",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e01.Camp-1.m4v",
             "seconds": 1375,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 133
+            "sizeMB": 152
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E01 - Camp (480p DVD TripleAudio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E01 - Camp (480p DVD TripleAudio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E01%20-%20Camp%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+              "seconds": 1375,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Everybody's Entitled to My Opinion\" (0.98)",
+              "item": "home-movies",
+              "itemTitle": "Home Movies Complete Season 1-4",
+              "file": "Season 4/Home.Movies-S04e04.Everybody's.Entitled.To.My.Opinion-4.m4v",
+              "name": "Season 4/Home.Movies-S04e04.Everybody's.Entitled.To.My.Opinion-4",
+              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e04.Everybody's.Entitled.To.My.Opinion-4.m4v",
+              "seconds": 1344,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 145
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Everybody's Entitled to My Opinion\" (0.95)",
@@ -2391,19 +2447,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 134
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Everybody's Entitled to My Opinion\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 4-4 - Everybody's Entitled to My Opinion (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 4-4 - Everybody's Entitled to My Opinion (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%204-4%20-%20Everybody's%20Entitled%20to%20My%20Opinion%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1344,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 65
             }
           ]
         },
@@ -2411,33 +2454,59 @@
           "number": 2,
           "name": "Camp",
           "airdate": "2004-01-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Camp\" (0.95)",
-            "item": "HomeMoviesS04DVDRips",
-            "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S04E01 - Camp (480p DVD TripleAudio x264 AAC2.0).mp4",
-            "name": "Home Movies S04E01 - Camp (480p DVD TripleAudio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E01%20-%20Camp%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
-            "seconds": 1375,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e02.Bye.Bye.Greasy-2.m4v",
+            "name": "Season 4/Home.Movies-S04e02.Bye.Bye.Greasy-2",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e02.Bye.Bye.Greasy-2.m4v",
+            "seconds": 1381,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 133
+            "sizeMB": 142
           },
           "alternates": [
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E02 - Bye Bye Greasy (480p DVD Quad Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E02 - Bye Bye Greasy (480p DVD Quad Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E02%20-%20Bye%20Bye%20Greasy%20(480p%20DVD%20Quad%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1381,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 134
+            },
+            {
               "conf": 0.8,
               "why": "title ~ \"Camp\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 4-1 - Camp (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 4-1 - Camp (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%204-1%20-%20Camp%20(480p_30fps_H264-128kbit_AAC).mp4",
+              "item": "home-movies",
+              "itemTitle": "Home Movies Complete Season 1-4",
+              "file": "Season 4/Home.Movies-S04e01.Camp-1.m4v",
+              "name": "Season 4/Home.Movies-S04e01.Camp-1",
+              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e01.Camp-1.m4v",
               "seconds": 1375,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 108
+              "sizeMB": 152
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Camp\" (0.95)",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E01 - Camp (480p DVD TripleAudio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E01 - Camp (480p DVD TripleAudio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E01%20-%20Camp%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+              "seconds": 1375,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
             }
           ]
         },
@@ -2449,54 +2518,20 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "HomeMoviesS04DVDRips",
-            "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S04E03 - The Heart Smashers (480p DVD TripleAudio x264 AAC2.0).mp4",
-            "name": "Home Movies S04E03 - The Heart Smashers (480p DVD TripleAudio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E03%20-%20The%20Heart%20Smashers%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e03.The.Heart.Smashers-3.m4v",
+            "name": "Season 4/Home.Movies-S04e03.The.Heart.Smashers-3",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e03.The.Heart.Smashers-3.m4v",
             "seconds": 1371,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 136
+            "sizeMB": 144
           },
           "alternates": [
             {
-              "conf": 0.8,
-              "why": "title ~ \"Bye, Bye, Greasy\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 4-2 - Bye Bye Greasy (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 4-2 - Bye Bye Greasy (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%204-2%20-%20Bye%20Bye%20Greasy%20(480p_30fps_H264-128kbit_AAC).mp4",
-              "seconds": 1381,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 58
-            }
-          ]
-        },
-        {
-          "number": 4,
-          "name": "The Heart Smashers",
-          "airdate": "2004-01-25",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "HomeMoviesS04DVDRips",
-            "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S04E04 - Everybody's Entitled to My Opinion (480p DVD TripleAudio x264 AAC2.0).mp4",
-            "name": "Home Movies S04E04 - Everybody's Entitled to My Opinion (480p DVD TripleAudio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E04%20-%20Everybody's%20Entitled%20to%20My%20Opinion%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
-            "seconds": 1344,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 134
-          },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Heart Smashers\" (0.95)",
+              "conf": 0.9,
+              "why": "S/E in filename",
               "item": "HomeMoviesS04DVDRips",
               "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
               "file": "Home Movies S04E03 - The Heart Smashers (480p DVD TripleAudio x264 AAC2.0).mp4",
@@ -2509,16 +2544,89 @@
             },
             {
               "conf": 0.8,
-              "why": "title ~ \"The Heart Smashers\" (0.95)",
-              "item": "Home-Movies-Cartoon-Series",
-              "itemTitle": "Home Movies Cartoon Series",
-              "file": "Home Movies/Home Movies - 4-3 - The Heart Smashers (480p_30fps_H264-128kbit_AAC).mp4",
-              "name": "Home Movies/Home Movies - 4-3 - The Heart Smashers (480p_30fps_H264-128kbit_AAC)",
-              "url": "https://archive.org/download/Home-Movies-Cartoon-Series/Home%20Movies%2FHome%20Movies%20-%204-3%20-%20The%20Heart%20Smashers%20(480p_30fps_H264-128kbit_AAC).mp4",
+              "why": "title ~ \"Bye, Bye, Greasy\" (0.95)",
+              "item": "home-movies",
+              "itemTitle": "Home Movies Complete Season 1-4",
+              "file": "Season 4/Home.Movies-S04e02.Bye.Bye.Greasy-2.m4v",
+              "name": "Season 4/Home.Movies-S04e02.Bye.Bye.Greasy-2",
+              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e02.Bye.Bye.Greasy-2.m4v",
+              "seconds": 1381,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 142
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Bye, Bye, Greasy\" (0.95)",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E02 - Bye Bye Greasy (480p DVD Quad Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E02 - Bye Bye Greasy (480p DVD Quad Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E02%20-%20Bye%20Bye%20Greasy%20(480p%20DVD%20Quad%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1381,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 134
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "name": "The Heart Smashers",
+          "airdate": "2004-01-25",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e04.Everybody's.Entitled.To.My.Opinion-4.m4v",
+            "name": "Season 4/Home.Movies-S04e04.Everybody's.Entitled.To.My.Opinion-4",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e04.Everybody's.Entitled.To.My.Opinion-4.m4v",
+            "seconds": 1344,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 145
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E04 - Everybody's Entitled to My Opinion (480p DVD TripleAudio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E04 - Everybody's Entitled to My Opinion (480p DVD TripleAudio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E04%20-%20Everybody's%20Entitled%20to%20My%20Opinion%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+              "seconds": 1344,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 134
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Heart Smashers\" (0.96)",
+              "item": "home-movies",
+              "itemTitle": "Home Movies Complete Season 1-4",
+              "file": "Season 4/Home.Movies-S04e03.The.Heart.Smashers-3.m4v",
+              "name": "Season 4/Home.Movies-S04e03.The.Heart.Smashers-3",
+              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e03.The.Heart.Smashers-3.m4v",
               "seconds": 1371,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 67
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Heart Smashers\" (0.95)",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E03 - The Heart Smashers (480p DVD TripleAudio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E03 - The Heart Smashers (480p DVD TripleAudio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E03%20-%20The%20Heart%20Smashers%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+              "seconds": 1371,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
             }
           ]
         },
@@ -2530,17 +2638,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS04DVDRips",
-            "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S04E05 - The Wizard's Baker (480p DVD TripleAudio x264 AAC2.0).mp4",
-            "name": "Home Movies S04E05 - The Wizard's Baker (480p DVD TripleAudio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E05%20-%20The%20Wizard's%20Baker%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
-            "seconds": 1335,
-            "format": "h.264",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e05.The.Wizard's.Baker-5.m4v",
+            "name": "Season 4/Home.Movies-S04e05.The.Wizard's.Baker-5",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e05.The.Wizard's.Baker-5.m4v",
+            "seconds": 1334,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 128
+            "sizeMB": 134
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E05 - The Wizard's Baker (480p DVD TripleAudio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E05 - The Wizard's Baker (480p DVD TripleAudio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E05%20-%20The%20Wizard's%20Baker%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+              "seconds": 1335,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 128
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"The Wizard's Baker\" (0.95)",
@@ -2553,19 +2674,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 57
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 4/Home.Movies-S04e05.The.Wizard's.Baker-5.m4v",
-              "name": "Season 4/Home.Movies-S04e05.The.Wizard's.Baker-5",
-              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e05.The.Wizard's.Baker-5.m4v",
-              "seconds": 1334,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 134
             }
           ]
         },
@@ -2577,17 +2685,43 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "home.-movies-s-04e-06.-psycho-delicate-6",
-            "itemTitle": "Home. Movies: Psycho Delicate",
-            "file": "Home.Movies-S04e06.Psycho-Delicate-6.mp4",
-            "name": "Home.Movies-S04e06.Psycho-Delicate-6",
-            "url": "https://archive.org/download/home.-movies-s-04e-06.-psycho-delicate-6/Home.Movies-S04e06.Psycho-Delicate-6.mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e06.Psycho-Delicate-6.m4v",
+            "name": "Season 4/Home.Movies-S04e06.Psycho-Delicate-6",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e06.Psycho-Delicate-6.m4v",
             "seconds": 1363,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 136
+            "sizeMB": 159
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E06 - Psycho Delicate (480p DVD Quad Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E06 - Psycho Delicate (480p DVD Quad Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E06%20-%20Psycho%20Delicate%20(480p%20DVD%20Quad%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1363,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "home.-movies-s-04e-06.-psycho-delicate-6",
+              "itemTitle": "Home. Movies: Psycho Delicate",
+              "file": "Home.Movies-S04e06.Psycho-Delicate-6.mp4",
+              "name": "Home.Movies-S04e06.Psycho-Delicate-6",
+              "url": "https://archive.org/download/home.-movies-s-04e-06.-psycho-delicate-6/Home.Movies-S04e06.Psycho-Delicate-6.mp4",
+              "seconds": 1363,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Psycho-Delicate\" (0.95)",
@@ -2600,32 +2734,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 71
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 4/Home.Movies-S04e06.Psycho-Delicate-6.m4v",
-              "name": "Season 4/Home.Movies-S04e06.Psycho-Delicate-6",
-              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e06.Psycho-Delicate-6.m4v",
-              "seconds": 1363,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 159
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "HomeMoviesS04DVDRips",
-              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-              "file": "Home Movies S04E06 - Psycho Delicate (480p DVD Quad Audio x264 AAC2.0).mp4",
-              "name": "Home Movies S04E06 - Psycho Delicate (480p DVD Quad Audio x264 AAC2.0)",
-              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E06%20-%20Psycho%20Delicate%20(480p%20DVD%20Quad%20Audio%20x264%20AAC2.0).mp4",
-              "seconds": 1363,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 136
             }
           ]
         },
@@ -2635,20 +2743,33 @@
           "airdate": "2004-02-22",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS04DVDRips",
-            "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S04E07 - Curses (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S04E07 - Curses (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E07%20-%20Curses%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e07.Curses-7.m4v",
+            "name": "Season 4/Home.Movies-S04e07.Curses-7",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e07.Curses-7.m4v",
             "seconds": 1358,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 131
+            "sizeMB": 144
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E07 - Curses (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E07 - Curses (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E07%20-%20Curses%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1358,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 131
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Curses\" (0.95)",
@@ -2661,19 +2782,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 69
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 4/Home.Movies-S04e07.Curses-7.m4v",
-              "name": "Season 4/Home.Movies-S04e07.Curses-7",
-              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e07.Curses-7.m4v",
-              "seconds": 1358,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 144
             }
           ]
         },
@@ -2683,20 +2791,33 @@
           "airdate": "2004-02-29",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS04DVDRips",
-            "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S04E08 - Honkey Magoo (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S04E08 - Honkey Magoo (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E08%20-%20Honkey%20Magoo%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e08.Honkey.Magoo-8.m4v",
+            "name": "Season 4/Home.Movies-S04e08.Honkey.Magoo-8",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e08.Honkey.Magoo-8.m4v",
             "seconds": 1368,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 137
+            "sizeMB": 152
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E08 - Honkey Magoo (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E08 - Honkey Magoo (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E08%20-%20Honkey%20Magoo%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1368,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 137
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Honkey Magoo\" (0.95)",
@@ -2709,19 +2830,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 70
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 4/Home.Movies-S04e08.Honkey.Magoo-8.m4v",
-              "name": "Season 4/Home.Movies-S04e08.Honkey.Magoo-8",
-              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e08.Honkey.Magoo-8.m4v",
-              "seconds": 1368,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 152
             }
           ]
         },
@@ -2733,17 +2841,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS04DVDRips",
-            "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S04E09 - Those Bitches Tried to Cheat Me (480p DVD TripleAudio x264 AAC2.0).mp4",
-            "name": "Home Movies S04E09 - Those Bitches Tried to Cheat Me (480p DVD TripleAudio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E09%20-%20Those%20Bitches%20Tried%20to%20Cheat%20Me%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e09.Those.Bitches.Tried.To.Cheat.Me-9.m4v",
+            "name": "Season 4/Home.Movies-S04e09.Those.Bitches.Tried.To.Cheat.Me-9",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e09.Those.Bitches.Tried.To.Cheat.Me-9.m4v",
             "seconds": 1353,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 131
+            "sizeMB": 145
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E09 - Those Bitches Tried to Cheat Me (480p DVD TripleAudio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E09 - Those Bitches Tried to Cheat Me (480p DVD TripleAudio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E09%20-%20Those%20Bitches%20Tried%20to%20Cheat%20Me%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+              "seconds": 1353,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 131
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Those Bitches Tried to Cheat Me\" (0.95)",
@@ -2756,19 +2877,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 72
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 4/Home.Movies-S04e09.Those.Bitches.Tried.To.Cheat.Me-9.m4v",
-              "name": "Season 4/Home.Movies-S04e09.Those.Bitches.Tried.To.Cheat.Me-9",
-              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e09.Those.Bitches.Tried.To.Cheat.Me-9.m4v",
-              "seconds": 1353,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 145
             }
           ]
         },
@@ -2778,20 +2886,33 @@
           "airdate": "2004-03-14",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS04DVDRips",
-            "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S04E10 - The Adventures of Cho & Amy Lee (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S04E10 - The Adventures of Cho & Amy Lee (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E10%20-%20The%20Adventures%20of%20Cho%20%26%20Amy%20Lee%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e10.The.Adventures.Of.Cho.&.Amy.Lee-10.m4v",
+            "name": "Season 4/Home.Movies-S04e10.The.Adventures.Of.Cho.&.Amy.Lee-10",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e10.The.Adventures.Of.Cho.%26.Amy.Lee-10.m4v",
             "seconds": 1362,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 136
+            "sizeMB": 155
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E10 - The Adventures of Cho & Amy Lee (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E10 - The Adventures of Cho & Amy Lee (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E10%20-%20The%20Adventures%20of%20Cho%20%26%20Amy%20Lee%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1362,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 136
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Cho & Amy Lee\" (0.95)",
@@ -2804,19 +2925,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 69
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 4/Home.Movies-S04e10.The.Adventures.Of.Cho.&.Amy.Lee-10.m4v",
-              "name": "Season 4/Home.Movies-S04e10.The.Adventures.Of.Cho.&.Amy.Lee-10",
-              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e10.The.Adventures.Of.Cho.%26.Amy.Lee-10.m4v",
-              "seconds": 1362,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 155
             }
           ]
         },
@@ -2826,20 +2934,33 @@
           "airdate": "2004-03-21",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS04DVDRips",
-            "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S04E11 - Definite Possible Murder (480p DVD Dual Audio x264 AAC2.0).mp4",
-            "name": "Home Movies S04E11 - Definite Possible Murder (480p DVD Dual Audio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E11%20-%20Definite%20Possible%20Murder%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e11.Definite.Possible.Murder-11.m4v",
+            "name": "Season 4/Home.Movies-S04e11.Definite.Possible.Murder-11",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e11.Definite.Possible.Murder-11.m4v",
             "seconds": 1343,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 130
+            "sizeMB": 131
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E11 - Definite Possible Murder (480p DVD Dual Audio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E11 - Definite Possible Murder (480p DVD Dual Audio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E11%20-%20Definite%20Possible%20Murder%20(480p%20DVD%20Dual%20Audio%20x264%20AAC2.0).mp4",
+              "seconds": 1343,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 130
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Definite Possible Murder\" (0.95)",
@@ -2852,19 +2973,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 53
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 4/Home.Movies-S04e11.Definite.Possible.Murder-11.m4v",
-              "name": "Season 4/Home.Movies-S04e11.Definite.Possible.Murder-11",
-              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e11.Definite.Possible.Murder-11.m4v",
-              "seconds": 1343,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 131
             }
           ]
         },
@@ -2876,17 +2984,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS04DVDRips",
-            "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S04E12 - Temporary Blindness (480p DVD TripleAudio x264 AAC2.0).mp4",
-            "name": "Home Movies S04E12 - Temporary Blindness (480p DVD TripleAudio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E12%20-%20Temporary%20Blindness%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e12.Temporary.Blindness-12.m4v",
+            "name": "Season 4/Home.Movies-S04e12.Temporary.Blindness-12",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e12.Temporary.Blindness-12.m4v",
             "seconds": 1347,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 135
+            "sizeMB": 167
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E12 - Temporary Blindness (480p DVD TripleAudio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E12 - Temporary Blindness (480p DVD TripleAudio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E12%20-%20Temporary%20Blindness%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+              "seconds": 1347,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 135
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Temporary Blindness\" (0.95)",
@@ -2899,19 +3020,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 73
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 4/Home.Movies-S04e12.Temporary.Blindness-12.m4v",
-              "name": "Season 4/Home.Movies-S04e12.Temporary.Blindness-12",
-              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e12.Temporary.Blindness-12.m4v",
-              "seconds": 1347,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 167
             }
           ]
         },
@@ -2923,17 +3031,30 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "HomeMoviesS04DVDRips",
-            "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
-            "file": "Home Movies S04E13 - Focus Grill (480p DVD TripleAudio x264 AAC2.0).mp4",
-            "name": "Home Movies S04E13 - Focus Grill (480p DVD TripleAudio x264 AAC2.0)",
-            "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E13%20-%20Focus%20Grill%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+            "item": "home-movies",
+            "itemTitle": "Home Movies Complete Season 1-4",
+            "file": "Season 4/Home.Movies-S04e13.Focus.Grill-13.m4v",
+            "name": "Season 4/Home.Movies-S04e13.Focus.Grill-13",
+            "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e13.Focus.Grill-13.m4v",
             "seconds": 1365,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 163
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "HomeMoviesS04DVDRips",
+              "itemTitle": "Home Movies (1999) - Season Four (DVDRips w Subs & Commentaries)",
+              "file": "Home Movies S04E13 - Focus Grill (480p DVD TripleAudio x264 AAC2.0).mp4",
+              "name": "Home Movies S04E13 - Focus Grill (480p DVD TripleAudio x264 AAC2.0)",
+              "url": "https://archive.org/download/HomeMoviesS04DVDRips/Home%20Movies%20S04E13%20-%20Focus%20Grill%20(480p%20DVD%20TripleAudio%20x264%20AAC2.0).mp4",
+              "seconds": 1365,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 138
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Focus Grill\" (0.95)",
@@ -2946,19 +3067,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 112
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "home-movies",
-              "itemTitle": "Home Movies Complete Season 1-4",
-              "file": "Season 4/Home.Movies-S04e13.Focus.Grill-13.m4v",
-              "name": "Season 4/Home.Movies-S04e13.Focus.Grill-13",
-              "url": "https://archive.org/download/home-movies/Season%204%2FHome.Movies-S04e13.Focus.Grill-13.m4v",
-              "seconds": 1365,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 163
             }
           ]
         }

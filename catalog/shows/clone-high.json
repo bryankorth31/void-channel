@@ -3,7 +3,7 @@
   "slug": "clone-high",
   "type": "MTV",
   "network": "MTV",
-  "matchedAt": "2026-10-16T07:56:41.624Z",
+  "matchedAt": "2026-10-19T04:10:47.384Z",
   "addedAt": "2026-10-15T12:07:45.451Z",
   "tvmaze": {
     "id": 1643,
@@ -29,20 +29,33 @@
           "airdate": "2002-11-02",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
-            "itemTitle": "Clone High (2002)",
-            "file": "Clone.High.S01e01.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
-            "name": "Clone.High.S01e01.480P.Amzn.Web-Dl.Ddp2.0.H",
-            "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e01.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "clone-high-season1",
+            "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+            "file": "S01 Episode 01 - Escape to Beer Mountain (A Rope of Sand)(SD).mp4",
+            "name": "S01 Episode 01 - Escape to Beer Mountain (A Rope of Sand)(SD)",
+            "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2001%20-%20Escape%20to%20Beer%20Mountain%20(A%20Rope%20of%20Sand)(SD).mp4",
             "seconds": 1296,
-            "format": "h.264 IA",
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (Ddp2)",
-            "sizeMB": 96
+            "sizeMB": 57
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e01.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
+              "name": "Clone.High.S01e01.480P.Amzn.Web-Dl.Ddp2.0.H",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e01.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
+              "seconds": 1296,
+              "format": "h.264 IA",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 96
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -92,6 +105,19 @@
               "playable": true,
               "codecRisk": "audio (Ddp2)",
               "sizeMB": 103
+            },
+            {
+              "conf": 0.8,
+              "why": "absolute episode number + title match",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S01 Episode 02 - Episode Two (Election Blu-Galoo)(SD).mp4",
+              "name": "S01 Episode 02 - Episode Two (Election Blu-Galoo)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2002%20-%20Episode%20Two%20(Election%20Blu-Galoo)(SD).mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 59
             }
           ]
         },
@@ -101,20 +127,33 @@
           "airdate": "2002-11-10",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
-            "itemTitle": "Clone High (2002)",
-            "file": "Clone.High.S01e03.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
-            "name": "Clone.High.S01e03.480P.Amzn.Web-Dl.Ddp2.0.H",
-            "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e03.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
-            "seconds": 1296,
-            "format": "h.264 IA",
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "clone-high-season1",
+            "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+            "file": "S01 Episode 03 - A.D.D. (The Last D is for Disorder)(SD).mp4",
+            "name": "S01 Episode 03 - A.D.D. (The Last D is for Disorder)(SD)",
+            "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2003%20-%20A.D.D.%20(The%20Last%20D%20is%20for%20Disorder)(SD).mp4",
+            "seconds": 1295,
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (Ddp2)",
-            "sizeMB": 103
+            "sizeMB": 59
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e03.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
+              "name": "Clone.High.S01e03.480P.Amzn.Web-Dl.Ddp2.0.H",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e03.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
+              "seconds": 1296,
+              "format": "h.264 IA",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 103
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -128,19 +167,6 @@
               "playable": true,
               "codecRisk": "audio (Ddp2)",
               "sizeMB": 103
-            },
-            {
-              "conf": 0.55,
-              "why": "absolute episode number + title match",
-              "item": "clone-high-season1",
-              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
-              "file": "S01 Episode 03 - A.D.D. (The Last D is for Disorder)(SD).mp4",
-              "name": "S01 Episode 03 - A.D.D. (The Last D is for Disorder)(SD)",
-              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2003%20-%20A.D.D.%20(The%20Last%20D%20is%20for%20Disorder)(SD).mp4",
-              "seconds": 1295,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 59
             }
           ]
         },
@@ -177,6 +203,19 @@
               "playable": true,
               "codecRisk": "audio (Ddp2)",
               "sizeMB": 102
+            },
+            {
+              "conf": 0.8,
+              "why": "absolute episode number + title match",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S01 Episode 04 - Film Fest (Tears of a Clone)(SD).mp4",
+              "name": "S01 Episode 04 - Film Fest (Tears of a Clone)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2004%20-%20Film%20Fest%20(Tears%20of%20a%20Clone)(SD).mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 57
             }
           ]
         },
@@ -213,6 +252,32 @@
               "playable": true,
               "codecRisk": "audio (Ddp2)",
               "sizeMB": 95
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Homecoming: A Shot in D'Arc\" (0.83)",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S01 Episode 06 - Homecoming (A Shot in D`Arc)(SD).mp4",
+              "name": "S01 Episode 06 - Homecoming (A Shot in D`Arc)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2006%20-%20Homecoming%20(A%20Shot%20in%20D%60Arc)(SD).mp4",
+              "seconds": 1294,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 58
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S01 Episode 05 - Sleep of Faith (La Rue D`Awakening)(SD).mp4",
+              "name": "S01 Episode 05 - Sleep of Faith (La Rue D`Awakening)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2005%20-%20Sleep%20of%20Faith%20(La%20Rue%20D%60Awakening)(SD).mp4",
+              "seconds": 1294,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 54
             }
           ]
         },
@@ -249,6 +314,32 @@
               "playable": true,
               "codecRisk": "audio (Ddp2)",
               "sizeMB": 104
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Sleep of Faith: La Rue D'Awakening\" (0.88)",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S01 Episode 05 - Sleep of Faith (La Rue D`Awakening)(SD).mp4",
+              "name": "S01 Episode 05 - Sleep of Faith (La Rue D`Awakening)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2005%20-%20Sleep%20of%20Faith%20(La%20Rue%20D%60Awakening)(SD).mp4",
+              "seconds": 1294,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 54
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S01 Episode 06 - Homecoming (A Shot in D`Arc)(SD).mp4",
+              "name": "S01 Episode 06 - Homecoming (A Shot in D`Arc)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2006%20-%20Homecoming%20(A%20Shot%20in%20D%60Arc)(SD).mp4",
+              "seconds": 1294,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 58
             }
           ]
         },
@@ -258,20 +349,33 @@
           "airdate": "2002-12-08",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
-            "itemTitle": "Clone High (2002)",
-            "file": "Clone.High.S01e07.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
-            "name": "Clone.High.S01e07.480P.Amzn.Web-Dl.Ddp2.0.H",
-            "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e07.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
-            "seconds": 1296,
-            "format": "h.264 IA",
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "clone-high-season1",
+            "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+            "file": "S01 Episode 07 - Plane Crazy (Gate Expectations)(SD).mp4",
+            "name": "S01 Episode 07 - Plane Crazy (Gate Expectations)(SD)",
+            "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2007%20-%20Plane%20Crazy%20(Gate%20Expectations)(SD).mp4",
+            "seconds": 1292,
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (Ddp2)",
-            "sizeMB": 113
+            "sizeMB": 64
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e07.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
+              "name": "Clone.High.S01e07.480P.Amzn.Web-Dl.Ddp2.0.H",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e07.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
+              "seconds": 1296,
+              "format": "h.264 IA",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 113
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -285,19 +389,6 @@
               "playable": true,
               "codecRisk": "audio (Ddp2)",
               "sizeMB": 113
-            },
-            {
-              "conf": 0.55,
-              "why": "absolute episode number + title match",
-              "item": "clone-high-season1",
-              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
-              "file": "S01 Episode 07 - Plane Crazy (Gate Expectations)(SD).mp4",
-              "name": "S01 Episode 07 - Plane Crazy (Gate Expectations)(SD)",
-              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2007%20-%20Plane%20Crazy%20(Gate%20Expectations)(SD).mp4",
-              "seconds": 1292,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 64
             }
           ]
         },
@@ -334,6 +425,19 @@
               "playable": true,
               "codecRisk": "audio (Ddp2)",
               "sizeMB": 142
+            },
+            {
+              "conf": 0.8,
+              "why": "absolute episode number + title match",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S01 Episode 08 - A Room of One`s Clone (The Pie of the Storm)(SD).mp4",
+              "name": "S01 Episode 08 - A Room of One`s Clone (The Pie of the Storm)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2008%20-%20A%20Room%20of%20One%60s%20Clone%20(The%20Pie%20of%20the%20Storm)(SD).mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 61
             }
           ]
         },
@@ -343,20 +447,33 @@
           "airdate": "2003-01-12",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
-            "itemTitle": "Clone High (2002)",
-            "file": "Clone.High.S01e09.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
-            "name": "Clone.High.S01e09.480P.Amzn.Web-Dl.Ddp2.0.H",
-            "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e09.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
-            "seconds": 1294,
-            "format": "h.264 IA",
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "clone-high-season1",
+            "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+            "file": "S01 Episode 09 - Raisin the Stakes (A Rock Opera in Three Acts)(SD).mp4",
+            "name": "S01 Episode 09 - Raisin the Stakes (A Rock Opera in Three Acts)(SD)",
+            "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2009%20-%20Raisin%20the%20Stakes%20(A%20Rock%20Opera%20in%20Three%20Acts)(SD).mp4",
+            "seconds": 1295,
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (Ddp2)",
-            "sizeMB": 112
+            "sizeMB": 71
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e09.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
+              "name": "Clone.High.S01e09.480P.Amzn.Web-Dl.Ddp2.0.H",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e09.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
+              "seconds": 1294,
+              "format": "h.264 IA",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 112
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -370,19 +487,6 @@
               "playable": true,
               "codecRisk": "audio (Ddp2)",
               "sizeMB": 112
-            },
-            {
-              "conf": 0.55,
-              "why": "absolute episode number + title match",
-              "item": "clone-high-season1",
-              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
-              "file": "S01 Episode 09 - Raisin the Stakes (A Rock Opera in Three Acts)(SD).mp4",
-              "name": "S01 Episode 09 - Raisin the Stakes (A Rock Opera in Three Acts)(SD)",
-              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2009%20-%20Raisin%20the%20Stakes%20(A%20Rock%20Opera%20in%20Three%20Acts)(SD).mp4",
-              "seconds": 1295,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 71
             }
           ]
         },
@@ -392,20 +496,33 @@
           "airdate": "2003-01-19",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
-            "itemTitle": "Clone High (2002)",
-            "file": "Clone.High.S01e10.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
-            "name": "Clone.High.S01e10.480P.Amzn.Web-Dl.Ddp2.0.H",
-            "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e10.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
-            "seconds": 1297,
-            "format": "h.264 IA",
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "clone-high-season1",
+            "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+            "file": "S01 Episode 10 - Litter Kills (Litterally)(SD).mp4",
+            "name": "S01 Episode 10 - Litter Kills (Litterally)(SD)",
+            "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2010%20-%20Litter%20Kills%20(Litterally)(SD).mp4",
+            "seconds": 1294,
+            "format": "MPEG4",
             "playable": true,
-            "codecRisk": "audio (Ddp2)",
-            "sizeMB": 105
+            "sizeMB": 60
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes",
+              "itemTitle": "Clone High (2002)",
+              "file": "Clone.High.S01e10.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
+              "name": "Clone.High.S01e10.480P.Amzn.Web-Dl.Ddp2.0.H",
+              "url": "https://archive.org/download/clone.-high.-s-01e-06.480-p.-amzn.-web-dl.-ddp-2.0.-h.-264-tepes/Clone.High.S01e10.480P.Amzn.Web-Dl.Ddp2.0.H.264-Tepes.ia.mp4",
+              "seconds": 1297,
+              "format": "h.264 IA",
+              "playable": true,
+              "codecRisk": "audio (Ddp2)",
+              "sizeMB": 105
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -419,19 +536,6 @@
               "playable": true,
               "codecRisk": "audio (Ddp2)",
               "sizeMB": 105
-            },
-            {
-              "conf": 0.55,
-              "why": "absolute episode number + title match",
-              "item": "clone-high-season1",
-              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
-              "file": "S01 Episode 10 - Litter Kills (Litterally)(SD).mp4",
-              "name": "S01 Episode 10 - Litter Kills (Litterally)(SD)",
-              "url": "https://archive.org/download/clone-high-season1/S01%20Episode%2010%20-%20Litter%20Kills%20(Litterally)(SD).mp4",
-              "seconds": 1294,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 60
             }
           ]
         },
@@ -468,6 +572,19 @@
               "playable": true,
               "codecRisk": "audio (Ddp2)",
               "sizeMB": 106
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Makeover, Makeover, Makeover: The Makeover Episode\" (0.82)",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S1Episode 12 - Makeover, Makeover, Makeover (The Makeover Episode)(SD).mp4",
+              "name": "S1Episode 12 - Makeover, Makeover, Makeover (The Makeover Episode)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S1Episode%2012%20-%20Makeover%2C%20Makeover%2C%20Makeover%20(The%20Makeover%20Episode)(SD).mp4",
+              "seconds": 1294,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 59
             }
           ]
         },
@@ -504,6 +621,19 @@
               "playable": true,
               "codecRisk": "audio (Ddp2)",
               "sizeMB": 102
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Changes: The Big Prom: The Sex Romp: The Season Finale\" (0.81)",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S1Episode 13 – Changes_The Big Prom_The Sex Romp_The Season Finale(SD).mp4",
+              "name": "S1Episode 13 – Changes_The Big Prom_The Sex Romp_The Season Finale(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S1Episode%2013%20%E2%80%93%20Changes_The%20Big%20Prom_The%20Sex%20Romp_The%20Season%20Finale(SD).mp4",
+              "seconds": 1296,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 59
             }
           ]
         },
@@ -540,6 +670,19 @@
               "playable": true,
               "codecRisk": "audio (Ddp2)",
               "sizeMB": 112
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Snowflake Day: A Very Special Holiday Episode\" (0.91)",
+              "item": "clone-high-season1",
+              "itemTitle": "Clone High (Season 1 2002/2003) (includes DVD special features)",
+              "file": "S1Episode 11 - Snowflake Day (A Very Special Holiday Episode)(SD).mp4",
+              "name": "S1Episode 11 - Snowflake Day (A Very Special Holiday Episode)(SD)",
+              "url": "https://archive.org/download/clone-high-season1/S1Episode%2011%20-%20Snowflake%20Day%20(A%20Very%20Special%20Holiday%20Episode)(SD).mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 59
             }
           ]
         }

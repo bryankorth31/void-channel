@@ -3,7 +3,7 @@
   "slug": "animal-x",
   "type": "Documentary & Geographic",
   "network": "Discovery",
-  "matchedAt": "2026-10-17T11:10:36.047Z",
+  "matchedAt": "2026-10-19T04:12:53.261Z",
   "addedAt": "2026-10-17T11:10:36.046Z",
   "tvmaze": {
     "id": 23156,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 6,
     "live": 0,
-    "review": 0,
-    "missing": 6,
-    "pct": 0
+    "review": 6,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -27,48 +27,120 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2016-11-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 10 in \"Animal X (Complete Series)\"",
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S03 E01 Ghostly Creatures.mp4",
+            "name": "Animal X S03 E01 Ghostly Creatures",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S03%20E01%20Ghostly%20Creatures.mp4",
+            "seconds": 2883,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 657
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2016-11-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 10 in \"Animal X (Complete Series)\"",
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S03 E02 Monster or Murderer? (Beast of Gevudan).mp4",
+            "name": "Animal X S03 E02 Monster or Murderer? (Beast of Gevudan)",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S03%20E02%20Monster%20or%20Murderer%3F%20(Beast%20of%20Gevudan).mp4",
+            "seconds": 2885,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 609
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Episode 3",
           "airdate": "2016-12-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 10 in \"Animal X (Complete Series)\"",
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S03 E03 Mystery of the Thylacine.mp4",
+            "name": "Animal X S03 E03 Mystery of the Thylacine",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S03%20E03%20Mystery%20of%20the%20Thylacine.mp4",
+            "seconds": 2891,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 637
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Episode 4",
           "airdate": "2016-12-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 10 in \"Animal X (Complete Series)\"",
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S03 E04 Texas Bigfoot.mp4",
+            "name": "Animal X S03 E04 Texas Bigfoot",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S03%20E04%20Texas%20Bigfoot.mp4",
+            "seconds": 2882,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 691
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "2016-12-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 10 in \"Animal X (Complete Series)\"",
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S03 E05 Winged Creatures.mp4",
+            "name": "Animal X S03 E05 Winged Creatures",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S03%20E05%20Winged%20Creatures.mp4",
+            "seconds": 2911,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 517
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Episode 6",
           "airdate": "2016-12-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 10 in \"Animal X (Complete Series)\"",
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S03 E06 Monsters of the Deep.mp4",
+            "name": "Animal X S03 E06 Monsters of the Deep",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S03%20E06%20Monsters%20of%20the%20Deep.mp4",
+            "seconds": 2883,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 649
+          },
           "alternates": []
         }
       ]

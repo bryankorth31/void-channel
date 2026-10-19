@@ -3,19 +3,19 @@
   "slug": "orphan-black",
   "type": "British and Beyond",
   "network": "Space",
-  "matchedAt": "2026-10-16T07:57:09.439Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:11:16.598Z",
+  "addedAt": "2026-10-16T07:57:09.439Z",
   "tvmaze": {
-    "id": null,
+    "id": 61,
     "name": "Orphan Black",
-    "runtime": null,
-    "premiered": null,
-    "network": "Space"
+    "runtime": 60,
+    "premiered": "2013-03-30",
+    "network": "CTV Sci-Fi Channel"
   },
   "coverage": {
-    "total": 58,
-    "live": 0,
-    "review": 58,
+    "total": 50,
+    "live": 8,
+    "review": 42,
     "missing": 0,
     "pct": 100
   },
@@ -25,9 +25,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "by luanharper",
-          "state": "REVIEW",
+          "name": "Natural Selection",
+          "airdate": "2013-03-30",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "orphan-black-s-01-",
             "itemTitle": "Orphan Black temp 1 ep 1 ao 6",
             "file": "Orphan Black S01E01 - 720p - By-LuanHarper.mp4",
@@ -36,21 +39,32 @@
             "seconds": 2699,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 210,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 210
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Natural Selection\" (0.95)",
+              "item": "orphan-black",
+              "itemTitle": "Orphan Black",
+              "file": "Season 1/1-1_Natural Selection.mp4",
+              "name": "Season 1/1-1_Natural Selection",
+              "url": "https://archive.org/download/orphan-black/Season%201%2F1-1_Natural%20Selection.mp4",
+              "seconds": 2687,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1445
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "by luanharper",
-          "state": "REVIEW",
+          "name": "Instinct",
+          "airdate": "2013-04-06",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "orphan-black-s-01-",
             "itemTitle": "Orphan Black temp 1 ep 1 ao 6",
             "file": "Orphan Black S01E02 - 720p - By-LuanHarper.mp4",
@@ -59,21 +73,32 @@
             "seconds": 2671,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 207,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 207
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Instinct\" (0.95)",
+              "item": "orphan-black",
+              "itemTitle": "Orphan Black",
+              "file": "Season 1/1-2_Instinct.mp4",
+              "name": "Season 1/1-2_Instinct",
+              "url": "https://archive.org/download/orphan-black/Season%201%2F1-2_Instinct.mp4",
+              "seconds": 2596,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1399
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "by luanharper",
-          "state": "REVIEW",
+          "name": "Variation Under Nature",
+          "airdate": "2013-04-13",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "orphan-black-s-01-",
             "itemTitle": "Orphan Black temp 1 ep 1 ao 6",
             "file": "Orphan Black S01E03 - 720p - By-LuanHarper.mp4",
@@ -82,21 +107,32 @@
             "seconds": 2604,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 417,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 417
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Variation Under Nature\" (0.95)",
+              "item": "orphan-black",
+              "itemTitle": "Orphan Black",
+              "file": "Season 1/1-3_Variation Under Nature.mp4",
+              "name": "Season 1/1-3_Variation Under Nature",
+              "url": "https://archive.org/download/orphan-black/Season%201%2F1-3_Variation%20Under%20Nature.mp4",
+              "seconds": 2602,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1401
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "by luanharper",
-          "state": "REVIEW",
+          "name": "Effects of External Conditions",
+          "airdate": "2013-04-20",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "orphan-black-s-01-",
             "itemTitle": "Orphan Black temp 1 ep 1 ao 6",
             "file": "Orphan Black S01E04 - 720p - By-LuanHarper.mp4",
@@ -105,21 +141,32 @@
             "seconds": 2597,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 396,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 396
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Effects of External Conditions\" (0.96)",
+              "item": "orphan-black",
+              "itemTitle": "Orphan Black",
+              "file": "Season 1/1-4_Effects of External Conditions.mp4",
+              "name": "Season 1/1-4_Effects of External Conditions",
+              "url": "https://archive.org/download/orphan-black/Season%201%2F1-4_Effects%20of%20External%20Conditions.mp4",
+              "seconds": 2594,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1397
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "by luanharper",
-          "state": "REVIEW",
+          "name": "Conditions of Existence",
+          "airdate": "2013-04-27",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "orphan-black-s-01-",
             "itemTitle": "Orphan Black temp 1 ep 1 ao 6",
             "file": "Orphan Black S01E05 - 720p - By-LuanHarper.mp4",
@@ -128,21 +175,32 @@
             "seconds": 2687,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 204,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 204
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Conditions of Existence\" (0.95)",
+              "item": "orphan-black",
+              "itemTitle": "Orphan Black",
+              "file": "Season 1/1-5_Conditions of Existence.mp4",
+              "name": "Season 1/1-5_Conditions of Existence",
+              "url": "https://archive.org/download/orphan-black/Season%201%2F1-5_Conditions%20of%20Existence.mp4",
+              "seconds": 2616,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1407
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "by luanharper",
-          "state": "REVIEW",
+          "name": "Variations Under Domestication",
+          "airdate": "2013-05-04",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "orphan-black-s-01-",
             "itemTitle": "Orphan Black temp 1 ep 1 ao 6",
             "file": "Orphan Black S01E06 - 720p - By-LuanHarper.mp4",
@@ -151,187 +209,32 @@
             "seconds": 2671,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 205,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 205
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Variations Under Domestication\" (0.96)",
+              "item": "orphan-black",
+              "itemTitle": "Orphan Black",
+              "file": "Season 1/1-6_Variations Under Domestication.mp4",
+              "name": "Season 1/1-6_Variations Under Domestication",
+              "url": "https://archive.org/download/orphan-black/Season%201%2F1-6_Variations%20Under%20Domestication.mp4",
+              "seconds": 2599,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1400
+            }
+          ]
         },
         {
-          "number": 8,
-          "name": "by luanharper",
+          "number": 7,
+          "name": "Parts Developed in an Unusual Manner",
+          "airdate": "2013-05-11",
           "state": "REVIEW",
           "file": {
-            "item": "orphan-black-s-01-e-08-720p-by-luan-harper",
-            "itemTitle": "Orphan Black S 01 E 08 720p By Luan Harper",
-            "file": "Orphan Black S01E08 - 720p - By-LuanHarper.mp4",
-            "name": "Orphan Black S01E08 - 720p - By-LuanHarper",
-            "url": "https://archive.org/download/orphan-black-s-01-e-08-720p-by-luan-harper/Orphan%20Black%20S01E08%20-%20720p%20-%20By-LuanHarper.mp4",
-            "seconds": 2601,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 396,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "by luanharper",
-          "state": "REVIEW",
-          "file": {
-            "item": "orphan-black-s-01-e-09-720p-by-luan-harper",
-            "itemTitle": "Orphan Black S 01 E 09 720p By Luan Harper",
-            "file": "Orphan Black S01E09 - 720p - By-LuanHarper.mp4",
-            "name": "Orphan Black S01E09 - 720p - By-LuanHarper",
-            "url": "https://archive.org/download/orphan-black-s-01-e-09-720p-by-luan-harper/Orphan%20Black%20S01E09%20-%20720p%20-%20By-LuanHarper.mp4",
-            "seconds": 2600,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 400,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "1 1 natural selection",
-          "state": "REVIEW",
-          "file": {
-            "item": "orphan-black",
-            "itemTitle": "Orphan Black",
-            "file": "Season 1/1-1_Natural Selection.mp4",
-            "name": "Season 1/1-1_Natural Selection",
-            "url": "https://archive.org/download/orphan-black/Season%201%2F1-1_Natural%20Selection.mp4",
-            "seconds": 2687,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1445,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "1 2 instinct",
-          "state": "REVIEW",
-          "file": {
-            "item": "orphan-black",
-            "itemTitle": "Orphan Black",
-            "file": "Season 1/1-2_Instinct.mp4",
-            "name": "Season 1/1-2_Instinct",
-            "url": "https://archive.org/download/orphan-black/Season%201%2F1-2_Instinct.mp4",
-            "seconds": 2596,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1399,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "1 3 variation under nature",
-          "state": "REVIEW",
-          "file": {
-            "item": "orphan-black",
-            "itemTitle": "Orphan Black",
-            "file": "Season 1/1-3_Variation Under Nature.mp4",
-            "name": "Season 1/1-3_Variation Under Nature",
-            "url": "https://archive.org/download/orphan-black/Season%201%2F1-3_Variation%20Under%20Nature.mp4",
-            "seconds": 2602,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1401,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "1 4 effects of external conditions",
-          "state": "REVIEW",
-          "file": {
-            "item": "orphan-black",
-            "itemTitle": "Orphan Black",
-            "file": "Season 1/1-4_Effects of External Conditions.mp4",
-            "name": "Season 1/1-4_Effects of External Conditions",
-            "url": "https://archive.org/download/orphan-black/Season%201%2F1-4_Effects%20of%20External%20Conditions.mp4",
-            "seconds": 2594,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1397,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "1 5 conditions of existence",
-          "state": "REVIEW",
-          "file": {
-            "item": "orphan-black",
-            "itemTitle": "Orphan Black",
-            "file": "Season 1/1-5_Conditions of Existence.mp4",
-            "name": "Season 1/1-5_Conditions of Existence",
-            "url": "https://archive.org/download/orphan-black/Season%201%2F1-5_Conditions%20of%20Existence.mp4",
-            "seconds": 2616,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1407,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "1 6 variations under domestication",
-          "state": "REVIEW",
-          "file": {
-            "item": "orphan-black",
-            "itemTitle": "Orphan Black",
-            "file": "Season 1/1-6_Variations Under Domestication.mp4",
-            "name": "Season 1/1-6_Variations Under Domestication",
-            "url": "https://archive.org/download/orphan-black/Season%201%2F1-6_Variations%20Under%20Domestication.mp4",
-            "seconds": 2599,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1400,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "1 7 parts developed in an unusual manner",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Parts Developed in an Unusual Manner\" (0.97)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 1/1-7_Parts Developed in an Unusual Manner.mp4",
@@ -340,58 +243,86 @@
             "seconds": 2602,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1400,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1400
           },
           "alternates": []
         },
         {
-          "number": 17,
-          "name": "1 8 entangled bank",
-          "state": "REVIEW",
+          "number": 8,
+          "name": "Entangled Bank",
+          "airdate": "2013-05-18",
+          "state": "LIVE",
           "file": {
-            "item": "orphan-black",
-            "itemTitle": "Orphan Black",
-            "file": "Season 1/1-8_Entangled Bank.mp4",
-            "name": "Season 1/1-8_Entangled Bank",
-            "url": "https://archive.org/download/orphan-black/Season%201%2F1-8_Entangled%20Bank.mp4",
-            "seconds": 2599,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "orphan-black-s-01-e-08-720p-by-luan-harper",
+            "itemTitle": "Orphan Black S 01 E 08 720p By Luan Harper",
+            "file": "Orphan Black S01E08 - 720p - By-LuanHarper.mp4",
+            "name": "Orphan Black S01E08 - 720p - By-LuanHarper",
+            "url": "https://archive.org/download/orphan-black-s-01-e-08-720p-by-luan-harper/Orphan%20Black%20S01E08%20-%20720p%20-%20By-LuanHarper.mp4",
+            "seconds": 2601,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1400,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 396
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Entangled Bank\" (0.95)",
+              "item": "orphan-black",
+              "itemTitle": "Orphan Black",
+              "file": "Season 1/1-8_Entangled Bank.mp4",
+              "name": "Season 1/1-8_Entangled Bank",
+              "url": "https://archive.org/download/orphan-black/Season%201%2F1-8_Entangled%20Bank.mp4",
+              "seconds": 2599,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1400
+            }
+          ]
         },
         {
-          "number": 18,
-          "name": "1 9 unconscious selection",
-          "state": "REVIEW",
+          "number": 9,
+          "name": "Unconscious Selection",
+          "airdate": "2013-05-25",
+          "state": "LIVE",
           "file": {
-            "item": "orphan-black",
-            "itemTitle": "Orphan Black",
-            "file": "Season 1/1-9_Unconscious Selection.mp4",
-            "name": "Season 1/1-9_Unconscious Selection",
-            "url": "https://archive.org/download/orphan-black/Season%201%2F1-9_Unconscious%20Selection.mp4",
-            "seconds": 2599,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "orphan-black-s-01-e-09-720p-by-luan-harper",
+            "itemTitle": "Orphan Black S 01 E 09 720p By Luan Harper",
+            "file": "Orphan Black S01E09 - 720p - By-LuanHarper.mp4",
+            "name": "Orphan Black S01E09 - 720p - By-LuanHarper",
+            "url": "https://archive.org/download/orphan-black-s-01-e-09-720p-by-luan-harper/Orphan%20Black%20S01E09%20-%20720p%20-%20By-LuanHarper.mp4",
+            "seconds": 2600,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1398,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 400
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Unconscious Selection\" (0.95)",
+              "item": "orphan-black",
+              "itemTitle": "Orphan Black",
+              "file": "Season 1/1-9_Unconscious Selection.mp4",
+              "name": "Season 1/1-9_Unconscious Selection",
+              "url": "https://archive.org/download/orphan-black/Season%201%2F1-9_Unconscious%20Selection.mp4",
+              "seconds": 2599,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1398
+            }
+          ]
         },
         {
-          "number": 19,
-          "name": "1 10 endless forms most beautiful",
+          "number": 10,
+          "name": "Endless Forms Most Beautiful",
+          "airdate": "2013-06-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Endless Forms Most Beautiful\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 1/1-10_Endless Forms Most Beautiful.mp4",
@@ -400,18 +331,23 @@
             "seconds": 2629,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1404,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1404
           },
           "alternates": []
-        },
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
         {
-          "number": 20,
-          "name": "2 1 nature under constraint and vexed",
+          "number": 1,
+          "name": "Nature Under Constraint and Vexed",
+          "airdate": "2014-04-19",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Nature Under Constraint and Vexed\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 2/2-1_Nature Under Constraint and Vexed.mp4",
@@ -420,18 +356,18 @@
             "seconds": 2615,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1402,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1402
           },
           "alternates": []
         },
         {
-          "number": 21,
-          "name": "2 2 governed by sound reason and true religion",
+          "number": 2,
+          "name": "Governed by Sound Reason and True Religion",
+          "airdate": "2014-04-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Governed by Sound Reason and True Religion\" (0.97)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 2/2-2_Governed by Sound Reason and True Religion.mp4",
@@ -440,18 +376,18 @@
             "seconds": 2614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1402,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1402
           },
           "alternates": []
         },
         {
-          "number": 22,
-          "name": "2 3 mingling its own nature with it",
+          "number": 3,
+          "name": "Mingling Its Own Nature with It",
+          "airdate": "2014-05-03",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Mingling Its Own Nature with It\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 2/2-3_Mingling Its Own Nature with It.mp4",
@@ -460,18 +396,18 @@
             "seconds": 2611,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1400,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1400
           },
           "alternates": []
         },
         {
-          "number": 23,
-          "name": "2 4 governed as it were by chance",
+          "number": 4,
+          "name": "Governed as It Were by Chance",
+          "airdate": "2014-05-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Governed as It Were by Chance\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 2/2-4_Governed as It Were by Chance.mp4",
@@ -480,18 +416,18 @@
             "seconds": 2615,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1402,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1402
           },
           "alternates": []
         },
         {
-          "number": 24,
-          "name": "2 5 ipsa scientia potestas est",
+          "number": 5,
+          "name": "Ipsa Scientia Potestas Est",
+          "airdate": "2014-05-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Ipsa Scientia Potestas Est\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 2/2-5_Ipsa Scientia Potestas Est.mp4",
@@ -500,18 +436,18 @@
             "seconds": 2615,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1402,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1402
           },
           "alternates": []
         },
         {
-          "number": 25,
-          "name": "2 6 to hound nature in her wanderings",
+          "number": 6,
+          "name": "To Hound Nature in Her Wanderings",
+          "airdate": "2014-05-24",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"To Hound Nature in Her Wanderings\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 2/2-6_To Hound Nature in Her Wanderings.mp4",
@@ -520,18 +456,18 @@
             "seconds": 2615,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1402,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1402
           },
           "alternates": []
         },
         {
-          "number": 26,
-          "name": "2 7 knowledge of causes and secret motion of things",
+          "number": 7,
+          "name": "Knowledge of Causes, and Secret Motion of Things",
+          "airdate": "2014-05-31",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Knowledge of Causes, and Secret Motion of Things\" (0.97)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 2/2-7_Knowledge of Causes, and Secret Motion of Things.mp4",
@@ -540,18 +476,18 @@
             "seconds": 2614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1402,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1402
           },
           "alternates": []
         },
         {
-          "number": 27,
-          "name": "2 8 variable and full of perturbation",
+          "number": 8,
+          "name": "Variable and Full of Perturbation",
+          "airdate": "2014-06-07",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Variable and Full of Perturbation\" (0.97)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 2/2-8_Variable and Full of Perturbation.mp4",
@@ -560,18 +496,18 @@
             "seconds": 2613,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1401,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1401
           },
           "alternates": []
         },
         {
-          "number": 28,
-          "name": "2 9 things which have never yet been done",
+          "number": 9,
+          "name": "Things Which Have Never Yet Been Done",
+          "airdate": "2014-06-14",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Things Which Have Never Yet Been Done\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 2/2-9_Things Which Have Never Yet Been Done.mp4",
@@ -580,18 +516,18 @@
             "seconds": 2616,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1403,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1403
           },
           "alternates": []
         },
         {
-          "number": 29,
-          "name": "2 10 by means which have never yet been tried",
+          "number": 10,
+          "name": "By Means Which Have Never Yet Been Tried",
+          "airdate": "2014-06-21",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"By Means Which Have Never Yet Been Tried\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 2/2-10_By Means Which Have Never Yet Been Tried.mp4",
@@ -600,18 +536,23 @@
             "seconds": 2620,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1406,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1406
           },
           "alternates": []
-        },
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
         {
-          "number": 30,
-          "name": "3 1 the weight of this combination",
+          "number": 1,
+          "name": "The Weight of This Combination",
+          "airdate": "2015-04-18",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Weight of This Combination\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 3/3-1_The Weight of This Combination.mp4",
@@ -620,18 +561,18 @@
             "seconds": 2618,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1407,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1407
           },
           "alternates": []
         },
         {
-          "number": 31,
-          "name": "3 2 transitory sacrifices of crisis",
+          "number": 2,
+          "name": "Transitory Sacrifices of Crisis",
+          "airdate": "2015-04-25",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Transitory Sacrifices of Crisis\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 3/3-2_Transitory Sacrifices of Crisis.mp4",
@@ -640,18 +581,18 @@
             "seconds": 2646,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1422,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1422
           },
           "alternates": []
         },
         {
-          "number": 32,
-          "name": "3 3 formalized complex and costly",
+          "number": 3,
+          "name": "Formalized, Complex, and Costly",
+          "airdate": "2015-05-02",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Formalized, Complex, and Costly\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 3/3-3_Formalized, Complex, and Costly.mp4",
@@ -660,18 +601,18 @@
             "seconds": 2618,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1408,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1408
           },
           "alternates": []
         },
         {
-          "number": 33,
-          "name": "3 4 newer elements of our defense",
+          "number": 4,
+          "name": "Newer Elements of Our Defense",
+          "airdate": "2015-05-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Newer Elements of Our Defense\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 3/3-4_Newer Elements of Our Defense.mp4",
@@ -680,18 +621,18 @@
             "seconds": 2616,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1406,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1406
           },
           "alternates": []
         },
         {
-          "number": 34,
-          "name": "3 5 scarred by many past frustrations",
+          "number": 5,
+          "name": "Scarred by Many Past Frustrations",
+          "airdate": "2015-05-16",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Scarred by Many Past Frustrations\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 3/3-5_Scarred by Many Past Frustrations.mp4",
@@ -700,18 +641,18 @@
             "seconds": 2616,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1406,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1406
           },
           "alternates": []
         },
         {
-          "number": 35,
-          "name": "3 6 certain agony of the battlefield",
+          "number": 6,
+          "name": "Certain Agony of the Battlefield",
+          "airdate": "2015-05-23",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Certain Agony of the Battlefield\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 3/3-6_Certain Agony of the Battlefield.mp4",
@@ -720,18 +661,18 @@
             "seconds": 2616,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1406,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1406
           },
           "alternates": []
         },
         {
-          "number": 36,
-          "name": "3 7 community of dreadful fear and hate",
+          "number": 7,
+          "name": "Community of Dreadful Fear and Hate",
+          "airdate": "2015-05-30",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Community of Dreadful Fear and Hate\" (0.97)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 3/3-7_Community of Dreadful Fear and Hate.mp4",
@@ -740,18 +681,18 @@
             "seconds": 2621,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1408,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1408
           },
           "alternates": []
         },
         {
-          "number": 37,
-          "name": "3 8 ruthless in purpose and insidious in method",
+          "number": 8,
+          "name": "Ruthless in Purpose, and Insidious in Method",
+          "airdate": "2015-06-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Ruthless in Purpose, and Insidious in Method\" (0.97)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 3/3-8_Ruthless in Purpose, and Insidious in Method.mp4",
@@ -760,18 +701,18 @@
             "seconds": 2616,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1406,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1406
           },
           "alternates": []
         },
         {
-          "number": 38,
-          "name": "3 9 insolvent phantom of tomorrow",
+          "number": 9,
+          "name": "Insolvent Phantom of Tomorrow",
+          "airdate": "2015-06-13",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Insolvent Phantom of Tomorrow\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 3/3-9_Insolvent Phantom of Tomorrow.mp4",
@@ -780,18 +721,18 @@
             "seconds": 2615,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1407,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1407
           },
           "alternates": []
         },
         {
-          "number": 39,
-          "name": "3 10 history yet to be written",
+          "number": 10,
+          "name": "History Yet to Be Written",
+          "airdate": "2015-06-20",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"History Yet to Be Written\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 3/3-10_History Yet to Be Written.mp4",
@@ -800,18 +741,23 @@
             "seconds": 2676,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1438,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1438
           },
           "alternates": []
-        },
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
         {
-          "number": 40,
-          "name": "4 1 the collapse of nature",
+          "number": 1,
+          "name": "The Collapse of Nature",
+          "airdate": "2016-04-14",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Collapse of Nature\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 4/4-1_The Collapse of Nature.mp4",
@@ -820,18 +766,18 @@
             "seconds": 2614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1403,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1403
           },
           "alternates": []
         },
         {
-          "number": 41,
-          "name": "4 2 transgressive border crossing",
+          "number": 2,
+          "name": "Transgressive Border Crossing",
+          "airdate": "2016-04-21",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Transgressive Border Crossing\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 4/4-2_Transgressive Border Crossing.mp4",
@@ -840,18 +786,18 @@
             "seconds": 2614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1402,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1402
           },
           "alternates": []
         },
         {
-          "number": 42,
-          "name": "4 3 the stigmata of progress",
+          "number": 3,
+          "name": "The Stigmata of Progress",
+          "airdate": "2016-04-28",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Stigmata of Progress\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 4/4-3_The Stigmata of Progress.mp4",
@@ -860,18 +806,18 @@
             "seconds": 2614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1403,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1403
           },
           "alternates": []
         },
         {
-          "number": 43,
-          "name": "4 4 from instinct to rational control",
+          "number": 4,
+          "name": "From Instinct to Rational Control",
+          "airdate": "2016-05-05",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"From Instinct to Rational Control\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 4/4-4_From Instinct to Rational Control.mp4",
@@ -880,18 +826,18 @@
             "seconds": 2614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1403,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1403
           },
           "alternates": []
         },
         {
-          "number": 44,
-          "name": "4 5 human raw material",
+          "number": 5,
+          "name": "Human Raw Material",
+          "airdate": "2016-05-12",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Human Raw Material\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 4/4-5_Human Raw Material.mp4",
@@ -900,18 +846,18 @@
             "seconds": 2614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1403,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1403
           },
           "alternates": []
         },
         {
-          "number": 45,
-          "name": "4 6 the scandal of altruism",
+          "number": 6,
+          "name": "The Scandal of Altruism",
+          "airdate": "2016-05-19",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Scandal of Altruism\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 4/4-6_The Scandal of Altruism.mp4",
@@ -920,18 +866,18 @@
             "seconds": 2614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1403,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1403
           },
           "alternates": []
         },
         {
-          "number": 46,
-          "name": "4 7 the antisocialism of sex",
+          "number": 7,
+          "name": "The Antisocialism of Sex",
+          "airdate": "2016-05-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Antisocialism of Sex\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 4/4-7_The Antisocialism of Sex.mp4",
@@ -940,18 +886,18 @@
             "seconds": 2614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1403,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1403
           },
           "alternates": []
         },
         {
-          "number": 47,
-          "name": "4 8 the redesign of natural objects",
+          "number": 8,
+          "name": "The Redesign of Natural Objects",
+          "airdate": "2016-06-02",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Redesign of Natural Objects\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 4/4-8_The Redesign of Natural Objects.mp4",
@@ -960,18 +906,18 @@
             "seconds": 2584,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1387,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1387
           },
           "alternates": []
         },
         {
-          "number": 48,
-          "name": "4 9 the mitigation of competition",
+          "number": 9,
+          "name": "The Mitigation of Competition",
+          "airdate": "2016-06-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Mitigation of Competition\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 4/4-9_The Mitigation of Competition.mp4",
@@ -980,18 +926,18 @@
             "seconds": 2674,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1435,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1435
           },
           "alternates": []
         },
         {
-          "number": 49,
-          "name": "4 10 from dancing mice to psychopaths",
+          "number": 10,
+          "name": "From Dancing Mice to Psychopaths",
+          "airdate": "2016-06-16",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"From Dancing Mice to Psychopaths\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 4/4-10_From Dancing Mice to Psychopaths.mp4",
@@ -1000,18 +946,23 @@
             "seconds": 2794,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1499,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1499
           },
           "alternates": []
-        },
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
         {
-          "number": 50,
-          "name": "5 1 the few who dare",
+          "number": 1,
+          "name": "The Few Who Dare",
+          "airdate": "2017-06-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Few Who Dare\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 5/5-1_The Few Who Dare.mp4",
@@ -1020,18 +971,18 @@
             "seconds": 2554,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1370,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1370
           },
           "alternates": []
         },
         {
-          "number": 51,
-          "name": "5 2 clutch of greed",
+          "number": 2,
+          "name": "Clutch of Greed",
+          "airdate": "2017-06-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Clutch of Greed\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 5/5-2_Clutch of Greed.mp4",
@@ -1040,18 +991,18 @@
             "seconds": 2554,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1370,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1370
           },
           "alternates": []
         },
         {
-          "number": 52,
-          "name": "5 3 beneath her heart",
+          "number": 3,
+          "name": "Beneath Her Heart",
+          "airdate": "2017-06-24",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Beneath Her Heart\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 5/5-3_Beneath Her Heart.mp4",
@@ -1060,18 +1011,18 @@
             "seconds": 2554,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1370,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1370
           },
           "alternates": []
         },
         {
-          "number": 53,
-          "name": "5 4 let the children and childbearers toil",
+          "number": 4,
+          "name": "Let the Children and Childbearers Toil",
+          "airdate": "2017-07-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Let the Children and Childbearers Toil\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 5/5-4_Let the Children and Childbearers Toil.mp4",
@@ -1080,18 +1031,18 @@
             "seconds": 2539,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1362,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1362
           },
           "alternates": []
         },
         {
-          "number": 54,
-          "name": "5 5 ease for idle millionaires",
+          "number": 5,
+          "name": "Ease for Idle Millionaires",
+          "airdate": "2017-07-08",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Ease for Idle Millionaires\" (0.96)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 5/5-5_Ease for Idle Millionaires.mp4",
@@ -1100,18 +1051,18 @@
             "seconds": 2554,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1370,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1370
           },
           "alternates": []
         },
         {
-          "number": 55,
-          "name": "5 6 manacled slim wrists",
+          "number": 6,
+          "name": "Manacled Slim Wrists",
+          "airdate": "2017-07-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Manacled Slim Wrists\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 5/5-6_Manacled Slim Wrists.mp4",
@@ -1120,18 +1071,18 @@
             "seconds": 2554,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1370,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1370
           },
           "alternates": []
         },
         {
-          "number": 56,
-          "name": "5 7 gag or throttle",
+          "number": 7,
+          "name": "Gag or Throttle",
+          "airdate": "2017-07-22",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Gag or Throttle\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 5/5-7_Gag or Throttle.mp4",
@@ -1140,18 +1091,18 @@
             "seconds": 2554,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1371,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1371
           },
           "alternates": []
         },
         {
-          "number": 57,
-          "name": "5 8 guillotines decide",
+          "number": 8,
+          "name": "Guillotines Decide",
+          "airdate": "2017-07-29",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Guillotines Decide\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 5/5-8_Guillotines Decide.mp4",
@@ -1160,18 +1111,18 @@
             "seconds": 2554,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1371,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1371
           },
           "alternates": []
         },
         {
-          "number": 58,
-          "name": "5 9 one fettered slave",
+          "number": 9,
+          "name": "One Fettered Slave",
+          "airdate": "2017-08-05",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"One Fettered Slave\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 5/5-9_One Fettered Slave.mp4",
@@ -1180,18 +1131,18 @@
             "seconds": 2554,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1371,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1371
           },
           "alternates": []
         },
         {
-          "number": 59,
-          "name": "5 10 to right the wrongs of many",
+          "number": 10,
+          "name": "To Right the Wrongs of Many",
+          "airdate": "2017-08-12",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"To Right the Wrongs of Many\" (0.95)",
             "item": "orphan-black",
             "itemTitle": "Orphan Black",
             "file": "Season 5/5-10_To Right the Wrongs of Many.mp4",
@@ -1200,19 +1151,11 @@
             "seconds": 2674,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1435,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1435
           },
           "alternates": []
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 61,
-    "name": "Orphan Black",
-    "placed": 8
-  }
+  ]
 }

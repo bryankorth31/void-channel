@@ -3,7 +3,7 @@
   "slug": "tales-of-the-gun",
   "type": "Documentary & Geographic",
   "network": "History",
-  "matchedAt": "2026-10-16T07:58:04.776Z",
+  "matchedAt": "2026-10-19T04:12:09.013Z",
   "addedAt": "2026-10-15T12:08:36.085Z",
   "tvmaze": {
     "id": 80849,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 52,
     "live": 0,
-    "review": 34,
-    "missing": 18,
-    "pct": 65
+    "review": 35,
+    "missing": 17,
+    "pct": 67
   },
   "seasons": [
     {
@@ -27,8 +27,20 @@
           "number": 1,
           "name": "Making of a Gun",
           "airdate": "1998-01-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 5 in \"Tales Of The Gun\"",
+            "item": "tales-of-the-gun-16-rapid-firepower_202202",
+            "itemTitle": "Tales Of The Gun",
+            "file": "Tales of the Gun/Tales of the Gun - 01 - Making of the Gun.mp4",
+            "name": "Tales of the Gun/Tales of the Gun - 01 - Making of the Gun",
+            "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2001%20-%20Making%20of%20the%20Gun.mp4",
+            "seconds": 2750,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 273
+          },
           "alternates": []
         },
         {
@@ -59,6 +71,19 @@
               "name": "Tales of the Gun - 02 - Bullets and Ammo",
               "url": "https://archive.org/download/tales-of-the-gun-06-guns-of-remington/Tales%20of%20the%20Gun%20-%2002%20-%20Bullets%20and%20Ammo.mp4",
               "seconds": 2756,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 277
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 5 in \"Tales Of The Gun\"",
+              "item": "tales-of-the-gun-16-rapid-firepower_202202",
+              "itemTitle": "Tales Of The Gun",
+              "file": "Tales of the Gun/Tales of the Gun - 11 - The Shotgun.mp4",
+              "name": "Tales of the Gun/Tales of the Gun - 11 - The Shotgun",
+              "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2011%20-%20The%20Shotgun.mp4",
+              "seconds": 2755,
               "format": "h.264",
               "playable": true,
               "sizeMB": 277
@@ -96,6 +121,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 276
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 5 in \"Tales Of The Gun\"",
+              "item": "tales-of-the-gun-16-rapid-firepower_202202",
+              "itemTitle": "Tales Of The Gun",
+              "file": "Tales of the Gun/Tales of the Gun - 24 - Guns of Isreal.mp4",
+              "name": "Tales of the Gun/Tales of the Gun - 24 - Guns of Isreal",
+              "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2024%20-%20Guns%20of%20Isreal.mp4",
+              "seconds": 2756,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 278
             }
           ]
         },
@@ -130,6 +168,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 278
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 5 in \"Tales Of The Gun\"",
+              "item": "tales-of-the-gun-16-rapid-firepower_202202",
+              "itemTitle": "Tales Of The Gun",
+              "file": "Tales of the Gun/Tales of the Gun - 36 - Guns of Infantry.mp4",
+              "name": "Tales of the Gun/Tales of the Gun - 36 - Guns of Infantry",
+              "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2036%20-%20Guns%20of%20Infantry.mp4",
+              "seconds": 2743,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 285
             }
           ]
         },
@@ -164,6 +215,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 276
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 5 in \"Tales Of The Gun\"",
+              "item": "tales-of-the-gun-16-rapid-firepower_202202",
+              "itemTitle": "Tales Of The Gun",
+              "file": "Tales of the Gun/Tales of the Gun - 37 - Guns of Infantry Pt2.mp4",
+              "name": "Tales of the Gun/Tales of the Gun - 37 - Guns of Infantry Pt2",
+              "url": "https://archive.org/download/tales-of-the-gun-16-rapid-firepower_202202/Tales%20of%20the%20Gun%2FTales%20of%20the%20Gun%20-%2037%20-%20Guns%20of%20Infantry%20Pt2.mp4",
+              "seconds": 2756,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 286
             }
           ]
         },

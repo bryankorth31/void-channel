@@ -3,7 +3,7 @@
   "slug": "smallville",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "The WB",
-  "matchedAt": "2026-10-16T07:56:55.039Z",
+  "matchedAt": "2026-10-19T04:10:59.132Z",
   "addedAt": "2026-10-15T15:06:03.735Z",
   "tvmaze": {
     "id": 435,
@@ -27,8 +27,20 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "2001-10-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Pilot\" (0.95)",
+            "item": "making-off-smallville-2001",
+            "itemTitle": "Making Off Smallville 2001",
+            "file": "SPECIALS/S00E01 - Unaired Pilot.mp4",
+            "name": "SPECIALS/S00E01 - Unaired Pilot",
+            "url": "https://archive.org/download/making-off-smallville-2001/SPECIALS%2FS00E01%20-%20Unaired%20Pilot.mp4",
+            "seconds": 3008,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 303
+          },
           "alternates": []
         },
         {
@@ -1760,20 +1772,8 @@
           "number": 17,
           "name": "Kent",
           "airdate": "2011-04-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Kent\" (0.95)",
-            "item": "galaxy-con-live-comic-con-smallville-cast-day-1-actors-panel-tom-welling-clark-k",
-            "itemTitle": "Galaxy Con Live Comic Con, Smallville Cast Day 1; Actors Panel Tom Welling “ Clark Kent”, Erica Durance “ Lois Lane' 10 12 2020",
-            "file": "GalaxyCon Live Comic-Con, Smallville cast Day 1; Actors Panel Tom Welling “Clark Kent”, Erica Durance “Lois Lane' 10-12-2020.mp4",
-            "name": "GalaxyCon Live Comic-Con, Smallville cast Day 1; Actors Panel Tom Welling “Clark Kent”, Erica Durance “Lois Lane' 10-12-2020",
-            "url": "https://archive.org/download/galaxy-con-live-comic-con-smallville-cast-day-1-actors-panel-tom-welling-clark-k/GalaxyCon%20Live%20Comic-Con%2C%20Smallville%20cast%20Day%201%3B%20Actors%20Panel%20Tom%20Welling%20%E2%80%9CClark%20Kent%E2%80%9D%2C%20Erica%20Durance%20%E2%80%9CLois%20Lane'%2010-12-2020.mp4",
-            "seconds": 3019,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 621
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

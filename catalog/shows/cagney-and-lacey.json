@@ -3,7 +3,7 @@
   "slug": "cagney-and-lacey",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:58:28.497Z",
+  "matchedAt": "2026-10-19T04:12:27.568Z",
   "addedAt": "2026-10-15T12:09:00.355Z",
   "tvmaze": {
     "id": 12374,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 125,
-    "live": 124,
-    "review": 1,
+    "live": 125,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "You Call This Plain Clothes?",
           "airdate": "1982-03-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "y_20251021",
             "itemTitle": "Cagney & Lacey",
@@ -43,7 +43,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "cagney-lacey-s-01",
               "itemTitle": "Cagney & Lacey Season 1",
@@ -54,6 +54,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 283
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"You Call This Plain Clothes?\" (0.95)",
+              "item": "cagneylaceys01",
+              "itemTitle": "Cagney & Lacey Season 1 (1982)",
+              "file": "S01E001_You Call This Plain Clothes_chf3_prob4.mp4",
+              "name": "S01E001_You Call This Plain Clothes_chf3_prob4",
+              "url": "https://archive.org/download/cagneylaceys01/S01E001_You%20Call%20This%20Plain%20Clothes_chf3_prob4.mp4",
+              "seconds": 2947,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 4427
             }
           ]
         },
@@ -88,6 +101,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 283
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Pop Used to Work Chinatown\" (0.95)",
+              "item": "cagneylaceys01",
+              "itemTitle": "Cagney & Lacey Season 1 (1982)",
+              "file": "S01E002_Pop Used To Work In Chinatown_chf3_prob4.mp4",
+              "name": "S01E002_Pop Used To Work In Chinatown_chf3_prob4",
+              "url": "https://archive.org/download/cagneylaceys01/S01E002_Pop%20Used%20To%20Work%20In%20Chinatown_chf3_prob4.mp4",
+              "seconds": 2950,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 4364
             }
           ]
         },
@@ -122,6 +148,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 267
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Beyond the Golden Door\" (0.95)",
+              "item": "cagneylaceys01",
+              "itemTitle": "Cagney & Lacey Season 1 (1982)",
+              "file": "S01E003_Beyond The Golden Door_1_chf3_prob4.mp4",
+              "name": "S01E003_Beyond The Golden Door_1_chf3_prob4",
+              "url": "https://archive.org/download/cagneylaceys01/S01E003_Beyond%20The%20Golden%20Door_1_chf3_prob4.mp4",
+              "seconds": 2950,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 4088
             }
           ]
         },
@@ -156,6 +195,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 270
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Street Scene\" (0.95)",
+              "item": "cagneylaceys01",
+              "itemTitle": "Cagney & Lacey Season 1 (1982)",
+              "file": "S01E004_Street Scene_chf3_prob4.mp4",
+              "name": "S01E004_Street Scene_chf3_prob4",
+              "url": "https://archive.org/download/cagneylaceys01/S01E004_Street%20Scene_chf3_prob4.mp4",
+              "seconds": 2949,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 4416
             }
           ]
         },
@@ -190,6 +242,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 270
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Suffer the Children\" (0.95)",
+              "item": "cagneylaceys01",
+              "itemTitle": "Cagney & Lacey Season 1 (1982)",
+              "file": "S01E005_Suffer The Children_chf3_prob4.mp4",
+              "name": "S01E005_Suffer The Children_chf3_prob4",
+              "url": "https://archive.org/download/cagneylaceys01/S01E005_Suffer%20The%20Children_chf3_prob4.mp4",
+              "seconds": 2951,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 4291
             }
           ]
         },
@@ -224,6 +289,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 275
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Better Than Equal\" (0.95)",
+              "item": "cagneylaceys01",
+              "itemTitle": "Cagney & Lacey Season 1 (1982)",
+              "file": "S01E006_Better Than Equal_chf3_prob4.mp4",
+              "name": "S01E006_Better Than Equal_chf3_prob4",
+              "url": "https://archive.org/download/cagneylaceys01/S01E006_Better%20Than%20Equal_chf3_prob4.mp4",
+              "seconds": 2953,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 4229
             }
           ]
         }

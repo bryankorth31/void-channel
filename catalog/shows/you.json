@@ -3,7 +3,8 @@
   "slug": "you",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:56.711Z",
+  "matchedAt": "2026-10-19T04:11:01.069Z",
+  "addedAt": "2026-10-19T04:11:01.074Z",
   "tvmaze": {
     "id": 26856,
     "name": "You",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 50,
-    "live": 0,
+    "live": 1,
     "review": 0,
-    "missing": 50,
-    "pct": 0
+    "missing": 49,
+    "pct": 2
   },
   "seasons": [
     {
@@ -382,8 +383,20 @@
           "number": 3,
           "name": "Impostor Syndrome",
           "airdate": "2025-04-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "503720p",
+            "itemTitle": "Hatha Yoga for Strength Just for You | Yoga with Melissa 503 | Attention Overwhelm Series",
+            "file": "503-720P.mp4",
+            "name": "503-720P",
+            "url": "https://archive.org/download/503720p/503-720P.mp4",
+            "seconds": 3119,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2073
+          },
           "alternates": []
         },
         {

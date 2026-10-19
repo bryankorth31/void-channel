@@ -3,7 +3,7 @@
   "slug": "the-red-green-show",
   "type": "British and Beyond",
   "network": "CBC",
-  "matchedAt": "2026-10-16T07:57:08.879Z",
+  "matchedAt": "2026-10-19T04:11:16.075Z",
   "addedAt": "2026-10-16T00:29:35.163Z",
   "tvmaze": {
     "id": 6188,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 302,
-    "live": 295,
-    "review": 6,
+    "live": 298,
+    "review": 3,
     "missing": 1,
     "pct": 100
   },
@@ -29,19 +29,59 @@
           "airdate": "1991-03-26",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-red-green-show-s01e01",
-            "itemTitle": "The Red Green Show - s01e01 - The Big Outboard",
-            "file": "The Red Green Show - s01e01.mp4",
-            "name": "The Red Green Show - s01e01",
-            "url": "https://archive.org/download/the-red-green-show-s01e01/The%20Red%20Green%20Show%20-%20s01e01.mp4",
-            "seconds": 1452,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "red-green-dvd-remux",
+            "itemTitle": "The Red Green Show NTSC DVD REMUX",
+            "file": "The Red Green Show - S01E01 - The Big Outboard.mp4",
+            "name": "The Red Green Show - S01E01 - The Big Outboard",
+            "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S01E01%20-%20The%20Big%20Outboard.mp4",
+            "seconds": 1449,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 125
+            "sizeMB": 147
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "the-red-green-show-s-11-m-01-duct-tape-forever-2002-360p-re-dvdrip_202306",
+              "itemTitle": "complete red green show",
+              "file": "The Red Green Show S01-S15 (1991-)/The Red Green Show S01 (360p re-webrip)/The Red Green Show S01E01 The Big Outboard.mp4",
+              "name": "The Red Green Show S01-S15 (1991-)/The Red Green Show S01 (360p re-webrip)/The Red Green Show S01E01 The Big Outboard",
+              "url": "https://archive.org/download/the-red-green-show-s-11-m-01-duct-tape-forever-2002-360p-re-dvdrip_202306/The%20Red%20Green%20Show%20S01-S15%20(1991-)%2FThe%20Red%20Green%20Show%20S01%20(360p%20re-webrip)%2FThe%20Red%20Green%20Show%20S01E01%20The%20Big%20Outboard.mp4",
+              "seconds": 1452,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 83
+            },
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "the-red-green-show-s-11-m-01-duct-tape-forever-2002-360p-re-dvdrip",
+              "itemTitle": "Red green show complete series plus movies",
+              "file": "The Red Green Show S01-S15 (1991-)/The Red Green Show S01 (360p re-webrip)/The Red Green Show S01E01 The Big Outboard.mp4",
+              "name": "The Red Green Show S01-S15 (1991-)/The Red Green Show S01 (360p re-webrip)/The Red Green Show S01E01 The Big Outboard",
+              "url": "https://archive.org/download/the-red-green-show-s-11-m-01-duct-tape-forever-2002-360p-re-dvdrip/The%20Red%20Green%20Show%20S01-S15%20(1991-)%2FThe%20Red%20Green%20Show%20S01%20(360p%20re-webrip)%2FThe%20Red%20Green%20Show%20S01E01%20The%20Big%20Outboard.mp4",
+              "seconds": 1452,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 83
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-red-green-show-s01e01",
+              "itemTitle": "The Red Green Show - s01e01 - The Big Outboard",
+              "file": "The Red Green Show - s01e01.mp4",
+              "name": "The Red Green Show - s01e01",
+              "url": "https://archive.org/download/the-red-green-show-s01e01/The%20Red%20Green%20Show%20-%20s01e01.mp4",
+              "seconds": 1452,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
         },
         {
           "number": 2,
@@ -5891,6 +5931,19 @@
           },
           "alternates": [
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "red-green-dvd-remux",
+              "itemTitle": "The Red Green Show NTSC DVD REMUX",
+              "file": "The Red Green Show - S08E02 - Harold’s Leaving.mp4",
+              "name": "The Red Green Show - S08E02 - Harold’s Leaving",
+              "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S08E02%20-%20Harold%E2%80%99s%20Leaving.mp4",
+              "seconds": 1362,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            },
+            {
               "conf": 0.8,
               "why": "title ~ \"House Moving\" (0.95)",
               "item": "red-green-dvd-remux",
@@ -5924,6 +5977,19 @@
             "sizeMB": 97
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "red-green-dvd-remux",
+              "itemTitle": "The Red Green Show NTSC DVD REMUX",
+              "file": "The Red Green Show - S08E03 - House Moving.mp4",
+              "name": "The Red Green Show - S08E03 - House Moving",
+              "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S08E03%20-%20House%20Moving.mp4",
+              "seconds": 1357,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 135
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Neither Rain Nor Sleet\" (0.97)",
@@ -7069,6 +7135,19 @@
           },
           "alternates": [
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "red-green-dvd-remux",
+              "itemTitle": "The Red Green Show NTSC DVD REMUX",
+              "file": "The Red Green Show - S09E16 - The Auto Club.mp4",
+              "name": "The Red Green Show - S09E16 - The Auto Club",
+              "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S09E16%20-%20The%20Auto%20Club.mp4",
+              "seconds": 1359,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
               "conf": 0.8,
               "why": "title ~ \"Too Much Information\" (0.95)",
               "item": "red-green-dvd-remux",
@@ -7386,21 +7465,47 @@
           "number": 6,
           "name": "Man of the Year",
           "airdate": "2000-01-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Man of the Year\" (0.96)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "red-green-dvd-remux",
             "itemTitle": "The Red Green Show NTSC DVD REMUX",
-            "file": "The Red Green Show - S10E05 - Man Of The Year.mp4",
-            "name": "The Red Green Show - S10E05 - Man Of The Year",
-            "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S10E05%20-%20Man%20Of%20The%20Year.mp4",
+            "file": "The Red Green Show - S10E06 - Survivor.mp4",
+            "name": "The Red Green Show - S10E06 - Survivor",
+            "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S10E06%20-%20Survivor.mp4",
             "seconds": 1359,
             "format": "h.264",
             "playable": true,
             "sizeMB": 136
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-red-green-show-s-11-m-01-duct-tape-forever-2002-360p-re-dvdrip_202306",
+              "itemTitle": "complete red green show",
+              "file": "The Red Green Show S01-S15 (1991-)/The Red Green Show S10 (360p re-webrip)/The Red Green Show S10E06 Survivor.mp4",
+              "name": "The Red Green Show S01-S15 (1991-)/The Red Green Show S10 (360p re-webrip)/The Red Green Show S10E06 Survivor",
+              "url": "https://archive.org/download/the-red-green-show-s-11-m-01-duct-tape-forever-2002-360p-re-dvdrip_202306/The%20Red%20Green%20Show%20S01-S15%20(1991-)%2FThe%20Red%20Green%20Show%20S10%20(360p%20re-webrip)%2FThe%20Red%20Green%20Show%20S10E06%20Survivor.mp4",
+              "seconds": 1359,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 101
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Man of the Year\" (0.96)",
+              "item": "red-green-dvd-remux",
+              "itemTitle": "The Red Green Show NTSC DVD REMUX",
+              "file": "The Red Green Show - S10E05 - Man Of The Year.mp4",
+              "name": "The Red Green Show - S10E05 - Man Of The Year",
+              "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S10E05%20-%20Man%20Of%20The%20Year.mp4",
+              "seconds": 1359,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Man of the Year\" (0.96)",
@@ -7480,21 +7585,47 @@
           "number": 8,
           "name": "Historic Site",
           "airdate": "2000-01-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Historic Site\" (0.95)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "red-green-dvd-remux",
             "itemTitle": "The Red Green Show NTSC DVD REMUX",
-            "file": "The Red Green Show - S10E07 - Historic Site.mp4",
-            "name": "The Red Green Show - S10E07 - Historic Site",
-            "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S10E07%20-%20Historic%20Site.mp4",
+            "file": "The Red Green Show - S10E08 - Twinning.mp4",
+            "name": "The Red Green Show - S10E08 - Twinning",
+            "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S10E08%20-%20Twinning.mp4",
             "seconds": 1358,
             "format": "h.264",
             "playable": true,
             "sizeMB": 136
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-red-green-show-s-11-m-01-duct-tape-forever-2002-360p-re-dvdrip_202306",
+              "itemTitle": "complete red green show",
+              "file": "The Red Green Show S01-S15 (1991-)/The Red Green Show S10 (360p re-webrip)/The Red Green Show S10E08 Twinning.mp4",
+              "name": "The Red Green Show S01-S15 (1991-)/The Red Green Show S10 (360p re-webrip)/The Red Green Show S10E08 Twinning",
+              "url": "https://archive.org/download/the-red-green-show-s-11-m-01-duct-tape-forever-2002-360p-re-dvdrip_202306/The%20Red%20Green%20Show%20S01-S15%20(1991-)%2FThe%20Red%20Green%20Show%20S10%20(360p%20re-webrip)%2FThe%20Red%20Green%20Show%20S10E08%20Twinning.mp4",
+              "seconds": 1358,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 90
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Historic Site\" (0.95)",
+              "item": "red-green-dvd-remux",
+              "itemTitle": "The Red Green Show NTSC DVD REMUX",
+              "file": "The Red Green Show - S10E07 - Historic Site.mp4",
+              "name": "The Red Green Show - S10E07 - Historic Site",
+              "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S10E07%20-%20Historic%20Site.mp4",
+              "seconds": 1358,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            },
             {
               "conf": 0.6,
               "why": "title ~ \"Historic Site\" (0.74)",
@@ -7908,21 +8039,47 @@
           "number": 16,
           "name": "The Beaver Dam",
           "airdate": "2000-01-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Beaver Dam\" (0.96)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "red-green-dvd-remux",
             "itemTitle": "The Red Green Show NTSC DVD REMUX",
-            "file": "The Red Green Show - S10E15 - The Beaver Dam.mp4",
-            "name": "The Red Green Show - S10E15 - The Beaver Dam",
-            "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S10E15%20-%20The%20Beaver%20Dam.mp4",
+            "file": "The Red Green Show - S10E16 - The Dandruff Foundation.mp4",
+            "name": "The Red Green Show - S10E16 - The Dandruff Foundation",
+            "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S10E16%20-%20The%20Dandruff%20Foundation.mp4",
             "seconds": 1358,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 135
+            "sizeMB": 136
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-red-green-show-s-11-m-01-duct-tape-forever-2002-360p-re-dvdrip_202306",
+              "itemTitle": "complete red green show",
+              "file": "The Red Green Show S01-S15 (1991-)/The Red Green Show S10 (360p re-webrip)/The Red Green Show S10E16 The Dandruff Foundation.mp4",
+              "name": "The Red Green Show S01-S15 (1991-)/The Red Green Show S10 (360p re-webrip)/The Red Green Show S10E16 The Dandruff Foundation",
+              "url": "https://archive.org/download/the-red-green-show-s-11-m-01-duct-tape-forever-2002-360p-re-dvdrip_202306/The%20Red%20Green%20Show%20S01-S15%20(1991-)%2FThe%20Red%20Green%20Show%20S10%20(360p%20re-webrip)%2FThe%20Red%20Green%20Show%20S10E16%20The%20Dandruff%20Foundation.mp4",
+              "seconds": 1358,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 94
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Beaver Dam\" (0.96)",
+              "item": "red-green-dvd-remux",
+              "itemTitle": "The Red Green Show NTSC DVD REMUX",
+              "file": "The Red Green Show - S10E15 - The Beaver Dam.mp4",
+              "name": "The Red Green Show - S10E15 - The Beaver Dam",
+              "url": "https://archive.org/download/red-green-dvd-remux/The%20Red%20Green%20Show%20-%20S10E15%20-%20The%20Beaver%20Dam.mp4",
+              "seconds": 1358,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 135
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"The Beaver Dam\" (0.96)",

@@ -3,7 +3,7 @@
   "slug": "heroes-unmasked",
   "type": "Documentary & Geographic",
   "network": "BBC Two",
-  "matchedAt": "2026-10-17T10:13:12.373Z",
+  "matchedAt": "2026-10-19T04:12:50.224Z",
   "addedAt": "2026-10-17T10:13:12.374Z",
   "tvmaze": {
     "id": 844,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 43,
-    "live": 0,
-    "review": 22,
-    "missing": 21,
-    "pct": 51
+    "live": 39,
+    "review": 1,
+    "missing": 3,
+    "pct": 93
   },
   "seasons": [
     {
@@ -35,9 +35,9 @@
           "number": 2,
           "name": "Growing Pains",
           "airdate": "2007-08-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -56,9 +56,9 @@
           "number": 3,
           "name": "The Dreamer",
           "airdate": "2007-08-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -77,9 +77,9 @@
           "number": 4,
           "name": "Hiro Worship",
           "airdate": "2007-08-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -98,9 +98,9 @@
           "number": 5,
           "name": "Painting the Future",
           "airdate": "2007-08-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -119,9 +119,9 @@
           "number": 6,
           "name": "Double Trouble",
           "airdate": "2007-08-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -140,9 +140,9 @@
           "number": 7,
           "name": "Voices",
           "airdate": "2007-09-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -161,17 +161,58 @@
           "number": 8,
           "name": "The HRG File",
           "airdate": "2007-09-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 1/Heroes.Unmasked.S01E08.The.H.R.G.File.WS.PDTV.XviD-BiA.mp4",
+            "name": "Season 1/Heroes.Unmasked.S01E08.The.H.R.G.File.WS.PDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E08.The.H.R.G.File.WS.PDTV.XviD-BiA.mp4",
+            "seconds": 939,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 93
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "Dark Angel Gabriel",
           "airdate": "2007-09-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 1/Heroes.Unmasked.S01E09.A.Heroes.Welcome.WS.PDTV.XviD-BiA.mp4",
+            "name": "Season 1/Heroes.Unmasked.S01E09.A.Heroes.Welcome.WS.PDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E09.A.Heroes.Welcome.WS.PDTV.XviD-BiA.mp4",
+            "seconds": 936,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 93
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Dark Angel Gabriel\" (0.95)",
+              "item": "heroes.unmasked.behind-the-scenes",
+              "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+              "file": "Season 1/Heroes.Unmasked.S01E10.Dark.Angel.Gabriel.HDTV.XviD-BiA.mp4",
+              "name": "Season 1/Heroes.Unmasked.S01E10.Dark.Angel.Gabriel.HDTV.XviD-BiA",
+              "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E10.Dark.Angel.Gabriel.HDTV.XviD-BiA.mp4",
+              "seconds": 991,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 98
+            }
+          ]
         },
         {
           "number": 10,
@@ -185,80 +226,330 @@
           "number": 11,
           "name": "The Invisible Touch",
           "airdate": "2007-10-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Invisible Touch\" (0.95)",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 1/Heroes.Unmasked.S01E12.The.Invisible.Touch.HDTV.XviD-BiA.mp4",
+            "name": "Season 1/Heroes.Unmasked.S01E12.The.Invisible.Touch.HDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E12.The.Invisible.Touch.HDTV.XviD-BiA.mp4",
+            "seconds": 1020,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 101
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Telling Tales",
           "airdate": "2007-10-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 1/Heroes.Unmasked.S01E12.The.Invisible.Touch.HDTV.XviD-BiA.mp4",
+            "name": "Season 1/Heroes.Unmasked.S01E12.The.Invisible.Touch.HDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E12.The.Invisible.Touch.HDTV.XviD-BiA.mp4",
+            "seconds": 1020,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 101
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Telling Tales\" (0.95)",
+              "item": "heroes.unmasked.behind-the-scenes",
+              "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+              "file": "Season 1/Heroes.Unmasked.S01E13.Telling.Tales.HDTV.XviD-BiA.mp4",
+              "name": "Season 1/Heroes.Unmasked.S01E13.Telling.Tales.HDTV.XviD-BiA",
+              "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E13.Telling.Tales.HDTV.XviD-BiA.mp4",
+              "seconds": 1002,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 98
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Head to Head",
           "airdate": "2007-10-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 1/Heroes.Unmasked.S01E13.Telling.Tales.HDTV.XviD-BiA.mp4",
+            "name": "Season 1/Heroes.Unmasked.S01E13.Telling.Tales.HDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E13.Telling.Tales.HDTV.XviD-BiA.mp4",
+            "seconds": 1002,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 98
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Head to Head\" (0.95)",
+              "item": "heroes.unmasked.behind-the-scenes",
+              "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+              "file": "Season 1/Heroes.Unmasked.S01E14.Head.to.Head.HDTV.XviD-BiA.mp4",
+              "name": "Season 1/Heroes.Unmasked.S01E14.Head.to.Head.HDTV.XviD-BiA",
+              "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E14.Head.to.Head.HDTV.XviD-BiA.mp4",
+              "seconds": 974,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 97
+            }
+          ]
         },
         {
           "number": 14,
           "name": "Sets and the City",
           "airdate": "2007-10-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 1/Heroes.Unmasked.S01E14.Head.to.Head.HDTV.XviD-BiA.mp4",
+            "name": "Season 1/Heroes.Unmasked.S01E14.Head.to.Head.HDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E14.Head.to.Head.HDTV.XviD-BiA.mp4",
+            "seconds": 974,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 97
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Sets and the City\" (0.95)",
+              "item": "heroes.unmasked.behind-the-scenes",
+              "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+              "file": "Season 1/Heroes.Unmasked.S01E15.Sets.And.The.City.HDTV.XviD-BiA.mp4",
+              "name": "Season 1/Heroes.Unmasked.S01E15.Sets.And.The.City.HDTV.XviD-BiA",
+              "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E15.Sets.And.The.City.HDTV.XviD-BiA.mp4",
+              "seconds": 977,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 97
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Turning Tides",
           "airdate": "2007-10-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 1/Heroes.Unmasked.S01E15.Sets.And.The.City.HDTV.XviD-BiA.mp4",
+            "name": "Season 1/Heroes.Unmasked.S01E15.Sets.And.The.City.HDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E15.Sets.And.The.City.HDTV.XviD-BiA.mp4",
+            "seconds": 977,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 97
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Turning Tides\" (0.95)",
+              "item": "heroes.unmasked.behind-the-scenes",
+              "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+              "file": "Season 1/Heroes.Unmasked.S01E16.Turning.Tides.HDTV.XviD-BiA.mp4",
+              "name": "Season 1/Heroes.Unmasked.S01E16.Turning.Tides.HDTV.XviD-BiA",
+              "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E16.Turning.Tides.HDTV.XviD-BiA.mp4",
+              "seconds": 998,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 99
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Bad Company",
           "airdate": "2007-11-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 1/Heroes.Unmasked.S01E16.Turning.Tides.HDTV.XviD-BiA.mp4",
+            "name": "Season 1/Heroes.Unmasked.S01E16.Turning.Tides.HDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E16.Turning.Tides.HDTV.XviD-BiA.mp4",
+            "seconds": 998,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 99
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Bad Company\" (0.95)",
+              "item": "heroes.unmasked.behind-the-scenes",
+              "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+              "file": "Season 1/Heroes.Unmasked.S01E17.Bad.Company.HDTV.XviD-BiA.mp4",
+              "name": "Season 1/Heroes.Unmasked.S01E17.Bad.Company.HDTV.XviD-BiA",
+              "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E17.Bad.Company.HDTV.XviD-BiA.mp4",
+              "seconds": 981,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 98
+            }
+          ]
         },
         {
           "number": 17,
           "name": "Isaac",
           "airdate": "2007-11-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 1/Heroes.Unmasked.S01E17.Bad.Company.HDTV.XviD-BiA.mp4",
+            "name": "Season 1/Heroes.Unmasked.S01E17.Bad.Company.HDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E17.Bad.Company.HDTV.XviD-BiA.mp4",
+            "seconds": 981,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 98
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Isaac\" (0.95)",
+              "item": "heroes.unmasked.behind-the-scenes",
+              "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+              "file": "Season 1/Heroes.Unmasked.S01E18.Isaac.HDTV.XviD-BiA.mp4",
+              "name": "Season 1/Heroes.Unmasked.S01E18.Isaac.HDTV.XviD-BiA",
+              "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E18.Isaac.HDTV.XviD-BiA.mp4",
+              "seconds": 1045,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 104
+            }
+          ]
         },
         {
           "number": 18,
           "name": "Tomorrow's World",
           "airdate": "2007-11-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 1/Heroes.Unmasked.S01E18.Isaac.HDTV.XviD-BiA.mp4",
+            "name": "Season 1/Heroes.Unmasked.S01E18.Isaac.HDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E18.Isaac.HDTV.XviD-BiA.mp4",
+            "seconds": 1045,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 104
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Tomorrow's World\" (0.95)",
+              "item": "heroes.unmasked.behind-the-scenes",
+              "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+              "file": "Season 1/Heroes.Unmasked.S01E19.Tomorrows.World.WS.PDTV.XviD-BiA.mp4",
+              "name": "Season 1/Heroes.Unmasked.S01E19.Tomorrows.World.WS.PDTV.XviD-BiA",
+              "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E19.Tomorrows.World.WS.PDTV.XviD-BiA.mp4",
+              "seconds": 973,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 97
+            }
+          ]
         },
         {
           "number": 19,
           "name": "The Director's Cut",
           "airdate": "2007-11-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 1/Heroes.Unmasked.S01E19.Tomorrows.World.WS.PDTV.XviD-BiA.mp4",
+            "name": "Season 1/Heroes.Unmasked.S01E19.Tomorrows.World.WS.PDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E19.Tomorrows.World.WS.PDTV.XviD-BiA.mp4",
+            "seconds": 973,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 97
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Director's Cut\" (0.95)",
+              "item": "heroes.unmasked.behind-the-scenes",
+              "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+              "file": "Season 1/Heroes.Unmasked.S01E20.The.Director's.Cut.HDTV.XviD-BiA.mp4",
+              "name": "Season 1/Heroes.Unmasked.S01E20.The.Director's.Cut.HDTV.XviD-BiA",
+              "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E20.The.Director's.Cut.HDTV.XviD-BiA.mp4",
+              "seconds": 936,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (XviD)",
+              "sizeMB": 92
+            }
+          ]
         },
         {
           "number": 20,
           "name": "Finale",
           "airdate": "2007-12-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 1/Heroes.Unmasked.S01E20.The.Director's.Cut.HDTV.XviD-BiA.mp4",
+            "name": "Season 1/Heroes.Unmasked.S01E20.The.Director's.Cut.HDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%201%2FHeroes.Unmasked.S01E20.The.Director's.Cut.HDTV.XviD-BiA.mp4",
+            "seconds": 936,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 92
+          },
           "alternates": []
         }
       ]
@@ -278,9 +569,9 @@
           "number": 2,
           "name": "Generations",
           "airdate": "2008-05-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -299,9 +590,9 @@
           "number": 3,
           "name": "What the Butlers Saw",
           "airdate": "2008-05-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -320,9 +611,9 @@
           "number": 4,
           "name": "When Worlds Collide",
           "airdate": "2008-05-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -341,9 +632,9 @@
           "number": 5,
           "name": "Sweet Dreams",
           "airdate": "2008-05-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -362,9 +653,9 @@
           "number": 6,
           "name": "Travelling in Style",
           "airdate": "2008-05-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -383,9 +674,9 @@
           "number": 7,
           "name": "New World Disorder",
           "airdate": "2008-06-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -404,9 +695,9 @@
           "number": 8,
           "name": "The Casting Couch",
           "airdate": "2008-06-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -425,16 +716,42 @@
           "number": 9,
           "name": "Through Heroes Eyes",
           "airdate": "2008-06-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 2/Heroes.Unmasked.S02E09.Through.Heroes.Eyes.WS.PDTV.XviD-BiA.mp4",
+            "name": "Season 2/Heroes.Unmasked.S02E09.Through.Heroes.Eyes.WS.PDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%202%2FHeroes.Unmasked.S02E09.Through.Heroes.Eyes.WS.PDTV.XviD-BiA.mp4",
+            "seconds": 974,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 97
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "From Heroes to Villains",
           "airdate": "2008-07-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 2/Heroes.Unmasked.S02E10.From.Heroes.To.Villains.WS.PDTV.XviD-BiA.mp4",
+            "name": "Season 2/Heroes.Unmasked.S02E10.From.Heroes.To.Villains.WS.PDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%202%2FHeroes.Unmasked.S02E10.From.Heroes.To.Villains.WS.PDTV.XviD-BiA.mp4",
+            "seconds": 1045,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 104
+          },
           "alternates": []
         }
       ]
@@ -446,9 +763,9 @@
           "number": 1,
           "name": "Pandora's Box",
           "airdate": "2008-10-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -467,17 +784,30 @@
           "number": 2,
           "name": "New Heroes on the Block",
           "airdate": "2008-10-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 3/Heroes.Unmasked.S03E02.New.Heroes.On.The.Block.WS.PDTV.XviD-BiA.mp4",
+            "name": "Season 3/Heroes.Unmasked.S03E02.New.Heroes.On.The.Block.WS.PDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%203%2FHeroes.Unmasked.S03E02.New.Heroes.On.The.Block.WS.PDTV.XviD-BiA.mp4",
+            "seconds": 992,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 99
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "On a Heroic Scale",
           "airdate": "2008-10-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -496,9 +826,9 @@
           "number": 4,
           "name": "Playing God",
           "airdate": "2008-10-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -517,9 +847,9 @@
           "number": 5,
           "name": "Shock of the Old",
           "airdate": "2008-10-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -538,9 +868,9 @@
           "number": 6,
           "name": "Teenage Kicks",
           "airdate": "2008-11-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -559,9 +889,9 @@
           "number": 7,
           "name": "A Bug's Life",
           "airdate": "2008-11-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -580,9 +910,9 @@
           "number": 8,
           "name": "Missing Links",
           "airdate": "2008-11-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -601,9 +931,9 @@
           "number": 9,
           "name": "Action!",
           "airdate": "2008-11-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -622,9 +952,9 @@
           "number": 10,
           "name": "Let's Get Physical",
           "airdate": "2008-12-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "heroes.unmasked.behind-the-scenes",
             "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
@@ -643,24 +973,63 @@
           "number": 11,
           "name": "Heroes By Design",
           "airdate": "2008-12-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 3/Heroes.Unmasked.S03E11.Heroes.By.Design.WS.PDTV.XviD-PVR.mp4",
+            "name": "Season 3/Heroes.Unmasked.S03E11.Heroes.By.Design.WS.PDTV.XviD-PVR",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%203%2FHeroes.Unmasked.S03E11.Heroes.By.Design.WS.PDTV.XviD-PVR.mp4",
+            "seconds": 1011,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 100
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "The Music of Heroes",
           "airdate": "2008-12-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 3/Heroes.Unmasked.S03E12.The.Music.Of.Heroes.WS.PDTV.XviD-BiA.mp4",
+            "name": "Season 3/Heroes.Unmasked.S03E12.The.Music.Of.Heroes.WS.PDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%203%2FHeroes.Unmasked.S03E12.The.Music.Of.Heroes.WS.PDTV.XviD-BiA.mp4",
+            "seconds": 992,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 101
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Heroes on the Run",
           "airdate": "2008-12-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "heroes.unmasked.behind-the-scenes",
+            "itemTitle": "Heroes Unmasked - Behind The Scenes Documentary Series for NBC's Heroes",
+            "file": "Season 3/Heroes.Unmasked.S03E13.Heroes.On.The.Run.WS.PDTV.XviD-BiA.mp4",
+            "name": "Season 3/Heroes.Unmasked.S03E13.Heroes.On.The.Run.WS.PDTV.XviD-BiA",
+            "url": "https://archive.org/download/heroes.unmasked.behind-the-scenes/Season%203%2FHeroes.Unmasked.S03E13.Heroes.On.The.Run.WS.PDTV.XviD-BiA.mp4",
+            "seconds": 1011,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 102
+          },
           "alternates": []
         }
       ]

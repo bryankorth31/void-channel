@@ -3,7 +3,7 @@
   "slug": "cow-and-chicken",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:30.753Z",
+  "matchedAt": "2026-10-19T04:10:39.026Z",
   "addedAt": "2026-10-15T17:04:06.238Z",
   "tvmaze": {
     "id": 12813,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 103,
-    "live": 26,
-    "review": 22,
-    "missing": 55,
-    "pct": 47
+    "live": 47,
+    "review": 26,
+    "missing": 30,
+    "pct": 71
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "Field Trip to Folsom Prison",
           "airdate": "1997-09-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
             "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
@@ -215,33 +215,46 @@
           "number": 9,
           "name": "The Ugliest Weenie",
           "airdate": "1997-10-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Ugliest Weenie\" (0.95)",
-            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
-            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
-            "file": "S01E05 The Ugliest Weenie Part One - I Are Big Star - The Ugliest Weenie Epilogue.mp4",
-            "name": "S01E05 The Ugliest Weenie Part One - I Are Big Star - The Ugliest Weenie Epilogue",
-            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S01E05%20The%20Ugliest%20Weenie%20Part%20One%20-%20I%20Are%20Big%20Star%20-%20The%20Ugliest%20Weenie%20Epilogue.mp4",
-            "seconds": 1319,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "cow-and-chicken-s-01-e-02-the-girls-bathroom-480p-dvdrip_202411",
+            "itemTitle": "COW And CHICKEN Season 1-4 ( 480p DVDRip)",
+            "file": "Season 1 (1997)/COW and CHICKEN - S01 E09-E10 - The Ugliest Weenie and Epilogue (480p - DVDRip).mp4",
+            "name": "Season 1 (1997)/COW and CHICKEN - S01 E09-E10 - The Ugliest Weenie and Epilogue (480p - DVDRip)",
+            "url": "https://archive.org/download/cow-and-chicken-s-01-e-02-the-girls-bathroom-480p-dvdrip_202411/Season%201%20(1997)%2FCOW%20and%20CHICKEN%20-%20S01%20E09-E10%20-%20The%20Ugliest%20Weenie%20and%20Epilogue%20(480p%20-%20DVDRip).mp4",
+            "seconds": 1323,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 413
+            "sizeMB": 327
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "cow-and-chicken-s-01-e-02-the-girls-bathroom-480p-dvdrip_202411",
-              "itemTitle": "COW And CHICKEN Season 1-4 ( 480p DVDRip)",
-              "file": "Season 1 (1997)/COW and CHICKEN - S01 E09-E10 - The Ugliest Weenie and Epilogue (480p - DVDRip).mp4",
-              "name": "Season 1 (1997)/COW and CHICKEN - S01 E09-E10 - The Ugliest Weenie and Epilogue (480p - DVDRip)",
-              "url": "https://archive.org/download/cow-and-chicken-s-01-e-02-the-girls-bathroom-480p-dvdrip_202411/Season%201%20(1997)%2FCOW%20and%20CHICKEN%20-%20S01%20E09-E10%20-%20The%20Ugliest%20Weenie%20and%20Epilogue%20(480p%20-%20DVDRip).mp4",
-              "seconds": 1323,
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S01E09 Cow's Instincts... Don't It - Ballerina Cow - I.R. Plant Life.mp4",
+              "name": "S01E09 Cow's Instincts... Don't It - Ballerina Cow - I.R. Plant Life",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S01E09%20Cow's%20Instincts...%20Don't%20It%20-%20Ballerina%20Cow%20-%20I.R.%20Plant%20Life.mp4",
+              "seconds": 1348,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 327
+              "sizeMB": 415
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Ugliest Weenie\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S01E05 The Ugliest Weenie Part One - I Are Big Star - The Ugliest Weenie Epilogue.mp4",
+              "name": "S01E05 The Ugliest Weenie Part One - I Are Big Star - The Ugliest Weenie Epilogue",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S01E05%20The%20Ugliest%20Weenie%20Part%20One%20-%20I%20Are%20Big%20Star%20-%20The%20Ugliest%20Weenie%20Epilogue.mp4",
+              "seconds": 1319,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 413
             }
           ]
         },
@@ -249,28 +262,54 @@
           "number": 10,
           "name": "Crash Dive",
           "airdate": "1997-08-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Crash Dive\" (0.95)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
             "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
-            "file": "S01E06 Crash Dive! - Happy Meat - Power of Odor.mp4",
-            "name": "S01E06 Crash Dive! - Happy Meat - Power of Odor",
-            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S01E06%20Crash%20Dive!%20-%20Happy%20Meat%20-%20Power%20of%20Odor.mp4",
-            "seconds": 1349,
+            "file": "S01E10 Chicken's First Kiss - Squirt the Daisies - I Am Ambassador.mp4",
+            "name": "S01E10 Chicken's First Kiss - Squirt the Daisies - I Am Ambassador",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S01E10%20Chicken's%20First%20Kiss%20-%20Squirt%20the%20Daisies%20-%20I%20Am%20Ambassador.mp4",
+            "seconds": 1353,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 417
+            "sizeMB": 410
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Crash Dive\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S01E06 Crash Dive! - Happy Meat - Power of Odor.mp4",
+              "name": "S01E06 Crash Dive! - Happy Meat - Power of Odor",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S01E06%20Crash%20Dive!%20-%20Happy%20Meat%20-%20Power%20of%20Odor.mp4",
+              "seconds": 1349,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 417
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Happy Meat",
           "airdate": "1997-08-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S01E11 Lawnmower Chicken - Cow Loves Piles - Law of Gravity.mp4",
+            "name": "S01E11 Lawnmower Chicken - Cow Loves Piles - Law of Gravity",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S01E11%20Lawnmower%20Chicken%20-%20Cow%20Loves%20Piles%20-%20Law%20of%20Gravity.mp4",
+            "seconds": 1348,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 425
+          },
           "alternates": []
         },
         {
@@ -319,19 +358,33 @@
           "airdate": "1997-09-02",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
+            "conf": 0.8,
             "why": "title ~ \"Orthodontic Police\" (0.95)",
             "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
             "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
-            "file": "S01E08 Orthodontic Police - The Cow with Four Eyes! - Disease Fiesta.mp4",
-            "name": "S01E08 Orthodontic Police - The Cow with Four Eyes! - Disease Fiesta",
-            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S01E08%20Orthodontic%20Police%20-%20The%20Cow%20with%20Four%20Eyes!%20-%20Disease%20Fiesta.mp4",
+            "file": "S02E07 Cow and Chicken Reclining - Orthodontic Police - I Am My Lifetime.mp4",
+            "name": "S02E07 Cow and Chicken Reclining - Orthodontic Police - I Am My Lifetime",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E07%20Cow%20and%20Chicken%20Reclining%20-%20Orthodontic%20Police%20-%20I%20Am%20My%20Lifetime.mp4",
             "seconds": 1352,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 385
+            "sizeMB": 352
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Orthodontic Police\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S01E08 Orthodontic Police - The Cow with Four Eyes! - Disease Fiesta.mp4",
+              "name": "S01E08 Orthodontic Police - The Cow with Four Eyes! - Disease Fiesta",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S01E08%20Orthodontic%20Police%20-%20The%20Cow%20with%20Four%20Eyes!%20-%20Disease%20Fiesta.mp4",
+              "seconds": 1352,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 385
+            }
+          ]
         },
         {
           "number": 15,
@@ -345,8 +398,20 @@
           "number": 16,
           "name": "Cow's Instincts...Don't It?",
           "airdate": "1997-09-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Cow's Instincts...Don't It?\" (0.95)",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S01E09 Cow's Instincts... Don't It - Ballerina Cow - I.R. Plant Life.mp4",
+            "name": "S01E09 Cow's Instincts... Don't It - Ballerina Cow - I.R. Plant Life",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S01E09%20Cow's%20Instincts...%20Don't%20It%20-%20Ballerina%20Cow%20-%20I.R.%20Plant%20Life.mp4",
+            "seconds": 1348,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 415
+          },
           "alternates": []
         },
         {
@@ -361,8 +426,20 @@
           "number": 18,
           "name": "Chicken's First Kiss",
           "airdate": "1997-12-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Chicken's First Kiss\" (0.95)",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S01E10 Chicken's First Kiss - Squirt the Daisies - I Am Ambassador.mp4",
+            "name": "S01E10 Chicken's First Kiss - Squirt the Daisies - I Am Ambassador",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S01E10%20Chicken's%20First%20Kiss%20-%20Squirt%20the%20Daisies%20-%20I%20Am%20Ambassador.mp4",
+            "seconds": 1353,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 410
+          },
           "alternates": []
         },
         {
@@ -385,8 +462,20 @@
           "number": 21,
           "name": "Cow Loves Piles",
           "airdate": "1997-12-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Cow Loves Piles\" (0.63)",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S01E11 Lawnmower Chicken - Cow Loves Piles - Law of Gravity.mp4",
+            "name": "S01E11 Lawnmower Chicken - Cow Loves Piles - Law of Gravity",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S01E11%20Lawnmower%20Chicken%20-%20Cow%20Loves%20Piles%20-%20Law%20of%20Gravity.mp4",
+            "seconds": 1348,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 425
+          },
           "alternates": []
         },
         {
@@ -474,32 +563,94 @@
           "number": 2,
           "name": "The Laughing Puddle",
           "airdate": "1998-01-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S02E02 Pirate Lessons - Halloween with Dead Ghost, Coast to Coast - I Am Deity.mp4",
+            "name": "S02E02 Pirate Lessons - Halloween with Dead Ghost, Coast to Coast - I Am Deity",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E02%20Pirate%20Lessons%20-%20Halloween%20with%20Dead%20Ghost%2C%20Coast%20to%20Coast%20-%20I%20Am%20Deity.mp4",
+            "seconds": 1349,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 298
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Pirate Lessons",
           "airdate": "1998-01-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S02E03 Tongue Sandwich - Dream Date Chicken - I Am Crybaby.mp4",
+            "name": "S02E03 Tongue Sandwich - Dream Date Chicken - I Am Crybaby",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E03%20Tongue%20Sandwich%20-%20Dream%20Date%20Chicken%20-%20I%20Am%20Crybaby.mp4",
+            "seconds": 1351,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 320
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Pirate Lessons\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S02E02 Pirate Lessons - Halloween with Dead Ghost, Coast to Coast - I Am Deity.mp4",
+              "name": "S02E02 Pirate Lessons - Halloween with Dead Ghost, Coast to Coast - I Am Deity",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E02%20Pirate%20Lessons%20-%20Halloween%20with%20Dead%20Ghost%2C%20Coast%20to%20Coast%20-%20I%20Am%20Deity.mp4",
+              "seconds": 1349,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 298
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Halloween with Dead Ghost, Coast to Coast",
           "airdate": "1998-01-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S02E04 Sumo Cow - Comet! - I.R.'s Phantom Foot.mp4",
+            "name": "S02E04 Sumo Cow - Comet! - I.R.'s Phantom Foot",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E04%20Sumo%20Cow%20-%20Comet!%20-%20I.R.'s%20Phantom%20Foot.mp4",
+            "seconds": 1351,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 308
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Tongue Sandwich",
           "airdate": "1998-01-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Tongue Sandwich\" (0.95)",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S02E03 Tongue Sandwich - Dream Date Chicken - I Am Crybaby.mp4",
+            "name": "S02E03 Tongue Sandwich - Dream Date Chicken - I Am Crybaby",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E03%20Tongue%20Sandwich%20-%20Dream%20Date%20Chicken%20-%20I%20Am%20Crybaby.mp4",
+            "seconds": 1351,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 320
+          },
           "alternates": []
         },
         {
@@ -526,17 +677,55 @@
           "number": 7,
           "name": "Sumo Cow",
           "airdate": "1998-02-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S02E07 Cow and Chicken Reclining - Orthodontic Police - I Am My Lifetime.mp4",
+            "name": "S02E07 Cow and Chicken Reclining - Orthodontic Police - I Am My Lifetime",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E07%20Cow%20and%20Chicken%20Reclining%20-%20Orthodontic%20Police%20-%20I%20Am%20My%20Lifetime.mp4",
+            "seconds": 1352,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 352
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Comet!",
           "airdate": "1998-02-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S02E08 Free Inside! - Journey to the Center of Cow - I.R. Pixie Fairie.mp4",
+            "name": "S02E08 Free Inside! - Journey to the Center of Cow - I.R. Pixie Fairie",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E08%20Free%20Inside!%20-%20Journey%20to%20the%20Center%20of%20Cow%20-%20I.R.%20Pixie%20Fairie.mp4",
+            "seconds": 1348,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 332
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Comet!\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S02E04 Sumo Cow - Comet! - I.R.'s Phantom Foot.mp4",
+              "name": "S02E04 Sumo Cow - Comet! - I.R.'s Phantom Foot",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E04%20Sumo%20Cow%20-%20Comet!%20-%20I.R.'s%20Phantom%20Foot.mp4",
+              "seconds": 1351,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 308
+            }
+          ]
         },
         {
           "number": 9,
@@ -582,21 +771,35 @@
           "number": 11,
           "name": "Which Came First",
           "airdate": "1998-02-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Which Came First\" (0.95)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
             "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
-            "file": "S02E06 Which Came First - Boneless Kite - I Are Music Man.mp4",
-            "name": "S02E06 Which Came First - Boneless Kite - I Are Music Man",
-            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E06%20Which%20Came%20First%20-%20Boneless%20Kite%20-%20I%20Are%20Music%20Man.mp4",
-            "seconds": 1350,
+            "file": "S02E11 The Bad News Plastic Surgeons - The Exchange Stüdent - I.R. in Wrong Cartoon.mp4",
+            "name": "S02E11 The Bad News Plastic Surgeons - The Exchange Stüdent - I.R. in Wrong Cartoon",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E11%20The%20Bad%20News%20Plastic%20Surgeons%20-%20The%20Exchange%20St%C3%BCdent%20-%20I.R.%20in%20Wrong%20Cartoon.mp4",
+            "seconds": 1349,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 315
+            "sizeMB": 303
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Which Came First\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S02E06 Which Came First - Boneless Kite - I Are Music Man.mp4",
+              "name": "S02E06 Which Came First - Boneless Kite - I Are Music Man",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E06%20Which%20Came%20First%20-%20Boneless%20Kite%20-%20I%20Are%20Music%20Man.mp4",
+              "seconds": 1350,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 315
+            }
+          ]
         },
         {
           "number": 12,
@@ -650,8 +853,20 @@
           "number": 15,
           "name": "Free Inside",
           "airdate": "1998-03-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Free Inside\" (0.95)",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S02E08 Free Inside! - Journey to the Center of Cow - I.R. Pixie Fairie.mp4",
+            "name": "S02E08 Free Inside! - Journey to the Center of Cow - I.R. Pixie Fairie",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E08%20Free%20Inside!%20-%20Journey%20to%20the%20Center%20of%20Cow%20-%20I.R.%20Pixie%20Fairie.mp4",
+            "seconds": 1348,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 332
+          },
           "alternates": []
         },
         {
@@ -722,8 +937,20 @@
           "number": 21,
           "name": "The Bad News Plastic Surgeons",
           "airdate": "1998-03-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Bad News Plastic Surgeons\" (0.95)",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S02E11 The Bad News Plastic Surgeons - The Exchange Stüdent - I.R. in Wrong Cartoon.mp4",
+            "name": "S02E11 The Bad News Plastic Surgeons - The Exchange Stüdent - I.R. in Wrong Cartoon",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S02E11%20The%20Bad%20News%20Plastic%20Surgeons%20-%20The%20Exchange%20St%C3%BCdent%20-%20I.R.%20in%20Wrong%20Cartoon.mp4",
+            "seconds": 1349,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 303
+          },
           "alternates": []
         },
         {
@@ -799,8 +1026,20 @@
           "number": 1,
           "name": "Can Cow Come Out & Play?",
           "airdate": "1998-08-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S03E01 Can Cow Come Out and Play - Horn Envy - Time Weasel.mp4",
+            "name": "S03E01 Can Cow Come Out and Play - Horn Envy - Time Weasel",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S03E01%20Can%20Cow%20Come%20Out%20and%20Play%20-%20Horn%20Envy%20-%20Time%20Weasel.mp4",
+            "seconds": 1351,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 345
+          },
           "alternates": []
         },
         {
@@ -821,7 +1060,21 @@
             "playable": true,
             "sizeMB": 311
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Horn Envy\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S03E01 Can Cow Come Out and Play - Horn Envy - Time Weasel.mp4",
+              "name": "S03E01 Can Cow Come Out and Play - Horn Envy - Time Weasel",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S03E01%20Can%20Cow%20Come%20Out%20and%20Play%20-%20Horn%20Envy%20-%20Time%20Weasel.mp4",
+              "seconds": 1351,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 345
+            }
+          ]
         },
         {
           "number": 3,
@@ -861,16 +1114,40 @@
           "number": 4,
           "name": "The Babysitter",
           "airdate": "1998-08-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S03E04 Sergeant Weenie Arms - Sow and Chicken - I Am Bush Pilot.mp4",
+            "name": "S03E04 Sergeant Weenie Arms - Sow and Chicken - I Am Bush Pilot",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S03E04%20Sergeant%20Weenie%20Arms%20-%20Sow%20and%20Chicken%20-%20I%20Am%20Bush%20Pilot.mp4",
+            "seconds": 1352,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 347
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Cow Fly",
           "airdate": "1998-08-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S03E05 Me an' My Dog - Cow's Dream Catcher - Dessert Island.mp4",
+            "name": "S03E05 Me an' My Dog - Cow's Dream Catcher - Dessert Island",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S03E05%20Me%20an'%20My%20Dog%20-%20Cow's%20Dream%20Catcher%20-%20Dessert%20Island.mp4",
+            "seconds": 1352,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 328
+          },
           "alternates": []
         },
         {
@@ -904,6 +1181,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 325
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Where Am I?\" (0.63)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S03E04 Sergeant Weenie Arms - Sow and Chicken - I Am Bush Pilot.mp4",
+              "name": "S03E04 Sergeant Weenie Arms - Sow and Chicken - I Am Bush Pilot",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S03E04%20Sergeant%20Weenie%20Arms%20-%20Sow%20and%20Chicken%20-%20I%20Am%20Bush%20Pilot.mp4",
+              "seconds": 1352,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 347
             }
           ]
         },
@@ -911,8 +1201,20 @@
           "number": 7,
           "name": "Sargeant Weenie Arms",
           "airdate": "1998-09-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S03E07 Chickens Don't Fly - P.E. - I Am Vampire.mp4",
+            "name": "S03E07 Chickens Don't Fly - P.E. - I Am Vampire",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S03E07%20Chickens%20Don't%20Fly%20-%20P.E.%20-%20I%20Am%20Vampire.mp4",
+            "seconds": 1353,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 347
+          },
           "alternates": []
         },
         {
@@ -939,9 +1241,35 @@
           "number": 9,
           "name": "Me An' My Dog",
           "airdate": "1998-09-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S03E09 The Day I Was Born - Factory Follies - Driver's Sped.mp4",
+            "name": "S03E09 The Day I Was Born - Factory Follies - Driver's Sped",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S03E09%20The%20Day%20I%20Was%20Born%20-%20Factory%20Follies%20-%20Driver's%20Sped.mp4",
+            "seconds": 1353,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 344
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Me An' My Dog\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S03E05 Me an' My Dog - Cow's Dream Catcher - Dessert Island.mp4",
+              "name": "S03E05 Me an' My Dog - Cow's Dream Catcher - Dessert Island",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S03E05%20Me%20an'%20My%20Dog%20-%20Cow's%20Dream%20Catcher%20-%20Dessert%20Island.mp4",
+              "seconds": 1352,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 328
+            }
+          ]
         },
         {
           "number": 10,
@@ -1009,7 +1337,21 @@
             "playable": true,
             "sizeMB": 319
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Chickens Don't Fly\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S03E07 Chickens Don't Fly - P.E. - I Am Vampire.mp4",
+              "name": "S03E07 Chickens Don't Fly - P.E. - I Am Vampire",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S03E07%20Chickens%20Don't%20Fly%20-%20P.E.%20-%20I%20Am%20Vampire.mp4",
+              "seconds": 1353,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 347
+            }
+          ]
         },
         {
           "number": 14,
@@ -1051,8 +1393,20 @@
           "number": 17,
           "name": "The Day I was Born",
           "airdate": "1998-10-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Day I was Born\" (0.95)",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S03E09 The Day I Was Born - Factory Follies - Driver's Sped.mp4",
+            "name": "S03E09 The Day I Was Born - Factory Follies - Driver's Sped",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S03E09%20The%20Day%20I%20Was%20Born%20-%20Factory%20Follies%20-%20Driver's%20Sped.mp4",
+            "seconds": 1353,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 344
+          },
           "alternates": []
         },
         {
@@ -1200,16 +1554,54 @@
           "number": 3,
           "name": "The Full Mounty",
           "airdate": "1999-05-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S04E03 Cow's Toys - I Scream, Man - I Are Gladiator.mp4",
+            "name": "S04E03 Cow's Toys - I Scream, Man - I Are Gladiator",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E03%20Cow's%20Toys%20-%20I%20Scream%2C%20Man%20-%20I%20Are%20Gladiator.mp4",
+            "seconds": 1354,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 336
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Full Mounty\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S04E07 The Full Mounty - Mall Cop - I Am Clichéd.mp4",
+              "name": "S04E07 The Full Mounty - Mall Cop - I Am Clichéd",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E07%20The%20Full%20Mounty%20-%20Mall%20Cop%20-%20I%20Am%20Clich%C3%A9d.mp4",
+              "seconds": 1354,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 340
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Mall Cop",
           "airdate": "1999-05-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S04E04 Cloud Nine - Send in the Clowns - Revolutionary Weasel.mp4",
+            "name": "S04E04 Cloud Nine - Send in the Clowns - Revolutionary Weasel",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E04%20Cloud%20Nine%20-%20Send%20in%20the%20Clowns%20-%20Revolutionary%20Weasel.mp4",
+            "seconds": 1354,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 337
+          },
           "alternates": []
         },
         {
@@ -1230,23 +1622,75 @@
             "playable": true,
             "sizeMB": 337
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Cow's Toys\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S04E03 Cow's Toys - I Scream, Man - I Are Gladiator.mp4",
+              "name": "S04E03 Cow's Toys - I Scream, Man - I Are Gladiator",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E03%20Cow's%20Toys%20-%20I%20Scream%2C%20Man%20-%20I%20Are%20Gladiator.mp4",
+              "seconds": 1354,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 336
+            }
+          ]
         },
         {
           "number": 6,
           "name": "I Scream Man",
           "airdate": "1999-04-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S04E06 Invisible Cow - Monster in the Closet - I Am Hairstylist.mp4",
+            "name": "S04E06 Invisible Cow - Monster in the Closet - I Am Hairstylist",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E06%20Invisible%20Cow%20-%20Monster%20in%20the%20Closet%20-%20I%20Am%20Hairstylist.mp4",
+            "seconds": 1351,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 332
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Cloud Nine",
           "airdate": "1999-04-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S04E07 The Full Mounty - Mall Cop - I Am Clichéd.mp4",
+            "name": "S04E07 The Full Mounty - Mall Cop - I Am Clichéd",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E07%20The%20Full%20Mounty%20-%20Mall%20Cop%20-%20I%20Am%20Clich%C3%A9d.mp4",
+            "seconds": 1354,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 340
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Cloud Nine\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S04E04 Cloud Nine - Send in the Clowns - Revolutionary Weasel.mp4",
+              "name": "S04E04 Cloud Nine - Send in the Clowns - Revolutionary Weasel",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E04%20Cloud%20Nine%20-%20Send%20in%20the%20Clowns%20-%20Revolutionary%20Weasel.mp4",
+              "seconds": 1354,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 337
+            }
+          ]
         },
         {
           "number": 8,
@@ -1272,21 +1716,35 @@
           "number": 9,
           "name": "The Big Move",
           "airdate": "1999-04-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Big Move\" (0.95)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
             "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
-            "file": "S04E02 The Big Move - Cow's Magic Blanket - I Are Ghost.mp4",
-            "name": "S04E02 The Big Move - Cow's Magic Blanket - I Are Ghost",
-            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E02%20The%20Big%20Move%20-%20Cow's%20Magic%20Blanket%20-%20I%20Are%20Ghost.mp4",
-            "seconds": 1354,
+            "file": "S04E09 Chicken's Fairy Tale - Magic Chicken - I Am Whale Captain.mp4",
+            "name": "S04E09 Chicken's Fairy Tale - Magic Chicken - I Am Whale Captain",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E09%20Chicken's%20Fairy%20Tale%20-%20Magic%20Chicken%20-%20I%20Am%20Whale%20Captain.mp4",
+            "seconds": 1351,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 325
+            "sizeMB": 313
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Big Move\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S04E02 The Big Move - Cow's Magic Blanket - I Are Ghost.mp4",
+              "name": "S04E02 The Big Move - Cow's Magic Blanket - I Are Ghost",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E02%20The%20Big%20Move%20-%20Cow's%20Magic%20Blanket%20-%20I%20Are%20Ghost.mp4",
+              "seconds": 1354,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 325
+            }
+          ]
         },
         {
           "number": 10,
@@ -1312,21 +1770,35 @@
           "number": 11,
           "name": "Snail Boy",
           "airdate": "1999-05-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Snail Boy\" (0.95)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
             "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
-            "file": "S04E08 Snail Boy - The Penalty Wheel - The Magnificent Motorbikini.mp4",
-            "name": "S04E08 Snail Boy - The Penalty Wheel - The Magnificent Motorbikini",
-            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E08%20Snail%20Boy%20-%20The%20Penalty%20Wheel%20-%20The%20Magnificent%20Motorbikini.mp4",
+            "file": "S04E11 Cow's a Beauty - Piano Lessons - The Sackless Games.mp4",
+            "name": "S04E11 Cow's a Beauty - Piano Lessons - The Sackless Games",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E11%20Cow's%20a%20Beauty%20-%20Piano%20Lessons%20-%20The%20Sackless%20Games.mp4",
             "seconds": 1353,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 334
+            "sizeMB": 352
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Snail Boy\" (0.95)",
+              "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+              "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+              "file": "S04E08 Snail Boy - The Penalty Wheel - The Magnificent Motorbikini.mp4",
+              "name": "S04E08 Snail Boy - The Penalty Wheel - The Magnificent Motorbikini",
+              "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E08%20Snail%20Boy%20-%20The%20Penalty%20Wheel%20-%20The%20Magnificent%20Motorbikini.mp4",
+              "seconds": 1353,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 334
+            }
+          ]
         },
         {
           "number": 12,
@@ -1372,16 +1844,40 @@
           "number": 14,
           "name": "Monster in the Closet",
           "airdate": "1999-05-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Monster in the Closet\" (0.95)",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S04E06 Invisible Cow - Monster in the Closet - I Am Hairstylist.mp4",
+            "name": "S04E06 Invisible Cow - Monster in the Closet - I Am Hairstylist",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E06%20Invisible%20Cow%20-%20Monster%20in%20the%20Closet%20-%20I%20Am%20Hairstylist.mp4",
+            "seconds": 1351,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 332
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Chicken's Fairy Tale",
           "airdate": "1999-04-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Chicken's Fairy Tale\" (0.95)",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S04E09 Chicken's Fairy Tale - Magic Chicken - I Am Whale Captain.mp4",
+            "name": "S04E09 Chicken's Fairy Tale - Magic Chicken - I Am Whale Captain",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E09%20Chicken's%20Fairy%20Tale%20-%20Magic%20Chicken%20-%20I%20Am%20Whale%20Captain.mp4",
+            "seconds": 1351,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 313
+          },
           "alternates": []
         },
         {
@@ -1444,8 +1940,20 @@
           "number": 20,
           "name": "Cow's a Beauty",
           "airdate": "1999-06-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Cow's a Beauty\" (0.95)",
+            "item": "s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans",
+            "itemTitle": "Cow and Chicken - The Complete Series (Tubi 720p)",
+            "file": "S04E11 Cow's a Beauty - Piano Lessons - The Sackless Games.mp4",
+            "name": "S04E11 Cow's a Beauty - Piano Lessons - The Sackless Games",
+            "url": "https://archive.org/download/s-01-e-04-confused-the-molting-fairy-i.-r.-gentlemans/S04E11%20Cow's%20a%20Beauty%20-%20Piano%20Lessons%20-%20The%20Sackless%20Games.mp4",
+            "seconds": 1353,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 352
+          },
           "alternates": []
         },
         {

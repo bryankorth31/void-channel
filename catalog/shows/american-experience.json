@@ -3,7 +3,7 @@
   "slug": "american-experience",
   "type": "Documentary & Geographic",
   "network": "PBS",
-  "matchedAt": "2026-10-16T07:58:04.448Z",
+  "matchedAt": "2026-10-19T04:12:08.736Z",
   "addedAt": "2026-10-15T12:08:35.790Z",
   "tvmaze": {
     "id": 3509,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 420,
-    "live": 4,
+    "live": 7,
     "review": 6,
-    "missing": 410,
-    "pct": 2
+    "missing": 407,
+    "pct": 3
   },
   "seasons": [
     {
@@ -196,8 +196,20 @@
           "number": 4,
           "name": "The Great War: 1918",
           "airdate": "1989-10-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "IdaBWellsAPassionforJustice",
+            "itemTitle": "Ida B. Wells : A Passion for Justice",
+            "file": "American.Experience.S02E04.Ida.B.Wells.A.Passion.For.Justice.1989.VHSRip.AAC2.0.x264-krokkers.mp4",
+            "name": "American.Experience.S02E04.Ida.B.Wells.A.Passion.For.Justice.1989.VHSRip.AAC2.0.x264-krokkers",
+            "url": "https://archive.org/download/IdaBWellsAPassionforJustice/American.Experience.S02E04.Ida.B.Wells.A.Passion.For.Justice.1989.VHSRip.AAC2.0.x264-krokkers.mp4",
+            "seconds": 3472,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 806
+          },
           "alternates": []
         },
         {
@@ -238,9 +250,35 @@
           "number": 6,
           "name": "Mr. Sears' Catalogue",
           "airdate": "1989-11-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "ForeverBaseball",
+            "itemTitle": "Forever Baseball",
+            "file": "American.Experience.S02E06.Forever.Baseball.1989.VHSRip.AAC2.0.x264-krokkers.ia.mp4",
+            "name": "American.Experience.S02E06.Forever.Baseball.1989.VHSRip.AAC2.0",
+            "url": "https://archive.org/download/ForeverBaseball/American.Experience.S02E06.Forever.Baseball.1989.VHSRip.AAC2.0.x264-krokkers.ia.mp4",
+            "seconds": 3498,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 568
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "ForeverBaseball",
+              "itemTitle": "Forever Baseball",
+              "file": "American.Experience.S02E06.Forever.Baseball.1989.VHSRip.AAC2.0.x264-krokkers.mp4",
+              "name": "American.Experience.S02E06.Forever.Baseball.1989.VHSRip.AAC2.0.x264-krokkers",
+              "url": "https://archive.org/download/ForeverBaseball/American.Experience.S02E06.Forever.Baseball.1989.VHSRip.AAC2.0.x264-krokkers.mp4",
+              "seconds": 3498,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 568
+            }
+          ]
         },
         {
           "number": 7,
@@ -1480,8 +1518,20 @@
           "number": 8,
           "name": "Nixon's China Game",
           "airdate": "2000-01-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "JubileeSingersSacrificeandGlory",
+            "itemTitle": "Jubilee Singers : Sacrifice and Glory",
+            "file": "American.Experience.S12E08.Jubilee.Singers.Sacrifice.and.Glory.2000.VHSRip.AAC2.0.x264-krokkers.mp4",
+            "name": "American.Experience.S12E08.Jubilee.Singers.Sacrifice.and.Glory.2000.VHSRip.AAC2.0.x264-krokkers",
+            "url": "https://archive.org/download/JubileeSingersSacrificeandGlory/American.Experience.S12E08.Jubilee.Singers.Sacrifice.and.Glory.2000.VHSRip.AAC2.0.x264-krokkers.mp4",
+            "seconds": 3404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 678
+          },
           "alternates": []
         },
         {

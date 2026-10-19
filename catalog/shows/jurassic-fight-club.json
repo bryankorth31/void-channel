@@ -3,7 +3,7 @@
   "slug": "jurassic-fight-club",
   "type": "Documentary & Geographic",
   "network": "History",
-  "matchedAt": "2026-10-17T10:18:10.136Z",
+  "matchedAt": "2026-10-19T04:12:50.504Z",
   "addedAt": "2026-10-17T10:18:10.137Z",
   "tvmaze": {
     "id": 1480,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 12,
-    "live": 11,
-    "review": 1,
+    "live": 12,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -141,21 +141,35 @@
           "number": 6,
           "name": "Deep Sea Killers",
           "airdate": "2008-09-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Deep Sea Killers\" (1.00)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "jurassic-fight-club-s-01-e-01-cannibal-dinosaur",
             "itemTitle": "Jurassic Fight Club S01 2008",
-            "file": "Jurassic Fight Club S01E05 Deep Sea Killers.mp4",
-            "name": "Jurassic Fight Club S01E05 Deep Sea Killers",
-            "url": "https://archive.org/download/jurassic-fight-club-s-01-e-01-cannibal-dinosaur/Jurassic%20Fight%20Club%20S01E05%20Deep%20Sea%20Killers.mp4",
-            "seconds": 2623,
+            "file": "Jurassic Fight Club S01E06 Hunter Becomes Hunted.mp4",
+            "name": "Jurassic Fight Club S01E06 Hunter Becomes Hunted",
+            "url": "https://archive.org/download/jurassic-fight-club-s-01-e-01-cannibal-dinosaur/Jurassic%20Fight%20Club%20S01E06%20Hunter%20Becomes%20Hunted.mp4",
+            "seconds": 2615,
             "format": "h.264",
             "playable": true,
             "sizeMB": 263
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Deep Sea Killers\" (1.00)",
+              "item": "jurassic-fight-club-s-01-e-01-cannibal-dinosaur",
+              "itemTitle": "Jurassic Fight Club S01 2008",
+              "file": "Jurassic Fight Club S01E05 Deep Sea Killers.mp4",
+              "name": "Jurassic Fight Club S01E05 Deep Sea Killers",
+              "url": "https://archive.org/download/jurassic-fight-club-s-01-e-01-cannibal-dinosaur/Jurassic%20Fight%20Club%20S01E05%20Deep%20Sea%20Killers.mp4",
+              "seconds": 2623,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 263
+            }
+          ]
         },
         {
           "number": 7,

@@ -3,21 +3,21 @@
   "slug": "the-mighty-boosh",
   "type": "British and Beyond",
   "network": "BBC Three",
-  "matchedAt": "2026-10-16T07:57:03.933Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:11:10.985Z",
+  "addedAt": "2026-10-16T07:57:03.933Z",
   "tvmaze": {
-    "id": null,
+    "id": 1947,
     "name": "The Mighty Boosh",
-    "runtime": null,
-    "premiered": null,
+    "runtime": 30,
+    "premiered": "2004-05-18",
     "network": "BBC Three"
   },
   "coverage": {
-    "total": 47,
-    "live": 0,
-    "review": 47,
-    "missing": 0,
-    "pct": 100
+    "total": 20,
+    "live": 12,
+    "review": 5,
+    "missing": 3,
+    "pct": 85
   },
   "seasons": [
     {
@@ -25,705 +25,131 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
+          "name": "Killeroo",
+          "airdate": "2004-05-18",
           "state": "REVIEW",
           "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "MIGHTY_BOOSH_S3_D1.mp4",
-            "name": "MIGHTY_BOOSH_S3_D1",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D1.mp4",
-            "seconds": 1729,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 171,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 5 in \"THE MIGHTY BOOSH TV SERIES [2003] [R2 PA\" | not browser-playable: container (Matroska)",
+            "item": "themightyboosh",
+            "itemTitle": "THE MIGHTY BOOSH TV SERIES [2003] [R2 PAL DVD REMUX]",
+            "file": "the_mighty_boosh-extras/boosh_publicity-s03.mkv",
+            "name": "the_mighty_boosh-extras/boosh_publicity-s03",
+            "url": "https://archive.org/download/themightyboosh/the_mighty_boosh-extras%2Fboosh_publicity-s03.mkv",
+            "seconds": 1762,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1389
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
+          "name": "Mutants",
+          "airdate": "2004-05-18",
           "state": "REVIEW",
           "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "MIGHTY_BOOSH_S3_D2.mp4",
-            "name": "MIGHTY_BOOSH_S3_D2",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D2.mp4",
-            "seconds": 1765,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 172,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 5 in \"THE MIGHTY BOOSH TV SERIES [2003] [R2 PA\" | not browser-playable: container (Matroska)",
+            "item": "themightyboosh",
+            "itemTitle": "THE MIGHTY BOOSH TV SERIES [2003] [R2 PAL DVD REMUX]",
+            "file": "the_mighty_boosh-extras/deleted_scenes-s03.mkv",
+            "name": "the_mighty_boosh-extras/deleted_scenes-s03",
+            "url": "https://archive.org/download/themightyboosh/the_mighty_boosh-extras%2Fdeleted_scenes-s03.mkv",
+            "seconds": 1356,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1069
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Episode 3",
+          "name": "Bollo",
+          "airdate": "2004-05-25",
           "state": "REVIEW",
           "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "MIGHTY_BOOSH_S3_D17.mp4",
-            "name": "MIGHTY_BOOSH_S3_D17",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D17.mp4",
-            "seconds": 1703,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 170,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 5 in \"THE MIGHTY BOOSH TV SERIES [2003] [R2 PA\" | not browser-playable: container (Matroska)",
+            "item": "themightyboosh",
+            "itemTitle": "THE MIGHTY BOOSH TV SERIES [2003] [R2 PAL DVD REMUX]",
+            "file": "the_mighty_boosh-extras/inside_the_mighty_boosh-dvd-s01.mkv",
+            "name": "the_mighty_boosh-extras/inside_the_mighty_boosh-dvd-s01",
+            "url": "https://archive.org/download/themightyboosh/the_mighty_boosh-extras%2Finside_the_mighty_boosh-dvd-s01.mkv",
+            "seconds": 1686,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1738
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Episode 4",
+          "name": "Tundra",
+          "airdate": "2004-06-01",
           "state": "REVIEW",
           "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "MIGHTY_BOOSH_S3_D18.mp4",
-            "name": "MIGHTY_BOOSH_S3_D18",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D18.mp4",
-            "seconds": 1713,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 169,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 5 in \"THE MIGHTY BOOSH TV SERIES [2003] [R2 PA\" | not browser-playable: container (Matroska)",
+            "item": "themightyboosh",
+            "itemTitle": "THE MIGHTY BOOSH TV SERIES [2003] [R2 PAL DVD REMUX]",
+            "file": "the_mighty_boosh-extras/making_boosh_2-s02.mkv",
+            "name": "the_mighty_boosh-extras/making_boosh_2-s02",
+            "url": "https://archive.org/download/themightyboosh/the_mighty_boosh-extras%2Fmaking_boosh_2-s02.mkv",
+            "seconds": 1711,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1587
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Episode 5",
+          "name": "Jungle",
+          "airdate": "2004-06-08",
           "state": "REVIEW",
           "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "MIGHTY_BOOSH_S3_D25.mp4",
-            "name": "MIGHTY_BOOSH_S3_D25",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D25.mp4",
-            "seconds": 1654,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 165,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 5 in \"THE MIGHTY BOOSH TV SERIES [2003] [R2 PA\" | not browser-playable: container (Matroska)",
+            "item": "themightyboosh",
+            "itemTitle": "THE MIGHTY BOOSH TV SERIES [2003] [R2 PAL DVD REMUX]",
+            "file": "the_mighty_boosh-extras/making_boosh_3-dvd-s03.mkv",
+            "name": "the_mighty_boosh-extras/making_boosh_3-dvd-s03",
+            "url": "https://archive.org/download/themightyboosh/the_mighty_boosh-extras%2Fmaking_boosh_3-dvd-s03.mkv",
+            "seconds": 1656,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1305
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Episode 6",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "MIGHTY_BOOSH_S3_D26.mp4",
-            "name": "MIGHTY_BOOSH_S3_D26",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D26.mp4",
-            "seconds": 1723,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 171,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Charlie",
+          "airdate": "2004-06-15",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
-          "name": "Episode 7",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "MIGHTY_BOOSH_S3_D28.mp4",
-            "name": "MIGHTY_BOOSH_S3_D28",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D28.mp4",
-            "seconds": 1357,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 133,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Electro",
+          "airdate": "2004-06-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Episode 8",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "MIGHTY_BOOSH_S3_D29.mp4",
-            "name": "MIGHTY_BOOSH_S3_D29",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D29.mp4",
-            "seconds": 1657,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 163,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Episode 9",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "MIGHTY_BOOSH_S3_D110.mp4",
-            "name": "MIGHTY_BOOSH_S3_D110",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D110.mp4",
-            "seconds": 1721,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 171,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "s02e01calloftheyeti",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
-            "file": "S02E01CallOfTheYeti.mp4",
-            "name": "S02E01CallOfTheYeti",
-            "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S02E01CallOfTheYeti.mp4",
-            "seconds": 1671,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 168,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "s02e02thepriest and thebeast",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
-            "file": "S02E02ThePriest&TheBeast.mp4",
-            "name": "S02E02ThePriest&TheBeast",
-            "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S02E02ThePriest%26TheBeast.mp4",
-            "seconds": 1705,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 170,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "s02e03nanageddon",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
-            "file": "S02E03Nanageddon.mp4",
-            "name": "S02E03Nanageddon",
-            "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S02E03Nanageddon.mp4",
-            "seconds": 1646,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 166,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "s02e04fountainofyouth",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
-            "file": "S02E04FountainOfYouth.mp4",
-            "name": "S02E04FountainOfYouth",
-            "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S02E04FountainOfYouth.mp4",
-            "seconds": 1698,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 170,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "s02e05thelegendofoldgregg",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
-            "file": "S02E05TheLegendOfOldGregg.mp4",
-            "name": "S02E05TheLegendOfOldGregg",
-            "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S02E05TheLegendOfOldGregg.mp4",
-            "seconds": 1649,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 165,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "s02e06thenightmareofmilkyjoe",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
-            "file": "S02E06TheNightmareOfMilkyJoe.mp4",
-            "name": "S02E06TheNightmareOfMilkyJoe",
-            "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S02E06TheNightmareOfMilkyJoe.mp4",
-            "seconds": 1715,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 173,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "s03e01eels",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
-            "file": "S03E01Eels.mp4",
-            "name": "S03E01Eels",
-            "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S03E01Eels.mp4",
-            "seconds": 1703,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 170,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "s03e02journeytothecentreofthepunk",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
-            "file": "S03E02JourneyToTheCentreOfThePunk.mp4",
-            "name": "S03E02JourneyToTheCentreOfThePunk",
-            "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S03E02JourneyToTheCentreOfThePunk.mp4",
-            "seconds": 1713,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 169,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "s03e03thepowerofthecrimp",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
-            "file": "S03E03ThePowerOfTheCrimp.mp4",
-            "name": "S03E03ThePowerOfTheCrimp",
-            "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S03E03ThePowerOfTheCrimp.mp4",
-            "seconds": 1729,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 171,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "s03e04thestrangetaleofthecrackfox",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
-            "file": "S03E04TheStrangeTaleOfTheCrackFox.mp4",
-            "name": "S03E04TheStrangeTaleOfTheCrackFox",
-            "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S03E04TheStrangeTaleOfTheCrackFox.mp4",
-            "seconds": 1721,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 171,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "s03e05party",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
-            "file": "S03E05Party.mp4",
-            "name": "S03E05Party",
-            "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S03E05Party.mp4",
-            "seconds": 1654,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 165,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "s03e06thechokes",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
-            "file": "S03E06TheChokes.mp4",
-            "name": "S03E06TheChokes",
-            "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S03E06TheChokes.mp4",
-            "seconds": 1723,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 171,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "the the pilot",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-mighty-boosh-s-00-e-00-the-pilot",
-            "itemTitle": "The Mighty Boosh - The Pilot - 2003/05/20",
-            "file": "The Mighty Boosh S00E00 - The Pilot.mp4",
-            "name": "The Mighty Boosh S00E00 - The Pilot",
-            "url": "https://archive.org/download/the-mighty-boosh-s-00-e-00-the-pilot/The%20Mighty%20Boosh%20S00E00%20-%20The%20Pilot.mp4",
-            "seconds": 1722,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 172,
-            "ep": {
-              "season": 0,
-              "episode": 0
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "the series 2 1",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_1.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_1",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_1.mp4",
-            "seconds": 1715,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 173,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "the series 2 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_2.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_2",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_2.mp4",
-            "seconds": 1722,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 170,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "the series 2 12",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_12.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_12",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_12.mp4",
-            "seconds": 1671,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 168,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "the series 2 13",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_13.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_13",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_13.mp4",
-            "seconds": 1705,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 170,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "the series 2 14",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_14.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_14",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_14.mp4",
-            "seconds": 1646,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 166,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "the series 2 15",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_15.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_15",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_15.mp4",
-            "seconds": 1698,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 170,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "the series 2 16",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_16.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_16",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_16.mp4",
-            "seconds": 1649,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 165,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "the series 2 22",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_22.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_22",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_22.mp4",
-            "seconds": 1722,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 172,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "the series 2 23",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_23.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_23",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_23.mp4",
-            "seconds": 864,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 85,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "the series 2 24",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_24.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_24",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_24.mp4",
-            "seconds": 864,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 85,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "the series 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_214.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_214",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_214.mp4",
-            "seconds": 1152,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 112,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "the series 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_218.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_218",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_218.mp4",
-            "seconds": 938,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 93,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "the series 2",
-          "state": "REVIEW",
-          "file": {
-            "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
-            "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
-            "file": "THE_MIGHTY_BOOSH_SERIES_2_DISC_219.mp4",
-            "name": "THE_MIGHTY_BOOSH_SERIES_2_DISC_219",
-            "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/THE_MIGHTY_BOOSH_SERIES_2_DISC_219.mp4",
-            "seconds": 938,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 93,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Hitcher",
+          "airdate": "2004-06-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -733,9 +159,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "calloftheyeti",
-          "state": "REVIEW",
+          "name": "Call of the Yeti",
+          "airdate": "2005-07-25",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-mighty-boosh-season-2-720pupscale10bit",
             "itemTitle": "The Mighty Boosh Season 2",
             "file": "S02E01 - CalloftheYeti.mp4",
@@ -744,21 +173,45 @@
             "seconds": 1671,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 165,
-            "ep": {
-              "season": 2,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 165
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Call of the Yeti\" (0.80)",
+              "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
+              "file": "S02E01CallOfTheYeti.mp4",
+              "name": "S02E01CallOfTheYeti",
+              "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S02E01CallOfTheYeti.mp4",
+              "seconds": 1671,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 168
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 17 in \"THE MIGHTY BOOSH SEASON 2-3 DISC SET\"",
+              "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
+              "file": "MIGHTY_BOOSH_S3_D1.mp4",
+              "name": "MIGHTY_BOOSH_S3_D1",
+              "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D1.mp4",
+              "seconds": 1729,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 171
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "thepriest and thebeast",
-          "state": "REVIEW",
+          "name": "The Priest and the Beast",
+          "airdate": "2005-08-02",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-mighty-boosh-season-2-720pupscale10bit",
             "itemTitle": "The Mighty Boosh Season 2",
             "file": "S02E02 - ThePriest&TheBeast.mp4",
@@ -767,21 +220,45 @@
             "seconds": 1705,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 167,
-            "ep": {
-              "season": 2,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 167
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Priest and the Beast\" (0.86)",
+              "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
+              "file": "S02E02ThePriest&TheBeast.mp4",
+              "name": "S02E02ThePriest&TheBeast",
+              "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S02E02ThePriest%26TheBeast.mp4",
+              "seconds": 1705,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 170
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 17 in \"THE MIGHTY BOOSH SEASON 2-3 DISC SET\"",
+              "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
+              "file": "MIGHTY_BOOSH_S3_D2.mp4",
+              "name": "MIGHTY_BOOSH_S3_D2",
+              "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D2.mp4",
+              "seconds": 1765,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 172
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "nanageddon",
-          "state": "REVIEW",
+          "name": "Nanageddon",
+          "airdate": "2005-08-09",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-mighty-boosh-season-2-720pupscale10bit",
             "itemTitle": "The Mighty Boosh Season 2",
             "file": "S02E03 - Nanageddon.mp4",
@@ -790,21 +267,45 @@
             "seconds": 1646,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 162,
-            "ep": {
-              "season": 2,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 162
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 17 in \"THE MIGHTY BOOSH SEASON 2-3 DISC SET\"",
+              "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
+              "file": "MIGHTY_BOOSH_S3_D17.mp4",
+              "name": "MIGHTY_BOOSH_S3_D17",
+              "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D17.mp4",
+              "seconds": 1703,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 170
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Nanageddon\" (0.73)",
+              "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
+              "file": "S02E03Nanageddon.mp4",
+              "name": "S02E03Nanageddon",
+              "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S02E03Nanageddon.mp4",
+              "seconds": 1646,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 166
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "fountainofyouth",
-          "state": "REVIEW",
+          "name": "Fountain of Youth",
+          "airdate": "2005-08-16",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-mighty-boosh-season-2-720pupscale10bit",
             "itemTitle": "The Mighty Boosh Season 2",
             "file": "S02E04 - FountainofYouth.mp4",
@@ -813,21 +314,45 @@
             "seconds": 1698,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 167,
-            "ep": {
-              "season": 2,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 167
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Fountain of Youth\" (0.81)",
+              "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
+              "file": "S02E04FountainOfYouth.mp4",
+              "name": "S02E04FountainOfYouth",
+              "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S02E04FountainOfYouth.mp4",
+              "seconds": 1698,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 170
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 17 in \"THE MIGHTY BOOSH SEASON 2-3 DISC SET\"",
+              "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
+              "file": "MIGHTY_BOOSH_S3_D18.mp4",
+              "name": "MIGHTY_BOOSH_S3_D18",
+              "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D18.mp4",
+              "seconds": 1713,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 169
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "thelegendofoldgregg",
-          "state": "REVIEW",
+          "name": "The Legend of Old Gregg",
+          "airdate": "2005-08-23",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-mighty-boosh-season-2-720pupscale10bit",
             "itemTitle": "The Mighty Boosh Season 2",
             "file": "S02E05 - TheLegendofOldGregg.mp4",
@@ -836,21 +361,45 @@
             "seconds": 1649,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 162,
-            "ep": {
-              "season": 2,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 162
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Legend of Old Gregg\" (0.85)",
+              "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
+              "file": "S02E05TheLegendOfOldGregg.mp4",
+              "name": "S02E05TheLegendOfOldGregg",
+              "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S02E05TheLegendOfOldGregg.mp4",
+              "seconds": 1649,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 165
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 17 in \"THE MIGHTY BOOSH SEASON 2-3 DISC SET\"",
+              "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
+              "file": "MIGHTY_BOOSH_S3_D25.mp4",
+              "name": "MIGHTY_BOOSH_S3_D25",
+              "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D25.mp4",
+              "seconds": 1654,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 165
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "thenightmareofmilkyjoe",
-          "state": "REVIEW",
+          "name": "The Nightmare of Milky Joe",
+          "airdate": "2005-08-30",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-mighty-boosh-season-2-720pupscale10bit",
             "itemTitle": "The Mighty Boosh Season 2",
             "file": "S02E06 - TheNightmareofMilkyJoe.mp4",
@@ -859,15 +408,36 @@
             "seconds": 1715,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 169,
-            "ep": {
-              "season": 2,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 169
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Nightmare of Milky Joe\" (0.88)",
+              "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
+              "file": "S02E06TheNightmareOfMilkyJoe.mp4",
+              "name": "S02E06TheNightmareOfMilkyJoe",
+              "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S02E06TheNightmareOfMilkyJoe.mp4",
+              "seconds": 1715,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 173
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 17 in \"THE MIGHTY BOOSH SEASON 2-3 DISC SET\"",
+              "item": "mighty-boosh-s-2-3-Disc-Set-Complete",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 DISC SET",
+              "file": "MIGHTY_BOOSH_S3_D26.mp4",
+              "name": "MIGHTY_BOOSH_S3_D26",
+              "url": "https://archive.org/download/mighty-boosh-s-2-3-Disc-Set-Complete/MIGHTY_BOOSH_S3_D26.mp4",
+              "seconds": 1723,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 171
+            }
+          ]
         }
       ]
     },
@@ -876,9 +446,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "eels",
-          "state": "REVIEW",
+          "name": "Eels",
+          "airdate": "2007-11-15",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-mighty-boosh-season-3-720pupscale10bit",
             "itemTitle": "The Mighty Boosh Season 3",
             "file": "S03E01 - Eels.mp4",
@@ -887,21 +460,18 @@
             "seconds": 1703,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 167,
-            "ep": {
-              "season": 3,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 167
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "journeytothecentreofthepunk",
-          "state": "REVIEW",
+          "name": "Journey to the Centre of the Punk",
+          "airdate": "2007-11-22",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-mighty-boosh-season-3-720pupscale10bit",
             "itemTitle": "The Mighty Boosh Season 3",
             "file": "S03E02 -  JourneytotheCentreofthePunk.mp4",
@@ -910,21 +480,32 @@
             "seconds": 1713,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 167,
-            "ep": {
-              "season": 3,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 167
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Journey to the Centre of the Punk\" (0.89)",
+              "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
+              "file": "S03E02JourneyToTheCentreOfThePunk.mp4",
+              "name": "S03E02JourneyToTheCentreOfThePunk",
+              "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S03E02JourneyToTheCentreOfThePunk.mp4",
+              "seconds": 1713,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 169
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "thepowerofthecrimp",
-          "state": "REVIEW",
+          "name": "The Power of the Crimp",
+          "airdate": "2007-11-29",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-mighty-boosh-season-3-720pupscale10bit",
             "itemTitle": "The Mighty Boosh Season 3",
             "file": "S03E03 -  ThePoweroftheCrimp.mp4",
@@ -933,21 +514,32 @@
             "seconds": 1729,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Power of the Crimp\" (0.86)",
+              "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
+              "file": "S03E03ThePowerOfTheCrimp.mp4",
+              "name": "S03E03ThePowerOfTheCrimp",
+              "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S03E03ThePowerOfTheCrimp.mp4",
+              "seconds": 1729,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 171
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "thestrangetaleofthecrackfox",
-          "state": "REVIEW",
+          "name": "The Strange Tale of the Crack Fox",
+          "airdate": "2007-12-06",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-mighty-boosh-season-3-720pupscale10bit",
             "itemTitle": "The Mighty Boosh Season 3",
             "file": "S03E04 -  TheStrangeTaleoftheCrackFox.mp4",
@@ -956,21 +548,32 @@
             "seconds": 1721,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Strange Tale of the Crack Fox\" (0.88)",
+              "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
+              "file": "S03E04TheStrangeTaleOfTheCrackFox.mp4",
+              "name": "S03E04TheStrangeTaleOfTheCrackFox",
+              "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S03E04TheStrangeTaleOfTheCrackFox.mp4",
+              "seconds": 1721,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 171
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "party",
-          "state": "REVIEW",
+          "name": "Party",
+          "airdate": "2007-12-13",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-mighty-boosh-season-3-720pupscale10bit",
             "itemTitle": "The Mighty Boosh Season 3",
             "file": "S03E05 - Party.mp4",
@@ -979,21 +582,18 @@
             "seconds": 1654,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 162,
-            "ep": {
-              "season": 3,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 162
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "thechokes",
-          "state": "REVIEW",
+          "name": "The Chokes",
+          "airdate": "2007-12-20",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-mighty-boosh-season-3-720pupscale10bit",
             "itemTitle": "The Mighty Boosh Season 3",
             "file": "S03E06 - TheChokes.mp4",
@@ -1002,22 +602,25 @@
             "seconds": 1723,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 168,
-            "ep": {
-              "season": 3,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 168
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"The Chokes\" (0.73)",
+              "item": "the-might-boosh-season-2-3-complete-in-mkv-format-no-iso",
+              "itemTitle": "THE MIGHTY BOOSH SEASON 2-3 COMPLETE IN MKV FORMAT NO ISO",
+              "file": "S03E06TheChokes.mp4",
+              "name": "S03E06TheChokes",
+              "url": "https://archive.org/download/the-might-boosh-season-2-3-complete-in-mkv-format-no-iso/S03E06TheChokes.mp4",
+              "seconds": 1723,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 171
+            }
+          ]
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 1947,
-    "name": "The Mighty Boosh",
-    "placed": 12
-  }
+  ]
 }

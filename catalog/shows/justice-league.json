@@ -3,7 +3,7 @@
   "slug": "justice-league",
   "type": "Animated",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:28.834Z",
+  "matchedAt": "2026-10-19T04:10:37.785Z",
   "addedAt": "2026-10-15T16:30:57.355Z",
   "tvmaze": {
     "id": 22040,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 52,
-    "live": 0,
-    "review": 22,
-    "missing": 30,
-    "pct": 42
+    "live": 46,
+    "review": 0,
+    "missing": 6,
+    "pct": 88
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "Secret Origins (1)",
           "airdate": "2001-11-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -41,31 +41,82 @@
             "playable": true,
             "sizeMB": 69
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Secret Origins (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 2 Secret Origins Part 2.mp4",
+              "name": "Justice League Season 1 Episode 2 Secret Origins Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%202%20Secret%20Origins%20Part%202.mp4",
+              "seconds": 1326,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 75
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Secret Origins (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 3 Secret Origins Part 3.mp4",
+              "name": "Justice League Season 1 Episode 3 Secret Origins Part 3",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%203%20Secret%20Origins%20Part%203.mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 72
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Secret Origins (2)",
           "airdate": "2001-11-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 2 Secret Origins Part 2.mp4",
+            "name": "Justice League Season 1 Episode 2 Secret Origins Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%202%20Secret%20Origins%20Part%202.mp4",
+            "seconds": 1326,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 75
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Secret Origins (3)",
           "airdate": "2001-11-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 3 Secret Origins Part 3.mp4",
+            "name": "Justice League Season 1 Episode 3 Secret Origins Part 3",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%203%20Secret%20Origins%20Part%203.mp4",
+            "seconds": 1295,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 72
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "In Blackest Night (1)",
           "airdate": "2001-11-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -77,23 +128,49 @@
             "playable": true,
             "sizeMB": 73
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"In Blackest Night (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 5 In Blackest Night Part 2.mp4",
+              "name": "Justice League Season 1 Episode 5 In Blackest Night Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%205%20In%20Blackest%20Night%20Part%202.mp4",
+              "seconds": 1351,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 77
+            }
+          ]
         },
         {
           "number": 5,
           "name": "In Blackest Night (2)",
           "airdate": "2001-11-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 5 In Blackest Night Part 2.mp4",
+            "name": "Justice League Season 1 Episode 5 In Blackest Night Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%205%20In%20Blackest%20Night%20Part%202.mp4",
+            "seconds": 1351,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 77
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "The Enemy Below (1)",
           "airdate": "2001-12-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -105,119 +182,451 @@
             "playable": true,
             "sizeMB": 68
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Enemy Below (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 7 The Enemy Below Part 2.mp4",
+              "name": "Justice League Season 1 Episode 7 The Enemy Below Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%207%20The%20Enemy%20Below%20Part%202.mp4",
+              "seconds": 1303,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 73
+            }
+          ]
         },
         {
           "number": 7,
           "name": "The Enemy Below (2)",
           "airdate": "2001-12-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 7 The Enemy Below Part 2.mp4",
+            "name": "Justice League Season 1 Episode 7 The Enemy Below Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%207%20The%20Enemy%20Below%20Part%202.mp4",
+            "seconds": 1303,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 73
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Paradise Lost (1)",
           "airdate": "2002-01-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 8 Injustice for All,Part 1.mp4",
+            "name": "Justice League Season 1 Episode 8 Injustice for All,Part 1",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%208%20Injustice%20for%20All%2CPart%201.mp4",
+            "seconds": 1301,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 72
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Paradise Lost (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 11 Paradise Lost, Part 2.mp4",
+              "name": "Justice League Season 1 Episode 11 Paradise Lost, Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2011%20Paradise%20Lost%2C%20Part%202.mp4",
+              "seconds": 1319,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 77
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Paradise Lost (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 10 Paradise Lost, Part 1.mp4",
+              "name": "Justice League Season 1 Episode 10 Paradise Lost, Part 1",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2010%20Paradise%20Lost%2C%20Part%201.mp4",
+              "seconds": 1285,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 73
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Paradise Lost (2)",
           "airdate": "2002-01-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 9 Injustice for All,Part 2.mp4",
+            "name": "Justice League Season 1 Episode 9 Injustice for All,Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%209%20Injustice%20for%20All%2CPart%202.mp4",
+            "seconds": 1316,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 66
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "War World (1)",
           "airdate": "2002-02-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 10 Paradise Lost, Part 1.mp4",
+            "name": "Justice League Season 1 Episode 10 Paradise Lost, Part 1",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2010%20Paradise%20Lost%2C%20Part%201.mp4",
+            "seconds": 1285,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 73
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"War World (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 13 War World, Part 2.mp4",
+              "name": "Justice League Season 1 Episode 13 War World, Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2013%20War%20World%2C%20Part%202.mp4",
+              "seconds": 1312,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 73
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"War World (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 12 War World, Part 1.mp4",
+              "name": "Justice League Season 1 Episode 12 War World, Part 1",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2012%20War%20World%2C%20Part%201.mp4",
+              "seconds": 1301,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 71
+            }
+          ]
         },
         {
           "number": 11,
           "name": "War World (2)",
           "airdate": "2002-03-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 11 Paradise Lost, Part 2.mp4",
+            "name": "Justice League Season 1 Episode 11 Paradise Lost, Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2011%20Paradise%20Lost%2C%20Part%202.mp4",
+            "seconds": 1319,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 77
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "The Brave and the Bold (1)",
           "airdate": "2002-03-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 12 War World, Part 1.mp4",
+            "name": "Justice League Season 1 Episode 12 War World, Part 1",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2012%20War%20World%2C%20Part%201.mp4",
+            "seconds": 1301,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 71
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Brave and the Bold (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 14 The Brave and the Bold,Part 1.mp4",
+              "name": "Justice League Season 1 Episode 14 The Brave and the Bold,Part 1",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2014%20The%20Brave%20and%20the%20Bold%2CPart%201.mp4",
+              "seconds": 1298,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 69
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Brave and the Bold (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 15 The Brave and the Bold, Part 2.mp4",
+              "name": "Justice League Season 1 Episode 15 The Brave and the Bold, Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2015%20The%20Brave%20and%20the%20Bold%2C%20Part%202.mp4",
+              "seconds": 1302,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 66
+            }
+          ]
         },
         {
           "number": 13,
           "name": "The Brave and the Bold (2)",
           "airdate": "2002-03-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 13 War World, Part 2.mp4",
+            "name": "Justice League Season 1 Episode 13 War World, Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2013%20War%20World%2C%20Part%202.mp4",
+            "seconds": 1312,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 73
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "Fury (1)",
           "airdate": "2002-04-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 14 The Brave and the Bold,Part 1.mp4",
+            "name": "Justice League Season 1 Episode 14 The Brave and the Bold,Part 1",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2014%20The%20Brave%20and%20the%20Bold%2CPart%201.mp4",
+            "seconds": 1298,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 69
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Fury (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 17 Fury, Part 2.mp4",
+              "name": "Justice League Season 1 Episode 17 Fury, Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2017%20Fury%2C%20Part%202.mp4",
+              "seconds": 1294,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 71
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Fury (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 16 Fury,Part 1.mp4",
+              "name": "Justice League Season 1 Episode 16 Fury,Part 1",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2016%20Fury%2CPart%201.mp4",
+              "seconds": 1299,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 64
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Fury (2)",
           "airdate": "2002-04-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 15 The Brave and the Bold, Part 2.mp4",
+            "name": "Justice League Season 1 Episode 15 The Brave and the Bold, Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2015%20The%20Brave%20and%20the%20Bold%2C%20Part%202.mp4",
+            "seconds": 1302,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 66
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "Legends (1)",
           "airdate": "2002-04-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 16 Fury,Part 1.mp4",
+            "name": "Justice League Season 1 Episode 16 Fury,Part 1",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2016%20Fury%2CPart%201.mp4",
+            "seconds": 1299,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 64
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Legends (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 18 Legends, Part 1.mp4",
+              "name": "Justice League Season 1 Episode 18 Legends, Part 1",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2018%20Legends%2C%20Part%201.mp4",
+              "seconds": 1318,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 79
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Legends (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 19 Legends, Part 2.mp4",
+              "name": "Justice League Season 1 Episode 19 Legends, Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2019%20Legends%2C%20Part%202.mp4",
+              "seconds": 1306,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 75
+            }
+          ]
         },
         {
           "number": 17,
           "name": "Legends (2)",
           "airdate": "2002-04-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 17 Fury, Part 2.mp4",
+            "name": "Justice League Season 1 Episode 17 Fury, Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2017%20Fury%2C%20Part%202.mp4",
+            "seconds": 1294,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 71
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "Injustice for All (1)",
           "airdate": "2002-09-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 18 Legends, Part 1.mp4",
+            "name": "Justice League Season 1 Episode 18 Legends, Part 1",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2018%20Legends%2C%20Part%201.mp4",
+            "seconds": 1318,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 79
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Injustice for All (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 8 Injustice for All,Part 1.mp4",
+              "name": "Justice League Season 1 Episode 8 Injustice for All,Part 1",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%208%20Injustice%20for%20All%2CPart%201.mp4",
+              "seconds": 1301,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 72
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Injustice for All (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 9 Injustice for All,Part 2.mp4",
+              "name": "Justice League Season 1 Episode 9 Injustice for All,Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%209%20Injustice%20for%20All%2CPart%202.mp4",
+              "seconds": 1316,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 66
+            }
+          ]
         },
         {
           "number": 19,
           "name": "Injustice for All (2)",
           "airdate": "2002-09-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 19 Legends, Part 2.mp4",
+            "name": "Justice League Season 1 Episode 19 Legends, Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2019%20Legends%2C%20Part%202.mp4",
+            "seconds": 1306,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 75
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "A Knight of Shadows (1)",
           "airdate": "2002-09-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -229,23 +638,49 @@
             "playable": true,
             "sizeMB": 70
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"A Knight of Shadows (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 21 A Knight of Shadows, Part 2.mp4",
+              "name": "Justice League Season 1 Episode 21 A Knight of Shadows, Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2021%20A%20Knight%20of%20Shadows%2C%20Part%202.mp4",
+              "seconds": 1320,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 73
+            }
+          ]
         },
         {
           "number": 21,
           "name": "A Knight of Shadows (2)",
           "airdate": "2002-09-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 21 A Knight of Shadows, Part 2.mp4",
+            "name": "Justice League Season 1 Episode 21 A Knight of Shadows, Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2021%20A%20Knight%20of%20Shadows%2C%20Part%202.mp4",
+            "seconds": 1320,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 73
+          },
           "alternates": []
         },
         {
           "number": 22,
           "name": "Metamorphosis (1)",
           "airdate": "2002-10-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -257,23 +692,49 @@
             "playable": true,
             "sizeMB": 65
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Metamorphosis (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 23 Metamorphosis, Part 2.mp4",
+              "name": "Justice League Season 1 Episode 23 Metamorphosis, Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2023%20Metamorphosis%2C%20Part%202.mp4",
+              "seconds": 1302,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 70
+            }
+          ]
         },
         {
           "number": 23,
           "name": "Metamorphosis (2)",
           "airdate": "2002-10-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 23 Metamorphosis, Part 2.mp4",
+            "name": "Justice League Season 1 Episode 23 Metamorphosis, Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2023%20Metamorphosis%2C%20Part%202.mp4",
+            "seconds": 1302,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 70
+          },
           "alternates": []
         },
         {
           "number": 24,
           "name": "The Savage Time (1)",
           "airdate": "2002-11-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -285,22 +746,73 @@
             "playable": true,
             "sizeMB": 69
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Savage Time (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 25 The Savage Time,Part 2.mp4",
+              "name": "Justice League Season 1 Episode 25 The Savage Time,Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2025%20The%20Savage%20Time%2CPart%202.mp4",
+              "seconds": 1329,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 67
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Savage Time (1)\" (0.95)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 1 Episode 26 The Savage Time, Part 3.mp4",
+              "name": "Justice League Season 1 Episode 26 The Savage Time, Part 3",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2026%20The%20Savage%20Time%2C%20Part%203.mp4",
+              "seconds": 1336,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 67
+            }
+          ]
         },
         {
           "number": 25,
           "name": "The Savage Time (2)",
           "airdate": "2002-11-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 25 The Savage Time,Part 2.mp4",
+            "name": "Justice League Season 1 Episode 25 The Savage Time,Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2025%20The%20Savage%20Time%2CPart%202.mp4",
+            "seconds": 1329,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 67
+          },
           "alternates": []
         },
         {
           "number": 26,
           "name": "The Savage Time (3)",
           "airdate": "2002-11-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 1 Episode 26 The Savage Time, Part 3.mp4",
+            "name": "Justice League Season 1 Episode 26 The Savage Time, Part 3",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%201%20Episode%2026%20The%20Savage%20Time%2C%20Part%203.mp4",
+            "seconds": 1336,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 67
+          },
           "alternates": []
         }
       ]
@@ -312,9 +824,9 @@
           "number": 1,
           "name": "Twilight (1)",
           "airdate": "2003-07-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -332,9 +844,9 @@
           "number": 2,
           "name": "Twilight (2)",
           "airdate": "2003-07-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -352,9 +864,9 @@
           "number": 3,
           "name": "Tabula Rasa (1)",
           "airdate": "2003-10-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -372,9 +884,9 @@
           "number": 4,
           "name": "Tabula Rasa (2)",
           "airdate": "2003-10-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -392,9 +904,9 @@
           "number": 5,
           "name": "Only a Dream (1)",
           "airdate": "2003-10-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -412,9 +924,9 @@
           "number": 6,
           "name": "Only a Dream (2)",
           "airdate": "2003-10-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -432,9 +944,9 @@
           "number": 7,
           "name": "Maid of Honor (1)",
           "airdate": "2003-10-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -452,9 +964,9 @@
           "number": 8,
           "name": "Maid of Honor (2)",
           "airdate": "2003-10-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -472,25 +984,63 @@
           "number": 9,
           "name": "Hearts and Minds (1)",
           "airdate": "2003-10-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 2 Episode 9 Heart and Minds,Part 1.mp4",
+            "name": "Justice League Season 2 Episode 9 Heart and Minds,Part 1",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%202%20Episode%209%20Heart%20and%20Minds%2CPart%201.mp4",
+            "seconds": 1373,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 84
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Hearts and Minds (1)\" (0.67)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 2 Episode 10 Heart and Minds, Part 2.mp4",
+              "name": "Justice League Season 2 Episode 10 Heart and Minds, Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%202%20Episode%2010%20Heart%20and%20Minds%2C%20Part%202.mp4",
+              "seconds": 1401,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 91
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Hearts and Minds (2)",
           "airdate": "2003-10-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 2 Episode 10 Heart and Minds, Part 2.mp4",
+            "name": "Justice League Season 2 Episode 10 Heart and Minds, Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%202%20Episode%2010%20Heart%20and%20Minds%2C%20Part%202.mp4",
+            "seconds": 1401,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 91
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "A Better World (1)",
           "airdate": "2003-11-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -508,9 +1058,9 @@
           "number": 12,
           "name": "A Better World (2)",
           "airdate": "2003-11-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -528,9 +1078,9 @@
           "number": 13,
           "name": "Eclipsed (1)",
           "airdate": "2003-11-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -548,9 +1098,9 @@
           "number": 14,
           "name": "Eclipsed (2)",
           "airdate": "2003-11-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -568,9 +1118,9 @@
           "number": 15,
           "name": "The Terror Beyond (1)",
           "airdate": "2003-11-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -588,9 +1138,9 @@
           "number": 16,
           "name": "The Terror Beyond (2)",
           "airdate": "2003-11-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -608,9 +1158,9 @@
           "number": 17,
           "name": "Secret Society (1)",
           "airdate": "2003-11-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -628,9 +1178,9 @@
           "number": 18,
           "name": "Secret Society (2)",
           "airdate": "2003-11-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "justice-league-complete-season",
             "itemTitle": "Justice League Complete Season",
@@ -648,16 +1198,54 @@
           "number": 19,
           "name": "Hereafter (1)",
           "airdate": "2003-11-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 2 Episode 19 Here After,Part 1.mp4",
+            "name": "Justice League Season 2 Episode 19 Here After,Part 1",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%202%20Episode%2019%20Here%20After%2CPart%201.mp4",
+            "seconds": 1336,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 85
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Hereafter (1)\" (0.61)",
+              "item": "justice-league-complete-season",
+              "itemTitle": "Justice League Complete Season",
+              "file": "Justice League Season 2 Episode 20 Here After,Part 2.mp4",
+              "name": "Justice League Season 2 Episode 20 Here After,Part 2",
+              "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%202%20Episode%2020%20Here%20After%2CPart%202.mp4",
+              "seconds": 1407,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 77
+            }
+          ]
         },
         {
           "number": 20,
           "name": "Hereafter (2)",
           "airdate": "2003-11-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "justice-league-complete-season",
+            "itemTitle": "Justice League Complete Season",
+            "file": "Justice League Season 2 Episode 20 Here After,Part 2.mp4",
+            "name": "Justice League Season 2 Episode 20 Here After,Part 2",
+            "url": "https://archive.org/download/justice-league-complete-season/Justice%20League%20Season%202%20Episode%2020%20Here%20After%2CPart%202.mp4",
+            "seconds": 1407,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 77
+          },
           "alternates": []
         },
         {

@@ -3,7 +3,8 @@
   "slug": "the-royle-family",
   "type": "British and Beyond",
   "network": "BBC Two",
-  "matchedAt": "2026-10-16T07:57:04.920Z",
+  "matchedAt": "2026-10-19T04:11:11.875Z",
+  "addedAt": "2026-10-19T04:11:11.879Z",
   "tvmaze": {
     "id": 4030,
     "name": "The Royle Family",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 20,
     "live": 0,
-    "review": 0,
-    "missing": 20,
-    "pct": 0
+    "review": 3,
+    "missing": 17,
+    "pct": 15
   },
   "seasons": [
     {
@@ -26,8 +27,20 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "1998-09-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "the-royle-family-1998-2012-tv-airing",
+            "itemTitle": "The Royle Family (1998-2012) TV Airing",
+            "file": "Series 03 - Episode 01 [Baby] U&GOLD Airing (18-09-2026).mp4",
+            "name": "Series 03 - Episode 01 [Baby] U&GOLD Airing (18-09-2026)",
+            "url": "https://archive.org/download/the-royle-family-1998-2012-tv-airing/Series%2003%20-%20Episode%2001%20%5BBaby%5D%20U%26GOLD%20Airing%20(18-09-2026).mp4",
+            "seconds": 2396,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 230
+          },
           "alternates": []
         },
         {
@@ -66,8 +79,20 @@
           "number": 6,
           "name": "Episode 6",
           "airdate": "1998-10-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "the-royle-family-1998-2012-tv-airing",
+            "itemTitle": "The Royle Family (1998-2012) TV Airing",
+            "file": "Series 01 - Episode 06 [Wedding Day] U&GOLD Airing (11-09-2026).mp4",
+            "name": "Series 01 - Episode 06 [Wedding Day] U&GOLD Airing (11-09-2026)",
+            "url": "https://archive.org/download/the-royle-family-1998-2012-tv-airing/Series%2001%20-%20Episode%2006%20%5BWedding%20Day%5D%20U%26GOLD%20Airing%20(11-09-2026).mp4",
+            "seconds": 2445,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 236
+          },
           "alternates": []
         }
       ]
@@ -140,8 +165,20 @@
           "number": 1,
           "name": "Baby",
           "airdate": "2000-10-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Baby\" (0.95)",
+            "item": "the-royle-family-1998-2012-tv-airing",
+            "itemTitle": "The Royle Family (1998-2012) TV Airing",
+            "file": "Series 03 - Episode 01 [Baby] U&GOLD Airing (18-09-2026).mp4",
+            "name": "Series 03 - Episode 01 [Baby] U&GOLD Airing (18-09-2026)",
+            "url": "https://archive.org/download/the-royle-family-1998-2012-tv-airing/Series%2003%20-%20Episode%2001%20%5BBaby%5D%20U%26GOLD%20Airing%20(18-09-2026).mp4",
+            "seconds": 2396,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 230
+          },
           "alternates": []
         },
         {

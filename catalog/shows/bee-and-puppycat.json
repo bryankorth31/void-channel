@@ -3,7 +3,7 @@
   "slug": "bee-and-puppycat",
   "type": "Internet Comedy",
   "network": "Web",
-  "matchedAt": "2026-10-16T07:57:27.830Z",
+  "matchedAt": "2026-10-19T04:11:31.921Z",
   "addedAt": "2026-10-15T12:08:10.819Z",
   "tvmaze": {
     "id": 66543,
@@ -237,7 +237,21 @@
             "playable": true,
             "sizeMB": 186
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "bee-and-puppycat-lazy-in-space_202508",
+              "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+              "file": "ep 8 - Two Clown Noses.mp4",
+              "name": "ep 8 - Two Clown Noses",
+              "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%208%20-%20Two%20Clown%20Noses.mp4",
+              "seconds": 1383,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 9,
@@ -347,19 +361,33 @@
           "airdate": "2022-09-06",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
+            "conf": 0.75,
+            "why": "title ~ \"Two Clown Noses\" (0.96)",
             "item": "bee-and-puppycat-lazy-in-space_202508",
             "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
-            "file": "ep 12 - Now I'm Really Alone.mp4",
-            "name": "ep 12 - Now I'm Really Alone",
-            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%2012%20-%20Now%20I'm%20Really%20Alone.mp4",
-            "seconds": 1391,
+            "file": "ep 8 - Two Clown Noses.mp4",
+            "name": "ep 8 - Two Clown Noses",
+            "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%208%20-%20Two%20Clown%20Noses.mp4",
+            "seconds": 1383,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 130
+            "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "bee-and-puppycat-lazy-in-space_202508",
+              "itemTitle": "Bee and PuppyCat S1 + Lazy in space [EN]",
+              "file": "ep 12 - Now I'm Really Alone.mp4",
+              "name": "ep 12 - Now I'm Really Alone",
+              "url": "https://archive.org/download/bee-and-puppycat-lazy-in-space_202508/ep%2012%20-%20Now%20I'm%20Really%20Alone.mp4",
+              "seconds": 1391,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 130
+            }
+          ]
         },
         {
           "number": 13,

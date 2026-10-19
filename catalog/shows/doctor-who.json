@@ -3,7 +3,8 @@
   "slug": "doctor-who",
   "type": "British and Beyond",
   "network": "BBC One",
-  "matchedAt": "2026-10-16T07:57:07.131Z",
+  "matchedAt": "2026-10-19T04:11:14.833Z",
+  "addedAt": "2026-10-19T04:11:14.837Z",
   "tvmaze": {
     "id": 72724,
     "name": "Doctor Who",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 16,
     "live": 0,
-    "review": 0,
-    "missing": 16,
-    "pct": 0
+    "review": 8,
+    "missing": 8,
+    "pct": 50
   },
   "seasons": [
     {
@@ -26,64 +27,160 @@
           "number": 1,
           "name": "Space Babies",
           "airdate": "2024-05-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 8 in \"Doctor Who(2005) Season 7b\"",
+            "item": "6-the-bells-of-saint-john",
+            "itemTitle": "Doctor Who(2005) Season 7b",
+            "file": "_(10) Journey to the Centre of the Tardis.mp4",
+            "name": "_(10) Journey to the Centre of the Tardis",
+            "url": "https://archive.org/download/6-the-bells-of-saint-john/_(10)%20Journey%20to%20the%20Centre%20of%20the%20Tardis.mp4",
+            "seconds": 2689,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 162
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "The Devil's Chord",
           "airdate": "2024-05-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 8 in \"Doctor Who(2005) Season 7b\"",
+            "item": "6-the-bells-of-saint-john",
+            "itemTitle": "Doctor Who(2005) Season 7b",
+            "file": "_(11) The Crimson Horror.mp4",
+            "name": "_(11) The Crimson Horror",
+            "url": "https://archive.org/download/6-the-bells-of-saint-john/_(11)%20The%20Crimson%20Horror.mp4",
+            "seconds": 2685,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 157
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Boom",
           "airdate": "2024-05-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 8 in \"Doctor Who(2005) Season 7b\"",
+            "item": "6-the-bells-of-saint-john",
+            "itemTitle": "Doctor Who(2005) Season 7b",
+            "file": "_(12) Nightmare in Silver.mp4",
+            "name": "_(12) Nightmare in Silver",
+            "url": "https://archive.org/download/6-the-bells-of-saint-john/_(12)%20Nightmare%20in%20Silver.mp4",
+            "seconds": 2645,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 152
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "73 Yards",
           "airdate": "2024-05-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 8 in \"Doctor Who(2005) Season 7b\"",
+            "item": "6-the-bells-of-saint-john",
+            "itemTitle": "Doctor Who(2005) Season 7b",
+            "file": "_(13) The Name of the Doctor.mp4",
+            "name": "_(13) The Name of the Doctor",
+            "url": "https://archive.org/download/6-the-bells-of-saint-john/_(13)%20The%20Name%20of%20the%20Doctor.mp4",
+            "seconds": 2666,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 155
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Dot and Bubble",
           "airdate": "2024-05-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 8 in \"Doctor Who(2005) Season 7b\"",
+            "item": "6-the-bells-of-saint-john",
+            "itemTitle": "Doctor Who(2005) Season 7b",
+            "file": "(6) The Bells of Saint John.mp4",
+            "name": "(6) The Bells of Saint John",
+            "url": "https://archive.org/download/6-the-bells-of-saint-john/(6)%20The%20Bells%20of%20Saint%20John.mp4",
+            "seconds": 2682,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 154
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Rogue",
           "airdate": "2024-06-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 8 in \"Doctor Who(2005) Season 7b\"",
+            "item": "6-the-bells-of-saint-john",
+            "itemTitle": "Doctor Who(2005) Season 7b",
+            "file": "(7) The Rings of Akhaten.mp4",
+            "name": "(7) The Rings of Akhaten",
+            "url": "https://archive.org/download/6-the-bells-of-saint-john/(7)%20The%20Rings%20of%20Akhaten.mp4",
+            "seconds": 2598,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 149
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "The Legend of Ruby Sunday",
           "airdate": "2024-06-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 8 in \"Doctor Who(2005) Season 7b\"",
+            "item": "6-the-bells-of-saint-john",
+            "itemTitle": "Doctor Who(2005) Season 7b",
+            "file": "(8) Cold War.mp4",
+            "name": "(8) Cold War",
+            "url": "https://archive.org/download/6-the-bells-of-saint-john/(8)%20Cold%20War.mp4",
+            "seconds": 2489,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 148
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Empire of Death",
           "airdate": "2024-06-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 8 in \"Doctor Who(2005) Season 7b\"",
+            "item": "6-the-bells-of-saint-john",
+            "itemTitle": "Doctor Who(2005) Season 7b",
+            "file": "(9) Hide.mp4",
+            "name": "(9) Hide",
+            "url": "https://archive.org/download/6-the-bells-of-saint-john/(9)%20Hide.mp4",
+            "seconds": 2691,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 156
+          },
           "alternates": []
         }
       ]

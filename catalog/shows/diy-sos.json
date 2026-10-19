@@ -3,7 +3,8 @@
   "slug": "diy-sos",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-17T09:44:44.147Z",
+  "matchedAt": "2026-10-19T04:12:48.784Z",
+  "addedAt": "2026-10-19T04:12:48.788Z",
   "tvmaze": {
     "id": 4352,
     "name": "DIY SOS",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 235,
     "live": 0,
-    "review": 0,
-    "missing": 235,
-    "pct": 0
+    "review": 6,
+    "missing": 229,
+    "pct": 3
   },
   "seasons": [
     {
@@ -1851,24 +1852,60 @@
           "number": 4,
           "name": "The Big Build: Bromsgrove",
           "airdate": "2019-11-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Big Build: Bromsgrove\" (0.95)",
+            "item": "DIY_SOS_Series_30_-_The_Big_Build_-_Bromsgrove_m000b25j_signed",
+            "itemTitle": " DIY SOS Series 30   The Big Build   Bromsgrove m000b25j signed",
+            "file": "DIY_SOS_Series_30_-_The_Big_Build_-_Bromsgrove_m000b25j_signed.mp4",
+            "name": "DIY_SOS_Series_30_-_The_Big_Build_-_Bromsgrove_m000b25j_signed",
+            "url": "https://archive.org/download/DIY_SOS_Series_30_-_The_Big_Build_-_Bromsgrove_m000b25j_signed/DIY_SOS_Series_30_-_The_Big_Build_-_Bromsgrove_m000b25j_signed.mp4",
+            "seconds": 3498,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2270
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "The Big Build: Bolton",
           "airdate": "2019-11-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Big Build: Bolton\" (0.95)",
+            "item": "DIY_SOS_Series_30_-_The_Big_Build_-_Bolton_m000bqsj_signed",
+            "itemTitle": " DIY SOS Series 30   The Big Build   Bolton m000bqsj signed",
+            "file": "DIY_SOS_Series_30_-_The_Big_Build_-_Bolton_m000bqsj_signed.mp4",
+            "name": "DIY_SOS_Series_30_-_The_Big_Build_-_Bolton_m000bqsj_signed",
+            "url": "https://archive.org/download/DIY_SOS_Series_30_-_The_Big_Build_-_Bolton_m000bqsj_signed/DIY_SOS_Series_30_-_The_Big_Build_-_Bolton_m000bqsj_signed.mp4",
+            "seconds": 3493,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2271
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "The Big Build: Bromley",
           "airdate": "2019-12-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Big Build: Bromley\" (0.95)",
+            "item": "DIY_SOS_Series_30_-_The_Big_Build_-_Bromley_m000c6ks_signed",
+            "itemTitle": " DIY SOS Series 30   The Big Build   Bromley m000c6ks signed",
+            "file": "DIY_SOS_Series_30_-_The_Big_Build_-_Bromley_m000c6ks_signed.mp4",
+            "name": "DIY_SOS_Series_30_-_The_Big_Build_-_Bromley_m000c6ks_signed",
+            "url": "https://archive.org/download/DIY_SOS_Series_30_-_The_Big_Build_-_Bromley_m000c6ks_signed/DIY_SOS_Series_30_-_The_Big_Build_-_Bromley_m000c6ks_signed.mp4",
+            "seconds": 3476,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2260
+          },
           "alternates": []
         },
         {
@@ -1888,24 +1925,60 @@
           "number": 1,
           "name": "The Big Build - Scunthorpe",
           "airdate": "2020-11-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Big Build - Scunthorpe\" (0.95)",
+            "item": "DIY_SOS_Series_31_-_02._The_Big_Build_-_Scunthorpe_m000pk6j_signed",
+            "itemTitle": " DIY SOS Series 31   02. The Big Build   Scunthorpe m000pk6j signed",
+            "file": "DIY_SOS_Series_31_-_02._The_Big_Build_-_Scunthorpe_m000pk6j_signed.mp4",
+            "name": "DIY_SOS_Series_31_-_02._The_Big_Build_-_Scunthorpe_m000pk6j_signed",
+            "url": "https://archive.org/download/DIY_SOS_Series_31_-_02._The_Big_Build_-_Scunthorpe_m000pk6j_signed/DIY_SOS_Series_31_-_02._The_Big_Build_-_Scunthorpe_m000pk6j_signed.mp4",
+            "seconds": 3536,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2299
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "The Big Build - Carbis Bay",
           "airdate": "2020-11-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Big Build - Carbis Bay\" (0.95)",
+            "item": "DIY_SOS_Series_31_-_03._The_Big_Build_-_Carbis_Bay_m000prsx_signed",
+            "itemTitle": " DIY SOS Series 31   03. The Big Build   Carbis Bay m000prsx signed",
+            "file": "DIY_SOS_Series_31_-_03._The_Big_Build_-_Carbis_Bay_m000prsx_signed.mp4",
+            "name": "DIY_SOS_Series_31_-_03._The_Big_Build_-_Carbis_Bay_m000prsx_signed",
+            "url": "https://archive.org/download/DIY_SOS_Series_31_-_03._The_Big_Build_-_Carbis_Bay_m000prsx_signed/DIY_SOS_Series_31_-_03._The_Big_Build_-_Carbis_Bay_m000prsx_signed.mp4",
+            "seconds": 3485,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2264
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "The Big Build - Weston-super-Mare",
           "airdate": "2020-12-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Big Build - Weston-super-Mare\" (0.95)",
+            "item": "DIY_SOS_Series_31_-_04._The_Big_Build_-_Weston-super-Mare_m000pztm_signed",
+            "itemTitle": " DIY SOS Series 31   04. The Big Build   Weston super Mare m000pztm signed",
+            "file": "DIY_SOS_Series_31_-_04._The_Big_Build_-_Weston-super-Mare_m000pztm_signed.mp4",
+            "name": "DIY_SOS_Series_31_-_04._The_Big_Build_-_Weston-super-Mare_m000pztm_signed",
+            "url": "https://archive.org/download/DIY_SOS_Series_31_-_04._The_Big_Build_-_Weston-super-Mare_m000pztm_signed/DIY_SOS_Series_31_-_04._The_Big_Build_-_Weston-super-Mare_m000pztm_signed.mp4",
+            "seconds": 3480,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2262
+          },
           "alternates": []
         },
         {

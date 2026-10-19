@@ -3,7 +3,7 @@
   "slug": "top-gear",
   "type": "British and Beyond",
   "network": "BBC Two",
-  "matchedAt": "2026-10-16T07:57:06.352Z",
+  "matchedAt": "2026-10-19T04:11:14.228Z",
   "addedAt": "2026-10-16T07:57:06.351Z",
   "tvmaze": {
     "id": 522,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 229,
-    "live": 164,
+    "live": 170,
     "review": 1,
-    "missing": 64,
-    "pct": 72
+    "missing": 58,
+    "pct": 75
   },
   "seasons": [
     {
@@ -3637,6 +3637,19 @@
               "sizeMB": 350
             },
             {
+              "conf": 0.95,
+              "why": "airdate in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Old Top Gear (1977 - 2002)/Other Stuff/Sky One - Movies' Greatest Cars [2005.08.07].mp4",
+              "name": "TGCC V2.0/Old Top Gear (1977 - 2002)/Other Stuff/Sky One - Movies' Greatest Cars [2005.08.07]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FOld%20Top%20Gear%20(1977%20-%202002)%2FOther%20Stuff%2FSky%20One%20-%20Movies'%20Greatest%20Cars%20%5B2005.08.07%5D.mp4",
+              "seconds": 7256,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 722
+            },
+            {
               "conf": 0.9,
               "why": "S/E in filename",
               "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
@@ -3649,19 +3662,6 @@
               "playable": true,
               "codecRisk": "audio (AC3)",
               "sizeMB": 353
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "top-gear-complete-collection",
-              "itemTitle": "Top Gear Complete Collection",
-              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 6 (2005)/Top Gear - S06E11 [2005.08.07].mp4",
-              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 6 (2005)/Top Gear - S06E11 [2005.08.07]",
-              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%206%20(2005)%2FTop%20Gear%20-%20S06E11%20%5B2005.08.07%5D.mp4",
-              "seconds": 3552,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 350
             }
           ]
         }
@@ -9381,49 +9381,373 @@
           "number": 1,
           "name": "New Zealand Yacht Race",
           "airdate": "2013-06-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
+            "itemTitle": "Top. Gear. UK. Complete. 576 1080p. AC 3.x 265 IPSO ( 2)",
+            "file": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e01 [2013.06.30].mp4",
+            "name": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e01 [2013.06.30]",
+            "url": "https://archive.org/download/top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2/Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO%2FTop%20Gear%20Series%2020%20(2013)%2FTop%20Gear%20-%20S20e01%20%5B2013.06.30%5D.mp4",
+            "seconds": 3771,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 374
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E01 [2013.06.30].mp4",
+              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E01 [2013.06.30]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%2020%20(2013)%2FTop%20Gear%20-%20S20E01%20%5B2013.06.30%5D.mp4",
+              "seconds": 3771,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 369
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
+              "itemTitle": "Top. Gear. UK. Complete. 576 1080p. AC 3.x 265 IPSO ( 2)",
+              "file": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e01 [2013.06.30].mp4",
+              "name": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e01 [2013.06.30]",
+              "url": "https://archive.org/download/top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2/Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO%2FTop%20Gear%20Series%2020%20(2013)%2FTop%20Gear%20-%20S20e01%20%5B2013.06.30%5D.mp4",
+              "seconds": 3771,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 374
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E01 [2013.06.30].mp4",
+              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E01 [2013.06.30]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%2020%20(2013)%2FTop%20Gear%20-%20S20E01%20%5B2013.06.30%5D.mp4",
+              "seconds": 3771,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 369
+            }
+          ]
         },
         {
           "number": 2,
           "name": "World's Best Taxi",
           "airdate": "2013-07-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
+            "itemTitle": "Top. Gear. UK. Complete. 576 1080p. AC 3.x 265 IPSO ( 2)",
+            "file": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e02 [2013.07.07].mp4",
+            "name": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e02 [2013.07.07]",
+            "url": "https://archive.org/download/top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2/Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO%2FTop%20Gear%20Series%2020%20(2013)%2FTop%20Gear%20-%20S20e02%20%5B2013.07.07%5D.mp4",
+            "seconds": 3677,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 364
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E02 [2013.07.07].mp4",
+              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E02 [2013.07.07]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%2020%20(2013)%2FTop%20Gear%20-%20S20E02%20%5B2013.07.07%5D.mp4",
+              "seconds": 3677,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 360
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
+              "itemTitle": "Top. Gear. UK. Complete. 576 1080p. AC 3.x 265 IPSO ( 2)",
+              "file": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e02 [2013.07.07].mp4",
+              "name": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e02 [2013.07.07]",
+              "url": "https://archive.org/download/top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2/Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO%2FTop%20Gear%20Series%2020%20(2013)%2FTop%20Gear%20-%20S20e02%20%5B2013.07.07%5D.mp4",
+              "seconds": 3677,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 364
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E02 [2013.07.07].mp4",
+              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E02 [2013.07.07]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%2020%20(2013)%2FTop%20Gear%20-%20S20E02%20%5B2013.07.07%5D.mp4",
+              "seconds": 3677,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 360
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Budget Supercar Convertibles",
           "airdate": "2013-07-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
+            "itemTitle": "Top. Gear. UK. Complete. 576 1080p. AC 3.x 265 IPSO ( 2)",
+            "file": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e03 [2013.07.14].mp4",
+            "name": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e03 [2013.07.14]",
+            "url": "https://archive.org/download/top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2/Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO%2FTop%20Gear%20Series%2020%20(2013)%2FTop%20Gear%20-%20S20e03%20%5B2013.07.14%5D.mp4",
+            "seconds": 3750,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 371
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E03 [2013.07.14].mp4",
+              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E03 [2013.07.14]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%2020%20(2013)%2FTop%20Gear%20-%20S20E03%20%5B2013.07.14%5D.mp4",
+              "seconds": 3750,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 367
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
+              "itemTitle": "Top. Gear. UK. Complete. 576 1080p. AC 3.x 265 IPSO ( 2)",
+              "file": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e03 [2013.07.14].mp4",
+              "name": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e03 [2013.07.14]",
+              "url": "https://archive.org/download/top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2/Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO%2FTop%20Gear%20Series%2020%20(2013)%2FTop%20Gear%20-%20S20e03%20%5B2013.07.14%5D.mp4",
+              "seconds": 3750,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 371
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E03 [2013.07.14].mp4",
+              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E03 [2013.07.14]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%2020%20(2013)%2FTop%20Gear%20-%20S20E03%20%5B2013.07.14%5D.mp4",
+              "seconds": 3750,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 367
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Hovervan",
           "airdate": "2013-07-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
+            "itemTitle": "Top. Gear. UK. Complete. 576 1080p. AC 3.x 265 IPSO ( 2)",
+            "file": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e04 [2013.07.21].mp4",
+            "name": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e04 [2013.07.21]",
+            "url": "https://archive.org/download/top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2/Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO%2FTop%20Gear%20Series%2020%20(2013)%2FTop%20Gear%20-%20S20e04%20%5B2013.07.21%5D.mp4",
+            "seconds": 3588,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 355
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E04 [2013.07.21].mp4",
+              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E04 [2013.07.21]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%2020%20(2013)%2FTop%20Gear%20-%20S20E04%20%5B2013.07.21%5D.mp4",
+              "seconds": 3588,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 351
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
+              "itemTitle": "Top. Gear. UK. Complete. 576 1080p. AC 3.x 265 IPSO ( 2)",
+              "file": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e04 [2013.07.21].mp4",
+              "name": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e04 [2013.07.21]",
+              "url": "https://archive.org/download/top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2/Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO%2FTop%20Gear%20Series%2020%20(2013)%2FTop%20Gear%20-%20S20e04%20%5B2013.07.21%5D.mp4",
+              "seconds": 3588,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 355
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E04 [2013.07.21].mp4",
+              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E04 [2013.07.21]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%2020%20(2013)%2FTop%20Gear%20-%20S20E04%20%5B2013.07.21%5D.mp4",
+              "seconds": 3588,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 351
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Lamborghinis and Caravaning",
           "airdate": "2013-07-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
+            "itemTitle": "Top. Gear. UK. Complete. 576 1080p. AC 3.x 265 IPSO ( 2)",
+            "file": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e05 [2013.07.28].mp4",
+            "name": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e05 [2013.07.28]",
+            "url": "https://archive.org/download/top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2/Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO%2FTop%20Gear%20Series%2020%20(2013)%2FTop%20Gear%20-%20S20e05%20%5B2013.07.28%5D.mp4",
+            "seconds": 3616,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 359
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E05 [2013.07.28].mp4",
+              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E05 [2013.07.28]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%2020%20(2013)%2FTop%20Gear%20-%20S20E05%20%5B2013.07.28%5D.mp4",
+              "seconds": 3616,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 355
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
+              "itemTitle": "Top. Gear. UK. Complete. 576 1080p. AC 3.x 265 IPSO ( 2)",
+              "file": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e05 [2013.07.28].mp4",
+              "name": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e05 [2013.07.28]",
+              "url": "https://archive.org/download/top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2/Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO%2FTop%20Gear%20Series%2020%20(2013)%2FTop%20Gear%20-%20S20e05%20%5B2013.07.28%5D.mp4",
+              "seconds": 3616,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 359
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E05 [2013.07.28].mp4",
+              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E05 [2013.07.28]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%2020%20(2013)%2FTop%20Gear%20-%20S20E05%20%5B2013.07.28%5D.mp4",
+              "seconds": 3616,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 355
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Jaguar F-Type",
           "airdate": "2013-08-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
+            "itemTitle": "Top. Gear. UK. Complete. 576 1080p. AC 3.x 265 IPSO ( 2)",
+            "file": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e06 [2013.08.04].mp4",
+            "name": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e06 [2013.08.04]",
+            "url": "https://archive.org/download/top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2/Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO%2FTop%20Gear%20Series%2020%20(2013)%2FTop%20Gear%20-%20S20e06%20%5B2013.08.04%5D.mp4",
+            "seconds": 3679,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 367
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E06 [2013.08.04].mp4",
+              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E06 [2013.08.04]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%2020%20(2013)%2FTop%20Gear%20-%20S20E06%20%5B2013.08.04%5D.mp4",
+              "seconds": 3679,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 362
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2",
+              "itemTitle": "Top. Gear. UK. Complete. 576 1080p. AC 3.x 265 IPSO ( 2)",
+              "file": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e06 [2013.08.04].mp4",
+              "name": "Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO/Top Gear Series 20 (2013)/Top Gear - S20e06 [2013.08.04]",
+              "url": "https://archive.org/download/top.-gear.-uk.-complete.-576-1080p.-ac-3.x-265-ipso-2/Top.Gear.UK.Complete.576-1080p.AC3.x265.IPSO%2FTop%20Gear%20Series%2020%20(2013)%2FTop%20Gear%20-%20S20e06%20%5B2013.08.04%5D.mp4",
+              "seconds": 3679,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 367
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "top-gear-complete-collection",
+              "itemTitle": "Top Gear Complete Collection",
+              "file": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E06 [2013.08.04].mp4",
+              "name": "TGCC V2.0/Top Gear (2002 - 2015)/Series 20 (2013)/Top Gear - S20E06 [2013.08.04]",
+              "url": "https://archive.org/download/top-gear-complete-collection/TGCC%20V2.0%2FTop%20Gear%20(2002%20-%202015)%2FSeries%2020%20(2013)%2FTop%20Gear%20-%20S20E06%20%5B2013.08.04%5D.mp4",
+              "seconds": 3679,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 362
+            }
+          ]
         }
       ]
     },

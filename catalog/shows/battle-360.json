@@ -3,7 +3,8 @@
   "slug": "battle-360",
   "type": "Documentary & Geographic",
   "network": "History",
-  "matchedAt": "2026-10-17T11:08:47.067Z",
+  "matchedAt": "2026-10-19T04:12:53.178Z",
+  "addedAt": "2026-10-19T04:12:53.183Z",
   "tvmaze": {
     "id": 16440,
     "name": "Battle 360",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 10,
-    "live": 0,
+    "live": 1,
     "review": 0,
-    "missing": 10,
-    "pct": 0
+    "missing": 9,
+    "pct": 10
   },
   "seasons": [
     {
@@ -90,8 +91,20 @@
           "number": 9,
           "name": "Battle of Leyte Gulf",
           "airdate": "2008-04-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "9-battle-360-season-1-episode-9-battle-of-leyte-gulf",
+            "itemTitle": "# 9 Battle 360 season 1 episode 9 (Battle of leyte gulf)",
+            "file": "#9 Battle 360 season 1 episode 9 (Battle of leyte gulf).mp4",
+            "name": "#9 Battle 360 season 1 episode 9 (Battle of leyte gulf)",
+            "url": "https://archive.org/download/9-battle-360-season-1-episode-9-battle-of-leyte-gulf/%239%20Battle%20360%20season%201%20episode%209%20(Battle%20of%20leyte%20gulf).mp4",
+            "seconds": 3283,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 316
+          },
           "alternates": []
         },
         {

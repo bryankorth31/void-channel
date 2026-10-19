@@ -3,7 +3,7 @@
   "slug": "trollhunters-tales-of-arcadia",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:59.746Z",
+  "matchedAt": "2026-10-19T04:11:04.830Z",
   "addedAt": "2026-10-15T12:07:57.362Z",
   "tvmaze": {
     "id": 21892,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 52,
-    "live": 51,
+    "live": 52,
     "review": 0,
-    "missing": 1,
-    "pct": 98
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -407,8 +407,20 @@
           "number": 20,
           "name": "Where is My Mind?",
           "airdate": "2016-12-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "trollhunters-tales-of-arcadia-s-1-e-26-2016",
+            "itemTitle": "Trollhunters Tales Of Arcadia S1,2,3",
+            "file": "s1/Trollhunters_ Tales of Arcadia _ S1E20 - [2016].mp4",
+            "name": "s1/Trollhunters_ Tales of Arcadia _ S1E20 - [2016]",
+            "url": "https://archive.org/download/trollhunters-tales-of-arcadia-s-1-e-26-2016/s1%2FTrollhunters_%20Tales%20of%20Arcadia%20_%20S1E20%20-%20%5B2016%5D.mp4",
+            "seconds": 1412,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 399
+          },
           "alternates": []
         },
         {

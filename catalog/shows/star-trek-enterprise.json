@@ -3,7 +3,7 @@
   "slug": "star-trek-enterprise",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "UPN",
-  "matchedAt": "2026-10-16T07:56:52.339Z",
+  "matchedAt": "2026-10-19T04:10:57.254Z",
   "addedAt": "2026-10-15T15:06:01.741Z",
   "tvmaze": {
     "id": 714,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 98,
     "live": 1,
-    "review": 28,
-    "missing": 69,
-    "pct": 30
+    "review": 31,
+    "missing": 66,
+    "pct": 33
   },
   "seasons": [
     {
@@ -182,8 +182,21 @@
           "number": 9,
           "name": "Civilization",
           "airdate": "2001-11-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "S/E in filename + title match",
+            "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
+            "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
+            "file": "Star Trek Enterprise 1x09 Questions De Civilisations.mp4",
+            "name": "Star Trek Enterprise 1x09 Questions De Civilisations",
+            "url": "https://archive.org/download/star-trek-enterprise-la-serie-v.f.-2001-2005/Star%20Trek%20Enterprise%201x09%20Questions%20De%20Civilisations.mp4",
+            "seconds": 2550,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 310
+          },
           "alternates": []
         },
         {
@@ -442,16 +455,42 @@
           "number": 22,
           "name": "Vox Sola",
           "airdate": "2002-05-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
+            "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
+            "file": "Star Trek Enterprise 1x22 Passager Clandestin.mp4",
+            "name": "Star Trek Enterprise 1x22 Passager Clandestin",
+            "url": "https://archive.org/download/star-trek-enterprise-la-serie-v.f.-2001-2005/Star%20Trek%20Enterprise%201x22%20Passager%20Clandestin.mp4",
+            "seconds": 2553,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 325
+          },
           "alternates": []
         },
         {
           "number": 23,
           "name": "Fallen Hero",
           "airdate": "2002-05-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename",
+            "item": "star-trek-enterprise-la-serie-v.f.-2001-2005",
+            "itemTitle": "Star Trek Enterprise ☆ La Série V.F. ☆ 2001-2005",
+            "file": "Star Trek Enterprise 1x23 Incident Diplomatique.mp4",
+            "name": "Star Trek Enterprise 1x23 Incident Diplomatique",
+            "url": "https://archive.org/download/star-trek-enterprise-la-serie-v.f.-2001-2005/Star%20Trek%20Enterprise%201x23%20Incident%20Diplomatique.mp4",
+            "seconds": 2552,
+            "format": "MPEG4",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 336
+          },
           "alternates": []
         },
         {

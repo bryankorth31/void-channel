@@ -3,7 +3,7 @@
   "slug": "rick-and-morty",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-16T07:56:40.892Z",
+  "matchedAt": "2026-10-19T04:10:46.710Z",
   "addedAt": "2026-10-15T12:07:44.960Z",
   "tvmaze": {
     "id": 216,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 91,
-    "live": 2,
-    "review": 2,
+    "live": 0,
+    "review": 4,
     "missing": 87,
     "pct": 4
   },
@@ -364,30 +364,16 @@
             "playable": true,
             "sizeMB": 375
           },
-          "alternates": [
-            {
-              "conf": 0.7,
-              "why": "title ~ \"Promortyus\" (0.95)",
-              "item": "rick-and-morty-companion-podcast-live-episode-406-promortyus",
-              "itemTitle": "Rick And Morty Companion Podcast Live EPISODE #406 – PROMORTYUS",
-              "file": "Rick and Morty Companion Podcast Live - EPISODE #406 – PROMORTYUS.mp4",
-              "name": "Rick and Morty Companion Podcast Live - EPISODE #406 – PROMORTYUS",
-              "url": "https://archive.org/download/rick-and-morty-companion-podcast-live-episode-406-promortyus/Rick%20and%20Morty%20Companion%20Podcast%20Live%20-%20EPISODE%20%23406%20%E2%80%93%20PROMORTYUS.mp4",
-              "seconds": 3829,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 402
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
           "name": "The Vat of Acid Episode",
           "airdate": "2020-05-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.95,
-            "why": "S/E in filename + title match",
+            "conf": 0.8,
+            "why": "S/E in filename",
             "item": "rick-and-morty-companion-podcast-live-episode-408-the-vat-of-acid-episode",
             "itemTitle": "Rick And Morty Companion Podcast Live EPISODE #408 – The Vat Of Acid Episode",
             "file": "Rick and Morty Companion Podcast Live - EPISODE #408 - The Vat of Acid Episode.mp4",
@@ -412,10 +398,10 @@
           "number": 10,
           "name": "Star Mort Rickturn of the Jerri",
           "airdate": "2020-05-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.8,
+            "why": "S/E in filename",
             "item": "rick-and-morty-companion-podcast-live-episode-410-star-mort-rickturn-of-the-jerri",
             "itemTitle": "Rick And Morty Companion Podcast Live EPISODE #410 – Star Mort Rickturn Of The Jerri",
             "file": "Rick and Morty Companion Podcast Live - EPISODE #410 - Star Mort Rickturn of the Jerri.mp4",

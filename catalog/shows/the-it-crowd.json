@@ -3,7 +3,7 @@
   "slug": "the-it-crowd",
   "type": "British and Beyond",
   "network": "Channel 4",
-  "matchedAt": "2026-10-16T07:57:03.523Z",
+  "matchedAt": "2026-10-19T04:11:10.624Z",
   "addedAt": "2026-10-15T22:03:29.820Z",
   "tvmaze": {
     "id": 539,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 24,
-    "live": 21,
-    "review": 3,
+    "live": 23,
+    "review": 1,
     "missing": 0,
     "pct": 100
   },
@@ -182,9 +182,9 @@
           "number": 1,
           "name": "The Work Outing",
           "airdate": "2007-08-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "TheTCrowd2024",
             "itemTitle": "The IT Crowd",
@@ -196,7 +196,21 @@
             "playable": true,
             "sizeMB": 212
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Work Outing\" (0.95)",
+              "item": "TheTCrowd2024",
+              "itemTitle": "The IT Crowd",
+              "file": "02E01 The Work Outing.ia.mp4",
+              "name": "02E01 The Work Outing",
+              "url": "https://archive.org/download/TheTCrowd2024/02E01%20The%20Work%20Outing.ia.mp4",
+              "seconds": 1488,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 212
+            }
+          ]
         },
         {
           "number": 2,
@@ -453,9 +467,9 @@
           "number": 2,
           "name": "The Final Countdown",
           "airdate": "2010-07-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "TheTCrowd2024",
             "itemTitle": "The IT Crowd",

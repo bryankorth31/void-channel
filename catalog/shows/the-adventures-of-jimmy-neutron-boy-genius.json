@@ -3,7 +3,7 @@
   "slug": "the-adventures-of-jimmy-neutron-boy-genius",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:33.084Z",
+  "matchedAt": "2026-10-19T04:10:40.736Z",
   "addedAt": "2026-10-15T18:15:40.858Z",
   "tvmaze": {
     "id": 7457,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 76,
-    "live": 0,
-    "review": 40,
-    "missing": 36,
-    "pct": 53
+    "live": 38,
+    "review": 21,
+    "missing": 17,
+    "pct": 78
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "When Pants Attack",
           "airdate": "2002-07-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
             "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
@@ -74,21 +74,34 @@
           "number": 2,
           "name": "Normal Boy",
           "airdate": "2002-09-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D2.mp4",
-            "name": "JIMMY_NEUTRON_S1_D2",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D2.mp4",
-            "seconds": 1600,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 2 normal boy birth of salesmen.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 2 normal boy birth of salesmen",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%202%20normal%20boy%20birth%20of%20salesmen.mp4",
+            "seconds": 1399,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 156
+            "sizeMB": 492
           },
           "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D2.mp4",
+              "name": "JIMMY_NEUTRON_S1_D2",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D2.mp4",
+              "seconds": 1600,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 156
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 2 of 5 in \"Jimmy Neutron: Mały Geniusz (The Adventu\"",
@@ -108,21 +121,47 @@
           "number": 3,
           "name": "Birth of a Salesman",
           "airdate": "2002-09-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D11.mp4",
-            "name": "JIMMY_NEUTRON_S1_D11",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D11.mp4",
-            "seconds": 1417,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 3 brobot the big pinch.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 3 brobot the big pinch",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%203%20brobot%20the%20big%20pinch.mp4",
+            "seconds": 1405,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 494
           },
           "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Birth of a Salesman\" (0.62)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 1 episode 2 normal boy birth of salesmen.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 1 episode 2 normal boy birth of salesmen",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%202%20normal%20boy%20birth%20of%20salesmen.mp4",
+              "seconds": 1399,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 492
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D11.mp4",
+              "name": "JIMMY_NEUTRON_S1_D11",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D11.mp4",
+              "seconds": 1417,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 139
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 3 of 5 in \"Jimmy Neutron: Mały Geniusz (The Adventu\"",
@@ -142,21 +181,47 @@
           "number": 4,
           "name": "Brobot",
           "airdate": "2002-09-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D12.mp4",
-            "name": "JIMMY_NEUTRON_S1_D12",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D12.mp4",
-            "seconds": 1417,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 4 granny baby time is money.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 4 granny baby time is money",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%204%20granny%20baby%20time%20is%20money.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 139
+            "sizeMB": 494
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Brobot\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 1 episode 3 brobot the big pinch.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 1 episode 3 brobot the big pinch",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%203%20brobot%20the%20big%20pinch.mp4",
+              "seconds": 1405,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 494
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D12.mp4",
+              "name": "JIMMY_NEUTRON_S1_D12",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D12.mp4",
+              "seconds": 1417,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 139
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 4 of 5 in \"Jimmy Neutron: Mały Geniusz (The Adventu\"",
@@ -176,21 +241,34 @@
           "number": 5,
           "name": "The Big Pinch",
           "airdate": "2002-09-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D14.mp4",
-            "name": "JIMMY_NEUTRON_S1_D14",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D14.mp4",
-            "seconds": 1548,
-            "format": "h.264",
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron season 1 episode 5 raise the oozy scab i dream of jimmy.mp4",
+            "name": "The adventures of jimmy neutron season 1 episode 5 raise the oozy scab i dream of jimmy",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20season%201%20episode%205%20raise%20the%20oozy%20scab%20i%20dream%20of%20jimmy.mp4",
+            "seconds": 1405,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 152
+            "sizeMB": 491
           },
           "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D14.mp4",
+              "name": "JIMMY_NEUTRON_S1_D14",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D14.mp4",
+              "seconds": 1548,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 5 of 5 in \"Jimmy Neutron: Mały Geniusz (The Adventu\"",
@@ -210,181 +288,398 @@
           "number": 6,
           "name": "Granny Baby",
           "airdate": "2002-09-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 6 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D15.mp4",
-            "name": "JIMMY_NEUTRON_S1_D15",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D15.mp4",
-            "seconds": 1548,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 6 jimmy on ice battle of the band.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 6 jimmy on ice battle of the band",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%206%20jimmy%20on%20ice%20battle%20of%20the%20band.mp4",
+            "seconds": 1406,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 152
+            "sizeMB": 490
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Granny Baby\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 1 episode 4 granny baby time is money.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 1 episode 4 granny baby time is money",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%204%20granny%20baby%20time%20is%20money.mp4",
+              "seconds": 1404,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 494
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D15.mp4",
+              "name": "JIMMY_NEUTRON_S1_D15",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D15.mp4",
+              "seconds": 1548,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Time is Money",
           "airdate": "2002-09-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 7 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D17.mp4",
-            "name": "JIMMY_NEUTRON_S1_D17",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D17.mp4",
-            "seconds": 1555,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 7 see jimmy run trading faces.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 7 see jimmy run trading faces",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%207%20see%20jimmy%20run%20trading%20faces.mp4",
+            "seconds": 1411,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 152
+            "sizeMB": 492
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D17.mp4",
+              "name": "JIMMY_NEUTRON_S1_D17",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D17.mp4",
+              "seconds": 1555,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Raise the Oozy Scab",
           "airdate": "2002-09-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 8 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D18.mp4",
-            "name": "JIMMY_NEUTRON_S1_D18",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D18.mp4",
-            "seconds": 1555,
-            "format": "h.264",
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron season 1 episode 8 the phantom of retroland my son the hamster.mp4",
+            "name": "The adventures of jimmy neutron season 1 episode 8 the phantom of retroland my son the hamster",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20season%201%20episode%208%20the%20phantom%20of%20retroland%20my%20son%20the%20hamster.mp4",
+            "seconds": 1394,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 152
+            "sizeMB": 486
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Raise the Oozy Scab\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron season 1 episode 5 raise the oozy scab i dream of jimmy.mp4",
+              "name": "The adventures of jimmy neutron season 1 episode 5 raise the oozy scab i dream of jimmy",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20season%201%20episode%205%20raise%20the%20oozy%20scab%20i%20dream%20of%20jimmy.mp4",
+              "seconds": 1405,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 491
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D18.mp4",
+              "name": "JIMMY_NEUTRON_S1_D18",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D18.mp4",
+              "seconds": 1555,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
           "number": 9,
           "name": "I Dream of Jimmy",
           "airdate": "2002-09-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 9 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D21.mp4",
-            "name": "JIMMY_NEUTRON_S1_D21",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D21.mp4",
-            "seconds": 1543,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 9 hall monster hypno birthday to you.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 9 hall monster hypno birthday to you",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%209%20hall%20monster%20hypno%20birthday%20to%20you.mp4",
+            "seconds": 1394,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 152
+            "sizeMB": 487
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season  2 episode 9 sheen's brain.mp4",
+              "name": "The adventures of jimmy neutron boy genius season  2 episode 9 sheen's brain",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%20%202%20episode%209%20sheen's%20brain.mp4",
+              "seconds": 1411,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 492
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D21.mp4",
+              "name": "JIMMY_NEUTRON_S1_D21",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D21.mp4",
+              "seconds": 1543,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Jimmy on Ice",
           "airdate": "2002-10-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 10 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D22.mp4",
-            "name": "JIMMY_NEUTRON_S1_D22",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D22.mp4",
-            "seconds": 1543,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 10 krunch time substitute creature.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 10 krunch time substitute creature",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2010%20krunch%20time%20substitute%20creature.mp4",
+            "seconds": 1395,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 152
+            "sizeMB": 490
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D22.mp4",
+              "name": "JIMMY_NEUTRON_S1_D22",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D22.mp4",
+              "seconds": 1543,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Battle of the Band",
           "airdate": "2002-10-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 11 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D24.mp4",
-            "name": "JIMMY_NEUTRON_S1_D24",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D24.mp4",
-            "seconds": 1543,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 11 safety first crime sheen investigation.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 11 safety first crime sheen investigation",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2011%20safety%20first%20crime%20sheen%20investigation.mp4",
+            "seconds": 1399,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 151
+            "sizeMB": 491
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Battle of the Band\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 1 episode 6 jimmy on ice battle of the band.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 1 episode 6 jimmy on ice battle of the band",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%206%20jimmy%20on%20ice%20battle%20of%20the%20band.mp4",
+              "seconds": 1406,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 490
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D24.mp4",
+              "name": "JIMMY_NEUTRON_S1_D24",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D24.mp4",
+              "seconds": 1543,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
           "number": 12,
           "name": "See Jimmy Run",
           "airdate": "2002-10-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 12 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D25.mp4",
-            "name": "JIMMY_NEUTRON_S1_D25",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D25.mp4",
-            "seconds": 1543,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 12 journey to the center of carl Aaughh wilderness.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 12 journey to the center of carl Aaughh wilderness",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2012%20journey%20to%20the%20center%20of%20carl%20Aaughh%20wilderness.mp4",
+            "seconds": 1413,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 151
+            "sizeMB": 493
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D25.mp4",
+              "name": "JIMMY_NEUTRON_S1_D25",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D25.mp4",
+              "seconds": 1543,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Trading Faces",
           "airdate": "2002-10-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 13 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D27.mp4",
-            "name": "JIMMY_NEUTRON_S1_D27",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D27.mp4",
-            "seconds": 1545,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 13 party at neutron's ultra sheen.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 13 party at neutron's ultra sheen",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2013%20party%20at%20neutron's%20ultra%20sheen.mp4",
+            "seconds": 1417,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 151
+            "sizeMB": 497
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Trading Faces\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 1 episode 7 see jimmy run trading faces.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 1 episode 7 see jimmy run trading faces",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%207%20see%20jimmy%20run%20trading%20faces.mp4",
+              "seconds": 1411,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 492
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D27.mp4",
+              "name": "JIMMY_NEUTRON_S1_D27",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D27.mp4",
+              "seconds": 1545,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
           "number": 14,
           "name": "The Phantom of Retroland",
           "airdate": "2002-10-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 14 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D28.mp4",
-            "name": "JIMMY_NEUTRON_S1_D28",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D28.mp4",
-            "seconds": 1545,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 14 broadcast blues professor calamitous I presume.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 14 broadcast blues professor calamitous I presume",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2014%20broadcast%20blues%20professor%20calamitous%20I%20presume.mp4",
+            "seconds": 1450,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 151
+            "sizeMB": 506
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Phantom of Retroland\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron season 1 episode 8 the phantom of retroland my son the hamster.mp4",
+              "name": "The adventures of jimmy neutron season 1 episode 8 the phantom of retroland my son the hamster",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20season%201%20episode%208%20the%20phantom%20of%20retroland%20my%20son%20the%20hamster.mp4",
+              "seconds": 1394,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 486
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season  2 episode 14 foul bull the science fair affair.mp4",
+              "name": "The adventures of jimmy neutron boy genius season  2 episode 14 foul bull the science fair affair",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%20%202%20episode%2014%20foul%20bull%20the%20science%20fair%20affair.mp4",
+              "seconds": 1409,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 495
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D28.mp4",
+              "name": "JIMMY_NEUTRON_S1_D28",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D28.mp4",
+              "seconds": 1545,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 151
+            }
+          ]
         },
         {
           "number": 15,
@@ -410,81 +705,163 @@
           "number": 16,
           "name": "Hall Monster",
           "airdate": "2002-11-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 16 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D34.mp4",
-            "name": "JIMMY_NEUTRON_S1_D34",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D34.mp4",
-            "seconds": 1443,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 16 maximum hugh nightmare in retroville.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 16 maximum hugh nightmare in retroville",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2016%20maximum%20hugh%20nightmare%20in%20retroville.mp4",
+            "seconds": 1393,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 142
+            "sizeMB": 490
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Hall Monster\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 1 episode 9 hall monster hypno birthday to you.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 1 episode 9 hall monster hypno birthday to you",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%209%20hall%20monster%20hypno%20birthday%20to%20you.mp4",
+              "seconds": 1394,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 487
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 16 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D34.mp4",
+              "name": "JIMMY_NEUTRON_S1_D34",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D34.mp4",
+              "seconds": 1443,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 17,
           "name": "Hypno-Birthday to You!",
           "airdate": "2002-11-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 17 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D36.mp4",
-            "name": "JIMMY_NEUTRON_S1_D36",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D36.mp4",
-            "seconds": 1494,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 17 make room for daddy o.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 17 make room for daddy o",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2017%20make%20room%20for%20daddy%20o.mp4",
+            "seconds": 1344,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 146
+            "sizeMB": 473
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 17 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D36.mp4",
+              "name": "JIMMY_NEUTRON_S1_D36",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D36.mp4",
+              "seconds": 1494,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 18,
           "name": "Krunch Time",
           "airdate": "2002-11-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 18 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D37.mp4",
-            "name": "JIMMY_NEUTRON_S1_D37",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D37.mp4",
-            "seconds": 1494,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 18 a beautiful mine.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 18 a beautiful mine",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2018%20a%20beautiful%20mine.mp4",
+            "seconds": 1405,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 146
+            "sizeMB": 493
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Krunch Time\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 1 episode 10 krunch time substitute creature.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 1 episode 10 krunch time substitute creature",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2010%20krunch%20time%20substitute%20creature.mp4",
+              "seconds": 1395,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 490
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 18 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D37.mp4",
+              "name": "JIMMY_NEUTRON_S1_D37",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D37.mp4",
+              "seconds": 1494,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 19,
           "name": "Substitute Creature",
           "airdate": "2002-11-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 19 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D38.mp4",
-            "name": "JIMMY_NEUTRON_S1_D38",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D38.mp4",
-            "seconds": 1455,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 19 sorry wrong era.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 19 sorry wrong era",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2019%20sorry%20wrong%20era.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 144
+            "sizeMB": 493
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 19 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D38.mp4",
+              "name": "JIMMY_NEUTRON_S1_D38",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D38.mp4",
+              "seconds": 1455,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 20,
@@ -492,19 +869,33 @@
           "airdate": "2002-11-30",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 20 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D39.mp4",
-            "name": "JIMMY_NEUTRON_S1_D39",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D39.mp4",
-            "seconds": 1455,
-            "format": "h.264",
+            "conf": 0.8,
+            "why": "title ~ \"Safety First\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 11 safety first crime sheen investigation.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 11 safety first crime sheen investigation",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2011%20safety%20first%20crime%20sheen%20investigation.mp4",
+            "seconds": 1399,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 144
+            "sizeMB": 491
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 20 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D39.mp4",
+              "name": "JIMMY_NEUTRON_S1_D39",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D39.mp4",
+              "seconds": 1455,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 21,
@@ -532,19 +923,33 @@
           "airdate": "2003-01-31",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 22 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D111.mp4",
-            "name": "JIMMY_NEUTRON_S1_D111",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D111.mp4",
-            "seconds": 1454,
-            "format": "h.264",
+            "conf": 0.8,
+            "why": "title ~ \"Journey to the Center of Carl\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 12 journey to the center of carl Aaughh wilderness.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 12 journey to the center of carl Aaughh wilderness",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2012%20journey%20to%20the%20center%20of%20carl%20Aaughh%20wilderness.mp4",
+            "seconds": 1413,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 144
+            "sizeMB": 493
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 22 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D111.mp4",
+              "name": "JIMMY_NEUTRON_S1_D111",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D111.mp4",
+              "seconds": 1454,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 23,
@@ -572,19 +977,33 @@
           "airdate": "2003-02-17",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 24 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D114.mp4",
-            "name": "JIMMY_NEUTRON_S1_D114",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D114.mp4",
-            "seconds": 1555,
-            "format": "h.264",
+            "conf": 0.8,
+            "why": "title ~ \"Party at Neutron's\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 13 party at neutron's ultra sheen.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 13 party at neutron's ultra sheen",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2013%20party%20at%20neutron's%20ultra%20sheen.mp4",
+            "seconds": 1417,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 152
+            "sizeMB": 497
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 24 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D114.mp4",
+              "name": "JIMMY_NEUTRON_S1_D114",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D114.mp4",
+              "seconds": 1555,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 152
+            }
+          ]
         },
         {
           "number": 25,
@@ -626,19 +1045,33 @@
           "airdate": "2003-03-14",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 26 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D118.mp4",
-            "name": "JIMMY_NEUTRON_S1_D118",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D118.mp4",
-            "seconds": 1456,
-            "format": "h.264",
+            "conf": 0.8,
+            "why": "title ~ \"Broadcast Blues\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 14 broadcast blues professor calamitous I presume.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 14 broadcast blues professor calamitous I presume",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2014%20broadcast%20blues%20professor%20calamitous%20I%20presume.mp4",
+            "seconds": 1450,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 144
+            "sizeMB": 506
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 26 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D118.mp4",
+              "name": "JIMMY_NEUTRON_S1_D118",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D118.mp4",
+              "seconds": 1456,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 27,
@@ -666,19 +1099,33 @@
           "airdate": "2003-05-17",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 28 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D210.mp4",
-            "name": "JIMMY_NEUTRON_S1_D210",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D210.mp4",
-            "seconds": 1448,
-            "format": "h.264",
+            "conf": 0.8,
+            "why": "title ~ \"Maximum Hugh\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 16 maximum hugh nightmare in retroville.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 16 maximum hugh nightmare in retroville",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2016%20maximum%20hugh%20nightmare%20in%20retroville.mp4",
+            "seconds": 1393,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 143
+            "sizeMB": 490
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 28 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D210.mp4",
+              "name": "JIMMY_NEUTRON_S1_D210",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D210.mp4",
+              "seconds": 1448,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 29,
@@ -706,19 +1153,33 @@
           "airdate": "2003-06-06",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 30 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D213.mp4",
-            "name": "JIMMY_NEUTRON_S1_D213",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D213.mp4",
-            "seconds": 1413,
-            "format": "h.264",
+            "conf": 0.8,
+            "why": "title ~ \"Make Room for Daddy-O\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 17 make room for daddy o.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 17 make room for daddy o",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2017%20make%20room%20for%20daddy%20o.mp4",
+            "seconds": 1344,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 141
+            "sizeMB": 473
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 30 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D213.mp4",
+              "name": "JIMMY_NEUTRON_S1_D213",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D213.mp4",
+              "seconds": 1413,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 31,
@@ -726,19 +1187,33 @@
           "airdate": "2003-08-01",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 31 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D214.mp4",
-            "name": "JIMMY_NEUTRON_S1_D214",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D214.mp4",
-            "seconds": 1413,
-            "format": "h.264",
+            "conf": 0.8,
+            "why": "title ~ \"A Beautiful Mine\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 18 a beautiful mine.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 18 a beautiful mine",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2018%20a%20beautiful%20mine.mp4",
+            "seconds": 1405,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 141
+            "sizeMB": 493
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 31 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D214.mp4",
+              "name": "JIMMY_NEUTRON_S1_D214",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D214.mp4",
+              "seconds": 1413,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 32,
@@ -746,19 +1221,33 @@
           "airdate": "2003-09-05",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 32 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
-            "item": "jimmy-neutron-s-1-d-1",
-            "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
-            "file": "JIMMY_NEUTRON_S1_D217.mp4",
-            "name": "JIMMY_NEUTRON_S1_D217",
-            "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D217.mp4",
-            "seconds": 1467,
-            "format": "h.264",
+            "conf": 0.8,
+            "why": "title ~ \"Sorry, Wrong Era\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 1 episode 19 sorry wrong era.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 1 episode 19 sorry wrong era",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%201%20episode%2019%20sorry%20wrong%20era.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 144
+            "sizeMB": 493
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 32 of 100 in \"The Adventures of Jimmy Neutron, Boy Gen\"",
+              "item": "jimmy-neutron-s-1-d-1",
+              "itemTitle": "The Adventures of Jimmy Neutron, Boy Genius: The Complete Series (DVD ISOs)",
+              "file": "JIMMY_NEUTRON_S1_D217.mp4",
+              "name": "JIMMY_NEUTRON_S1_D217",
+              "url": "https://archive.org/download/jimmy-neutron-s-1-d-1/JIMMY_NEUTRON_S1_D217.mp4",
+              "seconds": 1467,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         }
       ]
     },
@@ -769,9 +1258,9 @@
           "number": 1,
           "name": "Beach Party Mummy",
           "airdate": "2003-09-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
             "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
@@ -789,9 +1278,9 @@
           "number": 2,
           "name": "The Retroville 9",
           "airdate": "2003-10-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
             "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
@@ -817,9 +1306,9 @@
           "number": 4,
           "name": "Nightmare in Retroville",
           "airdate": "2003-10-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
             "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
@@ -837,9 +1326,9 @@
           "number": 5,
           "name": "Monster Hunt",
           "airdate": "2003-11-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
             "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
@@ -857,112 +1346,350 @@
           "number": 6,
           "name": "Jimmy for President",
           "airdate": "2003-11-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "the adventures of jimmy neutron boy genius season 2 episode 6 return of the nanobots.mp4",
+            "name": "the adventures of jimmy neutron boy genius season 2 episode 6 return of the nanobots",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/the%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%206%20return%20of%20the%20nanobots.mp4",
+            "seconds": 1396,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 490
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Return of the Nanobots",
           "airdate": "2003-11-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 2 episode 7 holly jolly jimmy.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 2 episode 7 holly jolly jimmy",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%207%20holly%20jolly%20jimmy.mp4",
+            "seconds": 1493,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 525
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Return of the Nanobots\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "the adventures of jimmy neutron boy genius season 2 episode 6 return of the nanobots.mp4",
+              "name": "the adventures of jimmy neutron boy genius season 2 episode 6 return of the nanobots",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/the%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%206%20return%20of%20the%20nanobots.mp4",
+              "seconds": 1396,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 490
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Holly Jolly Jimmy",
           "airdate": "2003-12-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 2 episode 8 love potion 976 j.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 2 episode 8 love potion 976 j",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%208%20love%20potion%20976%20j.mp4",
+            "seconds": 1391,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 489
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Holly Jolly Jimmy\" (0.63)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 2 episode 7 holly jolly jimmy.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 2 episode 7 holly jolly jimmy",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%207%20holly%20jolly%20jimmy.mp4",
+              "seconds": 1493,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 525
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Love Potion #976/J",
           "airdate": "2004-02-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 2 episode 9 maternotron knows best send in the clones.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 2 episode 9 maternotron knows best send in the clones",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%209%20maternotron%20knows%20best%20send%20in%20the%20clones.mp4",
+            "seconds": 1409,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 495
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Love Potion #976/J\" (0.71)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 2 episode 8 love potion 976 j.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 2 episode 8 love potion 976 j",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%208%20love%20potion%20976%20j.mp4",
+              "seconds": 1391,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 489
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Sheen's Brain",
           "airdate": "2004-03-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sheen's Brain\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season  2 episode 9 sheen's brain.mp4",
+            "name": "The adventures of jimmy neutron boy genius season  2 episode 9 sheen's brain",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%20%202%20episode%209%20sheen's%20brain.mp4",
+            "seconds": 1411,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 492
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "MaternoTron Knows Best",
           "airdate": "2004-03-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 2 episode 11 the great eg heist the feud.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 2 episode 11 the great eg heist the feud",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%2011%20the%20great%20eg%20heist%20the%20feud.mp4",
+            "seconds": 1408,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 494
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"MaternoTron Knows Best\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 2 episode 9 maternotron knows best send in the clones.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 2 episode 9 maternotron knows best send in the clones",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%209%20maternotron%20knows%20best%20send%20in%20the%20clones.mp4",
+              "seconds": 1409,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 495
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Send in the Clones",
           "airdate": "2004-03-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 2 episode 12 out darn spotlight.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 2 episode 12 out darn spotlight",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%2012%20out%20darn%20spotlight.mp4",
+            "seconds": 1397,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 491
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "The Great Egg Heist",
           "airdate": "2004-03-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 2 episode 13 the junkman cometh.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 2 episode 13 the junkman cometh",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%2013%20the%20junkman%20cometh.mp4",
+            "seconds": 1387,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 487
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "The Feud",
           "airdate": "2004-03-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Feud\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 2 episode 11 the great eg heist the feud.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 2 episode 11 the great eg heist the feud",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%2011%20the%20great%20eg%20heist%20the%20feud.mp4",
+            "seconds": 1408,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 494
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Out, Darn Spotlight",
           "airdate": "2004-03-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 2 episode 15 men at work.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 2 episode 15 men at work",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%2015%20men%20at%20work.mp4",
+            "seconds": 1389,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 488
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Out, Darn Spotlight\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 2 episode 12 out darn spotlight.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 2 episode 12 out darn spotlight",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%2012%20out%20darn%20spotlight.mp4",
+              "seconds": 1397,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 491
+            }
+          ]
         },
         {
           "number": 16,
           "name": "The Junkman Cometh",
           "airdate": "2004-03-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Junkman Cometh\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 2 episode 13 the junkman cometh.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 2 episode 13 the junkman cometh",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%2013%20the%20junkman%20cometh.mp4",
+            "seconds": 1387,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 487
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "Foul Bull",
           "airdate": "2004-03-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Foul Bull\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season  2 episode 14 foul bull the science fair affair.mp4",
+            "name": "The adventures of jimmy neutron boy genius season  2 episode 14 foul bull the science fair affair",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%20%202%20episode%2014%20foul%20bull%20the%20science%20fair%20affair.mp4",
+            "seconds": 1409,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 495
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "The Science Fair Affair",
           "airdate": "2004-03-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 2 episode 18 win lose and kaboom.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 2 episode 18 win lose and kaboom",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%2018%20win%20lose%20and%20kaboom.mp4",
+            "seconds": 4388,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1540
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "Men at Work",
           "airdate": "2004-06-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Men at Work\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 2 episode 15 men at work.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 2 episode 15 men at work",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%202%20episode%2015%20men%20at%20work.mp4",
+            "seconds": 1389,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 488
+          },
           "alternates": []
         },
         {
@@ -990,17 +1717,29 @@
           "number": 1,
           "name": "Lights! Camera! Danger!",
           "airdate": "2004-11-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Lights! Camera! Danger!\" (0.95)",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 3 episode 3 lights camera danger.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 3 episode 3 lights camera danger",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%203%20episode%203%20lights%20camera%20danger.mp4",
+            "seconds": 1398,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 491
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "The N Men",
           "airdate": "2004-11-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
             "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
@@ -1018,17 +1757,43 @@
           "number": 3,
           "name": "The Tomorrow Boys",
           "airdate": "2005-05-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 3 episode 3 lights camera danger.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 3 episode 3 lights camera danger",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%203%20episode%203%20lights%20camera%20danger.mp4",
+            "seconds": 1398,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 491
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Tomorrow Boys\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 3 episode 7 the tomorrow boys.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 3 episode 7 the tomorrow boys",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%203%20episode%207%20the%20tomorrow%20boys.mp4",
+              "seconds": 1407,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 494
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Fundemonium",
           "airdate": "2005-05-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
             "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
@@ -1046,9 +1811,9 @@
           "number": 5,
           "name": "Stranded",
           "airdate": "2005-05-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
             "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
@@ -1066,33 +1831,83 @@
           "number": 6,
           "name": "Jimmy Goes to College",
           "airdate": "2005-05-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 3 episode 6 jimmy goes to college.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 3 episode 6 jimmy goes to college",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%203%20episode%206%20jimmy%20goes%20to%20college.mp4",
+            "seconds": 1393,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 490
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Who's Your Mommy",
           "airdate": "2005-06-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 3 episode 7 the tomorrow boys.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 3 episode 7 the tomorrow boys",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%203%20episode%207%20the%20tomorrow%20boys.mp4",
+            "seconds": 1407,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 494
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Who's Your Mommy\" (0.95)",
+              "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+              "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+              "file": "The adventures of jimmy neutron boy genius season 3 episode 8 who's your mommy clash of the cousins.mp4",
+              "name": "The adventures of jimmy neutron boy genius season 3 episode 8 who's your mommy clash of the cousins",
+              "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%203%20episode%208%20who's%20your%20mommy%20clash%20of%20the%20cousins.mp4",
+              "seconds": 1412,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 495
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Clash of the Cousins",
           "airdate": "2005-06-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
+            "itemTitle": "The adventures of jimmy neutron boy genius The complete series",
+            "file": "The adventures of jimmy neutron boy genius season 3 episode 8 who's your mommy clash of the cousins.mp4",
+            "name": "The adventures of jimmy neutron boy genius season 3 episode 8 who's your mommy clash of the cousins",
+            "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack/The%20adventures%20of%20jimmy%20neutron%20boy%20genius%20season%203%20episode%208%20who's%20your%20mommy%20clash%20of%20the%20cousins.mp4",
+            "seconds": 1412,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 495
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "My Big Fat Spy Wedding",
           "airdate": "2005-07-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-adventures-of-jimmy-neutron-boy-genius-season-1-episode-1-when-pants-attack",
             "itemTitle": "The adventures of jimmy neutron boy genius The complete series",

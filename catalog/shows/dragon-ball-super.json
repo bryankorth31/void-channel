@@ -3,7 +3,7 @@
   "slug": "dragon-ball-super",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:33.841Z",
+  "matchedAt": "2026-10-19T04:11:36.098Z",
   "addedAt": "2026-10-15T12:08:14.865Z",
   "tvmaze": {
     "id": 2368,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 131,
-    "live": 16,
-    "review": 76,
-    "missing": 39,
-    "pct": 70
+    "live": 19,
+    "review": 98,
+    "missing": 14,
+    "pct": 89
   },
   "seasons": [
     {
@@ -31,20 +31,46 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "dragon-ball-super-episode-130",
-            "itemTitle": "Dragon Ball Super - COMPLETE ''Tournament of Power'' Saga (English Dub) [720p]",
-            "file": "Dragon Ball Super - Episode 101 -.mp4",
-            "name": "Dragon Ball Super - Episode 101 -",
-            "url": "https://archive.org/download/dragon-ball-super-episode-130/Dragon%20Ball%20Super%20-%20Episode%20101%20-.mp4",
-            "seconds": 1387,
+            "item": "dragonballsuperdubb",
+            "itemTitle": "Dragon Ball Super Complete Dub",
+            "file": "5DargonBallSuper/Dragon Ball Super 101 Warriors of Justice Close In! - The Pride Troopers!.mp4",
+            "name": "5DargonBallSuper/Dragon Ball Super 101 Warriors of Justice Close In! - The Pride Troopers!",
+            "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20101%20Warriors%20of%20Justice%20Close%20In!%20-%20The%20Pride%20Troopers!.mp4",
+            "seconds": 1363,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 128
+            "sizeMB": 141
           },
           "alternates": [
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "dragon-ball-super-episode-130",
+              "itemTitle": "Dragon Ball Super - COMPLETE ''Tournament of Power'' Saga (English Dub) [720p]",
+              "file": "Dragon Ball Super - Episode 101 -.mp4",
+              "name": "Dragon Ball Super - Episode 101 -",
+              "url": "https://archive.org/download/dragon-ball-super-episode-130/Dragon%20Ball%20Super%20-%20Episode%20101%20-.mp4",
+              "seconds": 1387,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 128
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 101 - The Impending Warriors Of Justice! The Pride Troopers!!.mp4",
+              "name": "Episode 101 - The Impending Warriors Of Justice! The Pride Troopers!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20101%20-%20The%20Impending%20Warriors%20Of%20Justice!%20The%20Pride%20Troopers!!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 166
+            },
+            {
               "conf": 0.55,
-              "why": "sequence guess: file 1 of 42 in \"Dragon Ball Super Complete Dub\"",
+              "why": "sequence guess: file 1 of 52 in \"Dragon Ball Super Complete Dub\"",
               "item": "dragonballsuperdubb",
               "itemTitle": "Dragon Ball Super Complete Dub",
               "file": "5DargonBallSuper/Dragon Ball Super 01.mp4",
@@ -54,19 +80,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 317
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 8 in \"Dragon Ball Super [Complete]\"",
-              "item": "dragon-ball-super-complete",
-              "itemTitle": "Dragon Ball Super [Complete]",
-              "file": "Episode 041 - Rise, God of Dragons, And Grant My Wish, Easy Peasy Lemon Squeezy!.mp4",
-              "name": "Episode 041 - Rise, God of Dragons, And Grant My Wish, Easy Peasy Lemon Squeezy!",
-              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20041%20-%20Rise%2C%20God%20of%20Dragons%2C%20And%20Grant%20My%20Wish%2C%20Easy%20Peasy%20Lemon%20Squeezy!.mp4",
-              "seconds": 1404,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 296
             }
           ]
         },
@@ -91,7 +104,7 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 2 of 42 in \"Dragon Ball Super Complete Dub\"",
+              "why": "sequence guess: file 2 of 52 in \"Dragon Ball Super Complete Dub\"",
               "item": "dragonballsuperdubb",
               "itemTitle": "Dragon Ball Super Complete Dub",
               "file": "5DargonBallSuper/Dragon Ball Super 02.mp4",
@@ -104,16 +117,29 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 2 of 8 in \"Dragon Ball Super [Complete]\"",
+              "why": "sequence guess: file 2 of 18 in \"Dragon Ball Super [Complete]\"",
               "item": "dragon-ball-super-complete",
               "itemTitle": "Dragon Ball Super [Complete]",
-              "file": "Episode 045 - Vegeta Disappears! The Threat of Duplicated Vegeta.mp4",
-              "name": "Episode 045 - Vegeta Disappears! The Threat of Duplicated Vegeta",
-              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20045%20-%20Vegeta%20Disappears!%20The%20Threat%20of%20Duplicated%20Vegeta.mp4",
+              "file": "Episode 041 - Rise, God of Dragons, And Grant My Wish, Easy Peasy Lemon Squeezy!.mp4",
+              "name": "Episode 041 - Rise, God of Dragons, And Grant My Wish, Easy Peasy Lemon Squeezy!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20041%20-%20Rise%2C%20God%20of%20Dragons%2C%20And%20Grant%20My%20Wish%2C%20Easy%20Peasy%20Lemon%20Squeezy!.mp4",
               "seconds": 1404,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 287
+              "sizeMB": 296
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"To the Promised Resort! Vegeta's Family Vacation?!\" (0.76)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 002 - To The Promised Resort! Vegeta Goes On A Family Trip.mp4",
+              "name": "Episode 002 - To The Promised Resort! Vegeta Goes On A Family Trip",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20002%20-%20To%20The%20Promised%20Resort!%20Vegeta%20Goes%20On%20A%20Family%20Trip.mp4",
+              "seconds": 1405,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 149
             }
           ]
         },
@@ -125,20 +151,46 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "dragon-ball-super-episode-130",
-            "itemTitle": "Dragon Ball Super - COMPLETE ''Tournament of Power'' Saga (English Dub) [720p]",
-            "file": "Dragon Ball Super - Episode 103 -.mp4",
-            "name": "Dragon Ball Super - Episode 103 -",
-            "url": "https://archive.org/download/dragon-ball-super-episode-130/Dragon%20Ball%20Super%20-%20Episode%20103%20-.mp4",
-            "seconds": 1387,
+            "item": "dragonballsuperdubb",
+            "itemTitle": "Dragon Ball Super Complete Dub",
+            "file": "5DargonBallSuper/Dragon Ball Super 103 Gohan, Get Ruthless! - Showdown with the 10th Universe!.mp4",
+            "name": "5DargonBallSuper/Dragon Ball Super 103 Gohan, Get Ruthless! - Showdown with the 10th Universe!",
+            "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20103%20Gohan%2C%20Get%20Ruthless!%20-%20Showdown%20with%20the%2010th%20Universe!.mp4",
+            "seconds": 1363,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 134
+            "sizeMB": 141
           },
           "alternates": [
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "dragon-ball-super-episode-130",
+              "itemTitle": "Dragon Ball Super - COMPLETE ''Tournament of Power'' Saga (English Dub) [720p]",
+              "file": "Dragon Ball Super - Episode 103 -.mp4",
+              "name": "Dragon Ball Super - Episode 103 -",
+              "url": "https://archive.org/download/dragon-ball-super-episode-130/Dragon%20Ball%20Super%20-%20Episode%20103%20-.mp4",
+              "seconds": 1387,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 134
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 103 - Gohan, Show No Mercy! Showdown With Universe 10!!.mp4",
+              "name": "Episode 103 - Gohan, Show No Mercy! Showdown With Universe 10!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20103%20-%20Gohan%2C%20Show%20No%20Mercy!%20Showdown%20With%20Universe%2010!!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 173
+            },
+            {
               "conf": 0.55,
-              "why": "sequence guess: file 3 of 42 in \"Dragon Ball Super Complete Dub\"",
+              "why": "sequence guess: file 3 of 52 in \"Dragon Ball Super Complete Dub\"",
               "item": "dragonballsuperdubb",
               "itemTitle": "Dragon Ball Super Complete Dub",
               "file": "5DargonBallSuper/Dragon Ball Super 03.mp4",
@@ -148,19 +200,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 317
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 8 in \"Dragon Ball Super [Complete]\"",
-              "item": "dragon-ball-super-complete",
-              "itemTitle": "Dragon Ball Super [Complete]",
-              "file": "Episode 054 - Inheritor of Saiyan Blood Trunks' Resolve.mp4",
-              "name": "Episode 054 - Inheritor of Saiyan Blood Trunks' Resolve",
-              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20054%20-%20Inheritor%20of%20Saiyan%20Blood%20Trunks'%20Resolve.mp4",
-              "seconds": 1405,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 131
             }
           ]
         },
@@ -352,20 +391,46 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "dragon-ball-super-episode-130",
-            "itemTitle": "Dragon Ball Super - COMPLETE ''Tournament of Power'' Saga (English Dub) [720p]",
-            "file": "Dragon Ball Super - Episode 107 -.mp4",
-            "name": "Dragon Ball Super - Episode 107 -",
-            "url": "https://archive.org/download/dragon-ball-super-episode-130/Dragon%20Ball%20Super%20-%20Episode%20107%20-.mp4",
-            "seconds": 1387,
+            "item": "dragonballsuperdubb",
+            "itemTitle": "Dragon Ball Super Complete Dub",
+            "file": "5DargonBallSuper/Dragon Ball Super 107 Revenge F! - A Cunning Trap is Set.mp4",
+            "name": "5DargonBallSuper/Dragon Ball Super 107 Revenge F! - A Cunning Trap is Set",
+            "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20107%20Revenge%20F!%20-%20A%20Cunning%20Trap%20is%20Set.mp4",
+            "seconds": 1363,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 112
+            "sizeMB": 142
           },
           "alternates": [
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "dragon-ball-super-episode-130",
+              "itemTitle": "Dragon Ball Super - COMPLETE ''Tournament of Power'' Saga (English Dub) [720p]",
+              "file": "Dragon Ball Super - Episode 107 -.mp4",
+              "name": "Dragon Ball Super - Episode 107 -",
+              "url": "https://archive.org/download/dragon-ball-super-episode-130/Dragon%20Ball%20Super%20-%20Episode%20107%20-.mp4",
+              "seconds": 1387,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 112
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 107 - Revenge F! The Cunning Trap!.mp4",
+              "name": "Episode 107 - Revenge F! The Cunning Trap!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20107%20-%20Revenge%20F!%20The%20Cunning%20Trap!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            },
+            {
               "conf": 0.55,
-              "why": "sequence guess: file 7 of 42 in \"Dragon Ball Super Complete Dub\"",
+              "why": "sequence guess: file 7 of 52 in \"Dragon Ball Super Complete Dub\"",
               "item": "dragonballsuperdubb",
               "itemTitle": "Dragon Ball Super Complete Dub",
               "file": "5DargonBallSuper/Dragon Ball Super 07.mp4",
@@ -375,19 +440,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 317
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 8 in \"Dragon Ball Super [Complete]\"",
-              "item": "dragon-ball-super-complete",
-              "itemTitle": "Dragon Ball Super [Complete]",
-              "file": "Episode 123 - Body and Soul, Full Power Release! Goku and Vegeta!!.mp4",
-              "name": "Episode 123 - Body and Soul, Full Power Release! Goku and Vegeta!!",
-              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20123%20-%20Body%20and%20Soul%2C%20Full%20Power%20Release!%20Goku%20and%20Vegeta!!.mp4",
-              "seconds": 1417,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 240
             }
           ]
         },
@@ -424,8 +476,21 @@
               "sizeMB": 109
             },
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 108 - Frieza and Frost! Conjoined Malice!.mp4",
+              "name": "Episode 108 - Frieza and Frost! Conjoined Malice!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20108%20-%20Frieza%20and%20Frost!%20Conjoined%20Malice!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 137
+            },
+            {
               "conf": 0.55,
-              "why": "sequence guess: file 8 of 42 in \"Dragon Ball Super Complete Dub\"",
+              "why": "sequence guess: file 8 of 52 in \"Dragon Ball Super Complete Dub\"",
               "item": "dragonballsuperdubb",
               "itemTitle": "Dragon Ball Super Complete Dub",
               "file": "5DargonBallSuper/Dragon Ball Super 08.mp4",
@@ -435,19 +500,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 317
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 8 in \"Dragon Ball Super [Complete]\"",
-              "item": "dragon-ball-super-complete",
-              "itemTitle": "Dragon Ball Super [Complete]",
-              "file": "Episode 124 - The Fiercely Overwhelming Assault! Gohan's Last Stand!!.mp4",
-              "name": "Episode 124 - The Fiercely Overwhelming Assault! Gohan's Last Stand!!",
-              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20124%20-%20The%20Fiercely%20Overwhelming%20Assault!%20Gohan's%20Last%20Stand!!.mp4",
-              "seconds": 1417,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 221
             }
           ]
         },
@@ -519,17 +571,30 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "dragon-ball-super-episode-130",
-            "itemTitle": "Dragon Ball Super - COMPLETE ''Tournament of Power'' Saga (English Dub) [720p]",
-            "file": "Dragon Ball Super - Episode 110 -.mp4",
-            "name": "Dragon Ball Super - Episode 110 -",
-            "url": "https://archive.org/download/dragon-ball-super-episode-130/Dragon%20Ball%20Super%20-%20Episode%20110%20-.mp4",
-            "seconds": 1372,
+            "item": "dragonballsuperdubb",
+            "itemTitle": "Dragon Ball Super Complete Dub",
+            "file": "5DargonBallSuper/Dragon Ball Super 110 Goku Enkindled! - The Awakened One's New Ultra Instinct!.mp4",
+            "name": "5DargonBallSuper/Dragon Ball Super 110 Goku Enkindled! - The Awakened One's New Ultra Instinct!",
+            "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20110%20Goku%20Enkindled!%20-%20The%20Awakened%20One's%20New%20Ultra%20Instinct!.mp4",
+            "seconds": 1355,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 132
+            "sizeMB": 140
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "dragon-ball-super-episode-130",
+              "itemTitle": "Dragon Ball Super - COMPLETE ''Tournament of Power'' Saga (English Dub) [720p]",
+              "file": "Dragon Ball Super - Episode 110 -.mp4",
+              "name": "Dragon Ball Super - Episode 110 -",
+              "url": "https://archive.org/download/dragon-ball-super-episode-130/Dragon%20Ball%20Super%20-%20Episode%20110%20-.mp4",
+              "seconds": 1372,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 132
+            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -555,19 +620,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 306
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 42 in \"Dragon Ball Super Complete Dub\"",
-              "item": "dragonballsuperdubb",
-              "itemTitle": "Dragon Ball Super Complete Dub",
-              "file": "5DargonBallSuper/Dragon Ball Super 10.mp4",
-              "name": "5DargonBallSuper/Dragon Ball Super 10",
-              "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%2010.mp4",
-              "seconds": 1398,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 317
             }
           ]
         },
@@ -677,17 +729,17 @@
               "sizeMB": 185
             },
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 42 in \"Dragon Ball Super Complete Dub\"",
-              "item": "dragonballsuperdubb",
-              "itemTitle": "Dragon Ball Super Complete Dub",
-              "file": "5DargonBallSuper/Dragon Ball Super 12.mp4",
-              "name": "5DargonBallSuper/Dragon Ball Super 12",
-              "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%2012.mp4",
-              "seconds": 1387,
+              "conf": 0.75,
+              "why": "title ~ \"The Universe Crumbles?! Clash! The God of Destruction vs. Super Saiyan God!\" (0.97)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 012 - The Universe Crumbles! Clash! The God of Destruction vs. Super Saiyan God.mp4",
+              "name": "Episode 012 - The Universe Crumbles! Clash! The God of Destruction vs. Super Saiyan God",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20012%20-%20The%20Universe%20Crumbles!%20Clash!%20The%20God%20of%20Destruction%20vs.%20Super%20Saiyan%20God.mp4",
+              "seconds": 1404,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 483
+              "sizeMB": 364
             }
           ]
         },
@@ -759,17 +811,43 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "dragon-ball-super-episode-130",
-            "itemTitle": "Dragon Ball Super - COMPLETE ''Tournament of Power'' Saga (English Dub) [720p]",
-            "file": "Dragon Ball Super - Episode 114 -.mp4",
-            "name": "Dragon Ball Super - Episode 114 -",
-            "url": "https://archive.org/download/dragon-ball-super-episode-130/Dragon%20Ball%20Super%20-%20Episode%20114%20-.mp4",
-            "seconds": 1372,
+            "item": "dragonballsuperdubb",
+            "itemTitle": "Dragon Ball Super Complete Dub",
+            "file": "5DargonBallSuper/Dragon Ball Super 114 Bloodcurdling! - The Explosive Birth of a New Super Warrior!.mp4",
+            "name": "5DargonBallSuper/Dragon Ball Super 114 Bloodcurdling! - The Explosive Birth of a New Super Warrior!",
+            "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20114%20Bloodcurdling!%20-%20The%20Explosive%20Birth%20of%20a%20New%20Super%20Warrior!.mp4",
+            "seconds": 1356,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 138
+            "sizeMB": 140
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "dragon-ball-super-episode-130",
+              "itemTitle": "Dragon Ball Super - COMPLETE ''Tournament of Power'' Saga (English Dub) [720p]",
+              "file": "Dragon Ball Super - Episode 114 -.mp4",
+              "name": "Dragon Ball Super - Episode 114 -",
+              "url": "https://archive.org/download/dragon-ball-super-episode-130/Dragon%20Ball%20Super%20-%20Episode%20114%20-.mp4",
+              "seconds": 1372,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 138
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 114 - Intimidating Passion! The Birth of A New Super Warrior!!.mp4",
+              "name": "Episode 114 - Intimidating Passion! The Birth of A New Super Warrior!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20114%20-%20Intimidating%20Passion!%20The%20Birth%20of%20A%20New%20Super%20Warrior!!.mp4",
+              "seconds": 1417,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 173
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"This is Every Last Bit of My Power! The Battle of Gods Concludes!\" (0.81)",
@@ -782,19 +860,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 316
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 14 of 42 in \"Dragon Ball Super Complete Dub\"",
-              "item": "dragonballsuperdubb",
-              "itemTitle": "Dragon Ball Super Complete Dub",
-              "file": "5DargonBallSuper/Dragon Ball Super 14.mp4",
-              "name": "5DargonBallSuper/Dragon Ball Super 14",
-              "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%2014.mp4",
-              "seconds": 1392,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 483
             }
           ]
         }
@@ -807,8 +872,20 @@
           "number": 1,
           "name": "Heroic Satan, Cause a Miracle! A Challenge From Outer Space!!",
           "airdate": "2015-10-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Heroic Satan, Cause a Miracle! A Challenge From Outer Space!!\" (0.90)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 015 - Brave Satan, Cause a Miracle! A Challenge from Outer Space.mp4",
+            "name": "Episode 015 - Brave Satan, Cause a Miracle! A Challenge from Outer Space",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20015%20-%20Brave%20Satan%2C%20Cause%20a%20Miracle!%20A%20Challenge%20from%20Outer%20Space.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 274
+          },
           "alternates": []
         },
         {
@@ -875,8 +952,20 @@
           "number": 5,
           "name": "Despair Once More! Revival of the Evil Emperor, Freeza!",
           "airdate": "2015-11-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Despair Once More! Revival of the Evil Emperor, Freeza!\" (0.76)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 019 - Despair Once Again! Resurrection of the Evil Emperor Freeza.mp4",
+            "name": "Episode 019 - Despair Once Again! Resurrection of the Evil Emperor Freeza",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20019%20-%20Despair%20Once%20Again!%20Resurrection%20of%20the%20Evil%20Emperor%20Freeza.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 281
+          },
           "alternates": []
         },
         {
@@ -903,16 +992,40 @@
           "number": 7,
           "name": "The Revenge Begins! The Freeza Army's Malice Strikes Gohan!",
           "airdate": "2015-11-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Revenge Begins! The Freeza Army's Malice Strikes Gohan!\" (1.00)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 021 - The Revenge Begins! The Freeza Army’s Malice Strikes Gohan.mp4",
+            "name": "Episode 021 - The Revenge Begins! The Freeza Army’s Malice Strikes Gohan",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20021%20-%20The%20Revenge%20Begins!%20The%20Freeza%20Army%E2%80%99s%20Malice%20Strikes%20Gohan.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 281
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Change! An Impossible Revival! The Name's Ginyu!!",
           "airdate": "2015-12-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Change! An Impossible Revival! The Name's Ginyu!!\" (1.00)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 022 - Change! An Impossible Revival! The Name’s Ginyu.mp4",
+            "name": "Episode 022 - Change! An Impossible Revival! The Name’s Ginyu",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20022%20-%20Change!%20An%20Impossible%20Revival!%20The%20Name%E2%80%99s%20Ginyu.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 279
+          },
           "alternates": []
         },
         {
@@ -979,8 +1092,20 @@
           "number": 12,
           "name": "Amidst the Crisis, a Shot at Victory Appears! Son Goku's Counterattack Begins!",
           "airdate": "2016-01-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Amidst the Crisis, a Shot at Victory Appears! Son Goku's Counterattack Begins!\" (1.00)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 026 - Amidst the Crisis, a Shot at Victory Appears! Son Goku’s Counterattack Begins.mp4",
+            "name": "Episode 026 - Amidst the Crisis, a Shot at Victory Appears! Son Goku’s Counterattack Begins",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20026%20-%20Amidst%20the%20Crisis%2C%20a%20Shot%20at%20Victory%20Appears!%20Son%20Goku%E2%80%99s%20Counterattack%20Begins.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 302
+          },
           "alternates": []
         },
         {
@@ -1026,24 +1151,74 @@
           "number": 1,
           "name": "The 6th Universe's God of Destruction — His Name's Champa",
           "airdate": "2016-01-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The 6th Universe's God of Destruction — His Name's Champa\" (0.93)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 028 - God of Destruction of the 6th Universe - His Name is Champa.mp4",
+            "name": "Episode 028 - God of Destruction of the 6th Universe - His Name is Champa",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20028%20-%20God%20of%20Destruction%20of%20the%206th%20Universe%20-%20His%20Name%20is%20Champa.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 240
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "It's Settled: We're Holding a Martial Arts Match! The Team Captain's Even Stronger Than Goku",
           "airdate": "2016-01-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 29 - It's Settled, We're Holding a Martial Arts Match! The Team Captain's Even Stronger Than Goku!.ia.mp4",
+            "name": "Episode 29 - It's Settled, We're Holding a Martial Arts Match! The Team Captain's Even Stronger Than Goku!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%2029%20-%20It's%20Settled%2C%20We're%20Holding%20a%20Martial%20Arts%20Match!%20The%20Team%20Captain's%20Even%20Stronger%20Than%20Goku!.ia.mp4",
+            "seconds": 1404,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 142
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"It's Settled: We're Holding a Martial Arts Match! The Team Captain's Even Stronger Than Goku\" (1.00)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 029 - It's Settled, We're Holding a Martial Arts Match! The Team Captain's Even Stronger Than Goku!.mp4",
+              "name": "Episode 029 - It's Settled, We're Holding a Martial Arts Match! The Team Captain's Even Stronger Than Goku!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20029%20-%20It's%20Settled%2C%20We're%20Holding%20a%20Martial%20Arts%20Match!%20The%20Team%20Captain's%20Even%20Stronger%20Than%20Goku!.mp4",
+              "seconds": 1404,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Rehearsing for the \"Martial Arts Tournament\" Who Are the Two Remaining Members?!",
           "airdate": "2016-02-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Rehearsing for the \"Martial Arts Tournament\" Who Are the Two Remaining Members?!\" (0.94)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 030 - Training for the Martial Arts Tournament - Who are the Two Remaining Members.mp4",
+            "name": "Episode 030 - Training for the Martial Arts Tournament - Who are the Two Remaining Members",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20030%20-%20Training%20for%20the%20Martial%20Arts%20Tournament%20-%20Who%20are%20the%20Two%20Remaining%20Members.mp4",
+            "seconds": 1405,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 276
+          },
           "alternates": []
         },
         {
@@ -1104,8 +1279,20 @@
           "number": 6,
           "name": "Be Surprised, Universe 6! This is Super Saiyan Son Goku!",
           "airdate": "2016-02-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Be Surprised, Universe 6! This is Super Saiyan Son Goku!\" (0.97)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 033 - Be Surprised, Universe 6! This is Super Saiyan - Son Goku.mp4",
+            "name": "Episode 033 - Be Surprised, Universe 6! This is Super Saiyan - Son Goku",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20033%20-%20Be%20Surprised%2C%20Universe%206!%20This%20is%20Super%20Saiyan%20-%20Son%20Goku.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 276
+          },
           "alternates": []
         },
         {
@@ -1152,8 +1339,20 @@
           "number": 9,
           "name": "An Unexpectedly Tough Foe! Vegeta's Explosion of Rage!",
           "airdate": "2016-03-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"An Unexpectedly Tough Foe! Vegeta's Explosion of Rage!\" (0.79)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 036 - An Unexpectedly Hard Fight! Vegeta’s Explosion of Rage.mp4",
+            "name": "Episode 036 - An Unexpectedly Hard Fight! Vegeta’s Explosion of Rage",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20036%20-%20An%20Unexpectedly%20Hard%20Fight!%20Vegeta%E2%80%99s%20Explosion%20of%20Rage.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 325
+          },
           "alternates": []
         },
         {
@@ -1180,8 +1379,20 @@
           "number": 11,
           "name": "The Last of Universe 6's Warriors! Meet the Strongest Man, Hit!",
           "airdate": "2016-04-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"The Last of Universe 6's Warriors! Meet the Strongest Man, Hit!\" (0.61)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 038 - Universe 6’s Most Powerful Warrior! Meet Assassin Hit.mp4",
+            "name": "Episode 038 - Universe 6’s Most Powerful Warrior! Meet Assassin Hit",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20038%20-%20Universe%206%E2%80%99s%20Most%20Powerful%20Warrior!%20Meet%20Assassin%20Hit.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 274
+          },
           "alternates": []
         },
         {
@@ -1208,8 +1419,20 @@
           "number": 13,
           "name": "Conclusion at Last! Is Beerus the Winner? Or is it Champa?",
           "airdate": "2016-04-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Conclusion at Last! Is Beerus the Winner? Or is it Champa?\" (1.00)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 040 - Conclusion at Last! Is Beerus the Winner Or is it Champa.mp4",
+            "name": "Episode 040 - Conclusion at Last! Is Beerus the Winner Or is it Champa",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20040%20-%20Conclusion%20at%20Last!%20Is%20Beerus%20the%20Winner%20Or%20is%20it%20Champa.mp4",
+            "seconds": 1404,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 293
+          },
           "alternates": []
         },
         {
@@ -1252,8 +1475,20 @@
           "number": 17,
           "name": "Secret of the Unleashed Superhuman Water",
           "airdate": "2016-05-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Secret of the Unleashed Superhuman Water\" (0.95)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 044 - Secret of the Superhuman Water is Unleashed.mp4",
+            "name": "Episode 044 - Secret of the Superhuman Water is Unleashed",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20044%20-%20Secret%20of%20the%20Superhuman%20Water%20is%20Unleashed.mp4",
+            "seconds": 1405,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 265
+          },
           "alternates": []
         },
         {
@@ -1363,19 +1598,33 @@
           "airdate": "2016-06-26",
           "state": "REVIEW",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "dragon-ball-super-episode-50",
-            "itemTitle": "Dragon Ball Super - COMPLETE Goku Black Saga (English Dub) [720p]",
-            "file": "Dragon Ball Super - Episode 49 -.mp4",
-            "name": "Dragon Ball Super - Episode 49 -",
-            "url": "https://archive.org/download/dragon-ball-super-episode-50/Dragon%20Ball%20Super%20-%20Episode%2049%20-.mp4",
-            "seconds": 1387,
+            "conf": 0.75,
+            "why": "title ~ \"A Message from the Future Goku Black Invades!\" (1.00)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 049 - A Message From The Future Goku Black Invades.mp4",
+            "name": "Episode 049 - A Message From The Future Goku Black Invades",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20049%20-%20A%20Message%20From%20The%20Future%20Goku%20Black%20Invades.mp4",
+            "seconds": 1404,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 103
+            "sizeMB": 281
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dragon-ball-super-episode-50",
+              "itemTitle": "Dragon Ball Super - COMPLETE Goku Black Saga (English Dub) [720p]",
+              "file": "Dragon Ball Super - Episode 49 -.mp4",
+              "name": "Dragon Ball Super - Episode 49 -",
+              "url": "https://archive.org/download/dragon-ball-super-episode-50/Dragon%20Ball%20Super%20-%20Episode%2049%20-.mp4",
+              "seconds": 1387,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 103
+            }
+          ]
         },
         {
           "number": 4,
@@ -1451,19 +1700,46 @@
           "airdate": "2016-07-17",
           "state": "REVIEW",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "dragon-ball-super-episode-50",
-            "itemTitle": "Dragon Ball Super - COMPLETE Goku Black Saga (English Dub) [720p]",
-            "file": "Dragon Ball Super - Episode 52 -.mp4",
-            "name": "Dragon Ball Super - Episode 52 -",
-            "url": "https://archive.org/download/dragon-ball-super-episode-50/Dragon%20Ball%20Super%20-%20Episode%2052%20-.mp4",
-            "seconds": 1387,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "absolute episode number + title match",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 52 - Reunion of Master and Student..ia.mp4",
+            "name": "Episode 52 - Reunion of Master and Student.",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%2052%20-%20Reunion%20of%20Master%20and%20Student..ia.mp4",
+            "seconds": 1404,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 110
+            "sizeMB": 169
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dragon-ball-super-episode-50",
+              "itemTitle": "Dragon Ball Super - COMPLETE Goku Black Saga (English Dub) [720p]",
+              "file": "Dragon Ball Super - Episode 52 -.mp4",
+              "name": "Dragon Ball Super - Episode 52 -",
+              "url": "https://archive.org/download/dragon-ball-super-episode-50/Dragon%20Ball%20Super%20-%20Episode%2052%20-.mp4",
+              "seconds": 1387,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 110
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Master and Student Reunited Son Gohan and \"Future\" Trunks\" (0.64)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 052 - Reunion of Master and Student..mp4",
+              "name": "Episode 052 - Reunion of Master and Student.",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20052%20-%20Reunion%20of%20Master%20and%20Student..mp4",
+              "seconds": 1404,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 169
+            }
+          ]
         },
         {
           "number": 7,
@@ -1471,19 +1747,33 @@
           "airdate": "2016-07-31",
           "state": "REVIEW",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "dragon-ball-super-episode-50",
-            "itemTitle": "Dragon Ball Super - COMPLETE Goku Black Saga (English Dub) [720p]",
-            "file": "Dragon Ball Super - Episode 53 -.mp4",
-            "name": "Dragon Ball Super - Episode 53 -",
-            "url": "https://archive.org/download/dragon-ball-super-episode-50/Dragon%20Ball%20Super%20-%20Episode%2053%20-.mp4",
-            "seconds": 1387,
+            "conf": 0.75,
+            "why": "title ~ \"Expose Black's True Identity! To the Kaioshin Realm of Universe 10\" (0.87)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 053 - Expose Black's True Identity, Head To Universe 10's Kaioshin Realm.mp4",
+            "name": "Episode 053 - Expose Black's True Identity, Head To Universe 10's Kaioshin Realm",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20053%20-%20Expose%20Black's%20True%20Identity%2C%20Head%20To%20Universe%2010's%20Kaioshin%20Realm.mp4",
+            "seconds": 1405,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 96
+            "sizeMB": 104
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dragon-ball-super-episode-50",
+              "itemTitle": "Dragon Ball Super - COMPLETE Goku Black Saga (English Dub) [720p]",
+              "file": "Dragon Ball Super - Episode 53 -.mp4",
+              "name": "Dragon Ball Super - Episode 53 -",
+              "url": "https://archive.org/download/dragon-ball-super-episode-50/Dragon%20Ball%20Super%20-%20Episode%2053%20-.mp4",
+              "seconds": 1387,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 96
+            }
+          ]
         },
         {
           "number": 8,
@@ -1735,19 +2025,46 @@
           "airdate": "2016-10-16",
           "state": "REVIEW",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "dragon-ball-super-episode-50",
-            "itemTitle": "Dragon Ball Super - COMPLETE Goku Black Saga (English Dub) [720p]",
-            "file": "Dragon Ball Super - Episode 62 -.mp4",
-            "name": "Dragon Ball Super - Episode 62 -",
-            "url": "https://archive.org/download/dragon-ball-super-episode-50/Dragon%20Ball%20Super%20-%20Episode%2062%20-.mp4",
-            "seconds": 1387,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "absolute episode number + title match",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 62 - I Will Protect the World! Trunks' Furious Super Power Explodes!!.ia.mp4",
+            "name": "Episode 62 - I Will Protect the World! Trunks' Furious Super Power Explodes!!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%2062%20-%20I%20Will%20Protect%20the%20World!%20Trunks'%20Furious%20Super%20Power%20Explodes!!.ia.mp4",
+            "seconds": 1404,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 97
+            "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "dragon-ball-super-episode-50",
+              "itemTitle": "Dragon Ball Super - COMPLETE Goku Black Saga (English Dub) [720p]",
+              "file": "Dragon Ball Super - Episode 62 -.mp4",
+              "name": "Dragon Ball Super - Episode 62 -",
+              "url": "https://archive.org/download/dragon-ball-super-episode-50/Dragon%20Ball%20Super%20-%20Episode%2062%20-.mp4",
+              "seconds": 1387,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 97
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"I Will Protect The World! Trunks Angry Super Power Explosion!!\" (0.75)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 062 - I Will Protect the World! Trunks' Furious Super Power Explodes!!.mp4",
+              "name": "Episode 062 - I Will Protect the World! Trunks' Furious Super Power Explodes!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20062%20-%20I%20Will%20Protect%20the%20World!%20Trunks'%20Furious%20Super%20Power%20Explodes!!.mp4",
+              "seconds": 1404,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 17,
@@ -1978,19 +2295,46 @@
           "airdate": "2016-12-11",
           "state": "REVIEW",
           "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Challenge from Champa! Let's Fight in Baseball!\" (0.67)",
-            "item": "dragonballsuperdubb",
-            "itemTitle": "Dragon Ball Super Complete Dub",
-            "file": "5DargonBallSuper/Dragon Ball Super 070 A Challenge From Champa! - This Time, a Baseball Game!.mp4",
-            "name": "5DargonBallSuper/Dragon Ball Super 070 A Challenge From Champa! - This Time, a Baseball Game!",
-            "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20070%20A%20Challenge%20From%20Champa!%20-%20This%20Time%2C%20a%20Baseball%20Game!.mp4",
-            "seconds": 1364,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "absolute episode number + title match",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 70 - Champa's Challenge! This Time We Fight With Baseball!.ia.mp4",
+            "name": "Episode 70 - Champa's Challenge! This Time We Fight With Baseball!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%2070%20-%20Champa's%20Challenge!%20This%20Time%20We%20Fight%20With%20Baseball!.ia.mp4",
+            "seconds": 1408,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 141
+            "sizeMB": 126
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Challenge from Champa! Let's Fight in Baseball!\" (0.67)",
+              "item": "dragonballsuperdubb",
+              "itemTitle": "Dragon Ball Super Complete Dub",
+              "file": "5DargonBallSuper/Dragon Ball Super 070 A Challenge From Champa! - This Time, a Baseball Game!.mp4",
+              "name": "5DargonBallSuper/Dragon Ball Super 070 A Challenge From Champa! - This Time, a Baseball Game!",
+              "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20070%20A%20Challenge%20From%20Champa!%20-%20This%20Time%2C%20a%20Baseball%20Game!.mp4",
+              "seconds": 1364,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Challenge from Champa! Let's Fight in Baseball!\" (0.68)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 070 - Champa's Challenge! This Time We Fight With Baseball!.mp4",
+              "name": "Episode 070 - Champa's Challenge! This Time We Fight With Baseball!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20070%20-%20Champa's%20Challenge!%20This%20Time%20We%20Fight%20With%20Baseball!.mp4",
+              "seconds": 1408,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 126
+            }
+          ]
         },
         {
           "number": 25,
@@ -2004,8 +2348,20 @@
           "number": 26,
           "name": "\"Will There Be a Counterattack?! The Invisible Killing Strike!!\"",
           "airdate": "2016-12-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"\"Will There Be a Counterattack?! The Invisible Killing Strike!!\"\" (1.00)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 072 - Will There Be A Counterattack! The Invisible Killing Strike.mp4",
+            "name": "Episode 072 - Will There Be A Counterattack! The Invisible Killing Strike",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20072%20-%20Will%20There%20Be%20A%20Counterattack!%20The%20Invisible%20Killing%20Strike.mp4",
+            "seconds": 1408,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 128
+          },
           "alternates": []
         },
         {
@@ -2020,8 +2376,20 @@
           "number": 28,
           "name": "For The Sake of Which He Loves!",
           "airdate": "2017-01-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 74 - For the Ones He Loves! The Unbeatable Great Saiyaman!.ia.mp4",
+            "name": "Episode 74 - For the Ones He Loves! The Unbeatable Great Saiyaman!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%2074%20-%20For%20the%20Ones%20He%20Loves!%20The%20Unbeatable%20Great%20Saiyaman!.ia.mp4",
+            "seconds": 1408,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 119
+          },
           "alternates": []
         },
         {
@@ -2101,15 +2469,68 @@
             "playable": true,
             "sizeMB": 142
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Let's Do It, Omni-King! The Universe's Greatest Martial Arts Tournament!!\" (0.75)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 077 - Let's Do It, Zen-oh sama! The All-Universe Martial Arts Tournament!!.mp4",
+              "name": "Episode 077 - Let's Do It, Zen-oh sama! The All-Universe Martial Arts Tournament!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20077%20-%20Let's%20Do%20It%2C%20Zen-oh%20sama!%20The%20All-Universe%20Martial%20Arts%20Tournament!!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 112
+            }
+          ]
         },
         {
           "number": 2,
           "name": "The Gods of Every Universe in Shock?! Losers Erased in the Tournament of Power",
           "airdate": "2017-02-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 78 - The Gods of Every Universe In Shock! Losers Erased in the Tournament of Power.ia.mp4",
+            "name": "Episode 78 - The Gods of Every Universe In Shock! Losers Erased in the Tournament of Power",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%2078%20-%20The%20Gods%20of%20Every%20Universe%20In%20Shock!%20Losers%20Erased%20in%20the%20Tournament%20of%20Power.ia.mp4",
+            "seconds": 1402,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 126
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Gods of Every Universe in Shock?! Losers Erased in the Tournament of Power\" (1.00)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 078 - The Gods of Every Universe In Shock! Losers Erased in the Tournament of Power.mp4",
+              "name": "Episode 078 - The Gods of Every Universe In Shock! Losers Erased in the Tournament of Power",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20078%20-%20The%20Gods%20of%20Every%20Universe%20In%20Shock!%20Losers%20Erased%20in%20the%20Tournament%20of%20Power.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 126
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"The Gods of Every Universe in Shock?! Losers Erased in the Tournament of Power\" (0.62)",
+              "item": "dragonballsuperdubb",
+              "itemTitle": "Dragon Ball Super Complete Dub",
+              "file": "5DargonBallSuper/Dragon Ball Super 078 Even the Universes' Gods are Appalled! - The Lose-and-Perish Tournament of Power.mp4",
+              "name": "5DargonBallSuper/Dragon Ball Super 078 Even the Universes' Gods are Appalled! - The Lose-and-Perish Tournament of Power",
+              "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20078%20Even%20the%20Universes'%20Gods%20are%20Appalled!%20-%20The%20Lose-and-Perish%20Tournament%20of%20Power.mp4",
+              "seconds": 1368,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 142
+            }
+          ]
         },
         {
           "number": 3,
@@ -2117,19 +2538,33 @@
           "airdate": "2017-02-19",
           "state": "REVIEW",
           "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Universe 9's Kicker Basil vs Universe 7's Majin Buu!!\" (0.79)",
-            "item": "dragonballsuperdubb",
-            "itemTitle": "Dragon Ball Super Complete Dub",
-            "file": "5DargonBallSuper/Dragon Ball Super 079 The 9th Universe's Kicking Basil - vs - The 7th Universe's Majin Buu!!.mp4",
-            "name": "5DargonBallSuper/Dragon Ball Super 079 The 9th Universe's Kicking Basil - vs - The 7th Universe's Majin Buu!!",
-            "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20079%20The%209th%20Universe's%20Kicking%20Basil%20-%20vs%20-%20The%207th%20Universe's%20Majin%20Buu!!.mp4",
-            "seconds": 1368,
+            "conf": 0.75,
+            "why": "title ~ \"Universe 9's Kicker Basil vs Universe 7's Majin Buu!!\" (0.95)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 079 - Universe 9's Basil the Kicker vs Universe 7's Majin Buu!!.mp4",
+            "name": "Episode 079 - Universe 9's Basil the Kicker vs Universe 7's Majin Buu!!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20079%20-%20Universe%209's%20Basil%20the%20Kicker%20vs%20Universe%207's%20Majin%20Buu!!.mp4",
+            "seconds": 1402,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 141
+            "sizeMB": 156
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Universe 9's Kicker Basil vs Universe 7's Majin Buu!!\" (0.79)",
+              "item": "dragonballsuperdubb",
+              "itemTitle": "Dragon Ball Super Complete Dub",
+              "file": "5DargonBallSuper/Dragon Ball Super 079 The 9th Universe's Kicking Basil - vs - The 7th Universe's Majin Buu!!.mp4",
+              "name": "5DargonBallSuper/Dragon Ball Super 079 The 9th Universe's Kicking Basil - vs - The 7th Universe's Majin Buu!!",
+              "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20079%20The%209th%20Universe's%20Kicking%20Basil%20-%20vs%20-%20The%207th%20Universe's%20Majin%20Buu!!.mp4",
+              "seconds": 1368,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 4,
@@ -2171,25 +2606,102 @@
           "number": 7,
           "name": "Forming the Universe 7 Representative Team",
           "airdate": "2017-03-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Forming the Universe 7 Representative Team\" (0.72)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 083 - From the Universe 7 Representing Team! Who Are the Strongest Ten!.mp4",
+            "name": "Episode 083 - From the Universe 7 Representing Team! Who Are the Strongest Ten!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20083%20-%20From%20the%20Universe%207%20Representing%20Team!%20Who%20Are%20the%20Strongest%20Ten!.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 124
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Son Goku the Talent Scout — Inviting Kuririn and No. 18",
           "airdate": "2017-04-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 84 - Son Goku the Recruiter Invites Krillin And No.18.ia.mp4",
+            "name": "Episode 84 - Son Goku the Recruiter Invites Krillin And No",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%2084%20-%20Son%20Goku%20the%20Recruiter%20Invites%20Krillin%20And%20No.18.ia.mp4",
+            "seconds": 1402,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 113
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Son Goku the Talent Scout — Inviting Kuririn and No. 18\" (0.61)",
+              "item": "dragonballsuperdubb",
+              "itemTitle": "Dragon Ball Super Complete Dub",
+              "file": "5DargonBallSuper/Dragon Ball Super 084 Goku the Talent Scout - Recruit Krillin and Android 18.mp4",
+              "name": "5DargonBallSuper/Dragon Ball Super 084 Goku the Talent Scout - Recruit Krillin and Android 18",
+              "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20084%20Goku%20the%20Talent%20Scout%20-%20Recruit%20Krillin%20and%20Android%2018.mp4",
+              "seconds": 1363,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Son Goku the Talent Scout — Inviting Kuririn and No. 18\" (0.61)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 084 - Son Goku the Recruiter Invites Krillin And No.18.mp4",
+              "name": "Episode 084 - Son Goku the Recruiter Invites Krillin And No.18",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20084%20-%20Son%20Goku%20the%20Recruiter%20Invites%20Krillin%20And%20No.18.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 113
+            }
+          ]
         },
         {
           "number": 9,
           "name": "The Universes Begin to Make Their Moves: Their Individual Motives",
           "airdate": "2017-04-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 85 - The Universes Begin To Make Their Moves Their Individual Motives.ia.mp4",
+            "name": "Episode 85 - The Universes Begin To Make Their Moves Their Individual Motives",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%2085%20-%20The%20Universes%20Begin%20To%20Make%20Their%20Moves%20Their%20Individual%20Motives.ia.mp4",
+            "seconds": 1402,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 122
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Universes Begin to Make Their Moves: Their Individual Motives\" (1.00)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 085 - The Universes Begin To Make Their Moves Their Individual Motives.mp4",
+              "name": "Episode 085 - The Universes Begin To Make Their Moves Their Individual Motives",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20085%20-%20The%20Universes%20Begin%20To%20Make%20Their%20Moves%20Their%20Individual%20Motives.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 122
+            }
+          ]
         },
         {
           "number": 10,
@@ -2229,9 +2741,35 @@
           "number": 11,
           "name": "Hunt the Poachers! Goku and N.17's Joint Battle!",
           "airdate": "2017-04-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Hunt the Poachers! Goku and N.17's Joint Battle!\" (0.66)",
+            "item": "dragonballsuperdubb",
+            "itemTitle": "Dragon Ball Super Complete Dub",
+            "file": "5DargonBallSuper/Dragon Ball Super 087 Hunt the Poaching Ring! - Goku and Android 17's Joint Struggle!.mp4",
+            "name": "5DargonBallSuper/Dragon Ball Super 087 Hunt the Poaching Ring! - Goku and Android 17's Joint Struggle!",
+            "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20087%20Hunt%20the%20Poaching%20Ring!%20-%20Goku%20and%20Android%2017's%20Joint%20Struggle!.mp4",
+            "seconds": 1363,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 141
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Hunt the Poachers! Goku and N.17's Joint Battle!\" (0.69)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 087 - Hunt the Poachers! Goku and No.17's United Front!!.mp4",
+              "name": "Episode 087 - Hunt the Poachers! Goku and No.17's United Front!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20087%20-%20Hunt%20the%20Poachers!%20Goku%20and%20No.17's%20United%20Front!!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 108
+            }
+          ]
         },
         {
           "number": 12,
@@ -2259,7 +2797,21 @@
             "playable": true,
             "sizeMB": 141
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"A Mysterious Beauty Appears! Mistery of the Tenshin-Style Dojo?!\" (0.74)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 089 - An Unknown Beauty Appears! The Tienshin-Style Dojo's Mystery!.mp4",
+              "name": "Episode 089 - An Unknown Beauty Appears! The Tienshin-Style Dojo's Mystery!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20089%20-%20An%20Unknown%20Beauty%20Appears!%20The%20Tienshin-Style%20Dojo's%20Mystery!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 14,
@@ -2267,26 +2819,65 @@
           "airdate": "2017-05-14",
           "state": "REVIEW",
           "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Facing the Wall that Must be Overcome! Goku vs Gohan\" (0.75)",
-            "item": "dragonballsuperdubb",
-            "itemTitle": "Dragon Ball Super Complete Dub",
-            "file": "5DargonBallSuper/Dragon Ball Super 090 Staring Down the Wall to be Overcome! - Goku vs. Gohan.mp4",
-            "name": "5DargonBallSuper/Dragon Ball Super 090 Staring Down the Wall to be Overcome! - Goku vs. Gohan",
-            "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20090%20Staring%20Down%20the%20Wall%20to%20be%20Overcome!%20-%20Goku%20vs.%20Gohan.mp4",
-            "seconds": 1363,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "absolute episode number + title match",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 90 - See the Wall That Must Be Passed! Goku vs Gohan.ia.mp4",
+            "name": "Episode 90 - See the Wall That Must Be Passed! Goku vs Gohan",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%2090%20-%20See%20the%20Wall%20That%20Must%20Be%20Passed!%20Goku%20vs%20Gohan.ia.mp4",
+            "seconds": 1402,
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 141
+            "sizeMB": 157
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Facing the Wall that Must be Overcome! Goku vs Gohan\" (0.75)",
+              "item": "dragonballsuperdubb",
+              "itemTitle": "Dragon Ball Super Complete Dub",
+              "file": "5DargonBallSuper/Dragon Ball Super 090 Staring Down the Wall to be Overcome! - Goku vs. Gohan.mp4",
+              "name": "5DargonBallSuper/Dragon Ball Super 090 Staring Down the Wall to be Overcome! - Goku vs. Gohan",
+              "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20090%20Staring%20Down%20the%20Wall%20to%20be%20Overcome!%20-%20Goku%20vs.%20Gohan.mp4",
+              "seconds": 1363,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Facing the Wall that Must be Overcome! Goku vs Gohan\" (0.74)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 090 - See the Wall That Must Be Passed! Goku vs Gohan.mp4",
+              "name": "Episode 090 - See the Wall That Must Be Passed! Goku vs Gohan",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20090%20-%20See%20the%20Wall%20That%20Must%20Be%20Passed!%20Goku%20vs%20Gohan.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 157
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Which Universe Will Survive?! The Strongest Warriors Are Gathering!!",
           "airdate": "2017-05-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Which Universe Will Survive?! The Strongest Warriors Are Gathering!!\" (1.00)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 091 - Which Universe Will Survive! The Strongest Warriors Are Gathering!!.mp4",
+            "name": "Episode 091 - Which Universe Will Survive! The Strongest Warriors Are Gathering!!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20091%20-%20Which%20Universe%20Will%20Survive!%20The%20Strongest%20Warriors%20Are%20Gathering!!.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 122
+          },
           "alternates": []
         },
         {
@@ -2327,7 +2918,21 @@
             "playable": true,
             "sizeMB": 141
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"You're the 10th Warrior! Goku Visits Freeza!\" (0.67)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 093 - You're the Tenth Warrior! Goku Goes To See Frieza!!.mp4",
+              "name": "Episode 093 - You're the Tenth Warrior! Goku Goes To See Frieza!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20093%20-%20You're%20the%20Tenth%20Warrior!%20Goku%20Goes%20To%20See%20Frieza!!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 130
+            }
+          ]
         },
         {
           "number": 18,
@@ -2347,7 +2952,21 @@
             "playable": true,
             "sizeMB": 142
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Emperor of Evil Returns! A Reception of Mysterious Assassins?!\" (1.00)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 094 - The Emperor of Evil Returns! A Reception of Mysterious Assassins!.mp4",
+              "name": "Episode 094 - The Emperor of Evil Returns! A Reception of Mysterious Assassins!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20094%20-%20The%20Emperor%20of%20Evil%20Returns!%20A%20Reception%20of%20Mysterious%20Assassins!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 103
+            }
+          ]
         },
         {
           "number": 19,
@@ -2387,8 +3006,20 @@
           "number": 20,
           "name": "The Time Is Here! To The World Of Void For The Fate Of The Universe!!",
           "airdate": "2017-06-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Time Is Here! To The World Of Void For The Fate Of The Universe!!\" (1.00)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 096 - The Time Is Here! To the World of Void For the Fate of the Universe!!.mp4",
+            "name": "Episode 096 - The Time Is Here! To the World of Void For the Fate of the Universe!!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20096%20-%20The%20Time%20Is%20Here!%20To%20the%20World%20of%20Void%20For%20the%20Fate%20of%20the%20Universe!!.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 120
+          },
           "alternates": []
         },
         {
@@ -2410,6 +3041,19 @@
             "sizeMB": 141
           },
           "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Survive! The Tournament of Power Begins at Last!!\" (0.91)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 097 - Survive! The Tournament of Power Begins!!.mp4",
+              "name": "Episode 097 - Survive! The Tournament of Power Begins!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20097%20-%20Survive!%20The%20Tournament%20of%20Power%20Begins!!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 134
+            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -2444,6 +3088,19 @@
             "sizeMB": 141
           },
           "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Oh, Uncertainty! A Universe Despairs!!\" (1.00)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 098 - Oh, Uncertainty! A Universe Despairs!!.mp4",
+              "name": "Episode 098 - Oh, Uncertainty! A Universe Despairs!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20098%20-%20Oh%2C%20Uncertainty!%20A%20Universe%20Despairs!!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 174
+            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -2510,8 +3167,20 @@
           "number": 24,
           "name": "The Berserker Awakens!",
           "airdate": "2017-07-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Berserker Awakens!\" (0.95)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 100 - Out of Control! The Savage Berserker Awakens!!.mp4",
+            "name": "Episode 100 - Out of Control! The Savage Berserker Awakens!!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20100%20-%20Out%20of%20Control!%20The%20Savage%20Berserker%20Awakens!!.mp4",
+            "seconds": 1402,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 161
+          },
           "alternates": []
         },
         {
@@ -2532,7 +3201,34 @@
             "playable": true,
             "sizeMB": 142
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"The Warrior of Justice Closes In!\" (0.73)",
+              "item": "dragonballsuperdubb",
+              "itemTitle": "Dragon Ball Super Complete Dub",
+              "file": "5DargonBallSuper/Dragon Ball Super 101 Warriors of Justice Close In! - The Pride Troopers!.mp4",
+              "name": "5DargonBallSuper/Dragon Ball Super 101 Warriors of Justice Close In! - The Pride Troopers!",
+              "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20101%20Warriors%20of%20Justice%20Close%20In!%20-%20The%20Pride%20Troopers!.mp4",
+              "seconds": 1363,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"The Warrior of Justice Closes In!\" (0.63)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 082 - Never Forgive Son Goku! Toppo the Warrior of Justice Intrudes!!.mp4",
+              "name": "Episode 082 - Never Forgive Son Goku! Toppo the Warrior of Justice Intrudes!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20082%20-%20Never%20Forgive%20Son%20Goku!%20Toppo%20the%20Warrior%20of%20Justice%20Intrudes!!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 148
+            }
+          ]
         },
         {
           "number": 26,
@@ -2572,7 +3268,21 @@
             "playable": true,
             "sizeMB": 141
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Gohan be Ruthless! The Showdown with Universe 10\" (0.74)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 103 - Gohan, Show No Mercy! Showdown With Universe 10!!.mp4",
+              "name": "Episode 103 - Gohan, Show No Mercy! Showdown With Universe 10!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20103%20-%20Gohan%2C%20Show%20No%20Mercy!%20Showdown%20With%20Universe%2010!!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 173
+            }
+          ]
         },
         {
           "number": 28,
@@ -2654,7 +3364,21 @@
             "playable": true,
             "sizeMB": 142
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Revenge ‘F'! The Cunning Trap?!\" (1.00)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 107 - Revenge F! The Cunning Trap!.mp4",
+              "name": "Episode 107 - Revenge F! The Cunning Trap!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20107%20-%20Revenge%20F!%20The%20Cunning%20Trap!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 32,
@@ -2830,6 +3554,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 227
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Goku vs Kafla!!\" (0.63)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 081 - Bergamo the Crusher vs Son Goku! Which One Wields the Limitless Power!.mp4",
+              "name": "Episode 081 - Bergamo the Crusher vs Son Goku! Which One Wields the Limitless Power!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20081%20-%20Bergamo%20the%20Crusher%20vs%20Son%20Goku!%20Which%20One%20Wields%20the%20Limitless%20Power!.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 148
             }
           ]
         },
@@ -2837,8 +3574,20 @@
           "number": 40,
           "name": "The Comeback Omen! Ultra Istinct's Great Explosion!!",
           "airdate": "2017-11-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"The Comeback Omen! Ultra Istinct's Great Explosion!!\" (0.70)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 116 - The Sign of A Comeback! Ultra Instinct's Huge Explosion!!.mp4",
+            "name": "Episode 116 - The Sign of A Comeback! Ultra Instinct's Huge Explosion!!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20116%20-%20The%20Sign%20of%20A%20Comeback!%20Ultra%20Instinct's%20Huge%20Explosion!!.mp4",
+            "seconds": 1417,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 277
+          },
           "alternates": []
         },
         {
@@ -2847,19 +3596,33 @@
           "airdate": "2017-11-26",
           "state": "REVIEW",
           "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Grand Love Shodown! Androids vs Universe 2\" (0.73)",
-            "item": "dragonballsuperdubb",
-            "itemTitle": "Dragon Ball Super Complete Dub",
-            "file": "5DargonBallSuper/Dragon Ball Super 117 Showdown of Love! - The Androids vs the 2nd Universe!.mp4",
-            "name": "5DargonBallSuper/Dragon Ball Super 117 Showdown of Love! - The Androids vs the 2nd Universe!",
-            "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20117%20Showdown%20of%20Love!%20-%20The%20Androids%20vs%20the%202nd%20Universe!.mp4",
-            "seconds": 1356,
+            "conf": 0.75,
+            "why": "title ~ \"Grand Love Shodown! Androids vs Universe 2\" (0.82)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 117 - Showdown Of Love! Androids vs Universe 2!!.mp4",
+            "name": "Episode 117 - Showdown Of Love! Androids vs Universe 2!!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20117%20-%20Showdown%20Of%20Love!%20Androids%20vs%20Universe%202!!.mp4",
+            "seconds": 1417,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 141
+            "sizeMB": 208
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Grand Love Shodown! Androids vs Universe 2\" (0.73)",
+              "item": "dragonballsuperdubb",
+              "itemTitle": "Dragon Ball Super Complete Dub",
+              "file": "5DargonBallSuper/Dragon Ball Super 117 Showdown of Love! - The Androids vs the 2nd Universe!.mp4",
+              "name": "5DargonBallSuper/Dragon Ball Super 117 Showdown of Love! - The Androids vs the 2nd Universe!",
+              "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20117%20Showdown%20of%20Love!%20-%20The%20Androids%20vs%20the%202nd%20Universe!.mp4",
+              "seconds": 1356,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 42,
@@ -2907,7 +3670,21 @@
             "playable": true,
             "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"A Perfect Survival Strategy! Universe 3's Menacing Assassins!!\" (0.78)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 120 - The Perfect Survival Tactic! Universe 3's Menacing Assassin!!.mp4",
+              "name": "Episode 120 - The Perfect Survival Tactic! Universe 3's Menacing Assassin!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20120%20-%20The%20Perfect%20Survival%20Tactic!%20Universe%203's%20Menacing%20Assassin!!.mp4",
+              "seconds": 1417,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 206
+            }
+          ]
         },
         {
           "number": 45,
@@ -2935,19 +3712,33 @@
           "airdate": "2018-01-07",
           "state": "REVIEW",
           "file": {
-            "conf": 0.6,
-            "why": "title ~ \"For One's Own Pride! Vegeta's Challenge to Be The Strongest!!\" (0.78)",
-            "item": "dragonballsuperdubb",
-            "itemTitle": "Dragon Ball Super Complete Dub",
-            "file": "5DargonBallSuper/Dragon Ball Super 122 With His Pride on the Line! - Vegeta's Challenge to Be the Strongest!.mp4",
-            "name": "5DargonBallSuper/Dragon Ball Super 122 With His Pride on the Line! - Vegeta's Challenge to Be the Strongest!",
-            "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20122%20With%20His%20Pride%20on%20the%20Line!%20-%20Vegeta's%20Challenge%20to%20Be%20the%20Strongest!.mp4",
-            "seconds": 1348,
+            "conf": 0.75,
+            "why": "title ~ \"For One's Own Pride! Vegeta's Challenge to Be The Strongest!!\" (1.00)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 122 - For One's Own Pride! Vegeta's Challenge To Be the Strongest!!.mp4",
+            "name": "Episode 122 - For One's Own Pride! Vegeta's Challenge To Be the Strongest!!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20122%20-%20For%20One's%20Own%20Pride!%20Vegeta's%20Challenge%20To%20Be%20the%20Strongest!!.mp4",
+            "seconds": 1417,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 140
+            "sizeMB": 252
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"For One's Own Pride! Vegeta's Challenge to Be The Strongest!!\" (0.78)",
+              "item": "dragonballsuperdubb",
+              "itemTitle": "Dragon Ball Super Complete Dub",
+              "file": "5DargonBallSuper/Dragon Ball Super 122 With His Pride on the Line! - Vegeta's Challenge to Be the Strongest!.mp4",
+              "name": "5DargonBallSuper/Dragon Ball Super 122 With His Pride on the Line! - Vegeta's Challenge to Be the Strongest!",
+              "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20122%20With%20His%20Pride%20on%20the%20Line!%20-%20Vegeta's%20Challenge%20to%20Be%20the%20Strongest!.mp4",
+              "seconds": 1348,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 47,
@@ -3003,19 +3794,33 @@
           "airdate": "2018-02-04",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "title ~ \"Surpass Even a God! Vegeta's Life-Risking Blow\" (0.70)",
-            "item": "dragon-ball-super-complete",
-            "itemTitle": "Dragon Ball Super [Complete]",
-            "file": "Episode 126 - Surpass Even A God! Vegeta's Desperate Blow!!.mp4",
-            "name": "Episode 126 - Surpass Even A God! Vegeta's Desperate Blow!!",
-            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20126%20-%20Surpass%20Even%20A%20God!%20Vegeta's%20Desperate%20Blow!!.mp4",
-            "seconds": 1417,
+            "conf": 0.6,
+            "why": "title ~ \"Surpass Even a God! Vegeta's Life-Risking Blow\" (0.64)",
+            "item": "dragonballsuperdubb",
+            "itemTitle": "Dragon Ball Super Complete Dub",
+            "file": "5DargonBallSuper/Dragon Ball Super 126 Surpass Even a God! - Vegeta's Sacrifice Strike!.mp4",
+            "name": "5DargonBallSuper/Dragon Ball Super 126 Surpass Even a God! - Vegeta's Sacrifice Strike!",
+            "url": "https://archive.org/download/dragonballsuperdubb/5DargonBallSuper%2FDragon%20Ball%20Super%20126%20Surpass%20Even%20a%20God!%20-%20Vegeta's%20Sacrifice%20Strike!.mp4",
+            "seconds": 1348,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 284
+            "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Surpass Even a God! Vegeta's Life-Risking Blow\" (0.70)",
+              "item": "dragon-ball-super-complete",
+              "itemTitle": "Dragon Ball Super [Complete]",
+              "file": "Episode 126 - Surpass Even A God! Vegeta's Desperate Blow!!.mp4",
+              "name": "Episode 126 - Surpass Even A God! Vegeta's Desperate Blow!!",
+              "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20126%20-%20Surpass%20Even%20A%20God!%20Vegeta's%20Desperate%20Blow!!.mp4",
+              "seconds": 1417,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 284
+            }
+          ]
         },
         {
           "number": 51,
@@ -3089,8 +3894,20 @@
           "number": 53,
           "name": "Trascending the Limit! Mastering Ultra Istinct!!",
           "airdate": "2018-03-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Trascending the Limit! Mastering Ultra Istinct!!\" (0.61)",
+            "item": "dragon-ball-super-complete",
+            "itemTitle": "Dragon Ball Super [Complete]",
+            "file": "Episode 129 - Limits Super Surpassed! Ultra Instinct Mastered!!.mp4",
+            "name": "Episode 129 - Limits Super Surpassed! Ultra Instinct Mastered!!",
+            "url": "https://archive.org/download/dragon-ball-super-complete/Episode%20129%20-%20Limits%20Super%20Surpassed!%20Ultra%20Instinct%20Mastered!!.mp4",
+            "seconds": 1417,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 289
+          },
           "alternates": []
         },
         {

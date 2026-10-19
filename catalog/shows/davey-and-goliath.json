@@ -3,7 +3,7 @@
   "slug": "davey-and-goliath",
   "type": "Classic TV",
   "network": "Syndicated",
-  "matchedAt": "2026-10-16T07:58:34.331Z",
+  "matchedAt": "2026-10-19T04:12:31.900Z",
   "addedAt": "2026-10-15T12:09:04.504Z",
   "tvmaze": {
     "id": 21976,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 66,
-    "live": 60,
-    "review": 6,
+    "live": 64,
+    "review": 2,
     "missing": 0,
     "pct": 100
   },
@@ -596,21 +596,35 @@
           "number": 5,
           "name": "The Parade",
           "airdate": "1961-10-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Parade\" (0.95)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "Davey-and-Goliath-Season-2",
             "itemTitle": "Davey and Goliath (1961) - Complete Season 2",
-            "file": "Davey and Goliath - S02E10 -The Parade-Webrip-CW23.mp4",
-            "name": "Davey and Goliath - S02E10 -The Parade-Webrip-CW23",
-            "url": "https://archive.org/download/Davey-and-Goliath-Season-2/Davey%20and%20Goliath%20-%20S02E10%20-The%20Parade-Webrip-CW23.mp4",
-            "seconds": 888,
+            "file": "Davey and Goliath - S02E05 -The Bell Ringer-Webrip-CW23.mp4",
+            "name": "Davey and Goliath - S02E05 -The Bell Ringer-Webrip-CW23",
+            "url": "https://archive.org/download/Davey-and-Goliath-Season-2/Davey%20and%20Goliath%20-%20S02E05%20-The%20Bell%20Ringer-Webrip-CW23.mp4",
+            "seconds": 889,
             "format": "h.264",
             "playable": true,
             "sizeMB": 91
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Parade\" (0.95)",
+              "item": "Davey-and-Goliath-Season-2",
+              "itemTitle": "Davey and Goliath (1961) - Complete Season 2",
+              "file": "Davey and Goliath - S02E10 -The Parade-Webrip-CW23.mp4",
+              "name": "Davey and Goliath - S02E10 -The Parade-Webrip-CW23",
+              "url": "https://archive.org/download/Davey-and-Goliath-Season-2/Davey%20and%20Goliath%20-%20S02E10%20-The%20Parade-Webrip-CW23.mp4",
+              "seconds": 888,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 91
+            }
+          ]
         },
         {
           "number": 6,
@@ -670,41 +684,69 @@
           "number": 8,
           "name": "Ten Little Indians",
           "airdate": "1961-12-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Ten Little Indians\" (0.95)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "Davey-and-Goliath-Season-2",
             "itemTitle": "Davey and Goliath (1961) - Complete Season 2",
-            "file": "Davey and Goliath - S02E02 -Ten Little Pins Formerly Ten Little Indians-Webrip-CW23.mp4",
-            "name": "Davey and Goliath - S02E02 -Ten Little Pins Formerly Ten Little Indians-Webrip-CW23",
-            "url": "https://archive.org/download/Davey-and-Goliath-Season-2/Davey%20and%20Goliath%20-%20S02E02%20-Ten%20Little%20Pins%20Formerly%20Ten%20Little%20Indians-Webrip-CW23.mp4",
-            "seconds": 832,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 86
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Not for Sale",
-          "airdate": "1961-12-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Not for Sale\" (0.95)",
-            "item": "Davey-and-Goliath-Season-2",
-            "itemTitle": "Davey and Goliath (1961) - Complete Season 2",
-            "file": "Davey and Goliath - S02E06 -Not For Sale-Webrip-CW23.mp4",
-            "name": "Davey and Goliath - S02E06 -Not For Sale-Webrip-CW23",
-            "url": "https://archive.org/download/Davey-and-Goliath-Season-2/Davey%20and%20Goliath%20-%20S02E06%20-Not%20For%20Sale-Webrip-CW23.mp4",
+            "file": "Davey and Goliath - S02E08 -The Runaway-Webrip-CW23.mp4",
+            "name": "Davey and Goliath - S02E08 -The Runaway-Webrip-CW23",
+            "url": "https://archive.org/download/Davey-and-Goliath-Season-2/Davey%20and%20Goliath%20-%20S02E08%20-The%20Runaway-Webrip-CW23.mp4",
             "seconds": 888,
             "format": "h.264",
             "playable": true,
             "sizeMB": 91
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Ten Little Indians\" (0.95)",
+              "item": "Davey-and-Goliath-Season-2",
+              "itemTitle": "Davey and Goliath (1961) - Complete Season 2",
+              "file": "Davey and Goliath - S02E02 -Ten Little Pins Formerly Ten Little Indians-Webrip-CW23.mp4",
+              "name": "Davey and Goliath - S02E02 -Ten Little Pins Formerly Ten Little Indians-Webrip-CW23",
+              "url": "https://archive.org/download/Davey-and-Goliath-Season-2/Davey%20and%20Goliath%20-%20S02E02%20-Ten%20Little%20Pins%20Formerly%20Ten%20Little%20Indians-Webrip-CW23.mp4",
+              "seconds": 832,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 86
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "name": "Not for Sale",
+          "airdate": "1961-12-10",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "Davey-and-Goliath-Season-2",
+            "itemTitle": "Davey and Goliath (1961) - Complete Season 2",
+            "file": "Davey and Goliath - S02E09 -Officer Bob-Webrip-CW23.mp4",
+            "name": "Davey and Goliath - S02E09 -Officer Bob-Webrip-CW23",
+            "url": "https://archive.org/download/Davey-and-Goliath-Season-2/Davey%20and%20Goliath%20-%20S02E09%20-Officer%20Bob-Webrip-CW23.mp4",
+            "seconds": 888,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 91
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Not for Sale\" (0.95)",
+              "item": "Davey-and-Goliath-Season-2",
+              "itemTitle": "Davey and Goliath (1961) - Complete Season 2",
+              "file": "Davey and Goliath - S02E06 -Not For Sale-Webrip-CW23.mp4",
+              "name": "Davey and Goliath - S02E06 -Not For Sale-Webrip-CW23",
+              "url": "https://archive.org/download/Davey-and-Goliath-Season-2/Davey%20and%20Goliath%20-%20S02E06%20-Not%20For%20Sale-Webrip-CW23.mp4",
+              "seconds": 888,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 91
+            }
+          ]
         },
         {
           "number": 10,
@@ -1007,21 +1049,35 @@
           "number": 6,
           "name": "Lemonade Stand",
           "airdate": "1964-09-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Lemonade Stand\" (0.95)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "Davey-and-Goliath-Season-3",
             "itemTitle": "Davey And Goliath (1961) - Complete Season 3",
-            "file": "Davey and Goliath - S03E08 -The Lemonade Stand-Webrip-CW23.mp4",
-            "name": "Davey and Goliath - S03E08 -The Lemonade Stand-Webrip-CW23",
-            "url": "https://archive.org/download/Davey-and-Goliath-Season-3/Davey%20and%20Goliath%20-%20S03E08%20-The%20Lemonade%20Stand-Webrip-CW23.mp4",
+            "file": "Davey and Goliath - S03E06 -The Bridge-Webrip-CW23.mp4",
+            "name": "Davey and Goliath - S03E06 -The Bridge-Webrip-CW23",
+            "url": "https://archive.org/download/Davey-and-Goliath-Season-3/Davey%20and%20Goliath%20-%20S03E06%20-The%20Bridge-Webrip-CW23.mp4",
             "seconds": 889,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 91
+            "sizeMB": 90
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Lemonade Stand\" (0.95)",
+              "item": "Davey-and-Goliath-Season-3",
+              "itemTitle": "Davey And Goliath (1961) - Complete Season 3",
+              "file": "Davey and Goliath - S03E08 -The Lemonade Stand-Webrip-CW23.mp4",
+              "name": "Davey and Goliath - S03E08 -The Lemonade Stand-Webrip-CW23",
+              "url": "https://archive.org/download/Davey-and-Goliath-Season-3/Davey%20and%20Goliath%20-%20S03E08%20-The%20Lemonade%20Stand-Webrip-CW23.mp4",
+              "seconds": 889,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 91
+            }
+          ]
         },
         {
           "number": 7,

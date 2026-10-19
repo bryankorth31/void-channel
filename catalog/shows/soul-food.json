@@ -3,7 +3,8 @@
   "slug": "soul-food",
   "type": "Drama",
   "network": "Showtime",
-  "matchedAt": "2026-10-16T07:56:48.196Z",
+  "matchedAt": "2026-10-19T04:10:54.089Z",
+  "addedAt": "2026-10-19T04:10:54.095Z",
   "tvmaze": {
     "id": 12302,
     "name": "Soul Food",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 74,
     "live": 0,
-    "review": 0,
-    "missing": 74,
-    "pct": 0
+    "review": 1,
+    "missing": 73,
+    "pct": 1
   },
   "seasons": [
     {
@@ -606,8 +607,20 @@
           "number": 11,
           "name": "Take It to the Limit",
           "airdate": "2004-05-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Take It to the Limit\" (0.95)",
+            "item": "soul-food-season-4-ep.-11-take-it-to-the-limit-original-showtime-broadcast-version",
+            "itemTitle": "Soul Food ( Season 4, Ep. 11) Take It To The Limit (Original Showtime Broadcast Version)",
+            "file": "Soul Food (Season 4, Ep. 11) - Take It To The Limit (Original Showtime Broadcast Version).mp4",
+            "name": "Soul Food (Season 4, Ep. 11) - Take It To The Limit (Original Showtime Broadcast Version)",
+            "url": "https://archive.org/download/soul-food-season-4-ep.-11-take-it-to-the-limit-original-showtime-broadcast-version/Soul%20Food%20(Season%204%2C%20Ep.%2011)%20-%20Take%20It%20To%20The%20Limit%20(Original%20Showtime%20Broadcast%20Version).mp4",
+            "seconds": 2959,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 213
+          },
           "alternates": []
         },
         {

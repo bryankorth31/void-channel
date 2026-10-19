@@ -3,7 +3,7 @@
   "slug": "hey-arnold",
   "type": "Animated",
   "network": "Nickelodeon",
-  "matchedAt": "2026-10-16T07:56:24.737Z",
+  "matchedAt": "2026-10-19T04:10:34.382Z",
   "addedAt": "2026-10-16T07:56:24.736Z",
   "tvmaze": {
     "id": 6482,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 100,
-    "live": 0,
-    "review": 14,
-    "missing": 86,
-    "pct": 14
+    "live": 20,
+    "review": 4,
+    "missing": 76,
+    "pct": 24
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "Downtown as Fruits / Eugene's Bike",
           "airdate": "1996-10-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "hey-arnold-1996",
             "itemTitle": "Hey Arnold! Complete Series 1080p",
@@ -47,9 +47,9 @@
           "number": 2,
           "name": "The Little Pink Book / Field Trip",
           "airdate": "1996-10-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "hey-arnold-1996",
             "itemTitle": "Hey Arnold! Complete Series 1080p",
@@ -67,9 +67,9 @@
           "number": 3,
           "name": "Arnold's Hat / Stoop Kid",
           "airdate": "1996-10-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "hey-arnold-1996",
             "itemTitle": "Hey Arnold! Complete Series 1080p",
@@ -81,15 +81,29 @@
             "playable": true,
             "sizeMB": 137
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Arnold's Hat / Stoop Kid\" (1.00)",
+              "item": "ka-blam-wont-crack-or-peel-nogglevision_202602",
+              "itemTitle": "My Collection of Classic Nickelodeon",
+              "file": "Hey Arnold! Arnold's Hat Stoop Kid.mp4",
+              "name": "Hey Arnold! Arnold's Hat Stoop Kid",
+              "url": "https://archive.org/download/ka-blam-wont-crack-or-peel-nogglevision_202602/Hey%20Arnold!%20Arnold's%20Hat%20Stoop%20Kid.mp4",
+              "seconds": 1373,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Helga's Makeover / The Old Building",
           "airdate": "1996-10-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "hey-arnold-1996",
             "itemTitle": "Hey Arnold! Complete Series 1080p",
@@ -107,9 +121,9 @@
           "number": 5,
           "name": "6th Grade Girls / The Baseball",
           "airdate": "1996-11-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "hey-arnold-1996",
             "itemTitle": "Hey Arnold! Complete Series 1080p",
@@ -127,9 +141,9 @@
           "number": 6,
           "name": "Heat / Snow",
           "airdate": "1996-11-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "hey-arnold-1996",
             "itemTitle": "Hey Arnold! Complete Series 1080p",
@@ -147,9 +161,9 @@
           "number": 7,
           "name": "Operation Ruthless / The Vacant Lot",
           "airdate": "1996-11-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "hey-arnold-1996",
             "itemTitle": "Hey Arnold! Complete Series 1080p",
@@ -167,9 +181,9 @@
           "number": 8,
           "name": "The List / Haunted Train",
           "airdate": "1996-11-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "hey-arnold-1996",
             "itemTitle": "Hey Arnold! Complete Series 1080p",
@@ -187,9 +201,9 @@
           "number": 9,
           "name": "Mugged / Roughin' It",
           "airdate": "1996-12-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "hey-arnold-1996",
             "itemTitle": "Hey Arnold! Complete Series 1080p",
@@ -207,9 +221,9 @@
           "number": 10,
           "name": "Door #16 / Arnold as Cupid",
           "airdate": "1996-12-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "hey-arnold-1996",
             "itemTitle": "Hey Arnold! Complete Series 1080p",
@@ -227,92 +241,339 @@
           "number": 11,
           "name": "Arnold's Christmas",
           "airdate": "1996-12-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "hey-arnold-1996",
+            "itemTitle": "Hey Arnold! Complete Series 1080p",
+            "file": "Season 1/Hey Arnold! S01E11 - Bench Warmer - Cool Jerk.mp4",
+            "name": "Season 1/Hey Arnold! S01E11 - Bench Warmer - Cool Jerk",
+            "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E11%20-%20Bench%20Warmer%20-%20Cool%20Jerk.mp4",
+            "seconds": 1416,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Arnold's Christmas\" (1.00)",
+              "item": "hey-arnold-1996",
+              "itemTitle": "Hey Arnold! Complete Series 1080p",
+              "file": "Season 1/Hey Arnold! S01E20 - Arnold's Christmas.mp4",
+              "name": "Season 1/Hey Arnold! S01E20 - Arnold's Christmas",
+              "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E20%20-%20Arnold's%20Christmas.mp4",
+              "seconds": 1445,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Benchwarmer / Cool Jerk",
           "airdate": "1996-12-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "hey-arnold-1996",
+            "itemTitle": "Hey Arnold! Complete Series 1080p",
+            "file": "Season 1/Hey Arnold! S01E12 - Das Subway - Wheezin' Ed.mp4",
+            "name": "Season 1/Hey Arnold! S01E12 - Das Subway - Wheezin' Ed",
+            "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E12%20-%20Das%20Subway%20-%20Wheezin'%20Ed.mp4",
+            "seconds": 1416,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Benchwarmer / Cool Jerk\" (1.00)",
+              "item": "hey-arnold-1996",
+              "itemTitle": "Hey Arnold! Complete Series 1080p",
+              "file": "Season 1/Hey Arnold! S01E11 - Bench Warmer - Cool Jerk.mp4",
+              "name": "Season 1/Hey Arnold! S01E11 - Bench Warmer - Cool Jerk",
+              "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E11%20-%20Bench%20Warmer%20-%20Cool%20Jerk.mp4",
+              "seconds": 1416,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Das Subway / Wheezin' Ed",
           "airdate": "1996-12-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "hey-arnold-1996",
+            "itemTitle": "Hey Arnold! Complete Series 1080p",
+            "file": "Season 1/Hey Arnold! S01E13 - Tutoring Torvald - Gerald Comes Over.mp4",
+            "name": "Season 1/Hey Arnold! S01E13 - Tutoring Torvald - Gerald Comes Over",
+            "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E13%20-%20Tutoring%20Torvald%20-%20Gerald%20Comes%20Over.mp4",
+            "seconds": 1416,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Das Subway / Wheezin' Ed\" (1.00)",
+              "item": "hey-arnold-1996",
+              "itemTitle": "Hey Arnold! Complete Series 1080p",
+              "file": "Season 1/Hey Arnold! S01E12 - Das Subway - Wheezin' Ed.mp4",
+              "name": "Season 1/Hey Arnold! S01E12 - Das Subway - Wheezin' Ed",
+              "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E12%20-%20Das%20Subway%20-%20Wheezin'%20Ed.mp4",
+              "seconds": 1416,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 14,
           "name": "Tutoring Torvald / Gerald Comes Over",
           "airdate": "1996-12-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "hey-arnold-1996",
+            "itemTitle": "Hey Arnold! Complete Series 1080p",
+            "file": "Season 1/Hey Arnold! S01E14 - The Spelling Bee - Pigeon Man.mp4",
+            "name": "Season 1/Hey Arnold! S01E14 - The Spelling Bee - Pigeon Man",
+            "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E14%20-%20The%20Spelling%20Bee%20-%20Pigeon%20Man.mp4",
+            "seconds": 1415,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Tutoring Torvald / Gerald Comes Over\" (1.00)",
+              "item": "hey-arnold-1996",
+              "itemTitle": "Hey Arnold! Complete Series 1080p",
+              "file": "Season 1/Hey Arnold! S01E13 - Tutoring Torvald - Gerald Comes Over.mp4",
+              "name": "Season 1/Hey Arnold! S01E13 - Tutoring Torvald - Gerald Comes Over",
+              "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E13%20-%20Tutoring%20Torvald%20-%20Gerald%20Comes%20Over.mp4",
+              "seconds": 1416,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Spelling Bee / Pigeon Man",
           "airdate": "1997-01-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "hey-arnold-1996",
+            "itemTitle": "Hey Arnold! Complete Series 1080p",
+            "file": "Season 1/Hey Arnold! S01E15 - Olga Comes Home - Salley's Comet.mp4",
+            "name": "Season 1/Hey Arnold! S01E15 - Olga Comes Home - Salley's Comet",
+            "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E15%20-%20Olga%20Comes%20Home%20-%20Salley's%20Comet.mp4",
+            "seconds": 1416,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Spelling Bee / Pigeon Man\" (0.95)",
+              "item": "hey-arnold-1996",
+              "itemTitle": "Hey Arnold! Complete Series 1080p",
+              "file": "Season 1/Hey Arnold! S01E14 - The Spelling Bee - Pigeon Man.mp4",
+              "name": "Season 1/Hey Arnold! S01E14 - The Spelling Bee - Pigeon Man",
+              "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E14%20-%20The%20Spelling%20Bee%20-%20Pigeon%20Man.mp4",
+              "seconds": 1415,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Olga Comes Home / Sally's Comet",
           "airdate": "1997-01-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "hey-arnold-1996",
+            "itemTitle": "Hey Arnold! Complete Series 1080p",
+            "file": "Season 1/Hey Arnold! S01E16 - Abner Comes Home - The Sewer King.mp4",
+            "name": "Season 1/Hey Arnold! S01E16 - Abner Comes Home - The Sewer King",
+            "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E16%20-%20Abner%20Comes%20Home%20-%20The%20Sewer%20King.mp4",
+            "seconds": 1415,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Olga Comes Home / Sally's Comet\" (0.91)",
+              "item": "hey-arnold-1996",
+              "itemTitle": "Hey Arnold! Complete Series 1080p",
+              "file": "Season 1/Hey Arnold! S01E15 - Olga Comes Home - Salley's Comet.mp4",
+              "name": "Season 1/Hey Arnold! S01E15 - Olga Comes Home - Salley's Comet",
+              "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E15%20-%20Olga%20Comes%20Home%20-%20Salley's%20Comet.mp4",
+              "seconds": 1416,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 17,
           "name": "Abner Come Home / The Sewer King",
           "airdate": "1997-01-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "hey-arnold-1996",
+            "itemTitle": "Hey Arnold! Complete Series 1080p",
+            "file": "Season 1/Hey Arnold! S01E17 - False Alarm - World Records.mp4",
+            "name": "Season 1/Hey Arnold! S01E17 - False Alarm - World Records",
+            "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E17%20-%20False%20Alarm%20-%20World%20Records.mp4",
+            "seconds": 1415,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Abner Come Home / The Sewer King\" (0.95)",
+              "item": "hey-arnold-1996",
+              "itemTitle": "Hey Arnold! Complete Series 1080p",
+              "file": "Season 1/Hey Arnold! S01E16 - Abner Comes Home - The Sewer King.mp4",
+              "name": "Season 1/Hey Arnold! S01E16 - Abner Comes Home - The Sewer King",
+              "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E16%20-%20Abner%20Comes%20Home%20-%20The%20Sewer%20King.mp4",
+              "seconds": 1415,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 18,
           "name": "False Alarm / World Records",
           "airdate": "1997-01-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "hey-arnold-1996",
+            "itemTitle": "Hey Arnold! Complete Series 1080p",
+            "file": "Season 1/Hey Arnold! S01E18 - Magic Show - Twenty Four Hours To Live.mp4",
+            "name": "Season 1/Hey Arnold! S01E18 - Magic Show - Twenty Four Hours To Live",
+            "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E18%20-%20Magic%20Show%20-%20Twenty%20Four%20Hours%20To%20Live.mp4",
+            "seconds": 1416,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"False Alarm / World Records\" (1.00)",
+              "item": "hey-arnold-1996",
+              "itemTitle": "Hey Arnold! Complete Series 1080p",
+              "file": "Season 1/Hey Arnold! S01E17 - False Alarm - World Records.mp4",
+              "name": "Season 1/Hey Arnold! S01E17 - False Alarm - World Records",
+              "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E17%20-%20False%20Alarm%20-%20World%20Records.mp4",
+              "seconds": 1415,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 19,
           "name": "Magic Show / 24 Hours to Live",
           "airdate": "1997-02-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Magic Show / 24 Hours to Live\" (1.00)",
-            "item": "ka-blam-wont-crack-or-peel-nogglevision_202602",
-            "itemTitle": "My Collection of Classic Nickelodeon",
-            "file": "Hey Arnold! Magic Show 24 Hours to Live.mp4",
-            "name": "Hey Arnold! Magic Show 24 Hours to Live",
-            "url": "https://archive.org/download/ka-blam-wont-crack-or-peel-nogglevision_202602/Hey%20Arnold!%20Magic%20Show%2024%20Hours%20to%20Live.mp4",
-            "seconds": 1370,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "hey-arnold-1996",
+            "itemTitle": "Hey Arnold! Complete Series 1080p",
+            "file": "Season 1/Hey Arnold! S01E19 - Part Time Friends - Runaway Float.mp4",
+            "name": "Season 1/Hey Arnold! S01E19 - Part Time Friends - Runaway Float",
+            "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E19%20-%20Part%20Time%20Friends%20-%20Runaway%20Float.mp4",
+            "seconds": 1415,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 129
+            "sizeMB": 137
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Magic Show / 24 Hours to Live\" (1.00)",
+              "item": "ka-blam-wont-crack-or-peel-nogglevision_202602",
+              "itemTitle": "My Collection of Classic Nickelodeon",
+              "file": "Hey Arnold! Magic Show 24 Hours to Live.mp4",
+              "name": "Hey Arnold! Magic Show 24 Hours to Live",
+              "url": "https://archive.org/download/ka-blam-wont-crack-or-peel-nogglevision_202602/Hey%20Arnold!%20Magic%20Show%2024%20Hours%20to%20Live.mp4",
+              "seconds": 1370,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 129
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Magic Show / 24 Hours to Live\" (0.76)",
+              "item": "hey-arnold-1996",
+              "itemTitle": "Hey Arnold! Complete Series 1080p",
+              "file": "Season 1/Hey Arnold! S01E18 - Magic Show - Twenty Four Hours To Live.mp4",
+              "name": "Season 1/Hey Arnold! S01E18 - Magic Show - Twenty Four Hours To Live",
+              "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E18%20-%20Magic%20Show%20-%20Twenty%20Four%20Hours%20To%20Live.mp4",
+              "seconds": 1416,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 20,
           "name": "Arnold's Valentine",
           "airdate": "1997-02-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "hey-arnold-1996",
+            "itemTitle": "Hey Arnold! Complete Series 1080p",
+            "file": "Season 1/Hey Arnold! S01E20 - Arnold's Christmas.mp4",
+            "name": "Season 1/Hey Arnold! S01E20 - Arnold's Christmas",
+            "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E20%20-%20Arnold's%20Christmas.mp4",
+            "seconds": 1445,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140
+          },
           "alternates": []
         }
       ]
@@ -480,8 +741,20 @@
           "number": 19,
           "name": "Runaway Float / Partners",
           "airdate": "1998-01-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Runaway Float / Partners\" (0.63)",
+            "item": "hey-arnold-1996",
+            "itemTitle": "Hey Arnold! Complete Series 1080p",
+            "file": "Season 1/Hey Arnold! S01E19 - Part Time Friends - Runaway Float.mp4",
+            "name": "Season 1/Hey Arnold! S01E19 - Part Time Friends - Runaway Float",
+            "url": "https://archive.org/download/hey-arnold-1996/Season%201%2FHey%20Arnold!%20S01E19%20-%20Part%20Time%20Friends%20-%20Runaway%20Float.mp4",
+            "seconds": 1415,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137
+          },
           "alternates": []
         }
       ]

@@ -3,7 +3,7 @@
   "slug": "mission-hill",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-16T07:56:38.561Z",
+  "matchedAt": "2026-10-19T04:10:44.633Z",
   "addedAt": "2026-10-16T07:56:38.560Z",
   "tvmaze": {
     "id": 7761,
@@ -43,19 +43,6 @@
           },
           "alternates": [
             {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "mission-hill-preservation",
-              "itemTitle": "Mission Hill Preservation",
-              "file": "101 - Pilot (or The Douchebag Aspect).mp4",
-              "name": "101 - Pilot (or The Douchebag Aspect)",
-              "url": "https://archive.org/download/mission-hill-preservation/101%20-%20Pilot%20(or%20The%20Douchebag%20Aspect).mp4",
-              "seconds": 1357,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 187
-            },
-            {
               "conf": 0.85,
               "why": "S/E in filename",
               "item": "mission-hill-broadcast-version",
@@ -67,6 +54,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 436
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "mission-hill-preservation",
+              "itemTitle": "Mission Hill Preservation",
+              "file": "101 - Pilot (or The Douchebag Aspect).mp4",
+              "name": "101 - Pilot (or The Douchebag Aspect)",
+              "url": "https://archive.org/download/mission-hill-preservation/101%20-%20Pilot%20(or%20The%20Douchebag%20Aspect).mp4",
+              "seconds": 1357,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 187
             }
           ]
         },
@@ -114,19 +114,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 182
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"Kevin's Problem (or Porno for Pyro)\" (0.71)",
-              "item": "mission-hill-broadcast-version",
-              "itemTitle": "mission hill broadcast version",
-              "file": "103 - Kevins Problem.mp4",
-              "name": "103 - Kevins Problem",
-              "url": "https://archive.org/download/mission-hill-broadcast-version/103%20-%20Kevins%20Problem.mp4",
-              "seconds": 1353,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 447
             }
           ]
         },
@@ -177,16 +164,16 @@
             },
             {
               "conf": 0.55,
-              "why": "title ~ \"Andy and Kevin Make a Friend (or One Bang for Two Brothers)\" (0.64)",
-              "item": "mission-hill-broadcast-version",
-              "itemTitle": "mission hill broadcast version",
-              "file": "105 - Andy and Kevin Make a Friend.mp4",
-              "name": "105 - Andy and Kevin Make a Friend",
-              "url": "https://archive.org/download/mission-hill-broadcast-version/105%20-%20Andy%20and%20Kevin%20Make%20a%20Friend.mp4",
+              "why": "title ~ \"Andy and Kevin Make a Friend (or One Bang for Two Brothers)\" (0.62)",
+              "item": "underrated-show-69420",
+              "itemTitle": "Mission Hill - The Complete Series (720p Restoration)",
+              "file": "S01E05 - One Bang for Two Brothers (720p YouTube Rip).mp4",
+              "name": "S01E05 - One Bang for Two Brothers (720p YouTube Rip)",
+              "url": "https://archive.org/download/underrated-show-69420/S01E05%20-%20One%20Bang%20for%20Two%20Brothers%20(720p%20YouTube%20Rip).mp4",
               "seconds": 1326,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 396
+              "sizeMB": 172
             }
           ]
         },
@@ -221,19 +208,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 130
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Kevin vs. the SAT (or Nocturnal Admissions)\" (1.00)",
-              "item": "mission-hill-preservation",
-              "itemTitle": "Mission Hill Preservation",
-              "file": "107 - Kevin Vs. the SAT (or Nocturnal Admissions).mp4",
-              "name": "107 - Kevin Vs. the SAT (or Nocturnal Admissions)",
-              "url": "https://archive.org/download/mission-hill-preservation/107%20-%20Kevin%20Vs.%20the%20SAT%20(or%20Nocturnal%20Admissions).mp4",
-              "seconds": 1354,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 186
             }
           ]
         },
@@ -255,7 +229,47 @@
             "playable": true,
             "sizeMB": 396
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "mission-hill-preservation",
+              "itemTitle": "Mission Hill Preservation",
+              "file": "105 - Andy and Kevin Make a Friend (or One Bang for Two Brothers).mp4",
+              "name": "105 - Andy and Kevin Make a Friend (or One Bang for Two Brothers)",
+              "url": "https://archive.org/download/mission-hill-preservation/105%20-%20Andy%20and%20Kevin%20Make%20a%20Friend%20(or%20One%20Bang%20for%20Two%20Brothers).mp4",
+              "seconds": 1326,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 182
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "underrated-show-69420",
+              "itemTitle": "Mission Hill - The Complete Series (720p Restoration)",
+              "file": "S01E05 - One Bang for Two Brothers (720p YouTube Rip).mp4",
+              "name": "S01E05 - One Bang for Two Brothers (720p YouTube Rip)",
+              "url": "https://archive.org/download/underrated-show-69420/S01E05%20-%20One%20Bang%20for%20Two%20Brothers%20(720p%20YouTube%20Rip).mp4",
+              "seconds": 1326,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 172
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Andy Gets a Promotion (or How to Get Head in Business Without Really Trying)\" (0.75)",
+              "item": "underrated-show-69420",
+              "itemTitle": "Mission Hill - The Complete Series (720p Restoration)",
+              "file": "S01E06 - How to Get Head in Business Without Really Trying (720p YouTube Rip).mp4",
+              "name": "S01E06 - How to Get Head in Business Without Really Trying (720p YouTube Rip)",
+              "url": "https://archive.org/download/underrated-show-69420/S01E06%20-%20How%20to%20Get%20Head%20in%20Business%20Without%20Really%20Trying%20(720p%20YouTube%20Rip).mp4",
+              "seconds": 1327,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 177
+            }
+          ]
         },
         {
           "number": 6,
@@ -277,17 +291,30 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "title ~ \"Unemployment Part 1 (or Brother's Big Boner)\" (0.67)",
-              "item": "mission-hill-broadcast-version",
-              "itemTitle": "mission hill broadcast version",
-              "file": "108 - Unemployment Part 1.mp4",
-              "name": "108 - Unemployment Part 1",
-              "url": "https://archive.org/download/mission-hill-broadcast-version/108%20-%20Unemployment%20Part%201.mp4",
-              "seconds": 1326,
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "mission-hill-preservation",
+              "itemTitle": "Mission Hill Preservation",
+              "file": "106 - Andy Gets a Promotion (or How to Get Head in Business Without Really Trying).mp4",
+              "name": "106 - Andy Gets a Promotion (or How to Get Head in Business Without Really Trying)",
+              "url": "https://archive.org/download/mission-hill-preservation/106%20-%20Andy%20Gets%20a%20Promotion%20(or%20How%20to%20Get%20Head%20in%20Business%20Without%20Really%20Trying).mp4",
+              "seconds": 1327,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 420
+              "sizeMB": 183
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "underrated-show-69420",
+              "itemTitle": "Mission Hill - The Complete Series (720p Restoration)",
+              "file": "S01E06 - How to Get Head in Business Without Really Trying (720p YouTube Rip).mp4",
+              "name": "S01E06 - How to Get Head in Business Without Really Trying (720p YouTube Rip)",
+              "url": "https://archive.org/download/underrated-show-69420/S01E06%20-%20How%20to%20Get%20Head%20in%20Business%20Without%20Really%20Trying%20(720p%20YouTube%20Rip).mp4",
+              "seconds": 1327,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 177
             }
           ]
         },
@@ -384,30 +411,17 @@
               "sizeMB": 211
             },
             {
-              "conf": 0.75,
-              "why": "title ~ \"Andy Joins the PTA (or Great Sexpectations)\" (1.00)",
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "mission-hill-preservation",
               "itemTitle": "Mission Hill Preservation",
-              "file": "102 - Andy Joins the PTA (or Great Sexpectations).mp4",
-              "name": "102 - Andy Joins the PTA (or Great Sexpectations)",
-              "url": "https://archive.org/download/mission-hill-preservation/102%20-%20Andy%20Joins%20the%20PTA%20(or%20Great%20Sexpectations).mp4",
-              "seconds": 1325,
+              "file": "108 - Unemployment Part 1 (or Brother's Big Boner).mp4",
+              "name": "108 - Unemployment Part 1 (or Brother's Big Boner)",
+              "url": "https://archive.org/download/mission-hill-preservation/108%20-%20Unemployment%20Part%201%20(or%20Brother's%20Big%20Boner).mp4",
+              "seconds": 1326,
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 182
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"Andy Joins the PTA (or Great Sexpectations)\" (0.62)",
-              "item": "mission-hill-broadcast-version",
-              "itemTitle": "mission hill broadcast version",
-              "file": "102 - Andy Joins the PTA.mp4",
-              "name": "102 - Andy Joins the PTA",
-              "url": "https://archive.org/download/mission-hill-broadcast-version/102%20-%20Andy%20Joins%20the%20PTA.mp4",
-              "seconds": 1325,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 437
             }
           ]
         },
@@ -477,8 +491,8 @@
           "airdate": "2002-07-21",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mission-hill-broadcast-version",
             "itemTitle": "mission hill broadcast version",
             "file": "110 - Kevin Finds Love.mp4",
@@ -491,19 +505,6 @@
           },
           "alternates": [
             {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "mission-hill-preservation",
-              "itemTitle": "Mission Hill Preservation",
-              "file": "110 - Kevin Finds Love (or Hot for Weirdie).mp4",
-              "name": "110 - Kevin Finds Love (or Hot for Weirdie)",
-              "url": "https://archive.org/download/mission-hill-preservation/110%20-%20Kevin%20Finds%20Love%20(or%20Hot%20for%20Weirdie).mp4",
-              "seconds": 1325,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 182
-            },
-            {
               "conf": 0.85,
               "why": "S/E in filename",
               "item": "underrated-show-69420",
@@ -515,6 +516,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 236
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "mission-hill-preservation",
+              "itemTitle": "Mission Hill Preservation",
+              "file": "110 - Kevin Finds Love (or Hot for Weirdie).mp4",
+              "name": "110 - Kevin Finds Love (or Hot for Weirdie)",
+              "url": "https://archive.org/download/mission-hill-preservation/110%20-%20Kevin%20Finds%20Love%20(or%20Hot%20for%20Weirdie).mp4",
+              "seconds": 1325,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 182
             }
           ]
         },
@@ -524,8 +538,8 @@
           "airdate": "2002-07-28",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mission-hill-broadcast-version",
             "itemTitle": "mission hill broadcast version",
             "file": "111 - Stories of Hope and Forgiveness.mp4",
@@ -538,8 +552,21 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "underrated-show-69420",
+              "itemTitle": "Mission Hill - The Complete Series (720p Restoration)",
+              "file": "S01E11 -  Day of the Jackass (720p YouTube Rip).mp4",
+              "name": "S01E11 -  Day of the Jackass (720p YouTube Rip)",
+              "url": "https://archive.org/download/underrated-show-69420/S01E11%20-%20%20Day%20of%20the%20Jackass%20(720p%20YouTube%20Rip).mp4",
+              "seconds": 1352,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 189
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "mission-hill-preservation",
               "itemTitle": "Mission Hill Preservation",
               "file": "111 - Stories of Hope and Forgiveness (or Day of the Jackass).mp4",
@@ -560,20 +587,33 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "mission-hill-broadcast-version",
-            "itemTitle": "mission hill broadcast version",
-            "file": "112 - Happy Birthday, Kevin.mp4",
-            "name": "112 - Happy Birthday, Kevin",
-            "url": "https://archive.org/download/mission-hill-broadcast-version/112%20-%20Happy%20Birthday%2C%20Kevin.mp4",
+            "item": "underrated-show-69420",
+            "itemTitle": "Mission Hill - The Complete Series (720p Restoration)",
+            "file": "S01e12 - Happy Birthday Douchebag (720p YouTube Rip).mp4",
+            "name": "S01e12 - Happy Birthday Douchebag (720p YouTube Rip)",
+            "url": "https://archive.org/download/underrated-show-69420/S01e12%20-%20Happy%20Birthday%20Douchebag%20(720p%20YouTube%20Rip).mp4",
             "seconds": 1326,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 383
+            "sizeMB": 180
           },
           "alternates": [
             {
-              "conf": 1,
-              "why": "S/E in filename + title match",
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "mission-hill-broadcast-version",
+              "itemTitle": "mission hill broadcast version",
+              "file": "112 - Happy Birthday, Kevin.mp4",
+              "name": "112 - Happy Birthday, Kevin",
+              "url": "https://archive.org/download/mission-hill-broadcast-version/112%20-%20Happy%20Birthday%2C%20Kevin.mp4",
+              "seconds": 1326,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 383
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "mission-hill-preservation",
               "itemTitle": "Mission Hill Preservation",
               "file": "112 - Happy Birthday, Kevin (or Happy Birthday, Douchebag).mp4",
@@ -583,19 +623,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 182
-            },
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "underrated-show-69420",
-              "itemTitle": "Mission Hill - The Complete Series (720p Restoration)",
-              "file": "S01e12 - Happy Birthday Douchebag (720p YouTube Rip).mp4",
-              "name": "S01e12 - Happy Birthday Douchebag (720p YouTube Rip)",
-              "url": "https://archive.org/download/underrated-show-69420/S01e12%20-%20Happy%20Birthday%20Douchebag%20(720p%20YouTube%20Rip).mp4",
-              "seconds": 1326,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 180
             }
           ]
         },
@@ -618,6 +645,19 @@
             "sizeMB": 186
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "underrated-show-69420",
+              "itemTitle": "Mission Hill - The Complete Series (720p Restoration)",
+              "file": "S01E13 - I Married a Gay Man from Outer Space (720p YouTube Rip).mp4",
+              "name": "S01E13 - I Married a Gay Man from Outer Space (720p YouTube Rip)",
+              "url": "https://archive.org/download/underrated-show-69420/S01E13%20-%20I%20Married%20a%20Gay%20Man%20from%20Outer%20Space%20(720p%20YouTube%20Rip).mp4",
+              "seconds": 1356,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 176
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",

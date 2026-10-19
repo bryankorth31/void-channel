@@ -3,7 +3,7 @@
   "slug": "histeria",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:35.222Z",
+  "matchedAt": "2026-10-19T04:10:42.160Z",
   "addedAt": "2026-10-15T18:51:46.984Z",
   "tvmaze": {
     "id": 15458,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 52,
-    "live": 26,
-    "review": 20,
-    "missing": 6,
-    "pct": 88
+    "live": 39,
+    "review": 9,
+    "missing": 4,
+    "pct": 92
   },
   "seasons": [
     {
@@ -67,9 +67,9 @@
           "number": 3,
           "name": "The Attack of the Vikings",
           "airdate": "1998-09-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "histeria-1998-2000-the-complete-series",
             "itemTitle": "Histeria! (1998–2000) – The Complete Series",
@@ -255,9 +255,9 @@
           "number": 13,
           "name": "Tribute to Tyrants",
           "airdate": "1998-09-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "histeria-1998-2000-the-complete-series",
             "itemTitle": "Histeria! (1998–2000) – The Complete Series",
@@ -295,9 +295,9 @@
           "number": 15,
           "name": "Great Heroes of France",
           "airdate": "1998-10-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "histeria-1998-2000-the-complete-series",
             "itemTitle": "Histeria! (1998–2000) – The Complete Series",
@@ -315,9 +315,9 @@
           "number": 16,
           "name": "The Terrible Tudors",
           "airdate": "1998-10-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "histeria-1998-2000-the-complete-series",
             "itemTitle": "Histeria! (1998–2000) – The Complete Series",
@@ -469,9 +469,9 @@
           "number": 23,
           "name": "Russian Revolution",
           "airdate": "1998-10-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "histeria-1998-2000-the-complete-series",
             "itemTitle": "Histeria! (1998–2000) – The Complete Series",
@@ -509,9 +509,9 @@
           "number": 25,
           "name": "Meglomaniacs",
           "airdate": "1998-10-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "histeria-1998-2000-the-complete-series",
             "itemTitle": "Histeria! (1998–2000) – The Complete Series",
@@ -529,9 +529,9 @@
           "number": 26,
           "name": "Hooray for Presidents",
           "airdate": "1998-11-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "histeria-1998-2000-the-complete-series",
             "itemTitle": "Histeria! (1998–2000) – The Complete Series",
@@ -589,9 +589,9 @@
           "number": 29,
           "name": "Return to China",
           "airdate": "1998-11-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "histeria-1998-2000-the-complete-series",
             "itemTitle": "Histeria! (1998–2000) – The Complete Series",
@@ -609,21 +609,35 @@
           "number": 30,
           "name": "Super Writers",
           "airdate": "1998-11-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Super Writers\" (1.00)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "histeria-1998-2000-the-complete-series",
             "itemTitle": "Histeria! (1998–2000) – The Complete Series",
-            "file": "S01e31 – Super Writers.mp4",
-            "name": "S01e31 – Super Writers",
-            "url": "https://archive.org/download/histeria-1998-2000-the-complete-series/S01e31%20%E2%80%93%20Super%20Writers.mp4",
-            "seconds": 1312,
+            "file": "S01e30 – Loud Kiddington’s Ancient History.mp4",
+            "name": "S01e30 – Loud Kiddington’s Ancient History",
+            "url": "https://archive.org/download/histeria-1998-2000-the-complete-series/S01e30%20%E2%80%93%20Loud%20Kiddington%E2%80%99s%20Ancient%20History.mp4",
+            "seconds": 1325,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 173
+            "sizeMB": 190
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Super Writers\" (1.00)",
+              "item": "histeria-1998-2000-the-complete-series",
+              "itemTitle": "Histeria! (1998–2000) – The Complete Series",
+              "file": "S01e31 – Super Writers.mp4",
+              "name": "S01e31 – Super Writers",
+              "url": "https://archive.org/download/histeria-1998-2000-the-complete-series/S01e31%20%E2%80%93%20Super%20Writers.mp4",
+              "seconds": 1312,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 173
+            }
+          ]
         },
         {
           "number": 31,
@@ -677,27 +691,55 @@
             "playable": true,
             "sizeMB": 181
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Presidential People\" (1.00)",
+              "item": "histeria-1998-2000-the-complete-series",
+              "itemTitle": "Histeria! (1998–2000) – The Complete Series",
+              "file": "S01e33 – Presidential People.mp4",
+              "name": "S01e33 – Presidential People",
+              "url": "https://archive.org/download/histeria-1998-2000-the-complete-series/S01e33%20%E2%80%93%20Presidential%20People.mp4",
+              "seconds": 1295,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 173
+            }
+          ]
         },
         {
           "number": 33,
           "name": "Writers of the Purple Prose",
           "airdate": "1999-02-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Writers of the Purple Prose\" (1.00)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "histeria-1998-2000-the-complete-series",
             "itemTitle": "Histeria! (1998–2000) – The Complete Series",
-            "file": "S01e34 – Writers of the Purple Prose.mp4",
-            "name": "S01e34 – Writers of the Purple Prose",
-            "url": "https://archive.org/download/histeria-1998-2000-the-complete-series/S01e34%20%E2%80%93%20Writers%20of%20the%20Purple%20Prose.mp4",
-            "seconds": 1305,
+            "file": "S01e33 – Presidential People.mp4",
+            "name": "S01e33 – Presidential People",
+            "url": "https://archive.org/download/histeria-1998-2000-the-complete-series/S01e33%20%E2%80%93%20Presidential%20People.mp4",
+            "seconds": 1295,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 153
+            "sizeMB": 173
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Writers of the Purple Prose\" (1.00)",
+              "item": "histeria-1998-2000-the-complete-series",
+              "itemTitle": "Histeria! (1998–2000) – The Complete Series",
+              "file": "S01e34 – Writers of the Purple Prose.mp4",
+              "name": "S01e34 – Writers of the Purple Prose",
+              "url": "https://archive.org/download/histeria-1998-2000-the-complete-series/S01e34%20%E2%80%93%20Writers%20of%20the%20Purple%20Prose.mp4",
+              "seconds": 1305,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 153
+            }
+          ]
         },
         {
           "number": 34,
@@ -771,7 +813,21 @@
             "playable": true,
             "sizeMB": 179
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Loud Kiddington's Ancient History\" (1.00)",
+              "item": "histeria-1998-2000-the-complete-series",
+              "itemTitle": "Histeria! (1998–2000) – The Complete Series",
+              "file": "S01e30 – Loud Kiddington’s Ancient History.mp4",
+              "name": "S01e30 – Loud Kiddington’s Ancient History",
+              "url": "https://archive.org/download/histeria-1998-2000-the-complete-series/S01e30%20%E2%80%93%20Loud%20Kiddington%E2%80%99s%20Ancient%20History.mp4",
+              "seconds": 1325,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 190
+            }
+          ]
         },
         {
           "number": 37,
@@ -797,9 +853,9 @@
           "number": 38,
           "name": "Better Living Through Science",
           "airdate": "1999-03-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "histeria-1998-2000-the-complete-series",
             "itemTitle": "Histeria! (1998–2000) – The Complete Series",
@@ -937,9 +993,9 @@
           "number": 45,
           "name": "20th Century Presidents",
           "airdate": "1999-05-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "histeria-1998-2000-the-complete-series",
             "itemTitle": "Histeria! (1998–2000) – The Complete Series",
@@ -957,8 +1013,20 @@
           "number": 46,
           "name": "Histeria Around the World (2)",
           "airdate": "1999-06-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "histeria-1998-2000-the-complete-series",
+            "itemTitle": "Histeria! (1998–2000) – The Complete Series",
+            "file": "S01e46 – Histeria! Around the World, Part 2.mp4",
+            "name": "S01e46 – Histeria! Around the World, Part 2",
+            "url": "https://archive.org/download/histeria-1998-2000-the-complete-series/S01e46%20%E2%80%93%20Histeria!%20Around%20the%20World%2C%20Part%202.mp4",
+            "seconds": 1299,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 173
+          },
           "alternates": []
         }
       ]
@@ -978,8 +1046,20 @@
           "number": 2,
           "name": "Heroes of Truth and Justice",
           "airdate": "2000-01-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Heroes of Truth and Justice\" (1.00)",
+            "item": "histeria-1998-2000-the-complete-series",
+            "itemTitle": "Histeria! (1998–2000) – The Complete Series",
+            "file": "S01e50 – Heroes of Truth and Justice.mp4",
+            "name": "S01e50 – Heroes of Truth and Justice",
+            "url": "https://archive.org/download/histeria-1998-2000-the-complete-series/S01e50%20%E2%80%93%20Heroes%20of%20Truth%20and%20Justice.mp4",
+            "seconds": 1300,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 186
+          },
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "we-can-be-heroes",
   "type": "British and Beyond",
   "network": "ABC Australia",
-  "matchedAt": "2026-10-16T07:57:09.678Z",
+  "matchedAt": "2026-10-19T04:11:16.908Z",
   "addedAt": "2026-10-16T07:57:09.678Z",
   "tvmaze": {
     "id": 1811,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 6,
     "live": 0,
-    "review": 0,
-    "missing": 6,
-    "pct": 0
+    "review": 6,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -27,48 +27,176 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2005-07-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "we-can-be-heroes-finding-the-australian-of-the-year-episodes",
+            "itemTitle": "We Can Be Heroes - Finding the Australian of the Year (Episodes)",
+            "file": "Episode 1 (Alternate Version).mp4",
+            "name": "Episode 1 (Alternate Version)",
+            "url": "https://archive.org/download/we-can-be-heroes-finding-the-australian-of-the-year-episodes/Episode%201%20(Alternate%20Version).mp4",
+            "seconds": 1666,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 174
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "we-can-be-heroes-finding-the-australian-of-the-year-episodes",
+              "itemTitle": "We Can Be Heroes - Finding the Australian of the Year (Episodes)",
+              "file": "Episode 1.mp4",
+              "name": "Episode 1",
+              "url": "https://archive.org/download/we-can-be-heroes-finding-the-australian-of-the-year-episodes/Episode%201.mp4",
+              "seconds": 1691,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 61
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2005-08-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "we-can-be-heroes-finding-the-australian-of-the-year-episodes",
+            "itemTitle": "We Can Be Heroes - Finding the Australian of the Year (Episodes)",
+            "file": "Episode 2 (Alternate Version).mp4",
+            "name": "Episode 2 (Alternate Version)",
+            "url": "https://archive.org/download/we-can-be-heroes-finding-the-australian-of-the-year-episodes/Episode%202%20(Alternate%20Version).mp4",
+            "seconds": 1613,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 167
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "we-can-be-heroes-finding-the-australian-of-the-year-episodes",
+              "itemTitle": "We Can Be Heroes - Finding the Australian of the Year (Episodes)",
+              "file": "Episode 2.mp4",
+              "name": "Episode 2",
+              "url": "https://archive.org/download/we-can-be-heroes-finding-the-australian-of-the-year-episodes/Episode%202.mp4",
+              "seconds": 1728,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 62
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Episode 3",
           "airdate": "2005-08-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "we-can-be-heroes-finding-the-australian-of-the-year-episodes",
+            "itemTitle": "We Can Be Heroes - Finding the Australian of the Year (Episodes)",
+            "file": "Episode 3 (Alternate Version).mp4",
+            "name": "Episode 3 (Alternate Version)",
+            "url": "https://archive.org/download/we-can-be-heroes-finding-the-australian-of-the-year-episodes/Episode%203%20(Alternate%20Version).mp4",
+            "seconds": 1617,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 169
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "we-can-be-heroes-finding-the-australian-of-the-year-episodes",
+              "itemTitle": "We Can Be Heroes - Finding the Australian of the Year (Episodes)",
+              "file": "Episode 3.mp4",
+              "name": "Episode 3",
+              "url": "https://archive.org/download/we-can-be-heroes-finding-the-australian-of-the-year-episodes/Episode%203.mp4",
+              "seconds": 1693,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 61
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Episode 4",
           "airdate": "2005-08-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "we-can-be-heroes-finding-the-australian-of-the-year-episodes",
+            "itemTitle": "We Can Be Heroes - Finding the Australian of the Year (Episodes)",
+            "file": "Episode 4 (Alternate Version).mp4",
+            "name": "Episode 4 (Alternate Version)",
+            "url": "https://archive.org/download/we-can-be-heroes-finding-the-australian-of-the-year-episodes/Episode%204%20(Alternate%20Version).mp4",
+            "seconds": 1626,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 169
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "2005-08-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "we-can-be-heroes-finding-the-australian-of-the-year-episodes",
+            "itemTitle": "We Can Be Heroes - Finding the Australian of the Year (Episodes)",
+            "file": "Episode 5 (Alternate Version).mp4",
+            "name": "Episode 5 (Alternate Version)",
+            "url": "https://archive.org/download/we-can-be-heroes-finding-the-australian-of-the-year-episodes/Episode%205%20(Alternate%20Version).mp4",
+            "seconds": 1633,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 170
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "we-can-be-heroes-finding-the-australian-of-the-year-episodes",
+              "itemTitle": "We Can Be Heroes - Finding the Australian of the Year (Episodes)",
+              "file": "Episode 5.mp4",
+              "name": "Episode 5",
+              "url": "https://archive.org/download/we-can-be-heroes-finding-the-australian-of-the-year-episodes/Episode%205.mp4",
+              "seconds": 1754,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 63
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Episode 6",
           "airdate": "2005-08-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "we-can-be-heroes-finding-the-australian-of-the-year-episodes",
+            "itemTitle": "We Can Be Heroes - Finding the Australian of the Year (Episodes)",
+            "file": "Episode 6 (Alternate Version).mp4",
+            "name": "Episode 6 (Alternate Version)",
+            "url": "https://archive.org/download/we-can-be-heroes-finding-the-australian-of-the-year-episodes/Episode%206%20(Alternate%20Version).mp4",
+            "seconds": 1678,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 175
+          },
           "alternates": []
         }
       ]

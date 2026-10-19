@@ -3,7 +3,7 @@
   "slug": "undergrads",
   "type": "MTV",
   "network": "MTV",
-  "matchedAt": "2026-10-16T07:56:41.655Z",
+  "matchedAt": "2026-10-19T04:10:47.440Z",
   "addedAt": "2026-10-15T12:07:45.473Z",
   "tvmaze": {
     "id": 12848,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 13,
     "live": 0,
-    "review": 2,
-    "missing": 11,
-    "pct": 15
+    "review": 1,
+    "missing": 12,
+    "pct": 8
   },
   "seasons": [
     {
@@ -127,20 +127,8 @@
           "number": 12,
           "name": "Risk",
           "airdate": "2001-08-05",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Risk\" (1.00)",
-            "item": "UndergradsDub",
-            "itemTitle": "Undergrads Dub",
-            "file": "Undergrads-Risk.mp4",
-            "name": "Undergrads-Risk",
-            "url": "https://archive.org/download/UndergradsDub/Undergrads-Risk.mp4",
-            "seconds": 1283,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 133
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

@@ -3,7 +3,8 @@
   "slug": "ace-of-the-diamond",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:43.624Z",
+  "matchedAt": "2026-10-19T04:11:45.417Z",
+  "addedAt": "2026-10-19T04:11:45.421Z",
   "tvmaze": {
     "id": 2871,
     "name": "Ace of Diamond",
@@ -14,8 +15,8 @@
   "coverage": {
     "total": 202,
     "live": 0,
-    "review": 0,
-    "missing": 202,
+    "review": 1,
+    "missing": 201,
     "pct": 0
   },
   "seasons": [
@@ -1473,8 +1474,20 @@
           "number": 2,
           "name": "For the Team",
           "airdate": "2026-04-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"For the Team\" (0.95)",
+            "item": "Al3asqTeamAceOfTheDiamond105CDB24B2480p",
+            "itemTitle": "[ Al 3asq Team] Ace Of The Diamond 10 [ 5 CDB 24 B 2] 480p",
+            "file": "[Al3asq-Team] Ace of the Diamond - 10 - [5CDB24B2] - 480p.mp4",
+            "name": "[Al3asq-Team] Ace of the Diamond - 10 - [5CDB24B2] - 480p",
+            "url": "https://archive.org/download/Al3asqTeamAceOfTheDiamond105CDB24B2480p/%5BAl3asq-Team%5D%20Ace%20of%20the%20Diamond%20-%2010%20-%20%5B5CDB24B2%5D%20-%20480p.mp4",
+            "seconds": 1445,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 92
+          },
           "alternates": []
         },
         {

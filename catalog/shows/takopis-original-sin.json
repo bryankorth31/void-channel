@@ -3,7 +3,7 @@
   "slug": "takopis-original-sin",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:41.099Z",
+  "matchedAt": "2026-10-19T04:11:43.158Z",
   "addedAt": "2026-10-15T12:08:19.973Z",
   "tvmaze": {
     "id": 81377,
@@ -75,7 +75,21 @@
             "playable": true,
             "sizeMB": 158
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Takopi's Salvation\" (0.64)",
+              "item": "takopis_original_sin",
+              "itemTitle": "Takopi's Original Sin",
+              "file": "02-Takopi's Salvation.mp4",
+              "name": "02-Takopi's Salvation",
+              "url": "https://archive.org/download/takopis_original_sin/02-Takopi's%20Salvation.mp4",
+              "seconds": 1300,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 116
+            }
+          ]
         },
         {
           "number": 3,
@@ -83,19 +97,46 @@
           "airdate": "2025-07-11",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 5 in \"Takopi's Original Sin\"",
-            "item": "takopis-original-sin",
-            "itemTitle": "Takopi's Original Sin",
-            "file": "Takopii no Genzai - 04.mp4",
-            "name": "Takopii no Genzai - 04",
-            "url": "https://archive.org/download/takopis-original-sin/Takopii%20no%20Genzai%20-%2004.mp4",
-            "seconds": 1421,
-            "format": "h.264",
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "takopis-original-sin-episode-1-full-english-sub-1080-p",
+            "itemTitle": "Takopi's Original Sin Episode 1-5 Full English Sub 1080 P",
+            "file": "Takopi's Original Sin episode 3 full english Sub 1080P.mp4",
+            "name": "Takopi's Original Sin episode 3 full english Sub 1080P",
+            "url": "https://archive.org/download/takopis-original-sin-episode-1-full-english-sub-1080-p/Takopi's%20Original%20Sin%20episode%203%20full%20english%20Sub%201080P.mp4",
+            "seconds": 1589,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 142
+            "sizeMB": 164
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 5 in \"Takopi's Original Sin\"",
+              "item": "takopis-original-sin",
+              "itemTitle": "Takopi's Original Sin",
+              "file": "Takopii no Genzai - 04.mp4",
+              "name": "Takopii no Genzai - 04",
+              "url": "https://archive.org/download/takopis-original-sin/Takopii%20no%20Genzai%20-%2004.mp4",
+              "seconds": 1421,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Takopi's Confession\" (0.64)",
+              "item": "takopis_original_sin",
+              "itemTitle": "Takopi's Original Sin",
+              "file": "03-Takopi's Confession.mp4",
+              "name": "03-Takopi's Confession",
+              "url": "https://archive.org/download/takopis_original_sin/03-Takopi's%20Confession.mp4",
+              "seconds": 1589,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 4,
@@ -103,19 +144,33 @@
           "airdate": "2025-07-18",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 5 in \"Takopi's Original Sin\"",
-            "item": "takopis-original-sin",
+            "conf": 0.75,
+            "why": "title ~ \"Azuma-kun's Salvation\" (0.95)",
+            "item": "takopis_original_sin",
             "itemTitle": "Takopi's Original Sin",
-            "file": "Takopii no Genzai - 05.mp4",
-            "name": "Takopii no Genzai - 05",
-            "url": "https://archive.org/download/takopis-original-sin/Takopii%20no%20Genzai%20-%2005.mp4",
-            "seconds": 1477,
-            "format": "h.264",
+            "file": "04-Azuma-kun's Salvation.mp4",
+            "name": "04-Azuma-kun's Salvation",
+            "url": "https://archive.org/download/takopis_original_sin/04-Azuma-kun's%20Salvation.mp4",
+            "seconds": 1421,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 147
+            "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 5 in \"Takopi's Original Sin\"",
+              "item": "takopis-original-sin",
+              "itemTitle": "Takopi's Original Sin",
+              "file": "Takopii no Genzai - 05.mp4",
+              "name": "Takopii no Genzai - 05",
+              "url": "https://archive.org/download/takopis-original-sin/Takopii%20no%20Genzai%20-%2005.mp4",
+              "seconds": 1477,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 147
+            }
+          ]
         },
         {
           "number": 5,

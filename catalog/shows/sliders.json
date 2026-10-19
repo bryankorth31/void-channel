@@ -3,7 +3,7 @@
   "slug": "sliders",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Sci-Fi Channel",
-  "matchedAt": "2026-10-16T07:56:53.396Z",
+  "matchedAt": "2026-10-19T04:10:57.936Z",
   "addedAt": "2026-10-15T12:07:52.907Z",
   "tvmaze": {
     "id": 583,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 87,
-    "live": 82,
-    "review": 3,
+    "live": 83,
+    "review": 2,
     "missing": 2,
     "pct": 98
   },
@@ -137,21 +137,35 @@
           "number": 7,
           "name": "The Weaker Sex",
           "airdate": "1995-05-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Weaker Sex\" (1.00)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "sliders-s-01-e-07-eggheads",
             "itemTitle": "Sliders S 01 E 07 ( Eggheads)",
-            "file": "Sliders - S01E08 (The Weaker Sex).mp4",
-            "name": "Sliders - S01E08 (The Weaker Sex)",
-            "url": "https://archive.org/download/sliders-s-01-e-07-eggheads/Sliders%20-%20S01E08%20(The%20Weaker%20Sex).mp4",
-            "seconds": 2696,
+            "file": "Sliders - S01E07 (Eggheads).mp4",
+            "name": "Sliders - S01E07 (Eggheads)",
+            "url": "https://archive.org/download/sliders-s-01-e-07-eggheads/Sliders%20-%20S01E07%20(Eggheads).mp4",
+            "seconds": 2709,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 379
+            "sizeMB": 402
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Weaker Sex\" (1.00)",
+              "item": "sliders-s-01-e-07-eggheads",
+              "itemTitle": "Sliders S 01 E 07 ( Eggheads)",
+              "file": "Sliders - S01E08 (The Weaker Sex).mp4",
+              "name": "Sliders - S01E08 (The Weaker Sex)",
+              "url": "https://archive.org/download/sliders-s-01-e-07-eggheads/Sliders%20-%20S01E08%20(The%20Weaker%20Sex).mp4",
+              "seconds": 2696,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 379
+            }
+          ]
         },
         {
           "number": 8,

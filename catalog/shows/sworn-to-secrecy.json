@@ -3,7 +3,7 @@
   "slug": "sworn-to-secrecy",
   "type": "Documentary & Geographic",
   "network": "History",
-  "matchedAt": "2026-10-16T07:58:09.955Z",
+  "matchedAt": "2026-10-19T04:12:13.507Z",
   "addedAt": "2026-10-15T12:08:38.464Z",
   "tvmaze": {
     "id": 23816,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 65,
     "live": 0,
-    "review": 1,
-    "missing": 64,
-    "pct": 2
+    "review": 0,
+    "missing": 65,
+    "pct": 0
   },
   "seasons": [
     {
@@ -534,20 +534,8 @@
           "number": 5,
           "name": "Spies in the Sky",
           "airdate": "1998-12-04",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Spies in the Sky\" (0.95)",
-            "item": "Sworn_To_Secrecy_Spies_In_The_Sky_1999_Time_Life_Video_Tape",
-            "itemTitle": "Sworn To Secrecy Spies In The Sky 1999 Time Life Video Tape",
-            "file": "Sworn To Secrecy Spies In The Sky 1999 Time Life Video Tape.mp4",
-            "name": "Sworn To Secrecy Spies In The Sky 1999 Time Life Video Tape",
-            "url": "https://archive.org/download/Sworn_To_Secrecy_Spies_In_The_Sky_1999_Time_Life_Video_Tape/Sworn%20To%20Secrecy%20Spies%20In%20The%20Sky%201999%20Time%20Life%20Video%20Tape.mp4",
-            "seconds": 3216,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 321
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

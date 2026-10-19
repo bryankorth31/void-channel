@@ -3,7 +3,8 @@
   "slug": "good-eats",
   "type": "Documentary & Geographic",
   "network": "Food Network",
-  "matchedAt": "2026-10-16T07:58:07.377Z",
+  "matchedAt": "2026-10-19T04:12:11.247Z",
+  "addedAt": "2026-10-19T04:12:11.251Z",
   "tvmaze": {
     "id": 979,
     "name": "Good Eats",
@@ -14,8 +15,8 @@
   "coverage": {
     "total": 264,
     "live": 0,
-    "review": 0,
-    "missing": 264,
+    "review": 1,
+    "missing": 263,
     "pct": 0
   },
   "seasons": [
@@ -1939,8 +1940,20 @@
           "number": 10,
           "name": "All Hallows Eats",
           "airdate": "2010-10-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"All Hallows Eats\" (0.64)",
+            "item": "good-eats-season-14-episode-10-all-hallows-eats",
+            "itemTitle": "Good Eats - Season 14 Episode 10: All Hallows Eats",
+            "file": "good-eats-season-14-episode-10-all-hallows-eats_360.mp4",
+            "name": "good-eats-season-14-episode-10-all-hallows-eats_360",
+            "url": "https://archive.org/download/good-eats-season-14-episode-10-all-hallows-eats/good-eats-season-14-episode-10-all-hallows-eats_360.mp4",
+            "seconds": 1262,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 80
+          },
           "alternates": []
         },
         {

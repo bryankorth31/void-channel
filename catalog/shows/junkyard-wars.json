@@ -3,7 +3,7 @@
   "slug": "junkyard-wars",
   "type": "Documentary & Geographic",
   "network": "TLC",
-  "matchedAt": "2026-10-16T07:58:08.241Z",
+  "matchedAt": "2026-10-19T04:12:11.913Z",
   "addedAt": "2026-10-15T12:08:37.244Z",
   "tvmaze": {
     "id": 14950,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 105,
-    "live": 1,
-    "review": 53,
-    "missing": 51,
-    "pct": 51
+    "live": 45,
+    "review": 19,
+    "missing": 41,
+    "pct": 61
   },
   "seasons": [
     {
@@ -27,53 +27,236 @@
           "number": 1,
           "name": "Hovercraft",
           "airdate": "1998-04-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Hovercraft\" (1.00)",
-            "item": "junkyard-wars-s-01e-06-hovercraft",
-            "itemTitle": "Junkyard Wars s01e06 Hovercraft",
-            "file": "Junkyard Wars s01e06 Hovercraft.mp4",
-            "name": "Junkyard Wars s01e06 Hovercraft",
-            "url": "https://archive.org/download/junkyard-wars-s-01e-06-hovercraft/Junkyard%20Wars%20s01e06%20Hovercraft.mp4",
-            "seconds": 3030,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Junkyard Wars/Junkyard Wars Season 01/1x01 - Seige Headquarters.mp4",
+            "name": "Junkyard Wars/Junkyard Wars Season 01/1x01 - Seige Headquarters",
+            "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x01%20-%20Seige%20Headquarters.mp4",
+            "seconds": 2564,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 338
+            "sizeMB": 248
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 01/1x01 - Seige Headquarters.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 01/1x01 - Seige Headquarters",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x01%20-%20Seige%20Headquarters.mp4",
+              "seconds": 2564,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 248
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Hovercraft\" (1.00)",
+              "item": "junkyard-wars-s-01e-06-hovercraft",
+              "itemTitle": "Junkyard Wars s01e06 Hovercraft",
+              "file": "Junkyard Wars s01e06 Hovercraft.mp4",
+              "name": "Junkyard Wars s01e06 Hovercraft",
+              "url": "https://archive.org/download/junkyard-wars-s-01e-06-hovercraft/Junkyard%20Wars%20s01e06%20Hovercraft.mp4",
+              "seconds": 3030,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 338
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 7 in \"Junkyard Wars\"",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 12/12x01 - Wheelie Cars.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 12/12x01 - Wheelie Cars",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2012%2F12x01%20-%20Wheelie%20Cars.mp4",
+              "seconds": 2655,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 258
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Siege",
           "airdate": "1998-09-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Junkyard Wars/Junkyard Wars Season 01/1x02 - Power Pullers.mp4",
+            "name": "Junkyard Wars/Junkyard Wars Season 01/1x02 - Power Pullers",
+            "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x02%20-%20Power%20Pullers.mp4",
+            "seconds": 2667,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 259
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 01/1x02 - Power Pullers.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 01/1x02 - Power Pullers",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x02%20-%20Power%20Pullers.mp4",
+              "seconds": 2667,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 259
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 7 in \"Junkyard Wars\"",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 12/12x02 - Bomb Disposal.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 12/12x02 - Bomb Disposal",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2012%2F12x02%20-%20Bomb%20Disposal.mp4",
+              "seconds": 2628,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 259
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Power Pullers",
           "airdate": "1998-09-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Junkyard Wars/Junkyard Wars Season 01/1x03 - Sub Aqua.mp4",
+            "name": "Junkyard Wars/Junkyard Wars Season 01/1x03 - Sub Aqua",
+            "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x03%20-%20Sub%20Aqua.mp4",
+            "seconds": 2673,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 257
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 01/1x03 - Sub Aqua.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 01/1x03 - Sub Aqua",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x03%20-%20Sub%20Aqua.mp4",
+              "seconds": 2673,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 257
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Power Pullers\" (1.00)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Junkyard Wars/Junkyard Wars Season 10/10x04 - Power Pullers.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 10/10x04 - Power Pullers",
+              "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2010%2F10x04%20-%20Power%20Pullers.mp4",
+              "seconds": 2788,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 269
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Power Pullers\" (1.00)",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 10/10x04 - Power Pullers.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 10/10x04 - Power Pullers",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2010%2F10x04%20-%20Power%20Pullers.mp4",
+              "seconds": 2788,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 269
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Sub-Aqua",
           "airdate": "1998-09-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Junkyard Wars/Junkyard Wars Season 01/1x04 - Offroad Challenge.mp4",
+            "name": "Junkyard Wars/Junkyard Wars Season 01/1x04 - Offroad Challenge",
+            "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x04%20-%20Offroad%20Challenge.mp4",
+            "seconds": 2685,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 260
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 01/1x04 - Offroad Challenge.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 01/1x04 - Offroad Challenge",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x04%20-%20Offroad%20Challenge.mp4",
+              "seconds": 2685,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 260
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Sub-Aqua\" (0.67)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Junkyard Wars/Junkyard Wars Season 01/1x03 - Sub Aqua.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 01/1x03 - Sub Aqua",
+              "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x03%20-%20Sub%20Aqua.mp4",
+              "seconds": 2673,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 257
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Sub-Aqua\" (0.67)",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 01/1x03 - Sub Aqua.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 01/1x03 - Sub Aqua",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x03%20-%20Sub%20Aqua.mp4",
+              "seconds": 2673,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 257
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Powerboats",
           "airdate": "1998-10-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -87,7 +270,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -98,6 +281,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 261
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 7 in \"Junkyard Wars\"",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 12/12x06 - Giant Darts.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 12/12x06 - Giant Darts",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2012%2F12x06%20-%20Giant%20Darts.mp4",
+              "seconds": 2626,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 259
             }
           ]
         },
@@ -119,15 +315,94 @@
             "playable": true,
             "sizeMB": 338
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Junkyard Wars/Junkyard Wars Season 01/1x06 - Rockets.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 01/1x06 - Rockets",
+              "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x06%20-%20Rockets.mp4",
+              "seconds": 2685,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 260
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 01/1x06 - Rockets.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 01/1x06 - Rockets",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x06%20-%20Rockets.mp4",
+              "seconds": 2685,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 260
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 7 in \"Junkyard Wars\"",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 12/12x07 - Jet Cars.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 12/12x07 - Jet Cars",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2012%2F12x07%20-%20Jet%20Cars.mp4",
+              "seconds": 2626,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 260
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Rockets",
           "airdate": "1998-10-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Rockets\" (1.00)",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Junkyard Wars/Junkyard Wars Season 01/1x06 - Rockets.mp4",
+            "name": "Junkyard Wars/Junkyard Wars Season 01/1x06 - Rockets",
+            "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x06%20-%20Rockets.mp4",
+            "seconds": 2685,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 260
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Rockets\" (1.00)",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 01/1x06 - Rockets.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 01/1x06 - Rockets",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x06%20-%20Rockets.mp4",
+              "seconds": 2685,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 260
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 7 in \"Junkyard Wars\"",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 14/Scrapheap Mega Challenge - The Locomotives Special [digitaldistractions].mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 14/Scrapheap Mega Challenge - The Locomotives Special [digitaldistractions]",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2014%2FScrapheap%20Mega%20Challenge%20-%20The%20Locomotives%20Special%20%5Bdigitaldistractions%5D.mp4",
+              "seconds": 4611,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 460
+            }
+          ]
         }
       ]
     },
@@ -355,9 +630,9 @@
           "number": 1,
           "name": "Demolition",
           "airdate": "2000-09-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -371,7 +646,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -389,9 +664,9 @@
           "number": 2,
           "name": "Aerial Bomber",
           "airdate": "2000-09-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -405,7 +680,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -423,9 +698,9 @@
           "number": 3,
           "name": "Underwater Chariot",
           "airdate": "2000-10-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -439,7 +714,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -457,9 +732,9 @@
           "number": 4,
           "name": "Windmill",
           "airdate": "2000-10-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -473,7 +748,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -491,9 +766,9 @@
           "number": 5,
           "name": "Missile Launcher",
           "airdate": "2000-10-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -507,7 +782,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -525,9 +800,9 @@
           "number": 6,
           "name": "Bridging Machines",
           "airdate": "2000-10-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -541,7 +816,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -559,9 +834,9 @@
           "number": 7,
           "name": "Steam-Powered Car",
           "airdate": "2000-10-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -575,7 +850,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -593,9 +868,9 @@
           "number": 8,
           "name": "Giant Mower",
           "airdate": "2000-11-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -609,7 +884,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -627,9 +902,9 @@
           "number": 9,
           "name": "Fireboat",
           "airdate": "2000-11-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -643,7 +918,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -661,9 +936,9 @@
           "number": 10,
           "name": "Dragster",
           "airdate": "2000-11-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -677,7 +952,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -732,9 +1007,35 @@
           "number": 4,
           "name": "Boats",
           "airdate": "2001-01-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Boats\" (0.62)",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Junkyard Wars/Junkyard Wars Season 12/12x08 - Speedboats.mp4",
+            "name": "Junkyard Wars/Junkyard Wars Season 12/12x08 - Speedboats",
+            "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2012%2F12x08%20-%20Speedboats.mp4",
+            "seconds": 2652,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 264
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Boats\" (0.62)",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 12/12x08 - Speedboats.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 12/12x08 - Speedboats",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2012%2F12x08%20-%20Speedboats.mp4",
+              "seconds": 2652,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 264
+            }
+          ]
         },
         {
           "number": 5,
@@ -769,9 +1070,9 @@
           "number": 1,
           "name": "Jumbo Trucks",
           "airdate": "2001-09-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -785,7 +1086,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -803,9 +1104,9 @@
           "number": 2,
           "name": "Portable Bridge",
           "airdate": "2001-09-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -819,7 +1120,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -837,9 +1138,9 @@
           "number": 3,
           "name": "Heavy Artillery",
           "airdate": "2001-09-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -853,7 +1154,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -871,9 +1172,9 @@
           "number": 4,
           "name": "Power Raft",
           "airdate": "2001-10-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -887,7 +1188,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -905,9 +1206,9 @@
           "number": 5,
           "name": "Gliders",
           "airdate": "2001-10-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -921,7 +1222,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -939,9 +1240,9 @@
           "number": 6,
           "name": "Naval Warfare",
           "airdate": "2001-10-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -955,7 +1256,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -973,9 +1274,9 @@
           "number": 7,
           "name": "Building Bashers",
           "airdate": "2001-10-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -989,7 +1290,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1028,9 +1329,9 @@
           "number": 1,
           "name": "Egg Shooter",
           "airdate": "2001-12-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1044,7 +1345,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1062,9 +1363,9 @@
           "number": 2,
           "name": "Monster Truck",
           "airdate": "2001-12-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1078,7 +1379,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1096,9 +1397,9 @@
           "number": 3,
           "name": "Torpedo",
           "airdate": "2001-12-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1112,7 +1413,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1130,9 +1431,9 @@
           "number": 4,
           "name": "Street Cleaner",
           "airdate": "2001-12-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1146,7 +1447,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1164,9 +1465,9 @@
           "number": 5,
           "name": "White Water Rider",
           "airdate": "2002-01-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1180,7 +1481,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1198,9 +1499,9 @@
           "number": 6,
           "name": "Snowmobile",
           "airdate": "2002-01-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1214,7 +1515,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1232,9 +1533,9 @@
           "number": 7,
           "name": "Mobile Crane",
           "airdate": "2002-01-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1248,7 +1549,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1266,9 +1567,9 @@
           "number": 8,
           "name": "Minesweeper",
           "airdate": "2002-01-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1282,7 +1583,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1300,9 +1601,9 @@
           "number": 9,
           "name": "Hill Climber",
           "airdate": "2002-01-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1316,7 +1617,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1334,9 +1635,9 @@
           "number": 10,
           "name": "Tunneller",
           "airdate": "2002-02-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1350,7 +1651,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1368,9 +1669,9 @@
           "number": 11,
           "name": "Hydrofoil",
           "airdate": "2002-02-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1384,7 +1685,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1402,9 +1703,9 @@
           "number": 12,
           "name": "Car Jousting",
           "airdate": "2002-02-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1418,7 +1719,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1532,7 +1833,34 @@
             "playable": true,
             "sizeMB": 279
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Manic Mud Racers\" (0.63)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Junkyard Wars/Junkyard Wars Season 12/12x05 - Ice Racers.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 12/12x05 - Ice Racers",
+              "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2012%2F12x05%20-%20Ice%20Racers.mp4",
+              "seconds": 2668,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 260
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Manic Mud Racers\" (0.63)",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 12/12x05 - Ice Racers.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 12/12x05 - Ice Racers",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2012%2F12x05%20-%20Ice%20Racers.mp4",
+              "seconds": 2668,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 260
+            }
+          ]
         },
         {
           "number": 2,
@@ -1788,9 +2116,9 @@
           "number": 1,
           "name": "Dune Buggies",
           "airdate": "2003-03-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1804,7 +2132,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1822,9 +2150,9 @@
           "number": 2,
           "name": "Car Dozer",
           "airdate": "2003-03-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1838,7 +2166,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1856,9 +2184,9 @@
           "number": 3,
           "name": "Jet Trikes",
           "airdate": "2003-04-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1872,7 +2200,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1890,17 +2218,43 @@
           "number": 4,
           "name": "Power Pullers",
           "airdate": "2003-04-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Junkyard Wars/Junkyard Wars Season 10/10x04 - Power Pullers.mp4",
+            "name": "Junkyard Wars/Junkyard Wars Season 10/10x04 - Power Pullers",
+            "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2010%2F10x04%20-%20Power%20Pullers.mp4",
+            "seconds": 2788,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 269
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 10/10x04 - Power Pullers.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 10/10x04 - Power Pullers",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2010%2F10x04%20-%20Power%20Pullers.mp4",
+              "seconds": 2788,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 269
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Laundry Launchers",
           "airdate": "2003-04-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1914,7 +2268,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1940,9 +2294,9 @@
           "number": 7,
           "name": "Off-Road Golf",
           "airdate": "2003-04-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1956,7 +2310,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -1979,9 +2333,9 @@
           "number": 9,
           "name": "Fire Engines",
           "airdate": "2003-12-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1995,7 +2349,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -2013,9 +2367,9 @@
           "number": 10,
           "name": "Car Curlers",
           "airdate": "2003-12-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2029,7 +2383,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -2047,9 +2401,9 @@
           "number": 11,
           "name": "Tanks",
           "airdate": "2003-12-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2063,7 +2417,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -2081,9 +2435,9 @@
           "number": 12,
           "name": "Grand Prix",
           "airdate": "2004-01-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2097,7 +2451,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "13x-08-frozen-tundra",
               "itemTitle": "Junkyard Wars",
@@ -2136,9 +2490,35 @@
           "number": 3,
           "name": "The Scrappy Races: Off-Road Challenge",
           "airdate": "2004-02-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"The Scrappy Races: Off-Road Challenge\" (0.70)",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Junkyard Wars/Junkyard Wars Season 01/1x04 - Offroad Challenge.mp4",
+            "name": "Junkyard Wars/Junkyard Wars Season 01/1x04 - Offroad Challenge",
+            "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x04%20-%20Offroad%20Challenge.mp4",
+            "seconds": 2685,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 260
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"The Scrappy Races: Off-Road Challenge\" (0.70)",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 01/1x04 - Offroad Challenge.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 01/1x04 - Offroad Challenge",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x04%20-%20Offroad%20Challenge.mp4",
+              "seconds": 2685,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 260
+            }
+          ]
         },
         {
           "number": 4,
@@ -2186,25 +2566,103 @@
           "number": 1,
           "name": "Junkyard Mega Wars: The Great Race (1)",
           "airdate": "2004-08-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Junkyard Mega Wars: The Great Race (1)\" (0.85)",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Junkyard Wars/Junkyard Wars Season 14/14x01 - Junyard Mega Wars The Great Race 1.mp4",
+            "name": "Junkyard Wars/Junkyard Wars Season 14/14x01 - Junyard Mega Wars The Great Race 1",
+            "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2014%2F14x01%20-%20Junyard%20Mega%20Wars%20The%20Great%20Race%201.mp4",
+            "seconds": 2666,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 265
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Junkyard Mega Wars: The Great Race (1)\" (0.85)",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 14/14x01 - Junyard Mega Wars The Great Race 1.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 14/14x01 - Junyard Mega Wars The Great Race 1",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2014%2F14x01%20-%20Junyard%20Mega%20Wars%20The%20Great%20Race%201.mp4",
+              "seconds": 2666,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 265
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Junkyard Mega Wars: The Great Race (2)",
           "airdate": "2004-08-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Junkyard Mega Wars: The Great Race (2)\" (0.85)",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Junkyard Wars/Junkyard Wars Season 14/14x02 - Junyard Mega Wars The Great Race 2.mp4",
+            "name": "Junkyard Wars/Junkyard Wars Season 14/14x02 - Junyard Mega Wars The Great Race 2",
+            "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2014%2F14x02%20-%20Junyard%20Mega%20Wars%20The%20Great%20Race%202.mp4",
+            "seconds": 2691,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 268
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Junkyard Mega Wars: The Great Race (2)\" (0.85)",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 14/14x02 - Junyard Mega Wars The Great Race 2.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 14/14x02 - Junyard Mega Wars The Great Race 2",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2014%2F14x02%20-%20Junyard%20Mega%20Wars%20The%20Great%20Race%202.mp4",
+              "seconds": 2691,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 268
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Junkyard Mega Wars: The Great Race (3)",
           "airdate": "2004-08-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Junkyard Mega Wars: The Great Race (3)\" (0.85)",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Junkyard Wars/Junkyard Wars Season 14/14x03 - Junyard Mega Wars The Great Race 3.mp4",
+            "name": "Junkyard Wars/Junkyard Wars Season 14/14x03 - Junyard Mega Wars The Great Race 3",
+            "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2014%2F14x03%20-%20Junyard%20Mega%20Wars%20The%20Great%20Race%203.mp4",
+            "seconds": 2646,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 264
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Junkyard Mega Wars: The Great Race (3)\" (0.85)",
+              "item": "13x-08-frozen-tundra",
+              "itemTitle": "Junkyard Wars",
+              "file": "Junkyard Wars/Junkyard Wars Season 14/14x03 - Junyard Mega Wars The Great Race 3.mp4",
+              "name": "Junkyard Wars/Junkyard Wars Season 14/14x03 - Junyard Mega Wars The Great Race 3",
+              "url": "https://archive.org/download/13x-08-frozen-tundra/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2014%2F14x03%20-%20Junyard%20Mega%20Wars%20The%20Great%20Race%203.mp4",
+              "seconds": 2646,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 264
+            }
+          ]
         }
       ]
     }

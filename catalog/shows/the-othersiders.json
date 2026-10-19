@@ -3,7 +3,7 @@
   "slug": "the-othersiders",
   "type": "Documentary & Geographic",
   "network": "Cartoon Network",
-  "matchedAt": "2026-10-17T11:26:58.021Z",
+  "matchedAt": "2026-10-19T04:12:54.926Z",
   "addedAt": "2026-10-17T11:26:58.022Z",
   "tvmaze": {
     "id": 9593,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 23,
-    "live": 21,
-    "review": 2,
+    "live": 22,
+    "review": 1,
     "missing": 0,
     "pct": 100
   },
@@ -272,9 +272,9 @@
           "number": 2,
           "name": "Linda Vista Hospital",
           "airdate": "2009-10-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "the-othersiders-complete-series",
             "itemTitle": "The Othersiders Complete Series (2009)",
@@ -475,18 +475,32 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.8,
-            "why": "title ~ \"Camino Saw Mill\" (0.95)",
+            "why": "S/E in filename",
             "item": "the-othersiders-complete-series",
             "itemTitle": "The Othersiders Complete Series (2009)",
-            "file": "The Othersiders  S02E11  Camino Saw Mill.mp4",
-            "name": "The Othersiders  S02E11  Camino Saw Mill",
-            "url": "https://archive.org/download/the-othersiders-complete-series/The%20Othersiders%20%20S02E11%20%20Camino%20Saw%20Mill.mp4",
-            "seconds": 1326,
+            "file": "The Othersiders - S02E12 - Alcatraz.mp4",
+            "name": "The Othersiders - S02E12 - Alcatraz",
+            "url": "https://archive.org/download/the-othersiders-complete-series/The%20Othersiders%20-%20S02E12%20-%20Alcatraz.mp4",
+            "seconds": 2650,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 71
+            "sizeMB": 82
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Camino Saw Mill\" (0.95)",
+              "item": "the-othersiders-complete-series",
+              "itemTitle": "The Othersiders Complete Series (2009)",
+              "file": "The Othersiders  S02E11  Camino Saw Mill.mp4",
+              "name": "The Othersiders  S02E11  Camino Saw Mill",
+              "url": "https://archive.org/download/the-othersiders-complete-series/The%20Othersiders%20%20S02E11%20%20Camino%20Saw%20Mill.mp4",
+              "seconds": 1326,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 71
+            }
+          ]
         }
       ]
     }

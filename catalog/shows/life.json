@@ -3,7 +3,8 @@
   "slug": "life",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-16T07:58:01.715Z",
+  "matchedAt": "2026-10-19T04:12:06.666Z",
+  "addedAt": "2026-10-19T04:12:06.671Z",
   "tvmaze": {
     "id": 1035,
     "name": "Life",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 32,
-    "live": 0,
-    "review": 0,
-    "missing": 32,
-    "pct": 0
+    "live": 9,
+    "review": 1,
+    "missing": 22,
+    "pct": 31
   },
   "seasons": [
     {
@@ -26,72 +27,278 @@
           "number": 1,
           "name": "Merit Badge",
           "airdate": "2007-09-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "a-year-in-the-life_202601",
+            "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+            "file": "S01E01 Don't I Know You From Somewhere.mp4",
+            "name": "S01E01 Don't I Know You From Somewhere",
+            "url": "https://archive.org/download/a-year-in-the-life_202601/S01E01%20Don't%20I%20Know%20You%20From%20Somewhere.mp4",
+            "seconds": 3256,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 109
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 8 in \"A Year in the Life (1986-1988) Miniserie\"",
+              "item": "a-year-in-the-life_202601",
+              "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+              "file": "S01E12 The Little Disturbance of Man.mp4",
+              "name": "S01E12 The Little Disturbance of Man",
+              "url": "https://archive.org/download/a-year-in-the-life_202601/S01E12%20The%20Little%20Disturbance%20of%20Man.mp4",
+              "seconds": 2840,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 96
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Tear Asunder",
           "airdate": "2007-10-03",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "a-year-in-the-life_202601",
+            "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+            "file": "S01E02 Things You Should Know Before and After.mp4",
+            "name": "S01E02 Things You Should Know Before and After",
+            "url": "https://archive.org/download/a-year-in-the-life_202601/S01E02%20Things%20You%20Should%20Know%20Before%20and%20After.mp4",
+            "seconds": 2835,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 94
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 8 in \"A Year in the Life (1986-1988) Miniserie\"",
+              "item": "a-year-in-the-life_202601",
+              "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+              "file": "S01E13 Sometimes It's Hard to Remember.mp4",
+              "name": "S01E13 Sometimes It's Hard to Remember",
+              "url": "https://archive.org/download/a-year-in-the-life_202601/S01E13%20Sometimes%20It's%20Hard%20to%20Remember.mp4",
+              "seconds": 2907,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 108
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Let Her Go",
           "airdate": "2007-10-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "a-year-in-the-life_202601",
+            "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+            "file": "S01E03 What Do You Think Love Is.mp4",
+            "name": "S01E03 What Do You Think Love Is",
+            "url": "https://archive.org/download/a-year-in-the-life_202601/S01E03%20What%20Do%20You%20Think%20Love%20Is.mp4",
+            "seconds": 2847,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 92
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 8 in \"A Year in the Life (1986-1988) Miniserie\"",
+              "item": "a-year-in-the-life_202601",
+              "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+              "file": "S01E14 The Enormous Changes at the Last Minute.mp4",
+              "name": "S01E14 The Enormous Changes at the Last Minute",
+              "url": "https://archive.org/download/a-year-in-the-life_202601/S01E14%20The%20Enormous%20Changes%20at%20the%20Last%20Minute.mp4",
+              "seconds": 2818,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 95
+            }
+          ]
         },
         {
           "number": 4,
           "name": "What They Saw",
           "airdate": "2007-10-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "a-year-in-the-life_202601",
+            "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+            "file": "S01E04 Dixie Chicken.mp4",
+            "name": "S01E04 Dixie Chicken",
+            "url": "https://archive.org/download/a-year-in-the-life_202601/S01E04%20Dixie%20Chicken.mp4",
+            "seconds": 2766,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 89
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 8 in \"A Year in the Life (1986-1988) Miniserie\"",
+              "item": "a-year-in-the-life_202601",
+              "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+              "file": "S01E17 Fathers and Other Strangers.mp4",
+              "name": "S01E17 Fathers and Other Strangers",
+              "url": "https://archive.org/download/a-year-in-the-life_202601/S01E17%20Fathers%20and%20Other%20Strangers.mp4",
+              "seconds": 2859,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 94
+            }
+          ]
         },
         {
           "number": 5,
           "name": "The Fallen Woman",
           "airdate": "2007-10-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "a-year-in-the-life_202601",
+            "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+            "file": "S01E05 What Do People Do All Day.mp4",
+            "name": "S01E05 What Do People Do All Day",
+            "url": "https://archive.org/download/a-year-in-the-life_202601/S01E05%20What%20Do%20People%20Do%20All%20Day.mp4",
+            "seconds": 2892,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 96
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 8 in \"A Year in the Life (1986-1988) Miniserie\"",
+              "item": "a-year-in-the-life_202601",
+              "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+              "file": "S01E18 Common Ground.mp4",
+              "name": "S01E18 Common Ground",
+              "url": "https://archive.org/download/a-year-in-the-life_202601/S01E18%20Common%20Ground.mp4",
+              "seconds": 2857,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 89
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Powerless",
           "airdate": "2007-10-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 8 in \"A Year in the Life (1986-1988) Miniserie\"",
+            "item": "a-year-in-the-life_202601",
+            "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+            "file": "S01E20 The Politics of Being.mp4",
+            "name": "S01E20 The Politics of Being",
+            "url": "https://archive.org/download/a-year-in-the-life_202601/S01E20%20The%20Politics%20of%20Being.mp4",
+            "seconds": 3514,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 117
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "A Civil War",
           "airdate": "2007-11-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "a-year-in-the-life_202601",
+            "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+            "file": "S01E07 Acts of Faith.mp4",
+            "name": "S01E07 Acts of Faith",
+            "url": "https://archive.org/download/a-year-in-the-life_202601/S01E07%20Acts%20of%20Faith.mp4",
+            "seconds": 2822,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 92
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 8 in \"A Year in the Life (1986-1988) Miniserie\"",
+              "item": "a-year-in-the-life_202601",
+              "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+              "file": "S01E21 Peter Creek Road.mp4",
+              "name": "S01E21 Peter Creek Road",
+              "url": "https://archive.org/download/a-year-in-the-life_202601/S01E21%20Peter%20Creek%20Road.mp4",
+              "seconds": 3455,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Farthingale",
           "airdate": "2007-11-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "a-year-in-the-life_202601",
+            "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+            "file": "S01E08 In Dreams Begin Responsibilites.mp4",
+            "name": "S01E08 In Dreams Begin Responsibilites",
+            "url": "https://archive.org/download/a-year-in-the-life_202601/S01E08%20In%20Dreams%20Begin%20Responsibilites.mp4",
+            "seconds": 2823,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 101
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 8 in \"A Year in the Life (1986-1988) Miniserie\"",
+              "item": "a-year-in-the-life_202601",
+              "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+              "file": "S01E22 Love Mother.mp4",
+              "name": "S01E22 Love Mother",
+              "url": "https://archive.org/download/a-year-in-the-life_202601/S01E22%20Love%20Mother.mp4",
+              "seconds": 3476,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 116
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Serious Control Issues",
           "airdate": "2007-11-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "a-year-in-the-life_202601",
+            "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+            "file": "S01E09 I Think You Know Something I Don't Know.mp4",
+            "name": "S01E09 I Think You Know Something I Don't Know",
+            "url": "https://archive.org/download/a-year-in-the-life_202601/S01E09%20I%20Think%20You%20Know%20Something%20I%20Don't%20Know.mp4",
+            "seconds": 3226,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 119
+          },
           "alternates": []
         },
         {
@@ -106,8 +313,20 @@
           "number": 11,
           "name": "Fill it Up",
           "airdate": "2007-12-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "a-year-in-the-life_202601",
+            "itemTitle": "A Year in the Life (1986-1988) Miniseries and Season One - 20 of 22 episodes",
+            "file": "S01E11 While Someone Else is Sleeping or Opening a Window.mp4",
+            "name": "S01E11 While Someone Else is Sleeping or Opening a Window",
+            "url": "https://archive.org/download/a-year-in-the-life_202601/S01E11%20While%20Someone%20Else%20is%20Sleeping%20or%20Opening%20a%20Window.mp4",
+            "seconds": 2820,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 96
+          },
           "alternates": []
         }
       ]

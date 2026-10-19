@@ -3,7 +3,7 @@
   "slug": "regular-show",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:58.635Z",
+  "matchedAt": "2026-10-19T04:11:03.101Z",
   "addedAt": "2026-10-15T12:07:56.572Z",
   "tvmaze": {
     "id": 868,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 246,
-    "live": 184,
-    "review": 44,
-    "missing": 18,
-    "pct": 93
+    "live": 223,
+    "review": 8,
+    "missing": 15,
+    "pct": 94
   },
   "seasons": [
     {
@@ -27,48 +27,21 @@
           "number": 1,
           "name": "The Power",
           "airdate": "2010-09-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Power\" (0.95)",
-            "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-            "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-            "file": "0551 - Power of three.mp4",
-            "name": "0551 - Power of three",
-            "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0551%20-%20Power%20of%20three.mp4",
-            "seconds": 666,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "AlyticsRegularShow.967",
+            "itemTitle": "Alytics - Regular Show",
+            "file": "Season 01/S01E01 The Power.mp4",
+            "name": "Season 01/S01E01 The Power",
+            "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2001%2FS01E01%20The%20Power.mp4",
+            "seconds": 681,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 13
+            "sizeMB": 68
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
-              "item": "AlyticsRegularShow.967",
-              "itemTitle": "Alytics - Regular Show",
-              "file": "Season 01/S01E01 The Power.mp4",
-              "name": "Season 01/S01E01 The Power",
-              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2001%2FS01E01%20The%20Power.mp4",
-              "seconds": 681,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 68
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 165 in \"Super Richie Logan Regular Show By Kevin\"",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0195 - Wario visits the dentist.mp4",
-              "name": "0195 - Wario visits the dentist",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0195%20-%20Wario%20visits%20the%20dentist.mp4",
-              "seconds": 653,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 15
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -90,7 +63,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -101,19 +74,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 79
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 165 in \"Super Richie Logan Regular Show By Kevin\"",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0219 - Wario moves in with mario.mp4",
-              "name": "0219 - Wario moves in with mario",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0219%20-%20Wario%20moves%20in%20with%20mario.mp4",
-              "seconds": 909,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 21
             }
           ]
         },
@@ -121,9 +81,9 @@
           "number": 3,
           "name": "Caffeinated Concert Tickets",
           "airdate": "2010-09-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -137,7 +97,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -148,19 +108,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 66
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 165 in \"Super Richie Logan Regular Show By Kevin\"",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0234 - Bowser jr. Goes to prison.mp4",
-              "name": "0234 - Bowser jr. Goes to prison",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0234%20-%20Bowser%20jr.%20Goes%20to%20prison.mp4",
-              "seconds": 987,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 22
             }
           ]
         },
@@ -184,7 +131,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -195,19 +142,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 64
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 165 in \"Super Richie Logan Regular Show By Kevin\"",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0243 - Bowser jr. Moves in with mario.mp4",
-              "name": "0243 - Bowser jr. Moves in with mario",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0243%20-%20Bowser%20jr.%20Moves%20in%20with%20mario.mp4",
-              "seconds": 963,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 21
             }
           ]
         },
@@ -231,7 +165,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -242,19 +176,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 62
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 165 in \"Super Richie Logan Regular Show By Kevin\"",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0248 - Eggman the babysitter.mp4",
-              "name": "0248 - Eggman the babysitter",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0248%20-%20Eggman%20the%20babysitter.mp4",
-              "seconds": 1000,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 22
             }
           ]
         },
@@ -278,7 +199,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -289,19 +210,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 67
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 165 in \"Super Richie Logan Regular Show By Kevin\"",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0308 - Bowser jr’s halloween.mp4",
-              "name": "0308 - Bowser jr’s halloween",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0308%20-%20Bowser%20jr%E2%80%99s%20halloween.mp4",
-              "seconds": 770,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 16
             }
           ]
         },
@@ -309,9 +217,9 @@
           "number": 7,
           "name": "Grilled Cheese Deluxe",
           "airdate": "2010-10-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -325,7 +233,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -336,19 +244,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 62
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 165 in \"Super Richie Logan Regular Show By Kevin\"",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0418 - cartman_s mom is a dirty slut.mp4",
-              "name": "0418 - cartman_s mom is a dirty slut",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0418%20-%20cartman_s%20mom%20is%20a%20dirty%20slut.mp4",
-              "seconds": 766,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 18
             }
           ]
         },
@@ -356,9 +251,9 @@
           "number": 8,
           "name": "The Unicorns Have Got to Go",
           "airdate": "2010-10-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -372,7 +267,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -383,19 +278,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 70
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 165 in \"Super Richie Logan Regular Show By Kevin\"",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0500 - mama luigi (The 500th Video Ever).mp4",
-              "name": "0500 - mama luigi (The 500th Video Ever)",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0500%20-%20mama%20luigi%20(The%20500th%20Video%20Ever).mp4",
-              "seconds": 655,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 15
             }
           ]
         },
@@ -419,7 +301,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -430,19 +312,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 75
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 165 in \"Super Richie Logan Regular Show By Kevin\"",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0530 - Bowser goes to the movies.mp4",
-              "name": "0530 - Bowser goes to the movies",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0530%20-%20Bowser%20goes%20to%20the%20movies.mp4",
-              "seconds": 896,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 23
             }
           ]
         },
@@ -466,7 +335,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -477,19 +346,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 72
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 165 in \"Super Richie Logan Regular Show By Kevin\"",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0531 - Bowser junior’s lemonade stand.mp4",
-              "name": "0531 - Bowser junior’s lemonade stand",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0531%20-%20Bowser%20junior%E2%80%99s%20lemonade%20stand.mp4",
-              "seconds": 847,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 24
             }
           ]
         },
@@ -513,7 +369,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -524,19 +380,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 69
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 11 of 165 in \"Super Richie Logan Regular Show By Kevin\"",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0534 - Chef pee pee gets sick.mp4",
-              "name": "0534 - Chef pee pee gets sick",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0534%20-%20Chef%20pee%20pee%20gets%20sick.mp4",
-              "seconds": 801,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 22
             }
           ]
         },
@@ -560,7 +403,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -571,19 +414,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 68
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 165 in \"Super Richie Logan Regular Show By Kevin\"",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0535 - Bowser junior’s candy bar.mp4",
-              "name": "0535 - Bowser junior’s candy bar",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0535%20-%20Bowser%20junior%E2%80%99s%20candy%20bar.mp4",
-              "seconds": 791,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 22
             }
           ]
         }
@@ -612,7 +442,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -646,7 +476,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -680,7 +510,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -714,7 +544,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -748,7 +578,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -782,7 +612,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -816,7 +646,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -850,7 +680,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -884,7 +714,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -918,7 +748,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -936,9 +766,9 @@
           "number": 11,
           "name": "Benson Be Gone",
           "airdate": "2011-02-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -952,7 +782,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -986,7 +816,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1020,7 +850,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1038,9 +868,9 @@
           "number": 14,
           "name": "Muscle Woman",
           "airdate": "2011-04-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -1054,7 +884,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1088,7 +918,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1122,7 +952,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1156,7 +986,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1190,7 +1020,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1224,7 +1054,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1258,7 +1088,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1326,7 +1156,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1360,7 +1190,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1394,7 +1224,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1428,20 +1258,7 @@
           },
           "alternates": [
             {
-              "conf": 0.75,
-              "why": "title ~ \"First Day\" (0.95)",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0124 - Bowser jr’s first day of school.mp4",
-              "name": "0124 - Bowser jr’s first day of school",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0124%20-%20Bowser%20jr%E2%80%99s%20first%20day%20of%20school.mp4",
-              "seconds": 755,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 19
-            },
-            {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1475,7 +1292,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1509,7 +1326,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1543,7 +1360,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1582,7 +1399,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1600,9 +1417,9 @@
           "number": 2,
           "name": "Bet to Be Blonde",
           "airdate": "2011-09-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -1616,7 +1433,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1634,9 +1451,9 @@
           "number": 3,
           "name": "Skips Strikes",
           "airdate": "2011-10-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -1650,7 +1467,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -1682,23 +1499,141 @@
             "playable": true,
             "sizeMB": 70
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E04 Creepy Doll.mp4",
+              "name": "Season 03/S03E04 Creepy Doll",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E04%20Creepy%20Doll.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 70
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Terror Tales of The Park\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "S03E05 Terror Tales Of The Park.ia.mp4",
+              "name": "S03E05 Terror Tales Of The Park",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/S03E05%20Terror%20Tales%20Of%20The%20Park.ia.mp4",
+              "seconds": 679,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 70
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Terror Tales of The Park\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E05 Terror Tales Of The Park.mp4",
+              "name": "Season 03/S03E05 Terror Tales Of The Park",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E05%20Terror%20Tales%20Of%20The%20Park.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 70
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Camping Can Be Cool",
           "airdate": "2011-10-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "AlyticsRegularShow.967",
+            "itemTitle": "Alytics - Regular Show",
+            "file": "S03E05 Terror Tales Of The Park.ia.mp4",
+            "name": "S03E05 Terror Tales Of The Park",
+            "url": "https://archive.org/download/AlyticsRegularShow.967/S03E05%20Terror%20Tales%20Of%20The%20Park.ia.mp4",
+            "seconds": 679,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 70
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E05 Terror Tales Of The Park.mp4",
+              "name": "Season 03/S03E05 Terror Tales Of The Park",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E05%20Terror%20Tales%20Of%20The%20Park.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 70
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Camping Can Be Cool\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "S03E06 Camping Can Be Cool.ia.mp4",
+              "name": "S03E06 Camping Can Be Cool",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/S03E06%20Camping%20Can%20Be%20Cool.ia.mp4",
+              "seconds": 680,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 87
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Camping Can Be Cool\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E06 Camping Can Be Cool.mp4",
+              "name": "Season 03/S03E06 Camping Can Be Cool",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E06%20Camping%20Can%20Be%20Cool.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 87
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Slam Dunk",
           "airdate": "2011-10-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "AlyticsRegularShow.967",
+            "itemTitle": "Alytics - Regular Show",
+            "file": "S03E06 Camping Can Be Cool.ia.mp4",
+            "name": "S03E06 Camping Can Be Cool",
+            "url": "https://archive.org/download/AlyticsRegularShow.967/S03E06%20Camping%20Can%20Be%20Cool.ia.mp4",
+            "seconds": 680,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 87
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E06 Camping Can Be Cool.mp4",
+              "name": "Season 03/S03E06 Camping Can Be Cool",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E06%20Camping%20Can%20Be%20Cool.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 87
+            }
+          ]
         },
         {
           "number": 7,
@@ -1718,7 +1653,21 @@
             "playable": true,
             "sizeMB": 68
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Cool Bikes\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E08 Cool Bikes.mp4",
+              "name": "Season 03/S03E08 Cool Bikes",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E08%20Cool%20Bikes.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 68
+            }
+          ]
         },
         {
           "number": 8,
@@ -1740,6 +1689,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E08 Cool Bikes.mp4",
+              "name": "Season 03/S03E08 Cool Bikes",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E08%20Cool%20Bikes.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 68
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"House Rules\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -1749,6 +1711,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E09%20House%20Rules.ia.mp4",
               "seconds": 682,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 54
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"House Rules\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E09 House Rules.mp4",
+              "name": "Season 03/S03E09 House Rules",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E09%20House%20Rules.mp4",
+              "seconds": 682,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 54
             }
@@ -1774,6 +1749,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E09 House Rules.mp4",
+              "name": "Season 03/S03E09 House Rules",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E09%20House%20Rules.mp4",
+              "seconds": 682,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 54
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Rap It Up\" (0.92)",
               "item": "AlyticsRegularShow.967",
@@ -1783,6 +1771,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E10%20Wrap%20It%20Up.ia.mp4",
               "seconds": 680,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 54
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Rap It Up\" (0.92)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E10 Wrap It Up.mp4",
+              "name": "Season 03/S03E10 Wrap It Up",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E10%20Wrap%20It%20Up.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 54
             }
@@ -1808,6 +1809,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E10 Wrap It Up.mp4",
+              "name": "Season 03/S03E10 Wrap It Up",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E10%20Wrap%20It%20Up.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 54
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Cruisin'\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -1817,6 +1831,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E11%20Cruisin'.ia.mp4",
               "seconds": 681,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 61
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Cruisin'\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E11 Cruisin'.mp4",
+              "name": "Season 03/S03E11 Cruisin'",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E11%20Cruisin'.mp4",
+              "seconds": 681,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 61
             }
@@ -1842,6 +1869,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E11 Cruisin'.mp4",
+              "name": "Season 03/S03E11 Cruisin'",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E11%20Cruisin'.mp4",
+              "seconds": 681,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 61
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Under the Hood\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -1851,6 +1891,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E12%20Under%20The%20Hood.ia.mp4",
               "seconds": 679,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 55
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Under the Hood\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E12 Under The Hood.mp4",
+              "name": "Season 03/S03E12 Under The Hood",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E12%20Under%20The%20Hood.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 55
             }
@@ -1874,27 +1927,107 @@
             "playable": true,
             "sizeMB": 55
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E12 Under The Hood.mp4",
+              "name": "Season 03/S03E12 Under The Hood",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E12%20Under%20The%20Hood.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 55
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Weekend at Benson's\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "S03E13 Weekend At Benson's.ia.mp4",
+              "name": "S03E13 Weekend At Benson's",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/S03E13%20Weekend%20At%20Benson's.ia.mp4",
+              "seconds": 679,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 81
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Weekend at Benson's\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E13 Weekend At Benson's.mp4",
+              "name": "Season 03/S03E13 Weekend At Benson's",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E13%20Weekend%20At%20Benson's.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 81
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Fortune Cookie",
           "airdate": "2012-01-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Fortune Cookie\" (1.00)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
-            "file": "S03E14 Fortune Cookie.ia.mp4",
-            "name": "S03E14 Fortune Cookie",
-            "url": "https://archive.org/download/AlyticsRegularShow.967/S03E14%20Fortune%20Cookie.ia.mp4",
+            "file": "S03E13 Weekend At Benson's.ia.mp4",
+            "name": "S03E13 Weekend At Benson's",
+            "url": "https://archive.org/download/AlyticsRegularShow.967/S03E13%20Weekend%20At%20Benson's.ia.mp4",
             "seconds": 679,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 88
+            "sizeMB": 81
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E13 Weekend At Benson's.mp4",
+              "name": "Season 03/S03E13 Weekend At Benson's",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E13%20Weekend%20At%20Benson's.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 81
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Fortune Cookie\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "S03E14 Fortune Cookie.ia.mp4",
+              "name": "S03E14 Fortune Cookie",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/S03E14%20Fortune%20Cookie.ia.mp4",
+              "seconds": 679,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 88
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Fortune Cookie\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E14 Fortune Cookie.mp4",
+              "name": "Season 03/S03E14 Fortune Cookie",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E14%20Fortune%20Cookie.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 88
+            }
+          ]
         },
         {
           "number": 14,
@@ -1916,6 +2049,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E14 Fortune Cookie.mp4",
+              "name": "Season 03/S03E14 Fortune Cookie",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E14%20Fortune%20Cookie.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 88
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Think Positive\" (0.80)",
               "item": "AlyticsRegularShow.967",
@@ -1925,6 +2071,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E15Think%20Positive.ia.mp4",
               "seconds": 680,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 75
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Think Positive\" (0.80)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E15Think Positive.mp4",
+              "name": "Season 03/S03E15Think Positive",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E15Think%20Positive.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 75
             }
@@ -1948,7 +2107,21 @@
             "playable": true,
             "sizeMB": 74
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Skips vs. Technology\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E16  Skips Vs Technology.mp4",
+              "name": "Season 03/S03E16  Skips Vs Technology",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E16%20%20Skips%20Vs%20Technology.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 74
+            }
+          ]
         },
         {
           "number": 16,
@@ -1970,6 +2143,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E16  Skips Vs Technology.mp4",
+              "name": "Season 03/S03E16  Skips Vs Technology",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E16%20%20Skips%20Vs%20Technology.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 74
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Butt Dial\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -1979,6 +2165,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E17%20Butt%20Dial.ia.mp4",
               "seconds": 679,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 61
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Butt Dial\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E17 Butt Dial.mp4",
+              "name": "Season 03/S03E17 Butt Dial",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E17%20Butt%20Dial.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 61
             }
@@ -2004,6 +2203,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E17 Butt Dial.mp4",
+              "name": "Season 03/S03E17 Butt Dial",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E17%20Butt%20Dial.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 61
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Eggscellent\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2013,6 +2225,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E18%20Eggscellent.ia.mp4",
               "seconds": 679,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 64
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Eggscellent\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E18 Eggscellent.mp4",
+              "name": "Season 03/S03E18 Eggscellent",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E18%20Eggscellent.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 64
             }
@@ -2038,6 +2263,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E18 Eggscellent.mp4",
+              "name": "Season 03/S03E18 Eggscellent",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E18%20Eggscellent.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 64
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Gut Model\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2047,6 +2285,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E19%20Gut%20Model.ia.mp4",
               "seconds": 679,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 62
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Gut Model\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E19 Gut Model.mp4",
+              "name": "Season 03/S03E19 Gut Model",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E19%20Gut%20Model.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 62
             }
@@ -2072,6 +2323,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E19 Gut Model.mp4",
+              "name": "Season 03/S03E19 Gut Model",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E19%20Gut%20Model.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 62
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Video Game Wizards\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2081,6 +2345,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E20%20%20Video%20Game%20Wizards.ia.mp4",
               "seconds": 680,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 62
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Video Game Wizards\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E20  Video Game Wizards.mp4",
+              "name": "Season 03/S03E20  Video Game Wizards",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E20%20%20Video%20Game%20Wizards.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 62
             }
@@ -2104,27 +2381,107 @@
             "playable": true,
             "sizeMB": 62
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E20  Video Game Wizards.mp4",
+              "name": "Season 03/S03E20  Video Game Wizards",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E20%20%20Video%20Game%20Wizards.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 62
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Big Winner\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "S03E21 Big Winner.ia.mp4",
+              "name": "S03E21 Big Winner",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/S03E21%20Big%20Winner.ia.mp4",
+              "seconds": 679,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 68
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Big Winner\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E21 Big Winner.mp4",
+              "name": "Season 03/S03E21 Big Winner",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E21%20Big%20Winner.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 68
+            }
+          ]
         },
         {
           "number": 21,
           "name": "The Best Burger in the World",
           "airdate": "2012-04-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"The Best Burger in the World\" (1.00)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
-            "file": "S03E22 The Best Burger In The World.ia.mp4",
-            "name": "S03E22 The Best Burger In The World",
-            "url": "https://archive.org/download/AlyticsRegularShow.967/S03E22%20The%20Best%20Burger%20In%20The%20World.ia.mp4",
+            "file": "S03E21 Big Winner.ia.mp4",
+            "name": "S03E21 Big Winner",
+            "url": "https://archive.org/download/AlyticsRegularShow.967/S03E21%20Big%20Winner.ia.mp4",
             "seconds": 679,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 61
+            "sizeMB": 68
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E21 Big Winner.mp4",
+              "name": "Season 03/S03E21 Big Winner",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E21%20Big%20Winner.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 68
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Best Burger in the World\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "S03E22 The Best Burger In The World.ia.mp4",
+              "name": "S03E22 The Best Burger In The World",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/S03E22%20The%20Best%20Burger%20In%20The%20World.ia.mp4",
+              "seconds": 679,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 61
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Best Burger in the World\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E22 The Best Burger In The World.mp4",
+              "name": "Season 03/S03E22 The Best Burger In The World",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E22%20The%20Best%20Burger%20In%20The%20World.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 61
+            }
+          ]
         },
         {
           "number": 22,
@@ -2146,6 +2503,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E22 The Best Burger In The World.mp4",
+              "name": "Season 03/S03E22 The Best Burger In The World",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E22%20The%20Best%20Burger%20In%20The%20World.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 61
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Replaced\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2155,6 +2525,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E23%20Replaced.ia.mp4",
               "seconds": 678,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 63
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Replaced\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E23 Replaced.mp4",
+              "name": "Season 03/S03E23 Replaced",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E23%20Replaced.mp4",
+              "seconds": 678,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 63
             }
@@ -2180,6 +2563,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E23 Replaced.mp4",
+              "name": "Season 03/S03E23 Replaced",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E23%20Replaced.mp4",
+              "seconds": 678,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 63
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Trash Boat\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2189,6 +2585,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E25%20Trash%20Boat.ia.mp4",
               "seconds": 679,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 74
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Trash Boat\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E25 Trash Boat.mp4",
+              "name": "Season 03/S03E25 Trash Boat",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E25%20Trash%20Boat.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 74
             }
@@ -2214,7 +2623,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -2248,6 +2657,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E25 Trash Boat.mp4",
+              "name": "Season 03/S03E25 Trash Boat",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E25%20Trash%20Boat.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 74
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Yes Dude Yes\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2257,6 +2679,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E26%20Yes%20Dude%2C%20Yes.ia.mp4",
               "seconds": 679,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 67
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Yes Dude Yes\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E26 Yes Dude, Yes.mp4",
+              "name": "Season 03/S03E26 Yes Dude, Yes",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E26%20Yes%20Dude%2C%20Yes.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 67
             }
@@ -2280,35 +2715,167 @@
             "playable": true,
             "sizeMB": 67
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E26 Yes Dude, Yes.mp4",
+              "name": "Season 03/S03E26 Yes Dude, Yes",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E26%20Yes%20Dude%2C%20Yes.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 67
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Busted Cart\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "S03E27 Busted Cart.ia.mp4",
+              "name": "S03E27 Busted Cart",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/S03E27%20Busted%20Cart.ia.mp4",
+              "seconds": 680,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 80
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Busted Cart\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E27 Busted Cart.mp4",
+              "name": "Season 03/S03E27 Busted Cart",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E27%20Busted%20Cart.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 80
+            }
+          ]
         },
         {
           "number": 27,
           "name": "Dead at Eight",
           "airdate": "2012-05-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "AlyticsRegularShow.967",
+            "itemTitle": "Alytics - Regular Show",
+            "file": "S03E27 Busted Cart.ia.mp4",
+            "name": "S03E27 Busted Cart",
+            "url": "https://archive.org/download/AlyticsRegularShow.967/S03E27%20Busted%20Cart.ia.mp4",
+            "seconds": 680,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 80
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E27 Busted Cart.mp4",
+              "name": "Season 03/S03E27 Busted Cart",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E27%20Busted%20Cart.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 80
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Dead at Eight\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "S03E28 Dead At Eight.ia.mp4",
+              "name": "S03E28 Dead At Eight",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/S03E28%20Dead%20At%20Eight.ia.mp4",
+              "seconds": 679,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 74
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Dead at Eight\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E28 Dead At Eight.mp4",
+              "name": "Season 03/S03E28 Dead At Eight",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E28%20Dead%20At%20Eight.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 74
+            }
+          ]
         },
         {
           "number": 28,
           "name": "Access Denied",
           "airdate": "2012-06-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Access Denied\" (0.95)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
-            "file": "S03E29 Acess Denied.ia.mp4",
-            "name": "S03E29 Acess Denied",
-            "url": "https://archive.org/download/AlyticsRegularShow.967/S03E29%20Acess%20Denied.ia.mp4",
-            "seconds": 681,
+            "file": "S03E28 Dead At Eight.ia.mp4",
+            "name": "S03E28 Dead At Eight",
+            "url": "https://archive.org/download/AlyticsRegularShow.967/S03E28%20Dead%20At%20Eight.ia.mp4",
+            "seconds": 679,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 93
+            "sizeMB": 74
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E28 Dead At Eight.mp4",
+              "name": "Season 03/S03E28 Dead At Eight",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E28%20Dead%20At%20Eight.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 74
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Access Denied\" (0.95)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "S03E29 Acess Denied.ia.mp4",
+              "name": "S03E29 Acess Denied",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/S03E29%20Acess%20Denied.ia.mp4",
+              "seconds": 681,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 93
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Access Denied\" (0.95)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E29 Acess Denied.mp4",
+              "name": "Season 03/S03E29 Acess Denied",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E29%20Acess%20Denied.mp4",
+              "seconds": 681,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 93
+            }
+          ]
         },
         {
           "number": 29,
@@ -2330,6 +2897,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E29 Acess Denied.mp4",
+              "name": "Season 03/S03E29 Acess Denied",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E29%20Acess%20Denied.mp4",
+              "seconds": 681,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 93
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Trucker Hall of Fame\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2341,6 +2921,19 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 68
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Trucker Hall of Fame\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E31 Trucker Hall Of Fame.mp4",
+              "name": "Season 03/S03E31 Trucker Hall Of Fame",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E31%20Trucker%20Hall%20Of%20Fame.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 68
             }
           ]
         },
@@ -2348,9 +2941,9 @@
           "number": 30,
           "name": "Muscle Mentor",
           "airdate": "2012-06-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -2364,7 +2957,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -2398,6 +2991,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E31 Trucker Hall Of Fame.mp4",
+              "name": "Season 03/S03E31 Trucker Hall Of Fame",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E31%20Trucker%20Hall%20Of%20Fame.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 68
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Out of Commission\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2407,6 +3013,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E32%20Out%20Of%20Commission.ia.mp4",
               "seconds": 679,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 61
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Out of Commission\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E32 Out Of Commission.mp4",
+              "name": "Season 03/S03E32 Out Of Commission",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E32%20Out%20Of%20Commission.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 61
             }
@@ -2432,6 +3051,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E32 Out Of Commission.mp4",
+              "name": "Season 03/S03E32 Out Of Commission",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E32%20Out%20Of%20Commission.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 61
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Fancy Restaurant\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2441,6 +3073,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E33%20Fancy%20Restaurant.ia.mp4",
               "seconds": 680,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 58
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Fancy Restaurant\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E33 Fancy Restaurant.mp4",
+              "name": "Season 03/S03E33 Fancy Restaurant",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E33%20Fancy%20Restaurant.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 58
             }
@@ -2466,6 +3111,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E33 Fancy Restaurant.mp4",
+              "name": "Season 03/S03E33 Fancy Restaurant",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E33%20Fancy%20Restaurant.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 58
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Diary\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2480,16 +3138,16 @@
             },
             {
               "conf": 0.75,
-              "why": "title ~ \"Diary\" (0.95)",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0784 - Who stole donut’s diary.mp4",
-              "name": "0784 - Who stole donut’s diary",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0784%20-%20Who%20stole%20donut%E2%80%99s%20diary.mp4",
-              "seconds": 943,
+              "why": "title ~ \"Diary\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E34 Diary.mp4",
+              "name": "Season 03/S03E34 Diary",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E34%20Diary.mp4",
+              "seconds": 679,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 20
+              "sizeMB": 59
             }
           ]
         },
@@ -2513,6 +3171,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E34 Diary.mp4",
+              "name": "Season 03/S03E34 Diary",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E34%20Diary.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 59
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"The Best VHS in the World\" (0.84)",
               "item": "AlyticsRegularShow.967",
@@ -2522,6 +3193,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E35%20The%20Best%20Vhs%20In%20The%20World.ia.mp4",
               "seconds": 679,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 61
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Best VHS in the World\" (0.84)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E35 The Best Vhs In The World.mp4",
+              "name": "Season 03/S03E35 The Best Vhs In The World",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E35%20The%20Best%20Vhs%20In%20The%20World.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 61
             }
@@ -2547,6 +3231,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E35 The Best Vhs In The World.mp4",
+              "name": "Season 03/S03E35 The Best Vhs In The World",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E35%20The%20Best%20Vhs%20In%20The%20World.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 61
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Prankless\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2556,6 +3253,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E36%20Prankless.ia.mp4",
               "seconds": 679,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 73
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Prankless\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E36 Prankless.mp4",
+              "name": "Season 03/S03E36 Prankless",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E36%20Prankless.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 73
             }
@@ -2581,6 +3291,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E36 Prankless.mp4",
+              "name": "Season 03/S03E36 Prankless",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E36%20Prankless.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 73
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Death Bear\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2590,6 +3313,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E37%20Death%20Bear.ia.mp4",
               "seconds": 680,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 65
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Death Bear\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E37 Death Bear.mp4",
+              "name": "Season 03/S03E37 Death Bear",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E37%20Death%20Bear.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 65
             }
@@ -2615,6 +3351,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E37 Death Bear.mp4",
+              "name": "Season 03/S03E37 Death Bear",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E37%20Death%20Bear.mp4",
+              "seconds": 680,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 65
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Fuzzy Dice\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2624,6 +3373,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S03E38%20Fuzzy%20Dice.ia.mp4",
               "seconds": 679,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 59
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Fuzzy Dice\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E38 Fuzzy Dice.mp4",
+              "name": "Season 03/S03E38 Fuzzy Dice",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E38%20Fuzzy%20Dice.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 59
             }
@@ -2647,7 +3409,21 @@
             "playable": true,
             "sizeMB": 59
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E38 Fuzzy Dice.mp4",
+              "name": "Season 03/S03E38 Fuzzy Dice",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E38%20Fuzzy%20Dice.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 59
+            }
+          ]
         },
         {
           "number": 39,
@@ -2667,7 +3443,21 @@
             "playable": true,
             "sizeMB": 68
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Bad Kiss\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 03/S03E40 Bad Kiss.mp4",
+              "name": "Season 03/S03E40 Bad Kiss",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2003%2FS03E40%20Bad%20Kiss.mp4",
+              "seconds": 679,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 68
+            }
+          ]
         }
       ]
     },
@@ -2702,7 +3492,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -2744,6 +3534,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E04 150 Piece Kit.mp4",
+              "name": "Season 04/S04E04 150 Piece Kit",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E04%20150%20Piece%20Kit.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 60
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Pie Contest\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2753,6 +3556,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S04E13%20Pie%20Contest.ia.mp4",
               "seconds": 685,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 48
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Pie Contest\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E13 Pie Contest.mp4",
+              "name": "Season 04/S04E13 Pie Contest",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E13%20Pie%20Contest.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 48
             }
@@ -2778,6 +3594,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E05 Bald Spot.mp4",
+              "name": "Season 04/S04E05 Bald Spot",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E05%20Bald%20Spot.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 63
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"150 Piece Kit\" (0.82)",
               "item": "AlyticsRegularShow.967",
@@ -2787,6 +3616,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S04E04%20150%20Piece%20Kit.ia.mp4",
               "seconds": 684,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 60
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"150 Piece Kit\" (0.82)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E04 150 Piece Kit.mp4",
+              "name": "Season 04/S04E04 150 Piece Kit",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E04%20150%20Piece%20Kit.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 60
             }
@@ -2812,6 +3654,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E06 Guy's Night.mp4",
+              "name": "Season 04/S04E06 Guy's Night",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E06%20Guy's%20Night.mp4",
+              "seconds": 683,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 46
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Bald Spot\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2821,6 +3676,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S04E05%20Bald%20Spot.ia.mp4",
               "seconds": 685,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 63
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Bald Spot\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E05 Bald Spot.mp4",
+              "name": "Season 04/S04E05 Bald Spot",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E05%20Bald%20Spot.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 63
             }
@@ -2846,6 +3714,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E07 One Pull Up.mp4",
+              "name": "Season 04/S04E07 One Pull Up",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E07%20One%20Pull%20Up.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 43
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Guy's Night\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2855,6 +3736,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S04E06%20Guy's%20Night.ia.mp4",
               "seconds": 683,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 46
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Guy's Night\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E06 Guy's Night.mp4",
+              "name": "Season 04/S04E06 Guy's Night",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E06%20Guy's%20Night.mp4",
+              "seconds": 683,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 46
             }
@@ -2878,7 +3772,21 @@
             "playable": true,
             "sizeMB": 43
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"One Pull Up\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E07 One Pull Up.mp4",
+              "name": "Season 04/S04E07 One Pull Up",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E07%20One%20Pull%20Up.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 43
+            }
+          ]
         },
         {
           "number": 9,
@@ -2898,7 +3806,21 @@
             "playable": true,
             "sizeMB": 54
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E09 T.G.I Tuesday.mp4",
+              "name": "Season 04/S04E09 T.G.I Tuesday",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E09%20T.G.I%20Tuesday.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 54
+            }
+          ]
         },
         {
           "number": 10,
@@ -2918,7 +3840,34 @@
             "playable": true,
             "sizeMB": 46
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E10 Firework Run.mp4",
+              "name": "Season 04/S04E10 Firework Run",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E10%20Firework%20Run.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 46
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"T.G.I. Tuesday\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E09 T.G.I Tuesday.mp4",
+              "name": "Season 04/S04E09 T.G.I Tuesday",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E09%20T.G.I%20Tuesday.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 54
+            }
+          ]
         },
         {
           "number": 11,
@@ -2940,6 +3889,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E11 The Longest Weekend.mp4",
+              "name": "Season 04/S04E11 The Longest Weekend",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E11%20The%20Longest%20Weekend.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 46
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Firework Run\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2949,6 +3911,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S04E10%20Firework%20Run.ia.mp4",
               "seconds": 684,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 46
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Firework Run\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E10 Firework Run.mp4",
+              "name": "Season 04/S04E10 Firework Run",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E10%20Firework%20Run.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 46
             }
@@ -2974,6 +3949,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E12 Sandwitch Of Death.mp4",
+              "name": "Season 04/S04E12 Sandwitch Of Death",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E12%20Sandwitch%20Of%20Death.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 50
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"The Longest Weekend\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -2983,6 +3971,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S04E11%20The%20Longest%20Weekend.ia.mp4",
               "seconds": 685,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 46
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Longest Weekend\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E11 The Longest Weekend.mp4",
+              "name": "Season 04/S04E11 The Longest Weekend",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E11%20The%20Longest%20Weekend.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 46
             }
@@ -3008,6 +4009,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E13 Pie Contest.mp4",
+              "name": "Season 04/S04E13 Pie Contest",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E13%20Pie%20Contest.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 48
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Sandwich of Death\" (0.90)",
               "item": "AlyticsRegularShow.967",
@@ -3017,6 +4031,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S04E12%20Sandwitch%20Of%20Death.ia.mp4",
               "seconds": 685,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 50
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Sandwich of Death\" (0.90)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E12 Sandwitch Of Death.mp4",
+              "name": "Season 04/S04E12 Sandwitch Of Death",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E12%20Sandwitch%20Of%20Death.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 50
             }
@@ -3042,7 +4069,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3076,7 +4103,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3110,7 +4137,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3144,7 +4171,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3178,7 +4205,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3212,7 +4239,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3246,7 +4273,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3280,7 +4307,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3314,7 +4341,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3346,7 +4373,21 @@
             "playable": true,
             "sizeMB": 50
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 04/S04E23 K.I.L.I.T Raido.mp4",
+              "name": "Season 04/S04E23 K.I.L.I.T Raido",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2004%2FS04E23%20K.I.L.I.T%20Raido.mp4",
+              "seconds": 683,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 50
+            }
+          ]
         },
         {
           "number": 24,
@@ -3368,7 +4409,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3402,7 +4443,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3436,7 +4477,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3470,7 +4511,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3488,9 +4529,9 @@
           "number": 28,
           "name": "Meteor Moves",
           "airdate": "2013-06-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -3504,7 +4545,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3522,9 +4563,9 @@
           "number": 29,
           "name": "Family BBQ",
           "airdate": "2013-06-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -3538,7 +4579,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3556,9 +4597,9 @@
           "number": 30,
           "name": "The Last LaserDisc Player",
           "airdate": "2013-06-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -3572,7 +4613,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3606,7 +4647,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3640,7 +4681,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3708,7 +4749,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3742,7 +4783,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3776,7 +4817,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3810,7 +4851,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3849,7 +4890,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3883,7 +4924,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3901,9 +4942,9 @@
           "number": 3,
           "name": "Benson's Car",
           "airdate": "2013-09-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -3917,7 +4958,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3951,7 +4992,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -3985,7 +5026,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4019,7 +5060,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4053,7 +5094,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4095,7 +5136,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4129,7 +5170,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4163,7 +5204,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4205,7 +5246,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4239,7 +5280,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4273,7 +5314,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4307,7 +5348,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4341,7 +5382,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4375,7 +5416,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4393,9 +5434,9 @@
           "number": 19,
           "name": "Journey to the Bottom of the Crash Pit",
           "airdate": "2014-03-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -4409,7 +5450,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4443,7 +5484,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4477,7 +5518,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4519,7 +5560,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4537,9 +5578,9 @@
           "number": 24,
           "name": "Bad Portrait",
           "airdate": "2014-04-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -4553,7 +5594,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4585,7 +5626,21 @@
             "playable": true,
             "sizeMB": 52
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 05/S05E25 Video 101.mp4",
+              "name": "Season 05/S05E25 Video 101",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2005%2FS05E25%20Video%20101.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 52
+            }
+          ]
         },
         {
           "number": 26,
@@ -4607,7 +5662,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4641,7 +5696,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4675,7 +5730,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4709,7 +5764,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4743,7 +5798,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4777,7 +5832,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4811,7 +5866,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4822,19 +5877,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 48
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"Take the Cake\" (0.67)",
-              "item": "SuperRichieLoganRegularShow-CartoonNetwork",
-              "itemTitle": "Super Richie Logan Regular Show By Kevin H. Macleod For Cartoon Network",
-              "file": "0772 - Take the tower.mp4",
-              "name": "0772 - Take the tower",
-              "url": "https://archive.org/download/SuperRichieLoganRegularShow-CartoonNetwork/0772%20-%20Take%20the%20tower.mp4",
-              "seconds": 769,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 17
             }
           ]
         },
@@ -4858,7 +5900,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4892,7 +5934,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4910,9 +5952,9 @@
           "number": 35,
           "name": "Bachelor Party! Zingo!!",
           "airdate": "2014-07-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -4926,7 +5968,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4960,7 +6002,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -4994,7 +6036,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5033,7 +6075,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5051,9 +6093,9 @@
           "number": 2,
           "name": "New Bro on Campus",
           "airdate": "2014-10-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -5067,7 +6109,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5127,9 +6169,9 @@
           "number": 5,
           "name": "The End of Muscle Man",
           "airdate": "2014-10-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -5143,7 +6185,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5177,7 +6219,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5211,7 +6253,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5237,9 +6279,9 @@
           "number": 9,
           "name": "The White Elephant Gift Exchange",
           "airdate": "2014-12-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -5253,7 +6295,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5287,7 +6329,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5321,7 +6363,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5339,9 +6381,9 @@
           "number": 12,
           "name": "Park Managers Lunch",
           "airdate": "2015-01-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -5355,7 +6397,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5389,7 +6431,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5407,9 +6449,9 @@
           "number": 14,
           "name": "Married and Broke",
           "airdate": "2015-01-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -5423,7 +6465,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5457,7 +6499,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5491,7 +6533,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5525,7 +6567,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5543,9 +6585,9 @@
           "number": 18,
           "name": "Benson's Suit",
           "airdate": "2015-02-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -5559,7 +6601,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5593,7 +6635,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5627,7 +6669,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5661,6 +6703,19 @@
           },
           "alternates": [
             {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 06/S06E21 Party Horse.mp4",
+              "name": "Season 06/S06E21 Party Horse",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2006%2FS06E21%20Party%20Horse.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 52
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Party Horse\" (0.95)",
               "item": "AlyticsRegularShow.967",
@@ -5674,17 +6729,17 @@
               "sizeMB": 46
             },
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.75,
+              "why": "title ~ \"Party Horse\" (0.95)",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
-              "file": "Season 06/S06E21 Party Horse.mp4",
-              "name": "Season 06/S06E21 Party Horse",
-              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2006%2FS06E21%20Party%20Horse.mp4",
-              "seconds": 685,
+              "file": "Season 07/S07E12 The Return Of The Party Horse.mp4",
+              "name": "Season 07/S07E12 The Return Of The Party Horse",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2007%2FS07E12%20The%20Return%20Of%20The%20Party%20Horse.mp4",
+              "seconds": 686,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 52
+              "sizeMB": 46
             }
           ]
         },
@@ -5708,7 +6763,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5742,7 +6797,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5784,7 +6839,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5818,7 +6873,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5852,7 +6907,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5870,9 +6925,9 @@
           "number": 28,
           "name": "Dumped at the Altar",
           "airdate": "2015-06-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -5886,7 +6941,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5925,7 +6980,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5959,7 +7014,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -5993,7 +7048,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6011,9 +7066,9 @@
           "number": 4,
           "name": "Local News Legends",
           "airdate": "2015-08-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -6027,7 +7082,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6069,7 +7124,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6103,7 +7158,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6121,9 +7176,9 @@
           "number": 8,
           "name": "Struck by Lightning",
           "airdate": "2015-09-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -6137,7 +7192,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6177,27 +7232,81 @@
             "playable": true,
             "sizeMB": 53
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 07/S07E10 Sleep Cycle.mp4",
+              "name": "Season 07/S07E10 Sleep Cycle",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2007%2FS07E10%20Sleep%20Cycle.mp4",
+              "seconds": 686,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 53
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Sleep Cycle",
           "airdate": "2015-11-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Sleep Cycle\" (1.00)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
-            "file": "S07E10 Sleep Cycle.ia.mp4",
-            "name": "S07E10 Sleep Cycle",
-            "url": "https://archive.org/download/AlyticsRegularShow.967/S07E10%20Sleep%20Cycle.ia.mp4",
+            "file": "S07E11 Just Friends.ia.mp4",
+            "name": "S07E11 Just Friends",
+            "url": "https://archive.org/download/AlyticsRegularShow.967/S07E11%20Just%20Friends.ia.mp4",
             "seconds": 686,
             "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 53
+            "sizeMB": 54
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 07/S07E11 Just Friends.mp4",
+              "name": "Season 07/S07E11 Just Friends",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2007%2FS07E11%20Just%20Friends.mp4",
+              "seconds": 686,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 54
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Sleep Cycle\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "S07E10 Sleep Cycle.ia.mp4",
+              "name": "S07E10 Sleep Cycle",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/S07E10%20Sleep%20Cycle.ia.mp4",
+              "seconds": 686,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 53
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Sleep Cycle\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 07/S07E10 Sleep Cycle.mp4",
+              "name": "Season 07/S07E10 Sleep Cycle",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2007%2FS07E10%20Sleep%20Cycle.mp4",
+              "seconds": 686,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 53
+            }
+          ]
         },
         {
           "number": 12,
@@ -6217,15 +7326,55 @@
             "playable": true,
             "sizeMB": 46
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 07/S07E12 The Return Of The Party Horse.mp4",
+              "name": "Season 07/S07E12 The Return Of The Party Horse",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2007%2FS07E12%20The%20Return%20Of%20The%20Party%20Horse.mp4",
+              "seconds": 686,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 46
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Just Friends\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "S07E11 Just Friends.ia.mp4",
+              "name": "S07E11 Just Friends",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/S07E11%20Just%20Friends.ia.mp4",
+              "seconds": 686,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 54
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Just Friends\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 07/S07E11 Just Friends.mp4",
+              "name": "Season 07/S07E11 Just Friends",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2007%2FS07E11%20Just%20Friends.mp4",
+              "seconds": 686,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 54
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Benson's Pig",
           "airdate": "2015-11-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -6239,7 +7388,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6273,7 +7422,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6291,9 +7440,9 @@
           "number": 15,
           "name": "Hello China",
           "airdate": "2015-11-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -6307,7 +7456,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6341,7 +7490,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6375,7 +7524,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6409,7 +7558,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6443,7 +7592,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6477,7 +7626,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6511,7 +7660,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6545,7 +7694,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6579,7 +7728,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6613,7 +7762,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6647,7 +7796,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6681,7 +7830,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6715,6 +7864,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 07/S07E27 Rigby Goes To The Prom.mp4",
+              "name": "Season 07/S07E27 Rigby Goes To The Prom",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2007%2FS07E27%20Rigby%20Goes%20To%20The%20Prom.mp4",
+              "seconds": 686,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 50
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"The Button\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -6724,6 +7886,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S07E28%20The%20Button.ia.mp4",
               "seconds": 685,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 49
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Button\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 07/S07E28 The Button.mp4",
+              "name": "Season 07/S07E28 The Button",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2007%2FS07E28%20The%20Button.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 49
             }
@@ -6749,6 +7924,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 07/S07E28 The Button.mp4",
+              "name": "Season 07/S07E28 The Button",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2007%2FS07E28%20The%20Button.mp4",
+              "seconds": 685,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 49
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Rigby Goes to the Prom\" (1.00)",
               "item": "AlyticsRegularShow.967",
@@ -6758,6 +7946,19 @@
               "url": "https://archive.org/download/AlyticsRegularShow.967/S07E27%20Rigby%20Goes%20To%20The%20Prom.ia.mp4",
               "seconds": 686,
               "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 50
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Rigby Goes to the Prom\" (1.00)",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 07/S07E27 Rigby Goes To The Prom.mp4",
+              "name": "Season 07/S07E27 Rigby Goes To The Prom",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2007%2FS07E27%20Rigby%20Goes%20To%20The%20Prom.mp4",
+              "seconds": 686,
+              "format": "MPEG4",
               "playable": true,
               "sizeMB": 50
             }
@@ -6783,7 +7984,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6817,7 +8018,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6851,7 +8052,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6869,9 +8070,9 @@
           "number": 32,
           "name": "Pam I Am",
           "airdate": "2016-06-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -6885,7 +8086,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6919,7 +8120,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6953,7 +8154,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -6987,7 +8188,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7034,7 +8235,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7068,7 +8269,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7102,7 +8303,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7136,7 +8337,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7170,7 +8371,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7204,7 +8405,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7222,9 +8423,9 @@
           "number": 7,
           "name": "The Dream Warrior",
           "airdate": "2016-09-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -7238,7 +8439,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7272,7 +8473,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7306,7 +8507,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7324,9 +8525,9 @@
           "number": 10,
           "name": "Spacey McSpaceTree",
           "airdate": "2016-10-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -7360,7 +8561,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7394,7 +8595,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7446,9 +8647,9 @@
           "number": 14,
           "name": "Operation: Hear No Evil",
           "airdate": "2016-10-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -7462,7 +8663,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7496,7 +8697,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7530,7 +8731,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7564,7 +8765,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7598,7 +8799,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7640,7 +8841,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7658,9 +8859,9 @@
           "number": 21,
           "name": "The Key to the Universe",
           "airdate": "2016-11-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "AlyticsRegularShow.967",
             "itemTitle": "Alytics - Regular Show",
@@ -7674,7 +8875,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7708,7 +8909,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7750,7 +8951,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7784,7 +8985,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7818,7 +9019,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "AlyticsRegularShow.967",
               "itemTitle": "Alytics - Regular Show",
@@ -7850,7 +9051,21 @@
             "playable": true,
             "sizeMB": 48
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "AlyticsRegularShow.967",
+              "itemTitle": "Alytics - Regular Show",
+              "file": "Season 08/S08E27 A Regular Epic Final Battle Part 1.mp4",
+              "name": "Season 08/S08E27 A Regular Epic Final Battle Part 1",
+              "url": "https://archive.org/download/AlyticsRegularShow.967/Season%2008%2FS08E27%20A%20Regular%20Epic%20Final%20Battle%20Part%201.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 48
+            }
+          ]
         },
         {
           "number": 28,

@@ -3,7 +3,7 @@
   "slug": "the-glory",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-16T07:57:45.351Z",
+  "matchedAt": "2026-10-19T04:11:48.091Z",
   "addedAt": "2026-10-15T12:08:22.835Z",
   "tvmaze": {
     "id": 65502,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 16,
     "live": 0,
-    "review": 7,
-    "missing": 9,
-    "pct": 44
+    "review": 9,
+    "missing": 7,
+    "pct": 56
   },
   "seasons": [
     {
@@ -121,8 +121,20 @@
           "number": 5,
           "name": "Episode 5",
           "airdate": "2022-12-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "glory-days-2002-and-1990",
+            "itemTitle": "Glory Days (2002) all 9 eps (AKA Demontown) - Emily VanCamp",
+            "file": "Glory Days (2002) all 9 eps (AKA Demontown) - Emily VanCamp/Glory Days - Episode 5 - _The Lost Girls_.mp4",
+            "name": "Glory Days (2002) all 9 eps (AKA Demontown) - Emily VanCamp/Glory Days - Episode 5 - _The Lost Girls_",
+            "url": "https://archive.org/download/glory-days-2002-and-1990/Glory%20Days%20(2002)%20all%209%20eps%20(AKA%20Demontown)%20-%20Emily%20VanCamp%2FGlory%20Days%20-%20Episode%205%20-%20_The%20Lost%20Girls_.mp4",
+            "seconds": 3320,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 350
+          },
           "alternates": []
         },
         {
@@ -149,8 +161,20 @@
           "number": 7,
           "name": "Episode 7",
           "airdate": "2022-12-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "glory-days-2002-and-1990",
+            "itemTitle": "Glory Days (2002) all 9 eps (AKA Demontown) - Emily VanCamp",
+            "file": "Glory Days (2002) all 9 eps (AKA Demontown) - Emily VanCamp/Glory Days - Episode 7 - _There Goes the Neighborhood_.mp4",
+            "name": "Glory Days (2002) all 9 eps (AKA Demontown) - Emily VanCamp/Glory Days - Episode 7 - _There Goes the Neighborhood_",
+            "url": "https://archive.org/download/glory-days-2002-and-1990/Glory%20Days%20(2002)%20all%209%20eps%20(AKA%20Demontown)%20-%20Emily%20VanCamp%2FGlory%20Days%20-%20Episode%207%20-%20_There%20Goes%20the%20Neighborhood_.mp4",
+            "seconds": 3356,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 373
+          },
           "alternates": []
         },
         {

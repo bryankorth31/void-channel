@@ -3,7 +3,8 @@
   "slug": "high-potential",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:00.453Z",
+  "matchedAt": "2026-10-19T04:11:05.833Z",
+  "addedAt": "2026-10-19T04:11:05.838Z",
   "tvmaze": {
     "id": 68752,
     "name": "High Potential",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 33,
     "live": 0,
-    "review": 0,
-    "missing": 33,
-    "pct": 0
+    "review": 2,
+    "missing": 31,
+    "pct": 6
   },
   "seasons": [
     {
@@ -26,16 +27,42 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "2024-09-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
+            "item": "high.-potential.s-01",
+            "itemTitle": "High. Potential. S 01",
+            "file": "High.Potential.S01E01.Pilot.720p.x264.English.Esubs.MoviesMod.fit.mkv",
+            "name": "High.Potential.S01E01.Pilot.720p.x264.English.Esubs.MoviesMod.fit",
+            "url": "https://archive.org/download/high.-potential.s-01/High.Potential.S01E01.Pilot.720p.x264.English.Esubs.MoviesMod.fit.mkv",
+            "seconds": 2645,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 374
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Dancers in the Dark",
           "airdate": "2024-09-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
+            "item": "high.-potential.s-01",
+            "itemTitle": "High. Potential. S 01",
+            "file": "High.Potential.S01E02.Dancers.In.The.Dark.720p.x264.English.Esubs.MoviesMod.fit.mkv",
+            "name": "High.Potential.S01E02.Dancers.In.The.Dark.720p.x264.English.Esubs.MoviesMod.fit",
+            "url": "https://archive.org/download/high.-potential.s-01/High.Potential.S01E02.Dancers.In.The.Dark.720p.x264.English.Esubs.MoviesMod.fit.mkv",
+            "seconds": 2555,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 361
+          },
           "alternates": []
         },
         {

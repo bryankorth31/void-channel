@@ -3,7 +3,7 @@
   "slug": "gargoyles",
   "type": "Animated",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:28.991Z",
+  "matchedAt": "2026-10-19T04:10:37.841Z",
   "addedAt": "2026-10-15T16:33:23.568Z",
   "tvmaze": {
     "id": 1898,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 78,
-    "live": 0,
-    "review": 64,
-    "missing": 14,
-    "pct": 82
+    "live": 78,
+    "review": 0,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "Awakening",
           "airdate": "1994-10-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -41,31 +41,82 @@
             "playable": true,
             "sizeMB": 136
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Awakening\" (0.95)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 1/Gargoyles - 01x02 - Awakening (2).mp4",
+              "name": "Gargoyles (1994)/Season 1/Gargoyles - 01x02 - Awakening (2)",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%201%2FGargoyles%20-%2001x02%20-%20Awakening%20(2).mp4",
+              "seconds": 1369,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Awakening\" (0.95)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 1/Gargoyles - 01x03 - Awakening (3).mp4",
+              "name": "Gargoyles (1994)/Season 1/Gargoyles - 01x03 - Awakening (3)",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%201%2FGargoyles%20-%2001x03%20-%20Awakening%20(3).mp4",
+              "seconds": 1376,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Awakening: Part Two",
           "airdate": "1994-10-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 1/Gargoyles - 01x02 - Awakening (2).mp4",
+            "name": "Gargoyles (1994)/Season 1/Gargoyles - 01x02 - Awakening (2)",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%201%2FGargoyles%20-%2001x02%20-%20Awakening%20(2).mp4",
+            "seconds": 1369,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Awakening: Part Three",
           "airdate": "1994-10-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 1/Gargoyles - 01x03 - Awakening (3).mp4",
+            "name": "Gargoyles (1994)/Season 1/Gargoyles - 01x03 - Awakening (3)",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%201%2FGargoyles%20-%2001x03%20-%20Awakening%20(3).mp4",
+            "seconds": 1376,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Awakening (4)",
           "airdate": "1994-10-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -83,9 +134,9 @@
           "number": 5,
           "name": "Awakening (5)",
           "airdate": "1994-10-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -103,9 +154,9 @@
           "number": 6,
           "name": "The Thrill of the Hunt",
           "airdate": "1994-11-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -123,9 +174,9 @@
           "number": 7,
           "name": "Temptation",
           "airdate": "1994-11-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -143,9 +194,9 @@
           "number": 8,
           "name": "Deadly Force",
           "airdate": "1994-11-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -163,9 +214,9 @@
           "number": 9,
           "name": "Enter MacBeth",
           "airdate": "1995-01-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -183,9 +234,9 @@
           "number": 10,
           "name": "The Edge",
           "airdate": "1995-01-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -203,9 +254,9 @@
           "number": 11,
           "name": "Long Way to Morning",
           "airdate": "1995-01-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -223,9 +274,9 @@
           "number": 12,
           "name": "Her Brother's Keeper",
           "airdate": "1995-01-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -243,9 +294,9 @@
           "number": 13,
           "name": "Reawakening",
           "airdate": "1995-02-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -268,9 +319,9 @@
           "number": 1,
           "name": "Leader of the Pack",
           "airdate": "1995-09-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -288,9 +339,9 @@
           "number": 2,
           "name": "Metamorphosis",
           "airdate": "1995-09-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -308,9 +359,9 @@
           "number": 3,
           "name": "Legion",
           "airdate": "1995-09-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -328,9 +379,9 @@
           "number": 4,
           "name": "A Lighthouse in the Sea of Time",
           "airdate": "1995-09-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -348,9 +399,9 @@
           "number": 5,
           "name": "The Mirror",
           "airdate": "1995-09-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -368,9 +419,9 @@
           "number": 6,
           "name": "The Silver Falcon",
           "airdate": "1995-09-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -388,9 +439,9 @@
           "number": 7,
           "name": "Eye of the Beholder",
           "airdate": "1995-09-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -408,9 +459,9 @@
           "number": 8,
           "name": "Vows",
           "airdate": "1995-09-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -428,9 +479,9 @@
           "number": 9,
           "name": "City of Stone (1)",
           "airdate": "1995-09-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -448,9 +499,9 @@
           "number": 10,
           "name": "City of Stone (2)",
           "airdate": "1995-09-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -468,9 +519,9 @@
           "number": 11,
           "name": "City of Stone (3)",
           "airdate": "1995-09-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -488,9 +539,9 @@
           "number": 12,
           "name": "City of Stone (4)",
           "airdate": "1995-09-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -508,9 +559,9 @@
           "number": 13,
           "name": "High Noon",
           "airdate": "1995-09-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -528,9 +579,9 @@
           "number": 14,
           "name": "Outfoxed",
           "airdate": "1995-09-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -548,57 +599,213 @@
           "number": 15,
           "name": "The Price",
           "airdate": "1995-10-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x15 - Revelations.mp4",
+            "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x15 - Revelations",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x15%20-%20Revelations.mp4",
+            "seconds": 1370,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Price\" (1.00)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x20 - The Price.mp4",
+              "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x20 - The Price",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x20%20-%20The%20Price.mp4",
+              "seconds": 1369,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Revelations",
           "airdate": "1995-10-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x16 - Double Jeopardy.mp4",
+            "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x16 - Double Jeopardy",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x16%20-%20Double%20Jeopardy.mp4",
+            "seconds": 1370,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Revelations\" (1.00)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x15 - Revelations.mp4",
+              "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x15 - Revelations",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x15%20-%20Revelations.mp4",
+              "seconds": 1370,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 17,
           "name": "Double Jeopardy",
           "airdate": "1995-11-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x17 - Upgrade.mp4",
+            "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x17 - Upgrade",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x17%20-%20Upgrade.mp4",
+            "seconds": 1368,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Double Jeopardy\" (1.00)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x16 - Double Jeopardy.mp4",
+              "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x16 - Double Jeopardy",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x16%20-%20Double%20Jeopardy.mp4",
+              "seconds": 1370,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 18,
           "name": "Upgrade",
           "airdate": "1995-11-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x18 - Protection.mp4",
+            "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x18 - Protection",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x18%20-%20Protection.mp4",
+            "seconds": 1368,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Upgrade\" (1.00)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x17 - Upgrade.mp4",
+              "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x17 - Upgrade",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x17%20-%20Upgrade.mp4",
+              "seconds": 1368,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 135
+            }
+          ]
         },
         {
           "number": 19,
           "name": "Protection",
           "airdate": "1995-11-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x19 - The Cage.mp4",
+            "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x19 - The Cage",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x19%20-%20The%20Cage.mp4",
+            "seconds": 1368,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Protection\" (1.00)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x18 - Protection.mp4",
+              "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x18 - Protection",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x18%20-%20Protection.mp4",
+              "seconds": 1368,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 20,
           "name": "The Cage",
           "airdate": "1995-11-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x20 - The Price.mp4",
+            "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x20 - The Price",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x20%20-%20The%20Price.mp4",
+            "seconds": 1369,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Cage\" (1.00)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x19 - The Cage.mp4",
+              "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x19 - The Cage",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x19%20-%20The%20Cage.mp4",
+              "seconds": 1368,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 21,
           "name": "Avalon (1)",
           "airdate": "1995-11-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -616,9 +823,9 @@
           "number": 22,
           "name": "Avalon (2)",
           "airdate": "1995-11-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -636,9 +843,9 @@
           "number": 23,
           "name": "Avalon (3)",
           "airdate": "1995-11-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -656,9 +863,9 @@
           "number": 24,
           "name": "Shadows of the Past",
           "airdate": "1995-11-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -676,9 +883,9 @@
           "number": 25,
           "name": "Heritage",
           "airdate": "1995-11-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -696,57 +903,213 @@
           "number": 26,
           "name": "Monsters",
           "airdate": "1995-11-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x26 - Kingdom.mp4",
+            "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x26 - Kingdom",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x26%20-%20Kingdom.mp4",
+            "seconds": 1365,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Monsters\" (1.00)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x27 - Monsters.mp4",
+              "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x27 - Monsters",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x27%20-%20Monsters.mp4",
+              "seconds": 1373,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 27,
           "name": "Golem",
           "airdate": "1995-12-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x27 - Monsters.mp4",
+            "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x27 - Monsters",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x27%20-%20Monsters.mp4",
+            "seconds": 1373,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Golem\" (1.00)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x28 - Golem.mp4",
+              "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x28 - Golem",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x28%20-%20Golem.mp4",
+              "seconds": 1372,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 28,
           "name": "Sanctuary",
           "airdate": "1995-12-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x28 - Golem.mp4",
+            "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x28 - Golem",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x28%20-%20Golem.mp4",
+            "seconds": 1372,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Sanctuary\" (1.00)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x29 - Sanctuary.mp4",
+              "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x29 - Sanctuary",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x29%20-%20Sanctuary.mp4",
+              "seconds": 1368,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 29,
           "name": "M.I.A.",
           "airdate": "1995-12-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x29 - Sanctuary.mp4",
+            "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x29 - Sanctuary",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x29%20-%20Sanctuary.mp4",
+            "seconds": 1368,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"M.I.A.\" (1.00)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x30 - M.I.A..mp4",
+              "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x30 - M.I.A.",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x30%20-%20M.I.A..mp4",
+              "seconds": 1370,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 30,
           "name": "Grief",
           "airdate": "1995-12-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x30 - M.I.A..mp4",
+            "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x30 - M.I.A.",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x30%20-%20M.I.A..mp4",
+            "seconds": 1370,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Grief\" (1.00)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x31 - Grief.mp4",
+              "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x31 - Grief",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x31%20-%20Grief.mp4",
+              "seconds": 1386,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 31,
           "name": "Kingdom",
           "airdate": "1996-02-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "gargoyles-1080p-ai-upscale",
+            "itemTitle": "Gargoyles 1080p AI Upscale",
+            "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x31 - Grief.mp4",
+            "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x31 - Grief",
+            "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x31%20-%20Grief.mp4",
+            "seconds": 1386,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Kingdom\" (1.00)",
+              "item": "gargoyles-1080p-ai-upscale",
+              "itemTitle": "Gargoyles 1080p AI Upscale",
+              "file": "Gargoyles (1994)/Season 2/Gargoyles - 02x26 - Kingdom.mp4",
+              "name": "Gargoyles (1994)/Season 2/Gargoyles - 02x26 - Kingdom",
+              "url": "https://archive.org/download/gargoyles-1080p-ai-upscale/Gargoyles%20(1994)%2FSeason%202%2FGargoyles%20-%2002x26%20-%20Kingdom.mp4",
+              "seconds": 1365,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 32,
           "name": "The Hound of Ulster",
           "airdate": "1996-02-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -764,9 +1127,9 @@
           "number": 33,
           "name": "Walkabout",
           "airdate": "1996-02-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -784,9 +1147,9 @@
           "number": 34,
           "name": "Mark of the Panther",
           "airdate": "1996-02-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -804,9 +1167,9 @@
           "number": 35,
           "name": "Pendragon",
           "airdate": "1996-02-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -824,9 +1187,9 @@
           "number": 36,
           "name": "Eye of the Storm",
           "airdate": "1996-02-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -844,9 +1207,9 @@
           "number": 37,
           "name": "The New Olympians",
           "airdate": "1996-02-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -864,9 +1227,9 @@
           "number": 38,
           "name": "The Green",
           "airdate": "1996-02-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -884,9 +1247,9 @@
           "number": 39,
           "name": "Sentinel",
           "airdate": "1996-02-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -904,9 +1267,9 @@
           "number": 40,
           "name": "Bushido",
           "airdate": "1996-02-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -924,9 +1287,9 @@
           "number": 41,
           "name": "Cloud Fathers",
           "airdate": "1996-02-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -944,9 +1307,9 @@
           "number": 42,
           "name": "Ill Met by Moonlight",
           "airdate": "1996-02-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -964,9 +1327,9 @@
           "number": 43,
           "name": "Future Tense",
           "airdate": "1996-04-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -984,9 +1347,9 @@
           "number": 44,
           "name": "The Gathering (1)",
           "airdate": "1996-04-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1004,9 +1367,9 @@
           "number": 45,
           "name": "The Gathering (2)",
           "airdate": "1996-04-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1024,9 +1387,9 @@
           "number": 46,
           "name": "Vendettas",
           "airdate": "1996-05-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1044,9 +1407,9 @@
           "number": 47,
           "name": "Turf",
           "airdate": "1996-05-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1064,9 +1427,9 @@
           "number": 48,
           "name": "The Reckoning",
           "airdate": "1996-05-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1084,9 +1447,9 @@
           "number": 49,
           "name": "Possession",
           "airdate": "1996-05-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1104,9 +1467,9 @@
           "number": 50,
           "name": "Hunter's Moon (1)",
           "airdate": "1996-05-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1124,9 +1487,9 @@
           "number": 51,
           "name": "Hunter's Moon (2)",
           "airdate": "1996-05-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1144,9 +1507,9 @@
           "number": 52,
           "name": "Hunter's Moon (3)",
           "airdate": "1996-05-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1169,9 +1532,9 @@
           "number": 1,
           "name": "The Journey",
           "airdate": "1996-09-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1189,9 +1552,9 @@
           "number": 2,
           "name": "Ransom",
           "airdate": "1996-09-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1209,9 +1572,9 @@
           "number": 3,
           "name": "Runaways",
           "airdate": "1996-09-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1229,9 +1592,9 @@
           "number": 4,
           "name": "Broadway Goes Hollywood",
           "airdate": "1996-09-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1249,9 +1612,9 @@
           "number": 5,
           "name": "A Bronx Tail",
           "airdate": "1996-10-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1269,9 +1632,9 @@
           "number": 6,
           "name": "The Dying of the Light",
           "airdate": "1996-10-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1289,9 +1652,9 @@
           "number": 7,
           "name": "And Justice for All",
           "airdate": "1996-11-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1309,9 +1672,9 @@
           "number": 8,
           "name": "Genesis Undone",
           "airdate": "1996-11-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1329,9 +1692,9 @@
           "number": 9,
           "name": "Generations",
           "airdate": "1996-11-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1349,9 +1712,9 @@
           "number": 10,
           "name": "...For It May Come True",
           "airdate": "1996-11-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1369,9 +1732,9 @@
           "number": 11,
           "name": "To Serve Mankind",
           "airdate": "1996-11-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1389,9 +1752,9 @@
           "number": 12,
           "name": "Seeing Isn't Believing",
           "airdate": "1997-02-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",
@@ -1409,9 +1772,9 @@
           "number": 13,
           "name": "Angels in the Night",
           "airdate": "1997-02-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "gargoyles-1080p-ai-upscale",
             "itemTitle": "Gargoyles 1080p AI Upscale",

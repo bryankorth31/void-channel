@@ -3,7 +3,7 @@
   "slug": "minor-adjustments",
   "type": "90s Sitcoms",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:56:17.342Z",
+  "matchedAt": "2026-10-19T04:10:28.661Z",
   "addedAt": "2026-10-16T07:56:17.341Z",
   "tvmaze": {
     "id": 62372,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 20,
-    "live": 1,
-    "review": 7,
+    "live": 2,
+    "review": 6,
     "missing": 12,
     "pct": 40
   },
@@ -93,33 +93,33 @@
           "number": 6,
           "name": "The Ex-Files",
           "airdate": "1995-11-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"The Ex-Files\" (1.00)",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "minor-adjustments",
             "itemTitle": "Minor Adjustments (1994–95) sitcom -Raven's Dad + Sara Rue",
-            "file": "Minor Adjustments S1.E06 -  The Ex-Files.mp4",
-            "name": "Minor Adjustments S1.E06 -  The Ex-Files",
-            "url": "https://archive.org/download/minor-adjustments/Minor%20Adjustments%20S1.E06%20-%20%20The%20Ex-Files.mp4",
-            "seconds": 1334,
+            "file": "x 1x06 The Ex-Files VHS WOC - 'Martin Minor Adjustments Tape1995⧸1996' - yt Texas TV Time - writers phil + tom.mp4",
+            "name": "x 1x06 The Ex-Files VHS WOC - 'Martin Minor Adjustments Tape1995⧸1996' - yt Texas TV Time - writers phil + tom",
+            "url": "https://archive.org/download/minor-adjustments/x%201x06%20The%20Ex-Files%20VHS%20WOC%20-%20'Martin%20Minor%20Adjustments%20Tape1995%E2%A7%B81996'%20-%20yt%20Texas%20TV%20Time%20-%20writers%20phil%20%2B%20tom.mp4",
+            "seconds": 2112,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 102
+            "sizeMB": 220
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
+              "conf": 0.8,
+              "why": "title ~ \"The Ex-Files\" (1.00)",
               "item": "minor-adjustments",
               "itemTitle": "Minor Adjustments (1994–95) sitcom -Raven's Dad + Sara Rue",
-              "file": "x 1x06 The Ex-Files VHS WOC - 'Martin Minor Adjustments Tape1995⧸1996' - yt Texas TV Time - writers phil + tom.mp4",
-              "name": "x 1x06 The Ex-Files VHS WOC - 'Martin Minor Adjustments Tape1995⧸1996' - yt Texas TV Time - writers phil + tom",
-              "url": "https://archive.org/download/minor-adjustments/x%201x06%20The%20Ex-Files%20VHS%20WOC%20-%20'Martin%20Minor%20Adjustments%20Tape1995%E2%A7%B81996'%20-%20yt%20Texas%20TV%20Time%20-%20writers%20phil%20%2B%20tom.mp4",
-              "seconds": 2112,
+              "file": "Minor Adjustments S1.E06 -  The Ex-Files.mp4",
+              "name": "Minor Adjustments S1.E06 -  The Ex-Files",
+              "url": "https://archive.org/download/minor-adjustments/Minor%20Adjustments%20S1.E06%20-%20%20The%20Ex-Files.mp4",
+              "seconds": 1334,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 220
+              "sizeMB": 102
             }
           ]
         },

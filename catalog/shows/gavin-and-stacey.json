@@ -3,7 +3,7 @@
   "slug": "gavin-and-stacey",
   "type": "British and Beyond",
   "network": "BBC Three",
-  "matchedAt": "2026-10-16T07:57:03.989Z",
+  "matchedAt": "2026-10-19T04:11:11.039Z",
   "addedAt": "2026-10-15T22:16:12.873Z",
   "tvmaze": {
     "id": 2331,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 19,
     "live": 0,
-    "review": 12,
-    "missing": 7,
-    "pct": 63
+    "review": 17,
+    "missing": 2,
+    "pct": 89
   },
   "seasons": [
     {
@@ -27,40 +27,100 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2007-05-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 5 in \"Gavin & Stacey Series 1\"",
+            "item": "gavin-and-stacey-series-1",
+            "itemTitle": "Gavin & Stacey Series 1",
+            "file": "1 The Meet Up.mp4",
+            "name": "1 The Meet Up",
+            "url": "https://archive.org/download/gavin-and-stacey-series-1/1%20The%20Meet%20Up.mp4",
+            "seconds": 1696,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 933
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2007-05-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 5 in \"Gavin & Stacey Series 1\"",
+            "item": "gavin-and-stacey-series-1",
+            "itemTitle": "Gavin & Stacey Series 1",
+            "file": "2 The Misunderstanding Phone Call.mp4",
+            "name": "2 The Misunderstanding Phone Call",
+            "url": "https://archive.org/download/gavin-and-stacey-series-1/2%20The%20Misunderstanding%20Phone%20Call.mp4",
+            "seconds": 1612,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 884
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Episode 3",
           "airdate": "2007-05-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 5 in \"Gavin & Stacey Series 1\"",
+            "item": "gavin-and-stacey-series-1",
+            "itemTitle": "Gavin & Stacey Series 1",
+            "file": "3 Engagement Party.mp4",
+            "name": "3 Engagement Party",
+            "url": "https://archive.org/download/gavin-and-stacey-series-1/3%20Engagement%20Party.mp4",
+            "seconds": 1672,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 917
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Episode 4",
           "airdate": "2007-05-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 5 in \"Gavin & Stacey Series 1\"",
+            "item": "gavin-and-stacey-series-1",
+            "itemTitle": "Gavin & Stacey Series 1",
+            "file": "4 The Big Secret.mp4",
+            "name": "4 The Big Secret",
+            "url": "https://archive.org/download/gavin-and-stacey-series-1/4%20The%20Big%20Secret.mp4",
+            "seconds": 1686,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 924
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "2007-06-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 5 in \"Gavin & Stacey Series 1\"",
+            "item": "gavin-and-stacey-series-1",
+            "itemTitle": "Gavin & Stacey Series 1",
+            "file": "5 Hen Night for Stacey.mp4",
+            "name": "5 Hen Night for Stacey",
+            "url": "https://archive.org/download/gavin-and-stacey-series-1/5%20Hen%20Night%20for%20Stacey.mp4",
+            "seconds": 1622,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 889
+          },
           "alternates": []
         },
         {

@@ -3,21 +3,21 @@
   "slug": "the-simpsons",
   "type": "Animated",
   "network": "FOX",
-  "matchedAt": "2026-10-16T07:56:22.848Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:10:33.075Z",
+  "addedAt": "2026-10-16T07:56:22.848Z",
   "tvmaze": {
-    "id": null,
+    "id": 83,
     "name": "The Simpsons",
-    "runtime": null,
-    "premiered": null,
+    "runtime": 30,
+    "premiered": "1989-12-17",
     "network": "FOX"
   },
   "coverage": {
-    "total": 22,
+    "total": 806,
     "live": 0,
-    "review": 22,
-    "missing": 0,
-    "pct": 100
+    "review": 3,
+    "missing": 803,
+    "pct": 0
   },
   "seasons": [
     {
@@ -25,129 +25,454 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the lisasimpsonfan2002s swimsuit bikini fanservice scene compilation starring marge lisa and zia",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-simpsons-lisa-simpson-fan-2002s-swimsuit-bikini-fanservice-scene-compilation",
-            "itemTitle": "[The Simpsons] LisaSimpsonFan2002's Swimsuit/Bikini/Fanservice Scene Compilation (Starring Marge, Lisa, and Zia)",
-            "file": "[The Simpsons] LisaSimpsonFan2002's Swimsuit Bikini Fanservice Scene Compilation (Starring Marge, Lisa, and Zia).mp4",
-            "name": "[The Simpsons] LisaSimpsonFan2002's Swimsuit Bikini Fanservice Scene Compilation (Starring Marge, Lisa, and Zia)",
-            "url": "https://archive.org/download/the-simpsons-lisa-simpson-fan-2002s-swimsuit-bikini-fanservice-scene-compilation/%5BThe%20Simpsons%5D%20LisaSimpsonFan2002's%20Swimsuit%20Bikini%20Fanservice%20Scene%20Compilation%20(Starring%20Marge%2C%20Lisa%2C%20and%20Zia).mp4",
-            "seconds": 1820,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 779,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Simpsons Roasting on an Open Fire",
+          "airdate": "1989-12-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "4iqdp77y 3c",
-          "state": "REVIEW",
-          "file": {
-            "item": "youtube-4Iqdp77y_3c",
-            "itemTitle": "The Simpsons 'No-No Sheets’",
-            "file": "4Iqdp77y_3c.webm",
-            "name": "4Iqdp77y_3c",
-            "url": "https://archive.org/download/youtube-4Iqdp77y_3c/4Iqdp77y_3c.webm",
-            "seconds": 1388,
-            "format": "WebM",
-            "playable": true,
-            "sizeMB": 451,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Bart the Genius",
+          "airdate": "1990-01-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "eternal moonshine of the simpson mind",
-          "state": "REVIEW",
-          "file": {
-            "item": "eternal-moonshine-of-the-simpson-mind",
-            "itemTitle": "The Simpsons: Eternal Moonshine Of The Simpson Mind Animatic (S19E9)",
-            "file": "Eternal Moonshine of the Simpson Mind.mp4",
-            "name": "Eternal Moonshine of the Simpson Mind",
-            "url": "https://archive.org/download/eternal-moonshine-of-the-simpson-mind/Eternal%20Moonshine%20of%20the%20Simpson%20Mind.mp4",
-            "seconds": 1642,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 171,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Homer's Odyssey",
+          "airdate": "1990-01-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "fox 43 news at ten february 23",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheSimpsonsPartialTVStuffMid90s",
-            "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
-            "file": "Fox 43 News at Ten- February 23, 1997.mp4",
-            "name": "Fox 43 News at Ten- February 23, 1997",
-            "url": "https://archive.org/download/TheSimpsonsPartialTVStuffMid90s/Fox%2043%20News%20at%20Ten-%20February%2023%2C%201997.mp4",
-            "seconds": 2048,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1270,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "There's No Disgrace Like Home",
+          "airdate": "1990-01-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "millersburg tv company footage june 14",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheSimpsonsPartialTVStuffMid90s",
-            "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
-            "file": "Millersburg TV Company Footage- June 14, 1997.mp4",
-            "name": "Millersburg TV Company Footage- June 14, 1997",
-            "url": "https://archive.org/download/TheSimpsonsPartialTVStuffMid90s/Millersburg%20TV%20Company%20Footage-%20June%2014%2C%201997.mp4",
-            "seconds": 3503,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 4009,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Bart the General",
+          "airdate": "1990-02-04",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
-          "name": "star trek deep space nine by infernos light incomplete",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheSimpsonsPartialTVStuffMid90s",
-            "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
-            "file": "Star Trek- Deep Space Nine (By Inferno's Light)- Incomplete.mp4",
-            "name": "Star Trek- Deep Space Nine (By Inferno's Light)- Incomplete",
-            "url": "https://archive.org/download/TheSimpsonsPartialTVStuffMid90s/Star%20Trek-%20Deep%20Space%20Nine%20(By%20Inferno's%20Light)-%20Incomplete.mp4",
-            "seconds": 1001,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 515,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Moaning Lisa",
+          "airdate": "1990-02-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
-          "name": "the colonel homer most",
+          "name": "The Call of the Simpsons",
+          "airdate": "1990-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Telltale Head",
+          "airdate": "1990-02-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Life on the Fast Lane",
+          "airdate": "1990-03-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Homer's Night Out",
+          "airdate": "1990-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Crepes of Wrath",
+          "airdate": "1990-04-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Krusty Gets Busted",
+          "airdate": "1990-04-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Some Enchanted Evening",
+          "airdate": "1990-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Bart Gets an F",
+          "airdate": "1990-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Simpson and Delilah",
+          "airdate": "1990-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Treehouse of Horror",
+          "airdate": "1990-10-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Two Cars in Every Garage and Three Eyes on Every Fish",
+          "airdate": "1990-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Dancin' Homer",
+          "airdate": "1990-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Dead Putting Society",
+          "airdate": "1990-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Bart vs. Thanksgiving",
+          "airdate": "1990-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Bart the Daredevil",
+          "airdate": "1990-12-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Itchy & Scratchy & Marge",
+          "airdate": "1990-12-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Bart Gets Hit by a Car",
+          "airdate": "1991-01-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "One Fish, Two Fish, Blowfish, Blue Fish",
+          "airdate": "1991-01-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Way We Was",
+          "airdate": "1991-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Homer vs. Lisa and the Eighth Commandment",
+          "airdate": "1991-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Principal Charming",
+          "airdate": "1991-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Oh Brother, Where Art Thou?",
+          "airdate": "1991-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Bart's Dog Gets an F",
+          "airdate": "1991-03-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Old Money",
+          "airdate": "1991-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Brush with Greatness",
+          "airdate": "1991-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Lisa's Substitute",
+          "airdate": "1991-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The War of the Simpsons",
+          "airdate": "1991-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Three Men and a Comic Book",
+          "airdate": "1991-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Blood Feud",
+          "airdate": "1991-07-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Stark Raving Dad",
+          "airdate": "1991-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Mr. Lisa Goes to Washington",
+          "airdate": "1991-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "When Flanders Failed",
+          "airdate": "1991-10-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Bart the Murderer",
+          "airdate": "1991-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Homer Defined",
+          "airdate": "1991-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Like Father Like Clown",
+          "airdate": "1991-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Treehouse of Horror II",
+          "airdate": "1991-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Lisa's Pony",
+          "airdate": "1991-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Saturdays of Thunder",
+          "airdate": "1991-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Flaming Moe's",
+          "airdate": "1991-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Burns Verkaufen der Kraftwerk",
+          "airdate": "1991-12-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "I Married Marge",
+          "airdate": "1991-12-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Radio Bart",
+          "airdate": "1992-01-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Lisa the Greek",
+          "airdate": "1992-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Homer Alone",
+          "airdate": "1992-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Bart the Lover",
+          "airdate": "1992-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Homer at the Bat",
+          "airdate": "1992-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Separate Vocations",
+          "airdate": "1992-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Dog of Death",
+          "airdate": "1992-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Colonel Homer",
+          "airdate": "1992-03-26",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Colonel Homer\" (0.95)",
             "item": "TheSimpsonsPartialTVStuffMid90s",
             "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
             "file": "The Simpsons- Colonel Homer (most).mp4",
@@ -156,78 +481,151 @@
             "seconds": 1406,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1191,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1191
           },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Black Widower",
+          "airdate": "1992-04-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Otto Show",
+          "airdate": "1992-04-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Bart's Friend Falls in Love",
+          "airdate": "1992-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Brother, Can You Spare Two Dimes?",
+          "airdate": "1992-08-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Kamp Krusty",
+          "airdate": "1992-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "A Streetcar Named Marge",
+          "airdate": "1992-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Homer the Heretic",
+          "airdate": "1992-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Lisa the Beauty Queen",
+          "airdate": "1992-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Treehouse of Horror III",
+          "airdate": "1992-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Itchy & Scratchy: The Movie",
+          "airdate": "1992-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Marge Gets a Job",
+          "airdate": "1992-11-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "the halloween special i incomplete",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheSimpsonsPartialTVStuffMid90s",
-            "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
-            "file": "The Simpsons- Halloween Special I (incomplete).mp4",
-            "name": "The Simpsons- Halloween Special I (incomplete)",
-            "url": "https://archive.org/download/TheSimpsonsPartialTVStuffMid90s/The%20Simpsons-%20Halloween%20Special%20I%20(incomplete).mp4",
-            "seconds": 1088,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 505,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The New Kid on the Block",
+          "airdate": "1992-11-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
-          "name": "the halloween special v",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheSimpsonsPartialTVStuffMid90s",
-            "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
-            "file": "The Simpsons- Halloween Special V.mp4",
-            "name": "The Simpsons- Halloween Special V",
-            "url": "https://archive.org/download/TheSimpsonsPartialTVStuffMid90s/The%20Simpsons-%20Halloween%20Special%20V.mp4",
-            "seconds": 1902,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1050,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Mr. Plow",
+          "airdate": "1992-11-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
-          "name": "the halloween special vi",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheSimpsonsPartialTVStuffMid90s",
-            "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
-            "file": "The Simpsons- Halloween Special VI.mp4",
-            "name": "The Simpsons- Halloween Special VI",
-            "url": "https://archive.org/download/TheSimpsonsPartialTVStuffMid90s/The%20Simpsons-%20Halloween%20Special%20VI.mp4",
-            "seconds": 1810,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 929,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Lisa's First Word",
+          "airdate": "1992-12-03",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
-          "name": "the selmas choice most",
+          "name": "Homer's Triple Bypass",
+          "airdate": "1992-12-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Marge vs. the Monorail",
+          "airdate": "1993-01-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Selma's Choice",
+          "airdate": "1993-01-21",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Selma's Choice\" (0.95)",
             "item": "TheSimpsonsPartialTVStuffMid90s",
             "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
             "file": "The Simpsons- Selma's Choice (most).mp4",
@@ -236,239 +634,6065 @@
             "seconds": 1465,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 723,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "the x files unrequited incomplete",
-          "state": "REVIEW",
-          "file": {
-            "item": "TheSimpsonsPartialTVStuffMid90s",
-            "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
-            "file": "The X-Files- Unrequited (Incomplete).mp4",
-            "name": "The X-Files- Unrequited (Incomplete)",
-            "url": "https://archive.org/download/TheSimpsonsPartialTVStuffMid90s/The%20X-Files-%20Unrequited%20(Incomplete).mp4",
-            "seconds": 2232,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1437,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "wttg 20010910 220000 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "WTTG_20010910_220000_The_Simpsons",
-            "itemTitle": "The Simpsons : WTTG : September 10, 2001 6:00pm-6:30pm EDT",
-            "file": "WTTG_20010910_220000_The_Simpsons.mp4",
-            "name": "WTTG_20010910_220000_The_Simpsons",
-            "url": "https://archive.org/download/WTTG_20010910_220000_The_Simpsons/WTTG_20010910_220000_The_Simpsons.mp4",
-            "seconds": 1802,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 184,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 723
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "wttg 20010910 223000 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "WTTG_20010910_223000_The_Simpsons",
-            "itemTitle": "The Simpsons : WTTG : September 10, 2001 6:30pm-7:00pm EDT",
-            "file": "WTTG_20010910_223000_The_Simpsons.mp4",
-            "name": "WTTG_20010910_223000_The_Simpsons",
-            "url": "https://archive.org/download/WTTG_20010910_223000_The_Simpsons/WTTG_20010910_223000_The_Simpsons.mp4",
-            "seconds": 1801,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 183,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Brother from the Same Planet",
+          "airdate": "1993-02-04",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 15,
-          "name": "wttg 20010911 220000 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "WTTG_20010911_220000_The_Simpsons",
-            "itemTitle": "The Simpsons : WTTG : September 11, 2001 6:00pm-6:30pm EDT",
-            "file": "WTTG_20010911_220000_The_Simpsons.mp4",
-            "name": "WTTG_20010911_220000_The_Simpsons",
-            "url": "https://archive.org/download/WTTG_20010911_220000_The_Simpsons/WTTG_20010911_220000_The_Simpsons.mp4",
-            "seconds": 1805,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 181,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "I Love Lisa",
+          "airdate": "1993-02-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 16,
-          "name": "wttg 20010911 223000 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "WTTG_20010911_223000_The_Simpsons",
-            "itemTitle": "The Simpsons : WTTG : September 11, 2001 6:30pm-6:59pm EDT",
-            "file": "WTTG_20010911_223000_The_Simpsons.mp4",
-            "name": "WTTG_20010911_223000_The_Simpsons",
-            "url": "https://archive.org/download/WTTG_20010911_223000_The_Simpsons/WTTG_20010911_223000_The_Simpsons.mp4",
-            "seconds": 1798,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 180,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Duffless",
+          "airdate": "1993-02-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
-          "name": "wttg 20010912 223000 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "WTTG_20010912_223000_The_Simpsons",
-            "itemTitle": "The Simpsons : WTTG : September 12, 2001 6:30pm-7:00pm EDT",
-            "file": "WTTG_20010912_223000_The_Simpsons.mp4",
-            "name": "WTTG_20010912_223000_The_Simpsons",
-            "url": "https://archive.org/download/WTTG_20010912_223000_The_Simpsons/WTTG_20010912_223000_The_Simpsons.mp4",
-            "seconds": 1804,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 181,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Last Exit to Springfield",
+          "airdate": "1993-03-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 18,
-          "name": "wttg 20010914 010000 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "WTTG_20010914_010000_The_Simpsons",
-            "itemTitle": "The Simpsons : WTTG : September 13, 2001 9:00pm-9:30pm EDT",
-            "file": "WTTG_20010914_010000_The_Simpsons.mp4",
-            "name": "WTTG_20010914_010000_The_Simpsons",
-            "url": "https://archive.org/download/WTTG_20010914_010000_The_Simpsons/WTTG_20010914_010000_The_Simpsons.mp4",
-            "seconds": 1804,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 181,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "So It's Come to This: A Simpsons Clip Show",
+          "airdate": "1993-04-01",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 19,
-          "name": "wttg 20010914 220000 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "WTTG_20010914_220000_The_Simpsons",
-            "itemTitle": "The Simpsons : WTTG : September 14, 2001 6:00pm-6:29pm EDT",
-            "file": "WTTG_20010914_220000_The_Simpsons.mp4",
-            "name": "WTTG_20010914_220000_The_Simpsons",
-            "url": "https://archive.org/download/WTTG_20010914_220000_The_Simpsons/WTTG_20010914_220000_The_Simpsons.mp4",
-            "seconds": 1798,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 180,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "The Front",
+          "airdate": "1993-04-15",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 20,
-          "name": "wttg 20010914 223000 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "WTTG_20010914_223000_The_Simpsons",
-            "itemTitle": "The Simpsons : WTTG : September 14, 2001 6:30pm-6:59pm EDT",
-            "file": "WTTG_20010914_223000_The_Simpsons.mp4",
-            "name": "WTTG_20010914_223000_The_Simpsons",
-            "url": "https://archive.org/download/WTTG_20010914_223000_The_Simpsons/WTTG_20010914_223000_The_Simpsons.mp4",
-            "seconds": 1798,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 180,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Whacking Day",
+          "airdate": "1993-04-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 21,
-          "name": "wttg 20010918 220000 the",
-          "state": "REVIEW",
-          "file": {
-            "item": "WTTG_20010918_220000_The_Simpsons",
-            "itemTitle": "The Simpsons : WTTG : September 18, 2001 6:00pm-6:29pm EDT",
-            "file": "WTTG_20010918_220000_The_Simpsons.mp4",
-            "name": "WTTG_20010918_220000_The_Simpsons",
-            "url": "https://archive.org/download/WTTG_20010918_220000_The_Simpsons/WTTG_20010918_220000_The_Simpsons.mp4",
-            "seconds": 1796,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 176,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Marge in Chains",
+          "airdate": "1993-05-06",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 22,
-          "name": "wttg 20010919 010000 the",
+          "name": "Krusty Gets Kancelled",
+          "airdate": "1993-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Homer's Barbershop Quartet",
+          "airdate": "1993-09-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Cape Feare",
+          "airdate": "1993-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Homer Goes to College",
+          "airdate": "1993-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Rosebud",
+          "airdate": "1993-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Treehouse of Horror IV",
+          "airdate": "1993-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Marge on the Lam",
+          "airdate": "1993-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Bart's Inner Child",
+          "airdate": "1993-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Boy-Scoutz 'n the Hood",
+          "airdate": "1993-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Last Temptation of Homer",
+          "airdate": "1993-12-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "$pringfield (or, How I Learned to Stop Worrying and Love Legalized Gambling)",
+          "airdate": "1993-12-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Homer the Vigilante",
+          "airdate": "1994-01-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Bart Gets Famous",
+          "airdate": "1994-02-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Homer and Apu",
+          "airdate": "1994-02-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Lisa vs. Malibu Stacy",
+          "airdate": "1994-02-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Deep Space Homer",
+          "airdate": "1994-02-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Homer Loves Flanders",
+          "airdate": "1994-03-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Bart Gets an Elephant",
+          "airdate": "1994-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Burns' Heir",
+          "airdate": "1994-04-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Sweet Seymour Skinner's Baadasssss Song",
+          "airdate": "1994-04-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Boy Who Knew Too Much",
+          "airdate": "1994-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Lady Bouvier's Lover",
+          "airdate": "1994-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Secrets of a Successful Marriage",
+          "airdate": "1994-05-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 6,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Bart of Darkness",
+          "airdate": "1994-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Lisa's Rival",
+          "airdate": "1994-09-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Another Simpsons Clip Show",
+          "airdate": "1994-09-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Itchy & Scratchy Land",
+          "airdate": "1994-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Sideshow Bob Roberts",
+          "airdate": "1994-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Treehouse of Horror V",
+          "airdate": "1994-10-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Bart's Girlfriend",
+          "airdate": "1994-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Lisa on Ice",
+          "airdate": "1994-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Homer Badman",
+          "airdate": "1994-11-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Grandpa vs. Sexual Inadequacy",
+          "airdate": "1994-12-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Fear of Flying",
+          "airdate": "1994-12-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Homer the Great",
+          "airdate": "1995-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "And Maggie Makes Three",
+          "airdate": "1995-01-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Bart's Comet",
+          "airdate": "1995-02-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Homie the Clown",
+          "airdate": "1995-02-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Bart vs. Australia",
+          "airdate": "1995-02-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Homer vs. Patty and Selma",
+          "airdate": "1995-02-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "A Star is Burns",
+          "airdate": "1995-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Lisa's Wedding",
+          "airdate": "1995-03-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Two Dozen and One Greyhounds",
+          "airdate": "1995-04-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The PTA Disbands",
+          "airdate": "1995-04-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Round Springfield",
+          "airdate": "1995-04-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "The Springfield Connection",
+          "airdate": "1995-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Lemon of Troy",
+          "airdate": "1995-05-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Who Shot Mr. Burns? (1)",
+          "airdate": "1995-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 7,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Who Shot Mr. Burns? (2)",
+          "airdate": "1995-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Radioactive Man",
+          "airdate": "1995-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Home Sweet Homediddly-Dum-Doodily",
+          "airdate": "1995-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Bart Sells His Soul",
+          "airdate": "1995-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Lisa the Vegetarian",
+          "airdate": "1995-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Treehouse of Horror VI",
+          "airdate": "1995-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "King-Size Homer",
+          "airdate": "1995-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Mother Simpson",
+          "airdate": "1995-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Sideshow Bob's Last Gleaming",
+          "airdate": "1995-11-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Simpsons 138th Episode Spectacular",
+          "airdate": "1995-12-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Marge Be Not Proud",
+          "airdate": "1995-12-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Team Homer",
+          "airdate": "1996-01-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Two Bad Neighbors",
+          "airdate": "1996-01-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Scenes from the Class Struggle in Springfield",
+          "airdate": "1996-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Bart the Fink",
+          "airdate": "1996-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Lisa the Iconoclast",
+          "airdate": "1996-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Homer the Smithers",
+          "airdate": "1996-02-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "The Day the Violence Died",
+          "airdate": "1996-03-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "A Fish Called Selma",
+          "airdate": "1996-03-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Bart on the Road",
+          "airdate": "1996-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "22 Short Films About Springfield",
+          "airdate": "1996-04-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Raging Abe Simpson and His Grumbling Grandson in \"The Curse of the Flying Hellfish\"",
+          "airdate": "1996-04-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Much Apu About Nothing",
+          "airdate": "1996-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Homerpalooza",
+          "airdate": "1996-05-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Summer of 4 ft. 2",
+          "airdate": "1996-05-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 8,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Treehouse of Horror VII",
+          "airdate": "1996-10-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "You Only Move Twice",
+          "airdate": "1996-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Homer They Fall",
+          "airdate": "1996-11-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Burns, Baby Burns",
+          "airdate": "1996-11-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Bart After Dark",
+          "airdate": "1996-11-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "A Milhouse Divided",
+          "airdate": "1996-12-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Lisa's Date with Density",
+          "airdate": "1996-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Hurricane Neddy",
+          "airdate": "1996-12-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "El Viaje de Nuestro Jomer (The Mysterious Voyage of Homer)",
+          "airdate": "1997-01-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Springfield Files",
+          "airdate": "1997-01-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Twisted World of Marge Simpson",
+          "airdate": "1997-01-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Mountain of Madness",
+          "airdate": "1997-02-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Simpsoncalifragilisticexpiala (Annoyed Grunt) cious",
+          "airdate": "1997-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Itchy & Scratchy & Poochie Show",
+          "airdate": "1997-02-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Homer's Phobia",
+          "airdate": "1997-02-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Brother from Another Series",
+          "airdate": "1997-02-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "My Sister, My Sitter",
+          "airdate": "1997-03-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Homer vs. the Eighteenth Amendment",
+          "airdate": "1997-03-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Grade School Confidential",
+          "airdate": "1997-04-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Canine Mutiny",
+          "airdate": "1997-04-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The Old Man and Lisa",
+          "airdate": "1997-04-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "In Marge We Trust",
+          "airdate": "1997-04-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Homer's Enemy",
+          "airdate": "1997-05-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "The Simpsons Spin-Off Showcase",
+          "airdate": "1997-05-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "The Secret War of Lisa Simpson",
+          "airdate": "1997-05-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 9,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The City of New York vs. Homer Simpson",
+          "airdate": "1997-09-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Principal and the Pauper",
+          "airdate": "1997-09-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Lisa's Sax",
+          "airdate": "1997-10-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror VIII",
+          "airdate": "1997-10-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Cartridge Family",
+          "airdate": "1997-11-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Bart Star",
+          "airdate": "1997-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Two Mrs. Nahasapeemapetilons",
+          "airdate": "1997-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Lisa the Skeptic",
+          "airdate": "1997-11-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Realty Bites",
+          "airdate": "1997-12-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Miracle on Evergreen Terrace",
+          "airdate": "1997-12-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "All Singing, All Dancing",
+          "airdate": "1998-01-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Bart Carny",
+          "airdate": "1998-01-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Joy of Sect",
+          "airdate": "1998-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Das Bus",
+          "airdate": "1998-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Last Temptation of Krusty",
+          "airdate": "1998-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Dumbbell Indemnity",
+          "airdate": "1998-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Lisa the Simpson",
+          "airdate": "1998-03-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "This Little Wiggy",
+          "airdate": "1998-03-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Simpson Tide",
+          "airdate": "1998-03-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Trouble with Trillions",
+          "airdate": "1998-04-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Girly Edition",
+          "airdate": "1998-04-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Trash of the Titans",
+          "airdate": "1998-04-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "King of the Hill",
+          "airdate": "1998-05-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Lost Our Lisa",
+          "airdate": "1998-05-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Natural Born Kissers",
+          "airdate": "1998-05-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 10,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Lard of the Dance",
+          "airdate": "1998-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Wizard of Evergreen Terrace",
+          "airdate": "1998-09-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Bart the Mother",
+          "airdate": "1998-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror IX",
+          "airdate": "1998-10-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "When You Dish Upon a Star",
+          "airdate": "1998-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "D'Oh-in' in the Wind",
+          "airdate": "1998-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Lisa Gets an \"A\"",
+          "airdate": "1998-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Homer Simpson in: \"Kidney Trouble\"",
+          "airdate": "1998-12-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Mayored to the Mob",
+          "airdate": "1998-12-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Viva Ned Flanders",
+          "airdate": "1999-01-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Wild Barts Can't Be Broken",
+          "airdate": "1999-01-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Sunday, Cruddy Sunday",
+          "airdate": "1999-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Homer to the Max",
+          "airdate": "1999-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "I'm with Cupid",
+          "airdate": "1999-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Marge Simpson in: \"Screaming Yellow Honkers\"",
+          "airdate": "1999-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Make Room for Lisa",
+          "airdate": "1999-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Maximum Homerdrive",
+          "airdate": "1999-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Simpsons Bible Stories",
+          "airdate": "1999-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Mom and Pop Art",
+          "airdate": "1999-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Old Man and the \"C\" Student",
+          "airdate": "1999-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Monty Can't Buy Me Love",
+          "airdate": "1999-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "They Saved Lisa's Brain",
+          "airdate": "1999-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "30 Minutes Over Tokyo",
+          "airdate": "1999-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 11,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Beyond Blunderdome",
+          "airdate": "1999-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Brother's Little Helper",
+          "airdate": "1999-10-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Guess Who's Coming to Criticize Dinner",
+          "airdate": "1999-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror X",
+          "airdate": "1999-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "E-I-E-I-(Annoyed Grunt)",
+          "airdate": "1999-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Hello Gutter, Hello Fadder",
+          "airdate": "1999-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Eight Misbehavin",
+          "airdate": "1999-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Take My Wife, Sleaze",
+          "airdate": "1999-11-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Grift of the Magi",
+          "airdate": "1999-12-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Little Big Mom",
+          "airdate": "2000-01-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Faith Off",
+          "airdate": "2000-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Mansion Family",
+          "airdate": "2000-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Saddlesore Galactica",
+          "airdate": "2000-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Alone Again Natura-Diddily",
+          "airdate": "2000-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Missionary Impossible",
+          "airdate": "2000-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Pygmoelian",
+          "airdate": "2000-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Bart to the Future",
+          "airdate": "2000-03-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Days of Wine and D'Ohses",
+          "airdate": "2000-04-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Kill the Alligator and Run",
+          "airdate": "2000-04-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Last Tap Dance in Springfield",
+          "airdate": "2000-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "It's a Mad, Mad, Mad, Mad Marge",
+          "airdate": "2000-05-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Behind the Laughter",
+          "airdate": "2000-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 12,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Treehouse of Horror XI",
+          "airdate": "2000-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "A Tale of Two Springfields",
+          "airdate": "2000-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Insane Clown Poppy",
+          "airdate": "2000-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Lisa the Treehugger",
+          "airdate": "2000-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Homer vs. Dignity",
+          "airdate": "2000-11-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Computer Wore Menace Shoes",
+          "airdate": "2000-12-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Great Money Caper",
+          "airdate": "2000-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Skinner's Sense of Snow",
+          "airdate": "2000-12-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "HOMR",
+          "airdate": "2001-01-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Pokey Mom",
+          "airdate": "2001-01-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Worst Episode Ever",
+          "airdate": "2001-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Tennis the Menace",
+          "airdate": "2001-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Day of the Jackanapes",
+          "airdate": "2001-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "New Kids on the Blecch",
+          "airdate": "2001-02-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Hungry Hungry Homer",
+          "airdate": "2001-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Bye Bye Nerdy",
+          "airdate": "2001-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Simpsons Safari",
+          "airdate": "2001-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Trilogy of Error",
+          "airdate": "2001-04-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "I'm Goin' to Praise Land",
+          "airdate": "2001-05-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Children of a Lesser Clod",
+          "airdate": "2001-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Simpsons Tall Tales",
+          "airdate": "2001-05-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 13,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Treehouse of Horror XII",
+          "airdate": "2001-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Parent Rap",
+          "airdate": "2001-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Homer the Moe",
+          "airdate": "2001-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Hunka Hunka Burns in Love",
+          "airdate": "2001-12-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Blunder Years",
+          "airdate": "2001-12-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "She of Little Faith",
+          "airdate": "2001-12-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Brawl in the Family",
+          "airdate": "2002-01-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Sweets and Sour Marge",
+          "airdate": "2002-01-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Jaws Wired Shut",
+          "airdate": "2002-01-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Half-Decent Proposal",
+          "airdate": "2002-02-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Bart Wants What It Wants",
+          "airdate": "2002-02-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Lastest Gun in the West",
+          "airdate": "2002-02-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Old Man and the Key",
+          "airdate": "2002-03-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Tales from the Public Domain",
+          "airdate": "2002-03-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Blame It on Lisa",
+          "airdate": "2002-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Weekend at Burnsies",
+          "airdate": "2002-04-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Gump Roast",
+          "airdate": "2002-04-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "I Am Furious Yellow",
+          "airdate": "2002-04-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "The Sweetest Apu",
+          "airdate": "2002-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Little Girl in the Big Ten",
+          "airdate": "2002-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Frying Game",
+          "airdate": "2002-05-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Papa's Got a Brand New Badge",
+          "airdate": "2002-05-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 14,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Treehouse of Horror XIII",
+          "airdate": "2002-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "How I Spent My Strummer Vacation",
+          "airdate": "2002-11-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Bart vs. Lisa vs. 3rd Grade",
+          "airdate": "2002-11-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Large Marge",
+          "airdate": "2002-11-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Helter Shelter",
+          "airdate": "2002-12-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Great Louse Detective",
+          "airdate": "2002-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Special Edna (a.k.a. Love and Marking)",
+          "airdate": "2003-01-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Dad Who Knew Too Little",
+          "airdate": "2003-01-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Strong Arms of the Ma",
+          "airdate": "2003-02-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Pray Anything",
+          "airdate": "2003-02-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Barting Over",
+          "airdate": "2003-02-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "I'm Spelling As Fast As I Can",
+          "airdate": "2003-02-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "A Star is Born Again",
+          "airdate": "2003-03-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Mr. Spritz Goes to Washington",
+          "airdate": "2003-03-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "C. E. D'oh",
+          "airdate": "2003-03-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "'Scuse Me While I Miss the Sky",
+          "airdate": "2003-03-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Three Gays of the Condo",
+          "airdate": "2003-04-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Dude, Where's My Ranch?",
+          "airdate": "2003-04-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Old Yeller-Belly",
+          "airdate": "2003-05-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Brake My Wife, Please",
+          "airdate": "2003-05-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The Bart of War",
+          "airdate": "2003-05-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Moe Baby Blues",
+          "airdate": "2003-05-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 15,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Treehouse of Horror XIV",
+          "airdate": "2003-11-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "My Mother the Carjacker",
+          "airdate": "2003-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The President Wore Pearls",
+          "airdate": "2003-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Regina Monologues",
+          "airdate": "2003-11-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Fat and the Furriest",
+          "airdate": "2003-11-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Today I Am a Klown",
+          "airdate": "2003-12-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "'Tis the Fifteenth Season",
+          "airdate": "2003-12-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Marge vs. Singles, Seniors, Childless Couples and Teens, and Gays",
+          "airdate": "2004-01-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "I, (Annoyed Grunt)-Bot",
+          "airdate": "2004-01-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Diatribe of a Mad Housewife",
+          "airdate": "2004-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Margical History Tour",
+          "airdate": "2004-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Milhouse Doesn't Live Here Anymore",
+          "airdate": "2004-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Smart & Smarter",
+          "airdate": "2004-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Ziff Who Came to Dinner",
+          "airdate": "2004-03-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Co-Dependent's Day",
+          "airdate": "2004-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Wandering Juvie",
+          "airdate": "2004-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "My Big Fat Geek Wedding",
+          "airdate": "2004-04-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Catch 'Em If You Can",
+          "airdate": "2004-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Simple Simpson",
+          "airdate": "2004-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Way We Weren't",
+          "airdate": "2004-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Bart-Mangled Banner",
+          "airdate": "2004-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Fraudcast News",
+          "airdate": "2004-05-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 16,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Treehouse of Horror XV",
+          "airdate": "2004-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "All's Fair in Oven War",
+          "airdate": "2004-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Sleeping with the Enemy",
+          "airdate": "2004-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "She Used to Be My Girl",
+          "airdate": "2004-12-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Fat Man and Little Boy",
+          "airdate": "2004-12-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Midnight Rx",
+          "airdate": "2005-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Mommie Beerest",
+          "airdate": "2005-01-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Homer and Ned's Hail Mary Pass",
+          "airdate": "2005-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Pranksta Rap",
+          "airdate": "2005-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "There's Something About Marrying",
+          "airdate": "2005-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "On a Clear Day I Can't See My Sister",
+          "airdate": "2005-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Goo Goo Gai Pan",
+          "airdate": "2005-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Mobile Homer",
+          "airdate": "2005-03-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Seven-Beer Snitch",
+          "airdate": "2005-04-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Future-Drama",
+          "airdate": "2005-04-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Don't Fear the Roofer",
+          "airdate": "2005-05-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "The Heartbroke Kid",
+          "airdate": "2005-05-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "A Star is Torn",
+          "airdate": "2005-05-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Thank God It's Doomsday",
+          "airdate": "2005-05-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Home Away from Homer",
+          "airdate": "2005-05-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Father, Son and Holy Guest-Star",
+          "airdate": "2005-05-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 17,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Bonfire of the Manatees",
+          "airdate": "2005-09-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Girl Who Slept Too Little",
+          "airdate": "2005-09-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Millhouse Of Sand And Fog",
+          "airdate": "2005-09-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror XVI",
+          "airdate": "2005-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Marge's Son Poisoning",
+          "airdate": "2005-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "See Homer Run",
+          "airdate": "2005-11-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Last of the Red Hat Mamas",
+          "airdate": "2005-11-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Italian Bob",
+          "airdate": "2005-12-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Simpsons Christmas Stories",
+          "airdate": "2005-12-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Homer's Paternity Coot",
+          "airdate": "2006-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "We're on the Road to D'oh-where",
+          "airdate": "2006-01-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "My Fair Laddy",
+          "airdate": "2006-02-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Seemingly Never-Ending Story",
+          "airdate": "2006-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Bart Has Two Mommies",
+          "airdate": "2006-03-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Homer Simpson, This is Your Wife",
+          "airdate": "2006-03-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Million Dollar Abie",
+          "airdate": "2006-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Kiss Kiss Bang Bangalore",
+          "airdate": "2006-04-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "The Wettest Stories Ever Told",
+          "airdate": "2006-04-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Girls Just Want to Have Sums",
+          "airdate": "2006-04-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Regarding Margie",
+          "airdate": "2006-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The Monkey Suit",
+          "airdate": "2006-05-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Marge and Homer Turn a Couple Play",
+          "airdate": "2006-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 18,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Mook, the Chef, the Wife and Her Homer",
+          "airdate": "2006-09-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Jazzy and the Pussycats",
+          "airdate": "2006-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Please Homer, Don't Hammer 'em",
+          "airdate": "2006-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror XVII",
+          "airdate": "2006-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "GI (Annoyed Grunt)",
+          "airdate": "2006-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Moe 'N' a Lisa",
+          "airdate": "2006-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Ice Cream of Margie (With the Light Blue Hair)",
+          "airdate": "2006-11-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Haw-Hawed Couple",
+          "airdate": "2006-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Kill Gil (Parts I & II)",
+          "airdate": "2006-12-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Wife Aquatic",
+          "airdate": "2007-01-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Revenge is a Dish Best Served Three Times",
+          "airdate": "2007-01-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Little Big Girl",
+          "airdate": "2007-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Springfield Up",
+          "airdate": "2007-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Yokel Chords",
+          "airdate": "2007-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Rome-old and Juli-eh",
+          "airdate": "2007-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Homerazzi",
+          "airdate": "2007-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Marge Gamer",
+          "airdate": "2007-04-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "The Boys of Bummer",
+          "airdate": "2007-04-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Crook and Ladder",
+          "airdate": "2007-05-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Stop or My Dog Will Shoot",
+          "airdate": "2007-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "24 Minutes",
+          "airdate": "2007-05-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "You Kent Always Say What You Want",
+          "airdate": "2007-05-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 19,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "He Loves to Fly and He D'ohs",
+          "airdate": "2007-09-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Homer of Seville",
+          "airdate": "2007-09-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Midnight Towboy",
+          "airdate": "2007-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "I Don't Wanna Know Why the Caged Bird Sings",
+          "airdate": "2007-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Treehouse of Horror XVIII",
+          "airdate": "2007-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Little Orphan Millie",
+          "airdate": "2007-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Husbands and Knives",
+          "airdate": "2007-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Funeral for a Fiend",
+          "airdate": "2007-11-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Eternal Moonshine of the Simpson Mind",
+          "airdate": "2007-12-16",
           "state": "REVIEW",
           "file": {
-            "item": "WTTG_20010919_010000_The_Simpsons",
-            "itemTitle": "The Simpsons : WTTG : September 18, 2001 9:00pm-9:18pm EDT",
-            "file": "WTTG_20010919_010000_The_Simpsons.mp4",
-            "name": "WTTG_20010919_010000_The_Simpsons",
-            "url": "https://archive.org/download/WTTG_20010919_010000_The_Simpsons/WTTG_20010919_010000_The_Simpsons.mp4",
-            "seconds": 1087,
+            "conf": 0.75,
+            "why": "title ~ \"Eternal Moonshine of the Simpson Mind\" (1.00)",
+            "item": "eternal-moonshine-of-the-simpson-mind",
+            "itemTitle": "The Simpsons: Eternal Moonshine Of The Simpson Mind Animatic (S19E9)",
+            "file": "Eternal Moonshine of the Simpson Mind.mp4",
+            "name": "Eternal Moonshine of the Simpson Mind",
+            "url": "https://archive.org/download/eternal-moonshine-of-the-simpson-mind/Eternal%20Moonshine%20of%20the%20Simpson%20Mind.mp4",
+            "seconds": 1642,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 109,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 171
           },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "E Pluribus Wiggum",
+          "airdate": "2008-01-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "That 90's Show",
+          "airdate": "2008-01-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Love, Springfieldian Style",
+          "airdate": "2008-02-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Debarted",
+          "airdate": "2008-03-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Dial 'N' for Nerder",
+          "airdate": "2008-03-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Smoke on the Daughter",
+          "airdate": "2008-03-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Papa Don't Leech",
+          "airdate": "2008-04-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Apocalypse Cow",
+          "airdate": "2008-04-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Any Given Sundance",
+          "airdate": "2008-05-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Mona Leaves-a",
+          "airdate": "2008-05-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "All About Lisa",
+          "airdate": "2008-05-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 20,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Sex, Pies and Idiot Scrapes",
+          "airdate": "2008-09-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Lost Verizon",
+          "airdate": "2008-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Double, Double, Boy in Trouble",
+          "airdate": "2008-10-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror XIX",
+          "airdate": "2008-11-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Dangerous Curves",
+          "airdate": "2008-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Homer and Lisa Exchange Cross Words",
+          "airdate": "2008-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Mypods and Boomsticks",
+          "airdate": "2008-11-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Burns and the Bees",
+          "airdate": "2008-12-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Lisa the Drama Queen",
+          "airdate": "2009-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Take My Life, Please",
+          "airdate": "2009-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "How the Test Was Won",
+          "airdate": "2009-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "No Loan Again, Naturally",
+          "airdate": "2009-03-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Gone Maggie Gone",
+          "airdate": "2009-03-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "In the Name of the Grandfather",
+          "airdate": "2009-03-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Wedding for Disaster",
+          "airdate": "2009-03-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Eeny Teeny Maya Moe",
+          "airdate": "2009-04-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "The Good, the Sad and the Drugly",
+          "airdate": "2009-04-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Father Knows Worst",
+          "airdate": "2009-04-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Waverly Hills, 9021-D'Oh",
+          "airdate": "2009-05-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Four Great Women and a Manicure",
+          "airdate": "2009-05-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Coming to Homerica",
+          "airdate": "2009-05-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 21,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Homer the Whopper",
+          "airdate": "2009-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Bart Gets a 'Z'",
+          "airdate": "2009-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Great Wife Hope",
+          "airdate": "2009-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror XX",
+          "airdate": "2009-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Devil Wears Nada",
+          "airdate": "2009-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Pranks and Greens",
+          "airdate": "2009-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Rednecks and Broomsticks",
+          "airdate": "2009-11-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "O Brother, Where Bart Thou?",
+          "airdate": "2009-12-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Thursdays with Abie",
+          "airdate": "2010-01-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Once Upon a Time in Springfield",
+          "airdate": "2010-01-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Million Dollar Maybe",
+          "airdate": "2010-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Boy Meets Curl",
+          "airdate": "2010-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Color Yellow",
+          "airdate": "2010-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Postcards from the Wedge",
+          "airdate": "2010-03-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Stealing First Base",
+          "airdate": "2010-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "The Greatest Story Ever Doh'd",
+          "airdate": "2010-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "American History X-cellent",
+          "airdate": "2010-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Chief of Hearts",
+          "airdate": "2010-04-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "The Squirt and the Whale",
+          "airdate": "2010-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "To Surveil with Love",
+          "airdate": "2010-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Moe Letter Blues",
+          "airdate": "2010-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Bob Next Door",
+          "airdate": "2010-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Judge Me Tender",
+          "airdate": "2010-05-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 22,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Elementary School Musical",
+          "airdate": "2010-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Loan-a-Lisa",
+          "airdate": "2010-10-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Money Bart",
+          "airdate": "2010-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror XXI",
+          "airdate": "2010-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Lisa Simpson, This Isn't Your Life",
+          "airdate": "2010-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Fool Monty",
+          "airdate": "2010-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "How Munched is That Birdie in the Window",
+          "airdate": "2010-11-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Fight Before Christmas",
+          "airdate": "2010-12-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Donnie Fatso",
+          "airdate": "2010-12-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Moms I'd Like to Forget",
+          "airdate": "2011-01-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Flaming Moe",
+          "airdate": "2011-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Homer the Father",
+          "airdate": "2011-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Blue and the Gray",
+          "airdate": "2011-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Angry Dad: The Movie",
+          "airdate": "2011-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Scorpion's Tale",
+          "airdate": "2011-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "A Midsummer's Nice Dream",
+          "airdate": "2011-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Love is a Many Strangled Thing",
+          "airdate": "2011-03-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "The Great Simpsina",
+          "airdate": "2011-04-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "The Real Housewives of Fat Tony",
+          "airdate": "2011-05-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Homer Scissorhands",
+          "airdate": "2011-05-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "500 Keys",
+          "airdate": "2011-05-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Ned-Liest Catch",
+          "airdate": "2011-05-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 23,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Falcon and the D'ohman",
+          "airdate": "2011-09-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Bart Stops to Smell the Roosevelts",
+          "airdate": "2011-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Treehouse of Horror XXII",
+          "airdate": "2011-10-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Replaceable You",
+          "airdate": "2011-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Food Wife",
+          "airdate": "2011-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Book Job",
+          "airdate": "2011-11-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Man in the Blue Flannel Pants",
+          "airdate": "2011-11-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Ten-Per-Cent Solution",
+          "airdate": "2011-12-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Holidays of Future Passed",
+          "airdate": "2011-12-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Politically Inept, with Homer Simpson",
+          "airdate": "2012-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The D'oh-cial Network",
+          "airdate": "2012-01-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Moe Goes from Rags to Riches",
+          "airdate": "2012-01-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Daughter Also Rises",
+          "airdate": "2012-02-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "At Long Last Leave",
+          "airdate": "2012-02-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Exit Through the Kwik-E-Mart",
+          "airdate": "2012-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "How I Wet Your Mother",
+          "airdate": "2012-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Them, Robot",
+          "airdate": "2012-03-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Beware My Cheating Bart",
+          "airdate": "2012-04-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "A Totally Fun Thing That Bart Will Never Do Again",
+          "airdate": "2012-04-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Spy Who Learned Me",
+          "airdate": "2012-05-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Ned 'n' Edna's Blend",
+          "airdate": "2012-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Lisa Goes Gaga",
+          "airdate": "2012-05-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 24,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Moonshine River",
+          "airdate": "2012-09-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Treehouse of Horror XXIII",
+          "airdate": "2012-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Adventures in Baby-Getting",
+          "airdate": "2012-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Gone Abie Gone",
+          "airdate": "2012-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Penny-Wiseguys",
+          "airdate": "2012-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "A Tree Grows in Springfield",
+          "airdate": "2012-11-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Day the Earth Stood Cool",
+          "airdate": "2012-12-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "To Cur with Love",
+          "airdate": "2012-12-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Homer Goes to Prep School",
+          "airdate": "2013-01-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "A Test Before Trying",
+          "airdate": "2013-01-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Changing of the Guardian",
+          "airdate": "2013-01-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Love is a Many-Splintered Thing",
+          "airdate": "2013-02-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Hardly Kirk-Ing",
+          "airdate": "2013-02-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Gorgeous Grampa",
+          "airdate": "2013-03-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Black-eyed, Please",
+          "airdate": "2013-03-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Dark Knight Court",
+          "airdate": "2013-03-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "What Animated Women Want",
+          "airdate": "2013-04-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Pulpit Friction",
+          "airdate": "2013-04-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Whiskey Business",
+          "airdate": "2013-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Fabulous Faker Boy",
+          "airdate": "2013-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The Saga of Carl",
+          "airdate": "2013-05-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Dangers on a Train",
+          "airdate": "2013-05-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 25,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Homerland",
+          "airdate": "2013-09-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Treehouse of Horror XXIV",
+          "airdate": "2013-10-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Four Regrettings and a Funeral",
+          "airdate": "2013-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "YOLO",
+          "airdate": "2013-11-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Labor Pains",
+          "airdate": "2013-11-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Kid is All Right",
+          "airdate": "2013-11-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Yellow Subterfuge",
+          "airdate": "2013-12-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "White Christmas Blues",
+          "airdate": "2013-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Steal This Episode",
+          "airdate": "2014-01-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Married to the Blob",
+          "airdate": "2014-01-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Specs and the City",
+          "airdate": "2014-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Diggs",
+          "airdate": "2014-03-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Man Who Grew Too Much",
+          "airdate": "2014-03-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Winter of His Content",
+          "airdate": "2014-03-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The War of Art",
+          "airdate": "2014-03-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "You Don't Have to Live Like a Referee",
+          "airdate": "2014-03-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Luca$",
+          "airdate": "2014-04-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Days of Future Future",
+          "airdate": "2014-04-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "What to Expect When Bart's Expecting",
+          "airdate": "2014-04-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Brick Like Me",
+          "airdate": "2014-05-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Pay Pal",
+          "airdate": "2014-05-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Yellow Badge of Cowardge",
+          "airdate": "2014-05-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 26,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Clown in the Dumps",
+          "airdate": "2014-09-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Wreck of the Relationship",
+          "airdate": "2014-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Super Franchise Me",
+          "airdate": "2014-10-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror XXV",
+          "airdate": "2014-10-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Opposites A-frack",
+          "airdate": "2014-11-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Simpsorama",
+          "airdate": "2014-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Blazed and Confused",
+          "airdate": "2014-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Covercraft",
+          "airdate": "2014-11-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "I Won't Be Home for Christmas",
+          "airdate": "2014-12-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Man Who Came to Be Dinner",
+          "airdate": "2015-01-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Bart's New Friend",
+          "airdate": "2015-01-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Musk Who Fell to Earth",
+          "airdate": "2015-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Walking Big & Tall",
+          "airdate": "2015-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "My Fare Lady",
+          "airdate": "2015-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Princess Guide",
+          "airdate": "2015-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Sky Police",
+          "airdate": "2015-03-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Waiting for Duffman",
+          "airdate": "2015-03-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Peeping Mom",
+          "airdate": "2015-04-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "The Kids Are All Fight",
+          "airdate": "2015-04-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Let's Go Fly a Coot",
+          "airdate": "2015-05-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Bull-E",
+          "airdate": "2015-05-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Mathlete's Feat",
+          "airdate": "2015-05-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 27,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Every Man's Dream",
+          "airdate": "2015-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Cue Detective",
+          "airdate": "2015-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Puffless",
+          "airdate": "2015-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Halloween of Horror",
+          "airdate": "2015-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Treehouse of Horror XXVI",
+          "airdate": "2015-10-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Friend with Benefit",
+          "airdate": "2015-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Lisa with an 'S'",
+          "airdate": "2015-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Paths of Glory",
+          "airdate": "2015-12-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Barthood",
+          "airdate": "2015-12-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Girl Code",
+          "airdate": "2016-01-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Teenage Mutant Milk-caused Hurdles",
+          "airdate": "2016-01-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Much Apu About Something",
+          "airdate": "2016-01-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Love is in the N2-O2-Ar-CO2-Ne-He-CH4",
+          "airdate": "2016-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Gal of Constant Sorrow",
+          "airdate": "2016-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Lisa the Veterinarian",
+          "airdate": "2016-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "The Marge-ian Chronicles",
+          "airdate": "2016-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "The Burns Cage",
+          "airdate": "2016-04-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "How Lisa Got Her Marge Back",
+          "airdate": "2016-04-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Fland Canyon",
+          "airdate": "2016-04-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "To Courier with Love",
+          "airdate": "2016-05-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Simprovised",
+          "airdate": "2016-05-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Orange is the New Yellow",
+          "airdate": "2016-05-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 28,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Monty Burns' Fleeing Circus",
+          "airdate": "2016-09-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Friends and Family",
+          "airdate": "2016-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Town",
+          "airdate": "2016-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror XXVII",
+          "airdate": "2016-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Trust But Clarify",
+          "airdate": "2016-10-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "There Will Be Buds",
+          "airdate": "2016-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Havana Wild Weekend",
+          "airdate": "2016-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Dad Behavior",
+          "airdate": "2016-11-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Last Traction Hero",
+          "airdate": "2016-12-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Nightmare After Krustmas",
+          "airdate": "2016-12-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Pork & Burns",
+          "airdate": "2017-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Great Phatsby, Part One",
+          "airdate": "2017-01-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Great Phatsby, Part Two",
+          "airdate": "2017-01-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Fatzcarraldo",
+          "airdate": "2017-02-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Cad and the Hat",
+          "airdate": "2017-02-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Kamp Krustier",
+          "airdate": "2017-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "22 for 30",
+          "airdate": "2017-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "A Father's Watch",
+          "airdate": "2017-03-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Caper Chase",
+          "airdate": "2017-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Looking for Mr. Goodbart",
+          "airdate": "2017-04-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Moho House",
+          "airdate": "2017-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Dogtown",
+          "airdate": "2017-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 29,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Serfsons",
+          "airdate": "2017-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Springfield Splendor",
+          "airdate": "2017-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Whistler's Father",
+          "airdate": "2017-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror XXVIII",
+          "airdate": "2017-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Grampy Can Ya Hear Me",
+          "airdate": "2017-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Old Blue Mayor She Ain't What She Used to Be",
+          "airdate": "2017-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Singin' in the Lane",
+          "airdate": "2017-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Mr. Lisa's Opus",
+          "airdate": "2017-12-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Gone Boy",
+          "airdate": "2017-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Haw-Haw Land",
+          "airdate": "2018-01-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Frink Gets Testy",
+          "airdate": "2018-01-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Homer is Where the Art Isn't",
+          "airdate": "2018-03-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "3 Scenes Plus a Tag from a Marriage",
+          "airdate": "2018-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Fears of a Clown",
+          "airdate": "2018-04-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "No Good Read Goes Unpunished",
+          "airdate": "2018-04-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "King Leer",
+          "airdate": "2018-04-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Lisa Gets the Blues",
+          "airdate": "2018-04-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Forgive and Regret",
+          "airdate": "2018-04-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Left Behind",
+          "airdate": "2018-05-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Throw Grampa from the Dane",
+          "airdate": "2018-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Flanders' Ladder",
+          "airdate": "2018-05-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 30,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Bart's Not Dead",
+          "airdate": "2018-09-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Heartbreak Hotel",
+          "airdate": "2018-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "My Way or the Highway to Heaven",
+          "airdate": "2018-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror XXIX",
+          "airdate": "2018-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Baby You Can't Drive My Car",
+          "airdate": "2018-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "From Russia Without Love",
+          "airdate": "2018-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Werking Mom",
+          "airdate": "2018-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Krusty the Clown",
+          "airdate": "2018-11-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Daddicus Finch",
+          "airdate": "2018-12-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "'Tis the 30th Season",
+          "airdate": "2018-12-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Mad About the Toy",
+          "airdate": "2019-01-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Girl on the Bus",
+          "airdate": "2019-01-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "I'm Dancing as Fat as I Can",
+          "airdate": "2019-02-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Clown Stays in the Picture",
+          "airdate": "2019-02-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "101 Mitigations",
+          "airdate": "2019-03-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "I Want You (She's So Heavy)",
+          "airdate": "2019-03-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "E My Sports",
+          "airdate": "2019-03-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Bart vs. Itchy & Scratchy",
+          "airdate": "2019-03-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Girl's in the Band",
+          "airdate": "2019-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "I'm Just a Girl Who Can't Say D'oh",
+          "airdate": "2019-04-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "D'oh Canada",
+          "airdate": "2019-04-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Woo-Hoo Dunnit",
+          "airdate": "2019-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Crystal Blue-Haired Persuasion",
+          "airdate": "2019-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 31,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Winter of Our Monetized Content",
+          "airdate": "2019-09-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Go Big or Go Homer",
+          "airdate": "2019-10-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Fat Blue Line",
+          "airdate": "2019-10-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror XXX",
+          "airdate": "2019-10-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Gorillas on the Mast",
+          "airdate": "2019-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Marge the Lumberjill",
+          "airdate": "2019-11-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Livin La Pura Vida",
+          "airdate": "2019-11-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Thanksgiving of Horror",
+          "airdate": "2019-11-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Todd, Todd, Why Hast Thou Forsaken Me?",
+          "airdate": "2019-12-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Bobby, It's Cold Outside",
+          "airdate": "2019-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Hail to the Teeth",
+          "airdate": "2020-01-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Miseducation of Lisa Simpson",
+          "airdate": "2020-02-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Frinkcoin",
+          "airdate": "2020-02-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Bart the Bad Guy",
+          "airdate": "2020-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Screenless",
+          "airdate": "2020-03-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Better Off Ned",
+          "airdate": "2020-03-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Highway to Well",
+          "airdate": "2020-03-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "The Incredible Lightness of Being a Baby",
+          "airdate": "2020-04-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Warrin' Priests",
+          "airdate": "2020-04-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Warrin' Priests Part Two",
+          "airdate": "2020-05-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The Hateful Eight-Year-Olds",
+          "airdate": "2020-05-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Way of the Dog",
+          "airdate": "2020-05-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 32,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Undercover Burns",
+          "airdate": "2020-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "I, Carumbus",
+          "airdate": "2020-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Now Museum, Now You Don't",
+          "airdate": "2020-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror XXXI",
+          "airdate": "2020-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The 7 Beer Itch",
+          "airdate": "2020-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Podcast News",
+          "airdate": "2020-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Three Dreams Denied",
+          "airdate": "2020-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Road To Cincinnati",
+          "airdate": "2020-11-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Sorry Not Sorry",
+          "airdate": "2020-12-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "A Springfield Summer Christmas for Christmas",
+          "airdate": "2020-12-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Dad-Feelings Limited",
+          "airdate": "2021-01-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Diary Queen",
+          "airdate": "2021-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Wad Goals",
+          "airdate": "2021-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Yokel Hero",
+          "airdate": "2021-03-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Do PizzaBots Dream of Electric Guitars?",
+          "airdate": "2021-03-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Manger Things",
+          "airdate": "2021-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Uncut Femmes",
+          "airdate": "2021-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Burger Kings",
+          "airdate": "2021-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Panic On The Streets Of Springfield",
+          "airdate": "2021-04-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Mother and Child Reunion",
+          "airdate": "2021-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The Man from G.R.A.M.P.A.",
+          "airdate": "2021-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Last Barfighter",
+          "airdate": "2021-05-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 33,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Star of the Backstage",
+          "airdate": "2021-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Bart's in Jail",
+          "airdate": "2021-10-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Treehouse of Horror XXXII",
+          "airdate": "2021-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Wayz We Were",
+          "airdate": "2021-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Lisa's Belly",
+          "airdate": "2021-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "A Serious Flanders Part One",
+          "airdate": "2021-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "A Serious Flanders Part Two",
+          "airdate": "2021-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Portrait of a Lackey on Fire",
+          "airdate": "2021-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Mothers and Other Strangers",
+          "airdate": "2021-11-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "A Made Maggie",
+          "airdate": "2021-12-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Longest Marge",
+          "airdate": "2022-01-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Pixelated and Afraid",
+          "airdate": "2022-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Boyz N The Highlands",
+          "airdate": "2022-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "You Won't Believe What This Episode is About - Act Three Will Shock You!",
+          "airdate": "2022-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Bart the Cool Kid",
+          "airdate": "2022-03-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Pretty Whittle Liar",
+          "airdate": "2022-03-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "The Sound of Bleeding Gums",
+          "airdate": "2022-04-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "My Octopus and a Teacher",
+          "airdate": "2022-04-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Girls Just Shauna Have Fun",
+          "airdate": "2022-05-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Marge the Meanie",
+          "airdate": "2022-05-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Meat Is Murder",
+          "airdate": "2022-05-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Poorhouse Rock",
+          "airdate": "2022-05-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 34,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Habeas Tortoise",
+          "airdate": "2022-09-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "One Angry Lisa",
+          "airdate": "2022-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Lisa the Boy Scout",
+          "airdate": "2022-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The King of Nice",
+          "airdate": "2022-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Treehouse of Horror Presents Not It",
+          "airdate": "2022-10-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Treehouse of Horror XXXIII",
+          "airdate": "2022-10-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "From Beer to Paternity",
+          "airdate": "2022-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Step Brother from the Same Planet",
+          "airdate": "2022-11-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "When Nelson Met Lisa",
+          "airdate": "2022-11-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Game Done Changed",
+          "airdate": "2022-12-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Top Goon",
+          "airdate": "2022-12-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "My Life as a Vlog",
+          "airdate": "2023-01-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Many Saints of Springfield",
+          "airdate": "2023-02-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Carl Carlson Rides Again",
+          "airdate": "2023-02-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Bartless",
+          "airdate": "2023-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Hostile Kirk Place",
+          "airdate": "2023-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Pin Gal",
+          "airdate": "2023-03-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Fan-ily Feud",
+          "airdate": "2023-04-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Write Off This Episode",
+          "airdate": "2023-04-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Very Hungry Caterpillars",
+          "airdate": "2023-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Clown V. Board of Education",
+          "airdate": "2023-05-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Homer's Adventures Through the Windshield Glass",
+          "airdate": "2023-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 35,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Homer's Crossing",
+          "airdate": "2023-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "A Mid-Childhood Night's Dream",
+          "airdate": "2023-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "McMansion & Wife",
+          "airdate": "2023-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Thirst Trap: A Corporate Love Story",
+          "airdate": "2023-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Treehouse of Horror XXXIV",
+          "airdate": "2023-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Iron Marge",
+          "airdate": "2023-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "It's a Blunderful Life",
+          "airdate": "2023-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Ae Bonny Romance",
+          "airdate": "2023-12-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Murder, She Boat",
+          "airdate": "2023-12-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Do The Wrong Thing",
+          "airdate": "2023-12-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Frinkenstein's Monster",
+          "airdate": "2024-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Lisa Gets an F1",
+          "airdate": "2024-02-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Clan of the Cave Mom",
+          "airdate": "2024-03-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Night of the Living Wage",
+          "airdate": "2024-04-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Cremains of the Day",
+          "airdate": "2024-04-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "The Tell-Tale Pants",
+          "airdate": "2024-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "The Tipping Point",
+          "airdate": "2024-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Bart's Brain",
+          "airdate": "2024-05-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 36,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Bart's Birthday",
+          "airdate": "2024-09-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Yellow Lotus",
+          "airdate": "2024-10-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Desperately Seeking Lisa",
+          "airdate": "2024-10-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Shoddy Heat",
+          "airdate": "2024-10-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Treehouse of Horror XXXV",
+          "airdate": "2024-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Women in Shorts",
+          "airdate": "2024-11-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Treehouse of Horror Presents: Simpsons Wicked This Way Comes",
+          "airdate": "2024-11-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Convenience Airways",
+          "airdate": "2024-12-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Homer and Her Sisters",
+          "airdate": "2024-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Man Who Flew Too Much",
+          "airdate": "2024-12-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Bottle Episode",
+          "airdate": "2024-12-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Flandshees of Innersimpson",
+          "airdate": "2025-03-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Last Man Expanding",
+          "airdate": "2025-04-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "P.S. I Hate You",
+          "airdate": "2025-04-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Abe League of Their Moe",
+          "airdate": "2025-04-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Stew Lies",
+          "airdate": "2025-05-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Full Heart, Empty Pool",
+          "airdate": "2025-05-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Estranger Things",
+          "airdate": "2025-05-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 37,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Thrifty Ways to Thieve Your Mother",
+          "airdate": "2025-09-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Keep Chalm and Gary On",
+          "airdate": "2025-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Treehouse of Horror XXXVI",
+          "airdate": "2025-10-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Men Behaving Manly",
+          "airdate": "2025-10-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Bad Boys... For Life?",
+          "airdate": "2025-11-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Bart 'N' Frink",
+          "airdate": "2025-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Sashes to Sashes",
+          "airdate": "2025-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Day of the Jack-up",
+          "airdate": "2025-11-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Aunt Misbehavin'",
+          "airdate": "2025-11-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Guess Who's Coming to Skinner",
+          "airdate": "2025-12-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Parahormonal Activity",
+          "airdate": "2025-12-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "¡The Fall Guy-Yi-Yi!",
+          "airdate": "2025-12-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Seperance",
+          "airdate": "2026-01-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Irrational Treasure",
+          "airdate": "2026-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Homer? A Cracker Bro?",
+          "airdate": "2026-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 38,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Children's Book Job",
+          "airdate": "2026-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Diary of a Chimpy Kid",
+          "airdate": "2026-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Treehouse of Horror Presents: The Revengening",
+          "airdate": "2026-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Treehouse of Horror XXXVII",
+          "airdate": "2026-10-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "TBA",
+          "airdate": "2026-11-01",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 83,
-    "name": "The Simpsons",
-    "placed": 2
-  }
+  ]
 }

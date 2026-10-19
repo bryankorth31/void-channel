@@ -3,7 +3,7 @@
   "slug": "spartacus",
   "type": "Drama",
   "network": "Starz",
-  "matchedAt": "2026-10-16T07:56:47.045Z",
+  "matchedAt": "2026-10-19T04:10:52.490Z",
   "addedAt": "2026-10-15T15:05:58.592Z",
   "tvmaze": {
     "id": 716,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 33,
-    "live": 1,
+    "live": 4,
     "review": 0,
-    "missing": 32,
-    "pct": 3
+    "missing": 29,
+    "pct": 12
   },
   "seasons": [
     {
@@ -41,30 +41,80 @@
             "playable": true,
             "sizeMB": 611
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "spartacus-blood-and-sand-motion-comic",
+              "itemTitle": "Spartacus Blood And Sand: The Motion Comic",
+              "file": "Spartacus Blood and Sand S1 E01 - Upon the Sands of Vengeance.mp4",
+              "name": "Spartacus Blood and Sand S1 E01 - Upon the Sands of Vengeance",
+              "url": "https://archive.org/download/spartacus-blood-and-sand-motion-comic/Spartacus%20Blood%20and%20Sand%20S1%20E01%20-%20Upon%20the%20Sands%20of%20Vengeance.mp4",
+              "seconds": 3296,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 329
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Sacramentum Gladiatorum",
           "airdate": "2010-01-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "spartacus-blood-and-sand-motion-comic",
+            "itemTitle": "Spartacus Blood And Sand: The Motion Comic",
+            "file": "Spartacus Blood and Sand S1 E02 - Shadows of the Jackal.mp4",
+            "name": "Spartacus Blood and Sand S1 E02 - Shadows of the Jackal",
+            "url": "https://archive.org/download/spartacus-blood-and-sand-motion-comic/Spartacus%20Blood%20and%20Sand%20S1%20E02%20-%20Shadows%20of%20the%20Jackal.mp4",
+            "seconds": 3168,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 316
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Legends",
           "airdate": "2010-02-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "spartacus-blood-and-sand-motion-comic",
+            "itemTitle": "Spartacus Blood And Sand: The Motion Comic",
+            "file": "Spartacus Blood and Sand S1 E03 - The Beast of Carthage.mp4",
+            "name": "Spartacus Blood and Sand S1 E03 - The Beast of Carthage",
+            "url": "https://archive.org/download/spartacus-blood-and-sand-motion-comic/Spartacus%20Blood%20and%20Sand%20S1%20E03%20-%20The%20Beast%20of%20Carthage.mp4",
+            "seconds": 3310,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 330
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "The Thing In the Pit",
           "airdate": "2010-02-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "spartacus-blood-and-sand-motion-comic",
+            "itemTitle": "Spartacus Blood And Sand: The Motion Comic",
+            "file": "Spartacus Blood and Sand S1 E04 - The Shadow of Death.mp4",
+            "name": "Spartacus Blood and Sand S1 E04 - The Shadow of Death",
+            "url": "https://archive.org/download/spartacus-blood-and-sand-motion-comic/Spartacus%20Blood%20and%20Sand%20S1%20E04%20-%20The%20Shadow%20of%20Death.mp4",
+            "seconds": 2950,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 295
+          },
           "alternates": []
         },
         {

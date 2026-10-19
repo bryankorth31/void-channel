@@ -3,7 +3,8 @@
   "slug": "carrier",
   "type": "Documentary & Geographic",
   "network": "PBS",
-  "matchedAt": "2026-10-17T10:17:10.689Z",
+  "matchedAt": "2026-10-19T04:12:50.413Z",
+  "addedAt": "2026-10-19T04:12:50.417Z",
   "tvmaze": {
     "id": 27692,
     "name": "Carrier",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 10,
-    "live": 0,
+    "live": 1,
     "review": 0,
-    "missing": 10,
-    "pct": 0
+    "missing": 9,
+    "pct": 10
   },
   "seasons": [
     {
@@ -34,8 +35,20 @@
           "number": 2,
           "name": "Controlled Chaos",
           "airdate": "2008-04-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "airdate in filename",
+            "item": "2008.04.27-whyy-two-episodes-of-carrier",
+            "itemTitle": "2008.04.27 - WHYY - Two Episodes of Carrier",
+            "file": "2008.04.27 - WHYY - Two Episodes of Carrier.mp4",
+            "name": "2008.04.27 - WHYY - Two Episodes of Carrier",
+            "url": "https://archive.org/download/2008.04.27-whyy-two-episodes-of-carrier/2008.04.27%20-%20WHYY%20-%20Two%20Episodes%20of%20Carrier.mp4",
+            "seconds": 7379,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 722
+          },
           "alternates": []
         },
         {

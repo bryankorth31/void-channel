@@ -3,7 +3,7 @@
   "slug": "robot-chicken",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-16T07:56:39.809Z",
+  "matchedAt": "2026-10-19T04:10:45.742Z",
   "addedAt": "2026-10-16T07:56:39.808Z",
   "tvmaze": {
     "id": 686,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 218,
-    "live": 0,
-    "review": 17,
-    "missing": 201,
-    "pct": 8
+    "live": 50,
+    "review": 22,
+    "missing": 146,
+    "pct": 33
   },
   "seasons": [
     {
@@ -27,9 +27,35 @@
           "number": 1,
           "name": "Junk in the Trunk",
           "airdate": "2005-02-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Episode 01 Avaturd CSiCarly.mp4",
+            "name": "MAD Episode 01 Avaturd CSiCarly",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2001%20Avaturd%20CSiCarly.mp4",
+            "seconds": 674,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 100
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Season 2 Episode 21 Real Veal Celebrity Wife Swamp.mp4",
+              "name": "MAD Season 2 Episode 21 Real Veal Celebrity Wife Swamp",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2021%20Real%20Veal%20Celebrity%20Wife%20Swamp.mp4",
+              "seconds": 683,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 90
+            }
+          ]
         },
         {
           "number": 2,
@@ -49,7 +75,21 @@
             "playable": true,
             "sizeMB": 81
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Season 2 Episode 23 The Adventures of TaunTaun Everybody Loves Rayman.mp4",
+              "name": "MAD Season 2 Episode 23 The Adventures of TaunTaun Everybody Loves Rayman",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2023%20The%20Adventures%20of%20TaunTaun%20Everybody%20Loves%20Rayman.mp4",
+              "seconds": 682,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 96
+            }
+          ]
         },
         {
           "number": 3,
@@ -69,7 +109,21 @@
             "playable": true,
             "sizeMB": 91
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Season 2 Episode 24 Potions 11 Moves Like Jabba.mp4",
+              "name": "MAD Season 2 Episode 24 Potions 11 Moves Like Jabba",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2024%20Potions%2011%20Moves%20Like%20Jabba.mp4",
+              "seconds": 683,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 100
+            }
+          ]
         },
         {
           "number": 4,
@@ -89,22 +143,74 @@
             "playable": true,
             "sizeMB": 96
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Season 2 Episode 25 Addition Impossible New Gill.mp4",
+              "name": "MAD Season 2 Episode 25 Addition Impossible New Gill",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2025%20Addition%20Impossible%20New%20Gill.mp4",
+              "seconds": 683,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 88
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Toyz in the Hood",
           "airdate": "2005-03-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Episode 05 WALL·E·NATOR Extreme Renovation - House Edition.mp4",
+            "name": "MAD Episode 05 WALL·E·NATOR Extreme Renovation - House Edition",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2005%20WALL%C2%B7E%C2%B7NATOR%20Extreme%20Renovation%20-%20House%20Edition.mp4",
+            "seconds": 668,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 61
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Season 2 Episode 26 iChronicle Hulk Smash.mp4",
+              "name": "MAD Season 2 Episode 26 iChronicle Hulk Smash",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2026%20iChronicle%20Hulk%20Smash.mp4",
+              "seconds": 681,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 99
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Vegetable Fun Fest",
           "airdate": "2005-03-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 21 Hip Hop Hobbit The Monday Project.mp4",
+            "name": "MAD Season 3 Episode 21 Hip Hop Hobbit The Monday Project",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2021%20Hip%20Hop%20Hobbit%20The%20Monday%20Project.mp4",
+            "seconds": 676,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 100
+          },
           "alternates": []
         },
         {
@@ -125,7 +231,21 @@
             "playable": true,
             "sizeMB": 86
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Season 3 Episode 22 The Perks of Being a Wallcrawler Regular Shogun Warriors.mp4",
+              "name": "MAD Season 3 Episode 22 The Perks of Being a Wallcrawler Regular Shogun Warriors",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2022%20The%20Perks%20of%20Being%20a%20Wallcrawler%20Regular%20Shogun%20Warriors.mp4",
+              "seconds": 674,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 97
+            }
+          ]
         },
         {
           "number": 8,
@@ -145,23 +265,89 @@
             "playable": true,
             "sizeMB": 94
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Season 3 Episode 23 Twilight - Breaking Down GOllum ON.mp4",
+              "name": "MAD Season 3 Episode 23 Twilight - Breaking Down GOllum ON",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2023%20Twilight%20-%20Breaking%20Down%20GOllum%20ON.mp4",
+              "seconds": 683,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 95
+            }
+          ]
         },
         {
           "number": 9,
           "name": "S&M Present",
           "airdate": "2005-04-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Episode 09 I Love You Iron Man Ben 10 Franklin.mp4",
+            "name": "MAD Episode 09 I Love You Iron Man Ben 10 Franklin",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2009%20I%20Love%20You%20Iron%20Man%20Ben%2010%20Franklin.mp4",
+            "seconds": 673,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 97
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Season 3 Episode 24 Life of Rhyme Here Comes Yogi Boo Boo.mp4",
+              "name": "MAD Season 3 Episode 24 Life of Rhyme Here Comes Yogi Boo Boo",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2024%20Life%20of%20Rhyme%20Here%20Comes%20Yogi%20Boo%20Boo.mp4",
+              "seconds": 682,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 96
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Badunkadunk",
           "airdate": "2005-04-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Episode 10 Class of the Titans Zeke and Lex Luthor.mp4",
+            "name": "MAD Episode 10 Class of the Titans Zeke and Lex Luthor",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2010%20Class%20of%20the%20Titans%20Zeke%20and%20Lex%20Luthor.mp4",
+            "seconds": 680,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 92
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Season 3 Episode 25 Reply All Randy Savage - 9th Grade Wrestler.mp4",
+              "name": "MAD Season 3 Episode 25 Reply All Randy Savage - 9th Grade Wrestler",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2025%20Reply%20All%20Randy%20Savage%20-%209th%20Grade%20Wrestler.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 102
+            }
+          ]
         },
         {
           "number": 11,
@@ -181,7 +367,21 @@
             "playable": true,
             "sizeMB": 108
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Season 3 Episode 26 George Washington - Cherry Tree Chopper Star Wars Earned Stripes.mp4",
+              "name": "MAD Season 3 Episode 26 George Washington - Cherry Tree Chopper Star Wars Earned Stripes",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2026%20George%20Washington%20-%20Cherry%20Tree%20Chopper%20Star%20Wars%20Earned%20Stripes.mp4",
+              "seconds": 682,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 99
+            }
+          ]
         },
         {
           "number": 12,
@@ -201,14 +401,40 @@
             "playable": true,
             "sizeMB": 82
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Season 4 Episode 21 Doraline Monster Mashville.mp4",
+              "name": "MAD Season 4 Episode 21 Doraline Monster Mashville",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2021%20Doraline%20Monster%20Mashville.mp4",
+              "seconds": 683,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 93
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Atta Toy",
           "airdate": "2005-05-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 13 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 23 Dullverine Under the Dumb.mp4",
+            "name": "MAD Season 4 Episode 23 Dullverine Under the Dumb",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2023%20Dullverine%20Under%20the%20Dumb.mp4",
+            "seconds": 685,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 49
+          },
           "alternates": []
         },
         {
@@ -229,7 +455,21 @@
             "playable": true,
             "sizeMB": 86
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 14 in \"MAD Magazine ★ The Animated Version - a \"",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Season 4 Episode 25 Alfreds Game We Are X-Men.mp4",
+              "name": "MAD Season 4 Episode 25 Alfreds Game We Are X-Men",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2025%20Alfreds%20Game%20We%20Are%20X-Men.mp4",
+              "seconds": 684,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 53
+            }
+          ]
         },
         {
           "number": 15,
@@ -255,8 +495,20 @@
           "number": 16,
           "name": "Nightmare Generator",
           "airdate": "2005-06-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Episode 16 The Straight A-Team Gamings Next Top Princess.mp4",
+            "name": "MAD Episode 16 The Straight A-Team Gamings Next Top Princess",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2016%20The%20Straight%20A-Team%20Gamings%20Next%20Top%20Princess.mp4",
+            "seconds": 679,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 110
+          },
           "alternates": []
         },
         {
@@ -324,28 +576,54 @@
           "number": 1,
           "name": "Suck It",
           "airdate": "2006-04-02",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 2 Episode 01 RiOa Thomas the Unstoppable Tank Engine.mp4",
+            "name": "MAD Season 2 Episode 01 RiOa Thomas the Unstoppable Tank Engine",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2001%20RiOa%20Thomas%20the%20Unstoppable%20Tank%20Engine.mp4",
+            "seconds": 680,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 110
+          },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Episode 21 Pooh Grit Not a Fan a Montana.mp4",
+              "name": "MAD Episode 21 Pooh Grit Not a Fan a Montana",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2021%20Pooh%20Grit%20Not%20a%20Fan%20a%20Montana.mp4",
+              "seconds": 683,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 96
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Federated Resources",
+          "airdate": "2006-04-09",
           "state": "REVIEW",
           "file": {
             "conf": 0.65,
             "why": "absolute episode number",
             "item": "mad-episode-01-avaturd-csicarly.mp4",
             "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
-            "file": "MAD Episode 21 Pooh Grit Not a Fan a Montana.mp4",
-            "name": "MAD Episode 21 Pooh Grit Not a Fan a Montana",
-            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2021%20Pooh%20Grit%20Not%20a%20Fan%20a%20Montana.mp4",
+            "file": "MAD Episode 22 The Social Netjerk Smallville - Turn Off the Clark.mp4",
+            "name": "MAD Episode 22 The Social Netjerk Smallville - Turn Off the Clark",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2022%20The%20Social%20Netjerk%20Smallville%20-%20Turn%20Off%20the%20Clark.mp4",
             "seconds": 683,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 96
+            "sizeMB": 59
           },
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Federated Resources",
-          "airdate": "2006-04-09",
-          "state": "MISSING",
-          "file": null,
           "alternates": []
         },
         {
@@ -372,76 +650,142 @@
           "number": 4,
           "name": "Celebrity Rocket",
           "airdate": "2006-04-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mad-episode-01-avaturd-csicarly.mp4",
             "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
-            "file": "MAD Episode 24 ArTHOR The Big Fang Theory.mp4",
-            "name": "MAD Episode 24 ArTHOR The Big Fang Theory",
-            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2024%20ArTHOR%20The%20Big%20Fang%20Theory.mp4",
-            "seconds": 682,
+            "file": "MAD Season 2 Episode 04 Pirates of the Pair of Tweens Konan the Kardashian.mp4",
+            "name": "MAD Season 2 Episode 04 Pirates of the Pair of Tweens Konan the Kardashian",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2004%20Pirates%20of%20the%20Pair%20of%20Tweens%20Konan%20the%20Kardashian.mp4",
+            "seconds": 683,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 87
+            "sizeMB": 111
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Episode 24 ArTHOR The Big Fang Theory.mp4",
+              "name": "MAD Episode 24 ArTHOR The Big Fang Theory",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2024%20ArTHOR%20The%20Big%20Fang%20Theory.mp4",
+              "seconds": 682,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 87
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Dragon Nut",
           "airdate": "2006-04-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mad-episode-01-avaturd-csicarly.mp4",
             "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
-            "file": "MAD Episode 25 Ribbitless The Clawfice.mp4",
-            "name": "MAD Episode 25 Ribbitless The Clawfice",
-            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2025%20Ribbitless%20The%20Clawfice.mp4",
-            "seconds": 682,
+            "file": "MAD Season 2 Episode 05 Fast Hive Minute to Flynn It.mp4",
+            "name": "MAD Season 2 Episode 05 Fast Hive Minute to Flynn It",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2005%20Fast%20Hive%20Minute%20to%20Flynn%20It.mp4",
+            "seconds": 675,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 119
+            "sizeMB": 97
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Episode 25 Ribbitless The Clawfice.mp4",
+              "name": "MAD Episode 25 Ribbitless The Clawfice",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2025%20Ribbitless%20The%20Clawfice.mp4",
+              "seconds": 682,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 119
+            }
+          ]
         },
         {
           "number": 6,
           "name": "1987",
           "airdate": "2006-05-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "mad-episode-01-avaturd-csicarly.mp4",
             "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
-            "file": "MAD Episode 26 Force Code Flammable.mp4",
-            "name": "MAD Episode 26 Force Code Flammable",
-            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2026%20Force%20Code%20Flammable.mp4",
-            "seconds": 683,
+            "file": "MAD Season 2 Episode 06 Cowboys and Alien Force ThunderLOLcats.mp4",
+            "name": "MAD Season 2 Episode 06 Cowboys and Alien Force ThunderLOLcats",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2006%20Cowboys%20and%20Alien%20Force%20ThunderLOLcats.mp4",
+            "seconds": 684,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 105
+            "sizeMB": 104
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Episode 26 Force Code Flammable.mp4",
+              "name": "MAD Episode 26 Force Code Flammable",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2026%20Force%20Code%20Flammable.mp4",
+              "seconds": 683,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 105
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Cracked China",
           "airdate": "2006-05-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 2 Episode 07 TransBOREmores 3 - Dark of the Blue Moon The Walking Fred.mp4",
+            "name": "MAD Season 2 Episode 07 TransBOREmores 3 - Dark of the Blue Moon The Walking Fred",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2007%20TransBOREmores%203%20-%20Dark%20of%20the%20Blue%20Moon%20The%20Walking%20Fred.mp4",
+            "seconds": 685,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 100
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Rodiggity",
           "airdate": "2006-05-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 2 Episode 08 X Games - First Class Criminal Minecraft.mp4",
+            "name": "MAD Season 2 Episode 08 X Games - First Class Criminal Minecraft",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2008%20X%20Games%20-%20First%20Class%20Criminal%20Minecraft.mp4",
+            "seconds": 676,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 88
+          },
           "alternates": []
         },
         {
@@ -456,24 +800,60 @@
           "number": 10,
           "name": "Password: Swordfish",
           "airdate": "2006-06-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 2 Episode 10 Dances with Wolverine - A Footloose Parody Tater Tots and Tiaras.mp4",
+            "name": "MAD Season 2 Episode 10 Dances with Wolverine - A Footloose Parody Tater Tots and Tiaras",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2010%20Dances%20with%20Wolverine%20-%20A%20Footloose%20Parody%20Tater%20Tots%20and%20Tiaras.mp4",
+            "seconds": 676,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 96
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Adoptions an Option",
           "airdate": "2006-09-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 2 Episode 11 Demise of the Planet of the Apes The Celebrity Ape-rentice.mp4",
+            "name": "MAD Season 2 Episode 11 Demise of the Planet of the Apes The Celebrity Ape-rentice",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2011%20Demise%20of%20the%20Planet%20of%20the%20Apes%20The%20Celebrity%20Ape-rentice.mp4",
+            "seconds": 683,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 88
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "The Munnery",
           "airdate": "2006-09-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 2 Episode 12 Moneyball Z Green Care Bear.mp4",
+            "name": "MAD Season 2 Episode 12 Moneyball Z Green Care Bear",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2012%20Moneyball%20Z%20Green%20Care%20Bear.mp4",
+            "seconds": 677,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 92
+          },
           "alternates": []
         },
         {
@@ -488,24 +868,60 @@
           "number": 14,
           "name": "Veggies for Sloth",
           "airdate": "2006-10-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 2 Episode 14 Captain Americant My Supernatural Sweet 16.mp4",
+            "name": "MAD Season 2 Episode 14 Captain Americant My Supernatural Sweet 16",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2014%20Captain%20Americant%20My%20Supernatural%20Sweet%2016.mp4",
+            "seconds": 681,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 87
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Sausage Fest",
           "airdate": "2006-10-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 2 Episode 15 FROST Undercover Claus.mp4",
+            "name": "MAD Season 2 Episode 15 FROST Undercover Claus",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2015%20FROST%20Undercover%20Claus.mp4",
+            "seconds": 679,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 92
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "Drippy Pony",
           "airdate": "2006-10-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 2 Episode 16 Twilight - Staking Dawn Cookie Blue.mp4",
+            "name": "MAD Season 2 Episode 16 Twilight - Staking Dawn Cookie Blue",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2016%20Twilight%20-%20Staking%20Dawn%20Cookie%20Blue.mp4",
+            "seconds": 684,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 89
+          },
           "alternates": []
         },
         {
@@ -520,24 +936,60 @@
           "number": 18,
           "name": "Lust for Puppets",
           "airdate": "2006-11-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 2 Episode 18 DolPhineas and Ferb Tale VICTORious.mp4",
+            "name": "MAD Season 2 Episode 18 DolPhineas and Ferb Tale VICTORious",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2018%20DolPhineas%20and%20Ferb%20Tale%20VICTORious.mp4",
+            "seconds": 672,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 97
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "Donkey Punch",
           "airdate": "2006-11-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 2 Episode 19 My Little War Horse The Tonight Show with Jay Lion-O.mp4",
+            "name": "MAD Season 2 Episode 19 My Little War Horse The Tonight Show with Jay Lion-O",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2019%20My%20Little%20War%20Horse%20The%20Tonight%20Show%20with%20Jay%20Lion-O.mp4",
+            "seconds": 683,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 91
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "Book of Corrine",
           "airdate": "2006-11-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 2 Episode 20 Al Pacino and the Chipmunks That’s What Super Friends Are For.mp4",
+            "name": "MAD Season 2 Episode 20 Al Pacino and the Chipmunks That’s What Super Friends Are For",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%202%20Episode%2020%20Al%20Pacino%20and%20the%20Chipmunks%20That%E2%80%99s%20What%20Super%20Friends%20Are%20For.mp4",
+            "seconds": 682,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 105
+          },
           "alternates": []
         }
       ]
@@ -549,16 +1001,40 @@
           "number": 1,
           "name": "Werewolf vs. Unicorn",
           "airdate": "2007-08-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 01 The Iron Giant Lady Raising a New Hope.mp4",
+            "name": "MAD Season 3 Episode 01 The Iron Giant Lady Raising a New Hope",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2001%20The%20Iron%20Giant%20Lady%20Raising%20a%20New%20Hope.mp4",
+            "seconds": 682,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 92
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Squaw Bury Shortcake",
           "airdate": "2007-08-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 02 Yawn Carter Franklin and Crash.mp4",
+            "name": "MAD Season 3 Episode 02 Yawn Carter Franklin and Crash",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2002%20Yawn%20Carter%20Franklin%20and%20Crash.mp4",
+            "seconds": 678,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 101
+          },
           "alternates": []
         },
         {
@@ -573,8 +1049,20 @@
           "number": 4,
           "name": "Tapping a Hero",
           "airdate": "2007-09-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 04 Betty White and the Huntsman Ancient Greek MythBusters.mp4",
+            "name": "MAD Season 3 Episode 04 Betty White and the Huntsman Ancient Greek MythBusters",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2004%20Betty%20White%20and%20the%20Huntsman%20Ancient%20Greek%20MythBusters.mp4",
+            "seconds": 683,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 84
+          },
           "alternates": []
         },
         {
@@ -589,112 +1077,280 @@
           "number": 6,
           "name": "Endless Breadsticks",
           "airdate": "2007-09-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 06 This Means War Machine iCharlie.mp4",
+            "name": "MAD Season 3 Episode 06 This Means War Machine iCharlie",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2006%20This%20Means%20War%20Machine%20iCharlie.mp4",
+            "seconds": 682,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 100
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Yancy the Yo-Yo Boy",
           "airdate": "2007-09-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 07 The Mixed Martial Artist Aquaman vs Wild.mp4",
+            "name": "MAD Season 3 Episode 07 The Mixed Martial Artist Aquaman vs Wild",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2007%20The%20Mixed%20Martial%20Artist%20Aquaman%20vs%20Wild.mp4",
+            "seconds": 683,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 85
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "More Blood, More Chocolate",
           "airdate": "2007-09-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 08 The Blunder Games The Poop-seidon Adventure.mp4",
+            "name": "MAD Season 3 Episode 08 The Blunder Games The Poop-seidon Adventure",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2008%20The%20Blunder%20Games%20The%20Poop-seidon%20Adventure.mp4",
+            "seconds": 681,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 100
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "Celebutard Mountain",
           "airdate": "2007-10-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 09 The Average-ers The Legend of Dora.mp4",
+            "name": "MAD Season 3 Episode 09 The Average-ers The Legend of Dora",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2009%20The%20Average-ers%20The%20Legend%20of%20Dora.mp4",
+            "seconds": 677,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 103
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Moesha Poppins",
           "airdate": "2007-10-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 10 Men in Black to the Future Pokemon of Interest.mp4",
+            "name": "MAD Season 3 Episode 10 Men in Black to the Future Pokemon of Interest",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2010%20Men%20in%20Black%20to%20the%20Future%20Pokemon%20of%20Interest.mp4",
+            "seconds": 681,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 106
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Ban on the Fun",
           "airdate": "2007-10-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 11 Diary of a Wimpy Kid Icarus The Adjustment Burro.mp4",
+            "name": "MAD Season 3 Episode 11 Diary of a Wimpy Kid Icarus The Adjustment Burro",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2011%20Diary%20of%20a%20Wimpy%20Kid%20Icarus%20The%20Adjustment%20Burro.mp4",
+            "seconds": 672,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 85
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Losin' the Wobble",
           "airdate": "2007-11-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 12 Taking Nemo Once Upon a Toon.mp4",
+            "name": "MAD Season 3 Episode 12 Taking Nemo Once Upon a Toon",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2012%20Taking%20Nemo%20Once%20Upon%20a%20Toon.mp4",
+            "seconds": 683,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 84
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Slaughterhouse on the Prairie",
           "airdate": "2007-11-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 13 Outtagascar F·I·E·N·D·S.mp4",
+            "name": "MAD Season 3 Episode 13 Outtagascar F·I·E·N·D·S",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2013%20Outtagascar%20F%C2%B7I%C2%B7E%C2%B7N%C2%B7D%C2%B7S.mp4",
+            "seconds": 683,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 103
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "Robot Chicken's Half-Assed Christmas Special",
           "airdate": "2007-12-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 14 The Amazing Spider-Minaj Go Dragon Ball Go.mp4",
+            "name": "MAD Season 3 Episode 14 The Amazing Spider-Minaj Go Dragon Ball Go",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2014%20The%20Amazing%20Spider-Minaj%20Go%20Dragon%20Ball%20Go.mp4",
+            "seconds": 680,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 86
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Tubba-Bubba's Now Hubba-Hubba",
           "airdate": "2008-09-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 15 FrankenWinnie ParaMorgan.mp4",
+            "name": "MAD Season 3 Episode 15 FrankenWinnie ParaMorgan",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2015%20FrankenWinnie%20ParaMorgan.mp4",
+            "seconds": 682,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 103
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "Boo Cocky",
           "airdate": "2008-09-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 16 Dark Knight at the Museum Lemming Snickets A Series of Unfortunate Video Game Deaths.mp4",
+            "name": "MAD Season 3 Episode 16 Dark Knight at the Museum Lemming Snickets A Series of Unfortunate Video Game Deaths",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2016%20Dark%20Knight%20at%20the%20Museum%20Lemming%20Snickets%20A%20Series%20of%20Unfortunate%20Video%20Game%20Deaths.mp4",
+            "seconds": 676,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 84
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "Bionic Cow",
           "airdate": "2008-09-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 17 Total Recall Me Baby The Asgardigans.mp4",
+            "name": "MAD Season 3 Episode 17 Total Recall Me Baby The Asgardigans",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2017%20Total%20Recall%20Me%20Baby%20The%20Asgardigans.mp4",
+            "seconds": 679,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 121
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "Monstourage",
           "airdate": "2008-09-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 18 The Bourne Leg-a-Turkey PilGrimm.mp4",
+            "name": "MAD Season 3 Episode 18 The Bourne Leg-a-Turkey PilGrimm",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2018%20The%20Bourne%20Leg-a-Turkey%20PilGrimm.mp4",
+            "seconds": 678,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 87
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "President Evil",
           "airdate": "2008-10-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 3 Episode 19 Here Comes the Doom Brain Purge.mp4",
+            "name": "MAD Season 3 Episode 19 Here Comes the Doom Brain Purge",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%203%20Episode%2019%20Here%20Comes%20the%20Doom%20Brain%20Purge.mp4",
+            "seconds": 678,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 97
+          },
           "alternates": []
         },
         {
@@ -714,48 +1370,120 @@
           "number": 1,
           "name": "Help Me",
           "airdate": "2008-12-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 01 Linkong Rainbow Dash and Bernstein.mp4",
+            "name": "MAD Season 4 Episode 01 Linkong Rainbow Dash and Bernstein",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2001%20Linkong%20Rainbow%20Dash%20and%20Bernstein.mp4",
+            "seconds": 684,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 93
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "They Took My Thumbs",
           "airdate": "2008-12-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 02 Pokemonsters Inc Bane and Kate.mp4",
+            "name": "MAD Season 4 Episode 02 Pokemonsters Inc Bane and Kate",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2002%20Pokemonsters%20Inc%20Bane%20and%20Kate.mp4",
+            "seconds": 681,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 99
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "I'm Trapped",
           "airdate": "2008-12-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 03 Wreck It Gandalph The Big Bird Theory.mp4",
+            "name": "MAD Season 4 Episode 03 Wreck It Gandalph The Big Bird Theory",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2003%20Wreck%20It%20Gandalph%20The%20Big%20Bird%20Theory.mp4",
+            "seconds": 680,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 91
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "In a DVD Factory",
           "airdate": "2008-12-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 04 Les the Miz The Lex Factor.mp4",
+            "name": "MAD Season 4 Episode 04 Les the Miz The Lex Factor",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2004%20Les%20the%20Miz%20The%20Lex%20Factor.mp4",
+            "seconds": 683,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 102
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Tell My Mom",
           "airdate": "2009-01-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 05 Papa 1600 Finn.mp4",
+            "name": "MAD Season 4 Episode 05 Papa 1600 Finn",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2005%20Papa%201600%20Finn.mp4",
+            "seconds": 677,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 81
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "PS: Yes, In That Way",
           "airdate": "2009-01-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 06 G.I. E.I. Joe Dog with a Captains Log.mp4",
+            "name": "MAD Season 4 Episode 06 G.I. E.I. Joe Dog with a Captains Log",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2006%20G.I.%20E.I.%20Joe%20Dog%20with%20a%20Captains%20Log.mp4",
+            "seconds": 684,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 104
+          },
           "alternates": []
         },
         {
@@ -770,25 +1498,75 @@
           "number": 8,
           "name": "Two Weeks Without Food",
           "airdate": "2009-01-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 08 POblivion Umbrellamentary.mp4",
+            "name": "MAD Season 4 Episode 08 POblivion Umbrellamentary",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2008%20POblivion%20Umbrellamentary.mp4",
+            "seconds": 684,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 99
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "But Not In That Way",
           "airdate": "2009-02-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 09 Jaws the Great and Powerful Old Spocks Off Their Spockers.mp4",
+            "name": "MAD Season 4 Episode 09 Jaws the Great and Powerful Old Spocks Off Their Spockers",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2009%20Jaws%20the%20Great%20and%20Powerful%20Old%20Spocks%20Off%20Their%20Spockers.mp4",
+            "seconds": 681,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 88
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "I Love Her",
           "airdate": "2009-02-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 10 Jacks the Giant Slayers The Most Beautiful Voice.mp4",
+            "name": "MAD Season 4 Episode 10 Jacks the Giant Slayers The Most Beautiful Voice",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2010%20Jacks%20the%20Giant%20Slayers%20The%20Most%20Beautiful%20Voice.mp4",
+            "seconds": 682,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 92
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"I Love Her\" (0.63)",
+              "item": "mad-episode-01-avaturd-csicarly.mp4",
+              "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+              "file": "MAD Episode 09 I Love You Iron Man Ben 10 Franklin.mp4",
+              "name": "MAD Episode 09 I Love You Iron Man Ben 10 Franklin",
+              "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Episode%2009%20I%20Love%20You%20Iron%20Man%20Ben%2010%20Franklin.mp4",
+              "seconds": 673,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 97
+            }
+          ]
         },
         {
           "number": 11,
@@ -802,72 +1580,180 @@
           "number": 12,
           "name": "Maurice Was Caught",
           "airdate": "2009-08-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 12 First White House Down McDuck Dynasty.mp4",
+            "name": "MAD Season 4 Episode 12 First White House Down McDuck Dynasty",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2012%20First%20White%20House%20Down%20McDuck%20Dynasty.mp4",
+            "seconds": 684,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 123
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Unionizing Our Labor",
           "airdate": "2009-08-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 13 After Bert Downton Shaggy.mp4",
+            "name": "MAD Season 4 Episode 13 After Bert Downton Shaggy",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2013%20After%20Bert%20Downton%20Shaggy.mp4",
+            "seconds": 679,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 85
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "President Hu Forbids It",
           "airdate": "2009-08-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 14 Lone Rango Doctor Whos Line is it Anyway .mp4",
+            "name": "MAD Season 4 Episode 14 Lone Rango Doctor Whos Line is it Anyway ",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2014%20Lone%20Rango%20Doctor%20Whos%20Line%20is%20it%20Anyway%20.mp4",
+            "seconds": 684,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 91
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Due to Constraints of Time and Budget",
           "airdate": "2009-08-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 15 Iron Bland 3 Monsters Community.mp4",
+            "name": "MAD Season 4 Episode 15 Iron Bland 3 Monsters Community",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2015%20Iron%20Bland%203%20Monsters%20Community.mp4",
+            "seconds": 678,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 95
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "The Ramblings of Maurice",
           "airdate": "2009-08-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 16 Star Blecch Into Dumbness Stark Tank.mp4",
+            "name": "MAD Season 4 Episode 16 Star Blecch Into Dumbness Stark Tank",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2016%20Star%20Blecch%20Into%20Dumbness%20Stark%20Tank.mp4",
+            "seconds": 682,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 96
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "Cannot Be Erased, So Sorry",
           "airdate": "2009-09-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 17 The Flash and the Furious Saved by Adele.mp4",
+            "name": "MAD Season 4 Episode 17 The Flash and the Furious Saved by Adele",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2017%20The%20Flash%20and%20the%20Furious%20Saved%20by%20Adele.mp4",
+            "seconds": 678,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 94
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "Please Do Not Notify Our Contractors",
           "airdate": "2009-09-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 18 Lukewarm Bodies Does Someone Have to GOa.mp4",
+            "name": "MAD Season 4 Episode 18 Lukewarm Bodies Does Someone Have to GOa",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2018%20Lukewarm%20Bodies%20Does%20Someone%20Have%20to%20GOa.mp4",
+            "seconds": 683,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 89
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "Especially the Animal Keith Crofford!",
           "airdate": "2009-09-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 19 Pacific Ring Horton Hears a Whodunnit.mp4",
+            "name": "MAD Season 4 Episode 19 Pacific Ring Horton Hears a Whodunnit",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2019%20Pacific%20Ring%20Horton%20Hears%20a%20Whodunnit.mp4",
+            "seconds": 684,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 99
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "Dear Consumer (Robot Chicken's Full-Assed Christmas Special)",
           "airdate": "2009-12-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 20 World War ZZZ SHAZAM and Cat.mp4",
+            "name": "MAD Season 4 Episode 20 World War ZZZ SHAZAM and Cat",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2020%20World%20War%20ZZZ%20SHAZAM%20and%20Cat.mp4",
+            "seconds": 683,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 84
+          },
           "alternates": []
         }
       ]
@@ -1201,8 +2087,20 @@
           "number": 1,
           "name": "G.I. Jogurt",
           "airdate": "2014-04-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"G.I. Jogurt\" (0.63)",
+            "item": "mad-episode-01-avaturd-csicarly.mp4",
+            "itemTitle": "MAD Magazine ★ The Animated Version - a kid-friendly version of Robot Chicken",
+            "file": "MAD Season 4 Episode 06 G.I. E.I. Joe Dog with a Captains Log.mp4",
+            "name": "MAD Season 4 Episode 06 G.I. E.I. Joe Dog with a Captains Log",
+            "url": "https://archive.org/download/mad-episode-01-avaturd-csicarly.mp4/MAD%20Season%204%20Episode%2006%20G.I.%20E.I.%20Joe%20Dog%20with%20a%20Captains%20Log.mp4",
+            "seconds": 684,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 104
+          },
           "alternates": []
         },
         {

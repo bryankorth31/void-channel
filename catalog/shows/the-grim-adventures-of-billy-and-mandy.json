@@ -3,7 +3,7 @@
   "slug": "the-grim-adventures-of-billy-and-mandy",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:33.646Z",
+  "matchedAt": "2026-10-19T04:10:41.167Z",
   "addedAt": "2026-10-15T18:20:52.112Z",
   "tvmaze": {
     "id": 7345,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 161,
-    "live": 62,
-    "review": 36,
-    "missing": 63,
-    "pct": 61
+    "live": 83,
+    "review": 40,
+    "missing": 38,
+    "pct": 76
   },
   "seasons": [
     {
@@ -43,6 +43,32 @@
           },
           "alternates": [
             {
+              "conf": 0.75,
+              "why": "title ~ \"Meet the Reaper\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S01E11 Meet the Reaper - Skeletons in the Water Closet - Opposite Day.mp4",
+              "name": "S01E11 Meet the Reaper - Skeletons in the Water Closet - Opposite Day",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E11%20Meet%20the%20Reaper%20-%20Skeletons%20in%20the%20Water%20Closet%20-%20Opposite%20Day.mp4",
+              "seconds": 1335,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 286
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Meet the Reaper\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E11b&m Meet the Reaper - Skeletons in the Water Closet - Opposite Day.mp4",
+              "name": "S01E11b&m Meet the Reaper - Skeletons in the Water Closet - Opposite Day",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E11b%26m%20Meet%20the%20Reaper%20-%20Skeletons%20in%20the%20Water%20Closet%20-%20Opposite%20Day.mp4",
+              "seconds": 1340,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 258
+            },
+            {
               "conf": 0.55,
               "why": "S/E in filename + title match",
               "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
@@ -54,19 +80,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 400
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 5 in \"The Grim Adventures of Billy & Mandy - T\"",
-              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
-              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
-              "file": "S01E02ecc Son of Evil - The Right to Bear Arms - The Trouble with Skarrina.mp4",
-              "name": "S01E02ecc Son of Evil - The Right to Bear Arms - The Trouble with Skarrina",
-              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E02ecc%20Son%20of%20Evil%20-%20The%20Right%20to%20Bear%20Arms%20-%20The%20Trouble%20with%20Skarrina.mp4",
-              "seconds": 1368,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 134
             }
           ]
         },
@@ -91,16 +104,16 @@
           "alternates": [
             {
               "conf": 0.55,
-              "why": "sequence guess: file 2 of 5 in \"The Grim Adventures of Billy & Mandy - T\"",
+              "why": "sequence guess: file 2 of 6 in \"The Grim Adventures of Billy & Mandy - T\"",
               "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
               "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
-              "file": "S01E03ecc Go Spork - Boskov's Day Out - Cod vs. Hector.mp4",
-              "name": "S01E03ecc Go Spork - Boskov's Day Out - Cod vs. Hector",
-              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E03ecc%20Go%20Spork%20-%20Boskov's%20Day%20Out%20-%20Cod%20vs.%20Hector.mp4",
-              "seconds": 1327,
+              "file": "S01E02ecc Son of Evil - The Right to Bear Arms - The Trouble with Skarrina.mp4",
+              "name": "S01E02ecc Son of Evil - The Right to Bear Arms - The Trouble with Skarrina",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E02ecc%20Son%20of%20Evil%20-%20The%20Right%20to%20Bear%20Arms%20-%20The%20Trouble%20with%20Skarrina.mp4",
+              "seconds": 1368,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 129
+              "sizeMB": 134
             }
           ]
         },
@@ -138,16 +151,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 3 of 5 in \"The Grim Adventures of Billy & Mandy - T\"",
+              "why": "sequence guess: file 3 of 6 in \"The Grim Adventures of Billy & Mandy - T\"",
               "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
               "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
-              "file": "S01E04ecc Max Courage! - The Time Hole Incident - Christmas Con Carne.mp4",
-              "name": "S01E04ecc Max Courage! - The Time Hole Incident - Christmas Con Carne",
-              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E04ecc%20Max%20Courage!%20-%20The%20Time%20Hole%20Incident%20-%20Christmas%20Con%20Carne.mp4",
-              "seconds": 1302,
+              "file": "S01E03ecc Go Spork - Boskov's Day Out - Cod vs. Hector.mp4",
+              "name": "S01E03ecc Go Spork - Boskov's Day Out - Cod vs. Hector",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E03ecc%20Go%20Spork%20-%20Boskov's%20Day%20Out%20-%20Cod%20vs.%20Hector.mp4",
+              "seconds": 1327,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 127
+              "sizeMB": 129
             }
           ]
         },
@@ -258,13 +271,13 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 5 of 5 in \"The Grim Adventures of Billy & Mandy - T\"",
+              "why": "sequence guess: file 5 of 6 in \"The Grim Adventures of Billy & Mandy - T\"",
               "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
               "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
-              "file": "S01E06ecc Bring Me the Face of Hector Con Carne - Devolver Part 1 - Devolver Part 2.mp4",
-              "name": "S01E06ecc Bring Me the Face of Hector Con Carne - Devolver Part 1 - Devolver Part 2",
-              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E06ecc%20Bring%20Me%20the%20Face%20of%20Hector%20Con%20Carne%20-%20Devolver%20Part%201%20-%20Devolver%20Part%202.mp4",
-              "seconds": 1357,
+              "file": "S01E05ecc Everyone Loves Uncle Bob - Tiptoe Through the Tulips Part 1 - Tiptoe Through the Tulips Part 2.mp4",
+              "name": "S01E05ecc Everyone Loves Uncle Bob - Tiptoe Through the Tulips Part 1 - Tiptoe Through the Tulips Part 2",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E05ecc%20Everyone%20Loves%20Uncle%20Bob%20-%20Tiptoe%20Through%20the%20Tulips%20Part%201%20-%20Tiptoe%20Through%20the%20Tulips%20Part%202.mp4",
+              "seconds": 1328,
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 132
@@ -302,6 +315,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 220
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 6 in \"The Grim Adventures of Billy & Mandy - T\"",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E06ecc Bring Me the Face of Hector Con Carne - Devolver Part 1 - Devolver Part 2.mp4",
+              "name": "S01E06ecc Bring Me the Face of Hector Con Carne - Devolver Part 1 - Devolver Part 2",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E06ecc%20Bring%20Me%20the%20Face%20of%20Hector%20Con%20Carne%20-%20Devolver%20Part%201%20-%20Devolver%20Part%202.mp4",
+              "seconds": 1357,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 132
             }
           ]
         },
@@ -338,6 +364,19 @@
               "sizeMB": 409
             },
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S01E07 Son of Nergal - Sister Grim - Go-Kart 3000.mp4",
+              "name": "S01E07 Son of Nergal - Sister Grim - Go-Kart 3000",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E07%20Son%20of%20Nergal%20-%20Sister%20Grim%20-%20Go-Kart%203000.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 273
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Fiend is Like Friend Without the R\" (0.95)",
               "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
@@ -349,19 +388,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 400
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Fiend is Like Friend Without the R\" (0.95)",
-              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
-              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
-              "file": "S01E13 Fiend is Like Friend Without the 'R' - Recipe for Disaster - A Dumb Wish.mp4",
-              "name": "S01E13 Fiend is Like Friend Without the 'R' - Recipe for Disaster - A Dumb Wish",
-              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E13%20Fiend%20is%20Like%20Friend%20Without%20the%20'R'%20-%20Recipe%20for%20Disaster%20-%20A%20Dumb%20Wish.mp4",
-              "seconds": 1328,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 264
             }
           ]
         },
@@ -369,21 +395,48 @@
           "number": 8,
           "name": "Recipe for Disaster",
           "airdate": "2001-10-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Recipe for Disaster\" (0.95)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
             "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
-            "file": "S01E05 Devolver Part 1 - Recipe for Disaster - Devolver Part 2.mp4",
-            "name": "S01E05 Devolver Part 1 - Recipe for Disaster - Devolver Part 2",
-            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E05%20Devolver%20Part%201%20-%20Recipe%20for%20Disaster%20-%20Devolver%20Part%202.mp4",
-            "seconds": 1334,
+            "file": "S01E08 Grim or Gregory - Search & Estroy - Something Stupid This Way Comes.mp4",
+            "name": "S01E08 Grim or Gregory - Search & Estroy - Something Stupid This Way Comes",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E08%20Grim%20or%20Gregory%20-%20Search%20%26%20Estroy%20-%20Something%20Stupid%20This%20Way%20Comes.mp4",
+            "seconds": 1374,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 402
+            "sizeMB": 414
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S01E08 Billy's Growth Spurt - Hoss Delgado Spectral Exterminator - Tickle Me Mandy.mp4",
+              "name": "S01E08 Billy's Growth Spurt - Hoss Delgado Spectral Exterminator - Tickle Me Mandy",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E08%20Billy's%20Growth%20Spurt%20-%20Hoss%20Delgado%20Spectral%20Exterminator%20-%20Tickle%20Me%20Mandy.mp4",
+              "seconds": 1331,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 156
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Recipe for Disaster\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E05 Devolver Part 1 - Recipe for Disaster - Devolver Part 2.mp4",
+              "name": "S01E05 Devolver Part 1 - Recipe for Disaster - Devolver Part 2",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E05%20Devolver%20Part%201%20-%20Recipe%20for%20Disaster%20-%20Devolver%20Part%202.mp4",
+              "seconds": 1334,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 402
+            }
+          ]
         },
         {
           "number": 9,
@@ -393,17 +446,30 @@
           "file": {
             "conf": 0.85,
             "why": "S/E in filename",
-            "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
-            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
-            "file": "S01E09 Billy and the Bully - To Eris Human - Big Trouble in Billy's Basement.mp4",
-            "name": "S01E09 Billy and the Bully - To Eris Human - Big Trouble in Billy's Basement",
-            "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E09%20Billy%20and%20the%20Bully%20-%20To%20Eris%20Human%20-%20Big%20Trouble%20in%20Billy's%20Basement.mp4",
-            "seconds": 1318,
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S01E09 A Grim Surprise - Everyone Loves Uncle Bob - Beasts and Barbarians.mp4",
+            "name": "S01E09 A Grim Surprise - Everyone Loves Uncle Bob - Beasts and Barbarians",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E09%20A%20Grim%20Surprise%20-%20Everyone%20Loves%20Uncle%20Bob%20-%20Beasts%20and%20Barbarians.mp4",
+            "seconds": 1337,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 225
+            "sizeMB": 402
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S01E09 Billy and the Bully - To Eris Human - Big Trouble in Billy's Basement.mp4",
+              "name": "S01E09 Billy and the Bully - To Eris Human - Big Trouble in Billy's Basement",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E09%20Billy%20and%20the%20Bully%20-%20To%20Eris%20Human%20-%20Big%20Trouble%20in%20Billy's%20Basement.mp4",
+              "seconds": 1318,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 225
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"A Dumb Wish\" (0.95)",
@@ -473,6 +539,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S01E11 Meet the Reaper - Skeletons in the Water Closet - Opposite Day.mp4",
+              "name": "S01E11 Meet the Reaper - Skeletons in the Water Closet - Opposite Day",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E11%20Meet%20the%20Reaper%20-%20Skeletons%20in%20the%20Water%20Closet%20-%20Opposite%20Day.mp4",
+              "seconds": 1335,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 286
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Tastes Like Chicken\" (0.95)",
               "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
@@ -497,19 +576,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 240
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Tastes Like Chicken\" (0.95)",
-              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
-              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
-              "file": "S01E14 Grim or Gregory - Grim vs. Mom - Tastes Like Chicken.mp4",
-              "name": "S01E14 Grim or Gregory - Grim vs. Mom - Tastes Like Chicken",
-              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E14%20Grim%20or%20Gregory%20-%20Grim%20vs.%20Mom%20-%20Tastes%20Like%20Chicken.mp4",
-              "seconds": 1341,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 131
             }
           ]
         },
@@ -521,17 +587,31 @@
           "file": {
             "conf": 0.85,
             "why": "S/E in filename",
-            "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
-            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
-            "file": "S01E12 Get Out of My Head - Look Alive - Mortal Dilemma.mp4",
-            "name": "S01E12 Get Out of My Head - Look Alive - Mortal Dilemma",
-            "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E12%20Get%20Out%20of%20My%20Head%20-%20Look%20Alive%20-%20Mortal%20Dilemma.mp4",
-            "seconds": 1324,
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S01E12 Big Trouble in Billy's Basement - Christmas Con Carne - Tickle Me Mandy.mp4",
+            "name": "S01E12 Big Trouble in Billy's Basement - Christmas Con Carne - Tickle Me Mandy",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E12%20Big%20Trouble%20in%20Billy's%20Basement%20-%20Christmas%20Con%20Carne%20-%20Tickle%20Me%20Mandy.mp4",
+            "seconds": 1311,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 323
+            "sizeMB": 395
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S01E12 Get Out of My Head - Look Alive - Mortal Dilemma.mp4",
+              "name": "S01E12 Get Out of My Head - Look Alive - Mortal Dilemma",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E12%20Get%20Out%20of%20My%20Head%20-%20Look%20Alive%20-%20Mortal%20Dilemma.mp4",
+              "seconds": 1324,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 323
+            }
+          ]
         },
         {
           "number": 13,
@@ -564,6 +644,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 264
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Something Stupid This Way Comes\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E08 Grim or Gregory - Search & Estroy - Something Stupid This Way Comes.mp4",
+              "name": "S01E08 Grim or Gregory - Search & Estroy - Something Stupid This Way Comes",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E08%20Grim%20or%20Gregory%20-%20Search%20%26%20Estroy%20-%20Something%20Stupid%20This%20Way%20Comes.mp4",
+              "seconds": 1374,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 414
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Something Stupid This Way Comes\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E15b&m Something Stupid This Way Comes - A Grim Surprise - Beasts and Barbarians.mp4",
+              "name": "S01E15b&m Something Stupid This Way Comes - A Grim Surprise - Beasts and Barbarians",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E15b%26m%20Something%20Stupid%20This%20Way%20Comes%20-%20A%20Grim%20Surprise%20-%20Beasts%20and%20Barbarians.mp4",
+              "seconds": 1345,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 246
             }
           ]
         },
@@ -632,6 +738,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 229
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Beasts and Barbarians\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E09 A Grim Surprise - Everyone Loves Uncle Bob - Beasts and Barbarians.mp4",
+              "name": "S01E09 A Grim Surprise - Everyone Loves Uncle Bob - Beasts and Barbarians",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E09%20A%20Grim%20Surprise%20-%20Everyone%20Loves%20Uncle%20Bob%20-%20Beasts%20and%20Barbarians.mp4",
+              "seconds": 1337,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 402
             }
           ]
         },
@@ -639,41 +758,94 @@
           "number": 16,
           "name": "Hoss Delgado: Spectral Exterminator",
           "airdate": "2002-09-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Hoss Delgado: Spectral Exterminator\" (0.95)",
-            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
-            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
-            "file": "S01E10 Hoss Delgado Spectral Exterminator - Evil on Trial - To Eris Human.mp4",
-            "name": "S01E10 Hoss Delgado Spectral Exterminator - Evil on Trial - To Eris Human",
-            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E10%20Hoss%20Delgado%20Spectral%20Exterminator%20-%20Evil%20on%20Trial%20-%20To%20Eris%20Human.mp4",
-            "seconds": 1340,
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+            "file": "S01E16 Something Stupid This Way Comes - A Grim Surprise - Beasts & Barbarians.mp4",
+            "name": "S01E16 Something Stupid This Way Comes - A Grim Surprise - Beasts & Barbarians",
+            "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E16%20Something%20Stupid%20This%20Way%20Comes%20-%20A%20Grim%20Surprise%20-%20Beasts%20%26%20Barbarians.mp4",
+            "seconds": 1343,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 393
+            "sizeMB": 147
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Hoss Delgado: Spectral Exterminator\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E10 Hoss Delgado Spectral Exterminator - Evil on Trial - To Eris Human.mp4",
+              "name": "S01E10 Hoss Delgado Spectral Exterminator - Evil on Trial - To Eris Human",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E10%20Hoss%20Delgado%20Spectral%20Exterminator%20-%20Evil%20on%20Trial%20-%20To%20Eris%20Human.mp4",
+              "seconds": 1340,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 393
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Hoss Delgado: Spectral Exterminator\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E08b&m Billy’s Growth Spurt - Hoss Delgado Spectral Exterminator - Tickle Me Mandy.mp4",
+              "name": "S01E08b&m Billy’s Growth Spurt - Hoss Delgado Spectral Exterminator - Tickle Me Mandy",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E08b%26m%20Billy%E2%80%99s%20Growth%20Spurt%20-%20Hoss%20Delgado%20Spectral%20Exterminator%20-%20Tickle%20Me%20Mandy.mp4",
+              "seconds": 1333,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 239
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Hoss Delgado: Spectral Exterminator\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S01E08 Billy's Growth Spurt - Hoss Delgado Spectral Exterminator - Tickle Me Mandy.mp4",
+              "name": "S01E08 Billy's Growth Spurt - Hoss Delgado Spectral Exterminator - Tickle Me Mandy",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E08%20Billy's%20Growth%20Spurt%20-%20Hoss%20Delgado%20Spectral%20Exterminator%20-%20Tickle%20Me%20Mandy.mp4",
+              "seconds": 1331,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 156
+            }
+          ]
         },
         {
           "number": 17,
           "name": "To Eris Human",
           "airdate": "2002-08-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"To Eris Human\" (0.95)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
             "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
-            "file": "S01E09b&m Billy and the Bully - To Eris Human - Big Trouble in Billy's Basement.mp4",
-            "name": "S01E09b&m Billy and the Bully - To Eris Human - Big Trouble in Billy's Basement",
-            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E09b%26m%20Billy%20and%20the%20Bully%20-%20To%20Eris%20Human%20-%20Big%20Trouble%20in%20Billy's%20Basement.mp4",
-            "seconds": 1327,
+            "file": "S01E17 Brown Evil - League of Destruction - Brown Evil, Part 2.mp4",
+            "name": "S01E17 Brown Evil - League of Destruction - Brown Evil, Part 2",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E17%20Brown%20Evil%20-%20League%20of%20Destruction%20-%20Brown%20Evil%2C%20Part%202.mp4",
+            "seconds": 1337,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 253
+            "sizeMB": 403
           },
           "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"To Eris Human\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E09b&m Billy and the Bully - To Eris Human - Big Trouble in Billy's Basement.mp4",
+              "name": "S01E09b&m Billy and the Bully - To Eris Human - Big Trouble in Billy's Basement",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E09b%26m%20Billy%20and%20the%20Bully%20-%20To%20Eris%20Human%20-%20Big%20Trouble%20in%20Billy's%20Basement.mp4",
+              "seconds": 1327,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 253
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"To Eris Human\" (0.95)",
@@ -761,7 +933,21 @@
             "playable": true,
             "sizeMB": 395
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Big Trouble in Billy's Basement\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E12 Big Trouble in Billy's Basement - Christmas Con Carne - Tickle Me Mandy.mp4",
+              "name": "S01E12 Big Trouble in Billy's Basement - Christmas Con Carne - Tickle Me Mandy",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E12%20Big%20Trouble%20in%20Billy's%20Basement%20-%20Christmas%20Con%20Carne%20-%20Tickle%20Me%20Mandy.mp4",
+              "seconds": 1311,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 395
+            }
+          ]
         },
         {
           "number": 21,
@@ -807,21 +993,34 @@
           "number": 23,
           "name": "Dream a Little Dream",
           "airdate": "2002-10-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Dream a Little Dream\" (0.95)",
-            "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
-            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
-            "file": "S01E10 Battle of the Bands - Little Rock of Horror - Dream a Little Dream.mp4",
-            "name": "S01E10 Battle of the Bands - Little Rock of Horror - Dream a Little Dream",
-            "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E10%20Battle%20of%20the%20Bands%20-%20Little%20Rock%20of%20Horror%20-%20Dream%20a%20Little%20Dream.mp4",
-            "seconds": 1355,
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S01E23 Terror of the Black Knight - The Right to Bear Arms - Battle of the Bands.mp4",
+            "name": "S01E23 Terror of the Black Knight - The Right to Bear Arms - Battle of the Bands",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E23%20Terror%20of%20the%20Black%20Knight%20-%20The%20Right%20to%20Bear%20Arms%20-%20Battle%20of%20the%20Bands.mp4",
+            "seconds": 1386,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 263
+            "sizeMB": 417
           },
           "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Dream a Little Dream\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S01E10 Battle of the Bands - Little Rock of Horror - Dream a Little Dream.mp4",
+              "name": "S01E10 Battle of the Bands - Little Rock of Horror - Dream a Little Dream",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E10%20Battle%20of%20the%20Bands%20-%20Little%20Rock%20of%20Horror%20-%20Dream%20a%20Little%20Dream.mp4",
+              "seconds": 1355,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 263
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Dream a Little Dream\" (0.95)",
@@ -846,21 +1045,47 @@
           "number": 1,
           "name": "Toadblatt's School of Sorcery",
           "airdate": "2003-06-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Toadblatt's School of Sorcery\" (0.95)",
-            "item": "nickelodeon-grim-adventures",
-            "itemTitle": "The Grim Adventures of Billy & Mandy: All 2003-2004 Nickelodeon Episodes (FANMADE)",
-            "file": "The Grim Adventures of Billy and Mandy - Brown Evil, Tween Wolf and Toadblatt's School of Sorcery.mp4",
-            "name": "The Grim Adventures of Billy and Mandy - Brown Evil, Tween Wolf and Toadblatt's School of Sorcery",
-            "url": "https://archive.org/download/nickelodeon-grim-adventures/The%20Grim%20Adventures%20of%20Billy%20and%20Mandy%20-%20Brown%20Evil%2C%20Tween%20Wolf%20and%20Toadblatt's%20School%20of%20Sorcery.mp4",
-            "seconds": 1524,
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S02E01 Five-O-Clock Shadows - Ultimate Evil.mp4",
+            "name": "S02E01 Five-O-Clock Shadows - Ultimate Evil",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S02E01%20Five-O-Clock%20Shadows%20-%20Ultimate%20Evil.mp4",
+            "seconds": 1339,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 425
+            "sizeMB": 403
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S02E01 Spider's Little Daddy - Tricycle of Terror.mp4",
+              "name": "S02E01 Spider's Little Daddy - Tricycle of Terror",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S02E01%20Spider's%20Little%20Daddy%20-%20Tricycle%20of%20Terror.mp4",
+              "seconds": 1344,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 212
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Toadblatt's School of Sorcery\" (0.95)",
+              "item": "nickelodeon-grim-adventures",
+              "itemTitle": "The Grim Adventures of Billy & Mandy: All 2003-2004 Nickelodeon Episodes (FANMADE)",
+              "file": "The Grim Adventures of Billy and Mandy - Brown Evil, Tween Wolf and Toadblatt's School of Sorcery.mp4",
+              "name": "The Grim Adventures of Billy and Mandy - Brown Evil, Tween Wolf and Toadblatt's School of Sorcery",
+              "url": "https://archive.org/download/nickelodeon-grim-adventures/The%20Grim%20Adventures%20of%20Billy%20and%20Mandy%20-%20Brown%20Evil%2C%20Tween%20Wolf%20and%20Toadblatt's%20School%20of%20Sorcery.mp4",
+              "seconds": 1524,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 425
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Toadblatt's School of Sorcery\" (0.95)",
@@ -873,32 +1098,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 405
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Toadblatt's School of Sorcery\" (0.95)",
-              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
-              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
-              "file": "S01E01 Toadblatt's School of Sorcery - Educating Grim - It's Hokey Mon!.mp4",
-              "name": "S01E01 Toadblatt's School of Sorcery - Educating Grim - It's Hokey Mon!",
-              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E01%20Toadblatt's%20School%20of%20Sorcery%20-%20Educating%20Grim%20-%20It's%20Hokey%20Mon!.mp4",
-              "seconds": 1346,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 269
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Toadblatt's School of Sorcery\" (0.95)",
-              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
-              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
-              "file": "S01E01b&m Toadblatt's School of Sorcery - Educating Grim - It's Hokey Mon!.mp4",
-              "name": "S01E01b&m Toadblatt's School of Sorcery - Educating Grim - It's Hokey Mon!",
-              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E01b%26m%20Toadblatt's%20School%20of%20Sorcery%20-%20Educating%20Grim%20-%20It's%20Hokey%20Mon!.mp4",
-              "seconds": 1346,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 237
             }
           ]
         },
@@ -920,7 +1119,21 @@
             "playable": true,
             "sizeMB": 246
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S02E02 Spider's Little Daddy - Tricycle of Terror.mp4",
+              "name": "S02E02 Spider's Little Daddy - Tricycle of Terror",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S02E02%20Spider's%20Little%20Daddy%20-%20Tricycle%20of%20Terror.mp4",
+              "seconds": 1350,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 224
+            }
+          ]
         },
         {
           "number": 3,
@@ -1007,6 +1220,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 220
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Brown Evil\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E17 Brown Evil - League of Destruction - Brown Evil, Part 2.mp4",
+              "name": "S01E17 Brown Evil - League of Destruction - Brown Evil, Part 2",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E17%20Brown%20Evil%20-%20League%20of%20Destruction%20-%20Brown%20Evil%2C%20Part%202.mp4",
+              "seconds": 1337,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 403
             }
           ]
         },
@@ -1061,9 +1287,35 @@
           "number": 7,
           "name": "Mandy, the Merciless",
           "airdate": "2003-06-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S02E07 Nigel Planter and the Chamber Pot of Secrets - Circus of Fear.mp4",
+            "name": "S02E07 Nigel Planter and the Chamber Pot of Secrets - Circus of Fear",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S02E07%20Nigel%20Planter%20and%20the%20Chamber%20Pot%20of%20Secrets%20-%20Circus%20of%20Fear.mp4",
+            "seconds": 1364,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 231
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S02E07 Nigel Planter and the Chamber Pot of Secrets - Circus of Fear.mp4",
+              "name": "S02E07 Nigel Planter and the Chamber Pot of Secrets - Circus of Fear",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S02E07%20Nigel%20Planter%20and%20the%20Chamber%20Pot%20of%20Secrets%20-%20Circus%20of%20Fear.mp4",
+              "seconds": 1359,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 223
+            }
+          ]
         },
         {
           "number": 8,
@@ -1120,17 +1372,31 @@
           "file": {
             "conf": 0.85,
             "why": "S/E in filename",
-            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
-            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
-            "file": "S02E09 Which Came First - Substitute Teacher.mp4",
-            "name": "S02E09 Which Came First - Substitute Teacher",
-            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S02E09%20Which%20Came%20First%20-%20Substitute%20Teacher.mp4",
-            "seconds": 1375,
+            "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+            "file": "S02E09 Five O' Clock Shadows - Terror of the Black Knight.mp4",
+            "name": "S02E09 Five O' Clock Shadows - Terror of the Black Knight",
+            "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S02E09%20Five%20O'%20Clock%20Shadows%20-%20Terror%20of%20the%20Black%20Knight.mp4",
+            "seconds": 1343,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 232
+            "sizeMB": 252
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S02E09 Which Came First - Substitute Teacher.mp4",
+              "name": "S02E09 Which Came First - Substitute Teacher",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S02E09%20Which%20Came%20First%20-%20Substitute%20Teacher.mp4",
+              "seconds": 1375,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 232
+            }
+          ]
         },
         {
           "number": 10,
@@ -1405,9 +1671,35 @@
           "number": 18,
           "name": "Son of Nergal",
           "airdate": "2003-07-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Son of Nergal\" (0.95)",
+            "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+            "file": "S01E07 Son of Nergal - Sister Grim - Go-Kart 3000.mp4",
+            "name": "S01E07 Son of Nergal - Sister Grim - Go-Kart 3000",
+            "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S01E07%20Son%20of%20Nergal%20-%20Sister%20Grim%20-%20Go-Kart%203000.mp4",
+            "seconds": 1369,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 273
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Son of Nergal\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E07b&m Son of Nergal - Sister Grim - Go-Kart 3000.mp4",
+              "name": "S01E07b&m Son of Nergal - Sister Grim - Go-Kart 3000",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E07b%26m%20Son%20of%20Nergal%20-%20Sister%20Grim%20-%20Go-Kart%203000.mp4",
+              "seconds": 1372,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 269
+            }
+          ]
         },
         {
           "number": 19,
@@ -1429,9 +1721,48 @@
           "number": 21,
           "name": "Terror of the Black Knight",
           "airdate": "2003-08-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Terror of the Black Knight\" (0.95)",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S01E23 Terror of the Black Knight - The Right to Bear Arms - Battle of the Bands.mp4",
+            "name": "S01E23 Terror of the Black Knight - The Right to Bear Arms - Battle of the Bands",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E23%20Terror%20of%20the%20Black%20Knight%20-%20The%20Right%20to%20Bear%20Arms%20-%20Battle%20of%20the%20Bands.mp4",
+            "seconds": 1386,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 417
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Terror of the Black Knight\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S02E09 Five O' Clock Shadows - Terror of the Black Knight.mp4",
+              "name": "S02E09 Five O' Clock Shadows - Terror of the Black Knight",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S02E09%20Five%20O'%20Clock%20Shadows%20-%20Terror%20of%20the%20Black%20Knight.mp4",
+              "seconds": 1343,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 252
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Terror of the Black Knight\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E16b&m Five-O-Clock Shadows - Terror of the Black Knight.mp4",
+              "name": "S01E16b&m Five-O-Clock Shadows - Terror of the Black Knight",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E16b%26m%20Five-O-Clock%20Shadows%20-%20Terror%20of%20the%20Black%20Knight.mp4",
+              "seconds": 1352,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 246
+            }
+          ]
         },
         {
           "number": 22,
@@ -1460,6 +1791,19 @@
             "sizeMB": 357
           },
           "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Halls of Time\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S01E25 Grim for a Day - Sister Grim - Halls of Time.mp4",
+              "name": "S01E25 Grim for a Day - Sister Grim - Halls of Time",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S01E25%20Grim%20for%20a%20Day%20-%20Sister%20Grim%20-%20Halls%20of%20Time.mp4",
+              "seconds": 1346,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 405
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Halls of Time\" (0.95)",
@@ -1574,6 +1918,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 150
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Spider's Little Daddy\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S02E02 Spider's Little Daddy - Tricycle of Terror.mp4",
+              "name": "S02E02 Spider's Little Daddy - Tricycle of Terror",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S02E02%20Spider's%20Little%20Daddy%20-%20Tricycle%20of%20Terror.mp4",
+              "seconds": 1350,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 224
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Spider's Little Daddy\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S02E01 Spider's Little Daddy - Tricycle of Terror.mp4",
+              "name": "S02E01 Spider's Little Daddy - Tricycle of Terror",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S02E01%20Spider's%20Little%20Daddy%20-%20Tricycle%20of%20Terror.mp4",
+              "seconds": 1344,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 212
             }
           ]
         },
@@ -1595,7 +1965,21 @@
             "playable": true,
             "sizeMB": 152
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S03E02 Gridlocked and Loaded - Fool's Paradise.mp4",
+              "name": "S03E02 Gridlocked and Loaded - Fool's Paradise",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S03E02%20Gridlocked%20and%20Loaded%20-%20Fool's%20Paradise.mp4",
+              "seconds": 1379,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            }
+          ]
         },
         {
           "number": 3,
@@ -1715,9 +2099,35 @@
           "number": 6,
           "name": "Skarred for Life",
           "airdate": "2004-06-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S03E06 Chocolate Sailor - The Good, the Bad and the Toothless.mp4",
+            "name": "S03E06 Chocolate Sailor - The Good, the Bad and the Toothless",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S03E06%20Chocolate%20Sailor%20-%20The%20Good%2C%20the%20Bad%20and%20the%20Toothless.mp4",
+            "seconds": 1381,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 258
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S03E06 Chocolate Sailor - The Good, the Bad and the Toothless.mp4",
+              "name": "S03E06 Chocolate Sailor - The Good, the Bad and the Toothless",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S03E06%20Chocolate%20Sailor%20-%20The%20Good%2C%20the%20Bad%20and%20the%20Toothless.mp4",
+              "seconds": 1376,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 193
+            }
+          ]
         },
         {
           "number": 7,
@@ -1783,9 +2193,35 @@
           "number": 8,
           "name": "A Grim Prophecy",
           "airdate": "2004-07-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S03E08 The Secret Snake Club.mp4",
+            "name": "S03E08 The Secret Snake Club",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S03E08%20The%20Secret%20Snake%20Club.mp4",
+            "seconds": 1343,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 238
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S03E08 The Secret Snake Club.mp4",
+              "name": "S03E08 The Secret Snake Club",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S03E08%20The%20Secret%20Snake%20Club.mp4",
+              "seconds": 1338,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 153
+            }
+          ]
         },
         {
           "number": 9,
@@ -1859,17 +2295,95 @@
           "number": 11,
           "name": "My Peeps",
           "airdate": "2004-07-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S03E11 Happy Huggy Stuffy Bears - The Secret Decoder Ring.mp4",
+            "name": "S03E11 Happy Huggy Stuffy Bears - The Secret Decoder Ring",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S03E11%20Happy%20Huggy%20Stuffy%20Bears%20-%20The%20Secret%20Decoder%20Ring.mp4",
+            "seconds": 1376,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 268
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S03E11 Happy Huggy Stuffy Bears - The Secret Decoder Ring.mp4",
+              "name": "S03E11 Happy Huggy Stuffy Bears - The Secret Decoder Ring",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S03E11%20Happy%20Huggy%20Stuffy%20Bears%20-%20The%20Secret%20Decoder%20Ring.mp4",
+              "seconds": 1373,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 181
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Nigel Planter and the Chamber Pot of Secrets",
           "airdate": "2004-07-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S03E12 Wild Parts - The Problem with Billy.mp4",
+            "name": "S03E12 Wild Parts - The Problem with Billy",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S03E12%20Wild%20Parts%20-%20The%20Problem%20with%20Billy.mp4",
+            "seconds": 1361,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 244
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S03E12 Wild Parts - The Problem with Billy.mp4",
+              "name": "S03E12 Wild Parts - The Problem with Billy",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S03E12%20Wild%20Parts%20-%20The%20Problem%20with%20Billy.mp4",
+              "seconds": 1360,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 142
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Nigel Planter and the Chamber Pot of Secrets\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S02E07 Nigel Planter and the Chamber Pot of Secrets - Circus of Fear.mp4",
+              "name": "S02E07 Nigel Planter and the Chamber Pot of Secrets - Circus of Fear",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S02E07%20Nigel%20Planter%20and%20the%20Chamber%20Pot%20of%20Secrets%20-%20Circus%20of%20Fear.mp4",
+              "seconds": 1364,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 231
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Nigel Planter and the Chamber Pot of Secrets\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S02E07 Nigel Planter and the Chamber Pot of Secrets - Circus of Fear.mp4",
+              "name": "S02E07 Nigel Planter and the Chamber Pot of Secrets - Circus of Fear",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S02E07%20Nigel%20Planter%20and%20the%20Chamber%20Pot%20of%20Secrets%20-%20Circus%20of%20Fear.mp4",
+              "seconds": 1359,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 223
+            }
+          ]
         },
         {
           "number": 13,
@@ -2119,8 +2633,20 @@
           "number": 24,
           "name": "Five O'Clock Shadows",
           "airdate": "2004-10-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Five O'Clock Shadows\" (0.71)",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S02E01 Five-O-Clock Shadows - Ultimate Evil.mp4",
+            "name": "S02E01 Five-O-Clock Shadows - Ultimate Evil",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S02E01%20Five-O-Clock%20Shadows%20-%20Ultimate%20Evil.mp4",
+            "seconds": 1339,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 403
+          },
           "alternates": []
         },
         {
@@ -2211,9 +2737,35 @@
           "number": 29,
           "name": "Chocolate Sailor",
           "airdate": "2004-11-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Chocolate Sailor\" (0.95)",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S03E06 Chocolate Sailor - The Good, the Bad and the Toothless.mp4",
+            "name": "S03E06 Chocolate Sailor - The Good, the Bad and the Toothless",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S03E06%20Chocolate%20Sailor%20-%20The%20Good%2C%20the%20Bad%20and%20the%20Toothless.mp4",
+            "seconds": 1381,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 258
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Chocolate Sailor\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S03E06 Chocolate Sailor - The Good, the Bad and the Toothless.mp4",
+              "name": "S03E06 Chocolate Sailor - The Good, the Bad and the Toothless",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S03E06%20Chocolate%20Sailor%20-%20The%20Good%2C%20the%20Bad%20and%20the%20Toothless.mp4",
+              "seconds": 1376,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 193
+            }
+          ]
         },
         {
           "number": 30,
@@ -2301,6 +2853,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 165
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Secret Snake Club\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S06E02 The Secret Snake Club vs. P.E. - King Tooten Pooten.mp4",
+              "name": "S06E02 The Secret Snake Club vs. P.E. - King Tooten Pooten",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E02%20The%20Secret%20Snake%20Club%20vs.%20P.E.%20-%20King%20Tooten%20Pooten.mp4",
+              "seconds": 1357,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 445
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Secret Snake Club\" (1.00)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S03E08 The Secret Snake Club.mp4",
+              "name": "S03E08 The Secret Snake Club",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S03E08%20The%20Secret%20Snake%20Club.mp4",
+              "seconds": 1343,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 238
             }
           ]
         },
@@ -2436,17 +3014,108 @@
           "number": 5,
           "name": "The House of No Tomorrow",
           "airdate": "2005-04-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S04E05 Runaway Pants - Scythe 2.0.mp4",
+            "name": "S04E05 Runaway Pants - Scythe 2.0",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S04E05%20Runaway%20Pants%20-%20Scythe%202.0.mp4",
+            "seconds": 1353,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 241
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S04E05 Runaway Pants - Scythe 2.0.ia.mp4",
+              "name": "S04E05 Runaway Pants - Scythe 2",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S04E05%20Runaway%20Pants%20-%20Scythe%202.0.ia.mp4",
+              "seconds": 1352,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 163
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S04E05 Runaway Pants - Scythe 2.0.mp4",
+              "name": "S04E05 Runaway Pants - Scythe 2.0",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S04E05%20Runaway%20Pants%20-%20Scythe%202.0.mp4",
+              "seconds": 1352,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 163
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Happy Huggy Stuffy Bears",
           "airdate": "2005-04-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S04E06 The Firebird Sweet - The Bubble with Billy.mp4",
+            "name": "S04E06 The Firebird Sweet - The Bubble with Billy",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S04E06%20The%20Firebird%20Sweet%20-%20The%20Bubble%20with%20Billy.mp4",
+            "seconds": 1384,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 258
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S04E06 The Firebird Sweet - The Bubble with Billy.mp4",
+              "name": "S04E06 The Firebird Sweet - The Bubble with Billy",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S04E06%20The%20Firebird%20Sweet%20-%20The%20Bubble%20with%20Billy.mp4",
+              "seconds": 1379,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 155
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Happy Huggy Stuffy Bears\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S03E11 Happy Huggy Stuffy Bears - The Secret Decoder Ring.mp4",
+              "name": "S03E11 Happy Huggy Stuffy Bears - The Secret Decoder Ring",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S03E11%20Happy%20Huggy%20Stuffy%20Bears%20-%20The%20Secret%20Decoder%20Ring.mp4",
+              "seconds": 1376,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 268
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Happy Huggy Stuffy Bears\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S03E11 Happy Huggy Stuffy Bears - The Secret Decoder Ring.mp4",
+              "name": "S03E11 Happy Huggy Stuffy Bears - The Secret Decoder Ring",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S03E11%20Happy%20Huggy%20Stuffy%20Bears%20-%20The%20Secret%20Decoder%20Ring.mp4",
+              "seconds": 1373,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 181
+            }
+          ]
         },
         {
           "number": 7,
@@ -2513,6 +3182,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 159
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Wild Parts\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S03E12 Wild Parts - The Problem with Billy.mp4",
+              "name": "S03E12 Wild Parts - The Problem with Billy",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S03E12%20Wild%20Parts%20-%20The%20Problem%20with%20Billy.mp4",
+              "seconds": 1361,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 244
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Wild Parts\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S03E12 Wild Parts - The Problem with Billy.mp4",
+              "name": "S03E12 Wild Parts - The Problem with Billy",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S03E12%20Wild%20Parts%20-%20The%20Problem%20with%20Billy.mp4",
+              "seconds": 1360,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 142
             }
           ]
         },
@@ -2674,9 +3369,35 @@
           "number": 12,
           "name": "Scythe for Sale",
           "airdate": "2005-06-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S04E12 Ecto Cooler - The Schlubs.mp4",
+            "name": "S04E12 Ecto Cooler - The Schlubs",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S04E12%20Ecto%20Cooler%20-%20The%20Schlubs.mp4",
+            "seconds": 1382,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 266
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S04E12 Ecto Cooler - The Schlubs.mp4",
+              "name": "S04E12 Ecto Cooler - The Schlubs",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S04E12%20Ecto%20Cooler%20-%20The%20Schlubs.mp4",
+              "seconds": 1379,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 169
+            }
+          ]
         },
         {
           "number": 13,
@@ -2834,9 +3555,48 @@
           "number": 19,
           "name": "Runaway Pants",
           "airdate": "2005-06-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Runaway Pants\" (0.95)",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S04E05 Runaway Pants - Scythe 2.0.mp4",
+            "name": "S04E05 Runaway Pants - Scythe 2.0",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S04E05%20Runaway%20Pants%20-%20Scythe%202.0.mp4",
+            "seconds": 1353,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 241
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Runaway Pants\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S04E05 Runaway Pants - Scythe 2.0.ia.mp4",
+              "name": "S04E05 Runaway Pants - Scythe 2",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S04E05%20Runaway%20Pants%20-%20Scythe%202.0.ia.mp4",
+              "seconds": 1352,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 163
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Runaway Pants\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S04E05 Runaway Pants - Scythe 2.0.mp4",
+              "name": "S04E05 Runaway Pants - Scythe 2.0",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S04E05%20Runaway%20Pants%20-%20Scythe%202.0.mp4",
+              "seconds": 1352,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 163
+            }
+          ]
         },
         {
           "number": 20,
@@ -2850,9 +3610,35 @@
           "number": 21,
           "name": "The Firebird Sweet",
           "airdate": "2005-06-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Firebird Sweet\" (0.95)",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S04E06 The Firebird Sweet - The Bubble with Billy.mp4",
+            "name": "S04E06 The Firebird Sweet - The Bubble with Billy",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S04E06%20The%20Firebird%20Sweet%20-%20The%20Bubble%20with%20Billy.mp4",
+            "seconds": 1384,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 258
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Firebird Sweet\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S04E06 The Firebird Sweet - The Bubble with Billy.mp4",
+              "name": "S04E06 The Firebird Sweet - The Bubble with Billy",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S04E06%20The%20Firebird%20Sweet%20-%20The%20Bubble%20with%20Billy.mp4",
+              "seconds": 1379,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 155
+            }
+          ]
         },
         {
           "number": 22,
@@ -2973,21 +3759,47 @@
           "number": 2,
           "name": "One Crazy Summoner",
           "airdate": "2005-08-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"One Crazy Summoner\" (0.95)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
             "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
-            "file": "S04E09 One Crazy Summoner - Guess What's Coming to Dinner.mp4",
-            "name": "S04E09 One Crazy Summoner - Guess What's Coming to Dinner",
-            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S04E09%20One%20Crazy%20Summoner%20-%20Guess%20What's%20Coming%20to%20Dinner.mp4",
-            "seconds": 1380,
+            "file": "S05E02 Keeper of the Reaper.mp4",
+            "name": "S05E02 Keeper of the Reaper",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S05E02%20Keeper%20of%20the%20Reaper.mp4",
+            "seconds": 1370,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 252
+            "sizeMB": 289
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S05E02 Keeper of the Reaper.mp4",
+              "name": "S05E02 Keeper of the Reaper",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S05E02%20Keeper%20of%20the%20Reaper.mp4",
+              "seconds": 1375,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"One Crazy Summoner\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S04E09 One Crazy Summoner - Guess What's Coming to Dinner.mp4",
+              "name": "S04E09 One Crazy Summoner - Guess What's Coming to Dinner",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S04E09%20One%20Crazy%20Summoner%20-%20Guess%20What's%20Coming%20to%20Dinner.mp4",
+              "seconds": 1380,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 252
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"One Crazy Summoner\" (0.95)",
@@ -3135,21 +3947,47 @@
           "number": 6,
           "name": "Reap Walking",
           "airdate": "2005-10-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Reap Walking\" (0.95)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
             "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
-            "file": "S04E11 Reap Walking - The Loser from the Earth's Core.mp4",
-            "name": "S04E11 Reap Walking - The Loser from the Earth's Core",
-            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S04E11%20Reap%20Walking%20-%20The%20Loser%20from%20the%20Earth's%20Core.mp4",
-            "seconds": 1381,
+            "file": "S05E06 Herbicidal Maniac - Chaos Theory.mp4",
+            "name": "S05E06 Herbicidal Maniac - Chaos Theory",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S05E06%20Herbicidal%20Maniac%20-%20Chaos%20Theory.mp4",
+            "seconds": 1373,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 253
+            "sizeMB": 391
           },
           "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S05E06 Herbicidal Maniac - Chaos Theory.mp4",
+              "name": "S05E06 Herbicidal Maniac - Chaos Theory",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S05E06%20Herbicidal%20Maniac%20-%20Chaos%20Theory.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 170
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Reap Walking\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S04E11 Reap Walking - The Loser from the Earth's Core.mp4",
+              "name": "S04E11 Reap Walking - The Loser from the Earth's Core",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S04E11%20Reap%20Walking%20-%20The%20Loser%20from%20the%20Earth's%20Core.mp4",
+              "seconds": 1381,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 253
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Reap Walking\" (0.95)",
@@ -3169,9 +4007,35 @@
           "number": 7,
           "name": "The Loser from the Earth's Core",
           "airdate": "2005-10-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S05E07 A Grim Day - Pandora’s Lunch Box.mp4",
+            "name": "S05E07 A Grim Day - Pandora’s Lunch Box",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S05E07%20A%20Grim%20Day%20-%20Pandora%E2%80%99s%20Lunch%20Box.mp4",
+            "seconds": 1358,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 369
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S05E07 A Grim Day - Pandora's Lunch Box.mp4",
+              "name": "S05E07 A Grim Day - Pandora's Lunch Box",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S05E07%20A%20Grim%20Day%20-%20Pandora's%20Lunch%20Box.mp4",
+              "seconds": 1363,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 168
+            }
+          ]
         },
         {
           "number": 8,
@@ -3396,33 +4260,59 @@
           "number": 1,
           "name": "Billy Ocean",
           "airdate": "2006-01-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "title ~ \"Billy Ocean\" (0.71)",
+            "conf": 0.85,
+            "why": "S/E in filename",
             "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
             "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
-            "file": "S05E01 Billy Ocean - Hill Billy.mp4",
-            "name": "S05E01 Billy Ocean - Hill Billy",
-            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S05E01%20Billy%20Ocean%20-%20Hill%20Billy.mp4",
-            "seconds": 1394,
+            "file": "S06E01 Everything Breaks - The Show That Dare Not Speak Its Name.mp4",
+            "name": "S06E01 Everything Breaks - The Show That Dare Not Speak Its Name",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E01%20Everything%20Breaks%20-%20The%20Show%20That%20Dare%20Not%20Speak%20Its%20Name.mp4",
+            "seconds": 1369,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 458
+            "sizeMB": 516
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "title ~ \"Billy Ocean\" (0.71)",
+              "conf": 0.85,
+              "why": "S/E in filename",
               "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
               "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
-              "file": "S05E01 Billy Ocean - Hill Billy.mp4",
-              "name": "S05E01 Billy Ocean - Hill Billy",
-              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S05E01%20Billy%20Ocean%20-%20Hill%20Billy.mp4",
-              "seconds": 1368,
+              "file": "S06E01 Everything Breaks - The Show That Dare Not Speak its Name.mp4",
+              "name": "S06E01 Everything Breaks - The Show That Dare Not Speak its Name",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S06E01%20Everything%20Breaks%20-%20The%20Show%20That%20Dare%20Not%20Speak%20its%20Name.mp4",
+              "seconds": 1367,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 179
+              "sizeMB": 234
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S06E01 Everything Breaks - The Show That Dare Not Speak Its Name (Original).mp4",
+              "name": "S06E01 Everything Breaks - The Show That Dare Not Speak Its Name (Original)",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E01%20Everything%20Breaks%20-%20The%20Show%20That%20Dare%20Not%20Speak%20Its%20Name%20(Original).mp4",
+              "seconds": 1316,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 127
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Billy Ocean\" (0.71)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S05E01 Billy Ocean - Hill Billy.mp4",
+              "name": "S05E01 Billy Ocean - Hill Billy",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S05E01%20Billy%20Ocean%20-%20Hill%20Billy.mp4",
+              "seconds": 1394,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 458
             }
           ]
         },
@@ -3430,9 +4320,61 @@
           "number": 2,
           "name": "Hill Billy",
           "airdate": "2006-01-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S06E02 The Secret Snake Club vs. P.E. - King Tooten Pooten.mp4",
+            "name": "S06E02 The Secret Snake Club vs. P.E. - King Tooten Pooten",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E02%20The%20Secret%20Snake%20Club%20vs.%20P.E.%20-%20King%20Tooten%20Pooten.mp4",
+            "seconds": 1357,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 445
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S06E02 The Secret Snake Club vs. P.E. - King Tooten Pooten.ia.mp4",
+              "name": "S06E02 The Secret Snake Club vs. P.E",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S06E02%20The%20Secret%20Snake%20Club%20vs.%20P.E.%20-%20King%20Tooten%20Pooten.ia.mp4",
+              "seconds": 1365,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 208
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S06E02 The Secret Snake Club vs. P.E. - King Tooten Pooten.mp4",
+              "name": "S06E02 The Secret Snake Club vs. P.E. - King Tooten Pooten",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S06E02%20The%20Secret%20Snake%20Club%20vs.%20P.E.%20-%20King%20Tooten%20Pooten.mp4",
+              "seconds": 1365,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 208
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S06E02 The Secret Snake Club vs. P.E. - King Tooten Pooten.ia.mp4",
+              "name": "S06E02 The Secret Snake Club vs. P.E",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E02%20The%20Secret%20Snake%20Club%20vs.%20P.E.%20-%20King%20Tooten%20Pooten.ia.mp4",
+              "seconds": 1357,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 132
+            }
+          ]
         },
         {
           "number": 3,
@@ -3478,6 +4420,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 127
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Keeper of the Reaper\" (1.00)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S05E02 Keeper of the Reaper.mp4",
+              "name": "S05E02 Keeper of the Reaper",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S05E02%20Keeper%20of%20the%20Reaper.mp4",
+              "seconds": 1370,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 289
             }
           ]
         },
@@ -3545,9 +4500,48 @@
           "number": 5,
           "name": "Major Cheese",
           "airdate": "2006-01-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S06E05 Company Halt - Anger Mismanagement.mp4",
+            "name": "S06E05 Company Halt - Anger Mismanagement",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E05%20Company%20Halt%20-%20Anger%20Mismanagement.mp4",
+            "seconds": 1367,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 488
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S06E05 Company Halt - Anger Mismanagement.mp4",
+              "name": "S06E05 Company Halt - Anger Mismanagement",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S06E05%20Company%20Halt%20-%20Anger%20Mismanagement.mp4",
+              "seconds": 1365,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 208
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S06E05 Company Halt - Anger Mismanagement (Original).mp4",
+              "name": "S06E05 Company Halt - Anger Mismanagement (Original)",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E05%20Company%20Halt%20-%20Anger%20Mismanagement%20(Original).mp4",
+              "seconds": 1315,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 6,
@@ -3742,6 +4736,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 300
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Herbicidal Maniac\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S05E06 Herbicidal Maniac - Chaos Theory.mp4",
+              "name": "S05E06 Herbicidal Maniac - Chaos Theory",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S05E06%20Herbicidal%20Maniac%20-%20Chaos%20Theory.mp4",
+              "seconds": 1373,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 391
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Herbicidal Maniac\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S05E06 Herbicidal Maniac - Chaos Theory.mp4",
+              "name": "S05E06 Herbicidal Maniac - Chaos Theory",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S05E06%20Herbicidal%20Maniac%20-%20Chaos%20Theory.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 170
             }
           ]
         },
@@ -3749,17 +4769,95 @@
           "number": 11,
           "name": "Chaos Theory",
           "airdate": "2006-03-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S06E11 Dracula Must Die! - Short Tall Tales.mp4",
+            "name": "S06E11 Dracula Must Die! - Short Tall Tales",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E11%20Dracula%20Must%20Die!%20-%20Short%20Tall%20Tales.mp4",
+            "seconds": 1376,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 517
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S06E11 Dracula Must Die! - Short Tall Tales.mp4",
+              "name": "S06E11 Dracula Must Die! - Short Tall Tales",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S06E11%20Dracula%20Must%20Die!%20-%20Short%20Tall%20Tales.mp4",
+              "seconds": 1371,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 253
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S06E11 Dracula Must Die! - Short Tall Tales (Original).mp4",
+              "name": "S06E11 Dracula Must Die! - Short Tall Tales (Original)",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E11%20Dracula%20Must%20Die!%20-%20Short%20Tall%20Tales%20(Original).mp4",
+              "seconds": 1320,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 12,
           "name": "A Grim Day",
           "airdate": "2006-03-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S06E12 Nigel Planter and The Order of the Peanuts - The Incredible Shrinking Mandy.mp4",
+            "name": "S06E12 Nigel Planter and The Order of the Peanuts - The Incredible Shrinking Mandy",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E12%20Nigel%20Planter%20and%20The%20Order%20of%20the%20Peanuts%20-%20The%20Incredible%20Shrinking%20Mandy.mp4",
+            "seconds": 1352,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 537
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S06E12 Nigel Planter & The Order of the Peanuts - The Incredible Shrinking Mandy.mp4",
+              "name": "S06E12 Nigel Planter & The Order of the Peanuts - The Incredible Shrinking Mandy",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S06E12%20Nigel%20Planter%20%26%20The%20Order%20of%20the%20Peanuts%20-%20The%20Incredible%20Shrinking%20Mandy.mp4",
+              "seconds": 1347,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 314
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S06E12 Nigel Planter and The Order of the Peanuts - The Incredible Shrinking Mandy (Original).mp4",
+              "name": "S06E12 Nigel Planter and The Order of the Peanuts - The Incredible Shrinking Mandy (Original)",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E12%20Nigel%20Planter%20and%20The%20Order%20of%20the%20Peanuts%20-%20The%20Incredible%20Shrinking%20Mandy%20(Original).mp4",
+              "seconds": 1298,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
         },
         {
           "number": 13,
@@ -3805,6 +4903,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 128
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Pandora's Lunch Box\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S05E07 A Grim Day - Pandora’s Lunch Box.mp4",
+              "name": "S05E07 A Grim Day - Pandora’s Lunch Box",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S05E07%20A%20Grim%20Day%20-%20Pandora%E2%80%99s%20Lunch%20Box.mp4",
+              "seconds": 1358,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 369
             }
           ]
         },
@@ -4014,9 +5125,35 @@
           "number": 23,
           "name": "The Crass Unicorn",
           "airdate": "2006-08-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Crass Unicorn\" (0.95)",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S05E13 The Crass Unicorn - Billy & Mandy Begins.mp4",
+            "name": "S05E13 The Crass Unicorn - Billy & Mandy Begins",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S05E13%20The%20Crass%20Unicorn%20-%20Billy%20%26%20Mandy%20Begins.mp4",
+            "seconds": 1358,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 369
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Crass Unicorn\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S05E13 The Crass Unicorn - Billy & Mandy Begins.mp4",
+              "name": "S05E13 The Crass Unicorn - Billy & Mandy Begins",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S05E13%20The%20Crass%20Unicorn%20-%20Billy%20%26%20Mandy%20Begins.mp4",
+              "seconds": 1360,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 159
+            }
+          ]
         },
         {
           "number": 24,
@@ -4035,9 +5172,48 @@
           "number": 1,
           "name": "Everything Breaks",
           "airdate": "2006-06-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Everything Breaks\" (0.95)",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S06E01 Everything Breaks - The Show That Dare Not Speak Its Name.mp4",
+            "name": "S06E01 Everything Breaks - The Show That Dare Not Speak Its Name",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E01%20Everything%20Breaks%20-%20The%20Show%20That%20Dare%20Not%20Speak%20Its%20Name.mp4",
+            "seconds": 1369,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 516
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Everything Breaks\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S06E01 Everything Breaks - The Show That Dare Not Speak its Name.mp4",
+              "name": "S06E01 Everything Breaks - The Show That Dare Not Speak its Name",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S06E01%20Everything%20Breaks%20-%20The%20Show%20That%20Dare%20Not%20Speak%20its%20Name.mp4",
+              "seconds": 1367,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 234
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Everything Breaks\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S06E01 Everything Breaks - The Show That Dare Not Speak Its Name (Original).mp4",
+              "name": "S06E01 Everything Breaks - The Show That Dare Not Speak Its Name (Original)",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E01%20Everything%20Breaks%20-%20The%20Show%20That%20Dare%20Not%20Speak%20Its%20Name%20(Original).mp4",
+              "seconds": 1316,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 2,
@@ -4051,9 +5227,35 @@
           "number": 3,
           "name": "The Secret Snake Club vs. P.E",
           "airdate": "2006-10-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Secret Snake Club vs. P.E\" (1.00)",
+            "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+            "file": "S06E02 The Secret Snake Club vs. P.E. - King Tooten Pooten.ia.mp4",
+            "name": "S06E02 The Secret Snake Club vs. P.E",
+            "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S06E02%20The%20Secret%20Snake%20Club%20vs.%20P.E.%20-%20King%20Tooten%20Pooten.ia.mp4",
+            "seconds": 1365,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 208
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Secret Snake Club vs. P.E\" (1.00)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S06E02 The Secret Snake Club vs. P.E. - King Tooten Pooten.ia.mp4",
+              "name": "S06E02 The Secret Snake Club vs. P.E",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E02%20The%20Secret%20Snake%20Club%20vs.%20P.E.%20-%20King%20Tooten%20Pooten.ia.mp4",
+              "seconds": 1357,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 132
+            }
+          ]
         },
         {
           "number": 4,
@@ -4177,9 +5379,48 @@
           "number": 9,
           "name": "Company Halt",
           "airdate": "2007-03-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Company Halt\" (0.95)",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S06E05 Company Halt - Anger Mismanagement.mp4",
+            "name": "S06E05 Company Halt - Anger Mismanagement",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E05%20Company%20Halt%20-%20Anger%20Mismanagement.mp4",
+            "seconds": 1367,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 488
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Company Halt\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S06E05 Company Halt - Anger Mismanagement.mp4",
+              "name": "S06E05 Company Halt - Anger Mismanagement",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S06E05%20Company%20Halt%20-%20Anger%20Mismanagement.mp4",
+              "seconds": 1365,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 208
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Company Halt\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S06E05 Company Halt - Anger Mismanagement (Original).mp4",
+              "name": "S06E05 Company Halt - Anger Mismanagement (Original)",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E05%20Company%20Halt%20-%20Anger%20Mismanagement%20(Original).mp4",
+              "seconds": 1315,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 10,
@@ -4285,9 +5526,48 @@
           "number": 16,
           "name": "Dracula Must Die!",
           "airdate": "2007-09-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Dracula Must Die!\" (0.95)",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S06E11 Dracula Must Die! - Short Tall Tales.mp4",
+            "name": "S06E11 Dracula Must Die! - Short Tall Tales",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E11%20Dracula%20Must%20Die!%20-%20Short%20Tall%20Tales.mp4",
+            "seconds": 1376,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 517
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Dracula Must Die!\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S06E11 Dracula Must Die! - Short Tall Tales.mp4",
+              "name": "S06E11 Dracula Must Die! - Short Tall Tales",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S06E11%20Dracula%20Must%20Die!%20-%20Short%20Tall%20Tales.mp4",
+              "seconds": 1371,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 253
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Dracula Must Die!\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S06E11 Dracula Must Die! - Short Tall Tales (Original).mp4",
+              "name": "S06E11 Dracula Must Die! - Short Tall Tales (Original)",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E11%20Dracula%20Must%20Die!%20-%20Short%20Tall%20Tales%20(Original).mp4",
+              "seconds": 1320,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 127
+            }
+          ]
         },
         {
           "number": 17,
@@ -4301,9 +5581,48 @@
           "number": 18,
           "name": "Nigel Planter and the Order of the Peanuts",
           "airdate": "2007-09-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Nigel Planter and the Order of the Peanuts\" (0.95)",
+            "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+            "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+            "file": "S06E12 Nigel Planter and The Order of the Peanuts - The Incredible Shrinking Mandy.mp4",
+            "name": "S06E12 Nigel Planter and The Order of the Peanuts - The Incredible Shrinking Mandy",
+            "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E12%20Nigel%20Planter%20and%20The%20Order%20of%20the%20Peanuts%20-%20The%20Incredible%20Shrinking%20Mandy.mp4",
+            "seconds": 1352,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 537
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Nigel Planter and the Order of the Peanuts\" (0.95)",
+              "item": "s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series (Tubi 720p)",
+              "file": "S06E12 Nigel Planter & The Order of the Peanuts - The Incredible Shrinking Mandy.mp4",
+              "name": "S06E12 Nigel Planter & The Order of the Peanuts - The Incredible Shrinking Mandy",
+              "url": "https://archive.org/download/s-01-e-01-toadblatts-school-of-sorcery-educating-grim-its-hokey-mon/S06E12%20Nigel%20Planter%20%26%20The%20Order%20of%20the%20Peanuts%20-%20The%20Incredible%20Shrinking%20Mandy.mp4",
+              "seconds": 1347,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 314
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Nigel Planter and the Order of the Peanuts\" (0.95)",
+              "item": "s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet",
+              "itemTitle": "The Grim Adventures of Billy & Mandy - The Complete Series",
+              "file": "S06E12 Nigel Planter and The Order of the Peanuts - The Incredible Shrinking Mandy (Original).mp4",
+              "name": "S06E12 Nigel Planter and The Order of the Peanuts - The Incredible Shrinking Mandy (Original)",
+              "url": "https://archive.org/download/s-01-e-01-meet-the-reaper-evil-con-carne-skeletons-in-the-water-closet/S06E12%20Nigel%20Planter%20and%20The%20Order%20of%20the%20Peanuts%20-%20The%20Incredible%20Shrinking%20Mandy%20(Original).mp4",
+              "seconds": 1298,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
         },
         {
           "number": 19,

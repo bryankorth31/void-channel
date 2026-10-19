@@ -3,7 +3,7 @@
   "slug": "wild-metropolis",
   "type": "Documentary & Geographic",
   "network": "CBC",
-  "matchedAt": "2026-10-17T10:48:45.884Z",
+  "matchedAt": "2026-10-19T04:12:52.244Z",
   "addedAt": "2026-10-17T10:48:45.885Z",
   "tvmaze": {
     "id": 44526,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 3,
     "live": 0,
-    "review": 1,
-    "missing": 2,
-    "pct": 33
+    "review": 3,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -27,8 +27,20 @@
           "number": 1,
           "name": "Residents",
           "airdate": "2019-10-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Residents\" (0.95)",
+            "item": "wild-metropolis",
+            "itemTitle": "Wild Metropolis ★ A BBC Earth Series - with Subtitles and MKV",
+            "file": "01 Residents.mp4",
+            "name": "01 Residents",
+            "url": "https://archive.org/download/wild-metropolis/01%20Residents.mp4",
+            "seconds": 3351,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 588
+          },
           "alternates": []
         },
         {
@@ -55,8 +67,20 @@
           "number": 3,
           "name": "Survivors",
           "airdate": "2019-10-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Survivors\" (0.95)",
+            "item": "wild-metropolis",
+            "itemTitle": "Wild Metropolis ★ A BBC Earth Series - with Subtitles and MKV",
+            "file": "03 Survivors.mp4",
+            "name": "03 Survivors",
+            "url": "https://archive.org/download/wild-metropolis/03%20Survivors.mp4",
+            "seconds": 3421,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 612
+          },
           "alternates": []
         }
       ]

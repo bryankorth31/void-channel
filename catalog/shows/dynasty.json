@@ -3,7 +3,8 @@
   "slug": "dynasty",
   "type": "Reality & Talk",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:46.834Z",
+  "matchedAt": "2026-10-19T04:11:53.388Z",
+  "addedAt": "2026-10-19T04:11:53.393Z",
   "tvmaze": {
     "id": 21656,
     "name": "Dynasty",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 108,
-    "live": 0,
+    "live": 2,
     "review": 0,
-    "missing": 108,
-    "pct": 0
+    "missing": 106,
+    "pct": 2
   },
   "seasons": [
     {
@@ -66,8 +67,20 @@
           "number": 6,
           "name": "I Exist Only for Me",
           "airdate": "2017-11-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tales-from-the-territories-s-01-e-06-polynesian-wrestlings-island-dynasty",
+            "itemTitle": "Tales From The Territories S01E06 Polynesian Wrestling’s Island Dynasty",
+            "file": "Tales From The Territories S01E06 Polynesian Wrestling’s Island Dynasty.mp4",
+            "name": "Tales From The Territories S01E06 Polynesian Wrestling’s Island Dynasty",
+            "url": "https://archive.org/download/tales-from-the-territories-s-01-e-06-polynesian-wrestlings-island-dynasty/Tales%20From%20The%20Territories%20S01E06%20Polynesian%20Wrestling%E2%80%99s%20Island%20Dynasty.mp4",
+            "seconds": 2662,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 373
+          },
           "alternates": []
         },
         {
@@ -569,8 +582,20 @@
           "number": 3,
           "name": "The Aftermath",
           "airdate": "2021-05-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "dark-side-of-the-ring-s-04-e-03-breaking-the-cycle-the-graham-dynasty",
+            "itemTitle": "Dark Side of the Ring S04E03 Breaking the Cycle - The Graham Dynasty",
+            "file": "Dark Side of the Ring S04E03 Breaking the Cycle - The Graham Dynasty.mp4",
+            "name": "Dark Side of the Ring S04E03 Breaking the Cycle - The Graham Dynasty",
+            "url": "https://archive.org/download/dark-side-of-the-ring-s-04-e-03-breaking-the-cycle-the-graham-dynasty/Dark%20Side%20of%20the%20Ring%20S04E03%20Breaking%20the%20Cycle%20-%20The%20Graham%20Dynasty.mp4",
+            "seconds": 2653,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 709
+          },
           "alternates": []
         },
         {

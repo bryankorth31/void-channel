@@ -3,7 +3,7 @@
   "slug": "powerpuff-girls-z",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:41.004Z",
+  "matchedAt": "2026-10-19T04:11:43.007Z",
   "addedAt": "2026-10-15T12:08:19.903Z",
   "tvmaze": {
     "id": 26437,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 52,
     "live": 0,
-    "review": 29,
-    "missing": 23,
-    "pct": 56
+    "review": 49,
+    "missing": 3,
+    "pct": 94
   },
   "seasons": [
     {
@@ -27,16 +27,40 @@
           "number": 1,
           "name": "Powerpuff Girls to the Rescue / The Secret of the Powerpuff Girls",
           "airdate": "2006-07-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Powerpuff Girls to the Rescue / The Secret of the Powerpuff Girls\" (0.67)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "01 - Powerpuff Girls to the Rescue + The Secret of the Powerpuff Girls.mp4",
+            "name": "01 - Powerpuff Girls to the Rescue + The Secret of the Powerpuff Girls",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/01%20-%20Powerpuff%20Girls%20to%20the%20Rescue%20%2B%20The%20Secret%20of%20the%20Powerpuff%20Girls.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 146
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Bouncing Bubbles",
           "airdate": "2006-07-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Bouncing Bubbles\" (0.95)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "02 - Bouncing Bubbles.mp4",
+            "name": "02 - Bouncing Bubbles",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/02%20-%20Bouncing%20Bubbles.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 117
+          },
           "alternates": []
         },
         {
@@ -71,16 +95,40 @@
           "number": 5,
           "name": "Mojo's Revenge / Climbing the Walls",
           "airdate": "2006-07-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Mojo's Revenge / Climbing the Walls\" (0.96)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "05 - Mojo's Revenge + Climbing the Walls.mp4",
+            "name": "05 - Mojo's Revenge + Climbing the Walls",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/05%20-%20Mojo's%20Revenge%20%2B%20Climbing%20the%20Walls.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 112
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Fuzzy Lumpkins / Princess Morbucks",
           "airdate": "2006-08-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Fuzzy Lumpkins / Princess Morbucks\" (0.96)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "06 - Fuzzy Lumpkins + Princess Morbucks.mp4",
+            "name": "06 - Fuzzy Lumpkins + Princess Morbucks",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/06%20-%20Fuzzy%20Lumpkins%20%2B%20Princess%20Morbucks.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 115
+          },
           "alternates": []
         },
         {
@@ -167,24 +215,60 @@
           "number": 11,
           "name": "Friends in High Places / Happy Birthday, New Townsville",
           "airdate": "2006-09-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Friends in High Places / Happy Birthday, New Townsville\" (0.98)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "11 - Friends in High Places + Happy Birthday, New Townsville.mp4",
+            "name": "11 - Friends in High Places + Happy Birthday, New Townsville",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/11%20-%20Friends%20in%20High%20Places%20%2B%20Happy%20Birthday%2C%20New%20Townsville.mp4",
+            "seconds": 1463,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 122
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Bubbles' Troubles",
           "airdate": "2006-09-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Bubbles' Troubles\" (0.95)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "12 - Bubbles' Troubles.mp4",
+            "name": "12 - Bubbles' Troubles",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/12%20-%20Bubbles'%20Troubles.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 118
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Mojo and the Amoeba Boys / Revenge of Negatron",
           "airdate": "2006-09-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Mojo and the Amoeba Boys / Revenge of Negatron\" (0.97)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "13 - Mojo and the Amoeba Boys + Revenge of Negatron.mp4",
+            "name": "13 - Mojo and the Amoeba Boys + Revenge of Negatron",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/13%20-%20Mojo%20and%20the%20Amoeba%20Boys%20%2B%20Revenge%20of%20Negatron.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 126
+          },
           "alternates": []
         },
         {
@@ -211,8 +295,20 @@
           "number": 15,
           "name": "Fashion Action / The Way of the Noodle",
           "airdate": "2006-10-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Fashion Action / The Way of the Noodle\" (0.96)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "15 - Fashion Action + The Way of the Noodle.mp4",
+            "name": "15 - Fashion Action + The Way of the Noodle",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/15%20-%20Fashion%20Action%20%2B%20The%20Way%20of%20the%20Noodle.mp4",
+            "seconds": 1463,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 128
+          },
           "alternates": []
         },
         {
@@ -239,25 +335,75 @@
           "number": 17,
           "name": "Picture This / Revenge of Digitron",
           "airdate": "2006-10-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Picture This / Revenge of Digitron\" (0.96)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "17 - Picture This + Revenge of Digitron.mp4",
+            "name": "17 - Picture This + Revenge of Digitron",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/17%20-%20Picture%20This%20%2B%20Revenge%20of%20Digitron.mp4",
+            "seconds": 1463,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 137
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "The Mojo League of Evil",
           "airdate": "2006-10-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Mojo League of Evil\" (0.95)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "18 - The Mojo League of Evil.mp4",
+            "name": "18 - The Mojo League of Evil",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/18%20-%20The%20Mojo%20League%20of%20Evil.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 116
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "Practice Makes Pandemonium / Ms. Keane to the Rescue",
           "airdate": "2006-11-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Practice Makes Pandemonium / Ms. Keane to the Rescue\" (0.97)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "19 - Practice Makes Pandemonium + Ms. Keane to the Rescue.mp4",
+            "name": "19 - Practice Makes Pandemonium + Ms. Keane to the Rescue",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/19%20-%20Practice%20Makes%20Pandemonium%20%2B%20Ms.%20Keane%20to%20the%20Rescue.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 129
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Practice Makes Pandemonium / Ms. Keane to the Rescue\" (0.76)",
+              "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+              "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+              "file": "19 - Practice Makes Pandemonium + Ms. Keane to the Rescue.ia.mp4",
+              "name": "19 - Practice Makes Pandemonium + Ms",
+              "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/19%20-%20Practice%20Makes%20Pandemonium%20%2B%20Ms.%20Keane%20to%20the%20Rescue.ia.mp4",
+              "seconds": 1483,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 20,
@@ -337,8 +483,20 @@
           "number": 23,
           "name": "A Comedy of Terrors / Beetle Battle",
           "airdate": "2006-12-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"A Comedy of Terrors / Beetle Battle\" (0.96)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "23 - A Comedy of Terrors + Beetle Battle.mp4",
+            "name": "23 - A Comedy of Terrors + Beetle Battle",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/23%20-%20A%20Comedy%20of%20Terrors%20%2B%20Beetle%20Battle.mp4",
+            "seconds": 1463,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 120
+          },
           "alternates": []
         },
         {
@@ -405,16 +563,40 @@
           "number": 27,
           "name": "Attack of the Sushi Monsters / Cat On a Hot Tin Poochie",
           "airdate": "2007-01-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Attack of the Sushi Monsters / Cat On a Hot Tin Poochie\" (0.96)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "27 - Attack of the Sushi Monsters + Cat On a Hot Tin Poochi.mp4",
+            "name": "27 - Attack of the Sushi Monsters + Cat On a Hot Tin Poochi",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/27%20-%20Attack%20of%20the%20Sushi%20Monsters%20%2B%20Cat%20On%20a%20Hot%20Tin%20Poochi.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 118
+          },
           "alternates": []
         },
         {
           "number": 28,
           "name": "The League of Lovely Ladies",
           "airdate": "2007-01-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The League of Lovely Ladies\" (0.95)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "28 - The League of Lovely Ladies.mp4",
+            "name": "28 - The League of Lovely Ladies",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/28%20-%20The%20League%20of%20Lovely%20Ladies.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 140
+          },
           "alternates": []
         },
         {
@@ -481,8 +663,20 @@
           "number": 32,
           "name": "Two Burger-Bots and a Side of Fries",
           "airdate": "2007-02-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Two Burger-Bots and a Side of Fries\" (0.96)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "32 - Two Burger-Bots and a Side of Fries.mp4",
+            "name": "32 - Two Burger-Bots and a Side of Fries",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/32%20-%20Two%20Burger-Bots%20and%20a%20Side%20of%20Fries.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 133
+          },
           "alternates": []
         },
         {
@@ -529,8 +723,20 @@
           "number": 35,
           "name": "Weeding out The Monsters / The Dog Days of New Townsville",
           "airdate": "2007-03-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Weeding out The Monsters / The Dog Days of New Townsville\" (0.98)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "35 - Weeding out The Monsters + The Dog Days of New Townsville.mp4",
+            "name": "35 - Weeding out The Monsters + The Dog Days of New Townsville",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/35%20-%20Weeding%20out%20The%20Monsters%20%2B%20The%20Dog%20Days%20of%20New%20Townsville.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 137
+          },
           "alternates": []
         },
         {
@@ -565,8 +771,20 @@
           "number": 38,
           "name": "Enter the Entourage",
           "airdate": "2007-03-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Enter the Entourage\" (0.95)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "38 - Enter the Entourage.mp4",
+            "name": "38 - Enter the Entourage",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/38%20-%20Enter%20the%20Entourage.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 137
+          },
           "alternates": []
         },
         {
@@ -593,8 +811,20 @@
           "number": 40,
           "name": "Babes in TV Land / The Legend of Princess Morbucks",
           "airdate": "2007-04-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Babes in TV Land / The Legend of Princess Morbucks\" (0.97)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "40 - Babes in TV Land + The Legend of Princess Morbucks.mp4",
+            "name": "40 - Babes in TV Land + The Legend of Princess Morbucks",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/40%20-%20Babes%20in%20TV%20Land%20%2B%20The%20Legend%20of%20Princess%20Morbucks.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 124
+          },
           "alternates": []
         },
         {
@@ -669,8 +899,20 @@
           "number": 45,
           "name": "Hoppily Ever After / Vamp on Campus",
           "airdate": "2007-05-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Hoppily Ever After / Vamp on Campus\" (0.96)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "45 - Hoppily Ever After + Vamp on Campus.mp4",
+            "name": "45 - Hoppily Ever After + Vamp on Campus",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/45%20-%20Hoppily%20Ever%20After%20%2B%20Vamp%20on%20Campus.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 120
+          },
           "alternates": []
         },
         {
@@ -717,8 +959,20 @@
           "number": 48,
           "name": "Bubbles and the Beast",
           "airdate": "2007-06-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Bubbles and the Beast\" (0.95)",
+            "item": "demashita_powerpuff_girls_z_full_series_japanese_dub",
+            "itemTitle": "Demashita! Powerpuff Girls Z - Full Series (Japanese Dub)",
+            "file": "48 - Bubbles and the Beast.mp4",
+            "name": "48 - Bubbles and the Beast",
+            "url": "https://archive.org/download/demashita_powerpuff_girls_z_full_series_japanese_dub/48%20-%20Bubbles%20and%20the%20Beast.mp4",
+            "seconds": 1483,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 122
+          },
           "alternates": []
         },
         {

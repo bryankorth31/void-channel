@@ -3,7 +3,7 @@
   "slug": "batman",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-16T07:58:17.433Z",
+  "matchedAt": "2026-10-19T04:12:19.832Z",
   "addedAt": "2026-10-15T12:08:52.086Z",
   "tvmaze": {
     "id": 975,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 120,
-    "live": 12,
-    "review": 9,
-    "missing": 99,
-    "pct": 18
+    "live": 18,
+    "review": 22,
+    "missing": 80,
+    "pct": 33
   },
   "seasons": [
     {
@@ -27,81 +27,189 @@
           "number": 1,
           "name": "Hi Diddle Riddle ",
           "airdate": "1966-01-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 9 in \"The Batman\"",
-            "item": "the-batman_202409",
-            "itemTitle": "The Batman",
-            "file": "The Batman - S04 E03 - Clayfaces (480p Web-DL).mp4",
-            "name": "The Batman - S04 E03 - Clayfaces (480p Web-DL)",
-            "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E03%20-%20Clayfaces%20(480p%20Web-DL).mp4",
-            "seconds": 1385,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "batman-mask-of-the-phantasm-1993",
+            "itemTitle": "Batman: Mask Of The Phantasm (Including the First Four Episodes of Batman TAS)",
+            "file": "Batman The Animated Series Season 1 episode 1.mp4",
+            "name": "Batman The Animated Series Season 1 episode 1",
+            "url": "https://archive.org/download/batman-mask-of-the-phantasm-1993/Batman%20The%20Animated%20Series%20Season%201%20episode%201.mp4",
+            "seconds": 1347,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 120
+            "sizeMB": 82
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+              "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+              "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+              "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 01 - Hunted (720p Web-DL).mp4",
+              "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 01 - Hunted (720p Web-DL)",
+              "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2001%20-%20Hunted%20(720p%20Web-DL).mp4",
+              "seconds": 1323,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 273
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S04 E01 - A Matter Of Family (480p Web-DL).mp4",
+              "name": "The Batman - S04 E01 - A Matter Of Family (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E01%20-%20A%20Matter%20Of%20Family%20(480p%20Web-DL).mp4",
+              "seconds": 1366,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 112
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Smack in the Middle ",
           "airdate": "1966-01-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 9 in \"The Batman\"",
-            "item": "the-batman_202409",
-            "itemTitle": "The Batman",
-            "file": "The Batman - S04 E04 - The Everywhere Man (480p Web-DL).mp4",
-            "name": "The Batman - S04 E04 - The Everywhere Man (480p Web-DL)",
-            "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E04%20-%20The%20Everywhere%20Man%20(480p%20Web-DL).mp4",
-            "seconds": 1329,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "batman-mask-of-the-phantasm-1993",
+            "itemTitle": "Batman: Mask Of The Phantasm (Including the First Four Episodes of Batman TAS)",
+            "file": "Batman The Animated Series Season 1 episode 2.mp4",
+            "name": "Batman The Animated Series Season 1 episode 2",
+            "url": "https://archive.org/download/batman-mask-of-the-phantasm-1993/Batman%20The%20Animated%20Series%20Season%201%20episode%202.mp4",
+            "seconds": 1348,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 117
+            "sizeMB": 66
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+              "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+              "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+              "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 02 - Secrets (720p Web-DL).mp4",
+              "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 02 - Secrets (720p Web-DL)",
+              "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2002%20-%20Secrets%20(720p%20Web-DL).mp4",
+              "seconds": 1325,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 237
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S04 E02 - Team Penguin (480p Web-DL).mp4",
+              "name": "The Batman - S04 E02 - Team Penguin (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E02%20-%20Team%20Penguin%20(480p%20Web-DL).mp4",
+              "seconds": 1380,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Fine Feathered Finks",
           "airdate": "1966-01-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 9 in \"The Batman\"",
-            "item": "the-batman_202409",
-            "itemTitle": "The Batman",
-            "file": "The Batman - S04 E07 - Artifacts (480p Web-DL).mp4",
-            "name": "The Batman - S04 E07 - Artifacts (480p Web-DL)",
-            "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E07%20-%20Artifacts%20(480p%20Web-DL).mp4",
-            "seconds": 1372,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "batman-mask-of-the-phantasm-1993",
+            "itemTitle": "Batman: Mask Of The Phantasm (Including the First Four Episodes of Batman TAS)",
+            "file": "Batman The Animated Series Season 1 episode 3.mp4",
+            "name": "Batman The Animated Series Season 1 episode 3",
+            "url": "https://archive.org/download/batman-mask-of-the-phantasm-1993/Batman%20The%20Animated%20Series%20Season%201%20episode%203.mp4",
+            "seconds": 1348,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 157
+            "sizeMB": 74
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+              "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+              "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+              "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 03 - Tests (720p Web-DL).mp4",
+              "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 03 - Tests (720p Web-DL)",
+              "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2003%20-%20Tests%20(720p%20Web-DL).mp4",
+              "seconds": 1325,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 232
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S04 E03 - Clayfaces (480p Web-DL).mp4",
+              "name": "The Batman - S04 E03 - Clayfaces (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E03%20-%20Clayfaces%20(480p%20Web-DL).mp4",
+              "seconds": 1385,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 120
+            }
+          ]
         },
         {
           "number": 4,
           "name": "The Penguin's a Jinx ",
           "airdate": "1966-01-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 9 in \"The Batman\"",
-            "item": "the-batman_202409",
-            "itemTitle": "The Batman",
-            "file": "The Batman - S04 E08 - Seconds (480p Web-DL).mp4",
-            "name": "The Batman - S04 E08 - Seconds (480p Web-DL)",
-            "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E08%20-%20Seconds%20(480p%20Web-DL).mp4",
-            "seconds": 1371,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "batman-mask-of-the-phantasm-1993",
+            "itemTitle": "Batman: Mask Of The Phantasm (Including the First Four Episodes of Batman TAS)",
+            "file": "Batman The Animated Series Season 1 episode 4.mp4",
+            "name": "Batman The Animated Series Season 1 episode 4",
+            "url": "https://archive.org/download/batman-mask-of-the-phantasm-1993/Batman%20The%20Animated%20Series%20Season%201%20episode%204.mp4",
+            "seconds": 1319,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 131
+            "sizeMB": 85
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+              "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+              "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+              "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 04 - Safe (720p Web-DL).mp4",
+              "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 04 - Safe (720p Web-DL)",
+              "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2004%20-%20Safe%20(720p%20Web-DL).mp4",
+              "seconds": 1324,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 241
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S04 E04 - The Everywhere Man (480p Web-DL).mp4",
+              "name": "The Batman - S04 E04 - The Everywhere Man (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E04%20-%20The%20Everywhere%20Man%20(480p%20Web-DL).mp4",
+              "seconds": 1329,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 117
+            }
+          ]
         },
         {
           "number": 5,
@@ -110,18 +218,32 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 5 of 9 in \"The Batman\"",
-            "item": "the-batman_202409",
-            "itemTitle": "The Batman",
-            "file": "The Batman - S04 E11 - Rumors (480p Web-DL).mp4",
-            "name": "The Batman - S04 E11 - Rumors (480p Web-DL)",
-            "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E11%20-%20Rumors%20(480p%20Web-DL).mp4",
-            "seconds": 1334,
+            "why": "sequence guess: file 5 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 05 - Broken (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 05 - Broken (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2005%20-%20Broken%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 124
+            "sizeMB": 231
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S04 E05 - The Breakout (480p Web-DL).mp4",
+              "name": "The Batman - S04 E05 - The Breakout (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E05%20-%20The%20Breakout%20(480p%20Web-DL).mp4",
+              "seconds": 1337,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 114
+            }
+          ]
         },
         {
           "number": 6,
@@ -130,18 +252,32 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 6 of 9 in \"The Batman\"",
-            "item": "the-batman_202409",
-            "itemTitle": "The Batman",
-            "file": "The Batman - S04 E12 - The Joining, Part I (480p Web-DL).mp4",
-            "name": "The Batman - S04 E12 - The Joining, Part I (480p Web-DL)",
-            "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E12%20-%20The%20Joining%2C%20Part%20I%20(480p%20Web-DL).mp4",
-            "seconds": 1358,
+            "why": "sequence guess: file 6 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 06 - Toxic (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 06 - Toxic (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2006%20-%20Toxic%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 115
+            "sizeMB": 246
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S04 E06 - Strange New World (480p Web-DL).mp4",
+              "name": "The Batman - S04 E06 - Strange New World (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E06%20-%20Strange%20New%20World%20(480p%20Web-DL).mp4",
+              "seconds": 1338,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 131
+            }
+          ]
         },
         {
           "number": 7,
@@ -150,18 +286,32 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 7 of 9 in \"The Batman\"",
-            "item": "the-batman_202409",
-            "itemTitle": "The Batman",
-            "file": "The Batman - S04 E13 - The Joining, Part II (480p Web-DL).mp4",
-            "name": "The Batman - S04 E13 - The Joining, Part II (480p Web-DL)",
-            "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E13%20-%20The%20Joining%2C%20Part%20II%20(480p%20Web-DL).mp4",
-            "seconds": 1379,
+            "why": "sequence guess: file 7 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 07 - Family (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 07 - Family (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2007%20-%20Family%20(720p%20Web-DL).mp4",
+            "seconds": 1324,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 136
+            "sizeMB": 199
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S04 E07 - Artifacts (480p Web-DL).mp4",
+              "name": "The Batman - S04 E07 - Artifacts (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E07%20-%20Artifacts%20(480p%20Web-DL).mp4",
+              "seconds": 1372,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 157
+            }
+          ]
         },
         {
           "number": 8,
@@ -170,18 +320,32 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 8 of 9 in \"The Batman\"",
-            "item": "the-batman_202409",
-            "itemTitle": "The Batman",
-            "file": "The Batman - S05 E01 - The Batman Superman Story, Part I (480p Web-DL).mp4",
-            "name": "The Batman - S05 E01 - The Batman Superman Story, Part I (480p Web-DL)",
-            "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S05%20E01%20-%20The%20Batman%20Superman%20Story%2C%20Part%20I%20(480p%20Web-DL).mp4",
-            "seconds": 1311,
+            "why": "sequence guess: file 8 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 08 - Allies (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 08 - Allies (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2008%20-%20Allies%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 122
+            "sizeMB": 208
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S04 E08 - Seconds (480p Web-DL).mp4",
+              "name": "The Batman - S04 E08 - Seconds (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E08%20-%20Seconds%20(480p%20Web-DL).mp4",
+              "seconds": 1371,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 131
+            }
+          ]
         },
         {
           "number": 9,
@@ -190,153 +354,455 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 9 of 9 in \"The Batman\"",
-            "item": "the-batman_202409",
-            "itemTitle": "The Batman",
-            "file": "The Batman - S05 E02 - The Batman Superman Story, Part II (480p Web-DL).mp4",
-            "name": "The Batman - S05 E02 - The Batman Superman Story, Part II (480p Web-DL)",
-            "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S05%20E02%20-%20The%20Batman%20Superman%20Story%2C%20Part%20II%20(480p%20Web-DL).mp4",
-            "seconds": 1315,
+            "why": "sequence guess: file 9 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 09 - Control (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 09 - Control (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2009%20-%20Control%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 120
+            "sizeMB": 238
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S04 E09 - Riddler's Revenge (480p Web-DL).mp4",
+              "name": "The Batman - S04 E09 - Riddler's Revenge (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E09%20-%20Riddler's%20Revenge%20(480p%20Web-DL).mp4",
+              "seconds": 1349,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 123
+            }
+          ]
         },
         {
           "number": 10,
           "name": "A Death Worse Than Fate ",
           "airdate": "1966-02-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 10 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 10 - Sacrifice (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 10 - Sacrifice (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2010%20-%20Sacrifice%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 239
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S04 E11 - Rumors (480p Web-DL).mp4",
+              "name": "The Batman - S04 E11 - Rumors (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E11%20-%20Rumors%20(480p%20Web-DL).mp4",
+              "seconds": 1334,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 124
+            }
+          ]
         },
         {
           "number": 11,
           "name": "A Riddle a Day Keeps the Riddler Away ",
           "airdate": "1966-02-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 11 - Instinct (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 11 - Instinct (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2011%20-%20Instinct%20(720p%20Web-DL).mp4",
+            "seconds": 1325,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 245
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S04 E12 - The Joining, Part I (480p Web-DL).mp4",
+              "name": "The Batman - S04 E12 - The Joining, Part I (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E12%20-%20The%20Joining%2C%20Part%20I%20(480p%20Web-DL).mp4",
+              "seconds": 1358,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 115
+            }
+          ]
         },
         {
           "number": 12,
           "name": "When the Rat's Away the Mice Will Play ",
           "airdate": "1966-02-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 12 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 12 - Attraction (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 12 - Attraction (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2012%20-%20Attraction%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 228
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S04 E13 - The Joining, Part II (480p Web-DL).mp4",
+              "name": "The Batman - S04 E13 - The Joining, Part II (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S04%20E13%20-%20The%20Joining%2C%20Part%20II%20(480p%20Web-DL).mp4",
+              "seconds": 1379,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 13,
           "name": "The Thirteenth Hat ",
           "airdate": "1966-02-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 13 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 13 - Fall (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 13 - Fall (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2013%20-%20Fall%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 219
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S05 E01 - The Batman Superman Story, Part I (480p Web-DL).mp4",
+              "name": "The Batman - S05 E01 - The Batman Superman Story, Part I (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S05%20E01%20-%20The%20Batman%20Superman%20Story%2C%20Part%20I%20(480p%20Web-DL).mp4",
+              "seconds": 1311,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 122
+            }
+          ]
         },
         {
           "number": 14,
           "name": "Batman Stands Pat",
           "airdate": "1966-02-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 14 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 14 - Darkness (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 14 - Darkness (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2014%20-%20Darkness%20(720p%20Web-DL).mp4",
+            "seconds": 1322,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 190
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 14 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S05 E02 - The Batman Superman Story, Part II (480p Web-DL).mp4",
+              "name": "The Batman - S05 E02 - The Batman Superman Story, Part II (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S05%20E02%20-%20The%20Batman%20Superman%20Story%2C%20Part%20II%20(480p%20Web-DL).mp4",
+              "seconds": 1315,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 120
+            }
+          ]
         },
         {
           "number": 15,
           "name": "The Joker Goes to School ",
           "airdate": "1966-03-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 15 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 15 - Reckoning (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 15 - Reckoning (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2015%20-%20Reckoning%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 233
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 15 of 15 in \"The Batman\"",
+              "item": "the-batman_202409",
+              "itemTitle": "The Batman",
+              "file": "The Batman - S05 E13 - Lost Heroes, Part II (480p Web-DL).mp4",
+              "name": "The Batman - S05 E13 - Lost Heroes, Part II (480p Web-DL)",
+              "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S05%20E13%20-%20Lost%20Heroes%2C%20Part%20II%20(480p%20Web-DL).mp4",
+              "seconds": 1342,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 16,
           "name": "He Meets His Match, the Grisly Ghoul ",
           "airdate": "1966-03-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 16 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 16 - Nexus (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 16 - Nexus (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2016%20-%20Nexus%20(720p%20Web-DL).mp4",
+            "seconds": 1322,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 206
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "True or False Face ",
           "airdate": "1966-03-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 17 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 17 - Monsters (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 17 - Monsters (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2017%20-%20Monsters%20(720p%20Web-DL).mp4",
+            "seconds": 1321,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 237
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "Holy Rat Race",
           "airdate": "1966-03-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 18 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 18 - Games (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 18 - Games (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2018%20-%20Games%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 183
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "The Purr-Fect Crime",
           "airdate": "1966-03-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 19 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 19 - Animal (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 19 - Animal (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2019%20-%20Animal%20(720p%20Web-DL).mp4",
+            "seconds": 1322,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 221
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "Better Luck Next Time ",
           "airdate": "1966-03-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 20 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 20 - Doppleganger (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 20 - Doppleganger (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2020%20-%20Doppleganger%20(720p%20Web-DL).mp4",
+            "seconds": 1322,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 221
+          },
           "alternates": []
         },
         {
           "number": 21,
           "name": "The Penguin Goes Straight",
           "airdate": "1966-03-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 21 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 21 - Unique (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 21 - Unique (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2021%20-%20Unique%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 241
+          },
           "alternates": []
         },
         {
           "number": 22,
           "name": "Not Yet, He Ain't",
           "airdate": "1966-03-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 22 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 22 - Hero (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 22 - Hero (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2022%20-%20Hero%20(720p%20Web-DL).mp4",
+            "seconds": 1322,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 240
+          },
           "alternates": []
         },
         {
           "number": 23,
           "name": "The Ring of Wax ",
           "airdate": "1966-03-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 23 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 23 - Choices (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 23 - Choices (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2023%20-%20Choices%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 231
+          },
           "alternates": []
         },
         {
           "number": 24,
           "name": "Give 'em the Axe",
           "airdate": "1966-03-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 24 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 24 - Epitaph (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 24 - Epitaph (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2024%20-%20Epitaph%20(720p%20Web-DL).mp4",
+            "seconds": 1321,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 257
+          },
           "alternates": []
         },
         {
           "number": 25,
           "name": "The Joker Trumps an Ace",
           "airdate": "1966-04-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 25 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 25 - Twist (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 25 - Twist (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2025%20-%20Twist%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 237
+          },
           "alternates": []
         },
         {
           "number": 26,
           "name": "Batman Sets the Pace",
           "airdate": "1966-04-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 26 of 26 in \"Beware The Batman Ep. 01 Hunted ( 720p W\"",
+            "item": "beware-the-batman-ep.-01-hunted-720p-web-dl",
+            "itemTitle": "Beware The Batman Ep. 01 Hunted ( 720p Web DL)",
+            "file": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 26 - Alone (720p Web-DL).mp4",
+            "name": "5a. Beware The Batman (2013-14)/Beware the Batman - Ep. 26 - Alone (720p Web-DL)",
+            "url": "https://archive.org/download/beware-the-batman-ep.-01-hunted-720p-web-dl/5a.%20Beware%20The%20Batman%20(2013-14)%2FBeware%20the%20Batman%20-%20Ep.%2026%20-%20Alone%20(720p%20Web-DL).mp4",
+            "seconds": 1323,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 239
+          },
           "alternates": []
         },
         {
@@ -528,8 +994,20 @@
           "number": 11,
           "name": "The Clock King's Crazy Crimes ",
           "airdate": "1966-10-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-batman_202409",
+            "itemTitle": "The Batman",
+            "file": "The Batman - S02 E11 - Strange Minds (480p Web-DL).mp4",
+            "name": "The Batman - S02 E11 - Strange Minds (480p Web-DL)",
+            "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S02%20E11%20-%20Strange%20Minds%20(480p%20Web-DL).mp4",
+            "seconds": 1275,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 105
+          },
           "alternates": []
         },
         {
@@ -1137,8 +1615,20 @@
           "number": 13,
           "name": "The Bloody Tower ",
           "airdate": "1967-12-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-batman_202409",
+            "itemTitle": "The Batman",
+            "file": "The Batman - S03 E13 - Gotham's Ultimate Criminal Mastermind (480p Web-DL).mp4",
+            "name": "The Batman - S03 E13 - Gotham's Ultimate Criminal Mastermind (480p Web-DL)",
+            "url": "https://archive.org/download/the-batman_202409/The%20Batman%20-%20S03%20E13%20-%20Gotham's%20Ultimate%20Criminal%20Mastermind%20(480p%20Web-DL).mp4",
+            "seconds": 1278,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 133
+          },
           "alternates": []
         },
         {

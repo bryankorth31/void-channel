@@ -3,7 +3,7 @@
   "slug": "black-clover",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:34.091Z",
+  "matchedAt": "2026-10-19T04:11:36.382Z",
   "addedAt": "2026-10-15T12:08:15.033Z",
   "tvmaze": {
     "id": 31396,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 177,
-    "live": 0,
-    "review": 30,
+    "live": 1,
+    "review": 29,
     "missing": 147,
     "pct": 17
   },
@@ -247,21 +247,35 @@
           "number": 12,
           "name": "The Wizard King Saw",
           "airdate": "2017-12-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 12 of 30 in \"Black Clover (Episode 131-150) (Anime TV\"",
-            "item": "my-disc_20260601",
-            "itemTitle": "Black Clover (Episode 131-150) (Anime TV Series) (2020 Bootleg DVD Files) (ISO) [Best Quality MDS Enjoyment]",
-            "file": "132.mp4",
-            "name": "132",
-            "url": "https://archive.org/download/my-disc_20260601/132.mp4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "vertvepisode112englishsubbed",
+            "itemTitle": "Black Clover ( TV) Episode 112 English Subbed",
+            "file": "[KickAssAnime] Black Clover (TV) - Episode 112 - English Subbed.mp4",
+            "name": "[KickAssAnime] Black Clover (TV) - Episode 112 - English Subbed",
+            "url": "https://archive.org/download/vertvepisode112englishsubbed/%5BKickAssAnime%5D%20Black%20Clover%20(TV)%20-%20Episode%20112%20-%20English%20Subbed.mp4",
             "seconds": 1434,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 133
+            "sizeMB": 426
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 30 in \"Black Clover (Episode 131-150) (Anime TV\"",
+              "item": "my-disc_20260601",
+              "itemTitle": "Black Clover (Episode 131-150) (Anime TV Series) (2020 Bootleg DVD Files) (ISO) [Best Quality MDS Enjoyment]",
+              "file": "132.mp4",
+              "name": "132",
+              "url": "https://archive.org/download/my-disc_20260601/132.mp4",
+              "seconds": 1434,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         },
         {
           "number": 13,

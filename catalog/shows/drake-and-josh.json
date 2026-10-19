@@ -3,7 +3,7 @@
   "slug": "drake-and-josh",
   "type": "2000s and Later Sitcoms",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:22.583Z",
+  "matchedAt": "2026-10-19T04:10:32.676Z",
   "addedAt": "2026-10-16T07:56:22.583Z",
   "tvmaze": {
     "id": 988,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 55,
     "live": 0,
-    "review": 0,
-    "missing": 55,
-    "pct": 0
+    "review": 8,
+    "missing": 47,
+    "pct": 15
   },
   "seasons": [
     {
@@ -27,16 +27,40 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "2004-01-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Pilot\" (1.00)",
+            "item": "drake-and-josh-episodes-not-on-paramount",
+            "itemTitle": "Drake and Josh episodes not on Paramount+",
+            "file": "Pilot Episode.mp4",
+            "name": "Pilot Episode",
+            "url": "https://archive.org/download/drake-and-josh-episodes-not-on-paramount/Pilot%20Episode.mp4",
+            "seconds": 1463,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 118
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Dune Buggy",
           "airdate": "2004-01-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Dune Buggy\" (1.00)",
+            "item": "drake-and-josh-episodes-not-on-paramount",
+            "itemTitle": "Drake and Josh episodes not on Paramount+",
+            "file": "Dune Buggy.mp4",
+            "name": "Dune Buggy",
+            "url": "https://archive.org/download/drake-and-josh-episodes-not-on-paramount/Dune%20Buggy.mp4",
+            "seconds": 1464,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 171
+          },
           "alternates": []
         },
         {
@@ -88,8 +112,20 @@
           "number": 2,
           "name": "Guitar",
           "airdate": "2004-03-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Guitar\" (1.00)",
+            "item": "drake-and-josh-episodes-not-on-paramount",
+            "itemTitle": "Drake and Josh episodes not on Paramount+",
+            "file": "Guitar.mp4",
+            "name": "Guitar",
+            "url": "https://archive.org/download/drake-and-josh-episodes-not-on-paramount/Guitar.mp4",
+            "seconds": 1426,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 107
+          },
           "alternates": []
         },
         {
@@ -128,32 +164,80 @@
           "number": 7,
           "name": "Little Diva",
           "airdate": "2004-05-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Little Diva\" (1.00)",
+            "item": "drake-and-josh-episodes-not-on-paramount",
+            "itemTitle": "Drake and Josh episodes not on Paramount+",
+            "file": "Little Diva.mp4",
+            "name": "Little Diva",
+            "url": "https://archive.org/download/drake-and-josh-episodes-not-on-paramount/Little%20Diva.mp4",
+            "seconds": 1429,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 107
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Blues Brothers",
           "airdate": "2004-09-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Blues Brothers\" (1.00)",
+            "item": "drake-and-josh-episodes-not-on-paramount",
+            "itemTitle": "Drake and Josh episodes not on Paramount+",
+            "file": "Blues Brothers.mp4",
+            "name": "Blues Brothers",
+            "url": "https://archive.org/download/drake-and-josh-episodes-not-on-paramount/Blues%20Brothers.mp4",
+            "seconds": 1430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 77
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "Driver's License",
           "airdate": "2004-09-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Driver's License\" (1.00)",
+            "item": "drake-and-josh-episodes-not-on-paramount",
+            "itemTitle": "Drake and Josh episodes not on Paramount+",
+            "file": "Driver's License.mp4",
+            "name": "Driver's License",
+            "url": "https://archive.org/download/drake-and-josh-episodes-not-on-paramount/Driver's%20License.mp4",
+            "seconds": 1423,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 90
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Number One Fan",
           "airdate": "2004-09-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Number One Fan\" (0.70)",
+            "item": "drake-and-josh-episodes-not-on-paramount",
+            "itemTitle": "Drake and Josh episodes not on Paramount+",
+            "file": "Number 1 Fan.mp4",
+            "name": "Number 1 Fan",
+            "url": "https://archive.org/download/drake-and-josh-episodes-not-on-paramount/Number%201%20Fan.mp4",
+            "seconds": 1428,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 57
+          },
           "alternates": []
         },
         {
@@ -168,8 +252,20 @@
           "number": 12,
           "name": "The Gary Grill",
           "airdate": "2004-10-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Gary Grill\" (1.00)",
+            "item": "drake-and-josh-episodes-not-on-paramount",
+            "itemTitle": "Drake and Josh episodes not on Paramount+",
+            "file": "The Gary Grill.mp4",
+            "name": "The Gary Grill",
+            "url": "https://archive.org/download/drake-and-josh-episodes-not-on-paramount/The%20Gary%20Grill.mp4",
+            "seconds": 1431,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 77
+          },
           "alternates": []
         },
         {

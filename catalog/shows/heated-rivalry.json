@@ -3,7 +3,7 @@
   "slug": "heated-rivalry",
   "type": "Streaming Era",
   "network": "CA",
-  "matchedAt": "2026-10-16T07:57:00.519Z",
+  "matchedAt": "2026-10-19T04:11:05.989Z",
   "addedAt": "2026-10-16T05:08:07.804Z",
   "tvmaze": {
     "id": 85269,
@@ -29,19 +29,32 @@
           "airdate": "2025-11-28",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "heated-rivalry-s-01-e-05",
-            "itemTitle": "Heated Rivalry S01",
-            "file": "Heated Rivalry S01E01.mp4",
-            "name": "Heated Rivalry S01E01",
-            "url": "https://archive.org/download/heated-rivalry-s-01-e-05/Heated%20Rivalry%20S01E01.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "heated-rivalry-season-1",
+            "itemTitle": "Heated Rivalry Season 1",
+            "file": "S01E01 Rookies 1080p.mp4",
+            "name": "S01E01 Rookies 1080p",
+            "url": "https://archive.org/download/heated-rivalry-season-1/S01E01%20Rookies%201080p.mp4",
             "seconds": 2961,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 111
+            "sizeMB": 2718
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "heated-rivalry-s-01-e-05",
+              "itemTitle": "Heated Rivalry S01",
+              "file": "Heated Rivalry S01E01.mp4",
+              "name": "Heated Rivalry S01E01",
+              "url": "https://archive.org/download/heated-rivalry-s-01-e-05/Heated%20Rivalry%20S01E01.mp4",
+              "seconds": 2961,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 111
+            },
             {
               "conf": 0.65,
               "why": "absolute episode number",
@@ -54,19 +67,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 688
-            },
-            {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
-              "item": "heated-rivalry-season-1",
-              "itemTitle": "Heated Rivalry Season 1",
-              "file": "S01E01 Rookies 1080p.mp4",
-              "name": "S01E01 Rookies 1080p",
-              "url": "https://archive.org/download/heated-rivalry-season-1/S01E01%20Rookies%201080p.mp4",
-              "seconds": 2961,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 2718
             }
           ]
         },
@@ -76,31 +76,31 @@
           "airdate": "2025-11-28",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "heated-rivalry-s-01-e-05",
-            "itemTitle": "Heated Rivalry S01",
-            "file": "Heated Rivalry S01E02.mp4",
-            "name": "Heated Rivalry S01E02",
-            "url": "https://archive.org/download/heated-rivalry-s-01-e-05/Heated%20Rivalry%20S01E02.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "heated-rivalry-season-1",
+            "itemTitle": "Heated Rivalry Season 1",
+            "file": "S01E02 Olympians 1080p.mp4",
+            "name": "S01E02 Olympians 1080p",
+            "url": "https://archive.org/download/heated-rivalry-season-1/S01E02%20Olympians%201080p.mp4",
             "seconds": 2614,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 97
+            "sizeMB": 2370
           },
           "alternates": [
             {
-              "conf": 0.75,
-              "why": "S/E in filename + title match",
-              "item": "heated-rivalry-season-1",
-              "itemTitle": "Heated Rivalry Season 1",
-              "file": "S01E02 Olympians 1080p.mp4",
-              "name": "S01E02 Olympians 1080p",
-              "url": "https://archive.org/download/heated-rivalry-season-1/S01E02%20Olympians%201080p.mp4",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "heated-rivalry-s-01-e-05",
+              "itemTitle": "Heated Rivalry S01",
+              "file": "Heated Rivalry S01E02.mp4",
+              "name": "Heated Rivalry S01E02",
+              "url": "https://archive.org/download/heated-rivalry-s-01-e-05/Heated%20Rivalry%20S01E02.mp4",
               "seconds": 2614,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 2370
+              "sizeMB": 97
             },
             {
               "conf": 0.65,
@@ -137,6 +137,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "heated-rivalry-season-1",
+              "itemTitle": "Heated Rivalry Season 1",
+              "file": "S01E03 1080p.mp4",
+              "name": "S01E03 1080p",
+              "url": "https://archive.org/download/heated-rivalry-season-1/S01E03%201080p.mp4",
+              "seconds": 2909,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 2466
+            },
+            {
               "conf": 0.65,
               "why": "absolute episode number",
               "item": "heated_rivalry",
@@ -157,31 +170,31 @@
           "airdate": "2025-12-12",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "heated-rivalry-s-01-e-05",
-            "itemTitle": "Heated Rivalry S01",
-            "file": "Heated Rivalry S01E04.mp4",
-            "name": "Heated Rivalry S01E04",
-            "url": "https://archive.org/download/heated-rivalry-s-01-e-05/Heated%20Rivalry%20S01E04.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "heated-rivalry-season-1",
+            "itemTitle": "Heated Rivalry Season 1",
+            "file": "S01E04 Rose 1080p.mp4",
+            "name": "S01E04 Rose 1080p",
+            "url": "https://archive.org/download/heated-rivalry-season-1/S01E04%20Rose%201080p.mp4",
             "seconds": 2603,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 121
+            "sizeMB": 2579
           },
           "alternates": [
             {
-              "conf": 0.75,
-              "why": "S/E in filename + title match",
-              "item": "heated-rivalry-season-1",
-              "itemTitle": "Heated Rivalry Season 1",
-              "file": "S01E04 Rose 1080p.mp4",
-              "name": "S01E04 Rose 1080p",
-              "url": "https://archive.org/download/heated-rivalry-season-1/S01E04%20Rose%201080p.mp4",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "heated-rivalry-s-01-e-05",
+              "itemTitle": "Heated Rivalry S01",
+              "file": "Heated Rivalry S01E04.mp4",
+              "name": "Heated Rivalry S01E04",
+              "url": "https://archive.org/download/heated-rivalry-s-01-e-05/Heated%20Rivalry%20S01E04.mp4",
               "seconds": 2603,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 2579
+              "sizeMB": 121
             },
             {
               "conf": 0.65,
@@ -204,19 +217,32 @@
           "airdate": "2025-12-19",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "heated-rivalry-s-01-e-05",
-            "itemTitle": "Heated Rivalry S01",
-            "file": "Heated Rivalry S01E05.mp4",
-            "name": "Heated Rivalry S01E05",
-            "url": "https://archive.org/download/heated-rivalry-s-01-e-05/Heated%20Rivalry%20S01E05.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "heated-rivalry-season-1",
+            "itemTitle": "Heated Rivalry Season 1",
+            "file": "S01E05 I'll Believe in Anything 1080p.mp4",
+            "name": "S01E05 I'll Believe in Anything 1080p",
+            "url": "https://archive.org/download/heated-rivalry-season-1/S01E05%20I'll%20Believe%20in%20Anything%201080p.mp4",
             "seconds": 3333,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 157
+            "sizeMB": 2950
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "heated-rivalry-s-01-e-05",
+              "itemTitle": "Heated Rivalry S01",
+              "file": "Heated Rivalry S01E05.mp4",
+              "name": "Heated Rivalry S01E05",
+              "url": "https://archive.org/download/heated-rivalry-s-01-e-05/Heated%20Rivalry%20S01E05.mp4",
+              "seconds": 3333,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 157
+            },
             {
               "conf": 0.65,
               "why": "absolute episode number",
@@ -229,19 +255,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 502
-            },
-            {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
-              "item": "heated-rivalry-season-1",
-              "itemTitle": "Heated Rivalry Season 1",
-              "file": "S01E05 I'll Believe in Anything 1080p.mp4",
-              "name": "S01E05 I'll Believe in Anything 1080p",
-              "url": "https://archive.org/download/heated-rivalry-season-1/S01E05%20I'll%20Believe%20in%20Anything%201080p.mp4",
-              "seconds": 3333,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 2950
             }
           ]
         },
@@ -251,31 +264,31 @@
           "airdate": "2025-12-26",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "heated-rivalry-s-01-e-05",
-            "itemTitle": "Heated Rivalry S01",
-            "file": "Heated Rivalry S01E06.mp4",
-            "name": "Heated Rivalry S01E06",
-            "url": "https://archive.org/download/heated-rivalry-s-01-e-05/Heated%20Rivalry%20S01E06.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "heated-rivalry-season-1",
+            "itemTitle": "Heated Rivalry Season 1",
+            "file": "S01E06 The Cottage 1080p.mp4",
+            "name": "S01E06 The Cottage 1080p",
+            "url": "https://archive.org/download/heated-rivalry-season-1/S01E06%20The%20Cottage%201080p.mp4",
             "seconds": 3111,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 115
+            "sizeMB": 2267
           },
           "alternates": [
             {
-              "conf": 0.75,
-              "why": "S/E in filename + title match",
-              "item": "heated-rivalry-season-1",
-              "itemTitle": "Heated Rivalry Season 1",
-              "file": "S01E06 The Cottage 1080p.mp4",
-              "name": "S01E06 The Cottage 1080p",
-              "url": "https://archive.org/download/heated-rivalry-season-1/S01E06%20The%20Cottage%201080p.mp4",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "heated-rivalry-s-01-e-05",
+              "itemTitle": "Heated Rivalry S01",
+              "file": "Heated Rivalry S01E06.mp4",
+              "name": "Heated Rivalry S01E06",
+              "url": "https://archive.org/download/heated-rivalry-s-01-e-05/Heated%20Rivalry%20S01E06.mp4",
               "seconds": 3111,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 2267
+              "sizeMB": 115
             },
             {
               "conf": 0.65,

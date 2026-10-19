@@ -3,21 +3,21 @@
   "slug": "little-britain",
   "type": "British and Beyond",
   "network": "BBC Three",
-  "matchedAt": "2026-10-16T07:57:04.199Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:11:11.210Z",
+  "addedAt": "2026-10-16T07:57:04.199Z",
   "tvmaze": {
-    "id": null,
+    "id": 1716,
     "name": "Little Britain",
-    "runtime": null,
-    "premiered": null,
-    "network": "BBC Three"
+    "runtime": 30,
+    "premiered": "2003-02-09",
+    "network": "BBC One"
   },
   "coverage": {
-    "total": 37,
-    "live": 0,
-    "review": 37,
-    "missing": 0,
-    "pct": 100
+    "total": 20,
+    "live": 14,
+    "review": 0,
+    "missing": 6,
+    "pct": 70
   },
   "seasons": [
     {
@@ -26,649 +26,456 @@
         {
           "number": 1,
           "name": "Episode 1",
-          "state": "REVIEW",
+          "airdate": "2003-09-16",
+          "state": "LIVE",
           "file": {
-            "item": "little-britain-complete-series",
-            "itemTitle": "Little Britain Complete Series",
-            "file": "Little Britan/Series 3/Episode 1.mp4",
-            "name": "Little Britan/Series 3/Episode 1",
-            "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%203%2FEpisode%201.mp4",
-            "seconds": 1691,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "little_britain",
+            "itemTitle": "Little Britain UK- Season 1",
+            "file": "UK - Season 1/Little.Britain.S01E01.mp4",
+            "name": "UK - Season 1/Little.Britain.S01E01",
+            "url": "https://archive.org/download/little_britain/UK%20-%20Season%201%2FLittle.Britain.S01E01.mp4",
+            "seconds": 1709,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 295,
-            "ep": {
-              "season": null,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 167
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 3/Episode 1.mp4",
+              "name": "Little Britan/Series 3/Episode 1",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%203%2FEpisode%201.mp4",
+              "seconds": 1691,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 295
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 1/Episode 1.mp4",
+              "name": "Little Britan/Series 1/Episode 1",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%201.mp4",
+              "seconds": 1710,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 273
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 2/Episode 1.mp4",
+              "name": "Little Britan/Series 2/Episode 1",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%202%2FEpisode%201.mp4",
+              "seconds": 1702,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 266
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Episode 2",
-          "state": "REVIEW",
+          "airdate": "2003-09-23",
+          "state": "LIVE",
           "file": {
-            "item": "little-britain-complete-series",
-            "itemTitle": "Little Britain Complete Series",
-            "file": "Little Britan/Series 1/Episode 2.mp4",
-            "name": "Little Britan/Series 1/Episode 2",
-            "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%202.mp4",
-            "seconds": 1710,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "little_britain",
+            "itemTitle": "Little Britain UK- Season 1",
+            "file": "UK - Season 1/Little.Britain.S01E02.mp4",
+            "name": "UK - Season 1/Little.Britain.S01E02",
+            "url": "https://archive.org/download/little_britain/UK%20-%20Season%201%2FLittle.Britain.S01E02.mp4",
+            "seconds": 1709,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 274,
-            "ep": {
-              "season": null,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 167
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 1/Episode 2.mp4",
+              "name": "Little Britan/Series 1/Episode 2",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%202.mp4",
+              "seconds": 1710,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 274
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 2/Episode 2.mp4",
+              "name": "Little Britan/Series 2/Episode 2",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%202%2FEpisode%202.mp4",
+              "seconds": 1698,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 243
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 3/Episode 2.mp4",
+              "name": "Little Britan/Series 3/Episode 2",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%203%2FEpisode%202.mp4",
+              "seconds": 1694,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 223
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Episode 3",
-          "state": "REVIEW",
+          "airdate": "2003-09-30",
+          "state": "LIVE",
           "file": {
-            "item": "little-britain-complete-series",
-            "itemTitle": "Little Britain Complete Series",
-            "file": "Little Britan/Series 2/Episode 3.mp4",
-            "name": "Little Britan/Series 2/Episode 3",
-            "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%202%2FEpisode%203.mp4",
-            "seconds": 1690,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "little_britain",
+            "itemTitle": "Little Britain UK- Season 1",
+            "file": "UK - Season 1/Little.Britain.S01E03.mp4",
+            "name": "UK - Season 1/Little.Britain.S01E03",
+            "url": "https://archive.org/download/little_britain/UK%20-%20Season%201%2FLittle.Britain.S01E03.mp4",
+            "seconds": 1705,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 263,
-            "ep": {
-              "season": null,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 167
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 2/Episode 3.mp4",
+              "name": "Little Britan/Series 2/Episode 3",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%202%2FEpisode%203.mp4",
+              "seconds": 1690,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 263
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 3/Episode 3.mp4",
+              "name": "Little Britan/Series 3/Episode 3",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%203%2FEpisode%203.mp4",
+              "seconds": 1702,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 258
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 1/Episode 3.mp4",
+              "name": "Little Britan/Series 1/Episode 3",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%203.mp4",
+              "seconds": 1706,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 240
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Episode 4",
-          "state": "REVIEW",
+          "airdate": "2003-10-06",
+          "state": "LIVE",
           "file": {
-            "item": "little-britain-complete-series",
-            "itemTitle": "Little Britain Complete Series",
-            "file": "Little Britan/Series 1/Episode 4.mp4",
-            "name": "Little Britan/Series 1/Episode 4",
-            "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%204.mp4",
-            "seconds": 1707,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "little_britain",
+            "itemTitle": "Little Britain UK- Season 1",
+            "file": "UK - Season 1/Little.Britain.S01E04.mp4",
+            "name": "UK - Season 1/Little.Britain.S01E04",
+            "url": "https://archive.org/download/little_britain/UK%20-%20Season%201%2FLittle.Britain.S01E04.mp4",
+            "seconds": 1706,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 250,
-            "ep": {
-              "season": null,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 167
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 1/Episode 4.mp4",
+              "name": "Little Britan/Series 1/Episode 4",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%204.mp4",
+              "seconds": 1707,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 250
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 3/Episode 4.mp4",
+              "name": "Little Britan/Series 3/Episode 4",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%203%2FEpisode%204.mp4",
+              "seconds": 1719,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 236
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 2/Episode 4.mp4",
+              "name": "Little Britan/Series 2/Episode 4",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%202%2FEpisode%204.mp4",
+              "seconds": 1672,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 229
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Episode 5",
-          "state": "REVIEW",
+          "airdate": "2003-10-14",
+          "state": "LIVE",
           "file": {
-            "item": "little-britain-complete-series",
-            "itemTitle": "Little Britain Complete Series",
-            "file": "Little Britan/Series 1/Episode 5.mp4",
-            "name": "Little Britan/Series 1/Episode 5",
-            "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%205.mp4",
-            "seconds": 1682,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "little_britain",
+            "itemTitle": "Little Britain UK- Season 1",
+            "file": "UK - Season 1/Little.Britain.S01E05.mp4",
+            "name": "UK - Season 1/Little.Britain.S01E05",
+            "url": "https://archive.org/download/little_britain/UK%20-%20Season%201%2FLittle.Britain.S01E05.mp4",
+            "seconds": 1703,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 256,
-            "ep": {
-              "season": null,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 165
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 1/Episode 5.mp4",
+              "name": "Little Britan/Series 1/Episode 5",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%205.mp4",
+              "seconds": 1682,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 256
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 3/Episode 5.mp4",
+              "name": "Little Britan/Series 3/Episode 5",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%203%2FEpisode%205.mp4",
+              "seconds": 1693,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 255
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 2/Episode 5.mp4",
+              "name": "Little Britan/Series 2/Episode 5",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%202%2FEpisode%205.mp4",
+              "seconds": 1666,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 239
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Episode 6",
-          "state": "REVIEW",
+          "airdate": "2003-10-21",
+          "state": "LIVE",
           "file": {
-            "item": "little-britain-complete-series",
-            "itemTitle": "Little Britain Complete Series",
-            "file": "Little Britan/Series 1/Episode 6.mp4",
-            "name": "Little Britan/Series 1/Episode 6",
-            "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%206.mp4",
-            "seconds": 1707,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "little_britain",
+            "itemTitle": "Little Britain UK- Season 1",
+            "file": "UK - Season 1/Little.Britain.S01E06.mp4",
+            "name": "UK - Season 1/Little.Britain.S01E06",
+            "url": "https://archive.org/download/little_britain/UK%20-%20Season%201%2FLittle.Britain.S01E06.mp4",
+            "seconds": 1681,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 256,
-            "ep": {
-              "season": null,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 162
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 1/Episode 6.mp4",
+              "name": "Little Britan/Series 1/Episode 6",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%206.mp4",
+              "seconds": 1707,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 256
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 3/Episode 6.mp4",
+              "name": "Little Britan/Series 3/Episode 6",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%203%2FEpisode%206.mp4",
+              "seconds": 1748,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 251
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 2/Episode 6.mp4",
+              "name": "Little Britan/Series 2/Episode 6",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%202%2FEpisode%206.mp4",
+              "seconds": 1589,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 246
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Episode 7",
-          "state": "REVIEW",
+          "airdate": "2003-10-28",
+          "state": "LIVE",
           "file": {
-            "item": "little-britain-complete-series",
-            "itemTitle": "Little Britain Complete Series",
-            "file": "Little Britan/Series 1/Episode 7.mp4",
-            "name": "Little Britan/Series 1/Episode 7",
-            "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%207.mp4",
-            "seconds": 1703,
-            "format": "MPEG4",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "little_britain",
+            "itemTitle": "Little Britain UK- Season 1",
+            "file": "UK - Season 1/Little.Britain.S01E07.mp4",
+            "name": "UK - Season 1/Little.Britain.S01E07",
+            "url": "https://archive.org/download/little_britain/UK%20-%20Season%201%2FLittle.Britain.S01E07.mp4",
+            "seconds": 1706,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 258,
-            "ep": {
-              "season": null,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 1/Episode 7.mp4",
+              "name": "Little Britan/Series 1/Episode 7",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%207.mp4",
+              "seconds": 1703,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 258
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 22 in \"Little Britain\"",
+              "item": "little-britain",
+              "itemTitle": "Little Britain",
+              "file": "Little_Britain_1x07_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
+              "name": "Little_Britain_1x07_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
+              "url": "https://archive.org/download/little-britain/Little_Britain_1x07_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
+              "seconds": 1707,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 167
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Episode 8",
-          "state": "REVIEW",
+          "airdate": "2003-11-04",
+          "state": "LIVE",
           "file": {
-            "item": "little-britain-complete-series",
-            "itemTitle": "Little Britain Complete Series",
-            "file": "Little Britan/Series 1/Episode 8.mp4",
-            "name": "Little Britan/Series 1/Episode 8",
-            "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%208.mp4",
-            "seconds": 1704,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 280,
-            "ep": {
-              "season": null,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_1x01_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_1x01_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_1x01_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1710,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 169,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_1x02_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_1x02_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_1x02_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1710,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 168,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_1x03_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_1x03_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_1x03_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1706,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 168,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_1x04_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_1x04_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_1x04_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1708,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 168,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_1x05_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_1x05_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_1x05_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1704,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 168,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_1x06_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_1x06_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_1x06_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1683,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 165,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_1x07_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_1x07_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_1x07_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1707,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 167,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_1x08_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_1x08_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_1x08_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1699,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 167,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_2x01_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_2x01_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_2x01_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1631,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 160,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_2x02_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_2x02_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_2x02_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1695,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 165,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_2x03_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_2x03_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_2x03_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1691,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 165,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_2x04_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_2x04_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_2x04_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1671,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 164,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_2x05_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_2x05_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_2x05_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1666,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 164,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_2x06_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_2x06_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_2x06_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1588,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 155,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_3x01_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_3x01_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_3x01_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1701,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 167,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_3x02_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_3x02_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_3x02_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1697,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 167,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_3x03_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_3x03_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_3x03_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1708,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 168,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_3x04_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_3x04_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_3x04_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1727,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 170,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_3x05_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_3x05_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_3x05_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1698,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 167,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "tdt catala per xordi totsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_3x06_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "name": "Little_Britain_3x06_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_3x06_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
-            "seconds": 1753,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 172,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "3xe1 especial nadal 1 tdtrip per xorditotsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_3xe1_Especial_Nadal_1_TDTrip_per_XordiTotsRucs_cat.mp4",
-            "name": "Little_Britain_3xe1_Especial_Nadal_1_TDTrip_per_XordiTotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_3xe1_Especial_Nadal_1_TDTrip_per_XordiTotsRucs_cat.mp4",
-            "seconds": 1769,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 176,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "3xe2 especial nadal 2 tdtrip per xorditotsrucs cat",
-          "state": "REVIEW",
-          "file": {
-            "item": "little-britain",
-            "itemTitle": "Little Britain",
-            "file": "Little_Britain_3xe2_Especial_Nadal_2_TDTrip_per_XordiTotsRucs_cat.mp4",
-            "name": "Little_Britain_3xe2_Especial_Nadal_2_TDTrip_per_XordiTotsRucs_cat",
-            "url": "https://archive.org/download/little-britain/Little_Britain_3xe2_Especial_Nadal_2_TDTrip_per_XordiTotsRucs_cat.mp4",
-            "seconds": 1716,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 170,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "pilot",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "little_britain",
             "itemTitle": "Little Britain UK- Season 1",
-            "file": "UK - Season 1/Little.Britain.S01E00.PILOT.mp4",
-            "name": "UK - Season 1/Little.Britain.S01E00.PILOT",
-            "url": "https://archive.org/download/little_britain/UK%20-%20Season%201%2FLittle.Britain.S01E00.PILOT.mp4",
-            "seconds": 1742,
+            "file": "UK - Season 1/Little.Britain.S01E08.mp4",
+            "name": "UK - Season 1/Little.Britain.S01E08",
+            "url": "https://archive.org/download/little_britain/UK%20-%20Season%201%2FLittle.Britain.S01E08.mp4",
+            "seconds": 1702,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 171,
-            "ep": {
-              "season": 1,
-              "episode": 0
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 164
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "little-britain-complete-series",
+              "itemTitle": "Little Britain Complete Series",
+              "file": "Little Britan/Series 1/Episode 8.mp4",
+              "name": "Little Britan/Series 1/Episode 8",
+              "url": "https://archive.org/download/little-britain-complete-series/Little%20Britan%2FSeries%201%2FEpisode%208.mp4",
+              "seconds": 1704,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 280
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 22 in \"Little Britain\"",
+              "item": "little-britain",
+              "itemTitle": "Little Britain",
+              "file": "Little_Britain_1x08_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
+              "name": "Little_Britain_1x08_DVD+TDT_catala_english_per_Xordi_TotsRucs_cat",
+              "url": "https://archive.org/download/little-britain/Little_Britain_1x08_DVD%2BTDT_catala_english_per_Xordi_TotsRucs_cat.mp4",
+              "seconds": 1699,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 167
+            }
+          ]
         }
       ]
     },
@@ -678,8 +485,11 @@
         {
           "number": 1,
           "name": "Episode 1",
-          "state": "REVIEW",
+          "airdate": "2004-10-19",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "little_britain_2",
             "itemTitle": "Little Britain Season 2",
             "file": "UK - Season 2/Little.Britain.S02E01.mp4",
@@ -688,21 +498,18 @@
             "seconds": 1702,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 166,
-            "ep": {
-              "season": 2,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 166
           },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
-          "state": "REVIEW",
+          "airdate": "2004-10-26",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "little_britain_2",
             "itemTitle": "Little Britain Season 2",
             "file": "UK - Season 2/Little.Britain.S02E02.mp4",
@@ -711,21 +518,18 @@
             "seconds": 1695,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 166,
-            "ep": {
-              "season": 2,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 166
           },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Episode 3",
-          "state": "REVIEW",
+          "airdate": "2004-11-02",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "little_britain_2",
             "itemTitle": "Little Britain Season 2",
             "file": "UK - Season 2/Little.Britain.S02E03.mp4",
@@ -734,21 +538,18 @@
             "seconds": 1689,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 165,
-            "ep": {
-              "season": 2,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 165
           },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Episode 4",
-          "state": "REVIEW",
+          "airdate": "2004-11-09",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "little_britain_2",
             "itemTitle": "Little Britain Season 2",
             "file": "UK - Season 2/Little.Britain.S02E04.mp4",
@@ -757,21 +558,18 @@
             "seconds": 1669,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 163,
-            "ep": {
-              "season": 2,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 163
           },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
-          "state": "REVIEW",
+          "airdate": "2004-11-16",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "little_britain_2",
             "itemTitle": "Little Britain Season 2",
             "file": "UK - Season 2/Little.Britain.S02E05.mp4",
@@ -780,21 +578,18 @@
             "seconds": 1666,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 163,
-            "ep": {
-              "season": 2,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 163
           },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Episode 6",
-          "state": "REVIEW",
+          "airdate": "2004-11-23",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "little_britain_2",
             "itemTitle": "Little Britain Season 2",
             "file": "UK - Season 2/Little.Britain.S02E06.mp4",
@@ -803,22 +598,64 @@
             "seconds": 1598,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 156,
-            "ep": {
-              "season": 2,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 156
           },
           "alternates": []
         }
       ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "airdate": "2005-11-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "airdate": "2005-11-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Episode 3",
+          "airdate": "2005-12-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Episode 4",
+          "airdate": "2005-12-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Episode 5",
+          "airdate": "2005-12-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Episode 6",
+          "airdate": "2005-12-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 1716,
-    "name": "Little Britain",
-    "placed": 8
-  }
+  ]
 }

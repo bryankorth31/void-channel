@@ -3,7 +3,7 @@
   "slug": "how-the-universe-works",
   "type": "Documentary & Geographic",
   "network": "Science",
-  "matchedAt": "2026-10-16T07:58:02.301Z",
+  "matchedAt": "2026-10-19T04:12:07.157Z",
   "addedAt": "2026-10-15T12:08:34.187Z",
   "tvmaze": {
     "id": 2481,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 92,
     "live": 10,
-    "review": 9,
-    "missing": 73,
-    "pct": 21
+    "review": 10,
+    "missing": 72,
+    "pct": 22
   },
   "seasons": [
     {
@@ -62,8 +62,20 @@
           "number": 2,
           "name": "Black Holes",
           "airdate": "2010-05-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "how-the-universe-works-session-4-episode-7.-forces-of-mass-construction",
+            "itemTitle": "How The Universe Works , Session 4 , Episode 7. Forces Of Mass Construction",
+            "file": "‫How The Universe Works  Session-4 EP2 Monster Black Hole.MP4",
+            "name": "‫How The Universe Works  Session-4 EP2 Monster Black Hole",
+            "url": "https://archive.org/download/how-the-universe-works-session-4-episode-7.-forces-of-mass-construction/%E2%80%ABHow%20The%20Universe%20Works%20%20Session-4%20EP2%20Monster%20Black%20Hole.MP4",
+            "seconds": 2582,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 394
+          },
           "alternates": []
         },
         {
@@ -98,8 +110,21 @@
           "number": 5,
           "name": "Supernovas",
           "airdate": "2010-05-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Supernovas\" (0.95)",
+            "item": "how.the.-universe.-works.-s-07-e-01.720p.-hevc.x-265-me-gusta",
+            "itemTitle": "How the Universe Works Season 7",
+            "file": "How.the.Universe.Works.S07E02.When.Supernovas.Strike.720p.HEVC.x265-MeGusta.mp4",
+            "name": "How.the.Universe.Works.S07E02.When.Supernovas.Strike.720p.HEVC.x265-MeGusta",
+            "url": "https://archive.org/download/how.the.-universe.-works.-s-07-e-01.720p.-hevc.x-265-me-gusta/How.the.Universe.Works.S07E02.When.Supernovas.Strike.720p.HEVC.x265-MeGusta.mp4",
+            "seconds": 2549,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (HEVC)",
+            "sizeMB": 257
+          },
           "alternates": []
         },
         {
@@ -969,20 +994,8 @@
           "number": 2,
           "name": "Curse of the Cosmic Rays",
           "airdate": "2022-03-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Curse of the Cosmic Rays\" (1.00)",
-            "item": "how-the-universe-works-curse-of-the-cosmic-rays-s-10-e-02.",
-            "itemTitle": "How The Universe Works Curse Of The Cosmic Rays S 10 E 02.",
-            "file": "How the Universe Works Curse of the Cosmic Rays_S10E02..mp4",
-            "name": "How the Universe Works Curse of the Cosmic Rays_S10E02.",
-            "url": "https://archive.org/download/how-the-universe-works-curse-of-the-cosmic-rays-s-10-e-02./How%20the%20Universe%20Works%20Curse%20of%20the%20Cosmic%20Rays_S10E02..mp4",
-            "seconds": 2521,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 254
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "bungo-stray-dogs",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:38.948Z",
+  "matchedAt": "2026-10-19T04:11:41.194Z",
   "addedAt": "2026-10-15T12:08:18.441Z",
   "tvmaze": {
     "id": 13687,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 60,
     "live": 0,
-    "review": 12,
-    "missing": 48,
-    "pct": 20
+    "review": 21,
+    "missing": 39,
+    "pct": 35
   },
   "seasons": [
     {
@@ -169,19 +169,33 @@
           "airdate": "2016-05-27",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 8 of 12 in \"Bungo Stray Dogs S 2 01\"",
-            "item": "bungo-stray-dogs-s-2-01",
-            "itemTitle": "Bungo Stray Dogs S 2 01",
-            "file": "Bungo Stray Dogs S2 - 08.mp4",
-            "name": "Bungo Stray Dogs S2 - 08",
-            "url": "https://archive.org/download/bungo-stray-dogs-s-2-01/Bungo%20Stray%20Dogs%20S2%20-%2008.mp4",
-            "seconds": 1451,
-            "format": "h.264",
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "bsd-s-1-all-ep",
+            "itemTitle": "Bungo Stray Dogs Season 1",
+            "file": "BSD S1 Ep8.mp4",
+            "name": "BSD S1 Ep8",
+            "url": "https://archive.org/download/bsd-s-1-all-ep/BSD%20S1%20Ep8.mp4",
+            "seconds": 1487,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 143
+            "sizeMB": 129
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 12 in \"Bungo Stray Dogs S 2 01\"",
+              "item": "bungo-stray-dogs-s-2-01",
+              "itemTitle": "Bungo Stray Dogs S 2 01",
+              "file": "Bungo Stray Dogs S2 - 08.mp4",
+              "name": "Bungo Stray Dogs S2 - 08",
+              "url": "https://archive.org/download/bungo-stray-dogs-s-2-01/Bungo%20Stray%20Dogs%20S2%20-%2008.mp4",
+              "seconds": 1451,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 9,
@@ -189,19 +203,33 @@
           "airdate": "2016-06-03",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 9 of 12 in \"Bungo Stray Dogs S 2 01\"",
-            "item": "bungo-stray-dogs-s-2-01",
-            "itemTitle": "Bungo Stray Dogs S 2 01",
-            "file": "Bungo Stray Dogs S2 - 09.mp4",
-            "name": "Bungo Stray Dogs S2 - 09",
-            "url": "https://archive.org/download/bungo-stray-dogs-s-2-01/Bungo%20Stray%20Dogs%20S2%20-%2009.mp4",
-            "seconds": 1452,
-            "format": "h.264",
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "bsd-s-1-all-ep",
+            "itemTitle": "Bungo Stray Dogs Season 1",
+            "file": "BSD S1 Ep9.mp4",
+            "name": "BSD S1 Ep9",
+            "url": "https://archive.org/download/bsd-s-1-all-ep/BSD%20S1%20Ep9.mp4",
+            "seconds": 1487,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 143
+            "sizeMB": 129
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 12 in \"Bungo Stray Dogs S 2 01\"",
+              "item": "bungo-stray-dogs-s-2-01",
+              "itemTitle": "Bungo Stray Dogs S 2 01",
+              "file": "Bungo Stray Dogs S2 - 09.mp4",
+              "name": "Bungo Stray Dogs S2 - 09",
+              "url": "https://archive.org/download/bungo-stray-dogs-s-2-01/Bungo%20Stray%20Dogs%20S2%20-%2009.mp4",
+              "seconds": 1452,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 10,
@@ -209,19 +237,33 @@
           "airdate": "2016-06-10",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 10 of 12 in \"Bungo Stray Dogs S 2 01\"",
-            "item": "bungo-stray-dogs-s-2-01",
-            "itemTitle": "Bungo Stray Dogs S 2 01",
-            "file": "Bungo Stray Dogs S2 - 10.mp4",
-            "name": "Bungo Stray Dogs S2 - 10",
-            "url": "https://archive.org/download/bungo-stray-dogs-s-2-01/Bungo%20Stray%20Dogs%20S2%20-%2010.mp4",
-            "seconds": 1451,
-            "format": "h.264",
+            "conf": 0.65,
+            "why": "absolute episode number",
+            "item": "bsd-s-1-all-ep",
+            "itemTitle": "Bungo Stray Dogs Season 1",
+            "file": "BSD S1 Ep10.mp4",
+            "name": "BSD S1 Ep10",
+            "url": "https://archive.org/download/bsd-s-1-all-ep/BSD%20S1%20Ep10.mp4",
+            "seconds": 1487,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 143
+            "sizeMB": 129
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 12 in \"Bungo Stray Dogs S 2 01\"",
+              "item": "bungo-stray-dogs-s-2-01",
+              "itemTitle": "Bungo Stray Dogs S 2 01",
+              "file": "Bungo Stray Dogs S2 - 10.mp4",
+              "name": "Bungo Stray Dogs S2 - 10",
+              "url": "https://archive.org/download/bungo-stray-dogs-s-2-01/Bungo%20Stray%20Dogs%20S2%20-%2010.mp4",
+              "seconds": 1451,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 11,
@@ -272,24 +314,60 @@
           "number": 1,
           "name": "The Dark Age",
           "airdate": "2016-10-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Dark Age\" (0.95)",
+            "item": "bsd-s2-eng-sub",
+            "itemTitle": "Bungo Stray Dogs season 2 eng sub + ep 13 Walking Alone",
+            "file": "1 The Dark Age.mp4",
+            "name": "1 The Dark Age",
+            "url": "https://archive.org/download/bsd-s2-eng-sub/1%20The%20Dark%20Age.mp4",
+            "seconds": 1452,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 196
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Nowhere to Return",
           "airdate": "2016-10-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Nowhere to Return\" (0.96)",
+            "item": "bsd-s2-eng-sub",
+            "itemTitle": "Bungo Stray Dogs season 2 eng sub + ep 13 Walking Alone",
+            "file": "2 Nowhere to Return.mp4",
+            "name": "2 Nowhere to Return",
+            "url": "https://archive.org/download/bsd-s2-eng-sub/2%20Nowhere%20to%20Return.mp4",
+            "seconds": 1451,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 149
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "A Room Where We Can Someday See The Ocean",
           "airdate": "2016-10-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"A Room Where We Can Someday See The Ocean\" (0.98)",
+            "item": "bsd-s2-eng-sub",
+            "itemTitle": "Bungo Stray Dogs season 2 eng sub + ep 13 Walking Alone",
+            "file": "3 A Room Where We Can Someday See The Ocean.mp4",
+            "name": "3 A Room Where We Can Someday See The Ocean",
+            "url": "https://archive.org/download/bsd-s2-eng-sub/3%20A%20Room%20Where%20We%20Can%20Someday%20See%20The%20Ocean.mp4",
+            "seconds": 1452,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 159
+          },
           "alternates": []
         },
         {
@@ -304,24 +382,60 @@
           "number": 5,
           "name": "Three Companies Conflict",
           "airdate": "2016-10-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Three Companies Conflict\" (0.98)",
+            "item": "bsd-s2-eng-sub",
+            "itemTitle": "Bungo Stray Dogs season 2 eng sub + ep 13 Walking Alone",
+            "file": "5 Three Companies Conflict.mp4",
+            "name": "5 Three Companies Conflict",
+            "url": "https://archive.org/download/bsd-s2-eng-sub/5%20Three%20Companies%20Conflict.mp4",
+            "seconds": 1452,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 263
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "The Strategy of Conflict",
           "airdate": "2016-11-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Strategy of Conflict\" (0.98)",
+            "item": "bsd-s2-eng-sub",
+            "itemTitle": "Bungo Stray Dogs season 2 eng sub + ep 13 Walking Alone",
+            "file": "6 The Strategy of Conflict.mp4",
+            "name": "6 The Strategy of Conflict",
+            "url": "https://archive.org/download/bsd-s2-eng-sub/6%20The%20Strategy%20of%20Conflict.mp4",
+            "seconds": 1451,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 301
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Will of Tycoon",
           "airdate": "2016-11-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Will of Tycoon\" (0.96)",
+            "item": "bsd-s2-eng-sub",
+            "itemTitle": "Bungo Stray Dogs season 2 eng sub + ep 13 Walking Alone",
+            "file": "7 Will of Tycoon.mp4",
+            "name": "7 Will of Tycoon",
+            "url": "https://archive.org/download/bsd-s2-eng-sub/7%20Will%20of%20Tycoon.mp4",
+            "seconds": 1452,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 272
+          },
           "alternates": []
         },
         {
@@ -336,8 +450,20 @@
           "number": 9,
           "name": "Double Black",
           "airdate": "2016-11-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Double Black\" (0.95)",
+            "item": "bsd-s2-eng-sub",
+            "itemTitle": "Bungo Stray Dogs season 2 eng sub + ep 13 Walking Alone",
+            "file": "9 Double Black.mp4",
+            "name": "9 Double Black",
+            "url": "https://archive.org/download/bsd-s2-eng-sub/9%20Double%20Black.mp4",
+            "seconds": 1452,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 254
+          },
           "alternates": []
         },
         {
@@ -352,16 +478,40 @@
           "number": 11,
           "name": "Rashoumon, The Tiger and the Last Emperor",
           "airdate": "2016-12-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Rashoumon, The Tiger and the Last Emperor\" (0.97)",
+            "item": "bsd-s2-eng-sub",
+            "itemTitle": "Bungo Stray Dogs season 2 eng sub + ep 13 Walking Alone",
+            "file": "11 Rashoumon, The Tiger, and The Last Emperor.mp4",
+            "name": "11 Rashoumon, The Tiger, and The Last Emperor",
+            "url": "https://archive.org/download/bsd-s2-eng-sub/11%20Rashoumon%2C%20The%20Tiger%2C%20and%20The%20Last%20Emperor.mp4",
+            "seconds": 1452,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 261
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "If I May Shed Away My Burden Now",
           "airdate": "2016-12-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"If I May Shed Away My Burden Now\" (0.96)",
+            "item": "bsd-s2-eng-sub",
+            "itemTitle": "Bungo Stray Dogs season 2 eng sub + ep 13 Walking Alone",
+            "file": "12 If I May Shed Away My Burden Now.mp4",
+            "name": "12 If I May Shed Away My Burden Now",
+            "url": "https://archive.org/download/bsd-s2-eng-sub/12%20If%20I%20May%20Shed%20Away%20My%20Burden%20Now.mp4",
+            "seconds": 1421,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 209
+          },
           "alternates": []
         }
       ]

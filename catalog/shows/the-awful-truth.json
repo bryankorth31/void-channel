@@ -3,7 +3,8 @@
   "slug": "the-awful-truth",
   "type": "Documentary & Geographic",
   "network": "Channel 4",
-  "matchedAt": "2026-10-17T10:40:54.032Z",
+  "matchedAt": "2026-10-19T04:12:51.754Z",
+  "addedAt": "2026-10-19T04:12:51.758Z",
   "tvmaze": {
     "id": 33292,
     "name": "The Awful Truth",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 24,
     "live": 0,
-    "review": 0,
-    "missing": 24,
-    "pct": 0
+    "review": 1,
+    "missing": 23,
+    "pct": 4
   },
   "seasons": [
     {
@@ -82,8 +83,21 @@
           "number": 8,
           "name": "Montana Shacks, Joe Camel Needs a Job, LucyCam #3",
           "airdate": "1999-05-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "S/E in filename | not browser-playable: container (QuickTime)",
+            "item": "122155-awful-truth-76-77-outrage-of-working-conditions-4-5",
+            "itemTitle": "122155 Awful Truth # 76 77 Outrage Of Working Conditions 4 5",
+            "file": "121362 Awful Truth #108 my own ISS the new facist terror of PC speech control.mov",
+            "name": "121362 Awful Truth #108 my own ISS the new facist terror of PC speech control",
+            "url": "https://archive.org/download/122155-awful-truth-76-77-outrage-of-working-conditions-4-5/121362%20Awful%20Truth%20%23108%20my%20own%20ISS%20the%20new%20facist%20terror%20of%20PC%20speech%20control.mov",
+            "seconds": 3440,
+            "format": "QuickTime",
+            "playable": false,
+            "codecRisk": "container (QuickTime)",
+            "sizeMB": 1148
+          },
           "alternates": []
         },
         {

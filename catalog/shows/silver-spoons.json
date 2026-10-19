@@ -3,7 +3,8 @@
   "slug": "silver-spoons",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:25.843Z",
+  "matchedAt": "2026-10-19T04:12:25.865Z",
+  "addedAt": "2026-10-19T04:12:25.870Z",
   "tvmaze": {
     "id": 7059,
     "name": "Silver Spoons",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 116,
     "live": 0,
-    "review": 0,
-    "missing": 116,
-    "pct": 0
+    "review": 1,
+    "missing": 115,
+    "pct": 1
   },
   "seasons": [
     {
@@ -585,8 +586,20 @@
           "number": 1,
           "name": "Head Over Heels",
           "airdate": "1985-09-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Head Over Heels\" (0.95)",
+            "item": "SilverSpoonsHeadOverHeelsSeason4Premiere",
+            "itemTitle": "Silver Spoons- Head Over Heels (Season 4 Premiere)",
+            "file": "Silver-Spoons-Head-Over-Heels-_Season-4-Premiere_.mp4",
+            "name": "Silver-Spoons-Head-Over-Heels-_Season-4-Premiere_",
+            "url": "https://archive.org/download/SilverSpoonsHeadOverHeelsSeason4Premiere/Silver-Spoons-Head-Over-Heels-_Season-4-Premiere_.mp4",
+            "seconds": 1474,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 357
+          },
           "alternates": []
         },
         {

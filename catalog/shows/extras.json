@@ -3,7 +3,7 @@
   "slug": "extras",
   "type": "British and Beyond",
   "network": "BBC Two",
-  "matchedAt": "2026-10-16T07:57:03.969Z",
+  "matchedAt": "2026-10-19T04:11:11.011Z",
   "addedAt": "2026-10-15T15:06:08.585Z",
   "tvmaze": {
     "id": 1270,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 12,
-    "live": 0,
+    "live": 12,
     "review": 0,
-    "missing": 12,
-    "pct": 0
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -27,48 +27,120 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2005-07-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bbc-extras-2005-complete",
+            "itemTitle": "BBC Extras (2005/06) Complete",
+            "file": "Extras (2005)/Season 01/S01E01 - Ben Stiller.mp4",
+            "name": "Extras (2005)/Season 01/S01E01 - Ben Stiller",
+            "url": "https://archive.org/download/bbc-extras-2005-complete/Extras%20(2005)%2FSeason%2001%2FS01E01%20-%20Ben%20Stiller.mp4",
+            "seconds": 1745,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 167
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2005-07-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bbc-extras-2005-complete",
+            "itemTitle": "BBC Extras (2005/06) Complete",
+            "file": "Extras (2005)/Season 01/S01E02 - Ross Kemp.mp4",
+            "name": "Extras (2005)/Season 01/S01E02 - Ross Kemp",
+            "url": "https://archive.org/download/bbc-extras-2005-complete/Extras%20(2005)%2FSeason%2001%2FS01E02%20-%20Ross%20Kemp.mp4",
+            "seconds": 1724,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 165
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Episode 3",
           "airdate": "2005-08-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bbc-extras-2005-complete",
+            "itemTitle": "BBC Extras (2005/06) Complete",
+            "file": "Extras (2005)/Season 01/S01E03 - Kate Winslet.mp4",
+            "name": "Extras (2005)/Season 01/S01E03 - Kate Winslet",
+            "url": "https://archive.org/download/bbc-extras-2005-complete/Extras%20(2005)%2FSeason%2001%2FS01E03%20-%20Kate%20Winslet.mp4",
+            "seconds": 1724,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 166
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Episode 4",
           "airdate": "2005-08-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bbc-extras-2005-complete",
+            "itemTitle": "BBC Extras (2005/06) Complete",
+            "file": "Extras (2005)/Season 01/S01E04 - Les Dennis.mp4",
+            "name": "Extras (2005)/Season 01/S01E04 - Les Dennis",
+            "url": "https://archive.org/download/bbc-extras-2005-complete/Extras%20(2005)%2FSeason%2001%2FS01E04%20-%20Les%20Dennis.mp4",
+            "seconds": 1746,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 168
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "2005-08-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bbc-extras-2005-complete",
+            "itemTitle": "BBC Extras (2005/06) Complete",
+            "file": "Extras (2005)/Season 01/S01E05 - Samuel L. Jackson.mp4",
+            "name": "Extras (2005)/Season 01/S01E05 - Samuel L. Jackson",
+            "url": "https://archive.org/download/bbc-extras-2005-complete/Extras%20(2005)%2FSeason%2001%2FS01E05%20-%20Samuel%20L.%20Jackson.mp4",
+            "seconds": 1711,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 165
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Episode 6",
           "airdate": "2005-08-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bbc-extras-2005-complete",
+            "itemTitle": "BBC Extras (2005/06) Complete",
+            "file": "Extras (2005)/Season 01/S01E06 - Patrick Stewart.mp4",
+            "name": "Extras (2005)/Season 01/S01E06 - Patrick Stewart",
+            "url": "https://archive.org/download/bbc-extras-2005-complete/Extras%20(2005)%2FSeason%2001%2FS01E06%20-%20Patrick%20Stewart.mp4",
+            "seconds": 1721,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 166
+          },
           "alternates": []
         }
       ]
@@ -80,48 +152,120 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2006-09-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bbc-extras-2005-complete",
+            "itemTitle": "BBC Extras (2005/06) Complete",
+            "file": "Extras (2005)/Season 02/S02E01 - Orlando Bloom.mp4",
+            "name": "Extras (2005)/Season 02/S02E01 - Orlando Bloom",
+            "url": "https://archive.org/download/bbc-extras-2005-complete/Extras%20(2005)%2FSeason%2002%2FS02E01%20-%20Orlando%20Bloom.mp4",
+            "seconds": 1758,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 174
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2006-09-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bbc-extras-2005-complete",
+            "itemTitle": "BBC Extras (2005/06) Complete",
+            "file": "Extras (2005)/Season 02/S02E02 - David Bowie.mp4",
+            "name": "Extras (2005)/Season 02/S02E02 - David Bowie",
+            "url": "https://archive.org/download/bbc-extras-2005-complete/Extras%20(2005)%2FSeason%2002%2FS02E02%20-%20David%20Bowie.mp4",
+            "seconds": 1742,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 172
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Episode 3",
           "airdate": "2006-09-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bbc-extras-2005-complete",
+            "itemTitle": "BBC Extras (2005/06) Complete",
+            "file": "Extras (2005)/Season 02/S02E03 - Daniel Ratcliffe.mp4",
+            "name": "Extras (2005)/Season 02/S02E03 - Daniel Ratcliffe",
+            "url": "https://archive.org/download/bbc-extras-2005-complete/Extras%20(2005)%2FSeason%2002%2FS02E03%20-%20Daniel%20Ratcliffe.mp4",
+            "seconds": 1731,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 166
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Episode 4",
           "airdate": "2006-10-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bbc-extras-2005-complete",
+            "itemTitle": "BBC Extras (2005/06) Complete",
+            "file": "Extras (2005)/Season 02/S02E04 - Chris Martin.mp4",
+            "name": "Extras (2005)/Season 02/S02E04 - Chris Martin",
+            "url": "https://archive.org/download/bbc-extras-2005-complete/Extras%20(2005)%2FSeason%2002%2FS02E04%20-%20Chris%20Martin.mp4",
+            "seconds": 1668,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 161
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Episode 5",
           "airdate": "2006-10-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bbc-extras-2005-complete",
+            "itemTitle": "BBC Extras (2005/06) Complete",
+            "file": "Extras (2005)/Season 02/S02E05 - Sir Ian McKellen.mp4",
+            "name": "Extras (2005)/Season 02/S02E05 - Sir Ian McKellen",
+            "url": "https://archive.org/download/bbc-extras-2005-complete/Extras%20(2005)%2FSeason%2002%2FS02E05%20-%20Sir%20Ian%20McKellen.mp4",
+            "seconds": 1730,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 167
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Episode 6",
           "airdate": "2006-10-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "bbc-extras-2005-complete",
+            "itemTitle": "BBC Extras (2005/06) Complete",
+            "file": "Extras (2005)/Season 02/S02E06 - Jonathan Ross.mp4",
+            "name": "Extras (2005)/Season 02/S02E06 - Jonathan Ross",
+            "url": "https://archive.org/download/bbc-extras-2005-complete/Extras%20(2005)%2FSeason%2002%2FS02E06%20-%20Jonathan%20Ross.mp4",
+            "seconds": 1667,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 160
+          },
           "alternates": []
         }
       ]

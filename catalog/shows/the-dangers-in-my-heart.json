@@ -3,21 +3,21 @@
   "slug": "the-dangers-in-my-heart",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:40.603Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:11:42.554Z",
+  "addedAt": "2026-10-16T07:57:40.603Z",
   "tvmaze": {
-    "id": null,
+    "id": 66218,
     "name": "The Dangers in My Heart",
-    "runtime": null,
-    "premiered": null,
-    "network": "JP"
+    "runtime": 24,
+    "premiered": "2023-04-01",
+    "network": "TV Asahi"
   },
   "coverage": {
-    "total": 26,
+    "total": 25,
     "live": 0,
-    "review": 26,
-    "missing": 0,
-    "pct": 100
+    "review": 23,
+    "missing": 2,
+    "pct": 92
   },
   "seasons": [
     {
@@ -25,9 +25,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the in i was stolen away",
+          "name": "karte 1: I Was Stolen Away",
+          "airdate": "2023-04-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"karte 1: I Was Stolen Away\" (0.69)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E01_I Was Stolen Away .mp4",
@@ -36,38 +39,26 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 137
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "the in i died",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
-            "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
-            "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E02_I Died .mp4",
-            "name": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E02_I Died ",
-            "url": "https://archive.org/download/the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona/The%20Dangers%20in%20My%20Heart%20%20Boku%20no%20Kokoro%20no%20Yabai%20Yatsu%20Season%201%2FThe%20Dangers%20in%20My%20Heart%20S01E02_I%20Died%20.mp4",
-            "seconds": 1385,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Karte 2: I Died",
+          "airdate": "2023-04-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "the in i want to hug you",
+          "name": "Karte 3: I Want to Hug You",
+          "airdate": "2023-04-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 3: I Want to Hug You\" (0.69)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E03_I Want to Hug You .mp4",
@@ -76,18 +67,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "the in i have a problem",
+          "name": "Karte 4: I Have a Problem",
+          "airdate": "2023-04-22",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 4: I Have a Problem\" (0.69)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E04_I Have a Problem .mp4",
@@ -96,18 +87,18 @@
             "seconds": 1393,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "the in we got split up",
+          "name": "Karte 5: We Got Split Up",
+          "airdate": "2023-04-29",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 5: We Got Split Up\" (0.67)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E05_We Got Split Up .mp4",
@@ -116,18 +107,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 137
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "the in i melted it",
+          "name": "Karte 6: I Melted It",
+          "airdate": "2023-05-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 6: I Melted It\" (0.62)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E06_I Melted It .mp4",
@@ -136,18 +127,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "the in we swapped places",
+          "name": "Karte 7: We Swapped Places",
+          "airdate": "2023-05-13",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 7: We Swapped Places\" (0.70)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E07_We Swapped Places .mp4",
@@ -156,38 +147,26 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "the in i had a dream",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
-            "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
-            "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E08_I Had a Dream .mp4",
-            "name": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E08_I Had a Dream ",
-            "url": "https://archive.org/download/the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona/The%20Dangers%20in%20My%20Heart%20%20Boku%20no%20Kokoro%20no%20Yabai%20Yatsu%20Season%201%2FThe%20Dangers%20in%20My%20Heart%20S01E08_I%20Had%20a%20Dream%20.mp4",
-            "seconds": 1393,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Karte 8: I Had a Dream",
+          "airdate": "2023-05-20",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
-          "name": "the in i hate yamada",
+          "name": "Karte 9: I Hate Yamada",
+          "airdate": "2023-05-27",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 9: I Hate Yamada\" (0.67)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E09_I Hate Yamada .mp4",
@@ -196,18 +175,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "the in we walked slowly",
+          "name": "Karte 10: We Walked Slowly",
+          "airdate": "2023-06-03",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 10: We Walked Slowly\" (0.68)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E10_We Walked Slowly .mp4",
@@ -216,18 +195,18 @@
             "seconds": 1370,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 135,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 135
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "the in were a bit alike",
+          "name": "Karte 11: We're a Bit Alike",
+          "airdate": "2023-06-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 11: We're a Bit Alike\" (0.67)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E11_We're a Bit Alike .mp4",
@@ -236,18 +215,18 @@
             "seconds": 1370,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 135,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 135
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "the in i wanted to be seen",
+          "name": "Karte 12: I Wanted to Be Seen",
+          "airdate": "2023-06-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 12: I Wanted to Be Seen\" (0.72)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E12_I Wanted to Be Seen .mp4",
@@ -256,38 +235,23 @@
             "seconds": 1378,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
-        },
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
         {
-          "number": 13,
-          "name": "the in twi yaba ona",
+          "number": 1,
+          "name": "Karte 13: We're Searching",
+          "airdate": "2024-01-06",
           "state": "REVIEW",
           "file": {
-            "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
-            "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
-            "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E13_Twi Yaba ONA .mp4",
-            "name": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 1/The Dangers in My Heart S01E13_Twi Yaba ONA ",
-            "url": "https://archive.org/download/the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona/The%20Dangers%20in%20My%20Heart%20%20Boku%20no%20Kokoro%20no%20Yabai%20Yatsu%20Season%201%2FThe%20Dangers%20in%20My%20Heart%20S01E13_Twi%20Yaba%20ONA%20.mp4",
-            "seconds": 1269,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 123,
-            "ep": null,
             "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "the in we re searching",
-          "state": "REVIEW",
-          "file": {
+            "why": "title ~ \"Karte 13: We're Searching\" (0.71)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E01_We`re Searching .mp4",
@@ -296,18 +260,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 137
           },
           "alternates": []
         },
         {
-          "number": 15,
-          "name": "the in i m growing up",
+          "number": 2,
+          "name": "Karte 14: I'm Growing Up",
+          "airdate": "2024-01-13",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 14: I'm Growing Up\" (0.65)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E02_I`m Growing Up .mp4",
@@ -316,18 +280,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
         },
         {
-          "number": 16,
-          "name": "the in yamada and me",
+          "number": 3,
+          "name": "Karte 15: Yamada and Me",
+          "airdate": "2024-01-20",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 15: Yamada and Me\" (0.63)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E03_Yamada and Me .mp4",
@@ -336,18 +300,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 137
           },
           "alternates": []
         },
         {
-          "number": 17,
-          "name": "the in yamada likes",
+          "number": 4,
+          "name": "Karte 16: Yamada Likes…",
+          "airdate": "2024-01-27",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 16: Yamada Likes…\" (0.63)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E04_Yamada Likes .mp4",
@@ -356,18 +320,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
         },
         {
-          "number": 18,
-          "name": "the in i want to know",
+          "number": 5,
+          "name": "Karte 17: I Want to Know",
+          "airdate": "2024-02-03",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 17: I Want to Know\" (0.63)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E05_I Want to Know .mp4",
@@ -376,18 +340,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
         },
         {
-          "number": 19,
-          "name": "the in yamada likes me",
+          "number": 6,
+          "name": "Karte 18: Yamada Likes Me",
+          "airdate": "2024-02-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 18: Yamada Likes Me\" (0.67)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E06_Yamada Likes Me .mp4",
@@ -396,18 +360,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 137
           },
           "alternates": []
         },
         {
-          "number": 20,
-          "name": "the in we re overflowing",
+          "number": 7,
+          "name": "Karte 19: We're Overflowing",
+          "airdate": "2024-02-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 19: We're Overflowing\" (0.70)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E07_We`re Overflowing .mp4",
@@ -416,18 +380,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 137
           },
           "alternates": []
         },
         {
-          "number": 21,
-          "name": "the in we stayed up all night",
+          "number": 8,
+          "name": "Karte 20: We Stayed Up All Night",
+          "airdate": "2024-02-24",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 20: We Stayed Up All Night\" (0.74)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E08_We Stayed Up All Night .mp4",
@@ -436,18 +400,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 137
           },
           "alternates": []
         },
         {
-          "number": 22,
-          "name": "the in we made a promise",
+          "number": 9,
+          "name": "Karte 21: We Made a Promise",
+          "airdate": "2024-03-02",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 21: We Made a Promise\" (0.68)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E09_We Made a Promise .mp4",
@@ -456,18 +420,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
         },
         {
-          "number": 23,
-          "name": "the in i want to be closer to yamada",
+          "number": 10,
+          "name": "Karte 22: I Want to Be Closer to Yamada",
+          "airdate": "2024-03-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 22: I Want to Be Closer to Yamada\" (0.79)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E10_I Want to Be Closer to Yamada .mp4",
@@ -476,18 +440,18 @@
             "seconds": 1385,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
         },
         {
-          "number": 24,
-          "name": "the in i don t want to lose",
+          "number": 11,
+          "name": "Karte 23: I Don't Want to Lose",
+          "airdate": "2024-03-16",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 23: I Don't Want to Lose\" (0.68)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E11_I Don`t Want to Lose .mp4",
@@ -496,18 +460,18 @@
             "seconds": 1370,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
         },
         {
-          "number": 25,
-          "name": "the in i want to tell her",
+          "number": 12,
+          "name": "Karte 24: I Want to Tell Her",
+          "airdate": "2024-03-23",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 24: I Want to Tell Her\" (0.72)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E12_I Want to Tell Her .mp4",
@@ -516,18 +480,18 @@
             "seconds": 1370,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 135,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 135
           },
           "alternates": []
         },
         {
-          "number": 26,
-          "name": "the in i we fell in love",
+          "number": 13,
+          "name": "Karte 25: I, We, Fell in Love",
+          "airdate": "2024-03-30",
           "state": "REVIEW",
           "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Karte 25: I, We, Fell in Love\" (0.69)",
             "item": "the-dangers-in-my-heart-boku-no-kokoro-no-yabai-yatsu-seasons-1-and-2-ona",
             "itemTitle": "The Dangers In My Heart Boku No Kokoro No Yabai Yatsu Seasons 1 and 2 + ONA",
             "file": "The Dangers in My Heart  Boku no Kokoro no Yabai Yatsu Season 2/The Dangers in My Heart S02E13_I, We, Fell in Love .mp4",
@@ -536,19 +500,11 @@
             "seconds": 1376,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 136
           },
           "alternates": []
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 66218,
-    "name": "The Dangers in My Heart",
-    "placed": 0
-  }
+  ]
 }

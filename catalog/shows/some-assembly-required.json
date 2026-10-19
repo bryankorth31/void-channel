@@ -3,7 +3,7 @@
   "slug": "some-assembly-required",
   "type": "Documentary & Geographic",
   "network": "Discovery",
-  "matchedAt": "2026-10-17T10:16:03.178Z",
+  "matchedAt": "2026-10-19T04:12:50.378Z",
   "addedAt": "2026-10-17T10:16:03.179Z",
   "tvmaze": {
     "id": 9481,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 57,
-    "live": 18,
-    "review": 36,
-    "missing": 3,
-    "pct": 95
+    "live": 57,
+    "review": 0,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "Strong Suit",
           "airdate": "2014-01-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -41,15 +41,44 @@
             "playable": true,
             "sizeMB": 1023
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E01.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E01",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E01.mp4",
+              "seconds": 1490,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 319
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E01.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E01.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E01.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1490,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Philharmonica",
           "airdate": "2014-01-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -61,15 +90,44 @@
             "playable": true,
             "sizeMB": 992
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E02.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E02",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E02.mp4",
+              "seconds": 1402,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 287
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E02.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E02.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E02.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1402,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Pants Full of Ants",
           "airdate": "2014-01-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -81,15 +139,44 @@
             "playable": true,
             "sizeMB": 1032
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E03.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E03",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E03.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 299
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E03.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E03.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E03.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Rainbow Bunny",
           "airdate": "2014-01-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -101,15 +188,44 @@
             "playable": true,
             "sizeMB": 998
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E04.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E04",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E04.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 289
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E04.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E04.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E04.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Kick the Can",
           "airdate": "2014-02-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -121,15 +237,44 @@
             "playable": true,
             "sizeMB": 1001
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E05.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E05",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E05.mp4",
+              "seconds": 1390,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 275
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E05.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E05.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E05.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1391,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 135
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Cupids Bow",
           "airdate": "2014-02-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -141,23 +286,93 @@
             "playable": true,
             "sizeMB": 986
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E06.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E06",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E06.mp4",
+              "seconds": 1370,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 277
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E06.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E06.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E06.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1370,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 133
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Dance Crew Evolution",
           "airdate": "2014-02-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "SomeAssemblyRequiredS1",
+            "itemTitle": "Some Assembly Required Season 1",
+            "file": "EP7-Dance Crew Revolution.mp4",
+            "name": "EP7-Dance Crew Revolution",
+            "url": "https://archive.org/download/SomeAssemblyRequiredS1/EP7-Dance%20Crew%20Revolution.mp4",
+            "seconds": 1385,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1089
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E07.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E07",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E07.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 312
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E07.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E07.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E07.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Angie",
           "airdate": "2014-02-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -169,15 +384,44 @@
             "playable": true,
             "sizeMB": 1021
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E08.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E08",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E08.mp4",
+              "seconds": 1390,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 308
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E08.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E08.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E08.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1391,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 135
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Snack in the Box",
           "airdate": "2014-03-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -189,15 +433,44 @@
             "playable": true,
             "sizeMB": 1111
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E09.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E09",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E09.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 292
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E09.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E09.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E09.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Lobster Trap",
           "airdate": "2014-03-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -209,23 +482,93 @@
             "playable": true,
             "sizeMB": 960
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E10.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E10",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E10.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 275
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E10.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E10.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E10.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Teeny Toddler Chemistry Set",
           "airdate": "2014-03-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "SomeAssemblyRequiredS1",
+            "itemTitle": "Some Assembly Required Season 1",
+            "file": "EP11-Teeny Toddler Chemistry Set.mp4",
+            "name": "EP11-Teeny Toddler Chemistry Set",
+            "url": "https://archive.org/download/SomeAssemblyRequiredS1/EP11-Teeny%20Toddler%20Chemistry%20Set.mp4",
+            "seconds": 1300,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1071
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E11.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E11",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E11.mp4",
+              "seconds": 1344,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 292
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E11.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E11.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E11.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1344,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 131
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Moosetrap",
           "airdate": "2014-03-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -237,15 +580,44 @@
             "playable": true,
             "sizeMB": 1016
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E12.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E12",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E12.mp4",
+              "seconds": 1390,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 251
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E12.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E12.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E12.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1391,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 135
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Flycycle",
           "airdate": "2014-03-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -257,15 +629,44 @@
             "playable": true,
             "sizeMB": 1176
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E13.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E13",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E13.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 317
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E13.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E13.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E13.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 14,
           "name": "Ricky Van Felt",
           "airdate": "2014-04-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -277,15 +678,44 @@
             "playable": true,
             "sizeMB": 1189
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E14.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E14",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E14.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 345
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E14.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E14.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E14.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Flyrates",
           "airdate": "2014-04-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -297,15 +727,44 @@
             "playable": true,
             "sizeMB": 1274
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E15.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E15",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E15.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 396
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E15.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E15.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E15.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Fat Cat",
           "airdate": "2014-04-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -317,15 +776,44 @@
             "playable": true,
             "sizeMB": 1166
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E16.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E16",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E16.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 302
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E16.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E16.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E16.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 17,
           "name": "Sidekick",
           "airdate": "2014-05-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -337,15 +825,44 @@
             "playable": true,
             "sizeMB": 1196
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E17.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E17",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E17.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 314
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E17.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E17.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E17.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 18,
           "name": "Presto Pack",
           "airdate": "2014-05-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -357,15 +874,44 @@
             "playable": true,
             "sizeMB": 1071
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E18.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E18",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E18.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 288
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E18.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E18.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E18.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 19,
           "name": "Very Scary Fairy Tales",
           "airdate": "2014-05-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -377,15 +923,44 @@
             "playable": true,
             "sizeMB": 1299
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E19.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E19",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E19.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 384
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E19.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E19.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E19.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 20,
           "name": "Realm of Raiders",
           "airdate": "2014-05-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -397,15 +972,44 @@
             "playable": true,
             "sizeMB": 1025
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E20.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E20",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E20.mp4",
+              "seconds": 1400,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 238
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E20.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E20.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E20.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1400,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 21,
           "name": "Dr. KnickKnack's Medical Bag",
           "airdate": "2014-07-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -417,47 +1021,145 @@
             "playable": true,
             "sizeMB": 1053
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E21.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E21",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E21.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 286
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E21.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E21.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E21.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 22,
           "name": "Pop Superstar",
           "airdate": "2014-07-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "SomeAssemblyRequiredS1",
+            "itemTitle": "Some Assembly Required Season 1",
+            "file": "EP22-Pop Superstar.mp4",
+            "name": "EP22-Pop Superstar",
+            "url": "https://archive.org/download/SomeAssemblyRequiredS1/EP22-Pop%20Superstar.mp4",
+            "seconds": 1375,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1287
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E22.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E22",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E22.mp4",
+              "seconds": 1420,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 383
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E22.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E22.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E22.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 23,
           "name": "Gizmospinatron",
           "airdate": "2014-08-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "beating-minecrafts-hardest-modpack-with-nothing-episode-23-some-assembly-required",
-            "itemTitle": "Beating Minecraft's Hardest Modpack With Nothing ⁄⁄ Episode 23 Some Assembly Required",
-            "file": "Beating Minecraft's Hardest Modpack With Nothing ⁄⁄ Episode 23 - Some Assembly Required (1080p_60fps_H264-128kbit_AAC).mp4",
-            "name": "Beating Minecraft's Hardest Modpack With Nothing ⁄⁄ Episode 23 - Some Assembly Required (1080p_60fps_H264-128kbit_AAC)",
-            "url": "https://archive.org/download/beating-minecrafts-hardest-modpack-with-nothing-episode-23-some-assembly-required/Beating%20Minecraft's%20Hardest%20Modpack%20With%20Nothing%20%E2%81%84%E2%81%84%20Episode%2023%20-%20Some%20Assembly%20Required%20(1080p_60fps_H264-128kbit_AAC).mp4",
-            "seconds": 1981,
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "SomeAssemblyRequiredS1",
+            "itemTitle": "Some Assembly Required Season 1",
+            "file": "EP23-Gizmospinatron.mp4",
+            "name": "EP23-Gizmospinatron",
+            "url": "https://archive.org/download/SomeAssemblyRequiredS1/EP23-Gizmospinatron.mp4",
+            "seconds": 1386,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1165
+            "sizeMB": 1259
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "absolute episode number + title match",
-              "item": "SomeAssemblyRequiredS1",
-              "itemTitle": "Some Assembly Required Season 1",
-              "file": "EP23-Gizmospinatron.mp4",
-              "name": "EP23-Gizmospinatron",
-              "url": "https://archive.org/download/SomeAssemblyRequiredS1/EP23-Gizmospinatron.mp4",
-              "seconds": 1386,
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E23.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E23",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E23.mp4",
+              "seconds": 1430,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 1259
+              "codecRisk": "video (x265)",
+              "sizeMB": 381
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E23.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E23.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E23.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 138
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "beating-minecrafts-hardest-modpack-with-nothing-episode-23-some-assembly-required",
+              "itemTitle": "Beating Minecraft's Hardest Modpack With Nothing ⁄⁄ Episode 23 Some Assembly Required",
+              "file": "Beating Minecraft's Hardest Modpack With Nothing ⁄⁄ Episode 23 - Some Assembly Required (1080p_60fps_H264-128kbit_AAC).mp4",
+              "name": "Beating Minecraft's Hardest Modpack With Nothing ⁄⁄ Episode 23 - Some Assembly Required (1080p_60fps_H264-128kbit_AAC)",
+              "url": "https://archive.org/download/beating-minecrafts-hardest-modpack-with-nothing-episode-23-some-assembly-required/Beating%20Minecraft's%20Hardest%20Modpack%20With%20Nothing%20%E2%81%84%E2%81%84%20Episode%2023%20-%20Some%20Assembly%20Required%20(1080p_60fps_H264-128kbit_AAC).mp4",
+              "seconds": 1981,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1165
             }
           ]
         },
@@ -465,9 +1167,9 @@
           "number": 24,
           "name": "Mmmbomb",
           "airdate": "2014-08-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -479,15 +1181,44 @@
             "playable": true,
             "sizeMB": 1246
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E24.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E24",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E24.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 340
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E24.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E24.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E24.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 25,
           "name": "Everyball",
           "airdate": "2014-08-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -499,15 +1230,44 @@
             "playable": true,
             "sizeMB": 1323
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E25.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E25",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E25.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 369
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E25.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E25.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E25.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 26,
           "name": "Junior Fish Gutter",
           "airdate": "2014-08-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 0.95,
             "why": "absolute episode number + title match",
             "item": "SomeAssemblyRequiredS1",
             "itemTitle": "Some Assembly Required Season 1",
@@ -519,7 +1279,36 @@
             "playable": true,
             "sizeMB": 1189
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E26.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 1/S01E26",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%201%2FS01E26.mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 300
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 1/Some.Assembly.Required.S01E26.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 1/Some.Assembly.Required.S01E26.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%201%2FSome.Assembly.Required.S01E26.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1430,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         }
       ]
     },
@@ -544,7 +1333,36 @@
             "playable": true,
             "sizeMB": 214
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E01.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E01",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E01.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 268
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E01.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E01.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E01.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 2,
@@ -564,7 +1382,36 @@
             "playable": true,
             "sizeMB": 143
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E02.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E02",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E02.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 342
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E02.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E02.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E02.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 3,
@@ -584,7 +1431,36 @@
             "playable": true,
             "sizeMB": 130
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E03.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E03",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E03.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 349
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E03.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E03.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E03.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 4,
@@ -604,7 +1480,36 @@
             "playable": true,
             "sizeMB": 160
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E04.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E04",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E04.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 373
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E04.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E04.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E04.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 5,
@@ -624,7 +1529,36 @@
             "playable": true,
             "sizeMB": 128
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E05.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E05",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E05.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 317
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E05.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E05.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E05.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 6,
@@ -644,7 +1578,36 @@
             "playable": true,
             "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E06.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E06",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E06.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 377
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E06.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E06.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E06.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 7,
@@ -664,7 +1627,36 @@
             "playable": true,
             "sizeMB": 128
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E07.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E07",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E07.mp4",
+              "seconds": 1418,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 323
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E07.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E07.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E07.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1418,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 8,
@@ -684,7 +1676,36 @@
             "playable": true,
             "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E08.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E08",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E08.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 335
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E08.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E08.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E08.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 9,
@@ -704,7 +1725,36 @@
             "playable": true,
             "sizeMB": 120
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E09.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E09",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E09.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 284
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E09.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E09.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E09.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 10,
@@ -724,7 +1774,36 @@
             "playable": true,
             "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E10.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E10",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E10.mp4",
+              "seconds": 1382,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 328
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E10.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E10.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E10.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1382,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 134
+            }
+          ]
         },
         {
           "number": 11,
@@ -744,7 +1823,36 @@
             "playable": true,
             "sizeMB": 184
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E11.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E11",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E11.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 359
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E11.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E11.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E11.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 12,
@@ -764,7 +1872,36 @@
             "playable": true,
             "sizeMB": 123
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E12.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E12",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E12.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 361
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E12.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E12.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E12.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 13,
@@ -774,17 +1911,45 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "some-assembly-required-s2",
-            "itemTitle": "Some Assembly Required Season 2",
-            "file": "Some Assembly Required s02e13 Rocket With a Pocket - Scrimble (480p, h264, youtube).mp4",
-            "name": "Some Assembly Required s02e13 Rocket With a Pocket - Scrimble (480p, h264, youtube)",
-            "url": "https://archive.org/download/some-assembly-required-s2/Some%20Assembly%20Required%20s02e13%20Rocket%20With%20a%20Pocket%20-%20Scrimble%20(480p%2C%20h264%2C%20youtube).mp4",
-            "seconds": 1358,
+            "item": "some-assembly-required_202606",
+            "itemTitle": "Some Assembly Required s01-s03 Complete",
+            "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E13.mp4",
+            "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E13",
+            "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E13.mp4",
+            "seconds": 1488,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 130
+            "codecRisk": "video (x265)",
+            "sizeMB": 351
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E13.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E13.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E13.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1488,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 145
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required-s2",
+              "itemTitle": "Some Assembly Required Season 2",
+              "file": "Some Assembly Required s02e13 Rocket With a Pocket - Scrimble (480p, h264, youtube).mp4",
+              "name": "Some Assembly Required s02e13 Rocket With a Pocket - Scrimble (480p, h264, youtube)",
+              "url": "https://archive.org/download/some-assembly-required-s2/Some%20Assembly%20Required%20s02e13%20Rocket%20With%20a%20Pocket%20-%20Scrimble%20(480p%2C%20h264%2C%20youtube).mp4",
+              "seconds": 1358,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 130
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Snappo\" (0.95)",
@@ -808,17 +1973,45 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "some-assembly-required-s2",
-            "itemTitle": "Some Assembly Required Season 2",
-            "file": "Some Assembly Required s02e14 Snappo - Scrimble (480p, h264, youtube).mp4",
-            "name": "Some Assembly Required s02e14 Snappo - Scrimble (480p, h264, youtube)",
-            "url": "https://archive.org/download/some-assembly-required-s2/Some%20Assembly%20Required%20s02e14%20Snappo%20-%20Scrimble%20(480p%2C%20h264%2C%20youtube).mp4",
-            "seconds": 1416,
+            "item": "some-assembly-required_202606",
+            "itemTitle": "Some Assembly Required s01-s03 Complete",
+            "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E14.mp4",
+            "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E14",
+            "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E14.mp4",
+            "seconds": 1428,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 155
+            "codecRisk": "video (x265)",
+            "sizeMB": 374
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required-s2",
+              "itemTitle": "Some Assembly Required Season 2",
+              "file": "Some Assembly Required s02e14 Snappo - Scrimble (480p, h264, youtube).mp4",
+              "name": "Some Assembly Required s02e14 Snappo - Scrimble (480p, h264, youtube)",
+              "url": "https://archive.org/download/some-assembly-required-s2/Some%20Assembly%20Required%20s02e14%20Snappo%20-%20Scrimble%20(480p%2C%20h264%2C%20youtube).mp4",
+              "seconds": 1416,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 155
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E14.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E14.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E14.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Rocket with a Pocket\" (0.95)",
@@ -852,7 +2045,36 @@
             "playable": true,
             "sizeMB": 116
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E15.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E15",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E15.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 270
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E15.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E15.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E15.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 16,
@@ -872,7 +2094,36 @@
             "playable": true,
             "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E16.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E16",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E16.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 390
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E16.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E16.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E16.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 17,
@@ -892,7 +2143,36 @@
             "playable": true,
             "sizeMB": 195
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E17.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E17",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E17.mp4",
+              "seconds": 1418,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 336
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E17.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E17.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E17.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1418,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 18,
@@ -912,7 +2192,36 @@
             "playable": true,
             "sizeMB": 203
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E18.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 2/S02E18",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%202%2FS02E18.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 333
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-requred-complete-series-and-extras",
+              "itemTitle": "Some Assembly Required: Complete Series + Extras",
+              "file": "Season 2/Some.Assembly.Required.S02E18.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "name": "Season 2/Some.Assembly.Required.S02E18.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT",
+              "url": "https://archive.org/download/some-assembly-requred-complete-series-and-extras/Season%202%2FSome.Assembly.Required.S02E18.1080p.NF.WEB-DL.DDP5.1.H.264-SPiRiT.mp4",
+              "seconds": 1428,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (DDP5)",
+              "sizeMB": 139
+            }
+          ]
         }
       ]
     },
@@ -923,9 +2232,9 @@
           "number": 1,
           "name": "Raindrop Rabbit",
           "airdate": "2016-03-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-requred-complete-series-and-extras",
             "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -939,7 +2248,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "some-assembly-required-season-3_202608",
               "itemTitle": "Some Assembly Required Season 3",
@@ -950,6 +2259,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 233
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e01.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e01",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e01.mp4",
+              "seconds": 1386,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 267
             }
           ]
         },
@@ -957,9 +2280,9 @@
           "number": 2,
           "name": "Dig It Dragon",
           "airdate": "2016-03-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-required-season-3_202608",
             "itemTitle": "Some Assembly Required Season 3",
@@ -973,7 +2296,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "some-assembly-requred-complete-series-and-extras",
               "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -984,6 +2307,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 279
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e02.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e02",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e02.mp4",
+              "seconds": 1386,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 320
             }
           ]
         },
@@ -991,9 +2328,9 @@
           "number": 3,
           "name": "Tinosaur",
           "airdate": "2016-03-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-required-season-3_202608",
             "itemTitle": "Some Assembly Required Season 3",
@@ -1007,7 +2344,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "some-assembly-requred-complete-series-and-extras",
               "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -1018,6 +2355,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 279
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e03.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e03",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e03.mp4",
+              "seconds": 1325,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 218
             }
           ]
         },
@@ -1025,9 +2376,9 @@
           "number": 4,
           "name": "Wreck & Roll",
           "airdate": "2016-04-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-required-season-3_202608",
             "itemTitle": "Some Assembly Required Season 3",
@@ -1041,7 +2392,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "some-assembly-requred-complete-series-and-extras",
               "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -1052,6 +2403,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 261
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e04.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e04",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e04.mp4",
+              "seconds": 1330,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 246
             }
           ]
         },
@@ -1059,9 +2424,9 @@
           "number": 5,
           "name": "Betty the Builder",
           "airdate": "2016-04-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-required-season-3_202608",
             "itemTitle": "Some Assembly Required Season 3",
@@ -1075,7 +2440,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "some-assembly-requred-complete-series-and-extras",
               "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -1086,6 +2451,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 351
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e05.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e05",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e05.mp4",
+              "seconds": 1386,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 328
             }
           ]
         },
@@ -1093,9 +2472,9 @@
           "number": 6,
           "name": "Joy Buzzer",
           "airdate": "2016-04-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-requred-complete-series-and-extras",
             "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -1109,7 +2488,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "some-assembly-required-season-3_202608",
               "itemTitle": "Some Assembly Required Season 3",
@@ -1120,6 +2499,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 296
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e06.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e06",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e06.mp4",
+              "seconds": 1386,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 278
             }
           ]
         },
@@ -1127,9 +2520,9 @@
           "number": 7,
           "name": "Unicorpse",
           "airdate": "2016-04-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-required-season-3_202608",
             "itemTitle": "Some Assembly Required Season 3",
@@ -1143,7 +2536,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "some-assembly-requred-complete-series-and-extras",
               "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -1154,6 +2547,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 275
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e07.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e07",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e07.mp4",
+              "seconds": 1369,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 273
             }
           ]
         },
@@ -1161,9 +2568,9 @@
           "number": 8,
           "name": "Microphony",
           "airdate": "2016-05-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-required-season-3_202608",
             "itemTitle": "Some Assembly Required Season 3",
@@ -1177,7 +2584,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "some-assembly-requred-complete-series-and-extras",
               "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -1188,6 +2595,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 326
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e08.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e08",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e08.mp4",
+              "seconds": 1386,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 311
             }
           ]
         },
@@ -1195,9 +2616,9 @@
           "number": 9,
           "name": "My Last Dolly",
           "airdate": "2016-05-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-required-season-3_202608",
             "itemTitle": "Some Assembly Required Season 3",
@@ -1211,7 +2632,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "some-assembly-requred-complete-series-and-extras",
               "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -1222,6 +2643,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 344
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e09.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e09",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e09.mp4",
+              "seconds": 1386,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 324
             }
           ]
         },
@@ -1229,9 +2664,9 @@
           "number": 10,
           "name": "Ollie-Matic",
           "airdate": "2016-05-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-required-season-3_202608",
             "itemTitle": "Some Assembly Required Season 3",
@@ -1245,7 +2680,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "some-assembly-requred-complete-series-and-extras",
               "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -1256,6 +2691,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 300
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e10.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e10",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e10.mp4",
+              "seconds": 1366,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 267
             }
           ]
         },
@@ -1263,9 +2712,9 @@
           "number": 11,
           "name": "Claude's Kitchen",
           "airdate": "2016-05-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-requred-complete-series-and-extras",
             "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -1279,7 +2728,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "some-assembly-required-season-3_202608",
               "itemTitle": "Some Assembly Required Season 3",
@@ -1290,6 +2739,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 312
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e11.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e11",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e11.mp4",
+              "seconds": 1386,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 275
             }
           ]
         },
@@ -1297,9 +2760,9 @@
           "number": 12,
           "name": "Captain Indestructible",
           "airdate": "2016-05-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-requred-complete-series-and-extras",
             "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -1313,7 +2776,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "some-assembly-required-season-3_202608",
               "itemTitle": "Some Assembly Required Season 3",
@@ -1324,6 +2787,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 316
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e12.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e12",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e12.mp4",
+              "seconds": 1387,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 280
             }
           ]
         },
@@ -1331,9 +2808,9 @@
           "number": 13,
           "name": "Mmmboing",
           "airdate": "2016-06-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "some-assembly-requred-complete-series-and-extras",
             "itemTitle": "Some Assembly Required: Complete Series + Extras",
@@ -1345,7 +2822,35 @@
             "playable": true,
             "sizeMB": 351
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required_202606",
+              "itemTitle": "Some Assembly Required s01-s03 Complete",
+              "file": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e13.mp4",
+              "name": "Some Assembly Required s01-s03 Complete 720p x265/Season 3/S03e13",
+              "url": "https://archive.org/download/some-assembly-required_202606/Some%20Assembly%20Required%20s01-s03%20Complete%20720p%20x265%2FSeason%203%2FS03e13.mp4",
+              "seconds": 1447,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 354
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "some-assembly-required-season-3_202608",
+              "itemTitle": "Some Assembly Required Season 3",
+              "file": "Some Assembly Required Season 3 Episode 13 Mmmmboing - Thunderbird Entertainment (720p, h264, youtube).mp4",
+              "name": "Some Assembly Required Season 3 Episode 13 Mmmmboing - Thunderbird Entertainment (720p, h264, youtube)",
+              "url": "https://archive.org/download/some-assembly-required-season-3_202608/Some%20Assembly%20Required%20Season%203%20Episode%2013%20Mmmmboing%20-%20Thunderbird%20Entertainment%20(720p%2C%20h264%2C%20youtube).mp4",
+              "seconds": 1446,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 350
+            }
+          ]
         }
       ]
     }

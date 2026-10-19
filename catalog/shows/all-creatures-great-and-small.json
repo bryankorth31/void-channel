@@ -3,21 +3,21 @@
   "slug": "all-creatures-great-and-small",
   "type": "Streaming Era",
   "network": "GB",
-  "matchedAt": "2026-10-17T07:40:36.375Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:11:08.222Z",
+  "addedAt": "2026-10-17T07:40:36.375Z",
   "tvmaze": {
-    "id": null,
-    "name": "All Creatures Great & Small",
-    "runtime": null,
-    "premiered": null,
-    "network": "GB"
+    "id": 42836,
+    "name": "All Creatures Great and Small",
+    "runtime": 60,
+    "premiered": "2020-09-01",
+    "network": "5"
   },
   "coverage": {
-    "total": 44,
+    "total": 42,
     "live": 0,
-    "review": 44,
-    "missing": 0,
-    "pct": 100
+    "review": 32,
+    "missing": 10,
+    "pct": 76
   },
   "seasons": [
     {
@@ -25,9 +25,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "1 1 youve got to dream",
+          "name": "You've Got to Dream",
+          "airdate": "2020-09-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"You've Got to Dream\" (0.95)",
             "item": "Masterpiece-All-Creatures",
             "itemTitle": "MASTERPIECE: All Creatures Great and Small",
             "file": "1.1 You've Got to Dream.mp4",
@@ -36,18 +39,32 @@
             "seconds": 3186,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1050,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1050
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 6 in \"MASTERPIECE: All Creatures Great and Sma\"",
+              "item": "Masterpiece-All-Creatures",
+              "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+              "file": "1.7 The Night Before Christmas.mp4",
+              "name": "1.7 The Night Before Christmas",
+              "url": "https://archive.org/download/Masterpiece-All-Creatures/1.7%20The%20Night%20Before%20Christmas.mp4",
+              "seconds": 3738,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 948
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "1 2 another farnon",
+          "name": "Another Farnon?",
+          "airdate": "2020-09-08",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Another Farnon?\" (0.95)",
             "item": "Masterpiece-All-Creatures",
             "itemTitle": "MASTERPIECE: All Creatures Great and Small",
             "file": "1.2 Another Farnon?.mp4",
@@ -56,18 +73,32 @@
             "seconds": 3186,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 992,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 992
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 6 in \"MASTERPIECE: All Creatures Great and Sma\"",
+              "item": "Masterpiece-All-Creatures",
+              "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+              "file": "2.7 The Perfect Christmas.mp4",
+              "name": "2.7 The Perfect Christmas",
+              "url": "https://archive.org/download/Masterpiece-All-Creatures/2.7%20The%20Perfect%20Christmas.mp4",
+              "seconds": 3351,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 869
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "1 3 andante",
+          "name": "Andante",
+          "airdate": "2020-09-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Andante\" (0.95)",
             "item": "Masterpiece-All-Creatures",
             "itemTitle": "MASTERPIECE: All Creatures Great and Small",
             "file": "1.3 Andante.mp4",
@@ -76,18 +107,32 @@
             "seconds": 3185,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 968,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 968
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 6 in \"MASTERPIECE: All Creatures Great and Sma\"",
+              "item": "Masterpiece-All-Creatures",
+              "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+              "file": "3.7 Merry Bloody Christmas.mp4",
+              "name": "3.7 Merry Bloody Christmas",
+              "url": "https://archive.org/download/Masterpiece-All-Creatures/3.7%20Merry%20Bloody%20Christmas.mp4",
+              "seconds": 3166,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 812
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "1 4 a tricki case",
+          "name": "A Tricki Case",
+          "airdate": "2020-09-22",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"A Tricki Case\" (0.95)",
             "item": "Masterpiece-All-Creatures",
             "itemTitle": "MASTERPIECE: All Creatures Great and Small",
             "file": "1.4 A Tricki Case.mp4",
@@ -96,618 +141,32 @@
             "seconds": 3185,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 842,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 842
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 6 in \"MASTERPIECE: All Creatures Great and Sma\"",
+              "item": "Masterpiece-All-Creatures",
+              "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+              "file": "4.7 On a Wing and a Prayer.mp4",
+              "name": "4.7 On a Wing and a Prayer",
+              "url": "https://archive.org/download/Masterpiece-All-Creatures/4.7%20On%20a%20Wing%20and%20a%20Prayer.mp4",
+              "seconds": 3165,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 754
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "1 5 alls fair",
+          "name": "All's Fair",
+          "airdate": "2020-09-29",
           "state": "REVIEW",
           "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "1.5 All's Fair.mp4",
-            "name": "1.5 All's Fair",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/1.5%20All's%20Fair.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1024,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "1 6 a cure for ills",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "1.6 A Cure for All Ills.mp4",
-            "name": "1.6 A Cure for All Ills",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/1.6%20A%20Cure%20for%20All%20Ills.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 830,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "1 7 the night before christmas",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "1.7 The Night Before Christmas.mp4",
-            "name": "1.7 The Night Before Christmas",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/1.7%20The%20Night%20Before%20Christmas.mp4",
-            "seconds": 3738,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 948,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "2 1 where the heart is",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "2.1 Where the Heart Is.mp4",
-            "name": "2.1 Where the Heart Is",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/2.1%20Where%20the%20Heart%20Is.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1035,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "2 2 semper progrediens",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "2.2 Semper Progrediens.mp4",
-            "name": "2.2 Semper Progrediens",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/2.2%20Semper%20Progrediens.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 895,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "2 3 we can but hope",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "2.3 We Can But Hope.mp4",
-            "name": "2.3 We Can But Hope",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/2.3%20We%20Can%20But%20Hope.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 766,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "2 4 many happy returns",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "2.4 Many Happy Returns.mp4",
-            "name": "2.4 Many Happy Returns",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/2.4%20Many%20Happy%20Returns.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 806,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "2 5 the last man in",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "2.5 The Last Man In.mp4",
-            "name": "2.5 The Last Man In",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/2.5%20The%20Last%20Man%20In.mp4",
-            "seconds": 3185,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1000,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "2 6 home truths",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "2.6 Home Truths.mp4",
-            "name": "2.6 Home Truths",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/2.6%20Home%20Truths.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 901,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "2 7 the perfect christmas",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "2.7 The Perfect Christmas.mp4",
-            "name": "2.7 The Perfect Christmas",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/2.7%20The%20Perfect%20Christmas.mp4",
-            "seconds": 3351,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 869,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "3 1 second time lucky",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "3.1. Second Time Lucky.mp4",
-            "name": "3.1. Second Time Lucky",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.1.%20Second%20Time%20Lucky.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 975,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "3 2 honeymoons over",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "3.2 Honeymoon's Over.mp4",
-            "name": "3.2 Honeymoon's Over",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.2%20Honeymoon's%20Over.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 891,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "3 3 surviving siegfried",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "3.3 Surviving Siegfried.mp4",
-            "name": "3.3 Surviving Siegfried",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.3%20Surviving%20Siegfried.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 962,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "3 4 what a balls up",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "3.4 What a Balls Up!.mp4",
-            "name": "3.4 What a Balls Up!",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.4%20What%20a%20Balls%20Up!.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 936,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "3 5 edward",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "3.5 Edward.mp4",
-            "name": "3.5 Edward",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.5%20Edward.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 748,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "3 6 for whom the bell tolls",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "3.6 For Whom the Bell Tolls.mp4",
-            "name": "3.6 For Whom the Bell Tolls",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.6%20For%20Whom%20the%20Bell%20Tolls.mp4",
-            "seconds": 3186,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 826,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "3 7 merry bloody christmas",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "3.7 Merry Bloody Christmas.mp4",
-            "name": "3.7 Merry Bloody Christmas",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.7%20Merry%20Bloody%20Christmas.mp4",
-            "seconds": 3166,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 812,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "4 1 broodiness",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "4.1 Broodiness.mp4",
-            "name": "4.1 Broodiness",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.1%20Broodiness.mp4",
-            "seconds": 3185,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 845,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "4 2 carpe diem",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "4.2 Carpe Diem.mp4",
-            "name": "4.2 Carpe Diem",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.2%20Carpe%20Diem.mp4",
-            "seconds": 3185,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 746,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "4 3 right hand man",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "4.3 Right Hand Man.mp4",
-            "name": "4.3 Right Hand Man",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.3%20Right%20Hand%20Man.mp4",
-            "seconds": 3185,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 950,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "4 4 by the book",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "4.4 By the Book.mp4",
-            "name": "4.4 By the Book",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.4%20By%20the%20Book.mp4",
-            "seconds": 3185,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 768,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "4 5 papers",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "4.5 Papers.mp4",
-            "name": "4.5 Papers",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.5%20Papers.mp4",
-            "seconds": 3185,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 807,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "4 6 the home front",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "4.6 The Home Front.mp4",
-            "name": "4.6 The Home Front",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.6%20The%20Home%20Front.mp4",
-            "seconds": 3185,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 686,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "4 7 on a wing and a prayer",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "4.7 On a Wing and a Prayer.mp4",
-            "name": "4.7 On a Wing and a Prayer",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.7%20On%20a%20Wing%20and%20a%20Prayer.mp4",
-            "seconds": 3165,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 754,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "5 1 to our boys",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "5.1 To All Our Boys.mp4",
-            "name": "5.1 To All Our Boys",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/5.1%20To%20All%20Our%20Boys.mp4",
-            "seconds": 3185,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1358,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "5 2 holding the baby",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "5.2 Holding the Baby.mp4",
-            "name": "5.2 Holding the Baby",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/5.2%20Holding%20the%20Baby.mp4",
-            "seconds": 3045,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1318,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "5 3 homecoming",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "5.3 Homecoming.mp4",
-            "name": "5.3 Homecoming",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/5.3%20Homecoming.mp4",
-            "seconds": 3185,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1454,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "5 4 uninvited guests",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "5.4 Uninvited Guests.mp4",
-            "name": "5.4 Uninvited Guests",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/5.4%20Uninvited%20Guests.mp4",
-            "seconds": 3185,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1297,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "5 5 pair bond",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "5.5 Pair Bond.mp4",
-            "name": "5.5 Pair Bond",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/5.5%20Pair%20Bond.mp4",
-            "seconds": 3185,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1821,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "5 6 glass half full",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "5.6 Glass Half Full.mp4",
-            "name": "5.6 Glass Half Full",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/5.6%20Glass%20Half%20Full.mp4",
-            "seconds": 3185,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1741,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "5 7 gods",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 6 in \"MASTERPIECE: All Creatures Great and Sma\"",
             "item": "Masterpiece-All-Creatures",
             "itemTitle": "MASTERPIECE: All Creatures Great and Small",
             "file": "5.7 All God's Creatures.mp4",
@@ -716,138 +175,18 @@
             "seconds": 3581,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1662,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1662
           },
           "alternates": []
         },
         {
-          "number": 36,
-          "name": "6 1 gathering the flock",
+          "number": 6,
+          "name": "A Cure for All Ills",
+          "airdate": "2020-10-06",
           "state": "REVIEW",
           "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "6.1 Gathering the Flock.mp4",
-            "name": "6.1 Gathering the Flock",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/6.1%20Gathering%20the%20Flock.mp4",
-            "seconds": 3214,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1676,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "6 2 old dog new tricks",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "6.2 Old Dog, New Tricks.mp4",
-            "name": "6.2 Old Dog, New Tricks",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/6.2%20Old%20Dog%2C%20New%20Tricks.mp4",
-            "seconds": 3215,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1518,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "6 3 captain farnon",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "6.3 Captain Farnon?.mp4",
-            "name": "6.3 Captain Farnon?",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/6.3%20Captain%20Farnon%3F.mp4",
-            "seconds": 3215,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1643,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 39,
-          "name": "6 4 jenny wren",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "6.4 Jenny Wren.mp4",
-            "name": "6.4 Jenny Wren",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/6.4%20Jenny%20Wren.mp4",
-            "seconds": 3143,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1687,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 40,
-          "name": "6 5 fixes",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "6.5 Fixes.mp4",
-            "name": "6.5 Fixes",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/6.5%20Fixes.mp4",
-            "seconds": 3215,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1965,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 41,
-          "name": "6 6 our hearts are full",
-          "state": "REVIEW",
-          "file": {
-            "item": "Masterpiece-All-Creatures",
-            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
-            "file": "6.6 Our Hearts Are Full.mp4",
-            "name": "6.6 Our Hearts Are Full",
-            "url": "https://archive.org/download/Masterpiece-All-Creatures/6.6%20Our%20Hearts%20Are%20Full.mp4",
-            "seconds": 3215,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1997,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 42,
-          "name": "6 7 comfort and joy",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 6 in \"MASTERPIECE: All Creatures Great and Sma\"",
             "item": "Masterpiece-All-Creatures",
             "itemTitle": "MASTERPIECE: All Creatures Great and Small",
             "file": "6.7 Comfort and Joy.mp4",
@@ -856,59 +195,655 @@
             "seconds": 3538,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 2062,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2062
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"A Cure for All Ills\" (0.77)",
+              "item": "Masterpiece-All-Creatures",
+              "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+              "file": "1.6 A Cure for All Ills.mp4",
+              "name": "1.6 A Cure for All Ills",
+              "url": "https://archive.org/download/Masterpiece-All-Creatures/1.6%20A%20Cure%20for%20All%20Ills.mp4",
+              "seconds": 3186,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 830
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Where the Heart Is",
+          "airdate": "2021-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Semper Progrediens",
+          "airdate": "2021-09-23",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Semper Progrediens\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "2.2 Semper Progrediens.mp4",
+            "name": "2.2 Semper Progrediens",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/2.2%20Semper%20Progrediens.mp4",
+            "seconds": 3186,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 895
           },
           "alternates": []
         },
         {
-          "number": 43,
-          "name": "and horse sense uk",
+          "number": 3,
+          "name": "We Can But Hope",
+          "airdate": "2021-09-30",
           "state": "REVIEW",
           "file": {
-            "item": "all-creatures-great-and-small-horse-sense-1996-uk-vhs",
-            "itemTitle": "All Creatures Great And Small Horse Sense (1996 UK VHS)",
-            "file": "All Creatures Great and Small - Horse Sense (1996 UK VHS).mp4",
-            "name": "All Creatures Great and Small - Horse Sense (1996 UK VHS)",
-            "url": "https://archive.org/download/all-creatures-great-and-small-horse-sense-1996-uk-vhs/All%20Creatures%20Great%20and%20Small%20-%20Horse%20Sense%20(1996%20UK%20VHS).mp4",
-            "seconds": 6189,
+            "conf": 0.75,
+            "why": "title ~ \"We Can But Hope\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "2.3 We Can But Hope.mp4",
+            "name": "2.3 We Can But Hope",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/2.3%20We%20Can%20But%20Hope.mp4",
+            "seconds": 3186,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1778,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 766
           },
           "alternates": []
         },
         {
-          "number": 44,
-          "name": "and the last furlong uk",
+          "number": 4,
+          "name": "Many Happy Returns",
+          "airdate": "2021-10-07",
           "state": "REVIEW",
           "file": {
-            "item": "all-creatures-great-and-small-the-last-furlong-1996-uk-vhs",
-            "itemTitle": "All Creatures Great And Small The Last Furlong (1996 UK VHS)",
-            "file": "All Creatures Great and Small - The Last Furlong (1996 UK VHS).mp4",
-            "name": "All Creatures Great and Small - The Last Furlong (1996 UK VHS)",
-            "url": "https://archive.org/download/all-creatures-great-and-small-the-last-furlong-1996-uk-vhs/All%20Creatures%20Great%20and%20Small%20-%20The%20Last%20Furlong%20(1996%20UK%20VHS).mp4",
-            "seconds": 5775,
+            "conf": 0.75,
+            "why": "title ~ \"Many Happy Returns\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "2.4 Many Happy Returns.mp4",
+            "name": "2.4 Many Happy Returns",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/2.4%20Many%20Happy%20Returns.mp4",
+            "seconds": 3186,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1803,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 806
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Last Man In",
+          "airdate": "2021-10-14",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Last Man In\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "2.5 The Last Man In.mp4",
+            "name": "2.5 The Last Man In",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/2.5%20The%20Last%20Man%20In.mp4",
+            "seconds": 3185,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1000
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Home Truths",
+          "airdate": "2021-10-21",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Home Truths\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "2.6 Home Truths.mp4",
+            "name": "2.6 Home Truths",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/2.6%20Home%20Truths.mp4",
+            "seconds": 3186,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 901
           },
           "alternates": []
         }
       ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Second Time Lucky",
+          "airdate": "2022-09-15",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Second Time Lucky\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "3.1. Second Time Lucky.mp4",
+            "name": "3.1. Second Time Lucky",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.1.%20Second%20Time%20Lucky.mp4",
+            "seconds": 3186,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 975
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Honeymoon's Over",
+          "airdate": "2022-09-22",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Honeymoon's Over\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "3.2 Honeymoon's Over.mp4",
+            "name": "3.2 Honeymoon's Over",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.2%20Honeymoon's%20Over.mp4",
+            "seconds": 3186,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 891
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Surviving Siegfried",
+          "airdate": "2022-09-29",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Surviving Siegfried\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "3.3 Surviving Siegfried.mp4",
+            "name": "3.3 Surviving Siegfried",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.3%20Surviving%20Siegfried.mp4",
+            "seconds": 3186,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 962
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "What a Balls Up!",
+          "airdate": "2022-10-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"What a Balls Up!\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "3.4 What a Balls Up!.mp4",
+            "name": "3.4 What a Balls Up!",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.4%20What%20a%20Balls%20Up!.mp4",
+            "seconds": 3186,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 936
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Edward",
+          "airdate": "2022-10-13",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Edward\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "3.5 Edward.mp4",
+            "name": "3.5 Edward",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.5%20Edward.mp4",
+            "seconds": 3186,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 748
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "For Whom the Bell Tolls",
+          "airdate": "2022-10-20",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"For Whom the Bell Tolls\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "3.6 For Whom the Bell Tolls.mp4",
+            "name": "3.6 For Whom the Bell Tolls",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/3.6%20For%20Whom%20the%20Bell%20Tolls.mp4",
+            "seconds": 3186,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 826
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Broodiness",
+          "airdate": "2023-10-05",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Broodiness\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "4.1 Broodiness.mp4",
+            "name": "4.1 Broodiness",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.1%20Broodiness.mp4",
+            "seconds": 3185,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 845
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Carpe Diem",
+          "airdate": "2023-10-12",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Carpe Diem\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "4.2 Carpe Diem.mp4",
+            "name": "4.2 Carpe Diem",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.2%20Carpe%20Diem.mp4",
+            "seconds": 3185,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 746
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Right Hand Man",
+          "airdate": "2023-10-19",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Right Hand Man\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "4.3 Right Hand Man.mp4",
+            "name": "4.3 Right Hand Man",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.3%20Right%20Hand%20Man.mp4",
+            "seconds": 3185,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 950
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "By the Book",
+          "airdate": "2023-10-26",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"By the Book\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "4.4 By the Book.mp4",
+            "name": "4.4 By the Book",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.4%20By%20the%20Book.mp4",
+            "seconds": 3185,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 768
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Papers",
+          "airdate": "2023-11-02",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Papers\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "4.5 Papers.mp4",
+            "name": "4.5 Papers",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.5%20Papers.mp4",
+            "seconds": 3185,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 807
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Home Front",
+          "airdate": "2023-11-09",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Home Front\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "4.6 The Home Front.mp4",
+            "name": "4.6 The Home Front",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/4.6%20The%20Home%20Front.mp4",
+            "seconds": 3185,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 686
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "To All Our Boys",
+          "airdate": "2024-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Holding The Baby",
+          "airdate": "2024-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Homecoming",
+          "airdate": "2024-10-03",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Homecoming\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "5.3 Homecoming.mp4",
+            "name": "5.3 Homecoming",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/5.3%20Homecoming.mp4",
+            "seconds": 3185,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1454
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Uninvited Guests",
+          "airdate": "2024-10-10",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Uninvited Guests\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "5.4 Uninvited Guests.mp4",
+            "name": "5.4 Uninvited Guests",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/5.4%20Uninvited%20Guests.mp4",
+            "seconds": 3185,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1297
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Pair Bond",
+          "airdate": "2024-10-17",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Pair Bond\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "5.5 Pair Bond.mp4",
+            "name": "5.5 Pair Bond",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/5.5%20Pair%20Bond.mp4",
+            "seconds": 3185,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1821
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Glass Half Full",
+          "airdate": "2024-10-24",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Glass Half Full\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "5.6 Glass Half Full.mp4",
+            "name": "5.6 Glass Half Full",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/5.6%20Glass%20Half%20Full.mp4",
+            "seconds": 3185,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1741
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 6,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Gathering the Flock",
+          "airdate": "2025-09-25",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Gathering the Flock\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "6.1 Gathering the Flock.mp4",
+            "name": "6.1 Gathering the Flock",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/6.1%20Gathering%20the%20Flock.mp4",
+            "seconds": 3214,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1676
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Old Dog, New Tricks",
+          "airdate": "2025-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Captain Farnon?",
+          "airdate": "2025-10-09",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Captain Farnon?\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "6.3 Captain Farnon?.mp4",
+            "name": "6.3 Captain Farnon?",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/6.3%20Captain%20Farnon%3F.mp4",
+            "seconds": 3215,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1643
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Jenny Wren",
+          "airdate": "2025-10-16",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Jenny Wren\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "6.4 Jenny Wren.mp4",
+            "name": "6.4 Jenny Wren",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/6.4%20Jenny%20Wren.mp4",
+            "seconds": 3143,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1687
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Fixes",
+          "airdate": "2025-10-23",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Fixes\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "6.5 Fixes.mp4",
+            "name": "6.5 Fixes",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/6.5%20Fixes.mp4",
+            "seconds": 3215,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1965
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Our Hearts Are Full",
+          "airdate": "2025-10-30",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Our Hearts Are Full\" (0.95)",
+            "item": "Masterpiece-All-Creatures",
+            "itemTitle": "MASTERPIECE: All Creatures Great and Small",
+            "file": "6.6 Our Hearts Are Full.mp4",
+            "name": "6.6 Our Hearts Are Full",
+            "url": "https://archive.org/download/Masterpiece-All-Creatures/6.6%20Our%20Hearts%20Are%20Full.mp4",
+            "seconds": 3215,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1997
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 7,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Back to School",
+          "airdate": "2026-09-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Friesians are Coming!",
+          "airdate": "2026-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Owl and the Pussycats",
+          "airdate": "2026-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Doppelgänger",
+          "airdate": "2026-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Farnon, Herriot and Farnon",
+          "airdate": "2026-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Give Us This Day",
+          "airdate": "2026-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 42836,
-    "name": "All Creatures Great and Small",
-    "placed": 0
-  }
+  ]
 }

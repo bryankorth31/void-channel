@@ -3,7 +3,7 @@
   "slug": "life-in-cold-blood",
   "type": "Documentary & Geographic",
   "network": "BBC One",
-  "matchedAt": "2026-10-17T09:37:01.409Z",
+  "matchedAt": "2026-10-19T04:12:48.048Z",
   "addedAt": "2026-10-17T09:37:01.408Z",
   "tvmaze": {
     "id": 7798,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 5,
     "live": 0,
-    "review": 3,
-    "missing": 2,
-    "pct": 60
+    "review": 5,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -29,19 +29,33 @@
           "airdate": "2008-02-04",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "title ~ \"The Cold Blooded Truth\" (0.77)",
-            "item": "life-in-cold-blood-bbc",
-            "itemTitle": "Life in Cold Blood (2008 TV documentary miniseries)",
-            "file": "(1) The Cold Blooded Truth.mp4",
-            "name": "(1) The Cold Blooded Truth",
-            "url": "https://archive.org/download/life-in-cold-blood-bbc/(1)%20The%20Cold%20Blooded%20Truth.mp4",
-            "seconds": 3460,
-            "format": "MPEG4",
+            "conf": 0.6,
+            "why": "title ~ \"The Cold Blooded Truth\" (0.63)",
+            "item": "bbcdavidattenborough",
+            "itemTitle": "David Attenborough",
+            "file": "Life In Cold Blood/BBC.Life.In.Cold.Blood.1of5.The.Cold-Blooded.Truth.XviD.AC3.MVGroup.org.mp4",
+            "name": "Life In Cold Blood/BBC.Life.In.Cold.Blood.1of5.The.Cold-Blooded.Truth.XviD.AC3.MVGroup.org",
+            "url": "https://archive.org/download/bbcdavidattenborough/Life%20In%20Cold%20Blood%2FBBC.Life.In.Cold.Blood.1of5.The.Cold-Blooded.Truth.XviD.AC3.MVGroup.org.mp4",
+            "seconds": 3463,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1120
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 360
           },
           "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"The Cold Blooded Truth\" (0.77)",
+              "item": "life-in-cold-blood-bbc",
+              "itemTitle": "Life in Cold Blood (2008 TV documentary miniseries)",
+              "file": "(1) The Cold Blooded Truth.mp4",
+              "name": "(1) The Cold Blooded Truth",
+              "url": "https://archive.org/download/life-in-cold-blood-bbc/(1)%20The%20Cold%20Blooded%20Truth.mp4",
+              "seconds": 3460,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1120
+            },
             {
               "conf": 0.55,
               "why": "title ~ \"The Cold Blooded Truth\" (0.73)",
@@ -61,9 +75,49 @@
           "number": 2,
           "name": "Land Invaders",
           "airdate": "2008-02-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Land Invaders\" (0.95)",
+            "item": "bbcdavidattenborough",
+            "itemTitle": "David Attenborough",
+            "file": "Life In Cold Blood/BBC.Life.In.Cold.Blood.2of5.Land.Invaders.XviD.AC3.MVGroup.org.mp4",
+            "name": "Life In Cold Blood/BBC.Life.In.Cold.Blood.2of5.Land.Invaders.XviD.AC3.MVGroup.org",
+            "url": "https://archive.org/download/bbcdavidattenborough/Life%20In%20Cold%20Blood%2FBBC.Life.In.Cold.Blood.2of5.Land.Invaders.XviD.AC3.MVGroup.org.mp4",
+            "seconds": 3455,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 360
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Land Invaders\" (0.96)",
+              "item": "life-in-cold-blood-bbc",
+              "itemTitle": "Life in Cold Blood (2008 TV documentary miniseries)",
+              "file": "(2) Land Invaders.mp4",
+              "name": "(2) Land Invaders",
+              "url": "https://archive.org/download/life-in-cold-blood-bbc/(2)%20Land%20Invaders.mp4",
+              "seconds": 3451,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1133
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Land Invaders\" (0.95)",
+              "item": "life-in-cold-blood",
+              "itemTitle": "Life in Cold Blood",
+              "file": "E02 - Land Invaders.mp4",
+              "name": "E02 - Land Invaders",
+              "url": "https://archive.org/download/life-in-cold-blood/E02%20-%20Land%20Invaders.mp4",
+              "seconds": 3455,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 341
+            }
+          ]
         },
         {
           "number": 3,
@@ -71,19 +125,33 @@
           "airdate": "2008-02-18",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Dragons of the Dry\" (0.96)",
-            "item": "life-in-cold-blood-bbc",
-            "itemTitle": "Life in Cold Blood (2008 TV documentary miniseries)",
-            "file": "(3) Dragons of the Dry.mp4",
-            "name": "(3) Dragons of the Dry",
-            "url": "https://archive.org/download/life-in-cold-blood-bbc/(3)%20Dragons%20of%20the%20Dry.mp4",
-            "seconds": 3466,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"Dragons of the Dry\" (0.95)",
+            "item": "bbcdavidattenborough",
+            "itemTitle": "David Attenborough",
+            "file": "Life In Cold Blood/BBC.Life.In.Cold.Blood.3of5.Dragons.Of.The.Dry.XviD.AC3.MVGroup.org.mp4",
+            "name": "Life In Cold Blood/BBC.Life.In.Cold.Blood.3of5.Dragons.Of.The.Dry.XviD.AC3.MVGroup.org",
+            "url": "https://archive.org/download/bbcdavidattenborough/Life%20In%20Cold%20Blood%2FBBC.Life.In.Cold.Blood.3of5.Dragons.Of.The.Dry.XviD.AC3.MVGroup.org.mp4",
+            "seconds": 3467,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1130
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 360
           },
           "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Dragons of the Dry\" (0.96)",
+              "item": "life-in-cold-blood-bbc",
+              "itemTitle": "Life in Cold Blood (2008 TV documentary miniseries)",
+              "file": "(3) Dragons of the Dry.mp4",
+              "name": "(3) Dragons of the Dry",
+              "url": "https://archive.org/download/life-in-cold-blood-bbc/(3)%20Dragons%20of%20the%20Dry.mp4",
+              "seconds": 3466,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1130
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Dragons of the Dry\" (0.95)",
@@ -103,9 +171,49 @@
           "number": 4,
           "name": "Sophisticated Serpents",
           "airdate": "2008-02-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sophisticated Serpents\" (0.95)",
+            "item": "bbcdavidattenborough",
+            "itemTitle": "David Attenborough",
+            "file": "Life In Cold Blood/BBC.Life.In.Cold.Blood.4of5.Sophisticated.Serpents.XviD.AC3.MVGroup.org.mp4",
+            "name": "Life In Cold Blood/BBC.Life.In.Cold.Blood.4of5.Sophisticated.Serpents.XviD.AC3.MVGroup.org",
+            "url": "https://archive.org/download/bbcdavidattenborough/Life%20In%20Cold%20Blood%2FBBC.Life.In.Cold.Blood.4of5.Sophisticated.Serpents.XviD.AC3.MVGroup.org.mp4",
+            "seconds": 3479,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 362
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Sophisticated Serpents\" (0.98)",
+              "item": "life-in-cold-blood-bbc",
+              "itemTitle": "Life in Cold Blood (2008 TV documentary miniseries)",
+              "file": "(4) Sophisticated Serpents.mp4",
+              "name": "(4) Sophisticated Serpents",
+              "url": "https://archive.org/download/life-in-cold-blood-bbc/(4)%20Sophisticated%20Serpents.mp4",
+              "seconds": 3475,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1131
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Sophisticated Serpents\" (0.95)",
+              "item": "life-in-cold-blood",
+              "itemTitle": "Life in Cold Blood",
+              "file": "E04 - Sophisticated Serpents.mp4",
+              "name": "E04 - Sophisticated Serpents",
+              "url": "https://archive.org/download/life-in-cold-blood/E04%20-%20Sophisticated%20Serpents.mp4",
+              "seconds": 3479,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 343
+            }
+          ]
         },
         {
           "number": 5,
@@ -113,19 +221,33 @@
           "airdate": "2008-03-03",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Armoured Giants\" (0.96)",
-            "item": "life-in-cold-blood-bbc",
-            "itemTitle": "Life in Cold Blood (2008 TV documentary miniseries)",
-            "file": "(5) Armoured Giants.mp4",
-            "name": "(5) Armoured Giants",
-            "url": "https://archive.org/download/life-in-cold-blood-bbc/(5)%20Armoured%20Giants.mp4",
-            "seconds": 3477,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"Armoured Giants\" (0.95)",
+            "item": "bbcdavidattenborough",
+            "itemTitle": "David Attenborough",
+            "file": "Life In Cold Blood/BBC.Life.In.Cold.Blood.5of5.Armoured.Giants.XviD.AC3.MVGroup.org.mp4",
+            "name": "Life In Cold Blood/BBC.Life.In.Cold.Blood.5of5.Armoured.Giants.XviD.AC3.MVGroup.org",
+            "url": "https://archive.org/download/bbcdavidattenborough/Life%20In%20Cold%20Blood%2FBBC.Life.In.Cold.Blood.5of5.Armoured.Giants.XviD.AC3.MVGroup.org.mp4",
+            "seconds": 3476,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 1134
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 362
           },
           "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Armoured Giants\" (0.96)",
+              "item": "life-in-cold-blood-bbc",
+              "itemTitle": "Life in Cold Blood (2008 TV documentary miniseries)",
+              "file": "(5) Armoured Giants.mp4",
+              "name": "(5) Armoured Giants",
+              "url": "https://archive.org/download/life-in-cold-blood-bbc/(5)%20Armoured%20Giants.mp4",
+              "seconds": 3477,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1134
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Armoured Giants\" (0.95)",

@@ -3,7 +3,7 @@
   "slug": "captain-planet-and-the-planeteers",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:35.174Z",
+  "matchedAt": "2026-10-19T04:10:42.118Z",
   "addedAt": "2026-10-15T18:49:28.805Z",
   "tvmaze": {
     "id": 4416,
@@ -3722,19 +3722,32 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.8,
-            "why": "S/E in filename | not browser-playable: container (Matroska)",
-            "item": "captain-planet-and-the-planeteers-1990",
-            "itemTitle": "CAPTAIN PLANET and The Planeteers (1990)",
-            "file": "CAPTAIN PLANET and The Planeteers (1990)/CAPTAIN PLANET and The Planeteers (1990) S6/Captain Planet And The Planeteers - 06X05 - A Good Bomb Is Hard To Find.mkv",
-            "name": "CAPTAIN PLANET and The Planeteers (1990)/CAPTAIN PLANET and The Planeteers (1990) S6/Captain Planet And The Planeteers - 06X05 - A Good Bomb Is Hard To Find",
-            "url": "https://archive.org/download/captain-planet-and-the-planeteers-1990/CAPTAIN%20PLANET%20and%20The%20Planeteers%20(1990)%2FCAPTAIN%20PLANET%20and%20The%20Planeteers%20(1990)%20S6%2FCaptain%20Planet%20And%20The%20Planeteers%20-%2006X05%20-%20A%20Good%20Bomb%20Is%20Hard%20To%20Find.mkv",
-            "seconds": 1284,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 1045
+            "why": "title ~ \"5-Ring Panda-Monium\" (0.85)",
+            "item": "captain-planet-and-the-planeteers-480p",
+            "itemTitle": "Captain Planet and the Planeteers Complete",
+            "file": "Captain.Planet.and.the.Planeteers.S06.480p/S6.E05 ∙ Five Ring Panda-Monium.mp4",
+            "name": "Captain.Planet.and.the.Planeteers.S06.480p/S6.E05 ∙ Five Ring Panda-Monium",
+            "url": "https://archive.org/download/captain-planet-and-the-planeteers-480p/Captain.Planet.and.the.Planeteers.S06.480p%2FS6.E05%20%E2%88%99%20Five%20Ring%20Panda-Monium.mp4",
+            "seconds": 1288,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 124
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "captain-planet-and-the-planeteers-1990",
+              "itemTitle": "CAPTAIN PLANET and The Planeteers (1990)",
+              "file": "CAPTAIN PLANET and The Planeteers (1990)/CAPTAIN PLANET and The Planeteers (1990) S6/Captain Planet And The Planeteers - 06X05 - A Good Bomb Is Hard To Find.mkv",
+              "name": "CAPTAIN PLANET and The Planeteers (1990)/CAPTAIN PLANET and The Planeteers (1990) S6/Captain Planet And The Planeteers - 06X05 - A Good Bomb Is Hard To Find",
+              "url": "https://archive.org/download/captain-planet-and-the-planeteers-1990/CAPTAIN%20PLANET%20and%20The%20Planeteers%20(1990)%2FCAPTAIN%20PLANET%20and%20The%20Planeteers%20(1990)%20S6%2FCaptain%20Planet%20And%20The%20Planeteers%20-%2006X05%20-%20A%20Good%20Bomb%20Is%20Hard%20To%20Find.mkv",
+              "seconds": 1284,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1045
+            },
             {
               "conf": 0.7,
               "why": "title ~ \"5-Ring Panda-Monium\" (0.95)",
@@ -3770,6 +3783,20 @@
             "sizeMB": 124
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "captain-planet-and-the-planeteers-1990",
+              "itemTitle": "CAPTAIN PLANET and The Planeteers (1990)",
+              "file": "CAPTAIN PLANET and The Planeteers (1990)/CAPTAIN PLANET and The Planeteers (1990) S6/Captain Planet And The Planeteers - 06X06 - Twelve Angry Animals.mkv",
+              "name": "CAPTAIN PLANET and The Planeteers (1990)/CAPTAIN PLANET and The Planeteers (1990) S6/Captain Planet And The Planeteers - 06X06 - Twelve Angry Animals",
+              "url": "https://archive.org/download/captain-planet-and-the-planeteers-1990/CAPTAIN%20PLANET%20and%20The%20Planeteers%20(1990)%2FCAPTAIN%20PLANET%20and%20The%20Planeteers%20(1990)%20S6%2FCaptain%20Planet%20And%20The%20Planeteers%20-%2006X06%20-%20Twelve%20Angry%20Animals.mkv",
+              "seconds": 1306,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 897
+            },
             {
               "conf": 0.7,
               "why": "title ~ \"A Good Bomb Is Hard to Find\" (0.95)",

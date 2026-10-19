@@ -3,7 +3,7 @@
   "slug": "sister-sister",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-16T07:56:12.968Z",
+  "matchedAt": "2026-10-19T04:10:25.640Z",
   "addedAt": "2026-10-15T12:07:32.819Z",
   "tvmaze": {
     "id": 7635,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 119,
     "live": 22,
-    "review": 17,
-    "missing": 80,
-    "pct": 33
+    "review": 21,
+    "missing": 76,
+    "pct": 36
   },
   "seasons": [
     {
@@ -775,8 +775,20 @@
           "number": 8,
           "name": "Popular Mechanic",
           "airdate": "1997-11-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Popular Mechanic\" (0.95)",
+            "item": "5.01-designer-genes",
+            "itemTitle": "Sister Sister S5 [1998]",
+            "file": "5.08 Popular Mechanic.mp4",
+            "name": "5.08 Popular Mechanic",
+            "url": "https://archive.org/download/5.01-designer-genes/5.08%20Popular%20Mechanic.mp4",
+            "seconds": 1337,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 136
+          },
           "alternates": []
         },
         {
@@ -803,16 +815,40 @@
           "number": 10,
           "name": "Two's Company",
           "airdate": "1997-11-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Two's Company\" (0.95)",
+            "item": "5.01-designer-genes",
+            "itemTitle": "Sister Sister S5 [1998]",
+            "file": "5.10 Two's Company.mp4",
+            "name": "5.10 Two's Company",
+            "url": "https://archive.org/download/5.01-designer-genes/5.10%20Two's%20Company.mp4",
+            "seconds": 1343,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 152
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Mo' Credit, Mo' Problems",
           "airdate": "1997-12-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Mo' Credit, Mo' Problems\" (0.95)",
+            "item": "5.01-designer-genes",
+            "itemTitle": "Sister Sister S5 [1998]",
+            "file": "5.11 Mo' Credit, Mo' Problems.mp4",
+            "name": "5.11 Mo' Credit, Mo' Problems",
+            "url": "https://archive.org/download/5.01-designer-genes/5.11%20Mo'%20Credit%2C%20Mo'%20Problems.mp4",
+            "seconds": 1353,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 141
+          },
           "alternates": []
         },
         {
@@ -899,8 +935,20 @@
           "number": 16,
           "name": "Ladies' Choice",
           "airdate": "1998-02-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Ladies' Choice\" (0.95)",
+            "item": "5.01-designer-genes",
+            "itemTitle": "Sister Sister S5 [1998]",
+            "file": "5.16 Ladies' Choice.mp4",
+            "name": "5.16 Ladies' Choice",
+            "url": "https://archive.org/download/5.01-designer-genes/5.16%20Ladies'%20Choice.mp4",
+            "seconds": 1304,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 151
+          },
           "alternates": []
         },
         {

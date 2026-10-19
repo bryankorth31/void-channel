@@ -3,7 +3,7 @@
   "slug": "late-night-with-conan-obrien",
   "type": "Reality & Talk",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:53.289Z",
+  "matchedAt": "2026-10-19T04:11:58.516Z",
   "addedAt": "2026-10-15T12:51:33.564Z",
   "tvmaze": {
     "id": 836,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 1004,
-    "live": 232,
+    "live": 247,
     "review": 8,
-    "missing": 764,
-    "pct": 24
+    "missing": 749,
+    "pct": 25
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "John Goodman, Drew Barrymore, Tony Randall",
           "airdate": "1993-09-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "airdate in filename",
             "item": "lnconanunsorted",
             "itemTitle": "Late Night with Conan O'Brien unsorted episodes",
@@ -1649,8 +1649,20 @@
           "number": 34,
           "name": "Jon Stewart, Mariska Hargitay, Paula Cole Band",
           "airdate": "1999-10-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-1999",
+            "itemTitle": "Late Night With Conan O' Brien - 1999",
+            "file": "Late Night with Conan O'Brien 1999.10.15 - Jon Stewart, Mariska Hargitay, Paula Cole Band.mp4",
+            "name": "Late Night with Conan O'Brien 1999.10.15 - Jon Stewart, Mariska Hargitay, Paula Cole Band",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-1999/Late%20Night%20with%20Conan%20O'Brien%201999.10.15%20-%20Jon%20Stewart%2C%20Mariska%20Hargitay%2C%20Paula%20Cole%20Band.mp4",
+            "seconds": 3617,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 372
+          },
           "alternates": []
         },
         {
@@ -1665,16 +1677,40 @@
           "number": 36,
           "name": "Ving Rhames, Meatloaf, Bush",
           "airdate": "1999-10-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-1999",
+            "itemTitle": "Late Night With Conan O' Brien - 1999",
+            "file": "Late Night with Conan O'Brien 1999.10.20 - Ving Rhames, Meat Loaf, Bush.mp4",
+            "name": "Late Night with Conan O'Brien 1999.10.20 - Ving Rhames, Meat Loaf, Bush",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-1999/Late%20Night%20with%20Conan%20O'Brien%201999.10.20%20-%20Ving%20Rhames%2C%20Meat%20Loaf%2C%20Bush.mp4",
+            "seconds": 2521,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 249
+          },
           "alternates": []
         },
         {
           "number": 37,
           "name": "Ben Affleck, Denise Richards, Robert Schimmel",
           "airdate": "1999-11-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-1999",
+            "itemTitle": "Late Night With Conan O' Brien - 1999",
+            "file": "Late Night with Conan O'Brien 1999.11.09 Los Angeles - Ben Affleck, Denise Richards, Robert Schimmel.mp4",
+            "name": "Late Night with Conan O'Brien 1999.11.09 Los Angeles - Ben Affleck, Denise Richards, Robert Schimmel",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-1999/Late%20Night%20with%20Conan%20O'Brien%201999.11.09%20Los%20Angeles%20-%20Ben%20Affleck%2C%20Denise%20Richards%2C%20Robert%20Schimmel.mp4",
+            "seconds": 2524,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 800
+          },
           "alternates": []
         },
         {
@@ -1689,16 +1725,54 @@
           "number": 39,
           "name": "Jay Leno, Rebecca Romijn-Stamos, Smash Mouth",
           "airdate": "1999-11-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-1999",
+            "itemTitle": "Late Night With Conan O' Brien - 1999",
+            "file": "Late Night with Conan O'Brien 1999.11.12 Los Angeles - Jay Leno, Rebecca Romijn.Stamos, Smash Mouth.ia.mp4",
+            "name": "Late Night with Conan O'Brien 1999.11.12 Los Angeles - Jay Leno, Rebecca Romijn",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-1999/Late%20Night%20with%20Conan%20O'Brien%201999.11.12%20Los%20Angeles%20-%20Jay%20Leno%2C%20Rebecca%20Romijn.Stamos%2C%20Smash%20Mouth.ia.mp4",
+            "seconds": 2520,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 976
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "late-night-with-conan-o-brien-1999",
+              "itemTitle": "Late Night With Conan O' Brien - 1999",
+              "file": "Late Night with Conan O'Brien 1999.11.12 Los Angeles - Jay Leno, Rebecca Romijn.Stamos, Smash Mouth.mp4",
+              "name": "Late Night with Conan O'Brien 1999.11.12 Los Angeles - Jay Leno, Rebecca Romijn.Stamos, Smash Mouth",
+              "url": "https://archive.org/download/late-night-with-conan-o-brien-1999/Late%20Night%20with%20Conan%20O'Brien%201999.11.12%20Los%20Angeles%20-%20Jay%20Leno%2C%20Rebecca%20Romijn.Stamos%2C%20Smash%20Mouth.mp4",
+              "seconds": 2520,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 976
+            }
+          ]
         },
         {
           "number": 40,
           "name": "Garth Brooks, Saffron Burrows",
           "airdate": "1999-12-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-1999",
+            "itemTitle": "Late Night With Conan O' Brien - 1999",
+            "file": "Late Night with Conan O'Brien 1999.12.02 - Garth Brooks, Saffron Burrows.mp4",
+            "name": "Late Night with Conan O'Brien 1999.12.02 - Garth Brooks, Saffron Burrows",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-1999/Late%20Night%20with%20Conan%20O'Brien%201999.12.02%20-%20Garth%20Brooks%2C%20Saffron%20Burrows.mp4",
+            "seconds": 3120,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 312
+          },
           "alternates": []
         },
         {
@@ -1713,8 +1787,20 @@
           "number": 42,
           "name": "Jim Carrey, Tony Bennett",
           "airdate": "1999-12-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-1999",
+            "itemTitle": "Late Night With Conan O' Brien - 1999",
+            "file": "Late Night with Conan O'Brien 1999.12.17 - Jim Carrey, Tony Bennett.mp4",
+            "name": "Late Night with Conan O'Brien 1999.12.17 - Jim Carrey, Tony Bennett",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-1999/Late%20Night%20with%20Conan%20O'Brien%201999.12.17%20-%20Jim%20Carrey%2C%20Tony%20Bennett.mp4",
+            "seconds": 2523,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 251
+          },
           "alternates": []
         }
       ]
@@ -1726,8 +1812,20 @@
           "number": 1,
           "name": "Heidi Klum, Sting,",
           "airdate": "2000-12-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Heidi Klum, Sting,\" (0.95)",
+            "item": "late-night-with-conan-o-brien-1999",
+            "itemTitle": "Late Night With Conan O' Brien - 1999",
+            "file": "Late Night with Conan O'Brien 1999.11.26 - Sting, Heidi Klum.mp4",
+            "name": "Late Night with Conan O'Brien 1999.11.26 - Sting, Heidi Klum",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-1999/Late%20Night%20with%20Conan%20O'Brien%201999.11.26%20-%20Sting%2C%20Heidi%20Klum.mp4",
+            "seconds": 2521,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 249
+          },
           "alternates": []
         },
         {
@@ -2586,8 +2684,20 @@
           "number": 20,
           "name": "KRISTEN DAVIS, OMAR EPPS",
           "airdate": "2004-02-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-2004",
+            "itemTitle": "Late Night With Conan O' Brien - 2004",
+            "file": "Late Night with Conan O'Brien 2004.02.18 - Kristin Davis, Omar Epps, The Holmes Brothers.mp4",
+            "name": "Late Night with Conan O'Brien 2004.02.18 - Kristin Davis, Omar Epps, The Holmes Brothers",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-2004/Late%20Night%20with%20Conan%20O'Brien%202004.02.18%20-%20Kristin%20Davis%2C%20Omar%20Epps%2C%20The%20Holmes%20Brothers.mp4",
+            "seconds": 2520,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 248
+          },
           "alternates": []
         },
         {
@@ -3530,8 +3640,20 @@
           "number": 72,
           "name": "TOM BROKAW, STEVE COOGAN, MAMA GENA",
           "airdate": "2004-06-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-2004",
+            "itemTitle": "Late Night With Conan O' Brien - 2004",
+            "file": "Late Night with Conan O'Brien 2004.06.09 - Kristin Davis, Steve Coogan, Regena Thomashauer.mp4",
+            "name": "Late Night with Conan O'Brien 2004.06.09 - Kristin Davis, Steve Coogan, Regena Thomashauer",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-2004/Late%20Night%20with%20Conan%20O'Brien%202004.06.09%20-%20Kristin%20Davis%2C%20Steve%20Coogan%2C%20Regena%20Thomashauer.mp4",
+            "seconds": 2530,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 393
+          },
           "alternates": []
         },
         {
@@ -3806,8 +3928,20 @@
           "number": 90,
           "name": "RANDY CONSTAN",
           "airdate": "2004-07-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-2004",
+            "itemTitle": "Late Night With Conan O' Brien - 2004",
+            "file": "Late Night with Conan O'Brien 2004.07.16 - Jimmy Smits, Reverend Al Sharpton, Randy Constan.mp4",
+            "name": "Late Night with Conan O'Brien 2004.07.16 - Jimmy Smits, Reverend Al Sharpton, Randy Constan",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-2004/Late%20Night%20with%20Conan%20O'Brien%202004.07.16%20-%20Jimmy%20Smits%2C%20Reverend%20Al%20Sharpton%2C%20Randy%20Constan.mp4",
+            "seconds": 2532,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 314
+          },
           "alternates": []
         },
         {
@@ -4963,8 +5097,20 @@
           "number": 2,
           "name": "2013",
           "airdate": "2005-02-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-2005",
+            "itemTitle": "Late Night With Conan O' Brien - 2005",
+            "file": "Late Night with Conan O'Brien 2005.02.02 - Donald Trump, Mekhi Phifer, Demetri Martin.mp4",
+            "name": "Late Night with Conan O'Brien 2005.02.02 - Donald Trump, Mekhi Phifer, Demetri Martin",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-2005/Late%20Night%20with%20Conan%20O'Brien%202005.02.02%20-%20Donald%20Trump%2C%20Mekhi%20Phifer%2C%20Demetri%20Martin.mp4",
+            "seconds": 2520,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 250
+          },
           "alternates": []
         },
         {
@@ -5935,8 +6081,20 @@
           "number": 95,
           "name": "RUSSELL CROWE, KRISTEN DAVIS, LEN BERMAN",
           "airdate": "2005-06-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-2005",
+            "itemTitle": "Late Night With Conan O' Brien - 2005",
+            "file": "Late Night with Conan O'Brien 2005.06.09 - Russell Crowe, Kristin Davis, Len Berman.mp4",
+            "name": "Late Night with Conan O'Brien 2005.06.09 - Russell Crowe, Kristin Davis, Len Berman",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-2005/Late%20Night%20with%20Conan%20O'Brien%202005.06.09%20-%20Russell%20Crowe%2C%20Kristin%20Davis%2C%20Len%20Berman.mp4",
+            "seconds": 2520,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 242
+          },
           "alternates": []
         },
         {
@@ -6152,17 +6310,31 @@
           "file": {
             "conf": 0.6,
             "why": "title ~ \"John C. Reilly, Vlasta, John Mayer\" (0.63)",
-            "item": "late-night-with-conan-o-brien-2006",
-            "itemTitle": "Late Night With Conan O' Brien - 2006",
-            "file": "Late Night with Conan O'Brien 2006.08.02 - John C. Reilly, Ashanti, Jackie Greene.mp4",
-            "name": "Late Night with Conan O'Brien 2006.08.02 - John C. Reilly, Ashanti, Jackie Greene",
-            "url": "https://archive.org/download/late-night-with-conan-o-brien-2006/Late%20Night%20with%20Conan%20O'Brien%202006.08.02%20-%20John%20C.%20Reilly%2C%20Ashanti%2C%20Jackie%20Greene.mp4",
-            "seconds": 2521,
-            "format": "h.264",
+            "item": "late-night-with-conan-o-brien-2000",
+            "itemTitle": "Late Night With Conan O' Brien - 2000",
+            "file": "Late Night with Conan O'Brien 2000.01.11 - Freddie Prinze Jr., John C. Reilly, Hank Williams III.mp4",
+            "name": "Late Night with Conan O'Brien 2000.01.11 - Freddie Prinze Jr., John C. Reilly, Hank Williams III",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-2000/Late%20Night%20with%20Conan%20O'Brien%202000.01.11%20-%20Freddie%20Prinze%20Jr.%2C%20John%20C.%20Reilly%2C%20Hank%20Williams%20III.mp4",
+            "seconds": 2526,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 242
+            "sizeMB": 436
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"John C. Reilly, Vlasta, John Mayer\" (0.63)",
+              "item": "late-night-with-conan-o-brien-2006",
+              "itemTitle": "Late Night With Conan O' Brien - 2006",
+              "file": "Late Night with Conan O'Brien 2006.08.02 - John C. Reilly, Ashanti, Jackie Greene.mp4",
+              "name": "Late Night with Conan O'Brien 2006.08.02 - John C. Reilly, Ashanti, Jackie Greene",
+              "url": "https://archive.org/download/late-night-with-conan-o-brien-2006/Late%20Night%20with%20Conan%20O'Brien%202006.08.02%20-%20John%20C.%20Reilly%2C%20Ashanti%2C%20Jackie%20Greene.mp4",
+              "seconds": 2521,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 242
+            }
+          ]
         },
         {
           "number": 10,
@@ -8005,8 +8177,20 @@
           "number": 58,
           "name": "Ray Liotta, Mary Lynn Rajskub, Joseph Arthur",
           "airdate": "2007-04-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-2007",
+            "itemTitle": "Late Night With Conan O' Brien - 2007",
+            "file": "Late Night with Conan O'Brien 2007.04.13 - Ray Liotta, Mary Lynn Rajskub, Joseph Arthur & The Lonely Astronauts.mp4",
+            "name": "Late Night with Conan O'Brien 2007.04.13 - Ray Liotta, Mary Lynn Rajskub, Joseph Arthur & The Lonely Astronauts",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-2007/Late%20Night%20with%20Conan%20O'Brien%202007.04.13%20-%20Ray%20Liotta%2C%20Mary%20Lynn%20Rajskub%2C%20Joseph%20Arthur%20%26%20The%20Lonely%20Astronauts.mp4",
+            "seconds": 2520,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 253
+          },
           "alternates": []
         },
         {
@@ -9314,8 +9498,20 @@
           "number": 14,
           "name": "Jim Gaffigan, Chuck \"The Iceman\" Liddell, Joe Nichols",
           "airdate": "2008-01-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "late-night-with-conan-o-brien-2008",
+            "itemTitle": "Late Night With Conan O' Brien - 2008",
+            "file": "Late Night with Conan O'Brien 2008.01.28 (Writer's Strike) - Jim Gaffigan, Chuck The Iceman Liddell, Joe Nichols.mp4",
+            "name": "Late Night with Conan O'Brien 2008.01.28 (Writer's Strike) - Jim Gaffigan, Chuck The Iceman Liddell, Joe Nichols",
+            "url": "https://archive.org/download/late-night-with-conan-o-brien-2008/Late%20Night%20with%20Conan%20O'Brien%202008.01.28%20(Writer's%20Strike)%20-%20Jim%20Gaffigan%2C%20Chuck%20The%20Iceman%20Liddell%2C%20Joe%20Nichols.mp4",
+            "seconds": 2547,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 367
+          },
           "alternates": []
         },
         {
@@ -11051,8 +11247,21 @@
           "number": 30,
           "name": "The White Stripes",
           "airdate": "2009-02-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "lnconanunsorted",
+            "itemTitle": "Late Night with Conan O'Brien unsorted episodes",
+            "file": "Late.Night.With.Conan.O.Brien.FINAL.SHOW.2009.02.20.The.White.Stripes.HDTV.XviD-XOXO.mp4",
+            "name": "Late.Night.With.Conan.O.Brien.FINAL.SHOW.2009.02.20.The.White.Stripes.HDTV.XviD-XOXO",
+            "url": "https://archive.org/download/lnconanunsorted/Late.Night.With.Conan.O.Brien.FINAL.SHOW.2009.02.20.The.White.Stripes.HDTV.XviD-XOXO.mp4",
+            "seconds": 2810,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 293
+          },
           "alternates": []
         }
       ]

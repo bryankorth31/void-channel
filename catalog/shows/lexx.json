@@ -3,7 +3,7 @@
   "slug": "lexx",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Sci-Fi Channel",
-  "matchedAt": "2026-10-16T07:56:54.035Z",
+  "matchedAt": "2026-10-19T04:10:58.374Z",
   "addedAt": "2026-10-15T12:07:53.371Z",
   "tvmaze": {
     "id": 1656,
@@ -588,17 +588,31 @@
           "file": {
             "conf": 0.8,
             "why": "title ~ \"P4X\" (0.95)",
-            "item": "lexx-season4",
-            "itemTitle": "Lexx - Season 4 [2001-02]",
-            "file": "Lexx-S04xE03-P4X.mp4",
-            "name": "Lexx-S04xE03-P4X",
-            "url": "https://archive.org/download/lexx-season4/Lexx-S04xE03-P4X.mp4",
-            "seconds": 2696,
-            "format": "h.264",
+            "item": "lexx-season-4-ep-3-p-4-x",
+            "itemTitle": "LEXX SEASON 4 Ep 3 - P4X",
+            "file": "LEXX_SEASON4_Ep-3 P4X.mp4",
+            "name": "LEXX_SEASON4_Ep-3 P4X",
+            "url": "https://archive.org/download/lexx-season-4-ep-3-p-4-x/LEXX_SEASON4_Ep-3%20P4X.mp4",
+            "seconds": 2698,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 282
+            "sizeMB": 921
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"P4X\" (0.95)",
+              "item": "lexx-season4",
+              "itemTitle": "Lexx - Season 4 [2001-02]",
+              "file": "Lexx-S04xE03-P4X.mp4",
+              "name": "Lexx-S04xE03-P4X",
+              "url": "https://archive.org/download/lexx-season4/Lexx-S04xE03-P4X.mp4",
+              "seconds": 2696,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 282
+            }
+          ]
         },
         {
           "number": 4,

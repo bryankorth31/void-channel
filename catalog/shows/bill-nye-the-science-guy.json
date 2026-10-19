@@ -3,7 +3,7 @@
   "slug": "bill-nye-the-science-guy",
   "type": "Documentary & Geographic",
   "network": "PBS",
-  "matchedAt": "2026-10-16T07:58:02.850Z",
+  "matchedAt": "2026-10-19T04:12:07.548Z",
   "addedAt": "2026-10-15T12:08:34.589Z",
   "tvmaze": {
     "id": 8602,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 100,
-    "live": 80,
-    "review": 17,
-    "missing": 3,
-    "pct": 97
+    "live": 100,
+    "review": 0,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -108,9 +108,9 @@
           "number": 3,
           "name": "Dinosaurs",
           "airdate": "1993-09-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -122,7 +122,21 @@
             "playable": true,
             "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Dinosaurs\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "03 Dinosaurs.mp4",
+              "name": "03 Dinosaurs",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/03%20Dinosaurs.mp4",
+              "seconds": 1377,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 4,
@@ -196,9 +210,9 @@
           "number": 6,
           "name": "Gravity",
           "airdate": "1993-10-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -210,7 +224,21 @@
             "playable": true,
             "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Gravity\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "06 Gravity.mp4",
+              "name": "06 Gravity",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/06%20Gravity.mp4",
+              "seconds": 1376,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 7,
@@ -318,9 +346,9 @@
           "number": 10,
           "name": "Simple Machines",
           "airdate": "1993-11-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -332,7 +360,34 @@
             "playable": true,
             "sizeMB": 136
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Simple Machines\" (1.00)",
+              "item": "SimpleMachinesVHS",
+              "itemTitle": "Bill Nye the Science Guy: Simple Machines (VHS)",
+              "file": "Simple Machines.mp4",
+              "name": "Simple Machines",
+              "url": "https://archive.org/download/SimpleMachinesVHS/Simple%20Machines.mp4",
+              "seconds": 1392,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 919
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Simple Machines\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "10 Simple Machines.mp4",
+              "name": "10 Simple Machines",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/10%20Simple%20Machines.mp4",
+              "seconds": 1353,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 11,
@@ -474,17 +529,43 @@
           "number": 15,
           "name": "Earth's Seasons",
           "airdate": "1993-12-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "BNTSG_2",
+            "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
+            "file": "BNTSG S01E15 Seasons.mp4",
+            "name": "BNTSG S01E15 Seasons",
+            "url": "https://archive.org/download/BNTSG_2/BNTSG%20S01E15%20Seasons.mp4",
+            "seconds": 1378,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Earth's Seasons\" (0.87)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "15 Earth Seasons.mp4",
+              "name": "15 Earth Seasons",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/15%20Earth%20Seasons.mp4",
+              "seconds": 1381,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Light & Color",
           "airdate": "1993-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -496,7 +577,21 @@
             "playable": true,
             "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Light & Color\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "16 Light and Color.mp4",
+              "name": "16 Light and Color",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/16%20Light%20and%20Color.mp4",
+              "seconds": 1380,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 17,
@@ -737,9 +832,9 @@
           "number": 3,
           "name": "Blood & Circulation",
           "airdate": "1994-03-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -751,15 +846,29 @@
             "playable": true,
             "sizeMB": 137
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Blood & Circulation\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "23 Blood & Circulation.mp4",
+              "name": "23 Blood & Circulation",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/23%20Blood%20%26%20Circulation.mp4",
+              "seconds": 1377,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Chemical Reactions",
           "airdate": "1994-03-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -771,7 +880,21 @@
             "playable": true,
             "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Chemical Reactions\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "24 Chemical Reactions.mp4",
+              "name": "24 Chemical Reactions",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/24%20Chemical%20Reactions.mp4",
+              "seconds": 1382,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 138
+            }
+          ]
         },
         {
           "number": 5,
@@ -878,9 +1001,9 @@
           "number": 8,
           "name": "Bones & Muscles",
           "airdate": "1994-09-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -892,7 +1015,21 @@
             "playable": true,
             "sizeMB": 136
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Bones & Muscles\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "28 Bones & Muscles.mp4",
+              "name": "28 Bones & Muscles",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/28%20Bones%20%26%20Muscles.mp4",
+              "seconds": 1362,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 9,
@@ -1297,9 +1434,9 @@
           "number": 1,
           "name": "Planets & Moons",
           "airdate": "1995-01-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -1378,6 +1515,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 139
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Plants\" (0.62)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "41 Planets.mp4",
+              "name": "41 Planets",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/41%20Planets.mp4",
+              "seconds": 1377,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
             }
           ]
         },
@@ -1453,9 +1603,9 @@
           "number": 6,
           "name": "Evolution",
           "airdate": "1995-02-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -1467,7 +1617,21 @@
             "playable": true,
             "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Evolution\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "46 Evolution.mp4",
+              "name": "46 Evolution",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/46%20Evolution.mp4",
+              "seconds": 1380,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 139
+            }
+          ]
         },
         {
           "number": 7,
@@ -1677,9 +1841,9 @@
           "number": 13,
           "name": "Mammals",
           "airdate": "1995-09-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -1691,7 +1855,47 @@
             "playable": true,
             "sizeMB": 140
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Mammals\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "53 Mammals.mp4",
+              "name": "53 Mammals",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/53%20Mammals.mp4",
+              "seconds": 1377,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Mammals\" (0.95)",
+              "item": "BNTSG_2",
+              "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
+              "file": "BNTSG S04E03 Marine Mammals.mp4",
+              "name": "BNTSG S04E03 Marine Mammals",
+              "url": "https://archive.org/download/BNTSG_2/BNTSG%20S04E03%20Marine%20Mammals.mp4",
+              "seconds": 1379,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Mammals\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "63 Marine Mammals.mp4",
+              "name": "63 Marine Mammals",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/63%20Marine%20Mammals.mp4",
+              "seconds": 1379,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 14,
@@ -1901,9 +2105,9 @@
           "number": 20,
           "name": "Animal Locomotion",
           "airdate": "1995-10-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -1915,7 +2119,21 @@
             "playable": true,
             "sizeMB": 137
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Animal Locomotion\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "60 Animal Locomotion.mp4",
+              "name": "60 Animal Locomotion",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/60%20Animal%20Locomotion.mp4",
+              "seconds": 1389,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         }
       ]
     },
@@ -1994,8 +2212,20 @@
           "number": 3,
           "name": "Marine Mammals",
           "airdate": "1995-11-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "BNTSG_2",
+            "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
+            "file": "BNTSG S04E03 Marine Mammals.mp4",
+            "name": "BNTSG S04E03 Marine Mammals",
+            "url": "https://archive.org/download/BNTSG_2/BNTSG%20S04E03%20Marine%20Mammals.mp4",
+            "seconds": 1379,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137
+          },
           "alternates": []
         },
         {
@@ -2036,9 +2266,35 @@
           "number": 5,
           "name": "NTV Top 11 Video Countdown",
           "airdate": "1995-12-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "BNTSG_2",
+            "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
+            "file": "BNTSG S04E05 NTV Top 11 Countdown.mp4",
+            "name": "BNTSG S04E05 NTV Top 11 Countdown",
+            "url": "https://archive.org/download/BNTSG_2/BNTSG%20S04E05%20NTV%20Top%2011%20Countdown.mp4",
+            "seconds": 1380,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"NTV Top 11 Video Countdown\" (0.76)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "65 NTV Top 11 Countdown.mp4",
+              "name": "65 NTV Top 11 Countdown",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/65%20NTV%20Top%2011%20Countdown.mp4",
+              "seconds": 1380,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 6,
@@ -2193,9 +2449,9 @@
           "number": 10,
           "name": "Flowers",
           "airdate": "1996-01-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -2207,15 +2463,29 @@
             "playable": true,
             "sizeMB": 137
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Flowers\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "70 Flowers.mp4",
+              "name": "70 Flowers",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/70%20Flowers.mp4",
+              "seconds": 1392,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Archaeology",
           "airdate": "1996-01-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -2227,7 +2497,21 @@
             "playable": true,
             "sizeMB": 134
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Archaeology\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "71 Archaeology.mp4",
+              "name": "71 Archaeology",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/71%20Archaeology.mp4",
+              "seconds": 1355,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 134
+            }
+          ]
         },
         {
           "number": 12,
@@ -2267,9 +2551,9 @@
           "number": 13,
           "name": "Amphibians",
           "airdate": "1996-01-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -2281,7 +2565,21 @@
             "playable": true,
             "sizeMB": 137
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Amphibians\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "73 Amphibians.mp4",
+              "name": "73 Amphibians",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/73%20Amphibians.mp4",
+              "seconds": 1386,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 14,
@@ -2389,9 +2687,9 @@
           "number": 17,
           "name": "Inventions",
           "airdate": "1996-02-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -2613,19 +2911,6 @@
             "sizeMB": 137
           },
           "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Genes\" (0.95)",
-              "item": "BillNyeTheScienceGuyGenesFULLEPISODE",
-              "itemTitle": "Bill Nye The Science Guy & Genes [ FULL EPISODE ]",
-              "file": "Bill Nye The Science Guy & Genes [ FULL EPISODE ].mp4",
-              "name": "Bill Nye The Science Guy & Genes [ FULL EPISODE ]",
-              "url": "https://archive.org/download/BillNyeTheScienceGuyGenesFULLEPISODE/Bill%20Nye%20The%20Science%20Guy%20%26%20Genes%20%5B%20FULL%20EPISODE%20%5D.mp4",
-              "seconds": 1382,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 76
-            },
             {
               "conf": 0.75,
               "why": "title ~ \"Genes\" (0.95)",
@@ -2849,9 +3134,9 @@
           "number": 10,
           "name": "Lakes & Ponds",
           "airdate": "1998-02-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -2863,7 +3148,21 @@
             "playable": true,
             "sizeMB": 137
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Lakes & Ponds\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "90 Lakes & Ponds.mp4",
+              "name": "90 Lakes & Ponds",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/90%20Lakes%20%26%20Ponds.mp4",
+              "seconds": 1381,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 11,
@@ -3005,9 +3304,9 @@
           "number": 15,
           "name": "Comets & Meteors",
           "airdate": "1998-05-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "BNTSG_2",
             "itemTitle": "Bill Nye The Science Guy - TV Series (1993)",
@@ -3019,7 +3318,21 @@
             "playable": true,
             "sizeMB": 137
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Comets & Meteors\" (0.95)",
+              "item": "billnyethescienceguythecompleteseries-07-28-2021",
+              "itemTitle": "Bill Nye the Science Guy: The Complete Series",
+              "file": "95 Comets & Meteors.mp4",
+              "name": "95 Comets & Meteors",
+              "url": "https://archive.org/download/billnyethescienceguythecompleteseries-07-28-2021/95%20Comets%20%26%20Meteors.mp4",
+              "seconds": 1376,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 16,

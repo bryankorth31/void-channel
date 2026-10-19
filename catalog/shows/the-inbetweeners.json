@@ -3,21 +3,21 @@
   "slug": "the-inbetweeners",
   "type": "British and Beyond",
   "network": "E4",
-  "matchedAt": "2026-10-16T07:57:03.392Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:11:10.504Z",
+  "addedAt": "2026-10-16T07:57:03.392Z",
   "tvmaze": {
-    "id": null,
+    "id": 953,
     "name": "The Inbetweeners",
-    "runtime": null,
-    "premiered": null,
+    "runtime": 30,
+    "premiered": "2008-05-01",
     "network": "E4"
   },
   "coverage": {
-    "total": 37,
-    "live": 0,
-    "review": 37,
-    "missing": 0,
-    "pct": 100
+    "total": 18,
+    "live": 6,
+    "review": 0,
+    "missing": 12,
+    "pct": 33
   },
   "seasons": [
     {
@@ -25,55 +25,107 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the us",
-          "state": "REVIEW",
+          "name": "First Day",
+          "airdate": "2008-05-01",
+          "state": "LIVE",
           "file": {
-            "item": "the-inbetweeners-us-incomplete",
-            "itemTitle": "The Inbetweeners US (Incomplete)",
-            "file": "The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON.ia.mp4",
-            "name": "The.Inbetweeners.US.S01E01.HDTV",
-            "url": "https://archive.org/download/the-inbetweeners-us-incomplete/The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON.ia.mp4",
-            "seconds": 1341,
-            "format": "h.264 IA",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "the-inbetweeners-2008-s-01-e-01-first-day-576p-dvd-x-265-panda",
+            "itemTitle": "The Inbetweeners ( 2008) S 01 E 01 First Day ( 576p DVD X 265 Panda)",
+            "file": "The Inbetweeners (2008) - S01E01 - First Day (576p DVD x265 Panda).mp4",
+            "name": "The Inbetweeners (2008) - S01E01 - First Day (576p DVD x265 Panda)",
+            "url": "https://archive.org/download/the-inbetweeners-2008-s-01-e-01-first-day-576p-dvd-x-265-panda/The%20Inbetweeners%20(2008)%20-%20S01E01%20-%20First%20Day%20(576p%20DVD%20x265%20Panda).mp4",
+            "seconds": 1314,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 194,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "codecRisk": "video (x265)",
+            "sizeMB": 129
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "the-inbetweeners-series1",
+              "itemTitle": "The Inbetweeners - Series 1 (2008)",
+              "file": "The Inbetweeners 1x01 First Day.mp4",
+              "name": "The Inbetweeners 1x01 First Day",
+              "url": "https://archive.org/download/the-inbetweeners-series1/The%20Inbetweeners%201x01%20First%20Day.mp4",
+              "seconds": 1307,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 124
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-inbetweeners-us-incomplete",
+              "itemTitle": "The Inbetweeners US (Incomplete)",
+              "file": "The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON.ia.mp4",
+              "name": "The.Inbetweeners.US.S01E01.HDTV",
+              "url": "https://archive.org/download/the-inbetweeners-us-incomplete/The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON.ia.mp4",
+              "seconds": 1341,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 194
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "the-inbetweeners-us-incomplete",
+              "itemTitle": "The Inbetweeners US (Incomplete)",
+              "file": "The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON.mp4",
+              "name": "The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON",
+              "url": "https://archive.org/download/the-inbetweeners-us-incomplete/The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON.mp4",
+              "seconds": 1341,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 194
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "the us 2hd",
-          "state": "REVIEW",
+          "name": "Bunk Off",
+          "airdate": "2008-05-01",
+          "state": "LIVE",
           "file": {
-            "item": "the-inbetweeners-us-incomplete",
-            "itemTitle": "The Inbetweeners US (Incomplete)",
-            "file": "The.Inbetweeners.US.S01E02.HDTV.x264-2HD.mp4",
-            "name": "The.Inbetweeners.US.S01E02.HDTV.x264-2HD",
-            "url": "https://archive.org/download/the-inbetweeners-us-incomplete/The.Inbetweeners.US.S01E02.HDTV.x264-2HD.mp4",
-            "seconds": 1231,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "the-inbetweeners-series1",
+            "itemTitle": "The Inbetweeners - Series 1 (2008)",
+            "file": "The Inbetweeners 1x02 Bunk Off.mp4",
+            "name": "The Inbetweeners 1x02 Bunk Off",
+            "url": "https://archive.org/download/the-inbetweeners-series1/The%20Inbetweeners%201x02%20Bunk%20Off.mp4",
+            "seconds": 1438,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 242,
-            "ep": {
-              "season": 1,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 143
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Bunk Off\" (0.95)",
+              "item": "episode-two-bunk-off",
+              "itemTitle": "The Inbetweeners - Season 1",
+              "file": "Episode Two - Bunk Off.mp4",
+              "name": "Episode Two - Bunk Off",
+              "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Two%20-%20Bunk%20Off.mp4",
+              "seconds": 1438,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 3,
-          "name": "the thorpe park",
-          "state": "REVIEW",
+          "name": "Thorpe Park",
+          "airdate": "2008-05-08",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-inbetweeners-series1",
             "itemTitle": "The Inbetweeners - Series 1 (2008)",
             "file": "The Inbetweeners 1x03 Thorpe Park.mp4",
@@ -82,21 +134,32 @@
             "seconds": 1344,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 131,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 131
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Thorpe Park\" (0.95)",
+              "item": "episode-two-bunk-off",
+              "itemTitle": "The Inbetweeners - Season 1",
+              "file": "Episode Three - Thorpe Park.mp4",
+              "name": "Episode Three - Thorpe Park",
+              "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Three%20-%20Thorpe%20Park.mp4",
+              "seconds": 1344,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 135
+            }
+          ]
         },
         {
           "number": 4,
-          "name": "the will gets a girlfriend",
-          "state": "REVIEW",
+          "name": "Girlfriend",
+          "airdate": "2008-05-15",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-inbetweeners-series1",
             "itemTitle": "The Inbetweeners - Series 1 (2008)",
             "file": "The Inbetweeners 1x04 Will Gets A Girlfriend.mp4",
@@ -105,21 +168,32 @@
             "seconds": 1420,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 143,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 143
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Girlfriend\" (0.95)",
+              "item": "episode-two-bunk-off",
+              "itemTitle": "The Inbetweeners - Season 1",
+              "file": "Episode Four - Girlfriend.mp4",
+              "name": "Episode Four - Girlfriend",
+              "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Four%20-%20Girlfriend.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 5,
-          "name": "the caravan club",
-          "state": "REVIEW",
+          "name": "Caravan Club",
+          "airdate": "2008-05-22",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-inbetweeners-series1",
             "itemTitle": "The Inbetweeners - Series 1 (2008)",
             "file": "The Inbetweeners 1x05 Caravan Club.mp4",
@@ -128,21 +202,32 @@
             "seconds": 1352,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 138,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 138
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Caravan Club\" (0.95)",
+              "item": "episode-two-bunk-off",
+              "itemTitle": "The Inbetweeners - Season 1",
+              "file": "Episode Five - Caravan Club.mp4",
+              "name": "Episode Five - Caravan Club",
+              "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Five%20-%20Caravan%20Club.mp4",
+              "seconds": 1352,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "the xmas party",
-          "state": "REVIEW",
+          "name": "Xmas Party",
+          "airdate": "2008-05-29",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-inbetweeners-series1",
             "itemTitle": "The Inbetweeners - Series 1 (2008)",
             "file": "The Inbetweeners 1x06 Xmas Party.mp4",
@@ -151,654 +236,131 @@
             "seconds": 1421,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 145,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 145
           },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Xmas Party\" (0.95)",
+              "item": "episode-two-bunk-off",
+              "itemTitle": "The Inbetweeners - Season 1",
+              "file": "Episode Six - Xmas Party.mp4",
+              "name": "Episode Six - Xmas Party",
+              "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Six%20-%20Xmas%20Party.mp4",
+              "seconds": 1421,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Field Trip",
+          "airdate": "2009-04-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "the us lol",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-inbetweeners-us-incomplete",
-            "itemTitle": "The Inbetweeners US (Incomplete)",
-            "file": "The.Inbetweeners.US.S01E08.HDTV.x264-LOL.mp4",
-            "name": "The.Inbetweeners.US.S01E08.HDTV.x264-LOL",
-            "url": "https://archive.org/download/the-inbetweeners-us-incomplete/The.Inbetweeners.US.S01E08.HDTV.x264-LOL.mp4",
-            "seconds": 1255,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 211,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 2,
+          "name": "Work Experience",
+          "airdate": "2009-04-09",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "the us 2hd",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-inbetweeners-us-incomplete",
-            "itemTitle": "The Inbetweeners US (Incomplete)",
-            "file": "the.inbetweeners.us.s01e09.hdtv.x264-2hd.mp4",
-            "name": "the.inbetweeners.us.s01e09.hdtv.x264-2hd",
-            "url": "https://archive.org/download/the-inbetweeners-us-incomplete/the.inbetweeners.us.s01e09.hdtv.x264-2hd.mp4",
-            "seconds": 1201,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 160,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 3,
+          "name": "Will's Birthday",
+          "airdate": "2009-04-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 11,
-          "name": "the us 2hd fg",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-inbetweeners-us-incomplete",
-            "itemTitle": "The Inbetweeners US (Incomplete)",
-            "file": "The.Inbetweeners.US.S01E11.HDTV.x264-2HD[fg].mp4",
-            "name": "The.Inbetweeners.US.S01E11.HDTV.x264-2HD[fg]",
-            "url": "https://archive.org/download/the-inbetweeners-us-incomplete/The.Inbetweeners.US.S01E11.HDTV.x264-2HD%5Bfg%5D.mp4",
-            "seconds": 1243,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 170,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 4,
+          "name": "A Night Out in London",
+          "airdate": "2009-04-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 12,
-          "name": "the us 2hd",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-inbetweeners-us-incomplete",
-            "itemTitle": "The Inbetweeners US (Incomplete)",
-            "file": "the.inbetweeners.us.s01e12.hdtv.x264-2hd.mp4",
-            "name": "the.inbetweeners.us.s01e12.hdtv.x264-2hd",
-            "url": "https://archive.org/download/the-inbetweeners-us-incomplete/the.inbetweeners.us.s01e12.hdtv.x264-2hd.mp4",
-            "seconds": 1222,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 171,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 5,
+          "name": "The Duke of Edinburgh Awards",
+          "airdate": "2009-04-30",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 13,
-          "name": "five caravan club",
-          "state": "REVIEW",
-          "file": {
-            "item": "episode-two-bunk-off",
-            "itemTitle": "The Inbetweeners - Season 1",
-            "file": "Episode Five - Caravan Club.mp4",
-            "name": "Episode Five - Caravan Club",
-            "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Five%20-%20Caravan%20Club.mp4",
-            "seconds": 1352,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 137,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 6,
+          "name": "Exam Time",
+          "airdate": "2009-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Fashion Show",
+          "airdate": "2010-09-13",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 14,
-          "name": "four girlfriend",
-          "state": "REVIEW",
-          "file": {
-            "item": "episode-two-bunk-off",
-            "itemTitle": "The Inbetweeners - Season 1",
-            "file": "Episode Four - Girlfriend.mp4",
-            "name": "Episode Four - Girlfriend",
-            "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Four%20-%20Girlfriend.mp4",
-            "seconds": 1420,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 141,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 2,
+          "name": "The Gig and the Girlfriend",
+          "airdate": "2010-09-20",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 15,
-          "name": "one first day",
-          "state": "REVIEW",
-          "file": {
-            "item": "episode-two-bunk-off",
-            "itemTitle": "The Inbetweeners - Season 1",
-            "file": "Episode One - First Day.mp4",
-            "name": "Episode One - First Day",
-            "url": "https://archive.org/download/episode-two-bunk-off/Episode%20One%20-%20First%20Day.mp4",
-            "seconds": 1307,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 132,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 3,
+          "name": "Will's Dilemma",
+          "airdate": "2010-09-27",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 16,
-          "name": "six xmas party",
-          "state": "REVIEW",
-          "file": {
-            "item": "episode-two-bunk-off",
-            "itemTitle": "The Inbetweeners - Season 1",
-            "file": "Episode Six - Xmas Party.mp4",
-            "name": "Episode Six - Xmas Party",
-            "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Six%20-%20Xmas%20Party.mp4",
-            "seconds": 1421,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 140,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 4,
+          "name": "The Trip to Warwick",
+          "airdate": "2010-10-04",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 17,
-          "name": "three thorpe park",
-          "state": "REVIEW",
-          "file": {
-            "item": "episode-two-bunk-off",
-            "itemTitle": "The Inbetweeners - Season 1",
-            "file": "Episode Three - Thorpe Park.mp4",
-            "name": "Episode Three - Thorpe Park",
-            "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Three%20-%20Thorpe%20Park.mp4",
-            "seconds": 1344,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 135,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 5,
+          "name": "Home Alone",
+          "airdate": "2010-10-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 18,
-          "name": "two bunk off",
-          "state": "REVIEW",
-          "file": {
-            "item": "episode-two-bunk-off",
-            "itemTitle": "The Inbetweeners - Season 1",
-            "file": "Episode Two - Bunk Off.mp4",
-            "name": "Episode Two - Bunk Off",
-            "url": "https://archive.org/download/episode-two-bunk-off/Episode%20Two%20-%20Bunk%20Off.mp4",
-            "seconds": 1438,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 145,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "the 20191024",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20191024_0230",
-            "itemTitle": " The Inbetweeners 20191024 0230",
-            "file": "The Inbetweeners_20191024_0230.mp4",
-            "name": "The Inbetweeners_20191024_0230",
-            "url": "https://archive.org/download/The_Inbetweeners_20191024_0230/The%20Inbetweeners_20191024_0230.mp4",
-            "seconds": 2398,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 233,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "the 20191114",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20191114_0205",
-            "itemTitle": " The Inbetweeners 20191114 0205",
-            "file": "The Inbetweeners_20191114_0205.mp4",
-            "name": "The Inbetweeners_20191114_0205",
-            "url": "https://archive.org/download/The_Inbetweeners_20191114_0205/The%20Inbetweeners_20191114_0205.mp4",
-            "seconds": 2097,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 204,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "the 20191115",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20191115_0245",
-            "itemTitle": " The Inbetweeners 20191115 0245",
-            "file": "The Inbetweeners_20191115_0245.mp4",
-            "name": "The Inbetweeners_20191115_0245",
-            "url": "https://archive.org/download/The_Inbetweeners_20191115_0245/The%20Inbetweeners_20191115_0245.mp4",
-            "seconds": 2399,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 233,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "the 20191119",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20191119_0205",
-            "itemTitle": " The Inbetweeners 20191119 0205",
-            "file": "The Inbetweeners_20191119_0205.mp4",
-            "name": "The Inbetweeners_20191119_0205",
-            "url": "https://archive.org/download/The_Inbetweeners_20191119_0205/The%20Inbetweeners_20191119_0205.mp4",
-            "seconds": 2398,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 233,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "the 20191125",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20191125_0205",
-            "itemTitle": " The Inbetweeners 20191125 0205",
-            "file": "The Inbetweeners_20191125_0205.mp4",
-            "name": "The Inbetweeners_20191125_0205",
-            "url": "https://archive.org/download/The_Inbetweeners_20191125_0205/The%20Inbetweeners_20191125_0205.mp4",
-            "seconds": 2398,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 233,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "the 20200925",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20200925_0350",
-            "itemTitle": " The Inbetweeners 20200925 0350",
-            "file": "The Inbetweeners_20200925_0350.mp4",
-            "name": "The Inbetweeners_20200925_0350",
-            "url": "https://archive.org/download/The_Inbetweeners_20200925_0350/The%20Inbetweeners_20200925_0350.mp4",
-            "seconds": 1860,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 181,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "the 20200925",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20200925_0421",
-            "itemTitle": " The Inbetweeners 20200925 0421",
-            "file": "The Inbetweeners_20200925_0421.mp4",
-            "name": "The Inbetweeners_20200925_0421",
-            "url": "https://archive.org/download/The_Inbetweeners_20200925_0421/The%20Inbetweeners_20200925_0421.mp4",
-            "seconds": 1748,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 169,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "the 20201002",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20201002_0220",
-            "itemTitle": " The Inbetweeners 20201002 0220",
-            "file": "The Inbetweeners_20201002_0220.mp4",
-            "name": "The Inbetweeners_20201002_0220",
-            "url": "https://archive.org/download/The_Inbetweeners_20201002_0220/The%20Inbetweeners_20201002_0220.mp4",
-            "seconds": 2090,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 204,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 27,
-          "name": "the 20201002",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20201002_0249",
-            "itemTitle": " The Inbetweeners 20201002 0249",
-            "file": "The Inbetweeners_20201002_0249.mp4",
-            "name": "The Inbetweeners_20201002_0249",
-            "url": "https://archive.org/download/The_Inbetweeners_20201002_0249/The%20Inbetweeners_20201002_0249.mp4",
-            "seconds": 1630,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 159,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "the 20201009",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20201009_0254",
-            "itemTitle": " The Inbetweeners 20201009 0254",
-            "file": "The Inbetweeners_20201009_0254.mp4",
-            "name": "The Inbetweeners_20201009_0254",
-            "url": "https://archive.org/download/The_Inbetweeners_20201009_0254/The%20Inbetweeners_20201009_0254.mp4",
-            "seconds": 1630,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 158,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "the 20201016",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20201016_0225",
-            "itemTitle": " The Inbetweeners 20201016 0225",
-            "file": "The Inbetweeners_20201016_0225.mp4",
-            "name": "The Inbetweeners_20201016_0225",
-            "url": "https://archive.org/download/The_Inbetweeners_20201016_0225/The%20Inbetweeners_20201016_0225.mp4",
-            "seconds": 2089,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 204,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "the 20201016",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20201016_0255",
-            "itemTitle": " The Inbetweeners 20201016 0255",
-            "file": "The Inbetweeners_20201016_0255.mp4",
-            "name": "The Inbetweeners_20201016_0255",
-            "url": "https://archive.org/download/The_Inbetweeners_20201016_0255/The%20Inbetweeners_20201016_0255.mp4",
-            "seconds": 1585,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 154,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 31,
-          "name": "the 20201023",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20201023_0259",
-            "itemTitle": " The Inbetweeners 20201023 0259",
-            "file": "The Inbetweeners_20201023_0259.mp4",
-            "name": "The Inbetweeners_20201023_0259",
-            "url": "https://archive.org/download/The_Inbetweeners_20201023_0259/The%20Inbetweeners_20201023_0259.mp4",
-            "seconds": 1783,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 173,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 32,
-          "name": "the 20201023",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20201023_0325",
-            "itemTitle": " The Inbetweeners 20201023 0325",
-            "file": "The Inbetweeners_20201023_0325.mp4",
-            "name": "The Inbetweeners_20201023_0325",
-            "url": "https://archive.org/download/The_Inbetweeners_20201023_0325/The%20Inbetweeners_20201023_0325.mp4",
-            "seconds": 2390,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 234,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "the 20201030",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20201030_0255",
-            "itemTitle": " The Inbetweeners 20201030 0255",
-            "file": "The Inbetweeners_20201030_0255.mp4",
-            "name": "The Inbetweeners_20201030_0255",
-            "url": "https://archive.org/download/The_Inbetweeners_20201030_0255/The%20Inbetweeners_20201030_0255.mp4",
-            "seconds": 2099,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 206,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 34,
-          "name": "the 20201112",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20201112_0322",
-            "itemTitle": " The Inbetweeners 20201112 0322",
-            "file": "The Inbetweeners_20201112_0322.mp4",
-            "name": "The Inbetweeners_20201112_0322",
-            "url": "https://archive.org/download/The_Inbetweeners_20201112_0322/The%20Inbetweeners_20201112_0322.mp4",
-            "seconds": 1790,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 173,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 35,
-          "name": "the 20201112",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20201112_0354",
-            "itemTitle": " The Inbetweeners 20201112 0354",
-            "file": "The Inbetweeners_20201112_0354.mp4",
-            "name": "The Inbetweeners_20201112_0354",
-            "url": "https://archive.org/download/The_Inbetweeners_20201112_0354/The%20Inbetweeners_20201112_0354.mp4",
-            "seconds": 1799,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 174,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 36,
-          "name": "the 20201228",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20201228_0020",
-            "itemTitle": " The Inbetweeners 20201228 0020",
-            "file": "The Inbetweeners_20201228_0020.mp4",
-            "name": "The Inbetweeners_20201228_0020",
-            "url": "https://archive.org/download/The_Inbetweeners_20201228_0020/The%20Inbetweeners_20201228_0020.mp4",
-            "seconds": 2389,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 233,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 37,
-          "name": "the 20201228",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20201228_0055",
-            "itemTitle": " The Inbetweeners 20201228 0055",
-            "file": "The Inbetweeners_20201228_0055.mp4",
-            "name": "The Inbetweeners_20201228_0055",
-            "url": "https://archive.org/download/The_Inbetweeners_20201228_0055/The%20Inbetweeners_20201228_0055.mp4",
-            "seconds": 1995,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 194,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 38,
-          "name": "the 20210102",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20210102_0000",
-            "itemTitle": " The Inbetweeners 20210102 0000",
-            "file": "The Inbetweeners_20210102_0000.mp4",
-            "name": "The Inbetweeners_20210102_0000",
-            "url": "https://archive.org/download/The_Inbetweeners_20210102_0000/The%20Inbetweeners_20210102_0000.mp4",
-            "seconds": 2389,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 233,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 39,
-          "name": "the 20210102",
-          "state": "REVIEW",
-          "file": {
-            "item": "The_Inbetweeners_20210102_0038",
-            "itemTitle": " The Inbetweeners 20210102 0038",
-            "file": "The Inbetweeners_20210102_0038.mp4",
-            "name": "The Inbetweeners_20210102_0038",
-            "url": "https://archive.org/download/The_Inbetweeners_20210102_0038/The%20Inbetweeners_20210102_0038.mp4",
-            "seconds": 1777,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 173,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 6,
+          "name": "The Camping Trip",
+          "airdate": "2010-10-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 953,
-    "name": "The Inbetweeners",
-    "placed": 6
-  }
+  ]
 }

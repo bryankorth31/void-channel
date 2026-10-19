@@ -3,7 +3,7 @@
   "slug": "the-critic",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:31.823Z",
+  "matchedAt": "2026-10-19T04:10:39.764Z",
   "addedAt": "2026-10-15T17:27:52.671Z",
   "tvmaze": {
     "id": 697,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 33,
     "live": 0,
-    "review": 18,
-    "missing": 15,
-    "pct": 55
+    "review": 22,
+    "missing": 11,
+    "pct": 67
   },
   "seasons": [
     {
@@ -215,8 +215,20 @@
           "number": 11,
           "name": "A Day at the Races and a Night at the Opera",
           "airdate": "1994-07-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"A Day at the Races and a Night at the Opera\" (0.96)",
+            "item": "the-critic-animated-series",
+            "itemTitle": "The Critic (1994-1995 & 2000-2001)",
+            "file": "11 - A Day at the Races and a Night at the Opera.mp4",
+            "name": "11 - A Day at the Races and a Night at the Opera",
+            "url": "https://archive.org/download/the-critic-animated-series/11%20-%20A%20Day%20at%20the%20Races%20and%20a%20Night%20at%20the%20Opera.mp4",
+            "seconds": 1363,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 329
+          },
           "alternates": []
         },
         {
@@ -268,16 +280,40 @@
           "number": 1,
           "name": "Sherman, Woman and Child",
           "airdate": "1995-03-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Sherman, Woman and Child\" (0.95)",
+            "item": "the-critic-animated-series",
+            "itemTitle": "The Critic (1994-1995 & 2000-2001)",
+            "file": "14 - Sherman, Woman and Child.mp4",
+            "name": "14 - Sherman, Woman and Child",
+            "url": "https://archive.org/download/the-critic-animated-series/14%20-%20Sherman%2C%20Woman%20and%20Child.mp4",
+            "seconds": 1304,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 312
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Siskel & Ebert & Jay & Alice",
           "airdate": "1995-03-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Siskel & Ebert & Jay & Alice\" (0.96)",
+            "item": "the-critic-animated-series",
+            "itemTitle": "The Critic (1994-1995 & 2000-2001)",
+            "file": "20 - Siskel & Ebert & Jay & Alice.mp4",
+            "name": "20 - Siskel & Ebert & Jay & Alice",
+            "url": "https://archive.org/download/the-critic-animated-series/20%20-%20Siskel%20%26%20Ebert%20%26%20Jay%20%26%20Alice.mp4",
+            "seconds": 1333,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 321
+          },
           "alternates": []
         },
         {
@@ -424,8 +460,20 @@
           "number": 10,
           "name": "I Can't Believe It's a Clip Show",
           "airdate": "1995-05-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"I Can't Believe It's a Clip Show\" (0.96)",
+            "item": "the-critic-animated-series",
+            "itemTitle": "The Critic (1994-1995 & 2000-2001)",
+            "file": "23 - I Can't Believe It's a Clip Show.mp4",
+            "name": "23 - I Can't Believe It's a Clip Show",
+            "url": "https://archive.org/download/the-critic-animated-series/23%20-%20I%20Can't%20Believe%20It's%20a%20Clip%20Show.mp4",
+            "seconds": 1340,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 323
+          },
           "alternates": []
         }
       ]

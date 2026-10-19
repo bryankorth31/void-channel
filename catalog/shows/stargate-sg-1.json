@@ -3,21 +3,21 @@
   "slug": "stargate-sg-1",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Sci-Fi Channel",
-  "matchedAt": "2026-10-16T07:56:53.164Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:10:57.790Z",
+  "addedAt": "2026-10-16T07:56:53.164Z",
   "tvmaze": {
-    "id": null,
-    "name": "Stargate SG-1",
-    "runtime": null,
-    "premiered": null,
-    "network": "Sci-Fi Channel"
+    "id": 204,
+    "name": "Stargate SG·1",
+    "runtime": 60,
+    "premiered": "1997-07-27",
+    "network": "Syfy"
   },
   "coverage": {
-    "total": 132,
-    "live": 0,
-    "review": 132,
-    "missing": 0,
-    "pct": 100
+    "total": 213,
+    "live": 2,
+    "review": 125,
+    "missing": 86,
+    "pct": 60
   },
   "seasons": [
     {
@@ -25,33 +25,20 @@
       "episodes": [
         {
           "number": 1,
-          "name": "02 children of the gods showtime bd dd5 thesickle taoe",
-          "state": "REVIEW",
-          "file": {
-            "item": "stargate-sg-1-1997-1080p-bd",
-            "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
-            "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E01-02 - Children of the Gods (Showtime) (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
-            "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E01-02 - Children of the Gods (Showtime) (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
-            "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E01-02%20-%20Children%20of%20the%20Gods%20(Showtime)%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
-            "seconds": 5827,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 2503,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Children of the Gods",
+          "airdate": "1997-07-27",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "the enemy within bd dd5 thesickle taoe",
+          "number": 2,
+          "name": "The Enemy Within",
+          "airdate": "1997-08-01",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "title ~ \"The Enemy Within\" (0.95) | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E03 - The Enemy Within (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -61,21 +48,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 917,
-            "ep": {
-              "season": 1,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 917
           },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "emancipation bd dd5 thesickle taoe",
+          "number": 3,
+          "name": "Emancipation",
+          "airdate": "1997-08-08",
           "state": "REVIEW",
           "file": {
+            "conf": 0.7,
+            "why": "title ~ \"Emancipation\" (0.95) | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E04 - Emancipation (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -85,21 +69,54 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1506,
-            "ep": {
-              "season": 1,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1506
           },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "the broca divide bd dd5 thesickle taoe",
+          "number": 4,
+          "name": "The Broca Divide",
+          "airdate": "1997-08-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "stargate-sg-1-1997-1080p-bd",
+            "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+            "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E04 - Emancipation (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+            "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E04 - Emancipation (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+            "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E04%20-%20Emancipation%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+            "seconds": 2654,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1506
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"The Broca Divide\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E05 - The Broca Divide (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E05 - The Broca Divide (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E05%20-%20The%20Broca%20Divide%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1212
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "name": "The First Commandment",
+          "airdate": "1997-08-22",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E05 - The Broca Divide (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -109,21 +126,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1212,
-            "ep": {
-              "season": 1,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1212
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"The First Commandment\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E06 - The First Commandment (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E06 - The First Commandment (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E06%20-%20The%20First%20Commandment%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1562
+            }
+          ]
         },
         {
           "number": 6,
-          "name": "the first commandment bd dd5 thesickle taoe",
+          "name": "Cold Lazarus",
+          "airdate": "1997-08-29",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E06 - The First Commandment (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -133,45 +162,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1562,
-            "ep": {
-              "season": 1,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1562
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Cold Lazarus\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E07 - Cold Lazarus (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E07 - Cold Lazarus (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E07%20-%20Cold%20Lazarus%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1155
+            }
+          ]
         },
         {
           "number": 7,
-          "name": "cold lazarus bd dd5 thesickle taoe",
+          "name": "The Nox",
+          "airdate": "1997-09-12",
           "state": "REVIEW",
           "file": {
-            "item": "stargate-sg-1-1997-1080p-bd",
-            "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
-            "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E07 - Cold Lazarus (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
-            "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E07 - Cold Lazarus (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
-            "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E07%20-%20Cold%20Lazarus%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
-            "seconds": 2654,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 1155,
-            "ep": {
-              "season": 1,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "the nox bd dd5 thesickle taoe",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.7,
+            "why": "title ~ \"The Nox\" (0.95) | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E08 - The Nox (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -181,21 +198,54 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1594,
-            "ep": {
-              "season": 1,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1594
           },
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "brief candle bd dd5 thesickle taoe",
+          "number": 8,
+          "name": "Brief Candle",
+          "airdate": "1997-09-19",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "stargate-sg-1-1997-1080p-bd",
+            "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+            "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E08 - The Nox (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+            "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E08 - The Nox (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+            "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E08%20-%20The%20Nox%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+            "seconds": 2654,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1594
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Brief Candle\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E09 - Brief Candle (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E09 - Brief Candle (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E09%20-%20Brief%20Candle%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1069
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "name": "Thor's Hammer",
+          "airdate": "1997-09-26",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E09 - Brief Candle (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -205,21 +255,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1069,
-            "ep": {
-              "season": 1,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1069
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Thor's Hammer\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E10 - Thor's Hammer (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E10 - Thor's Hammer (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E10%20-%20Thor's%20Hammer%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1103
+            }
+          ]
         },
         {
           "number": 10,
-          "name": "thors hammer bd dd5 thesickle taoe",
+          "name": "The Torment of Tantalus",
+          "airdate": "1997-10-03",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E10 - Thor's Hammer (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -229,21 +291,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1103,
-            "ep": {
-              "season": 1,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1103
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"The Torment of Tantalus\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E11 - The Torment of Tantalus (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E11 - The Torment of Tantalus (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E11%20-%20The%20Torment%20of%20Tantalus%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1067
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "the torment of tantalus bd dd5 thesickle taoe",
+          "name": "Bloodlines",
+          "airdate": "1997-10-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E11 - The Torment of Tantalus (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -253,21 +327,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1067,
-            "ep": {
-              "season": 1,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1067
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Bloodlines\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E12 - Bloodlines (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E12 - Bloodlines (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E12%20-%20Bloodlines%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1308
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "bloodlines bd dd5 thesickle taoe",
+          "name": "Fire and Water",
+          "airdate": "1997-10-17",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E12 - Bloodlines (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -277,21 +363,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1308,
-            "ep": {
-              "season": 1,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1308
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Fire and Water\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E13 - Fire and Water (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E13 - Fire and Water (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E13%20-%20Fire%20and%20Water%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1408
+            }
+          ]
         },
         {
           "number": 13,
-          "name": "fire and water bd dd5 thesickle taoe",
+          "name": "Hathor",
+          "airdate": "1997-10-24",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E13 - Fire and Water (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -301,21 +399,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1408,
-            "ep": {
-              "season": 1,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1408
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Hathor\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E14 - Hathor (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E14 - Hathor (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E14%20-%20Hathor%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1081
+            }
+          ]
         },
         {
           "number": 14,
-          "name": "hathor bd dd5 thesickle taoe",
+          "name": "Singularity",
+          "airdate": "1997-10-31",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E14 - Hathor (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -325,21 +435,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1081,
-            "ep": {
-              "season": 1,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1081
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Singularity\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E15 - Singularity (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E15 - Singularity (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E15%20-%20Singularity%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1091
+            }
+          ]
         },
         {
           "number": 15,
-          "name": "singularity bd dd5 thesickle taoe",
+          "name": "Cor-ai",
+          "airdate": "1998-01-23",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E15 - Singularity (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -349,21 +471,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1091,
-            "ep": {
-              "season": 1,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1091
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Cor-ai\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E16 - Cor-Ai (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E16 - Cor-Ai (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E16%20-%20Cor-Ai%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1082
+            }
+          ]
         },
         {
           "number": 16,
-          "name": "cor ai bd dd5 thesickle taoe",
+          "name": "Enigma",
+          "airdate": "1998-01-30",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E16 - Cor-Ai (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -373,21 +507,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1082,
-            "ep": {
-              "season": 1,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1082
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Enigma\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E17 - Enigma (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E17 - Enigma (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E17%20-%20Enigma%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1250
+            }
+          ]
         },
         {
           "number": 17,
-          "name": "enigma bd dd5 thesickle taoe",
+          "name": "Solitudes",
+          "airdate": "1998-02-06",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E17 - Enigma (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -397,21 +543,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1250,
-            "ep": {
-              "season": 1,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1250
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Solitudes\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E18 - Solitudes (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E18 - Solitudes (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E18%20-%20Solitudes%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 840
+            }
+          ]
         },
         {
           "number": 18,
-          "name": "solitudes bd dd5 thesickle taoe",
+          "name": "Tin Man",
+          "airdate": "1998-02-13",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E18 - Solitudes (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -421,45 +579,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 840,
-            "ep": {
-              "season": 1,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 840
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Tin Man\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E19 - Tin Man (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E19 - Tin Man (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E19%20-%20Tin%20Man%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 914
+            }
+          ]
         },
         {
           "number": 19,
-          "name": "tin man bd dd5 thesickle taoe",
+          "name": "There But for the Grace of God",
+          "airdate": "1998-02-20",
           "state": "REVIEW",
           "file": {
-            "item": "stargate-sg-1-1997-1080p-bd",
-            "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
-            "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E19 - Tin Man (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
-            "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E19 - Tin Man (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
-            "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E19%20-%20Tin%20Man%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
-            "seconds": 2654,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 914,
-            "ep": {
-              "season": 1,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "there but for the grace of god bd dd5 thesickle taoe",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.7,
+            "why": "title ~ \"There But for the Grace of God\" (0.95) | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E20 - There But For the Grace of God (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -469,21 +615,54 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1080,
-            "ep": {
-              "season": 1,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1080
           },
           "alternates": []
         },
         {
-          "number": 21,
-          "name": "politics bd dd5 thesickle taoe",
+          "number": 20,
+          "name": "Politics",
+          "airdate": "1998-02-27",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "stargate-sg-1-1997-1080p-bd",
+            "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+            "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E20 - There But For the Grace of God (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+            "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E20 - There But For the Grace of God (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+            "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E20%20-%20There%20But%20For%20the%20Grace%20of%20God%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+            "seconds": 2654,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 1080
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Politics\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E21 - Politics (1) (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E21 - Politics (1) (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E21%20-%20Politics%20(1)%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1166
+            }
+          ]
+        },
+        {
+          "number": 21,
+          "name": "Within the Serpent's Grasp",
+          "airdate": "1998-03-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E21 - Politics (1) (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
@@ -493,120 +672,24 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1166,
-            "ep": {
-              "season": 1,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1166
           },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "within the serpents grasp 2 bd dd5 thesickle taoe",
-          "state": "REVIEW",
-          "file": {
-            "item": "stargate-sg-1-1997-1080p-bd",
-            "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
-            "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E22 - Within the Serpent's Grasp (2) (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
-            "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E22 - Within the Serpent's Grasp (2) (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
-            "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E22%20-%20Within%20the%20Serpent's%20Grasp%20(2)%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
-            "seconds": 2654,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 1030,
-            "ep": {
-              "season": 1,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 23,
-          "name": "sg1 southern cross 10 08",
-          "state": "REVIEW",
-          "file": {
-            "item": "stargate-sg-1-southern-cross-10-08-2006_202408",
-            "itemTitle": "Stargate SG-1 (Southern Cross, 10-08-2006)",
-            "file": "Stargate SG1 (Southern Cross, 10-08-2006).mp4",
-            "name": "Stargate SG1 (Southern Cross, 10-08-2006)",
-            "url": "https://archive.org/download/stargate-sg-1-southern-cross-10-08-2006_202408/Stargate%20SG1%20(Southern%20Cross%2C%2010-08-2006).mp4",
-            "seconds": 3174,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 2928,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 24,
-          "name": "children of the gods final cut upscale dd5 dh",
-          "state": "REVIEW",
-          "file": {
-            "item": "stargate-sg-1-1997-1080p-bd",
-            "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
-            "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) -  - Children of the Gods (Final Cut) (1080p.DVDRip.Upscale.DD5.1.x265-DH).mkv",
-            "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) -  - Children of the Gods (Final Cut) (1080p.DVDRip.Upscale.DD5.1.x265-DH)",
-            "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20%20-%20Children%20of%20the%20Gods%20(Final%20Cut)%20(1080p.DVDRip.Upscale.DD5.1.x265-DH).mkv",
-            "seconds": 5532,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 7319,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 25,
-          "name": "wttg 20010916 040000",
-          "state": "REVIEW",
-          "file": {
-            "item": "WTTG_20010916_040000_Stargate_SG-1",
-            "itemTitle": "Stargate SG-1 : WTTG : September 16, 2001 12:00am-1:00am EDT",
-            "file": "WTTG_20010916_040000_Stargate_SG-1.mp4",
-            "name": "WTTG_20010916_040000_Stargate_SG-1",
-            "url": "https://archive.org/download/WTTG_20010916_040000_Stargate_SG-1/WTTG_20010916_040000_Stargate_SG-1.mp4",
-            "seconds": 3601,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 359,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "wttg 20010916 080000",
-          "state": "REVIEW",
-          "file": {
-            "item": "WTTG_20010916_080000_Stargate_SG-1",
-            "itemTitle": "Stargate SG-1 : WTTG : September 16, 2001 4:00am-5:00am EDT",
-            "file": "WTTG_20010916_080000_Stargate_SG-1.mp4",
-            "name": "WTTG_20010916_080000_Stargate_SG-1",
-            "url": "https://archive.org/download/WTTG_20010916_080000_Stargate_SG-1/WTTG_20010916_080000_Stargate_SG-1.mp4",
-            "seconds": 3602,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 362,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Within the Serpent's Grasp\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E22 - Within the Serpent's Grasp (2) (1080p.BD.DD5.1.x265-TheSickle[TAoE]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 01/Stargate SG-1 (1997) - S01E22 - Within the Serpent's Grasp (2) (1080p.BD.DD5.1.x265-TheSickle[TAoE])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2001%2FStargate%20SG-1%20(1997)%20-%20S01E22%20-%20Within%20the%20Serpent's%20Grasp%20(2)%20(1080p.BD.DD5.1.x265-TheSickle%5BTAoE%5D).mkv",
+              "seconds": 2654,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1030
+            }
+          ]
         }
       ]
     },
@@ -615,9 +698,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the serpents lair 3 hybrid bd dd5 thesickle taoe jr",
+          "name": "The Serpent's Lair",
+          "airdate": "1998-06-26",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E01 - The Serpent's Lair (3) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -627,21 +713,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1102,
-            "ep": {
-              "season": 2,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1102
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "in the line of duty hybrid bd dd5 thesickle taoe jr",
+          "name": "In the Line of Duty",
+          "airdate": "1998-07-03",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E02 - In the Line of Duty (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -651,21 +734,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1054,
-            "ep": {
-              "season": 2,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1054
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "prisoners hybrid bd dd5 thesickle taoe jr",
+          "name": "Prisoners",
+          "airdate": "1998-07-10",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E03 - Prisoners (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -675,21 +755,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1026,
-            "ep": {
-              "season": 2,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1026
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "the gamekeeper hybrid bd dd5 thesickle taoe jr",
+          "name": "The Gamekeeper",
+          "airdate": "1998-07-17",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E04 - The Gamekeeper (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -699,21 +776,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1298,
-            "ep": {
-              "season": 2,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1298
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "need hybrid bd dd5 thesickle taoe jr",
+          "name": "Need",
+          "airdate": "1998-07-24",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E05 - Need (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -723,21 +797,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1178,
-            "ep": {
-              "season": 2,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1178
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "thors chariot hybrid bd dd5 thesickle taoe jr",
+          "name": "Thor's Chariot",
+          "airdate": "1998-07-31",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E06 - Thor's Chariot (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -747,21 +818,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1480,
-            "ep": {
-              "season": 2,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1480
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "message in a bottle hybrid bd dd5 thesickle taoe jr",
+          "name": "Message in a Bottle",
+          "airdate": "1998-08-07",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E07 - Message in a Bottle (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -771,21 +839,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 970,
-            "ep": {
-              "season": 2,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 970
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "family hybrid bd dd5 thesickle taoe jr",
+          "name": "Family",
+          "airdate": "1998-08-14",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E08 - Family (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -795,21 +860,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1150,
-            "ep": {
-              "season": 2,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1150
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "secrets hybrid bd dd5 thesickle taoe jr",
+          "name": "Secrets",
+          "airdate": "1998-08-21",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E09 - Secrets (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -819,21 +881,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1008,
-            "ep": {
-              "season": 2,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1008
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "bane hybrid bd dd5 thesickle taoe jr",
+          "name": "Bane",
+          "airdate": "1998-09-25",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E10 - Bane (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -843,21 +902,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1075,
-            "ep": {
-              "season": 2,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1075
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "the tokra hybrid bd dd5 thesickle taoe jr",
+          "name": "The Tok'ra",
+          "airdate": "1998-10-02",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E11 - The Tok'ra (1) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -867,21 +923,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1039,
-            "ep": {
-              "season": 2,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1039
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"The Tok'ra\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E12 - The Tok'ra (2) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E12 - The Tok'ra (2) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR)",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2002%2FStargate%20SG-1%20(1997)%20-%20S02E12%20-%20The%20Tok'ra%20(2)%20(1080p.Hybrid.BD.DD5.1.x265-TheSickle%5BTAoE%5D-JR).mkv",
+              "seconds": 2655,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1087
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "the tokra 2 hybrid bd dd5 thesickle taoe jr",
+          "name": "The Tok'ra (Part Two)",
+          "airdate": "1998-10-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E12 - The Tok'ra (2) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -891,21 +959,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1087,
-            "ep": {
-              "season": 2,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1087
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "spirits hybrid bd dd5 thesickle taoe jr",
+          "name": "Spirits",
+          "airdate": "1998-10-23",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E13 - Spirits (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -915,21 +980,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1204,
-            "ep": {
-              "season": 2,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1204
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "touchstone hybrid bd dd5 thesickle taoe jr",
+          "name": "Touchstone",
+          "airdate": "1998-10-30",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E14 - Touchstone (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -939,21 +1001,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1136,
-            "ep": {
-              "season": 2,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1136
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "the fifth race hybrid bd dd5 thesickle taoe jr",
+          "name": "The Fifth Race",
+          "airdate": "1999-01-22",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E15 - The Fifth Race (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -963,21 +1022,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1085,
-            "ep": {
-              "season": 2,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1085
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "a matter of time hybrid bd dd5 thesickle taoe jr",
+          "name": "A Matter of Time",
+          "airdate": "1999-01-29",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E16 - A Matter of Time (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -987,21 +1043,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1346,
-            "ep": {
-              "season": 2,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1346
           },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "holiday hybrid bd dd5 thesickle taoe jr",
+          "name": "Holiday",
+          "airdate": "1999-02-05",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E17 - Holiday (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1011,21 +1064,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1328,
-            "ep": {
-              "season": 2,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1328
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "serpents song hybrid bd dd5 thesickle taoe jr",
+          "name": "Serpent's Song",
+          "airdate": "1999-02-12",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E18 - Serpent's Song (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1035,21 +1085,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1038,
-            "ep": {
-              "season": 2,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1038
           },
           "alternates": []
         },
         {
           "number": 19,
-          "name": "one false step hybrid bd dd5 thesickle taoe jr",
+          "name": "One False Step",
+          "airdate": "1999-02-19",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E19 - One False Step (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1059,21 +1106,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1399,
-            "ep": {
-              "season": 2,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1399
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "show and tell hybrid bd dd5 thesickle taoe jr",
+          "name": "Show and Tell",
+          "airdate": "1999-02-26",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E20 - Show and Tell (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1083,21 +1127,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1253,
-            "ep": {
-              "season": 2,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1253
           },
           "alternates": []
         },
         {
           "number": 21,
-          "name": "hybrid bd dd5 thesickle taoe jr",
+          "name": "1969",
+          "airdate": "1999-03-05",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E21 - 1969 (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1107,21 +1148,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1224,
-            "ep": {
-              "season": 2,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1224
           },
           "alternates": []
         },
         {
           "number": 22,
-          "name": "out of mind hybrid bd dd5 thesickle taoe jr",
+          "name": "Out of Mind",
+          "airdate": "1999-03-12",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 02/Stargate SG-1 (1997) - S02E22 - Out of Mind (1) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1131,13 +1169,7 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1030,
-            "ep": {
-              "season": 2,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1030
           },
           "alternates": []
         }
@@ -1148,9 +1180,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "into the fire 2 hybrid bd dd5 thesickle taoe jr",
+          "name": "Into the Fire",
+          "airdate": "1999-06-25",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 03/Stargate SG-1 (1997) - S03E01 - Into the Fire (2) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1160,14 +1195,357 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1309,
-            "ep": {
-              "season": 3,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1309
           },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Seth",
+          "airdate": "1999-07-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Fair Game",
+          "airdate": "1999-07-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Legacy",
+          "airdate": "1999-07-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Learning Curve",
+          "airdate": "1999-07-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Point of View",
+          "airdate": "1999-07-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Deadman Switch",
+          "airdate": "1999-08-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Demons",
+          "airdate": "1999-08-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Rules of Engagement",
+          "airdate": "1999-08-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Forever in a Day",
+          "airdate": "1999-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Past and Present",
+          "airdate": "1999-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Jolinar's Memories",
+          "airdate": "1999-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Devil You Know",
+          "airdate": "1999-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Foothold",
+          "airdate": "1999-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Pretense",
+          "airdate": "2000-01-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Urgo",
+          "airdate": "2000-01-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "A Hundred Days",
+          "airdate": "2000-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Shades of Grey",
+          "airdate": "2000-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "New Ground",
+          "airdate": "2000-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Maternal Instinct",
+          "airdate": "2000-02-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Crystal Skull",
+          "airdate": "2000-03-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Nemesis",
+          "airdate": "2000-03-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Small Victories",
+          "airdate": "2000-06-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Other Side",
+          "airdate": "2000-07-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Upgrades",
+          "airdate": "2000-07-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Crossroads",
+          "airdate": "2000-07-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Divide and Conquer",
+          "airdate": "2000-07-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Window of Opportunity",
+          "airdate": "2000-08-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Watergate",
+          "airdate": "2000-08-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The First Ones",
+          "airdate": "2000-08-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Scorched Earth",
+          "airdate": "2000-08-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Beneath the Surface",
+          "airdate": "2000-09-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Point of No Return",
+          "airdate": "2000-09-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Tangent",
+          "airdate": "2000-09-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Curse",
+          "airdate": "2000-09-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Serpent's Venom",
+          "airdate": "2000-09-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Chain Reaction",
+          "airdate": "2001-01-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "2010",
+          "airdate": "2001-01-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Absolute Power",
+          "airdate": "2001-01-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "The Light",
+          "airdate": "2001-01-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Prodigy",
+          "airdate": "2001-02-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Entity",
+          "airdate": "2001-02-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Double Jeopardy",
+          "airdate": "2001-02-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Exodus",
+          "airdate": "2001-02-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -1177,9 +1555,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "enemies 2 hybrid bd dd5 thesickle taoe jr",
+          "name": "Enemies",
+          "airdate": "2001-06-29",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E01 - Enemies (2) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1189,21 +1570,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1419,
-            "ep": {
-              "season": 5,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1419
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "threshold 3 hybrid bd dd5 thesickle taoe jr",
+          "name": "Threshold",
+          "airdate": "2001-07-06",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E02 - Threshold (3) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1213,21 +1591,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 980,
-            "ep": {
-              "season": 5,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 980
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "ascension hybrid bd dd5 thesickle taoe jr",
+          "name": "Ascension",
+          "airdate": "2001-07-13",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E03 - Ascension (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1237,21 +1612,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1017,
-            "ep": {
-              "season": 5,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1017
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "the fifth man hybrid bd dd5 thesickle taoe jr",
+          "name": "The Fifth Man",
+          "airdate": "2001-07-20",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E04 - The Fifth Man (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1261,21 +1633,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 994,
-            "ep": {
-              "season": 5,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 994
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "red sky hybrid bd dd5 thesickle taoe jr",
+          "name": "Red Sky",
+          "airdate": "2001-07-27",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E05 - Red Sky (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1285,21 +1654,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1171,
-            "ep": {
-              "season": 5,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1171
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "rite of passage hybrid bd dd5 thesickle taoe jr",
+          "name": "Rite of Passage",
+          "airdate": "2001-08-03",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E06 - Rite of Passage (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1309,21 +1675,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 802,
-            "ep": {
-              "season": 5,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 802
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "beast of burden hybrid bd dd5 thesickle taoe jr",
+          "name": "Beast of Burden",
+          "airdate": "2001-08-10",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E07 - Beast of Burden (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1333,21 +1696,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1025,
-            "ep": {
-              "season": 5,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1025
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "the tomb hybrid bd dd5 thesickle taoe jr",
+          "name": "The Tomb",
+          "airdate": "2001-08-17",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E08 - The Tomb (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1357,21 +1717,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 833,
-            "ep": {
-              "season": 5,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 833
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "between two fires hybrid bd dd5 thesickle taoe jr",
+          "name": "Between Two Fires",
+          "airdate": "2001-08-24",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E09 - Between Two Fires (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1381,21 +1738,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 902,
-            "ep": {
-              "season": 5,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 902
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "hybrid bd dd5 thesickle taoe jr",
+          "name": "2001",
+          "airdate": "2001-08-31",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E10 - 2001 (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1405,21 +1759,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 911,
-            "ep": {
-              "season": 5,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 911
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "desperate measures hybrid bd dd5 thesickle taoe jr",
+          "name": "Desperate Measures",
+          "airdate": "2001-09-07",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E11 - Desperate Measures (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1429,21 +1780,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 777,
-            "ep": {
-              "season": 5,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 777
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "wormhole x treme hybrid bd dd5 thesickle taoe jr",
+          "name": "Wormhole X-Treme!",
+          "airdate": "2001-09-08",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E12 - Wormhole X-Treme (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1453,21 +1801,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 952,
-            "ep": {
-              "season": 5,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 952
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "proving ground hybrid bd dd5 thesickle taoe jr",
+          "name": "Proving Ground",
+          "airdate": "2002-03-08",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E13 - Proving Ground (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1477,21 +1822,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 963,
-            "ep": {
-              "season": 5,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 963
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "48 hours hybrid bd dd5 thesickle taoe jr",
+          "name": "48 Hours",
+          "airdate": "2002-03-15",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E14 - 48 Hours (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1501,21 +1843,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 909,
-            "ep": {
-              "season": 5,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 909
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "summit hybrid bd dd5 thesickle taoe jr",
+          "name": "Summit",
+          "airdate": "2002-03-22",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E15 - Summit (1) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1525,21 +1864,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1033,
-            "ep": {
-              "season": 5,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1033
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "last stand 2 hybrid bd dd5 thesickle taoe jr",
+          "name": "Last Stand",
+          "airdate": "2002-03-29",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E16 - Last Stand (2) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1549,21 +1885,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1030,
-            "ep": {
-              "season": 5,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1030
           },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "fail safe hybrid bd dd5 thesickle taoe jr",
+          "name": "Fail Safe",
+          "airdate": "2002-04-05",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E17 - Fail Safe (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1573,21 +1906,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 893,
-            "ep": {
-              "season": 5,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 893
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "the warrior hybrid bd dd5 thesickle taoe jr",
+          "name": "The Warrior",
+          "airdate": "2002-04-12",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E18 - The Warrior (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1597,21 +1927,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1303,
-            "ep": {
-              "season": 5,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1303
           },
           "alternates": []
         },
         {
           "number": 19,
-          "name": "menace hybrid bd dd5 thesickle taoe jr",
+          "name": "Menace",
+          "airdate": "2002-04-26",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E19 - Menace (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1621,21 +1948,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 873,
-            "ep": {
-              "season": 5,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 873
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "the sentinel hybrid bd dd5 thesickle taoe jr",
+          "name": "The Sentinel",
+          "airdate": "2002-05-03",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E20 - The Sentinel (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1645,21 +1969,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 990,
-            "ep": {
-              "season": 5,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 990
           },
           "alternates": []
         },
         {
           "number": 21,
-          "name": "meridian hybrid bd dd5 thesickle taoe jr",
+          "name": "Meridian",
+          "airdate": "2002-05-10",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E21 - Meridian (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1669,21 +1990,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 818,
-            "ep": {
-              "season": 5,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 818
           },
           "alternates": []
         },
         {
           "number": 22,
-          "name": "revelations hybrid bd dd5 thesickle taoe jr",
+          "name": "Revelations",
+          "airdate": "2002-05-17",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 05/Stargate SG-1 (1997) - S05E22 - Revelations (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1693,13 +2011,7 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 918,
-            "ep": {
-              "season": 5,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 918
           },
           "alternates": []
         }
@@ -1710,9 +2022,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "redemption hybrid bd dd5 thesickle taoe jr",
+          "name": "Redemption",
+          "airdate": "2002-06-07",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E01 - Redemption (1) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1722,21 +2037,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1136,
-            "ep": {
-              "season": 6,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1136
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Redemption\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E02 - Redemption (2) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E02 - Redemption (2) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR)",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2006%2FStargate%20SG-1%20(1997)%20-%20S06E02%20-%20Redemption%20(2)%20(1080p.Hybrid.BD.DD5.1.x265-TheSickle%5BTAoE%5D-JR).mkv",
+              "seconds": 2638,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 1139
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "redemption 2 hybrid bd dd5 thesickle taoe jr",
+          "name": "Redemption Part 2",
+          "airdate": "2002-06-14",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E02 - Redemption (2) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1746,21 +2073,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1139,
-            "ep": {
-              "season": 6,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1139
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "descent hybrid bd dd5 thesickle taoe jr",
+          "name": "Descent",
+          "airdate": "2002-06-21",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E03 - Descent (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1770,21 +2094,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1049,
-            "ep": {
-              "season": 6,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1049
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "frozen hybrid bd dd5 thesickle taoe jr",
+          "name": "Frozen",
+          "airdate": "2002-06-28",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E04 - Frozen (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1794,21 +2115,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 873,
-            "ep": {
-              "season": 6,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 873
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "nightwalkers hybrid bd dd5 thesickle taoe jr",
+          "name": "Nightwalkers",
+          "airdate": "2002-07-12",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E05 - Nightwalkers (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1818,21 +2136,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 935,
-            "ep": {
-              "season": 6,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 935
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "abyss hybrid bd dd5 thesickle taoe jr",
+          "name": "Abyss",
+          "airdate": "2002-07-19",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E06 - Abyss (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1842,21 +2157,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 977,
-            "ep": {
-              "season": 6,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 977
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "shadow play hybrid bd dd5 thesickle taoe jr",
+          "name": "Shadow Play",
+          "airdate": "2002-07-26",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E07 - Shadow Play (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1866,21 +2178,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 880,
-            "ep": {
-              "season": 6,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 880
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "the other guys hybrid bd dd5 thesickle taoe jr",
+          "name": "The Other Guys",
+          "airdate": "2002-08-02",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E08 - The Other Guys (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1890,21 +2199,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1338,
-            "ep": {
-              "season": 6,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1338
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "allegiance hybrid bd dd5 thesickle taoe jr",
+          "name": "Allegiance",
+          "airdate": "2002-08-09",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E09 - Allegiance (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1914,21 +2220,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1505,
-            "ep": {
-              "season": 6,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1505
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "cure hybrid bd dd5 thesickle taoe jr",
+          "name": "Cure",
+          "airdate": "2002-08-16",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E10 - Cure (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1938,21 +2241,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1123,
-            "ep": {
-              "season": 6,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1123
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "prometheus hybrid bd dd5 thesickle taoe jr",
+          "name": "Prometheus",
+          "airdate": "2002-08-23",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E11 - Prometheus (1) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1962,21 +2262,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 976,
-            "ep": {
-              "season": 6,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 976
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Prometheus\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E12 - Prometheus Unbound (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E12 - Prometheus Unbound (1080p.WEBRip.DD5.1.x265-Goki[SEV])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2008%2FStargate%20SG-1%20(1997)%20-%20S08E12%20-%20Prometheus%20Unbound%20(1080p.WEBRip.DD5.1.x265-Goki%5BSEV%5D).mkv",
+              "seconds": 2616,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 3251
+            }
+          ]
         },
         {
           "number": 12,
-          "name": "unnatural selection 2 hybrid bd dd5 thesickle taoe jr",
+          "name": "Unnatural Selection",
+          "airdate": "2003-01-10",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E12 - Unnatural Selection (2) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -1986,21 +2298,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 766,
-            "ep": {
-              "season": 6,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 766
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "sight unseen hybrid bd dd5 thesickle taoe jr",
+          "name": "Sight Unseen",
+          "airdate": "2003-01-17",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E13 - Sight Unseen (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -2010,21 +2319,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1148,
-            "ep": {
-              "season": 6,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1148
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "smoke and mirrors hybrid bd dd5 thesickle taoe jr",
+          "name": "Smoke & Mirrors",
+          "airdate": "2003-01-24",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E14 - Smoke & Mirrors (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -2034,21 +2340,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 996,
-            "ep": {
-              "season": 6,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 996
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "paradise lost hybrid bd dd5 thesickle taoe jr",
+          "name": "Paradise Lost",
+          "airdate": "2003-01-31",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E15 - Paradise Lost (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -2058,21 +2361,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1469,
-            "ep": {
-              "season": 6,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1469
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "metamorphosis hybrid bd dd5 thesickle taoe jr",
+          "name": "Metamorphosis",
+          "airdate": "2003-02-07",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E16 - Metamorphosis (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -2082,21 +2382,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1103,
-            "ep": {
-              "season": 6,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1103
           },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "disclosure hybrid bd dd5 thesickle taoe jr",
+          "name": "Disclosure",
+          "airdate": "2003-02-14",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E17 - Disclosure (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -2106,21 +2403,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 917,
-            "ep": {
-              "season": 6,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 917
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "forsaken hybrid bd dd5 thesickle taoe jr",
+          "name": "Forsaken",
+          "airdate": "2003-02-21",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E18 - Forsaken (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -2130,21 +2424,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1168,
-            "ep": {
-              "season": 6,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1168
           },
           "alternates": []
         },
         {
           "number": 19,
-          "name": "the changeling hybrid bd dd5 thesickle taoe jr",
+          "name": "The Changeling",
+          "airdate": "2003-02-28",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E19 - The Changeling (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -2154,21 +2445,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1158,
-            "ep": {
-              "season": 6,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1158
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "memento hybrid bd dd5 thesickle taoe jr",
+          "name": "Memento",
+          "airdate": "2003-03-07",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E20 - Memento (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -2178,21 +2466,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 957,
-            "ep": {
-              "season": 6,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 957
           },
           "alternates": []
         },
         {
           "number": 21,
-          "name": "prophecy hybrid bd dd5 thesickle taoe jr",
+          "name": "Prophecy",
+          "airdate": "2003-03-14",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E21 - Prophecy (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -2202,21 +2487,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1031,
-            "ep": {
-              "season": 6,
-              "episode": 21
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1031
           },
           "alternates": []
         },
         {
           "number": 22,
-          "name": "full circle hybrid bd dd5 thesickle taoe jr",
+          "name": "Full Circle",
+          "airdate": "2003-03-21",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 06/Stargate SG-1 (1997) - S06E22 - Full Circle (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -2226,14 +2508,189 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1391,
-            "ep": {
-              "season": 6,
-              "episode": 22
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1391
           },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 7,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Fallen",
+          "airdate": "2003-06-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Homecoming",
+          "airdate": "2003-06-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Fragile Balance",
+          "airdate": "2003-06-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Orpheus",
+          "airdate": "2003-06-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Revisions",
+          "airdate": "2003-07-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Lifeboat",
+          "airdate": "2003-07-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Enemy Mine",
+          "airdate": "2003-07-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Space Race",
+          "airdate": "2003-08-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Avenger 2.0",
+          "airdate": "2003-08-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Birthright",
+          "airdate": "2003-08-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Evolution",
+          "airdate": "2003-08-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Evolution Part 2",
+          "airdate": "2004-01-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Grace",
+          "airdate": "2004-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Fallout",
+          "airdate": "2004-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Chimera",
+          "airdate": "2004-01-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Death Knell",
+          "airdate": "2004-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Heroes",
+          "airdate": "2004-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Heroes Part 2",
+          "airdate": "2004-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Resurrection",
+          "airdate": "2004-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Inauguration",
+          "airdate": "2004-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Lost City",
+          "airdate": "2004-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Lost City Part 2",
+          "airdate": "2004-03-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -2243,9 +2700,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "new order dd5 goki sev",
+          "name": "New Order",
+          "airdate": "2004-07-09",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E01 - New Order (1) (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2255,21 +2715,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2620,
-            "ep": {
-              "season": 8,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2620
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"New Order\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E02 - New Order (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E02 - New Order (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2008%2FStargate%20SG-1%20(1997)%20-%20S08E02%20-%20New%20Order%20(2)%20(1080p.WEBRip.DD5.1.x265-Goki%5BSEV%5D).mkv",
+              "seconds": 2618,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2917
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "new order 2 dd5 goki sev",
+          "name": "New Order Part 2",
+          "airdate": "2004-07-09",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E02 - New Order (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2279,21 +2751,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2917,
-            "ep": {
-              "season": 8,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2917
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "lockdown dd5 goki sev",
+          "name": "Lockdown",
+          "airdate": "2004-07-23",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E03 - Lockdown (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2303,21 +2772,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2139,
-            "ep": {
-              "season": 8,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2139
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "zero hour dd5 goki sev",
+          "name": "Zero Hour",
+          "airdate": "2004-07-30",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E04 - Zero Hour (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2327,21 +2793,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2908,
-            "ep": {
-              "season": 8,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2908
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "icon dd5 goki sev",
+          "name": "Icon",
+          "airdate": "2004-08-06",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E05 - Icon (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2351,21 +2814,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3381,
-            "ep": {
-              "season": 8,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3381
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "avatar dd5 goki sev",
+          "name": "Avatar",
+          "airdate": "2004-08-13",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E06 - Avatar (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2375,21 +2835,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3094,
-            "ep": {
-              "season": 8,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3094
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "affinity dd5 goki sev",
+          "name": "Affinity",
+          "airdate": "2004-08-20",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E07 - Affinity (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2399,21 +2856,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3702,
-            "ep": {
-              "season": 8,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3702
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "covenant dd5 goki sev",
+          "name": "Covenant",
+          "airdate": "2004-08-27",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E08 - Covenant (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2423,21 +2877,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3951,
-            "ep": {
-              "season": 8,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3951
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "sacrifices dd5 goki sev",
+          "name": "Sacrifices",
+          "airdate": "2004-09-10",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E09 - Sacrifices (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2447,21 +2898,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3157,
-            "ep": {
-              "season": 8,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3157
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "endgame dd5 goki sev",
+          "name": "Endgame",
+          "airdate": "2004-09-17",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E10 - Endgame (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2471,21 +2919,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2985,
-            "ep": {
-              "season": 8,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2985
           },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "gemini dd5 goki sev",
+          "name": "Gemini",
+          "airdate": "2005-01-21",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E11 - Gemini (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2495,21 +2940,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2809,
-            "ep": {
-              "season": 8,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2809
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "prometheus unbound dd5 goki sev",
+          "name": "Prometheus Unbound",
+          "airdate": "2005-01-28",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E12 - Prometheus Unbound (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2519,21 +2961,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3251,
-            "ep": {
-              "season": 8,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3251
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "its good to be king dd5 goki sev",
+          "name": "It's Good To Be King",
+          "airdate": "2005-02-04",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E13 - Its Good to Be King (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2543,21 +2982,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3630,
-            "ep": {
-              "season": 8,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3630
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "full alert dd5 goki sev",
+          "name": "Full Alert",
+          "airdate": "2005-02-11",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E14 - Full Alert (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2567,21 +3003,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2734,
-            "ep": {
-              "season": 8,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2734
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "citizen joe dd5 goki sev",
+          "name": "Citizen Joe",
+          "airdate": "2005-02-18",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E15 - Citizen Joe (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2591,21 +3024,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3055,
-            "ep": {
-              "season": 8,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3055
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "reckoning dd5 goki sev",
+          "name": "Reckoning",
+          "airdate": "2005-02-25",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E16 - Reckoning (1) (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2615,21 +3045,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2863,
-            "ep": {
-              "season": 8,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2863
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Reckoning\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E17 - Reckoning (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E17 - Reckoning (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2008%2FStargate%20SG-1%20(1997)%20-%20S08E17%20-%20Reckoning%20(2)%20(1080p.WEBRip.DD5.1.x265-Goki%5BSEV%5D).mkv",
+              "seconds": 2619,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 2631
+            }
+          ]
         },
         {
           "number": 17,
-          "name": "reckoning 2 dd5 goki sev",
+          "name": "Reckoning Part 2",
+          "airdate": "2005-03-04",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E17 - Reckoning (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2639,21 +3081,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2631,
-            "ep": {
-              "season": 8,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2631
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "threads extended hybrid bd dd5 thesickle taoe jr",
+          "name": "Threads",
+          "airdate": "2005-03-11",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E18 - Threads (Extended) (1080p.Hybrid.BD.DD5.1.x265-TheSickle[TAoE]-JR).mkv",
@@ -2663,21 +3102,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 1777,
-            "ep": {
-              "season": 8,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 1777
           },
           "alternates": []
         },
         {
           "number": 19,
-          "name": "moebius edge2020",
-          "state": "REVIEW",
+          "name": "Moebius",
+          "airdate": "2005-03-18",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "stargate-sg-1-s-08-e-18-threads-1080p-x-265-edge-2020",
             "itemTitle": "Stargate SG 1 S 08 E 18 Threads ( 1080p X 265 EDGE 2020)",
             "file": "Stargate SG-1 - S08E19 - Moebius (1) (1080p x265 EDGE2020).mp4",
@@ -2687,21 +3123,61 @@
             "format": "MPEG4",
             "playable": true,
             "codecRisk": "video (x265)",
-            "sizeMB": 255,
-            "ep": {
-              "season": 8,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 255
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Moebius\" (0.95)",
+              "item": "stargate-sg-1-s-08-e-18-threads-1080p-x-265-edge-2020",
+              "itemTitle": "Stargate SG 1 S 08 E 18 Threads ( 1080p X 265 EDGE 2020)",
+              "file": "Stargate SG-1 - S08E20 - Moebius (2) (1080p x265 EDGE2020).mp4",
+              "name": "Stargate SG-1 - S08E20 - Moebius (2) (1080p x265 EDGE2020)",
+              "url": "https://archive.org/download/stargate-sg-1-s-08-e-18-threads-1080p-x-265-edge-2020/Stargate%20SG-1%20-%20S08E20%20-%20Moebius%20(2)%20(1080p%20x265%20EDGE2020).mp4",
+              "seconds": 2610,
+              "format": "MPEG4",
+              "playable": true,
+              "codecRisk": "video (x265)",
+              "sizeMB": 253
+            },
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E19 - Moebius (1) (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E19 - Moebius (1) (1080p.WEBRip.DD5.1.x265-Goki[SEV])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2008%2FStargate%20SG-1%20(1997)%20-%20S08E19%20-%20Moebius%20(1)%20(1080p.WEBRip.DD5.1.x265-Goki%5BSEV%5D).mkv",
+              "seconds": 2618,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 3469
+            },
+            {
+              "conf": 0.7,
+              "why": "title ~ \"Moebius\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E20 - Moebius (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E20 - Moebius (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2008%2FStargate%20SG-1%20(1997)%20-%20S08E20%20-%20Moebius%20(2)%20(1080p.WEBRip.DD5.1.x265-Goki%5BSEV%5D).mkv",
+              "seconds": 2611,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 3521
+            }
+          ]
         },
         {
           "number": 20,
-          "name": "moebius 2 edge2020",
-          "state": "REVIEW",
+          "name": "Moebius Part 2",
+          "airdate": "2005-03-25",
+          "state": "LIVE",
           "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "stargate-sg-1-s-08-e-18-threads-1080p-x-265-edge-2020",
             "itemTitle": "Stargate SG 1 S 08 E 18 Threads ( 1080p X 265 EDGE 2020)",
             "file": "Stargate SG-1 - S08E20 - Moebius (2) (1080p x265 EDGE2020).mp4",
@@ -2711,14 +3187,188 @@
             "format": "MPEG4",
             "playable": true,
             "codecRisk": "video (x265)",
-            "sizeMB": 253,
-            "ep": {
-              "season": 8,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 253
           },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "S/E in filename",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E20 - Moebius (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 08/Stargate SG-1 (1997) - S08E20 - Moebius (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2008%2FStargate%20SG-1%20(1997)%20-%20S08E20%20-%20Moebius%20(2)%20(1080p.WEBRip.DD5.1.x265-Goki%5BSEV%5D).mkv",
+              "seconds": 2611,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 3521
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "season": 9,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Avalon",
+          "airdate": "2005-07-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Avalon Part 2",
+          "airdate": "2005-07-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Origin",
+          "airdate": "2005-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Ties That Bind",
+          "airdate": "2005-08-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Powers That Be",
+          "airdate": "2005-08-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Beachhead",
+          "airdate": "2005-08-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Ex Deus Machina",
+          "airdate": "2005-08-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Babylon",
+          "airdate": "2005-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Prototype",
+          "airdate": "2005-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Fourth Horseman",
+          "airdate": "2005-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Fourth Horseman Part 2",
+          "airdate": "2006-01-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Collateral Damage",
+          "airdate": "2006-01-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Ripple Effect",
+          "airdate": "2006-01-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Stronghold",
+          "airdate": "2006-01-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Ethon",
+          "airdate": "2006-02-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Off the Grid",
+          "airdate": "2006-02-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "The Scourge",
+          "airdate": "2006-02-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Arthur's Mantle",
+          "airdate": "2006-02-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Crusade",
+          "airdate": "2006-03-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Camelot",
+          "airdate": "2006-03-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -2728,9 +3378,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "flesh and blood dd5 goki sev",
+          "name": "Flesh and Blood",
+          "airdate": "2006-07-14",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E01 - Flesh and Blood (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2740,21 +3393,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2704,
-            "ep": {
-              "season": 10,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2704
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "morpheus dd5 goki sev",
+          "name": "Morpheus",
+          "airdate": "2006-07-21",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E02 - Morpheus (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2764,21 +3414,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2800,
-            "ep": {
-              "season": 10,
-              "episode": 2
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2800
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "the pegasus project dd5 goki sev",
+          "name": "The Pegasus Project",
+          "airdate": "2006-07-28",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E03 - The Pegasus Project (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2788,21 +3435,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3273,
-            "ep": {
-              "season": 10,
-              "episode": 3
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3273
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "insiders dd5 goki sev",
+          "name": "Insiders",
+          "airdate": "2006-08-04",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E04 - Insiders (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2812,21 +3456,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3239,
-            "ep": {
-              "season": 10,
-              "episode": 4
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3239
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "uninvited dd5 goki sev",
+          "name": "Uninvited",
+          "airdate": "2006-08-11",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E05 - Uninvited (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2836,21 +3477,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 4016,
-            "ep": {
-              "season": 10,
-              "episode": 5
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 4016
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "dd5 goki sev",
+          "name": "200",
+          "airdate": "2006-08-18",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E06 - 200 (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2860,21 +3498,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2619,
-            "ep": {
-              "season": 10,
-              "episode": 6
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2619
           },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "counterstrike dd5 goki sev",
+          "name": "Counterstrike",
+          "airdate": "2006-08-25",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E07 - Counterstrike (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2884,21 +3519,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2744,
-            "ep": {
-              "season": 10,
-              "episode": 7
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2744
           },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "memento mori dd5 goki sev",
+          "name": "Memento Mori",
+          "airdate": "2006-09-08",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E08 - Memento Mori (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2908,21 +3540,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3188,
-            "ep": {
-              "season": 10,
-              "episode": 8
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3188
           },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "company of thieves dd5 goki sev",
+          "name": "Company of Thieves",
+          "airdate": "2006-09-15",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E09 - Company of Thieves (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2932,21 +3561,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2799,
-            "ep": {
-              "season": 10,
-              "episode": 9
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2799
           },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "the quest dd5 goki sev",
+          "name": "The Quest",
+          "airdate": "2006-09-22",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E10 - The Quest (1) (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2956,21 +3582,33 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3591,
-            "ep": {
-              "season": 10,
-              "episode": 10
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3591
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"The Quest\" (0.95)",
+              "item": "stargate-sg-1-1997-1080p-bd",
+              "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
+              "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E11 - The Quest (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
+              "name": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E11 - The Quest (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV])",
+              "url": "https://archive.org/download/stargate-sg-1-1997-1080p-bd/Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR%2FSeason%2010%2FStargate%20SG-1%20(1997)%20-%20S10E11%20-%20The%20Quest%20(2)%20(1080p.WEBRip.DD5.1.x265-Goki%5BSEV%5D).mkv",
+              "seconds": 2611,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 3101
+            }
+          ]
         },
         {
           "number": 11,
-          "name": "the quest 2 dd5 goki sev",
+          "name": "The Quest Part 2",
+          "airdate": "2007-04-13",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E11 - The Quest (2) (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -2980,21 +3618,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3101,
-            "ep": {
-              "season": 10,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3101
           },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "line in the sand dd5 goki sev",
+          "name": "Line in the Sand",
+          "airdate": "2007-04-20",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E12 - Line in the Sand (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -3004,21 +3639,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2989,
-            "ep": {
-              "season": 10,
-              "episode": 12
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2989
           },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "the road not taken dd5 goki sev",
+          "name": "The Road Not Taken",
+          "airdate": "2007-04-27",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E13 - The Road Not Taken (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -3028,21 +3660,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3181,
-            "ep": {
-              "season": 10,
-              "episode": 13
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3181
           },
           "alternates": []
         },
         {
           "number": 14,
-          "name": "the shroud dd5 goki sev",
+          "name": "The Shroud",
+          "airdate": "2007-05-04",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E14 - The Shroud (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -3052,21 +3681,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2524,
-            "ep": {
-              "season": 10,
-              "episode": 14
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2524
           },
           "alternates": []
         },
         {
           "number": 15,
-          "name": "bounty dd5 goki sev",
+          "name": "Bounty",
+          "airdate": "2007-05-11",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E15 - Bounty (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -3076,21 +3702,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 3157,
-            "ep": {
-              "season": 10,
-              "episode": 15
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 3157
           },
           "alternates": []
         },
         {
           "number": 16,
-          "name": "bad guys dd5 goki sev",
+          "name": "Bad Guys",
+          "airdate": "2007-05-18",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E16 - Bad Guys (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -3100,21 +3723,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2865,
-            "ep": {
-              "season": 10,
-              "episode": 16
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2865
           },
           "alternates": []
         },
         {
           "number": 17,
-          "name": "talion dd5 goki sev",
+          "name": "Talion",
+          "airdate": "2007-06-01",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E17 - Talion (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -3124,21 +3744,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2636,
-            "ep": {
-              "season": 10,
-              "episode": 17
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2636
           },
           "alternates": []
         },
         {
           "number": 18,
-          "name": "family ties dd5 goki sev",
+          "name": "Family Ties",
+          "airdate": "2007-06-08",
           "state": "REVIEW",
           "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E18 - Family Ties (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -3148,21 +3765,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2957,
-            "ep": {
-              "season": 10,
-              "episode": 18
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2957
           },
           "alternates": []
         },
         {
           "number": 19,
-          "name": "dominion dd5 goki sev",
+          "name": "Dominion",
+          "airdate": "2007-06-15",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E19 - Dominion (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -3172,21 +3786,18 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2693,
-            "ep": {
-              "season": 10,
-              "episode": 19
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2693
           },
           "alternates": []
         },
         {
           "number": 20,
-          "name": "unending dd5 goki sev",
+          "name": "Unending",
+          "airdate": "2007-06-22",
           "state": "REVIEW",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
             "item": "stargate-sg-1-1997-1080p-bd",
             "itemTitle": "Stargate SG-1 ( 1997) 1080p BD DD5.1 x265",
             "file": "Stargate.SG-1.1997.Unicorn.Edition.S01-S10.1080p.Mixed.DD5.1.x265-JR/Season 10/Stargate SG-1 (1997) - S10E20 - Unending (1080p.WEBRip.DD5.1.x265-Goki[SEV]).mkv",
@@ -3196,22 +3807,11 @@
             "format": "Matroska",
             "playable": false,
             "codecRisk": "container (Matroska)",
-            "sizeMB": 2484,
-            "ep": {
-              "season": 10,
-              "episode": 20
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 2484
           },
           "alternates": []
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 204,
-    "name": "Stargate SG·1",
-    "placed": 2
-  }
+  ]
 }

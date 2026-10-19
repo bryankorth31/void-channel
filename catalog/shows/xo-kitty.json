@@ -3,7 +3,8 @@
   "slug": "xo-kitty",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:00.443Z",
+  "matchedAt": "2026-10-19T04:11:05.813Z",
+  "addedAt": "2026-10-19T04:11:05.817Z",
   "tvmaze": {
     "id": 60509,
     "name": "XO, Kitty",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 26,
-    "live": 0,
+    "live": 2,
     "review": 0,
-    "missing": 26,
-    "pct": 0
+    "missing": 24,
+    "pct": 8
   },
   "seasons": [
     {
@@ -180,8 +181,20 @@
           "number": 1,
           "name": "Guest List",
           "airdate": "2026-04-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "xo-kitty-season-3-episode-1-with-eng-subs",
+            "itemTitle": "XO, Kitty Season 3 Episode 1 - Guest List",
+            "file": "XO Kitty Season 3 Episode 1 with Eng Subs.mp4",
+            "name": "XO Kitty Season 3 Episode 1 with Eng Subs",
+            "url": "https://archive.org/download/xo-kitty-season-3-episode-1-with-eng-subs/XO%20Kitty%20Season%203%20Episode%201%20with%20Eng%20Subs.mp4",
+            "seconds": 1873,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 185
+          },
           "alternates": []
         },
         {
@@ -236,8 +249,20 @@
           "number": 8,
           "name": "Wish List",
           "airdate": "2026-04-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "xo-kitty-season-3-episode-8-with-eng-subs",
+            "itemTitle": "XO, Kitty Season 3 Episode 8 - Wish List",
+            "file": "XO Kitty Season 3 Episode 8 with Eng Subs.mp4",
+            "name": "XO Kitty Season 3 Episode 8 with Eng Subs",
+            "url": "https://archive.org/download/xo-kitty-season-3-episode-8-with-eng-subs/XO%20Kitty%20Season%203%20Episode%208%20with%20Eng%20Subs.mp4",
+            "seconds": 2147,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 213
+          },
           "alternates": []
         }
       ]

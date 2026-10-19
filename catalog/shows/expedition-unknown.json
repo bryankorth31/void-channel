@@ -3,7 +3,8 @@
   "slug": "expedition-unknown",
   "type": "Documentary & Geographic",
   "network": "Travel Channel",
-  "matchedAt": "2026-10-16T07:58:06.973Z",
+  "matchedAt": "2026-10-19T04:12:10.788Z",
+  "addedAt": "2026-10-19T04:12:10.792Z",
   "tvmaze": {
     "id": 612,
     "name": "Expedition Unknown",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 161,
     "live": 0,
-    "review": 0,
-    "missing": 161,
-    "pct": 0
+    "review": 1,
+    "missing": 160,
+    "pct": 1
   },
   "seasons": [
     {
@@ -810,8 +811,20 @@
           "number": 1,
           "name": "Dillinger's Lost Loot",
           "airdate": "2021-07-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "absolute episode number",
+            "item": "episode-94-evan-stone-interview",
+            "itemTitle": "EP #94: Interview w/ Extreme Filmmaker on Discovery Channels Expedition Unknown-Evan B. Stone (Live)",
+            "file": "Episode 94 - Live 2k.mp4",
+            "name": "Episode 94 - Live 2k",
+            "url": "https://archive.org/download/episode-94-evan-stone-interview/Episode%2094%20-%20Live%202k.mp4",
+            "seconds": 6636,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 8455
+          },
           "alternates": []
         },
         {

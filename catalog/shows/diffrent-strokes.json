@@ -3,7 +3,7 @@
   "slug": "diffrent-strokes",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:25.828Z",
+  "matchedAt": "2026-10-19T04:12:25.842Z",
   "addedAt": "2026-10-15T12:08:58.208Z",
   "tvmaze": {
     "id": 4606,
@@ -14,9 +14,9 @@
   },
   "coverage": {
     "total": 189,
-    "live": 180,
-    "review": 5,
-    "missing": 4,
+    "live": 183,
+    "review": 3,
+    "missing": 3,
     "pct": 98
   },
   "seasons": [
@@ -818,6 +818,19 @@
               "sizeMB": 223
             },
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "diffrent-strokes-Lando18",
+              "itemTitle": "Diff'rent Strokes (complete TV series)",
+              "file": "Diff'rent Strokes - S01E17 (Mrs. Garrett's Crisis).mp4",
+              "name": "Diff'rent Strokes - S01E17 (Mrs. Garrett's Crisis)",
+              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S01E17%20(Mrs.%20Garrett's%20Crisis).mp4",
+              "seconds": 1511,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 164
+            },
+            {
               "conf": 0.8,
               "why": "title ~ \"Willis' Privacy\" (1.00)",
               "item": "diffrent-strokes-Lando18",
@@ -1560,7 +1573,21 @@
             "playable": true,
             "sizeMB": 230
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "diffrent-strokes-Lando18",
+              "itemTitle": "Diff'rent Strokes (complete TV series)",
+              "file": "Diff'rent Strokes - S02E11 (The Rivals).mp4",
+              "name": "Diff'rent Strokes - S02E11 (The Rivals)",
+              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E11%20(The%20Rivals).mp4",
+              "seconds": 1516,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 220
+            }
+          ]
         },
         {
           "number": 12,
@@ -1882,21 +1909,35 @@
           "number": 19,
           "name": "Big Business",
           "airdate": "1980-01-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Big Business\" (1.00)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
-            "file": "Diff'rent Strokes - S02E17 (Big Business).mp4",
-            "name": "Diff'rent Strokes - S02E17 (Big Business)",
-            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E17%20(Big%20Business).mp4",
-            "seconds": 1513,
+            "file": "Diff'rent Strokes - S02E19 (Valentine Day Retrospect).mp4",
+            "name": "Diff'rent Strokes - S02E19 (Valentine Day Retrospect)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E19%20(Valentine%20Day%20Retrospect).mp4",
+            "seconds": 1515,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 218
+            "sizeMB": 182
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Big Business\" (1.00)",
+              "item": "diffrent-strokes-Lando18",
+              "itemTitle": "Diff'rent Strokes (complete TV series)",
+              "file": "Diff'rent Strokes - S02E17 (Big Business).mp4",
+              "name": "Diff'rent Strokes - S02E17 (Big Business)",
+              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E17%20(Big%20Business).mp4",
+              "seconds": 1513,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 218
+            }
+          ]
         },
         {
           "number": 20,
@@ -1989,6 +2030,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 228
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "diffrent-strokes-Lando18",
+              "itemTitle": "Diff'rent Strokes (complete TV series)",
+              "file": "Diff'rent Strokes - S02E21 (Teacher's Pet).mp4",
+              "name": "Diff'rent Strokes - S02E21 (Teacher's Pet)",
+              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S02E21%20(Teacher's%20Pet).mp4",
+              "seconds": 1515,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 195
             },
             {
               "conf": 0.6,
@@ -3521,7 +3575,34 @@
             "playable": true,
             "sizeMB": 212
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "airdate in filename",
+              "item": "diffstrokes-antennatv",
+              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
+              "file": "Diff'rent Strokes S05e01 1982-10-02 Shootout At The Ok Arcade 2020-12-09-1625-50.mp4",
+              "name": "Diff'rent Strokes S05e01 1982-10-02 Shootout At The Ok Arcade 2020-12-09-1625-50",
+              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S05e01%201982-10-02%20Shootout%20At%20The%20Ok%20Arcade%202020-12-09-1625-50.mp4",
+              "seconds": 1380,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "diffstrokes-antennatv",
+              "itemTitle": "Some Diff'rent Strokes episodes recorded from Antenna TV (2020/2021) [IN MP4]",
+              "file": "Diff'rent Strokes S05e01 1982-10-02 Shootout At The Ok Arcade 2020-12-09-1625-50.mp4",
+              "name": "Diff'rent Strokes S05e01 1982-10-02 Shootout At The Ok Arcade 2020-12-09-1625-50",
+              "url": "https://archive.org/download/diffstrokes-antennatv/Diff'rent%20Strokes%20S05e01%201982-10-02%20Shootout%20At%20The%20Ok%20Arcade%202020-12-09-1625-50.mp4",
+              "seconds": 1380,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 136
+            }
+          ]
         },
         {
           "number": 2,
@@ -5047,9 +5128,9 @@
           "number": 16,
           "name": "Hooray for Hollywood (1)",
           "airdate": "1984-02-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "diffrent-strokes-Lando18",
             "itemTitle": "Diff'rent Strokes (complete TV series)",
@@ -5061,14 +5142,40 @@
             "playable": true,
             "sizeMB": 198
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Hooray for Hollywood (1)\" (0.88)",
+              "item": "diffrent-strokes-Lando18",
+              "itemTitle": "Diff'rent Strokes (complete TV series)",
+              "file": "Diff'rent Strokes - S06E17 (Hooray for Hollywood - pt2).mp4",
+              "name": "Diff'rent Strokes - S06E17 (Hooray for Hollywood - pt2)",
+              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S06E17%20(Hooray%20for%20Hollywood%20-%20pt2).mp4",
+              "seconds": 1498,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 200
+            }
+          ]
         },
         {
           "number": 17,
           "name": "Hooray for Hollywood (2)",
           "airdate": "1984-02-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "diffrent-strokes-Lando18",
+            "itemTitle": "Diff'rent Strokes (complete TV series)",
+            "file": "Diff'rent Strokes - S06E17 (Hooray for Hollywood - pt2).mp4",
+            "name": "Diff'rent Strokes - S06E17 (Hooray for Hollywood - pt2)",
+            "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S06E17%20(Hooray%20for%20Hollywood%20-%20pt2).mp4",
+            "seconds": 1498,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 200
+          },
           "alternates": []
         },
         {
@@ -6307,6 +6414,19 @@
               "sizeMB": 218
             },
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "diffrent-strokes-Lando18",
+              "itemTitle": "Diff'rent Strokes (complete TV series)",
+              "file": "Diff'rent Strokes - S08E04 (Willis Goes to College).mp4",
+              "name": "Diff'rent Strokes - S08E04 (Willis Goes to College)",
+              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E04%20(Willis%20Goes%20to%20College).mp4",
+              "seconds": 1488,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 199
+            },
+            {
               "conf": 0.8,
               "why": "title ~ \"Love on the Run\" (1.00)",
               "item": "diffrent-strokes-Lando18",
@@ -6412,6 +6532,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 239
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "diffrent-strokes-Lando18",
+              "itemTitle": "Diff'rent Strokes (complete TV series)",
+              "file": "Diff'rent Strokes - S08E06 (A Tale of Two Teachers).mp4",
+              "name": "Diff'rent Strokes - S08E06 (A Tale of Two Teachers)",
+              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E06%20(A%20Tale%20of%20Two%20Teachers).mp4",
+              "seconds": 1489,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 204
             },
             {
               "conf": 0.8,
@@ -6686,6 +6819,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 261
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "diffrent-strokes-Lando18",
+              "itemTitle": "Diff'rent Strokes (complete TV series)",
+              "file": "Diff'rent Strokes - S08E11 (Arnold's Initiation).mp4",
+              "name": "Diff'rent Strokes - S08E11 (Arnold's Initiation)",
+              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E11%20(Arnold's%20Initiation).mp4",
+              "seconds": 1490,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 201
             },
             {
               "conf": 0.8,
@@ -7020,6 +7166,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 231
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "diffrent-strokes-Lando18",
+              "itemTitle": "Diff'rent Strokes (complete TV series)",
+              "file": "Diff'rent Strokes - S08E17 (The Photo Club).mp4",
+              "name": "Diff'rent Strokes - S08E17 (The Photo Club)",
+              "url": "https://archive.org/download/diffrent-strokes-Lando18/Diff'rent%20Strokes%20-%20S08E17%20(The%20Photo%20Club).mp4",
+              "seconds": 1460,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 195
             },
             {
               "conf": 0.8,

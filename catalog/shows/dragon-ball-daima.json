@@ -3,7 +3,7 @@
   "slug": "dragon-ball-daima",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:37.750Z",
+  "matchedAt": "2026-10-19T04:11:39.907Z",
   "addedAt": "2026-10-15T12:08:17.601Z",
   "tvmaze": {
     "id": 75093,
@@ -31,17 +31,30 @@
           "file": {
             "conf": 1,
             "why": "absolute episode number + title match",
-            "item": "dragon-ball-daima-complete-collection",
-            "itemTitle": "Dragon Ball DAIMA Complete Collection",
-            "file": "Dragon Ball DAIMA Episode 01 - Conspiracy (Dub).mp4",
-            "name": "Dragon Ball DAIMA Episode 01 - Conspiracy (Dub)",
-            "url": "https://archive.org/download/dragon-ball-daima-complete-collection/Dragon%20Ball%20DAIMA%20Episode%2001%20-%20Conspiracy%20(Dub).mp4",
+            "item": "dragon-ball-daima-episode-1-conspiracy-1080p-english-dubb",
+            "itemTitle": "Dragon Ball Daima Episode 1 (English Dub) [1080p]",
+            "file": "Dragon Ball Daima - Episode 1 - Conspiracy (1080p) [English Dubb].mp4",
+            "name": "Dragon Ball Daima - Episode 1 - Conspiracy (1080p) [English Dubb]",
+            "url": "https://archive.org/download/dragon-ball-daima-episode-1-conspiracy-1080p-english-dubb/Dragon%20Ball%20Daima%20-%20Episode%201%20-%20Conspiracy%20(1080p)%20%5BEnglish%20Dubb%5D.mp4",
             "seconds": 1926,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 456
+            "sizeMB": 499
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "absolute episode number + title match",
+              "item": "dragon-ball-daima-complete-collection",
+              "itemTitle": "Dragon Ball DAIMA Complete Collection",
+              "file": "Dragon Ball DAIMA Episode 01 - Conspiracy (Dub).mp4",
+              "name": "Dragon Ball DAIMA Episode 01 - Conspiracy (Dub)",
+              "url": "https://archive.org/download/dragon-ball-daima-complete-collection/Dragon%20Ball%20DAIMA%20Episode%2001%20-%20Conspiracy%20(Dub).mp4",
+              "seconds": 1926,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 456
+            },
             {
               "conf": 1,
               "why": "absolute episode number + title match",
@@ -67,19 +80,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 189
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama1.mp4",
-              "name": "diama1",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama1.mp4",
-              "seconds": 1901,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 498
             }
           ]
         },
@@ -117,6 +117,19 @@
             },
             {
               "conf": 1,
+              "why": "absolute episode number + title match",
+              "item": "dragon-ball-daima-episode-2-glorio-720p-english-dub",
+              "itemTitle": "Dragon Ball Daima - Episode 2 -  Glorio (720p) [English Dub]",
+              "file": "Dragon Ball Daima - Episode 2 - Glorio (720p) [English Dub].mp4",
+              "name": "Dragon Ball Daima - Episode 2 - Glorio (720p) [English Dub]",
+              "url": "https://archive.org/download/dragon-ball-daima-episode-2-glorio-720p-english-dub/Dragon%20Ball%20Daima%20-%20Episode%202%20-%20Glorio%20(720p)%20%5BEnglish%20Dub%5D.mp4",
+              "seconds": 1431,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 150
+            },
+            {
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "dragon-ball-daima-complete-english",
               "itemTitle": "Dragon Ball DAIMA Complete English",
@@ -127,19 +140,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama2.mp4",
-              "name": "diama2",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama2.mp4",
-              "seconds": 1420,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 281
             }
           ]
         },
@@ -178,6 +178,19 @@
             {
               "conf": 0.7,
               "why": "absolute episode number",
+              "item": "dragon-ball-daima-episode-3-daima-1080p-english-dub",
+              "itemTitle": "Dragon Ball Daima - Episode 3 - Daima (1080p) [English Dub]",
+              "file": "Dragon Ball Daima - Episode 3 - Daima (1080p) [English Dub].mp4",
+              "name": "Dragon Ball Daima - Episode 3 - Daima (1080p) [English Dub]",
+              "url": "https://archive.org/download/dragon-ball-daima-episode-3-daima-1080p-english-dub/Dragon%20Ball%20Daima%20-%20Episode%203%20-%20Daima%20(1080p)%20%5BEnglish%20Dub%5D.mp4",
+              "seconds": 1431,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 340
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
               "item": "dragon-ball-daima-complete-collection",
               "itemTitle": "Dragon Ball DAIMA Complete Collection",
               "file": "Dragon Ball DAIMA Episode 03 - Daima (Dub).mp4",
@@ -187,19 +200,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 309
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama3.mp4",
-              "name": "diama3",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama3.mp4",
-              "seconds": 1431,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 394
             }
           ]
         },
@@ -247,19 +247,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama4.mp4",
-              "name": "diama4",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama4.mp4",
-              "seconds": 1431,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 394
             }
           ]
         },
@@ -307,19 +294,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama5.mp4",
-              "name": "diama5",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama5.mp4",
-              "seconds": 1431,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 354
             }
           ]
         },
@@ -367,19 +341,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama6.mp4",
-              "name": "diama6",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama6.mp4",
-              "seconds": 1431,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 341
             }
           ]
         },
@@ -427,19 +388,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 139
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama7.mp4",
-              "name": "diama7",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama7.mp4",
-              "seconds": 1431,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 309
             }
           ]
         },
@@ -487,19 +435,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama8.mp4",
-              "name": "diama8",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama8.mp4",
-              "seconds": 1426,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 411
             }
           ]
         },
@@ -547,19 +482,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 138
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama9.mp4",
-              "name": "diama9",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama9.mp4",
-              "seconds": 1431,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 321
             }
           ]
         },
@@ -607,19 +529,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 139
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama10.mp4",
-              "name": "diama10",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama10.mp4",
-              "seconds": 1431,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 372
             }
           ]
         },
@@ -847,19 +756,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 14 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama14.mp4",
-              "name": "diama14",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama14.mp4",
-              "seconds": 1431,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 332
             }
           ]
         },
@@ -907,19 +803,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 141
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 15 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama15.mp4",
-              "name": "diama15",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama15.mp4",
-              "seconds": 1408,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 473
             }
           ]
         },
@@ -967,19 +850,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 16 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama16.mp4",
-              "name": "diama16",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama16.mp4",
-              "seconds": 1431,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 311
             }
           ]
         },
@@ -1027,19 +897,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 139
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 17 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama17.mp4",
-              "name": "diama17",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama17.mp4",
-              "seconds": 1431,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 445
             }
           ]
         },
@@ -1077,29 +934,29 @@
             },
             {
               "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "dragon-ball-daima-complete-english",
-              "itemTitle": "Dragon Ball DAIMA Complete English",
-              "file": "Dragon Ball DAIMA - S01E18 - Awakening (1).mp4",
-              "name": "Dragon Ball DAIMA - S01E18 - Awakening (1)",
-              "url": "https://archive.org/download/dragon-ball-daima-complete-english/Dragon%20Ball%20DAIMA%20-%20S01E18%20-%20Awakening%20(1).mp4",
-              "seconds": 1421,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 18 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama18.mp4",
-              "name": "diama18",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama18.mp4",
-              "seconds": 1427,
+              "why": "absolute episode number + title match",
+              "item": "dragon-ball-daima-episode-18-awakening-720p-english-dub",
+              "itemTitle": "Dragon Ball Daima - Episode 18 - 20 (720p & 1080p) [English Dub]",
+              "file": "Dragon Ball Daima - Episode 18 - Awakening (1080p) [English Dub].mp4",
+              "name": "Dragon Ball Daima - Episode 18 - Awakening (1080p) [English Dub]",
+              "url": "https://archive.org/download/dragon-ball-daima-episode-18-awakening-720p-english-dub/Dragon%20Ball%20Daima%20-%20Episode%2018%20-%20Awakening%20(1080p)%20%5BEnglish%20Dub%5D.mp4",
+              "seconds": 1431,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 592
+              "sizeMB": 397
+            },
+            {
+              "conf": 1,
+              "why": "absolute episode number + title match",
+              "item": "dragon-ball-daima-episode-18-awakening-720p-english-dub",
+              "itemTitle": "Dragon Ball Daima - Episode 18 - 20 (720p & 1080p) [English Dub]",
+              "file": "Dragon Ball Daima - Episode 18 - Awakening (720p) [English Dub].mp4",
+              "name": "Dragon Ball Daima - Episode 18 - Awakening (720p) [English Dub]",
+              "url": "https://archive.org/download/dragon-ball-daima-episode-18-awakening-720p-english-dub/Dragon%20Ball%20Daima%20-%20Episode%2018%20-%20Awakening%20(720p)%20%5BEnglish%20Dub%5D.mp4",
+              "seconds": 1431,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 306
             }
           ]
         },
@@ -1137,29 +994,29 @@
             },
             {
               "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "dragon-ball-daima-complete-english",
-              "itemTitle": "Dragon Ball DAIMA Complete English",
-              "file": "Dragon Ball DAIMA - S01E19 - Betrayal (1).mp4",
-              "name": "Dragon Ball DAIMA - S01E19 - Betrayal (1)",
-              "url": "https://archive.org/download/dragon-ball-daima-complete-english/Dragon%20Ball%20DAIMA%20-%20S01E19%20-%20Betrayal%20(1).mp4",
-              "seconds": 1421,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 19 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama19.mp4",
-              "name": "diama19",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama19.mp4",
+              "why": "absolute episode number + title match",
+              "item": "dragon-ball-daima-episode-18-awakening-720p-english-dub",
+              "itemTitle": "Dragon Ball Daima - Episode 18 - 20 (720p & 1080p) [English Dub]",
+              "file": "Dragon Ball Daima - Episode 19 - Betrayal (1080p) [English Dub].mp4",
+              "name": "Dragon Ball Daima - Episode 19 - Betrayal (1080p) [English Dub]",
+              "url": "https://archive.org/download/dragon-ball-daima-episode-18-awakening-720p-english-dub/Dragon%20Ball%20Daima%20-%20Episode%2019%20-%20Betrayal%20(1080p)%20%5BEnglish%20Dub%5D.mp4",
               "seconds": 1431,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 455
+              "sizeMB": 306
+            },
+            {
+              "conf": 1,
+              "why": "absolute episode number + title match",
+              "item": "dragon-ball-daima-episode-18-awakening-720p-english-dub",
+              "itemTitle": "Dragon Ball Daima - Episode 18 - 20 (720p & 1080p) [English Dub]",
+              "file": "Dragon Ball Daima - Episode 19 - Betrayal (720p) [English Dub].mp4",
+              "name": "Dragon Ball Daima - Episode 19 - Betrayal (720p) [English Dub]",
+              "url": "https://archive.org/download/dragon-ball-daima-episode-18-awakening-720p-english-dub/Dragon%20Ball%20Daima%20-%20Episode%2019%20-%20Betrayal%20(720p)%20%5BEnglish%20Dub%5D.mp4",
+              "seconds": 1431,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 238
             }
           ]
         },
@@ -1197,29 +1054,29 @@
             },
             {
               "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "dragon-ball-daima-complete-english",
-              "itemTitle": "Dragon Ball DAIMA Complete English",
-              "file": "Dragon Ball DAIMA - S01E20 - Maximum (1).mp4",
-              "name": "Dragon Ball DAIMA - S01E20 - Maximum (1)",
-              "url": "https://archive.org/download/dragon-ball-daima-complete-english/Dragon%20Ball%20DAIMA%20-%20S01E20%20-%20Maximum%20(1).mp4",
-              "seconds": 1421,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 20 of 20 in \"Dragon Ball Daima Dub Complete\"",
-              "item": "DragonBallDaimaComplete",
-              "itemTitle": "Dragon Ball Daima Dub Complete",
-              "file": "diama20.mp4",
-              "name": "diama20",
-              "url": "https://archive.org/download/DragonBallDaimaComplete/diama20.mp4",
-              "seconds": 1420,
+              "why": "absolute episode number + title match",
+              "item": "dragon-ball-daima-episode-18-awakening-720p-english-dub",
+              "itemTitle": "Dragon Ball Daima - Episode 18 - 20 (720p & 1080p) [English Dub]",
+              "file": "Dragon Ball Daima - Episode 20 - Maximum (1080p) [English Dub].mp4",
+              "name": "Dragon Ball Daima - Episode 20 - Maximum (1080p) [English Dub]",
+              "url": "https://archive.org/download/dragon-ball-daima-episode-18-awakening-720p-english-dub/Dragon%20Ball%20Daima%20-%20Episode%2020%20-%20Maximum%20(1080p)%20%5BEnglish%20Dub%5D.mp4",
+              "seconds": 1431,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 514
+              "sizeMB": 346
+            },
+            {
+              "conf": 1,
+              "why": "absolute episode number + title match",
+              "item": "dragon-ball-daima-episode-18-awakening-720p-english-dub",
+              "itemTitle": "Dragon Ball Daima - Episode 18 - 20 (720p & 1080p) [English Dub]",
+              "file": "Dragon Ball Daima - Episode 20 - Maximum (720p) [English Dub].mp4",
+              "name": "Dragon Ball Daima - Episode 20 - Maximum (720p) [English Dub]",
+              "url": "https://archive.org/download/dragon-ball-daima-episode-18-awakening-720p-english-dub/Dragon%20Ball%20Daima%20-%20Episode%2020%20-%20Maximum%20(720p)%20%5BEnglish%20Dub%5D.mp4",
+              "seconds": 1431,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 206
             }
           ]
         }

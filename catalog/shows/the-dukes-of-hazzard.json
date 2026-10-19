@@ -3,21 +3,21 @@
   "slug": "the-dukes-of-hazzard",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:58:24.959Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:12:25.247Z",
+  "addedAt": "2026-10-16T07:58:24.959Z",
   "tvmaze": {
-    "id": null,
+    "id": 4284,
     "name": "The Dukes of Hazzard",
-    "runtime": null,
-    "premiered": null,
+    "runtime": 60,
+    "premiered": "1979-01-26",
     "network": "CBS"
   },
   "coverage": {
-    "total": 56,
-    "live": 0,
-    "review": 56,
-    "missing": 0,
-    "pct": 100
+    "total": 147,
+    "live": 1,
+    "review": 13,
+    "missing": 133,
+    "pct": 10
   },
   "seasons": [
     {
@@ -25,9 +25,12 @@
       "episodes": [
         {
           "number": 1,
-          "name": "the of one armed bandits",
-          "state": "REVIEW",
+          "name": "One Armed Bandits",
+          "airdate": "1979-01-26",
+          "state": "LIVE",
           "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "the-dukes-of-hazzard-s-01-e-01-one-armed-bandits",
             "itemTitle": "The Dukes Of Hazzard S01 E01 One Armed Bandits",
             "file": "The Dukes of Hazzard S01E01 One Armed Bandits.mp4",
@@ -36,421 +39,45 @@
             "seconds": 2943,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 286,
-            "ep": {
-              "season": 1,
-              "episode": 1
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 286
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
+              "item": "the-dukes-of-hazzard-s2",
+              "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
+              "file": "DUKES_OF_HAZZARD_SEASON2_D1A8.mp4",
+              "name": "DUKES_OF_HAZZARD_SEASON2_D1A8",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D1A8.mp4",
+              "seconds": 2955,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+              "item": "the-dukes-of-hazzard-s1",
+              "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+              "file": "DUKES_OF_HAZZARD_S1D1_SIDEA7.mp4",
+              "name": "DUKES_OF_HAZZARD_S1D1_SIDEA7",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEA7.mp4",
+              "seconds": 2943,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            }
+          ]
         },
         {
           "number": 2,
-          "name": "of s1d1 sidea",
+          "name": "Daisy's Song",
+          "airdate": "1979-02-02",
           "state": "REVIEW",
           "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D1_SIDEA.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D1_SIDEA",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEA.mp4",
-            "seconds": 8869,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 808,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "of s1d1 sidea7",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D1_SIDEA7.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D1_SIDEA7",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEA7.mp4",
-            "seconds": 2943,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "of s1d1 sidea8",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D1_SIDEA8.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D1_SIDEA8",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEA8.mp4",
-            "seconds": 2945,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "of s1d1 sidea9",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D1_SIDEA9.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D1_SIDEA9",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEA9.mp4",
-            "seconds": 2981,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 291,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "of s1d1 sideb",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D1_SIDEB.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D1_SIDEB",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEB.mp4",
-            "seconds": 9049,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 871,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "of s1d1 sideb7",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D1_SIDEB7.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D1_SIDEB7",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEB7.mp4",
-            "seconds": 2948,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 289,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "of s1d1 sideb8",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D1_SIDEB8.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D1_SIDEB8",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEB8.mp4",
-            "seconds": 2955,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 289,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "of s1d1 sideb9",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D1_SIDEB9.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D1_SIDEB9",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEB9.mp4",
-            "seconds": 3146,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 292,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "of s1d2 sidea",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D2_SIDEA.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D2_SIDEA",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEA.mp4",
-            "seconds": 8922,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 868,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "of s1d2 sidea7",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D2_SIDEA7.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D2_SIDEA7",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEA7.mp4",
-            "seconds": 2949,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 12,
-          "name": "of s1d2 sidea8",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D2_SIDEA8.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D2_SIDEA8",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEA8.mp4",
-            "seconds": 2950,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "of s1d2 sidea9",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D2_SIDEA9.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D2_SIDEA9",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEA9.mp4",
-            "seconds": 3144,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 292,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 14,
-          "name": "of s1d2 sideb",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D2_SIDEB.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D2_SIDEB",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEB.mp4",
-            "seconds": 9039,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 868,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "of s1d2 sideb7",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D2_SIDEB7.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D2_SIDEB7",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEB7.mp4",
-            "seconds": 2948,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 287,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 16,
-          "name": "of s1d2 sideb8",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D2_SIDEB8.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D2_SIDEB8",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEB8.mp4",
-            "seconds": 2949,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 17,
-          "name": "of s1d2 sideb9",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D2_SIDEB9.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D2_SIDEB9",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEB9.mp4",
-            "seconds": 3021,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 291,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 18,
-          "name": "Episode 18",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D3.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D3",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D3.mp4",
-            "seconds": 2982,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 291,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 19,
-          "name": "Episode 19",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s1",
-            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
-            "file": "DUKES_OF_HAZZARD_S1D37.mp4",
-            "name": "DUKES_OF_HAZZARD_S1D37",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D37.mp4",
-            "seconds": 1714,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 169,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 20,
-          "name": "of season2 d1a",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D1A.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D1A",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D1A.mp4",
-            "seconds": 8880,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 868,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 21,
-          "name": "of season2 d1a8",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D1A8.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D1A8",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D1A8.mp4",
-            "seconds": 2955,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 22,
-          "name": "of season2 d1a9",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
             "item": "the-dukes-of-hazzard-s2",
             "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
             "file": "DUKES_OF_HAZZARD_SEASON2_D1A9.mp4",
@@ -459,78 +86,100 @@
             "seconds": 2952,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 289,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 289
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+              "item": "the-dukes-of-hazzard-s1",
+              "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+              "file": "DUKES_OF_HAZZARD_S1D1_SIDEA8.mp4",
+              "name": "DUKES_OF_HAZZARD_S1D1_SIDEA8",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEA8.mp4",
+              "seconds": 2945,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            }
+          ]
         },
         {
-          "number": 23,
-          "name": "of season2 d1a10",
+          "number": 3,
+          "name": "Mary Kaye's Baby",
+          "airdate": "1979-02-09",
           "state": "REVIEW",
           "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D1A10.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D1A10",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D1A10.mp4",
-            "seconds": 2974,
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+            "item": "the-dukes-of-hazzard-s1",
+            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+            "file": "DUKES_OF_HAZZARD_S1D1_SIDEA9.mp4",
+            "name": "DUKES_OF_HAZZARD_S1D1_SIDEA9",
+            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEA9.mp4",
+            "seconds": 2981,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 290,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 291
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
+              "item": "the-dukes-of-hazzard-s2",
+              "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
+              "file": "DUKES_OF_HAZZARD_SEASON2_D1A10.mp4",
+              "name": "DUKES_OF_HAZZARD_SEASON2_D1A10",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D1A10.mp4",
+              "seconds": 2974,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 290
+            }
+          ]
         },
         {
-          "number": 24,
-          "name": "of season2 d1b",
+          "number": 4,
+          "name": "Repo Men",
+          "airdate": "1979-02-16",
           "state": "REVIEW",
           "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D1B.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D1B",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D1B.mp4",
-            "seconds": 8888,
+            "conf": 0.55,
+            "why": "sequence guess: file 4 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+            "item": "the-dukes-of-hazzard-s1",
+            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+            "file": "DUKES_OF_HAZZARD_S1D1_SIDEB7.mp4",
+            "name": "DUKES_OF_HAZZARD_S1D1_SIDEB7",
+            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEB7.mp4",
+            "seconds": 2948,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 870,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 289
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
+              "item": "the-dukes-of-hazzard-s2",
+              "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
+              "file": "DUKES_OF_HAZZARD_SEASON2_D1B8.mp4",
+              "name": "DUKES_OF_HAZZARD_SEASON2_D1B8",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D1B8.mp4",
+              "seconds": 2953,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            }
+          ]
         },
         {
-          "number": 25,
-          "name": "of season2 d1b8",
+          "number": 5,
+          "name": "High Octane",
+          "airdate": "1979-02-23",
           "state": "REVIEW",
           "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D1B8.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D1B8",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D1B8.mp4",
-            "seconds": 2953,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 26,
-          "name": "of season2 d1b9",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
             "item": "the-dukes-of-hazzard-s2",
             "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
             "file": "DUKES_OF_HAZZARD_SEASON2_D1B9.mp4",
@@ -539,58 +188,66 @@
             "seconds": 2957,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 290,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 290
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+              "item": "the-dukes-of-hazzard-s1",
+              "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+              "file": "DUKES_OF_HAZZARD_S1D1_SIDEB8.mp4",
+              "name": "DUKES_OF_HAZZARD_S1D1_SIDEB8",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEB8.mp4",
+              "seconds": 2955,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 289
+            }
+          ]
         },
         {
-          "number": 27,
-          "name": "of season2 d1b10",
+          "number": 6,
+          "name": "Swamp Molly",
+          "airdate": "1979-03-09",
           "state": "REVIEW",
           "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D1B10.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D1B10",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D1B10.mp4",
-            "seconds": 2980,
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+            "item": "the-dukes-of-hazzard-s1",
+            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+            "file": "DUKES_OF_HAZZARD_S1D1_SIDEB9.mp4",
+            "name": "DUKES_OF_HAZZARD_S1D1_SIDEB9",
+            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D1_SIDEB9.mp4",
+            "seconds": 3146,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 290,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 292
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
+              "item": "the-dukes-of-hazzard-s2",
+              "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
+              "file": "DUKES_OF_HAZZARD_SEASON2_D1B10.mp4",
+              "name": "DUKES_OF_HAZZARD_SEASON2_D1B10",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D1B10.mp4",
+              "seconds": 2980,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 290
+            }
+          ]
         },
         {
-          "number": 28,
-          "name": "of season2 d2a",
+          "number": 7,
+          "name": "Luke's Love Story",
+          "airdate": "1979-03-16",
           "state": "REVIEW",
           "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D2A.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D2A",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D2A.mp4",
-            "seconds": 8833,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 864,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "of season2 d2a8",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 7 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
             "item": "the-dukes-of-hazzard-s2",
             "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
             "file": "DUKES_OF_HAZZARD_SEASON2_D2A8.mp4",
@@ -599,18 +256,32 @@
             "seconds": 2953,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 289,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 289
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+              "item": "the-dukes-of-hazzard-s1",
+              "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+              "file": "DUKES_OF_HAZZARD_S1D2_SIDEA7.mp4",
+              "name": "DUKES_OF_HAZZARD_S1D2_SIDEA7",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEA7.mp4",
+              "seconds": 2949,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            }
+          ]
         },
         {
-          "number": 30,
-          "name": "of season2 d2a9",
+          "number": 8,
+          "name": "The Big Heist",
+          "airdate": "1979-03-30",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
             "item": "the-dukes-of-hazzard-s2",
             "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
             "file": "DUKES_OF_HAZZARD_SEASON2_D2A9.mp4",
@@ -619,58 +290,66 @@
             "seconds": 2962,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 289,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 289
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+              "item": "the-dukes-of-hazzard-s1",
+              "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+              "file": "DUKES_OF_HAZZARD_S1D2_SIDEA8.mp4",
+              "name": "DUKES_OF_HAZZARD_S1D2_SIDEA8",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEA8.mp4",
+              "seconds": 2950,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            }
+          ]
         },
         {
-          "number": 31,
-          "name": "of season2 d2a10",
+          "number": 9,
+          "name": "Limo One is Missing",
+          "airdate": "1979-04-06",
           "state": "REVIEW",
           "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D2A10.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D2A10",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D2A10.mp4",
-            "seconds": 2919,
+            "conf": 0.55,
+            "why": "sequence guess: file 9 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+            "item": "the-dukes-of-hazzard-s1",
+            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+            "file": "DUKES_OF_HAZZARD_S1D2_SIDEA9.mp4",
+            "name": "DUKES_OF_HAZZARD_S1D2_SIDEA9",
+            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEA9.mp4",
+            "seconds": 3144,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 285,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 292
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
+              "item": "the-dukes-of-hazzard-s2",
+              "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
+              "file": "DUKES_OF_HAZZARD_SEASON2_D2A10.mp4",
+              "name": "DUKES_OF_HAZZARD_SEASON2_D2A10",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D2A10.mp4",
+              "seconds": 2919,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 285
+            }
+          ]
         },
         {
-          "number": 32,
-          "name": "of season2 d2b",
+          "number": 10,
+          "name": "Deputy Dukes",
+          "airdate": "1979-04-13",
           "state": "REVIEW",
           "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D2B.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D2B",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D2B.mp4",
-            "seconds": 8882,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 868,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 33,
-          "name": "of season2 d2b8",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 10 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
             "item": "the-dukes-of-hazzard-s2",
             "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
             "file": "DUKES_OF_HAZZARD_SEASON2_D2B8.mp4",
@@ -679,18 +358,32 @@
             "seconds": 2957,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 289,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 289
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+              "item": "the-dukes-of-hazzard-s1",
+              "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+              "file": "DUKES_OF_HAZZARD_S1D2_SIDEB7.mp4",
+              "name": "DUKES_OF_HAZZARD_S1D2_SIDEB7",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEB7.mp4",
+              "seconds": 2948,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 287
+            }
+          ]
         },
         {
-          "number": 34,
-          "name": "of season2 d2b9",
+          "number": 11,
+          "name": "Money to Burn",
+          "airdate": "1979-04-20",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 11 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
             "item": "the-dukes-of-hazzard-s2",
             "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
             "file": "DUKES_OF_HAZZARD_SEASON2_D2B9.mp4",
@@ -699,398 +392,201 @@
             "seconds": 2951,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 288
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+              "item": "the-dukes-of-hazzard-s1",
+              "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+              "file": "DUKES_OF_HAZZARD_S1D2_SIDEB8.mp4",
+              "name": "DUKES_OF_HAZZARD_S1D2_SIDEB8",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEB8.mp4",
+              "seconds": 2949,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            }
+          ]
         },
         {
-          "number": 35,
-          "name": "of season2 d2b10",
+          "number": 12,
+          "name": "Route 7-11",
+          "airdate": "1979-05-04",
           "state": "REVIEW",
           "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D2B10.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D2B10",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D2B10.mp4",
-            "seconds": 2975,
+            "conf": 0.55,
+            "why": "sequence guess: file 12 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+            "item": "the-dukes-of-hazzard-s1",
+            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+            "file": "DUKES_OF_HAZZARD_S1D2_SIDEB9.mp4",
+            "name": "DUKES_OF_HAZZARD_S1D2_SIDEB9",
+            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D2_SIDEB9.mp4",
+            "seconds": 3021,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 290,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 291
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
+              "item": "the-dukes-of-hazzard-s2",
+              "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
+              "file": "DUKES_OF_HAZZARD_SEASON2_D2B10.mp4",
+              "name": "DUKES_OF_HAZZARD_SEASON2_D2B10",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D2B10.mp4",
+              "seconds": 2975,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 290
+            }
+          ]
         },
         {
-          "number": 36,
-          "name": "of season2 d3a",
+          "number": 13,
+          "name": "Double Sting",
+          "airdate": "1979-05-11",
           "state": "REVIEW",
           "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D3A.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D3A",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D3A.mp4",
-            "seconds": 8866,
+            "conf": 0.55,
+            "why": "sequence guess: file 13 of 13 in \"The Dukes of Hazzard: The Complete First\"",
+            "item": "the-dukes-of-hazzard-s1",
+            "itemTitle": "The Dukes of Hazzard: The Complete First Season",
+            "file": "DUKES_OF_HAZZARD_S1D3.mp4",
+            "name": "DUKES_OF_HAZZARD_S1D3",
+            "url": "https://archive.org/download/the-dukes-of-hazzard-s1/DUKES_OF_HAZZARD_S1D3.mp4",
+            "seconds": 2982,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 866,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 291
           },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 23 in \"The Dukes of Hazzard: The Complete Secon\"",
+              "item": "the-dukes-of-hazzard-s2",
+              "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
+              "file": "DUKES_OF_HAZZARD_SEASON2_D3A8.mp4",
+              "name": "DUKES_OF_HAZZARD_SEASON2_D3A8",
+              "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D3A8.mp4",
+              "seconds": 2941,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Days of Shine and Roses",
+          "airdate": "1979-09-21",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 37,
-          "name": "of season2 d3a8",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D3A8.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D3A8",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D3A8.mp4",
-            "seconds": 2941,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 2,
+          "name": "Gold Fever",
+          "airdate": "1979-09-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 38,
-          "name": "of season2 d3a9",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D3A9.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D3A9",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D3A9.mp4",
-            "seconds": 2950,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 3,
+          "name": "The Rustlers",
+          "airdate": "1979-10-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 39,
-          "name": "of season2 d3a10",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D3A10.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D3A10",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D3A10.mp4",
-            "seconds": 2976,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 290,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 4,
+          "name": "The Meeting",
+          "airdate": "1979-10-12",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 40,
-          "name": "of season2 d3b",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D3B.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D3B",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D3B.mp4",
-            "seconds": 8840,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 866,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 5,
+          "name": "Road Pirates",
+          "airdate": "1979-10-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 41,
-          "name": "of season2 d3b8",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D3B8.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D3B8",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D3B8.mp4",
-            "seconds": 2921,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 285,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 6,
+          "name": "The Ghost of General Lee",
+          "airdate": "1979-10-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 42,
-          "name": "of season2 d3b9",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D3B9.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D3B9",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D3B9.mp4",
-            "seconds": 2946,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 7,
+          "name": "Dukes Meet Cale Yarborough",
+          "airdate": "1979-11-02",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 43,
-          "name": "of season2 d3b10",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D3B10.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D3B10",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D3B10.mp4",
-            "seconds": 2974,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 291,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 8,
+          "name": "Hazzard Connection",
+          "airdate": "1979-11-09",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 44,
-          "name": "of season2 d4a",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D4A.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D4A",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D4A.mp4",
-            "seconds": 8876,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 868,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 9,
+          "name": "Witness for the Persecution",
+          "airdate": "1979-11-16",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 45,
-          "name": "of season2 d4a8",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D4A8.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D4A8",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D4A8.mp4",
-            "seconds": 2953,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 289,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 10,
+          "name": "Granny Annie",
+          "airdate": "1979-11-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 46,
-          "name": "of season2 d4a9",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D4A9.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D4A9",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D4A9.mp4",
-            "seconds": 2954,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 11,
+          "name": "People's Choice",
+          "airdate": "1979-11-30",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 47,
-          "name": "of season2 d4a10",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D4A10.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D4A10",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D4A10.mp4",
-            "seconds": 2971,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 290,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 12,
+          "name": "Arrest Jesse Duke",
+          "airdate": "1979-12-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 48,
-          "name": "of season2 d4b",
+          "number": 13,
+          "name": "Duke of Duke",
+          "airdate": "1980-01-04",
           "state": "REVIEW",
           "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D4B.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D4B",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D4B.mp4",
-            "seconds": 5934,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 579,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 49,
-          "name": "of season2 d4b8",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D4B8.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D4B8",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D4B8.mp4",
-            "seconds": 2957,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 288,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 50,
-          "name": "of season2 d4b9",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D4B9.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D4B9",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D4B9.mp4",
-            "seconds": 2978,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 290,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 51,
-          "name": "of season2 d4b10",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-s2",
-            "itemTitle": "The Dukes of Hazzard: The Complete Second Season",
-            "file": "DUKES_OF_HAZZARD_SEASON2_D4B10.mp4",
-            "name": "DUKES_OF_HAZZARD_SEASON2_D4B10",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-s2/DUKES_OF_HAZZARD_SEASON2_D4B10.mp4",
-            "seconds": 1976,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 196,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 52,
-          "name": "in hollywood",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-two-movie-collection",
-            "itemTitle": "The Dukes of Hazzard: Two-Movie Collection",
-            "file": "HAZZARD_IN_HOLLYWOOD.mp4",
-            "name": "HAZZARD_IN_HOLLYWOOD",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-two-movie-collection/HAZZARD_IN_HOLLYWOOD.mp4",
-            "seconds": 5354,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 529,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 53,
-          "name": "the of reunion",
-          "state": "REVIEW",
-          "file": {
-            "item": "the-dukes-of-hazzard-two-movie-collection",
-            "itemTitle": "The Dukes of Hazzard: Two-Movie Collection",
-            "file": "THE_DUKES_OF_HAZZARD_REUNION.mp4",
-            "name": "THE_DUKES_OF_HAZZARD_REUNION",
-            "url": "https://archive.org/download/the-dukes-of-hazzard-two-movie-collection/THE_DUKES_OF_HAZZARD_REUNION.mp4",
-            "seconds": 5459,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 541,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 54,
-          "name": "the of officer daisy duke",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Duke of Duke\" (0.95)",
             "item": "the.-dukes.-of.-hazzard-s-02-e-17-officer-daisy-duke",
             "itemTitle": "The Dukes of Hazzard S02 E17 Officer Daisy Duke",
             "file": "The.Dukes.Of.Hazzard_S02E17_Officer Daisy Duke.mp4",
@@ -1099,59 +595,1031 @@
             "seconds": 2829,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 275,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 275
           },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Duke of Duke\" (0.95)",
+              "item": "the.-dukes.-of.-hazzard-s-03-e-05-and-in-this-corner-luke-duke",
+              "itemTitle": "The Dukes of Hazzard S03 E05 And In This Corner, Luke Duke",
+              "file": "The.Dukes.Of.Hazzard_S03E05_And In This Corner, Luke Duke.mp4",
+              "name": "The.Dukes.Of.Hazzard_S03E05_And In This Corner, Luke Duke",
+              "url": "https://archive.org/download/the.-dukes.-of.-hazzard-s-03-e-05-and-in-this-corner-luke-duke/The.Dukes.Of.Hazzard_S03E05_And%20In%20This%20Corner%2C%20Luke%20Duke.mp4",
+              "seconds": 2841,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 275
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Duke of Duke\" (0.95)",
+              "item": "the.-dukes.-of.-hazzard-s-03-e-18-by-line-daisy-duke",
+              "itemTitle": "The Dukes of Hazzard S03 E18 By Line, Daisy Duke",
+              "file": "The.Dukes.Of.Hazzard_S03E18_By-Line, Daisy Duke.mp4",
+              "name": "The.Dukes.Of.Hazzard_S03E18_By-Line, Daisy Duke",
+              "url": "https://archive.org/download/the.-dukes.-of.-hazzard-s-03-e-18-by-line-daisy-duke/The.Dukes.Of.Hazzard_S03E18_By-Line%2C%20Daisy%20Duke.mp4",
+              "seconds": 2835,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 274
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "name": "The Runaway",
+          "airdate": "1980-01-11",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 55,
-          "name": "the of and in this corner luke duke",
-          "state": "REVIEW",
-          "file": {
-            "item": "the.-dukes.-of.-hazzard-s-03-e-05-and-in-this-corner-luke-duke",
-            "itemTitle": "The Dukes of Hazzard S03 E05 And In This Corner, Luke Duke",
-            "file": "The.Dukes.Of.Hazzard_S03E05_And In This Corner, Luke Duke.mp4",
-            "name": "The.Dukes.Of.Hazzard_S03E05_And In This Corner, Luke Duke",
-            "url": "https://archive.org/download/the.-dukes.-of.-hazzard-s-03-e-05-and-in-this-corner-luke-duke/The.Dukes.Of.Hazzard_S03E05_And%20In%20This%20Corner%2C%20Luke%20Duke.mp4",
-            "seconds": 2841,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 275,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 15,
+          "name": "Follow That Still",
+          "airdate": "1980-01-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 56,
-          "name": "the of by line daisy duke",
-          "state": "REVIEW",
-          "file": {
-            "item": "the.-dukes.-of.-hazzard-s-03-e-18-by-line-daisy-duke",
-            "itemTitle": "The Dukes of Hazzard S03 E18 By Line, Daisy Duke",
-            "file": "The.Dukes.Of.Hazzard_S03E18_By-Line, Daisy Duke.mp4",
-            "name": "The.Dukes.Of.Hazzard_S03E18_By-Line, Daisy Duke",
-            "url": "https://archive.org/download/the.-dukes.-of.-hazzard-s-03-e-18-by-line-daisy-duke/The.Dukes.Of.Hazzard_S03E18_By-Line%2C%20Daisy%20Duke.mp4",
-            "seconds": 2835,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 274,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 16,
+          "name": "Treasure of Hazzard",
+          "airdate": "1980-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Officer Daisy Duke",
+          "airdate": "1980-02-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Find Loretta Lynn",
+          "airdate": "1980-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Jude Emery",
+          "airdate": "1980-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Return of the Ridge Raiders",
+          "airdate": "1980-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Mason Dixon's Girls",
+          "airdate": "1980-02-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "R.I.P. Henry Flatt",
+          "airdate": "1980-03-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Southern Comfurts",
+          "airdate": "1980-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Carnival of Thrills (1)",
+          "airdate": "1980-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Carnival of Thrills (2)",
+          "airdate": "1980-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Enos Strate to the Top",
+          "airdate": "1980-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Hazzardville Horror",
+          "airdate": "1980-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "And in this Corner, Luke Duke",
+          "airdate": "1980-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Late J.D. Hogg",
+          "airdate": "1980-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Uncle Boss",
+          "airdate": "1980-11-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Baa, Baa, White Sheep",
+          "airdate": "1980-12-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Mrs. Rosco P. Coltrane",
+          "airdate": "1980-12-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Great Santa Claus Chase",
+          "airdate": "1980-12-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Good Neighbors, Duke",
+          "airdate": "1981-01-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "State of the County",
+          "airdate": "1981-01-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Legacy",
+          "airdate": "1981-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Duke vs. Duke",
+          "airdate": "1981-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "My Son, Bo Hogg",
+          "airdate": "1981-01-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "To Catch a Duke",
+          "airdate": "1981-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Along Came a Duke",
+          "airdate": "1981-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "By-Line, Daisy Duke",
+          "airdate": "1981-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "The Return of Hughie Hogg",
+          "airdate": "1981-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Bye, Bye, Boss",
+          "airdate": "1981-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The Great Hazzard Hijack",
+          "airdate": "1981-03-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Hack of Hazzard",
+          "airdate": "1981-04-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "The Canterbury Crock",
+          "airdate": "1981-04-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Mrs. Daisy Hogg",
+          "airdate": "1981-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Double Dukes",
+          "airdate": "1981-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Diamonds in the Rough",
+          "airdate": "1981-10-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Coltrane vs. Duke",
+          "airdate": "1981-10-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Fugitive",
+          "airdate": "1981-11-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Great Bank Robbery",
+          "airdate": "1981-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Sadie Hogg Day",
+          "airdate": "1981-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "10 Million Dollar Sheriff (1)",
+          "airdate": "1981-11-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "10 Million Dollar Sheriff (2)",
+          "airdate": "1981-11-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Trouble at Cooter's",
+          "airdate": "1981-11-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Goodbye, General Lee",
+          "airdate": "1981-12-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Cletus Falls in Love",
+          "airdate": "1981-12-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Hughie Hogg Strikes Again",
+          "airdate": "1981-12-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Dukescam Scam",
+          "airdate": "1982-01-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Sound of Music - Hazzard Style",
+          "airdate": "1982-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Shine on Hazzard Moon",
+          "airdate": "1982-01-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Pin the Tail on the Dukes",
+          "airdate": "1982-01-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Miz Tisdale on the Lam",
+          "airdate": "1982-01-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Nothin' But the Truth",
+          "airdate": "1982-02-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Dear Diary",
+          "airdate": "1982-02-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "New Deputy in Town",
+          "airdate": "1982-02-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Birds Gotta Fly",
+          "airdate": "1982-02-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Bad Day in Hazzard",
+          "airdate": "1982-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Miss Tri-Counties",
+          "airdate": "1982-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Share and Share Alike",
+          "airdate": "1982-03-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "The Law and Jesse Duke",
+          "airdate": "1982-03-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "Dukes in Danger",
+          "airdate": "1982-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The New Dukes",
+          "airdate": "1982-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Dukes Strike It Rich",
+          "airdate": "1982-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Lawman of the Year",
+          "airdate": "1982-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Coy Meets Girl",
+          "airdate": "1982-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Hazzardgate Tape",
+          "airdate": "1982-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Big Daddy",
+          "airdate": "1982-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Vance's Lady",
+          "airdate": "1982-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Hazzard Hustle",
+          "airdate": "1982-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Enos in Trouble",
+          "airdate": "1982-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Great Insurance Fraud",
+          "airdate": "1982-11-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "A Little Game of Pool",
+          "airdate": "1982-12-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "The Treasure of Soggy Marsh",
+          "airdate": "1982-12-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Revenge of Hughie Hogg",
+          "airdate": "1982-12-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Return of the Mean Green Machine",
+          "airdate": "1983-01-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Ding, Dong, The Boss is Dead",
+          "airdate": "1983-01-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Coy vs. Vance",
+          "airdate": "1983-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Comrade Duke",
+          "airdate": "1983-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Witness: Jesse Duke",
+          "airdate": "1983-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Welcome Back, Bo 'n' Luke",
+          "airdate": "1983-02-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Big Brothers, Duke",
+          "airdate": "1983-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Farewell, Hazzard",
+          "airdate": "1983-03-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Daisy's Shotgun Wedding",
+          "airdate": "1983-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 6,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Lulu's Gone Away",
+          "airdate": "1983-09-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "A Baby for the Dukes",
+          "airdate": "1983-09-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Too Many Roscos",
+          "airdate": "1983-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Brotherly Love",
+          "airdate": "1983-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Boar's Nest Bears",
+          "airdate": "1983-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Boss Behind Bars",
+          "airdate": "1983-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "A Boy's Best Friend",
+          "airdate": "1983-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Targets: Daisy and Lulu",
+          "airdate": "1983-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Twin Trouble",
+          "airdate": "1983-11-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Enos's Last Chance",
+          "airdate": "1983-12-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "High Flyin' Dukes",
+          "airdate": "1983-12-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Cooter's Girl",
+          "airdate": "1983-12-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Heiress Daisy Duke",
+          "airdate": "1984-01-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Dead and Alive",
+          "airdate": "1984-01-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Play It Again, Luke",
+          "airdate": "1984-01-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Undercover Dukes (1)",
+          "airdate": "1984-02-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Undercover Dukes (2)",
+          "airdate": "1984-02-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "How to Succeed in Hazzard",
+          "airdate": "1984-02-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Close Call for Daisy",
+          "airdate": "1984-02-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Ransom of Hazzard County",
+          "airdate": "1984-03-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The Fortune Tellers",
+          "airdate": "1984-03-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Cooter's Confession",
+          "airdate": "1984-03-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 7,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Happy Birthday, General Lee",
+          "airdate": "1984-09-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Welcome, Waylon Jennings",
+          "airdate": "1984-09-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Dr. Jekyll and Mr. Duke",
+          "airdate": "1984-10-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Robot P. Coltrane",
+          "airdate": "1984-10-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "No More Mr. Nice Guy",
+          "airdate": "1984-10-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Dukes in Hollywood",
+          "airdate": "1984-11-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Cool Hands, Luke & Bo",
+          "airdate": "1984-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Go West, Young Dukes",
+          "airdate": "1984-11-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Cale Yarborough Comes to Hazzard",
+          "airdate": "1984-11-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Danger on the Hazzard Express",
+          "airdate": "1984-11-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Sittin' Dukes",
+          "airdate": "1984-12-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Sky Bandits Over Hazzard",
+          "airdate": "1984-12-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "The Haunting of J.D. Hogg",
+          "airdate": "1985-01-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "When You Wish Upon a Hogg",
+          "airdate": "1985-01-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Strange Visitor to Hazzard",
+          "airdate": "1985-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Enos and Daisy's Wedding",
+          "airdate": "1985-02-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Opening Night at the Boar's Nest",
+          "airdate": "1985-02-08",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 4284,
-    "name": "The Dukes of Hazzard",
-    "placed": 2
-  }
+  ]
 }

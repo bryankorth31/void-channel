@@ -3,7 +3,7 @@
   "slug": "teenage-mutant-ninja-turtles",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:36.554Z",
+  "matchedAt": "2026-10-19T04:10:43.114Z",
   "addedAt": "2026-10-16T07:56:36.554Z",
   "tvmaze": {
     "id": 4159,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 191,
-    "live": 5,
-    "review": 16,
-    "missing": 170,
-    "pct": 11
+    "live": 32,
+    "review": 2,
+    "missing": 157,
+    "pct": 18
   },
   "seasons": [
     {
@@ -29,19 +29,46 @@
           "airdate": "1987-12-14",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997",
-            "itemTitle": "Teenage Mutant Ninja Turtles - The Next Mutation - Complete Series 1997",
-            "file": "Ninja Turtles - Next Mutation S01E01.mp4",
-            "name": "Ninja Turtles - Next Mutation S01E01",
-            "url": "https://archive.org/download/teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997/Ninja%20Turtles%20-%20Next%20Mutation%20S01E01.mp4",
-            "seconds": 1255,
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E01 - Things Change [1080p DVDRip Upscale][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E01 - Things Change [1080p DVDRip Upscale][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E01%20-%20Things%20Change%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+            "seconds": 1329,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 121
+            "sizeMB": 135
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997",
+              "itemTitle": "Teenage Mutant Ninja Turtles - The Next Mutation - Complete Series 1997",
+              "file": "Ninja Turtles - Next Mutation S01E01.mp4",
+              "name": "Ninja Turtles - Next Mutation S01E01",
+              "url": "https://archive.org/download/teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997/Ninja%20Turtles%20-%20Next%20Mutation%20S01E01.mp4",
+              "seconds": 1255,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 121
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 18 in \"Teenage Mutant Ninja Turtles (2003): The\"",
+              "item": "tmnt-2003_202404",
+              "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+              "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E07 - The Way of Invisibility [1080p DVDRip Upscale][SX].mp4",
+              "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E07 - The Way of Invisibility [1080p DVDRip Upscale][SX]",
+              "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E07%20-%20The%20Way%20of%20Invisibility%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+              "seconds": 1323,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         },
         {
           "number": 2,
@@ -49,19 +76,46 @@
           "airdate": "1987-12-15",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997",
-            "itemTitle": "Teenage Mutant Ninja Turtles - The Next Mutation - Complete Series 1997",
-            "file": "Ninja Turtles - Next Mutation S01E02.mp4",
-            "name": "Ninja Turtles - Next Mutation S01E02",
-            "url": "https://archive.org/download/teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997/Ninja%20Turtles%20-%20Next%20Mutation%20S01E02.mp4",
-            "seconds": 1235,
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E02 - A Better Mousetrap [1080p DVDRip Upscale][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E02 - A Better Mousetrap [1080p DVDRip Upscale][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E02%20-%20A%20Better%20Mousetrap%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+            "seconds": 1328,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 119
+            "sizeMB": 133
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997",
+              "itemTitle": "Teenage Mutant Ninja Turtles - The Next Mutation - Complete Series 1997",
+              "file": "Ninja Turtles - Next Mutation S01E02.mp4",
+              "name": "Ninja Turtles - Next Mutation S01E02",
+              "url": "https://archive.org/download/teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997/Ninja%20Turtles%20-%20Next%20Mutation%20S01E02.mp4",
+              "seconds": 1235,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 119
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 18 in \"Teenage Mutant Ninja Turtles (2003): The\"",
+              "item": "tmnt-2003_202404",
+              "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+              "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E09 - Garbageman [1080p DVDRip Upscale][SX].mp4",
+              "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E09 - Garbageman [1080p DVDRip Upscale][SX]",
+              "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E09%20-%20Garbageman%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+              "seconds": 1324,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         },
         {
           "number": 3,
@@ -69,19 +123,46 @@
           "airdate": "1987-12-16",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997",
-            "itemTitle": "Teenage Mutant Ninja Turtles - The Next Mutation - Complete Series 1997",
-            "file": "Ninja Turtles - Next Mutation S01E03.mp4",
-            "name": "Ninja Turtles - Next Mutation S01E03",
-            "url": "https://archive.org/download/teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997/Ninja%20Turtles%20-%20Next%20Mutation%20S01E03.mp4",
-            "seconds": 1239,
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E03 - Attack of the Mousers [1080p DVDRip Upscale][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E03 - Attack of the Mousers [1080p DVDRip Upscale][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E03%20-%20Attack%20of%20the%20Mousers%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+            "seconds": 1323,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 119
+            "sizeMB": 133
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997",
+              "itemTitle": "Teenage Mutant Ninja Turtles - The Next Mutation - Complete Series 1997",
+              "file": "Ninja Turtles - Next Mutation S01E03.mp4",
+              "name": "Ninja Turtles - Next Mutation S01E03",
+              "url": "https://archive.org/download/teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997/Ninja%20Turtles%20-%20Next%20Mutation%20S01E03.mp4",
+              "seconds": 1239,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 119
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 18 in \"Teenage Mutant Ninja Turtles (2003): The\"",
+              "item": "tmnt-2003_202404",
+              "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+              "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E10 - The Shredder Strikes Part 1 [1080p DVDRip Upscale][SX].mp4",
+              "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E10 - The Shredder Strikes Part 1 [1080p DVDRip Upscale][SX]",
+              "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E10%20-%20The%20Shredder%20Strikes%20Part%201%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+              "seconds": 1323,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         },
         {
           "number": 4,
@@ -89,19 +170,46 @@
           "airdate": "1987-12-17",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997",
-            "itemTitle": "Teenage Mutant Ninja Turtles - The Next Mutation - Complete Series 1997",
-            "file": "Ninja Turtles - Next Mutation S01E04.mp4",
-            "name": "Ninja Turtles - Next Mutation S01E04",
-            "url": "https://archive.org/download/teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997/Ninja%20Turtles%20-%20Next%20Mutation%20S01E04.mp4",
-            "seconds": 1234,
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E04 - Meet Casey Jones [1080p DVDRip Upscale][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E04 - Meet Casey Jones [1080p DVDRip Upscale][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E04%20-%20Meet%20Casey%20Jones%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+            "seconds": 1330,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 119
+            "sizeMB": 134
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997",
+              "itemTitle": "Teenage Mutant Ninja Turtles - The Next Mutation - Complete Series 1997",
+              "file": "Ninja Turtles - Next Mutation S01E04.mp4",
+              "name": "Ninja Turtles - Next Mutation S01E04",
+              "url": "https://archive.org/download/teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997/Ninja%20Turtles%20-%20Next%20Mutation%20S01E04.mp4",
+              "seconds": 1234,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 119
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 18 in \"Teenage Mutant Ninja Turtles (2003): The\"",
+              "item": "tmnt-2003_202404",
+              "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+              "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E11 - The Shredder Strikes Part 2 [1080p DVDRip Upscale][SX].mp4",
+              "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E11 - The Shredder Strikes Part 2 [1080p DVDRip Upscale][SX]",
+              "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E11%20-%20The%20Shredder%20Strikes%20Part%202%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+              "seconds": 1323,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         },
         {
           "number": 5,
@@ -109,19 +217,46 @@
           "airdate": "1987-12-18",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997",
-            "itemTitle": "Teenage Mutant Ninja Turtles - The Next Mutation - Complete Series 1997",
-            "file": "Ninja Turtles - Next Mutation S01E05.mp4",
-            "name": "Ninja Turtles - Next Mutation S01E05",
-            "url": "https://archive.org/download/teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997/Ninja%20Turtles%20-%20Next%20Mutation%20S01E05.mp4",
-            "seconds": 1237,
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E05 - Nano [1080p DVDRip Upscale][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E05 - Nano [1080p DVDRip Upscale][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E05%20-%20Nano%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+            "seconds": 1328,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 119
+            "sizeMB": 133
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997",
+              "itemTitle": "Teenage Mutant Ninja Turtles - The Next Mutation - Complete Series 1997",
+              "file": "Ninja Turtles - Next Mutation S01E05.mp4",
+              "name": "Ninja Turtles - Next Mutation S01E05",
+              "url": "https://archive.org/download/teenage-mutant-ninja-turtles-the-next-mutation-complete-series-1997/Ninja%20Turtles%20-%20Next%20Mutation%20S01E05.mp4",
+              "seconds": 1237,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 119
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 18 in \"Teenage Mutant Ninja Turtles (2003): The\"",
+              "item": "tmnt-2003_202404",
+              "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+              "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E12 - The Unconvincing Turtle Titan [1080p DVDRip Upscale][SX].mp4",
+              "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E12 - The Unconvincing Turtle Titan [1080p DVDRip Upscale][SX]",
+              "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E12%20-%20The%20Unconvincing%20Turtle%20Titan%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+              "seconds": 1323,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         }
       ]
     },
@@ -132,16 +267,40 @@
           "number": 1,
           "name": "Return of the Shredder",
           "airdate": "1988-10-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E01 - Turtles in Space Part 1 - The Fugitoid [1080p DVDRip Upscale v2][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E01 - Turtles in Space Part 1 - The Fugitoid [1080p DVDRip Upscale v2][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2002%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S02E01%20-%20Turtles%20in%20Space%20Part%201%20-%20The%20Fugitoid%20%5B1080p%20DVDRip%20Upscale%20v2%5D%5BSX%5D.mp4",
+            "seconds": 1322,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 133
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "The Incredible Shrinking Turtles",
           "airdate": "1988-10-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E02 - Turtles in Space Part 2 - The Trouble with Triceratons [1080p DVDRip Upscale v2][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E02 - Turtles in Space Part 2 - The Trouble with Triceratons [1080p DVDRip Upscale v2][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2002%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S02E02%20-%20Turtles%20in%20Space%20Part%202%20-%20The%20Trouble%20with%20Triceratons%20%5B1080p%20DVDRip%20Upscale%20v2%5D%5BSX%5D.mp4",
+            "seconds": 1324,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134
+          },
           "alternates": []
         },
         {
@@ -156,80 +315,200 @@
           "number": 4,
           "name": "The Mean Machines",
           "airdate": "1988-10-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E04 - Turtles in Space Part 4 - The Arena [1080p DVDRip Upscale v2][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E04 - Turtles in Space Part 4 - The Arena [1080p DVDRip Upscale v2][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2002%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S02E04%20-%20Turtles%20in%20Space%20Part%204%20-%20The%20Arena%20%5B1080p%20DVDRip%20Upscale%20v2%5D%5BSX%5D.mp4",
+            "seconds": 1325,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 133
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Curse of the Evil Eye",
           "airdate": "1988-10-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E05 - Turtles in Space Part 5 - Triceraton Wars [1080p DVDRip Upscale v2][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E05 - Turtles in Space Part 5 - Triceraton Wars [1080p DVDRip Upscale v2][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2002%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S02E05%20-%20Turtles%20in%20Space%20Part%205%20-%20Triceraton%20Wars%20%5B1080p%20DVDRip%20Upscale%20v2%5D%5BSX%5D.mp4",
+            "seconds": 1322,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "The Case of the Killer Pizzas",
           "airdate": "1988-11-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E06 - Secret Origins Part 1 [1080p DVDRip Upscale v2][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E06 - Secret Origins Part 1 [1080p DVDRip Upscale v2][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2002%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S02E06%20-%20Secret%20Origins%20Part%201%20%5B1080p%20DVDRip%20Upscale%20v2%5D%5BSX%5D.mp4",
+            "seconds": 1323,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 133
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Enter: The Fly",
           "airdate": "1988-11-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E07 - Secret Origins Part 2 [1080p DVDRip Upscale v2][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E07 - Secret Origins Part 2 [1080p DVDRip Upscale v2][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2002%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S02E07%20-%20Secret%20Origins%20Part%202%20%5B1080p%20DVDRip%20Upscale%20v2%5D%5BSX%5D.mp4",
+            "seconds": 1324,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 133
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Invasion of the Punk Frogs",
           "airdate": "1988-11-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E08 - Secret Origins Part 3 [1080p DVDRip Upscale v2][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E08 - Secret Origins Part 3 [1080p DVDRip Upscale v2][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2002%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S02E08%20-%20Secret%20Origins%20Part%203%20%5B1080p%20DVDRip%20Upscale%20v2%5D%5BSX%5D.mp4",
+            "seconds": 1325,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 133
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "Splinter No More",
           "airdate": "1988-11-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E09 - Reflections [1080p DVDRip Upscale v2][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E09 - Reflections [1080p DVDRip Upscale v2][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2002%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S02E09%20-%20Reflections%20%5B1080p%20DVDRip%20Upscale%20v2%5D%5BSX%5D.mp4",
+            "seconds": 1291,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "New York's Shiniest",
           "airdate": "1988-12-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E10 - The Ultimate Ninja [1080p DVDRip Upscale v2][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E10 - The Ultimate Ninja [1080p DVDRip Upscale v2][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2002%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S02E10%20-%20The%20Ultimate%20Ninja%20%5B1080p%20DVDRip%20Upscale%20v2%5D%5BSX%5D.mp4",
+            "seconds": 1291,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Teenagers from Dimension X",
           "airdate": "1988-12-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E11 - The Return of Nano [1080p DVDRip Upscale v2][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E11 - The Return of Nano [1080p DVDRip Upscale v2][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2002%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S02E11%20-%20The%20Return%20of%20Nano%20%5B1080p%20DVDRip%20Upscale%20v2%5D%5BSX%5D.mp4",
+            "seconds": 1292,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "The Cat Woman from Channel Six",
           "airdate": "1988-12-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E12 - What a Croc [1080p DVDRip Upscale][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E12 - What a Croc [1080p DVDRip Upscale][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2002%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S02E12%20-%20What%20a%20Croc%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+            "seconds": 1292,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Return of the Technodrome",
           "airdate": "1988-12-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E13 - Return to the Underground [1080p DVDRip Upscale][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 02/Teenage Mutant Ninja Turtles (2003) - S02E13 - Return to the Underground [1080p DVDRip Upscale][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2002%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S02E13%20-%20Return%20to%20the%20Underground%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+            "seconds": 1292,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         }
       ]
@@ -678,9 +957,48 @@
           "number": 8,
           "name": "Rondo in New York",
           "airdate": "1990-09-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Rondo in New York\" (0.63)",
+            "item": "tmnt-2003_202404",
+            "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+            "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E21 - Return to New York Part 1 [1080p DVDRip Upscale][SX].mp4",
+            "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E21 - Return to New York Part 1 [1080p DVDRip Upscale][SX]",
+            "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E21%20-%20Return%20to%20New%20York%20Part%201%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+            "seconds": 1276,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Rondo in New York\" (0.63)",
+              "item": "tmnt-2003_202404",
+              "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+              "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E22 - Return to New York Part 2 [1080p DVDRip Upscale][SX].mp4",
+              "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E22 - Return to New York Part 2 [1080p DVDRip Upscale][SX]",
+              "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E22%20-%20Return%20to%20New%20York%20Part%202%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+              "seconds": 1276,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 128
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Rondo in New York\" (0.63)",
+              "item": "tmnt-2003_202404",
+              "itemTitle": "Teenage Mutant Ninja Turtles (2003): The Complete Series - Remastered in 1080p",
+              "file": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E23 - Return to New York Part 3 [1080p DVDRip Upscale][SX].mp4",
+              "name": "Teenage Mutant Ninja Turtles (2003) The Complete Series - Remastered in 1080p/Season 01/Teenage Mutant Ninja Turtles (2003) - S01E23 - Return to New York Part 3 [1080p DVDRip Upscale][SX]",
+              "url": "https://archive.org/download/tmnt-2003_202404/Teenage%20Mutant%20Ninja%20Turtles%20(2003)%20The%20Complete%20Series%20-%20Remastered%20in%201080p%2FSeason%2001%2FTeenage%20Mutant%20Ninja%20Turtles%20(2003)%20-%20S01E23%20-%20Return%20to%20New%20York%20Part%203%20%5B1080p%20DVDRip%20Upscale%5D%5BSX%5D.mp4",
+              "seconds": 1276,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 128
+            }
+          ]
         },
         {
           "number": 9,
@@ -1527,9 +1845,9 @@
           "number": 1,
           "name": "The Unknown Ninja",
           "airdate": "1995-09-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1547,9 +1865,9 @@
           "number": 2,
           "name": "Dregg of the Earth",
           "airdate": "1995-09-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1567,9 +1885,9 @@
           "number": 3,
           "name": "The Wrath of Medusa",
           "airdate": "1995-09-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1587,9 +1905,9 @@
           "number": 4,
           "name": "The New Mutation",
           "airdate": "1995-10-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1647,9 +1965,9 @@
           "number": 5,
           "name": "The Showdown",
           "airdate": "1995-10-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1687,9 +2005,9 @@
           "number": 7,
           "name": "Carter, the Enforcer",
           "airdate": "1995-10-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1707,9 +2025,9 @@
           "number": 8,
           "name": "Doomquest",
           "airdate": "1995-11-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1732,9 +2050,9 @@
           "number": 1,
           "name": "The Return of Dregg",
           "airdate": "1996-09-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1752,9 +2070,9 @@
           "number": 2,
           "name": "The Beginning of the End",
           "airdate": "1996-09-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1772,9 +2090,9 @@
           "number": 3,
           "name": "The Power of Three",
           "airdate": "1996-09-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1792,9 +2110,9 @@
           "number": 4,
           "name": "A Turtle in Time",
           "airdate": "1996-10-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1812,9 +2130,9 @@
           "number": 5,
           "name": "Turtles to the Second Power",
           "airdate": "1996-10-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1832,9 +2150,9 @@
           "number": 6,
           "name": "Mobster from Dimension X",
           "airdate": "1996-10-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1852,9 +2170,9 @@
           "number": 7,
           "name": "The Day the Earth Disappeared",
           "airdate": "1996-10-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",
@@ -1872,9 +2190,9 @@
           "number": 8,
           "name": "Divide and Conquer",
           "airdate": "1996-11-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "tmnt-season-9-10",
             "itemTitle": "Teenage Mutant Ninja Turtles 1987 Season 9 & 10 (1080p Upscale)",

@@ -3,7 +3,7 @@
   "slug": "real-time-with-bill-maher",
   "type": "Reality & Talk",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:47.804Z",
+  "matchedAt": "2026-10-19T04:11:54.454Z",
   "addedAt": "2026-10-15T12:08:26.473Z",
   "tvmaze": {
     "id": 279,
@@ -14,9 +14,9 @@
   },
   "coverage": {
     "total": 746,
-    "live": 0,
-    "review": 4,
-    "missing": 742,
+    "live": 3,
+    "review": 2,
+    "missing": 741,
     "pct": 1
   },
   "seasons": [
@@ -232,16 +232,40 @@
           "number": 6,
           "name": "February 20, 2004",
           "airdate": "2004-02-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"February 20, 2004\" (0.63)",
+            "item": "km-real-time-with-bill-maher-season-7-february-20-2009-480p-30f-20250220-171816",
+            "itemTitle": "Real Time With Bill Maher February 20 2009 Season 7",
+            "file": "km_Real Time With Bill Maher Season 7 February 20 2009_480p_30f_20250220_171816.mp4",
+            "name": "km_Real Time With Bill Maher Season 7 February 20 2009_480p_30f_20250220_171816",
+            "url": "https://archive.org/download/km-real-time-with-bill-maher-season-7-february-20-2009-480p-30f-20250220-171816/km_Real%20Time%20With%20Bill%20Maher%20Season%207%20February%2020%202009_480p_30f_20250220_171816.mp4",
+            "seconds": 3422,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 854
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "February 27, 2004",
           "airdate": "2004-02-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"February 27, 2004\" (0.63)",
+            "item": "km-real-time-with-bill-maher-2009-02-27",
+            "itemTitle": "Real Time With Bill Maher Season 7 February 27 2009",
+            "file": "km_Real Time With Bill Maher Season 7 February 27 2009_480p_30f_20250227_200251.mp4",
+            "name": "km_Real Time With Bill Maher Season 7 February 27 2009_480p_30f_20250227_200251",
+            "url": "https://archive.org/download/km-real-time-with-bill-maher-2009-02-27/km_Real%20Time%20With%20Bill%20Maher%20Season%207%20February%2027%202009_480p_30f_20250227_200251.mp4",
+            "seconds": 3427,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 693
+          },
           "alternates": []
         },
         {
@@ -1185,24 +1209,63 @@
           "number": 1,
           "name": "February 20, 2009",
           "airdate": "2009-02-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "km-real-time-with-bill-maher-season-7-february-20-2009-480p-30f-20250220-171816",
+            "itemTitle": "Real Time With Bill Maher February 20 2009 Season 7",
+            "file": "Real Time With Bill Maher 2009 02 20 HDTV XviD aAF.mp4",
+            "name": "Real Time With Bill Maher 2009 02 20 HDTV XviD aAF",
+            "url": "https://archive.org/download/km-real-time-with-bill-maher-season-7-february-20-2009-480p-30f-20250220-171816/Real%20Time%20With%20Bill%20Maher%202009%2002%2020%20HDTV%20XviD%20aAF.mp4",
+            "seconds": 3417,
+            "format": "MPEG4",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 174
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "February 27, 2009",
           "airdate": "2009-02-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "km-real-time-with-bill-maher-2009-02-27",
+            "itemTitle": "Real Time With Bill Maher Season 7 February 27 2009",
+            "file": "Real Time With Bill Maher 02 27 2009 HDTV XviD aAF.mp4",
+            "name": "Real Time With Bill Maher 02 27 2009 HDTV XviD aAF",
+            "url": "https://archive.org/download/km-real-time-with-bill-maher-2009-02-27/Real%20Time%20With%20Bill%20Maher%2002%2027%202009%20HDTV%20XviD%20aAF.mp4",
+            "seconds": 3421,
+            "format": "MPEG4",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 171
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "March 06, 2009",
           "airdate": "2009-03-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "airdate in filename",
+            "item": "km-real-time-with-bill-maher-march-6-2009",
+            "itemTitle": "Real Time With Bill Maher March 6 2009",
+            "file": "Real Time With Bill Maher 03 06 2009 HDTV XviD aAF.mp4",
+            "name": "Real Time With Bill Maher 03 06 2009 HDTV XviD aAF",
+            "url": "https://archive.org/download/km-real-time-with-bill-maher-march-6-2009/Real%20Time%20With%20Bill%20Maher%2003%2006%202009%20HDTV%20XviD%20aAF.mp4",
+            "seconds": 3419,
+            "format": "MPEG4",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 173
+          },
           "alternates": []
         },
         {
@@ -1225,20 +1288,8 @@
           "number": 6,
           "name": "March 27, 2009",
           "airdate": "2009-03-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"March 27, 2009\" (0.63)",
-            "item": "km-real-time-with-bill-maher-march-27-2009-480p",
-            "itemTitle": "Real Time With Bill Maher March 27 2009",
-            "file": "Real Time With Bill Maher March 27 2009_480p.mp4",
-            "name": "Real Time With Bill Maher March 27 2009_480p",
-            "url": "https://archive.org/download/km-real-time-with-bill-maher-march-27-2009-480p/Real%20Time%20With%20Bill%20Maher%20March%2027%202009_480p.mp4",
-            "seconds": 3425,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 598
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1253,20 +1304,8 @@
           "number": 8,
           "name": "April 10, 2009",
           "airdate": "2009-04-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"April 10, 2009\" (0.63)",
-            "item": "real-time-with-bill-maher",
-            "itemTitle": "Real Time With Bill Maher April 10 2009",
-            "file": "km_Real Time With Bill Maher April 10 2009_480p_30f_20250410_204752.mp4",
-            "name": "km_Real Time With Bill Maher April 10 2009_480p_30f_20250410_204752",
-            "url": "https://archive.org/download/real-time-with-bill-maher/km_Real%20Time%20With%20Bill%20Maher%20April%2010%202009_480p_30f_20250410_204752.mp4",
-            "seconds": 2967,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 614
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1297,20 +1336,8 @@
           "number": 12,
           "name": "May 15, 2009",
           "airdate": "2009-05-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"May 15, 2009\" (0.63)",
-            "item": "real-time-with-bill-maher-may-15-2009",
-            "itemTitle": "Real Time With Bill Maher May 15 2009",
-            "file": "km_Real Time With Bill Maher May 15 2009_480p_30f_20250515_211317.mp4",
-            "name": "km_Real Time With Bill Maher May 15 2009_480p_30f_20250515_211317",
-            "url": "https://archive.org/download/real-time-with-bill-maher-may-15-2009/km_Real%20Time%20With%20Bill%20Maher%20May%2015%202009_480p_30f_20250515_211317.mp4",
-            "seconds": 3444,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 753
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1405,20 +1432,8 @@
           "number": 24,
           "name": "August 21, 2009",
           "airdate": "2009-08-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "title ~ \"August 21, 2009\" (0.64)",
-            "item": "real-time-with-bill-maher-august-21-2009",
-            "itemTitle": "Real Time With Bill Maher August 21 2009",
-            "file": "Real Time With Bill Maher August 21 2009.mp4",
-            "name": "Real Time With Bill Maher August 21 2009",
-            "url": "https://archive.org/download/real-time-with-bill-maher-august-21-2009/Real%20Time%20With%20Bill%20Maher%20August%2021%202009.mp4",
-            "seconds": 3546,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 793
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

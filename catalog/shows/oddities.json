@@ -3,7 +3,7 @@
   "slug": "oddities",
   "type": "MTV",
   "network": "MTV",
-  "matchedAt": "2026-10-16T07:56:42.225Z",
+  "matchedAt": "2026-10-19T04:10:48.284Z",
   "addedAt": "2026-10-15T12:07:45.864Z",
   "tvmaze": {
     "id": 8625,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 70,
-    "live": 10,
-    "review": 5,
-    "missing": 55,
-    "pct": 21
+    "live": 12,
+    "review": 0,
+    "missing": 58,
+    "pct": 17
   },
   "seasons": [
     {
@@ -41,21 +41,7 @@
             "playable": true,
             "sizeMB": 354
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 10 in \"VHS TV - YTV MTV's ODDITIES BROADCAST WO\"",
-              "item": "ytv-MTV-oddities-WOC",
-              "itemTitle": "VHS TV - YTV MTV's ODDITIES BROADCAST WOC 1996",
-              "file": "YTV THE HEAD 1 and 2.mp4",
-              "name": "YTV THE HEAD 1 and 2",
-              "url": "https://archive.org/download/ytv-MTV-oddities-WOC/YTV%20THE%20HEAD%201%20and%202.mp4",
-              "seconds": 1524,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1823
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -75,21 +61,7 @@
             "playable": true,
             "sizeMB": 379
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 10 in \"VHS TV - YTV MTV's ODDITIES BROADCAST WO\"",
-              "item": "ytv-MTV-oddities-WOC",
-              "itemTitle": "VHS TV - YTV MTV's ODDITIES BROADCAST WOC 1996",
-              "file": "YTV THE HEAD 3 and 4.mp4",
-              "name": "YTV THE HEAD 3 and 4",
-              "url": "https://archive.org/download/ytv-MTV-oddities-WOC/YTV%20THE%20HEAD%203%20and%204.mp4",
-              "seconds": 1550,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1854
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -109,21 +81,7 @@
             "playable": true,
             "sizeMB": 361
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 10 in \"VHS TV - YTV MTV's ODDITIES BROADCAST WO\"",
-              "item": "ytv-MTV-oddities-WOC",
-              "itemTitle": "VHS TV - YTV MTV's ODDITIES BROADCAST WOC 1996",
-              "file": "YTV THE HEAD ONE.ia.mp4",
-              "name": "YTV THE HEAD ONE",
-              "url": "https://archive.org/download/ytv-MTV-oddities-WOC/YTV%20THE%20HEAD%20ONE.ia.mp4",
-              "seconds": 1524,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 148
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -143,39 +101,25 @@
             "playable": true,
             "sizeMB": 360
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 10 in \"VHS TV - YTV MTV's ODDITIES BROADCAST WO\"",
-              "item": "ytv-MTV-oddities-WOC",
-              "itemTitle": "VHS TV - YTV MTV's ODDITIES BROADCAST WOC 1996",
-              "file": "YTV THE HEAD TWO.ia.mp4",
-              "name": "YTV THE HEAD TWO",
-              "url": "https://archive.org/download/ytv-MTV-oddities-WOC/YTV%20THE%20HEAD%20TWO.ia.mp4",
-              "seconds": 1550,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 151
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
           "name": "Mummified Hand",
           "airdate": "2010-12-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 10 in \"VHS TV - YTV MTV's ODDITIES BROADCAST WO\"",
-            "item": "ytv-MTV-oddities-WOC",
-            "itemTitle": "VHS TV - YTV MTV's ODDITIES BROADCAST WOC 1996",
-            "file": "YTV THE MAXX WOC 9 and 10.mp4",
-            "name": "YTV THE MAXX WOC 9 and 10",
-            "url": "https://archive.org/download/ytv-MTV-oddities-WOC/YTV%20THE%20MAXX%20WOC%209%20and%2010.mp4",
-            "seconds": 1663,
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mtvs-oddities-inside-the-head",
+            "itemTitle": "MTV's Oddities:The Head",
+            "file": "105 Rebellion - Mona's Secret.mp4",
+            "name": "105 Rebellion - Mona's Secret",
+            "url": "https://archive.org/download/mtvs-oddities-inside-the-head/105%20Rebellion%20-%20Mona's%20Secret.mp4",
+            "seconds": 1359,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1986
+            "sizeMB": 368
           },
           "alternates": []
         },
@@ -197,39 +141,25 @@
             "playable": true,
             "sizeMB": 375
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 10 in \"VHS TV - YTV MTV's ODDITIES BROADCAST WO\"",
-              "item": "ytv-MTV-oddities-WOC",
-              "itemTitle": "VHS TV - YTV MTV's ODDITIES BROADCAST WOC 1996",
-              "file": "YTV THE MAXX WOC 11.mp4",
-              "name": "YTV THE MAXX WOC 11",
-              "url": "https://archive.org/download/ytv-MTV-oddities-WOC/YTV%20THE%20MAXX%20WOC%2011.mp4",
-              "seconds": 1293,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1546
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
           "name": "Pickled Pig",
           "airdate": "2010-12-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 7 of 10 in \"VHS TV - YTV MTV's ODDITIES BROADCAST WO\"",
-            "item": "ytv-MTV-oddities-WOC",
-            "itemTitle": "VHS TV - YTV MTV's ODDITIES BROADCAST WOC 1996",
-            "file": "YTV THE MAXX WOC 12 and 13.mp4",
-            "name": "YTV THE MAXX WOC 12 and 13",
-            "url": "https://archive.org/download/ytv-MTV-oddities-WOC/YTV%20THE%20MAXX%20WOC%2012%20and%2013.mp4",
-            "seconds": 1639,
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "mtvs-oddities-inside-the-head",
+            "itemTitle": "MTV's Oddities:The Head",
+            "file": "107 The Invasion - Maxx Sneak Peek.mp4",
+            "name": "107 The Invasion - Maxx Sneak Peek",
+            "url": "https://archive.org/download/mtvs-oddities-inside-the-head/107%20The%20Invasion%20-%20Maxx%20Sneak%20Peek.mp4",
+            "seconds": 1358,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1961
+            "sizeMB": 370
           },
           "alternates": []
         },
@@ -237,60 +167,24 @@
           "number": 8,
           "name": "Teeth on a Stick",
           "airdate": "2011-01-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 8 of 10 in \"VHS TV - YTV MTV's ODDITIES BROADCAST WO\"",
-            "item": "ytv-MTV-oddities-WOC",
-            "itemTitle": "VHS TV - YTV MTV's ODDITIES BROADCAST WOC 1996",
-            "file": "YTV THE MAXX WOC ELEVEN.ia.mp4",
-            "name": "YTV THE MAXX WOC ELEVEN",
-            "url": "https://archive.org/download/ytv-MTV-oddities-WOC/YTV%20THE%20MAXX%20WOC%20ELEVEN.ia.mp4",
-            "seconds": 1293,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 126
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
           "name": "The Chair",
           "airdate": "2011-01-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 9 of 10 in \"VHS TV - YTV MTV's ODDITIES BROADCAST WO\"",
-            "item": "ytv-MTV-oddities-WOC",
-            "itemTitle": "VHS TV - YTV MTV's ODDITIES BROADCAST WOC 1996",
-            "file": "YTV THE MAXX WOC NINE.ia.mp4",
-            "name": "YTV THE MAXX WOC NINE",
-            "url": "https://archive.org/download/ytv-MTV-oddities-WOC/YTV%20THE%20MAXX%20WOC%20NINE.ia.mp4",
-            "seconds": 1663,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 161
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "The Bulb Cruncher",
           "airdate": "2011-04-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 10 of 10 in \"VHS TV - YTV MTV's ODDITIES BROADCAST WO\"",
-            "item": "ytv-MTV-oddities-WOC",
-            "itemTitle": "VHS TV - YTV MTV's ODDITIES BROADCAST WOC 1996",
-            "file": "YTV THE MAXX WOC TWELVE.ia.mp4",
-            "name": "YTV THE MAXX WOC TWELVE",
-            "url": "https://archive.org/download/ytv-MTV-oddities-WOC/YTV%20THE%20MAXX%20WOC%20TWELVE.ia.mp4",
-            "seconds": 1639,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 160
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

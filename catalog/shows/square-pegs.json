@@ -3,7 +3,7 @@
   "slug": "square-pegs",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:58:28.781Z",
+  "matchedAt": "2026-10-19T04:12:27.794Z",
   "addedAt": "2026-10-15T12:09:00.565Z",
   "tvmaze": {
     "id": 12742,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 20,
     "live": 5,
-    "review": 11,
-    "missing": 4,
-    "pct": 80
+    "review": 13,
+    "missing": 2,
+    "pct": 90
   },
   "seasons": [
     {
@@ -136,8 +136,20 @@
           "number": 5,
           "name": "Halloween XII",
           "airdate": "1982-11-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Halloween XII\" (0.95)",
+            "item": "square-pegs-1982-83-sjp",
+            "itemTitle": "Square Pegs (1982–83) Sarah Jessica Parker",
+            "file": "05 Square Pegs   e05   Halloween XII - yt - Square Pegs Full Episodes.mp4",
+            "name": "05 Square Pegs   e05   Halloween XII - yt - Square Pegs Full Episodes",
+            "url": "https://archive.org/download/square-pegs-1982-83-sjp/05%20Square%20Pegs%20%20%20e05%20%20%20Halloween%20XII%20-%20yt%20-%20Square%20Pegs%20Full%20Episodes.mp4",
+            "seconds": 1487,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 143
+          },
           "alternates": []
         },
         {
@@ -178,8 +190,20 @@
           "number": 7,
           "name": "Weemaweegate",
           "airdate": "1982-11-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Weemaweegate\" (0.95)",
+            "item": "square-pegs-1982-83-sjp",
+            "itemTitle": "Square Pegs (1982–83) Sarah Jessica Parker",
+            "file": "07 Square Pegs   e07   Weemaweegate - yt - Square Pegs Full Episodes.mp4",
+            "name": "07 Square Pegs   e07   Weemaweegate - yt - Square Pegs Full Episodes",
+            "url": "https://archive.org/download/square-pegs-1982-83-sjp/07%20Square%20Pegs%20%20%20e07%20%20%20Weemaweegate%20-%20yt%20-%20Square%20Pegs%20Full%20Episodes.mp4",
+            "seconds": 1458,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 144
+          },
           "alternates": []
         },
         {
@@ -390,7 +414,21 @@
             "playable": true,
             "sizeMB": 123
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Stepanowicz Papers\" (0.95)",
+              "item": "square-pegs-1982-83-sjp",
+              "itemTitle": "Square Pegs (1982–83) Sarah Jessica Parker",
+              "file": "16 not 15 Square Pegs  e15 the Stepanowicz Papers - yt - Square Pegs Full Episodes.mp4",
+              "name": "16 not 15 Square Pegs  e15 the Stepanowicz Papers - yt - Square Pegs Full Episodes",
+              "url": "https://archive.org/download/square-pegs-1982-83-sjp/16%20not%2015%20Square%20Pegs%20%20e15%20the%20Stepanowicz%20Papers%20-%20yt%20-%20Square%20Pegs%20Full%20Episodes.mp4",
+              "seconds": 1488,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 133
+            }
+          ]
         },
         {
           "number": 17,

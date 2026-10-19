@@ -3,7 +3,7 @@
   "slug": "prime-suspect",
   "type": "British and Beyond",
   "network": "ITV",
-  "matchedAt": "2026-10-16T07:57:07.173Z",
+  "matchedAt": "2026-10-19T04:11:14.921Z",
   "addedAt": "2026-10-16T00:12:11.887Z",
   "tvmaze": {
     "id": 1282,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 15,
     "live": 0,
-    "review": 5,
-    "missing": 10,
-    "pct": 33
+    "review": 6,
+    "missing": 9,
+    "pct": 40
   },
   "seasons": [
     {
@@ -63,19 +63,33 @@
           "airdate": "1991-04-08",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 6 in \"Prime Suspect (1991-2006 TV Detective se\"",
+            "conf": 0.7,
+            "why": "absolute episode number",
             "item": "prime-suspect-1991",
             "itemTitle": "Prime Suspect (1991-2006 TV Detective series)",
-            "file": "Prime Suspect 3 (1993) (Part 2).mp4",
-            "name": "Prime Suspect 3 (1993) (Part 2)",
-            "url": "https://archive.org/download/prime-suspect-1991/Prime%20Suspect%203%20(1993)%20(Part%202).mp4",
-            "seconds": 6214,
+            "file": "Prime Suspect 4 Ep 2 - Inner Circles (1995).mp4",
+            "name": "Prime Suspect 4 Ep 2 - Inner Circles (1995)",
+            "url": "https://archive.org/download/prime-suspect-1991/Prime%20Suspect%204%20Ep%202%20-%20Inner%20Circles%20(1995).mp4",
+            "seconds": 6106,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 770
+            "sizeMB": 994
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 6 in \"Prime Suspect (1991-2006 TV Detective se\"",
+              "item": "prime-suspect-1991",
+              "itemTitle": "Prime Suspect (1991-2006 TV Detective series)",
+              "file": "Prime Suspect 3 (1993) (Part 2).mp4",
+              "name": "Prime Suspect 3 (1993) (Part 2)",
+              "url": "https://archive.org/download/prime-suspect-1991/Prime%20Suspect%203%20(1993)%20(Part%202).mp4",
+              "seconds": 6214,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 770
+            }
+          ]
         }
       ]
     },
@@ -86,8 +100,20 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "1992-12-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "prime-suspect-1991",
+            "itemTitle": "Prime Suspect (1991-2006 TV Detective series)",
+            "file": "Prime Suspect 4 Ep 3 - The Scent of Darkness (1995).mp4",
+            "name": "Prime Suspect 4 Ep 3 - The Scent of Darkness (1995)",
+            "url": "https://archive.org/download/prime-suspect-1991/Prime%20Suspect%204%20Ep%203%20-%20The%20Scent%20of%20Darkness%20(1995).mp4",
+            "seconds": 6076,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 987
+          },
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "the-sisters-grimm",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-17T08:06:03.663Z",
+  "matchedAt": "2026-10-19T04:11:09.146Z",
   "addedAt": "2026-10-17T08:06:03.663Z",
   "tvmaze": {
     "id": 85777,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 12,
     "live": 0,
-    "review": 10,
-    "missing": 2,
-    "pct": 83
+    "review": 12,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -87,8 +87,20 @@
           "number": 4,
           "name": "Prince Charming",
           "airdate": "2025-10-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Prince Charming\" (1.00)",
+            "item": "the-sisters-grimm",
+            "itemTitle": "The Sisters Grimm",
+            "file": "Prince Charming.mp4",
+            "name": "Prince Charming",
+            "url": "https://archive.org/download/the-sisters-grimm/Prince%20Charming.mp4",
+            "seconds": 1355,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 251
+          },
           "alternates": []
         },
         {
@@ -220,8 +232,20 @@
           "number": 5,
           "name": "The Pied Piper",
           "airdate": "2026-10-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Pied Piper\" (1.00)",
+            "item": "the-sisters-grimm",
+            "itemTitle": "The Sisters Grimm",
+            "file": "The Pied Piper.mp4",
+            "name": "The Pied Piper",
+            "url": "https://archive.org/download/the-sisters-grimm/The%20Pied%20Piper.mp4",
+            "seconds": 1357,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 400
+          },
           "alternates": []
         },
         {

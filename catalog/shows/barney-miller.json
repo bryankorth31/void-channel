@@ -3,7 +3,7 @@
   "slug": "barney-miller",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-16T07:58:20.606Z",
+  "matchedAt": "2026-10-19T04:12:22.124Z",
   "addedAt": "2026-10-15T12:08:54.331Z",
   "tvmaze": {
     "id": 5782,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 170,
-    "live": 164,
+    "live": 166,
     "review": 0,
-    "missing": 6,
-    "pct": 96
+    "missing": 4,
+    "pct": 98
   },
   "seasons": [
     {
@@ -2393,16 +2393,54 @@
           "number": 13,
           "name": "Vanished (1)",
           "airdate": "1980-01-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "barney-miller",
+            "itemTitle": "Barney Miller Series",
+            "file": "Barney Miller 1975-1982 (Complete TV series in MP4 format)/Barney Miller S06E13 (Vanished Pt1).mp4",
+            "name": "Barney Miller 1975-1982 (Complete TV series in MP4 format)/Barney Miller S06E13 (Vanished Pt1)",
+            "url": "https://archive.org/download/barney-miller/Barney%20Miller%201975-1982%20(Complete%20TV%20series%20in%20MP4%20format)%2FBarney%20Miller%20S06E13%20(Vanished%20Pt1).mp4",
+            "seconds": 1480,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 318
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Vanished (1)\" (0.78)",
+              "item": "barney-miller",
+              "itemTitle": "Barney Miller Series",
+              "file": "Barney Miller 1975-1982 (Complete TV series in MP4 format)/Barney Miller S06E14 (Vanished Pt2).mp4",
+              "name": "Barney Miller 1975-1982 (Complete TV series in MP4 format)/Barney Miller S06E14 (Vanished Pt2)",
+              "url": "https://archive.org/download/barney-miller/Barney%20Miller%201975-1982%20(Complete%20TV%20series%20in%20MP4%20format)%2FBarney%20Miller%20S06E14%20(Vanished%20Pt2).mp4",
+              "seconds": 1517,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 326
+            }
+          ]
         },
         {
           "number": 14,
           "name": "Vanished (2)",
           "airdate": "1980-01-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "barney-miller",
+            "itemTitle": "Barney Miller Series",
+            "file": "Barney Miller 1975-1982 (Complete TV series in MP4 format)/Barney Miller S06E14 (Vanished Pt2).mp4",
+            "name": "Barney Miller 1975-1982 (Complete TV series in MP4 format)/Barney Miller S06E14 (Vanished Pt2)",
+            "url": "https://archive.org/download/barney-miller/Barney%20Miller%201975-1982%20(Complete%20TV%20series%20in%20MP4%20format)%2FBarney%20Miller%20S06E14%20(Vanished%20Pt2).mp4",
+            "seconds": 1517,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 326
+          },
           "alternates": []
         },
         {

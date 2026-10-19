@@ -3,7 +3,7 @@
   "slug": "punky-brewster",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:25.981Z",
+  "matchedAt": "2026-10-19T04:12:25.959Z",
   "addedAt": "2026-10-15T12:08:58.332Z",
   "tvmaze": {
     "id": 1253,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 88,
-    "live": 80,
-    "review": 8,
+    "live": 82,
+    "review": 6,
     "missing": 0,
     "pct": 100
   },
@@ -87,9 +87,9 @@
           "number": 4,
           "name": "Punky Gets Her Own Room / Lost and Found",
           "airdate": "1984-10-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
@@ -532,21 +532,35 @@
           "number": 20,
           "name": "Gals and Dolls",
           "airdate": "1985-03-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Gals and Dolls\" (1.00)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
             "itemTitle": "Punky Brewster S01-S04",
-            "file": "Punky Brewster - S01E23 - Gals and Dolls.mp4",
-            "name": "Punky Brewster - S01E23 - Gals and Dolls",
-            "url": "https://archive.org/download/punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus/Punky%20Brewster%20-%20S01E23%20-%20Gals%20and%20Dolls.mp4",
-            "seconds": 1456,
+            "file": "Punky Brewster - S01E20 - My Aged Valentine.mp4",
+            "name": "Punky Brewster - S01E20 - My Aged Valentine",
+            "url": "https://archive.org/download/punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus/Punky%20Brewster%20-%20S01E20%20-%20My%20Aged%20Valentine.mp4",
+            "seconds": 1462,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 352
+            "sizeMB": 354
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Gals and Dolls\" (1.00)",
+              "item": "punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus",
+              "itemTitle": "Punky Brewster S01-S04",
+              "file": "Punky Brewster - S01E23 - Gals and Dolls.mp4",
+              "name": "Punky Brewster - S01E23 - Gals and Dolls",
+              "url": "https://archive.org/download/punky-brewster-s-01-e-15-e-16-yes-punky-there-is-a-santa-claus/Punky%20Brewster%20-%20S01E23%20-%20Gals%20and%20Dolls.mp4",
+              "seconds": 1456,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 352
+            }
+          ]
         },
         {
           "number": 21,

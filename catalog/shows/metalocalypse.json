@@ -3,7 +3,7 @@
   "slug": "metalocalypse",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-16T07:56:39.301Z",
+  "matchedAt": "2026-10-19T04:10:45.342Z",
   "addedAt": "2026-10-15T15:05:52.889Z",
   "tvmaze": {
     "id": 928,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 62,
     "live": 0,
-    "review": 0,
-    "missing": 62,
-    "pct": 0
+    "review": 3,
+    "missing": 59,
+    "pct": 5
   },
   "seasons": [
     {
@@ -506,8 +506,20 @@
           "number": 9,
           "name": "Going Downklok",
           "airdate": "2012-06-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "minoriteam-s-01-e-12-the-internet",
+            "itemTitle": "Random [adult swim] recordings and lost media from here and myspleen , personal collection  Part 2",
+            "file": "S04E09 - Going Downklok.mp4",
+            "name": "S04E09 - Going Downklok",
+            "url": "https://archive.org/download/minoriteam-s-01-e-12-the-internet/S04E09%20-%20Going%20Downklok.mp4",
+            "seconds": 678,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 61
+          },
           "alternates": []
         },
         {
@@ -522,16 +534,40 @@
           "number": 11,
           "name": "Breakup Klok",
           "airdate": "2012-07-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "minoriteam-s-01-e-12-the-internet",
+            "itemTitle": "Random [adult swim] recordings and lost media from here and myspleen , personal collection  Part 2",
+            "file": "S04E11 - Breakup Klok.mp4",
+            "name": "S04E11 - Breakup Klok",
+            "url": "https://archive.org/download/minoriteam-s-01-e-12-the-internet/S04E11%20-%20Breakup%20Klok.mp4",
+            "seconds": 678,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 62
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Church of the Black Klok",
           "airdate": "2012-07-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "minoriteam-s-01-e-12-the-internet",
+            "itemTitle": "Random [adult swim] recordings and lost media from here and myspleen , personal collection  Part 2",
+            "file": "S04E12 - Church Of The Black Klok.mp4",
+            "name": "S04E12 - Church Of The Black Klok",
+            "url": "https://archive.org/download/minoriteam-s-01-e-12-the-internet/S04E12%20-%20Church%20Of%20The%20Black%20Klok.mp4",
+            "seconds": 680,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 67
+          },
           "alternates": []
         }
       ]

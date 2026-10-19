@@ -3,7 +3,7 @@
   "slug": "on-flux",
   "type": "MTV",
   "network": "MTV",
-  "matchedAt": "2026-10-16T07:56:41.441Z",
+  "matchedAt": "2026-10-19T04:10:47.161Z",
   "selfListed": true,
   "tvmaze": {
     "id": null,
@@ -13,9 +13,9 @@
     "network": "MTV"
   },
   "coverage": {
-    "total": 16,
+    "total": 76,
     "live": 0,
-    "review": 16,
+    "review": 76,
     "missing": 0,
     "pct": 100
   },
@@ -25,19 +25,22 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
+          "name": "01 pilot 06",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "00.mp4",
-            "name": "00",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/00.mp4",
-            "seconds": 745,
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "01 - Pilot [1x01-06].mp4",
+            "name": "01 - Pilot [1x01-06]",
+            "url": "https://archive.org/download/hnbt_aeonflux/01%20-%20Pilot%20%5B1x01-06%5D.mp4",
+            "seconds": 828,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 75,
-            "ep": null,
+            "sizeMB": 84,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
           },
@@ -48,16 +51,19 @@
           "name": "Episode 2",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "01.mp4",
-            "name": "01",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/01.mp4",
-            "seconds": 1350,
-            "format": "h.264",
+            "item": "aeonfluxfullseries",
+            "itemTitle": "Æon Flux Full Series",
+            "file": "S 1 EP 2.mp4",
+            "name": "S 1 EP 2",
+            "url": "https://archive.org/download/aeonfluxfullseries/S%201%20EP%202.mp4",
+            "seconds": 1302,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
+            "sizeMB": 71,
+            "ep": {
+              "season": null,
+              "episode": 2
+            },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
           },
@@ -68,16 +74,19 @@
           "name": "Episode 3",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "02.mp4",
-            "name": "02",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/02.mp4",
+            "item": "aeonfluxfullseries",
+            "itemTitle": "Æon Flux Full Series",
+            "file": "S 1 EP 3.mp4",
+            "name": "S 1 EP 3",
+            "url": "https://archive.org/download/aeonfluxfullseries/S%201%20EP%203.mp4",
             "seconds": 1416,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 143,
-            "ep": null,
+            "sizeMB": 69,
+            "ep": {
+              "season": null,
+              "episode": 3
+            },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
           },
@@ -88,16 +97,19 @@
           "name": "Episode 4",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "03.mp4",
-            "name": "03",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/03.mp4",
+            "item": "aeonfluxfullseries",
+            "itemTitle": "Æon Flux Full Series",
+            "file": "S 1 EP 4.mp4",
+            "name": "S 1 EP 4",
+            "url": "https://archive.org/download/aeonfluxfullseries/S%201%20EP%204.mp4",
             "seconds": 1354,
-            "format": "h.264",
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 137,
-            "ep": null,
+            "sizeMB": 67,
+            "ep": {
+              "season": null,
+              "episode": 4
+            },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
           },
@@ -108,16 +120,19 @@
           "name": "Episode 5",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "04.mp4",
-            "name": "04",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/04.mp4",
-            "seconds": 1281,
-            "format": "h.264",
+            "item": "aeonfluxfullseries",
+            "itemTitle": "Æon Flux Full Series",
+            "file": "S 1 EP 5.mp4",
+            "name": "S 1 EP 5",
+            "url": "https://archive.org/download/aeonfluxfullseries/S%201%20EP%205.mp4",
+            "seconds": 1384,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 130,
-            "ep": null,
+            "sizeMB": 68,
+            "ep": {
+              "season": null,
+              "episode": 5
+            },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
           },
@@ -128,16 +143,19 @@
           "name": "Episode 6",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "05.mp4",
-            "name": "05",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/05.mp4",
-            "seconds": 1327,
-            "format": "h.264",
+            "item": "aeonfluxfullseries",
+            "itemTitle": "Æon Flux Full Series",
+            "file": "S 1 EP 6.mp4",
+            "name": "S 1 EP 6",
+            "url": "https://archive.org/download/aeonfluxfullseries/S%201%20EP%206.mp4",
+            "seconds": 1352,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 134,
-            "ep": null,
+            "sizeMB": 66,
+            "ep": {
+              "season": null,
+              "episode": 6
+            },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
           },
@@ -148,16 +166,19 @@
           "name": "Episode 7",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "06.mp4",
-            "name": "06",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/06.mp4",
-            "seconds": 1384,
-            "format": "h.264",
+            "item": "aeonfluxfullseries",
+            "itemTitle": "Æon Flux Full Series",
+            "file": "S 1 EP 7.mp4",
+            "name": "S 1 EP 7",
+            "url": "https://archive.org/download/aeonfluxfullseries/S%201%20EP%207.mp4",
+            "seconds": 1299,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 140,
-            "ep": null,
+            "sizeMB": 63,
+            "ep": {
+              "season": null,
+              "episode": 7
+            },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
           },
@@ -168,16 +189,19 @@
           "name": "Episode 8",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "07.mp4",
-            "name": "07",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/07.mp4",
-            "seconds": 1302,
-            "format": "h.264",
+            "item": "aeonfluxfullseries",
+            "itemTitle": "Æon Flux Full Series",
+            "file": "S 1 EP 8.mp4",
+            "name": "S 1 EP 8",
+            "url": "https://archive.org/download/aeonfluxfullseries/S%201%20EP%208.mp4",
+            "seconds": 1281,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 132,
-            "ep": null,
+            "sizeMB": 62,
+            "ep": {
+              "season": null,
+              "episode": 8
+            },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
           },
@@ -188,16 +212,19 @@
           "name": "Episode 9",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "08.mp4",
-            "name": "08",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/08.mp4",
-            "seconds": 1352,
-            "format": "h.264",
+            "item": "aeonfluxfullseries",
+            "itemTitle": "Æon Flux Full Series",
+            "file": "S 1 EP 9.mp4",
+            "name": "S 1 EP 9",
+            "url": "https://archive.org/download/aeonfluxfullseries/S%201%20EP%209.mp4",
+            "seconds": 1327,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 136,
-            "ep": null,
+            "sizeMB": 65,
+            "ep": {
+              "season": null,
+              "episode": 9
+            },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
           },
@@ -208,16 +235,19 @@
           "name": "Episode 10",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "09.mp4",
-            "name": "09",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/09.mp4",
-            "seconds": 1299,
-            "format": "h.264",
+            "item": "aeonfluxfullseries",
+            "itemTitle": "Æon Flux Full Series",
+            "file": "S 1 EP 10.mp4",
+            "name": "S 1 EP 10",
+            "url": "https://archive.org/download/aeonfluxfullseries/S%201%20EP%2010.mp4",
+            "seconds": 1293,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 131,
-            "ep": null,
+            "sizeMB": 65,
+            "ep": {
+              "season": null,
+              "episode": 10
+            },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
           },
@@ -225,18 +255,18 @@
         },
         {
           "number": 11,
-          "name": "Episode 11",
+          "name": "aeon 01 tide",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "10.mp4",
-            "name": "10",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/10.mp4",
-            "seconds": 1293,
-            "format": "h.264",
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 01 Tide.m4v",
+            "name": "Aeon Flux - 01 Tide",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2001%20Tide.m4v",
+            "seconds": 263,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 130,
+            "sizeMB": 96,
             "ep": null,
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
@@ -245,15 +275,815 @@
         },
         {
           "number": 12,
-          "name": "short corto 1 guerra war",
+          "name": "aeon 02 mirror",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "Short-Corto 1 Guerra-War.mp4",
-            "name": "Short-Corto 1 Guerra-War",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/Short-Corto%201%20Guerra-War.mp4",
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 02 Mirror .m4v",
+            "name": "Aeon Flux - 02 Mirror ",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2002%20Mirror%20.m4v",
+            "seconds": 250,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 91,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "aeon 03 leisure",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 03 Leisure.m4v",
+            "name": "Aeon Flux - 03 Leisure",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2003%20Leisure.m4v",
+            "seconds": 184,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 67,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "aeon 04 gravity",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 04 Gravity .m4v",
+            "name": "Aeon Flux - 04 Gravity ",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2004%20Gravity%20.m4v",
+            "seconds": 196,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 70,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "aeon 05 war",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 05 War.m4v",
+            "name": "Aeon Flux - 05 War",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2005%20War.m4v",
             "seconds": 326,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 119,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "aeon 06",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 06.m4v",
+            "name": "Aeon Flux - 06",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2006.m4v",
+            "seconds": 745,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 274,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "aeon 07 end sinister",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 07 End Sinister.m4v",
+            "name": "Aeon Flux - 07 End Sinister",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2007%20End%20Sinister.m4v",
+            "seconds": 1294,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 478,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "aeon 08 chronophasia",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 08 Chronophasia.m4v",
+            "name": "Aeon Flux - 08 Chronophasia",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2008%20Chronophasia.m4v",
+            "seconds": 1300,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 481,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "aeon 09 reraizore",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 09 Reraizore.m4v",
+            "name": "Aeon Flux - 09 Reraizore",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2009%20Reraizore.m4v",
+            "seconds": 1353,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 500,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "aeon 10 isthmus cryptocus",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 10 Isthmus Cryptocus.m4v",
+            "name": "Aeon Flux - 10 Isthmus Cryptocus",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2010%20Isthmus%20Cryptocus.m4v",
+            "seconds": 1303,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 482,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "aeon 11 the demiurge",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 11 The Demiurge.m4v",
+            "name": "Aeon Flux - 11 The Demiurge",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2011%20The%20Demiurge.m4v",
+            "seconds": 1385,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 512,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "aeon 12 the purge",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 12 The Purge.m4v",
+            "name": "Aeon Flux - 12 The Purge",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2012%20The%20Purge.m4v",
+            "seconds": 1328,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 490,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "aeon 13 ether drift theory",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 13 Ether Drift Theory.m4v",
+            "name": "Aeon Flux - 13 Ether Drift Theory",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2013%20Ether%20Drift%20Theory.m4v",
+            "seconds": 1282,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 474,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "aeon 14 thanatophobia",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 14 Thanatophobia.m4v",
+            "name": "Aeon Flux - 14 Thanatophobia",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2014%20Thanatophobia.m4v",
+            "seconds": 1417,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 524,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "aeon 15 a last time for everything",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 15 A last time for everything.m4v",
+            "name": "Aeon Flux - 15 A last time for everything",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2015%20A%20last%20time%20for%20everything.m4v",
+            "seconds": 1355,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 501,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "aeon 16 utopia or deuteranopia",
+          "state": "REVIEW",
+          "file": {
+            "item": "aeon-flux-01-tide",
+            "itemTitle": "Æon Flux - Peter Chung (1991-1995)",
+            "file": "Aeon Flux - 16 Utopia or?Deuteranopia?.m4v",
+            "name": "Aeon Flux - 16 Utopia or?Deuteranopia?",
+            "url": "https://archive.org/download/aeon-flux-01-tide/Aeon%20Flux%20-%2016%20Utopia%20or%3FDeuteranopia%3F.m4v",
+            "seconds": 1351,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 500,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "aeon",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX.mp4",
+            "name": "ISOs/AEON_FLUX",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX.mp4",
+            "seconds": 1431,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 145,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "aeon d1",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D1.mp4",
+            "name": "ISOs/AEON_FLUX_D1",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D1.mp4",
+            "seconds": 6861,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 689,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "aeon d2",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D2.mp4",
+            "name": "ISOs/AEON_FLUX_D2",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D2.mp4",
+            "seconds": 6844,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 687,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "aeon d11",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D11.mp4",
+            "name": "ISOs/AEON_FLUX_D11",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D11.mp4",
+            "seconds": 1401,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "aeon d12",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D12.mp4",
+            "name": "ISOs/AEON_FLUX_D12",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D12.mp4",
+            "seconds": 1467,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "aeon d13",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D13.mp4",
+            "name": "ISOs/AEON_FLUX_D13",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D13.mp4",
+            "seconds": 1486,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "aeon d14",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D14.mp4",
+            "name": "ISOs/AEON_FLUX_D14",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D14.mp4",
+            "seconds": 1332,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "aeon d15",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D15.mp4",
+            "name": "ISOs/AEON_FLUX_D15",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D15.mp4",
+            "seconds": 1459,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "aeon d18",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D18.mp4",
+            "name": "ISOs/AEON_FLUX_D18",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D18.mp4",
+            "seconds": 5498,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 552,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "aeon d21",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D21.mp4",
+            "name": "ISOs/AEON_FLUX_D21",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D21.mp4",
+            "seconds": 1435,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 143,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "aeon d22",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D22.mp4",
+            "name": "ISOs/AEON_FLUX_D22",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D22.mp4",
+            "seconds": 1433,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 144,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "aeon d23",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D23.mp4",
+            "name": "ISOs/AEON_FLUX_D23",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D23.mp4",
+            "seconds": 1483,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 149,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "aeon d24",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D24.mp4",
+            "name": "ISOs/AEON_FLUX_D24",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D24.mp4",
+            "seconds": 1430,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 144,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "aeon d25",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D25.mp4",
+            "name": "ISOs/AEON_FLUX_D25",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D25.mp4",
+            "seconds": 1424,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 143,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "aeon d28",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D28.mp4",
+            "name": "ISOs/AEON_FLUX_D28",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D28.mp4",
+            "seconds": 4035,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 405,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "aeon d110",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D110.mp4",
+            "name": "ISOs/AEON_FLUX_D110",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D110.mp4",
+            "seconds": 357,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 35,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "aeon d111",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D111.mp4",
+            "name": "ISOs/AEON_FLUX_D111",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D111.mp4",
+            "seconds": 342,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 34,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "aeon d112",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D112.mp4",
+            "name": "ISOs/AEON_FLUX_D112",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D112.mp4",
+            "seconds": 133,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 13,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "aeon d113",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D113.mp4",
+            "name": "ISOs/AEON_FLUX_D113",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D113.mp4",
+            "seconds": 6977,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 701,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "aeon d114",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D114.mp4",
+            "name": "ISOs/AEON_FLUX_D114",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D114.mp4",
+            "seconds": 133,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 13,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 47,
+          "name": "aeon d211",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D211.mp4",
+            "name": "ISOs/AEON_FLUX_D211",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D211.mp4",
+            "seconds": 134,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 13,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 48,
+          "name": "aeon d212",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D212.mp4",
+            "name": "ISOs/AEON_FLUX_D212",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D212.mp4",
+            "seconds": 6800,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 682,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 49,
+          "name": "aeon d213",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX_D213.mp4",
+            "name": "ISOs/AEON_FLUX_D213",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX_D213.mp4",
+            "seconds": 134,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 13,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 50,
+          "name": "aeon flux1",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX1.mp4",
+            "name": "ISOs/AEON_FLUX1",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX1.mp4",
+            "seconds": 868,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 87,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 51,
+          "name": "aeon flux2",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX2.mp4",
+            "name": "ISOs/AEON_FLUX2",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX2.mp4",
+            "seconds": 455,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 46,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 52,
+          "name": "aeon flux3",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX3.mp4",
+            "name": "ISOs/AEON_FLUX3",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX3.mp4",
+            "seconds": 325,
             "format": "h.264",
             "playable": true,
             "sizeMB": 33,
@@ -264,19 +1094,19 @@
           "alternates": []
         },
         {
-          "number": 13,
-          "name": "short corto 2 gravedad gravity",
+          "number": 53,
+          "name": "aeon flux4",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "Short-Corto 2 Gravedad- Gravity.mp4",
-            "name": "Short-Corto 2 Gravedad- Gravity",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/Short-Corto%202%20Gravedad-%20Gravity.mp4",
-            "seconds": 196,
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX4.mp4",
+            "name": "ISOs/AEON_FLUX4",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX4.mp4",
+            "seconds": 313,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 19,
+            "sizeMB": 32,
             "ep": null,
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
@@ -284,19 +1114,19 @@
           "alternates": []
         },
         {
-          "number": 14,
-          "name": "short corto 3 ocio leisure",
+          "number": 54,
+          "name": "aeon flux5",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "Short-Corto 3 Ocio- Leisure.mp4",
-            "name": "Short-Corto 3 Ocio- Leisure",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/Short-Corto%203%20Ocio-%20Leisure.mp4",
-            "seconds": 184,
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX5.mp4",
+            "name": "ISOs/AEON_FLUX5",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX5.mp4",
+            "seconds": 299,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 19,
+            "sizeMB": 30,
             "ep": null,
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
@@ -304,19 +1134,19 @@
           "alternates": []
         },
         {
-          "number": 15,
-          "name": "short corto 4 espejo mirror",
+          "number": 55,
+          "name": "aeon flux8",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "Short-Corto 4 Espejo-Mirror.mp4",
-            "name": "Short-Corto 4 Espejo-Mirror",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/Short-Corto%204%20Espejo-Mirror.mp4",
-            "seconds": 250,
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX8.mp4",
+            "name": "ISOs/AEON_FLUX8",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX8.mp4",
+            "seconds": 392,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 25,
+            "sizeMB": 40,
             "ep": null,
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
@@ -324,20 +1154,463 @@
           "alternates": []
         },
         {
-          "number": 16,
-          "name": "short corto 5 corriente tide",
+          "number": 56,
+          "name": "aeon flux10",
           "state": "REVIEW",
           "file": {
-            "item": "aeon-flux-1995-tv-series-mtv-latin-spanish-and-english",
-            "itemTitle": "Aeon Flux tv series MTV ( Audio Latin Spanish-English ) 1995",
-            "file": "Short-Corto 5 Corriente-Tide.mp4",
-            "name": "Short-Corto 5 Corriente-Tide",
-            "url": "https://archive.org/download/aeon-flux-1995-tv-series-mtv-latin-spanish-and-english/Short-Corto%205%20Corriente-Tide.mp4",
-            "seconds": 263,
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX10.mp4",
+            "name": "ISOs/AEON_FLUX10",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX10.mp4",
+            "seconds": 213,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 26,
+            "sizeMB": 21,
             "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 57,
+          "name": "aeon flux11",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX11.mp4",
+            "name": "ISOs/AEON_FLUX11",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX11.mp4",
+            "seconds": 213,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 21,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 58,
+          "name": "aeon flux12",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX12.mp4",
+            "name": "ISOs/AEON_FLUX12",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX12.mp4",
+            "seconds": 213,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 21,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 59,
+          "name": "aeon flux17",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX17.mp4",
+            "name": "ISOs/AEON_FLUX17",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX17.mp4",
+            "seconds": 1107,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 111,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 60,
+          "name": "aeon flux18",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX18.mp4",
+            "name": "ISOs/AEON_FLUX18",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX18.mp4",
+            "seconds": 416,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 41,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 61,
+          "name": "aeon flux20",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX20.mp4",
+            "name": "ISOs/AEON_FLUX20",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX20.mp4",
+            "seconds": 150,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 15,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 62,
+          "name": "aeon flux22",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX22.mp4",
+            "name": "ISOs/AEON_FLUX22",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX22.mp4",
+            "seconds": 447,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 45,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 63,
+          "name": "aeon flux23",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX23.mp4",
+            "name": "ISOs/AEON_FLUX23",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX23.mp4",
+            "seconds": 372,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 37,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 64,
+          "name": "aeon flux24",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX24.mp4",
+            "name": "ISOs/AEON_FLUX24",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX24.mp4",
+            "seconds": 895,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 89,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 65,
+          "name": "aeon flux25",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "ISOs/AEON_FLUX25.mp4",
+            "name": "ISOs/AEON_FLUX25",
+            "url": "https://archive.org/download/hnbt_aeonflux/ISOs%2FAEON_FLUX25.mp4",
+            "seconds": 357,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 35,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "02 war gravity leisure mirror tide 05",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "02 - War, Gravity, Leisure, Mirror, Tide [2x01-05].mp4",
+            "name": "02 - War, Gravity, Leisure, Mirror, Tide [2x01-05]",
+            "url": "https://archive.org/download/hnbt_aeonflux/02%20-%20War%2C%20Gravity%2C%20Leisure%2C%20Mirror%2C%20Tide%20%5B2x01-05%5D.mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 132,
+            "ep": {
+              "season": 2,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "03 utopia or deuteranopia",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "03 - Utopia or Deuteranopia？ [3x01].mp4",
+            "name": "03 - Utopia or Deuteranopia？ [3x01]",
+            "url": "https://archive.org/download/hnbt_aeonflux/03%20-%20Utopia%20or%20Deuteranopia%EF%BC%9F%20%5B3x01%5D.mp4",
+            "seconds": 1468,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 147,
+            "ep": {
+              "season": 3,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "04 thanatophobia",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "04 - Thanatophobia [3x02].mp4",
+            "name": "04 - Thanatophobia [3x02]",
+            "url": "https://archive.org/download/hnbt_aeonflux/04%20-%20Thanatophobia%20%5B3x02%5D.mp4",
+            "seconds": 1535,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 154,
+            "ep": {
+              "season": 3,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "05 a last time for everything",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "05 - A Last Time for Everything [3x03].mp4",
+            "name": "05 - A Last Time for Everything [3x03]",
+            "url": "https://archive.org/download/hnbt_aeonflux/05%20-%20A%20Last%20Time%20for%20Everything%20%5B3x03%5D.mp4",
+            "seconds": 1473,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": 3,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "06 ether drift theory",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "06 - Ether Drift Theory [3x04].mp4",
+            "name": "06 - Ether Drift Theory [3x04]",
+            "url": "https://archive.org/download/hnbt_aeonflux/06%20-%20Ether%20Drift%20Theory%20%5B3x04%5D.mp4",
+            "seconds": 1399,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": {
+              "season": 3,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "07 the purge",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "07 - The Purge [3x05].mp4",
+            "name": "07 - The Purge [3x05]",
+            "url": "https://archive.org/download/hnbt_aeonflux/07%20-%20The%20Purge%20%5B3x05%5D.mp4",
+            "seconds": 1446,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 145,
+            "ep": {
+              "season": 3,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "08 the demiurge",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "08 - The Demiurge [3x06].mp4",
+            "name": "08 - The Demiurge [3x06]",
+            "url": "https://archive.org/download/hnbt_aeonflux/08%20-%20The%20Demiurge%20%5B3x06%5D.mp4",
+            "seconds": 1504,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 150,
+            "ep": {
+              "season": 3,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "09 ithsmus crypticus",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "09 - Ithsmus Crypticus [3x07].mp4",
+            "name": "09 - Ithsmus Crypticus [3x07]",
+            "url": "https://archive.org/download/hnbt_aeonflux/09%20-%20Ithsmus%20Crypticus%20%5B3x07%5D.mp4",
+            "seconds": 1422,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 143,
+            "ep": {
+              "season": 3,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "10 reraizure",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "10 - Reraizure [3x08].mp4",
+            "name": "10 - Reraizure [3x08]",
+            "url": "https://archive.org/download/hnbt_aeonflux/10%20-%20Reraizure%20%5B3x08%5D.mp4",
+            "seconds": 1472,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": 3,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "11 chronophasia",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "11 - Chronophasia [3x09].mp4",
+            "name": "11 - Chronophasia [3x09]",
+            "url": "https://archive.org/download/hnbt_aeonflux/11%20-%20Chronophasia%20%5B3x09%5D.mp4",
+            "seconds": 1419,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": {
+              "season": 3,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "12 end sinister",
+          "state": "REVIEW",
+          "file": {
+            "item": "hnbt_aeonflux",
+            "itemTitle": "Æon Flux complete series MKV + ISO",
+            "file": "12 - End Sinister [3x10].mp4",
+            "name": "12 - End Sinister [3x10]",
+            "url": "https://archive.org/download/hnbt_aeonflux/12%20-%20End%20Sinister%20%5B3x10%5D.mp4",
+            "seconds": 1413,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 142,
+            "ep": {
+              "season": 3,
+              "episode": 10
+            },
             "conf": 0.6,
             "why": "self-listed: no TVmaze entry; order from the files"
           },

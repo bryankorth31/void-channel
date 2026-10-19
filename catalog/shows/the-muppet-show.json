@@ -3,7 +3,7 @@
   "slug": "the-muppet-show",
   "type": "Classic TV",
   "network": "Syndicated",
-  "matchedAt": "2026-10-16T07:58:28.862Z",
+  "matchedAt": "2026-10-19T04:12:27.884Z",
   "addedAt": "2026-10-15T12:09:00.624Z",
   "tvmaze": {
     "id": 3288,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 120,
     "live": 0,
-    "review": 2,
-    "missing": 118,
-    "pct": 2
+    "review": 3,
+    "missing": 117,
+    "pct": 3
   },
   "seasons": [
     {
@@ -226,6 +226,19 @@
             "sizeMB": 136
           },
           "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Juliet Prowse\" (0.95)",
+              "item": "muppet-show-prowse-pilot",
+              "itemTitle": "Muppet Show: Juliet Prowse (Unaired Pilot) 1976 ITC color master",
+              "file": "Muppet Show - Juliet Prowse Pilot (1976) [Remastered Audio].mp4",
+              "name": "Muppet Show - Juliet Prowse Pilot (1976) [Remastered Audio]",
+              "url": "https://archive.org/download/muppet-show-prowse-pilot/Muppet%20Show%20-%20Juliet%20Prowse%20Pilot%20(1976)%20%5BRemastered%20Audio%5D.mp4",
+              "seconds": 1406,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 136
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Juliet Prowse\" (0.95)",
@@ -873,9 +886,38 @@
           "number": 5,
           "name": "Brooke Shields",
           "airdate": "1980-04-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename + title match",
+            "item": "die-muppet-show-german-mary-roos-chris-langham-brooke-shields",
+            "itemTitle": "Die Muppet Show (German) Mary Roos, Chris Langham, Brooke Shields",
+            "file": "s05e05 Brooke Shields.mp4",
+            "name": "s05e05 Brooke Shields",
+            "url": "https://archive.org/download/die-muppet-show-german-mary-roos-chris-langham-brooke-shields/s05e05%20Brooke%20Shields.mp4",
+            "seconds": 1529,
+            "format": "h.264",
+            "playable": true,
+            "langRisk": true,
+            "sizeMB": 148
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "S/E in filename + title match",
+              "item": "die-muppet-show-german-mary-roos-chris-langham-brooke-shields",
+              "itemTitle": "Die Muppet Show (German) Mary Roos, Chris Langham, Brooke Shields",
+              "file": "E s05e05 Brooke Shields.mkv",
+              "name": "E s05e05 Brooke Shields",
+              "url": "https://archive.org/download/die-muppet-show-german-mary-roos-chris-langham-brooke-shields/E%20s05e05%20Brooke%20Shields.mkv",
+              "seconds": 1529,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "langRisk": true,
+              "sizeMB": 1103
+            }
+          ]
         },
         {
           "number": 6,

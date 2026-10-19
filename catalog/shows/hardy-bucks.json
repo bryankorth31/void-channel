@@ -3,7 +3,7 @@
   "slug": "hardy-bucks",
   "type": "British and Beyond",
   "network": "RTÉ",
-  "matchedAt": "2026-10-16T07:57:07.189Z",
+  "matchedAt": "2026-10-19T04:11:14.971Z",
   "addedAt": "2026-10-16T07:57:07.188Z",
   "tvmaze": {
     "id": 37985,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 20,
-    "live": 3,
-    "review": 2,
-    "missing": 15,
-    "pct": 25
+    "live": 4,
+    "review": 0,
+    "missing": 16,
+    "pct": 20
   },
   "seasons": [
     {
@@ -87,9 +87,9 @@
           "number": 4,
           "name": "Christmas Special",
           "airdate": "2010-12-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "hardy-bucks-1234",
             "itemTitle": "Hardy Bucks",
@@ -242,51 +242,9 @@
           "number": 4,
           "name": "The Viper",
           "airdate": "2018-04-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "title ~ \"The Viper\" (0.95) | not browser-playable: container (Matroska)",
-            "item": "viper-plays-games",
-            "itemTitle": "Viper Higgins - Plays [hardy bucks tv]",
-            "file": "Viper Live Stream - Games Jan 03-01-2019 RE2.mkv",
-            "name": "Viper Live Stream - Games Jan 03-01-2019 RE2",
-            "url": "https://archive.org/download/viper-plays-games/Viper%20Live%20Stream%20-%20Games%20Jan%2003-01-2019%20RE2.mkv",
-            "seconds": 4240,
-            "format": "Matroska",
-            "playable": false,
-            "codecRisk": "container (Matroska)",
-            "sizeMB": 433
-          },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "title ~ \"The Viper\" (0.95)",
-              "item": "viper-plays-games",
-              "itemTitle": "Viper Higgins - Plays [hardy bucks tv]",
-              "file": "Viper Live Stream - Games Jan 02-01-2019 pt.2 RE2.mkv",
-              "name": "Viper Live Stream - Games Jan 02-01-2019 pt.2 RE2",
-              "url": "https://archive.org/download/viper-plays-games/Viper%20Live%20Stream%20-%20Games%20Jan%2002-01-2019%20pt.2%20RE2.mkv",
-              "seconds": 4003,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 329
-            },
-            {
-              "conf": 0.55,
-              "why": "title ~ \"The Viper\" (0.95)",
-              "item": "viper-plays-games",
-              "itemTitle": "Viper Higgins - Plays [hardy bucks tv]",
-              "file": "Viper Live Stream - Games Jan 02-01-2019 pt.1 RE2.mkv",
-              "name": "Viper Live Stream - Games Jan 02-01-2019 pt.1 RE2",
-              "url": "https://archive.org/download/viper-plays-games/Viper%20Live%20Stream%20-%20Games%20Jan%2002-01-2019%20pt.1%20RE2.mkv",
-              "seconds": 3205,
-              "format": "Matroska",
-              "playable": false,
-              "codecRisk": "container (Matroska)",
-              "sizeMB": 299
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         }
       ]
     }

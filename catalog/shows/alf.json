@@ -3,7 +3,7 @@
   "slug": "alf",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:26.367Z",
+  "matchedAt": "2026-10-19T04:12:26.231Z",
   "addedAt": "2026-10-15T12:08:58.621Z",
   "tvmaze": {
     "id": 848,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 102,
-    "live": 77,
-    "review": 21,
-    "missing": 4,
-    "pct": 96
+    "live": 91,
+    "review": 9,
+    "missing": 2,
+    "pct": 98
   },
   "seasons": [
     {
@@ -41,15 +41,42 @@
             "playable": true,
             "sizeMB": 142
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S01e01 (Phantom Pilot)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S01e01 (Phantom Pilot)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e01%20(Phantom%20Pilot)_AI%20Upscale.mp4",
+              "seconds": 1344,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 521
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 1/S01E01 Phantom Pilot.mp4",
+              "name": "ALF The Animated Series/Season 1/S01E01 Phantom Pilot",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%201%2FS01E01%20Phantom%20Pilot.mp4",
+              "seconds": 1342,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 327
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Strangers in the Night",
           "airdate": "1986-09-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "alf-complete",
             "itemTitle": "ALF (Complete Series)",
@@ -61,15 +88,42 @@
             "playable": true,
             "sizeMB": 145
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S01e02 (Hair Today, Bald Tomorrow)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S01e02 (Hair Today, Bald Tomorrow)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e02%20(Hair%20Today%2C%20Bald%20Tomorrow)_AI%20Upscale.mp4",
+              "seconds": 1334,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 469
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 1/S01E02 Hair Today, Bald Tomorrow.mp4",
+              "name": "ALF The Animated Series/Season 1/S01E02 Hair Today, Bald Tomorrow",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%201%2FS01E02%20Hair%20Today%2C%20Bald%20Tomorrow.mp4",
+              "seconds": 1331,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 325
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Looking for Lucky",
           "airdate": "1986-10-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "alf-complete",
             "itemTitle": "ALF (Complete Series)",
@@ -81,7 +135,34 @@
             "playable": true,
             "sizeMB": 139
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S01e03 (Two For The Brig)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S01e03 (Two For The Brig)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e03%20(Two%20For%20The%20Brig)_AI%20Upscale.mp4",
+              "seconds": 1301,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 470
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 1/S01E03 Two for the Brig.mp4",
+              "name": "ALF The Animated Series/Season 1/S01E03 Two for the Brig",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%201%2FS01E03%20Two%20for%20the%20Brig.mp4",
+              "seconds": 1298,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 317
+            }
+          ]
         },
         {
           "number": 4,
@@ -101,7 +182,34 @@
             "playable": true,
             "sizeMB": 145
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S01e04 (Gordon Ships Out)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S01e04 (Gordon Ships Out)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e04%20(Gordon%20Ships%20Out)_AI%20Upscale.mp4",
+              "seconds": 1336,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 552
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 1/S01E04 Gordon Ships Out.mp4",
+              "name": "ALF The Animated Series/Season 1/S01E04 Gordon Ships Out",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%201%2FS01E04%20Gordon%20Ships%20Out.mp4",
+              "seconds": 1335,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 326
+            }
+          ]
         },
         {
           "number": 5,
@@ -141,7 +249,34 @@
             "playable": true,
             "sizeMB": 291
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S01e06 (Pismo And The Orbit Gyro)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S01e06 (Pismo And The Orbit Gyro)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e06%20(Pismo%20And%20The%20Orbit%20Gyro)_AI%20Upscale.mp4",
+              "seconds": 1341,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 585
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 1/S01E06 Pismo and the Orbit Gyro.mp4",
+              "name": "ALF The Animated Series/Season 1/S01E06 Pismo and the Orbit Gyro",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%201%2FS01E06%20Pismo%20and%20the%20Orbit%20Gyro.mp4",
+              "seconds": 1339,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 326
+            }
+          ]
         },
         {
           "number": 7,
@@ -161,7 +296,34 @@
             "playable": true,
             "sizeMB": 145
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S01e07 (20,000 Years In Driving School)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S01e07 (20,000 Years In Driving School)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e07%20(20%2C000%20Years%20In%20Driving%20School)_AI%20Upscale.mp4",
+              "seconds": 1347,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 550
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 1/S01E07 20,000 Years in Driving School.mp4",
+              "name": "ALF The Animated Series/Season 1/S01E07 20,000 Years in Driving School",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%201%2FS01E07%2020%2C000%20Years%20in%20Driving%20School.mp4",
+              "seconds": 1344,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 328
+            }
+          ]
         },
         {
           "number": 8,
@@ -181,7 +343,34 @@
             "playable": true,
             "sizeMB": 145
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S01e08 (Pride Of The Shumways)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S01e08 (Pride Of The Shumways)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e08%20(Pride%20Of%20The%20Shumways)_AI%20Upscale.mp4",
+              "seconds": 1355,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 593
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 1/S01E08 Pride of the Shumways.mp4",
+              "name": "ALF The Animated Series/Season 1/S01E08 Pride of the Shumways",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%201%2FS01E08%20Pride%20of%20the%20Shumways.mp4",
+              "seconds": 1354,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 330
+            }
+          ]
         },
         {
           "number": 9,
@@ -201,7 +390,34 @@
             "playable": true,
             "sizeMB": 145
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S01e09 (Captain Bobaroo)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S01e09 (Captain Bobaroo)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e09%20(Captain%20Bobaroo)_AI%20Upscale.mp4",
+              "seconds": 1348,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 599
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 1/S01E09 Captain Bobaroo.mp4",
+              "name": "ALF The Animated Series/Season 1/S01E09 Captain Bobaroo",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%201%2FS01E09%20Captain%20Bobaroo.mp4",
+              "seconds": 1347,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 329
+            }
+          ]
         },
         {
           "number": 10,
@@ -221,7 +437,21 @@
             "playable": true,
             "sizeMB": 145
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S01e10 (Neep At The Races)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S01e10 (Neep At The Races)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e10%20(Neep%20At%20The%20Races)_AI%20Upscale.mp4",
+              "seconds": 1329,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 606
+            }
+          ]
         },
         {
           "number": 11,
@@ -229,31 +459,44 @@
           "airdate": "1986-12-08",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
-            "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
-            "file": "Alf - The Animated Adventures S01e11 (Salad Wars)_AI Upscale.mp4",
-            "name": "Alf - The Animated Adventures S01e11 (Salad Wars)_AI Upscale",
-            "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e11%20(Salad%20Wars)_AI%20Upscale.mp4",
-            "seconds": 1434,
-            "format": "MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "alf-complete",
+            "itemTitle": "ALF (Complete Series)",
+            "file": "S01E11 - On the Road Again.mp4",
+            "name": "S01E11 - On the Road Again",
+            "url": "https://archive.org/download/alf-complete/S01E11%20-%20On%20the%20Road%20Again.mp4",
+            "seconds": 1425,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 637
+            "sizeMB": 139
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
-              "item": "alf-complete",
-              "itemTitle": "ALF (Complete Series)",
-              "file": "S01E11 - On the Road Again.mp4",
-              "name": "S01E11 - On the Road Again",
-              "url": "https://archive.org/download/alf-complete/S01E11%20-%20On%20the%20Road%20Again.mp4",
-              "seconds": 1425,
-              "format": "h.264",
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S01e11 (Salad Wars)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S01e11 (Salad Wars)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e11%20(Salad%20Wars)_AI%20Upscale.mp4",
+              "seconds": 1434,
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 139
+              "sizeMB": 637
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 1/S01E11 Salad Wars.mp4",
+              "name": "ALF The Animated Series/Season 1/S01E11 Salad Wars",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%201%2FS01E11%20Salad%20Wars.mp4",
+              "seconds": 1363,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 378
             }
           ]
         },
@@ -275,15 +518,29 @@
             "playable": true,
             "sizeMB": 145
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S01e12 (Tough Shrimp Don't Dance)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S01e12 (Tough Shrimp Don't Dance)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e12%20(Tough%20Shrimp%20Don't%20Dance)_AI%20Upscale.mp4",
+              "seconds": 1351,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 508
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Mother and Child Reunion",
           "airdate": "1987-01-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "alf-complete",
             "itemTitle": "ALF (Complete Series)",
@@ -295,7 +552,21 @@
             "playable": true,
             "sizeMB": 145
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 1 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S01e13 (Home Away From Home)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S01e13 (Home Away From Home)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-01e-11-salad-wars-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S01e13%20(Home%20Away%20From%20Home)_AI%20Upscale.mp4",
+              "seconds": 1380,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 596
+            }
+          ]
         },
         {
           "number": 14,
@@ -357,9 +628,9 @@
           "number": 18,
           "name": "Border Song",
           "airdate": "1987-02-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "alf-complete",
             "itemTitle": "ALF (Complete Series)",
@@ -542,21 +813,35 @@
           "number": 1,
           "name": "Working My Way Back to You",
           "airdate": "1987-09-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename + title match",
-            "item": "alf-complete",
-            "itemTitle": "ALF (Complete Series)",
-            "file": "S02E01 - Working My Way Back to You.mp4",
-            "name": "S02E01 - Working My Way Back to You",
-            "url": "https://archive.org/download/alf-complete/S02E01%20-%20Working%20My%20Way%20Back%20to%20You.mp4",
-            "seconds": 1468,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale",
+            "itemTitle": "Alf - The Animated Adventures - Season 2 - AI Upscale 1080p",
+            "file": "Alf - The Animated Adventures S02e01 (Flodust Memories)_AI Upscale.mp4",
+            "name": "Alf - The Animated Adventures S02e01 (Flodust Memories)_AI Upscale",
+            "url": "https://archive.org/download/alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S02e01%20(Flodust%20Memories)_AI%20Upscale.mp4",
+            "seconds": 1311,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 143
+            "sizeMB": 224
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "alf-complete",
+              "itemTitle": "ALF (Complete Series)",
+              "file": "S02E01 - Working My Way Back to You.mp4",
+              "name": "S02E01 - Working My Way Back to You",
+              "url": "https://archive.org/download/alf-complete/S02E01%20-%20Working%20My%20Way%20Back%20to%20You.mp4",
+              "seconds": 1468,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 2,
@@ -596,7 +881,34 @@
             "playable": true,
             "sizeMB": 144
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 2 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S02e03 (Clams Never Sang For Me Father)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S02e03 (Clams Never Sang For Me Father)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S02e03%20(Clams%20Never%20Sang%20For%20Me%20Father)_AI%20Upscale.mp4",
+              "seconds": 1410,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 583
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 2/S02E03 Clams Never Sang for My Father.mp4",
+              "name": "ALF The Animated Series/Season 2/S02E03 Clams Never Sang for My Father",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%202%2FS02E03%20Clams%20Never%20Sang%20for%20My%20Father.mp4",
+              "seconds": 1410,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 391
+            }
+          ]
         },
         {
           "number": 4,
@@ -604,19 +916,45 @@
           "airdate": "1987-10-12",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "alf-complete",
-            "itemTitle": "ALF (Complete Series)",
-            "file": "S02E04 - Something's Wrong With Me.mp4",
-            "name": "S02E04 - Something's Wrong With Me",
-            "url": "https://archive.org/download/alf-complete/S02E04%20-%20Something's%20Wrong%20With%20Me.mp4",
-            "seconds": 1437,
-            "format": "h.264",
+            "item": "alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale",
+            "itemTitle": "Alf - The Animated Adventures - Season 2 - AI Upscale 1080p",
+            "file": "Alf - The Animated Adventures S02e04 (A Mid-Goomer Night's Dream)_AI Upscale.mp4",
+            "name": "Alf - The Animated Adventures S02e04 (A Mid-Goomer Night's Dream)_AI Upscale",
+            "url": "https://archive.org/download/alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S02e04%20(A%20Mid-Goomer%20Night's%20Dream)_AI%20Upscale.mp4",
+            "seconds": 1386,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 141
+            "sizeMB": 472
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 2/S02E04 A Mid-Goomer Night's Dream.mp4",
+              "name": "ALF The Animated Series/Season 2/S02E04 A Mid-Goomer Night's Dream",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%202%2FS02E04%20A%20Mid-Goomer%20Night's%20Dream.mp4",
+              "seconds": 1348,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 375
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "alf-complete",
+              "itemTitle": "ALF (Complete Series)",
+              "file": "S02E04 - Something's Wrong With Me.mp4",
+              "name": "S02E04 - Something's Wrong With Me",
+              "url": "https://archive.org/download/alf-complete/S02E04%20-%20Something's%20Wrong%20With%20Me.mp4",
+              "seconds": 1437,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 141
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Wedding Bell Blues\" (1.00)",
@@ -650,7 +988,34 @@
             "playable": true,
             "sizeMB": 142
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 2 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S02e05 (The Bone Losers)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S02e05 (The Bone Losers)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S02e05%20(The%20Bone%20Losers)_AI%20Upscale.mp4",
+              "seconds": 1451,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 605
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 2/S02E05 The Bone Losers.mp4",
+              "name": "ALF The Animated Series/Season 2/S02E05 The Bone Losers",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%202%2FS02E05%20The%20Bone%20Losers.mp4",
+              "seconds": 1414,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 393
+            }
+          ]
         },
         {
           "number": 6,
@@ -670,7 +1035,34 @@
             "playable": true,
             "sizeMB": 141
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 2 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S02e06 (Thank Gordon For Little Girls)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S02e06 (Thank Gordon For Little Girls)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S02e06%20(Thank%20Gordon%20For%20Little%20Girls)_AI%20Upscale.mp4",
+              "seconds": 1350,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 526
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 2/S02E06 Thank Gordon for Little Girls.mp4",
+              "name": "ALF The Animated Series/Season 2/S02E06 Thank Gordon for Little Girls",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%202%2FS02E06%20Thank%20Gordon%20for%20Little%20Girls.mp4",
+              "seconds": 1336,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 371
+            }
+          ]
         },
         {
           "number": 7,
@@ -698,19 +1090,45 @@
           "airdate": "1987-11-09",
           "state": "LIVE",
           "file": {
-            "conf": 0.85,
+            "conf": 0.9,
             "why": "S/E in filename",
-            "item": "alf-complete",
-            "itemTitle": "ALF (Complete Series)",
-            "file": "S02E08 - Wedding Bell Blues.mp4",
-            "name": "S02E08 - Wedding Bell Blues",
-            "url": "https://archive.org/download/alf-complete/S02E08%20-%20Wedding%20Bell%20Blues.mp4",
-            "seconds": 1488,
-            "format": "h.264",
+            "item": "alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale",
+            "itemTitle": "Alf - The Animated Adventures - Season 2 - AI Upscale 1080p",
+            "file": "Alf - The Animated Adventures S02e08 (The Spy From East Velcro)_AI Upscale.mp4",
+            "name": "Alf - The Animated Adventures S02e08 (The Spy From East Velcro)_AI Upscale",
+            "url": "https://archive.org/download/alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S02e08%20(The%20Spy%20From%20East%20Velcro)_AI%20Upscale.mp4",
+            "seconds": 1367,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 145
+            "sizeMB": 527
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 2/S02E08 The Spy from East Velcro.mp4",
+              "name": "ALF The Animated Series/Season 2/S02E08 The Spy from East Velcro",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%202%2FS02E08%20The%20Spy%20from%20East%20Velcro.mp4",
+              "seconds": 1316,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 366
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "alf-complete",
+              "itemTitle": "ALF (Complete Series)",
+              "file": "S02E08 - Wedding Bell Blues.mp4",
+              "name": "S02E08 - Wedding Bell Blues",
+              "url": "https://archive.org/download/alf-complete/S02E08%20-%20Wedding%20Bell%20Blues.mp4",
+              "seconds": 1488,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Something's Wrong with Me\" (1.00)",
@@ -744,7 +1162,34 @@
             "playable": true,
             "sizeMB": 146
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 2 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S02e09 (He Ain't Seafood, He's My Brother)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S02e09 (He Ain't Seafood, He's My Brother)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S02e09%20(He%20Ain't%20Seafood%2C%20He's%20My%20Brother)_AI%20Upscale.mp4",
+              "seconds": 1321,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 505
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 2/S02E09 He Ain't Seafood, He's My Brother.mp4",
+              "name": "ALF The Animated Series/Season 2/S02E09 He Ain't Seafood, He's My Brother",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%202%2FS02E09%20He%20Ain't%20Seafood%2C%20He's%20My%20Brother.mp4",
+              "seconds": 1309,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 363
+            }
+          ]
         },
         {
           "number": 10,
@@ -764,7 +1209,34 @@
             "playable": true,
             "sizeMB": 141
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 2 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S02e10 (Looking For Love In All The Wrong Places)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S02e10 (Looking For Love In All The Wrong Places)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S02e10%20(Looking%20For%20Love%20In%20All%20The%20Wrong%20Places)_AI%20Upscale.mp4",
+              "seconds": 1351,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 514
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 2/S02E10 Looking for Love in All the Wrong Places.mp4",
+              "name": "ALF The Animated Series/Season 2/S02E10 Looking for Love in All the Wrong Places",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%202%2FS02E10%20Looking%20for%20Love%20in%20All%20the%20Wrong%20Places.mp4",
+              "seconds": 1368,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 380
+            }
+          ]
         },
         {
           "number": 11,
@@ -784,23 +1256,102 @@
             "playable": true,
             "sizeMB": 146
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 2 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S02e11 (The Slugs Of Wrath)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S02e11 (The Slugs Of Wrath)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S02e11%20(The%20Slugs%20Of%20Wrath)_AI%20Upscale.mp4",
+              "seconds": 1444,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 577
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 2/S02E11 The Slugs of Wrath.mp4",
+              "name": "ALF The Animated Series/Season 2/S02E11 The Slugs of Wrath",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%202%2FS02E11%20The%20Slugs%20of%20Wrath.mp4",
+              "seconds": 1350,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 375
+            }
+          ]
         },
         {
           "number": 12,
           "name": "ALF's Special Christmas: Part 1",
           "airdate": "1987-12-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale",
+            "itemTitle": "Alf - The Animated Adventures - Season 2 - AI Upscale 1080p",
+            "file": "Alf - The Animated Adventures S02e12 (Housesitting For Pokipsi)_AI Upscale.mp4",
+            "name": "Alf - The Animated Adventures S02e12 (Housesitting For Pokipsi)_AI Upscale",
+            "url": "https://archive.org/download/alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S02e12%20(Housesitting%20For%20Pokipsi)_AI%20Upscale.mp4",
+            "seconds": 1351,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 553
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 2/S02E12 Housesitting for Pokipsi.mp4",
+              "name": "ALF The Animated Series/Season 2/S02E12 Housesitting for Pokipsi",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%202%2FS02E12%20Housesitting%20for%20Pokipsi.mp4",
+              "seconds": 1345,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 374
+            }
+          ]
         },
         {
           "number": 13,
           "name": "ALF's Special Christmas: Part 2",
           "airdate": "1987-12-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale",
+            "itemTitle": "Alf - The Animated Adventures - Season 2 - AI Upscale 1080p",
+            "file": "Alf - The Animated Adventures S02e13 (Skipper's Got A Brand New Dad)_AI Upscale.mp4",
+            "name": "Alf - The Animated Adventures S02e13 (Skipper's Got A Brand New Dad)_AI Upscale",
+            "url": "https://archive.org/download/alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S02e13%20(Skipper's%20Got%20A%20Brand%20New%20Dad)_AI%20Upscale.mp4",
+            "seconds": 1379,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 541
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 2/S02E13 Skipper's Got a Brand New Dad.mp4",
+              "name": "ALF The Animated Series/Season 2/S02E13 Skipper's Got a Brand New Dad",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%202%2FS02E13%20Skipper's%20Got%20a%20Brand%20New%20Dad.mp4",
+              "seconds": 1317,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 366
+            }
+          ]
         },
         {
           "number": 14,
@@ -826,9 +1377,9 @@
           "number": 15,
           "name": "Can I Get a Witness?",
           "airdate": "1988-01-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "alf-complete",
             "itemTitle": "ALF (Complete Series)",
@@ -1185,9 +1736,9 @@
           "number": 6,
           "name": "Promises, Promises",
           "airdate": "1988-10-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "alf-complete",
             "itemTitle": "ALF (Complete Series)",
@@ -1245,9 +1796,9 @@
           "number": 9,
           "name": "Changes",
           "airdate": "1988-11-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "alf-complete",
             "itemTitle": "ALF (Complete Series)",
@@ -1305,9 +1856,9 @@
           "number": 12,
           "name": "Do You Believe in Magic?",
           "airdate": "1988-12-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "alf-complete",
             "itemTitle": "ALF (Complete Series)",
@@ -1445,9 +1996,9 @@
           "number": 19,
           "name": "Superstition",
           "airdate": "1989-02-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "alf-complete",
             "itemTitle": "ALF (Complete Series)",
@@ -1650,9 +2201,9 @@
           "number": 3,
           "name": "Wanted: Dead or Alive",
           "airdate": "1989-10-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "alf-complete",
             "itemTitle": "ALF (Complete Series)",
@@ -1744,7 +2295,34 @@
             "playable": true,
             "sizeMB": 135
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"He Ain't Heavy, He's Willie's Brother\" (0.63)",
+              "item": "alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale",
+              "itemTitle": "Alf - The Animated Adventures - Season 2 - AI Upscale 1080p",
+              "file": "Alf - The Animated Adventures S02e09 (He Ain't Seafood, He's My Brother)_AI Upscale.mp4",
+              "name": "Alf - The Animated Adventures S02e09 (He Ain't Seafood, He's My Brother)_AI Upscale",
+              "url": "https://archive.org/download/alf-the-animated-adventures-s-02e-05-the-bone-losers-ai-upscale/Alf%20-%20The%20Animated%20Adventures%20S02e09%20(He%20Ain't%20Seafood%2C%20He's%20My%20Brother)_AI%20Upscale.mp4",
+              "seconds": 1321,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 505
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"He Ain't Heavy, He's Willie's Brother\" (0.63)",
+              "item": "alf-the-animated-series_202506",
+              "itemTitle": "Alf: The Animated Series",
+              "file": "ALF The Animated Series/Season 2/S02E09 He Ain't Seafood, He's My Brother.mp4",
+              "name": "ALF The Animated Series/Season 2/S02E09 He Ain't Seafood, He's My Brother",
+              "url": "https://archive.org/download/alf-the-animated-series_202506/ALF%20The%20Animated%20Series%2FSeason%202%2FS02E09%20He%20Ain't%20Seafood%2C%20He's%20My%20Brother.mp4",
+              "seconds": 1309,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 363
+            }
+          ]
         },
         {
           "number": 8,
@@ -1990,9 +2568,9 @@
           "number": 20,
           "name": "Mr. Sandman",
           "airdate": "1990-02-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "alf-complete",
             "itemTitle": "ALF (Complete Series)",

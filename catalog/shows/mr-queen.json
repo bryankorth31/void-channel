@@ -3,7 +3,7 @@
   "slug": "mr-queen",
   "type": "World TV",
   "network": "KR",
-  "matchedAt": "2026-10-16T07:57:45.816Z",
+  "matchedAt": "2026-10-19T04:11:48.819Z",
   "addedAt": "2026-10-15T12:08:23.177Z",
   "tvmaze": {
     "id": 51568,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 20,
     "live": 0,
-    "review": 20,
-    "missing": 0,
-    "pct": 100
+    "review": 18,
+    "missing": 2,
+    "pct": 90
   },
   "seasons": [
     {
@@ -27,40 +27,16 @@
           "number": 1,
           "name": "Jang Bong Hwan in Wonderland",
           "airdate": "2020-12-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 10 in \"Mr Queen THAIEP 04\"",
-            "item": "mr-queen-thaiep-04",
-            "itemTitle": "Mr Queen THAIEP 04",
-            "file": "CheeseInTheTrapTHAIEP15.mp4",
-            "name": "CheeseInTheTrapTHAIEP15",
-            "url": "https://archive.org/download/mr-queen-thaiep-04/CheeseInTheTrapTHAIEP15.mp4",
-            "seconds": 3517,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 966
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Nobody Knows",
           "airdate": "2020-12-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 10 in \"Mr Queen THAIEP 04\"",
-            "item": "mr-queen-thaiep-04",
-            "itemTitle": "Mr Queen THAIEP 04",
-            "file": "CheeseInTheTrapTHAIEP16.mp4",
-            "name": "CheeseInTheTrapTHAIEP16",
-            "url": "https://archive.org/download/mr-queen-thaiep-04/CheeseInTheTrapTHAIEP16.mp4",
-            "seconds": 3792,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1036
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -81,21 +57,7 @@
             "playable": true,
             "sizeMB": 835
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 10 in \"Mr Queen THAIEP 04\"",
-              "item": "mr-queen-thaiep-04",
-              "itemTitle": "Mr Queen THAIEP 04",
-              "file": "FlowerofEvilTHAIEP15.mp4",
-              "name": "FlowerofEvilTHAIEP15",
-              "url": "https://archive.org/download/mr-queen-thaiep-04/FlowerofEvilTHAIEP15.mp4",
-              "seconds": 4518,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1214
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -115,21 +77,7 @@
             "playable": true,
             "sizeMB": 828
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 10 in \"Mr Queen THAIEP 04\"",
-              "item": "mr-queen-thaiep-04",
-              "itemTitle": "Mr Queen THAIEP 04",
-              "file": "FlowerofEvilTHAIEP16.mp4",
-              "name": "FlowerofEvilTHAIEP16",
-              "url": "https://archive.org/download/mr-queen-thaiep-04/FlowerofEvilTHAIEP16.mp4",
-              "seconds": 4749,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1292
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
@@ -149,21 +97,7 @@
             "playable": true,
             "sizeMB": 828
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 10 in \"Mr Queen THAIEP 04\"",
-              "item": "mr-queen-thaiep-04",
-              "itemTitle": "Mr Queen THAIEP 04",
-              "file": "ItsAlrightThisisLoveTHAIEP07.mp4",
-              "name": "ItsAlrightThisisLoveTHAIEP07",
-              "url": "https://archive.org/download/mr-queen-thaiep-04/ItsAlrightThisisLoveTHAIEP07.mp4",
-              "seconds": 3569,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 964
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
@@ -183,21 +117,7 @@
             "playable": true,
             "sizeMB": 754
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 10 in \"Mr Queen THAIEP 04\"",
-              "item": "mr-queen-thaiep-04",
-              "itemTitle": "Mr Queen THAIEP 04",
-              "file": "ItsAlrightThisisLoveTHAIEP08.mp4",
-              "name": "ItsAlrightThisisLoveTHAIEP08",
-              "url": "https://archive.org/download/mr-queen-thaiep-04/ItsAlrightThisisLoveTHAIEP08.mp4",
-              "seconds": 3567,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1063
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -217,21 +137,7 @@
             "playable": true,
             "sizeMB": 690
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 10 in \"Mr Queen THAIEP 04\"",
-              "item": "mr-queen-thaiep-04",
-              "itemTitle": "Mr Queen THAIEP 04",
-              "file": "MrQueenTHAIEP03.mp4",
-              "name": "MrQueenTHAIEP03",
-              "url": "https://archive.org/download/mr-queen-thaiep-04/MrQueenTHAIEP03.mp4",
-              "seconds": 4894,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1327
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -251,21 +157,7 @@
             "playable": true,
             "sizeMB": 669
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 10 in \"Mr Queen THAIEP 04\"",
-              "item": "mr-queen-thaiep-04",
-              "itemTitle": "Mr Queen THAIEP 04",
-              "file": "MrQueenTHAIEP04.mp4",
-              "name": "MrQueenTHAIEP04",
-              "url": "https://archive.org/download/mr-queen-thaiep-04/MrQueenTHAIEP04.mp4",
-              "seconds": 4853,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1341
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -285,21 +177,7 @@
             "playable": true,
             "sizeMB": 702
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 10 in \"Mr Queen THAIEP 04\"",
-              "item": "mr-queen-thaiep-04",
-              "itemTitle": "Mr Queen THAIEP 04",
-              "file": "School2017THAIEP11.mp4",
-              "name": "School2017THAIEP11",
-              "url": "https://archive.org/download/mr-queen-thaiep-04/School2017THAIEP11.mp4",
-              "seconds": 3890,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1068
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
@@ -319,21 +197,7 @@
             "playable": true,
             "sizeMB": 721
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 10 of 10 in \"Mr Queen THAIEP 04\"",
-              "item": "mr-queen-thaiep-04",
-              "itemTitle": "Mr Queen THAIEP 04",
-              "file": "School2017THAIEP12.mp4",
-              "name": "School2017THAIEP12",
-              "url": "https://archive.org/download/mr-queen-thaiep-04/School2017THAIEP12.mp4",
-              "seconds": 3872,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1045
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,

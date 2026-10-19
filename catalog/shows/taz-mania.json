@@ -3,7 +3,7 @@
   "slug": "taz-mania",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:31.418Z",
+  "matchedAt": "2026-10-19T04:10:39.531Z",
   "addedAt": "2026-10-15T17:17:08.219Z",
   "tvmaze": {
     "id": 18425,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 121,
     "live": 0,
-    "review": 22,
-    "missing": 99,
-    "pct": 18
+    "review": 47,
+    "missing": 74,
+    "pct": 39
   },
   "seasons": [
     {
@@ -27,24 +27,74 @@
           "number": 1,
           "name": "The Dog the Turtle Story",
           "airdate": "1991-09-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 6 in \"Taz-Mania\"",
+            "item": "63_20240517",
+            "itemTitle": "Taz-Mania",
+            "file": "Taz-Mania/Season 1/5.mp4",
+            "name": "Taz-Mania/Season 1/5",
+            "url": "https://archive.org/download/63_20240517/Taz-Mania%2FSeason%201%2F5.mp4",
+            "seconds": 1318,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Like Father, Like Son",
           "airdate": "1991-09-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Like Father, Like Son\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'Like Father, Like Son ; Frights of Passage' (Recorded February 2, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'Like Father, Like Son ; Frights of Passage' (Recorded February 2, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Like%20Father%2C%20Like%20Son%20%3B%20Frights%20of%20Passage'%20(Recorded%20February%202%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1762,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 170
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 6 in \"Taz-Mania\"",
+              "item": "63_20240517",
+              "itemTitle": "Taz-Mania",
+              "file": "Taz-Mania/Season 3/31.mp4",
+              "name": "Taz-Mania/Season 3/31",
+              "url": "https://archive.org/download/63_20240517/Taz-Mania%2FSeason%203%2F31.mp4",
+              "seconds": 1277,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Frights of Passage",
           "airdate": "1991-09-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 3 of 6 in \"Taz-Mania\"",
+            "item": "63_20240517",
+            "itemTitle": "Taz-Mania",
+            "file": "Taz-Mania/Season 3/33 (Broadcast Tape error at 7-25).mp4",
+            "name": "Taz-Mania/Season 3/33 (Broadcast Tape error at 7-25)",
+            "url": "https://archive.org/download/63_20240517/Taz-Mania%2FSeason%203%2F33%20(Broadcast%20Tape%20error%20at%207-25).mp4",
+            "seconds": 1308,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 126
+          },
           "alternates": []
         },
         {
@@ -65,22 +115,60 @@
             "playable": true,
             "sizeMB": 180
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 6 in \"Taz-Mania\"",
+              "item": "63_20240517",
+              "itemTitle": "Taz-Mania",
+              "file": "Taz-Mania/Season 3/40.mp4",
+              "name": "Taz-Mania/Season 3/40",
+              "url": "https://archive.org/download/63_20240517/Taz-Mania%2FSeason%203%2F40.mp4",
+              "seconds": 1309,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 132
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Airbourne Airhead",
           "airdate": "1991-09-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 5 of 6 in \"Taz-Mania\"",
+            "item": "63_20240517",
+            "itemTitle": "Taz-Mania",
+            "file": "Taz-Mania/Season 4/44.mp4",
+            "name": "Taz-Mania/Season 4/44",
+            "url": "https://archive.org/download/63_20240517/Taz-Mania%2FSeason%204%2F44.mp4",
+            "seconds": 1272,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "It's No Picnic",
           "airdate": "1991-09-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 6 in \"Taz-Mania\"",
+            "item": "63_20240517",
+            "itemTitle": "Taz-Mania",
+            "file": "Taz-Mania/Season 4/63.mp4",
+            "name": "Taz-Mania/Season 4/63",
+            "url": "https://archive.org/download/63_20240517/Taz-Mania%2FSeason%204%2F63.mp4",
+            "seconds": 1310,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 132
+          },
           "alternates": []
         },
         {
@@ -151,8 +239,20 @@
           "number": 12,
           "name": "Devil with the Violet Dress On",
           "airdate": "1991-10-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Devil with the Violet Dress On\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'Devil with the Violet Dress On ; Kidnapped Koala' (Recorded March 27, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'Devil with the Violet Dress On ; Kidnapped Koala' (Recorded March 27, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Devil%20with%20the%20Violet%20Dress%20On%20%3B%20Kidnapped%20Koala'%20(Recorded%20March%2027%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1701,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 168
+          },
           "alternates": []
         },
         {
@@ -315,8 +415,20 @@
           "number": 28,
           "name": "Boys Just Wanna Have Fun",
           "airdate": "1992-10-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Boys Just Wanna Have Fun\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": " Taz-Mania 'Boys Just Wanna Have Fun ; Unhappy Together' (Recorded March 3, 2026; 4;30pm).mp4",
+            "name": " Taz-Mania 'Boys Just Wanna Have Fun ; Unhappy Together' (Recorded March 3, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/%20Taz-Mania%20'Boys%20Just%20Wanna%20Have%20Fun%20%3B%20Unhappy%20Together'%20(Recorded%20March%203%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1831,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 180
+          },
           "alternates": []
         },
         {
@@ -339,8 +451,20 @@
           "number": 31,
           "name": "Oh, Brother",
           "airdate": "1992-09-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Oh, Brother\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": " Taz-Mania 'Oh Brother ; Taz Babies' (Recorded February 20, 2026; 4;30pm).mp4",
+            "name": " Taz-Mania 'Oh Brother ; Taz Babies' (Recorded February 20, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/%20Taz-Mania%20'Oh%20Brother%20%3B%20Taz%20Babies'%20(Recorded%20February%2020%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1821,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 177
+          },
           "alternates": []
         },
         {
@@ -463,16 +587,40 @@
           "number": 42,
           "name": "Just Be 'Cuz",
           "airdate": "1995-02-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Just Be 'Cuz\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'Heartbreak Taz ; Just Be 'Cuz' (Recorded April 22, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'Heartbreak Taz ; Just Be 'Cuz' (Recorded April 22, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Heartbreak%20Taz%20%3B%20Just%20Be%20'Cuz'%20(Recorded%20April%2022%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1860,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 182
+          },
           "alternates": []
         },
         {
           "number": 43,
           "name": "Sidekicked",
           "airdate": "1994-11-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Sidekicked\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'Sidekicked ; Gone with the Windbag' (Recorded April 10, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'Sidekicked ; Gone with the Windbag' (Recorded April 10, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Sidekicked%20%3B%20Gone%20with%20the%20Windbag'%20(Recorded%20April%2010%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1833,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 178
+          },
           "alternates": []
         },
         {
@@ -487,8 +635,20 @@
           "number": 45,
           "name": "Return of the Road to Taz-Mania Strikes Back",
           "airdate": "1994-09-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Return of the Road to Taz-Mania Strikes Back\" (0.66)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'Return of the Road to Taz-Mania Strikes Back' (Recorded April 1, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'Return of the Road to Taz-Mania Strikes Back' (Recorded April 1, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Return%20of%20the%20Road%20to%20Taz-Mania%20Strikes%20Back'%20(Recorded%20April%201%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1777,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 176
+          },
           "alternates": []
         },
         {
@@ -511,8 +671,20 @@
           "number": 48,
           "name": "The Treasure of the Burnt Sienna",
           "airdate": "1994-09-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"The Treasure of the Burnt Sienna\" (0.63)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'The Pied Piper of Taz-Mania ; The Treasure of the Burnt Sienn' (Recorded April 3, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'The Pied Piper of Taz-Mania ; The Treasure of the Burnt Sienn' (Recorded April 3, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'The%20Pied%20Piper%20of%20Taz-Mania%20%3B%20The%20Treasure%20of%20the%20Burnt%20Sienn'%20(Recorded%20April%203%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1759,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 174
+          },
           "alternates": []
         },
         {
@@ -535,8 +707,20 @@
           "number": 51,
           "name": "Home Despair",
           "airdate": "1994-09-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Home Despair\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'Home Despair ; Take All Of Me' (Recorded April 7, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'Home Despair ; Take All Of Me' (Recorded April 7, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Home%20Despair%20%3B%20Take%20All%20Of%20Me'%20(Recorded%20April%207%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1687,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 163
+          },
           "alternates": []
         },
         {
@@ -551,8 +735,20 @@
           "number": 53,
           "name": "Bird-Brained Beast",
           "airdate": "1994-09-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Bird-Brained Beast\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'Bird-Brained Beast ; Ready, Willing, Unstable' (Recorded April 8, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'Bird-Brained Beast ; Ready, Willing, Unstable' (Recorded April 8, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Bird-Brained%20Beast%20%3B%20Ready%2C%20Willing%2C%20Unstable'%20(Recorded%20April%208%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1825,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 181
+          },
           "alternates": []
         },
         {
@@ -575,8 +771,20 @@
           "number": 56,
           "name": "Moments You've Missed",
           "airdate": "1994-09-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Moments You've Missed\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'We'll Always Have Taz-Mania ; Moments You've Missed' (Recorded April 9, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'We'll Always Have Taz-Mania ; Moments You've Missed' (Recorded April 9, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'We'll%20Always%20Have%20Taz-Mania%20%3B%20Moments%20You've%20Missed'%20(Recorded%20April%209%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1811,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 179
+          },
           "alternates": []
         },
         {
@@ -647,8 +855,20 @@
           "number": 62,
           "name": "Mean Bear",
           "airdate": "1994-11-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Mean Bear\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'Driving Mr. Taz ; Mean Bear' (Recorded April 13, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'Driving Mr. Taz ; Mean Bear' (Recorded April 13, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Driving%20Mr.%20Taz%20%3B%20Mean%20Bear'%20(Recorded%20April%2013%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1710,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 167
+          },
           "alternates": []
         },
         {
@@ -663,8 +883,20 @@
           "number": 64,
           "name": "Ticket Taker Taz",
           "airdate": "1994-11-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Ticket Taker Taz\" (0.63)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'Ticket Taker Taz ; Taz²' (Recorded April 14, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'Ticket Taker Taz ; Taz²' (Recorded April 14, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Ticket%20Taker%20Taz%20%3B%20Taz%C2%B2'%20(Recorded%20April%2014%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1812,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 179
+          },
           "alternates": []
         },
         {
@@ -745,7 +977,21 @@
             "playable": true,
             "sizeMB": 183
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Kee-Wee Cornered\" (0.63)",
+              "item": "tazmaniametvtoons",
+              "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+              "file": "Taz-Mania 'Taz in Kee-Wee Land ; Struck for Bucks ; A Philosophical Moment' (Recorded April 27, 2026; 4;30pm).mp4",
+              "name": "Taz-Mania 'Taz in Kee-Wee Land ; Struck for Bucks ; A Philosophical Moment' (Recorded April 27, 2026; 4;30pm)",
+              "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Taz%20in%20Kee-Wee%20Land%20%3B%20Struck%20for%20Bucks%20%3B%20A%20Philosophical%20Moment'%20(Recorded%20April%2027%2C%202026%3B%204%3B30pm).mp4",
+              "seconds": 1769,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 172
+            }
+          ]
         },
         {
           "number": 72,
@@ -787,8 +1033,20 @@
           "number": 75,
           "name": "Mutton for Nothing",
           "airdate": "1994-11-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Mutton for Nothing\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'Mutton For Nothing ; Dr. Wendal And Mr. Taz' (Recorded April 15, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'Mutton For Nothing ; Dr. Wendal And Mr. Taz' (Recorded April 15, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Mutton%20For%20Nothing%20%3B%20Dr.%20Wendal%20And%20Mr.%20Taz'%20(Recorded%20April%2015%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1866,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 184
+          },
           "alternates": []
         },
         {
@@ -839,8 +1097,20 @@
           "number": 80,
           "name": "Antenna Dilemma",
           "airdate": "1993-11-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Antenna Dilemma\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'Antenna Dilemma ; Autograph Pound' (Recorded March 20, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'Antenna Dilemma ; Autograph Pound' (Recorded March 20, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Antenna%20Dilemma%20%3B%20Autograph%20Pound'%20(Recorded%20March%2020%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1801,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 177
+          },
           "alternates": []
         },
         {
@@ -919,8 +1189,20 @@
           "number": 87,
           "name": "The Not-So-Gladiators",
           "airdate": "1994-11-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Not-So-Gladiators\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'The Not So Gladiators ; One Ring Taz' (Recorded April 17, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'The Not So Gladiators ; One Ring Taz' (Recorded April 17, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'The%20Not%20So%20Gladiators%20%3B%20One%20Ring%20Taz'%20(Recorded%20April%2017%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1837,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 182
+          },
           "alternates": []
         },
         {
@@ -1019,8 +1301,20 @@
           "number": 98,
           "name": "The Taz Story Primer",
           "airdate": "1995-02-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"The Taz Story Primer\" (0.63)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'The Taz Story Primer ; Ask Taz' (Recorded April 23, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'The Taz Story Primer ; Ask Taz' (Recorded April 23, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'The%20Taz%20Story%20Primer%20%3B%20Ask%20Taz'%20(Recorded%20April%2023%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1883,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 185
+          },
           "alternates": []
         },
         {
@@ -1035,8 +1329,20 @@
           "number": 100,
           "name": "Willie Wombat's Deja Boo-Boo",
           "airdate": "1993-10-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Willie Wombat's Deja Boo-Boo\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": " Taz-Mania 'Willie Wombat's Deja Boo-Boo ; To Catch A Taz' (Recorded March 18, 2026; 4;30pm).mp4",
+            "name": " Taz-Mania 'Willie Wombat's Deja Boo-Boo ; To Catch A Taz' (Recorded March 18, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/%20Taz-Mania%20'Willie%20Wombat's%20Deja%20Boo-Boo%20%3B%20To%20Catch%20A%20Taz'%20(Recorded%20March%2018%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1550,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 152
+          },
           "alternates": []
         },
         {
@@ -1051,8 +1357,20 @@
           "number": 102,
           "name": "It's a Taz's Life",
           "airdate": "1995-02-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"It's a Taz's Life\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'It's a Taz's Life ; Gee, Bull' (Recorded April 24, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'It's a Taz's Life ; Gee, Bull' (Recorded April 24, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'It's%20a%20Taz's%20Life%20%3B%20Gee%2C%20Bull'%20(Recorded%20April%2024%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1786,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 176
+          },
           "alternates": []
         },
         {
@@ -1099,8 +1417,20 @@
           "number": 108,
           "name": "Bad Luck Bottlecap",
           "airdate": "1995-05-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Bad Luck Bottlecap\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'Bad Luck Bottlecap ; A Story with a Moral' (Recorded April 30, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'Bad Luck Bottlecap ; A Story with a Moral' (Recorded April 30, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'Bad%20Luck%20Bottlecap%20%3B%20A%20Story%20with%20a%20Moral'%20(Recorded%20April%2030%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1671,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 164
+          },
           "alternates": []
         },
         {
@@ -1251,8 +1581,20 @@
           "number": 121,
           "name": "Francis Takes a Stand",
           "airdate": "1995-05-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Francis Takes a Stand\" (0.95)",
+            "item": "tazmaniametvtoons",
+            "itemTitle": "Taz-Mania (Remastered) (METV TOONS PRINT)",
+            "file": "Taz-Mania 'The Origin of the Beginning of the Incredible Taz-Man ; Francis Takes a Stand' (Recorded April 28, 2026; 4;30pm).mp4",
+            "name": "Taz-Mania 'The Origin of the Beginning of the Incredible Taz-Man ; Francis Takes a Stand' (Recorded April 28, 2026; 4;30pm)",
+            "url": "https://archive.org/download/tazmaniametvtoons/Taz-Mania%20'The%20Origin%20of%20the%20Beginning%20of%20the%20Incredible%20Taz-Man%20%3B%20Francis%20Takes%20a%20Stand'%20(Recorded%20April%2028%2C%202026%3B%204%3B30pm).mp4",
+            "seconds": 1899,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 186
+          },
           "alternates": []
         }
       ]

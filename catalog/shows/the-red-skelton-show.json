@@ -3,7 +3,8 @@
   "slug": "the-red-skelton-show",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:58:44.141Z",
+  "matchedAt": "2026-10-19T04:12:39.900Z",
+  "addedAt": "2026-10-19T04:12:39.905Z",
   "tvmaze": {
     "id": 6058,
     "name": "The Red Skelton Show",
@@ -14,8 +15,8 @@
   "coverage": {
     "total": 478,
     "live": 0,
-    "review": 0,
-    "missing": 478,
+    "review": 1,
+    "missing": 477,
     "pct": 0
   },
   "seasons": [
@@ -1615,8 +1616,20 @@
           "number": 2,
           "name": "The U.N. Show",
           "airdate": "1960-09-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"The U.N. Show\" (0.67)",
+            "item": "the-red-skelton-show_202606",
+            "itemTitle": "The Red Skelton Show - Three Classic Episodes [DigiView DVD ISO]",
+            "file": "DigiView - The Red Skelton Show - Three Classic Episodes [07.2004 DVD ISO] [Made in Taiwan]/THE_RED_SKELTON_SHOW1.mp4",
+            "name": "DigiView - The Red Skelton Show - Three Classic Episodes [07.2004 DVD ISO] [Made in Taiwan]/THE_RED_SKELTON_SHOW1",
+            "url": "https://archive.org/download/the-red-skelton-show_202606/DigiView%20-%20The%20Red%20Skelton%20Show%20-%20Three%20Classic%20Episodes%20%5B07.2004%20DVD%20ISO%5D%20%5BMade%20in%20Taiwan%5D%2FTHE_RED_SKELTON_SHOW1.mp4",
+            "seconds": 4832,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 486
+          },
           "alternates": []
         },
         {

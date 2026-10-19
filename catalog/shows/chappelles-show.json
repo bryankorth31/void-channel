@@ -3,7 +3,7 @@
   "slug": "chappelles-show",
   "type": "Sketch and Comedy",
   "network": "Comedy Central",
-  "matchedAt": "2026-10-16T07:58:12.479Z",
+  "matchedAt": "2026-10-19T04:12:16.281Z",
   "addedAt": "2026-10-15T12:08:42.798Z",
   "tvmaze": {
     "id": 4128,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 28,
-    "live": 0,
-    "review": 6,
-    "missing": 22,
-    "pct": 21
+    "live": 16,
+    "review": 0,
+    "missing": 12,
+    "pct": 57
   },
   "seasons": [
     {
@@ -27,17 +27,55 @@
           "number": 1,
           "name": "Black White Supremacist",
           "airdate": "2003-01-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
+            "itemTitle": "Chappelle's Show",
+            "file": "Season 1/Chappelle's Show- 1x01-PopCopy & Clayton Bigsby.mp4",
+            "name": "Season 1/Chappelle's Show- 1x01-PopCopy & Clayton Bigsby",
+            "url": "https://archive.org/download/chappelles-show-1x-01-pop-copy-clayton-bigsby/Season%201%2FChappelle's%20Show-%201x01-PopCopy%20%26%20Clayton%20Bigsby.mp4",
+            "seconds": 1303,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Introducing Tyrone Biggums",
           "airdate": "2003-01-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
+            "itemTitle": "Chappelle's Show",
+            "file": "Season 1/Chappelle's Show- 1x02- Tyrone Biggums at School & Wrap It Up Box.mp4",
+            "name": "Season 1/Chappelle's Show- 1x02- Tyrone Biggums at School & Wrap It Up Box",
+            "url": "https://archive.org/download/chappelles-show-1x-01-pop-copy-clayton-bigsby/Season%201%2FChappelle's%20Show-%201x02-%20Tyrone%20Biggums%20at%20School%20%26%20Wrap%20It%20Up%20Box.mp4",
+            "seconds": 1291,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 127
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Introducing Tyrone Biggums\" (0.63)",
+              "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
+              "itemTitle": "Chappelle's Show",
+              "file": "Season 2/Chappelle's Show- 2x10 -Snoop Dogg, Tyrone Biggums.mp4",
+              "name": "Season 2/Chappelle's Show- 2x10 -Snoop Dogg, Tyrone Biggums",
+              "url": "https://archive.org/download/chappelles-show-1x-01-pop-copy-clayton-bigsby/Season%202%2FChappelle's%20Show-%202x10%20-Snoop%20Dogg%2C%20Tyrone%20Biggums.mp4",
+              "seconds": 1302,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 131
+            }
+          ]
         },
         {
           "number": 3,
@@ -67,9 +105,9 @@
           "number": 6,
           "name": "The Mad Real World",
           "airdate": "2003-02-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
             "itemTitle": "Chappelle's Show",
@@ -119,17 +157,29 @@
           "number": 11,
           "name": "Fisticuffs",
           "airdate": "2003-04-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
+            "itemTitle": "Chappelle's Show",
+            "file": "Season 1/Chappelle's Show- 1x11- De La Soul.mp4",
+            "name": "Season 1/Chappelle's Show- 1x11- De La Soul",
+            "url": "https://archive.org/download/chappelles-show-1x-01-pop-copy-clayton-bigsby/Season%201%2FChappelle's%20Show-%201x11-%20De%20La%20Soul.mp4",
+            "seconds": 1297,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Trading Spouses",
           "airdate": "2003-04-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
             "itemTitle": "Chappelle's Show",
@@ -152,9 +202,9 @@
           "number": 1,
           "name": "The Racial Draft",
           "airdate": "2004-01-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
             "itemTitle": "Chappelle's Show",
@@ -180,9 +230,9 @@
           "number": 3,
           "name": "White People Can't Dance",
           "airdate": "2004-02-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
             "itemTitle": "Chappelle's Show",
@@ -224,9 +274,9 @@
           "number": 7,
           "name": "World Series of Dice",
           "airdate": "2004-03-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
             "itemTitle": "Chappelle's Show",
@@ -244,9 +294,9 @@
           "number": 8,
           "name": "I Know Black People",
           "airdate": "2004-03-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
             "itemTitle": "Chappelle's Show",
@@ -264,24 +314,60 @@
           "number": 9,
           "name": "Oprah's Baby Daddy",
           "airdate": "2004-03-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
+            "itemTitle": "Chappelle's Show",
+            "file": "Season 2/Chappelle's Show- 2x09 -Wyclef Jean.mp4",
+            "name": "Season 2/Chappelle's Show- 2x09 -Wyclef Jean",
+            "url": "https://archive.org/download/chappelles-show-1x-01-pop-copy-clayton-bigsby/Season%202%2FChappelle's%20Show-%202x09%20-Wyclef%20Jean.mp4",
+            "seconds": 1301,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Making Da Band",
           "airdate": "2004-03-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
+            "itemTitle": "Chappelle's Show",
+            "file": "Season 2/Chappelle's Show- 2x10 -Snoop Dogg, Tyrone Biggums.mp4",
+            "name": "Season 2/Chappelle's Show- 2x10 -Snoop Dogg, Tyrone Biggums",
+            "url": "https://archive.org/download/chappelles-show-1x-01-pop-copy-clayton-bigsby/Season%202%2FChappelle's%20Show-%202x10%20-Snoop%20Dogg%2C%20Tyrone%20Biggums.mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Greatest Misses",
           "airdate": "2004-03-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
+            "itemTitle": "Chappelle's Show",
+            "file": "Season 2/Chappelle's Show- 2x11 -Mandela Boot Camp & The Time Haters.mp4",
+            "name": "Season 2/Chappelle's Show- 2x11 -Mandela Boot Camp & The Time Haters",
+            "url": "https://archive.org/download/chappelles-show-1x-01-pop-copy-clayton-bigsby/Season%202%2FChappelle's%20Show-%202x11%20-Mandela%20Boot%20Camp%20%26%20The%20Time%20Haters.mp4",
+            "seconds": 1301,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
@@ -296,8 +382,20 @@
           "number": 13,
           "name": "Black Bush",
           "airdate": "2004-04-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
+            "itemTitle": "Chappelle's Show",
+            "file": "Season 2/Chappelle's Show- 2x13 -Big Boi.mp4",
+            "name": "Season 2/Chappelle's Show- 2x13 -Big Boi",
+            "url": "https://archive.org/download/chappelles-show-1x-01-pop-copy-clayton-bigsby/Season%202%2FChappelle's%20Show-%202x13%20-Big%20Boi.mp4",
+            "seconds": 1302,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 131
+          },
           "alternates": []
         }
       ]
@@ -309,24 +407,60 @@
           "number": 1,
           "name": "Lost Episode 1",
           "airdate": "2006-07-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
+            "itemTitle": "Chappelle's Show",
+            "file": "Season 3/Chappelle's Show- 3x01- Lost Episode-1.mp4",
+            "name": "Season 3/Chappelle's Show- 3x01- Lost Episode-1",
+            "url": "https://archive.org/download/chappelles-show-1x-01-pop-copy-clayton-bigsby/Season%203%2FChappelle's%20Show-%203x01-%20Lost%20Episode-1.mp4",
+            "seconds": 1265,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Lost Episode 2",
           "airdate": "2006-07-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
+            "itemTitle": "Chappelle's Show",
+            "file": "Season 3/Chappelle's Show- 3x02- Lost Episode-2.mp4",
+            "name": "Season 3/Chappelle's Show- 3x02- Lost Episode-2",
+            "url": "https://archive.org/download/chappelles-show-1x-01-pop-copy-clayton-bigsby/Season%203%2FChappelle's%20Show-%203x02-%20Lost%20Episode-2.mp4",
+            "seconds": 1718,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 160
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Lost Episode 3",
           "airdate": "2006-07-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "chappelles-show-1x-01-pop-copy-clayton-bigsby",
+            "itemTitle": "Chappelle's Show",
+            "file": "Season 3/Chappelle's Show- 3x03- Lost Episode-3.mp4",
+            "name": "Season 3/Chappelle's Show- 3x03- Lost Episode-3",
+            "url": "https://archive.org/download/chappelles-show-1x-01-pop-copy-clayton-bigsby/Season%203%2FChappelle's%20Show-%203x03-%20Lost%20Episode-3.mp4",
+            "seconds": 1391,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128
+          },
           "alternates": []
         }
       ]

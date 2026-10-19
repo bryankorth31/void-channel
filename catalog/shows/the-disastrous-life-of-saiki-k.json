@@ -3,7 +3,8 @@
   "slug": "the-disastrous-life-of-saiki-k",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:39.668Z",
+  "matchedAt": "2026-10-19T04:11:41.647Z",
+  "addedAt": "2026-10-19T04:11:41.652Z",
   "tvmaze": {
     "id": 45663,
     "name": "The Disastrous Life of Saiki K.: Reawakened",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 6,
-    "live": 0,
+    "live": 2,
     "review": 0,
-    "missing": 6,
-    "pct": 0
+    "missing": 4,
+    "pct": 33
   },
   "seasons": [
     {
@@ -26,8 +27,20 @@
           "number": 1,
           "name": "Three Men, A Little Girl, A Police Officer and A Dog",
           "airdate": "2019-12-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "saiki-k-s1-e3",
+            "itemTitle": "The Disastrous Life Of Saiki K: Season 1 Episode 3 (SUB)",
+            "file": "The Disastrous Life of Saiki K Saiki Kusuo no Ψ Nan Season 1 Episode 1 (SUB).mp4",
+            "name": "The Disastrous Life of Saiki K Saiki Kusuo no Ψ Nan Season 1 Episode 1 (SUB)",
+            "url": "https://archive.org/download/saiki-k-s1-e3/The%20Disastrous%20Life%20of%20Saiki%20K%20Saiki%20Kusuo%20no%20%CE%A8%20Nan%20Season%201%20Episode%201%20(SUB).mp4",
+            "seconds": 1434,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 207
+          },
           "alternates": []
         },
         {
@@ -50,9 +63,35 @@
           "number": 4,
           "name": "Terrifying! A Disastrous Transfer Student",
           "airdate": "2019-12-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "saiki-k-s1-e4",
+            "itemTitle": "The Disastrous Life Of Saiki K: Season 1 Episode 4 (SUB)",
+            "file": "The Disastrous Life Of Saiki K Season 1 Episode 4 (SUB).mp4",
+            "name": "The Disastrous Life Of Saiki K Season 1 Episode 4 (SUB)",
+            "url": "https://archive.org/download/saiki-k-s1-e4/The%20Disastrous%20Life%20Of%20Saiki%20K%20Season%201%20Episode%204%20(SUB).mp4",
+            "seconds": 1436,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 214
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "saiki-k-s1-e4_202403",
+              "itemTitle": "The Disastrous Life Of Saiki K: Season 1 Episode 5 (SUB)",
+              "file": "The Disastrous Life Of Saiki K Season 1 Episode 4 (SUB).mp4",
+              "name": "The Disastrous Life Of Saiki K Season 1 Episode 4 (SUB)",
+              "url": "https://archive.org/download/saiki-k-s1-e4_202403/The%20Disastrous%20Life%20Of%20Saiki%20K%20Season%201%20Episode%204%20(SUB).mp4",
+              "seconds": 1432,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 211
+            }
+          ]
         },
         {
           "number": 5,

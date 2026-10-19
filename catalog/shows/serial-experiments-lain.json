@@ -3,7 +3,7 @@
   "slug": "serial-experiments-lain",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:37.571Z",
+  "matchedAt": "2026-10-19T04:11:39.750Z",
   "addedAt": "2026-10-15T12:08:17.470Z",
   "tvmaze": {
     "id": 1938,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 13,
-    "live": 0,
-    "review": 13,
+    "live": 3,
+    "review": 10,
     "missing": 0,
     "pct": 100
   },
@@ -29,19 +29,32 @@
           "airdate": "1998-07-06",
           "state": "REVIEW",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "serial-experiments-lain-episode-1",
-            "itemTitle": "Serial Experiments Lain Episode 1",
-            "file": "Serial Experiments Lain Episode 1.mp4",
-            "name": "Serial Experiments Lain Episode 1",
-            "url": "https://archive.org/download/serial-experiments-lain-episode-1/Serial%20Experiments%20Lain%20Episode%201.mp4",
-            "seconds": 1437,
+            "conf": 0.75,
+            "why": "title ~ \"Weird\" (0.95)",
+            "item": "09-sel-protocol",
+            "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+            "file": "01SEL Weird.mp4",
+            "name": "01SEL Weird",
+            "url": "https://archive.org/download/09-sel-protocol/01SEL%20Weird.mp4",
+            "seconds": 1435,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 533
+            "sizeMB": 431
           },
           "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "serial-experiments-lain-episode-1",
+              "itemTitle": "Serial Experiments Lain Episode 1",
+              "file": "Serial Experiments Lain Episode 1.mp4",
+              "name": "Serial Experiments Lain Episode 1",
+              "url": "https://archive.org/download/serial-experiments-lain-episode-1/Serial%20Experiments%20Lain%20Episode%201.mp4",
+              "seconds": 1437,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 533
+            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
@@ -55,6 +68,19 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 145
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_01_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_01_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_01_BDRip_hi10p_1080p.mp4",
+              "seconds": 1437,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
             }
           ]
         },
@@ -64,20 +90,47 @@
           "airdate": "1998-07-13",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serial-experiments-lain-english",
-            "itemTitle": "Serial Experiments Lain English Dubbed",
-            "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E02.mp4",
-            "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E02",
-            "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E02.mp4",
-            "seconds": 1434,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Girls\" (0.95)",
+            "item": "09-sel-protocol",
+            "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+            "file": "02SEL Girls.mp4",
+            "name": "02SEL Girls",
+            "url": "https://archive.org/download/09-sel-protocol/02SEL%20Girls.mp4",
+            "seconds": 1432,
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 146
+            "sizeMB": 421
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serial-experiments-lain-english",
+              "itemTitle": "Serial Experiments Lain English Dubbed",
+              "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E02.mp4",
+              "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E02",
+              "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E02.mp4",
+              "seconds": 1434,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 146
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_02_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_02_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_02_BDRip_hi10p_1080p.mp4",
+              "seconds": 1434,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 3,
@@ -85,20 +138,47 @@
           "airdate": "1998-07-20",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serial-experiments-lain-english",
-            "itemTitle": "Serial Experiments Lain English Dubbed",
-            "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E03.mp4",
-            "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E03",
-            "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E03.mp4",
-            "seconds": 1436,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Psyche\" (0.95)",
+            "item": "09-sel-protocol",
+            "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+            "file": "03SEL Psyche.mp4",
+            "name": "03SEL Psyche",
+            "url": "https://archive.org/download/09-sel-protocol/03SEL%20Psyche.mp4",
+            "seconds": 1434,
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 147
+            "sizeMB": 407
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serial-experiments-lain-english",
+              "itemTitle": "Serial Experiments Lain English Dubbed",
+              "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E03.mp4",
+              "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E03",
+              "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E03.mp4",
+              "seconds": 1436,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 147
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_03_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_03_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_03_BDRip_hi10p_1080p.mp4",
+              "seconds": 1436,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 147
+            }
+          ]
         },
         {
           "number": 4,
@@ -106,41 +186,108 @@
           "airdate": "1998-07-27",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serial-experiments-lain-english",
-            "itemTitle": "Serial Experiments Lain English Dubbed",
-            "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E04.mp4",
-            "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E04",
-            "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E04.mp4",
-            "seconds": 1437,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Religion\" (0.95)",
+            "item": "09-sel-protocol",
+            "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+            "file": "04SEL Religion.mp4",
+            "name": "04SEL Religion",
+            "url": "https://archive.org/download/09-sel-protocol/04SEL%20Religion.mp4",
+            "seconds": 1435,
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 145
+            "sizeMB": 436
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serial-experiments-lain-english",
+              "itemTitle": "Serial Experiments Lain English Dubbed",
+              "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E04.mp4",
+              "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E04",
+              "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E04.mp4",
+              "seconds": 1437,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 145
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_04_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_04_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_04_BDRip_hi10p_1080p.mp4",
+              "seconds": 1437,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Distortion",
           "airdate": "1998-08-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serial-experiments-lain-english",
-            "itemTitle": "Serial Experiments Lain English Dubbed",
-            "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E05.mp4",
-            "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E05",
-            "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E05.mp4",
-            "seconds": 1435,
+            "conf": 0.85,
+            "why": "absolute episode number + title match",
+            "item": "lain-vhs-englishsubs-japaneseaudio",
+            "itemTitle": "Serial Experiments Lain - VHS - English Subtitles - Japanese Audio",
+            "file": "Episode 05, 06, 07 - Distortion, Kids, Society.mp4",
+            "name": "Episode 05, 06, 07 - Distortion, Kids, Society",
+            "url": "https://archive.org/download/lain-vhs-englishsubs-japaneseaudio/Episode%2005%2C%2006%2C%2007%20-%20Distortion%2C%20Kids%2C%20Society.mp4",
+            "seconds": 4405,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 146
+            "sizeMB": 448
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Distortion\" (0.95)",
+              "item": "09-sel-protocol",
+              "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+              "file": "05SEL Distortion.mp4",
+              "name": "05SEL Distortion",
+              "url": "https://archive.org/download/09-sel-protocol/05SEL%20Distortion.mp4",
+              "seconds": 1433,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 377
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serial-experiments-lain-english",
+              "itemTitle": "Serial Experiments Lain English Dubbed",
+              "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E05.mp4",
+              "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E05",
+              "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E05.mp4",
+              "seconds": 1435,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 146
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_05_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_05_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_05_BDRip_hi10p_1080p.mp4",
+              "seconds": 1434,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 6,
@@ -148,20 +295,47 @@
           "airdate": "1998-08-10",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serial-experiments-lain-english",
-            "itemTitle": "Serial Experiments Lain English Dubbed",
-            "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E06.mp4",
-            "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E06",
-            "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E06.mp4",
-            "seconds": 1434,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Kids\" (0.95)",
+            "item": "09-sel-protocol",
+            "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+            "file": "06SEL Kids.mp4",
+            "name": "06SEL Kids",
+            "url": "https://archive.org/download/09-sel-protocol/06SEL%20Kids.mp4",
+            "seconds": 1432,
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 145
+            "sizeMB": 402
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serial-experiments-lain-english",
+              "itemTitle": "Serial Experiments Lain English Dubbed",
+              "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E06.mp4",
+              "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E06",
+              "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E06.mp4",
+              "seconds": 1434,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 145
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_06_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_06_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_06_BDRip_hi10p_1080p.mp4",
+              "seconds": 1435,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 7,
@@ -169,41 +343,108 @@
           "airdate": "1998-08-17",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serial-experiments-lain-english",
-            "itemTitle": "Serial Experiments Lain English Dubbed",
-            "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E07.mp4",
-            "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E07",
-            "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E07.mp4",
-            "seconds": 1435,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Society\" (0.95)",
+            "item": "09-sel-protocol",
+            "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+            "file": "07SEL Society.mp4",
+            "name": "07SEL Society",
+            "url": "https://archive.org/download/09-sel-protocol/07SEL%20Society.mp4",
+            "seconds": 1433,
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 144
+            "sizeMB": 427
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serial-experiments-lain-english",
+              "itemTitle": "Serial Experiments Lain English Dubbed",
+              "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E07.mp4",
+              "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E07",
+              "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E07.mp4",
+              "seconds": 1435,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_07_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_07_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_07_BDRip_hi10p_1080p.mp4",
+              "seconds": 1435,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Rumors",
           "airdate": "1998-08-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serial-experiments-lain-english",
-            "itemTitle": "Serial Experiments Lain English Dubbed",
-            "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E08.mp4",
-            "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E08",
-            "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E08.mp4",
-            "seconds": 1434,
+            "conf": 0.85,
+            "why": "absolute episode number + title match",
+            "item": "lain-vhs-englishsubs-japaneseaudio",
+            "itemTitle": "Serial Experiments Lain - VHS - English Subtitles - Japanese Audio",
+            "file": "Episode 08, 09, 10 - Rumors, Protocol, Love.mp4",
+            "name": "Episode 08, 09, 10 - Rumors, Protocol, Love",
+            "url": "https://archive.org/download/lain-vhs-englishsubs-japaneseaudio/Episode%2008%2C%2009%2C%2010%20-%20Rumors%2C%20Protocol%2C%20Love.mp4",
+            "seconds": 4432,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 146
+            "sizeMB": 451
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Rumors\" (0.95)",
+              "item": "09-sel-protocol",
+              "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+              "file": "08SEL Rumors.mp4",
+              "name": "08SEL Rumors",
+              "url": "https://archive.org/download/09-sel-protocol/08SEL%20Rumors.mp4",
+              "seconds": 1432,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 416
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serial-experiments-lain-english",
+              "itemTitle": "Serial Experiments Lain English Dubbed",
+              "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E08.mp4",
+              "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E08",
+              "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E08.mp4",
+              "seconds": 1434,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 146
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_08_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_08_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_08_BDRip_hi10p_1080p.mp4",
+              "seconds": 1434,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 9,
@@ -211,20 +452,47 @@
           "airdate": "1998-08-31",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serial-experiments-lain-english",
-            "itemTitle": "Serial Experiments Lain English Dubbed",
-            "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E09.mp4",
-            "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E09",
-            "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E09.mp4",
-            "seconds": 1434,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Protocol\" (0.95)",
+            "item": "09-sel-protocol",
+            "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+            "file": "09SEL Protocol.mp4",
+            "name": "09SEL Protocol",
+            "url": "https://archive.org/download/09-sel-protocol/09SEL%20Protocol.mp4",
+            "seconds": 1431,
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 145
+            "sizeMB": 460
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serial-experiments-lain-english",
+              "itemTitle": "Serial Experiments Lain English Dubbed",
+              "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E09.mp4",
+              "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E09",
+              "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E09.mp4",
+              "seconds": 1434,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 145
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_09_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_09_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_09_BDRip_hi10p_1080p.mp4",
+              "seconds": 1433,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 10,
@@ -232,41 +500,108 @@
           "airdate": "1998-09-07",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serial-experiments-lain-english",
-            "itemTitle": "Serial Experiments Lain English Dubbed",
-            "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E10.mp4",
-            "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E10",
-            "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E10.mp4",
-            "seconds": 1434,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Love\" (0.95)",
+            "item": "09-sel-protocol",
+            "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+            "file": "10SEL Love.mp4",
+            "name": "10SEL Love",
+            "url": "https://archive.org/download/09-sel-protocol/10SEL%20Love.mp4",
+            "seconds": 1432,
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 145
+            "sizeMB": 401
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serial-experiments-lain-english",
+              "itemTitle": "Serial Experiments Lain English Dubbed",
+              "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E10.mp4",
+              "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E10",
+              "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E10.mp4",
+              "seconds": 1434,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 145
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_10_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_10_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_10_BDRip_hi10p_1080p.mp4",
+              "seconds": 1434,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Infornography",
           "airdate": "1998-09-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serial-experiments-lain-english",
-            "itemTitle": "Serial Experiments Lain English Dubbed",
-            "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E11.mp4",
-            "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E11",
-            "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E11.mp4",
-            "seconds": 1438,
+            "conf": 0.85,
+            "why": "absolute episode number + title match",
+            "item": "lain-vhs-englishsubs-japaneseaudio",
+            "itemTitle": "Serial Experiments Lain - VHS - English Subtitles - Japanese Audio",
+            "file": "Episode 11, 12, 13 - Infornography, Landscape, Ego.mp4",
+            "name": "Episode 11, 12, 13 - Infornography, Landscape, Ego",
+            "url": "https://archive.org/download/lain-vhs-englishsubs-japaneseaudio/Episode%2011%2C%2012%2C%2013%20-%20Infornography%2C%20Landscape%2C%20Ego.mp4",
+            "seconds": 4389,
             "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 144
+            "sizeMB": 443
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Infornography\" (0.95)",
+              "item": "09-sel-protocol",
+              "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+              "file": "11SEL Infornography.mp4",
+              "name": "11SEL Infornography",
+              "url": "https://archive.org/download/09-sel-protocol/11SEL%20Infornography.mp4",
+              "seconds": 1436,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 427
+            },
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serial-experiments-lain-english",
+              "itemTitle": "Serial Experiments Lain English Dubbed",
+              "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E11.mp4",
+              "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E11",
+              "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E11.mp4",
+              "seconds": 1438,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 11 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_11_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_11_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_11_BDRip_hi10p_1080p.mp4",
+              "seconds": 1438,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 143
+            }
+          ]
         },
         {
           "number": 12,
@@ -274,20 +609,47 @@
           "airdate": "1998-09-21",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serial-experiments-lain-english",
-            "itemTitle": "Serial Experiments Lain English Dubbed",
-            "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E12.mp4",
-            "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E12",
-            "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E12.mp4",
-            "seconds": 1433,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Landscape\" (0.95)",
+            "item": "09-sel-protocol",
+            "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+            "file": "12SEL Landscape.mp4",
+            "name": "12SEL Landscape",
+            "url": "https://archive.org/download/09-sel-protocol/12SEL%20Landscape.mp4",
+            "seconds": 1431,
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 145
+            "sizeMB": 411
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serial-experiments-lain-english",
+              "itemTitle": "Serial Experiments Lain English Dubbed",
+              "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E12.mp4",
+              "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E12",
+              "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E12.mp4",
+              "seconds": 1433,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 145
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 12 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_12_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_12_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_12_BDRip_hi10p_1080p.mp4",
+              "seconds": 1433,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 13,
@@ -295,20 +657,47 @@
           "airdate": "1998-09-28",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "serial-experiments-lain-english",
-            "itemTitle": "Serial Experiments Lain English Dubbed",
-            "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E13.mp4",
-            "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E13",
-            "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E13.mp4",
-            "seconds": 1420,
-            "format": "h.264",
+            "conf": 0.75,
+            "why": "title ~ \"Ego\" (0.95)",
+            "item": "09-sel-protocol",
+            "itemTitle": "Serial Experiments Lain: Full English Subtitle, in original Japanese",
+            "file": "13SEL Ego.mp4",
+            "name": "13SEL Ego",
+            "url": "https://archive.org/download/09-sel-protocol/13SEL%20Ego.mp4",
+            "seconds": 1445,
+            "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 143
+            "sizeMB": 447
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename",
+              "item": "serial-experiments-lain-english",
+              "itemTitle": "Serial Experiments Lain English Dubbed",
+              "file": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E13.mp4",
+              "name": "BluRay (MKV - Highest Quality)/Serial Experiments Lain - S01E13",
+              "url": "https://archive.org/download/serial-experiments-lain-english/BluRay%20(MKV%20-%20Highest%20Quality)%2FSerial%20Experiments%20Lain%20-%20S01E13.mp4",
+              "seconds": 1420,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 143
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 13 of 13 in \"Serial Experiments Lain 1-13 episodes\"",
+              "item": "serial-experiments-lain-1080p",
+              "itemTitle": "Serial Experiments Lain 1-13 episodes",
+              "file": "Serial_Experiments_Lain_13_BDRip_hi10p_1080p.mp4",
+              "name": "Serial_Experiments_Lain_13_BDRip_hi10p_1080p",
+              "url": "https://archive.org/download/serial-experiments-lain-1080p/Serial_Experiments_Lain_13_BDRip_hi10p_1080p.mp4",
+              "seconds": 1419,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 142
+            }
+          ]
         }
       ]
     }

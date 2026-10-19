@@ -3,7 +3,7 @@
   "slug": "aqua-teen-hunger-force",
   "type": "Adult Swim",
   "network": "Adult Swim",
-  "matchedAt": "2026-10-16T07:56:38.039Z",
+  "matchedAt": "2026-10-19T04:10:44.310Z",
   "addedAt": "2026-10-15T12:07:42.991Z",
   "tvmaze": {
     "id": 382,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 143,
-    "live": 131,
-    "review": 3,
+    "live": 133,
+    "review": 1,
     "missing": 9,
     "pct": 94
   },
@@ -1373,21 +1373,35 @@
           "number": 9,
           "name": "Moonajuana",
           "airdate": "2006-11-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Moonajuana\" (1.00)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
-            "file": "Aqua Teen Hunger Force (2000) - s04e10 - Moonajuana.mp4",
-            "name": "Aqua Teen Hunger Force (2000) - s04e10 - Moonajuana",
-            "url": "https://archive.org/download/aqua-teen-hunger-force-2000-s-01e-01-rabbot/Aqua%20Teen%20Hunger%20Force%20(2000)%20-%20s04e10%20-%20Moonajuana.mp4",
-            "seconds": 691,
+            "file": "Aqua Teen Hunger Force (2000) - s04e09 - Grim Reaper Gutters.mp4",
+            "name": "Aqua Teen Hunger Force (2000) - s04e09 - Grim Reaper Gutters",
+            "url": "https://archive.org/download/aqua-teen-hunger-force-2000-s-01e-01-rabbot/Aqua%20Teen%20Hunger%20Force%20(2000)%20-%20s04e09%20-%20Grim%20Reaper%20Gutters.mp4",
+            "seconds": 679,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 68
+            "sizeMB": 67
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Moonajuana\" (1.00)",
+              "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
+              "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
+              "file": "Aqua Teen Hunger Force (2000) - s04e10 - Moonajuana.mp4",
+              "name": "Aqua Teen Hunger Force (2000) - s04e10 - Moonajuana",
+              "url": "https://archive.org/download/aqua-teen-hunger-force-2000-s-01e-01-rabbot/Aqua%20Teen%20Hunger%20Force%20(2000)%20-%20s04e10%20-%20Moonajuana.mp4",
+              "seconds": 691,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 68
+            }
+          ]
         },
         {
           "number": 10,
@@ -2096,21 +2110,35 @@
           "number": 5,
           "name": "Hands on a Hamburger",
           "airdate": "2010-03-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Hands on a Hamburger\" (1.00)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
             "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
-            "file": "Aqua Teen Hunger Force (2000) - s07e06 - Hands On a Hamburger.mp4",
-            "name": "Aqua Teen Hunger Force (2000) - s07e06 - Hands On a Hamburger",
-            "url": "https://archive.org/download/aqua-teen-hunger-force-2000-s-01e-01-rabbot/Aqua%20Teen%20Hunger%20Force%20(2000)%20-%20s07e06%20-%20Hands%20On%20a%20Hamburger.mp4",
-            "seconds": 692,
+            "file": "Aqua Teen Hunger Force (2000) - s07e05 - Monster.mp4",
+            "name": "Aqua Teen Hunger Force (2000) - s07e05 - Monster",
+            "url": "https://archive.org/download/aqua-teen-hunger-force-2000-s-01e-01-rabbot/Aqua%20Teen%20Hunger%20Force%20(2000)%20-%20s07e05%20-%20Monster.mp4",
+            "seconds": 694,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 67
+            "sizeMB": 68
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Hands on a Hamburger\" (1.00)",
+              "item": "aqua-teen-hunger-force-2000-s-01e-01-rabbot",
+              "itemTitle": "Aqua Teen Hunger Force Complete sereis (2000) (1080p HMAX WEB-DL H265 SDR DD English)",
+              "file": "Aqua Teen Hunger Force (2000) - s07e06 - Hands On a Hamburger.mp4",
+              "name": "Aqua Teen Hunger Force (2000) - s07e06 - Hands On a Hamburger",
+              "url": "https://archive.org/download/aqua-teen-hunger-force-2000-s-01e-01-rabbot/Aqua%20Teen%20Hunger%20Force%20(2000)%20-%20s07e06%20-%20Hands%20On%20a%20Hamburger.mp4",
+              "seconds": 692,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 67
+            }
+          ]
         },
         {
           "number": 6,

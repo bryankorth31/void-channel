@@ -3,7 +3,7 @@
   "slug": "earthworm-jim",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:31.506Z",
+  "matchedAt": "2026-10-19T04:10:39.581Z",
   "addedAt": "2026-10-15T17:19:25.086Z",
   "tvmaze": {
     "id": 6833,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 23,
-    "live": 19,
-    "review": 4,
+    "live": 23,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -327,9 +327,9 @@
           "number": 6,
           "name": "Upholstered Peril",
           "airdate": "1995-10-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "earthworm-jim-complete-series-1995-1996",
             "itemTitle": "Earthworm Jim Complete Series (1995-1996)",
@@ -343,20 +343,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 23 in \"Earthworm Jim [1995]\"",
-              "item": "earthworm-jim-1995",
-              "itemTitle": "Earthworm Jim [1995]",
-              "file": "EWJ_DVD18.mp4",
-              "name": "EWJ_DVD18",
-              "url": "https://archive.org/download/earthworm-jim-1995/EWJ_DVD18.mp4",
-              "seconds": 1283,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 128
-            },
-            {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "earthworm-jim-mkv",
               "itemTitle": "Earthworm Jim Complete Series [MKV]",
@@ -369,7 +356,7 @@
               "sizeMB": 127
             },
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "earthworm_jim_202211",
               "itemTitle": "Earthworm Jim Complete Series",
@@ -380,6 +367,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 127
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 23 in \"Earthworm Jim [1995]\"",
+              "item": "earthworm-jim-1995",
+              "itemTitle": "Earthworm Jim [1995]",
+              "file": "EWJ_DVD18.mp4",
+              "name": "EWJ_DVD18",
+              "url": "https://archive.org/download/earthworm-jim-1995/EWJ_DVD18.mp4",
+              "seconds": 1283,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 128
             }
           ]
         },
@@ -567,9 +567,9 @@
           "number": 10,
           "name": "The Great Secret of the Universe",
           "airdate": "1995-11-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "earthworm-jim-mkv",
             "itemTitle": "Earthworm Jim Complete Series [MKV]",
@@ -583,7 +583,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "earthworm_jim_202211",
               "itemTitle": "Earthworm Jim Complete Series",
@@ -594,6 +594,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 128
+            },
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "earthworm-jim-complete-series-1995-1996",
+              "itemTitle": "Earthworm Jim Complete Series (1995-1996)",
+              "file": "S01E10 - The Great Secret of the Universe.mp4",
+              "name": "S01E10 - The Great Secret of the Universe",
+              "url": "https://archive.org/download/earthworm-jim-complete-series-1995-1996/S01E10%20-%20The%20Great%20Secret%20of%20the%20Universe.mp4",
+              "seconds": 1182,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 45
             },
             {
               "conf": 0.55,
@@ -607,19 +620,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 127
-            },
-            {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
-              "item": "earthworm-jim-complete-series-1995-1996",
-              "itemTitle": "Earthworm Jim Complete Series (1995-1996)",
-              "file": "S01E10 - The Great Secret of the Universe.mp4",
-              "name": "S01E10 - The Great Secret of the Universe",
-              "url": "https://archive.org/download/earthworm-jim-complete-series-1995-1996/S01E10%20-%20The%20Great%20Secret%20of%20the%20Universe.mp4",
-              "seconds": 1182,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 45
             }
           ]
         },
@@ -1017,9 +1017,9 @@
           "number": 5,
           "name": "Evil in Love",
           "airdate": "1996-10-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "earthworm-jim-complete-series-1995-1996",
             "itemTitle": "Earthworm Jim Complete Series (1995-1996)",
@@ -1033,7 +1033,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "earthworm-jim-mkv",
               "itemTitle": "Earthworm Jim Complete Series [MKV]",
@@ -1044,6 +1044,20 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 127
+            },
+            {
+              "conf": 0.5,
+              "why": "S/E in filename",
+              "item": "jim-der-regenwurm",
+              "itemTitle": "Jim Der Regenwurm (German dub of Earthworm Jim)",
+              "file": "Jim der Regenwurm S02E05 Evil ist verliebt.mp4",
+              "name": "Jim der Regenwurm S02E05 Evil ist verliebt",
+              "url": "https://archive.org/download/jim-der-regenwurm/Jim%20der%20Regenwurm%20S02E05%20Evil%20ist%20verliebt.mp4",
+              "seconds": 1228,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 74
             }
           ]
         },
@@ -1147,9 +1161,9 @@
           "number": 8,
           "name": "Lounge Day's Journey Into Night",
           "airdate": "1996-11-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "earthworm-jim-complete-series-1995-1996",
             "itemTitle": "Earthworm Jim Complete Series (1995-1996)",
@@ -1163,7 +1177,7 @@
           },
           "alternates": [
             {
-              "conf": 0.55,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "earthworm-jim-mkv",
               "itemTitle": "Earthworm Jim Complete Series [MKV]",

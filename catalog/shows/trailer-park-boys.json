@@ -3,21 +3,21 @@
   "slug": "trailer-park-boys",
   "type": "British and Beyond",
   "network": "Showcase",
-  "matchedAt": "2026-10-16T07:57:02.572Z",
-  "addedAt": "2026-10-15T15:06:07.783Z",
+  "matchedAt": "2026-10-19T04:11:09.960Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 302,
+    "id": null,
     "name": "Trailer Park Boys",
-    "runtime": 25,
-    "premiered": "2001-04-22",
-    "network": "SwearNet"
+    "runtime": null,
+    "premiered": null,
+    "network": "Showcase"
   },
   "coverage": {
-    "total": 105,
+    "total": 36,
     "live": 0,
-    "review": 11,
-    "missing": 94,
-    "pct": 10
+    "review": 36,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -25,1130 +25,730 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Take Your Little Gun and Get Out of My Trailer Park",
-          "airdate": "2001-04-22",
+          "name": "Episode 1",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "s-01-ep-09-hurricane-ricky",
-            "itemTitle": "Trailer Park Boys  The Animated Series",
-            "file": "S02 EP 01 Duber.mp4",
-            "name": "S02 EP 01 Duber",
-            "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S02%20EP%2001%20Duber.mp4",
-            "seconds": 1482,
-            "format": "MPEG4",
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_01.mp4",
+            "name": "TRAILER_PARK_BOYS_01",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_01.mp4",
+            "seconds": 1478,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 298
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Fuck Community College, Let's Get Drunk and Eat Chicken Fingers",
-          "airdate": "2001-04-29",
+          "name": "Episode 2",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "s-01-ep-09-hurricane-ricky",
-            "itemTitle": "Trailer Park Boys  The Animated Series",
-            "file": "S02 EP 02 Viral Video.mp4",
-            "name": "S02 EP 02 Viral Video",
-            "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S02%20EP%2002%20Viral%20Video.mp4",
-            "seconds": 1540,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 341
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "s-01-ep-09-hurricane-ricky",
-              "itemTitle": "Trailer Park Boys  The Animated Series",
-              "file": "S01 EP02 The Pepperoni Cobra.mp4",
-              "name": "S01 EP02 The Pepperoni Cobra",
-              "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S01%20EP02%20The%20Pepperoni%20Cobra.mp4",
-              "seconds": 1488,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 292
-            }
-          ]
-        },
-        {
-          "number": 3,
-          "name": "Mr. Lahey's Got My Porno Tape!",
-          "airdate": "2001-05-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "s-01-ep-09-hurricane-ricky",
-            "itemTitle": "Trailer Park Boys  The Animated Series",
-            "file": "S01 EP 03 The Stanley Bong.mp4",
-            "name": "S01 EP 03 The Stanley Bong",
-            "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S01%20EP%2003%20The%20Stanley%20Bong.mp4",
-            "seconds": 1476,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 322
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "s-01-ep-09-hurricane-ricky",
-              "itemTitle": "Trailer Park Boys  The Animated Series",
-              "file": "S02 EP 03 The Tax Man Fucked Me.mp4",
-              "name": "S02 EP 03 The Tax Man Fucked Me",
-              "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S02%20EP%2003%20The%20Tax%20Man%20Fucked%20Me.mp4",
-              "seconds": 1586,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 304
-            }
-          ]
-        },
-        {
-          "number": 4,
-          "name": "Mrs. Peterson's Dog Gets Fucked Up",
-          "airdate": "2001-05-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "s-01-ep-09-hurricane-ricky",
-            "itemTitle": "Trailer Park Boys  The Animated Series",
-            "file": "S01 EP 04 The Penis Milker.mp4",
-            "name": "S01 EP 04 The Penis Milker",
-            "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S01%20EP%2004%20The%20Penis%20Milker.mp4",
-            "seconds": 1496,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 296
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "s-01-ep-09-hurricane-ricky",
-              "itemTitle": "Trailer Park Boys  The Animated Series",
-              "file": "S02 EP 04 Scamazon.mp4",
-              "name": "S02 EP 04 Scamazon",
-              "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S02%20EP%2004%20Scamazon.mp4",
-              "seconds": 1525,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 253
-            }
-          ]
-        },
-        {
-          "number": 5,
-          "name": "I'm Not Gay, I Love Lucy... Wait a Second, Maybe I Am Gay",
-          "airdate": "2001-05-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "s-01-ep-09-hurricane-ricky",
-            "itemTitle": "Trailer Park Boys  The Animated Series",
-            "file": "S01 EP 05 Big Ho's Carwash.mp4",
-            "name": "S01 EP 05 Big Ho's Carwash",
-            "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S01%20EP%2005%20Big%20Ho's%20Carwash.mp4",
-            "seconds": 1442,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 352
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "s-01-ep-09-hurricane-ricky",
-              "itemTitle": "Trailer Park Boys  The Animated Series",
-              "file": "S02 EP 05 Clint Eatswood.mp4",
-              "name": "S02 EP 05 Clint Eatswood",
-              "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S02%20EP%2005%20Clint%20Eatswood.mp4",
-              "seconds": 1434,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 269
-            }
-          ]
-        },
-        {
-          "number": 6,
-          "name": "Who the Hell Invited These Idiots to My Wedding?",
-          "airdate": "2001-05-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "s-01-ep-09-hurricane-ricky",
-            "itemTitle": "Trailer Park Boys  The Animated Series",
-            "file": "S02 EP 06 The First Time We Smoked Weed.mp4",
-            "name": "S02 EP 06 The First Time We Smoked Weed",
-            "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S02%20EP%2006%20The%20First%20Time%20We%20Smoked%20Weed.mp4",
-            "seconds": 1512,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 229
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "s-01-ep-09-hurricane-ricky",
-              "itemTitle": "Trailer Park Boys  The Animated Series",
-              "file": "S01 EP 06 The Three Mustardteers.mp4",
-              "name": "S01 EP 06 The Three Mustardteers",
-              "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S01%20EP%2006%20The%20Three%20Mustardteers.mp4",
-              "seconds": 1480,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 202
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "season": 2,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "What in the Fuck Happened to Our Trailer Park?",
-          "airdate": "2002-06-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "s-01-ep-09-hurricane-ricky",
-            "itemTitle": "Trailer Park Boys  The Animated Series",
-            "file": "S01 EP 07 Satan's Bastards.mp4",
-            "name": "S01 EP 07 Satan's Bastards",
-            "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S01%20EP%2007%20Satan's%20Bastards.mp4",
-            "seconds": 1488,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 304
-          },
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Jim Lahey is a Drunk Bastard",
-          "airdate": "2002-06-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "s-01-ep-09-hurricane-ricky",
-            "itemTitle": "Trailer Park Boys  The Animated Series",
-            "file": "S01 EP 08 Space Weed.mp4",
-            "name": "S01 EP 08 Space Weed",
-            "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S01%20EP%2008%20Space%20Weed.mp4",
-            "seconds": 1496,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 309
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "I've Met Cats and Dogs Smarter Than Trevor and Cory",
-          "airdate": "2002-07-07",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "s-01-ep-09-hurricane-ricky",
-            "itemTitle": "Trailer Park Boys  The Animated Series",
-            "file": "S01 EP 09 Hurricane Ricky.mp4",
-            "name": "S01 EP 09 Hurricane Ricky",
-            "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S01%20EP%2009%20Hurricane%20Ricky.mp4",
-            "seconds": 1504,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 373
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "s-01-ep-09-hurricane-ricky",
-              "itemTitle": "Trailer Park Boys  The Animated Series",
-              "file": "S02 EP 09 The Fucket List.mp4",
-              "name": "S02 EP 09 The Fucket List",
-              "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S02%20EP%2009%20The%20Fucket%20List.mp4",
-              "seconds": 1432,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 296
-            }
-          ]
-        },
-        {
-          "number": 4,
-          "name": "A Dope Trailer is No Place for a Kitty",
-          "airdate": "2002-07-14",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "s-01-ep-09-hurricane-ricky",
-            "itemTitle": "Trailer Park Boys  The Animated Series",
-            "file": "S01 EP 10 Trailerstock.mp4",
-            "name": "S01 EP 10 Trailerstock",
-            "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S01%20EP%2010%20Trailerstock.mp4",
-            "seconds": 1488,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 321
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "s-01-ep-09-hurricane-ricky",
-              "itemTitle": "Trailer Park Boys  The Animated Series",
-              "file": "S02 EP 10 Well Boys, I Guess I Gotta Get Dead.mp4",
-              "name": "S02 EP 10 Well Boys, I Guess I Gotta Get Dead",
-              "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S02%20EP%2010%20Well%20Boys%2C%20I%20Guess%20I%20Gotta%20Get%20Dead.mp4",
-              "seconds": 1588,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 300
-            }
-          ]
-        },
-        {
-          "number": 5,
-          "name": "The Bible Pimp",
-          "airdate": "2002-07-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Never Trust a Man with No Shirt On",
-          "airdate": "2002-07-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "The Bare Pimp Project",
-          "airdate": "2002-08-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 3,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Kiss of Freedom",
-          "airdate": "2003-04-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Temporary Relief Assistant Trailer Park Supervisor",
-          "airdate": "2003-04-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "If I Can't Smoke and Swear I'm Fucked",
-          "airdate": "2003-05-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Who's the Microphone Assassin?",
-          "airdate": "2003-05-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Closer to the Heart",
-          "airdate": "2003-05-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Where in the Fuck is Randy's Barbeque?",
-          "airdate": "2003-05-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "The Delusions of Officer Jim Lahey",
-          "airdate": "2003-06-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "A Shit Leopard Can't Change Its Spots",
-          "airdate": "2003-06-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 4,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Never Cry Shitwolf",
-          "airdate": "2004-04-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "A Man's Gotta Eat",
-          "airdate": "2004-04-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Rub 'N Tiz'zug",
-          "airdate": "2004-04-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "The Green Bastard",
-          "airdate": "2004-05-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Conky",
-          "airdate": "2004-05-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "If You Love Something, Set It Free",
-          "airdate": "2004-05-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Propane, Propane",
-          "airdate": "2004-05-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Working Man",
-          "airdate": "2004-05-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 5,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Give Peace a Chance",
-          "airdate": "2005-04-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "The Shit Puppets",
-          "airdate": "2005-04-24",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "The Fuckin' Way She Goes",
-          "airdate": "2005-05-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "You Got to Blame the Thing Up Here",
-          "airdate": "2005-05-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Jim Lahey is a Fuckin' Drunk and He Always Will Be",
-          "airdate": "2005-05-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Don't Cross the Shit Line",
-          "airdate": "2005-05-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "The Winds of Shit",
-          "airdate": "2005-05-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Dressed All Over & Zesty Mordant",
-          "airdate": "2005-06-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "I Am the Liquor",
-          "airdate": "2005-06-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Shit Blizzard",
-          "airdate": "2005-06-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 6,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Way of the Road",
-          "airdate": "2006-04-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "The Cheeseburger Picnic",
-          "airdate": "2006-04-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "High Definition Piss Jugs",
-          "airdate": "2006-04-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Where in the Fuck is Oscar Goldman?",
-          "airdate": "2006-05-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Halloween 1977",
-          "airdate": "2006-05-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Gimme My Fucking Money or Randy's Dead",
-          "airdate": "2006-05-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 7,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "I Fuckin' Miss Cory & Trevor",
-          "airdate": "2007-04-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "I Banged Lucy and Knocked Her Up, No Big Deal",
-          "airdate": "2007-04-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Three Good Men Are Dead",
-          "airdate": "2007-04-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Friends of the Road",
-          "airdate": "2007-04-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "The Mustard Tiger",
-          "airdate": "2007-05-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "title ~ \"The Mustard Tiger\" (0.61)",
-            "item": "s-01-ep-09-hurricane-ricky",
-            "itemTitle": "Trailer Park Boys  The Animated Series",
-            "file": "S01 EP 06 The Three Mustardteers.mp4",
-            "name": "S01 EP 06 The Three Mustardteers",
-            "url": "https://archive.org/download/s-01-ep-09-hurricane-ricky/S01%20EP%2006%20The%20Three%20Mustardteers.mp4",
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_02.mp4",
+            "name": "TRAILER_PARK_BOYS_02",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_02.mp4",
             "seconds": 1480,
-            "format": "MPEG4",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 202
+            "sizeMB": 143,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Episode 3",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_03.mp4",
+            "name": "TRAILER_PARK_BOYS_03",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_03.mp4",
+            "seconds": 1463,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 139,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Episode 4",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s5",
+            "itemTitle": "Trailer Park Boys: The Complete Fifth Season",
+            "file": "TRAILER_PARK_BOYS_5_DISC_154.mp4",
+            "name": "TRAILER_PARK_BOYS_5_DISC_154",
+            "url": "https://archive.org/download/trailer-park-boys-s5/TRAILER_PARK_BOYS_5_DISC_154.mp4",
+            "seconds": 1135,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 109,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Episode 5",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s5",
+            "itemTitle": "Trailer Park Boys: The Complete Fifth Season",
+            "file": "TRAILER_PARK_BOYS_5_DISC_165.mp4",
+            "name": "TRAILER_PARK_BOYS_5_DISC_165",
+            "url": "https://archive.org/download/trailer-park-boys-s5/TRAILER_PARK_BOYS_5_DISC_165.mp4",
+            "seconds": 1419,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "We Can't Call People Without Wings Angels, So We Call Them Friends",
-          "airdate": "2007-05-13",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 6",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s5",
+            "itemTitle": "Trailer Park Boys: The Complete Fifth Season",
+            "file": "TRAILER_PARK_BOYS_5_DISC_166.mp4",
+            "name": "TRAILER_PARK_BOYS_5_DISC_166",
+            "url": "https://archive.org/download/trailer-park-boys-s5/TRAILER_PARK_BOYS_5_DISC_166.mp4",
+            "seconds": 1419,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "Jump the Cheeseburger",
-          "airdate": "2007-05-20",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 7",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s5",
+            "itemTitle": "Trailer Park Boys: The Complete Fifth Season",
+            "file": "TRAILER_PARK_BOYS_5_DISC_167.mp4",
+            "name": "TRAILER_PARK_BOYS_5_DISC_167",
+            "url": "https://archive.org/download/trailer-park-boys-s5/TRAILER_PARK_BOYS_5_DISC_167.mp4",
+            "seconds": 1479,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 8,
-          "name": "Let the Liquor Do the Thinking",
-          "airdate": "2007-05-27",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 8",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s5",
+            "itemTitle": "Trailer Park Boys: The Complete Fifth Season",
+            "file": "TRAILER_PARK_BOYS_5_DISC_168.mp4",
+            "name": "TRAILER_PARK_BOYS_5_DISC_168",
+            "url": "https://archive.org/download/trailer-park-boys-s5/TRAILER_PARK_BOYS_5_DISC_168.mp4",
+            "seconds": 1419,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Going Off the Rails on the Swayzie Train",
-          "airdate": "2007-06-03",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 9",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s5",
+            "itemTitle": "Trailer Park Boys: The Complete Fifth Season",
+            "file": "TRAILER_PARK_BOYS_5_DISC_169.mp4",
+            "name": "TRAILER_PARK_BOYS_5_DISC_169",
+            "url": "https://archive.org/download/trailer-park-boys-s5/TRAILER_PARK_BOYS_5_DISC_169.mp4",
+            "seconds": 1418,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "A Shit River Runs Through It",
-          "airdate": "2007-06-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 8,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Money Can Suck My Cock",
-          "airdate": "2014-09-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "The Fuckin' V-Team",
-          "airdate": "2014-09-05",
-          "state": "MISSING",
-          "file": null,
+          "name": "Episode 10",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s5",
+            "itemTitle": "Trailer Park Boys: The Complete Fifth Season",
+            "file": "TRAILER_PARK_BOYS_5_DISC_243.mp4",
+            "name": "TRAILER_PARK_BOYS_5_DISC_243",
+            "url": "https://archive.org/download/trailer-park-boys-s5/TRAILER_PARK_BOYS_5_DISC_243.mp4",
+            "seconds": 928,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 90,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "The Dirty Dancer",
-          "airdate": "2014-09-05",
-          "state": "MISSING",
-          "file": null,
+          "number": 11,
+          "name": "Episode 11",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s5",
+            "itemTitle": "Trailer Park Boys: The Complete Fifth Season",
+            "file": "TRAILER_PARK_BOYS_5_DISC_254.mp4",
+            "name": "TRAILER_PARK_BOYS_5_DISC_254",
+            "url": "https://archive.org/download/trailer-park-boys-s5/TRAILER_PARK_BOYS_5_DISC_254.mp4",
+            "seconds": 1419,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Orangie's Pretty Fuckin' Tough",
-          "airdate": "2014-09-05",
-          "state": "MISSING",
-          "file": null,
+          "number": 12,
+          "name": "Episode 12",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s5",
+            "itemTitle": "Trailer Park Boys: The Complete Fifth Season",
+            "file": "TRAILER_PARK_BOYS_5_DISC_255.mp4",
+            "name": "TRAILER_PARK_BOYS_5_DISC_255",
+            "url": "https://archive.org/download/trailer-park-boys-s5/TRAILER_PARK_BOYS_5_DISC_255.mp4",
+            "seconds": 1419,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "Whore-a-Geddon",
-          "airdate": "2014-09-05",
-          "state": "MISSING",
-          "file": null,
+          "number": 13,
+          "name": "Episode 13",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s5",
+            "itemTitle": "Trailer Park Boys: The Complete Fifth Season",
+            "file": "TRAILER_PARK_BOYS_5_DISC_256.mp4",
+            "name": "TRAILER_PARK_BOYS_5_DISC_256",
+            "url": "https://archive.org/download/trailer-park-boys-s5/TRAILER_PARK_BOYS_5_DISC_256.mp4",
+            "seconds": 1419,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "Friends with the Benedicts",
-          "airdate": "2014-09-05",
-          "state": "MISSING",
-          "file": null,
+          "number": 14,
+          "name": "Episode 14",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s5",
+            "itemTitle": "Trailer Park Boys: The Complete Fifth Season",
+            "file": "TRAILER_PARK_BOYS_5_DISC_257.mp4",
+            "name": "TRAILER_PARK_BOYS_5_DISC_257",
+            "url": "https://archive.org/download/trailer-park-boys-s5/TRAILER_PARK_BOYS_5_DISC_257.mp4",
+            "seconds": 1479,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "Community Service and a Boner Made with Love",
-          "airdate": "2014-09-05",
-          "state": "MISSING",
-          "file": null,
+          "number": 15,
+          "name": "Episode 15",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s5",
+            "itemTitle": "Trailer Park Boys: The Complete Fifth Season",
+            "file": "TRAILER_PARK_BOYS_5_DISC_258.mp4",
+            "name": "TRAILER_PARK_BOYS_5_DISC_258",
+            "url": "https://archive.org/download/trailer-park-boys-s5/TRAILER_PARK_BOYS_5_DISC_258.mp4",
+            "seconds": 1478,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 136,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "The Super-Duper-Industrial-Bubbles-Honey-Oil-Inator",
-          "airdate": "2014-09-05",
-          "state": "MISSING",
-          "file": null,
+          "number": 16,
+          "name": "Episode 16",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_015.mp4",
+            "name": "TRAILER_PARK_BOYS_015",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_015.mp4",
+            "seconds": 1478,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "Righties Loosies, Lefties Tighties",
-          "airdate": "2014-09-05",
-          "state": "MISSING",
-          "file": null,
+          "number": 17,
+          "name": "Episode 17",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_017.mp4",
+            "name": "TRAILER_PARK_BOYS_017",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_017.mp4",
+            "seconds": 1558,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 143,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "Crawling Through the Shitpipe",
-          "airdate": "2014-09-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 9,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Why in the Fuck is My Trailer Pink?",
-          "airdate": "2015-03-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "A Stable Fucking Environment",
-          "airdate": "2015-03-27",
-          "state": "MISSING",
-          "file": null,
+          "number": 18,
+          "name": "Episode 18",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_027.mp4",
+            "name": "TRAILER_PARK_BOYS_027",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_027.mp4",
+            "seconds": 1480,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 143,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "Anointed in Liquor",
-          "airdate": "2015-03-27",
-          "state": "MISSING",
-          "file": null,
+          "number": 19,
+          "name": "Episode 19",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_029.mp4",
+            "name": "TRAILER_PARK_BOYS_029",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_029.mp4",
+            "seconds": 1543,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 140,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "George Green: Industrial Cock Inhaler",
-          "airdate": "2015-03-27",
-          "state": "MISSING",
-          "file": null,
+          "number": 20,
+          "name": "Episode 20",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_035.mp4",
+            "name": "TRAILER_PARK_BOYS_035",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_035.mp4",
+            "seconds": 1403,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "The Motel Can't Live at the Motel",
-          "airdate": "2015-03-27",
-          "state": "MISSING",
-          "file": null,
+          "number": 21,
+          "name": "Episode 21",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_039.mp4",
+            "name": "TRAILER_PARK_BOYS_039",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_039.mp4",
+            "seconds": 1443,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "Sweet Liquory Load",
-          "airdate": "2015-03-27",
-          "state": "MISSING",
-          "file": null,
+          "number": 22,
+          "name": "Episode 22",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_0111.mp4",
+            "name": "TRAILER_PARK_BOYS_0111",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_0111.mp4",
+            "seconds": 1418,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "Piss",
-          "airdate": "2015-03-27",
-          "state": "MISSING",
-          "file": null,
+          "number": 23,
+          "name": "Episode 23",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_0211.mp4",
+            "name": "TRAILER_PARK_BOYS_0211",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_0211.mp4",
+            "seconds": 1543,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "A Dancer for Money",
-          "airdate": "2015-03-27",
-          "state": "MISSING",
-          "file": null,
+          "number": 24,
+          "name": "Episode 24",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_0311.mp4",
+            "name": "TRAILER_PARK_BOYS_0311",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_0311.mp4",
+            "seconds": 1444,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "Sam-Squamptches and Heli-Cocksuckers",
-          "airdate": "2015-03-27",
-          "state": "MISSING",
-          "file": null,
+          "number": 25,
+          "name": "Episode 25",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s1-s2",
+            "itemTitle": "Trailer Park Boys: The Complete First and Second Season",
+            "file": "TRAILER_PARK_BOYS_0313.mp4",
+            "name": "TRAILER_PARK_BOYS_0313",
+            "url": "https://archive.org/download/trailer-park-boys-s1-s2/TRAILER_PARK_BOYS_0313.mp4",
+            "seconds": 1443,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "The Liquor Snurf",
-          "airdate": "2015-03-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 10,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Freedom 45?",
-          "airdate": "2016-03-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "You Want Lot Fees, Suck Them Out of the Tip of My Cock",
-          "airdate": "2016-03-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 26,
+          "name": "s7 disc15",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s7",
+            "itemTitle": "Trailer Park Boys: The Complete Seventh Season",
+            "file": "TRAILER_PARK_BOYS_S7_DISC15.mp4",
+            "name": "TRAILER_PARK_BOYS_S7_DISC15",
+            "url": "https://archive.org/download/trailer-park-boys-s7/TRAILER_PARK_BOYS_S7_DISC15.mp4",
+            "seconds": 1447,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "A Three Tiered Shit Dyke",
-          "airdate": "2016-03-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 27,
+          "name": "s7 disc16",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s7",
+            "itemTitle": "Trailer Park Boys: The Complete Seventh Season",
+            "file": "TRAILER_PARK_BOYS_S7_DISC16.mp4",
+            "name": "TRAILER_PARK_BOYS_S7_DISC16",
+            "url": "https://archive.org/download/trailer-park-boys-s7/TRAILER_PARK_BOYS_S7_DISC16.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 135,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Shit Covered Cave Teeth",
-          "airdate": "2016-03-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 28,
+          "name": "s7 disc17",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s7",
+            "itemTitle": "Trailer Park Boys: The Complete Seventh Season",
+            "file": "TRAILER_PARK_BOYS_S7_DISC17.mp4",
+            "name": "TRAILER_PARK_BOYS_S7_DISC17",
+            "url": "https://archive.org/download/trailer-park-boys-s7/TRAILER_PARK_BOYS_S7_DISC17.mp4",
+            "seconds": 1447,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "If You Don't Believe It, It's Not Real",
-          "airdate": "2016-03-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 29,
+          "name": "s7 disc18",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s7",
+            "itemTitle": "Trailer Park Boys: The Complete Seventh Season",
+            "file": "TRAILER_PARK_BOYS_S7_DISC18.mp4",
+            "name": "TRAILER_PARK_BOYS_S7_DISC18",
+            "url": "https://archive.org/download/trailer-park-boys-s7/TRAILER_PARK_BOYS_S7_DISC18.mp4",
+            "seconds": 1447,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "All the Fuckin' Dope You Can Smoke!",
-          "airdate": "2016-03-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 30,
+          "name": "s7 disc19",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s7",
+            "itemTitle": "Trailer Park Boys: The Complete Seventh Season",
+            "file": "TRAILER_PARK_BOYS_S7_DISC19.mp4",
+            "name": "TRAILER_PARK_BOYS_S7_DISC19",
+            "url": "https://archive.org/download/trailer-park-boys-s7/TRAILER_PARK_BOYS_S7_DISC19.mp4",
+            "seconds": 1448,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 133,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 7,
-          "name": "Up in Smoke We Go",
-          "airdate": "2016-03-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 31,
+          "name": "s7 disc25",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s7",
+            "itemTitle": "Trailer Park Boys: The Complete Seventh Season",
+            "file": "TRAILER_PARK_BOYS_S7_DISC25.mp4",
+            "name": "TRAILER_PARK_BOYS_S7_DISC25",
+            "url": "https://archive.org/download/trailer-park-boys-s7/TRAILER_PARK_BOYS_S7_DISC25.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 133,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 8,
-          "name": "The Super Bling Cowboy",
-          "airdate": "2016-03-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 32,
+          "name": "s7 disc26",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s7",
+            "itemTitle": "Trailer Park Boys: The Complete Seventh Season",
+            "file": "TRAILER_PARK_BOYS_S7_DISC26.mp4",
+            "name": "TRAILER_PARK_BOYS_S7_DISC26",
+            "url": "https://archive.org/download/trailer-park-boys-s7/TRAILER_PARK_BOYS_S7_DISC26.mp4",
+            "seconds": 1447,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 9,
-          "name": "Thugged Out Gangsta Shit",
-          "airdate": "2016-03-28",
-          "state": "MISSING",
-          "file": null,
+          "number": 33,
+          "name": "s7 disc27",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s7",
+            "itemTitle": "Trailer Park Boys: The Complete Seventh Season",
+            "file": "TRAILER_PARK_BOYS_S7_DISC27.mp4",
+            "name": "TRAILER_PARK_BOYS_S7_DISC27",
+            "url": "https://archive.org/download/trailer-park-boys-s7/TRAILER_PARK_BOYS_S7_DISC27.mp4",
+            "seconds": 1446,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 133,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "Looks Like the Liquor Wins",
-          "airdate": "2016-03-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 11,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "The Jack Your Cock Furry Whore Slut",
-          "airdate": "2017-03-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "The Walker Zombley",
-          "airdate": "2017-03-31",
-          "state": "MISSING",
-          "file": null,
+          "number": 34,
+          "name": "s7 disc28",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s7",
+            "itemTitle": "Trailer Park Boys: The Complete Seventh Season",
+            "file": "TRAILER_PARK_BOYS_S7_DISC28.mp4",
+            "name": "TRAILER_PARK_BOYS_S7_DISC28",
+            "url": "https://archive.org/download/trailer-park-boys-s7/TRAILER_PARK_BOYS_S7_DISC28.mp4",
+            "seconds": 1386,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "My Fucking Balls, My Cock, My Hole, or My Tits?",
-          "airdate": "2017-03-31",
-          "state": "MISSING",
-          "file": null,
+          "number": 35,
+          "name": "s7 disc29",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s7",
+            "itemTitle": "Trailer Park Boys: The Complete Seventh Season",
+            "file": "TRAILER_PARK_BOYS_S7_DISC29.mp4",
+            "name": "TRAILER_PARK_BOYS_S7_DISC29",
+            "url": "https://archive.org/download/trailer-park-boys-s7/TRAILER_PARK_BOYS_S7_DISC29.mp4",
+            "seconds": 1447,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 134,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Darth Lahey",
-          "airdate": "2017-03-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Flight of the Bumblecock",
-          "airdate": "2017-03-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "How Do You Keep Your Bag So Soft?",
-          "airdate": "2017-03-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "I Look Like A FUCKING DICK!!",
-          "airdate": "2017-03-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "A Liquor Captain Never Abandons a Sinking Shit Ship",
-          "airdate": "2017-03-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Oh, My Fuck Boys, We Killed Lahey & Randy",
-          "airdate": "2017-03-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "The All You Can Eat Shit Buffet",
-          "airdate": "2017-03-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 12,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Chlamydia",
-          "airdate": "2018-03-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Godspeed My Muscular Friend",
-          "airdate": "2018-03-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "The Cunt Word",
-          "airdate": "2018-03-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "All the Shit I Need",
-          "airdate": "2018-03-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "Happy Birthday Bubbles",
-          "airdate": "2018-03-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Flow Me the Money",
-          "airdate": "2018-03-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "Big Cock",
-          "airdate": "2018-03-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "Will You For to Be Fucking Married to Me?",
-          "airdate": "2018-03-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Angel Shit Sent Down from Jesus God",
-          "airdate": "2018-03-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 10,
-          "name": "Fuckin' Fucked Out of Our Fuckin' Minds",
-          "airdate": "2018-03-30",
-          "state": "MISSING",
-          "file": null,
+          "number": 36,
+          "name": "s7 disc210",
+          "state": "REVIEW",
+          "file": {
+            "item": "trailer-park-boys-s7",
+            "itemTitle": "Trailer Park Boys: The Complete Seventh Season",
+            "file": "TRAILER_PARK_BOYS_S7_DISC210.mp4",
+            "name": "TRAILER_PARK_BOYS_S7_DISC210",
+            "url": "https://archive.org/download/trailer-park-boys-s7/TRAILER_PARK_BOYS_S7_DISC210.mp4",
+            "seconds": 766,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 72,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 302,
+    "name": "Trailer Park Boys",
+    "placed": 10
+  }
 }

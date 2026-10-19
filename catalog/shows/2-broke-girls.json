@@ -3,7 +3,8 @@
   "slug": "2-broke-girls",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:59.014Z",
+  "matchedAt": "2026-10-19T04:11:03.853Z",
+  "addedAt": "2026-10-19T04:11:03.859Z",
   "tvmaze": {
     "id": 124,
     "name": "2 Broke Girls",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 138,
     "live": 0,
-    "review": 0,
-    "missing": 138,
-    "pct": 0
+    "review": 3,
+    "missing": 135,
+    "pct": 2
   },
   "seasons": [
     {
@@ -26,24 +27,63 @@
           "number": 1,
           "name": "And How They Met",
           "airdate": "2011-09-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "2-broke-girls-2011-s-06-e-01-e-02-and-the-two-openings-1080p-amzn-web-dl-x-265-rzero-x",
+            "itemTitle": "2 Broke Girls Full Series",
+            "file": "2 Broke Girls/Season 1/2 Broke Girls (2011) - S01E01 - Pilot (1080p BluRay x265 RZeroX).mkv",
+            "name": "2 Broke Girls/Season 1/2 Broke Girls (2011) - S01E01 - Pilot (1080p BluRay x265 RZeroX)",
+            "url": "https://archive.org/download/2-broke-girls-2011-s-06-e-01-e-02-and-the-two-openings-1080p-amzn-web-dl-x-265-rzero-x/2%20Broke%20Girls%2FSeason%201%2F2%20Broke%20Girls%20(2011)%20-%20S01E01%20-%20Pilot%20(1080p%20BluRay%20x265%20RZeroX).mkv",
+            "seconds": 1319,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 746
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "And the Break-up Scene",
           "airdate": "2011-09-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
+            "item": "2-broke-girls-2011-s-06-e-01-e-02-and-the-two-openings-1080p-amzn-web-dl-x-265-rzero-x",
+            "itemTitle": "2 Broke Girls Full Series",
+            "file": "2 Broke Girls/Season 1/2 Broke Girls (2011) - S01E02 - And the Break-up Scene (1080p BluRay x265 RZeroX).mkv",
+            "name": "2 Broke Girls/Season 1/2 Broke Girls (2011) - S01E02 - And the Break-up Scene (1080p BluRay x265 RZeroX)",
+            "url": "https://archive.org/download/2-broke-girls-2011-s-06-e-01-e-02-and-the-two-openings-1080p-amzn-web-dl-x-265-rzero-x/2%20Broke%20Girls%2FSeason%201%2F2%20Broke%20Girls%20(2011)%20-%20S01E02%20-%20And%20the%20Break-up%20Scene%20(1080p%20BluRay%20x265%20RZeroX).mkv",
+            "seconds": 1286,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 719
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "And Strokes of Goodwill",
           "airdate": "2011-10-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match | not browser-playable: container (Matroska)",
+            "item": "2-broke-girls-2011-s-06-e-01-e-02-and-the-two-openings-1080p-amzn-web-dl-x-265-rzero-x",
+            "itemTitle": "2 Broke Girls Full Series",
+            "file": "2 Broke Girls/Season 1/2 Broke Girls (2011) - S01E03 - And Strokes of Goodwill (1080p BluRay x265 RZeroX).mkv",
+            "name": "2 Broke Girls/Season 1/2 Broke Girls (2011) - S01E03 - And Strokes of Goodwill (1080p BluRay x265 RZeroX)",
+            "url": "https://archive.org/download/2-broke-girls-2011-s-06-e-01-e-02-and-the-two-openings-1080p-amzn-web-dl-x-265-rzero-x/2%20Broke%20Girls%2FSeason%201%2F2%20Broke%20Girls%20(2011)%20-%20S01E03%20-%20And%20Strokes%20of%20Goodwill%20(1080p%20BluRay%20x265%20RZeroX).mkv",
+            "seconds": 1299,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 735
+          },
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "fresh-meat",
   "type": "British and Beyond",
   "network": "Channel 4",
-  "matchedAt": "2026-10-16T07:57:04.017Z",
+  "matchedAt": "2026-10-19T04:11:11.080Z",
   "addedAt": "2026-10-15T22:19:24.136Z",
   "tvmaze": {
     "id": 1650,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 30,
-    "live": 21,
+    "live": 24,
     "review": 0,
-    "missing": 9,
-    "pct": 70
+    "missing": 6,
+    "pct": 80
   },
   "seasons": [
     {
@@ -221,8 +221,21 @@
           "number": 2,
           "name": "Episode 2",
           "airdate": "2012-10-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "fresh.-meat.-2x-01.-hdtv.-xvi-d-fo-v",
+            "itemTitle": "Fresh. Meat. Series 2",
+            "file": "Fresh.Meat.2x02.HDTV.XviD-AFG.mp4",
+            "name": "Fresh.Meat.2x02.HDTV.XviD-AFG",
+            "url": "https://archive.org/download/fresh.-meat.-2x-01.-hdtv.-xvi-d-fo-v/Fresh.Meat.2x02.HDTV.XviD-AFG.mp4",
+            "seconds": 2392,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 242
+          },
           "alternates": []
         },
         {
@@ -271,8 +284,21 @@
           "number": 5,
           "name": "Episode 5",
           "airdate": "2012-11-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "fresh.-meat.-2x-01.-hdtv.-xvi-d-fo-v",
+            "itemTitle": "Fresh. Meat. Series 2",
+            "file": "Fresh.Meat.2x05.HDTV.XviD-AFG.mp4",
+            "name": "Fresh.Meat.2x05.HDTV.XviD-AFG",
+            "url": "https://archive.org/download/fresh.-meat.-2x-01.-hdtv.-xvi-d-fo-v/Fresh.Meat.2x05.HDTV.XviD-AFG.mp4",
+            "seconds": 2388,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 238
+          },
           "alternates": []
         },
         {
@@ -321,8 +347,21 @@
           "number": 8,
           "name": "Episode 8",
           "airdate": "2012-11-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "fresh.-meat.-2x-01.-hdtv.-xvi-d-fo-v",
+            "itemTitle": "Fresh. Meat. Series 2",
+            "file": "Fresh.Meat.2x08.HDTV.XviD-AFG.mp4",
+            "name": "Fresh.Meat.2x08.HDTV.XviD-AFG",
+            "url": "https://archive.org/download/fresh.-meat.-2x-01.-hdtv.-xvi-d-fo-v/Fresh.Meat.2x08.HDTV.XviD-AFG.mp4",
+            "seconds": 2351,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "video (XviD)",
+            "sizeMB": 237
+          },
           "alternates": []
         }
       ]

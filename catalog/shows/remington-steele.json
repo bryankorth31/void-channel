@@ -3,7 +3,8 @@
   "slug": "remington-steele",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:24.010Z",
+  "matchedAt": "2026-10-19T04:12:24.230Z",
+  "addedAt": "2026-10-19T04:12:24.234Z",
   "tvmaze": {
     "id": 1496,
     "name": "Remington Steele",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 92,
     "live": 0,
-    "review": 0,
-    "missing": 92,
-    "pct": 0
+    "review": 1,
+    "missing": 91,
+    "pct": 1
   },
   "seasons": [
     {
@@ -98,8 +99,20 @@
           "number": 10,
           "name": "Steele Trap",
           "airdate": "1982-12-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename",
+            "item": "1985.08.28-ktvu-tenspeed-and-brown-shoe-s01e10-kgo-moonlighting-s01e04-",
+            "itemTitle": "1985.08.28 - KTVU - Tenspeed and Brown Shoe S01E10 - KGO - Moonlighting S01E04 - Remington Steele S03E19",
+            "file": "1985.08.28 - KTVU - Tenspeed and Brown Shoe S01E10 - KGO - Moonlighting S01E04 - Remington Steele S03E19.mp4",
+            "name": "1985.08.28 - KTVU - Tenspeed and Brown Shoe S01E10 - KGO - Moonlighting S01E04 - Remington Steele S03E19",
+            "url": "https://archive.org/download/1985.08.28-ktvu-tenspeed-and-brown-shoe-s01e10-kgo-moonlighting-s01e04-/1985.08.28%20-%20KTVU%20-%20Tenspeed%20and%20Brown%20Shoe%20S01E10%20-%20KGO%20-%20Moonlighting%20S01E04%20-%20Remington%20Steele%20S03E19.mp4",
+            "seconds": 7409,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 729
+          },
           "alternates": []
         },
         {

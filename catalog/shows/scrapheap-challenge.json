@@ -3,7 +3,7 @@
   "slug": "scrapheap-challenge",
   "type": "Documentary & Geographic",
   "network": "TLC",
-  "matchedAt": "2026-10-16T07:58:08.975Z",
+  "matchedAt": "2026-10-19T04:12:12.168Z",
   "addedAt": "2026-10-15T12:08:37.777Z",
   "tvmaze": {
     "id": 4729,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 143,
-    "live": 0,
-    "review": 124,
-    "missing": 19,
-    "pct": 87
+    "live": 139,
+    "review": 1,
+    "missing": 3,
+    "pct": 98
   },
   "seasons": [
     {
@@ -27,21 +27,47 @@
           "number": 1,
           "name": "Hovercraft (Pilot)",
           "airdate": "1998-04-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "scrapheap-challenge-s08",
-            "itemTitle": "Scrapheap Challenge (Series 8)",
-            "file": "Scrapheap Challenge - S08 EP01 - From Skies to Seas.mp4",
-            "name": "Scrapheap Challenge - S08 EP01 - From Skies to Seas",
-            "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP01%20-%20From%20Skies%20to%20Seas.mp4",
-            "seconds": 2916,
-            "format": "h.264",
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 1/Scrapheap Challenge - S01E01 - Hovercraft.mp4",
+            "name": "Season 1/Scrapheap Challenge - S01E01 - Hovercraft",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E01%20-%20Hovercraft.mp4",
+            "seconds": 3030,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 288
+            "sizeMB": 309
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 1/Scrapheap Challenge - S01E01 - Hovercraft.mp4",
+              "name": "Season 1/Scrapheap Challenge - S01E01 - Hovercraft",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E01%20-%20Hovercraft.mp4",
+              "seconds": 3030,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 309
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP01 - From Skies to Seas.mp4",
+              "name": "Scrapheap Challenge - S08 EP01 - From Skies to Seas",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP01%20-%20From%20Skies%20to%20Seas.mp4",
+              "seconds": 2916,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -61,9 +87,9 @@
           "number": 2,
           "name": "Siege Engines",
           "airdate": "1998-09-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -77,7 +103,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -95,21 +121,47 @@
           "number": 3,
           "name": "Power Pullers",
           "airdate": "1998-09-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "scrapheap-challenge-s08",
-            "itemTitle": "Scrapheap Challenge (Series 8)",
-            "file": "Scrapheap Challenge - S08 EP03 - Mechanical Crossbow vs. Air Cannon.mp4",
-            "name": "Scrapheap Challenge - S08 EP03 - Mechanical Crossbow vs. Air Cannon",
-            "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP03%20-%20Mechanical%20Crossbow%20vs.%20Air%20Cannon.mp4",
-            "seconds": 2892,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 1/Scrapheap Challenge - S01E03 - Power Pullers.mp4",
+            "name": "Season 1/Scrapheap Challenge - S01E03 - Power Pullers",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E03%20-%20Power%20Pullers.mp4",
+            "seconds": 3039,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 286
+            "sizeMB": 353
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 1/Scrapheap Challenge - S01E03 - Power Pullers.mp4",
+              "name": "Season 1/Scrapheap Challenge - S01E03 - Power Pullers",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E03%20-%20Power%20Pullers.mp4",
+              "seconds": 3039,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 353
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP03 - Mechanical Crossbow vs. Air Cannon.mp4",
+              "name": "Scrapheap Challenge - S08 EP03 - Mechanical Crossbow vs. Air Cannon",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP03%20-%20Mechanical%20Crossbow%20vs.%20Air%20Cannon.mp4",
+              "seconds": 2892,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 286
+            },
             {
               "conf": 0.7,
               "why": "absolute episode number",
@@ -122,32 +174,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 286
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap_challenge",
-              "itemTitle": "Scrapheap Challenge",
-              "file": "Season 1/Scrapheap Challenge - S01E03 - Power Pullers.mp4",
-              "name": "Season 1/Scrapheap Challenge - S01E03 - Power Pullers",
-              "url": "https://archive.org/download/scrapheap_challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E03%20-%20Power%20Pullers.mp4",
-              "seconds": 3039,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 353
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap-challenge",
-              "itemTitle": "scrapheap-challenge",
-              "file": "Season 1/Scrapheap Challenge - S01E03 - Power Pullers.mp4",
-              "name": "Season 1/Scrapheap Challenge - S01E03 - Power Pullers",
-              "url": "https://archive.org/download/scrapheap-challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E03%20-%20Power%20Pullers.mp4",
-              "seconds": 3039,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 353
             }
           ]
         },
@@ -155,44 +181,83 @@
           "number": 4,
           "name": "Sub-Aqua",
           "airdate": "1998-09-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 1/Scrapheap Challenge - S01E04 - Sub-Aqua.mp4",
+            "name": "Season 1/Scrapheap Challenge - S01E04 - Sub-Aqua",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E04%20-%20Sub-Aqua.mp4",
+            "seconds": 3033,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 323
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 1/Scrapheap Challenge - S01E04 - Sub-Aqua.mp4",
+              "name": "Season 1/Scrapheap Challenge - S01E04 - Sub-Aqua",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E04%20-%20Sub-Aqua.mp4",
+              "seconds": 3033,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 323
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP04 - Building The Stronges Milk Float.mp4",
+              "name": "Scrapheap Challenge - S08 EP04 - Building The Stronges Milk Float",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP04%20-%20Building%20The%20Stronges%20Milk%20Float.mp4",
+              "seconds": 2883,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 285
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP4 - Building The Stronges Milk Float.mp4",
+              "name": "Scrapheap Challenge - S08 EP4 - Building The Stronges Milk Float",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP4%20-%20Building%20The%20Stronges%20Milk%20Float.mp4",
+              "seconds": 2883,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 285
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Powerboats",
           "airdate": "1998-10-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "scrapheap-challenge-s08",
-            "itemTitle": "Scrapheap Challenge (Series 8)",
-            "file": "Scrapheap Challenge - S08 EP5 - Battle of the Drag Boats.mp4",
-            "name": "Scrapheap Challenge - S08 EP5 - Battle of the Drag Boats",
-            "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP5%20-%20Battle%20of%20the%20Drag%20Boats.mp4",
-            "seconds": 2874,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 1/Scrapheap Challenge - S01E05 - Powerboats.mp4",
+            "name": "Season 1/Scrapheap Challenge - S01E05 - Powerboats",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E05%20-%20Powerboats.mp4",
+            "seconds": 3027,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 285
+            "sizeMB": 327
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap_challenge",
-              "itemTitle": "Scrapheap Challenge",
-              "file": "Season 1/Scrapheap Challenge - S01E05 - Powerboats.mp4",
-              "name": "Season 1/Scrapheap Challenge - S01E05 - Powerboats",
-              "url": "https://archive.org/download/scrapheap_challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E05%20-%20Powerboats.mp4",
-              "seconds": 3027,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 327
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -205,17 +270,30 @@
               "sizeMB": 327
             },
             {
-              "conf": 0.55,
-              "why": "S/E in filename + title match",
+              "conf": 0.8,
+              "why": "title ~ \"Powerboats\" (1.00)",
               "item": "scrapheap_challenge",
               "itemTitle": "Scrapheap Challenge",
-              "file": "Junkyard Wars/Junkyard Wars Season 01/1x05 - Power Boats.mp4",
-              "name": "Junkyard Wars/Junkyard Wars Season 01/1x05 - Power Boats",
-              "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2001%2F1x05%20-%20Power%20Boats.mp4",
-              "seconds": 2670,
-              "format": "h.264",
+              "file": "Season 10/Scrapheap Challenge - S10E06 - Powerboats.mp4",
+              "name": "Season 10/Scrapheap Challenge - S10E06 - Powerboats",
+              "url": "https://archive.org/download/scrapheap_challenge/Season%2010%2FScrapheap%20Challenge%20-%20S10E06%20-%20Powerboats.mp4",
+              "seconds": 2664,
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 261
+              "sizeMB": 271
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Powerboats\" (1.00)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 10/Scrapheap Challenge - S10E06 - Powerboats.mp4",
+              "name": "Season 10/Scrapheap Challenge - S10E06 - Powerboats",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2010%2FScrapheap%20Challenge%20-%20S10E06%20-%20Powerboats.mp4",
+              "seconds": 2664,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 271
             }
           ]
         },
@@ -223,36 +301,23 @@
           "number": 6,
           "name": "Off Road Buggies",
           "airdate": "1998-10-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "scrapheap-challenge-s08",
-            "itemTitle": "Scrapheap Challenge (Series 8)",
-            "file": "Scrapheap Challenge - S08 EP6 - When Cars Become Fish.mp4",
-            "name": "Scrapheap Challenge - S08 EP6 - When Cars Become Fish",
-            "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP6%20-%20When%20Cars%20Become%20Fish.mp4",
-            "seconds": 2873,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 1/Scrapheap Challenge - S01E06 - Off Road Buggies.mp4",
+            "name": "Season 1/Scrapheap Challenge - S01E06 - Off Road Buggies",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E06%20-%20Off%20Road%20Buggies.mp4",
+            "seconds": 3027,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 284
+            "sizeMB": 329
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap_challenge",
-              "itemTitle": "Scrapheap Challenge",
-              "file": "Season 1/Scrapheap Challenge - S01E06 - Off Road Buggies.mp4",
-              "name": "Season 1/Scrapheap Challenge - S01E06 - Off Road Buggies",
-              "url": "https://archive.org/download/scrapheap_challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E06%20-%20Off%20Road%20Buggies.mp4",
-              "seconds": 3027,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 329
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -263,6 +328,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 329
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP6 - When Cars Become Fish.mp4",
+              "name": "Scrapheap Challenge - S08 EP6 - When Cars Become Fish",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP6%20-%20When%20Cars%20Become%20Fish.mp4",
+              "seconds": 2873,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 284
             },
             {
               "conf": 0.6,
@@ -283,9 +361,9 @@
           "number": 7,
           "name": "Rockets",
           "airdate": "1998-10-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -299,7 +377,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -310,6 +388,33 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 317
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP7 - Icebound Pinball Showdown.mp4",
+              "name": "Scrapheap Challenge - S08 EP7 - Icebound Pinball Showdown",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP7%20-%20Icebound%20Pinball%20Showdown.mp4",
+              "seconds": 2869,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 283
+            },
+            {
+              "conf": 0.6,
+              "why": "absolute episode number",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP07 - Icebound Pinball Showdown.mkv",
+              "name": "Scrapheap Challenge - S08 EP07 - Icebound Pinball Showdown",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP07%20-%20Icebound%20Pinball%20Showdown.mkv",
+              "seconds": 2869,
+              "format": "Matroska",
+              "playable": false,
+              "codecRisk": "container (Matroska)",
+              "sizeMB": 741
             }
           ]
         }
@@ -322,9 +427,9 @@
           "number": 1,
           "name": "Flying Machines",
           "airdate": "1999-09-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -338,7 +443,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -351,17 +456,30 @@
               "sizeMB": 348
             },
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
+              "conf": 0.8,
+              "why": "title ~ \"Flying Machines\" (1.00)",
               "item": "scrapheap_challenge",
               "itemTitle": "Scrapheap Challenge",
-              "file": "Junkyard Wars/Junkyard Wars Season 02/Scrapheap Challenge - S02E01 - Flying Machines (swe hardsub).mp4",
-              "name": "Junkyard Wars/Junkyard Wars Season 02/Scrapheap Challenge - S02E01 - Flying Machines (swe hardsub)",
-              "url": "https://archive.org/download/scrapheap_challenge/Junkyard%20Wars%2FJunkyard%20Wars%20Season%2002%2FScrapheap%20Challenge%20-%20S02E01%20-%20Flying%20Machines%20(swe%20hardsub).mp4",
-              "seconds": 2792,
-              "format": "h.264",
+              "file": "Season 8/Scrapheap Challenge - S08E12 - Flying Machines.mp4",
+              "name": "Season 8/Scrapheap Challenge - S08E12 - Flying Machines",
+              "url": "https://archive.org/download/scrapheap_challenge/Season%208%2FScrapheap%20Challenge%20-%20S08E12%20-%20Flying%20Machines.mp4",
+              "seconds": 2652,
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 281
+              "sizeMB": 267
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Flying Machines\" (1.00)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 8/Scrapheap Challenge - S08E12 - Flying Machines.mp4",
+              "name": "Season 8/Scrapheap Challenge - S08E12 - Flying Machines",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%208%2FScrapheap%20Challenge%20-%20S08E12%20-%20Flying%20Machines.mp4",
+              "seconds": 2652,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 267
             }
           ]
         },
@@ -369,36 +487,23 @@
           "number": 2,
           "name": "Cannons",
           "airdate": "1999-09-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "scrapheap-challenge-s08",
-            "itemTitle": "Scrapheap Challenge (Series 8)",
-            "file": "Scrapheap Challenge - S08 EP9 - The Steeplechase Showdown.mp4",
-            "name": "Scrapheap Challenge - S08 EP9 - The Steeplechase Showdown",
-            "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP9%20-%20The%20Steeplechase%20Showdown.mp4",
-            "seconds": 2853,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 2/Scrapheap Challenge - S02E02 - Cannons.mp4",
+            "name": "Season 2/Scrapheap Challenge - S02E02 - Cannons",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%202%2FScrapheap%20Challenge%20-%20S02E02%20-%20Cannons.mp4",
+            "seconds": 2988,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 281
+            "sizeMB": 347
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap_challenge",
-              "itemTitle": "Scrapheap Challenge",
-              "file": "Season 2/Scrapheap Challenge - S02E02 - Cannons.mp4",
-              "name": "Season 2/Scrapheap Challenge - S02E02 - Cannons",
-              "url": "https://archive.org/download/scrapheap_challenge/Season%202%2FScrapheap%20Challenge%20-%20S02E02%20-%20Cannons.mp4",
-              "seconds": 2988,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 347
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -409,6 +514,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 347
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP9 - The Steeplechase Showdown.mp4",
+              "name": "Scrapheap Challenge - S08 EP9 - The Steeplechase Showdown",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP9%20-%20The%20Steeplechase%20Showdown.mp4",
+              "seconds": 2853,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 281
             },
             {
               "conf": 0.6,
@@ -429,9 +547,9 @@
           "number": 3,
           "name": "Amphibious Vehicles",
           "airdate": "1999-09-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -445,7 +563,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -456,6 +574,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 350
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP10 - Drag Machine Clash - Power and Traction Battle!.mp4",
+              "name": "Scrapheap Challenge - S08 EP10 - Drag Machine Clash - Power and Traction Battle!",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP10%20-%20Drag%20Machine%20Clash%20-%20Power%20and%20Traction%20Battle!.mp4",
+              "seconds": 2864,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 283
             }
           ]
         },
@@ -463,36 +594,23 @@
           "number": 4,
           "name": "Land Yachts",
           "airdate": "1999-09-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "scrapheap-challenge-s08",
-            "itemTitle": "Scrapheap Challenge (Series 8)",
-            "file": "Scrapheap Challenge - S08 EP11 - Buiding the Ultimate Off-Road Vehicle.mp4",
-            "name": "Scrapheap Challenge - S08 EP11 - Buiding the Ultimate Off-Road Vehicle",
-            "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP11%20-%20Buiding%20the%20Ultimate%20Off-Road%20Vehicle.mp4",
-            "seconds": 2886,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 2/Scrapheap Challenge - S02E04 - Land Yachts.mp4",
+            "name": "Season 2/Scrapheap Challenge - S02E04 - Land Yachts",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%202%2FScrapheap%20Challenge%20-%20S02E04%20-%20Land%20Yachts.mp4",
+            "seconds": 2967,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 285
+            "sizeMB": 345
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap_challenge",
-              "itemTitle": "Scrapheap Challenge",
-              "file": "Season 2/Scrapheap Challenge - S02E04 - Land Yachts.mp4",
-              "name": "Season 2/Scrapheap Challenge - S02E04 - Land Yachts",
-              "url": "https://archive.org/download/scrapheap_challenge/Season%202%2FScrapheap%20Challenge%20-%20S02E04%20-%20Land%20Yachts.mp4",
-              "seconds": 2967,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 345
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -503,6 +621,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 345
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP11 - Buiding the Ultimate Off-Road Vehicle.mp4",
+              "name": "Scrapheap Challenge - S08 EP11 - Buiding the Ultimate Off-Road Vehicle",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP11%20-%20Buiding%20the%20Ultimate%20Off-Road%20Vehicle.mp4",
+              "seconds": 2886,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 285
             },
             {
               "conf": 0.6,
@@ -523,9 +654,9 @@
           "number": 5,
           "name": "Mileage Marathon",
           "airdate": "1999-10-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -539,7 +670,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -550,6 +681,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 349
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP12 - Scrapheap Legends Take Flight.mp4",
+              "name": "Scrapheap Challenge - S08 EP12 - Scrapheap Legends Take Flight",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP12%20-%20Scrapheap%20Legends%20Take%20Flight.mp4",
+              "seconds": 2773,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 273
             },
             {
               "conf": 0.6,
@@ -570,9 +714,9 @@
           "number": 6,
           "name": "Marine Salvage",
           "airdate": "1999-10-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -586,7 +730,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -597,6 +741,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 347
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP13 - Taking Cars Underwater What Could Possibly Go Wrong.mp4",
+              "name": "Scrapheap Challenge - S08 EP13 - Taking Cars Underwater What Could Possibly Go Wrong",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP13%20-%20Taking%20Cars%20Underwater%20What%20Could%20Possibly%20Go%20Wrong.mp4",
+              "seconds": 2761,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 274
             },
             {
               "conf": 0.6,
@@ -617,9 +774,9 @@
           "number": 7,
           "name": "Walking Machines",
           "airdate": "1999-10-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -633,7 +790,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -669,9 +826,9 @@
           "number": 1,
           "name": "Demolition",
           "airdate": "2000-09-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -685,7 +842,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -716,9 +873,9 @@
           "number": 2,
           "name": "Aerial Bomber",
           "airdate": "2000-09-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -732,7 +889,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -763,9 +920,9 @@
           "number": 3,
           "name": "Underwater Chariot",
           "airdate": "2000-10-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -779,7 +936,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -810,9 +967,9 @@
           "number": 4,
           "name": "Windmill",
           "airdate": "2000-10-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -826,7 +983,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -857,9 +1014,9 @@
           "number": 5,
           "name": "Missile Launcher",
           "airdate": "2000-10-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -873,7 +1030,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -904,9 +1061,9 @@
           "number": 6,
           "name": "Bridging Machines",
           "airdate": "2000-10-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -920,7 +1077,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -951,25 +1108,129 @@
           "number": 7,
           "name": "Giant Mower",
           "airdate": "2000-11-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 3/Scrapheap Challenge - S03E07 - Steam-Powered Car.mp4",
+            "name": "Season 3/Scrapheap Challenge - S03E07 - Steam-Powered Car",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%203%2FScrapheap%20Challenge%20-%20S03E07%20-%20Steam-Powered%20Car.mp4",
+            "seconds": 2982,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 868
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 3/Scrapheap Challenge - S03E07 - Steam-Powered Car.mp4",
+              "name": "Season 3/Scrapheap Challenge - S03E07 - Steam-Powered Car",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%203%2FScrapheap%20Challenge%20-%20S03E07%20-%20Steam-Powered%20Car.mp4",
+              "seconds": 2982,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 868
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Giant Mower\" (1.00)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Season 3/Scrapheap Challenge - S03E08 - Giant Mower.mp4",
+              "name": "Season 3/Scrapheap Challenge - S03E08 - Giant Mower",
+              "url": "https://archive.org/download/scrapheap_challenge/Season%203%2FScrapheap%20Challenge%20-%20S03E08%20-%20Giant%20Mower.mp4",
+              "seconds": 2994,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 873
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Giant Mower\" (1.00)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 3/Scrapheap Challenge - S03E08 - Giant Mower.mp4",
+              "name": "Season 3/Scrapheap Challenge - S03E08 - Giant Mower",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%203%2FScrapheap%20Challenge%20-%20S03E08%20-%20Giant%20Mower.mp4",
+              "seconds": 2994,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 873
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Steam-Powered Car",
           "airdate": "2000-10-29",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 3/Scrapheap Challenge - S03E08 - Giant Mower.mp4",
+            "name": "Season 3/Scrapheap Challenge - S03E08 - Giant Mower",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%203%2FScrapheap%20Challenge%20-%20S03E08%20-%20Giant%20Mower.mp4",
+            "seconds": 2994,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 873
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 3/Scrapheap Challenge - S03E08 - Giant Mower.mp4",
+              "name": "Season 3/Scrapheap Challenge - S03E08 - Giant Mower",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%203%2FScrapheap%20Challenge%20-%20S03E08%20-%20Giant%20Mower.mp4",
+              "seconds": 2994,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 873
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Steam-Powered Car\" (1.00)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Season 3/Scrapheap Challenge - S03E07 - Steam-Powered Car.mp4",
+              "name": "Season 3/Scrapheap Challenge - S03E07 - Steam-Powered Car",
+              "url": "https://archive.org/download/scrapheap_challenge/Season%203%2FScrapheap%20Challenge%20-%20S03E07%20-%20Steam-Powered%20Car.mp4",
+              "seconds": 2982,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 868
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Steam-Powered Car\" (1.00)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 3/Scrapheap Challenge - S03E07 - Steam-Powered Car.mp4",
+              "name": "Season 3/Scrapheap Challenge - S03E07 - Steam-Powered Car",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%203%2FScrapheap%20Challenge%20-%20S03E07%20-%20Steam-Powered%20Car.mp4",
+              "seconds": 2982,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 868
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Fireboat",
           "airdate": "2000-11-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -983,7 +1244,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1014,9 +1275,9 @@
           "number": 10,
           "name": "Dragster",
           "airdate": "2000-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1030,7 +1291,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1066,9 +1327,9 @@
           "number": 1,
           "name": "Egg Shooter",
           "airdate": "2001-12-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1082,7 +1343,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1100,9 +1361,9 @@
           "number": 2,
           "name": "Monster Trucks",
           "airdate": "2001-12-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1116,7 +1377,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1134,9 +1395,9 @@
           "number": 3,
           "name": "Torpedo",
           "airdate": "2001-12-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1150,7 +1411,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1168,9 +1429,9 @@
           "number": 4,
           "name": "Street Cleaner",
           "airdate": "2001-12-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1184,7 +1445,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1202,9 +1463,9 @@
           "number": 5,
           "name": "White Water Rider",
           "airdate": "2002-01-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1218,7 +1479,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1236,9 +1497,9 @@
           "number": 6,
           "name": "Snowmobile",
           "airdate": "2002-01-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1252,7 +1513,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1270,9 +1531,9 @@
           "number": 7,
           "name": "Mobile Crane",
           "airdate": "2002-01-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1286,7 +1547,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1304,9 +1565,9 @@
           "number": 8,
           "name": "Minesweeper",
           "airdate": "2002-01-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1320,7 +1581,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1338,9 +1599,9 @@
           "number": 9,
           "name": "Hill Climber",
           "airdate": "2002-01-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1354,7 +1615,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1372,9 +1633,9 @@
           "number": 10,
           "name": "Tunneller",
           "airdate": "2002-02-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1388,7 +1649,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1406,9 +1667,9 @@
           "number": 11,
           "name": "Hydrofoil",
           "airdate": "2002-02-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1422,7 +1683,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1440,9 +1701,9 @@
           "number": 12,
           "name": "Car Jousting",
           "airdate": "2002-02-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1456,7 +1717,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1479,9 +1740,9 @@
           "number": 1,
           "name": "Mud Monsters",
           "airdate": "2002-10-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1495,7 +1756,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1513,9 +1774,9 @@
           "number": 2,
           "name": "Hovercraft",
           "airdate": "2002-10-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1529,7 +1790,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1540,6 +1801,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 859
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Hovercraft\" (1.00)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Season 1/Scrapheap Challenge - S01E01 - Hovercraft.mp4",
+              "name": "Season 1/Scrapheap Challenge - S01E01 - Hovercraft",
+              "url": "https://archive.org/download/scrapheap_challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E01%20-%20Hovercraft.mp4",
+              "seconds": 3030,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 309
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Hovercraft\" (1.00)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 1/Scrapheap Challenge - S01E01 - Hovercraft.mp4",
+              "name": "Season 1/Scrapheap Challenge - S01E01 - Hovercraft",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%201%2FScrapheap%20Challenge%20-%20S01E01%20-%20Hovercraft.mp4",
+              "seconds": 3030,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 309
             }
           ]
         },
@@ -1547,9 +1834,9 @@
           "number": 3,
           "name": "Golfball Gatling Gun",
           "airdate": "2002-11-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1563,7 +1850,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1581,9 +1868,9 @@
           "number": 4,
           "name": "Blind Navigation",
           "airdate": "2002-11-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1597,7 +1884,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1615,9 +1902,9 @@
           "number": 5,
           "name": "Railroad Racers",
           "airdate": "2002-11-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1631,7 +1918,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1649,9 +1936,9 @@
           "number": 6,
           "name": "Clockwork Cars",
           "airdate": "2002-11-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1665,7 +1952,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1683,9 +1970,9 @@
           "number": 7,
           "name": "Smooth Riders",
           "airdate": "2002-12-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1699,7 +1986,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1717,9 +2004,9 @@
           "number": 8,
           "name": "Mono-wheels",
           "airdate": "2002-12-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1733,7 +2020,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1751,17 +2038,43 @@
           "number": 9,
           "name": "Tugboats",
           "airdate": "2002-12-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 5/Scrapheap Challenge - S05E09 - Tugs of War.mp4",
+            "name": "Season 5/Scrapheap Challenge - S05E09 - Tugs of War",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%205%2FScrapheap%20Challenge%20-%20S05E09%20-%20Tugs%20of%20War.mp4",
+            "seconds": 2907,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 847
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 5/Scrapheap Challenge - S05E09 - Tugs of War.mp4",
+              "name": "Season 5/Scrapheap Challenge - S05E09 - Tugs of War",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%205%2FScrapheap%20Challenge%20-%20S05E09%20-%20Tugs%20of%20War.mp4",
+              "seconds": 2907,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 847
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Diggers",
           "airdate": "2003-01-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1775,7 +2088,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1793,9 +2106,9 @@
           "number": 11,
           "name": "Destroyers",
           "airdate": "2003-01-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1809,7 +2122,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1827,9 +2140,9 @@
           "number": 12,
           "name": "Car Flinger",
           "airdate": "2003-01-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1843,7 +2156,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1866,9 +2179,9 @@
           "number": 1,
           "name": "Wheelie Cars",
           "airdate": "2003-10-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1882,7 +2195,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1900,9 +2213,9 @@
           "number": 2,
           "name": "Bomb Disposal",
           "airdate": "2003-10-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1916,7 +2229,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1934,9 +2247,9 @@
           "number": 3,
           "name": "Backpack Cars",
           "airdate": "2003-10-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1950,7 +2263,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -1968,9 +2281,9 @@
           "number": 4,
           "name": "Amphibious Motorcycles",
           "airdate": "2003-11-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -1984,7 +2297,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2002,9 +2315,9 @@
           "number": 5,
           "name": "Ice Racers",
           "airdate": "2003-11-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2018,7 +2331,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2036,9 +2349,9 @@
           "number": 6,
           "name": "Giant Darts",
           "airdate": "2003-11-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2052,7 +2365,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2070,9 +2383,9 @@
           "number": 7,
           "name": "Jet Cars",
           "airdate": "2003-11-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2086,7 +2399,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2104,9 +2417,9 @@
           "number": 8,
           "name": "Speedboats",
           "airdate": "2003-12-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2120,7 +2433,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2138,9 +2451,9 @@
           "number": 9,
           "name": "Fire Engines",
           "airdate": "2003-12-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2154,7 +2467,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2172,9 +2485,9 @@
           "number": 10,
           "name": "Car Curlers",
           "airdate": "2003-12-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2188,7 +2501,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2206,9 +2519,9 @@
           "number": 11,
           "name": "Tanks",
           "airdate": "2003-12-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2222,7 +2535,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2240,21 +2553,47 @@
           "number": 12,
           "name": "Grand Prix",
           "airdate": "2004-01-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Grand Prix\" (1.00)",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
-            "file": "Misc/Scrapheap Challenge - S00E06 - Grand Prix DVD.mp4",
-            "name": "Misc/Scrapheap Challenge - S00E06 - Grand Prix DVD",
-            "url": "https://archive.org/download/scrapheap_challenge/Misc%2FScrapheap%20Challenge%20-%20S00E06%20-%20Grand%20Prix%20DVD.mp4",
-            "seconds": 2832,
-            "format": "h.264",
+            "file": "Season 6/Scrapheap Challenge - S06E12 - Grand Prix.mp4",
+            "name": "Season 6/Scrapheap Challenge - S06E12 - Grand Prix",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%206%2FScrapheap%20Challenge%20-%20S06E12%20-%20Grand%20Prix.mp4",
+            "seconds": 2934,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 280
+            "sizeMB": 855
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 6/Scrapheap Challenge - S06E12 - Grand Prix.mp4",
+              "name": "Season 6/Scrapheap Challenge - S06E12 - Grand Prix",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%206%2FScrapheap%20Challenge%20-%20S06E12%20-%20Grand%20Prix.mp4",
+              "seconds": 2934,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 855
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Grand Prix\" (1.00)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Misc/Scrapheap Challenge - S00E06 - Grand Prix DVD.mp4",
+              "name": "Misc/Scrapheap Challenge - S00E06 - Grand Prix DVD",
+              "url": "https://archive.org/download/scrapheap_challenge/Misc%2FScrapheap%20Challenge%20-%20S00E06%20-%20Grand%20Prix%20DVD.mp4",
+              "seconds": 2832,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 280
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Grand Prix\" (1.00)",
@@ -2267,32 +2606,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 280
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap_challenge",
-              "itemTitle": "Scrapheap Challenge",
-              "file": "Season 6/Scrapheap Challenge - S06E12 - Grand Prix.mp4",
-              "name": "Season 6/Scrapheap Challenge - S06E12 - Grand Prix",
-              "url": "https://archive.org/download/scrapheap_challenge/Season%206%2FScrapheap%20Challenge%20-%20S06E12%20-%20Grand%20Prix.mp4",
-              "seconds": 2934,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 855
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap-challenge",
-              "itemTitle": "scrapheap-challenge",
-              "file": "Season 6/Scrapheap Challenge - S06E12 - Grand Prix.mp4",
-              "name": "Season 6/Scrapheap Challenge - S06E12 - Grand Prix",
-              "url": "https://archive.org/download/scrapheap-challenge/Season%206%2FScrapheap%20Challenge%20-%20S06E12%20-%20Grand%20Prix.mp4",
-              "seconds": 2934,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 855
             }
           ]
         },
@@ -2300,9 +2613,35 @@
           "number": 13,
           "name": "Best of Scrapheap Challenge",
           "airdate": "2003-12-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 6/Scrapheap Challenge - S06E13 - Best of Scrapheap Challenge.mp4",
+            "name": "Season 6/Scrapheap Challenge - S06E13 - Best of Scrapheap Challenge",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%206%2FScrapheap%20Challenge%20-%20S06E13%20-%20Best%20of%20Scrapheap%20Challenge.mp4",
+            "seconds": 2925,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 850
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 6/Scrapheap Challenge - S06E13 - Best of Scrapheap Challenge.mp4",
+              "name": "Season 6/Scrapheap Challenge - S06E13 - Best of Scrapheap Challenge",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%206%2FScrapheap%20Challenge%20-%20S06E13%20-%20Best%20of%20Scrapheap%20Challenge.mp4",
+              "seconds": 2925,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 850
+            }
+          ]
         }
       ]
     },
@@ -2313,9 +2652,9 @@
           "number": 1,
           "name": "Sand-racers",
           "airdate": "2004-09-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2329,7 +2668,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2347,9 +2686,9 @@
           "number": 2,
           "name": "Dam Buster",
           "airdate": "2004-09-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2363,7 +2702,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2381,9 +2720,9 @@
           "number": 3,
           "name": "Bowling Bangers",
           "airdate": "2004-09-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2397,7 +2736,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2415,9 +2754,9 @@
           "number": 4,
           "name": "Off Road Rescue",
           "airdate": "2004-09-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2431,7 +2770,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2449,9 +2788,9 @@
           "number": 5,
           "name": "Jet Boat",
           "airdate": "2004-10-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2465,7 +2804,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2483,9 +2822,9 @@
           "number": 6,
           "name": "Propeller Car",
           "airdate": "2004-10-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2499,7 +2838,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2517,9 +2856,9 @@
           "number": 7,
           "name": "Power Rower",
           "airdate": "2004-10-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2533,7 +2872,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2551,9 +2890,9 @@
           "number": 8,
           "name": "Spy Cars",
           "airdate": "2004-10-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2567,7 +2906,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2585,9 +2924,9 @@
           "number": 9,
           "name": "Landing Craft",
           "airdate": "2004-10-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2601,7 +2940,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2619,9 +2958,9 @@
           "number": 10,
           "name": "Flaming Flingers",
           "airdate": "2004-11-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2635,7 +2974,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2653,9 +2992,9 @@
           "number": 11,
           "name": "Roman Motor-Chariot",
           "airdate": "2004-11-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2669,7 +3008,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2687,21 +3026,47 @@
           "number": 12,
           "name": "Juggernauts",
           "airdate": "2008-11-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Juggernauts\" (1.00)",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
-            "file": "Misc/Scrapheap Challenge - S00E07 - Juggernauts DVD.mp4",
-            "name": "Misc/Scrapheap Challenge - S00E07 - Juggernauts DVD",
-            "url": "https://archive.org/download/scrapheap_challenge/Misc%2FScrapheap%20Challenge%20-%20S00E07%20-%20Juggernauts%20DVD.mp4",
-            "seconds": 2801,
-            "format": "h.264",
+            "file": "Season 7/Scrapheap Challenge - S07E12 - Juggernauts.mp4",
+            "name": "Season 7/Scrapheap Challenge - S07E12 - Juggernauts",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%207%2FScrapheap%20Challenge%20-%20S07E12%20-%20Juggernauts.mp4",
+            "seconds": 2958,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 277
+            "sizeMB": 862
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 7/Scrapheap Challenge - S07E12 - Juggernauts.mp4",
+              "name": "Season 7/Scrapheap Challenge - S07E12 - Juggernauts",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%207%2FScrapheap%20Challenge%20-%20S07E12%20-%20Juggernauts.mp4",
+              "seconds": 2958,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 862
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Juggernauts\" (1.00)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Misc/Scrapheap Challenge - S00E07 - Juggernauts DVD.mp4",
+              "name": "Misc/Scrapheap Challenge - S00E07 - Juggernauts DVD",
+              "url": "https://archive.org/download/scrapheap_challenge/Misc%2FScrapheap%20Challenge%20-%20S00E07%20-%20Juggernauts%20DVD.mp4",
+              "seconds": 2801,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 277
+            },
             {
               "conf": 0.8,
               "why": "title ~ \"Juggernauts\" (1.00)",
@@ -2714,32 +3079,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 277
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap_challenge",
-              "itemTitle": "Scrapheap Challenge",
-              "file": "Season 7/Scrapheap Challenge - S07E12 - Juggernauts.mp4",
-              "name": "Season 7/Scrapheap Challenge - S07E12 - Juggernauts",
-              "url": "https://archive.org/download/scrapheap_challenge/Season%207%2FScrapheap%20Challenge%20-%20S07E12%20-%20Juggernauts.mp4",
-              "seconds": 2958,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 862
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap-challenge",
-              "itemTitle": "scrapheap-challenge",
-              "file": "Season 7/Scrapheap Challenge - S07E12 - Juggernauts.mp4",
-              "name": "Season 7/Scrapheap Challenge - S07E12 - Juggernauts",
-              "url": "https://archive.org/download/scrapheap-challenge/Season%207%2FScrapheap%20Challenge%20-%20S07E12%20-%20Juggernauts.mp4",
-              "seconds": 2958,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 862
             }
           ]
         },
@@ -2747,9 +3086,9 @@
           "number": 13,
           "name": "Series 7 Award show",
           "airdate": "2008-11-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2763,7 +3102,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2781,9 +3120,9 @@
           "number": 14,
           "name": "Series 7 Best of",
           "airdate": "2008-11-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2797,7 +3136,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2808,6 +3147,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 823
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Series 7 Best of\" (0.63)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Season 6/Scrapheap Challenge - S06E13 - Best of Scrapheap Challenge.mp4",
+              "name": "Season 6/Scrapheap Challenge - S06E13 - Best of Scrapheap Challenge",
+              "url": "https://archive.org/download/scrapheap_challenge/Season%206%2FScrapheap%20Challenge%20-%20S06E13%20-%20Best%20of%20Scrapheap%20Challenge.mp4",
+              "seconds": 2925,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 850
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Series 7 Best of\" (0.63)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 6/Scrapheap Challenge - S06E13 - Best of Scrapheap Challenge.mp4",
+              "name": "Season 6/Scrapheap Challenge - S06E13 - Best of Scrapheap Challenge",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%206%2FScrapheap%20Challenge%20-%20S06E13%20-%20Best%20of%20Scrapheap%20Challenge.mp4",
+              "seconds": 2925,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 850
             }
           ]
         }
@@ -2820,9 +3185,9 @@
           "number": 1,
           "name": "Underwater Cars",
           "airdate": "2005-09-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2836,7 +3201,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2847,6 +3212,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 304
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Underwater Cars\" (0.95)",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP13 - Taking Cars Underwater What Could Possibly Go Wrong.mp4",
+              "name": "Scrapheap Challenge - S08 EP13 - Taking Cars Underwater What Could Possibly Go Wrong",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP13%20-%20Taking%20Cars%20Underwater%20What%20Could%20Possibly%20Go%20Wrong.mp4",
+              "seconds": 2761,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 274
             }
           ]
         },
@@ -2854,21 +3232,47 @@
           "number": 2,
           "name": "Kung Fu Cars",
           "airdate": "2005-09-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
-            "why": "title ~ \"Kung Fu Cars\" (0.63)",
-            "item": "scrapheap-challenge-s08",
-            "itemTitle": "Scrapheap Challenge (Series 8)",
-            "file": "Scrapheap Challenge - S08 EP02 - Teaching a Car Kung Fu.mp4",
-            "name": "Scrapheap Challenge - S08 EP02 - Teaching a Car Kung Fu",
-            "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP02%20-%20Teaching%20a%20Car%20Kung%20Fu.mp4",
-            "seconds": 2881,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 8/Scrapheap Challenge - S08E02 - Kung Fu Cars.mp4",
+            "name": "Season 8/Scrapheap Challenge - S08E02 - Kung Fu Cars",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%208%2FScrapheap%20Challenge%20-%20S08E02%20-%20Kung%20Fu%20Cars.mp4",
+            "seconds": 2628,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 282
+            "sizeMB": 258
           },
           "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 8/Scrapheap Challenge - S08E02 - Kung Fu Cars.mp4",
+              "name": "Season 8/Scrapheap Challenge - S08E02 - Kung Fu Cars",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%208%2FScrapheap%20Challenge%20-%20S08E02%20-%20Kung%20Fu%20Cars.mp4",
+              "seconds": 2628,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 258
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Kung Fu Cars\" (0.63)",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP02 - Teaching a Car Kung Fu.mp4",
+              "name": "Scrapheap Challenge - S08 EP02 - Teaching a Car Kung Fu",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP02%20-%20Teaching%20a%20Car%20Kung%20Fu.mp4",
+              "seconds": 2881,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 282
+            },
             {
               "conf": 0.6,
               "why": "title ~ \"Kung Fu Cars\" (0.63)",
@@ -2881,32 +3285,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 282
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap_challenge",
-              "itemTitle": "Scrapheap Challenge",
-              "file": "Season 8/Scrapheap Challenge - S08E02 - Kung Fu Cars.mp4",
-              "name": "Season 8/Scrapheap Challenge - S08E02 - Kung Fu Cars",
-              "url": "https://archive.org/download/scrapheap_challenge/Season%208%2FScrapheap%20Challenge%20-%20S08E02%20-%20Kung%20Fu%20Cars.mp4",
-              "seconds": 2628,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 258
-            },
-            {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap-challenge",
-              "itemTitle": "scrapheap-challenge",
-              "file": "Season 8/Scrapheap Challenge - S08E02 - Kung Fu Cars.mp4",
-              "name": "Season 8/Scrapheap Challenge - S08E02 - Kung Fu Cars",
-              "url": "https://archive.org/download/scrapheap-challenge/Season%208%2FScrapheap%20Challenge%20-%20S08E02%20-%20Kung%20Fu%20Cars.mp4",
-              "seconds": 2628,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 258
             }
           ]
         },
@@ -2914,9 +3292,9 @@
           "number": 3,
           "name": "Sharp Shooters",
           "airdate": "2005-10-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2930,7 +3308,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2948,9 +3326,9 @@
           "number": 4,
           "name": "AC/DC Dairy Dash",
           "airdate": "2005-10-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2964,7 +3342,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -2982,9 +3360,9 @@
           "number": 5,
           "name": "Polar Pinball",
           "airdate": "2005-10-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -2998,7 +3376,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3016,9 +3394,9 @@
           "number": 6,
           "name": "Caber Tossers",
           "airdate": "2005-10-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3032,7 +3410,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3043,6 +3421,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 307
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Caber Tossers\" (0.64)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E09 - Caber Tossing SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E09 - Caber Tossing SDTV",
+              "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E09%20-%20Caber%20Tossing%20SDTV.mp4",
+              "seconds": 2867,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Caber Tossers\" (0.64)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E09 - Caber Tossing SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E09 - Caber Tossing SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E09%20-%20Caber%20Tossing%20SDTV.mp4",
+              "seconds": 2867,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
             }
           ]
         },
@@ -3050,36 +3454,23 @@
           "number": 7,
           "name": "Drag Boats",
           "airdate": "2005-10-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Drag Boats\" (0.95)",
-            "item": "scrapheap-challenge-s08",
-            "itemTitle": "Scrapheap Challenge (Series 8)",
-            "file": "Scrapheap Challenge - S08 EP5 - Battle of the Drag Boats.mp4",
-            "name": "Scrapheap Challenge - S08 EP5 - Battle of the Drag Boats",
-            "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP5%20-%20Battle%20of%20the%20Drag%20Boats.mp4",
-            "seconds": 2874,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 8/Scrapheap Challenge - S08E07 - Drag Boats.mp4",
+            "name": "Season 8/Scrapheap Challenge - S08E07 - Drag Boats",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%208%2FScrapheap%20Challenge%20-%20S08E07%20-%20Drag%20Boats.mp4",
+            "seconds": 2631,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 285
+            "sizeMB": 260
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap_challenge",
-              "itemTitle": "Scrapheap Challenge",
-              "file": "Season 8/Scrapheap Challenge - S08E07 - Drag Boats.mp4",
-              "name": "Season 8/Scrapheap Challenge - S08E07 - Drag Boats",
-              "url": "https://archive.org/download/scrapheap_challenge/Season%208%2FScrapheap%20Challenge%20-%20S08E07%20-%20Drag%20Boats.mp4",
-              "seconds": 2631,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 260
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3090,6 +3481,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 260
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Drag Boats\" (0.95)",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP5 - Battle of the Drag Boats.mp4",
+              "name": "Scrapheap Challenge - S08 EP5 - Battle of the Drag Boats",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP5%20-%20Battle%20of%20the%20Drag%20Boats.mp4",
+              "seconds": 2874,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 285
             },
             {
               "conf": 0.7,
@@ -3111,9 +3515,9 @@
           "number": 8,
           "name": "Car Fishing",
           "airdate": "2005-11-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3127,7 +3531,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3145,9 +3549,9 @@
           "number": 9,
           "name": "Monster Drag",
           "airdate": "2005-11-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3161,7 +3565,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3179,36 +3583,23 @@
           "number": 10,
           "name": "Steeplechase",
           "airdate": "2005-11-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Steeplechase\" (0.95)",
-            "item": "scrapheap-challenge-s08",
-            "itemTitle": "Scrapheap Challenge (Series 8)",
-            "file": "Scrapheap Challenge - S08 EP9 - The Steeplechase Showdown.mp4",
-            "name": "Scrapheap Challenge - S08 EP9 - The Steeplechase Showdown",
-            "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP9%20-%20The%20Steeplechase%20Showdown.mp4",
-            "seconds": 2853,
-            "format": "h.264",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 8/Scrapheap Challenge - S08E10 - Steeplechase.mp4",
+            "name": "Season 8/Scrapheap Challenge - S08E10 - Steeplechase",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%208%2FScrapheap%20Challenge%20-%20S08E10%20-%20Steeplechase.mp4",
+            "seconds": 2619,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 281
+            "sizeMB": 254
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "S/E in filename + title match",
-              "item": "scrapheap_challenge",
-              "itemTitle": "Scrapheap Challenge",
-              "file": "Season 8/Scrapheap Challenge - S08E10 - Steeplechase.mp4",
-              "name": "Season 8/Scrapheap Challenge - S08E10 - Steeplechase",
-              "url": "https://archive.org/download/scrapheap_challenge/Season%208%2FScrapheap%20Challenge%20-%20S08E10%20-%20Steeplechase.mp4",
-              "seconds": 2619,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 254
-            },
-            {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3219,6 +3610,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 254
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Steeplechase\" (0.95)",
+              "item": "scrapheap-challenge-s08",
+              "itemTitle": "Scrapheap Challenge (Series 8)",
+              "file": "Scrapheap Challenge - S08 EP9 - The Steeplechase Showdown.mp4",
+              "name": "Scrapheap Challenge - S08 EP9 - The Steeplechase Showdown",
+              "url": "https://archive.org/download/scrapheap-challenge-s08/Scrapheap%20Challenge%20-%20S08%20EP9%20-%20The%20Steeplechase%20Showdown.mp4",
+              "seconds": 2853,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 281
             },
             {
               "conf": 0.7,
@@ -3240,9 +3644,9 @@
           "number": 11,
           "name": "Rock Crawler",
           "airdate": "2005-11-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3256,7 +3660,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3274,9 +3678,35 @@
           "number": 12,
           "name": "Flying Machines",
           "airdate": "2005-12-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 8/Scrapheap Challenge - S08E12 - Flying Machines.mp4",
+            "name": "Season 8/Scrapheap Challenge - S08E12 - Flying Machines",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%208%2FScrapheap%20Challenge%20-%20S08E12%20-%20Flying%20Machines.mp4",
+            "seconds": 2652,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 267
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 8/Scrapheap Challenge - S08E12 - Flying Machines.mp4",
+              "name": "Season 8/Scrapheap Challenge - S08E12 - Flying Machines",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%208%2FScrapheap%20Challenge%20-%20S08E12%20-%20Flying%20Machines.mp4",
+              "seconds": 2652,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 267
+            }
+          ]
         }
       ]
     },
@@ -3287,9 +3717,9 @@
           "number": 1,
           "name": "Human Cannonball",
           "airdate": "2007-04-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3303,7 +3733,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3321,9 +3751,9 @@
           "number": 2,
           "name": "Monster Trikes",
           "airdate": "2007-04-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3337,7 +3767,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3355,9 +3785,9 @@
           "number": 3,
           "name": "Muscle Trains",
           "airdate": "2007-04-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3371,7 +3801,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3389,9 +3819,9 @@
           "number": 4,
           "name": "Snowmobiles",
           "airdate": "2007-05-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3405,7 +3835,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3423,9 +3853,9 @@
           "number": 5,
           "name": "Giant Skateboards",
           "airdate": "2007-05-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3439,7 +3869,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3457,9 +3887,9 @@
           "number": 6,
           "name": "Mechanical Mortars",
           "airdate": "2007-05-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3473,7 +3903,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3491,9 +3921,9 @@
           "number": 7,
           "name": "Airboats",
           "airdate": "2007-05-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3507,7 +3937,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3525,9 +3955,9 @@
           "number": 8,
           "name": "Skid Pan Sumo",
           "airdate": "2007-06-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3541,7 +3971,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3559,9 +3989,9 @@
           "number": 9,
           "name": "Earth Movers",
           "airdate": "2007-11-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3575,7 +4005,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3593,9 +4023,9 @@
           "number": 10,
           "name": "Drag Sleds",
           "airdate": "2007-11-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3609,7 +4039,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3627,9 +4057,9 @@
           "number": 11,
           "name": "Swamp Racers",
           "airdate": "2007-11-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3643,7 +4073,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3661,9 +4091,9 @@
           "number": 12,
           "name": "Bulldozers",
           "airdate": "2007-11-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3677,7 +4107,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3695,9 +4125,9 @@
           "number": 13,
           "name": "Paddle Boats",
           "airdate": "2007-12-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3711,7 +4141,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3729,9 +4159,9 @@
           "number": 14,
           "name": "Sofa Speedway",
           "airdate": "2007-12-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3745,7 +4175,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3763,9 +4193,9 @@
           "number": 15,
           "name": "Welly Wanging",
           "airdate": "2007-12-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3779,7 +4209,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3797,9 +4227,35 @@
           "number": 16,
           "name": "Scrapheap Retrospective",
           "airdate": "2008-01-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 9/Scrapheap Challenge - S09E16 - Scrapheap Retrospective.mp4",
+            "name": "Season 9/Scrapheap Challenge - S09E16 - Scrapheap Retrospective",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%209%2FScrapheap%20Challenge%20-%20S09E16%20-%20Scrapheap%20Retrospective.mp4",
+            "seconds": 2628,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 260
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 9/Scrapheap Challenge - S09E16 - Scrapheap Retrospective.mp4",
+              "name": "Season 9/Scrapheap Challenge - S09E16 - Scrapheap Retrospective",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%209%2FScrapheap%20Challenge%20-%20S09E16%20-%20Scrapheap%20Retrospective.mp4",
+              "seconds": 2628,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 260
+            }
+          ]
         }
       ]
     },
@@ -3810,9 +4266,9 @@
           "number": 1,
           "name": "Scrap Speed Record",
           "airdate": "2008-04-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3826,7 +4282,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3844,9 +4300,9 @@
           "number": 2,
           "name": "Scooter Shooters",
           "airdate": "2008-05-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3860,7 +4316,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3878,9 +4334,9 @@
           "number": 3,
           "name": "Speedy Superbikes",
           "airdate": "2008-05-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3894,7 +4350,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3912,9 +4368,9 @@
           "number": 4,
           "name": "Decoration Dash",
           "airdate": "2008-05-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3928,7 +4384,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3946,9 +4402,9 @@
           "number": 5,
           "name": "Dune Bashers",
           "airdate": "2008-05-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -3962,7 +4418,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -3980,17 +4436,43 @@
           "number": 6,
           "name": "Powerboats",
           "airdate": "2008-06-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 10/Scrapheap Challenge - S10E06 - Powerboats.mp4",
+            "name": "Season 10/Scrapheap Challenge - S10E06 - Powerboats",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%2010%2FScrapheap%20Challenge%20-%20S10E06%20-%20Powerboats.mp4",
+            "seconds": 2664,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 271
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 10/Scrapheap Challenge - S10E06 - Powerboats.mp4",
+              "name": "Season 10/Scrapheap Challenge - S10E06 - Powerboats",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2010%2FScrapheap%20Challenge%20-%20S10E06%20-%20Powerboats.mp4",
+              "seconds": 2664,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 271
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Rocket Railway",
           "airdate": "2008-06-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4004,7 +4486,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4022,9 +4504,9 @@
           "number": 8,
           "name": "Fire Fighters",
           "airdate": "2008-06-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4038,7 +4520,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4056,9 +4538,9 @@
           "number": 9,
           "name": "Snow Shifters",
           "airdate": "2008-06-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4072,7 +4554,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4090,9 +4572,9 @@
           "number": 10,
           "name": "Savvy Salvaging",
           "airdate": "2008-06-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4106,7 +4588,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4124,9 +4606,9 @@
           "number": 11,
           "name": "Land Tugs",
           "airdate": "2008-07-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4140,7 +4622,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4158,9 +4640,9 @@
           "number": 12,
           "name": "Manphibious Madness",
           "airdate": "2008-07-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4174,7 +4656,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4192,9 +4674,9 @@
           "number": 13,
           "name": "Hovercraft Bother",
           "airdate": "2008-07-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4208,7 +4690,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4226,9 +4708,9 @@
           "number": 14,
           "name": "Dragsters",
           "airdate": "2008-08-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4242,7 +4724,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4260,9 +4742,9 @@
           "number": 15,
           "name": "Ballistas",
           "airdate": "2008-08-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4276,7 +4758,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4294,9 +4776,9 @@
           "number": 16,
           "name": "10 Years on the Heap",
           "airdate": "2008-08-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4310,7 +4792,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4333,17 +4815,43 @@
           "number": 1,
           "name": "Chariot Jousting",
           "airdate": "2009-07-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 11/Scrapheap Challenge - S11E01 - Chariots SDTV.mp4",
+            "name": "Season 11/Scrapheap Challenge - S11E01 - Chariots SDTV",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E01%20-%20Chariots%20SDTV.mp4",
+            "seconds": 2877,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 288
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E01 - Chariots SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E01 - Chariots SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E01%20-%20Chariots%20SDTV.mp4",
+              "seconds": 2877,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Stuck in the Mud",
           "airdate": "2009-07-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4357,7 +4865,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4368,6 +4876,32 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 292
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Stuck in the Mud\" (0.95)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E11 - Stuck in the Mud 2 SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E11 - Stuck in the Mud 2 SDTV",
+              "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E11%20-%20Stuck%20in%20the%20Mud%202%20SDTV.mp4",
+              "seconds": 2854,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 291
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Stuck in the Mud\" (0.95)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E11 - Stuck in the Mud 2 SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E11 - Stuck in the Mud 2 SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E11%20-%20Stuck%20in%20the%20Mud%202%20SDTV.mp4",
+              "seconds": 2854,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 291
             }
           ]
         },
@@ -4375,9 +4909,9 @@
           "number": 3,
           "name": "Water Power",
           "airdate": "2009-07-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4391,7 +4925,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4402,6 +4936,32 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 286
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Water Power\" (0.95)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E12 - Water Power 2 SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E12 - Water Power 2 SDTV",
+              "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E12%20-%20Water%20Power%202%20SDTV.mp4",
+              "seconds": 2862,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 286
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Water Power\" (0.95)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E12 - Water Power 2 SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E12 - Water Power 2 SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E12%20-%20Water%20Power%202%20SDTV.mp4",
+              "seconds": 2862,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 286
             }
           ]
         },
@@ -4409,9 +4969,9 @@
           "number": 4,
           "name": "Blow Football 1",
           "airdate": "2009-07-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4425,7 +4985,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4443,25 +5003,77 @@
           "number": 5,
           "name": "Medieval Siege Weapons",
           "airdate": "2009-07-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 11/Scrapheap Challenge - S11E05 - Medieval Thrower SDTV.mp4",
+            "name": "Season 11/Scrapheap Challenge - S11E05 - Medieval Thrower SDTV",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E05%20-%20Medieval%20Thrower%20SDTV.mp4",
+            "seconds": 2868,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 291
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E05 - Medieval Thrower SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E05 - Medieval Thrower SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E05%20-%20Medieval%20Thrower%20SDTV.mp4",
+              "seconds": 2868,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 291
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Giant Golf 1",
           "airdate": "2009-07-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 11/Scrapheap Challenge - S11E06 - Monster Golf SDTV.mp4",
+            "name": "Season 11/Scrapheap Challenge - S11E06 - Monster Golf SDTV",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E06%20-%20Monster%20Golf%20SDTV.mp4",
+            "seconds": 2861,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 290
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E06 - Monster Golf SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E06 - Monster Golf SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E06%20-%20Monster%20Golf%20SDTV.mp4",
+              "seconds": 2861,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 290
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Super Surf Boards 1",
           "airdate": "2009-07-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4475,7 +5087,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4493,9 +5105,9 @@
           "number": 8,
           "name": "Mobile Mortars 1",
           "airdate": "2009-07-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4509,7 +5121,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4527,41 +5139,145 @@
           "number": 9,
           "name": "Caber Tosser 1",
           "airdate": "2009-07-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 11/Scrapheap Challenge - S11E09 - Caber Tossing SDTV.mp4",
+            "name": "Season 11/Scrapheap Challenge - S11E09 - Caber Tossing SDTV",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E09%20-%20Caber%20Tossing%20SDTV.mp4",
+            "seconds": 2867,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 288
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E09 - Caber Tossing SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E09 - Caber Tossing SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E09%20-%20Caber%20Tossing%20SDTV.mp4",
+              "seconds": 2867,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Chariot Jousting 2",
           "airdate": "2009-07-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 11/Scrapheap Challenge - S11E10 - Chariots 2 SDTV.mp4",
+            "name": "Season 11/Scrapheap Challenge - S11E10 - Chariots 2 SDTV",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E10%20-%20Chariots%202%20SDTV.mp4",
+            "seconds": 2878,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 292
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E10 - Chariots 2 SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E10 - Chariots 2 SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E10%20-%20Chariots%202%20SDTV.mp4",
+              "seconds": 2878,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 292
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Stuck in the Mud 2",
           "airdate": "2009-07-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 11/Scrapheap Challenge - S11E11 - Stuck in the Mud 2 SDTV.mp4",
+            "name": "Season 11/Scrapheap Challenge - S11E11 - Stuck in the Mud 2 SDTV",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E11%20-%20Stuck%20in%20the%20Mud%202%20SDTV.mp4",
+            "seconds": 2854,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 291
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E11 - Stuck in the Mud 2 SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E11 - Stuck in the Mud 2 SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E11%20-%20Stuck%20in%20the%20Mud%202%20SDTV.mp4",
+              "seconds": 2854,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 291
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Water Power 2",
           "airdate": "2009-07-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 11/Scrapheap Challenge - S11E12 - Water Power 2 SDTV.mp4",
+            "name": "Season 11/Scrapheap Challenge - S11E12 - Water Power 2 SDTV",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E12%20-%20Water%20Power%202%20SDTV.mp4",
+            "seconds": 2862,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 286
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E12 - Water Power 2 SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E12 - Water Power 2 SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E12%20-%20Water%20Power%202%20SDTV.mp4",
+              "seconds": 2862,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 286
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Blow Football 2",
           "airdate": "2009-07-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4575,7 +5291,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4593,9 +5309,9 @@
           "number": 14,
           "name": "Medieval Throwers 2",
           "airdate": "2009-07-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4609,7 +5325,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4620,6 +5336,32 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 281
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Medieval Throwers 2\" (0.88)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E05 - Medieval Thrower SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E05 - Medieval Thrower SDTV",
+              "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E05%20-%20Medieval%20Thrower%20SDTV.mp4",
+              "seconds": 2868,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 291
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Medieval Throwers 2\" (0.88)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E05 - Medieval Thrower SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E05 - Medieval Thrower SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E05%20-%20Medieval%20Thrower%20SDTV.mp4",
+              "seconds": 2868,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 291
             }
           ]
         },
@@ -4627,9 +5369,9 @@
           "number": 15,
           "name": "Monster Golf 2",
           "airdate": "2009-07-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4643,7 +5385,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4654,6 +5396,32 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 282
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Monster Golf 2\" (0.80)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E06 - Monster Golf SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E06 - Monster Golf SDTV",
+              "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E06%20-%20Monster%20Golf%20SDTV.mp4",
+              "seconds": 2861,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 290
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Monster Golf 2\" (0.80)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E06 - Monster Golf SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E06 - Monster Golf SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E06%20-%20Monster%20Golf%20SDTV.mp4",
+              "seconds": 2861,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 290
             }
           ]
         },
@@ -4661,9 +5429,9 @@
           "number": 16,
           "name": "Super Surfboards 2",
           "airdate": "2009-07-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4677,7 +5445,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4695,9 +5463,9 @@
           "number": 17,
           "name": "Mobile Mortars 2",
           "airdate": "2009-07-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4711,7 +5479,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4729,9 +5497,9 @@
           "number": 18,
           "name": "Caber Tosser 2",
           "airdate": "2009-07-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4745,7 +5513,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4763,9 +5531,9 @@
           "number": 19,
           "name": "Semi Final",
           "airdate": "2009-07-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4779,7 +5547,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4797,9 +5565,9 @@
           "number": 20,
           "name": "Grand Final",
           "airdate": "2009-07-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.6,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "scrapheap_challenge",
             "itemTitle": "Scrapheap Challenge",
@@ -4813,7 +5581,7 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "scrapheap-challenge",
               "itemTitle": "scrapheap-challenge",
@@ -4836,9 +5604,61 @@
           "number": 1,
           "name": "Chariots",
           "airdate": "2010-06-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Chariots\" (0.95)",
+            "item": "scrapheap_challenge",
+            "itemTitle": "Scrapheap Challenge",
+            "file": "Season 11/Scrapheap Challenge - S11E10 - Chariots 2 SDTV.mp4",
+            "name": "Season 11/Scrapheap Challenge - S11E10 - Chariots 2 SDTV",
+            "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E10%20-%20Chariots%202%20SDTV.mp4",
+            "seconds": 2878,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 292
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Chariots\" (0.95)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E10 - Chariots 2 SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E10 - Chariots 2 SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E10%20-%20Chariots%202%20SDTV.mp4",
+              "seconds": 2878,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 292
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Chariots\" (0.95)",
+              "item": "scrapheap_challenge",
+              "itemTitle": "Scrapheap Challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E01 - Chariots SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E01 - Chariots SDTV",
+              "url": "https://archive.org/download/scrapheap_challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E01%20-%20Chariots%20SDTV.mp4",
+              "seconds": 2877,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Chariots\" (0.95)",
+              "item": "scrapheap-challenge",
+              "itemTitle": "scrapheap-challenge",
+              "file": "Season 11/Scrapheap Challenge - S11E01 - Chariots SDTV.mp4",
+              "name": "Season 11/Scrapheap Challenge - S11E01 - Chariots SDTV",
+              "url": "https://archive.org/download/scrapheap-challenge/Season%2011%2FScrapheap%20Challenge%20-%20S11E01%20-%20Chariots%20SDTV.mp4",
+              "seconds": 2877,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 288
+            }
+          ]
         },
         {
           "number": 2,

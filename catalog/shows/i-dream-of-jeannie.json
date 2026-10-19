@@ -3,7 +3,7 @@
   "slug": "i-dream-of-jeannie",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:17.332Z",
+  "matchedAt": "2026-10-19T04:12:19.736Z",
   "addedAt": "2026-10-16T07:58:17.331Z",
   "tvmaze": {
     "id": 2000,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 139,
     "live": 0,
-    "review": 28,
-    "missing": 111,
-    "pct": 20
+    "review": 31,
+    "missing": 108,
+    "pct": 22
   },
   "seasons": [
     {
@@ -29,19 +29,33 @@
           "airdate": "1965-09-18",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
-            "item": "bella-genio",
-            "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
-            "file": "MBG-T1-E01-La dama en la botella.mp4",
-            "name": "MBG-T1-E01-La dama en la botella",
-            "url": "https://archive.org/download/bella-genio/MBG-T1-E01-La%20dama%20en%20la%20botella.mp4",
-            "seconds": 1538,
-            "format": "MPEG4",
+            "conf": 0.75,
+            "why": "title ~ \"The Lady in the Bottle\" (0.95)",
+            "item": "01theladyinthebottleunairedpilot",
+            "itemTitle": "I Dream of Jeannie (unaired pilot)",
+            "file": "01 The Lady in the Bottle (unaired pilot).mp4",
+            "name": "01 The Lady in the Bottle (unaired pilot)",
+            "url": "https://archive.org/download/01theladyinthebottleunairedpilot/01%20The%20Lady%20in%20the%20Bottle%20(unaired%20pilot).mp4",
+            "seconds": 1848,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 286
+            "sizeMB": 193
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+              "item": "bella-genio",
+              "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
+              "file": "MBG-T1-E01-La dama en la botella.mp4",
+              "name": "MBG-T1-E01-La dama en la botella",
+              "url": "https://archive.org/download/bella-genio/MBG-T1-E01-La%20dama%20en%20la%20botella.mp4",
+              "seconds": 1538,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 286
+            }
+          ]
         },
         {
           "number": 2,
@@ -50,7 +64,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 2 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 2 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E02-Mi héroe.mp4",
@@ -70,7 +84,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 3 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 3 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E03-Adivina qué pasó de camino a la luna.mp4",
@@ -90,7 +104,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 4 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 4 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E04-Jeannie y la trampa matrimonial.mp4",
@@ -110,7 +124,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 5 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 5 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E05-G.I. Jeannie.ia.mp4",
@@ -130,7 +144,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 6 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 6 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E05-G.I. Jeannie.mp4",
@@ -150,7 +164,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 7 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 7 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E06-El caso del asesinato del yate.mp4",
@@ -170,7 +184,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 8 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 8 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E07-¿Alguien ha visto a Jeannieʔ.mp4",
@@ -190,7 +204,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 9 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 9 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E08-La americanización de Jeannie.mp4",
@@ -210,7 +224,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 10 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 10 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E09-El dedo que se mueve.mp4",
@@ -230,7 +244,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 11 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 11 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E11-¿Qué fue de Baby Custerʔ.mp4",
@@ -250,7 +264,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 12 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 12 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E12-¿Dónde te has ido-fuiʔ.mp4",
@@ -270,7 +284,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 13 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 13 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E13-Ruleta rusa.mp4",
@@ -290,7 +304,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 14 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 14 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E14-¿Qué casa está enfrenteʔ.mp4",
@@ -310,7 +324,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 15 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 15 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E15-Demasiados Tonys.mp4",
@@ -330,7 +344,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 16 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 16 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E16-Llévame a la Meca a tiempo.mp4",
@@ -350,7 +364,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 17 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 17 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E17-El astronauta más rico del mundo.mp4",
@@ -370,7 +384,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 18 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 18 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E18-¿Hay un genio extra en la casaʔ.mp4",
@@ -390,7 +404,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 19 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 19 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E19-Nunca intentes ser más listo que una Jeannie.mp4",
@@ -410,7 +424,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 20 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 20 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E20-Mi maestro el Doctor.mp4",
@@ -430,7 +444,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 21 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 21 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E21-Jeannie y el securstro.mp4",
@@ -450,7 +464,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 22 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 22 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E22-Qué suerte puedes tener.mp4",
@@ -470,13 +484,13 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 23 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 23 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
-            "file": "MBG-T1-E25-Más grande que una caja de pan y mejor que un genio.mp4",
-            "name": "MBG-T1-E25-Más grande que una caja de pan y mejor que un genio",
-            "url": "https://archive.org/download/bella-genio/MBG-T1-E25-M%C3%A1s%20grande%20que%20una%20caja%20de%20pan%20y%20mejor%20que%20un%20genio.mp4",
-            "seconds": 1533,
+            "file": "MBG-T1-E23-Cuidado con el pajarito.mp4",
+            "name": "MBG-T1-E23-Cuidado con el pajarito",
+            "url": "https://archive.org/download/bella-genio/MBG-T1-E23-Cuidado%20con%20el%20pajarito.mp4",
+            "seconds": 1537,
             "format": "MPEG4",
             "playable": true,
             "sizeMB": 329
@@ -490,13 +504,13 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 24 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 24 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
-            "file": "MBG-T1-E26-Mi Maestro, el Gran Rembrandt.mp4",
-            "name": "MBG-T1-E26-Mi Maestro, el Gran Rembrandt",
-            "url": "https://archive.org/download/bella-genio/MBG-T1-E26-Mi%20Maestro%2C%20el%20Gran%20Rembrandt.mp4",
-            "seconds": 1533,
+            "file": "MBG-T1-E24-El huésped permanente.mp4",
+            "name": "MBG-T1-E24-El huésped permanente",
+            "url": "https://archive.org/download/bella-genio/MBG-T1-E24-El%20hu%C3%A9sped%20permanente.mp4",
+            "seconds": 1535,
             "format": "MPEG4",
             "playable": true,
             "sizeMB": 329
@@ -510,7 +524,67 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 25 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 25 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "item": "bella-genio",
+            "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
+            "file": "MBG-T1-E25-Más grande que una caja de pan y mejor que un genio.mp4",
+            "name": "MBG-T1-E25-Más grande que una caja de pan y mejor que un genio",
+            "url": "https://archive.org/download/bella-genio/MBG-T1-E25-M%C3%A1s%20grande%20que%20una%20caja%20de%20pan%20y%20mejor%20que%20un%20genio.mp4",
+            "seconds": 1533,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 329
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "My Master, the Great Rembrandt",
+          "airdate": "1966-03-19",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 26 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "item": "bella-genio",
+            "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
+            "file": "MBG-T1-E26-Mi Maestro, el Gran Rembrandt.mp4",
+            "name": "MBG-T1-E26-Mi Maestro, el Gran Rembrandt",
+            "url": "https://archive.org/download/bella-genio/MBG-T1-E26-Mi%20Maestro%2C%20el%20Gran%20Rembrandt.mp4",
+            "seconds": 1533,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 329
+          },
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "My Master, the Thief",
+          "airdate": "1966-04-02",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 27 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "item": "bella-genio",
+            "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
+            "file": "MBG-T1-E27-Mi amo, el ladrón.mp4",
+            "name": "MBG-T1-E27-Mi amo, el ladrón",
+            "url": "https://archive.org/download/bella-genio/MBG-T1-E27-Mi%20amo%2C%20el%20ladr%C3%B3n.mp4",
+            "seconds": 1536,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 330
+          },
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "This Is Murder",
+          "airdate": "1966-04-09",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 28 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E28-Esto es asesinato.mp4",
@@ -524,13 +598,13 @@
           "alternates": []
         },
         {
-          "number": 26,
-          "name": "My Master, the Great Rembrandt",
-          "airdate": "1966-03-19",
+          "number": 29,
+          "name": "My Master the Magician",
+          "airdate": "1966-04-23",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 26 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 29 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E29-Mi maestro el Mago.mp4",
@@ -544,13 +618,13 @@
           "alternates": []
         },
         {
-          "number": 27,
-          "name": "My Master, the Thief",
-          "airdate": "1966-04-02",
+          "number": 30,
+          "name": "I'll Never Forget What's Her Name",
+          "airdate": "1966-05-07",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 27 of 27 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
+            "why": "sequence guess: file 30 of 30 in \"Mi Bella Genio (I Dream of Jeannie) T1 -\"",
             "item": "bella-genio",
             "itemTitle": "Mi Bella Genio (I Dream of Jeannie) T1 - Esp-Lat",
             "file": "MBG-T1-E30-Nunca olvidaré cómo se llama.mp4",
@@ -561,30 +635,6 @@
             "playable": true,
             "sizeMB": 329
           },
-          "alternates": []
-        },
-        {
-          "number": 28,
-          "name": "This Is Murder",
-          "airdate": "1966-04-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 29,
-          "name": "My Master the Magician",
-          "airdate": "1966-04-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 30,
-          "name": "I'll Never Forget What's Her Name",
-          "airdate": "1966-05-07",
-          "state": "MISSING",
-          "file": null,
           "alternates": []
         }
       ]

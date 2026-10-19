@@ -3,21 +3,21 @@
   "slug": "9-1-1",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:57.587Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:11:02.116Z",
+  "addedAt": "2026-10-16T07:56:57.587Z",
   "tvmaze": {
-    "id": null,
+    "id": 28152,
     "name": "9-1-1",
-    "runtime": null,
-    "premiered": null,
-    "network": "US"
+    "runtime": 60,
+    "premiered": "2018-01-03",
+    "network": "ABC"
   },
   "coverage": {
-    "total": 20,
-    "live": 0,
-    "review": 20,
-    "missing": 0,
-    "pct": 100
+    "total": 146,
+    "live": 1,
+    "review": 1,
+    "missing": 144,
+    "pct": 1
   },
   "seasons": [
     {
@@ -25,382 +25,1029 @@
       "episodes": [
         {
           "number": 1,
-          "name": "11 exposed 2nd edition full documentary film",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9 11 Exposed   2nd Edition 2015 Full Documentary Film.mp4",
-            "name": "9 11 Exposed   2nd Edition 2015 Full Documentary Film",
-            "url": "https://archive.org/download/09112001/9%2011%20Exposed%20%20%202nd%20Edition%202015%20Full%20Documentary%20Film.mp4",
-            "seconds": 6600,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 598,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Pilot",
+          "airdate": "2018-01-03",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "11 breakthrough energy technology dr judy wood",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9_11 Breakthrough Energy Technology _ Dr Judy Wood.mp4",
-            "name": "9_11 Breakthrough Energy Technology _ Dr Judy Wood",
-            "url": "https://archive.org/download/09112001/9_11%20Breakthrough%20Energy%20Technology%20_%20Dr%20Judy%20Wood.mp4",
-            "seconds": 8697,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 545,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Let Go",
+          "airdate": "2018-01-10",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
-          "name": "11 deception end game march 18",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9_11 DECEPTION_ End Game - March 18 2017.mp4",
-            "name": "9_11 DECEPTION_ End Game - March 18 2017",
-            "url": "https://archive.org/download/09112001/9_11%20DECEPTION_%20End%20Game%20-%20March%2018%202017.mp4",
-            "seconds": 7383,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 779,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Next of Kin",
+          "airdate": "2018-01-17",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
-          "name": "11 explosive evidence",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9_11 Explosive Evidence - 2012.mp4",
-            "name": "9_11 Explosive Evidence - 2012",
-            "url": "https://archive.org/download/09112001/9_11%20Explosive%20Evidence%20-%202012.mp4",
-            "seconds": 3517,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 313,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Worst Day Ever",
+          "airdate": "2018-01-24",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
-          "name": "11 hy poth e sis full length",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9_11 hy.poth.e.sis - 2010 (full length).mp4",
-            "name": "9_11 hy.poth.e.sis - 2010 (full length)",
-            "url": "https://archive.org/download/09112001/9_11%20hy.poth.e.sis%20-%202010%20(full%20length).mp4",
-            "seconds": 2682,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 408,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Point of Origin",
+          "airdate": "2018-01-31",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
-          "name": "11 the israel connection james perloff",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9_11 The Israel Connection - James Perloff.mp4",
-            "name": "9_11 The Israel Connection - James Perloff",
-            "url": "https://archive.org/download/09112001/9_11%20The%20Israel%20Connection%20-%20James%20Perloff.mp4",
-            "seconds": 7872,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 292,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Heartbreaker",
+          "airdate": "2018-02-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
-          "name": "11 trillions follow the money",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9_11 Trillions_ Follow The Money.mp4",
-            "name": "9_11 Trillions_ Follow The Money",
-            "url": "https://archive.org/download/09112001/9_11%20Trillions_%20Follow%20The%20Money.mp4",
-            "seconds": 3574,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 269,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Full Moon (Creepy AF)",
+          "airdate": "2018-02-28",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 8,
-          "name": "11 war games",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9_11 War Games.mp4",
-            "name": "9_11 War Games",
-            "url": "https://archive.org/download/09112001/9_11%20War%20Games.mp4",
-            "seconds": 3395,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 278,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Karma's a Bitch",
+          "airdate": "2018-03-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 9,
-          "name": "11 american scholars symposium",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9-11 - American Scholars Symposium.mp4",
-            "name": "9-11 - American Scholars Symposium",
-            "url": "https://archive.org/download/09112001/9-11%20-%20American%20Scholars%20Symposium.mp4",
-            "seconds": 6374,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 665,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Trapped",
+          "airdate": "2018-03-14",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
-          "name": "11 analysis by richard gage",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9-11 - Analysis By Richard Gage.mp4",
-            "name": "9-11 - Analysis By Richard Gage",
-            "url": "https://archive.org/download/09112001/9-11%20-%20Analysis%20By%20Richard%20Gage.mp4",
-            "seconds": 8199,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 854,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "A Whole New You",
+          "airdate": "2018-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Under Pressure",
+          "airdate": "2018-09-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "7.1",
+          "airdate": "2018-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Help Is Not Coming",
+          "airdate": "2018-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Stuck",
+          "airdate": "2018-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Awful People",
+          "airdate": "2018-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Dosed",
+          "airdate": "2018-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Haunted",
+          "airdate": "2018-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Buck, Actually",
+          "airdate": "2018-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Hen Begins",
+          "airdate": "2018-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Merry Ex-Mas",
+          "airdate": "2018-11-26",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
-          "name": "11 birth of treason",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9-11 - Birth Of Treason.mp4",
-            "name": "9-11 - Birth Of Treason",
-            "url": "https://archive.org/download/09112001/9-11%20-%20Birth%20Of%20Treason.mp4",
-            "seconds": 7063,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 355,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "New Beginnings",
+          "airdate": "2019-03-18",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
-          "name": "11 blueprint for truth",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9-11 - Blueprint For Truth.mp4",
-            "name": "9-11 - Blueprint For Truth",
-            "url": "https://archive.org/download/09112001/9-11%20-%20Blueprint%20For%20Truth.mp4",
-            "seconds": 7179,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 746,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Chimney Begins",
+          "airdate": "2019-03-25",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 13,
-          "name": "11 dust and deceit",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9-11 - Dust And Deceit.mp4",
-            "name": "9-11 - Dust And Deceit",
-            "url": "https://archive.org/download/09112001/9-11%20-%20Dust%20And%20Deceit.mp4",
-            "seconds": 3561,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 371,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Fight or Flight",
+          "airdate": "2019-04-01",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 14,
-          "name": "11 dust to dust",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9-11 - Dust To Dust.mp4",
-            "name": "9-11 - Dust To Dust",
-            "url": "https://archive.org/download/09112001/9-11%20-%20Dust%20To%20Dust.mp4",
-            "seconds": 3475,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 361,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Broken",
+          "airdate": "2019-04-15",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 15,
-          "name": "esoteric agenda",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "esoteric.agenda.mp4",
-            "name": "esoteric.agenda",
-            "url": "https://archive.org/download/09112001/esoteric.agenda.mp4",
-            "seconds": 7585,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 541,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Ocean's 9-1-1",
+          "airdate": "2019-04-22",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 16,
-          "name": "liars of sept 11 reveal shocking truths exposed",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "Liars Of Sept 11 Reveal-SHOCKING TRUTHS EXPOSED!.mp4",
-            "name": "Liars Of Sept 11 Reveal-SHOCKING TRUTHS EXPOSED!",
-            "url": "https://archive.org/download/09112001/Liars%20Of%20Sept%2011%20Reveal-SHOCKING%20TRUTHS%20EXPOSED!.mp4",
-            "seconds": 2141,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 105,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Bobby Begins Again",
+          "airdate": "2019-04-29",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 17,
-          "name": "making sense of the war on terror christopher bollyn",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "making_sense_of_the_war_on_terror_christopher_bollyn.mp4",
-            "name": "making_sense_of_the_war_on_terror_christopher_bollyn",
-            "url": "https://archive.org/download/09112001/making_sense_of_the_war_on_terror_christopher_bollyn.mp4",
-            "seconds": 8604,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 391,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Careful What You Wish For",
+          "airdate": "2019-05-06",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 18,
-          "name": "mark passio the occult aspects of",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "mark Passio the_occult_aspects_of_911_.mp4",
-            "name": "mark Passio the_occult_aspects_of_911_",
-            "url": "https://archive.org/download/09112001/mark%20Passio%20the_occult_aspects_of_911_.mp4",
-            "seconds": 7206,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 270,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "This Life We Choose",
+          "airdate": "2019-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Kids Today",
+          "airdate": "2019-09-23",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 19,
-          "name": "the war on islam 11 revisited uncovered and exposed",
-          "state": "REVIEW",
-          "file": {
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "The War on Islam_ 9_11 Revisited, Uncovered and Exposed.mp4",
-            "name": "The War on Islam_ 9_11 Revisited, Uncovered and Exposed",
-            "url": "https://archive.org/download/09112001/The%20War%20on%20Islam_%209_11%20Revisited%2C%20Uncovered%20and%20Exposed.mp4",
-            "seconds": 6693,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 864,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 2,
+          "name": "Sink or Swim",
+          "airdate": "2019-09-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Searchers",
+          "airdate": "2019-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Triggers",
+          "airdate": "2019-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Rage",
+          "airdate": "2019-10-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Monsters",
+          "airdate": "2019-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Athena Begins",
+          "airdate": "2019-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Malfunction",
+          "airdate": "2019-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Fallout",
+          "airdate": "2019-11-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Christmas Spirit",
+          "airdate": "2019-12-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Seize the Day",
+          "airdate": "2020-03-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Fools",
+          "airdate": "2020-03-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Pinned",
+          "airdate": "2020-03-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Taking of Dispatch 9-1-1",
+          "airdate": "2020-04-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Eddie Begins",
+          "airdate": "2020-04-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "The One That Got Away",
+          "airdate": "2020-04-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Powerless",
+          "airdate": "2020-05-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "What's Next?",
+          "airdate": "2020-05-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The New Abnormal",
+          "airdate": "2021-01-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Alone Together",
+          "airdate": "2021-01-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Future Tense",
+          "airdate": "2021-02-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "9-1-1, What's Your Grievance?",
+          "airdate": "2021-02-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Buck Begins",
+          "airdate": "2021-02-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Jinx",
+          "airdate": "2021-02-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "There Goes the Neighborhood",
+          "airdate": "2021-03-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Breaking Point",
+          "airdate": "2021-03-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Blindsided",
+          "airdate": "2021-04-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Parenthood",
+          "airdate": "2021-04-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "First Responders",
+          "airdate": "2021-05-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Treasure Hunt",
+          "airdate": "2021-05-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Suspicion",
+          "airdate": "2021-05-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Survivors",
+          "airdate": "2021-05-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Panic",
+          "airdate": "2021-09-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Desperate Times",
+          "airdate": "2021-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Desperate Measures",
+          "airdate": "2021-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Home and Away",
+          "airdate": "2021-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Peer Pressure",
+          "airdate": "2021-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Brawl in Cell Block 9-1-1",
+          "airdate": "2021-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Ghost Stories",
+          "airdate": "2021-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Defend in Place",
+          "airdate": "2021-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Past Is Prologue",
+          "airdate": "2021-11-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Wrapped in Red",
+          "airdate": "2021-12-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Outside Looking In",
+          "airdate": "2022-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Boston",
+          "airdate": "2022-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Fear-o-Phobia",
+          "airdate": "2022-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Dumb Luck",
+          "airdate": "2022-04-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "FOMO",
+          "airdate": "2022-04-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "May Day",
+          "airdate": "2022-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Hero Complex",
+          "airdate": "2022-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Starting Over",
+          "airdate": "2022-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 6,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Let the Games Begin",
+          "airdate": "2022-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Crash and Learn",
+          "airdate": "2022-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Devil You Know",
+          "airdate": "2022-10-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Animal Instincts",
+          "airdate": "2022-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Home Invasion",
+          "airdate": "2022-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Tomorrow",
+          "airdate": "2022-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Cursed",
+          "airdate": "2022-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "What's Your Fantasy?",
+          "airdate": "2022-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Red Flag",
+          "airdate": "2022-11-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "In a Flash",
+          "airdate": "2023-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "In Another Life",
+          "airdate": "2023-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Recovery",
+          "airdate": "2023-03-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Mixed Feelings",
+          "airdate": "2023-04-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Performance Anxiety",
+          "airdate": "2023-04-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Death and Taxes",
+          "airdate": "2023-04-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Lost & Found",
+          "airdate": "2023-05-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Love Is in the Air",
+          "airdate": "2023-05-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Pay It Forward",
+          "airdate": "2023-05-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 7,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Abandon Ships",
+          "airdate": "2024-03-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Rock the Boat",
+          "airdate": "2024-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Capsized",
+          "airdate": "2024-03-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Buck, Bothered and Bewildered",
+          "airdate": "2024-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "You Don't Know Me",
+          "airdate": "2024-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "There Goes the Groom",
+          "airdate": "2024-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Ghost of a Second Chance",
+          "airdate": "2024-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Step Nine",
+          "airdate": "2024-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Ashes, Ashes",
+          "airdate": "2024-05-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "All Fall Down",
+          "airdate": "2024-05-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 8,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Buzzkill",
+          "airdate": "2024-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "When the Boeing Gets Tough...",
+          "airdate": "2024-10-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Final Approach",
+          "airdate": "2024-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "No Place Like Home",
+          "airdate": "2024-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Masks",
+          "airdate": "2024-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Confessions",
+          "airdate": "2024-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Hotshots",
+          "airdate": "2024-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Wannabes",
+          "airdate": "2024-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Sob Stories",
+          "airdate": "2025-03-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Voices",
+          "airdate": "2025-03-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Holy Mother of God",
+          "airdate": "2025-03-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Disconnected",
+          "airdate": "2025-03-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Invisible",
+          "airdate": "2025-04-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Sick Day",
+          "airdate": "2025-04-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Lab Rats",
+          "airdate": "2025-04-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "The Last Alarm",
+          "airdate": "2025-05-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Don't Drink the Water",
+          "airdate": "2025-05-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Seismic Shifts",
+          "airdate": "2025-05-15",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
@@ -409,34 +1056,252 @@
       "season": 9,
       "episodes": [
         {
-          "number": 11,
-          "name": "alchemy facing reality full documentary",
+          "number": 1,
+          "name": "Eat the Rich",
+          "airdate": "2025-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Spiraling",
+          "airdate": "2025-10-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Sky Is Falling",
+          "airdate": "2025-10-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Reentry",
+          "airdate": "2025-10-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Día de los Muertos",
+          "airdate": "2025-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Family History",
+          "airdate": "2025-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Secrets",
+          "airdate": "2026-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "War",
+          "airdate": "2026-01-15",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"War\" (0.95)",
             "item": "09112001",
             "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "911 Alchemy - Facing Reality (Full Documentary).mp4",
-            "name": "911 Alchemy - Facing Reality (Full Documentary)",
-            "url": "https://archive.org/download/09112001/911%20Alchemy%20-%20Facing%20Reality%20(Full%20Documentary).mp4",
-            "seconds": 10704,
+            "file": "9_11 War Games.mp4",
+            "name": "9_11 War Games",
+            "url": "https://archive.org/download/09112001/9_11%20War%20Games.mp4",
+            "seconds": 3395,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 874,
-            "ep": {
-              "season": 9,
-              "episode": 11
-            },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 278
           },
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "title ~ \"War\" (0.95)",
+              "item": "09112001",
+              "itemTitle": "09/11/2001 Analysis Collection",
+              "file": "The War on Islam_ 9_11 Revisited, Uncovered and Exposed.mp4",
+              "name": "The War on Islam_ 9_11 Revisited, Uncovered and Exposed",
+              "url": "https://archive.org/download/09112001/The%20War%20on%20Islam_%209_11%20Revisited%2C%20Uncovered%20and%20Exposed.mp4",
+              "seconds": 6693,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 864
+            },
+            {
+              "conf": 0.65,
+              "why": "title ~ \"War\" (0.95)",
+              "item": "09112001",
+              "itemTitle": "09/11/2001 Analysis Collection",
+              "file": "making_sense_of_the_war_on_terror_christopher_bollyn.mp4",
+              "name": "making_sense_of_the_war_on_terror_christopher_bollyn",
+              "url": "https://archive.org/download/09112001/making_sense_of_the_war_on_terror_christopher_bollyn.mp4",
+              "seconds": 8604,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 391
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "name": "Fighting Back",
+          "airdate": "2026-01-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Handle with Care",
+          "airdate": "2026-01-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Going Once, Going Twice",
+          "airdate": "2026-02-26",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "09112001",
+            "itemTitle": "09/11/2001 Analysis Collection",
+            "file": "Dr. Judy Wood Andrew Johnson on the 911 Cover Up .mp4",
+            "name": "Dr. Judy Wood Andrew Johnson on the 911 Cover Up ",
+            "url": "https://archive.org/download/09112001/Dr.%20Judy%20Wood%20Andrew%20Johnson%20on%20the%20911%20Cover%20Up%20.mp4",
+            "seconds": 4590,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 89
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "S/E in filename",
+              "item": "09112001",
+              "itemTitle": "09/11/2001 Analysis Collection",
+              "file": "911 - The Greatest Lie Ever Sold by Anthony Hilder [2005].mp4",
+              "name": "911 - The Greatest Lie Ever Sold by Anthony Hilder [2005]",
+              "url": "https://archive.org/download/09112001/911%20-%20The%20Greatest%20Lie%20Ever%20Sold%20by%20Anthony%20Hilder%20%5B2005%5D.mp4",
+              "seconds": 7569,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 328
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "name": "Dads and Cads",
+          "airdate": "2026-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Mother's Boy",
+          "airdate": "2026-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "D.I.Y.",
+          "airdate": "2026-03-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Pick Your Poison",
+          "airdate": "2026-03-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Where There's Smoke",
+          "airdate": "2026-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "I Got You Babe",
+          "airdate": "2026-04-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Hearts and Flowers",
+          "airdate": "2026-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 10,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "That Sinking Feeling",
+          "airdate": "2026-10-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Fire in the Hole",
+          "airdate": "2026-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Streets of Fire",
+          "airdate": "2026-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Imposter Syndrome",
+          "airdate": "2026-11-05",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 28152,
-    "name": "9-1-1",
-    "placed": 0
-  }
+  ]
 }

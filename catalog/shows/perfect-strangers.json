@@ -3,7 +3,7 @@
   "slug": "perfect-strangers",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-16T07:58:26.590Z",
+  "matchedAt": "2026-10-19T04:12:26.351Z",
   "addedAt": "2026-10-15T12:08:58.792Z",
   "tvmaze": {
     "id": 4304,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 150,
-    "live": 146,
-    "review": 4,
+    "live": 150,
+    "review": 0,
     "missing": 0,
     "pct": 100
   },
@@ -54,6 +54,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 146
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "perfect_strangers",
+              "itemTitle": "Perfect Strangers",
+              "file": "Primo Cruzado Ep01.mp4",
+              "name": "Primo Cruzado Ep01",
+              "url": "https://archive.org/download/perfect_strangers/Primo%20Cruzado%20Ep01.mp4",
+              "seconds": 1494,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 145
             }
           ]
         },
@@ -75,7 +88,21 @@
             "playable": true,
             "sizeMB": 316
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "perfect_strangers",
+              "itemTitle": "Perfect Strangers",
+              "file": "Primo Cruzado Ep02.mp4",
+              "name": "Primo Cruzado Ep02",
+              "url": "https://archive.org/download/perfect_strangers/Primo%20Cruzado%20Ep02.mp4",
+              "seconds": 1444,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 140
+            }
+          ]
         },
         {
           "number": 3,
@@ -294,21 +321,35 @@
           "number": 6,
           "name": "Ladies and Germs",
           "airdate": "1986-11-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Ladies and Germs\" (1.00)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
-            "file": "Perfect Strangers S02E04 (Ladies and Germs...).mp4",
-            "name": "Perfect Strangers S02E04 (Ladies and Germs...)",
-            "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E04%20(Ladies%20and%20Germs...).mp4",
+            "file": "Perfect Strangers S02E06 (Babes in Babylon).mp4",
+            "name": "Perfect Strangers S02E06 (Babes in Babylon)",
+            "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E06%20(Babes%20in%20Babylon).mp4",
             "seconds": 1524,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 326
+            "sizeMB": 331
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Ladies and Germs\" (1.00)",
+              "item": "perfect-strangers-Lando18",
+              "itemTitle": "Perfect Strangers (complete TV series)",
+              "file": "Perfect Strangers S02E04 (Ladies and Germs...).mp4",
+              "name": "Perfect Strangers S02E04 (Ladies and Germs...)",
+              "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E04%20(Ladies%20and%20Germs...).mp4",
+              "seconds": 1524,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 326
+            }
+          ]
         },
         {
           "number": 7,
@@ -334,30 +375,10 @@
           "number": 8,
           "name": "Can I Get a Witness?",
           "airdate": "1986-11-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Can I Get a Witness?\" (1.00)",
-            "item": "perfect-strangers-Lando18",
-            "itemTitle": "Perfect Strangers (complete TV series)",
-            "file": "Perfect Strangers S02E09 (Can I Get a Witness).mp4",
-            "name": "Perfect Strangers S02E09 (Can I Get a Witness)",
-            "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E09%20(Can%20I%20Get%20a%20Witness).mp4",
-            "seconds": 1523,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 336
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "Two Men and a Cradle",
-          "airdate": "1986-12-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Two Men and a Cradle\" (1.00)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
             "file": "Perfect Strangers S02E08 (Two Men and a Cradle).mp4",
@@ -368,7 +389,55 @@
             "playable": true,
             "sizeMB": 321
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Can I Get a Witness?\" (1.00)",
+              "item": "perfect-strangers-Lando18",
+              "itemTitle": "Perfect Strangers (complete TV series)",
+              "file": "Perfect Strangers S02E09 (Can I Get a Witness).mp4",
+              "name": "Perfect Strangers S02E09 (Can I Get a Witness)",
+              "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E09%20(Can%20I%20Get%20a%20Witness).mp4",
+              "seconds": 1523,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 336
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "name": "Two Men and a Cradle",
+          "airdate": "1986-12-03",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "perfect-strangers-Lando18",
+            "itemTitle": "Perfect Strangers (complete TV series)",
+            "file": "Perfect Strangers S02E09 (Can I Get a Witness).mp4",
+            "name": "Perfect Strangers S02E09 (Can I Get a Witness)",
+            "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E09%20(Can%20I%20Get%20a%20Witness).mp4",
+            "seconds": 1523,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 336
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Two Men and a Cradle\" (1.00)",
+              "item": "perfect-strangers-Lando18",
+              "itemTitle": "Perfect Strangers (complete TV series)",
+              "file": "Perfect Strangers S02E08 (Two Men and a Cradle).mp4",
+              "name": "Perfect Strangers S02E08 (Two Men and a Cradle)",
+              "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S02E08%20(Two%20Men%20and%20a%20Cradle).mp4",
+              "seconds": 1523,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 321
+            }
+          ]
         },
         {
           "number": 10,
@@ -1339,21 +1408,35 @@
           "number": 22,
           "name": "Bye Bye Biki",
           "airdate": "1988-05-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Bye Bye Biki\" (1.00)",
+            "conf": 0.9,
+            "why": "S/E in filename",
             "item": "perfect-strangers-Lando18",
             "itemTitle": "Perfect Strangers (complete TV series)",
-            "file": "Perfect Strangers S03E18 (Bye Bye Biki).mp4",
-            "name": "Perfect Strangers S03E18 (Bye Bye Biki)",
-            "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S03E18%20(Bye%20Bye%20Biki).mp4",
-            "seconds": 1462,
+            "file": "Perfect Strangers S03E22 (You Gotta Have Friends).mp4",
+            "name": "Perfect Strangers S03E22 (You Gotta Have Friends)",
+            "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S03E22%20(You%20Gotta%20Have%20Friends).mp4",
+            "seconds": 1461,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 284
+            "sizeMB": 296
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Bye Bye Biki\" (1.00)",
+              "item": "perfect-strangers-Lando18",
+              "itemTitle": "Perfect Strangers (complete TV series)",
+              "file": "Perfect Strangers S03E18 (Bye Bye Biki).mp4",
+              "name": "Perfect Strangers S03E18 (Bye Bye Biki)",
+              "url": "https://archive.org/download/perfect-strangers-Lando18/Perfect%20Strangers%20S03E18%20(Bye%20Bye%20Biki).mp4",
+              "seconds": 1462,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 284
+            }
+          ]
         }
       ]
     },

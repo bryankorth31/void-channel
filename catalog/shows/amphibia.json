@@ -3,7 +3,8 @@
   "slug": "amphibia",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:00.910Z",
+  "matchedAt": "2026-10-19T04:11:06.599Z",
+  "addedAt": "2026-10-19T04:11:06.603Z",
   "tvmaze": {
     "id": 35072,
     "name": "Amphibia",
@@ -14,9 +15,9 @@
   "coverage": {
     "total": 106,
     "live": 0,
-    "review": 0,
-    "missing": 106,
-    "pct": 0
+    "review": 4,
+    "missing": 102,
+    "pct": 4
   },
   "seasons": [
     {
@@ -623,8 +624,20 @@
           "number": 36,
           "name": "True Colors",
           "airdate": "2021-05-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "title ~ \"True Colors\" (0.95)",
+            "item": "amphibia_20260605",
+            "itemTitle": "Amphibia The Complete Season 2-3 DVD",
+            "file": "Amphibia_Season_2_Episode_20_True_Colors.mp4",
+            "name": "Amphibia_Season_2_Episode_20_True_Colors",
+            "url": "https://archive.org/download/amphibia_20260605/Amphibia_Season_2_Episode_20_True_Colors.mp4",
+            "seconds": 1550,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 215
+          },
           "alternates": []
         }
       ]
@@ -668,9 +681,35 @@
           "number": 5,
           "name": "Adventures in Catsitting",
           "airdate": "2021-10-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Adventures in Catsitting\" (0.95)",
+            "item": "amphibia_20260605",
+            "itemTitle": "Amphibia The Complete Season 2-3 DVD",
+            "file": "Amphibia_Season_3_Episode_3_Part_2_–_Adventures_in_Catsitting.mp4",
+            "name": "Amphibia_Season_3_Episode_3_Part_2_–_Adventures_in_Catsitting",
+            "url": "https://archive.org/download/amphibia_20260605/Amphibia_Season_3_Episode_3_Part_2_%E2%80%93_Adventures_in_Catsitting.mp4",
+            "seconds": 670,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 51
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Adventures in Catsitting\" (0.95)",
+              "item": "amphibia_20260604_2218",
+              "itemTitle": "Amphibia The Complete Season 2-3",
+              "file": "Amphibia_Season_3_Episode_3_Part_2_–_Adventures_in_Catsitting.mp4",
+              "name": "Amphibia_Season_3_Episode_3_Part_2_–_Adventures_in_Catsitting",
+              "url": "https://archive.org/download/amphibia_20260604_2218/Amphibia_Season_3_Episode_3_Part_2_%E2%80%93_Adventures_in_Catsitting.mp4",
+              "seconds": 670,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 51
+            }
+          ]
         },
         {
           "number": 6,
@@ -748,8 +787,20 @@
           "number": 15,
           "name": "If You Give a Frog a Cookie",
           "airdate": "2021-11-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"If You Give a Frog a Cookie\" (0.95)",
+            "item": "amphibia_20260605",
+            "itemTitle": "Amphibia The Complete Season 2-3 DVD",
+            "file": "Amphibia_Season_3_Episode_8b_–_If_You_Give_a_Frog_a_Cookie.mp4",
+            "name": "Amphibia_Season_3_Episode_8b_–_If_You_Give_a_Frog_a_Cookie",
+            "url": "https://archive.org/download/amphibia_20260605/Amphibia_Season_3_Episode_8b_%E2%80%93_If_You_Give_a_Frog_a_Cookie.mp4",
+            "seconds": 670,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 52
+          },
           "alternates": []
         },
         {
@@ -876,9 +927,35 @@
           "number": 31,
           "name": "The Hardest Thing",
           "airdate": "2022-05-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "title ~ \"The Hardest Thing\" (0.95)",
+            "item": "amphibia_20260605",
+            "itemTitle": "Amphibia The Complete Season 2-3 DVD",
+            "file": "Amphibia_Season_3_Episode_18_–_Hardest_Thing.mp4",
+            "name": "Amphibia_Season_3_Episode_18_–_Hardest_Thing",
+            "url": "https://archive.org/download/amphibia_20260605/Amphibia_Season_3_Episode_18_%E2%80%93_Hardest_Thing.mp4",
+            "seconds": 1763,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 218
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "title ~ \"The Hardest Thing\" (0.95)",
+              "item": "amphibia_20260604_2218",
+              "itemTitle": "Amphibia The Complete Season 2-3",
+              "file": "Amphibia_Season_3_Episode_18_–_Hardest_Thing.mp4",
+              "name": "Amphibia_Season_3_Episode_18_–_Hardest_Thing",
+              "url": "https://archive.org/download/amphibia_20260604_2218/Amphibia_Season_3_Episode_18_%E2%80%93_Hardest_Thing.mp4",
+              "seconds": 1763,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 218
+            }
+          ]
         }
       ]
     }

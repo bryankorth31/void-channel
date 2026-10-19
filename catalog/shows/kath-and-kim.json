@@ -3,7 +3,7 @@
   "slug": "kath-and-kim",
   "type": "British and Beyond",
   "network": "ABC Australia",
-  "matchedAt": "2026-10-16T07:57:09.512Z",
+  "matchedAt": "2026-10-19T04:11:16.666Z",
   "addedAt": "2026-10-16T01:13:56.548Z",
   "tvmaze": {
     "id": 9206,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 17,
     "live": 7,
-    "review": 0,
-    "missing": 10,
-    "pct": 41
+    "review": 5,
+    "missing": 5,
+    "pct": 71
   },
   "seasons": [
     {
@@ -41,7 +41,47 @@
             "playable": true,
             "sizeMB": 125
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2007] Season 4/Kath & Kim Series 4 Episode 1 - Holiday [720p].mp4",
+              "name": "[2007] Season 4/Kath & Kim Series 4 Episode 1 - Holiday [720p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2007%5D%20Season%204%2FKath%20%26%20Kim%20Series%204%20Episode%201%20-%20Holiday%20%5B720p%5D.mp4",
+              "seconds": 1443,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 205
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2004] Season 3/Kath & Kim Series 3 Episode 1 - Cactus Hour [720p].mp4",
+              "name": "[2004] Season 3/Kath & Kim Series 3 Episode 1 - Cactus Hour [720p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2004%5D%20Season%203%2FKath%20%26%20Kim%20Series%203%20Episode%201%20-%20Cactus%20Hour%20%5B720p%5D.mp4",
+              "seconds": 1494,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 188
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2003] Season 2/Kath & Kim Series 2 Episode 1 - The Announcement [480p].mp4",
+              "name": "[2003] Season 2/Kath & Kim Series 2 Episode 1 - The Announcement [480p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2003%5D%20Season%202%2FKath%20%26%20Kim%20Series%202%20Episode%201%20-%20The%20Announcement%20%5B480p%5D.mp4",
+              "seconds": 1588,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 176
+            }
+          ]
         },
         {
           "number": 2,
@@ -61,15 +101,107 @@
             "playable": true,
             "sizeMB": 126
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2004] Season 3/Kath & Kim Series 3 Episode 2 - The Mango Espadrille [720p].mp4",
+              "name": "[2004] Season 3/Kath & Kim Series 3 Episode 2 - The Mango Espadrille [720p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2004%5D%20Season%203%2FKath%20%26%20Kim%20Series%203%20Episode%202%20-%20The%20Mango%20Espadrille%20%5B720p%5D.mp4",
+              "seconds": 1569,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 239
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2007] Season 4/Kath & Kim Series 4 Episode 2 - Fame [720p].mp4",
+              "name": "[2007] Season 4/Kath & Kim Series 4 Episode 2 - Fame [720p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2007%5D%20Season%204%2FKath%20%26%20Kim%20Series%204%20Episode%202%20-%20Fame%20%5B720p%5D.mp4",
+              "seconds": 1412,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 191
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2003] Season 2/Kath & Kim Series 2 Episode 2 - Inside Out [480p].mp4",
+              "name": "[2003] Season 2/Kath & Kim Series 2 Episode 2 - Inside Out [480p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2003%5D%20Season%202%2FKath%20%26%20Kim%20Series%202%20Episode%202%20-%20Inside%20Out%20%5B480p%5D.mp4",
+              "seconds": 1517,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 167
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Old",
           "airdate": "2008-10-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Old\" (0.95)",
+            "item": "da-kath-kim-code",
+            "itemTitle": "Kath & Kim Complete Collection",
+            "file": "[2002] Season 1/Kath & Kim Series 1 Episode 5 - Old [480p].mp4",
+            "name": "[2002] Season 1/Kath & Kim Series 1 Episode 5 - Old [480p]",
+            "url": "https://archive.org/download/da-kath-kim-code/%5B2002%5D%20Season%201%2FKath%20%26%20Kim%20Series%201%20Episode%205%20-%20Old%20%5B480p%5D.mp4",
+            "seconds": 1549,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 166
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2004] Season 3/Kath & Kim Series 3 Episode 3 - Sitting on a Pile [720p].mp4",
+              "name": "[2004] Season 3/Kath & Kim Series 3 Episode 3 - Sitting on a Pile [720p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2004%5D%20Season%203%2FKath%20%26%20Kim%20Series%203%20Episode%203%20-%20Sitting%20on%20a%20Pile%20%5B720p%5D.mp4",
+              "seconds": 1471,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 207
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2002] Season 1/Kath & Kim Series 1 Episode 3 - Sport [480p].mp4",
+              "name": "[2002] Season 1/Kath & Kim Series 1 Episode 3 - Sport [480p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2002%5D%20Season%201%2FKath%20%26%20Kim%20Series%201%20Episode%203%20-%20Sport%20%5B480p%5D.mp4",
+              "seconds": 1484,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 176
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2007] Season 4/Kath & Kim Series 4 Episode 3 - Work [720p].mp4",
+              "name": "[2007] Season 4/Kath & Kim Series 4 Episode 3 - Work [720p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2007%5D%20Season%204%2FKath%20%26%20Kim%20Series%204%20Episode%203%20-%20Work%20%5B720p%5D.mp4",
+              "seconds": 1394,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 164
+            }
+          ]
         },
         {
           "number": 4,
@@ -89,39 +221,274 @@
             "playable": true,
             "sizeMB": 123
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Money\" (0.95)",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2002] Season 1/Kath & Kim Series 1 Episode 6 - Money [480p].mp4",
+              "name": "[2002] Season 1/Kath & Kim Series 1 Episode 6 - Money [480p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2002%5D%20Season%201%2FKath%20%26%20Kim%20Series%201%20Episode%206%20-%20Money%20%5B480p%5D.mp4",
+              "seconds": 1596,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 170
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2004] Season 3/Kath & Kim Series 3 Episode 4 - Kicking up a Stink [720p].mp4",
+              "name": "[2004] Season 3/Kath & Kim Series 3 Episode 4 - Kicking up a Stink [720p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2004%5D%20Season%203%2FKath%20%26%20Kim%20Series%203%20Episode%204%20-%20Kicking%20up%20a%20Stink%20%5B720p%5D.mp4",
+              "seconds": 1501,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 190
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2002] Season 1/Kath & Kim Series 1 Episode 4 - Fat [480p].mp4",
+              "name": "[2002] Season 1/Kath & Kim Series 1 Episode 4 - Fat [480p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2002%5D%20Season%201%2FKath%20%26%20Kim%20Series%201%20Episode%204%20-%20Fat%20%5B480p%5D.mp4",
+              "seconds": 1542,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 172
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Dating",
           "airdate": "2008-11-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "da-kath-kim-code",
+            "itemTitle": "Kath & Kim Complete Collection",
+            "file": "[2004] Season 3/Kath & Kim Series 3 Episode 5 - Hello Nails! [720p].mp4",
+            "name": "[2004] Season 3/Kath & Kim Series 3 Episode 5 - Hello Nails! [720p]",
+            "url": "https://archive.org/download/da-kath-kim-code/%5B2004%5D%20Season%203%2FKath%20%26%20Kim%20Series%203%20Episode%205%20-%20Hello%20Nails!%20%5B720p%5D.mp4",
+            "seconds": 1486,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 194
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2007] Season 4/Kath & Kim Series 4 Episode 5 - House [720p].mp4",
+              "name": "[2007] Season 4/Kath & Kim Series 4 Episode 5 - House [720p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2007%5D%20Season%204%2FKath%20%26%20Kim%20Series%204%20Episode%205%20-%20House%20%5B720p%5D.mp4",
+              "seconds": 1446,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 184
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2003] Season 2/Kath & Kim Series 2 Episode 5 - My Boyfriend [480p].mp4",
+              "name": "[2003] Season 2/Kath & Kim Series 2 Episode 5 - My Boyfriend [480p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2003%5D%20Season%202%2FKath%20%26%20Kim%20Series%202%20Episode%205%20-%20My%20Boyfriend%20%5B480p%5D.mp4",
+              "seconds": 1524,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 178
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2002] Season 1/Kath & Kim Series 1 Episode 5 - Old [480p].mp4",
+              "name": "[2002] Season 1/Kath & Kim Series 1 Episode 5 - Old [480p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2002%5D%20Season%201%2FKath%20%26%20Kim%20Series%201%20Episode%205%20-%20Old%20%5B480p%5D.mp4",
+              "seconds": 1549,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 166
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Jealousy",
           "airdate": "2008-11-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "da-kath-kim-code",
+            "itemTitle": "Kath & Kim Complete Collection",
+            "file": "[2002] Season 1/Kath & Kim Series 1 Episode 6 - Money [480p].mp4",
+            "name": "[2002] Season 1/Kath & Kim Series 1 Episode 6 - Money [480p]",
+            "url": "https://archive.org/download/da-kath-kim-code/%5B2002%5D%20Season%201%2FKath%20%26%20Kim%20Series%201%20Episode%206%20-%20Money%20%5B480p%5D.mp4",
+            "seconds": 1596,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 170
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2007] Season 4/Kath & Kim Series 4 Episode 6 - Roots [720p].mp4",
+              "name": "[2007] Season 4/Kath & Kim Series 4 Episode 6 - Roots [720p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2007%5D%20Season%204%2FKath%20%26%20Kim%20Series%204%20Episode%206%20-%20Roots%20%5B720p%5D.mp4",
+              "seconds": 1387,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 169
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2003] Season 2/Kath & Kim Series 2 Episode 6 - Another Announcement [480p].mp4",
+              "name": "[2003] Season 2/Kath & Kim Series 2 Episode 6 - Another Announcement [480p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2003%5D%20Season%202%2FKath%20%26%20Kim%20Series%202%20Episode%206%20-%20Another%20Announcement%20%5B480p%5D.mp4",
+              "seconds": 1354,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 137
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Gay",
           "airdate": "2008-11-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Gay\" (0.95)",
+            "item": "da-kath-kim-code",
+            "itemTitle": "Kath & Kim Complete Collection",
+            "file": "[2002] Season 1/Kath & Kim Series 1 Episode 2 - Gay [480p].mp4",
+            "name": "[2002] Season 1/Kath & Kim Series 1 Episode 2 - Gay [480p]",
+            "url": "https://archive.org/download/da-kath-kim-code/%5B2002%5D%20Season%201%2FKath%20%26%20Kim%20Series%201%20Episode%202%20-%20Gay%20%5B480p%5D.mp4",
+            "seconds": 1544,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 164
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2003] Season 2/Kath & Kim Series 2 Episode 7 - The Shower [480p].mp4",
+              "name": "[2003] Season 2/Kath & Kim Series 2 Episode 7 - The Shower [480p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2003%5D%20Season%202%2FKath%20%26%20Kim%20Series%202%20Episode%207%20-%20The%20Shower%20%5B480p%5D.mp4",
+              "seconds": 1512,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 179
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2007] Season 4/Kath & Kim Series 4 Episode 7 - Lust [720p].mp4",
+              "name": "[2007] Season 4/Kath & Kim Series 4 Episode 7 - Lust [720p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2007%5D%20Season%204%2FKath%20%26%20Kim%20Series%204%20Episode%207%20-%20Lust%20%5B720p%5D.mp4",
+              "seconds": 1348,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 176
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2002] Season 1/Kath & Kim Series 1 Episode 7 - Party [480p].mp4",
+              "name": "[2002] Season 1/Kath & Kim Series 1 Episode 7 - Party [480p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2002%5D%20Season%201%2FKath%20%26%20Kim%20Series%201%20Episode%207%20-%20Party%20%5B480p%5D.mp4",
+              "seconds": 1484,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 171
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Sacrifice",
           "airdate": "2008-12-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "da-kath-kim-code",
+            "itemTitle": "Kath & Kim Complete Collection",
+            "file": "[2004] Season 3/Kath & Kim Series 3 Episode 8 - 99% Fat Free [720p].mp4",
+            "name": "[2004] Season 3/Kath & Kim Series 3 Episode 8 - 99% Fat Free [720p]",
+            "url": "https://archive.org/download/da-kath-kim-code/%5B2004%5D%20Season%203%2FKath%20%26%20Kim%20Series%203%20Episode%208%20-%2099%25%20Fat%20Free%20%5B720p%5D.mp4",
+            "seconds": 1457,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 218
+          },
+          "alternates": [
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2007] Season 4/Kath & Kim Series 4 Episode 8 - Wedding of the Century [720p].mp4",
+              "name": "[2007] Season 4/Kath & Kim Series 4 Episode 8 - Wedding of the Century [720p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2007%5D%20Season%204%2FKath%20%26%20Kim%20Series%204%20Episode%208%20-%20Wedding%20of%20the%20Century%20%5B720p%5D.mp4",
+              "seconds": 1565,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 213
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2002] Season 1/Kath & Kim Series 1 Episode 8 - The Wedding [480p].mp4",
+              "name": "[2002] Season 1/Kath & Kim Series 1 Episode 8 - The Wedding [480p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2002%5D%20Season%201%2FKath%20%26%20Kim%20Series%201%20Episode%208%20-%20The%20Wedding%20%5B480p%5D.mp4",
+              "seconds": 1463,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 179
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "da-kath-kim-code",
+              "itemTitle": "Kath & Kim Complete Collection",
+              "file": "[2003] Season 2/Kath & Kim Series 2 Episode 8 - The Hideous Truth [480p].mp4",
+              "name": "[2003] Season 2/Kath & Kim Series 2 Episode 8 - The Hideous Truth [480p]",
+              "url": "https://archive.org/download/da-kath-kim-code/%5B2003%5D%20Season%202%2FKath%20%26%20Kim%20Series%202%20Episode%208%20-%20The%20Hideous%20Truth%20%5B480p%5D.mp4",
+              "seconds": 1460,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 158
+            }
+          ]
         },
         {
           "number": 9,

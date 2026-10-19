@@ -3,21 +3,21 @@
   "slug": "wings",
   "type": "Drama",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:47.761Z",
-  "selfListed": true,
+  "matchedAt": "2026-10-19T04:10:53.460Z",
+  "addedAt": "2026-10-16T07:56:47.761Z",
   "tvmaze": {
-    "id": null,
+    "id": 1510,
     "name": "Wings",
-    "runtime": null,
-    "premiered": null,
-    "network": "US"
+    "runtime": 30,
+    "premiered": "1990-04-19",
+    "network": "NBC"
   },
   "coverage": {
-    "total": 31,
+    "total": 172,
     "live": 0,
-    "review": 31,
-    "missing": 0,
-    "pct": 100
+    "review": 26,
+    "missing": 146,
+    "pct": 15
   },
   "seasons": [
     {
@@ -25,89 +25,20 @@
       "episodes": [
         {
           "number": 1,
-          "name": "1 puppetmaster",
-          "state": "REVIEW",
-          "file": {
-            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
-            "itemTitle": "Wings Season 2",
-            "file": "1 puppetmaster.mp4",
-            "name": "1 puppetmaster",
-            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/1%20puppetmaster.mp4",
-            "seconds": 1379,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 220,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "name": "Legacy",
+          "airdate": "1990-04-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
-          "name": "1legacy 20260729202421460",
+          "name": "Around the World in Eighty Years",
+          "airdate": "1990-04-26",
           "state": "REVIEW",
           "file": {
-            "item": "legacy-20260729201647172",
-            "itemTitle": "wings season 1",
-            "file": "1Legacy_20260729202421460.mp4",
-            "name": "1Legacy_20260729202421460",
-            "url": "https://archive.org/download/legacy-20260729201647172/1Legacy_20260729202421460.mp4",
-            "seconds": 1380,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 217,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "1puppetmaster",
-          "state": "REVIEW",
-          "file": {
-            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
-            "itemTitle": "Wings Season 2",
-            "file": "1puppetmaster.ia.mp4",
-            "name": "1puppetmaster",
-            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/1puppetmaster.ia.mp4",
-            "seconds": 1379,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 220,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "2 story of joe 20260729203653429",
-          "state": "REVIEW",
-          "file": {
-            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
-            "itemTitle": "Wings Season 2",
-            "file": "2 story of joe_20260729203653429.mp4",
-            "name": "2 story of joe_20260729203653429",
-            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/2%20story%20of%20joe_20260729203653429.mp4",
-            "seconds": 1380,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 209,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 5,
-          "name": "2around the world in eighty years 20260729205452392",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Around the World in Eighty Years\" (0.76)",
             "item": "legacy-20260729201647172",
             "itemTitle": "wings season 1",
             "file": "2around the world in eighty years_20260729205452392.mp4",
@@ -116,78 +47,18 @@
             "seconds": 1379,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 264,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 264
           },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "2story of joe 20260729203653429",
+          "number": 3,
+          "name": "Return to Nantucket (1)",
+          "airdate": "1990-05-03",
           "state": "REVIEW",
           "file": {
-            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
-            "itemTitle": "Wings Season 2",
-            "file": "2story of joe_20260729203653429.ia.mp4",
-            "name": "2story of joe_20260729203653429",
-            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/2story%20of%20joe_20260729203653429.ia.mp4",
-            "seconds": 1380,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 209,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 7,
-          "name": "3 a little nightmare music 20260729204440357",
-          "state": "REVIEW",
-          "file": {
-            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
-            "itemTitle": "Wings Season 2",
-            "file": "3 a little nightmare music_20260729204440357.mp4",
-            "name": "3 a little nightmare music_20260729204440357",
-            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/3%20a%20little%20nightmare%20music_20260729204440357.mp4",
-            "seconds": 1380,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 199,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 8,
-          "name": "3a little nightmare music 20260729204440357",
-          "state": "REVIEW",
-          "file": {
-            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
-            "itemTitle": "Wings Season 2",
-            "file": "3a little nightmare music_20260729204440357.ia.mp4",
-            "name": "3a little nightmare music_20260729204440357",
-            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/3a%20little%20nightmare%20music_20260729204440357.ia.mp4",
-            "seconds": 1380,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 199,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "3return to nantucket part 1",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Return to Nantucket (1)\" (0.85)",
             "item": "legacy-20260729201647172",
             "itemTitle": "wings season 1",
             "file": "3return to Nantucket Part 1.mp4",
@@ -196,38 +67,18 @@
             "seconds": 1381,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 249,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 249
           },
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "4 sports and leisure 20260729233443302",
+          "number": 4,
+          "name": "Return to Nantucket (2)",
+          "airdate": "1990-05-10",
           "state": "REVIEW",
           "file": {
-            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
-            "itemTitle": "Wings Season 2",
-            "file": "4 sports and leisure_20260729233443302.mp4",
-            "name": "4 sports and leisure_20260729233443302",
-            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/4%20sports%20and%20leisure_20260729233443302.mp4",
-            "seconds": 1379,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 261,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 11,
-          "name": "4return to nantucket part 2 20260729203205152",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Return to Nantucket (2)\" (0.63)",
             "item": "legacy-20260729201647172",
             "itemTitle": "wings season 1",
             "file": "4return to Nantucket part 2_20260729203205152.mp4",
@@ -236,38 +87,18 @@
             "seconds": 1380,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 236,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 236
           },
           "alternates": []
         },
         {
-          "number": 12,
-          "name": "5 a stand up kind of guy 20260729230737868",
+          "number": 5,
+          "name": "There Once Was a Girl from Nantucket",
+          "airdate": "1990-05-17",
           "state": "REVIEW",
           "file": {
-            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
-            "itemTitle": "Wings Season 2",
-            "file": "5 A stand up kind of guy_20260729230737868.mp4",
-            "name": "5 A stand up kind of guy_20260729230737868",
-            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/5%20A%20stand%20up%20kind%20of%20guy_20260729230737868.mp4",
-            "seconds": 1383,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 253,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 13,
-          "name": "5there once was a girl from nantucket 20260729210038540",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"There Once Was a Girl from Nantucket\" (0.79)",
             "item": "legacy-20260729201647172",
             "itemTitle": "wings season 1",
             "file": "5there once was a girl from Nantucket_20260729210038540.mp4",
@@ -276,38 +107,18 @@
             "seconds": 1379,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 247,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 247
           },
           "alternates": []
         },
         {
-          "number": 14,
-          "name": "6 its not the thought its the gift 20260729231929700",
+          "number": 6,
+          "name": "All for One and Two for Helen",
+          "airdate": "1990-05-24",
           "state": "REVIEW",
           "file": {
-            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
-            "itemTitle": "Wings Season 2",
-            "file": "6 its not the thought, its the gift_20260729231929700.mp4",
-            "name": "6 its not the thought, its the gift_20260729231929700",
-            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/6%20its%20not%20the%20thought%2C%20its%20the%20gift_20260729231929700.mp4",
-            "seconds": 1381,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 253,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
-          "alternates": []
-        },
-        {
-          "number": 15,
-          "name": "6all for one and two for helen 20260729204848320",
-          "state": "REVIEW",
-          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"All for One and Two for Helen\" (0.73)",
             "item": "legacy-20260729201647172",
             "itemTitle": "wings season 1",
             "file": "6all for one and two for Helen_20260729204848320.mp4",
@@ -316,18 +127,171 @@
             "seconds": 1380,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 214
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Puppetmaster",
+          "airdate": "1990-09-28",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Puppetmaster\" (0.95)",
+            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
+            "itemTitle": "Wings Season 2",
+            "file": "1 puppetmaster.mp4",
+            "name": "1 puppetmaster",
+            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/1%20puppetmaster.mp4",
+            "seconds": 1379,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 220
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Puppetmaster\" (0.85)",
+              "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
+              "itemTitle": "Wings Season 2",
+              "file": "1puppetmaster.ia.mp4",
+              "name": "1puppetmaster",
+              "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/1puppetmaster.ia.mp4",
+              "seconds": 1379,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 220
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "The Story of Joe",
+          "airdate": "1990-10-05",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Story of Joe\" (0.95)",
+            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
+            "itemTitle": "Wings Season 2",
+            "file": "2 story of joe_20260729203653429.mp4",
+            "name": "2 story of joe_20260729203653429",
+            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/2%20story%20of%20joe_20260729203653429.mp4",
+            "seconds": 1380,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 209
           },
           "alternates": []
         },
         {
-          "number": 16,
-          "name": "7 hell hath no fury like a policewoman scorned 20260729232320946",
+          "number": 3,
+          "name": "A Little Nightmare Music",
+          "airdate": "1990-10-12",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"A Little Nightmare Music\" (0.95)",
+            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
+            "itemTitle": "Wings Season 2",
+            "file": "3 a little nightmare music_20260729204440357.mp4",
+            "name": "3 a little nightmare music_20260729204440357",
+            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/3%20a%20little%20nightmare%20music_20260729204440357.mp4",
+            "seconds": 1380,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 199
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"A Little Nightmare Music\" (0.95)",
+              "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
+              "itemTitle": "Wings Season 2",
+              "file": "3a little nightmare music_20260729204440357.ia.mp4",
+              "name": "3a little nightmare music_20260729204440357",
+              "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/3a%20little%20nightmare%20music_20260729204440357.ia.mp4",
+              "seconds": 1380,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 199
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "name": "Sports & Leisure",
+          "airdate": "1990-10-19",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Sports & Leisure\" (0.95)",
+            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
+            "itemTitle": "Wings Season 2",
+            "file": "4 sports and leisure_20260729233443302.mp4",
+            "name": "4 sports and leisure_20260729233443302",
+            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/4%20sports%20and%20leisure_20260729233443302.mp4",
+            "seconds": 1379,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 261
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "A Stand-up Kind of Guy",
+          "airdate": "1990-10-26",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"A Stand-up Kind of Guy\" (0.95)",
+            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
+            "itemTitle": "Wings Season 2",
+            "file": "5 A stand up kind of guy_20260729230737868.mp4",
+            "name": "5 A stand up kind of guy_20260729230737868",
+            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/5%20A%20stand%20up%20kind%20of%20guy_20260729230737868.mp4",
+            "seconds": 1383,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 253
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "It's Not the Thought, It's the Gift",
+          "airdate": "1990-11-09",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"It's Not the Thought, It's the Gift\" (0.95)",
+            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
+            "itemTitle": "Wings Season 2",
+            "file": "6 its not the thought, its the gift_20260729231929700.mp4",
+            "name": "6 its not the thought, its the gift_20260729231929700",
+            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/6%20its%20not%20the%20thought%2C%20its%20the%20gift_20260729231929700.mp4",
+            "seconds": 1381,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 253
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Hell Hath No Fury Like a Policewoman Scorned",
+          "airdate": "1990-11-16",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Hell Hath No Fury Like a Policewoman Scorned\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "7 Hell Hath No fury like a policewoman scorned_20260729232320946.mp4",
@@ -336,18 +300,18 @@
             "seconds": 1381,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 242,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 242
           },
           "alternates": []
         },
         {
-          "number": 17,
-          "name": "8 high anxiety 20260729233046129",
+          "number": 8,
+          "name": "High Anxiety",
+          "airdate": "1990-11-23",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"High Anxiety\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "8 high anxiety_20260729233046129.mp4",
@@ -356,18 +320,18 @@
             "seconds": 1379,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 232,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 232
           },
           "alternates": []
         },
         {
-          "number": 18,
-          "name": "9 friends or lovers 20260729232710740",
+          "number": 9,
+          "name": "Friends or Lovers?",
+          "airdate": "1990-12-07",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Friends or Lovers?\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "9 Friends or Lovers_20260729232710740.mp4",
@@ -376,18 +340,18 @@
             "seconds": 1381,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 203,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 203
           },
           "alternates": []
         },
         {
-          "number": 19,
-          "name": "10 there always room for cello 20260729233942638",
+          "number": 10,
+          "name": "There's Always Room for Cello",
+          "airdate": "1990-12-14",
           "state": "REVIEW",
           "file": {
+            "conf": 0.55,
+            "why": "title ~ \"There's Always Room for Cello\" (0.71)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "10 there always room for cello_20260729233942638.mp4",
@@ -396,18 +360,18 @@
             "seconds": 1377,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 239,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 239
           },
           "alternates": []
         },
         {
-          "number": 20,
-          "name": "11 a terminal christmas 20260729231610002",
+          "number": 11,
+          "name": "A Terminal Christmas",
+          "airdate": "1990-12-21",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"A Terminal Christmas\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "11 a terminal christmas _20260729231610002.mp4",
@@ -416,18 +380,18 @@
             "seconds": 1381,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 207,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 207
           },
           "alternates": []
         },
         {
-          "number": 21,
-          "name": "12 airport 90 20260729231133961",
+          "number": 12,
+          "name": "Airport '90",
+          "airdate": "1991-01-03",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Airport '90\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "12 Airport 90_20260729231133961.mp4",
@@ -436,18 +400,18 @@
             "seconds": 1381,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 219,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 219
           },
           "alternates": []
         },
         {
-          "number": 22,
-          "name": "13 love is like pulling teeth 20260730001609777",
+          "number": 13,
+          "name": "Love Is Like Pulling Teeth",
+          "airdate": "1991-01-10",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Love Is Like Pulling Teeth\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "13 love is like pulling teeth_20260730001609777.mp4",
@@ -456,18 +420,18 @@
             "seconds": 1379,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 213,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 213
           },
           "alternates": []
         },
         {
-          "number": 23,
-          "name": "14 tennis bum 20260730003802839",
+          "number": 14,
+          "name": "The Tennis Bum",
+          "airdate": "1991-01-24",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Tennis Bum\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "14 Tennis Bum_20260730003802839.mp4",
@@ -476,18 +440,18 @@
             "seconds": 1374,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 265,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 265
           },
           "alternates": []
         },
         {
-          "number": 24,
-          "name": "15 my brothers back and theres going to be trouble 20260730003353397",
+          "number": 15,
+          "name": "My Brother's Back---And There's Gonna Be Trouble",
+          "airdate": "1991-01-31",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"My Brother's Back---And There's Gonna Be Trouble\" (0.81)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "15 my brothers back and there's going to be trouble _20260730003353397.mp4",
@@ -496,18 +460,18 @@
             "seconds": 1375,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 287,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 287
           },
           "alternates": []
         },
         {
-          "number": 25,
-          "name": "16 plane nine from nantucket 20260729235003386",
+          "number": 16,
+          "name": "Plane Nine From Nantucket",
+          "airdate": "1991-02-07",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Plane Nine From Nantucket\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "16 plane nine from Nantucket_20260729235003386.mp4",
@@ -516,18 +480,18 @@
             "seconds": 1381,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 200,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 200
           },
           "alternates": []
         },
         {
-          "number": 26,
-          "name": "17 looking for love in all the wrong places 20260730002109096",
+          "number": 17,
+          "name": "Looking for Love in All the Wrong Places",
+          "airdate": "1991-02-14",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Looking for Love in All the Wrong Places\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "17 looking for love in all the wrong places _20260730002109096.mp4",
@@ -536,18 +500,18 @@
             "seconds": 1379,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 225,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 225
           },
           "alternates": []
         },
         {
-          "number": 27,
-          "name": "18 love means never having to say geronimo 20260730001223673",
+          "number": 18,
+          "name": "Love Means Never Having to Say Geronimo",
+          "airdate": "1991-02-21",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Love Means Never Having to Say Geronimo\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "18 love means never having to say geronimo_20260730001223673.mp4",
@@ -556,38 +520,26 @@
             "seconds": 1380,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 228,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 228
           },
           "alternates": []
         },
         {
-          "number": 28,
-          "name": "19 all in the family 20260730000852044",
-          "state": "REVIEW",
-          "file": {
-            "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
-            "itemTitle": "Wings Season 2",
-            "file": "19 all in the family_20260730000852044.mp4",
-            "name": "19 all in the family_20260730000852044",
-            "url": "https://archive.org/download/15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397/19%20all%20in%20the%20family_20260730000852044.mp4",
-            "seconds": 1380,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 231,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
-          },
+          "number": 19,
+          "name": "All in the Family",
+          "airdate": "1991-03-07",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
-          "number": 29,
-          "name": "20 mother wore stripes 20260730000530049",
+          "number": 20,
+          "name": "Mother Wore Stripes",
+          "airdate": "1991-03-14",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Mother Wore Stripes\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "20 mother wore stripes_20260730000530049.mp4",
@@ -596,18 +548,18 @@
             "seconds": 1380,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 208,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 208
           },
           "alternates": []
         },
         {
-          "number": 30,
-          "name": "21 murder she roast 20260730002448221",
+          "number": 21,
+          "name": "Murder She Roast",
+          "airdate": "1991-03-21",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Murder She Roast\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "21 murder she Roast_20260730002448221.mp4",
@@ -616,18 +568,18 @@
             "seconds": 1379,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 212,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 212
           },
           "alternates": []
         },
         {
-          "number": 31,
-          "name": "22 duet for cello and plane 20260730002849127",
+          "number": 22,
+          "name": "Duet for Plane and Cello",
+          "airdate": "1991-03-28",
           "state": "REVIEW",
           "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Duet for Plane and Cello\" (0.95)",
             "item": "15-my-brothers-back-and-theres-going-to-be-trouble-20260730003353397",
             "itemTitle": "Wings Season 2",
             "file": "22 duet for cello and plane 20260730002849127.mp4",
@@ -636,19 +588,1193 @@
             "seconds": 1379,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 285,
-            "ep": null,
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "sizeMB": 285
           },
           "alternates": []
         }
       ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Naked Truth",
+          "airdate": "1991-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Is That a Subpoena in Your Pocket...?",
+          "airdate": "1991-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Taming of the Shrew",
+          "airdate": "1991-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "I Ain't Got No Bunny",
+          "airdate": "1991-10-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "If Elected, I Will Not Live",
+          "airdate": "1991-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "My Brother's Keeper",
+          "airdate": "1991-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Grate Expectations",
+          "airdate": "1991-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Ladies Who Lunch",
+          "airdate": "1991-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Try to Remember the Night He Dismembered",
+          "airdate": "1991-12-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Late Mrs. Biggins",
+          "airdate": "1991-12-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "The Bogey Men",
+          "airdate": "1991-12-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Marriage, Italian Style (1)",
+          "airdate": "1992-01-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Divorce, American Style (2)",
+          "airdate": "1992-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Stew in a Stew",
+          "airdate": "1992-01-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "This Old House",
+          "airdate": "1992-01-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Planes, Trains and Visiting Cranes",
+          "airdate": "1992-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Das Plane",
+          "airdate": "1992-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Take My Life, Please",
+          "airdate": "1992-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Four Dates That Will Live in Infamy",
+          "airdate": "1992-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "The Bank Dick",
+          "airdate": "1992-04-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Say It Ain't So, Joe",
+          "airdate": "1992-04-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "As Fate Would Have It",
+          "airdate": "1992-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 4,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Lifeboat",
+          "airdate": "1992-09-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Fortune Cookie",
+          "airdate": "1992-10-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Noses Off",
+          "airdate": "1992-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Blackout Biggins",
+          "airdate": "1992-10-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Mathers of the Heart",
+          "airdate": "1992-10-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Two Jerks and a Jill",
+          "airdate": "1992-11-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "It's So Nice to Have a Mather Around the House",
+          "airdate": "1992-11-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Just Say No",
+          "airdate": "1992-11-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "It May Have Happened One Night",
+          "airdate": "1992-12-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Customer's Usually Right",
+          "airdate": "1992-12-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Exit Laughing",
+          "airdate": "1993-01-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "What the Cabbie Saw",
+          "airdate": "1993-01-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Labor Pains",
+          "airdate": "1993-01-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "I've Got a Secret",
+          "airdate": "1993-02-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Gift (1)",
+          "airdate": "1993-02-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "The Gift (2)",
+          "airdate": "1993-02-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "I Love Brian",
+          "airdate": "1993-02-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "The Key to Alex",
+          "airdate": "1993-04-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "The Houseguest",
+          "airdate": "1993-04-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Goodbye, Old Friend",
+          "airdate": "1993-04-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Another Wedding",
+          "airdate": "1993-05-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Date Package Number Seven",
+          "airdate": "1993-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 5,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Stop in the Name of Love",
+          "airdate": "1993-09-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Terminal Jealousy",
+          "airdate": "1993-09-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Bye-Bye, Bunny",
+          "airdate": "1993-09-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Business or Pleasure",
+          "airdate": "1993-10-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "An Affair to Forget",
+          "airdate": "1993-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Black Eye Affair",
+          "airdate": "1993-10-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Joe Blows (1)",
+          "airdate": "1993-11-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Joe Blows (2)",
+          "airdate": "1993-11-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "2 Good 2 B 4 Gotten",
+          "airdate": "1993-11-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Come Fly with Me",
+          "airdate": "1993-12-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Happy Holidays",
+          "airdate": "1993-12-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Ready, Teddy, Go",
+          "airdate": "1994-01-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Oh, Give Me a Home Where the Mathers Don't Roam",
+          "airdate": "1994-01-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "The Faygitive",
+          "airdate": "1994-01-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Say Uncle, Carlton",
+          "airdate": "1994-02-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Hey, Nineteen",
+          "airdate": "1994-02-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Exclusively Yours",
+          "airdate": "1994-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Moonlighting",
+          "airdate": "1994-02-17",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Sleepless in Nantucket",
+          "airdate": "1994-03-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Boys Will Be Girls",
+          "airdate": "1994-04-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Roy Crazy",
+          "airdate": "1994-04-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Long Distance Lament",
+          "airdate": "1994-04-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Call of the Wild",
+          "airdate": "1994-05-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "A Decent Proposal",
+          "airdate": "1994-05-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 6,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Whose Wife Is It Anyway?",
+          "airdate": "1994-09-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Twisted Sister",
+          "airdate": "1994-09-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Shrink",
+          "airdate": "1994-10-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Spark and How to Get It",
+          "airdate": "1994-10-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Waxman Cometh",
+          "airdate": "1994-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Is That a Ten-Foot Sandwich or Are You Just Glad to See Me?",
+          "airdate": "1994-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "All's Fare",
+          "airdate": "1994-11-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Miss Jenkins",
+          "airdate": "1994-11-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "If It's Not One Thing, It's Your Mother",
+          "airdate": "1994-11-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Wrong Stuff",
+          "airdate": "1994-11-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Insanity Claus",
+          "airdate": "1994-12-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "She's Baaack",
+          "airdate": "1995-01-03",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Have I Got a Couple for You",
+          "airdate": "1995-01-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Fools Russian",
+          "airdate": "1995-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Let's Call the Whole Thing Off",
+          "airdate": "1995-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Remembrance of Flings Past (1)",
+          "airdate": "1995-02-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Remembrance of Flings Past (2)",
+          "airdate": "1995-02-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Gone But Not Faygotten",
+          "airdate": "1995-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Ex, Lies and Videotape",
+          "airdate": "1995-02-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Portrait of the Con Artist as a Young Man",
+          "airdate": "1995-03-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "The Love Life and Times of Joe and Helen",
+          "airdate": "1995-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "A House to Die For",
+          "airdate": "1995-05-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Nuptials Off",
+          "airdate": "1995-05-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Et Tu, Antonio?",
+          "airdate": "1995-05-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Boys Just Wanna Have Fun (1)",
+          "airdate": "1995-05-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Here It Is: The Big Wedding (2)",
+          "airdate": "1995-05-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 7,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Burnin' Down the House (1)",
+          "airdate": "1995-09-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Burnin' Down the House (2)",
+          "airdate": "1995-09-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Death Becomes Him",
+          "airdate": "1995-10-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Person Formerly Known as Lowell",
+          "airdate": "1995-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Hooker, Line and Sinker",
+          "airdate": "1995-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "She's Gotta Have It",
+          "airdate": "1995-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "So Long, Frank Lloyd Wrong",
+          "airdate": "1995-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "When a Man Loves a Donut",
+          "airdate": "1995-11-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "The Big Sleep",
+          "airdate": "1995-12-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "'Twas the Heist Before Christmas",
+          "airdate": "1995-12-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "Honey, We Broke the Kid",
+          "airdate": "1996-01-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "B.S., I Love You",
+          "airdate": "1996-01-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Sons and Lovers",
+          "airdate": "1996-01-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Bye, George",
+          "airdate": "1996-01-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "The Team Player",
+          "airdate": "1996-02-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Love at First Flight",
+          "airdate": "1996-02-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "Lynch Party",
+          "airdate": "1996-02-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "One Flew Over the Cooper's Nest",
+          "airdate": "1996-02-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Driving Mr. DeCarlo",
+          "airdate": "1996-03-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "A Tale of Two Sister Cities",
+          "airdate": "1996-03-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "What About Larry?",
+          "airdate": "1996-04-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "The Lady Vanishes",
+          "airdate": "1996-04-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Life Could Be a Dream",
+          "airdate": "1996-04-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "The Lyin' King",
+          "airdate": "1996-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "Love Overboard",
+          "airdate": "1996-05-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "Grouses, Houses and Bickering Spouses",
+          "airdate": "1996-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 8,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Porno for Pyros",
+          "airdate": "1996-09-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "... Like a Neighbor Scorned",
+          "airdate": "1996-09-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Maybe It's You",
+          "airdate": "1996-10-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Single and Hating It",
+          "airdate": "1996-10-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Too Beautiful for You",
+          "airdate": "1996-10-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Gift of Life",
+          "airdate": "1996-10-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Olive or Twist",
+          "airdate": "1996-11-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Wingless (1)",
+          "airdate": "1996-11-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "Wingless (2)",
+          "airdate": "1996-11-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "Wingless (3)",
+          "airdate": "1996-12-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "All About Christmas Eve",
+          "airdate": "1996-12-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Let's Talk About Sex",
+          "airdate": "1997-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Hosed",
+          "airdate": "1997-01-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "Just Call Me Angel",
+          "airdate": "1997-02-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "Fay There, Georgy Girl",
+          "airdate": "1997-02-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "Escape from New York",
+          "airdate": "1997-02-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "House of Blues",
+          "airdate": "1997-03-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "Ms. Write",
+          "airdate": "1997-03-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "Dreamgirl",
+          "airdate": "1997-04-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "Heartache Tonight",
+          "airdate": "1997-04-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "Oedipus Wrecks",
+          "airdate": "1997-05-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "Raging Bull*&@!",
+          "airdate": "1997-05-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "Final Approach (1)",
+          "airdate": "1997-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "Final Approach (2)",
+          "airdate": "1997-05-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
     }
-  ],
-  "tvmazeWeak": {
-    "id": 1510,
-    "name": "Wings",
-    "placed": 0
-  }
+  ]
 }

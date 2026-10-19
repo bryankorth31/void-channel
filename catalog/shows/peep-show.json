@@ -3,7 +3,7 @@
   "slug": "peep-show",
   "type": "British and Beyond",
   "network": "Channel 4",
-  "matchedAt": "2026-10-16T07:57:03.332Z",
+  "matchedAt": "2026-10-19T04:11:10.462Z",
   "addedAt": "2026-10-15T12:07:58.316Z",
   "tvmaze": {
     "id": 383,
@@ -44,19 +44,6 @@
           "alternates": [
             {
               "conf": 1,
-              "why": "absolute episode number + title match",
-              "item": "peep-show-warring-factions-full-episode-series-1-episode-1",
-              "itemTitle": "Peep Show Warring Factions FULL EPISODE Series 1, Episode 1",
-              "file": "Peep Show _   Warring Factions   _ FULL EPISODE _ Series 1, Episode 1.mp4",
-              "name": "Peep Show _   Warring Factions   _ FULL EPISODE _ Series 1, Episode 1",
-              "url": "https://archive.org/download/peep-show-warring-factions-full-episode-series-1-episode-1/Peep%20Show%20_%20%20%20Warring%20Factions%20%20%20_%20FULL%20EPISODE%20_%20Series%201%2C%20Episode%201.mp4",
-              "seconds": 1432,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 302
-            },
-            {
-              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "TerenceMcKenna2000",
               "itemTitle": "peep show",
@@ -80,6 +67,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 150
+            },
+            {
+              "conf": 0.7,
+              "why": "absolute episode number",
+              "item": "peep-show-warring-factions-full-episode-series-1-episode-1",
+              "itemTitle": "Peep Show Warring Factions FULL EPISODE Series 1, Episode 1",
+              "file": "Peep Show _   Warring Factions   _ FULL EPISODE _ Series 1, Episode 1.mp4",
+              "name": "Peep Show _   Warring Factions   _ FULL EPISODE _ Series 1, Episode 1",
+              "url": "https://archive.org/download/peep-show-warring-factions-full-episode-series-1-episode-1/Peep%20Show%20_%20%20%20Warring%20Factions%20%20%20_%20FULL%20EPISODE%20_%20Series%201%2C%20Episode%201.mp4",
+              "seconds": 1432,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 302
             }
           ]
         },

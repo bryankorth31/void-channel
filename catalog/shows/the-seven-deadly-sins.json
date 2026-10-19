@@ -3,7 +3,7 @@
   "slug": "the-seven-deadly-sins",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-16T07:57:33.870Z",
+  "matchedAt": "2026-10-19T04:11:36.144Z",
   "addedAt": "2026-10-15T12:08:14.885Z",
   "tvmaze": {
     "id": 8524,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 96,
-    "live": 1,
+    "live": 2,
     "review": 8,
-    "missing": 87,
-    "pct": 9
+    "missing": 86,
+    "pct": 10
   },
   "seasons": [
     {
@@ -378,8 +378,20 @@
           "number": 5,
           "name": "Overwhelming Violence",
           "airdate": "2018-02-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "the-seven-deadly-sins-revival-of-the-commandments-episode-05-s-2-e-05-english-sub",
+            "itemTitle": "The Seven Deadly Sins Revival Of The Commandments Episode 05 ( S 2 E 05) English Sub",
+            "file": "The Seven Deadly Sins Revival of the Commandments - Episode 05 (S2E05) English Sub.mp4",
+            "name": "The Seven Deadly Sins Revival of the Commandments - Episode 05 (S2E05) English Sub",
+            "url": "https://archive.org/download/the-seven-deadly-sins-revival-of-the-commandments-episode-05-s-2-e-05-english-sub/The%20Seven%20Deadly%20Sins%20Revival%20of%20the%20Commandments%20-%20Episode%2005%20(S2E05)%20English%20Sub.mp4",
+            "seconds": 1470,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 119
+          },
           "alternates": []
         },
         {

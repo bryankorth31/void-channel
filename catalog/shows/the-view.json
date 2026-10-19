@@ -3,7 +3,8 @@
   "slug": "the-view",
   "type": "Reality & Talk",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:54.405Z",
+  "matchedAt": "2026-10-19T04:11:59.570Z",
+  "addedAt": "2026-10-19T04:11:59.575Z",
   "tvmaze": {
     "id": 6048,
     "name": "The View",
@@ -13,9 +14,9 @@
   },
   "coverage": {
     "total": 2613,
-    "live": 0,
+    "live": 1,
     "review": 0,
-    "missing": 2613,
+    "missing": 2612,
     "pct": 0
   },
   "seasons": [
@@ -5704,8 +5705,20 @@
           "number": 8,
           "name": "Raven Symone, Toni Braxton, Ernie Hudson",
           "airdate": "2015-05-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "AnAstronautsViewofEarth",
+            "itemTitle": "An Astronaut's View of Earth",
+            "file": "NOVA.S19E08.An.Astronauts.View.of.Earth.1992.VHSRip.AAC2.0.x264-rattera.mp4",
+            "name": "NOVA.S19E08.An.Astronauts.View.of.Earth.1992.VHSRip.AAC2.0.x264-rattera",
+            "url": "https://archive.org/download/AnAstronautsViewofEarth/NOVA.S19E08.An.Astronauts.View.of.Earth.1992.VHSRip.AAC2.0.x264-rattera.mp4",
+            "seconds": 2957,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1426
+          },
           "alternates": []
         },
         {
