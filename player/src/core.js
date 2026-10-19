@@ -19,6 +19,18 @@
  *   silent      the copy plays but no sound is decoded (an audio codec this browser lacks)
  *   slow-start  nothing plays within START_MS of asking
  *
+ * Measured and reported only, never acted on (no seek, no speed change, no hop, no switch), and only while the
+ * picture plays steadily (not paused, seeking, waiting, hidden or settling, not in the first STEADY_MS, at speed 1):
+ *   hitch       a shown frame arrives HITCH_MS or more after the one before, while the sound ran (under FREEZE_MS)
+ *   avlag       picture and sound apart by more than AVLAG_S for AVLAG_HOLD_MS, allowing for the display delay
+ *   lowfps      the pictures a second the page shows stay under LOWFPS_RATIO of the file's own rate
+ *   lowsourcefps the file itself holds under LOWSRC_FPS frames a second (a file problem, not a player problem)
+ *   decodelag   the browser drops more than DECODELAG_SHARE of its frames: it is falling behind
+ * Beside them it logs the stretches when the browser stopped calling for frames while the sound ran and the page was
+ * on screen (throttled: Edge efficiency mode, power throttling), and whether the page's drawing stopped too. Time
+ * hidden or throttled is left out of all the measures above.
+ * What these cannot see, an offset built into the file, is in ../DESIGN.md ("Picture and sound out of step").
+ *
  * What it does, in escalating steps, per source:
  *   nudge     jump to the current time (flushes the browser's decoders; re-aligns picture and sound)
  *   reload    reload the same source at the current time
@@ -58,12 +70,42 @@
     BUFFER_LOW_S: 10,         // ...and less than this is buffered ahead = the download stalled: hop before the picture stops
     BUFFER_GROW_S: 0.05,      // the buffered end must advance by more than this to count as growing
     STARVE_RELOADS: 1,        // a lone last server (nothing to hop to) is reloaded this often before the copy is given up
+    // Measured and reported only (see the header): none of these makes the core do anything.
+    HITCH_MS: 250,            // a shown-frame interval over this (and under FREEZE_MS) while the sound ran = a hitch
+    HITCH_SRC_FRAMES: 3,      // ...and over this many frames of the file's own pace, so a slow file is not all hitches
+    HITCH_EMIT_MS: 1000,      // at most one hitch event per this long...
+    HITCH_EMIT_MAX: 20,       // ...and this many per episode (every hitch is still counted)
+    AVLAG_S: 0.25,            // picture and sound apart by more than this (allowing for the display delay)...
+    AVLAG_HOLD_MS: 1000,      // ...for this long without a break = A/V lag
+    AVLAG_EVERY_MS: 10000,    // a lag that lasts is counted again at most this often
+    GAP_SAMPLE_MS: 500,       // one gap reading kept per this long (the last 30 go with the viewer's Out of sync? stamp)
+    STEADY_MS: 2000,          // the sync, hitch and rate measures start this long after play, seek, hop or resume
+    RATE_WINDOW_MS: 10000,    // pictures-a-second figures are over this rolling window...
+    RATE_MIN_MS: 3000,        // ...and are shown once the window holds this much
+    RATE_MIN_FRAMES: 10,      // the dropped share needs at least this many frames in the window
+    SRC_MIN_STEPS: 24,        // steps between shown frames needed before the file's frame rate is reported
+    LOWFPS_RATIO: 0.6,        // shown frames a second under this share of the file's rate...
+    LOWFPS_MS: 10000,         // ...for this long of steady playing = lowfps
+    LOWSRC_FPS: 15,           // a file under this many frames a second is a file problem (lowsourcefps)
+    DECODELAG_SHARE: 0.1,     // dropped frames over this share of the window's frames...
+    DECODELAG_MS: 10000,      // ...for this long of steady playing = decodelag
+    THROTTLE_MS: 1000,        // no frame callback this long while the sound runs and the page is on screen = throttled
+    THROTTLE_EMIT_MAX: 50,    // throttle events per episode (every stretch is still counted)
+    BEHIND_RATIO: 0.9,        // a steady minute with decoded frames a second under this share of the file's rate = a minute behind
   };
+  const MINUTE_MS = 60000;
 
   function create(opts) {
     const C = Object.assign({}, DEFAULTS, (opts && opts.config) || {});
     const emit = (opts && opts.emit) || function () {};
-    const act = (opts && opts.act) || function () {};
+    const actOut = (opts && opts.act) || function () {};
+    // Every action (a new source, a seek, a reload, a card) breaks the run of shown frames the measures read; a new
+    // copy of the file also starts the file's frame rate afresh (another server of the same copy does not).
+    const act = (a) => {
+      chainOff(); unsteady();
+      if (a && a.type === 'set-source') { const k = a.source && a.source.fileKey; if (k == null || k !== rateFile) { resetRate(); rateFile = k; } }
+      actOut(a);
+    };
 
     let sources = [];         // [{url, label, file, server}], best first
     let si = -1;              // index of the source in use
@@ -79,7 +121,9 @@
     let history = [];         // trouble on the current source: [{kind, at}]
     let starveSwitches = 0;   // server switches for starvation on the current copy
     let lastQualityAt = 0;
-    const totals = { watchMs: 0, stallMs: 0, stalls: 0, freezes: 0, drifts: 0, errors: 0, actions: 0, recovered: 0, switches: 0, longestPauseMs: 0, startupMs: null };
+    const totals = { watchMs: 0, stallMs: 0, stalls: 0, freezes: 0, drifts: 0, errors: 0, actions: 0, recovered: 0, switches: 0, longestPauseMs: 0, startupMs: null,
+      hitches: 0, longestHitchMs: 0, avlags: 0, maxAvGapMs: 0, lowfps: 0, lowsourcefps: 0, decodelags: 0, outOfSyncPresses: 0, minutesBehind: 0, minutesMeasured: 0,
+      throttles: 0, throttledMs: 0, throttlesPageWide: 0 };
     let lastSampleAt = 0;
     let lastErrCode = null;   // code of the last media error (1 aborted, 2 network, 3 decode, 4 not supported)
     const reloaded = new Map(); // source index -> reloads spent on a lone server that went quiet
@@ -91,6 +135,140 @@
     const log = [];           // recent decisions, for diagnostics
     let t0 = 0;               // when the current episode was loaded; decisions are logged in seconds from here
     const note = (o) => { o.sec = Math.round((o.at - t0) / 100) / 10; log.push(o); if (log.length > 80) log.shift(); };
+
+    // ---- Picture rate and sync: measured and reported only. Nothing here seeks, changes the speed, hops or
+    // switches. It uses counters and fixed rings made once, so the per-frame path allocates nothing. ----
+    const RING = 64, STEP_RING = 240, GAPS = 30, HITS = 8, NEVER = -1e12; // NEVER: the time of something that has not happened yet
+    const wT = new Float64Array(RING), wP = new Float64Array(RING), wD = new Float64Array(RING), wX = new Float64Array(RING); // the rolling window: time, frames shown, frames made, frames dropped
+    let wHead = 0, wN = 0;
+    const stepR = new Float32Array(STEP_RING), stepS = new Float32Array(STEP_RING); // media-time steps between shown frames, and a sorted copy
+    let stepW = 0, stepN = 0, prevMt = -1, lastEstAt = NEVER;
+    const gapR = new Float32Array(GAPS); let gapW = 0, gapN = 0, lastGapAt = NEVER;      // sound minus picture (s), one reading per GAP_SAMPLE_MS
+    const hitR = new Float64Array(HITS * 3); let hitW = 0, hitN = 0;                 // the last hitches: media time, ms, when
+    let rvfcSeen = false, rvfcKnown = false;  // does this browser give per-frame timing at all (requestVideoFrameCallback)
+    let presented = 0, avFrames = 0;          // frames shown since load, and how many of them were measured
+    let steadySince = 0, steadyUntil = 0;     // playing steadily since / the frame feed may measure until
+    let avRun = 0, lastAvlagAt = NEVER, prevFrameAt = 0, prevT = 0, lastHitchEmitAt = NEVER, hitchEmitted = 0;
+    let srcFps = null, rateFile;              // the file's own frame rate, and the copy it was measured on
+    let clockNow = 0, lastCbAt = 0, lastCbT = -1, lastAwayAt = 0, lastRafOffAt = 0, thrNow = false; // frame callbacks: when the last came, where the playhead was, when the page was last off screen / not drawing, throttled right now
+    const THR = 10, thrR = new Float64Array(THR * 3); let thrW = 0, thrN = 0, thrEmitted = 0;         // the last throttled stretches: ended at, ms, drawing stopped too
+    let curPres = null, curDec = null, curDrop = null;     // the rolling window now (null: cannot be measured now)
+    let heldPres = null, heldDec = null, heldDrop = null;  // the last window that could be measured
+    let lowSince = 0, decSince = 0, lowfpsFired = false, decodeFired = false, lowSrcFired = false;
+    let qHave = false, qNow = 0, qP = 0, qT = -1, qX = 0;  // the previous steady sample, for differences
+    let mMs = 0, mPres = 0, mDecMs = 0, mDec = 0, mDrop = 0; // sums over the steady playing of the episode
+    let minMs = 0, minFramesMs = 0, minFrames = 0;           // the steady minute being counted
+    const r1 = (v) => (v == null ? null : Math.round(v * 10) / 10), r3 = (v) => (v == null ? null : Math.round(v * 1000) / 1000);
+    // The picture stopped being steady (paused, seeking, waiting, hidden, settling, another speed...): start the windows again.
+    // A break in the run of shown frames (a seek, a pause, a new source...): the next frame is not compared with the last.
+    // A stretch of throttling that is still going on when the run breaks (the freeze check nudged, the viewer paused or
+    // sought, a new source) is logged as it stands.
+    function chainOff() {
+      if (thrNow && lastCbT >= 0 && lastCbAt > 0 && clockNow - lastCbAt > C.THROTTLE_MS) logThrottle(clockNow - lastCbAt, clockNow, lastT, undefined);
+      prevMt = -1; lastCbAt = clockNow; lastCbT = -1;
+    }
+    function unsteady() { thrNow = false; steadySince = 0; steadyUntil = 0; wHead = 0; wN = 0; curPres = curDec = curDrop = null; lowSince = 0; decSince = 0; qHave = false; avRun = 0; prevFrameAt = 0; }
+    function resetRate() { stepW = 0; stepN = 0; srcFps = null; lowSrcFired = false; lastEstAt = NEVER; }
+    function resetQuality() {
+      unsteady(); resetRate(); chainOff(); rateFile = undefined; thrW = 0; thrN = 0; thrEmitted = 0; lastAwayAt = 0; lastRafOffAt = 0;
+      presented = 0; avFrames = 0; gapW = 0; gapN = 0; lastGapAt = NEVER; hitW = 0; hitN = 0; lastAvlagAt = NEVER; lastHitchEmitAt = NEVER; hitchEmitted = 0;
+      heldPres = heldDec = heldDrop = null; lowfpsFired = false; decodeFired = false;
+      mMs = 0; mPres = 0; mDecMs = 0; mDec = 0; mDrop = 0; minMs = 0; minFramesMs = 0; minFrames = 0;
+    }
+    function noteStep(m) {
+      if (prevMt >= 0) { const d = m - prevMt; if (d > 0.002 && d < 1) { stepR[stepW] = d; stepW = (stepW + 1) % STEP_RING; if (stepN < STEP_RING) stepN += 1; } }
+      prevMt = m;
+    }
+    // The file's frame rate, from the media-time step between shown frames. A browser that falls behind shows only
+    // some of the frames, so many steps are 2, 3, 4 frames long; the file's own step is the smallest one that keeps
+    // turning up (at least 3 steps, and 2 percent of them, within 12 percent of each other), and its median gives the rate.
+    function estimateSource() {
+      const n = stepN;
+      if (n < C.SRC_MIN_STEPS) return;
+      for (let i = 0; i < STEP_RING; i++) stepS[i] = i < n ? stepR[i] : Infinity;
+      stepS.sort();
+      const need = Math.max(3, Math.ceil(n * 0.02));
+      let hi = 0;
+      for (let i = 0; i + need <= n; i++) {
+        if (hi < i) hi = i;
+        const lim = stepS[i] * 1.12;
+        while (hi < n && stepS[hi] <= lim) hi += 1;
+        if (hi - i >= need) { srcFps = Math.round(100 / stepS[i + ((hi - i) >> 1)]) / 100; return; }
+      }
+    }
+    // Called from sample() once per sample while playing. Decides whether the picture plays steadily; if so it feeds the
+    // rolling window, the sums and the three rate events.
+    function trackQuality(s, now, moved) {
+      if (typeof s.rvfc === 'boolean') rvfcKnown = s.rvfc;
+      if (now - lastEstAt >= 1000) { lastEstAt = now; estimateSource(); }
+      thrNow = (rvfcSeen || rvfcKnown) && lastCbAt > 0 && lastCbT >= 0 && now - lastCbAt > C.THROTTLE_MS && (moved || now - lastProgressAt <= 600) && lastAwayAt < lastCbAt;
+      const ok = state === 'playing' && now >= settleUntil && !thrNow && !s.hidden && s.hasVideo !== false
+        && (s.ready === undefined || s.ready >= 3) && (s.rate === undefined || s.rate === 1) && (moved || now - lastProgressAt <= 600);
+      if (!ok) { const thr = thrNow; unsteady(); thrNow = thr; return; } // (still throttled right now, if it is)
+      if (!steadySince) steadySince = now;
+      if (now - steadySince < C.STEADY_MS) { steadyUntil = 0; return; }
+      steadyUntil = now + C.FREEZE_MS + 500; // longer than the longest hitch, so a busy page that delays this sample does not hide one
+      const perFrame = rvfcSeen || rvfcKnown;
+      const tot = typeof s.totalFrames === 'number' ? s.totalFrames : -1, drp = typeof s.dropped === 'number' ? s.dropped : 0;
+      if (wN && tot >= 0 && tot < wD[(wHead + wN - 1) % RING]) { wHead = 0; wN = 0; qHave = false; } // the element started its counts again (a new source)
+      while (wN > 2 && wT[wHead] < now - C.RATE_WINDOW_MS) { wHead = (wHead + 1) % RING; wN -= 1; }
+      if (wN === RING) { wHead = (wHead + 1) % RING; wN -= 1; }
+      const wi = (wHead + wN) % RING;
+      wT[wi] = now; wP[wi] = presented; wD[wi] = tot; wX[wi] = drp; wN += 1;
+      const a = wHead, z = (wHead + wN - 1) % RING, span = wT[z] - wT[a];
+      curPres = curDec = curDrop = null;
+      if (span >= C.RATE_MIN_MS) {
+        if (perFrame) curPres = (wP[z] - wP[a]) * 1000 / span;
+        if (wD[a] >= 0 && wD[z] >= wD[a]) {
+          const dT = wD[z] - wD[a];
+          curDec = dT * 1000 / span;
+          if (dT >= C.RATE_MIN_FRAMES) curDrop = (wX[z] - wX[a]) / dT;
+        }
+        if (curPres !== null) heldPres = curPres;
+        if (curDec !== null) heldDec = curDec;
+        if (curDrop !== null) heldDrop = curDrop;
+      }
+      // sums for the episode, and the steady minute being counted
+      if (qHave) {
+        const dms = Math.min(1000, now - qNow);
+        mMs += dms; minMs += dms;
+        if (perFrame) mPres += presented - qP;
+        if (tot >= 0 && qT >= 0) { mDecMs += dms; mDec += tot - qT; mDrop += drp - qX; minFramesMs += dms; minFrames += tot - qT; }
+        if (minMs >= MINUTE_MS) {
+          if (srcFps && minFramesMs >= minMs * 0.8) { totals.minutesMeasured += 1; if (minFrames * 1000 / minFramesMs < C.BEHIND_RATIO * srcFps) totals.minutesBehind += 1; }
+          minMs = 0; minFramesMs = 0; minFrames = 0;
+        }
+      }
+      qHave = true; qNow = now; qP = presented; qT = tot; qX = drp;
+
+      // The file itself holds too few pictures a second. Only said when the browser is keeping up: it makes about as
+      // many frames as the file claims and drops few of them. A browser that falls behind shows steps that are too
+      // long and makes any file look slow, and that is the player's side, not the file's.
+      if (srcFps && srcFps < C.LOWSRC_FPS && !lowSrcFired
+          && (tot >= 0 ? curDrop !== null && curDrop < C.DECODELAG_SHARE && curDec >= C.BEHIND_RATIO * srcFps * 0.9 : curPres !== null)) {
+        lowSrcFired = true; totals.lowsourcefps += 1;
+        emit({ type: 'lowsourcefps', sourceFps: srcFps, at: now });
+        note({ at: now, did: 'lowsourcefps', fps: srcFps });
+      }
+      // The page shows far fewer pictures a second than the file holds, for a while.
+      if (curPres !== null && srcFps && curPres < C.LOWFPS_RATIO * srcFps) {
+        if (!lowSince) lowSince = now;
+        if (!lowfpsFired && now - lowSince >= C.LOWFPS_MS) {
+          lowfpsFired = true; totals.lowfps += 1;
+          emit({ type: 'lowfps', presentedFps: r1(curPres), sourceFps: srcFps, at: now });
+          note({ at: now, did: 'lowfps', fps: r1(curPres), src: srcFps });
+        }
+      } else lowSince = 0;
+      // The browser drops a large share of its frames, for a while: it is falling behind.
+      if (curDrop !== null && curDrop > C.DECODELAG_SHARE) {
+        if (!decSince) decSince = now;
+        if (!decodeFired && now - decSince >= C.DECODELAG_MS) {
+          decodeFired = true; totals.decodelags += 1;
+          emit({ type: 'decodelag', decodedFps: r1(curDec), droppedShare: r3(curDrop), presentedFps: r1(curPres), sourceFps: srcFps, at: now });
+          note({ at: now, did: 'decodelag', dropped: r3(curDrop), fps: r1(curDec) });
+        }
+      } else decSince = 0;
+    }
 
     function src() { return sources[si] || null; }
     function setState(s, now) { if (state !== s) { const from = state; state = s; emit({ type: 'state', from, to: s, at: now }); } }
@@ -127,9 +305,10 @@
 
     function load(list, startAt, now, autoplay) {
       sources = (list || []).filter((s) => s && s.url);
-      log.length = 0; t0 = now; // diagnostics describe the current episode only
+      clockNow = now; log.length = 0; t0 = now; // diagnostics describe the current episode only
       for (const k of Object.keys(totals)) totals[k] = k === 'startupMs' ? null : 0;
       totals.startupMs = null;
+      resetQuality();
       history = []; pending = null; driftRun = 0; bufferingSince = 0; stallStep = 0; starveSwitches = 0;
       reloaded.clear(); lastErrCode = null; pauseSince = 0; lastHopAt = 0; resetBuf(now);
       goodT = Math.max(0, +startAt || 0);
@@ -267,19 +446,22 @@
     //      at the end of the file is never read as a hang) and the media element's networkState (1 = the browser
     //      itself stopped fetching, which is not a hang).
     function sample(s) {
-      const now = s.now;
+      const now = s.now; clockNow = now;
       const dt = lastSampleAt ? Math.min(1000, now - lastSampleAt) : 0;
       lastSampleAt = now;
-      if (state === 'failed' || state === 'idle') return;
-      if (s.ended) { if (state !== 'ended') { setState('ended', now); emit({ type: 'ended', at: now }); } return; }
+      if (state === 'failed' || state === 'idle') { unsteady(); return; }
+      if (s.ended) { chainOff(); unsteady(); if (state !== 'ended') { setState('ended', now); emit({ type: 'ended', at: now }); } return; }
       if (s.paused) {
+        chainOff(); unsteady();
         // Waiting for an autoplay to start is "loading"; an episode nobody asked to play yet is simply paused
         // (so the page shows a play button, not an endless spinner).
         if (state !== 'recovering' && !(state === 'loading' && want)) setState('paused', now);
         lastProgressAt = now; lastFrameAt = now; bufferingSince = 0; pauseSince = 0; driftRun = 0; resetBuf(now);
         return;
       }
-      if (s.seeking) { lastProgressAt = now; lastFrameAt = now; resetBuf(now); return; }
+      if (s.seeking) { chainOff(); unsteady(); lastProgressAt = now; lastFrameAt = now; resetBuf(now); return; }
+      if (s.docHidden === true || s.offscreen === true || s.pip === true) lastAwayAt = now; // the page is off screen: no frames is not throttling
+      if (s.raf === false) lastRafOffAt = now;                                              // the page's own drawing (requestAnimationFrame) is stopped
       if (s.hidden) lastFrameAt = now; // hidden tabs and off-screen video get no frame callbacks: never read that as a freeze
 
       const moved = s.t > lastT + 0.02;
@@ -334,6 +516,7 @@
         }
       }
       trackBuffer(s, now);
+      trackQuality(s, now, moved);
       if (settling) return;
       if (!startedAt) return; // before the first frame, only slow-start applies
 
@@ -386,11 +569,33 @@
       }
     }
 
-    // Called for each presented video frame (requestVideoFrameCallback) with the frame's media time
-    // and the playhead time read at that moment.
-    function frame(mediaTime, t, now) {
-      lastFrameAt = now; framesKnown = true;
-      if (state === 'failed' || state === 'ended' || now < settleUntil) { driftRun = 0; return; }
+    // A frame arrives after the browser stopped calling for frames for over THROTTLE_MS. If the sound ran meanwhile and
+    // the page stayed on screen, that was throttling: logged, with whether the page's own drawing stopped too (a
+    // page-wide throttle: efficiency mode, power throttling) or only the video's frames did. The windows start again, so
+    // none of it reaches the hitch, lag or dropped-frame figures.
+    function noteThrottle(t, now, rafAt) {
+      const gap = now - lastCbAt;
+      if (!(t - lastCbT > gap / 2000) || lastAwayAt >= lastCbAt) return;
+      logThrottle(gap, now, t, rafAt);
+    }
+    function logThrottle(gap, now, t, rafAt) {
+      if (lastAwayAt >= lastCbAt) return;
+      const wide = lastRafOffAt >= lastCbAt || (typeof rafAt === 'number' && rafAt > 0 && now - rafAt > C.THROTTLE_MS / 2);
+      totals.throttles += 1; totals.throttledMs += Math.round(gap); if (wide) totals.throttlesPageWide += 1;
+      const k = thrW * 3; thrR[k] = now; thrR[k + 1] = gap; thrR[k + 2] = wide ? 1 : 0; thrW = (thrW + 1) % THR; if (thrN < THR) thrN += 1;
+      unsteady();
+      if (thrEmitted < C.THROTTLE_EMIT_MAX) { thrEmitted += 1; emit({ type: 'throttle', ms: Math.round(gap), raf: wide ? 'paused' : 'alive', t, at: now }); }
+    }
+
+    // Called for each presented video frame (requestVideoFrameCallback) with the frame's media time, the playhead
+    // time read at that moment, the clock (performance.now), when the browser gives it the frame's
+    // expectedDisplayTime, and the time of the page's last requestAnimationFrame beat. It allocates nothing: it moves counters and writes into the rings made in create().
+    function frame(mediaTime, t, now, expected, rafAt) {
+      lastFrameAt = now; framesKnown = true; rvfcSeen = true; presented += 1;
+      if (lastCbT >= 0 && now - lastCbAt > C.THROTTLE_MS) noteThrottle(t, now, rafAt);
+      lastCbAt = now; lastCbT = t;
+      noteStep(mediaTime);
+      if (state === 'failed' || state === 'ended' || now < settleUntil) { driftRun = 0; avRun = 0; prevFrameAt = 0; return; }
       const lag = t - mediaTime;
       driftRun = Math.abs(lag) > C.DRIFT_S ? driftRun + 1 : 0;
       if (driftRun >= C.DRIFT_FRAMES) {
@@ -399,12 +604,44 @@
         note({ at: now, did: 'drift', t: Math.round(t), lag: Math.round(lag * 1000) / 1000 });
         driftRun = 0;
         escalate('drift', now);
+        return;
       }
+      // From here on: report only, and only while the picture plays steadily.
+      if (state !== 'playing' || now >= steadyUntil) { avRun = 0; prevFrameAt = 0; return; }
+      avFrames += 1;
+      // Sound minus picture, as it will be when this frame is on the screen: the playhead is read now, the frame is
+      // shown at expectedDisplayTime, so the normal one-frame offset (more on a slow machine) is not lag.
+      let g = lag;
+      if (typeof expected === 'number') { const ahead = expected - now; if (ahead >= -100 && ahead <= 500) g += ahead / 1000; }
+      const ag = g < 0 ? -g : g;
+      if (ag * 1000 > totals.maxAvGapMs) totals.maxAvGapMs = Math.round(ag * 1000);
+      if (now - lastGapAt >= C.GAP_SAMPLE_MS) { lastGapAt = now; gapR[gapW] = g; gapW = (gapW + 1) % GAPS; if (gapN < GAPS) gapN += 1; }
+      if (ag > C.AVLAG_S) {
+        if (!avRun) avRun = now;
+        else if (now - avRun >= C.AVLAG_HOLD_MS && now - lastAvlagAt >= C.AVLAG_EVERY_MS) {
+          lastAvlagAt = now; totals.avlags += 1;
+          emit({ type: 'avlag', gap: Math.round(g * 1000) / 1000, t, at: now });
+          note({ at: now, did: 'avlag', t: Math.round(t), lag: Math.round(g * 1000) / 1000 });
+        }
+      } else avRun = 0;
+      // A shown frame that came late while the sound ran on: the picture stood still for a moment and caught up.
+      if (prevFrameAt) {
+        const ms = now - prevFrameAt;
+        if (srcFps && ms > C.HITCH_MS && ms < C.FREEZE_MS && t - prevT > ms / 2000 && ms > C.HITCH_SRC_FRAMES * 1000 / srcFps) {
+          totals.hitches += 1;
+          if (ms > totals.longestHitchMs) totals.longestHitchMs = Math.round(ms);
+          const k = hitW * 3; hitR[k] = t; hitR[k + 1] = ms; hitR[k + 2] = now; hitW = (hitW + 1) % HITS; if (hitN < HITS) hitN += 1;
+          if (hitchEmitted < C.HITCH_EMIT_MAX && now - lastHitchEmitAt >= C.HITCH_EMIT_MS) { hitchEmitted += 1; lastHitchEmitAt = now; emit({ type: 'hitch', ms: Math.round(ms), t, at: now }); }
+        }
+      }
+      prevFrameAt = now; prevT = t;
     }
 
     // Media element events the DOM layer forwards: error (with code), playing, pause/play by the viewer,
     // seeked by the viewer.
     function event(name, now, info) {
+      clockNow = now;
+      if (name === 'away') { lastAwayAt = now; return; } // the page went off screen, hidden, into picture-in-picture or back
       if (name === 'error') {
         if (state === 'failed') return;
         totals.errors += 1;
@@ -418,7 +655,8 @@
       if (name === 'silent') { if (state === 'failed' || state === 'ended') return; emit({ type: 'silent', source: src() && src().label, at: now }); return escalate('silent', now); }
       if (name === 'user-play') { want = true; if (!startedAt) askedAt = now; return; }
       if (name === 'user-pause') { want = false; return; }
-      if (name === 'user-seek') { settleUntil = now + C.SETTLE_MS; driftRun = 0; bufferingSince = 0; pauseSince = 0; resetBuf(now); lastProgressAt = now; lastFrameAt = now; if (info && typeof info.t === 'number') goodT = info.t; return; }
+      if (name === 'user-avsync') { totals.outOfSyncPresses += 1; note({ at: now, did: 'user-avsync', t: Math.round(goodT) }); return; }
+      if (name === 'user-seek') { chainOff(); unsteady(); settleUntil = now + C.SETTLE_MS; driftRun = 0; bufferingSince = 0; pauseSince = 0; resetBuf(now); lastProgressAt = now; lastFrameAt = now; if (info && typeof info.t === 'number') goodT = info.t; return; }
       if (name === 'retry') { // the viewer pressed Retry on the failure card: start over from the best source
         history = []; pending = null; starveSwitches = 0; reloaded.clear(); lastErrCode = null; pauseSince = 0; lastHopAt = 0; resetBuf(now); // a fresh start gets the full allowance again
         si = -1; setState('recovering', now);
@@ -444,12 +682,37 @@
       return src();
     }
 
-    function summary() {
-      const watch = totals.watchMs || 0;
-      return Object.assign({}, totals, { rebufferRatio: watch ? Math.round(totals.stallMs * 1000 / (watch + totals.stallMs)) / 1000 : 0, source: src() && src().label, sourceIndex: si, sources: sources.length, state });
+    // The pictures-a-second figures and the sync readings, for diagnostics and the viewer's Out of sync? stamp.
+    // file = the file's own rate (from the media-time steps), decoded = frames the browser made per second, shown =
+    // frames the page presented per second, droppedShare = the share of the made frames the browser dropped. All but
+    // the file's rate are over the last 10 s of steady playing; a figure holds its last value when playing is not steady.
+    function timing() {
+      const pf = rvfcSeen || rvfcKnown, gaps = [], hits = [];
+      for (let i = 0; i < gapN; i++) gaps.push(r3(gapR[(gapW - gapN + i + GAPS * 2) % GAPS]));
+      const thr = [];
+      for (let i = 0; i < thrN; i++) { const k = ((thrW - thrN + i + THR * 2) % THR) * 3; thr.push({ ms: Math.round(thrR[k + 1]), raf: thrR[k + 2] ? 'paused' : 'alive', sec: Math.round((thrR[k] - t0) / 100) / 10 }); }
+      for (let i = 0; i < hitN; i++) { const k = ((hitW - hitN + i + HITS * 2) % HITS) * 3; hits.push({ t: r1(hitR[k]), ms: Math.round(hitR[k + 1]), sec: Math.round((hitR[k + 2] - t0) / 100) / 10 }); }
+      return {
+        measure: pf ? 'per-frame' : 'unavailable', steady: steadyUntil > 0, live: curPres !== null || curDec !== null, throttled: thrNow,
+        presentedFps: pf ? r1(heldPres) : null, sourceFps: srcFps, fpsRatio: pf && heldPres != null && srcFps ? Math.round(heldPres / srcFps * 100) / 100 : null,
+        decodedFps: r1(heldDec), droppedShare: r3(heldDrop), gaps, hitches: hits, throttles: thr,
+      };
     }
 
-    return { load, sample, frame, event, expand, summary, get state() { return state; }, get sourceIndex() { return si; }, get source() { return src(); }, get log() { return log.slice(); }, config: C };
+    function summary() {
+      const watch = totals.watchMs || 0, tm = timing(), pf = tm.measure === 'per-frame';
+      return Object.assign({}, totals, {
+        rebufferRatio: watch ? Math.round(totals.stallMs * 1000 / (watch + totals.stallMs)) / 1000 : 0, source: src() && src().label, sourceIndex: si, sources: sources.length, state,
+        // No per-frame timing in this browser: the sync and hitch figures are null ("no measure"), never a zero that reads as "no lag".
+        avMeasure: tm.measure, throttles: pf ? totals.throttles : null, throttledMs: pf ? totals.throttledMs : null, throttlesPageWide: pf ? totals.throttlesPageWide : null, avlags: pf ? totals.avlags : null, hitches: pf ? totals.hitches : null, longestHitchMs: pf ? totals.longestHitchMs : null,
+        maxAvGapMs: pf && avFrames ? totals.maxAvGapMs : null,
+        presentedFps: tm.presentedFps, sourceFps: tm.sourceFps, fpsRatio: tm.fpsRatio, decodedFps: tm.decodedFps, droppedShare: tm.droppedShare,
+        meanPresentedFps: pf && mMs ? r1(mPres * 1000 / mMs) : null, meanDecodedFps: mDecMs ? r1(mDec * 1000 / mDecMs) : null,
+        meanDroppedShare: mDec >= C.RATE_MIN_FRAMES ? r3(mDrop / mDec) : null, steadyMs: Math.round(mMs),
+      });
+    }
+
+    return { load, sample, frame, event, expand, summary, timing, get state() { return state; }, get sourceIndex() { return si; }, get source() { return src(); }, get log() { return log.slice(); }, config: C };
   }
 
   return { create, DEFAULTS };
