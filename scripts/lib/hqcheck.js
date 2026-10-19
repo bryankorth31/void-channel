@@ -1,5 +1,6 @@
-// HQ GUARD PROBE: asks a running HQ whether it still refuses what it must refuse (audit finding CF-004). The doctor's
-// "local servers" check calls it. Every probe goes to POST /api/ping, a route that does nothing, so a probe is harmless
+// HQ GUARD PROBE: asks a running HQ whether it still refuses what it must refuse (audit finding CF-004). It is meant to be
+// called by the doctor's "local-servers" check; until that hook is added to scripts/doctor.js only the tests call it. Every
+// probe goes to POST /api/ping, a route that does nothing, so a probe is harmless
 // even when the guard it tests is broken. None of the three carries HQ's token, and each should be turned away for its own reason:
 //   1. a page from another port (Origin http://127.0.0.1:1)               -> 403
 //   2. a text/plain body that only mentions application/json              -> 415

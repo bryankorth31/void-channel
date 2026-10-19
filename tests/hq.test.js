@@ -451,8 +451,7 @@ test('the HQ page has the two publish buttons, their confirm texts, and the new 
     'Other commits are waiting on this PC. Push them together with the catalog?',
   ]) assert.ok(page.includes(ask), ask);
   assert.ok(/async function publish\(flag\)\{[^]*?api\('\/api\/jobs',\{name:'publish',args:flag\?\[flag\]:\[\]\}\)/.test(page), 'publish() goes through api(), the helper that sends the token');
-  for (const word of ['<b>unpushed</b> yellow', '<b>unpushed</b> red', '<b>addresses</b> red', '<b>refused</b>', '<b>held</b>']) assert.ok(page.includes(word), word);
-});
+  for (const word of ['<b>unpushed</b> yellow', '<b>unpushed</b> red', '<b>addresses</b> red', '<b>local-servers</b> red', '<b>refused</b> (also red)', '<b>publish</b> yellow, log says <b>held</b>']) assert.ok(page.includes(word), word);});
 
 // ---- the stop logic itself, against sleepers this test starts and ends -----------------------------------------
 
