@@ -49,8 +49,10 @@ for (const m of ['http', 'https']) { const mod = require(m); mod.request = block
 // length) and say what the OLD pick was: wrong (another work), right, unclear (cannot be told from the names).
 const SAMPLE = { 228780: 'wrong', 626318: 'wrong', 645745: 'wrong', 931690: 'wrong', 435268: 'wrong', 345617: 'wrong', 1163: 'right', 31712: 'right', 45759: 'right', 62989: 'unclear', 83242: 'wrong', 113234: 'wrong', 145979: 'right', 201068: 'wrong', 239227: 'right', 276692: 'wrong',
   322835: 'wrong', 369657: 'wrong', 425767: 'unclear', 488023: 'wrong', 564637: 'wrong', 729269: 'wrong', 920081: 'unclear', 1120659: 'right' };
-// The most-voted 100 whose LIVE state changed, labelled the same way (filled in after reading them).
-const TOP_LABELS = {};
+// The most-voted 100 whose LIVE state changed on 19 Oct 2026, labelled the same way: A Christmas Prince (the file is "Christmas with a Prince: Becoming Royal"), Starstruck (a 1995 VHS rip),
+// Gia (a Vietnamese video), Z-O-M-B-I-E-S (the file is number 2), Conspiracy (a "9-11 Conspiracy Video"), Frenemies (a "Full Playlist" of a web series), 7 Days in Hell (a zombie game stream),
+// Flowers in the Attic (the 1987 film, not the 2014 one). A change that is not in this list prints "?" and has to be read by hand.
+const TOP_LABELS = { 483104: 'wrong', 35558: 'wrong', 14533: 'wrong', 483980: 'wrong', 12900: 'wrong', 84105: 'wrong', 287689: 'wrong', 236399: 'wrong' };
 
 // ---------------------------------------------------------------- run
 const t0 = Date.now();
