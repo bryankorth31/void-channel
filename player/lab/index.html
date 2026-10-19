@@ -35,7 +35,7 @@ label{color:var(--dim)}
 </style>
 </head>
 <body>
-<header><b>VOID Player Lab</b><span>the new player, apart from VOIDtv · real Archive episodes · live decisions</span></header>
+<header><b>VOID Player Lab</b><span>the new player, apart from VOIDtv · real Archive episodes · live decisions</span><a href="hop.html" style="color:var(--cyan);margin-left:auto">Hops and causes (no video)</a><a href="states.html" style="color:var(--cyan)">All card states</a></header>
 <div class="wrap">
   <section class="panel"><h3>Episodes</h3><div class="eps" id="eps">Loading…</div></section>
   <section>
@@ -53,7 +53,7 @@ label{color:var(--dim)}
       <p class="note">Network and decode errors are reported to the player's brain exactly as the browser would report them, so the real recovery steps run. The dead-copy tests use genuinely broken links. A real frozen picture can't be faked from a page; it is caught live while you watch, and logged below.</p>
       <p><label><input type="checkbox" id="soak"> Soak test: play the next episode in the list automatically</label></p>
     </div>
-    <div class="panel" style="margin-top:12px"><h3>Session results <button id="copyAll" style="float:right" class="btns">Copy all</button></h3><table><thead><tr><th>Episode</th><th>Start</th><th>Watched</th><th>Stalls</th><th>Freezes</th><th>Drifts</th><th>Fixed</th><th>Switches</th><th>End</th></tr></thead><tbody id="results"></tbody></table></div>
+    <div class="panel" style="margin-top:12px"><h3>Session results <button id="copyAll" style="float:right" class="btns">Copy all</button></h3><table><thead><tr><th>Episode</th><th>Start</th><th>Watched</th><th>Stalls</th><th>Longest pause</th><th>Freezes</th><th>Drifts</th><th>Fixed</th><th>Switches</th><th>End</th></tr></thead><tbody id="results"></tbody></table></div>
   </section>
   <section>
     <div class="panel"><h3>Live</h3><dl class="kv" id="live"></dl><div class="copies" id="copies"></div>
@@ -93,13 +93,13 @@ label{color:var(--dim)}
   function record(e) {
     if (cur < 0) return;
     const s = e.summary || player.core.summary(), ep = EPS[cur];
-    const row = { id: ep.id, show: ep.show, title: ep.title, startupMs: s.startupMs, watchMin: Math.round((s.watchMs || 0) / 6000) / 10, stalls: s.stalls, freezes: s.freezes, drifts: s.drifts, recovered: s.recovered, switches: s.switches, end: e.type === 'failed' ? 'failed' : s.state, source: s.source, at: new Date().toISOString(), ua: navigator.userAgent };
+    const row = { id: ep.id, show: ep.show, title: ep.title, startupMs: s.startupMs, watchMin: Math.round((s.watchMs || 0) / 6000) / 10, stalls: s.stalls, pauseS: Math.round((s.longestPauseMs || 0) / 100) / 10, freezes: s.freezes, drifts: s.drifts, recovered: s.recovered, switches: s.switches, end: e.type === 'failed' ? 'failed' : s.state, source: s.source, at: new Date().toISOString(), ua: navigator.userAgent };
     const i = results.findIndex((r) => r.id === row.id && r.at.slice(0, 13) === row.at.slice(0, 13));
     if (i >= 0) results[i] = row; else results.push(row);
     saveResults(); drawResults();
   }
   function drawResults() {
-    $('results').innerHTML = results.slice(-30).reverse().map((r) => '<tr><td>' + esc(r.show + ' · ' + r.title) + '</td><td>' + (r.startupMs == null ? '–' : (r.startupMs / 1000).toFixed(1) + 's') + '</td><td>' + r.watchMin + 'm</td><td>' + r.stalls + '</td><td>' + r.freezes + '</td><td>' + r.drifts + '</td><td>' + r.recovered + '</td><td>' + r.switches + '</td><td>' + esc(r.end) + '</td></tr>').join('');
+    $('results').innerHTML = results.slice(-30).reverse().map((r) => '<tr><td>' + esc(r.show + ' · ' + r.title) + '</td><td>' + (r.startupMs == null ? '–' : (r.startupMs / 1000).toFixed(1) + 's') + '</td><td>' + r.watchMin + 'm</td><td>' + r.stalls + '</td><td>' + (r.pauseS == null ? '-' : r.pauseS + 's') + '</td><td>' + r.freezes + '</td><td>' + r.drifts + '</td><td>' + r.recovered + '</td><td>' + r.switches + '</td><td>' + esc(r.end) + '</td></tr>').join('');
   }
 
   function playIndex(i) {
@@ -119,7 +119,7 @@ label{color:var(--dim)}
   setInterval(() => {
     if (cur < 0) return;
     const d = player.diagnostics(), s = d.summary;
-    const rows = [['State', '<span class="st ' + d.state + '">' + d.state + '</span>'], ['Source', esc(d.source ? d.source.label : '–')], ['Server', esc(d.source ? d.source.url.split('/')[2] : '–')], ['Time', d.time + ' / ' + d.duration + ' s'], ['Buffered ahead', d.ahead + ' s'], ['Picture', esc(d.size)], ['Dropped frames', d.frames ? d.frames.dropped + ' of ' + d.frames.total : 'n/a'], ['Startup', s.startupMs == null ? '–' : (s.startupMs / 1000).toFixed(2) + ' s'], ['Stalls / time', s.stalls + ' / ' + (s.stallMs / 1000).toFixed(1) + ' s'], ['Freezes · drifts', s.freezes + ' · ' + s.drifts], ['Fixes tried · worked', s.actions + ' · ' + s.recovered], ['Copy/server switches', s.switches + ' (on ' + (s.sourceIndex + 1) + ' of ' + s.sources + ')'], ['Rebuffer ratio', (s.rebufferRatio * 100).toFixed(1) + '%'], ['Frame timing', player._rvfc ? 'per frame (best)' : 'decoder count (fallback)'], ['Page being drawn', d.pageDrawing ? 'yes' : 'no (freeze checks paused)']];
+    const rows = [['State', '<span class="st ' + d.state + '">' + d.state + '</span>'], ['Source', esc(d.source ? d.source.label : '–')], ['Server', esc(d.source ? d.source.url.split('/')[2] : '–')], ['Time', d.time + ' / ' + d.duration + ' s'], ['Buffered ahead', d.ahead + ' s'], ['Picture', esc(d.size)], ['Dropped frames', d.frames ? d.frames.dropped + ' of ' + d.frames.total : 'n/a'], ['Startup', s.startupMs == null ? '–' : (s.startupMs / 1000).toFixed(2) + ' s'], ['Stalls / time', s.stalls + ' / ' + (s.stallMs / 1000).toFixed(1) + ' s'], ['Longest pause', ((s.longestPauseMs || 0) / 1000).toFixed(1) + ' s'],['Freezes · drifts', s.freezes + ' · ' + s.drifts], ['Fixes tried · worked', s.actions + ' · ' + s.recovered], ['Copy/server switches', s.switches + ' (on ' + (s.sourceIndex + 1) + ' of ' + s.sources + ')'], ['Rebuffer ratio', (s.rebufferRatio * 100).toFixed(1) + '%'], ['Frame timing', player._rvfc ? 'per frame (best)' : 'decoder count (fallback)'], ['Page being drawn', d.pageDrawing ? 'yes' : 'no (freeze checks paused)']];
     $('live').innerHTML = rows.map(([k, v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
     drawCopies();
   }, 500);
