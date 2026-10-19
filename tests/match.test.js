@@ -286,8 +286,14 @@ describe('Archive identifier rule (CP-003)', () => {
     assert.equal(noWrites(() => M.selfGrid(parkers, { items: [item('parkers-season-1', 'Season 1 DVD rips', names)] }, [])), null);
   });
   test('a title that starts with the show name still goes through the junk test', () => {
-    const it = item('whatever', 'The Parkers Walkthrough PS2', range(10).map((i) => 'The Parkers part ' + i + '.mp4'));
+    const it = item('whatever', 'The Parkers - Walkthrough PS2', range(10).map((i) => 'The Parkers part ' + i + '.mp4')); // a separator after the name: the title test passes, so the junk test is what refuses it
     assert.equal(noWrites(() => M.selfGrid(parkers, { items: [it] }, [])), null);
+  });
+  test('selfGrid masks addresses on its own, not only when it is reached through gridFor', () => {
+    const files = range(6).map((i) => mkFile(i === 2 ? 'Zork Show S01E02 bob@example.com.mp4' : 'Zork Show S01E0' + i + '.mp4', { ep: se(1, i) }));
+    const g = M.selfGrid(ENTRY, { items: [{ id: 'zork-show-s1', title: 'Zork Show Season 1', files }] }, []);
+    assert.ok(g && g.seasons[0].episodes.length === 6);
+    assert.ok(!JSON.stringify(g).includes('@'), 'no address-shaped text in the self-list');
   });
   test('a title that names the show is enough, whatever the identifier says', () => {
     const it = item('xyz123', 'The Parkers Complete Series', range(8).map((i) => 'The Parkers ' + pad2(i) + '.mp4'));
