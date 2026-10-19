@@ -277,10 +277,11 @@ function matchShow(entry, drops) {
   return r;
 }
 
-// The decision for one show, with no disk access of its own: its grid, or { noTvmaze: true } when there is nothing to list.
-// ctx: ov (this show's overrides), readDead, firstAdded, and tags (a Map the caller may pass in to see why each file was placed or turned away).
 // HQ and linkcheck key a file by the item and the name the grid shows, which is the masked one; the raw name is tried too.
 const fileKeys = (itemId, name) => [itemId + '|' + name, itemId + '|' + noEmail(name)];
+
+// The decision for one show, with no disk access of its own: its grid, or { noTvmaze: true } when there is nothing to list.
+// ctx: ov (this show's overrides), readDead, firstAdded, and tags (a Map the caller may pass in to see why each file was placed or turned away).
 // Every grid leaves through noEmail: the episode names, titles and file names it copies from TVmaze and from Archive items are masked.
 function gridFor(entry, cand, tv, ctx = {}) { return noEmail(decideGrid(entry, cand, tv, ctx)); }
 function decideGrid(entry, cand, tv, ctx) {
