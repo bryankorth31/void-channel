@@ -19,9 +19,9 @@ const read = (f) => fs.readFileSync(path.join(REPO, f), 'utf8').replace(/\r\n/g,
 const APP = require('../scripts/lib/app');
 const OLD = /VOIDtv|VoidTV|Void TV|Voidtv/;
 const CONTACT = 'preacherb@cashvalues.org';
-// Old spellings that stay on purpose because they are not visitor-facing and sit in files this change does not own: an Error message that the
-// import handler never shows (scripts/lib/app-me.js) and three comments in the player (player/src). Remove an entry when its owner changes the line.
-const KNOWN = [/throw new Error\('not a VOIDtv export'\)/g, /so it can drop into VOIDtv \(or any page\)/g, /\(VOIDtv has video\{max-height/g, /Nothing here knows about VOIDtv's pages/g];
+// Old spellings that stay on purpose because they are comments in files this change does not own (three comments in the player, player/src).
+// Remove an entry when its owner changes the line.
+const KNOWN = [/so it can drop into VOIDtv \(or any page\)/g, /\(VOIDtv has video\{max-height/g, /Nothing here knows about VOIDtv's pages/g];
 const strip = (s) => KNOWN.reduce((a, re) => a.replace(re, ''), s);
 const OPEN = ["[link to the Archive's rights and takedown page]"]; // the one placeholder still waiting for Bryan
 
@@ -85,7 +85,8 @@ test('header: pink "voidtv" and blue ".net" in the brand-kit colours, on one lin
   assert.match(phone, /header\{gap:10px;column-gap:6px;row-gap:8px;/);
   assert.match(phone, /header \.logo img\.mark\{width:24px;height:24px;margin-right:6px\}/);
   assert.match(phone, /header \.logo \.name\{font-size:14px\}/);
-  assert.match(css, /@media\(max-width:760px\)\{header \.logo \.name\{font-size:15px\}\}/);
+  // up to 760 px: the name 15 px and the TV and Mine text labels hidden (icons stay), so the search box keeps about 94 px at 601 px
+  assert.match(css, /@media\(max-width:760px\)\{header \.logo \.name\{font-size:15px\}header \.mine-link \.long\{display:none\}\}/);
   assert.doesNotMatch(phone, /header \.logo \.name\{[^}]*display:none/);
 });
 
@@ -128,13 +129,21 @@ test('/privacy: the approved text, the address, and no placeholder left', () => 
     'Very little, and nothing that names you.',
     'No account, no sign-up, no email.',
     'One cookie, only while the site is in testing',
+    'It is no longer set when the site opens to the public, and copies already in browsers expire within 30 days.',
+    'when a search is made (with the search words, up to 80 characters)',
+    'plus your country, region, city, time zone and the data center that answered you, as reported by our hosting provider.',
+    'It also carries your browser, operating system and device type, and the name of the site you came from, if any.',
     'No IP address is stored. Nothing is sold or shared.',
-    'reported to an error service (Sentry)',
+    'Your Mine page (list, likes, watch history) stays in your own browser. We never see it. A file you report with "Wrong file?" is sent to us, with the show and episode.',
+    'Errors and playback trouble are reported to an error service (Sentry) with the show, the episode and what the player measured',
+    'Those reports carry no name and no account.',
+    'The Sentry script (js.sentry-cdn.com) loads on every page view, so your browser contacts Sentry whenever you open the site.',
     'load from The Movie Database (TMDB)',
     'No advertising, no tracking across sites, no selling of data, no profiles.',
     'A separate site for children, voidtv.net kids, is being built with its own rules and no identifiers at all.',
   ]) assert.ok(t.includes(s), 'privacy text has: ' + s);
   assert.match(html, new RegExp('<a href="mailto:' + CONTACT + '">' + CONTACT + '</a>'));
+  assert.ok(!/My Void|favourites|is removed when|hidden for you/.test(t), 'the sentences the review found untrue are gone');
   assert.equal(html.match(/\[[^\]]*\]/), null, 'no square-bracket placeholder is left on /privacy');
   assert.equal(html.match(OLD), null);
   assert.equal(title, 'Privacy · voidtv.net');
@@ -152,14 +161,31 @@ test('/takedown: the approved text, the address, two business days, and only the
     'it stops playing on voidtv.net; our nightly check retires the listing.',
     'We remove the listing from voidtv.net within two business days whether or not the Archive has acted, and we tell you when it is done.',
     'Every episode page has a "Wrong file?" button.',
+    'Press it and the file is flagged and queued for a person to look at, and the report shows on your Mine page.',
     'voidtv.net is a project of CASH, a 501(c)(3) nonprofit.',
   ]) assert.ok(t.includes(s), 'takedown text has: ' + s);
+  assert.ok(!/hidden/.test(t), 'nothing promises that a reported file is hidden: no code in the page hides it');
   assert.equal((html.match(new RegExp('mailto:' + CONTACT, 'g')) || []).length, 2, 'the address is a link in the takedown route and in the wrong-file line');
   assert.ok(!/\[(two business days|takedown@|the same address|city, state|Postal)/i.test(html), 'Bryan\'s values replaced the other placeholders');
   assert.ok(!/Postal address|city, state/.test(html), 'the postal and city lines are gone');
   assert.deepEqual(html.match(/\[[^\]]*\]/g), OPEN, 'exactly the open placeholders remain, written exactly as drafted');
   assert.equal(html.match(OLD), null);
   assert.equal(title, 'Takedown and corrections · voidtv.net');
+});
+
+// A public privacy page must be true. These checks tie its sentences to the code, so a change to the code that makes a sentence untrue fails here
+// (review of batch C: the draft named a "My Void" list, promised a hidden file, said the cookie is removed, and left fields out).
+test('the privacy page tells only what the code does: cookie life, stored fields, no IP, Sentry on every page view, Mine, Wrong file?', () => {
+  const mw = read('functions/_middleware.js'), e = read('functions/api/e.js');
+  assert.match(mw, /Max-Age=2592000;/, '30 days is 2,592,000 seconds');
+  for (const f of ['str(e.q, 80)', 'str(cf.country', 'str(cf.region', 'str(cf.city', 'str(cf.timezone', 'str(cf.colo', 'str(e.ref', '          os,', '          device,', '          browser,', 'sid,']) assert.ok(e.includes(f), 'e.js stores ' + f.trim());
+  assert.doesNotMatch(e, /cf-connecting-ip|x-forwarded-for|x-real-ip/i, 'e.js never reads the IP address');
+  assert.match(SCRIPT, /if\('[0-9a-f]+'\)\{const h=location\.hostname;if\(h==='voidtv\.net'\|\|h\.endsWith\('\.voidtv\.net'\)\)\{[^\n]*sc\.src='https:\/\/js\.sentry-cdn\.com\//, 'the Sentry script is added when the page loads, on voidtv.net hosts');
+  assert.match(SCRIPT, /<h1>Mine<\/h1>/);
+  assert.match(SCRIPT, /<h2>Reported files</, 'a reported file shows on the Mine page');
+  assert.match(SCRIPT, /'Wrong file\?'/);
+  assert.match(SCRIPT, /track\('report'/, 'a reported file is sent');
+  assert.match(SCRIPT, /track\('search',\{q,n\}\)/, 'the search words are sent');
 });
 
 test('routes: /privacy and /takedown work as direct visits, with or without a trailing slash, and as #hash links', () => {
