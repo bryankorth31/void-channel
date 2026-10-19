@@ -178,7 +178,7 @@ describe('the self-list fallback gate (CP-001)', () => {
       const files = [...range(n).map((i) => mkFile(`Zork Show Part ${i}.mp4`)), ...range(10).map((i) => mkFile(`Zork Show Funny Clip ${String.fromCharCode(64 + i)}.mp4`))];
       return { cand: { items: [{ id: 'zork', title: 'Zork Show', files }] }, tags: new Map(files.map((f) => [f, 'no-match'])) };
     };
-    const ctx = { tv: { runtime: 30 }, namesShow: () => true, cores: ['zork show'] };
+    const ctx = { tv: { runtime: 30 }, namesTitle: () => true, cores: ['zork show'] };
     const four = pool(4), five = pool(5);
     assert.equal(M.fallbackCand(four.cand, four.tags, ctx).items.length, 0, 'four numbered files are not a run');
     assert.equal(M.fallbackCand(five.cand, five.tags, ctx).items[0].files.length, 5, 'five are, and the unnumbered clips stay out');
@@ -257,6 +257,63 @@ describe('Archive identifier rule (CP-003)', () => {
     assert.equal(M.inRuntimeBand(900, 30), false);
     assert.equal(M.inRuntimeBand(5400, 30), false);
     assert.equal(M.inRuntimeBand(1800, null), false);
+  });
+});
+
+// ---------------------------------------------------------------- the title test: whole words, and the name must close
+describe('the upload title names the show', () => {
+  const names = (text, show, aliases = []) => M.namesTitle(text, [M.norm(show).replace(/^the /, ''), ...aliases.map(M.norm)]);
+  test('the name alone, or followed by a separator, an episode token or a format word, names the show', () => {
+    for (const [t, s] of [
+      ['The Parkers', 'The Parkers'], ['The Parkers : WSBK : September 10, 2001 9:00pm-9:30pm EDT', 'The Parkers'], ['Zork Show', 'Zork Show'],
+      ['Zork_Show_S01E02', 'Zork Show'], ['Zork.Show.1x02.720p', 'Zork Show'], ['Zork Show - Pilot', 'Zork Show'], ['Zork Show | Season 2', 'Zork Show'],
+      ['Zork Show/Season 1/01 Pilot', 'Zork Show'], ['Zork Show [1080p]', 'Zork Show'], ['Zork Show "Pilot"', 'Zork Show'], ['Zork Show: The Pilot', 'Zork Show'],
+      ['Jake and Amir： Audit', 'Jake and Amir'], ['Zork Show 1987', 'Zork Show'], ['Zork Show Season One', 'Zork Show'], ['Zork Show Complete Series', 'Zork Show'],
+      ['Zork Show Collection', 'Zork Show'], ['Zork Show Full Episodes', 'Zork Show'], ['Zork Show DVD ISO', 'Zork Show'], ['Zork Show Videos', 'Zork Show'],
+      ['Zork Show (2007-2024)', 'Zork Show'], ['All Zork Show DVDs [DVDISO]', 'Zork Show'], ['Zork Show The Complete Series', 'Zork Show'], ['Zork Show All Episodes', 'Zork Show'],
+      ['zork show', 'The Zork Show'], ['The Zork Show Season 1', 'The Zork Show'], ['Zork Show S 2', 'Zork Show'], ['Zork Show 1x 4', 'Zork Show'],
+    ]) assert.equal(names(t, s), true, t);
+  });
+  test('a name followed straight by another ordinary word is a longer title, and does not name the show', () => {
+    for (const [t, s] of [
+      ["Parker's Puzzle Episodes", 'The Parkers'], ['Parkers Place! 01x02 JAME DUDE!', 'The Parkers'], ['Naruto Shippuden Disney XD Version', 'Naruto'],
+      ['Monster Jam: Before It Sucked (2000-2013)', 'Monster'], ['Rumble - The Body Language Guy (2022)', 'Body Language'], ['Iron Chef America Season 1', 'Iron Chef'],
+      ['Nature Cat - Full Series', 'Nature'], ['Seinfeld The Contest', 'Seinfeld'], ['Zork Show Jam', 'Zork Show'], ['Zork Showdown', 'Zork Show'], ['Zork-Show-Jam', 'Zork Show'],
+      ['Homestar Runner Strong Bad Email', 'Homestar Runner'], ['Zork Show Publicly Available Episodes', 'Zork Show'], ['Zork Show S x', 'Zork Show'],
+    ]) assert.equal(names(t, s), false, t);
+    const cores = ['zork show'];
+    assert.deepEqual([M.titleNaming('Zork Show - Pilot', cores), M.titleNaming('Zork Show Jam', cores), M.titleNaming('Nothing like it', cores)], ['names', 'longer', 'none']);
+  });
+  test('whole words only: the name inside a longer word, or glued to digits, is not the name', () => {
+    assert.equal(names('Unzork Show', 'Zork Show'), false);
+    assert.equal(names('Zork Shows', 'Zork Show'), false);
+    assert.equal(names('zorkshow2016', 'Zork Show'), false);
+    assert.equal(names('Best of the Zork Show', 'Zork Show'), true, 'words before the name do not matter');
+  });
+  test('the longer form counts when it is one of the show\'s aliases, and any one good occurrence is enough', () => {
+    assert.equal(names('Naruto Shippuden - 001', 'Naruto'), false);
+    assert.equal(names('Naruto Shippuden - 001', 'Naruto', ['Naruto Shippuden']), true);
+    assert.equal(names('Zork Show Jam, then Zork Show - Season 2', 'Zork Show'), true);
+  });
+  test('the fallback, the identifier rule and the sequence guess all use it', () => {
+    // the fallback gate: an upload titled "Zork Show Jam" is not an upload of Zork Show, whatever its files are called
+    const evidence = range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i) }));
+    assert.equal(run(evidence, { title: 'Zork Show Season 9' }).grid.selfListed, true);
+    assert.equal(run(evidence, { title: 'Zork Show Jam' }).grid.selfListed, undefined);
+    // the identifier rule: half the file names must name the show the same way ("Parkers Place" is another show)
+    const parkers = { name: 'The Parkers', type: 'Sitcom', network: 'UPN' };
+    const item = (names) => ({ id: 'parkers-season-1', title: 'Season 1 DVD rips', files: names.map((n) => mkFile(n, { seconds: 1700, nameHit: false })) });
+    assert.ok(M.selfGrid(parkers, { items: [item(range(10).map((i) => 'The Parkers - Episode ' + pad2(i) + '.mp4'))] }, []));
+    assert.equal(M.selfGrid(parkers, { items: [item(range(10).map((i) => 'Parkers Place - Episode ' + pad2(i) + '.mp4'))] }, []), null);
+    // the sequence guess: unmatched files in an upload titled as the show are offered in order; in a longer title's upload they are not
+    const clips = () => range(6).map((i) => mkFile(`Zork Show Funny Clip ${String.fromCharCode(64 + i)}.mp4`));
+    const guessed = (title) => run(clips(), { title }).grid.seasons.flatMap((s) => s.episodes).filter((e) => e.file && /^sequence guess/.test(e.file.why)).length;
+    assert.equal(guessed('Zork Show Season 1'), 4);
+    assert.equal(guessed("Zork Show Jam Season 1"), 0);
+    // the strict pass: an episode name that merely looks alike is no proof when the upload's title is a longer title
+    const alike = (title) => run([mkFile('Zork Show Jam - Velvet Anchor.mp4')], { title }).grid.seasons.flatMap((s) => s.episodes).find((e) => e.name === 'Velvet Anchor').file;
+    assert.ok(alike('Zork Show Season 1'), 'placed from an upload titled as the show');
+    assert.equal(alike('Zork Show Jam'), null, 'not placed from an upload titled as a longer title');
   });
 });
 
@@ -351,7 +408,7 @@ describe('matcher self-test for the doctor', () => {
       assert.equal(r.warn, true);
       assert.equal(r.fallback.count, 1);
       assert.equal(r.fallback.scanned, 2);
-      assert.deepEqual(r.fallback.grids.map((g) => [g.slug, g.picks, g.unnamed, g.share, g.junk]), [['the-parkers', 4, 2, 0.5, 1]]);
+      assert.deepEqual(r.fallback.grids.map((g) => [g.slug, g.picks, g.unnamed, g.share, g.junk]), [['the-parkers', 4, 3, 0.75, 1]]);
       assert.match(r.detail, /self-tests pass; 1 fallback grid/);
       const clean = matcherCheck({ showsDir: path.join(dir, 'nothing-here') });
       assert.equal(clean.ok, true);

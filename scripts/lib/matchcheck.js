@@ -47,8 +47,7 @@ function matcherCheck(opts = {}) {
     for (const se of g.seasons || []) for (const e of se.episodes || []) {
       if (!e.file) continue;
       picks++;
-      const title = M.norm(e.file.itemTitle || '');
-      if (!cores.some((c) => title.includes(c))) unnamed++;
+      if (!M.namesTitle(e.file.itemTitle || '', cores)) unnamed++;
       if (M.isJunkItem(e.file.itemTitle || '', cores) || M.isJunkFile(e.file.name || '', cores)) junk++;
     }
     grids.push({ slug: g.slug || f.slice(0, -5), show: g.show, picks, unnamed, share: picks ? +(unnamed / picks).toFixed(2) : 0, junk });

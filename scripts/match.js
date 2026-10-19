@@ -139,6 +139,49 @@ const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json'))
 const DEAD_FILE = path.join(PROFILE.catalogDir, 'dead-files.json');
 function readDead() { try { return JSON.parse(fs.readFileSync(DEAD_FILE, 'utf8')); } catch (e) { return {}; } } // linkcheck.js retires files the Archive no longer serves
 function readOverrides() { try { return JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')); } catch (e) { return OVERRIDES; } }
+// ---- Does an upload title NAME the show? ----
+// A plain substring test said "Parker's Puzzle" names The Parkers, "Monster Jam" names Monster, "Naruto Shippuden" names Naruto and "The Body Language Guy"
+// names Body Language. A title names the show when the show's name stands in it as whole words AND what follows closes the name: the end of the text; a
+// separator (colon, a dash with spaces round it, pipe, slash, bracket or double quote); or a word that belongs after a show name (an episode token such as
+// S01E02, season, episode, part or chapter, a number or a year, a quality or format word such as DVD, ISO or 720p, complete, collection, full, series, video).
+// A name followed straight by another ordinary word is the start of a longer title ("Naruto Shippuden"), and that is not this show unless the longer form is
+// one of the show's aliases (the aliases are tried the same way). Tested on lower-cased text with the punctuation kept, because norm() throws the separators away.
+const NAME_SEP = /[:|\/\\()\[\]{}"\u201c\u201d\uff1a\uff5c\uff0f\uff02\uff08\uff09\uff3b\uff3d\u3010\u3011\u300c\u300d\u300e\u300f]/;
+const NAME_DASH = /\s[-\u2013\u2014\u2015]|[-\u2013\u2014\u2015]\s/; // a dash separates only with a space beside it
+const NAME_TAIL = /^(?:s\d{1,2}(?:e\d{1,3})?|e\d{1,3}|\d+x\d{1,3}|\d+(?:st|nd|rd|th)?|eps?\d*|episodes?|seasons?|series|parts?|chapters?|volumes?|vol|discs?|complete|collection|full|uncut|remastered|videos?|hd|uhd|sd|4k|\d{3,4}p|x26[45]|h26[45]|hevc|dvds?|dvdrip|dvdiso|iso|blu?ray|bd(?:rip)?|web\w*|rip\w*|vhs|pal|ntsc|mp4|mkv|avi|ogv|mpe?g\d*|aac|ac3|xvid|divx|box|boxset)$/;
+const NAME_FILLER = new Set(['the', 'a', 'an', 'and', 'of', 'all']); // skipped before the check: "The Complete Series", "All Episodes"
+const nameRes = new Map();
+function nameRe(core) {
+  let r = nameRes.get(core);
+  if (!r) { r = new RegExp('(?:^|[^a-z0-9])' + core.split(' ').map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('[^a-z0-9]+') + '(?![a-z0-9])', 'g'); nameRes.set(core, r); }
+  r.lastIndex = 0;
+  return r;
+}
+function closesName(rest) {
+  const run = /^[^a-z0-9]*/.exec(rest)[0];
+  if (run.length === rest.length) return true; // the name ends the text
+  const gap = run.replace(/_/g, ' ');
+  if (NAME_SEP.test(gap) || NAME_DASH.test(gap)) return true; // a separator follows it
+  const toks = rest.slice(run.length).split(/[^a-z0-9]+/).filter(Boolean);
+  let i = 0;
+  while (i < 2 && i < toks.length - 1 && NAME_FILLER.has(toks[i])) i++;
+  return NAME_TAIL.test(toks[i]) || (/^(?:s|e|\d+x)$/.test(toks[i]) && /^\d+$/.test(toks[i + 1] || '')); // "S 2", "1x 4": SxxEyy written with a space
+}
+// cores: the show's normalised name (without a leading "the") and its normalised aliases.
+// 'names': the name stands as whole words and closes; 'longer': the name is there as whole words but only ever runs on into another word (a longer title); 'none'.
+function titleNaming(text, cores) {
+  const t = String(text == null ? '' : text).toLowerCase().replace(/&/g, ' and ').replace(/['\u2019`]/g, '');
+  let found = false;
+  for (const core of cores || []) {
+    if (!core) continue;
+    const re = nameRe(core);
+    let m;
+    while ((m = re.exec(t))) { found = true; if (closesName(t.slice(m.index + m[0].length))) return 'names'; if (m[0].length === 0) re.lastIndex++; }
+  }
+  return found ? 'longer' : 'none';
+}
+const namesTitle = (text, cores) => titleNaming(text, cores) === 'names';
+
 // ---- The self-list fallback: what it may take, and why the strict pass turned files away ----
 // Every episode-band file the strict loop sees gets one tag:
 //   placed          the strict pass placed it (an option for some episode at REVIEW or better)
@@ -185,7 +228,7 @@ function fallbackCand(cand, tags, ctx) {
   const tagOf = (f, it) => { const t = tags.get(f); return t === 'wrong-length' && ctx.whyNot ? ctx.whyNot(f, it) : t; };
   const items = [];
   for (const it of cand.items) {
-    if (!ctx.namesShow(it.title || '')) continue; // an identifier or a description is free text; only the title counts
+    if (!ctx.namesTitle(it.title || '')) continue; // an identifier or a description is free text; only the title counts, and it must name the show as a title does
     if (isExtras(it.title, cores) || isExtras(it.id, cores)) continue;
     let files = it.files.filter((f) => { const t = tagOf(f, it); return (t === 'no-match' || t === 'placed') && !isExtras(f.name, cores) && (!tv.runtime || inRuntimeBand(f.seconds, tv.runtime)); });
     const run = new Set(files.map((f) => episodeNumberOf(f.name, cores)).filter((n) => n != null));
@@ -237,6 +280,7 @@ function decideGrid(entry, cand, tv, ctx) {
     const itemNamesMe = norm(itemText).includes(core) || norm(item.id).includes(core.replace(/ /g, ''));
     const itemNamesOther = namesOtherShow(item.title || '', show, aliases);
     const itemTitled = namesShow(item.title || '') || idNamesShow(item.id); // the upload itself says it is this show
+    const itemLonger = titleNaming(item.title || '', [core, ...aliases]) === 'longer'; // its title runs on into a longer title ("Naruto Shippuden"): an episode name that merely looks alike proves nothing
     const unmatched = []; // episode-band files this item could not place by number or title
     for (const f of item.files) {
       // Files hunted before the show had a TVmaze runtime carry generic bands (half-hour, hour); re-band them now that we know the runtime.
@@ -264,7 +308,7 @@ function decideGrid(entry, cand, tv, ctx) {
       // upload that does not name the show is how Tweenies ended up under Look Around You.
       const titleAlone = !namesShow(f.name) && !itemTitled;
       const strongTitle = best && norm(best.name).split(' ').filter((w) => !STOP.has(w) && w.length > 2).length >= 2;
-      if (!dateHit && best && bestSim >= 0.6 && (!titleAlone || strongTitle)) {
+      if (!dateHit && best && bestSim >= 0.6 && (!titleAlone || strongTitle) && !itemLonger) {
         const existing = candidates.find((c) => c.ep === best);
         if (existing) { existing.base += bestSim >= 0.8 ? 0.3 : 0.15; existing.why += ' + title match'; }
         else candidates.push({ ep: best, base: bestSim >= 0.8 ? 0.5 : 0.3, why: `title ~ "${best.name}" (${bestSim.toFixed(2)})` });
@@ -304,7 +348,7 @@ function decideGrid(entry, cand, tv, ctx) {
     // If the ITEM names the show, holds 5+ unplaced episode-length files and no other show, offer
     // them in natural order as consecutive episodes of the season the item title suggests
     // (volume/season N, else 1) at REVIEW confidence. A human confirms with a glance.
-    const titleNamesMe = itemTitled;
+    const titleNamesMe = namesTitle(item.title || '', [core, ...aliases]); // the upload's TITLE names the show (an identifier does not)
     if (titleNamesMe && !itemNamesOther && unmatched.length >= 5 && !REACT.test(item.title || '') && !langRisk(item.title)) {
       const m = /\b(?:season|series|volume|vol\.?)\s*(\d{1,2}|one|two|three|four|five|six|seven|eight|nine|ten)\b/i.exec(item.title || '');
       const words = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
@@ -347,7 +391,7 @@ function decideGrid(entry, cand, tv, ctx) {
   const pool = cand.items.reduce((n, it) => n + it.files.filter((f) => f.band !== 'block' && f.band !== 'odd').length, 0);
   if (placed * 6 < pool && pool >= 20 && dateRejected < pool / 2) {
     const whyNot = (f, item) => rejectionTag({ other: namesOtherShow(f.name, show, aliases) || (!namesShow(f.name) && namesOtherShow(item.title || '', show, aliases)), react: REACT.test(tagText(f.name)) || REACT.test(tagText(item.title || '')), foreign: langRisk(f.name) || langRisk(item.title), notNamed: !namesShow(f.name) && !(namesShow(item.title || '') || idNamesShow(item.id)) });
-    const sg = selfGrid(entry, fallbackCand(cand, tags, { tv, namesShow, cores: [core, ...aliases], whyNot }), aliases);
+    const sg = selfGrid(entry, fallbackCand(cand, tags, { tv, namesTitle: (t) => namesTitle(t, [core, ...aliases]), cores: [core, ...aliases], whyNot }), aliases);
     const sgPlaced = sg ? sg.seasons.reduce((n, se) => n + se.episodes.length, 0) : 0;
     if (sgPlaced >= Math.max(20, placed * 3)) { sg.tvmazeWeak = { id: tv.id, name: tv.name, placed }; return sg; }
   }
@@ -368,14 +412,14 @@ function selfGrid(entry, cand, aliases) {
   const show = entry.name;
   const core = norm(show).replace(/^the /, '').replace(/\(.*?\)/g, '').trim();
   if (core.length < 5 && core.split(' ').length < 2 && !aliases.length) return null; // 'Bu', 'Oz': too short a name to trust inside other titles
-  const names = (t) => { const x = norm(t); return x.includes(core) || aliases.some((a) => x.includes(a)); };
-  const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const cores = [core, ...aliases];
+  const names = (t) => namesTitle(t, cores); // whole words, and the name must close (see namesTitle)
+  const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const items = cand.items.map((item) => {
     const t = norm(item.title || ''), idn = norm(item.id).replace(/ /g, '');
     // What an upload is comes from its TITLE. An Archive identifier is free text the uploader chose ("parkers-puzzle-cooking-kids-27-and-exercise"),
     // so it counts only when at least half of the video file names also name the show.
-    const starts = t.startsWith(core) || t.startsWith('the ' + core);
+    const starts = names(item.title || '') && (t.startsWith(core) || t.startsWith('the ' + core));
     const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name) && !isJunkFile(f.name, cores));
     const idHit = idn.includes(core.replace(/ /g, '')) || aliases.some((a) => idn.includes(a.replace(/ /g, '')));
     const named = names(item.title || '') || (idHit && vids.length > 0 && vids.filter((f) => names(f.name)).length / vids.length >= 0.5);
@@ -448,5 +492,5 @@ function main() {
   console.log(`\nWrote ${rows.length} grids to catalog/shows/ and docs/COVERAGE.md`);
 }
 if (require.main === module) main();
-module.exports = { norm, tagText, slug, noEmail, REACT, QUALITY_RE, OTHER_SHOWS, BUILTIN_ALIASES, makeOtherShows, forOtherShow, otherShowCores, namesOtherShow, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,
+module.exports = { norm, tagText, slug, noEmail, namesTitle, titleNaming, closesName, REACT, QUALITY_RE, OTHER_SHOWS, BUILTIN_ALIASES, makeOtherShows, forOtherShow, otherShowCores, namesOtherShow, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,
   fallbackCand, gridFor, selfGrid, matchShow, fileDate };

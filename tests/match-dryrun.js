@@ -29,6 +29,7 @@ const writeReport = realFs.writeFileSync.bind(realFs);
 const argv = process.argv.slice(2);
 const arg = (name) => { const i = argv.indexOf(name); return i >= 0 ? argv[i + 1] : null; };
 const flag = (name) => argv.includes(name);
+const WATCH = (arg('--watch') || 'naruto shippuden,monster jam,body language guy,unsolved mysteries iceberg').split(',').map((s) => s.trim().toLowerCase()).filter(Boolean);
 const catalogArg = arg('--catalog'), beforeArg = arg('--before'), outArg = arg('--out'), afterArg = arg('--after'), onlySlug = arg('--only');
 if (!catalogArg || (!beforeArg && !flag('--no-before'))) { console.error('usage: node tests/match-dryrun.js --catalog <catalog folder> --before <old match.js> [--out <file>] [--after <file>] [--only <slug>] [--no-top] [--no-repeat] [--no-before]'); process.exit(2); }
 const CATALOG = path.resolve(catalogArg);
@@ -112,7 +113,7 @@ const whyType = (why) => /^self-listed/.test(why) ? 'self-listed (order from fil
 function runPass(label, mod, shipped, { keepOverlay = false } = {}) {
   if (!keepOverlay) { overlay.clear(); deleted.clear(); }
   const t0 = Date.now(), snap = { ...attempts.byName };
-  const shows = new Map(), eps = new Map(), picks = [], errors = [], types = new Map();
+  const shows = new Map(), eps = new Map(), picks = [], errors = [], types = new Map(), watch = new Map(WATCH.map((w) => [w, 0]));
   let identical = 0, compared = 0, ran = 0, addresses = 0;
   const entries = LIST.shows.filter((e) => !onlySlug || slugOf(e.name) === onlySlug);
   entries.forEach((entry, i) => {
@@ -133,7 +134,8 @@ function runPass(label, mod, shipped, { keepOverlay = false } = {}) {
         s.placed++;
         if (e.state === 'LIVE') s.live++; else s.review++;
         const t = whyType(e.file.why || ''), rec = types.get(t) || { n: 0, unnamed: 0 };
-        rec.n++; if (!cores.some((c) => AFTER.norm(e.file.itemTitle || '').includes(c))) rec.unnamed++;
+        rec.n++; if (!(AFTER.namesTitle ? AFTER.namesTitle(e.file.itemTitle || '', cores) : cores.some((c) => AFTER.norm(e.file.itemTitle || '').includes(c)))) rec.unnamed++;
+        { const nt = AFTER.norm(e.file.itemTitle || ''); for (const w of WATCH) if (nt.includes(w)) watch.set(w, watch.get(w) + 1); }
         types.set(t, rec);
         if (r.selfListed) continue;
         eps.set(slug + '|' + se.season + 'x' + e.number, { conf: e.file.conf, name: e.file.name, state: e.state });
@@ -144,7 +146,7 @@ function runPass(label, mod, shipped, { keepOverlay = false } = {}) {
     shows.set(slug, s);
   });
   const w = {}; for (const k of Object.keys(attempts.byName)) w[k] = attempts.byName[k] - (snap[k] || 0);
-  return { label, shows, eps, picks, errors, ran, identical, compared, addresses, types, ms: Date.now() - t0, writes: w };
+  return { label, shows, eps, picks, errors, ran, identical, compared, addresses, types, watch, ms: Date.now() - t0, writes: w };
 }
 
 function totals(p) {
@@ -173,7 +175,7 @@ const shippedBefore = readShipped();
 const placedIn = (g) => (g && g.seasons ? g.seasons.reduce((n, se) => n + se.episodes.filter((e) => e.file).length, 0) : 0);
 
 // ---------------------------------------------------------------- run
-const EMPTY = { label: 'skipped', shows: new Map(), eps: new Map(), picks: [], errors: [], ran: 0, identical: 0, compared: 0, addresses: 0, types: new Map(), ms: 0, writes: {} };
+const EMPTY = { label: 'skipped', shows: new Map(), eps: new Map(), picks: [], errors: [], ran: 0, identical: 0, compared: 0, addresses: 0, watch: new Map(WATCH.map((w) => [w, 0])), types: new Map(), ms: 0, writes: {} };
 let B = EMPTY;
 if (BEFORE) { console.error('before pass...'); B = runPass('before', BEFORE, shippedBefore.grids); }
 console.error('after pass...');
@@ -265,6 +267,9 @@ for (const t of [...new Set([...B.types.keys(), ...A.types.keys()])].sort()) {
   const b = B.types.get(t) || { n: 0, unnamed: 0 }, a = A.types.get(t) || { n: 0, unnamed: 0 };
   say('  ' + pad(t, 30) + lpad(fmt(b.n), 9) + lpad(fmt(b.unnamed), 9) + lpad(fmt(a.n), 9) + lpad(fmt(a.unnamed), 9));
 }
+say();
+say('WATCHED UPLOADS (placed files whose item title contains the phrase; known wrong-show offenders, should be 0 after)');
+for (const w of WATCH) say('  ' + pad(w, 34) + lpad(fmt(B.watch.get(w)), 8) + lpad(fmt(A.watch.get(w)), 8));
 say();
 if (BEFORE) {
   say('STRICT-GRID MOVEMENT (episodes keyed by show, season, number)');
