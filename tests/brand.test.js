@@ -78,9 +78,14 @@ test('header: pink "voidtv" and blue ".net" in the brand-kit colours, on one lin
   assert.match(css, /header \.logo \.name \.v\{color:var\(--brand-pink\)\}/);
   assert.match(css, /header \.logo \.name \.n\{color:var\(--brand-blue\)\}/);
   assert.match(css, /header \.logo \.name\{[^}]*white-space:nowrap/);
-  // the phone rule (600 px and narrower) keeps the name no bigger than 17 px
+  // The phone rules. voidtv.net is wider than the old VOIDtv, so the name is 14 px (15 px up to 760 px), the mark 24 px and the gap 6 px:
+  // measured in a browser at 375 px and at 360 px, the logo, TV, Mine and Donate stay on one row with 27 px and 12 px to spare.
+  // At the old 17 px the Donate button dropped to a second row at 375 px.
   const phone = css.match(/@media\(max-width:600px\)\{header\{[^\n]*/)[0];
-  assert.match(phone, /header \.logo \.name\{font-size:(1[0-7]|[0-9])px\}/);
+  assert.match(phone, /header\{gap:10px;column-gap:6px;row-gap:8px;/);
+  assert.match(phone, /header \.logo img\.mark\{width:24px;height:24px;margin-right:6px\}/);
+  assert.match(phone, /header \.logo \.name\{font-size:14px\}/);
+  assert.match(css, /@media\(max-width:760px\)\{header \.logo \.name\{font-size:15px\}\}/);
   assert.doesNotMatch(phone, /header \.logo \.name\{[^}]*display:none/);
 });
 
