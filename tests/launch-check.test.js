@@ -30,9 +30,10 @@ function good() {
     health: { data: { at: iso(NOW - 5 * MIN), level: 'green', checks: [{ id: 'publish', level: 'green', msg: 'ok' }, { id: 'nightly', level: 'green', msg: 'ok' }] } },
     fresh: null,
     live: { text: versionText() },
+    site: { rootStatus: 401, apiStatus: null }, // gate=on: the front page is the password page
     remote: { sha: SHA },
     analytics: { events: 120 },
-    sentry: { status: 200 },
+    sentry: { status: 200, keyFound: true },
     publish: { text: [
       `${iso(NOW - 10 * HOUR)} pushed abc1234: Catalog: 4897 shows, 49449 episodes (12 files)`,
       `${iso(NOW - 2 * HOUR)} nothing new`,
@@ -69,10 +70,10 @@ test('row 1 findings: an open critical or high blocks, whatever its status word 
     assert.match(row(res, 1).text, /X-100/);
     assert.ok(row(res, 1).detail.some((d) => d.startsWith('X-100 high')), 'every open one is listed on its own line');
   }
-  const crit = good(); crit.findings.items.push({ id: 'X-1', severity: 'critical', status: 'open', title: 't' }, { id: 'X-2', severity: 'high', status: 'open', title: 't' });
+  const crit = good(); crit.findings.items.push({ id: 'X-2', severity: 'high', status: 'open', title: 't' }, { id: 'X-1', severity: 'critical', status: 'open', title: 't' });
   const rc = LC.evaluate(crit);
-  assert.deepEqual(row(rc, 1).detail.map((d) => d.split(' ')[0]), ['X-1', 'X-2']);
-  assert.match(row(rc, 1).text, /^2 open critical or high findings: X-1, X-2/);
+  assert.deepEqual(row(rc, 1).detail.map((d) => d.split(' ')[0]), ['X-1', 'X-2'], 'critical first');
+  assert.match(row(rc, 1).text, /^2 open findings block the launch \(2 critical or high\): X-1, X-2/);
   // medium and low never block, fixed and refuted highs never block
   assert.equal(row(LC.evaluate(good()), 1).status, 'GO');
   // an unreadable or empty list cannot be called GO
@@ -152,28 +153,42 @@ test('row 6 Sentry: no answer or a non-loader answer blocks; the sentence says i
   const none = LC.evaluate({ ...good(), sentry: { error: 'no answer in 5 s' } });
   assertBlocks(none, 6);
   assert.match(row(none, 6).text, /proves the host answers, not that an event arrived/);
-  assertBlocks(LC.evaluate({ ...good(), sentry: { status: 404 } }), 6);
-  assertBlocks(LC.evaluate({ ...good(), sentry: { status: 503 } }), 6);
+  assertBlocks(LC.evaluate({ ...good(), sentry: { status: 404, keyFound: true } }), 6);
+  assertBlocks(LC.evaluate({ ...good(), sentry: { status: 503, keyFound: true } }), 6);
   assertBlocks(LC.evaluate({ ...good(), sentry: undefined }), 6);
   const ok = LC.evaluate(good());
   assert.equal(row(ok, 6).status, 'GO');
   assert.match(row(ok, 6).text, /not that an event arrived/);
 });
 
+test('row 6 Sentry: when the site\'s key cannot be read from app.js the front door answering is a WARN, never a GO', () => {
+  const nokey = LC.evaluate({ ...good(), sentry: { status: 204, keyFound: false } });
+  assert.equal(row(nokey, 6).status, 'WARN');
+  assert.equal(nokey.code, 0, 'a warning does not block');
+  assert.match(row(nokey, 6).text, /front door only/);
+  assert.match(row(nokey, 6).text, /key could not be found in scripts\/lib\/app\.js/);
+  assert.match(row(nokey, 6).text, /not that an event arrived/);
+  assert.match(row(nokey, 6).fix, /SENTRY_KEY/);
+  assertBlocks(LC.evaluate({ ...good(), sentry: { status: 500, keyFound: false } }), 6);
+  assertBlocks(LC.evaluate({ ...good(), sentry: { error: 'no answer in 5 s', keyFound: false } }), 6);
+});
+
+const OPEN_VERSION = versionText().replace('gate=on', 'gate=off');
+// A made-up world in which the site is open and every row is GO; the patch changes one part of it.
+function openSite(patch) { const i = good(); i.live = { text: OPEN_VERSION }; i.site = { rootStatus: 200, apiStatus: 200 }; return { ...i, ...(patch || {}) }; }
+
 test('row 7 gate: gate=on is information; gate=off blocks only while another required row is NO-GO', () => {
   const on = good();
   assert.equal(row(LC.evaluate(on), 7).status, 'GO');
-  assert.match(row(LC.evaluate(on), 7).text, /gate=on/);
+  assert.match(row(LC.evaluate(on), 7).text, /gate=on and the front page answers 401/);
   assert.match(row(LC.evaluate(on), 7).detail.join(' '), /GATE = off/, 'it says what opening needs');
   // the site is open and everything is fine: GO
-  const open = good(); open.live = { text: versionText().replace('gate=on', 'gate=off') };
-  const ro = LC.evaluate(open);
+  const ro = LC.evaluate(openSite());
   assert.equal(row(ro, 7).status, 'GO');
-  assert.match(row(ro, 7).text, /gate=off: the site is OPEN/);
+  assert.match(row(ro, 7).text, /gate=off: the site is OPEN \(front page 200, \/api\/e 200\)/);
   assert.equal(ro.code, 0);
   // the site is open and a required row fails: row 7 blocks too, and says which
-  const bad = good(); bad.live = open.live; bad.sentry = { error: 'no answer' };
-  const rb = LC.evaluate(bad);
+  const rb = LC.evaluate(openSite({ sentry: { error: 'no answer' } }));
   assertBlocks(rb, 7);
   assertBlocks(rb, 6);
   assert.match(row(rb, 7).text, /row 6 is NO-GO/);
@@ -184,11 +199,67 @@ test('row 7 gate: gate=on is information; gate=off blocks only while another req
   assert.equal(row(rc, 7).status, 'GO');
   assert.deepEqual(rc.blocking, [6]);
   // an advisory or warning row does not count as a reason: open + only WARN rows is still GO
-  const openWarn = good(); openWarn.live = open.live; openWarn.soak = { missing: true }; openWarn.analytics = { events: 0 };
-  assert.equal(row(LC.evaluate(openWarn), 7).status, 'GO');
+  assert.equal(row(LC.evaluate(openSite({ soak: { missing: true }, analytics: { events: 0 } })), 7).status, 'GO');
   // no gate word yet
   const old = good(); old.live = { text: `${SHA} 2026-10-19T11:00:00.000Z\n` };
   assert.equal(row(LC.evaluate(old), 7).status, 'WARN');
+});
+
+test('row 7 gate: an open site with a failing publish (row 8) or backup (row 9) is NO-GO too, and so is every other required row', () => {
+  const fail8 = LC.evaluate(openSite({ publish: { text: `${iso(NOW - HOUR)} FAILED: push to origin/master did not go through (timeout)` } }));
+  assertBlocks(fail8, 8);
+  assertBlocks(fail8, 7);
+  assert.match(row(fail8, 7).text, /row 8 is NO-GO/);
+  const fail9 = LC.evaluate(openSite({ backup: { error: 'file not found' } }));
+  assertBlocks(fail9, 9);
+  assertBlocks(fail9, 7);
+  assert.match(row(fail9, 7).text, /row 9 is NO-GO/);
+  const two = LC.evaluate(openSite({ backup: { error: 'file not found' }, health: { error: 'file not found' } }));
+  assert.match(row(two, 7).text, /rows 2, 9 are NO-GO/);
+  // the same failure with the gate on leaves row 7 alone
+  assert.equal(row(LC.evaluate({ ...good(), backup: { error: 'file not found' } }), 7).status, 'GO');
+  // every one of the other required rows counts
+  const breaks = { 1: { findings: { error: 'x' } }, 2: { health: { error: 'x' } }, 3: { remote: { sha: 'f'.repeat(40) } }, 5: { analytics: { error: 'x' } }, 6: { sentry: { error: 'x' } } };
+  for (const [n, patch] of Object.entries(breaks)) {
+    const r = LC.evaluate(openSite(patch));
+    assertBlocks(r, +n);
+    assertBlocks(r, 7);
+  }
+});
+
+test('row 7 gate: it asks the RUNNING site, by the doctor\'s rule: gate=on must answer 401, gate=off must answer 200 on / and 200 on /api/e', () => {
+  // gate=on in version.txt but the front page is open: the build and the running site disagree (fail open, a rollback, a hidden secret)
+  const failOpen = LC.evaluate({ ...good(), site: { rootStatus: 200, apiStatus: null } });
+  assertBlocks(failOpen, 7);
+  assert.match(row(failOpen, 7).text, /gate=on but the front page answered 200, not 401/);
+  assertBlocks(LC.evaluate({ ...good(), site: { rootStatus: 500, apiStatus: null } }), 7);
+  assertBlocks(LC.evaluate({ ...good(), site: { rootStatus: 302, apiStatus: null } }), 7);
+  // gate=off in version.txt but the front page still asks for a password
+  const stillClosed = LC.evaluate(openSite({ site: { rootStatus: 401, apiStatus: 401 } }));
+  assertBlocks(stillClosed, 7);
+  assert.match(row(stillClosed, 7).text, /gate=off but the front page answered 401, not 200/);
+  // gate=off, the pages open, but a password the build could not see still guards the analytics intake
+  const api401 = LC.evaluate(openSite({ site: { rootStatus: 200, apiStatus: 401 } }));
+  assertBlocks(api401, 7);
+  assert.match(row(api401, 7).text, /\/api\/e\) answered 401/);
+  // the front page could not be asked: not GO, whatever version.txt says
+  const unasked = LC.evaluate({ ...good(), site: { rootStatus: null, apiStatus: null, error: 'no answer in 5 s' } });
+  assertBlocks(unasked, 7);
+  assert.match(row(unasked, 7).text, /front page https:\/\/voidtv\.net\/ could not be asked/);
+  assertBlocks(LC.evaluate({ ...good(), site: undefined }), 7);
+  assertBlocks(LC.evaluate({ ...good(), site: null }), 7);
+  // gate=off and /api/e could not be asked
+  const noApi = LC.evaluate(openSite({ site: { rootStatus: 200, apiStatus: null, apiError: 'no answer in 5 s' } }));
+  assertBlocks(noApi, 7);
+  assert.match(row(noApi, 7).text, /analytics intake .* could not be asked/);
+  // gate=off and /api/e answers something odd (not 200, not 401): the doctor calls that yellow, so it is a warning here, not a block
+  const odd = LC.evaluate(openSite({ site: { rootStatus: 200, apiStatus: 500 } }));
+  assert.equal(row(odd, 7).status, 'WARN');
+  assert.equal(odd.code, 0);
+  // when version.txt could not be read the row says it was not checked, and row 3 carries the NO-GO
+  const nolive = LC.evaluate({ ...good(), live: { error: 'it answered 500' }, site: null });
+  assert.equal(row(nolive, 7).status, 'WARN');
+  assertBlocks(nolive, 3);
 });
 
 test('row 8 publish: a failed or guard-refused last run blocks; held, an earlier refusal and a quiet log warn', () => {
@@ -341,7 +412,11 @@ test('the printed table names which rows are required, says it only reads, and k
   const lines = LC.render(LC.evaluate(good()), { nowMs: NOW, root: '/made/up' }).join('\n');
   assert.match(lines, /Rows 1 to 9 are required/);
   assert.match(lines, /Row 10 is advisory/);
-  assert.match(lines, /This only reads\. It changes nothing and it never opens the site\./);
+  assert.match(lines, /This only reads, and it never opens the site\./);
+  assert.ok(!/It changes nothing/.test(lines), 'with --fresh the quick doctor rewrites health.json, so the printed text must not say nothing changes');
+  assert.ok(!/rewrote catalog\/cache\/health\.json/.test(lines), 'without --fresh nothing is rewritten, and the text does not say so');
+  const freshLines = LC.render(LC.evaluate(good()), { nowMs: NOW, root: '/made/up', fresh: true }).join('\n');
+  assert.match(freshLines, /It ran the quick doctor first, which rewrote catalog\/cache\/health\.json as the doctor always does\./);
   assert.match(lines, /playback pause rate in Sentry/);
   assert.match(lines, /docs\/DEPLOY\.md/);
   const bad = LC.render(LC.evaluate({ ...good(), backup: { error: 'none' } }), { nowMs: NOW }).join('\n');
@@ -370,6 +445,317 @@ test('options: an unknown option is refused (exit 2), --help prints the usage an
   assert.match(help.stdout, /Usage: node scripts\/launch-check\.js/);
 });
 
+test('row 1 findings: an open finding the audit flagged launch_blocking blocks whatever its severity, and is marked in the list', () => {
+  const i = good();
+  i.findings.items.push(
+    { id: 'M-1', severity: 'medium', status: 'open', title: 'a flagged medium', launch_blocking: true },
+    { id: 'L-1', severity: 'low', status: 'verified', title: 'a flagged low', launch_blocking: true },
+    { id: 'M-2', severity: 'medium', status: 'open', title: 'an unflagged medium', launch_blocking: false },
+    { id: 'M-3', severity: 'medium', status: 'fixed', title: 'a flagged medium that is fixed', launch_blocking: true },
+    { id: 'M-4', severity: 'medium', status: 'refuted', title: 'a flagged medium that is refuted', launch_blocking: true },
+    { id: 'M-5', severity: 'medium', status: 'open', title: 'flag as a word, not a boolean', launch_blocking: 'true' },
+  );
+  const res = LC.evaluate(i);
+  assertBlocks(res, 1);
+  assert.match(row(res, 1).text, /^2 open findings block the launch \(2 flagged launch-blocking\): L-1, M-1/);
+  const ids = row(res, 1).detail.map((d) => d.split(' ')[0]);
+  assert.deepEqual(ids, ['L-1', 'M-1']);
+  assert.ok(row(res, 1).detail.every((d) => d.includes('[flagged launch-blocking]')), 'each one is marked');
+  // with a critical and a flagged one the text counts both kinds
+  i.findings.items.push({ id: 'C-1', severity: 'critical', status: 'open', title: 'a critical' });
+  const both = LC.evaluate(i);
+  assert.match(row(both, 1).text, /^3 open findings block the launch \(1 critical or high, 2 flagged launch-blocking\): C-1, L-1, M-1/);
+  assert.ok(!row(both, 1).detail[0].includes('[flagged'), 'a critical is listed as a critical');
+  // none of the extras open: back to GO
+  const fine = good();
+  fine.findings.items.push({ id: 'M-3', severity: 'medium', status: 'fixed', title: 't', launch_blocking: true }, { id: 'M-2', severity: 'medium', status: 'open', title: 't', launch_blocking: false });
+  assert.equal(row(LC.evaluate(fine), 1).status, 'GO');
+  assert.match(row(LC.evaluate(good()), 1).text, /none flagged launch-blocking \(2 other open findings, not blocking\)/);
+});
+
+test('the findings reader carries the launch_blocking flag through', () => {
+  const dir = fs.mkdtempSync(path.join(require('os').tmpdir(), 'lc-'));
+  try {
+    const file = path.join(dir, 'findings.json');
+    fs.writeFileSync(file, JSON.stringify({ findings: [{ id: 'A-1', severity: 'medium', status: 'open', title: 'one', launch_blocking: true }, { id: 'A-2', severity: 'medium', status: 'open', title: 'two' }, { id: 'A-3', severity: 'high', status: 'fixed', title: 'three', launch_blocking: true }] }));
+    const got = LC.collectFindings(file);
+    assert.deepEqual(got.items.map((x) => x.launch_blocking), [true, false, true]);
+    const res = LC.evaluate({ ...good(), findings: got });
+    assert.deepEqual(row(res, 1).detail.map((d) => d.split(' ')[0]), ['A-1']);
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+});
+
+test('row 2 with --fresh: the result must have been written after the run started, so a crashed doctor cannot hand back an older file', () => {
+  const started = NOW - 2 * MIN;
+  const older = good(); older.fresh = { ran: true, startedMs: started }; older.health.data.at = iso(NOW - 5 * MIN);
+  const r1 = LC.evaluate(older);
+  assertBlocks(r1, 2);
+  assert.match(row(r1, 2).text, /health\.json is still the older result/);
+  assert.match(row(r1, 2).text, /may have crashed/);
+  assert.match(row(r1, 2).fix, /node scripts\/doctor\.js --quick/);
+  const written = good(); written.fresh = { ran: true, startedMs: started }; written.health.data.at = iso(NOW - 1 * MIN);
+  const r2 = LC.evaluate(written);
+  assert.equal(row(r2, 2).status, 'GO');
+  assert.match(row(r2, 2).text, /just run/);
+  const exact = good(); exact.fresh = { ran: true, startedMs: started }; exact.health.data.at = iso(started);
+  assert.equal(row(LC.evaluate(exact), 2).status, 'GO', 'written at the very start of the run is accepted');
+  const justBefore = good(); justBefore.fresh = { ran: true, startedMs: started }; justBefore.health.data.at = iso(started - 1);
+  assertBlocks(LC.evaluate(justBefore), 2);
+  // without --fresh the same older file is fine while it is under 30 minutes
+  assert.equal(row(LC.evaluate(good()), 2).status, 'GO');
+  // a red light in a file the run did write still blocks
+  const red = good(); red.fresh = { ran: true, startedMs: started }; red.health.data.at = iso(NOW - MIN); red.health.data.checks.push({ id: 'backup', level: 'red', msg: 'never backed up', fix: 'x' });
+  assertBlocks(LC.evaluate(red), 2);
+});
+
+test('row 2 wording: a green doctor does not claim rows 3 to 7 cover the network lights, and a yellow one says yellow does not block', () => {
+  const g = row(LC.evaluate(good()), 2).text;
+  assert.ok(!/rows 3 to 7/.test(g));
+  assert.match(g, /rows 3, 4 and 7 cover live, files and gate/);
+  assert.match(g, /www, headers and live:missing-files are in no row/);
+  assert.match(g, /steps 7 and 8/);
+  const y = good(); y.health.data.checks.push({ id: 'cache', level: 'yellow', msg: 'big' });
+  assert.match(row(LC.evaluate(y), 2).fix, /yellow light does not block the launch \(only red does\)/);
+});
+
+// ---- the collectors, fed made-up fetch and run functions ----
+function fakeFetch(answers, calls) {
+  return async (url, init) => {
+    const method = (init && init.method) || 'GET';
+    calls.push({ url, method, init });
+    const a = answers[`${method} ${url}`] !== undefined ? answers[`${method} ${url}`] : answers[url];
+    if (a === undefined) throw new Error('unexpected request ' + method + ' ' + url);
+    if (a instanceof Error) throw a;
+    return { status: a.status, text: async () => a.body || '', body: null };
+  };
+}
+const timeoutError = () => Object.assign(new Error('timed out'), { name: 'TimeoutError' });
+
+test('collectLive: version.txt must answer 200 with a body; any other answer, a redirect or a timeout is an error; only voidtv.net is asked, with no redirects followed', async () => {
+  const calls = [];
+  const ok = await LC.collectLive({ fetch: fakeFetch({ 'https://voidtv.net/version.txt': { status: 200, body: versionText() } }, calls) });
+  assert.equal(ok.text, versionText());
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].url, 'https://voidtv.net/version.txt');
+  assert.equal(calls[0].init.redirect, 'manual');
+  assert.ok(calls[0].init.signal, 'a time limit is set');
+  for (const status of [500, 404, 401, 301, 302, 204]) {
+    const bad = await LC.collectLive({ fetch: fakeFetch({ 'https://voidtv.net/version.txt': { status, body: versionText() } }, []) });
+    assert.ok(bad.error && !bad.text, `status ${status} must be an error, not a body`);
+    assert.match(bad.error, new RegExp('it answered ' + status));
+  }
+  const slow = await LC.collectLive({ fetch: fakeFetch({ 'https://voidtv.net/version.txt': timeoutError() }, []) });
+  assert.match(slow.error, /no answer in 5 s/);
+  const down = await LC.collectLive({ fetch: fakeFetch({ 'https://voidtv.net/version.txt': Object.assign(new TypeError('fetch failed'), { cause: { code: 'ENOTFOUND' } }) }, []) });
+  assert.match(down.error, /ENOTFOUND/);
+  // what the collector returns for a bad answer turns row 3 into a NO-GO
+  const bad = await LC.collectLive({ fetch: fakeFetch({ 'https://voidtv.net/version.txt': { status: 500, body: 'oops' } }, []) });
+  assertBlocks(LC.evaluate({ ...good(), live: bad }), 3);
+});
+
+test('collectSite: HEAD / always; GET /api/e only when version.txt says gate=off; a failed request leaves the status null', async () => {
+  const on = [], off = [];
+  const siteOn = await LC.collectSite({ text: versionText() }, { fetch: fakeFetch({ 'HEAD https://voidtv.net/': { status: 401 } }, on) });
+  assert.deepEqual(siteOn, { rootStatus: 401, apiStatus: null });
+  assert.deepEqual(on.map((c) => `${c.method} ${c.url}`), ['HEAD https://voidtv.net/']);
+  const siteOff = await LC.collectSite({ text: OPEN_VERSION }, { fetch: fakeFetch({ 'HEAD https://voidtv.net/': { status: 200 }, 'GET https://voidtv.net/api/e': { status: 200 } }, off) });
+  assert.deepEqual(siteOff, { rootStatus: 200, apiStatus: 200 });
+  assert.deepEqual(off.map((c) => `${c.method} ${c.url}`), ['HEAD https://voidtv.net/', 'GET https://voidtv.net/api/e']);
+  assert.ok(off.every((c) => c.init.redirect === 'manual'));
+  const failed = await LC.collectSite({ text: OPEN_VERSION }, { fetch: fakeFetch({ 'HEAD https://voidtv.net/': timeoutError(), 'GET https://voidtv.net/api/e': { status: 401 } }, []) });
+  assert.equal(failed.rootStatus, null);
+  assert.match(failed.error, /no answer in 5 s/);
+  assert.equal(failed.apiStatus, 401);
+  assert.equal(await LC.collectSite({ error: 'it answered 500' }, { fetch: fakeFetch({}, []) }), null, 'no version.txt, nothing to ask');
+  // what the collector returns drives row 7
+  assertBlocks(LC.evaluate({ ...good(), site: failed, live: { text: OPEN_VERSION } }), 7);
+});
+
+test('collectRemote: github.com only, the ls-remote answer must be a 40 character commit on refs/heads/master; junk, a wrong ref, a timeout or a failure is an error', async () => {
+  const SHA40 = 'abcdef0123456789abcdef0123456789abcdef01';
+  const make = (urlOut, lsOut) => { const calls = []; return { calls, run: async (cmd, args) => { calls.push([cmd, ...args]); if (args[0] === 'remote') return urlOut; return lsOut; } }; };
+  const good1 = make({ err: null, stdout: 'https://github.com/bryankorth31/void-channel.git\n' }, { err: null, stdout: `${SHA40}\trefs/heads/master\n` });
+  assert.deepEqual(await LC.collectRemote({ run: good1.run }), { sha: SHA40 });
+  assert.deepEqual(good1.calls.map((c) => c.slice(0, 3).join(' ')), ['git remote get-url', 'git ls-remote origin']);
+  assert.ok(good1.calls[1].includes('refs/heads/master'));
+  assert.deepEqual(await LC.collectRemote({ run: make({ err: null, stdout: 'git@github.com:bryankorth31/void-channel.git\n' }, { err: null, stdout: `${SHA40}\trefs/heads/master\n` }).run }), { sha: SHA40 }, 'the ssh form is github.com too');
+  for (const junk of ['garbage', '', 'not-a-commit\trefs/heads/master', `${SHA40.slice(0, 20)}\trefs/heads/master`, `${SHA40}\trefs/heads/other`, `${SHA40}`, '<html>proxy error</html>']) {
+    const r = await LC.collectRemote({ run: make({ err: null, stdout: 'https://github.com/a/b.git\n' }, { err: null, stdout: junk }).run });
+    assert.ok(r.error && !r.sha, `ls-remote output ${JSON.stringify(junk)} must be an error`);
+  }
+  const timedOut = await LC.collectRemote({ run: make({ err: null, stdout: 'https://github.com/a/b.git\n' }, { err: Object.assign(new Error('x'), { killed: true }), stdout: '', stderr: '' }).run });
+  assert.match(timedOut.error, /no answer in 5 s/);
+  const failed = await LC.collectRemote({ run: make({ err: null, stdout: 'https://github.com/a/b.git\n' }, { err: new Error('x'), stdout: '', stderr: 'fatal: unable to access' }).run });
+  assert.match(failed.error, /unable to access/);
+  // another host, or lookalikes of github.com, are never contacted: ls-remote is not even run
+  for (const url of ['https://evil.com/github.com/x.git', 'https://github.com.evil.com/x.git', 'https://github.com@evil.com/x.git', 'git@evil.com:github.com/x.git', 'https://gitlab.com/a/b.git', 'C:/some/folder']) {
+    const m = make({ err: null, stdout: url + '\n' }, { err: null, stdout: `${SHA40}\trefs/heads/master\n` });
+    const r = await LC.collectRemote({ run: m.run });
+    assert.match(r.error, /not on github\.com/, url);
+    assert.equal(m.calls.length, 1, 'only the local "remote get-url" ran for ' + url);
+  }
+  assert.match((await LC.collectRemote({ run: make({ err: new Error('x'), stdout: '' }, {}).run })).error, /no git remote named origin/);
+  // a wrong answer drives row 3
+  assertBlocks(LC.evaluate({ ...good(), remote: { error: 'GitHub did not name a master commit' } }), 3);
+});
+
+test('collectSentry: asks the loader for the key found in app.js; no key means the front door and keyFound false; a HEAD refused with 405 is retried as a small GET', async () => {
+  const KEY = '0123456789abcdef0123456789abcdef';
+  const src = `const SENTRY_KEY = PROFILE.name === 'voidtv' ? '${KEY}' : '';\n`;
+  const calls = [];
+  const withKey = await LC.collectSentry({ appSource: src, fetch: fakeFetch({ [`HEAD https://js.sentry-cdn.com/${KEY}.min.js`]: { status: 200 } }, calls) });
+  assert.deepEqual(withKey, { status: 200, keyFound: true });
+  assert.equal(calls.length, 1);
+  const noKey = await LC.collectSentry({ appSource: 'const nothing = 1;', fetch: fakeFetch({ 'HEAD https://js.sentry-cdn.com/': { status: 204 } }, []) });
+  assert.deepEqual(noKey, { status: 204, keyFound: false });
+  assert.equal(row(LC.evaluate({ ...good(), sentry: noKey }), 6).status, 'WARN');
+  const c405 = [];
+  const retried = await LC.collectSentry({ appSource: src, fetch: fakeFetch({ [`HEAD https://js.sentry-cdn.com/${KEY}.min.js`]: { status: 405 }, [`GET https://js.sentry-cdn.com/${KEY}.min.js`]: { status: 200 } }, c405) });
+  assert.deepEqual(retried, { status: 200, keyFound: true });
+  assert.equal(c405[1].method, 'GET');
+  assert.equal(c405[1].init.headers.range, 'bytes=0-0');
+  const gone = await LC.collectSentry({ appSource: src, fetch: fakeFetch({ [`HEAD https://js.sentry-cdn.com/${KEY}.min.js`]: timeoutError() }, []) });
+  assert.match(gone.error, /no answer in 5 s/);
+  const notFound = await LC.collectSentry({ appSource: src, fetch: fakeFetch({ [`HEAD https://js.sentry-cdn.com/${KEY}.min.js`]: { status: 404 } }, []) });
+  assertBlocks(LC.evaluate({ ...good(), sentry: notFound }), 6);
+  // the real app.js still has the line the reader looks for (the request goes to a made-up fetch, never the network)
+  const realCalls = [];
+  const realRun = await LC.collectSentry({ fetch: async (url) => { realCalls.push(url); return { status: 200, body: null }; } });
+  assert.equal(realRun.keyFound, true, 'scripts/lib/app.js has no readable SENTRY_KEY line any more: update collectSentry');
+  assert.match(realCalls[0], /^https:\/\/js\.sentry-cdn\.com\/[0-9a-f]{16,64}\.min\.js$/);
+});
+
+test('collectHealth with --fresh: the doctor is run once with --quick; a doctor that writes nothing new is caught by row 2, one that writes a new file is accepted', async () => {
+  const dir = fs.mkdtempSync(path.join(require('os').tmpdir(), 'lc-'));
+  try {
+    fs.mkdirSync(path.join(dir, 'scripts'), { recursive: true });
+    fs.mkdirSync(path.join(dir, 'catalog', 'cache'), { recursive: true });
+    fs.writeFileSync(path.join(dir, 'scripts', 'doctor.js'), '// stands in for the doctor\n');
+    const healthFile = path.join(dir, 'catalog', 'cache', 'health.json');
+    const oldHealth = { at: iso(NOW - 5 * MIN), level: 'green', checks: [{ id: 'publish', level: 'green', msg: 'ok' }] };
+    fs.writeFileSync(healthFile, JSON.stringify(oldHealth));
+    // a doctor that crashes: exit code 1, writes nothing
+    const calls = [];
+    const crash = await LC.collectHealth(dir, true, { now: () => NOW, run: async (cmd, args) => { calls.push(args); return { err: Object.assign(new Error('Command failed'), { code: 1 }), stdout: '', stderr: 'TypeError: x' }; } });
+    assert.deepEqual(calls.map((a) => a.slice(1)), [['--quick']]);
+    assert.equal(crash.fresh.ran, true);
+    assert.equal(crash.fresh.startedMs, NOW);
+    assert.equal(crash.fresh.error, undefined, 'exit code 1 is a red light or a crash: the file decides, not the code');
+    const rCrash = LC.evaluate({ ...good(), health: crash.health, fresh: crash.fresh });
+    assertBlocks(rCrash, 2);
+    assert.match(row(rCrash, 2).text, /older result/);
+    // a doctor that writes a new file
+    const ok = await LC.collectHealth(dir, true, { now: () => NOW, run: async () => { fs.writeFileSync(healthFile, JSON.stringify({ ...oldHealth, at: iso(NOW + 1000) })); return { err: null, stdout: '', stderr: '' }; } });
+    const rOk = LC.evaluate({ ...good(), health: ok.health, fresh: ok.fresh });
+    assert.equal(row(rOk, 2).status, 'GO');
+    // a doctor that is killed, and one that is not there
+    const killed = await LC.collectHealth(dir, true, { now: () => NOW, run: async () => ({ err: Object.assign(new Error('x'), { killed: true }), stdout: '', stderr: '' }) });
+    assert.match(killed.fresh.error, /over 3 minutes/);
+    assertBlocks(LC.evaluate({ ...good(), health: killed.health, fresh: killed.fresh }), 2);
+    const empty = fs.mkdtempSync(path.join(require('os').tmpdir(), 'lc-'));
+    try {
+      const none = await LC.collectHealth(empty, true, { now: () => NOW, run: async () => ({ err: null }) });
+      assert.match(none.fresh.error, /no scripts\/doctor\.js/);
+      assertBlocks(LC.evaluate({ ...good(), health: none.health, fresh: none.fresh }), 2);
+    } finally { fs.rmSync(empty, { recursive: true, force: true }); }
+    // without --fresh the doctor is not run at all and the file is read as it is
+    fs.writeFileSync(healthFile, JSON.stringify(oldHealth));
+    const noRun = await LC.collectHealth(dir, false, { now: () => NOW, run: async () => { throw new Error('must not run'); } });
+    assert.equal(noRun.fresh, null);
+    assert.equal(noRun.health.data.at, oldHealth.at);
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+});
+
+test('the file readers (publish.log, backup-stamp.json, soak.json, health.json) on files shaped like the real ones', () => {
+  const dir = fs.mkdtempSync(path.join(require('os').tmpdir(), 'lc-'));
+  try {
+    const cache = path.join(dir, 'catalog', 'cache');
+    fs.mkdirSync(cache, { recursive: true });
+    // publish.log as scripts/publish.js writes it: dated lines, git noise, CRLF
+    const log = [
+      `${iso(NOW - 30 * HOUR)} pushed f1e7c603c: Catalog: 4790 shows, 48424 episodes (12 files)`,
+      'warning: in the working copy of x, LF will be replaced by CRLF the next time Git touches it',
+      `${iso(NOW - 2 * HOUR)} held: 31 other commits waiting: Doctor: page-guards light | Merge fix batch B (not pushed; run with --allow-other-commits to push them with the catalog)`,
+      `${iso(NOW - 10 * MIN)} nothing new`,
+    ].join('\r\n') + '\r\n';
+    fs.writeFileSync(path.join(cache, 'publish.log'), log);
+    const pub = LC.collectPublish(dir);
+    assert.equal(pub.text, log);
+    const r8 = row(LC.evaluate({ ...good(), publish: pub }), 8);
+    assert.equal(r8.status, 'GO');
+    assert.match(r8.text, /"nothing new" 10 min ago/);
+    // backup-stamp.json as scripts/backup-cache.js writes it
+    const stamp = { at: iso(NOW - 10 * DAY), from: 'C:\\x\\catalog\\cache', to: 'C:\\x-backups\\cache', sets: { tvmaze: { files: 2992, bytes: 32882110 } }, files: 89687, bytes: 2481634305, copied: 89687, copiedBytes: 2481634305, unchanged: 0, failed: 0, failedNames: [], dry: false };
+    fs.writeFileSync(path.join(cache, 'backup-stamp.json'), JSON.stringify(stamp, null, 1) + '\n');
+    const bk = LC.collectBackup(dir);
+    assert.equal(bk.stamp.files, 89687);
+    assertBlocks(LC.evaluate({ ...good(), backup: bk }), 9);
+    fs.writeFileSync(path.join(cache, 'backup-stamp.json'), JSON.stringify({ ...stamp, at: iso(NOW - HOUR) }));
+    assert.equal(row(LC.evaluate({ ...good(), backup: LC.collectBackup(dir) }), 9).status, 'GO');
+    // soak.json: absent is "missing", present is read
+    assert.deepEqual(LC.collectSoak(dir), { missing: true });
+    fs.writeFileSync(path.join(cache, 'soak.json'), JSON.stringify({ at: iso(NOW - HOUR), durationMs: 2.2 * 3600e3, longestPauseMs: 4100, stallMs: 9000, rebufferRatio: 0.002 }));
+    assert.equal(LC.collectSoak(dir).data.longestPauseMs, 4100);
+    assert.equal(row(LC.evaluate({ ...good(), soak: LC.collectSoak(dir) }), 10).status, 'WARN');
+    fs.writeFileSync(path.join(cache, 'soak.json'), '{ not json');
+    assert.match(LC.collectSoak(dir).error, /not valid JSON/);
+    // missing files become errors the rows turn into NO-GO or WARN, never a crash
+    const bare = fs.mkdtempSync(path.join(require('os').tmpdir(), 'lc-'));
+    try {
+      assert.match(LC.collectPublish(bare).error, /file not found/);
+      assert.match(LC.collectBackup(bare).error, /file not found/);
+      assert.deepEqual(LC.collectSoak(bare), { missing: true });
+      assert.equal(row(LC.evaluate({ ...good(), publish: LC.collectPublish(bare) }), 8).status, 'WARN');
+      assertBlocks(LC.evaluate({ ...good(), backup: LC.collectBackup(bare) }), 9);
+    } finally { fs.rmSync(bare, { recursive: true, force: true }); }
+    fs.writeFileSync(path.join(cache, 'backup-stamp.json'), '[1,');
+    assert.match(LC.collectBackup(dir).error, /not valid JSON/);
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+});
+
+test('collectAll: every part of the picture comes from its own source, so a faked part shows up as a wrong verdict', async () => {
+  const dir = fs.mkdtempSync(path.join(require('os').tmpdir(), 'lc-'));
+  try {
+    const cache = path.join(dir, 'catalog', 'cache');
+    fs.mkdirSync(cache, { recursive: true });
+    fs.mkdirSync(path.join(dir, 'audit'), { recursive: true });
+    fs.writeFileSync(path.join(dir, 'audit', 'findings.json'), JSON.stringify({ findings: [{ id: 'A-1', severity: 'high', status: 'fixed', title: 'done' }, { id: 'A-2', severity: 'medium', status: 'open', title: 'open medium' }] }));
+    fs.writeFileSync(path.join(cache, 'health.json'), JSON.stringify({ at: iso(NOW - 3 * MIN), level: 'green', checks: [{ id: 'publish', level: 'green', msg: 'ok' }] }));
+    fs.writeFileSync(path.join(cache, 'publish.log'), `${iso(NOW - 20 * MIN)} FAILED: push to origin/master did not go through (timeout)\n`);
+    fs.writeFileSync(path.join(cache, 'backup-stamp.json'), JSON.stringify({ at: iso(NOW - 10 * DAY), files: 5, bytes: 5, failed: 0 }));
+    const KEY = '0123456789abcdef0123456789abcdef';
+    const calls = [];
+    const net = fakeFetch({
+      'https://voidtv.net/version.txt': { status: 200, body: versionText() },
+      'HEAD https://voidtv.net/': { status: 401 },
+      [`HEAD https://js.sentry-cdn.com/${KEY}.min.js`]: { status: 200 },
+    }, calls);
+    const run = async (cmd, args) => (args[0] === 'remote' ? { err: null, stdout: 'https://github.com/bryankorth31/void-channel.git\n' } : { err: null, stdout: `${SHA}\trefs/heads/master\n` });
+    const deps = { fetch: net, run, now: () => NOW, appSource: `const SENTRY_KEY = PROFILE.name === 'voidtv' ? '${KEY}' : '';`, analytics: async () => ({ events: 7 }) };
+    const { inputs } = await LC.collectAll({ root: dir, fresh: false }, deps);
+    assert.equal(inputs.nowMs, NOW);
+    assert.equal(inputs.live.text, versionText());
+    assert.deepEqual(inputs.site, { rootStatus: 401, apiStatus: null });
+    assert.deepEqual(inputs.remote, { sha: SHA });
+    assert.deepEqual(inputs.analytics, { events: 7 });
+    assert.deepEqual(inputs.sentry, { status: 200, keyFound: true });
+    assert.match(inputs.publish.text, /FAILED: push to origin/);
+    assert.equal(inputs.backup.stamp.files, 5);
+    assert.deepEqual(inputs.soak, { missing: true });
+    assert.equal(inputs.fresh, null);
+    // the verdict follows the files: the failed publish (row 8) and the 10 day old backup (row 9) block, nothing else does
+    const res = LC.evaluate(inputs);
+    assert.deepEqual(res.blocking, [8, 9]);
+    assert.equal(res.code, 1);
+    assert.equal(row(res, 3).status, 'GO');
+    assert.equal(row(res, 7).status, 'GO');
+    assert.ok(calls.every((c) => /^https:\/\/(voidtv\.net|js\.sentry-cdn\.com)\//.test(c.url)), 'only the listed hosts were asked');
+    // a made-up commit on the GitHub side shows up as a mismatch
+    const other = await LC.collectAll({ root: dir, fresh: false }, { ...deps, run: async (cmd, args) => (args[0] === 'remote' ? { err: null, stdout: 'https://github.com/a/b.git\n' } : { err: null, stdout: `${'e'.repeat(40)}\trefs/heads/master\n` }) });
+    assertBlocks(LC.evaluate(other.inputs), 3);
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+});
+
 test('no em dash in the files this piece wrote, and the opening-day section names only files and commands that exist', () => {
   for (const f of ['scripts/launch-check.js', 'tests/launch-check.test.js', 'docs/DEPLOY.md']) {
     const text = fs.readFileSync(path.join(REPO, f), 'utf8');
@@ -385,4 +771,15 @@ test('no em dash in the files this piece wrote, and the opening-day section name
   }
   assert.ok(seen.has('scripts/launch-check.js') || doc.includes('scripts/launch-check.js'), 'the doc names the launch check');
   assert.ok(doc.includes('node scripts/launch-check.js'), 'the doc says how to run the launch check by hand');
+  // the wording the reviewer asked for
+  assert.ok(!/last lines say `Verdict: GO/.test(doc), 'the verdict line is followed by notes, so "the last lines" is wrong');
+  assert.match(doc, /the line that starts `Verdict:` says GO/);
+  assert.match(doc, /make sure setup steps 1 to 6 above are done/i);
+  assert.match(doc, /the launch check cannot see the Cloudflare dashboard/);
+  assert.match(doc, /If only row 3 is NO-GO[^.]*wait two minutes and run it again/);
+  assert.match(doc, /A yellow light in the doctor is a WARN too: only a red light blocks/);
+  assert.match(doc, /flagged launch-blocking/);
+  assert.ok(!/It changes nothing and cannot open/.test(doc), 'with --fresh the doctor rewrites health.json');
+  assert.match(doc, /the one thing that writes is `--fresh`/);
+  assert.match(doc, /a HEAD on `https:\/\/voidtv\.net\/` and, for `gate=off`, a GET on `\/api\/e`/);
 });

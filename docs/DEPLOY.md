@@ -104,27 +104,27 @@ node scripts/launch-check.js
 Run it in the real void-channel folder (it reads `audit/`, `catalog/cache/` and `backend/.env`, which are not in git). It needs the internet and takes a few seconds. It prints one line for each of ten checks, each marked GO, NO-GO or WARN, and ends with a verdict line:
 
 - **NO-GO** blocks the launch and prints a line starting `By hand:` that says what to do. The exit code is 1 when any row is NO-GO and 0 otherwise. In PowerShell, `$LASTEXITCODE` shows it right after the run.
-- **WARN** is listed and never blocks. Read each one.
+- **WARN** is listed and never blocks. Read each one. A yellow light in the doctor is a WARN too: only a red light blocks (the plan's "System check all green" is stricter, so read the yellow ones before you say go).
 - Rows 1 to 9 are required (each can be NO-GO). Row 10 is advisory.
 
 | row | what it looks at | NO-GO when |
 |---|---|---|
-| 1 Findings | `audit/findings.json` | any critical or high finding is still open (any status other than fixed or refuted); every one is listed |
-| 2 Doctor | `catalog/cache/health.json`, written by the doctor | a red light (named), or the result is over 30 minutes old |
+| 1 Findings | `audit/findings.json` | any critical or high finding is still open (any status other than fixed or refuted), or any open finding of any severity that the audit marked `launch_blocking`; every one is listed and the flagged ones are marked "flagged launch-blocking" |
+| 2 Doctor | `catalog/cache/health.json`, written by the doctor | a red light (named), or the result is over 30 minutes old; yellow lights are WARN. With `--fresh` the result must also have been written after the run started |
 | 3 Live = master | `https://voidtv.net/version.txt` against `git ls-remote origin master` | the commits differ (a short commit id is accepted) |
 | 4 File count | line 2 of the live `version.txt` | 19,500 files or more, or a file over 24 MiB (WARN from 18,000 files) |
 | 5 Analytics | one small read-only Analytics Engine query through Cloudflare | the query fails or the keys are missing (WARN: no events in the last 24 hours) |
-| 6 Sentry | the Sentry loader host, `js.sentry-cdn.com` | no answer (this proves the host answers, not that an event arrived) |
-| 7 Gate | the `gate=` word in the live `version.txt` | `gate=off` (the site is open) while any other required row is NO-GO |
+| 6 Sentry | the Sentry loader host, `js.sentry-cdn.com` | no answer (this proves the host answers, not that an event arrived); WARN when the site's Sentry key cannot be read from `scripts/lib/app.js`, because then only the host's front door was asked |
+| 7 Gate | the `gate=` word in the live `version.txt`, then the running site: a HEAD on `https://voidtv.net/` and, for `gate=off`, a GET on `/api/e` (the doctor's own rule) | `gate=on` but `/` does not answer 401; `gate=off` but `/` does not answer 200 or `/api/e` answers 401; the site cannot be asked; or `gate=off` (the site is open) while any other required row is NO-GO |
 | 8 Publish | `catalog/cache/publish.log` | the last run FAILED or was refused by a guard (WARN: held, a refusal in the last day, no run for 6 hours) |
 | 9 Backup | `catalog/cache/backup-stamp.json` | the cache was never backed up, or the last backup is over 7 days old (WARN over 3 days) |
 | 10 Player soak | `catalog/cache/soak.json` | never (advisory); WARN when there is no result or a pause over 3 seconds. The player lab does not write this file yet, so it says "no soak result yet" |
 
 Options: `--fresh` runs the quick doctor first (`node scripts/doctor.js --quick`, no network, which rewrites `health.json` as the doctor always does) and then reads it. `--findings <file>` reads the findings from another file. `VOID_ROOT=<folder>` looks for `audit/`, `catalog/cache/` and `backend/.env` under another folder.
 
-It contacts only `voidtv.net`, `github.com`, `api.cloudflare.com` and `js.sentry-cdn.com`, each with a 5 second limit. It reads two keys from `backend/.env` (`CF_ACCOUNT_ID` and `CF_ANALYTICS_TOKEN`) for the analytics query and never prints them. It changes nothing and cannot open the site. It does not check the playback pause rate in Sentry or the catalog standard; look at those yourself (step 10).
+It contacts only `voidtv.net`, `github.com`, `api.cloudflare.com` and `js.sentry-cdn.com`, each with a 5 second limit. It reads two keys from `backend/.env` (`CF_ACCOUNT_ID` and `CF_ANALYTICS_TOKEN`) for the analytics query and never prints them. It only reads and cannot open the site; the one thing that writes is `--fresh`, where the quick doctor rewrites `catalog/cache/health.json` as it always does. It asks `voidtv.net` for `version.txt`, the front page and, when the site is open, `/api/e`. It does not check the Cloudflare dashboard (setup steps 1 to 6 below), the doctor's `www`, `headers` and `live:missing-files` lights (steps 7 and 8 do those by hand), the playback pause rate in Sentry or the catalog standard; look at those yourself (step 10).
 
-Every row can be checked without it: row 3 is `git ls-remote origin master` against the first word of `https://voidtv.net/version.txt`; rows 2, 8 and 9 are the files named in the table; row 4 is line 2 of `version.txt`; row 7 is its `gate=` word.
+Every row can be checked without it: row 3 is `git ls-remote origin master` against the first word of `https://voidtv.net/version.txt`; rows 2, 8 and 9 are the files named in the table; row 4 is line 2 of `version.txt`; row 7 is its `gate=` word together with `curl.exe -sI https://voidtv.net/` (and, for `gate=off`, `curl.exe -s https://voidtv.net/api/e`, which prints one line of text).
 
 ### One-time setup in Cloudflare (before the day)
 
@@ -163,10 +163,10 @@ All paths start at dash.cloudflare.com. None of these changes what a visitor see
 
 Each step says how to tell it worked. If a step does not work, stop there: nothing later depends on guessing.
 
-1. **Run the launch check:** `node scripts/launch-check.js`. It worked when the last lines say `Verdict: GO.` and the exit code is 0. If it says NO-GO, stop: each NO-GO row says what to do by hand, then run it again. If row 2 says the doctor result is old, run `node scripts/launch-check.js --fresh`. Then look yourself at the two things it does not check: the playback pause rate in Sentry against the target, and the catalog standard.
+1. **Run the launch check:** `node scripts/launch-check.js`. It worked when the line that starts `Verdict:` says GO and the exit code is 0 (the verdict is followed by a few lines of notes). If it says NO-GO, stop: each NO-GO row says what to do by hand, then run it again. If row 2 says the doctor result is old, run `node scripts/launch-check.js --fresh`. Then look yourself at the two things it does not check: the playback pause rate in Sentry against the target, and the catalog standard.
 2. **Confirm Workers Paid is on.** Open the account's Billing page in the dashboard and check that Workers Paid is listed as active. It worked when you can see it there. Why: with the password off, `/api/e` and `/q/*` still run as Functions, and without Workers Paid they would stop at the free daily limit (the pages would not). With it, 10 million Function requests a month are included, then 0.30 dollars per million.
 3. **Confirm `GATE_KEY` is set.** Settings > Variables and Secrets, Production list: the name `GATE_KEY` is listed (a Secret shows only its name). It matters if you ever put the password back: the cookie the gate hands out is then a signed value you can rotate (change the key to sign everyone out) instead of a plain hash of the password. If it is missing, add it as a Secret with a long random value you make up and keep only there. A changed variable is picked up by the next build, which is step 6.
-4. **Say go.** Nothing below happens until you do. Make sure `https://voidtv.net/version.txt` still shows `gate=on` and the launch check was run on the same day.
+4. **Say go.** Nothing below happens until you do. First make sure setup steps 1 to 6 above are done (the www rule, HSTS, the rate-limit rule, the failure email, previews off and the Production variables): the launch check cannot see the Cloudflare dashboard, so it says GO whether or not they are. Make sure `https://voidtv.net/version.txt` still shows `gate=on` and the launch check was run on the same day.
 5. **Open the site.** Settings > Variables and Secrets, Production list:
    - delete `SITE_PASSWORD` (a Secret too);
    - delete `GATE` if it is there as `on`;
@@ -196,7 +196,7 @@ Each step says how to tell it worked. If a step does not work, stop there: nothi
    - `curl.exe -sI https://voidtv.net/` : the first line ends `200` and the headers include `strict-transport-security`, `x-frame-options: DENY`, `x-content-type-options: nosniff`, `referrer-policy`, `permissions-policy` and `content-security-policy-report-only`.
 
    (In PowerShell, plain `curl` is a different command; type `curl.exe`.) It worked when you see those lines. If the www answer is not a 301, setup step 1 is not done. The Content-Security-Policy is report-only: it blocks nothing, and a browser lists what it would have blocked under F12 > Console.
-9. **Run the launch check again:** `node scripts/launch-check.js`. It worked when row 7 reads `gate=off: the site is OPEN, and every required row is GO` and the verdict is GO. If any required row is NO-GO now, row 7 is NO-GO too: the site is open on a failing check, so close it (next section) and fix the row.
+9. **Run the launch check again:** `node scripts/launch-check.js`. It worked when row 7 reads `gate=off: the site is OPEN (front page 200, /api/e 200), and every required row is GO` and the line that starts `Verdict:` says GO. If only row 3 is NO-GO, that is usually the two-hourly publish having pushed a new commit that Cloudflare is still building: wait two minutes and run it again. If any other required row is NO-GO now, row 7 is NO-GO too: the site is open on a failing check, so close it (next section) and fix the row.
 10. **Watch for 48 hours before any promo.** Promo videos start only after 48 hours with the site open and no red row.
     - Sentry (organisation `church-of-american-strength-ho`, project `voidtv`): new issues named "Playback trouble: <show>", and the pause rate against the target.
     - Analytics: HQ > Analytics and HQ > Reports. Events keep arriving all day; a day with none while the site is open means the intake stopped (launch check row 5 says WARN for it). Reports lists what viewers flagged with "Wrong file?".
@@ -211,7 +211,7 @@ There are two ways. Use the first to make the site private again. Use the second
 
 1. Settings > Variables and Secrets, Production list: add `SITE_PASSWORD` (type Text) with the password. Delete `GATE`, or set it to `on`. (The same password and the same `GATE_KEY` keep every earlier visitor's 30-day cookie valid.)
 2. Rebuild: Deployments > the newest production deployment > actions menu > Retry deployment (or push; push only on your word).
-3. It worked when line 2 of `https://voidtv.net/version.txt` starts `gate=on`, `curl.exe -sI https://voidtv.net/` answers 401, and the doctor's `gate` light is green. Run `node scripts/launch-check.js`: row 7 reads `gate=on`.
+3. It worked when line 2 of `https://voidtv.net/version.txt` starts `gate=on`, `curl.exe -sI https://voidtv.net/` answers 401, and the doctor's `gate` light is green. Run `node scripts/launch-check.js`: row 7 reads `gate=on and the front page answers 401`.
 
 **B. Roll back to the previous good deployment (instant, no build).**
 

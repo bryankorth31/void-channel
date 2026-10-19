@@ -1,10 +1,12 @@
-// LAUNCH CHECK: the go/no-go list for opening voidtv.net, as one command. It only reads. It changes nothing, it never opens the
-// site, and it never touches the password (the gate stays on until Bryan removes it himself, audit rule R-027).
+// LAUNCH CHECK: the go/no-go list for opening voidtv.net, as one command. It only reads, it never opens the site, and it never
+// touches the password (the gate stays on until Bryan removes it himself, audit rule R-027). The one thing that can write is --fresh,
+// which runs the quick doctor, and the doctor rewrites catalog/cache/health.json as it always does.
 //
 //   node scripts/launch-check.js [--fresh] [--findings <file>]
 //
 //   --fresh            run the quick doctor first (node scripts/doctor.js --quick, no network). That rewrites
-//                      catalog/cache/health.json, which is the doctor's normal output, and then reads it.
+//                      catalog/cache/health.json, which is the doctor's normal output, and then reads it. The result must be
+//                      newer than the start of the run, so a doctor that crashed cannot hand back an older file.
 //   --findings <file>  read the audit findings from this file instead of audit/findings.json
 //   VOID_ROOT=<folder> look for audit/, catalog/cache/ and backend/.env under that folder instead of this repository
 //                      (audit/, catalog/cache and backend/.env are not in git, so a copy of the repository does not have them)
@@ -15,7 +17,8 @@
 //   Rows 1 to 9 are required: each can come out NO-GO. Row 10 (the player soak) is advisory: GO or WARN only.
 // The rules are in evaluate(), a pure function of the collected facts (tests/launch-check.test.js feeds it fixtures). The collectors
 // below are thin: they read files and make a few small requests, each limited to 5 seconds, and a failure becomes a NO-GO or WARN
-// row with a plain sentence, never a crash. The only hosts contacted are voidtv.net (version.txt), github.com (git ls-remote),
+// row with a plain sentence, never a crash. The collectors take their fetch and run functions as arguments so the tests can feed them
+// made-up answers. The only hosts contacted are voidtv.net (version.txt, the front page, /api/e), github.com (git ls-remote),
 // api.cloudflare.com (one read-only Analytics Engine query) and js.sentry-cdn.com (the Sentry loader). Never the Internet Archive,
 // TVmaze or TMDB. Secrets are read from backend/.env only to make the one query, are never printed, and anything in an output line
 // that looks like a token is masked.
@@ -84,12 +87,13 @@ function parsePublishLog(text, nowMs) {
 // evaluate(inputs): the rules. Pure. Returns { rows, code, verdict, blocking } and touches nothing.
 // inputs (every part may be missing or carry an error string; a missing part is a NO-GO or WARN, never a crash):
 //   nowMs, root
-//   findings   { error } | { items: [{ id, severity, status, title }] }
-//   health     { error } | { data: { at, level, checks: [{ id, level, msg, fix }] } },  fresh: { ran, error }
+//   findings   { error } | { items: [{ id, severity, status, title, launch_blocking }] }
+//   health     { error } | { data: { at, level, checks: [{ id, level, msg, fix }] } },  fresh: { ran, startedMs, error }
 //   live       { error } | { text }                 the body of https://voidtv.net/version.txt
+//   site       { rootStatus, apiStatus, error }     HEAD https://voidtv.net/ and, for gate=off, GET /api/e (null = not answered)
 //   remote     { error } | { sha }                  git ls-remote origin master
 //   analytics  { missingKeys } | { error } | { events }
-//   sentry     { error } | { status }
+//   sentry     { error } | { status, keyFound }
 //   publish    { error } | { text }                 catalog/cache/publish.log
 //   backup     { error } | { stamp }                catalog/cache/backup-stamp.json
 //   soak       { missing } | { error } | { data }   catalog/cache/soak.json
@@ -104,13 +108,19 @@ function rowFindings(f) {
   if (!items.length) return r(NOGO, 'the findings file lists no findings at all, which is not believable', { fix: 'Open the file and check it is the audit list (audit/findings.json has a top-level "findings" list).' });
   const open = items.filter((x) => !CLOSED.includes(String((x && x.status) || '').toLowerCase()));
   const sev = (x) => String(x.severity || '').toLowerCase();
-  const blocking = open.filter((x) => BLOCKING.includes(sev(x))).sort((a, b) => (sev(a) === sev(b) ? String(a.id).localeCompare(String(b.id)) : sev(a) === 'critical' ? -1 : 1));
+  const hi = (x) => BLOCKING.includes(sev(x));
+  // The audit marks some findings of any severity "launch_blocking": true. An open one of those blocks like a critical or high does.
+  const flaggedOnly = (x) => x.launch_blocking === true && !hi(x);
+  const rank = (x) => (sev(x) === 'critical' ? 0 : sev(x) === 'high' ? 1 : 2);
+  const blocking = open.filter((x) => hi(x) || x.launch_blocking === true).sort((a, b) => rank(a) - rank(b) || String(a.id).localeCompare(String(b.id)));
   const rest = open.length - blocking.length;
-  if (!blocking.length) return r(GO, `no open critical or high findings (${rest} lower ones still open, not blocking)`);
-  const row = r(NOGO, `${blocking.length} open critical or high finding${blocking.length === 1 ? '' : 's'}: ${blocking.map((x) => x.id).join(', ')}`, {
+  if (!blocking.length) return r(GO, `no open critical or high finding, and none flagged launch-blocking (${rest} other open finding${rest === 1 ? '' : 's'}, not blocking)`);
+  const nHi = blocking.filter(hi).length, nFlag = blocking.filter(flaggedOnly).length;
+  const parts = [nHi ? `${nHi} critical or high` : '', nFlag ? `${nFlag} flagged launch-blocking` : ''].filter(Boolean).join(', ');
+  const row = r(NOGO, `${blocking.length} open finding${blocking.length === 1 ? '' : 's'} block${blocking.length === 1 ? 's' : ''} the launch (${parts}): ${blocking.map((x) => x.id).join(', ')}`, {
     fix: 'Each one needs a fix that is verified, or a ruling that it is not real. The list is audit/findings.json (status fixed or refuted closes one). Ask the audit chat for the fix of each, then run this check again.',
   });
-  row.detail = blocking.map((x) => `${x.id} ${sev(x)} (${String(x.status || 'open').toLowerCase()}): ${clip(x.title, 100)}`);
+  row.detail = blocking.map((x) => `${x.id} ${sev(x) || 'no severity'} (${String(x.status || 'open').toLowerCase()})${flaggedOnly(x) ? ' [flagged launch-blocking]' : ''}: ${clip(x.title, 100)}`);
   return row;
 }
 
@@ -122,6 +132,9 @@ function rowDoctor(h, fresh, nowMs) {
   const d = h.data, checks = Array.isArray(d.checks) ? d.checks : null;
   const atMs = Date.parse(d.at);
   if (!checks || !Number.isFinite(atMs)) return r(NOGO, 'health.json is not a doctor result (no date or no lights)', { fix: 'Run the quick doctor again: node scripts/doctor.js --quick' });
+  // With --fresh the quick doctor was just run, so the result must have been written by that run. A doctor that crashed leaves the
+  // file from an earlier run behind (and a crash exits 1 like a red light does), so an older "at" is not accepted.
+  if (fresh && fresh.ran && Number.isFinite(fresh.startedMs) && atMs < fresh.startedMs) return r(NOGO, `the quick doctor was run but health.json is still the older result from ${ago(nowMs - atMs)} ago: the doctor did not finish writing a new one (it may have crashed)`, { fix: 'Run the quick doctor yourself and read what it says: node scripts/doctor.js --quick. Then run this check again.' });
   const age = (nowMs - atMs) / 60000;
   if (age > HEALTH_MAX_MIN) return r(NOGO, `the doctor result is ${ago(nowMs - atMs)} old (limit ${HEALTH_MAX_MIN} min), so it says nothing about now`, { fix: 'Run this check with --fresh (node scripts/launch-check.js --fresh), which runs the quick doctor first. By hand: node scripts/doctor.js --quick, then this check again.' });
   const reds = checks.filter((c) => c.level === 'red'), yellows = checks.filter((c) => c.level === 'yellow');
@@ -130,8 +143,8 @@ function rowDoctor(h, fresh, nowMs) {
     row.detail = reds.map((c) => `${c.id}: ${clip(c.msg, 110)}` + (c.fix ? ` -> ${clip(c.fix, 150)}` : ''));
     return row;
   }
-  if (yellows.length) return r(WARN, `no red lights, ${yellows.length} yellow: ${yellows.map((c) => c.id).join(', ')} (${ago(nowMs - atMs)} old${fresh && fresh.ran ? ', just run' : ''})`, { fix: 'Yellow does not block. docs/RUNBOOK.md says what each one means.' });
-  return r(GO, `all ${checks.length} lights green (${ago(nowMs - atMs)} old${fresh && fresh.ran ? ', just run' : ''}); the quick doctor skips the network lights, rows 3 to 7 cover those`);
+  if (yellows.length) return r(WARN, `no red lights, ${yellows.length} yellow: ${yellows.map((c) => c.id).join(', ')} (${ago(nowMs - atMs)} old${fresh && fresh.ran ? ', just run' : ''})`, { fix: 'A yellow light does not block the launch (only red does); read each one and decide. docs/RUNBOOK.md says what each one means.' });
+  return r(GO, `all ${checks.length} lights green (${ago(nowMs - atMs)} old${fresh && fresh.ran ? ', just run' : ''}). The quick doctor skips the network lights: rows 3, 4 and 7 cover live, files and gate; www, headers and live:missing-files are in no row (docs/DEPLOY.md, steps 7 and 8, check them by hand)`);
 }
 
 function rowLiveVersion(live, remote) {
@@ -173,6 +186,7 @@ function rowSentry(s) {
   const r = (status, text, extra) => mk(6, 'Sentry', status, text, extra);
   const note = ' This proves the host answers, not that an event arrived.';
   if (!s || s.error) return r(NOGO, 'the Sentry loader host did not answer: ' + clip(s && s.error || 'no answer', 100) + '.' + note, { fix: 'Open https://js.sentry-cdn.com in a browser. If it loads, run this again; if not, Sentry or your connection is down and the 48 hour watch would be blind.' });
+  if (s.status >= 200 && s.status < 400 && s.keyFound === false) return r(WARN, `js.sentry-cdn.com answered ${s.status} at its front door only: the site's Sentry key could not be found in scripts/lib/app.js, so the loader itself was not asked.${note}`, { fix: 'Open scripts/lib/app.js and look for SENTRY_KEY. If the key moved, this check needs updating (ask the audit chat); open https://js.sentry-cdn.com/<the key>.min.js in a browser to see the loader yourself.' });
   if (s.status >= 200 && s.status < 400) return r(GO, `js.sentry-cdn.com answered ${s.status}.${note}`);
   return r(NOGO, `js.sentry-cdn.com answered ${s.status}, which is not the loader.` + note, { fix: 'The site loads its Sentry script from there. Check the Sentry project voidtv still has its browser key (Sentry > Settings > Client Keys); the key is named in scripts/lib/app.js.' });
 }
@@ -222,16 +236,25 @@ function rowSoak(s, nowMs) {
   return r(GO, `${len}${when}: longest pause ${(longest / 1000).toFixed(1)} s, within the ${SOAK_TARGET_MS / 1000} s target`);
 }
 
-function rowGate(live, others) {
+// The gate row asks the RUNNING site, not only version.txt: version.txt is what the build believed, the front page is what visitors get.
+// The rule is the doctor's own (G.gateLight in scripts/lib/siteguards.js): gate=on must answer 401 on /, gate=off must answer 200 on /
+// and 200 on /api/e (a 401 there means a password the build could not see is still guarding the intake). A mismatch is a NO-GO.
+// site is { rootStatus, apiStatus } from HEAD / and, for gate=off, GET /api/e; a status that could not be read is null.
+function rowGate(live, site, others) {
   const r = (status, text, extra) => mk(7, 'Gate', status, text, extra);
   if (!live || live.error) return r(WARN, 'not checked: version.txt could not be read (row 3 says why)');
   const v = G.parseVersion(live.text);
   const needs = 'To open the site (only when you say so): in Workers & Pages > voidtvsite > Settings > Variables and Secrets, delete SITE_PASSWORD, add a Text variable GATE = off, then retry the deployment (docs/DEPLOY.md, opening day).';
   if (!v.gate) return r(WARN, 'version.txt has no gate= word (the live build is older than the one-switch change)', { fix: 'It appears with the next deploy.' });
-  if (v.gate === 'on') { const row = r(GO, 'gate=on: the site is private, as it must be until you open it'); row.detail = [needs]; return row; }
+  if (!site || site.rootStatus == null) return r(NOGO, `version.txt says gate=${v.gate}, but the front page https://voidtv.net/ could not be asked (${clip(site && site.error || 'no answer', 80)}), so what visitors get is not known`, { fix: 'Open https://voidtv.net/ in a private window and run this check again. gate=on must show the password page; gate=off must show the site.' });
+  if (v.gate === 'off' && site.apiStatus == null) return r(NOGO, 'gate=off, the front page answers ' + site.rootStatus + ', but the analytics intake https://voidtv.net/api/e could not be asked (' + clip(site.apiError || 'no answer', 80) + ')', { fix: 'Run this check again. If it stays, open https://voidtv.net/api/e in a browser: it should print a short line of text.' });
+  const light = G.gateLight({ gate: v.gate, rootStatus: site.rootStatus, apiStatus: v.gate === 'off' ? site.apiStatus : null });
+  if (light.level === 'red') return r(NOGO, light.msg, { fix: light.fix });
+  if (light.level === 'yellow') return r(WARN, light.msg, { fix: light.fix });
+  if (v.gate === 'on') { const row = r(GO, 'gate=on and the front page answers 401, the password page: the site is private, as it must be until you open it'); row.detail = [needs]; return row; }
   const bad = others.filter((x) => x.status === NOGO);
-  if (bad.length) return r(NOGO, `gate=off: the site is OPEN while ${bad.length === 1 ? 'row' : 'rows'} ${bad.map((x) => x.n).join(', ')} ${bad.length === 1 ? 'is' : 'are'} NO-GO. The site must not be open on a failing check`, { fix: 'Close it now: add SITE_PASSWORD (type Text) and delete GATE (or set it to on), then retry the deployment. docs/DEPLOY.md, "Rollback and closing the site again". Then fix the NO-GO rows.' });
-  return r(GO, 'gate=off: the site is OPEN, and every required row is GO');
+  if (bad.length) return r(NOGO, `gate=off: the site is OPEN (front page ${site.rootStatus}, /api/e ${site.apiStatus}) while ${bad.length === 1 ? 'row' : 'rows'} ${bad.map((x) => x.n).join(', ')} ${bad.length === 1 ? 'is' : 'are'} NO-GO. The site must not be open on a failing check`, { fix: 'Close it now: add SITE_PASSWORD (type Text) and delete GATE (or set it to on), then retry the deployment. docs/DEPLOY.md, "Rollback and closing the site again". Then fix the NO-GO rows.' });
+  return r(GO, `gate=off: the site is OPEN (front page ${site.rootStatus}, /api/e ${site.apiStatus}), and every required row is GO`);
 }
 
 function evaluate(inputs) {
@@ -241,7 +264,7 @@ function evaluate(inputs) {
     rowAnalytics(i.analytics), rowSentry(i.sentry),
   ];
   const later = [rowPublish(i.publish, nowMs), rowBackup(i.backup, nowMs), rowSoak(i.soak, nowMs)];
-  const gate = rowGate(i.live, [...rows, ...later.filter((x) => x.n <= 9)]);
+  const gate = rowGate(i.live, i.site, [...rows, ...later.filter((x) => x.n <= 9)]);
   const all = [...rows, gate, ...later].sort((a, b) => a.n - b.n);
   const blocking = all.filter((x) => x.status === NOGO).map((x) => x.n);
   const warns = all.filter((x) => x.status === WARN).map((x) => x.n);
@@ -267,7 +290,7 @@ function render(result, ctx) {
   const out = [];
   out.push(`Launch check for voidtv.net, ${new Date(c.nowMs || Date.now()).toISOString().slice(0, 16).replace('T', ' ')} UTC`);
   if (c.root) out.push(`Reading: ${c.root}`);
-  out.push('This only reads. It changes nothing and it never opens the site.');
+  out.push('This only reads, and it never opens the site.' + (c.fresh ? ' It ran the quick doctor first, which rewrote catalog/cache/health.json as the doctor always does.' : ''));
   out.push('Rows 1 to 9 are required: a NO-GO on any of them blocks the launch (exit code 1). Row 10 is advisory. WARN never blocks.');
   out.push('');
   const pad = '               ';
@@ -297,40 +320,55 @@ function collectFindings(file) {
   if (j.error) return { error: j.error };
   const list = j.data && j.data.findings;
   if (!Array.isArray(list)) return { error: file + ' has no "findings" list' };
-  return { items: list.map((x) => ({ id: x.id, severity: x.severity, status: x.status, title: x.title })) };
+  return { items: list.map((x) => ({ id: x.id, severity: x.severity, status: x.status, title: x.title, launch_blocking: x.launch_blocking === true })) };
 }
 
 // Only the hosts above may be contacted. Redirects are not followed: a redirect to another host would be a host we did not list.
-async function get(url, init) {
+// doFetch is fetch, or a made-up one in the tests.
+async function get(url, init, doFetch) {
   const u = new URL(url);
   if (u.protocol !== 'https:' || !ALLOWED_HOSTS.includes(u.hostname)) throw new Error('refusing to contact ' + u.hostname);
-  return fetch(url, { redirect: 'manual', ...(init || {}), signal: AbortSignal.timeout(NET_MS) });
+  return (doFetch || fetch)(url, { redirect: 'manual', ...(init || {}), signal: AbortSignal.timeout(NET_MS) });
 }
 const why = (e) => (e && e.name === 'TimeoutError' ? `no answer in ${NET_MS / 1000} s` : String((e && (e.cause && e.cause.code || e.message)) || e).slice(0, 100));
+const drain = async (r) => { try { if (r && r.body && r.body.cancel) await r.body.cancel(); } catch (e) { /* body already gone */ } };
 
-async function collectLive() {
+// deps (all optional, for the tests): { fetch, run, selfRoot, appSource, now, analytics }
+async function collectLive(deps) {
   try {
-    const r = await get('https://voidtv.net/version.txt', { headers: { 'cache-control': 'no-cache' } });
-    if (r.status !== 200) return { error: 'it answered ' + r.status };
+    const r = await get('https://voidtv.net/version.txt', { headers: { 'cache-control': 'no-cache' } }, deps && deps.fetch);
+    if (r.status !== 200) { await drain(r); return { error: 'it answered ' + r.status }; }
     return { text: (await r.text()).slice(0, 4000) };
   } catch (e) { return { error: why(e) }; }
+}
+
+// What visitors really get: HEAD / and, when version.txt says gate=off, GET /api/e. A status that could not be read stays null.
+async function collectSite(live, deps) {
+  if (!live || live.error) return null;
+  const f = deps && deps.fetch, out = { rootStatus: null, apiStatus: null };
+  try { const r = await get('https://voidtv.net/', { method: 'HEAD' }, f); out.rootStatus = r.status; await drain(r); } catch (e) { out.error = why(e); }
+  if (G.parseVersion(live.text).gate === 'off') {
+    try { const r = await get('https://voidtv.net/api/e', { method: 'GET' }, f); out.apiStatus = r.status; await drain(r); } catch (e) { out.apiError = why(e); }
+  }
+  return out;
 }
 
 function run(cmd, args, opts) {
   return new Promise((resolve) => execFile(cmd, args, { windowsHide: true, ...opts }, (err, stdout, stderr) => resolve({ err, stdout: String(stdout || ''), stderr: String(stderr || '') })));
 }
 // git ls-remote origin master, asked from the checkout this script lives in. Only github.com is allowed.
-async function collectRemote() {
+async function collectRemote(deps) {
+  const doRun = (deps && deps.run) || run, cwd = (deps && deps.selfRoot) || SELF_ROOT;
   const env = { ...process.env, GIT_TERMINAL_PROMPT: '0', GCM_INTERACTIVE: 'never' };
-  const u = await run('git', ['remote', 'get-url', 'origin'], { cwd: SELF_ROOT, timeout: NET_MS, env });
-  const url = u.stdout.trim();
+  const u = await doRun('git', ['remote', 'get-url', 'origin'], { cwd, timeout: NET_MS, env });
+  const url = String(u.stdout || '').trim();
   if (u.err || !url) return { error: 'this folder has no git remote named origin' };
   const host = (/^[a-z+]+:\/\/(?:[^@/]*@)?([^/:]+)/i.exec(url) || /^[^@]+@([^:]+):/.exec(url) || [])[1];
   if (String(host).toLowerCase() !== 'github.com') return { error: 'origin is not on github.com, so it is not contacted' };
-  const r = await run('git', ['ls-remote', 'origin', 'refs/heads/master'], { cwd: SELF_ROOT, timeout: NET_MS, env });
+  const r = await doRun('git', ['ls-remote', 'origin', 'refs/heads/master'], { cwd, timeout: NET_MS, env });
   if (r.err) return { error: r.err.killed ? `no answer in ${NET_MS / 1000} s` : clip(r.stderr || r.err.message, 100) };
-  const sha = (r.stdout.split(/\s+/)[0] || '').trim();
-  return /^[0-9a-f]{40}$/i.test(sha) ? { sha } : { error: 'GitHub did not name a master commit' };
+  const first = String(r.stdout || '').split(/\r?\n/)[0].split(/\s+/);
+  return /^[0-9a-f]{40}$/i.test(first[0]) && first[1] === 'refs/heads/master' ? { sha: first[0] } : { error: 'GitHub did not name a master commit' };
 }
 
 // The Cloudflare account id and analytics token come from backend/.env under the root being checked (only these two keys), are handed to
@@ -363,54 +401,65 @@ async function collectAnalytics(root, secrets) {
   finally { globalThis.fetch = realFetch; }
 }
 
-async function collectSentry() {
+async function collectSentry(deps) {
   // The loader is the script every page loads: https://js.sentry-cdn.com/<public browser key>.min.js (the key is public, in every page).
-  // The key is taken from scripts/lib/app.js; if it cannot be found the host's front door is asked instead. The ingest host is not named
-  // anywhere in the code (the loader supplies it), so it is not contacted.
-  const src = readText(path.join(SELF_ROOT, 'scripts', 'lib', 'app.js')).text || '';
+  // The key is taken from scripts/lib/app.js. If it cannot be found the host's front door is asked instead and the row can only be a
+  // WARN (keyFound: false), never a GO: the front door answers for any visitor, so it proves nothing about this site's loader. The
+  // ingest host is not named anywhere in the code (the loader supplies it), so it is not contacted.
+  const src = deps && typeof deps.appSource === 'string' ? deps.appSource : readText(path.join((deps && deps.selfRoot) || SELF_ROOT, 'scripts', 'lib', 'app.js')).text || '';
   const key = (/SENTRY_KEY\s*=\s*PROFILE\.name\s*===\s*'voidtv'\s*\?\s*'([0-9a-f]{16,64})'/.exec(src) || [])[1];
   const url = key ? `https://js.sentry-cdn.com/${key}.min.js` : 'https://js.sentry-cdn.com/';
+  const f = deps && deps.fetch;
   try {
-    let r = await get(url, { method: 'HEAD' });
-    if (r.status === 405 || r.status === 501) r = await get(url, { method: 'GET', headers: { range: 'bytes=0-0' } });
-    return { status: r.status };
+    let r = await get(url, { method: 'HEAD' }, f);
+    if (r.status === 405 || r.status === 501) { await drain(r); r = await get(url, { method: 'GET', headers: { range: 'bytes=0-0' } }, f); }
+    await drain(r);
+    return { status: r.status, keyFound: Boolean(key) };
   } catch (e) { return { error: why(e) }; }
 }
 
-async function collectHealth(root, fresh) {
+async function collectHealth(root, fresh, deps) {
   const file = path.join(root, 'catalog', 'cache', 'health.json');
+  const doRun = (deps && deps.run) || run, now = (deps && deps.now) || Date.now;
   let ran = null;
   if (fresh) {
     const doctor = path.join(root, 'scripts', 'doctor.js');
     if (!fs.existsSync(doctor)) ran = { ran: true, error: 'no scripts/doctor.js under ' + root };
     else {
-      const r = await run(process.execPath, [doctor, '--quick'], { cwd: root, timeout: 180000, maxBuffer: 64 * 1024 * 1024 });
-      // The doctor exits 1 when a light is red; that is a result, not a failure to run. A kill or a missing file is the failure.
-      ran = r.err && (r.err.killed || typeof r.err.code !== 'number') ? { ran: true, error: r.err.killed ? 'it took over 3 minutes and was stopped' : clip(r.err.message, 100) } : { ran: true };
+      const startedMs = now();
+      const r = await doRun(process.execPath, [doctor, '--quick'], { cwd: root, timeout: 180000, maxBuffer: 64 * 1024 * 1024 });
+      // The doctor exits 1 when a light is red (a result) and also when it crashes with an uncaught error, so the exit code cannot say
+      // which. What can: health.json must have been written after startedMs (rowDoctor checks it). A kill or a missing node is the failure here.
+      ran = r.err && (r.err.killed || typeof r.err.code !== 'number') ? { ran: true, startedMs, error: r.err.killed ? 'it took over 3 minutes and was stopped' : clip(r.err.message, 100) } : { ran: true, startedMs };
     }
   }
   const j = readJson(file);
   return { health: j.error ? { error: j.error } : { data: j.data }, fresh: ran };
 }
 
-async function collectAll(opts) {
-  const root = opts.root, secrets = [];
-  const [live, remote, analytics, sentry, hc] = await Promise.all([
-    collectLive(), collectRemote(), collectAnalytics(root, secrets), collectSentry(), collectHealth(root, opts.fresh),
+// The three files under catalog/cache that rows 8, 9 and 10 read.
+function collectPublish(root) { const t = readText(path.join(root, 'catalog', 'cache', 'publish.log')); return t.error ? { error: t.error } : { text: t.text }; }
+function collectBackup(root) { const j = readJson(path.join(root, 'catalog', 'cache', 'backup-stamp.json')); return j.error ? { error: j.error } : { stamp: j.data }; }
+function collectSoak(root) {
+  const p = path.join(root, 'catalog', 'cache', 'soak.json');
+  if (!fs.existsSync(p)) return { missing: true };
+  const j = readJson(p);
+  return j.error ? { error: j.error } : { data: j.data };
+}
+
+async function collectAll(opts, deps) {
+  const root = opts.root, secrets = [], d = deps || {};
+  const analyticsFn = d.analytics || collectAnalytics;
+  const [liveAndSite, remote, analytics, sentry, hc] = await Promise.all([
+    collectLive(d).then(async (live) => ({ live, site: await collectSite(live, d) })),
+    collectRemote(d), analyticsFn(root, secrets), collectSentry(d), collectHealth(root, opts.fresh, d),
   ]);
-  const cache = path.join(root, 'catalog', 'cache');
-  const log = readText(path.join(cache, 'publish.log'));
-  const stamp = readJson(path.join(cache, 'backup-stamp.json'));
-  const soakPath = path.join(cache, 'soak.json');
-  const soak = fs.existsSync(soakPath) ? (() => { const s = readJson(soakPath); return s.error ? { error: s.error } : { data: s.data }; })() : { missing: true };
   return {
     secrets,
     inputs: {
-      nowMs: Date.now(), root, findings: collectFindings(opts.findings || path.join(root, 'audit', 'findings.json')),
-      health: hc.health, fresh: hc.fresh, live, remote, analytics, sentry,
-      publish: log.error ? { error: log.error } : { text: log.text },
-      backup: stamp.error ? { error: stamp.error } : { stamp: stamp.data },
-      soak,
+      nowMs: (d.now || Date.now)(), root, findings: collectFindings(opts.findings || path.join(root, 'audit', 'findings.json')),
+      health: hc.health, fresh: hc.fresh, live: liveAndSite.live, site: liveAndSite.site, remote, analytics, sentry,
+      publish: collectPublish(root), backup: collectBackup(root), soak: collectSoak(root),
     },
   };
 }
@@ -435,9 +484,12 @@ async function main(argv) {
   const root = process.env.VOID_ROOT ? path.resolve(process.env.VOID_ROOT) : SELF_ROOT;
   const { inputs, secrets } = await collectAll({ root, fresh: o.fresh, findings: o.findings });
   const result = evaluate(inputs);
-  for (const line of render(result, { nowMs: inputs.nowMs, root, secrets })) console.log(line);
+  for (const line of render(result, { nowMs: inputs.nowMs, root, secrets, fresh: o.fresh })) console.log(line);
   return result.code;
 }
 
-module.exports = { evaluate, render, scrub, parsePublishLog, parseArgs, collectFindings, main, ALLOWED_HOSTS };
+module.exports = {
+  evaluate, render, scrub, parsePublishLog, parseArgs, main, ALLOWED_HOSTS,
+  collectFindings, collectLive, collectSite, collectRemote, collectSentry, collectHealth, collectPublish, collectBackup, collectSoak, collectAll,
+};
 if (require.main === module) main(process.argv.slice(2)).then((code) => process.exit(code), (e) => { console.error('The launch check itself failed: ' + scrub(e && e.message || e)); process.exit(2); });
