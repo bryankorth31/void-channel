@@ -60,7 +60,9 @@ const HARD_GAP = new RegExp('[:|/\\\\()\\[\\]{}"~' + chars(0x201c, 0x201d, 0xff1
 const POSSESSIVE = new RegExp('((?:[a-z0-9]+[\\s_.]+)?[a-z0-9]+)[' + esc(APOS) + ']s[\\s_.' + DASHES + ']*$');
 // Networks: one may stand before a title ("Lifetime-Liz & Dick") or after it ("Victim of Love CBS 1991").
 const NETWORKS = ['cbs', 'nbc', 'abc', 'fox', 'pbs', 'hbo', 'bbc', 'itv', 'cbc', 'ctv', 'tnt', 'tbs', 'showtime', 'lifetime', 'hallmark', 'freeform', 'cinemax', 'starz', 'mtv', 'vh1', 'bet', 'upn', 'wb', 'syfy', 'oxygen', 'lmn', 'disney', 'nickelodeon', 'harlequin'];
-// Words that may stand in front of a title without making it a different one.
+// Words that may stand in front of a title without making it a different one. (An article either way: a name may leave out the title's "The" and may add
+// one. Refusing the added one was tried and measured: of the nine LIVE picks it demoted, five were the right film, "The King of Texas" and "The Girl in the Box"
+// among them, and only four were another work, "The Descent" for "Descent" among them. So it is allowed, and the year or the runtime has to back a short title.)
 const LEFT_OK = new Set(['the', 'a', 'an', ...NETWORKS]);
 // What may follow a movie title beside the series rule's end words. Each is a whole-word run; match.js then asks the rest of the name to end too,
 // so "Open Marriage Movie Night" is still a longer title.
@@ -95,10 +97,9 @@ function occurrences(core, t) {
 }
 // "Stephen King's", "Wes Craven's", "Disney's": a possessive that names a person (two words) or a network. "Dogwalker's Christmas Tail" is not "A Christmas Tail".
 function possessiveOk(prefix) { const m = POSSESSIVE.exec(prefix); return !!m && (/[\s_.]/.test(m[1]) || NETWORKS.includes(m[1])); }
-// What stands before the title at t[pos]: nothing, a real separator, a possessive, or a few harmless words in a row ("The", a network,
-// a track number such as 04 or a year). The words are peeled one at a time and what is left must end the same way, so the "the" of
-// "Cry of the Banshee" does not make "Banshee" a title: "of" stands before it. A bare one or two digit number ("8 Women") is part
-// of the other title.
+// What stands before the title at t[pos]: nothing, a real separator, a possessive, or a few harmless words in a row (an article, a network, a track
+// number such as 04 or a year). The words are peeled one at a time and what is left must end the same way, so the "the" of "Cry of the Banshee"
+// does not make "Banshee" a title: "of" stands before it. A bare one or two digit number ("8 Women") is part of the other title.
 function leftOk(t, s, idx, pos) {
   for (let i = 0; i < 4; i++) {
     const m = /([a-z0-9]+)([^a-z0-9]*)$/.exec(t.slice(0, pos));
@@ -172,7 +173,7 @@ function titlePhrase(title, texts) {
 // ---- judging one file ----
 const within = (v, target, share) => target > 0 && Math.abs(v - target) <= target * share;
 // A four-digit year in the text within a year of TMDB's.
-const yearsIn = (text) => String(text).match(/\b(?:19|20)\d{2}\b/g) || [];
+const yearsIn = (text) => String(text).replace(/_/g, ' ').match(/\b(?:19|20)\d{2}\b/g) || []; // an underscore is a word character, so it would hide the year in "Dark_Tower_1943"
 const yearNear = (text, year) => !!year && yearsIn(text).some((y) => Math.abs(+y - +year) <= 1);
 // The names that carry the title name a year, and not one of them is the movie's (within two years, because uploaders date a VHS release or a
 // rerun): it is another film with the same title (Grey Gardens 1975 for the 2009 film). A year inside the movie's own title ("Knight Rider 2000") is no evidence.
