@@ -425,7 +425,7 @@ function decideGrid(entry, cand, tv, ctx) {
     const whyNot = (f, item) => rejectionTag({ other: namesOtherShow(f.name, show, aliases) || (!namesShow(f.name) && namesOtherShow(item.title || '', show, aliases)), react: REACT.test(tagText(f.name)) || REACT.test(tagText(item.title || '')), foreign: langRisk(f.name) || langRisk(item.title), notNamed: !namesShow(f.name) && !(namesShow(item.title || '') || idNamesShow(item.id)) });
     const sg = selfGrid(entry, fallbackCand(withoutRejected(cand), tags, { tv, namesTitle: (t) => namesTitle(t, [core, ...aliases], nets), cores: [core, ...aliases], whyNot }), aliases, nets);
     const sgPlaced = sg ? sg.seasons.reduce((n, se) => n + se.episodes.length, 0) : 0;
-    if (sgPlaced >= Math.max(20, placed * 3)) { sg.tvmazeWeak = { id: tv.id, name: tv.name, placed }; return sg; }
+    if (sgPlaced >= Math.max(20, placed * 3)) { sg.tvmazeWeak = { id: tv.id, name: tv.name, placed }; keepLive(sg, seasons); return sg; }
   }
   const total = tv.episodes.length;
   const out = {
@@ -435,6 +435,20 @@ function decideGrid(entry, cand, tv, ctx) {
     seasons,
   };
   return out;
+}
+
+// A self-list is all REVIEW (the order comes from the files). The one thing the strict pass knew better: a slot it filled LIVE, from a file whose season and episode
+// matched, stays LIVE when the self-list puts that same file in that same slot, so taking over a grid never turns a confident episode into a doubtful one.
+function keepLive(sg, seasons) {
+  const live = new Map();
+  for (const s of seasons) for (const e of s.episodes) if (e.state === 'LIVE' && e.file) live.set(s.season + 'x' + e.number, e.file);
+  let kept = 0;
+  if (live.size) for (const s of sg.seasons) for (const e of s.episodes) {
+    const k = live.get(s.season + 'x' + e.number);
+    if (k && e.file && e.file.url === k.url) { e.state = 'LIVE'; e.file.conf = k.conf; e.file.why = k.why + ' | kept LIVE inside the self-list'; kept++; }
+  }
+  if (kept) sg.coverage = { ...sg.coverage, live: kept, review: sg.coverage.total - kept };
+  return kept;
 }
 
 // No TVmaze entry (web series, one-off documentaries, local shows): list the show from its own files.
@@ -559,4 +573,4 @@ function main() {
 }
 if (require.main === module) main();
 module.exports = { norm, tagText, slug, noEmail, namesTitle, titleNaming, closesName, REACT, QUALITY_RE, OTHER_SHOWS, BUILTIN_ALIASES, makeOtherShows, forOtherShow, otherShowCores, namesOtherShow, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,
-  fallbackCand, gridFor, selfGrid, matchShow, fileDate, placedIn, droppedBy, mergeDropped, droppedLines, saveDropped };
+  fallbackCand, gridFor, selfGrid, matchShow, fileDate, placedIn, droppedBy, mergeDropped, droppedLines, saveDropped, keepLive };

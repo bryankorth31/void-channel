@@ -329,6 +329,12 @@ if (!flag('--no-top')) {
   say();
 }
 
+{
+  const lossy = [...B.shows.values()].filter((b) => !b.noTvmaze).map((b) => { const a = A.shows.get(b.slug); return { show: b.show, bl: b.live, al: a && !a.noTvmaze ? a.live : 0, bp: b.placed, ap: a && !a.noTvmaze ? a.placed : 0, bk: kind(b), ak: kind(a) }; }).filter((d) => d.al < d.bl).sort((x, y) => (y.bl - y.al) - (x.bl - x.al) || x.show.localeCompare(y.show));
+  say('SHOWS THAT END WITH FEWER LIVE EPISODES THAN THE OLD MATCHER GAVE THEM (all shows): ' + lossy.length + ' shows, ' + fmt(lossy.reduce((n, d) => n + d.bl - d.al, 0)) + ' LIVE episodes');
+  for (const d of lossy.slice(0, 40)) say('  ' + pad(d.show.slice(0, 40), 42) + 'LIVE ' + lpad(d.bl, 5) + ' -> ' + lpad(d.al, 5) + '   placed ' + lpad(d.bp, 5) + ' -> ' + lpad(d.ap, 5) + '   ' + d.bk + ' -> ' + d.ak);
+  say();
+}
 say('THE BIGGEST DROPS IN PLACED EPISODES (all shows, before minus after, top 40)');
 const drops = [...B.shows.values()].filter((b) => !b.noTvmaze).map((b) => { const a = A.shows.get(b.slug); return { show: b.show, b: b.placed, a: a && !a.noTvmaze ? a.placed : 0, bk: kind(b), ak: kind(a) }; }).filter((d) => d.a < d.b).sort((x, y) => (y.b - y.a) - (x.b - x.a));
 for (const d of drops.slice(0, 40)) say('  ' + pad(d.show.slice(0, 40), 42) + lpad(d.b, 7) + ' -> ' + lpad(d.a, 7) + '   ' + d.bk + ' -> ' + d.ak);

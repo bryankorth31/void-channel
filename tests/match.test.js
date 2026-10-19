@@ -220,6 +220,25 @@ describe('the self-list fallback gate (CP-001)', () => {
     assert.equal(grid.selfListed, true);
     assert.equal(grid.seasons.reduce((n, s) => n + s.episodes.length, 0), 25);
   });
+  test('an accepted self-list keeps LIVE for a slot the strict pass filled with the same file (Yo soy Betty, la fea)', () => {
+    const strict = range(2).map((i) => mkFile(`Zork Show S01E0${i}.mp4`, { ep: se(1, i) }));
+    const { grid } = run([...strict, ...evidence(25)]);
+    assert.equal(grid.selfListed, true);
+    const eps = grid.seasons.flatMap((s) => s.episodes.map((e) => [s.season, e.number, e.state]));
+    assert.deepEqual(eps.filter((e) => e[0] === 1), [[1, 1, 'LIVE'], [1, 2, 'LIVE']]);
+    assert.ok(eps.filter((e) => e[0] === 9).length === 25 && eps.filter((e) => e[0] === 9).every((e) => e[2] === 'REVIEW'), 'the rest stay REVIEW');
+    assert.deepEqual([grid.coverage.live, grid.coverage.review], [2, 25]);
+    assert.match(grid.seasons[0].episodes[0].file.why, /kept LIVE inside the self-list/);
+    // the rule itself: the same slot and the same file, nothing else
+    const sg = () => ({ coverage: { total: 3, live: 0, review: 3, missing: 0, pct: 100 }, seasons: [{ season: 1, episodes: [{ number: 1, state: 'REVIEW', file: { url: 'u1', conf: 0.6, why: 'x' } }, { number: 2, state: 'REVIEW', file: { url: 'other', conf: 0.6, why: 'x' } }, { number: 5, state: 'REVIEW', file: { url: 'u3', conf: 0.6, why: 'x' } }] }] });
+    const strictSeasons = [{ season: 1, episodes: [{ number: 1, state: 'LIVE', file: { url: 'u1', conf: 0.9, why: 'S/E in filename' } }, { number: 2, state: 'LIVE', file: { url: 'u2', conf: 0.9, why: 'S/E in filename' } }, { number: 3, state: 'LIVE', file: { url: 'u3', conf: 0.9, why: 'S/E in filename' } }, { number: 4, state: 'REVIEW', file: { url: 'u4', conf: 0.6, why: 'y' } }] }];
+    const g = sg();
+    assert.equal(M.keepLive(g, strictSeasons), 1, 'only slot 1 holds the same LIVE file in both');
+    assert.deepEqual(g.seasons[0].episodes.map((e) => e.state), ['LIVE', 'REVIEW', 'REVIEW']);
+    assert.deepEqual([g.coverage.live, g.coverage.review], [1, 2]);
+    const h = sg(); assert.equal(M.keepLive(h, [{ season: 1, episodes: [{ number: 1, state: 'REVIEW', file: { url: 'u1', conf: 0.6 } }] }]), 0, 'a REVIEW pick is not kept');
+    assert.deepEqual(h.coverage, sg().coverage);
+  });
   test('files rejected in HQ or retired as dead stay out of the self-list, by the raw or the masked name, with or without a TVmaze list', () => {
     const id = 'zork-show-season-9';
     const listed = (grid) => grid.seasons.flatMap((s) => s.episodes).map((e) => e.file && e.file.name);
