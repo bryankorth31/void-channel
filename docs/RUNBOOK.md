@@ -38,7 +38,7 @@ means and what to do. Everything here is clickable in HQ or a one-line command.
 ## Daily, in HQ (five minutes)
 
 1. Overview: all lights green? If not, the table above.
-2. Reports: any Wrong file? reports or playback errors from viewers. Open the show, preview, Reject or Accept.
+2. Reports: any Wrong file? reports or playback errors from viewers. Open the show, preview, Reject or Accept. The same page lists Wrong film reports (viewers who ticked "Not the right film" on a TV movie marked "Unconfirmed match"): open the film on voidtv.net and its Archive item side by side. That list is read only and hides nothing.
 3. Shows > "review only": watch a minute of a file the judges were unsure about, Accept.
 4. Analytics > Searches: zero-result searches are things people want; Add shows.
 

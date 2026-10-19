@@ -10,6 +10,10 @@ const path = require('path');
 const crypto = require('crypto');
 const { spawn, execSync, execFile, execFileSync } = require('child_process');
 const cfa = require('./lib/cfa');
+// One more named query for /api/analytics/<name>: the "Wrong film reports" list on the Reports page (viewers ticking "Not the right
+// film" on a TV movie marked "Unconfirmed match"; the page sends type report with q wrongfilm, x = Archive item, a space, file name).
+// Day buckets, added up by the page, so it uses only what the other queries in lib/cfa.js already use. Read-only; it hides nothing.
+cfa.REPORTS.wrongfilm = (d) => `SELECT blob2 AS slug, blob14 AS file, toStartOfInterval(timestamp, INTERVAL '1' DAY) AS day, SUM(_sample_interval) AS n FROM voidtv_events WHERE timestamp > NOW() - INTERVAL '${Math.max(1, Math.min(90, +d || 30))}' DAY AND blob1 = 'report' AND blob12 = 'wrongfilm' GROUP BY slug, file, day ORDER BY day DESC LIMIT 3000`;
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
