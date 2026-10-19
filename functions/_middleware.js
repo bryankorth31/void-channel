@@ -1,6 +1,6 @@
 // Password gate for the test deployment (Cloudflare Pages Functions). Active only when the Pages
 // project has a SITE_PASSWORD environment variable; otherwise every request passes straight through.
-// The right password sets a cookie for 30 days. Remove the variable to open the site.
+// The right password sets a cookie for 30 days. To open the site, delete the variable and set GATE = off (docs/DEPLOY.md, "Opening day").
 // Three things wrap that gate (audit fix batch B, B3):
 //   * www.voidtv.net is sent to voidtv.net with a 301 (same path and query) before anything else, gate on or off (F-004, CF-025).
 //     Once the gate is off, scripts/site.js narrows _routes.json to /api/* and /q/*, so this Function only sees those paths
