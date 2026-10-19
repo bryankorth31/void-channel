@@ -233,6 +233,7 @@ test('a built site: manifest, share cards, show pages and the password page say 
     const put = (rel, body) => { const p = path.join(root, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, body); };
     for (const f of ['scripts/site.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/profile.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js', 'player/src/core.js', 'player/src/icons.js', 'player/src/player.js', 'player/src/player.css', 'profiles/voidtv/profile.json']) put(f, fs.readFileSync(path.join(REPO, f)));
     fs.cpSync(path.join(REPO, 'functions'), path.join(root, 'functions'), { recursive: true });
+    put('assets/brand/icon-512-maskable.png', fs.readFileSync(path.join(REPO, 'assets', 'brand', 'icon-512-maskable.png'))); // the real file must exist in the repo; the build copies the brand folder
     put('scripts/show-list.json', JSON.stringify({ types: ['Drama'], shows: [] }));
     for (let i = 0; i < 100; i++) put(`catalog/shows/test-show-${i}.json`, JSON.stringify({
       show: `Test Show ${i}`, slug: `test-show-${i}`, type: 'Drama', network: 'TestNet', matchedAt: '2026-01-01T00:00:00.000Z', tvmaze: { id: i, runtime: 30, premiered: '2000-01-01' },
@@ -247,6 +248,12 @@ test('a built site: manifest, share cards, show pages and the password page say 
     const m = JSON.parse(out('manifest.webmanifest'));
     assert.equal(m.name, 'voidtv.net');
     assert.equal(m.short_name, 'voidtv.net');
+    // icons: the full-bleed 512 is plain 'any'; the padded one is the only 'maskable' entry, and the file is really shipped
+    const i512 = m.icons.filter((x) => /icon-512/.test(x.src));
+    assert.equal(i512.length, 2);
+    assert.equal(i512.find((x) => /icon-512.png/.test(x.src)).purpose, 'any');
+    assert.equal(i512.find((x) => /icon-512-maskable.png/.test(x.src)).purpose, 'maskable');
+    assert.ok(fs.existsSync(path.join(root, 'site', 'assets', 'brand', 'icon-512-maskable.png')), 'the maskable icon is in the build');
     assert.match(out('index.html'), /<title>voidtv\.net<\/title>/);
     const show = out('show/test-show-7/index.html');
     assert.match(show, /<title>Test Show 7 · voidtv\.net<\/title>/);
