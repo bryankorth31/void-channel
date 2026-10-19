@@ -1,5 +1,5 @@
 // Tests for the page side of the VOID player (player.js): what load() does around the Archive server lookup, and
-// when the end-of-play summary is sent. Run:  node --test player/test
+// when the end-of-play summary is sent. Run:  node --test "player/test/*.test.js"
 // The real core.js and player.js run in a bare vm with a fake page (a proxy that answers every DOM call, plus a
 // recording <video>) and a fetch that the test answers when it says so. No network, no browser, nothing is played.
 const { test, afterEach } = require('node:test');
@@ -34,13 +34,13 @@ const episode = (id, n, tag) => ({ id, title: id, show: 'Show', files: Array.fro
 // The real player in a fake page. `cached` maps an item to server info already in the session cache.
 function open(opts) {
   opts = opts || {};
-  const seen = { src: [], play: 0 }, events = [], asked = [], pending = [];
+  const seen = { src: [], play: 0, removed: 0 }, events = [], asked = [], pending = [];
   const video = fakeNode({
     paused: true, ended: false, readyState: 0, networkState: 0, volume: 1, muted: false, currentTime: 0, duration: NaN, buffered: { length: 0 }, playbackRate: 1,
     seeking: false, videoWidth: 0, textTracks: [], getVideoPlaybackQuality: undefined, requestVideoFrameCallback: undefined,
     play() { seen.play++; return Promise.resolve(); }, pause() {}, load() {},
     getAttribute(k) { return k === 'src' && seen.src.length ? seen.src[seen.src.length - 1] : null; },
-    removeAttribute() {}, canPlayType() { return 'maybe'; }, addEventListener() {}, removeEventListener() {}, querySelectorAll() { return []; },
+    removeAttribute(k) { if (k === 'src') seen.removed++; }, canPlayType() { return 'maybe'; }, addEventListener() {}, removeEventListener() {}, querySelectorAll() { return []; },
   }, (k, v) => { if (k === 'src') seen.src.push(v); });
   const rootNode = fakeNode({ querySelector: (sel) => (sel === 'video' ? video : fakeNode()), querySelectorAll: () => [], remove() {} });
   const ctx = {
@@ -49,12 +49,19 @@ function open(opts) {
     localStorage: { getItem: () => null, setItem() {} },
     sessionStorage: { getItem: (k) => (opts.cached && opts.cached[k.replace('voidplayer:srv:', '')]) ? JSON.stringify(Object.assign({ at: Date.now() }, opts.cached[k.replace('voidplayer:srv:', '')])) : null, setItem() {} },
     setTimeout, clearTimeout, setInterval, clearInterval, AbortController, requestAnimationFrame: () => 1, cancelAnimationFrame() {}, addEventListener() {}, removeEventListener() {}, devicePixelRatio: 1,
-    fetch: (url) => new Promise((resolve) => { asked.push(url); pending.push((ok) => resolve(ok ? { ok: true, json: async () => (/dir$/.test(url) ? { result: '/1/items/x' } : { result: ['ia800000.us.archive.org'] }) } : { ok: false, json: async () => null })); }),
+    // The Archive's metadata API: item2 lives on another host than the rest, so a test can tell whose servers were used.
+    // A lookup that is aborted (the player's time limit) rejects, as a real fetch does.
+    fetch: (url, init) => new Promise((resolve, reject) => {
+      asked.push(url);
+      if (init && init.signal) init.signal.addEventListener('abort', () => reject(new Error('aborted')));
+      const item = (/metadata\/([^/]+)\//.exec(url) || [])[1] || 'x', host = item === 'item2' ? 'ia800002.us.archive.org' : 'ia800000.us.archive.org';
+      pending.push((ok) => resolve(ok ? { ok: true, json: async () => (/dir$/.test(url) ? { result: '/1/items/' + item } : { result: [host] }) } : { ok: false, json: async () => null }));
+    }),
   };
   ctx.self = ctx;
   vm.createContext(ctx);
   vm.runInContext(BUNDLE, ctx);
-  const player = ctx.VoidPlayer.create(fakeNode(), { resolveServers: true, metadataTimeoutMs: 5000, onEvent: (e) => events.push(e) });
+  const player = ctx.VoidPlayer.create(fakeNode(), { resolveServers: true, metadataTimeoutMs: opts.timeout || 5000, onEvent: (e) => events.push(e) });
   const settle = async () => { for (let i = 0; i < 8; i++) await new Promise((r) => setImmediate(r)); };
   const answer = async (ok) => { pending.splice(0).forEach((f) => f(ok !== false)); await settle(); };
   const x = { player, seen, events, asked, answer, settle, kinds: (t) => events.filter((e) => e.type === t) };
@@ -194,4 +201,108 @@ test('SP-022: the same episode object loaded again while its lookup is pending r
 test('SP-022: a player that never started a load sends no summary', () => {
   const x = open(); x.player.destroy();
   assert.strictEqual(x.kinds('summary').length, 0);
+});
+
+// ---------- SP-026: the other copies' servers are looked up the first time the core moves onto the copy ----------
+// An episode with two copies. The first press looks up copy 1 only. A decode error on copy 1 makes the core move to
+// copy 2, whose servers are then unknown: the player looks them up at that moment.
+async function toCopy2(opts) {
+  const x = open(opts);
+  x.player.load(episode('a/1x1', 2), { autoplay: true });
+  await x.settle(); await x.answer(true); // copy 1's lookup answers, copy 1 starts
+  assert.strictEqual(x.seen.src.length, 1);
+  x.removedBeforeHop = x.seen.removed;
+  x.player.core.event('error', performance.now(), { code: 3 }); // copy 1 cannot be decoded: on to copy 2
+  await x.settle();
+  return x;
+}
+const lookups = (x, item) => x.asked.filter((u) => u.includes('/' + item + '/')).length;
+
+test('SP-026: a hop to copy 2 looks its servers up then (fast answer): it starts on copy 2\'s primary server', async () => {
+  const x = await toCopy2();
+  assert.strictEqual(lookups(x, 'item2'), 2, 'copy 2 was looked up when the core moved onto it, not before');
+  assert.strictEqual(x.seen.src.length, 1, 'nothing starts until the lookup answers');
+  assert.ok(x.seen.removed > x.removedBeforeHop, 'the source being left is dropped at once, not 2.5 s later');
+  await x.answer(true);
+  assert.strictEqual(x.seen.src.length, 2);
+  assert.ok(x.seen.src[1].includes('ia800002.us.archive.org'), 'copy 2 on its own primary server: ' + x.seen.src[1]);
+  assert.strictEqual(x.player.core.source.label, 'copy2@primary');
+  assert.ok(x.player.core.log.some((e) => e.did === 'servers' && /copy2@primary/.test(e.to)), 'the core was told');
+  assert.strictEqual(x.kinds('lookup-failed').length, 0);
+});
+
+test('SP-026: while copy 2 is being looked up the core is told the page is between sources, not paused', async () => {
+  const x = await toCopy2();
+  const told = []; const real = x.player.core.sample;
+  x.player.core.sample = (s) => { told.push(s.paused); return real(s); };
+  x.player._sample();
+  assert.deepStrictEqual(J(told), [false], 'not paused: a pause would wipe the pause measurement and look like the viewer');
+  await x.answer(true);
+  x.player._sample();
+  assert.strictEqual(told[told.length - 1], true, 'once the source is set the video reports as it is');
+});
+
+test('SP-026: a slow lookup is given up at the time limit: copy 2 starts on its Archive link and lookup-failed is sent', async () => {
+  const x = await toCopy2({ timeout: 60 });
+  assert.strictEqual(x.seen.src.length, 1);
+  await new Promise((r) => setTimeout(r, 200)); // nobody answers: the player's own limit aborts the lookup
+  await x.settle();
+  assert.strictEqual(x.seen.src.length, 2, 'the hop was not held back longer than the limit');
+  assert.strictEqual(x.seen.src[1], 'https://archive.org/download/item2/f2.mp4');
+  assert.strictEqual(x.player.core.source.label, 'copy2@archive');
+  assert.deepStrictEqual(J(x.kinds('lookup-failed').map((e) => e.item)), ['item2']);
+});
+
+test('SP-026: a failed lookup keeps the Archive link, says so once, and is never asked again (no loop)', async () => {
+  const x = await toCopy2();
+  await x.answer(false);
+  assert.strictEqual(x.seen.src[1], 'https://archive.org/download/item2/f2.mp4');
+  assert.strictEqual(x.kinds('lookup-failed').length, 1);
+  const asked = x.asked.length;
+  x.player.core.event('error', performance.now(), { code: 3 }); // copy 2 fails too: nothing left, the card
+  await x.settle(); await x.answer(true);
+  assert.strictEqual(x.asked.length, asked, 'no second lookup for copy 2');
+  assert.strictEqual(x.kinds('lookup-failed').length, 1);
+  assert.strictEqual(x.kinds('failed').length, 1);
+  // the viewer presses Try again and copy 1 fails again: copy 2 is entered a second time, and still not looked up again
+  x.player.core.event('retry', performance.now()); await x.settle();
+  x.player.core.event('error', performance.now(), { code: 3 }); await x.settle(); await x.answer(true);
+  assert.strictEqual(x.player.core.source.label, 'copy2@archive');
+  assert.strictEqual(x.asked.length, asked, 'the copy is marked done: never looked up twice');
+});
+
+test('SP-026: if the core moves on while copy 2 is being looked up (Try again), the late answer starts nothing', async () => {
+  const x = await toCopy2();
+  x.player.core.event('retry', performance.now()); // back to copy 1, which starts again
+  await x.settle();
+  const started = x.seen.src.length;
+  await x.answer(true); // copy 2's lookup answers late
+  assert.strictEqual(x.seen.src.length, started, 'nothing started on top of the source the core is now using');
+  assert.strictEqual(x.player.core.source.label, 'copy1@primary');
+});
+
+test('SP-026: a player destroyed during the lazy lookup starts nothing, plays nothing, and says nothing', async () => {
+  const x = await toCopy2();
+  x.player.destroy();
+  await x.answer(true);
+  assert.strictEqual(x.seen.src.length, 1, 'no source for copy 2 on the detached video');
+  assert.strictEqual(x.seen.play, 1, 'only the first copy ever played');
+  assert.strictEqual(x.kinds('lookup-failed').length, 0);
+  assert.ok(!x.player.core.log.some((e) => e.did === 'servers'), 'the core was not changed either');
+});
+
+test('SP-026: a load that replaces the episode during the lazy lookup wins; the old lookup starts nothing', async () => {
+  const x = await toCopy2();
+  x.player.load(episode('b/1x1', 1, 'b'), { autoplay: true });
+  await x.settle(); await x.answer(true);
+  assert.strictEqual(x.seen.src.length, 2, 'copy 1 of the old episode, then the new episode; never copy 2 of the old one');
+  assert.ok(!x.seen.src.some((u) => u.includes('ia800002')));
+  assert.ok(x.seen.src[1].includes('/1/items/itemb1/'), 'the new episode started: ' + x.seen.src[1]);
+});
+
+test('SP-026: a later copy that is already in the session cache needs no lookup when the core moves onto it', async () => {
+  const x = await toCopy2({ cached: { item2: { hosts: ['ia800002.us.archive.org'], dir: '/2/items/item2' } } });
+  assert.strictEqual(lookups(x, 'item2'), 0);
+  assert.strictEqual(x.seen.src.length, 2, 'started at once');
+  assert.ok(x.seen.src[1].includes('ia800002.us.archive.org'));
 });

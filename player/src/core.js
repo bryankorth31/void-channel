@@ -426,12 +426,30 @@
       }
     }
 
+    // The page found out the servers of the copy the core has just moved to (it looks them up on the first switch to
+    // a copy, not when the episode opens). The new entries go in front of the copy's Archive link, which keeps its
+    // place after them, and the core moves onto the first of them: the same order as if they had been known from
+    // the start (primary, backup, then the link). Only the current source is expanded, and only with entries of its
+    // own copy; nothing else changes (no event, no settle time, no counters), so it cannot cause a loop. Returns the
+    // source now in use.
+    function expand(entries) {
+      const cur = src();
+      const add = (entries || []).filter((e) => e && e.url && cur && e.fileKey === cur.fileKey);
+      if (!cur || !add.length) return cur;
+      const moved = new Map();
+      reloaded.forEach((n, k) => moved.set(k >= si ? k + add.length : k, n)); // indexes after the insertion point shift
+      reloaded.clear(); moved.forEach((n, k) => reloaded.set(k, n));
+      sources.splice(si, 0, ...add);
+      note({ at: lastSampleAt || t0, did: 'servers', to: add.map((e) => e.label).join(',') });
+      return src();
+    }
+
     function summary() {
       const watch = totals.watchMs || 0;
       return Object.assign({}, totals, { rebufferRatio: watch ? Math.round(totals.stallMs * 1000 / (watch + totals.stallMs)) / 1000 : 0, source: src() && src().label, sourceIndex: si, sources: sources.length, state });
     }
 
-    return { load, sample, frame, event, summary, get state() { return state; }, get sourceIndex() { return si; }, get source() { return src(); }, get log() { return log.slice(); }, config: C };
+    return { load, sample, frame, event, expand, summary, get state() { return state; }, get sourceIndex() { return si; }, get source() { return src(); }, get log() { return log.slice(); }, config: C };
   }
 
   return { create, DEFAULTS };

@@ -111,7 +111,9 @@
         const tag = 'copy' + (i + 1);
         const s = srv[i];
         if (s && f.path) s.hosts.forEach((h, k) => list.push({ url: 'https://' + h + s.dir + '/' + f.path, label: tag + (k ? '@backup' : '@primary'), file: f, fileKey: i, server: h }));
-        list.push({ url: f.url, label: tag + '@archive', file: f, fileKey: i, server: 'archive.org' });
+        // A later copy whose servers are not known yet carries lazy: the first time the core moves onto it, its
+        // servers are looked up then (_lazySource), so the first press stays fast and a hop can still use them.
+        list.push({ url: f.url, label: tag + '@archive', file: f, fileKey: i, server: 'archive.org', lazy: !!(this.o.resolveServers && i > 0 && !s && f.item && f.path) });
       });
       this._emit({ type: 'load', id: ep.id, title: ep.title, sources: list.map((x) => x.label), at: now() });
       this._setMedia(ep);
@@ -302,7 +304,7 @@
     // ---------- carrying out the core's decisions ----------
     _act(a) {
       const v = this.v;
-      if (a.type === 'set-source') return this._setSrc(a.source.url, a.at, a.play);
+      if (a.type === 'set-source') return a.source.lazy ? this._lazySource(a) : this._setSrc(a.source.url, a.at, a.play);
       if (a.type === 'seek') { v.currentTime = a.at; this._status('Catching up…', 1500); return; }
       if (a.type === 'reload') {
         this._status('Reconnecting…');
@@ -312,6 +314,27 @@
       }
       if (a.type === 'show-failure') return this._failure(a.reason, a.cause, a.code);
       if (a.type === 'show-notice') return this._notice(a.reason);
+    }
+
+    // The core has moved onto a copy whose servers were never looked up (SP-026: only the first copy is looked up
+    // before the first picture). Look them up now, once, within the same limit as every lookup (metadataTimeoutMs,
+    // and an hour of sessionStorage cache as always), tell the core, and start on the copy's primary server, as if
+    // they had been known from the start. A failed or slow lookup keeps the Archive link, reported as lookup-failed.
+    // The copy is marked done before the wait, so this can never run twice for it (no loop). If the load was
+    // replaced or the player destroyed while waiting, or the core has moved on, nothing starts.
+    async _lazySource(a) {
+      const src = a.source, token = this._token, f = src.file;
+      src.lazy = false;
+      this._teardown(true); // the source being left is abandoned now, as in every switch
+      this._lazyWait = !!a.play; // the page is between sources, not paused by the viewer: the core must not read it as a pause
+      let s = null;
+      try { s = await servers(f.item, this.o.metadataTimeoutMs); } catch (e) { /* a failed lookup is just null */ }
+      this._lazyWait = false;
+      if (token !== this._token || this.core.source !== src) return; // replaced, destroyed, or the core moved on: start nothing
+      let cur = src;
+      if (s && f.path) cur = this.core.expand(s.hosts.map((h, k) => ({ url: 'https://' + h + s.dir + '/' + f.path, label: src.label.split('@')[0] + (k ? '@backup' : '@primary'), file: f, fileKey: src.fileKey, server: h })));
+      else this._emit({ type: 'lookup-failed', item: f.item, at: now() });
+      this._setSrc(cur.url, a.at, a.play);
     }
 
     // Swap the source on the ONE video element, shutting the previous stream down properly first.
@@ -352,7 +375,7 @@
       this._drawing = !root.requestAnimationFrame || now() - this._lastRaf < 500;
       const hidden = document.hidden || !this._visible || !this._drawing || document.pictureInPictureElement === v;
       this.core.sample({
-        now: now(), t: v.currentTime, paused: v.paused, seeking: v.seeking, ended: v.ended, ready: v.readyState, hidden,
+        now: now(), t: v.currentTime, paused: v.paused && !this._lazyWait, seeking: v.seeking, ended: v.ended, ready: v.readyState, hidden,
         hasVideo: v.readyState >= 1 ? v.videoWidth > 0 : undefined,
         frames: this._rvfc ? this._frames : total, dropped, totalFrames: total, ahead: this._ahead(),
         bufEnd: this._bufEnd(), duration: v.duration, networkState: v.networkState, // the buffer watch (SP-021)

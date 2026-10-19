@@ -1,4 +1,4 @@
-// Tests for the VOID player core. Run:  node --test player/test
+// Tests for the VOID player core. Run:  node --test "player/test/*.test.js"
 // Each test drives a simulated playback timeline (250 ms samples, optional per-frame callbacks) and
 // checks what the core decides. No browser needed.
 const test = require('node:test');
@@ -536,6 +536,42 @@ test('SP-021: the pause the viewer saw is counted from the hop to the picture co
   assert.ok(s.rebufferRatio > 0 && s.rebufferRatio < 0.2);
   assert.strictEqual(s.stalls, 1);
   assert.strictEqual(w.core.state, 'playing');
+});
+
+// SP-026: a later copy's servers are looked up by the page when the core first moves onto it, and handed to the core.
+const TWO_COPIES = [{ url: 'https://archive.org/download/x/a.mp4', label: 'copy1@archive', fileKey: 0 }, { url: 'https://archive.org/download/y/b.mp4', label: 'copy2@archive', fileKey: 1, lazy: true }];
+const COPY2_SERVERS = [{ url: 'https://ia9/y/b.mp4', label: 'copy2@primary', fileKey: 1 }, { url: 'https://ia8/y/b.mp4', label: 'copy2@backup', fileKey: 1 }];
+
+test('SP-026: servers found for the copy the core just moved onto go in front of its Archive link, and the core moves onto the first', () => {
+  const w = world(); w.load(TWO_COPIES); w.run(3000);
+  w.core.event('error', w.now, { code: 3 }); // copy 1 cannot be decoded: on to copy 2 (its servers unknown)
+  assert.strictEqual(w.core.source.label, 'copy2@archive');
+  const cur = w.core.expand(COPY2_SERVERS);
+  assert.strictEqual(cur.label, 'copy2@primary');
+  assert.strictEqual(w.core.source.label, 'copy2@primary');
+  assert.strictEqual(w.core.sourceIndex, 1);
+  assert.strictEqual(w.core.summary().sources, 4, 'copy 1, primary, backup, the Archive link');
+  assert.strictEqual(w.kinds('switch').length, 1, 'expanding is not a switch');
+});
+
+test('SP-026: an expanded copy cycles its servers when it starves, instead of reloading a lone link and failing', () => {
+  const w = world(); w.load(TWO_COPIES); w.run(3000);
+  w.core.event('error', w.now, { code: 3 }); w.core.expand(COPY2_SERVERS); w.run(10000);
+  w.ahead = 0; w.run(4000, 'stall');
+  assert.strictEqual(w.kinds('switch').pop().to, 'copy2@backup');
+  assert.strictEqual(w.acts('reload').length, 0);
+  assert.strictEqual(w.kinds('failed').length, 0);
+  w.run(8000, 'stall');
+  assert.strictEqual(w.kinds('switch').pop().to, 'copy2@archive', 'then the copy\'s Archive link, the old order');
+});
+
+test('SP-026: entries of another copy, or none, change nothing', () => {
+  const w = world(); w.load(TWO_COPIES); w.run(3000);
+  assert.strictEqual(w.core.expand(COPY2_SERVERS).label, 'copy1@archive', 'still on copy 1: entries of copy 2 are not its servers');
+  assert.strictEqual(w.core.summary().sources, 2);
+  assert.strictEqual(w.core.expand([]).label, 'copy1@archive');
+  assert.strictEqual(w.core.expand(null).label, 'copy1@archive');
+  assert.strictEqual(w.core.summary().sources, 2);
 });
 
 test('SP-022: a hop after a stopped picture still counts the pause from where it stopped (it used to be lost)', () => {
