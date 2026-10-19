@@ -304,7 +304,8 @@ function render(result, ctx) {
   out.push('');
   out.push('Not checked by this script, so look yourself before you open the site:');
   out.push('  - the playback pause rate in Sentry (org church-of-american-strength-ho, project voidtv) against the target;');
-  out.push('  - the catalog standard (the report you were shown) and the System check page in HQ.');
+  out.push('  - the catalog standard (the report you were shown) and the System check page in HQ;');
+  out.push('  - the Cloudflare dashboard (docs/DEPLOY.md, setup steps 1 to 6) and the doctor\'s www, headers and live:missing-files lights (steps 7 and 8).');
   out.push('When every row is GO and you say so: docs/DEPLOY.md, "Opening day", has the steps and the rollback.');
   return out.map((l) => scrub(l, secrets));
 }

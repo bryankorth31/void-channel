@@ -418,6 +418,7 @@ test('the printed table names which rows are required, says it only reads, and k
   const freshLines = LC.render(LC.evaluate(good()), { nowMs: NOW, root: '/made/up', fresh: true }).join('\n');
   assert.match(freshLines, /It ran the quick doctor first, which rewrote catalog\/cache\/health\.json as the doctor always does\./);
   assert.match(lines, /playback pause rate in Sentry/);
+  assert.match(lines, /the Cloudflare dashboard \(docs\/DEPLOY\.md, setup steps 1 to 6\)/);
   assert.match(lines, /docs\/DEPLOY\.md/);
   const bad = LC.render(LC.evaluate({ ...good(), backup: { error: 'none' } }), { nowMs: NOW }).join('\n');
   assert.match(bad, /By hand: [\s\S]*backup-cache\.js/, 'a NO-GO row prints its by-hand fix');
