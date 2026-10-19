@@ -127,7 +127,7 @@ test('a file that cannot be copied is counted, the rest are copied, and the exit
 // ---- the doctor, in a throwaway copy of the tools ---------------------------------------------------------------------
 test('the doctor: backup and shrink lights read the stamp and the counts', () => {
   const root = path.join(TMP, 'doctor-tree');
-  for (const f of ['scripts/doctor.js', 'scripts/lib/profile.js', 'scripts/lib/tasks.js', 'scripts/lib/app.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js']) { fs.mkdirSync(path.dirname(path.join(root, f)), { recursive: true }); fs.copyFileSync(path.join(REPO, f), path.join(root, f)); }
+  for (const f of ['scripts/doctor.js', 'scripts/lib/profile.js', 'scripts/lib/tasks.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js']) { fs.mkdirSync(path.dirname(path.join(root, f)), { recursive: true }); fs.copyFileSync(path.join(REPO, f), path.join(root, f)); }
   write(path.join(root, 'scripts'), 'show-list.json', JSON.stringify({ types: ['Drama'], shows: [] }));
   const grid = (i) => ({ show: `T${i}`, slug: `t-${i}`, type: 'Drama', tvmaze: { id: i }, seasons: [{ season: 1, episodes: [1, 2].map((k) => ({ number: k, name: 'e', airdate: '2000-01-01', state: 'LIVE', alternates: [], file: { name: 'e', file: 'e.mp4', item: 'i' + i, url: 'https://archive.org/download/i/e.mp4', format: 'h.264', playable: true, seconds: 1800, sizeMB: 9, conf: 0.9 } })) }] });
   for (let i = 0; i < 10; i++) write(path.join(root, 'catalog', 'shows'), `t-${i}.json`, JSON.stringify(grid(i)));
@@ -154,7 +154,7 @@ test('the doctor: backup and shrink lights read the stamp and the counts', () =>
 
 test('the doctor keeps working in a tree that lacks the guards module (it says so in a light)', () => {
   const root = path.join(TMP, 'doctor-bare');
-  for (const f of ['scripts/doctor.js', 'scripts/lib/profile.js', 'scripts/lib/tasks.js', 'scripts/lib/app.js', 'player/tools/rank-sources.js']) { fs.mkdirSync(path.dirname(path.join(root, f)), { recursive: true }); fs.copyFileSync(path.join(REPO, f), path.join(root, f)); }
+  for (const f of ['scripts/doctor.js', 'scripts/lib/profile.js', 'scripts/lib/tasks.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'player/tools/rank-sources.js']) { fs.mkdirSync(path.dirname(path.join(root, f)), { recursive: true }); fs.copyFileSync(path.join(REPO, f), path.join(root, f)); }
   const e = { ...process.env }; delete e.VOID_PROFILE;
   spawnSync(process.execPath, [path.join(root, 'scripts', 'doctor.js'), '--quick'], { cwd: TMP, encoding: 'utf8', env: e });
   const h = JSON.parse(fs.readFileSync(path.join(root, 'catalog', 'cache', 'health.json'), 'utf8'));

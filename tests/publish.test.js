@@ -301,7 +301,7 @@ test('works the way this PC is set up: core.autocrlf=true and CRLF files in the 
 test('no flags: the scheduled run, started from inside its own tree, finds the same paths without --root', () => {
   const c = fresh();
   const root = path.join(__dirname, '..');
-  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
+  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
   git(c.work, 'add', 'scripts', 'player');
   git(c.work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (the tooling for this test)'); // a Catalog commit so nothing is "other"
   git(c.work, 'push', '-q', 'origin', 'master');
@@ -319,7 +319,7 @@ test('no flags: the scheduled run, started from inside its own tree, finds the s
 const STUB_APP = "const fs = require('fs');\nconst real = require('./app-real');\nmodule.exports = { assemble() { const d = real.assemble(); if (process.env.TEST_DRIFT_FILE) fs.writeFileSync(process.env.TEST_DRIFT_FILE, process.env.TEST_DRIFT_TEXT); return d; } };\n";
 function copyTools(work, stub) {
   const root = path.join(__dirname, '..');
-  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'player/tools/rank-sources.js']) write(work, f, fs.readFileSync(path.join(root, f), 'utf8'));
+  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'player/tools/rank-sources.js']) write(work, f, fs.readFileSync(path.join(root, f), 'utf8'));
   const app = fs.readFileSync(path.join(root, 'scripts/lib/app.js'), 'utf8');
   if (stub) { write(work, 'scripts/lib/app-real.js', app); write(work, 'scripts/lib/app.js', STUB_APP); } else write(work, 'scripts/lib/app.js', app);
 }
@@ -446,7 +446,7 @@ test('publish.log is cut back to its last megabyte', () => {
 test('the doctor: publish light follows the last outcome line, unpushed turns yellow then red, addresses are counted', () => {
   const c = fresh();
   const root = path.join(__dirname, '..');
-  for (const f of ['scripts/doctor.js', 'scripts/lib/profile.js', 'scripts/lib/tasks.js', 'scripts/lib/app.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
+  for (const f of ['scripts/doctor.js', 'scripts/lib/profile.js', 'scripts/lib/tasks.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
   git(c.work, 'add', 'scripts', 'player');
   git(c.work, 'commit', '-q', '-m', 'Add the tooling for this test');
   git(c.work, 'push', '-q', 'origin', 'master');
