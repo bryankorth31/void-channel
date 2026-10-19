@@ -19,7 +19,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..', '..');
 const name = process.env.VOID_PROFILE || 'voidtv';
 const defaults = {
-  name: 'voidtv', siteName: 'VOIDtv', tagline: 'before AI slop, there was human creativity', domain: 'https://voidtv.net',
+  name: 'voidtv', siteName: 'voidtv.net', tagline: 'before AI slop, there was human creativity', domain: 'https://voidtv.net',
   listFile: 'scripts/show-list.json', catalogDir: 'catalog', siteDir: 'site', docsDir: 'docs', reference: 'tvmaze', mediatype: 'movies',
   rows: null, taskPrefix: 'VoidTV', port: 8780,
 };

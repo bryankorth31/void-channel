@@ -521,7 +521,7 @@
     _setMedia(ep) {
       if (!('mediaSession' in navigator)) return;
       try {
-        navigator.mediaSession.metadata = new MediaMetadata({ title: ep.title || '', artist: ep.show || '', album: 'VOIDtv', artwork: ep.artwork ? [{ src: ep.artwork, sizes: '512x512' }] : [] });
+        navigator.mediaSession.metadata = new MediaMetadata({ title: ep.title || '', artist: ep.show || '', album: 'voidtv.net', artwork: ep.artwork ? [{ src: ep.artwork, sizes: '512x512' }] : [] });
         const ms = navigator.mediaSession, set = (a, f) => { try { ms.setActionHandler(a, f); } catch (e) { /* unsupported action */ } };
         set('play', () => this.play()); set('pause', () => this.pause());
         set('seekbackward', () => this.skip(-this.o.skipBack)); set('seekforward', () => this.skip(this.o.skipFwd));

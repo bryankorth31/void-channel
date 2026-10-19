@@ -80,7 +80,7 @@ function meApply(stored, ops, ctx) {
 }
 
 function meImportMerge(me, m) {
-  if (!m || typeof m !== 'object' || m.v !== 1) throw new Error('not a VOIDtv export');
+  if (!m || typeof m !== 'object' || m.v !== 1) throw new Error('not a voidtv.net export');
   const n = { list: 0, likes: 0, history: 0, reports: 0, skipped: 0 };
   const num = (x) => typeof x === 'number' && isFinite(x);
   const int = (x, hi) => num(x) && Math.floor(x) === x && x >= 0 && x <= hi;
