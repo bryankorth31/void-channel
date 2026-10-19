@@ -113,13 +113,13 @@ const whyType = (why) => /^self-listed/.test(why) ? 'self-listed (order from fil
 function runPass(label, mod, shipped, { keepOverlay = false } = {}) {
   if (!keepOverlay) { overlay.clear(); deleted.clear(); }
   const t0 = Date.now(), snap = { ...attempts.byName };
-  const shows = new Map(), eps = new Map(), picks = [], errors = [], types = new Map(), watch = new Map(WATCH.map((w) => [w, 0]));
+  const shows = new Map(), eps = new Map(), picks = [], errors = [], types = new Map(), watch = new Map(WATCH.map((w) => [w, 0])), drops = []; // drops: grids the matcher says it removed or emptied (the old matcher says nothing)
   let identical = 0, compared = 0, ran = 0, addresses = 0;
   const entries = LIST.shows.filter((e) => !onlySlug || slugOf(e.name) === onlySlug);
   entries.forEach((entry, i) => {
     progress(label, i, entries.length);
     let r;
-    try { r = mod.matchShow(entry); } catch (e) { errors.push(entry.name + ': ' + e.message); return; }
+    try { r = mod.matchShow(entry, drops); } catch (e) { errors.push(entry.name + ': ' + e.message); return; }
     if (!r) return;
     ran++;
     if (!r.noTvmaze) addresses += (JSON.stringify(r).match(ADDRESS) || []).length;
@@ -146,7 +146,7 @@ function runPass(label, mod, shipped, { keepOverlay = false } = {}) {
     shows.set(slug, s);
   });
   const w = {}; for (const k of Object.keys(attempts.byName)) w[k] = attempts.byName[k] - (snap[k] || 0);
-  return { label, shows, eps, picks, errors, ran, identical, compared, addresses, types, watch, ms: Date.now() - t0, writes: w };
+  return { label, shows, eps, picks, errors, ran, identical, compared, addresses, types, watch, drops, ms: Date.now() - t0, writes: w };
 }
 
 function totals(p) {
@@ -271,6 +271,12 @@ say();
 say('WATCHED UPLOADS (placed files whose item title contains the phrase; known wrong-show offenders, should be 0 after)');
 for (const w of WATCH) say('  ' + pad(w, 34) + lpad(fmt(B.watch.get(w)), 8) + lpad(fmt(A.watch.get(w)), 8));
 say();
+{
+  const dr = A.drops || [];
+  say('GRIDS THE FIRST RUN AFTER THE CHANGE REMOVES OR EMPTIES (one log line each; the COVERAGE.md section and catalog/cache/match-dropped.json hold the same list): ' + dr.length + ' shows, ' + fmt(dr.reduce((n, d) => n + d.episodes, 0)) + ' episodes they had');
+  for (const d of [...dr].sort((x, y) => y.episodes - x.episodes || x.show.localeCompare(y.show))) say('  ' + pad(d.show, 44) + pad(d.slug, 44) + lpad(d.episodes, 6) + '  ' + d.what);
+  say();
+}
 if (BEFORE) {
   say('STRICT-GRID MOVEMENT (episodes keyed by show, season, number)');
   say('  placed after but not before: ' + fmt(gained) + '   placed before but not after: ' + fmt(lostEps) + '   confidence up: ' + fmt(confUp) + '   down: ' + fmt(confDown) + '   different file picked: ' + fmt(fileChanged));

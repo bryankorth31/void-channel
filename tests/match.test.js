@@ -460,6 +460,93 @@ describe('writeIfChanged (CP-006)', () => {
   test('cleanup', () => { fs.rmSync(dir, { recursive: true, force: true }); assert.equal(fs.existsSync(dir), false); });
 });
 
+// ---------------------------------------------------------------- R-019 / R-026: say which grids a run removes or empties
+describe('grids a run removes or empties', () => {
+  const had = (n) => ({ show: 'Zork Show', slug: 'zork-show', seasons: [{ season: 1, episodes: [...range(n).map((i) => ({ number: i, state: 'REVIEW', file: { name: 'f' + i } })), { number: 99, state: 'MISSING', file: null }] }] });
+  // The catalog folders served from memory: nothing is read from or written to the real catalog/shows or catalog/cache.
+  function memCatalog(files) {
+    const real = { exists: fs.existsSync, read: fs.readFileSync, write: fs.writeFileSync, mkdir: fs.mkdirSync, unlink: fs.unlinkSync };
+    const key = (p) => String(p).replace(/\\/g, '/').split('/').slice(-2).join('/');
+    const mem = new Map(Object.entries(files).map(([k, v]) => [k, JSON.stringify(v)]));
+    const ours = (p) => /^(shows|cache|candidates)\//.test(key(p));
+    fs.existsSync = (p) => (mem.has(key(p)) ? true : real.exists(p));
+    fs.readFileSync = (p, ...a) => { if (ours(p)) { if (mem.has(key(p))) return mem.get(key(p)); const e = new Error('ENOENT ' + p); e.code = 'ENOENT'; throw e; } return real.read(p, ...a); };
+    fs.writeFileSync = (p, text) => { if (!ours(p)) throw new Error('unexpected write ' + p); mem.set(key(p), String(text)); };
+    fs.mkdirSync = (p) => { if (!ours(p + '/x')) throw new Error('unexpected mkdir ' + p); };
+    fs.unlinkSync = (p) => { if (!ours(p) || !mem.has(key(p))) { const e = new Error('ENOENT ' + p); e.code = 'ENOENT'; throw e; } mem.delete(key(p)); };
+    return { mem, restore() { fs.existsSync = real.exists; fs.readFileSync = real.read; fs.writeFileSync = real.write; fs.mkdirSync = real.mkdir; fs.unlinkSync = real.unlink; } };
+  }
+  const entry = { name: 'Zork Show', type: 'Test', network: 'Nowhere' };
+  const upload = (title, names) => ({ items: [{ id: 'zork-upload', title, files: names.map((n) => (typeof n === 'string' ? mkFile(n) : n)) }] });
+  const match = (files, drops) => { const cat = memCatalog(files); try { return { r: M.matchShow(entry, drops), mem: cat.mem }; } finally { cat.restore(); } };
+
+  test('placedIn counts the episodes that hold a file', () => {
+    assert.equal(M.placedIn(had(12)), 12);
+    assert.equal(M.placedIn(null), 0);
+    assert.equal(M.placedIn({ seasons: [] }), 0);
+  });
+  test('droppedBy: a removed grid and an emptied grid are reported with the count they had; a grid that never held a file, or still does, is not', () => {
+    assert.deepEqual(M.droppedBy({ show: 'Zork Show', noTvmaze: true }, had(12)), { slug: 'zork-show', show: 'Zork Show', episodes: 12, what: 'removed' });
+    assert.deepEqual(M.droppedBy({ show: 'Zork Show', slug: 'zork-show', coverage: { live: 0, review: 0 } }, had(7)), { slug: 'zork-show', show: 'Zork Show', episodes: 7, what: 'emptied' });
+    assert.equal(M.droppedBy({ show: 'Zork Show', noTvmaze: true }, null), null, 'no grid before');
+    assert.equal(M.droppedBy({ show: 'Zork Show', noTvmaze: true }, had(0)), null, 'an empty grid before');
+    assert.equal(M.droppedBy({ show: 'Zork Show', slug: 'zork-show', coverage: { live: 3, review: 1 } }, had(7)), null, 'it still places files');
+  });
+  test('the list kept between runs: new drops come in, earlier ones stay until the show has a grid again, biggest first', () => {
+    const prior = [{ slug: 'a', show: 'A', episodes: 5, what: 'removed', at: 'old' }, { slug: 'b', show: 'B', episodes: 9, what: 'emptied', at: 'old' }, { slug: 'c', show: 'C', episodes: 2, what: 'removed', at: 'old' }];
+    const rows = [{ show: 'B', slug: 'b', coverage: { live: 1, review: 0 } }, { show: 'A', noTvmaze: true }];
+    const list = M.mergeDropped(prior, [{ slug: 'd', show: 'D', episodes: 30, what: 'removed' }, { slug: 'c', show: 'C', episodes: 4, what: 'emptied' }], rows, 'now');
+    assert.deepEqual(list.map((d) => d.slug + ':' + d.episodes), ['d:30', 'a:5', 'c:4'], 'b has a grid again; c is replaced by the new record; a is still without one');
+    assert.equal(list[0].at, 'now');
+    assert.equal(list[1].at, 'old');
+    assert.deepEqual(M.mergeDropped([], [], [], 'now'), []);
+  });
+  test('the report section lists them, and says nothing when there are none', () => {
+    assert.deepEqual(M.droppedLines([]), []);
+    const text = M.droppedLines([{ slug: 'zork-show', show: 'Zork Show', episodes: 12, what: 'removed', at: '2026-10-18T10:00:00.000Z' }]).join('\n');
+    assert.match(text, /## Grids removed or emptied/);
+    assert.match(text, /\| Zork Show \| zork-show \| 12 \| removed \| 2026-10-18 \|/);
+  });
+  test('catalog/cache/match-dropped.json holds the list, and a repeat run does not wipe it before anyone reads it', () => {
+    const cat = memCatalog({});
+    try {
+      M.saveDropped([{ slug: 'zork-show', show: 'Zork Show', episodes: 12, what: 'removed' }], [], '2026-10-18T10:00:00.000Z');
+      const first = JSON.parse(cat.mem.get('cache/match-dropped.json'));
+      assert.deepEqual(first.dropped.map((d) => [d.slug, d.episodes, d.what, d.at]), [['zork-show', 12, 'removed', '2026-10-18T10:00:00.000Z']]);
+      const again = M.saveDropped([], [{ show: 'Zork Show', noTvmaze: true }], '2026-10-19T10:00:00.000Z');
+      assert.equal(again.length, 1, 'still without a grid: it stays on the list');
+      assert.equal(JSON.parse(cat.mem.get('cache/match-dropped.json')).matchedAt, first.matchedAt, 'only the run stamp differs, so the file is left alone');
+      assert.deepEqual(M.saveDropped([], [{ show: 'Zork Show', slug: 'zork-show', coverage: { live: 0, review: 5 } }], '2026-10-20T10:00:00.000Z'), [], 'the show has a grid again: it leaves the list');
+      assert.deepEqual(JSON.parse(cat.mem.get('cache/match-dropped.json')).dropped, []);
+    } finally { cat.restore(); }
+  });
+  test('matchShow reports the stale grid it unlinks and the grid it empties, and still drops exactly what it dropped before', () => {
+    // no TVmaze list and an upload that does not name the show: nothing to self-list, so the old grid goes
+    let drops = [];
+    let { r, mem } = match({ 'candidates/zork-show.json': upload('Mystery Upload', ['A.mp4', 'B.mp4']), 'shows/zork-show.json': had(12) }, drops);
+    assert.equal(r.noTvmaze, true);
+    assert.equal(mem.has('shows/zork-show.json'), false, 'the stale grid is unlinked, as before');
+    assert.deepEqual(drops, [{ slug: 'zork-show', show: 'Zork Show', episodes: 12, what: 'removed' }]);
+    // a TVmaze list and files that match nothing: the new grid is empty and replaces the old one
+    drops = [];
+    ({ r, mem } = match({ 'candidates/zork-show.json': upload('Mystery Upload', ['A.mp4']), 'cache/tvmaze-zork-show.json': mkTv(), 'shows/zork-show.json': had(12) }, drops));
+    assert.equal(r.coverage.live + r.coverage.review, 0);
+    assert.equal(JSON.parse(mem.get('shows/zork-show.json')).coverage.review, 0, 'the empty grid is written, as before');
+    assert.deepEqual(drops, [{ slug: 'zork-show', show: 'Zork Show', episodes: 12, what: 'emptied' }]);
+    // no grid on disk before: nothing was lost
+    drops = [];
+    match({ 'candidates/zork-show.json': upload('Mystery Upload', ['A.mp4', 'B.mp4']) }, drops);
+    match({ 'candidates/zork-show.json': upload('Mystery Upload', ['A.mp4']), 'cache/tvmaze-zork-show.json': mkTv() }, drops);
+    assert.deepEqual(drops, []);
+    // the grid still places files: nothing was lost; and a caller that passes no list gets the old behaviour
+    drops = [];
+    const files = range(5).map((i) => mkFile('Zork Show S01E0' + i + '.mp4', { ep: se(1, i) }));
+    match({ 'candidates/zork-show.json': upload('Zork Show Season 1', files), 'cache/tvmaze-zork-show.json': mkTv(), 'shows/zork-show.json': had(12) }, drops);
+    assert.deepEqual(drops, []);
+    assert.equal(match({ 'candidates/zork-show.json': upload('Mystery Upload', ['A.mp4', 'B.mp4']), 'shows/zork-show.json': had(12) }).mem.has('shows/zork-show.json'), false);
+  });
+});
+
 // ---------------------------------------------------------------- the address mask
 describe('address mask', () => {
   test('no address-shaped text reaches a grid: episode names, titles, file names, summaries and urls are masked', () => {

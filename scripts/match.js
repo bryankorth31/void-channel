@@ -18,6 +18,7 @@ const CAND_DIR = path.join(PROFILE.catalogDir, 'candidates');
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
 const OUT_DIR = path.join(PROFILE.catalogDir, 'shows');
 const OUT_MD = path.join(PROFILE.docsDir, 'COVERAGE.md');
+const DROPPED_FILE = path.join(CACHE_DIR, 'match-dropped.json'); // git-ignored (catalog/cache); HQ can read it
 const LIVE = 0.85, REVIEW = 0.5;
 const REACT = /\b(reaction|reacts?|reacting|review|recap|commentary|breakdown|watch ?along|first time watching|normies|mark watches|group reaction|walkthrough|playthrough|gameplay|let'?s play|longplay|speedrun)\b/i;
 
@@ -258,13 +259,19 @@ function fallbackCand(cand, tags, ctx) {
 }
 
 // Read one show's inputs, decide its grid (gridFor), and write the grid only when it is the one that ships.
-function matchShow(entry) {
+// drops (optional): an array that gets one record for each grid this call removes or empties (see droppedBy).
+function matchShow(entry, drops) {
   const show = entry.name;
   const cf = path.join(CAND_DIR, slug(show) + '.json');
   if (!fs.existsSync(cf)) return null;
   const cand = JSON.parse(fs.readFileSync(cf, 'utf8'));
   const r = gridFor(entry, cand, loadTv(show), { ov: readOverrides()[slug(show)] || {}, readDead, firstAdded });
-  if (r.noTvmaze) { try { fs.unlinkSync(path.join(OUT_DIR, slug(show) + '.json')); } catch (_) {} /* a stale grid must not outlive the rule that rejected it */ return r; }
+  const outFile = path.join(OUT_DIR, slug(show) + '.json');
+  if (drops && (r.noTvmaze || r.coverage.live + r.coverage.review === 0)) { // the only two ways a run can take a grid away; read the grid that is on disk now, before it goes
+    let old = null; try { old = JSON.parse(fs.readFileSync(outFile, 'utf8')); } catch (_) { /* none */ }
+    const d = droppedBy(r, old); if (d) drops.push(d);
+  }
+  if (r.noTvmaze) { try { fs.unlinkSync(outFile); } catch (_) {} /* a stale grid must not outlive the rule that rejected it */ return r; }
   fs.mkdirSync(OUT_DIR, { recursive: true });
   writeIfChanged(path.join(OUT_DIR, r.slug + '.json'), r); // untouched when only matchedAt differs, so a re-match of an unchanged show leaves the file and its old stamp alone
   return r;
@@ -484,13 +491,44 @@ function selfGrid(entry, cand, aliases, nets = []) {
   return noEmail(out);
 }
 
-function writeCoverage(rows) {
+// ---- Grids a run takes away ----
+// A show that had a grid and now has none (no TVmaze list and nothing to self-list: the stale grid is unlinked), or has one that places no file at all, is a loss
+// somebody should see. Nothing here changes what is dropped; it only says so: one console line per show, a section in docs/COVERAGE.md and catalog/cache/match-dropped.json.
+const placedIn = (grid) => (grid && Array.isArray(grid.seasons) ? grid.seasons.reduce((n, s) => n + (s.episodes || []).filter((e) => e.file).length, 0) : 0);
+function droppedBy(r, old) { // r: the new result for a show; old: the grid on disk before this run, or null. Returns { slug, show, episodes it had, what } or null
+  const had = placedIn(old);
+  if (!had || !r) return null;
+  if (r.noTvmaze) return { slug: slug(r.show), show: r.show, episodes: had, what: 'removed' };
+  if (r.coverage && r.coverage.live + r.coverage.review === 0) return { slug: r.slug, show: r.show, episodes: had, what: 'emptied' };
+  return null;
+}
+// The list kept between runs: this run's drops, plus earlier ones for shows that have not got a grid back (a repeat run would otherwise wipe the list before anyone read it).
+function mergeDropped(prior, drops, rows, at) {
+  const back = new Set(rows.filter((r) => r && !r.noTvmaze && r.coverage.live + r.coverage.review > 0).map((r) => r.slug));
+  const now = new Set(drops.map((d) => d.slug));
+  return [...(prior || []).filter((d) => !back.has(d.slug) && !now.has(d.slug)), ...drops.map((d) => ({ ...d, at }))]
+    .sort((a, b) => b.episodes - a.episodes || a.show.localeCompare(b.show));
+}
+function droppedLines(list) {
+  if (!list || !list.length) return [];
+  return ['', '## Grids removed or emptied', '', 'These shows had a grid that a run took away (no TVmaze list and nothing to self-list) or left with no file in it. They stay here until the show has files again.', '',
+    '| Show | Slug | Episodes it had | What happened | Run |', '|---|---|---|---|---|', ...list.map((d) => `| ${d.show} | ${d.slug} | ${d.episodes} | ${d.what} | ${String(d.at || '').slice(0, 10)} |`)];
+}
+function saveDropped(drops, rows, at) {
+  let prior = []; try { prior = JSON.parse(fs.readFileSync(DROPPED_FILE, 'utf8')).dropped || []; } catch (_) { /* first time */ }
+  const list = mergeDropped(prior, drops, rows, at);
+  try { fs.mkdirSync(CACHE_DIR, { recursive: true }); writeIfChanged(DROPPED_FILE, { matchedAt: at, dropped: list }); } catch (e) { console.log('Could not write match-dropped.json: ' + e.message); }
+  return list;
+}
+
+function writeCoverage(rows, dropped = []) {
   const have = rows.filter((r) => r && !r.noTvmaze).sort((a, b) => b.coverage.pct - a.coverage.pct || a.show.localeCompare(b.show));
   const lines = ['# Coverage', '', `${have.length} shows matched to TVmaze episode lists. LIVE = confident file for that episode; REVIEW = a file that needs a look; MISSING = no file found yet.`, '',
     '| Show | Row | Episodes | Live | Review | Missing | Covered |', '|---|---|---|---|---|---|---|'];
   for (const r of have) lines.push(`| ${r.show} | ${r.type} | ${r.coverage.total} | ${r.coverage.live} | ${r.coverage.review} | ${r.coverage.missing} | ${r.coverage.pct}% |`);
   const none = rows.filter((r) => r && r.noTvmaze);
   if (none.length) lines.push('', 'No TVmaze match (needs a manual episode list): ' + none.map((r) => r.show).join(', '));
+  lines.push(...droppedLines(dropped));
   fs.writeFileSync(OUT_MD, lines.join('\n') + '\n');
 }
 
@@ -502,20 +540,23 @@ function main() {
   const slugFilter = slugAt >= 0 ? argv[slugAt + 1] : null; // HQ passes the exact slug; a name substring would sweep in every title containing it
   const filter = slugFilter ? '' : (argv.find((a) => !a.startsWith('--')) || '').toLowerCase();
   const partial = !!(filter || slugFilter);
-  const rows = [];
+  const rows = [], drops = [], at = new Date().toISOString();
   for (const entry of LIST.shows) {
     if (slugFilter && slug(entry.name) !== slugFilter) continue;
     if (filter && !entry.name.toLowerCase().includes(filter)) continue;
     let r;
-    try { r = matchShow(entry); } catch (e) { console.log(`${entry.name}: FAILED ${e.message}`); continue; } // one bad file must not abort the run
+    const seen = drops.length;
+    try { r = matchShow(entry, drops); } catch (e) { console.log(`${entry.name}: FAILED ${e.message}`); continue; } // one bad file must not abort the run
     if (!r) continue;
     rows.push(r);
+    for (const d of drops.slice(seen)) console.log(`${entry.name}: GRID ${d.what.toUpperCase()}, slug ${d.slug}, it had ${d.episodes} episodes`);
     if (r.noTvmaze) console.log(`${entry.name}: no TVmaze episode list`);
     else console.log(`${entry.name}: ${r.coverage.live} live, ${r.coverage.review} review, ${r.coverage.missing} missing of ${r.coverage.total} (${r.coverage.pct}%)`);
   }
-  if (!partial) writeCoverage(rows); // a filtered run leaves the full report alone
+  const dropped = saveDropped(drops, rows, at); // a partial run (HQ's one-show match) updates the list too
+  if (!partial) writeCoverage(rows, dropped); // a filtered run leaves the full report alone
   console.log(`\nWrote ${rows.length} grids to catalog/shows/ and docs/COVERAGE.md`);
 }
 if (require.main === module) main();
 module.exports = { norm, tagText, slug, noEmail, namesTitle, titleNaming, closesName, REACT, QUALITY_RE, OTHER_SHOWS, BUILTIN_ALIASES, makeOtherShows, forOtherShow, otherShowCores, namesOtherShow, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,
-  fallbackCand, gridFor, selfGrid, matchShow, fileDate };
+  fallbackCand, gridFor, selfGrid, matchShow, fileDate, placedIn, droppedBy, mergeDropped, droppedLines, saveDropped };
