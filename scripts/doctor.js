@@ -143,6 +143,14 @@ async function main() {
     else add('local-servers', r.ok ? 'green' : 'red', r.detail, r.ok ? undefined : 'Close HQ and the desktop app and start them again from the current scripts/hq.js (HQ.cmd or the desktop app). A copy started before the CF-004 fix still answers any page on this PC.');
   } catch (e) { add('local-servers', 'yellow', 'could not probe HQ: ' + String(e.message).slice(0, 80)); }
 
+  // 4c. motion editor guards (CF-005): a foreign Host, another port, a text/plain body and a bad theme value must all be refused
+  try {
+    const kitPort = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'motion', 'kit.json'), 'utf8')).port || 8221; } catch (e) { return 8221; } })();
+    const m = await require('./lib/motioncheck').probeMotion(kitPort);
+    if (m.down) add('local-servers:motion', 'green', 'motion editor is not running on ' + kitPort + ', nothing to probe');
+    else add('local-servers:motion', m.ok ? 'green' : 'red', m.detail, m.ok ? undefined : 'Apply audit/proposals/motion-editor-hardening.md, then restart the motion editor (HQ > Motion > Restart). An editor started before the fix still trusts any page.');
+  } catch (e) { add('local-servers:motion', 'yellow', 'could not probe the motion editor: ' + String(e.message).slice(0, 80)); }
+
   // 5. catalog integrity (cheap: parse every grid, look for reserved names and empty essentials)
   const showsDir = path.join(PROFILE.catalogDir, 'shows');
   let bad = 0, n = 0, reserved = 0;
