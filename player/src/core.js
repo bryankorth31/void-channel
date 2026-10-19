@@ -21,14 +21,18 @@
  *
  * Measured and reported only, never acted on (no seek, no speed change, no hop, no switch), and only while the
  * picture plays steadily (not paused, seeking, waiting, hidden or settling, not in the first STEADY_MS, at speed 1):
- *   hitch       a shown frame arrives HITCH_MS or more after the one before, while the sound ran (under FREEZE_MS)
+ *   hitch       a shown frame arrives HITCH_MS or more after the one before, while the sound ran (under THROTTLE_MS, 1 s;
+ *               a gap of 1 to 1.5 s is a throttled stretch, not a hitch and not yet a freeze)
  *   avlag       picture and sound apart by more than AVLAG_S for AVLAG_HOLD_MS, allowing for the display delay
- *   lowfps      the pictures a second the page shows stay under LOWFPS_RATIO of the file's own rate
- *   lowsourcefps the file itself holds under LOWSRC_FPS frames a second (a file problem, not a player problem)
+ *   lowfps      the pictures a second the page shows stay under LOWFPS_RATIO of the file's rate (an estimate: see below)
  *   decodelag   the browser drops more than DECODELAG_SHARE of its frames: it is falling behind
  * Beside them it logs the stretches when the browser stopped calling for frames while the sound ran and the page was
  * on screen (throttled: Edge efficiency mode, power throttling), and whether the page's drawing stopped too. Time
  * hidden or throttled is left out of all the measures above.
+ * The file's rate (sourceFps) is only an ESTIMATE from the media-time steps of the frames shown. The page cannot tell a file
+ * that holds few frames from a browser that skips frames without counting them, so it never says the file is at fault:
+ * only the file's own header (an ffprobe look) gives the true rate. A low estimate with a high dropped share, or with a
+ * decoded rate under the estimate, means the browser fell behind.
  * What these cannot see, an offset built into the file, is in ../DESIGN.md ("Picture and sound out of step").
  *
  * What it does, in escalating steps, per source:
@@ -71,7 +75,7 @@
     BUFFER_GROW_S: 0.05,      // the buffered end must advance by more than this to count as growing
     STARVE_RELOADS: 1,        // a lone last server (nothing to hop to) is reloaded this often before the copy is given up
     // Measured and reported only (see the header): none of these makes the core do anything.
-    HITCH_MS: 250,            // a shown-frame interval over this (and under FREEZE_MS) while the sound ran = a hitch
+    HITCH_MS: 250,            // a shown-frame interval over this (and under THROTTLE_MS: 1 to 1.5 s is a throttled stretch) while the sound ran = a hitch
     HITCH_SRC_FRAMES: 3,      // ...and over this many frames of the file's own pace, so a slow file is not all hitches
     HITCH_EMIT_MS: 1000,      // at most one hitch event per this long...
     HITCH_EMIT_MAX: 20,       // ...and this many per episode (every hitch is still counted)
@@ -86,7 +90,6 @@
     SRC_MIN_STEPS: 24,        // steps between shown frames needed before the file's frame rate is reported
     LOWFPS_RATIO: 0.6,        // shown frames a second under this share of the file's rate...
     LOWFPS_MS: 10000,         // ...for this long of steady playing = lowfps
-    LOWSRC_FPS: 15,           // a file under this many frames a second is a file problem (lowsourcefps)
     DECODELAG_SHARE: 0.1,     // dropped frames over this share of the window's frames...
     DECODELAG_MS: 10000,      // ...for this long of steady playing = decodelag
     THROTTLE_MS: 1000,        // no frame callback this long while the sound runs and the page is on screen = throttled
@@ -122,7 +125,7 @@
     let starveSwitches = 0;   // server switches for starvation on the current copy
     let lastQualityAt = 0;
     const totals = { watchMs: 0, stallMs: 0, stalls: 0, freezes: 0, drifts: 0, errors: 0, actions: 0, recovered: 0, switches: 0, longestPauseMs: 0, startupMs: null,
-      hitches: 0, longestHitchMs: 0, avlags: 0, maxAvGapMs: 0, lowfps: 0, lowsourcefps: 0, decodelags: 0, outOfSyncPresses: 0, minutesBehind: 0, minutesMeasured: 0,
+      hitches: 0, longestHitchMs: 0, avlags: 0, maxAvGapMs: 0, lowfps: 0, decodelags: 0, outOfSyncPresses: 0, minutesBehind: 0, minutesMeasured: 0,
       throttles: 0, throttledMs: 0, throttlesPageWide: 0 };
     let lastSampleAt = 0;
     let lastErrCode = null;   // code of the last media error (1 aborted, 2 network, 3 decode, 4 not supported)
@@ -154,7 +157,7 @@
     const THR = 10, thrR = new Float64Array(THR * 3); let thrW = 0, thrN = 0, thrEmitted = 0;         // the last throttled stretches: ended at, ms, drawing stopped too
     let curPres = null, curDec = null, curDrop = null;     // the rolling window now (null: cannot be measured now)
     let heldPres = null, heldDec = null, heldDrop = null;  // the last window that could be measured
-    let lowSince = 0, decSince = 0, lowfpsFired = false, decodeFired = false, lowSrcFired = false;
+    let lowSince = 0, decSince = 0, lowfpsFired = false, decodeFired = false;
     let qHave = false, qNow = 0, qP = 0, qT = -1, qX = 0;  // the previous steady sample, for differences
     let mMs = 0, mPres = 0, mDecMs = 0, mDec = 0, mDrop = 0; // sums over the steady playing of the episode
     let minMs = 0, minFramesMs = 0, minFrames = 0;           // the steady minute being counted
@@ -168,7 +171,7 @@
       prevMt = -1; lastCbAt = clockNow; lastCbT = -1;
     }
     function unsteady() { thrNow = false; steadySince = 0; steadyUntil = 0; wHead = 0; wN = 0; curPres = curDec = curDrop = null; lowSince = 0; decSince = 0; qHave = false; avRun = 0; prevFrameAt = 0; }
-    function resetRate() { stepW = 0; stepN = 0; srcFps = null; lowSrcFired = false; lastEstAt = NEVER; }
+    function resetRate() { stepW = 0; stepN = 0; srcFps = null; lastEstAt = NEVER; }
     function resetQuality() {
       unsteady(); resetRate(); chainOff(); rateFile = undefined; thrW = 0; thrN = 0; thrEmitted = 0; lastAwayAt = 0; lastRafOffAt = 0;
       presented = 0; avFrames = 0; gapW = 0; gapN = 0; lastGapAt = NEVER; hitW = 0; hitN = 0; lastAvlagAt = NEVER; lastHitchEmitAt = NEVER; hitchEmitted = 0;
@@ -179,7 +182,7 @@
       if (prevMt >= 0) { const d = m - prevMt; if (d > 0.002 && d < 1) { stepR[stepW] = d; stepW = (stepW + 1) % STEP_RING; if (stepN < STEP_RING) stepN += 1; } }
       prevMt = m;
     }
-    // The file's frame rate, from the media-time step between shown frames. A browser that falls behind shows only
+    // An ESTIMATE of the file's frame rate, from the media-time step between shown frames. A browser that falls behind shows only
     // some of the frames, so many steps are 2, 3, 4 frames long; the file's own step is the smallest one that keeps
     // turning up (at least 3 steps, and 2 percent of them, within 12 percent of each other), and its median gives the rate.
     function estimateSource() {
@@ -241,16 +244,9 @@
       }
       qHave = true; qNow = now; qP = presented; qT = tot; qX = drp;
 
-      // The file itself holds too few pictures a second. Only said when the browser is keeping up: it makes about as
-      // many frames as the file claims and drops few of them. A browser that falls behind shows steps that are too
-      // long and makes any file look slow, and that is the player's side, not the file's.
-      if (srcFps && srcFps < C.LOWSRC_FPS && !lowSrcFired
-          && (tot >= 0 ? curDrop !== null && curDrop < C.DECODELAG_SHARE && curDec >= C.BEHIND_RATIO * srcFps * 0.9 : curPres !== null)) {
-        lowSrcFired = true; totals.lowsourcefps += 1;
-        emit({ type: 'lowsourcefps', sourceFps: srcFps, at: now });
-        note({ at: now, did: 'lowsourcefps', fps: srcFps });
-      }
-      // The page shows far fewer pictures a second than the file holds, for a while.
+      // The page shows far fewer pictures a second than the file seems to hold (the estimate), for a while. A file that
+      // really holds few frames, or a browser that skips frames without counting them, reads as a low estimate and does
+      // not fire this: the page cannot tell those apart, and does not guess.
       if (curPres !== null && srcFps && curPres < C.LOWFPS_RATIO * srcFps) {
         if (!lowSince) lowSince = now;
         if (!lowfpsFired && now - lowSince >= C.LOWFPS_MS) {
@@ -694,7 +690,7 @@
       for (let i = 0; i < hitN; i++) { const k = ((hitW - hitN + i + HITS * 2) % HITS) * 3; hits.push({ t: r1(hitR[k]), ms: Math.round(hitR[k + 1]), sec: Math.round((hitR[k + 2] - t0) / 100) / 10 }); }
       return {
         measure: pf ? 'per-frame' : 'unavailable', steady: steadyUntil > 0, live: curPres !== null || curDec !== null, throttled: thrNow,
-        presentedFps: pf ? r1(heldPres) : null, sourceFps: srcFps, fpsRatio: pf && heldPres != null && srcFps ? Math.round(heldPres / srcFps * 100) / 100 : null,
+        presentedFps: pf ? r1(heldPres) : null, sourceFps: srcFps, sourceFpsBasis: 'estimate from the frames shown', fpsRatio: pf && heldPres != null && srcFps ? Math.round(heldPres / srcFps * 100) / 100 : null,
         decodedFps: r1(heldDec), droppedShare: r3(heldDrop), gaps, hitches: hits, throttles: thr,
       };
     }
@@ -706,7 +702,7 @@
         // No per-frame timing in this browser: the sync and hitch figures are null ("no measure"), never a zero that reads as "no lag".
         avMeasure: tm.measure, throttles: pf ? totals.throttles : null, throttledMs: pf ? totals.throttledMs : null, throttlesPageWide: pf ? totals.throttlesPageWide : null, avlags: pf ? totals.avlags : null, hitches: pf ? totals.hitches : null, longestHitchMs: pf ? totals.longestHitchMs : null,
         maxAvGapMs: pf && avFrames ? totals.maxAvGapMs : null,
-        presentedFps: tm.presentedFps, sourceFps: tm.sourceFps, fpsRatio: tm.fpsRatio, decodedFps: tm.decodedFps, droppedShare: tm.droppedShare,
+        presentedFps: tm.presentedFps, sourceFps: tm.sourceFps, sourceFpsBasis: tm.sourceFpsBasis, fpsRatio: tm.fpsRatio, decodedFps: tm.decodedFps, droppedShare: tm.droppedShare,
         meanPresentedFps: pf && mMs ? r1(mPres * 1000 / mMs) : null, meanDecodedFps: mDecMs ? r1(mDec * 1000 / mDecMs) : null,
         meanDroppedShare: mDec >= C.RATE_MIN_FRAMES ? r3(mDrop / mDec) : null, steadyMs: Math.round(mMs),
       });

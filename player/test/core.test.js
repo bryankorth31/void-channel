@@ -628,16 +628,17 @@ test('A-022 rate: a healthy 24 a second film reads 24 file / 24 decoded / 24 sho
   near(s.sourceFps, 24, 0.1, 'file rate'); near(s.presentedFps, 24, 0.6, 'shown'); near(s.decodedFps, 24, 0.6, 'decoded'); near(s.fpsRatio, 1, 0.03, 'ratio');
   assert.strictEqual(s.droppedShare, 0);
   near(s.meanPresentedFps, 24, 0.6, 'episode average shown'); near(s.meanDecodedFps, 24, 0.6, 'episode average decoded'); assert.strictEqual(s.meanDroppedShare, 0);
-  assert.deepStrictEqual([s.hitches, s.avlags, s.longestHitchMs, s.lowfps, s.lowsourcefps, s.decodelags, s.throttles], [0, 0, 0, 0, 0, 0, 0]);
+  assert.deepStrictEqual([s.hitches, s.avlags, s.longestHitchMs, s.lowfps, s.decodelags, s.throttles], [0, 0, 0, 0, 0, 0]);
+  assert.strictEqual(s.sourceFpsBasis, 'estimate from the frames shown', 'the file rate says what it is'); assert.ok(!('lowsourcefps' in s), 'there is no claim about the file');
   assert.ok(s.maxAvGapMs < 60, 'a normal stream shows a small gap: ' + s.maxAvGapMs);
-  none(w, 'lowfps', 'lowsourcefps', 'decodelag', 'hitch', 'avlag', 'throttle'); onlyStart(w);
+  none(w, 'lowfps', 'decodelag', 'hitch', 'avlag', 'throttle'); onlyStart(w);
 });
 
 test('A-022 rate: steps of 50/1199 s with two of every three frames missing still read the file at 23.98', () => {
   const rnd = lcg(11), w = film({ d: 50 / 1199, pick: () => (rnd() < 1 / 3 ? 'show' : 'skip') }); w.load(); w.play(60000);
   near(w.core.summary().sourceFps, 23.98, 0.1, 'file rate with 2 of 3 frames missing'); near(w.core.timing().sourceFps, 23.98, 0.1, 'in timing()');
   near(w.core.summary().presentedFps, 8, 1.5, 'shown');
-  none(w, 'lowsourcefps'); // 23.98 is a fine file; the shortfall is the page's
+  assert.strictEqual(w.core.timing().sourceFpsBasis, 'estimate from the frames shown'); // an estimate, never a statement about the file
 });
 
 test('A-022 rate: the file rate is not reported before enough steps, and starts afresh for a different copy', () => {
@@ -663,19 +664,23 @@ test('A-022 lowfps: a film shown at 80 percent of its rate is left alone, and so
   const b = film({ pick: (k, at) => (at > 21000 && at < 27000 && k % 3 ? 'skip' : 'show') }); b.load(); b.play(60000); none(b, 'lowfps');
 });
 
-test('A-022 lowsourcefps: a file that holds 7.5 frames a second says so (the file, not the player), and nothing else is wrong', () => {
+test('A-022 estimate: a film that seems to hold 7.5 frames a second reads 7.5 as an estimate, and the page claims nothing about the file', () => {
   const w = film({ d: 1 / 7.5 }); w.load(); w.play(40000);
-  const e = w.kinds('lowsourcefps');
-  assert.strictEqual(e.length, 1); near(e[0].sourceFps, 7.5, 0.1);
+  near(w.core.summary().sourceFps, 7.5, 0.1, 'the estimate'); assert.strictEqual(w.core.summary().sourceFpsBasis, 'estimate from the frames shown');
   near(w.core.summary().presentedFps, 7.5, 0.4); near(w.core.summary().decodedFps, 7.5, 0.4); near(w.core.summary().fpsRatio, 1, 0.05);
-  none(w, 'lowfps', 'decodelag', 'hitch', 'avlag'); assert.strictEqual(w.core.summary().hitches, 0, 'a slow file is not 7 hitches a second'); onlyStart(w);
+  assert.ok(!w.events.some((e) => e.type === 'lowsourcefps'), 'no event blames the file: the page cannot tell a file with few frames from a browser that skipped them');
+  assert.ok(!('LOWSRC_FPS' in VoidCore.DEFAULTS), 'and there is no setting for it');
+  none(w, 'lowfps', 'decodelag', 'hitch', 'avlag'); assert.strictEqual(w.core.summary().hitches, 0, 'a slow film is not 7 hitches a second'); onlyStart(w);
 });
 
-test('A-022 lowsourcefps: said only while the browser keeps up (a browser dropping most frames makes any file look slow)', () => {
-  const w = film({ pick: (k) => (k % 3 ? 'drop' : 'show') }); w.load(); w.play(60000); // every third frame shown, steps all 3 frames long
-  near(w.core.summary().sourceFps, 8, 0.1, 'all it can see is 8 a second: the limit of reading the rate from the steps');
-  none(w, 'lowsourcefps'); assert.strictEqual(w.kinds('decodelag').length, 1, 'the dropped share says what is going on');
-  const s = film({ pick: () => 'skip' }); s.load(); s.play(30000); none(s, 'lowsourcefps', 'lowfps'); // nothing shown at all: nothing to say
+test('A-022 estimate: a browser that drops or silently skips frames reads a low estimate, and the page does not blame the file', () => {
+  const a = film({ pick: (k) => (k % 3 ? 'drop' : 'show') }); a.load(); a.play(60000); // every third frame shown, the rest counted as dropped
+  near(a.core.summary().sourceFps, 8, 0.1, 'all the steps can show is 8 a second: the limit of reading the rate from the steps');
+  assert.strictEqual(a.kinds('decodelag').length, 1, 'the dropped share says the browser fell behind'); assert.ok(!a.events.some((e) => e.type === 'lowsourcefps'));
+  const b = film({ pick: (k) => (k % 3 ? 'skip' : 'show') }); b.load(); b.play(60000); // the same, but the missing frames are not counted anywhere (the Marco Polo case)
+  near(b.core.summary().sourceFps, 8, 0.1); near(b.core.summary().decodedFps, 8, 0.4); assert.strictEqual(b.core.summary().droppedShare, 0);
+  assert.ok(!b.events.some((e) => e.type === 'lowsourcefps' || e.type === 'lowfps' || e.type === 'decodelag'), 'nothing in the page can tell this from a file that really holds 8: it says nothing about the file');
+  const c = film({ pick: () => 'skip' }); c.load(); c.play(30000); none(c, 'lowfps', 'decodelag'); // nothing shown at all: nothing to say
 });
 
 test('A-022 decodelag: a window with 34 percent of its frames dropped for 10 s fires once, with the four figures, and does nothing else', () => {
@@ -684,7 +689,7 @@ test('A-022 decodelag: a window with 34 percent of its frames dropped for 10 s f
   const e = w.kinds('decodelag');
   assert.strictEqual(e.length, 1, 'once');
   near(e[0].droppedShare, 0.333, 0.04, 'dropped share'); near(e[0].decodedFps, 24, 1, 'decoded'); near(e[0].presentedFps, 16, 1.5, 'shown'); near(e[0].sourceFps, 24, 0.2, 'file');
-  none(w, 'lowfps', 'lowsourcefps'); // 16 of 24 is above 60 percent, and the file is fine
+  none(w, 'lowfps'); // 16 of 24 is above 60 percent
   assert.strictEqual(w.core.summary().decodelags, 1); onlyStart(w);
 });
 
@@ -699,7 +704,7 @@ test('A-022 decodelag: the soak shape (a third of the frames dropped, a quarter 
   const e = w.kinds('decodelag'); assert.strictEqual(e.length, 1);
   near(e[0].decodedFps, 6, 1, 'decoded'); near(e[0].droppedShare, 0.333, 0.05, 'dropped'); near(e[0].presentedFps, 4, 0.8, 'shown'); near(e[0].sourceFps, 24, 0.5, 'file');
   assert.strictEqual(w.kinds('lowfps').length, 1, 'shown is far under the file rate too');
-  near(w.core.summary().sourceFps, 24, 0.5, 'and the file still reads 24 from the steps that were shown'); none(w, 'lowsourcefps');
+  near(w.core.summary().sourceFps, 24, 0.5, 'and the estimate still reads 24 from the steps that were shown');
   assert.ok(w.core.summary().minutesBehind >= 1, 'every minute decoded far under the file rate'); onlyStart(w);
 });
 
@@ -788,7 +793,7 @@ test('A-022 no measure: a browser with no per-frame timing reports the sync and 
   assert.strictEqual(s.avMeasure, 'unavailable');
   for (const k of ['avlags', 'maxAvGapMs', 'hitches', 'longestHitchMs', 'presentedFps', 'fpsRatio', 'meanPresentedFps', 'throttles', 'throttledMs']) assert.strictEqual(s[k], null, k + ' is null, not 0');
   near(s.decodedFps, 24, 1, 'the decoder count still works without frame timing'); assert.strictEqual(s.droppedShare, 0);
-  none(w, 'lowfps', 'lowsourcefps', 'hitch', 'avlag', 'throttle');
+  none(w, 'lowfps', 'hitch', 'avlag', 'throttle');
   const f = film({ rvfcFlag: true }); f.load(); f.play(500); assert.strictEqual(f.core.summary().avMeasure, 'per-frame'); assert.strictEqual(f.core.summary().avlags, 0, 'with the feed, zero means zero');
 });
 
