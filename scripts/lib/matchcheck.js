@@ -130,4 +130,48 @@ function matcherLight(opts = {}) {
   return { level: fixes.length ? 'yellow' : 'green', detail: [m.detail, t.detail, d.warn ? d.detail : ''].filter(Boolean).join('; '), fix: fixes.length ? fixes.join(' ') : undefined, ok: true, checks: { matcher: m, seTitle: t, sameDay: d } };
 }
 
-module.exports = { matcherCheck, seTitleCheck, sameDayCheck, matcherLight };
+// CP-022 and CP-023: the TV-movie records (catalog/movies). Two counts, both should be 0:
+//   phrase       LIVE movies whose title does not stand as a phrase in the file name or the upload title (the rule is in scripts/lib/moviejudge.js)
+//   hardExclude  shipped picks (a playable file, state not MISSING: what the site build puts on the page) that are C-SPAN, hearing, council or news material (scripts/lib/hardexclude.js)
+// Reads the movie records only, no network and no Archive call. A pick hunted before the hunt stored collections has none to test, so the name and identifier decide.
+//   const { phrase, hardExclude, scanned } = require('./lib/matchcheck').moviesCheck({ moviesDir });
+function moviesCheck(opts = {}) {
+  const dir = opts.moviesDir || path.join(PROFILE.catalogDir, 'movies');
+  const J = require('./moviejudge'), HX = require('./hardexclude');
+  const out = { scanned: 0, live: 0, shipped: 0, phrase: { count: 0, examples: [] }, hardExclude: { count: 0, live: 0, review: 0, examples: [] } };
+  for (const f of GRID_FILES(dir)) {
+    let text;
+    try { text = fs.readFileSync(path.join(dir, f), 'utf8'); } catch (e) { continue; }
+    out.scanned++;
+    if (text.includes('"state": "MISSING"')) continue; // nothing ships and nothing is LIVE: skip the parse
+    let r;
+    try { r = JSON.parse(text); } catch (e) { continue; }
+    const p = r.file;
+    if (!p || r.state === 'MISSING') continue;
+    if (r.state === 'LIVE') {
+      out.live++;
+      const ph = J.titlePhrase(r.title, [p.stem, p.itemTitle]);
+      if (ph.kind !== 'names' && ph.kind !== 'words') { out.phrase.count++; if (out.phrase.examples.length < 3) out.phrase.examples.push(`${r.title} <= ${String(p.stem).slice(0, 40)}`); }
+    }
+    if (p.playable) {
+      out.shipped++;
+      const hx = HX.hardExclude({ title: p.itemTitle, stem: p.stem, item: p.item, collection: p.collection }, r.title);
+      if (hx) { out.hardExclude.count++; out.hardExclude[r.state === 'LIVE' ? 'live' : 'review']++; if (out.hardExclude.examples.length < 3) out.hardExclude.examples.push(`${r.title} <= ${String(p.stem).slice(0, 40)} (${hx.term})`); }
+    }
+  }
+  return out;
+}
+// The two lights the doctor shows, each { level, detail, fix }: movies:phrase (yellow above 0) and movies:hard-exclude (red above 0: a standing rule, R-005).
+function moviesLights(opts = {}) {
+  const m = moviesCheck(opts);
+  const fix = 'Run node scripts/hunt-movies.js --rescore (it writes nothing and lists every change), then node scripts/hunt-movies.js --rescore --write (docs/RUNBOOK.md, movies).';
+  const phrase = m.phrase.count
+    ? { level: 'yellow', detail: `${m.phrase.count} of ${m.live} LIVE movies do not carry their title as a phrase in the file or upload name, e.g. ${m.phrase.examples.join('; ')}`, fix }
+    : { level: 'green', detail: `all ${m.live} LIVE movies carry their title as a phrase in the file or upload name` };
+  const hard = m.hardExclude.count
+    ? { level: 'red', detail: `${m.hardExclude.count} shipped movie picks are C-SPAN, hearing, council or news material (${m.hardExclude.live} LIVE, ${m.hardExclude.review} REVIEW), e.g. ${m.hardExclude.examples.join('; ')}`, fix }
+    : { level: 'green', detail: `none of the ${m.shipped} shipped movie picks is C-SPAN, hearing, council or news material` };
+  return { phrase, hardExclude: hard, check: m };
+}
+
+module.exports = { matcherCheck, seTitleCheck, sameDayCheck, matcherLight, moviesCheck, moviesLights };

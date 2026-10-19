@@ -170,6 +170,9 @@ async function main() {
   // 5b. the matcher: its self-test, the share of S/E-plus-title picks below LIVE, grids restamped on one day, fallback grids an older matcher left (scripts/lib/matchcheck.js)
   const ml = (() => { try { return require('./lib/matchcheck').matcherLight({ showsDir }); } catch (e) { return { level: 'red', detail: 'self-test could not run: ' + e.message.slice(0, 80) }; } })();
   add('matcher', ml.level, ml.detail, ml.fix);
+  // 5c. the TV movies: LIVE picks whose title is not a phrase in the name, and shipped picks that are C-SPAN, hearing, council or news material (scripts/lib/matchcheck.js, docs/RUNBOOK.md, movies)
+  try { const mv = require('./lib/matchcheck').moviesLights({ moviesDir: path.join(PROFILE.catalogDir, 'movies') }); add('movies:phrase', mv.phrase.level, mv.phrase.detail, mv.phrase.fix); add('movies:hard-exclude', mv.hardExclude.level, mv.hardExclude.detail, mv.hardExclude.fix); }
+  catch (e) { add('movies:phrase', 'yellow', 'could not read the movie records: ' + String(e.message).slice(0, 80)); }
   let built = null; // the counts assemble() gives, for the shrink light
   try {
     const { assemble } = require('./lib/app');
