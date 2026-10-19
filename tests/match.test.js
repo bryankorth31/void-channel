@@ -334,6 +334,12 @@ describe('the upload title names the show', () => {
     assert.equal(run(files, { title: 'Zork Show Nowhere Seasons 01-02' }).grid.selfListed, true, 'an upload titled with the show and its own network');
     assert.equal(run(files, { title: 'Zork Show Elsewhere Seasons 01-02' }).grid.selfListed, undefined, 'not with another network');
   });
+  test('Duckman: TVmaze\'s own name for the show is an alias', () => {
+    assert.ok(M.BUILTIN_ALIASES.duckman.includes('Duckman: Private Dick/Family Man'));
+    const title = 'The Duckman Private Dick Family Man Collection.';
+    assert.equal(M.namesTitle(title, ['duckman']), false, 'without the alias the title runs on into a longer one');
+    assert.equal(M.namesTitle(title, ['duckman', ...M.BUILTIN_ALIASES.duckman.map(M.norm)]), true);
+  });
   test('the fallback, the identifier rule and the sequence guess all use it', () => {
     // the fallback gate: an upload titled "Zork Show Jam" is not an upload of Zork Show, whatever its files are called
     const evidence = range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i) }));

@@ -134,6 +134,7 @@ function namesOtherShow(text, show, aliases = [], list = OTHER_SHOWS) { return o
 // Other names a show goes by, for the matcher's own tests. catalog/overrides.json aliases (set from HQ) add to these.
 const BUILTIN_ALIASES = {
   'forensic-files': ['Medical Detectives'], // Forensic Files began as Medical Detectives; both are on the list
+  'duckman': ['Duckman: Private Dick/Family Man'], // TVmaze's own name for the show (catalog/cache/tvmaze-duckman.json, field name); the list says Duckman
 };
 
 const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')) : {};
