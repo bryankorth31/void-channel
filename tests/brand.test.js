@@ -133,8 +133,8 @@ test('/privacy: the approved text, the address, and no placeholder left', () => 
     'when a search is made (with the search words, up to 80 characters)',
     'plus your country, region, city, time zone and the data center that answered you, as reported by our hosting provider.',
     'It also carries your browser, operating system and device type, and the name of the site you came from, if any.',
-    'No IP address is stored. Nothing is sold or shared.',
-    'Your Mine page (list, likes, watch history) stays in your own browser. We never see it. A file you report with "Wrong file?" is sent to us, with the show and episode.',
+    'Our own usage counts store no IP address. Nothing is sold or shared.',
+    'Your Mine page (list, likes, watch history) is kept in your own browser, and we do not receive it as a list. We do count the actions, as anonymous usage counts like the rest: when you like or hide a show, add it to your list or play an episode. A file you report with "Wrong file?" is sent to us, with the show and episode.',
     'Errors and playback trouble are reported to an error service (Sentry) with the show, the episode and what the player measured',
     'Those reports carry no name and no account.',
     'The Sentry script (js.sentry-cdn.com) loads on every page view, so your browser contacts Sentry whenever you open the site.',
@@ -143,7 +143,8 @@ test('/privacy: the approved text, the address, and no placeholder left', () => 
     'A separate site for children, voidtv.net kids, is being built with its own rules and no identifiers at all.',
   ]) assert.ok(t.includes(s), 'privacy text has: ' + s);
   assert.match(html, new RegExp('<a href="mailto:' + CONTACT + '">' + CONTACT + '</a>'));
-  assert.ok(!/My Void|favourites|is removed when|hidden for you/.test(t), 'the sentences the review found untrue are gone');
+  assert.ok(!/My Void|favourites|is removed when|hidden for you|We never see it|No IP address is stored/.test(t), 'the sentences the reviews found untrue are gone');
+  assert.ok(!/Sentry[^.]*\bIP\b/.test(t), 'no claim about how Sentry handles IP addresses (the Sentry project setting is not confirmed)');
   assert.equal(html.match(/\[[^\]]*\]/), null, 'no square-bracket placeholder is left on /privacy');
   assert.equal(html.match(OLD), null);
   assert.equal(title, 'Privacy · voidtv.net');
@@ -158,13 +159,14 @@ test('/takedown: the approved text, the address, two business days, and only the
     'voidtv.net does not store, copy or re-host any of it.',
     'Two routes, and you may use both:',
     'The Archive handles removal of the files it hosts.',
-    'it stops playing on voidtv.net; our nightly check retires the listing.',
+    'it stops playing on voidtv.net; our link check tests a sample of files each night and retires the ones that no longer play, as it finds them.',
     'We remove the listing from voidtv.net within two business days whether or not the Archive has acted, and we tell you when it is done.',
     'Every episode page has a "Wrong file?" button.',
     'Press it and the file is flagged and queued for a person to look at, and the report shows on your Mine page.',
     'voidtv.net is a project of CASH, a 501(c)(3) nonprofit.',
   ]) assert.ok(t.includes(s), 'takedown text has: ' + s);
   assert.ok(!/hidden/.test(t), 'nothing promises that a reported file is hidden: no code in the page hides it');
+  assert.ok(!/nightly check retires/.test(t), 'no promise that a removed file is retired the same night: the check samples');
   assert.equal((html.match(new RegExp('mailto:' + CONTACT, 'g')) || []).length, 2, 'the address is a link in the takedown route and in the wrong-file line');
   assert.ok(!/\[(two business days|takedown@|the same address|city, state|Postal)/i.test(html), 'Bryan\'s values replaced the other placeholders');
   assert.ok(!/Postal address|city, state/.test(html), 'the postal and city lines are gone');
@@ -186,6 +188,15 @@ test('the privacy page tells only what the code does: cookie life, stored fields
   assert.match(SCRIPT, /'Wrong file\?'/);
   assert.match(SCRIPT, /track\('report'/, 'a reported file is sent');
   assert.match(SCRIPT, /track\('search',\{q,n\}\)/, 'the search words are sent');
+  // the Mine page stays in the browser, but its actions are counted: like, hide, list and every play
+  assert.match(SCRIPT, /track\('act',\{slug,x:ME\.likes\[slug\]>0\?'like':ME\.likes\[slug\]<0\?'hide':'unlike'\}\)/);
+  assert.match(SCRIPT, /track\('act',\{slug,x:ME\.list\[slug\]\?'list':'unlist'\}\)/);
+  assert.match(SCRIPT, /track\('play',\{slug:c\.slug,ep:c\.epk,x:c\.file\}\)/);
+  // the link check: a sample of files a night, retiring the ones the Archive no longer has
+  const nightly = read('scripts/nightly.js'), lc = read('scripts/linkcheck.js');
+  assert.match(nightly, /step\('linkcheck', \['scripts\/linkcheck\.js', '--sample', '150'\]/);
+  assert.match(lc, /samples episode files across the catalog/);
+  assert.match(lc, /retires the dead ones into/);
 });
 
 test('routes: /privacy and /takedown work as direct visits, with or without a trailing slash, and as #hash links', () => {
