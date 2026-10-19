@@ -3,8 +3,7 @@
 //    page titles, share cards, the web manifest, the password page. The old spellings (VOIDtv, VoidTV, Void TV, Voidtv) must not come back.
 //    What deliberately keeps the old spelling is not visitor-facing: the scheduled-task prefix, comments, the HQ dialogs.
 // 2. /privacy and /takedown exist as routes, are linked from About and the footer, and carry the approved text with Bryan's address.
-//    Exactly one placeholder is still open: the link to the Archive's own rights and takedown page. When that link arrives, change the
-//    test's OPEN list to [] and the page text in scripts/lib/app.js together.
+//    No placeholder is left: route 1 on /takedown links the Internet Archive's Terms of Use (https://archive.org/about/terms.php).
 // The page code is read out of the REAL built page and run in a bare vm with a fake page; no network, no browser, nothing is played.
 const test = require('node:test');
 const assert = require('node:assert/strict');
@@ -23,7 +22,6 @@ const CONTACT = 'preacherb@cashvalues.org';
 // Remove an entry when its owner changes the line.
 const KNOWN = [/so it can drop into VOIDtv \(or any page\)/g, /\(VOIDtv has video\{max-height/g, /Nothing here knows about VOIDtv's pages/g];
 const strip = (s) => KNOWN.reduce((a, re) => a.replace(re, ''), s);
-const OPEN = ["[link to the Archive's rights and takedown page]"]; // the one placeholder still waiting for Bryan
 
 // The built shell (what scripts/site.js writes as index.html), with an empty catalog: the page code does not depend on the shows.
 const SHELL = APP.page({ data: { shows: [], people: {}, links: {}, types: [] }, mode: 'split', routes: 'path', base: '/', meta: { url: 'https://voidtv.net/' } });
@@ -150,7 +148,7 @@ test('/privacy: the approved text, the address, and no placeholder left', () => 
   assert.equal(title, 'Privacy · voidtv.net');
 });
 
-test('/takedown: the approved text, the address, two business days, and only the Archive link still open', () => {
+test('/takedown: the approved text, the address, two business days, the Archive link, and no placeholder left', () => {
   const { html, title } = render('takedownPage');
   const t = text(html);
   assert.match(html, /<h1>Takedown and corrections<\/h1>/);
@@ -170,7 +168,11 @@ test('/takedown: the approved text, the address, two business days, and only the
   assert.equal((html.match(new RegExp('mailto:' + CONTACT, 'g')) || []).length, 2, 'the address is a link in the takedown route and in the wrong-file line');
   assert.ok(!/\[(two business days|takedown@|the same address|city, state|Postal)/i.test(html), 'Bryan\'s values replaced the other placeholders');
   assert.ok(!/Postal address|city, state/.test(html), 'the postal and city lines are gone');
-  assert.deepEqual(html.match(/\[[^\]]*\]/g), OPEN, 'exactly the open placeholders remain, written exactly as drafted');
+  assert.equal(html.match(/\[[^\]]*\]/), null, 'no square-bracket placeholder is left on /takedown');
+  // route 1 points at the Internet Archive's Terms of Use (copyright policy and how to request removal), in the site's external link style
+  assert.match(html, /Their process is in <a href="https:\/\/archive\.org\/about\/terms\.php" target="_blank" rel="noopener">the Internet Archive's Terms of Use, which include its copyright policy and how to request removal<\/a>\. When a file is removed there/);
+  assert.equal((html.match(/archive\.org\/about\//g) || []).length, 1, 'one link to the Archive, and it is the Terms of Use');
+  assert.doesNotMatch(html, /dmca/i);
   assert.equal(html.match(OLD), null);
   assert.equal(title, 'Takedown and corrections · voidtv.net');
 });
