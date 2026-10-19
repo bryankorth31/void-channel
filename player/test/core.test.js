@@ -439,12 +439,91 @@ test('SP-021: a playhead stuck on buffered data is a browser hiccup and keeps th
   assert.strictEqual(w.kinds('switch').length, 0);
 });
 
-test('SP-021: after a hop the core waits out the settle time, even when the buffer limit is shorter', () => {
+test('SP-021: after a hop the flat-buffer clock starts when the settle time ends, even when the buffer limit is shorter', () => {
   const w = hung({ config: { BUFFER_STALL_MS: 1000 } }); w.run(9000);
   const hops = w.kinds('switch');
   assert.ok(hops.length >= 2, 'hops: ' + hops.length);
   const gap = hops[1].at - hops[0].at;
-  assert.ok(gap >= 2500 && gap <= 2750, 'second hop ' + gap + ' ms after the first (settle is 2500)');
+  assert.ok(gap >= 3500 && gap <= 3750, 'second hop ' + gap + ' ms after the first (settle 2500 plus the 1000 limit)');
+});
+
+test('SP-021: a fresh connection gets as long to send its first byte as it does without the watch (5 s is fine)', () => {
+  const w = hung(); // the primary hangs; the backup is healthy but its first byte takes 5 s
+  let hopped = 0, connectAt = 0;
+  for (let i = 0; i < 200; i++) { // 50 s
+    if (w.kinds('switch').length > hopped) { hopped = w.kinds('switch').length; w.bufEnd = w.t; w.fill = 0; connectAt = w.now + 5000; } // a new connection starts with nothing buffered
+    if (connectAt && w.now >= connectAt) { w.fill = 1.5; connectAt = 0; }
+    w.run(250);
+  }
+  assert.strictEqual(w.kinds('switch').length, 1, 'stayed on the backup');
+  assert.strictEqual(w.kinds('failed').length, 0);
+  assert.strictEqual(w.core.state, 'playing');
+});
+
+// The watch may move (another server, the next copy) but it must never end playback or throw the buffer away for a
+// lone-server reload: only the stopped-picture path may do that, because only then has playback really stopped.
+// A 15 s browser buffer; each hang heals by itself after 6 s (the server comes back with a refilled buffer).
+function hangsThatHeal(srcs, count, everyMs) {
+  const w = world(); w.load(srcs); w.run(6000); w.healthyBuffer(15, 100000); w.run(8000);
+  for (let k = 0; k < count; k++) { w.fill = 0; w.run(6000); w.bufEnd = w.t + 15; w.fill = 1; w.run(everyMs - 6000); }
+  return w;
+}
+
+test('SP-021: four separate 6 s hangs on a two-server file end in no failure card, whatever the hop allowance', () => {
+  const w = hangsThatHeal(SOURCES.slice(0, 2), 4, 100000);
+  assert.strictEqual(w.kinds('failed').length, 0);
+  assert.strictEqual(w.acts('show-failure').length, 0);
+  assert.strictEqual(w.kinds('switch').length, 3, 'three hops, the fourth hang is left to the buffer (the allowance is spent)');
+  assert.strictEqual(w.core.state, 'playing');
+});
+
+test('SP-021: two separate 6 s hangs on a single source never reload it and never show a failure card', () => {
+  const w = hangsThatHeal(LONE, 2, 200000);
+  assert.strictEqual(w.kinds('action').length, 0, 'the watch does not reload a lone server while the picture still plays');
+  assert.strictEqual(w.acts('reload').length, 0);
+  assert.strictEqual(w.kinds('failed').length, 0);
+  assert.strictEqual(w.core.state, 'playing');
+});
+
+test('SP-021: a hang that outlasts the buffer fails only after the picture has really stopped', () => {
+  const w = world(); w.load(SOURCES.slice(0, 2)); w.run(6000); w.healthyBuffer(15, 100000); w.run(8000); w.fill = 0;
+  let aheadAtFail = null;
+  for (let i = 0; i < 480 && aheadAtFail === null; i++) { w.run(250); if (w.kinds('failed').length) aheadAtFail = w.bufEnd - w.t; }
+  assert.notStrictEqual(aheadAtFail, null, 'it does fail in the end');
+  assert.ok(aheadAtFail < 1, 'the picture had stopped when it failed: ' + aheadAtFail + ' s were still buffered');
+  assert.strictEqual(w.kinds('failed')[0].cause, 'network');
+  assert.ok(w.kinds('stall').filter((e) => e.trigger === 'buffer').length <= 3, 'no stall event repeating while the watch declines');
+});
+
+test('SP-021: the hop allowance refills after two minutes of playing, so later hangs still get their hop', () => {
+  const w = hangsThatHeal(SOURCES.slice(0, 2), 6, 150000);
+  assert.strictEqual(w.kinds('switch').length, 6, 'every hang got its hop, not just the first three');
+  assert.strictEqual(w.kinds('failed').length, 0);
+});
+
+test('SP-021: a lone-server reload is refilled too, so a second hang long after the first is reloaded again', () => {
+  const w = world(); w.load(LONE); w.run(10000); w.ahead = 0; w.run(4000, 'stall'); // the picture stopped: the one reload
+  assert.strictEqual(w.acts('reload').length, 1);
+  w.ahead = 20; w.run(130000); // plays on for over two minutes
+  w.ahead = 0; w.run(4000, 'stall');
+  assert.strictEqual(w.acts('reload').length, 2, 'the allowance came back');
+  assert.strictEqual(w.kinds('failed').length, 0);
+});
+
+test('SP-021: a file length that is Infinity, NaN or 0 keeps the watch off', () => {
+  for (const d of [Infinity, NaN, 0]) {
+    const w = hung(); w.duration = d; w.run(7000);
+    assert.strictEqual(w.kinds('action').length, 0, 'duration ' + d);
+  }
+});
+
+test('SP-021: a seek the page makes itself (no viewer event) restarts the flat-buffer clock when it completes', () => {
+  const w = hung(); w.run(3000); // the buffer has been flat for 3 s
+  w.seeking = true; w.run(3000, 'stall'); w.seeking = false; // the page seeks (no user-seek event); 3 more seconds pass
+  w.run(3000);
+  assert.strictEqual(w.kinds('action').length, 0, 'the 4 s start again after the seek, not 6 s ago');
+  w.run(2000);
+  assert.strictEqual(w.kinds('switch').length, 1, 'and it still hops once the buffer has been flat for 4 s since');
 });
 
 test('SP-021: the pause the viewer saw is counted from the hop to the picture coming back', () => {

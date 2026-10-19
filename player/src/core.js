@@ -84,6 +84,7 @@
     let lastErrCode = null;   // code of the last media error (1 aborted, 2 network, 3 decode, 4 not supported)
     const reloaded = new Map(); // source index -> reloads spent on a lone server that went quiet
     let pauseSince = 0;       // when the viewer last saw the picture stop; kept across hops, so the whole pause is counted
+    let lastHopAt = 0;        // when the core last hopped or reloaded for starvation (the allowance refills 2 minutes after)
     let lastBufEnd = -1, bufGrowAt = 0; // where the buffered end was last seen to move to, and when
     let bufHist = [];         // [{at, end}] about once a second, to tell how fast the buffer grows
     const resetBuf = (now) => { lastBufEnd = -1; bufGrowAt = now; bufHist = []; };
@@ -130,7 +131,7 @@
       for (const k of Object.keys(totals)) totals[k] = k === 'startupMs' ? null : 0;
       totals.startupMs = null;
       history = []; pending = null; driftRun = 0; bufferingSince = 0; stallStep = 0; starveSwitches = 0;
-      reloaded.clear(); lastErrCode = null; pauseSince = 0; resetBuf(now);
+      reloaded.clear(); lastErrCode = null; pauseSince = 0; lastHopAt = 0; resetBuf(now);
       goodT = Math.max(0, +startAt || 0);
       want = autoplay !== false;
       askedAt = now; startedAt = 0;
@@ -160,7 +161,7 @@
       const at = same.indexOf(si);
       const j = same[(at + 1) % same.length];
       const from = cur;
-      si = j; history = []; driftRun = 0; bufferingSince = 0; stallStep = 0; resetBuf(now);
+      si = j; history = []; driftRun = 0; bufferingSince = 0; stallStep = 0; lastHopAt = now; resetBuf(now);
       totals.switches += 1; totals.actions += 1;
       pending = { kind: 'starved', step: 'switch', at: now };
       settleUntil = now + C.SETTLE_MS;
@@ -172,12 +173,27 @@
     }
     const STARVE_LIMIT = (n) => n * C.STARVE_CYCLES - 1;
 
+    // Would a hop now be a move, and not the end of the road? The buffer watch asks before it acts: it may hop to
+    // another server or the next copy, but it must never end playback (no failure card while video is still
+    // buffered) and never throw the buffer away for a reload of a lone server. Only the stopped-picture path may
+    // do those, because only then has playback really stopped. Mirrors the choices in hopServer, changing nothing.
+    function bufferHopOk() {
+      const cur = src();
+      if (!cur) return false;
+      const keyed = cur.fileKey != null;
+      const servers = keyed ? sources.filter((x) => x.fileKey === cur.fileKey).length : 1;
+      if (servers >= 2 && starveSwitches + 1 <= STARVE_LIMIT(servers)) return true; // another server of this copy
+      let j = si + 1;
+      if (keyed) while (j < sources.length && sources[j].fileKey === cur.fileKey) j++;
+      return j < sources.length; // the next copy
+    }
+
     // The one reload of a lone last server that stopped sending. Same source, same place; no card is shown, so
     // nothing the failure card offers (a download link included) appears because of it.
     function reloadLone(now) {
       const n = (reloaded.get(si) || 0) + 1;
       reloaded.set(si, n);
-      history = []; driftRun = 0; bufferingSince = 0; stallStep = 0; resetBuf(now);
+      history = []; driftRun = 0; bufferingSince = 0; stallStep = 0; lastHopAt = now; resetBuf(now);
       totals.actions += 1;
       pending = { kind: 'starved', step: 'retry', at: now };
       settleUntil = now + C.SETTLE_MS;
@@ -211,7 +227,7 @@
         return;
       }
       if (newFile || (sources[j] && from && sources[j].fileKey !== from.fileKey)) starveSwitches = 0;
-      si = j; history = []; driftRun = 0; bufferingSince = 0; stallStep = 0; resetBuf(now);
+      si = j; history = []; driftRun = 0; bufferingSince = 0; stallStep = 0; lastHopAt = now; resetBuf(now);
       totals.switches += 1;
       pending = { kind: reason, step: 'switch', at: now };
       settleUntil = now + C.SETTLE_MS;
@@ -300,6 +316,9 @@
           totals.stallMs += paused; if (paused > totals.longestPauseMs) totals.longestPauseMs = paused;
           pauseSince = 0;
         }
+        // The hop allowance is per hang, not per episode: two minutes of playing after the last hop or reload
+        // gives it back, so hangs that healed long ago do not decide how a later one ends.
+        if ((starveSwitches || reloaded.size) && lastHopAt && state === 'playing' && now - lastHopAt >= C.REPEAT_WINDOW_MS) { starveSwitches = 0; reloaded.clear(); }
         if (state !== 'playing' && !settling && (!pending || now - pending.at > C.SETTLE_MS)) {
           if (pending && now - pending.at >= C.HEALTHY_MS) {
             totals.recovered += 1;
@@ -321,10 +340,14 @@
       // Buffer watch: the download stopped growing while little is buffered. The picture still moves, but it will
       // stop when the buffer runs out, and every other trigger below waits for that. Hop now. Not for a playhead
       // stuck on buffered data (a browser hiccup: the ladder's job), not while the buffer still grows (a slow
-      // line), not when the browser paused the download itself, and not near the end of the file.
+      // line), not when the browser paused the download itself, and not near the end of the file. The 4 s clock
+      // runs from the end of the settle window, so a fresh connection gets the same time to start as it does
+      // under the stopped-picture path (about 6 s). The watch may only move (another server, the next copy): it
+      // never fails and never reloads a lone server, so it cannot end playback; the stopped-picture path does that.
       if (typeof s.ahead === 'number' && typeof s.duration === 'number' && s.duration > 0 && isFinite(s.duration)
           && (moved || now - lastProgressAt <= 600 || s.ahead < C.STARVED_S)
-          && s.ahead < C.BUFFER_LOW_S && lastBufEnd < s.duration - 0.5 && now - bufGrowAt >= C.BUFFER_STALL_MS) {
+          && s.ahead < C.BUFFER_LOW_S && lastBufEnd < s.duration - 0.5 && now - Math.max(bufGrowAt, settleUntil) >= C.BUFFER_STALL_MS
+          && bufferHopOk()) {
         const flat = now - bufGrowAt, g = bufGrowth(now);
         if (!bufferingSince) { totals.stalls += 1; emit({ type: 'stall', trigger: 'buffer', t: s.t, ahead: s.ahead, flatMs: Math.round(flat), grewS: g.grewS, spanMs: g.spanMs, at: now }); note({ at: now, did: 'stall', trigger: 'buffer', t: Math.round(s.t), ahead: Math.round(s.ahead * 10) / 10, flatMs: Math.round(flat), ready: s.ready }); }
         if (!pauseSince) pauseSince = now;
@@ -397,7 +420,7 @@
       if (name === 'user-pause') { want = false; return; }
       if (name === 'user-seek') { settleUntil = now + C.SETTLE_MS; driftRun = 0; bufferingSince = 0; pauseSince = 0; resetBuf(now); lastProgressAt = now; lastFrameAt = now; if (info && typeof info.t === 'number') goodT = info.t; return; }
       if (name === 'retry') { // the viewer pressed Retry on the failure card: start over from the best source
-        history = []; pending = null; starveSwitches = 0; reloaded.clear(); lastErrCode = null; pauseSince = 0; resetBuf(now); // a fresh start gets the full allowance again
+        history = []; pending = null; starveSwitches = 0; reloaded.clear(); lastErrCode = null; pauseSince = 0; lastHopAt = 0; resetBuf(now); // a fresh start gets the full allowance again
         si = -1; setState('recovering', now);
         return nextSource('viewer-retry', now);
       }
