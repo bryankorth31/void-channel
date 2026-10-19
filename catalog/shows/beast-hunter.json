@@ -1,0 +1,81 @@
+{
+  "show": "Beast Hunter",
+  "slug": "beast-hunter",
+  "type": "Documentary & Geographic",
+  "network": "National Geographic",
+  "matchedAt": "2026-10-19T09:37:04.832Z",
+  "addedAt": "2026-10-19T09:37:04.832Z",
+  "tvmaze": {
+    "id": 26291,
+    "name": "Beast Hunter",
+    "runtime": 60,
+    "premiered": "2011-03-04",
+    "network": "National Geographic Wild"
+  },
+  "coverage": {
+    "total": 5,
+    "live": 1,
+    "review": 0,
+    "missing": 4,
+    "pct": 20
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Man Ape of Sumatra",
+          "airdate": "2011-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Nightmare of the Amazon",
+          "airdate": "2011-03-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Swamp Monster of the Congo",
+          "airdate": "2011-03-11",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "beast-hunter-swamp-monster-of-the-congo-2011",
+            "itemTitle": "Beast Hunter: Swamp Monster Of The Congo (2011)",
+            "file": "Beast Hunter S01 E03 Swamp Monster of the Congo (2011).mp4",
+            "name": "Beast Hunter S01 E03 Swamp Monster of the Congo (2011)",
+            "url": "https://archive.org/download/beast-hunter-swamp-monster-of-the-congo-2011/Beast%20Hunter%20S01%20E03%20Swamp%20Monster%20of%20the%20Congo%20(2011).mp4",
+            "seconds": 2701,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 283
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Sea Serpent of the North",
+          "airdate": "2011-03-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Mongolian Death Worm",
+          "airdate": "2011-03-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

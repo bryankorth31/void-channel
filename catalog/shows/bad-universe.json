@@ -1,0 +1,77 @@
+{
+  "show": "Bad Universe",
+  "slug": "bad-universe",
+  "type": "Documentary & Geographic",
+  "network": "Discovery",
+  "matchedAt": "2026-10-19T10:11:26.800Z",
+  "addedAt": "2026-10-19T10:11:26.801Z",
+  "tvmaze": {
+    "id": 5816,
+    "name": "Bad Universe",
+    "runtime": 60,
+    "premiered": "2010-08-29",
+    "network": "Discovery"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 2,
+    "missing": 1,
+    "pct": 67
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Asteroid Apocalypse",
+          "airdate": "2010-08-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Alien Attack!",
+          "airdate": "2010-10-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "bad-universe-episode-2",
+            "itemTitle": "Bad Universe Episode 2",
+            "file": "Bad Universe episode 2.MP4",
+            "name": "Bad Universe episode 2",
+            "url": "https://archive.org/download/bad-universe-episode-2/Bad%20Universe%20episode%202.MP4",
+            "seconds": 2615,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 348
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Death Stars",
+          "airdate": "2011-04-19",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "bad-universe-episode-2",
+            "itemTitle": "Bad Universe Episode 2",
+            "file": "Bad Universe episode 3.MP4",
+            "name": "Bad Universe episode 3",
+            "url": "https://archive.org/download/bad-universe-episode-2/Bad%20Universe%20episode%203.MP4",
+            "seconds": 2547,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 327
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "show": "Foo Fighters Sonic Highways",
+  "slug": "foo-fighters-sonic-highways",
+  "type": "Documentary & Geographic",
+  "network": "HBO",
+  "matchedAt": "2026-10-19T11:05:19.124Z",
+  "addedAt": "2026-10-19T11:05:19.124Z",
+  "tvmaze": {
+    "id": 5622,
+    "name": "Foo Fighters Sonic Highways",
+    "runtime": 60,
+    "premiered": "2014-10-17",
+    "network": "HBO"
+  },
+  "coverage": {
+    "total": 8,
+    "live": 0,
+    "review": 1,
+    "missing": 7,
+    "pct": 13
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Chicago",
+          "airdate": "2014-10-17",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "S/E in filename | not browser-playable: container (Matroska)",
+            "item": "foo-fighters-sonic-highways-1x-02-episode-2",
+            "itemTitle": "Foo Fighters Sonic Highways 1x 02 Episode 2",
+            "file": "Foo Fighters Sonic Highways - 1x01 - Episode 1.mkv",
+            "name": "Foo Fighters Sonic Highways - 1x01 - Episode 1",
+            "url": "https://archive.org/download/foo-fighters-sonic-highways-1x-02-episode-2/Foo%20Fighters%20Sonic%20Highways%20-%201x01%20-%20Episode%201.mkv",
+            "seconds": 3548,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 641
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Washington, D.C.",
+          "airdate": "2014-10-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Nashville",
+          "airdate": "2014-10-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Austin",
+          "airdate": "2014-11-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Los Angeles",
+          "airdate": "2014-11-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "New Orleans",
+          "airdate": "2014-11-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Seattle",
+          "airdate": "2014-11-28",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "New York",
+          "airdate": "2014-12-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "show": "Untamed Americas",
+  "slug": "untamed-americas",
+  "type": "Documentary & Geographic",
+  "network": "National Geographic",
+  "matchedAt": "2026-10-19T10:17:28.018Z",
+  "addedAt": "2026-10-19T10:17:28.018Z",
+  "tvmaze": {
+    "id": 13318,
+    "name": "Untamed Americas",
+    "runtime": 60,
+    "premiered": "2012-06-10",
+    "network": "National Geographic"
+  },
+  "coverage": {
+    "total": 4,
+    "live": 2,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Mountains",
+          "airdate": "2012-06-10",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "untamed-americas",
+            "itemTitle": "Untamed Americas",
+            "file": "Episode 1 - Mountains.mp4",
+            "name": "Episode 1 - Mountains",
+            "url": "https://archive.org/download/untamed-americas/Episode%201%20-%20Mountains.mp4",
+            "seconds": 2702,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 687
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Mountains\" (1.00)",
+              "item": "untamed-americas",
+              "itemTitle": "Untamed Americas",
+              "file": "Untamed Americas Mountains.ia.mp4",
+              "name": "Untamed Americas Mountains",
+              "url": "https://archive.org/download/untamed-americas/Untamed%20Americas%20Mountains.ia.mp4",
+              "seconds": 2702,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 687
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Coasts",
+          "airdate": "2012-06-10",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Coasts\" (1.00)",
+            "item": "untamed-americas",
+            "itemTitle": "Untamed Americas",
+            "file": "Untamed Americas Coasts.ia.mp4",
+            "name": "Untamed Americas Coasts",
+            "url": "https://archive.org/download/untamed-americas/Untamed%20Americas%20Coasts.ia.mp4",
+            "seconds": 2702,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 727
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Coasts\" (0.95)",
+              "item": "untamed-americas",
+              "itemTitle": "Untamed Americas",
+              "file": "Episode 3 - Coasts.mp4",
+              "name": "Episode 3 - Coasts",
+              "url": "https://archive.org/download/untamed-americas/Episode%203%20-%20Coasts.mp4",
+              "seconds": 2702,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 727
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "untamed-americas",
+              "itemTitle": "Untamed Americas",
+              "file": "Episode 2 - Deserts.mp4",
+              "name": "Episode 2 - Deserts",
+              "url": "https://archive.org/download/untamed-americas/Episode%202%20-%20Deserts.mp4",
+              "seconds": 2702,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 677
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "name": "Deserts",
+          "airdate": "2012-06-11",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Deserts\" (1.00)",
+            "item": "untamed-americas",
+            "itemTitle": "Untamed Americas",
+            "file": "Untamed Americas Deserts.ia.mp4",
+            "name": "Untamed Americas Deserts",
+            "url": "https://archive.org/download/untamed-americas/Untamed%20Americas%20Deserts.ia.mp4",
+            "seconds": 2702,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 677
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Deserts\" (0.95)",
+              "item": "untamed-americas",
+              "itemTitle": "Untamed Americas",
+              "file": "Episode 2 - Deserts.mp4",
+              "name": "Episode 2 - Deserts",
+              "url": "https://archive.org/download/untamed-americas/Episode%202%20-%20Deserts.mp4",
+              "seconds": 2702,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 677
+            },
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "untamed-americas",
+              "itemTitle": "Untamed Americas",
+              "file": "Episode 3 - Coasts.mp4",
+              "name": "Episode 3 - Coasts",
+              "url": "https://archive.org/download/untamed-americas/Episode%203%20-%20Coasts.mp4",
+              "seconds": 2702,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 727
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "name": "Forest",
+          "airdate": "2012-06-11",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "untamed-americas",
+            "itemTitle": "Untamed Americas",
+            "file": "Episode 4 - Forests.mp4",
+            "name": "Episode 4 - Forests",
+            "url": "https://archive.org/download/untamed-americas/Episode%204%20-%20Forests.mp4",
+            "seconds": 2702,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 919
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Forest\" (0.91)",
+              "item": "untamed-americas",
+              "itemTitle": "Untamed Americas",
+              "file": "Untamed Americas Forests.ia.mp4",
+              "name": "Untamed Americas Forests",
+              "url": "https://archive.org/download/untamed-americas/Untamed%20Americas%20Forests.ia.mp4",
+              "seconds": 2702,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 919
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Forest\" (0.91)",
+              "item": "untamed-americas",
+              "itemTitle": "Untamed Americas",
+              "file": "Forests.ia.mp4",
+              "name": "Forests",
+              "url": "https://archive.org/download/untamed-americas/Forests.ia.mp4",
+              "seconds": 2702,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 919
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

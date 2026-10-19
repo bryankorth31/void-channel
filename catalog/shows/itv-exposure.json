@@ -1,0 +1,89 @@
+{
+  "show": "ITV Exposure",
+  "slug": "itv-exposure",
+  "type": "Documentary & Geographic",
+  "network": "ITV",
+  "matchedAt": "2026-10-19T09:55:01.549Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "ITV Exposure",
+    "runtime": null,
+    "premiered": null,
+    "network": "ITV"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 3,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "the grave",
+          "state": "REVIEW",
+          "file": {
+            "item": "itv-exposure-the-grave",
+            "itemTitle": "ITV Exposure - The Grave",
+            "file": "ITV Exposure -The Grave.mp4",
+            "name": "ITV Exposure -The Grave",
+            "url": "https://archive.org/download/itv-exposure-the-grave/ITV%20Exposure%20-The%20Grave.mp4",
+            "seconds": 3978,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 390,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "ukraines stolen children",
+          "state": "REVIEW",
+          "file": {
+            "item": "exposure-ukraines-stolen-children-2023",
+            "itemTitle": "ITV Exposure  2023: Ukraines Stolen Children",
+            "file": "ITV.Exposure.2023.Ukraines.Stolen.Children.1080p.mp4",
+            "name": "ITV.Exposure.2023.Ukraines.Stolen.Children.1080p",
+            "url": "https://archive.org/download/exposure-ukraines-stolen-children-2023/ITV.Exposure.2023.Ukraines.Stolen.Children.1080p.mp4",
+            "seconds": 3827,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 378,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "saudi arabia uncovered",
+          "state": "REVIEW",
+          "file": {
+            "item": "ITV.Exposure.Saudi.Arabia.Uncovered",
+            "itemTitle": "ITV. Exposure. Saudi. Arabia. Uncovered",
+            "file": "ITV.Exposure.Saudi.Arabia.Uncovered.mp4",
+            "name": "ITV.Exposure.Saudi.Arabia.Uncovered",
+            "url": "https://archive.org/download/ITV.Exposure.Saudi.Arabia.Uncovered/ITV.Exposure.Saudi.Arabia.Uncovered.mp4",
+            "seconds": 3145,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 208,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
