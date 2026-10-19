@@ -198,6 +198,7 @@ test('files light: yellow at 18,000, red at 19,500 or over 24 MiB, yellow when v
   assert.equal(l(19499, 10e6).level, 'yellow');
   assert.equal(l(19500, 10e6).level, 'red');
   assert.equal(l(100, 24 * MiB + 1).level, 'red');
+  for (const n of [18000, 19500]) { const fix = l(n, 10e6).fix; assert.match(fix, /HQ > Jobs/); assert.match(fix, /Hide from the site/); assert.match(fix, /fewer pages per deploy/); assert.match(fix, /The file limit, by hand/); assert.match(fix, /audit chat/); }
   assert.equal(G.filesLight({ files: null }).level, 'yellow');
   assert.match(l(15454, 10237790).msg, /15,454 files of 20,000 allowed, largest file 10\.2 MB \(data\/graph\.json\)/);
 });
@@ -309,6 +310,20 @@ test('another domain gets no www light (only voidtv.net is checked for www)', as
   const body = G.versionText({ sha: 'e'.repeat(40), at: 'now', gate: true, files: 1, largest: 1, shows: 1, episodes: 1 });
   const ls = await G.liveLights({ base: 'https://example.test', versionTextBody: body, nowMs: Date.now(), remote: null, doFetch: fakeFetch({ 'HEAD https://example.test/': { status: 401, headers: SEC }, 'HEAD https://example.test/version.txt': { status: 200, headers: SEC } }) });
   assert.ok(!ls.some((x) => x.id === 'www'));
+});
+
+test('DEPLOY.md: previews, the Workers Paid cap, the site name, the failed-deploy email and the file limit steps are stated correctly', () => {
+  const doc = fs.readFileSync(path.join(__dirname, '..', 'docs', 'DEPLOY.md'), 'utf8');
+  assert.ok(!/`on`\s+keeps\s+(them|previews)\s+private/.test(doc), 'GATE=on does not keep previews private');
+  assert.match(doc, /keeps only the production build gated/);
+  assert.match(doc, /Settings > Builds >\s+Branch control/);
+  assert.ok(!/100,000 Function requests/.test(doc), 'no daily cap any more');
+  assert.ok(!/Workers Free/.test(doc));
+  assert.match(doc, /10 million requests a month are included, then 0\.30 dollars per million/);
+  assert.match(doc, /10 million a month are included,\s+then 0\.30 dollars per million/);
+  assert.ok(!/VOIDtv/.test(doc.split('\n').slice(1).join('\n')), 'the site is called voidtv.net (only the title line keeps the old name)');
+  assert.match(doc, /Notifications > Add > Workers and Pages/);
+  assert.match(doc, /^### The file limit, by hand$/m);
 });
 
 test('no em dash in the files this batch wrote', () => {

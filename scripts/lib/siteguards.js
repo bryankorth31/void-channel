@@ -158,13 +158,15 @@ function unreadableGrids(showsDir) {
 // 5. Lights (each is { id, level, msg, fix }; level is green, yellow or red) ---------------------------------------
 const light = (id, level, msg, fix) => ({ id, level, msg, fix: level === 'green' ? undefined : fix });
 
+// What Bryan can do himself when the files light is yellow or red: fewer pages per deploy. The real cure is a change to what the site writes.
+const FILES_BY_HAND = 'stop the hunts that add shows (HQ > Jobs), hide shows you can do without (open the show in HQ, Hide from the site) and Publish now, which means fewer pages per deploy; steps in docs/DEPLOY.md, "The file limit, by hand". The lasting fix is fewer per-show pages or a data split (audit F-005): ask the audit chat.';
 function filesLight(v) {
   if (v.files == null) return light('files', 'yellow', 'version.txt has no file count yet', 'The live build is older than the file-count guard. The count appears after the next deploy.');
   const r = checkOutput({ files: v.files, largest: v.largest || 0, largestFile: v.largestFile });
   const size = v.largest != null ? `, largest file ${mb(v.largest)}${v.largestFile ? ' (' + v.largestFile + ')' : ''}` : '';
   const line = `${v.files.toLocaleString('en-US')} files of ${LIMITS.pagesFiles.toLocaleString('en-US')} allowed${size}`;
-  if (r.level === 'refuse') return light('files', 'red', line + ': ' + r.why.join('; '), 'A build this big is refused, so the old site stays up. Reduce what the site writes: fewer per-show pages or a data split (audit F-005); tell the Voidtv chat.');
-  if (r.level === 'warn') return light('files', 'yellow', line, 'Pages refuses a deploy over 20,000 files and the old site stays up. It grew about 350 files a day in October 2026 while hunts added shows. The fix is fewer per-show pages or a data split (audit F-005); tell the Voidtv chat.');
+  if (r.level === 'refuse') return light('files', 'red', line + ': ' + r.why.join('; '), 'A build this big is refused, so the old site stays up. By hand: ' + FILES_BY_HAND);
+  if (r.level === 'warn') return light('files', 'yellow', line, 'Pages refuses a deploy over 20,000 files and the old site stays up. It grew about 350 files a day in October 2026 while hunts added shows. By hand: ' + FILES_BY_HAND);
   return light('files', 'green', line);
 }
 
