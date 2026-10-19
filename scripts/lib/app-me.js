@@ -9,6 +9,9 @@
 //   meApply(stored, ops, ctx)     those changes laid onto the blob as it is stored right now, newest `at` winning a clash
 //   meImportMerge(me, m)          the same idea for an exported file: checked entry by entry, newest `at` wins
 // Deletes are real deletes (no tombstones): a removal only goes through when nobody changed that key meanwhile.
+// No identifier is stored anywhere. To tell "a record another tab wrote a moment ago" from "my own earlier write" a tab keeps,
+// in memory only (ctx.wrote, one plain object per page load), the time of the history record it last wrote for each show:
+// a stored record whose time is not the one this tab wrote is another tab's. Nothing of this reaches localStorage or an export.
 //
 // app.js inlines meSource into the page (like app-fetch.js), so the browser and tests/app-me.test.js run the same
 // code. Every function here must be self-contained (only each other and standard globals) and must carry no line
@@ -22,6 +25,10 @@ function meClean(m) {
   if (!m || typeof m !== 'object' || m.v !== 1) return out;
   for (const k of Object.keys(m)) out[k] = m[k];
   for (const s of ['list', 'likes', 'history', 'reports']) if (!out[s] || typeof out[s] !== 'object' || Array.isArray(out[s])) out[s] = {};
+  for (const k of Object.keys(out.history)) {
+    const r = out.history[k];
+    if (r && typeof r === 'object' && meHas(r, 'tab')) { out.history[k] = Object.assign({}, r); delete out.history[k].tab; }
+  }
   return out;
 }
 
@@ -48,15 +55,17 @@ function meDiff(base, mine) {
 function meApply(stored, ops, ctx) {
   const out = meClean(meCopy(stored));
   const now = ctx && ctx.now != null ? ctx.now : Date.now();
+  const wrote = ctx && ctx.wrote;
   for (const op of ops) {
     const box = op.s ? out[op.s] : out;
     const cur = meHas(box, op.k) ? box[op.k] : undefined;
     const untouched = cur === undefined || meSame(cur, op.was);
-    if (op.del) { if (untouched) delete box[op.k]; continue; }
+    if (op.del) { if (untouched) { delete box[op.k]; if (wrote && op.s === 'history') delete wrote[op.k]; } continue; }
     let val = op.set;
     if (!untouched) {
       if (op.s === 'history') {
-        const live = cur && cur.tab && ctx && cur.tab !== ctx.tab && now - (cur.at || 0) < 15000 && cur.se === val.se && cur.e === val.e && !(ctx.playing && ctx.playing(op.k, val.se, val.e));
+        const mine = wrote && meHas(wrote, op.k) && wrote[op.k] === cur.at;
+        const live = cur && wrote && !mine && now - (cur.at || 0) < 15000 && cur.se === val.se && cur.e === val.e && !(ctx.playing && ctx.playing(op.k, val.se, val.e));
         if (live || (cur && (cur.at || 0) > (val.at || 0))) val = cur;
       } else if (op.s === 'reports') {
         if (cur && (cur.at || 0) > (val.at || 0)) val = cur;
@@ -64,7 +73,7 @@ function meApply(stored, ops, ctx) {
         if (typeof cur === 'number' && typeof val === 'number' && cur > val) val = cur;
       }
     }
-    if (op.s === 'history' && val === op.set && ctx && ctx.tab) val = Object.assign({}, val, { tab: ctx.tab });
+    if (op.s === 'history' && val === op.set && wrote) wrote[op.k] = val.at;
     box[op.k] = meCopy(val);
   }
   return out;

@@ -31,10 +31,10 @@ function makeSite(initial) {
       setItem: (k, v) => { if (site.failWrites > 0) { site.failWrites--; throw new Error('quota'); } m.set(k, String(v)); if (site.deliver) for (const t of site.tabs) if (t !== owner) for (const f of t.handlers.storage) f({ key: k }); },
       removeItem: (k) => { m.delete(k); },
     };
-    const ss = new Map([['voidtv:tab', id]]);
     const calls = { render: 0, acts: 0 };
+    // No sessionStorage and no crypto in the fake page: the saving code must not need either (nothing may identify a tab).
     const ctx = {
-      localStorage, sessionStorage: { getItem: (k) => (ss.has(k) ? ss.get(k) : null), setItem: (k, v) => ss.set(k, v) },
+      localStorage,
       window: { addEventListener: (t, f) => handlers[t].push(f) }, document: { hidden: false, addEventListener: (t, f) => handlers[t].push(f), querySelectorAll: () => [] },
       state: { view: '', show: null }, render: () => { calls.render++; }, acts: () => '',
     };
@@ -61,7 +61,7 @@ test('the audit repro: a tab loaded earlier that only plays does not erase a lik
   assert.equal(after.ME.likes.show1, 1, 'the like survives');
   assert.equal(after.ME.list.show2, 5000, 'the list entry survives');
   assert.equal(after.ME.history.show1.pos, 15);
-  assert.equal(after.ME.history.show1.tab, 'tab-B', 'the record says which tab wrote the position');
+  assert.deepEqual(plain(after.ME.history.show1), { se: 0, e: 0, at: 25000, pos: 15 }, 'the record is the plain old shape, nothing about the tab');
   assert.equal(playing.ME.likes.show1, 1, 'the playing tab picked the like up on its first save');
 });
 
@@ -106,7 +106,7 @@ test('the same show changed in both tabs: the newest history record wins, with o
   const b = site.open('tab-B');
   a.ME.history.s = { se: 0, e: 4, at: 5000, pos: 0 }; a.save();
   b.ME.history.s = { se: 0, e: 2, at: 4000, pos: 99 }; b.save();
-  assert.deepEqual(plain(site.stored().history.s), { se: 0, e: 4, at: 5000, pos: 0, tab: 'tab-A' }, 'B\'s record is older, so A\'s stays');
+  assert.deepEqual(plain(site.stored().history.s), { se: 0, e: 4, at: 5000, pos: 0 }, 'B\'s record is older, so A\'s stays');
   assert.deepEqual(plain(b.ME.history.s), plain(site.stored().history.s));
 });
 
@@ -120,12 +120,58 @@ test('a tab that has not started playing does not overwrite the position of a ta
   stale.ME.history.s = { se: 1, e: 2, at: now, pos: 100 };
   stale.save();
   assert.equal(site.stored().history.s.pos, 900, 'the playing tab\'s position stays');
-  assert.equal(site.stored().history.s.tab, 'tab-live');
   assert.equal(stale.ME.history.s.pos, 900, 'and the stale tab now knows it');
   stale.setVP({ _cur: { slug: 's', se: 1, e: 2 }, v: { paused: false } });
   stale.ME.history.s.pos = 950; stale.ME.history.s.at = Date.now(); stale.save();
   assert.equal(site.stored().history.s.pos, 950, 'once the stale tab really plays that episode it may write the position');
-  assert.equal(site.stored().history.s.tab, 'tab-stale');
+});
+
+test('a tab\'s own earlier write is not mistaken for another tab\'s: it can change its own record again within seconds', () => {
+  const now = Date.now();
+  const site = makeSite({ 'voidtv:me': JSON.stringify({ v: 1, list: {}, likes: {}, history: { s: { se: 1, e: 2, at: now - 60000, pos: 100 } }, reports: {} }) });
+  site.deliver = false;
+  const a = site.open('tab-A');
+  const b = site.open('tab-B');
+  a.ME.history.s.pos = 300; a.ME.history.s.at = now - 3000; a.save();
+  b.ME.history.s = { se: 1, e: 2, at: now - 2000, pos: 100 };                // the other tab, stale, not playing: held back by the live rule
+  b.save();
+  assert.equal(site.stored().history.s.pos, 300, 'B did not overwrite the position A wrote 3 s ago');
+  a.ME.history.s = { se: 1, e: 2, at: now - 1000, pos: 310 };                // A, paused, presses play on the same episode: its own record, so it goes through
+  a.save();
+  assert.equal(site.stored().history.s.pos, 310, 'A may change what A wrote, however recent');
+});
+
+test('nothing identifies a tab: no id in storage, in the blob, in the records or in an export, and the saving code uses no session storage or random id', () => {
+  assert.ok(!/sessionStorage|randomUUID|Math\.random|crypto/.test(BLOCK), 'the saving code never asks for an id');
+  const site = makeSite();
+  site.deliver = false;
+  const a = site.open('tab-A');
+  const b = site.open('tab-B');
+  a.ME.history.s = { se: 0, e: 1, at: Date.now() - 500, pos: 5 }; a.ME.likes.s = 1; a.save();
+  b.ME.history.t = { se: 2, e: 0, at: Date.now(), pos: 0 }; b.save();
+  a.ME.history.s.pos = 9; a.ME.history.s.at = Date.now(); a.save();
+  assert.deepEqual([...site.m.keys()], ['voidtv:me'], 'the only thing written to storage is the blob');
+  const text = JSON.stringify(site.stored());
+  assert.ok(!/"tab"/.test(text) && !/tab-[AB]/.test(text), 'no tab field and no tab name in the stored blob');
+  const exported = JSON.parse(JSON.stringify(b.ME));                          // what exportMe writes: JSON.stringify(ME)
+  assert.deepEqual(Object.keys(exported).sort(), ['history', 'likes', 'list', 'reports', 'v']);
+  for (const rec of Object.values(exported.history)) assert.deepEqual(Object.keys(rec).sort(), ['at', 'e', 'pos', 'se'], 'a history record is se, e, at, pos and nothing else');
+});
+
+test('the format of a stored blob from before this change loads as it is: nothing is written at start, a leftover tab field is dropped on the next save', () => {
+  const old = { v: 1, list: { a: 5 }, likes: { a: 1 }, history: { s: { se: 0, e: 0, at: 100, pos: 7 }, t: { se: 1, e: 1, at: 200, pos: 0, tab: 'old-id' } }, reports: { 'a/1/1': { show: 'A', season: 1, ep: 1, name: 'n', item: 'i', url: 'u', at: 3 } }, adult: 99 };
+  const text = JSON.stringify(old);
+  const site = makeSite({ 'voidtv:me': text });
+  const t = site.open('tab-A');
+  assert.equal(site.m.get('voidtv:me'), text, 'loading and the start-up sync write nothing');
+  assert.deepEqual(plain(t.ME.history.s), old.history.s);
+  assert.deepEqual(plain(t.ME.list), old.list);
+  assert.equal(t.ME.adult, 99);
+  assert.equal('tab' in t.ME.history.t, false, 'a leftover tab field is not kept in memory');
+  t.ME.likes.b = 1; t.save();
+  assert.equal(JSON.stringify(site.stored()).includes('old-id'), false, 'and is gone from storage once the tab saves');
+  assert.deepEqual(plain(site.stored().history.s), old.history.s);
+  assert.deepEqual(plain(site.stored().reports), old.reports);
 });
 
 test('old per-show keys are moved into history and the move is saved at once (it used to be lost unless something else saved)', () => {
@@ -133,7 +179,7 @@ test('old per-show keys are moved into history and the move is saved at once (it
   const t = site.open('tab-A');
   assert.equal(site.m.has('voidtv:old-show'), false, 'the old key is gone');
   assert.equal(site.m.get('voidtv:vol'), '0.5', 'the player\'s own keys are left alone');
-  assert.deepEqual(plain(site.stored().history['old-show']), { se: 2, e: 4, at: 0, pos: 0, tab: 'tab-A' });
+  assert.deepEqual(plain(site.stored().history['old-show']), { se: 2, e: 4, at: 0, pos: 0 });
   assert.deepEqual(plain(t.ME.history['old-show']), plain(site.stored().history['old-show']));
 });
 
@@ -182,9 +228,25 @@ test('meDiff names adds, edits and deletes in every section', () => {
 test('meApply: a clash on a report or a list entry goes to the newer one', () => {
   const stored = { v: 1, list: { s: 900 }, likes: {}, history: {}, reports: { 'a/1/2': { at: 500, name: 'newer' } } };
   const ops = [{ s: 'list', k: 's', set: 400, was: 100 }, { s: 'reports', k: 'a/1/2', set: { at: 300, name: 'older' }, was: { at: 100, name: 'x' } }];
-  const out = meApply(stored, ops, { tab: 'T', now: 10 });
+  const out = meApply(stored, ops, { now: 10, wrote: {} });
   assert.equal(out.list.s, 900);
   assert.equal(out.reports['a/1/2'].name, 'newer');
+});
+
+test('meApply: the live rule needs only the in-memory record of what this tab wrote', () => {
+  const stored = { v: 1, list: {}, likes: {}, reports: {}, history: { s: { se: 1, e: 2, at: 9000, pos: 500 } } };
+  const ops = [{ s: 'history', k: 's', set: { se: 1, e: 2, at: 9500, pos: 10 }, was: { se: 1, e: 2, at: 1000, pos: 10 } }];
+  const held = meApply(stored, ops, { now: 10000, wrote: {}, playing: () => false });
+  assert.equal(held.history.s.pos, 500, 'a record from a few seconds ago that this tab did not write is another tab\'s and stays');
+  const wrote = { s: 9000 };
+  const own = meApply(stored, ops, { now: 10000, wrote, playing: () => false });
+  assert.equal(own.history.s.pos, 10, 'the same record, when its time is the one this tab wrote, is this tab\'s own');
+  assert.equal(wrote.s, 9500, 'and the tab notes the new time it wrote');
+  const old = meApply(stored, ops, { now: 60000, wrote: {}, playing: () => false });
+  assert.equal(old.history.s.pos, 10, 'a record older than 15 s is nobody\'s to protect: the newer time wins');
+  const noMemory = meApply(stored, ops, { now: 10000 });
+  assert.equal(noMemory.history.s.pos, 10, 'with no memory of writes given, only the newer time decides');
+  assert.deepEqual(Object.keys(own.history.s).sort(), ['at', 'e', 'pos', 'se']);
 });
 
 // ---- import ----

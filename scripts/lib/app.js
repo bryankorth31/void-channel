@@ -395,11 +395,12 @@ const esc=(s)=>String(s==null?'':s).replace(/[&<>"]/g,(c)=>({'&':'&amp;','<':'&l
 const decade=(y)=>y?Math.floor(+y/10)*10+'s':'';
 // MINE: list, likes, history and reports live in one blob (voidtv:me) so a later sync code can move it whole.
 // A save writes what this tab CHANGED onto what is stored right now (see scripts/lib/app-me.js), so a tab that only
-// plays a video cannot erase a like or a list entry saved in another tab. TAB names this tab in the history record.
+// plays a video cannot erase a like or a list entry saved in another tab. Nothing identifies a tab: ME_WROTE (memory only,
+// gone with the page, never stored or exported) holds the time of the history record this tab last wrote for each show.
 const ME_KEY='voidtv:me';
 let ME_BASE=null,ME_RAW=null;
 ${ME_SRC}
-const TAB=(()=>{try{let t=sessionStorage.getItem('voidtv:tab');if(!t){t=window.crypto&&crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2)+Date.now().toString(36);sessionStorage.setItem('voidtv:tab',t)}return t}catch(_){return Math.random().toString(36).slice(2)+Date.now().toString(36)}})();
+const ME_WROTE={};
 const ME=(()=>{let raw=null,m=null;try{raw=localStorage.getItem(ME_KEY);m=JSON.parse(raw||'null')}catch(_){}ME_RAW=raw;m=meClean(m);ME_BASE=meCopy(m);
  try{const keys=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('voidtv:')&&!['voidtv:me','voidtv:sid','voidtv:vol'].includes(k))keys.push(k)}for(const k of keys){const sl=k.slice(7);try{if(!m.history[sl]){const r=JSON.parse(localStorage.getItem(k)||'null');if(r&&r.se!=null)m.history[sl]={se:r.se,e:r.e,at:0,pos:0}}}catch(e){}localStorage.removeItem(k)}}catch(_){}
  return m})();
@@ -407,7 +408,7 @@ function mePlaying(slug,se,e){const c=VP&&VP._cur;return !!(c&&c.slug===slug&&c.
 function meSync(){let raw=null;try{raw=localStorage.getItem(ME_KEY)}catch(_){return false}
  const ops=meDiff(ME_BASE,ME);if(!ops.length&&raw===ME_RAW)return false;
  let st=null;try{st=JSON.parse(raw||'null')}catch(_){}
- const merged=meApply(meClean(st),ops,{tab:TAB,now:Date.now(),playing:mePlaying});let out=raw;
+ const merged=meApply(meClean(st),ops,{wrote:ME_WROTE,now:Date.now(),playing:mePlaying});let out=raw;
  if(ops.length||(raw!=null&&st===null)){try{out=JSON.stringify(merged);localStorage.setItem(ME_KEY,out)}catch(_){return false}}
  const changed=meDiff(ME,merged).length>0;for(const k of Object.keys(ME))delete ME[k];Object.assign(ME,merged);ME_BASE=meCopy(merged);ME_RAW=out;return changed}
 function saveMe(){meSync()}
