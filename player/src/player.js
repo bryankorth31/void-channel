@@ -21,9 +21,10 @@
   const DEFAULTS = {
     skipBack: 10, skipFwd: 30, arrowSkip: 10, volumeKeys: true, storageKey: 'voidplayer', globalKeys: false, resolveServers: true, metadataTimeoutMs: 2500,
     onEvent: null, onEnded: null, onNext: null, onPrev: null, onReport: null, config: null,
-    outOfSync: true, // the "Out of sync?" control in the bar (a host that does not want it passes false)
+    syncButton: false, // the "Out of sync?" button in the control row: for testers and the lab, not for viewers (the failure card has its own "Picture out of sync" choice)
   };
   const AVSYNC_MIN_WIDTH = 720; // a player narrower than this has no room for the control, as with speed and picture-in-picture, which player.css hides sooner
+  const AVSYNC_NOTE = 'Noted. Thank you.', AVSYNC_NOTE_MS = 2500; // the line shown after a press, and how long
   const AVSYNC_REPEAT_MS = 10000; // pressing it again within this long stamps nothing new
 
   // ---------- Archive servers: every item lives on a primary and a backup storage server ----------
@@ -161,7 +162,7 @@
           'source     ' + (d.source ? d.source.label + '  ' + d.source.url.split('/')[2] : '-'),
           'time       ' + d.time + ' / ' + d.duration + ' s   buffered ahead ' + d.ahead + ' s',
           'picture    ' + d.size + '   frames ' + (d.frames ? d.frames.total + ', dropped ' + d.frames.dropped : 'n/a') + '   timing ' + d.env.frameTiming,
-          'pictures/s file ' + f1(tm.sourceFps) + ' / decoded ' + f1(tm.decodedFps) + ' / shown ' + f1(tm.presentedFps) + '   dropped ' + pct(tm.droppedShare) + (tm.throttled ? '   THROTTLED now' : ''),
+          'pictures/s file ~' + f1(tm.sourceFps) + ' (estimate from the frames shown) / decoded ' + f1(tm.decodedFps) + ' / shown ' + f1(tm.presentedFps) + '   dropped ' + pct(tm.droppedShare) + (tm.throttled ? '   THROTTLED now' : ''),
           'sync       ' + (m.avMeasure === 'unavailable' ? 'no measure in this browser' : 'lag events ' + m.avlags + ' (largest gap ' + (m.maxAvGapMs == null ? '-' : m.maxAvGapMs + ' ms') + ')  hitches ' + m.hitches + ' (longest ' + m.longestHitchMs + ' ms)  throttled ' + m.throttles),
           'startup    ' + (m.startupMs == null ? '-' : (m.startupMs / 1000).toFixed(2) + ' s'),
           'trouble    stalls ' + m.stalls + ' (' + (m.stallMs / 1000).toFixed(1) + ' s, longest ' + ((m.longestPauseMs || 0) / 1000).toFixed(1) + ' s)  freezes ' + m.freezes + '  drifts ' + m.drifts,
@@ -229,7 +230,7 @@
         + '<span class="vpx-time" aria-live="off">0:00 / 0:00</span><span class="vpx-sp"></span>'
         + b('mute', 'volume', 'Mute (M)') + '<input class="vpx-vol" type="range" min="0" max="100" step="1" value="100" aria-label="Volume">'
         + b('cc', 'captions', 'Captions (C)') + '<button type="button" data-a="speed" class="vpx-speed" aria-label="Playback speed" title="Playback speed">1×</button>'
-        + (this.o.outOfSync ? '<button type="button" data-a="avsync" aria-label="Out of sync? Tell us the picture and the sound do not match" title="Picture and sound out of sync? Tell us">Out of sync?</button>' : '')
+        + (this.o.syncButton ? '<button type="button" data-a="avsync" aria-label="Out of sync? Tell us the picture and the sound do not match" title="Picture and sound out of sync? Tell us">Out of sync?</button>' : '')
         + b('pip', 'pip', 'Picture in picture') + (this.o.onNext ? b('next', 'next', 'Next episode (N)') : '') + b('fs', 'fullscreen', 'Fullscreen (F)')
         + '</div></div>';
       container.appendChild(r);
@@ -340,9 +341,18 @@
     // "Out of sync?": the viewer says the sound and picture do not match. Nothing is changed or fixed; the moment is stamped
     // (where, which copy and server, the frame rates, the last gap readings and hitches) and sent on as one event for the host.
     // Pressed twice within AVSYNC_REPEAT_MS it stamps once. The stamp is small on purpose: not the whole diagnostics.
-    markOutOfSync() {
+    // From the control-row button the stamp goes out as a `user-avsync` event. From the failure card (viaCard) it is
+    // returned instead, and the card hands it to the host's onReport with kind 'avsync', so it leaves once, by one path.
+    markOutOfSync(viaCard) {
       const t = now();
-      this._status('Noted. Thank you.', 2500);
+      if (!viaCard) {
+        this._status(AVSYNC_NOTE, AVSYNC_NOTE_MS);
+        // _sample only clears a status that has run its time while the core says "playing", so a press while paused (a natural
+        // moment to press it) would leave the line over the picture. It clears on its own timer, whatever the play state.
+        this._timers.delete(this._noteT); clearTimeout(this._noteT);
+        this._noteT = setTimeout(() => { this._timers.delete(this._noteT); if (this.ui.statusT.textContent === AVSYNC_NOTE) this._status(''); }, AVSYNC_NOTE_MS);
+        this._timers.add(this._noteT);
+      }
       if (!this.ep || (this._avAt && t - this._avAt < AVSYNC_REPEAT_MS)) return false;
       this._avAt = t;
       this.core.event('user-avsync', t);
@@ -350,14 +360,15 @@
       const stamp = {
         type: 'user-avsync', at: t, when: new Date().toISOString(), episode: this.ep.id, position: Math.round(v.currentTime * 10) / 10, duration: Math.round((v.duration || 0) * 10) / 10,
         source: src && src.label, server: src && src.url ? src.url.split('/')[2] : '', state: this.core.state, paused: v.paused, rate: v.playbackRate, size: v.videoWidth + 'x' + v.videoHeight,
-        frames: q ? { total: q.totalVideoFrames, dropped: q.droppedVideoFrames } : null, sourceFps: tm.sourceFps, presentedFps: tm.presentedFps, decodedFps: tm.decodedFps, droppedShare: tm.droppedShare,
+        frames: q ? { total: q.totalVideoFrames, dropped: q.droppedVideoFrames } : null, sourceFps: tm.sourceFps, sourceFpsBasis: tm.sourceFpsBasis, presentedFps: tm.presentedFps, decodedFps: tm.decodedFps, droppedShare: tm.droppedShare,
         measure: tm.measure, gaps: tm.gaps, hitches: tm.hitches, throttles: tm.throttles,
       };
       (this._avStamps = this._avStamps || []).push(stamp); if (this._avStamps.length > 5) this._avStamps.shift();
+      if (viaCard) return stamp;
       this._emit(stamp);
       return true;
     }
-    // The control only shows when the player is wide enough (the bar has no room on a phone).
+    // The button (when the host asked for it) only shows when the player is wide enough: the bar has no room on a phone.
     _fit() { const b = this.ui && this.ui.sync; if (!b) return; const w = this.root.clientWidth; b.style.display = w && w < AVSYNC_MIN_WIDTH ? 'none' : ''; }
 
     // ---------- carrying out the core's decisions ----------
@@ -596,7 +607,7 @@
       const c = this.ui.card;
       c.className = 'vpx-card' + (look ? ' ' + look : '');
       c.innerHTML = html; c.hidden = false;
-      c.onclick = (e) => { const b = e.target.closest('[data-c]'); if (b) onPick(b.dataset.c); };
+      c.onclick = (e) => { const b = e.target.closest('[data-c]'); if (b) onPick(b.dataset.c, b); };
       const first = c.querySelector('button'); if (first && !c.contains(document.activeElement)) first.focus({ preventScroll: true });
     }
     _hideCard() { this.ui.card.hidden = true; this.ui.card.innerHTML = ''; this.ui.card.className = 'vpx-card'; }
@@ -610,10 +621,12 @@
         + '<div class="vpx-acts"><button data-c="retry" class="vpx-primary">' + (ICON.retry || '') + 'Try again</button>'
         + (f ? '<a class="vpx-btn" href="' + esc(f.url) + '" target="_blank" rel="noopener" download>' + (ICON.download || '') + 'Download</a>' : '')
         + (this.o.onNext ? '<button data-c="next">' + (ICON.next || '') + 'Next episode</button>' : '')
-        + (this.o.onReport ? '<button data-c="report">' + (ICON.flag || '') + 'Report</button>' : '') + '</div>', (c) => {
+        + (this.o.onReport ? '<button data-c="report">' + (ICON.flag || '') + 'Report</button><button data-c="avsync">Picture out of sync</button>' : '') + '</div>', (c, btn) => {
         if (c === 'retry') { this._hideCard(); this.core.event('retry', now()); }
         if (c === 'next' && this.o.onNext) { this._hideCard(); this.o.onNext(this); }
         if (c === 'report' && this.o.onReport) this.o.onReport(this.diagnostics(), this);
+        // The viewer says the picture and sound were out of step: stamp this moment and send it down the same path as Report, kind 'avsync'.
+        if (c === 'avsync' && this.o.onReport) { const st = this.markOutOfSync(true); if (btn) btn.textContent = AVSYNC_NOTE; if (st) this.o.onReport(Object.assign(this.diagnostics(), { avsync: st }), this, 'avsync'); }
       }, 'static');
     }
 

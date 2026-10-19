@@ -312,12 +312,12 @@ test('SP-026: a later copy that is already in the session cache needs no lookup 
 });
 
 // ---------- A-022: the "Out of sync?" control, the frame feed's lifetime, what the core is told ----------
-test('A-022: the bar carries an "Out of sync?" button, keyboard reachable like the other controls, and a host can leave it out', () => {
-  const x = open(); const html = x.html.join('');
+test('A-022: the control row has no "Out of sync?" button by default; with syncButton it has one, keyboard reachable like the other controls', () => {
+  const off = open(); assert.ok(!off.html.join('').includes('avsync'), 'not in the normal control row, for viewers');
+  const x = open({ options: { syncButton: true } }); const html = x.html.join('');
   assert.ok(/<button type="button" data-a="avsync"[^>]*>Out of sync\?<\/button>/.test(html), 'a real button in the bar');
   assert.ok(html.indexOf('data-a="avsync"') > html.indexOf('class="vpx-row"') && html.indexOf('data-a="avsync"') < html.indexOf('data-a="fs"'), 'inside the control row, which the arrow keys and Tab walk');
   assert.ok(!/class=/.test(html.match(/<button[^>]*data-a="avsync"[^>]*>/)[0]), 'no class of its own, so no class without the vpx- prefix');
-  const off = open({ options: { outOfSync: false } }); assert.ok(!off.html.join('').includes('avsync'));
 });
 
 test('A-022: pressing it stamps the moment once, changes nothing about playback, and twice within 10 s stamps once', async () => {
@@ -349,9 +349,9 @@ test('A-022: pressing it with nothing loaded stamps nothing, and with an episode
   x.player._do('avsync'); assert.strictEqual(x.kinds('user-avsync').length, 1); x.player.destroy();
 });
 
-test('A-022: the button hides below 720 px of player width (no room), shows above', () => {
-  const narrow = open({ width: 500 }); narrow.player._fit(); assert.strictEqual(narrow.player.ui.sync.style.display, 'none');
-  const wide = open({ width: 1000 }); wide.player._fit(); assert.strictEqual(wide.player.ui.sync.style.display, '');
+test('A-022: the button, when asked for, hides below 720 px of player width (no room), shows above', () => {
+  const narrow = open({ width: 500, options: { syncButton: true } }); narrow.player._fit(); assert.strictEqual(narrow.player.ui.sync.style.display, 'none');
+  const wide = open({ width: 1000, options: { syncButton: true } }); wide.player._fit(); assert.strictEqual(wide.player.ui.sync.style.display, '');
 });
 
 test('A-022: the frame feed is one callback at a time, passes the display time and the drawing beat, and stops on replace, ended and destroy', async () => {
@@ -399,5 +399,78 @@ test('A-022: the page going away or coming back is told to the core (visibility,
   const x = open({ rvfc: true }); const told = []; const real = x.player.core.event; x.player.core.event = (n, t, i) => { told.push(n); return real(n, t, i); };
   x.listeners.enterpictureinpicture.forEach((f) => f()); x.listeners.leavepictureinpicture.forEach((f) => f());
   assert.deepStrictEqual(told, ['away', 'away']);
+  x.player.destroy();
+});
+
+test('A-022: the "Noted. Thank you." line after Out of sync? clears on its own timer, also while paused', async () => {
+  const x = open(); x.player.load(episode('a/1x1', 1), { autoplay: true }); await x.settle(); await x.answer(true);
+  assert.strictEqual(x.video.paused, true, 'the fake video is paused: the case the review found');
+  x.player._do('avsync');
+  assert.strictEqual(x.player.ui.statusT.textContent, 'Noted. Thank you.');
+  await new Promise((r) => setTimeout(r, 1300)); x.player._sample(); // the sample loop alone does not clear it while paused
+  assert.strictEqual(x.player.ui.statusT.textContent, 'Noted. Thank you.', 'still there inside its 2.5 s');
+  x.player._do('avsync'); // pressed again: the line is renewed, not cut short by the first press's timer
+  await new Promise((r) => setTimeout(r, 1500)); x.player._sample();
+  assert.strictEqual(x.player.ui.statusT.textContent, 'Noted. Thank you.', 'renewed by the second press');
+  await new Promise((r) => setTimeout(r, 1200));
+  assert.strictEqual(x.player.ui.statusT.textContent, '', 'cleared with the player still paused');
+  x.player.destroy();
+});
+
+test('A-022: a status that is not the Out of sync? line is left alone when its timer runs', async () => {
+  const x = open(); x.player.load(episode('a/1x1', 1), { autoplay: true }); await x.settle(); await x.answer(true);
+  x.player._do('avsync'); x.player._status('Reconnecting...');
+  await new Promise((r) => setTimeout(r, 2700));
+  assert.strictEqual(x.player.ui.statusT.textContent, 'Reconnecting...', 'only its own line is cleared');
+  x.player._avAt -= 11000; x.player._do('avsync'); assert.strictEqual(x.player.ui.statusT.textContent, 'Noted. Thank you.');
+  await new Promise((r) => setTimeout(r, 2700));
+  assert.strictEqual(x.player.ui.statusT.textContent, '', 'and its own line still clears');
+  x.player.destroy();
+});
+
+// ---------- the failure card's "Picture out of sync" choice (the viewer's own path to the same stamp) ----------
+async function failed(opts) { // an episode loaded, then the failure card up
+  const x = open(opts); x.reports = []; x.player.o.onReport = opts && opts.noReport ? null : (...a) => x.reports.push(a);
+  x.player._ctx = { slug: 'a', ep: '1x1' };
+  x.player.load(episode('a/1x1', 1), { autoplay: true }); await x.settle(); await x.answer(true);
+  x.player._failure('freeze', 'playback');
+  return x;
+}
+const click = (x, c) => { const btn = { dataset: { c }, textContent: '' }; x.player.ui.card.onclick({ target: { closest: () => btn } }); return btn; };
+
+test('A-022: the failure card offers "Picture out of sync" beside Report, with the card\'s own buttons, and not without a Report handler', async () => {
+  const x = await failed(); const html = x.player.ui.card.innerHTML;
+  assert.ok(/<button data-c="report">[\s\S]*Report<\/button><button data-c="avsync">Picture out of sync<\/button>/.test(html), 'right beside Report');
+  assert.ok(!/class=/.test(html.match(/<button data-c="avsync">/)[0]), 'no class of its own: the card styles its buttons already');
+  x.player.destroy();
+  const n = await failed({ noReport: true });
+  n.player._failure('freeze', 'playback'); // the options are read when the card is made
+  n.player.o.onReport = null; n.player._failure('freeze', 'playback');
+  assert.ok(!n.player.ui.card.innerHTML.includes('avsync'), 'a host with nowhere to send it gets no such choice');
+  n.player.destroy();
+});
+
+test('A-022: the failure card choice stamps once and reaches onReport with kind avsync and the stamp; pressed again it sends nothing more', async () => {
+  const x = await failed();
+  const btn = click(x, 'avsync');
+  assert.strictEqual(x.reports.length, 1);
+  const [d, p, kind] = x.reports[0];
+  assert.strictEqual(kind, 'avsync'); assert.strictEqual(p, x.player);
+  assert.strictEqual(d.avsync.type, 'user-avsync'); assert.strictEqual(d.avsync.episode, 'a/1x1'); assert.ok(typeof d.avsync.at === 'number'); assert.ok(d.failure && d.failure.reason === 'freeze', 'with the diagnostics, failure included');
+  assert.ok(Array.isArray(d.avsync.gaps) && 'sourceFps' in d.avsync && 'droppedShare' in d.avsync);
+  assert.strictEqual(x.kinds('user-avsync').length, 0, 'it leaves by one path: no second event for the host to send');
+  assert.strictEqual(x.player.core.summary().outOfSyncPresses, 1); assert.strictEqual(btn.textContent, 'Noted. Thank you.');
+  click(x, 'avsync'); click(x, 'avsync');
+  assert.strictEqual(x.reports.length, 1, 'twice within 10 s: one stamp'); assert.strictEqual(x.player.core.summary().outOfSyncPresses, 1);
+  x.player._avAt -= 11000; click(x, 'avsync');
+  assert.strictEqual(x.reports.length, 2, 'a new stamp after 10 s'); assert.notStrictEqual(x.reports[1][0].avsync.at, x.reports[0][0].avsync.at, 'a different stamp, so the host can tell them apart');
+  click(x, 'report'); assert.strictEqual(x.reports[2][2], undefined, 'Report itself is unchanged: no kind');
+  x.player.destroy();
+});
+
+test('A-022: the failure card choice changes nothing about playback', async () => {
+  const x = await failed(); const src0 = x.seen.src.length, play0 = x.seen.play, log0 = x.player.core.log.filter((e) => e.did !== 'user-avsync').length;
+  click(x, 'avsync'); assert.strictEqual(x.reports.length, 1, 'it did stamp and report');
+  assert.deepStrictEqual([x.seen.src.length, x.seen.play, x.player.core.log.filter((e) => e.did !== 'user-avsync').length], [src0, play0, log0]);
   x.player.destroy();
 });

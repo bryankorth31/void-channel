@@ -18,8 +18,9 @@ Double-click **`player\LAB.cmd`**. It starts a small local server and opens the 
 6. **Session results** keeps a row per episode. **Copy all** puts them (and the hidden and throttled logs) on the
    clipboard to send me or compare between devices. **Copy soak.json** copies this soak's totals and a row per
    episode for the launch check. **Copy diagnostics** captures one moment in detail.
-7. **Out of sync?** is a button in the player's control row (shown when the player is 720 px wide or more). Press it
-   when the picture and sound do not match: it stamps that moment and counts it, and changes nothing about playback.
+7. **Out of sync?** is a button in the control row that the lab turns on (`syncButton: true`; on the real site it appears with
+   `?dbg=1`, and for viewers it is off). Press it when the picture and sound do not match: it stamps that moment and counts
+   it, and changes nothing about playback. Viewers get a "Picture out of sync" choice on the failure card instead.
 
 After "Both servers dead", reload the lab page; that test poisons the server cache for the session.
 

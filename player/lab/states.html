@@ -9,7 +9,7 @@ h1{font-size:18px;margin:0 0 4px}p{color:#9aa0b4;margin:0 0 14px}
 figure{margin:0}figcaption{margin-top:6px;color:#9aa0b4;font-size:12px}
 </style></head><body>
 <h1>VOID player: motion states</h1>
-<p>The animations that need no logo and the two failure cards, each frozen in its state on a real player. No video loads here. The third figure is the card for cause "network" (the Archive stopped sending); the last is the card for cause "format".</p>
+<p>The animations that need no logo and the two failure cards, each frozen in its state on a real player. No video loads here. The third figure is the card for cause "network" (the Archive stopped sending); the last is the card for cause "format". Both failure cards show Report and Picture out of sync, as they do when the host gives the player a Report handler.</p>
 <div class="grid">
   <figure><div id="s1"></div><figcaption>Tuning in (loading): the signal pulses outward</figcaption></figure>
   <figure><div id="s2"></div><figcaption>Recovering: gold, sweeping back in, with the reason</figcaption></figure>
@@ -19,11 +19,11 @@ figure{margin:0}figcaption{margin-top:6px;color:#9aa0b4;font-size:12px}
 </div>
 <script src="../src/core.js"></script><script src="../src/icons.js"></script><script src="../src/player.js"></script>
 <script>
-const mk = (id) => VoidPlayer.create(document.getElementById(id), { resolveServers: false, onNext: () => {} });
+const mk = (id, o) => VoidPlayer.create(document.getElementById(id), Object.assign({ resolveServers: false, onNext: () => {} }, o));
 const freeze = (p) => { clearInterval(p._loop); p.root.classList.remove('paused'); };
 const a = mk('s1'); freeze(a); a.root.classList.add('vpx-wait');
 const b = mk('s2'); freeze(b); b.root.classList.add('vpx-wait', 'vpx-recovering'); b._status('Switching to the backup server…');
-const c = mk('s3'); freeze(c); c.ep = { files: [{ url: '#' }] }; c._failure('starved', 'network');
+const c = mk('s3', { onReport: () => {} }); freeze(c); c.ep = { files: [{ url: '#' }] }; c._failure('starved', 'network');
 const d = mk('s4'); freeze(d); d.upNext('The Wolf and the Deer', 10);
-const e = mk('s5'); freeze(e); e.ep = { files: [{ url: '#' }] }; e._failure('error-fatal', 'format');
+const e = mk('s5', { onReport: () => {} }); freeze(e); e.ep = { files: [{ url: '#' }] }; e._failure('error-fatal', 'format');
 </script></body></html>
