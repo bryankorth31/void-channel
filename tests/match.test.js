@@ -375,6 +375,19 @@ describe('the upload title names the show', () => {
     assert.equal(run(files, { title: 'Zork Show \u2605 Fan Edits' }).grid.selfListed, true);
     assert.equal(run(files, { title: 'Zork Show Jam \u2605 Fan Edits' }).grid.selfListed, undefined);
   });
+  test('"TV" or "Television" before an end word is how an uploader names a series (Severance Tv Series), but "Zork TV Jam" is still a longer title', () => {
+    for (const [t, s] of [
+      ['Severance Tv Series', 'Severance'], ['Just Shoot Me TV Series Complete', 'Just Shoot Me'], ['Just shoot me TV series season 1 to 7 Full episodes', 'Just Shoot Me'],
+      ['Zork Show Television Series', 'Zork Show'], ['Zork Show TV Season 2', 'Zork Show'], ['Zork Show TV The Complete Series', 'Zork Show'], ['Zork Show tv_series_1987', 'Zork Show'],
+    ]) assert.equal(names(t, s), true, t);
+    for (const [t, s] of [
+      ['Zork TV Jam', 'Zork'], ['Naruto Shippuden TV', 'Naruto'], ['Naruto Shippuden TV Series', 'Naruto'], ['Zork Show Television Jam', 'Zork Show'], ['Zork Show TVs Series', 'Zork Show'], ['Zork Showtv Series', 'Zork Show'],
+    ]) assert.equal(names(t, s), false, t);
+    // end to end, through the fallback
+    const files = range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i) }));
+    assert.equal(run(files, { title: 'Zork Show TV Series' }).grid.selfListed, true);
+    assert.equal(run(files, { title: 'Zork Show TV Jam' }).grid.selfListed, undefined);
+  });
   test('whole words only: the name inside a longer word, or glued to digits, is not the name', () => {
     assert.equal(names('Unzork Show', 'Zork Show'), false);
     assert.equal(names('Zork Shows', 'Zork Show'), false);
