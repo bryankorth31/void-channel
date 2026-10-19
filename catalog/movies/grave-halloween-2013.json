@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T00:38:34.879Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "cobrtn-The_Art_Corner_-_Grave_Halloween_2025",
-    "itemTitle": "The Art Corner - Grave (Halloween 2025)",
-    "stem": "The_Art_Corner_-_Grave_Halloween_2025",
-    "file": "The_Art_Corner_-_Grave_Halloween_2025.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4905,
-    "sizeMB": 480,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/cobrtn-The_Art_Corner_-_Grave_Halloween_2025/The_Art_Corner_-_Grave_Halloween_2025.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T03:26:20.680Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "rain_the_color_of_blue",
     "itemTitle": "Rain the Color of Blue With a Little Red in It (2015)",
     "stem": "AKOUNAK TEDALAT TAHA TAZOUGHAI",
@@ -31,5 +31,9 @@
     "fileSim": 0.058823529411764705,
     "url": "https://archive.org/download/rain_the_color_of_blue/AKOUNAK%20TEDALAT%20TAHA%20TAZOUGHAI.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

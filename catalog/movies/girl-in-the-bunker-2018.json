@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T02:31:39.070Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "girl-in-the-bunker-based-on-a-true-story-2018-henry-thomas-e.-t.-moira-kelly-cutting-edge",
     "itemTitle": "Girl In The Bunker Based On A True Story ( 2018) Henry Thomas ( E. T.) Moira Kelly ( Cutting Edge)",
     "stem": "Girl in the Bunker_ Based on a True Story (2018) Henry Thomas (E.T.) Moira Kelly (Cutting Edge)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/girl-in-the-bunker-based-on-a-true-story-2018-henry-thomas-e.-t.-moira-kelly-cutting-edge/Girl%20in%20the%20Bunker_%20Based%20on%20a%20True%20Story%20(2018)%20Henry%20Thomas%20(E.T.)%20Moira%20Kelly%20(Cutting%20Edge).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

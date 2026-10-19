@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T22:13:52.628Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "s-09-e-01-the-clothes-in-the-wardrobe",
     "itemTitle": "S09E01 The Clothes In The Wardrobe",
     "stem": "S09E01 The Clothes in the Wardrobe",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/s-09-e-01-the-clothes-in-the-wardrobe/S09E01%20The%20Clothes%20in%20the%20Wardrobe.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

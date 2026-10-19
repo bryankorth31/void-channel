@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T08:40:33.374Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "doggin-around",
     "itemTitle": "S06E07 Doggin' Around",
     "stem": "Doggin' Around",
@@ -31,5 +31,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/doggin-around/Doggin'%20Around.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

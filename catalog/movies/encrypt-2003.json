@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T14:41:58.366Z",
   "archiveMentions": 44,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "Encrypt.megafilms.me_201803",
     "itemTitle": "Encrypt .megafilms.me",
     "stem": "Encrypt_.megafilms.me",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/Encrypt.megafilms.me_201803/Encrypt_.megafilms.me.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

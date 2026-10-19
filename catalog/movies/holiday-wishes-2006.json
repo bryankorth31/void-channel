@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T22:40:27.569Z",
   "archiveMentions": 98,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "bluesroom-holidaywishes",
     "itemTitle": "Blue's Room Holiday Wishes 2005 DVD ISO",
     "stem": "BLUESROOM_HOLIDAYWISHES",
@@ -34,5 +34,9 @@
     "fileSim": 0.75,
     "url": "https://archive.org/download/bluesroom-holidaywishes/BLUESROOM_HOLIDAYWISHES.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

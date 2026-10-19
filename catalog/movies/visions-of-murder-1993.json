@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T06:48:58.343Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "the-secret-history-underground-dungeons-murder-demonic-visions-and-the-death-of-the-roman-empire",
     "itemTitle": "The Secret History Underground Dungeons, Murder, Demonic Visions And The Death Of The Roman Empire",
     "stem": "The Secret History - Underground Dungeons, Murder, Demonic Visions and the Death of the Roman Empire",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "the-secret-history-underground-dungeons-murder-demonic-visions-and-the-death-of-the-roman-not-posted",
       "itemTitle": "The Secret History Underground Dungeons, Murder, Demonic Visions And The Death Of The Roman NOT POSTED",
       "stem": "The Secret History - Underground Dungeons, Murder, Demonic Visions and the Death of the Roman NOT POSTED",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/the-secret-history-underground-dungeons-murder-demonic-visions-and-the-death-of-the-roman-not-posted/The%20Secret%20History%20-%20Underground%20Dungeons%2C%20Murder%2C%20Demonic%20Visions%20and%20the%20Death%20of%20the%20Roman%20NOT%20POSTED.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

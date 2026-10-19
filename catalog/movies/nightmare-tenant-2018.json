@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T20:11:41.777Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "nightmaretenant",
     "itemTitle": "nightmaretenant",
     "stem": "nightmaretenant",
@@ -31,5 +31,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/nightmaretenant/nightmaretenant.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

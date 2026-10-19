@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T10:24:07.894Z",
   "archiveMentions": 39,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "CSPAN2_20230708_212500_Ashley_Brown_Serving_Herself_-_The_Life_and_Times_of_Althea_Gibson",
-    "itemTitle": "Ashley Brown, \"Serving Herself - The Life and Times of Althea Gibson\" : CSPAN2 : July 8, 2023 5:25pm-6:51pm EDT",
-    "stem": "CSPAN2_20230708_212500_Ashley_Brown_Serving_Herself_-_The_Life_and_Times_of_Althea_Gibson",
-    "file": "CSPAN2_20230708_212500_Ashley_Brown_Serving_Herself_-_The_Life_and_Times_of_Althea_Gibson.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5221,
-    "sizeMB": 828,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN2_20230708_212500_Ashley_Brown_Serving_Herself_-_The_Life_and_Times_of_Althea_Gibson/CSPAN2_20230708_212500_Ashley_Brown_Serving_Herself_-_The_Life_and_Times_of_Althea_Gibson.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-CSPAN2"
+  }
 }

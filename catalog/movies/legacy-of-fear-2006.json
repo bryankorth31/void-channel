@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T18:33:08.564Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "youtube-SHSAEEW9CEs",
-    "itemTitle": "NBC News Special - Nothing to Fear: The Legacy of FDR (Complete Broadcast, 1/24/1982) 📺",
-    "stem": "SHSAEEW9CEs",
-    "file": "SHSAEEW9CEs.webm",
-    "format": "WebM",
-    "playable": true,
-    "seconds": 3618,
-    "sizeMB": 934,
-    "band": "near",
-    "fileSim": 0,
-    "url": "https://archive.org/download/youtube-SHSAEEW9CEs/SHSAEEW9CEs.webm"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: news"
+  }
 }

@@ -16,63 +16,11 @@
   "huntedAt": "2026-10-15T02:45:50.204Z",
   "archiveMentions": 30,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "CSPAN2_20250907_220000_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions",
-    "itemTitle": "America 250 Nathan Perl-Rosenthal, \"The Age of Revolutions\" : CSPAN2 : September 7, 2025 6:00pm-7:02pm EDT",
-    "stem": "CSPAN2_20250907_220000_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions",
-    "file": "CSPAN2_20250907_220000_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3721,
-    "sizeMB": 681,
-    "band": "near",
-    "fileSim": 0.6333333333333333,
-    "url": "https://archive.org/download/CSPAN2_20250907_220000_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions/CSPAN2_20250907_220000_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "CSPAN2_20250908_100000_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions",
-      "itemTitle": "America 250 Nathan Perl-Rosenthal, \"The Age of Revolutions\" : CSPAN2 : September 8, 2025 6:00am-7:01am EDT",
-      "stem": "CSPAN2_20250908_100000_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions",
-      "file": "CSPAN2_20250908_100000_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3720,
-      "sizeMB": 681,
-      "band": "near",
-      "fileSim": 0.6333333333333333,
-      "url": "https://archive.org/download/CSPAN2_20250908_100000_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions/CSPAN2_20250908_100000_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "CSPAN3_20250913_220100_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions",
-      "itemTitle": "America 250 Nathan Perl-Rosenthal, \"The Age of Revolutions\" : CSPAN3 : September 13, 2025 6:01pm-7:03pm EDT",
-      "stem": "CSPAN3_20250913_220100_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions",
-      "file": "CSPAN3_20250913_220100_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3720,
-      "sizeMB": 681,
-      "band": "near",
-      "fileSim": 0.6333333333333333,
-      "url": "https://archive.org/download/CSPAN3_20250913_220100_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions/CSPAN3_20250913_220100_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "CSPAN3_20251016_232900_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions",
-      "itemTitle": "America 250 Nathan Perl-Rosenthal, \"The Age of Revolutions\" : CSPAN3 : October 16, 2025 7:29pm-8:28pm EDT",
-      "stem": "CSPAN3_20251016_232900_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions",
-      "file": "CSPAN3_20251016_232900_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3600,
-      "sizeMB": 668,
-      "band": "near",
-      "fileSim": 0.6333333333333333,
-      "url": "https://archive.org/download/CSPAN3_20251016_232900_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions/CSPAN3_20251016_232900_America_250_Nathan_Perl-Rosenthal_The_Age_of_Revolutions.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN2, TV-CSPAN3"
+  }
 }

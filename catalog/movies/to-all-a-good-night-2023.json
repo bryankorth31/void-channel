@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T07:15:47.527Z",
   "archiveMentions": 22,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "monster-movie-night-to-all-a-good-night-yule-2023-special-ep-25-ep-318",
     "itemTitle": "Monster Movie Night To All A Good NIght Yule 2023 Special Ep 25 Ep 318",
     "stem": "Monster Movie Night To All A Good NIght Yule 2023 Special ep 25 ep 318",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "good-night-teddy-bear-all-episodes-in-a-row-see-description-english",
       "itemTitle": "Good Night Teddy Bear - all episodes in a row (see description) - ENGLISH",
       "stem": "km_Good Night Teddy Bear (All Episodes)_480p_30f_20260617_144252",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/good-night-teddy-bear-all-episodes-in-a-row-see-description-english/km_Good%20Night%20Teddy%20Bear%20(All%20Episodes)_480p_30f_20260617_144252.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

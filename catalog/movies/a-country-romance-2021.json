@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T12:02:15.050Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "heart-of-the-country-2013-drama-family-romance",
     "itemTitle": "Heart Of The Country (2013 Drama, Family, Romance",
     "stem": "Heart of the Country (2013 Drama, Family, Romance",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "the.-valley.of.-light-2007-country-life-drama-romance",
       "itemTitle": "The. Valley.of. Light (2007 +++++ Country Life, Drama, Romance)",
       "stem": "The.Valley.of.Light (2007 +++++ Country-life, Drama, Romance)",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/the.-valley.of.-light-2007-country-life-drama-romance/The.Valley.of.Light%20(2007%20%2B%2B%2B%2B%2B%20Country-life%2C%20Drama%2C%20Romance).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "a-m-0ving-r-0mance-2018-country-life-dramady-romance",
       "itemTitle": "A M0ving R0mance (2018 Country Life, Dramady, Romance)",
       "stem": "A M0vingR0mance (2018 Country life, Dramady, Romance)",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/a-m-0ving-r-0mance-2018-country-life-dramady-romance/A%20M0vingR0mance%20(2018%20Country%20life%2C%20Dramady%2C%20Romance).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "a-backyard-wedding-2010-country-life-romance",
       "itemTitle": "A Backyard Wedding (2010 +++++ Country Life, Romance)",
       "stem": "A-Backyard-Wedding (2010 +++++ Country life, Romance)",
@@ -76,5 +76,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/a-backyard-wedding-2010-country-life-romance/A-Backyard-Wedding%20(2010%20%2B%2B%2B%2B%2B%20Country%20life%2C%20Romance).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

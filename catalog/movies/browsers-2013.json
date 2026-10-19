@@ -17,63 +17,11 @@
   "huntedAt": "2026-10-14T22:51:30.627Z",
   "archiveMentions": 50,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "D3T205201308021500FoodphreakingHackingTheFoodSystemBeyondTheScreenAndOutsideOfTh",
-    "itemTitle": "OHM2013: Zoltan Balazs - The quest for the client-side elixir against zombie browsers",
-    "stem": "d3-t2-05-20130802-1500-foodphreaking_hacking_the_food_system_beyond_the_screen_and_outside_of_the_home_kitchen-genomic_gastronomy",
-    "file": "d3-t2-05-20130802-1500-foodphreaking_hacking_the_food_system_beyond_the_screen_and_outside_of_the_home_kitchen-genomic_gastronomy.m4v",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 2538,
-    "sizeMB": 1618,
-    "band": "short",
-    "fileSim": 0.021739130434782608,
-    "url": "https://archive.org/download/D3T205201308021500FoodphreakingHackingTheFoodSystemBeyondTheScreenAndOutsideOfTh/d3-t2-05-20130802-1500-foodphreaking_hacking_the_food_system_beyond_the_screen_and_outside_of_the_home_kitchen-genomic_gastronomy.m4v"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "CC1536BROWSERS",
-      "itemTitle": "Battle of the Browsers",
-      "stem": "CC1536BROWSERS",
-      "file": "CC1536BROWSERS.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 1696,
-      "sizeMB": 166,
-      "band": "short",
-      "fileSim": 0.7,
-      "url": "https://archive.org/download/CC1536BROWSERS/CC1536BROWSERS.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "Battleof98",
-      "itemTitle": "Battle of the Browsers",
-      "stem": "Battleof98",
-      "file": "Battleof98.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 1646,
-      "sizeMB": 163,
-      "band": "short",
-      "fileSim": 0,
-      "url": "https://archive.org/download/Battleof98/Battleof98.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "CC1536BROWSERS",
-      "itemTitle": "Battle of the Browsers",
-      "stem": "CC1536BROWSERS_512kb",
-      "file": "CC1536BROWSERS_512kb.mp4",
-      "format": "512Kb MPEG4",
-      "playable": true,
-      "seconds": 1696,
-      "sizeMB": 119,
-      "band": "short",
-      "fileSim": 0.56,
-      "url": "https://archive.org/download/CC1536BROWSERS/CC1536BROWSERS_512kb.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime"
+  }
 }

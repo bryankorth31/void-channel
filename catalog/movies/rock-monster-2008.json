@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T10:42:43.873Z",
   "archiveMentions": 22,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "SS113ROCKMONSUPSHOW",
     "itemTitle": "SPOOK SHOW 113 Rock n Roll Monster Supershow",
     "stem": "SS 113 ROCK MON SUP SHOW",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "metallica-monster-of-rock-tushino-airfield-moscow-sept.-28-1991",
       "itemTitle": "Metallica - Monster of Rock, Tushino Airfield, Moscow (Sept. 28, 1991)",
       "stem": "Metallica - Monster of Rock, Tushino Airfield, Moscow (Sept. 28, 1991)",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/metallica-monster-of-rock-tushino-airfield-moscow-sept.-28-1991/Metallica%20-%20Monster%20of%20Rock%2C%20Tushino%20Airfield%2C%20Moscow%20(Sept.%2028%2C%201991).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T05:32:13.916Z",
   "archiveMentions": 68,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "yt-1s.com-sticks-and-stones-1970-360p.mp-4",
     "itemTitle": "Sticks And Stones (1970)",
     "stem": "yt1s.com -Sticks and Stones 1970_360p.mp4",
@@ -46,5 +46,9 @@
       "fileSim": 0.8125,
       "url": "https://archive.org/download/sticksandstones-102608/sticksandstones-102608.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2008)"
+  }
 }

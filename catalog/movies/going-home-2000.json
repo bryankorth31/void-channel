@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T07:23:14.836Z",
   "archiveMentions": 215,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "im.-going.-home.-2001.1080p.-blu-ray.-remux.-avc.-flac-2.0-zoro-senpai",
     "itemTitle": "Im Going Home 2001 1080p",
     "stem": "Im.Going.Home.2001.1080p.Blu-ray.Remux.AVC.FLAC2.0-ZoroSenpai",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/im.-going.-home.-2001.1080p.-blu-ray.-remux.-avc.-flac-2.0-zoro-senpai/Im.Going.Home.2001.1080p.Blu-ray.Remux.AVC.FLAC2.0-ZoroSenpai.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

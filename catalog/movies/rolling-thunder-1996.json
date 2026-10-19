@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T12:09:23.693Z",
   "archiveMentions": 90,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "mtvmi-ROLLING_THUNDER",
-    "itemTitle": "ROLLING THUNDER",
-    "stem": "ROLLING_THUNDER",
-    "file": "ROLLING_THUNDER.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3814,
-    "sizeMB": 150,
-    "band": "near",
-    "fileSim": 1,
-    "url": "https://archive.org/download/mtvmi-ROLLING_THUNDER/ROLLING_THUNDER.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

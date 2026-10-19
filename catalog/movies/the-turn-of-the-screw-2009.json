@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T05:16:54.750Z",
   "archiveMentions": 16,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "SCV5_1",
     "itemTitle": "Startime: Turn of the Screw",
     "stem": "SCV5_1",
@@ -78,5 +78,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/TheTurnOfScrew1992DivxAC3/The%20Turn%20Of%20Screw%20(1992)%20Divx%2BAC3.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-13T23:11:50.851Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "sharpes-rifles-carlton-1996",
     "itemTitle": "Sharpe's Rifles (Carlton 1996)",
     "stem": "Sharpe's Rifles (Carlton 1996)",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/sharpes-rifles-carlton-1996/Sharpe's%20Rifles%20(Carlton%201996).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1993)"
+  }
 }

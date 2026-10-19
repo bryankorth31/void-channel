@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T14:46:22.210Z",
   "archiveMentions": 55,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "the-canary-murder-case-1929_202502",
     "itemTitle": "The Canary Murder Case 1929 ★★★ CC: pre-Code Mystery [1:19:45]",
     "stem": "The Canary Murder Case 1929",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "a-perry-mason-mystery-the-case-of-the-grimacing-governor-1994-vhsrip",
       "itemTitle": "A Perry Mason Mystery: The Case Of The Grimacing Governor (1994) [VHSRip]",
       "stem": "A Perry Mason Mystery - The Case of The Grimacing Governor (1994) [VHSRip]",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/a-perry-mason-mystery-the-case-of-the-grimacing-governor-1994-vhsrip/A%20Perry%20Mason%20Mystery%20-%20The%20Case%20of%20The%20Grimacing%20Governor%20(1994)%20%5BVHSRip%5D.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "the-strange-case-of-doctor-rx-1942",
       "itemTitle": "The Strange Case Of Doctor Rx 1942 ★★½ CC: Mystery [1:05:45]",
       "stem": "The Strange Case Of Doctor Rx 1942",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/the-strange-case-of-doctor-rx-1942/The%20Strange%20Case%20Of%20Doctor%20Rx%201942.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "the-greene-murder-case-1929",
       "itemTitle": "The Greene Murder Case 1929 ★★★ CC: pre-Code Mystery [1:07:27]",
       "stem": "The Greene Murder Case 1929",
@@ -74,5 +74,9 @@
       "fileSim": 0.475,
       "url": "https://archive.org/download/the-greene-murder-case-1929/The%20Greene%20Murder%20Case%201929.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

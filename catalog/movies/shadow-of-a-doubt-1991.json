@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T02:41:56.418Z",
   "archiveMentions": 20,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "shadow-of-a-doubt-1943",
     "itemTitle": "Shadow of a Doubt (1943)",
     "stem": "Shadow Of A Doubt (1943)/Shadow Of A Doubt - 1943",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "shadow-of-a-doubt-1943_202606",
       "itemTitle": "Shadow Of A Doubt 1943",
       "stem": "Shadow Of A Doubt - 1943",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/shadow-of-a-doubt-1943_202606/Shadow%20Of%20A%20Doubt%20-%201943.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "1943-shadow-of-a-doubt-la-sombra-de-una-duda-alfred-hitchcock-vose",
       "itemTitle": "1943 - Shadow of a Doubt - La sombra de una duda - Alfred Hitchcock - VOSE",
       "stem": "1943 - Shadow of a Doubt - La sombra de una duda - Alfred Hitchcock - VOSE",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/1943-shadow-of-a-doubt-la-sombra-de-una-duda-alfred-hitchcock-vose/1943%20-%20Shadow%20of%20a%20Doubt%20-%20La%20sombra%20de%20una%20duda%20-%20Alfred%20Hitchcock%20-%20VOSE.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "shadow-of-a-doubt",
       "itemTitle": "SHADOW OF A DOUBT",
       "stem": "SHADOW OF A DOUBT",
@@ -75,5 +75,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/shadow-of-a-doubt/SHADOW%20OF%20A%20DOUBT.m4v"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1991)"
+  }
 }

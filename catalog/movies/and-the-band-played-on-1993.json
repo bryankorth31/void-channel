@@ -34,20 +34,6 @@
   "alternates": [
     {
       "conf": 0.85,
-      "item": "and-the-band-played-on-like-new-vhs",
-      "itemTitle": "And the Band Played On [Like-New VHS]",
-      "stem": "And the Band Played On [Like-New VHS]",
-      "file": "And the Band Played On [Like-New VHS].mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 8870,
-      "sizeMB": 867,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/and-the-band-played-on-like-new-vhs/And%20the%20Band%20Played%20On%20%5BLike-New%20VHS%5D.mp4"
-    },
-    {
-      "conf": 0.85,
       "item": "videoplayback_20260709",
       "itemTitle": "And the Band Played On (1994 VHS)",
       "stem": "videoplayback",
@@ -61,7 +47,21 @@
       "url": "https://archive.org/download/videoplayback_20260709/videoplayback.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
+      "item": "and-the-band-played-on-like-new-vhs",
+      "itemTitle": "And the Band Played On [Like-New VHS]",
+      "stem": "And the Band Played On [Like-New VHS]",
+      "file": "And the Band Played On [Like-New VHS].mp4",
+      "format": "h.264",
+      "playable": true,
+      "seconds": 8870,
+      "sizeMB": 867,
+      "band": "match",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/and-the-band-played-on-like-new-vhs/And%20the%20Band%20Played%20On%20%5BLike-New%20VHS%5D.mp4"
+    },
+    {
+      "conf": 0.84,
       "item": "and-the-band-played-on-like-new-vhs",
       "itemTitle": "And the Band Played On [Like-New VHS]",
       "stem": "And the Band Played On [Like-new VHS]",

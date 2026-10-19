@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T05:24:49.654Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "The_Saugus_Historical_Society_Presents_-_The_History_of_Vinegar_Hill_with_Tim_Hawkes_May_2017",
-    "itemTitle": "The Saugus Historical Society Presents: The History of Vinegar Hill with Tim Hawkes May 2017",
-    "stem": "The_Saugus_Historical_Society_Presents_-_The_History_of_Vinegar_Hill_with_Tim_Hawkes_May_2017.HD",
-    "file": "The_Saugus_Historical_Society_Presents_-_The_History_of_Vinegar_Hill_with_Tim_Hawkes_May_2017.HD.mov",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3909,
-    "sizeMB": 2367,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/The_Saugus_Historical_Society_Presents_-_The_History_of_Vinegar_Hill_with_Tim_Hawkes_May_2017/The_Saugus_Historical_Society_Presents_-_The_History_of_Vinegar_Hill_with_Tim_Hawkes_May_2017.HD.mov"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

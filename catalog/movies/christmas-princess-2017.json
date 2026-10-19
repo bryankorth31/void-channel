@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T14:04:48.775Z",
   "archiveMentions": 27,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a-princess-for-christmas-2011-1080p",
     "itemTitle": "A Princess For Christmas (1080p)",
     "stem": "A Princess For Christmas (2011) - 1080p",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "index_20211028",
       "itemTitle": "A Princess For Christmas",
       "stem": "index",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/index_20211028/index.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "disney-princess-a-christmas-of-enchantment-full-vhs_202508",
       "itemTitle": "Disney Princess: A Christmas of Enchantment (Full VHS)",
       "stem": "Disney Princess A Christmas of Enchantment (Full VHS)",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/disney-princess-a-christmas-of-enchantment-full-vhs_202508/Disney%20Princess%20A%20Christmas%20of%20Enchantment%20(Full%20VHS).mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "disney-princess-a-christmas-of-enchantment-2005-vhs",
       "itemTitle": "Disney Princess: A Christmas of Enchantment (2005 VHS)",
       "stem": "Disney Princess - A Christmas of Enchantment (2005 VHS)",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/disney-princess-a-christmas-of-enchantment-2005-vhs/Disney%20Princess%20-%20A%20Christmas%20of%20Enchantment%20(2005%20VHS).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

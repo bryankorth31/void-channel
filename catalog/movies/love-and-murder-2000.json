@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T12:36:32.022Z",
   "archiveMentions": 41,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "love-lies-and-murder-1991",
     "itemTitle": "Love, Lies And Murder 1991",
     "stem": "The Learning Tree  Gordon Parks (1969) [Feature Film]",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "youtube-q3ui2bSdAkU",
       "itemTitle": "LOVE, BETRAYAL AND MURDER - 2017 Latest Nigerian Movies African Nollywood Full Movies 2017",
       "stem": "LOVE_BETRAYAL_AND_MURDER_-_2017_Latest_Nigerian_Movies_African_Nollywood_Full_Movies_2017-q3ui2bSdAkU",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/youtube-q3ui2bSdAkU/LOVE_BETRAYAL_AND_MURDER_-_2017_Latest_Nigerian_Movies_African_Nollywood_Full_Movies_2017-q3ui2bSdAkU.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "hdm.-s-1-e-1.2016-thriller-murder-mys-rom-murder-with-love",
       "itemTitle": "(HDM.S1E1.2016 THRILLER! Murder Mys Rom) Murder With Love",
       "stem": "(HDM.S1E1.2016 THRILLER! Murder MysRom) Murder-With-Love",
@@ -62,5 +62,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/hdm.-s-1-e-1.2016-thriller-murder-mys-rom-murder-with-love/(HDM.S1E1.2016%20THRILLER!%20Murder%20MysRom)%20Murder-With-Love.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T11:37:05.034Z",
   "archiveMentions": 53,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "bye-bye-birdie_202501",
     "itemTitle": "Bye Bye Birdie 1963",
     "stem": "Bye Bye Birdie",
@@ -35,21 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "DoubleACS_ByeByeBirdie",
-      "itemTitle": "Bye Bye Birdie",
-      "stem": "DoubleACS_ByeByeBirdie",
-      "file": "DoubleACS_ByeByeBirdie.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 7646,
-      "sizeMB": 792,
-      "band": "match",
-      "fileSim": 0.64,
-      "url": "https://archive.org/download/DoubleACS_ByeByeBirdie/DoubleACS_ByeByeBirdie.mp4"
-    },
-    {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "60150",
       "itemTitle": "Bye Bye Birdie VHS (1985) (USA) (1990 revision)",
       "stem": "60150",
@@ -62,5 +48,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/60150/60150.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1995)"
+  }
 }

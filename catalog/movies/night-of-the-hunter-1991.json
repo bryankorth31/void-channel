@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T17:07:47.375Z",
   "archiveMentions": 62,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the.-night.-of.-the.-hunter.-1955.1080p.-blu-ray.x-264-yts.-am",
     "itemTitle": "The Night of The Hunter 1955",
     "stem": "The.Night.Of.The.Hunter.1955.1080p.BluRay.x264-[YTS.AM]",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the.-night.-of.-the.-hunter.-1955.720p.-brrip.x-264-x-0r",
       "itemTitle": "The Night of the Hunter (1955)",
       "stem": "The.Night.Of.The.Hunter.1955.720p.BRRip.x264-x0r",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/the.-night.-of.-the.-hunter.-1955.720p.-brrip.x-264-x-0r/The.Night.Of.The.Hunter.1955.720p.BRRip.x264-x0r.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1991)"
+  }
 }

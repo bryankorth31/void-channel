@@ -21,9 +21,9 @@
   "huntedAt": "2026-10-15T12:54:25.803Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "the-adventures-of-jimmy-neutron-boy-genius-attack-of-the-twonkies_202602",
     "itemTitle": "The Adventures Of Jimmy Neutron Boy Genius - Attack Of The Twonkies",
     "stem": "The Adventures of Jimmy Neutron Boy Genius - Attack of the Twonkies",
@@ -36,5 +36,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-attack-of-the-twonkies_202602/The%20Adventures%20of%20Jimmy%20Neutron%20Boy%20Genius%20-%20Attack%20of%20the%20Twonkies.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

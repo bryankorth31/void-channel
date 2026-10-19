@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T05:57:24.800Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "snowed-inn-christmas-2017-christmas-lifetime",
     "itemTitle": "Snowed Inn Christmas (2017 +++++ Christmas, LIFETIME)",
     "stem": "Snowed Inn Christmas (2017 +++++ Christmas, LIFETIME)",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "mickeys-magical-christmas-snowed-in-at-the-house-of-mouse-2001-vhs",
       "itemTitle": "Mickey's Magical Christmas: Snowed in at the House of Mouse (2001) VHS",
       "stem": "Mickey's Magical Christmas - Snowed In at the House of Mouse (2001 VHS)",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/mickeys-magical-christmas-snowed-in-at-the-house-of-mouse-2001-vhs/Mickey's%20Magical%20Christmas%20-%20Snowed%20In%20at%20the%20House%20of%20Mouse%20(2001%20VHS).mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "mickeys-magical-christmas-snowed-in-at-the-house-of-mouse_202512",
       "itemTitle": "Mickey's Magical Christmas Snowed in at the House of Mouse",
       "stem": "Mickey's Magical Christmas Snowed in at the House of Mouse",
@@ -62,5 +62,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/mickeys-magical-christmas-snowed-in-at-the-house-of-mouse_202512/Mickey's%20Magical%20Christmas%20Snowed%20in%20at%20the%20House%20of%20Mouse.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

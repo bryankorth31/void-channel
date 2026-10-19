@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T14:11:34.711Z",
   "archiveMentions": 94,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "star.-trek.-voyager.-s-01-e-01.-caretaker",
     "itemTitle": "Star. Trek. Voyager. S 01 E 01. Caretaker",
     "stem": "Star.Trek.Voyager.S01E01.Caretaker",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "star.-trek.-voyager.-s-01-e-01.-caretaker",
       "itemTitle": "Star. Trek. Voyager. S 01 E 01. Caretaker",
       "stem": "Star.Trek.Voyager.S05E15.Dark.Frontier",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/star.-trek.-voyager.-s-01-e-01.-caretaker/Star.Trek.Voyager.S05E15.Dark.Frontier.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "star.-trek.-voyager.-s-01-e-01.-caretaker",
       "itemTitle": "Star. Trek. Voyager. S 01 E 01. Caretaker",
       "stem": "Star.Trek.Voyager.S07E24.Endgame",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/star.-trek.-voyager.-s-01-e-01.-caretaker/Star.Trek.Voyager.S07E24.Endgame.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "star.-trek.-voyager.-s-01-e-01.-caretaker",
       "itemTitle": "Star. Trek. Voyager. S 01 E 01. Caretaker",
       "stem": "Star.Trek.Voyager.S07E09.Flesh.And.Blood",
@@ -74,5 +74,9 @@
       "fileSim": 0.18181818181818182,
       "url": "https://archive.org/download/star.-trek.-voyager.-s-01-e-01.-caretaker/Star.Trek.Voyager.S07E09.Flesh.And.Blood.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

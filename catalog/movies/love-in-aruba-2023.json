@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T14:22:39.875Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "love-in-aruba",
     "itemTitle": "Love in aruba",
     "stem": "hd_no_mpl",
@@ -33,5 +33,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/love-in-aruba/hd_no_mpl.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

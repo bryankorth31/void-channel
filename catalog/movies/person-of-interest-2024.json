@@ -17,49 +17,11 @@
   "huntedAt": "2026-10-15T14:04:11.184Z",
   "archiveMentions": 57,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "rs21pa-A_Person_of_Interest_-_Flora_Sherry",
-    "itemTitle": "A Person of Interest: Flora Sherry",
-    "stem": "A_Person_of_Interest_-_Flora_Sherry",
-    "file": "A_Person_of_Interest_-_Flora_Sherry.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 2043,
-    "sizeMB": 199,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/rs21pa-A_Person_of_Interest_-_Flora_Sherry/A_Person_of_Interest_-_Flora_Sherry.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "rs21pa-A_Person_of_Interest_-_Tattoo_Artist_J._Trip",
-      "itemTitle": "A Person of Interest: Tattoo Artist J. Trip",
-      "stem": "A_Person_of_Interest_-_Tattoo_Artist_J._Trip",
-      "file": "A_Person_of_Interest_-_Tattoo_Artist_J._Trip.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 1964,
-      "sizeMB": 192,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/rs21pa-A_Person_of_Interest_-_Tattoo_Artist_J._Trip/A_Person_of_Interest_-_Tattoo_Artist_J._Trip.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "rs21pa-A_Person_of_Interest_-_Fr._Jeremy_Hiers_O.S.A.",
-      "itemTitle": "A Person of Interest - Fr. Jeremy Hiers, O.S.A.",
-      "stem": "A_Person_of_Interest_-_Fr._Jeremy_Hiers_O.S.A.",
-      "file": "A_Person_of_Interest_-_Fr._Jeremy_Hiers_O.S.A..mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 1873,
-      "sizeMB": 183,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/rs21pa-A_Person_of_Interest_-_Fr._Jeremy_Hiers_O.S.A./A_Person_of_Interest_-_Fr._Jeremy_Hiers_O.S.A..mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

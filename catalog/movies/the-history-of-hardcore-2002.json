@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T12:47:46.548Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-history-of-hardcore_202601",
     "itemTitle": "The History Of Hardcore",
     "stem": "The History Of Hardcore",
@@ -31,5 +31,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/the-history-of-hardcore_202601/The%20History%20Of%20Hardcore.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

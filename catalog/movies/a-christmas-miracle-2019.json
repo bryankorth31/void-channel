@@ -16,35 +16,24 @@
   "huntedAt": "2026-10-14T14:07:34.132Z",
   "archiveMentions": 70,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "dgsvga-Miracle_on_Main_Street_Christmas_Parade_and_Tree_Lighting",
-    "itemTitle": "Miracle on Main Street Christmas Parade and Tree Lighting",
-    "stem": "Miracle_on_Main_Street_Christmas_Parade_and_Tree_Lighting",
-    "file": "Miracle_on_Main_Street_Christmas_Parade_and_Tree_Lighting.mp4",
-    "format": "h.264",
+    "conf": 0.7,
+    "item": "miracle-on-highway-34-2020-christmas-drama",
+    "itemTitle": "Miracle On Highway 34 (2020 +++++ Christmas, Drama)",
+    "stem": "Miracle on Highway 34 (2020 Christmas, Drama)",
+    "file": "Miracle on Highway 34 (2020 Christmas, Drama).mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 4195,
-    "sizeMB": 406,
+    "seconds": 4283,
+    "sizeMB": 187,
     "band": "match",
     "fileSim": 0.95,
-    "url": "https://archive.org/download/dgsvga-Miracle_on_Main_Street_Christmas_Parade_and_Tree_Lighting/Miracle_on_Main_Street_Christmas_Parade_and_Tree_Lighting.mp4"
+    "url": "https://archive.org/download/miracle-on-highway-34-2020-christmas-drama/Miracle%20on%20Highway%2034%20(2020%20Christmas%2C%20Drama).mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "miracle-on-highway-34-2020-christmas-drama",
-      "itemTitle": "Miracle On Highway 34 (2020 +++++ Christmas, Drama)",
-      "stem": "Miracle on Highway 34 (2020 Christmas, Drama)",
-      "file": "Miracle on Highway 34 (2020 Christmas, Drama).mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4283,
-      "sizeMB": 187,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/miracle-on-highway-34-2020-christmas-drama/Miracle%20on%20Highway%2034%20(2020%20Christmas%2C%20Drama).mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

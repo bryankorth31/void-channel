@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T17:03:13.433Z",
   "archiveMentions": 88,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "AllonsanfandeiFratelliTavianiconMarcelloMastroianniLeaMassari1974",
     "itemTitle": "Allonsanfan (dei Fratelli Taviani,con Marcello Mastroianni, Lea Massari, 1974)",
     "stem": "Allonsanfan (dei fratelli Taviani,con Marcello Mastroianni,Lea Massari,1974)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/AllonsanfandeiFratelliTavianiconMarcelloMastroianniLeaMassari1974/Allonsanfan%20(dei%20fratelli%20Taviani%2Ccon%20Marcello%20Mastroianni%2CLea%20Massari%2C1974).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

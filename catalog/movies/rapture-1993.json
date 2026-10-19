@@ -16,50 +16,22 @@
   "huntedAt": "2026-10-15T06:48:44.951Z",
   "archiveMentions": 294,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "EndTimesRaptureClassicsdramatized",
-    "itemTitle": "End Times Rapture Classics (Dramatized)",
-    "stem": "EarlyWarning1981",
-    "file": "EarlyWarning1981.m4v",
+    "conf": 0.84,
+    "item": "rapture-1965",
+    "itemTitle": "Rapture (1965)",
+    "stem": "Dean Stockwell's performance in Rapture (1965)",
+    "file": "Dean Stockwell's performance in Rapture (1965).mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 5163,
-    "sizeMB": 1388,
+    "seconds": 6255,
+    "sizeMB": 660,
     "band": "match",
-    "fileSim": 0,
-    "url": "https://archive.org/download/EndTimesRaptureClassicsdramatized/EarlyWarning1981.m4v"
+    "fileSim": 0.95,
+    "url": "https://archive.org/download/rapture-1965/Dean%20Stockwell's%20performance%20in%20Rapture%20(1965).mp4"
   },
   "alternates": [
-    {
-      "conf": 0.85,
-      "item": "EndTimesRaptureClassicsdramatized",
-      "itemTitle": "End Times Rapture Classics (Dramatized)",
-      "stem": "YearsOfTheBeast1981",
-      "file": "YearsOfTheBeast1981.m4v",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6156,
-      "sizeMB": 1259,
-      "band": "match",
-      "fileSim": 0,
-      "url": "https://archive.org/download/EndTimesRaptureClassicsdramatized/YearsOfTheBeast1981.m4v"
-    },
-    {
-      "conf": 0.85,
-      "item": "rapture-1965",
-      "itemTitle": "Rapture (1965)",
-      "stem": "Dean Stockwell's performance in Rapture (1965)",
-      "file": "Dean Stockwell's performance in Rapture (1965).mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6255,
-      "sizeMB": 660,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/rapture-1965/Dean%20Stockwell's%20performance%20in%20Rapture%20(1965).mp4"
-    },
     {
       "conf": 0.75,
       "item": "Rapture_1993_TV_Movie_UPN33_WOC_2000-09",
@@ -73,6 +45,38 @@
       "band": "near",
       "fileSim": 0.95,
       "url": "https://archive.org/download/Rapture_1993_TV_Movie_UPN33_WOC_2000-09/Rapture_1993_TV_Movie_UPN33_WOC_2000-09.mp4"
+    },
+    {
+      "conf": 0.7,
+      "item": "EndTimesRaptureClassicsdramatized",
+      "itemTitle": "End Times Rapture Classics (Dramatized)",
+      "stem": "EarlyWarning1981",
+      "file": "EarlyWarning1981.m4v",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 5163,
+      "sizeMB": 1388,
+      "band": "match",
+      "fileSim": 0,
+      "url": "https://archive.org/download/EndTimesRaptureClassicsdramatized/EarlyWarning1981.m4v"
+    },
+    {
+      "conf": 0.7,
+      "item": "EndTimesRaptureClassicsdramatized",
+      "itemTitle": "End Times Rapture Classics (Dramatized)",
+      "stem": "YearsOfTheBeast1981",
+      "file": "YearsOfTheBeast1981.m4v",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 6156,
+      "sizeMB": 1259,
+      "band": "match",
+      "fileSim": 0,
+      "url": "https://archive.org/download/EndTimesRaptureClassicsdramatized/YearsOfTheBeast1981.m4v"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1993)"
+  }
 }

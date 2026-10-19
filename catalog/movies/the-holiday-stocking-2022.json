@@ -18,35 +18,11 @@
   "huntedAt": "2026-10-15T00:38:13.120Z",
   "archiveMentions": 17,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "psdco-Holiday_Stocking_2023",
-    "itemTitle": "Holiday Stocking 2023",
-    "stem": "Holiday_Stocking_2023",
-    "file": "Holiday_Stocking_2023.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5759,
-    "sizeMB": 558,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/psdco-Holiday_Stocking_2023/Holiday_Stocking_2023.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "psdco-Holiday_Stocking_2021_-_Live_from_the_Lincoln_Center",
-      "itemTitle": "Holiday Stocking 2021: Live from the Lincoln Center",
-      "stem": "Holiday_Stocking_2021_-_Live_from_the_Lincoln_Center",
-      "file": "Holiday_Stocking_2021_-_Live_from_the_Lincoln_Center.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 6800,
-      "sizeMB": 643,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/psdco-Holiday_Stocking_2021_-_Live_from_the_Lincoln_Center/Holiday_Stocking_2021_-_Live_from_the_Lincoln_Center.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

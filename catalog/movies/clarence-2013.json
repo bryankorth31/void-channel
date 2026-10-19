@@ -18,20 +18,11 @@
   "huntedAt": "2026-10-15T10:29:24.403Z",
   "archiveMentions": 282,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "734038",
-    "itemTitle": "Clarence Darrow and the Death of the American Trial",
-    "stem": "734038",
-    "file": "734038.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3215,
-    "sizeMB": 338,
-    "band": "short",
-    "fileSim": 0,
-    "url": "https://archive.org/download/734038/734038.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

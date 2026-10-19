@@ -16,38 +16,24 @@
   "huntedAt": "2026-10-14T16:18:27.337Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "dirtypictures-2002",
-    "itemTitle": "Reality Shaping History of a Performance Artist in Dirty Pictures (NSFW)",
-    "stem": "dirtypictures-june2002",
-    "file": "dirtypictures-june2002.mp4",
+    "conf": 0.84,
+    "item": "dirty.-pictures.-2010.720p.-bluray.-dts.x-264-ptp",
+    "itemTitle": "Dirty. Pictures. 2010.720p. Bluray. DTS.x 264 PTP",
+    "stem": "Grasp The Nettle (Full Movie)-SD",
+    "file": "Grasp The Nettle (Full Movie)-SD.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 5636,
-    "sizeMB": 1895,
+    "seconds": 5372,
+    "sizeMB": 579,
     "band": "match",
-    "fileSim": 0.75,
-    "url": "https://archive.org/download/dirtypictures-2002/dirtypictures-june2002.mp4"
+    "fileSim": 0,
+    "url": "https://archive.org/download/dirty.-pictures.-2010.720p.-bluray.-dts.x-264-ptp/Grasp%20The%20Nettle%20(Full%20Movie)-SD.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "dirty.-pictures.-2010.720p.-bluray.-dts.x-264-ptp",
-      "itemTitle": "Dirty. Pictures. 2010.720p. Bluray. DTS.x 264 PTP",
-      "stem": "Grasp The Nettle (Full Movie)-SD",
-      "file": "Grasp The Nettle (Full Movie)-SD.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5372,
-      "sizeMB": 579,
-      "band": "match",
-      "fileSim": 0,
-      "url": "https://archive.org/download/dirty.-pictures.-2010.720p.-bluray.-dts.x-264-ptp/Grasp%20The%20Nettle%20(Full%20Movie)-SD.mp4"
-    },
-    {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "dirty.-pictures.-2010.720p.-bluray.-dts.x-264-ptp",
       "itemTitle": "Dirty. Pictures. 2010.720p. Bluray. DTS.x 264 PTP",
       "stem": "Earth [2007]",
@@ -61,7 +47,7 @@
       "url": "https://archive.org/download/dirty.-pictures.-2010.720p.-bluray.-dts.x-264-ptp/Earth%20%5B2007%5D.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "dirty.-pictures.-2010.720p.-bluray.-dts.x-264-ptp",
       "itemTitle": "Dirty. Pictures. 2010.720p. Bluray. DTS.x 264 PTP",
       "stem": "Evilness of Power-SD",
@@ -73,6 +59,24 @@
       "band": "match",
       "fileSim": 0.07692307692307693,
       "url": "https://archive.org/download/dirty.-pictures.-2010.720p.-bluray.-dts.x-264-ptp/Evilness%20of%20Power-SD.mp4"
+    },
+    {
+      "conf": 0.7,
+      "item": "dirtypictures-2002",
+      "itemTitle": "Reality Shaping History of a Performance Artist in Dirty Pictures (NSFW)",
+      "stem": "dirtypictures-june2002",
+      "file": "dirtypictures-june2002.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 5636,
+      "sizeMB": 1895,
+      "band": "match",
+      "fileSim": 0.75,
+      "url": "https://archive.org/download/dirtypictures-2002/dirtypictures-june2002.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2000)"
+  }
 }

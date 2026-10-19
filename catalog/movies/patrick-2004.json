@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T10:06:52.981Z",
   "archiveMentions": 292,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "BabyFace_201501",
     "itemTitle": "Patrick Landeza",
     "stem": "SJDisplay19541957",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "BabyFace_201501",
       "itemTitle": "Patrick Landeza",
       "stem": "Dangerous1947",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/BabyFace_201501/Dangerous1947.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "BabyFace_201501",
       "itemTitle": "Patrick Landeza",
       "stem": "zMuseum1940",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/BabyFace_201501/zMuseum1940.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "00PL4",
       "itemTitle": "Patrick Landeza - 10",
       "stem": "331Denominator",
@@ -76,5 +76,9 @@
       "fileSim": 0.10526315789473684,
       "url": "https://archive.org/download/00PL4/331Denominator.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

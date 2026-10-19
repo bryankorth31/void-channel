@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T09:57:27.861Z",
   "archiveMentions": 256,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "rolls-royce-baby",
     "itemTitle": "Rolls Royce Baby (1975)",
     "stem": "Rolls-Royce Baby",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "xvideos-vintage-erotic-film-rolls-royce-1975-360p",
       "itemTitle": "Rolls Royce 1975",
       "stem": "Xvideos_vintage_erotic_film_rolls_royce_1975__360p",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/xvideos-vintage-erotic-film-rolls-royce-1975-360p/Xvideos_vintage_erotic_film_rolls_royce_1975__360p.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

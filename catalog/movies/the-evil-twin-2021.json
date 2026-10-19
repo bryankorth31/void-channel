@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T23:06:27.209Z",
   "archiveMentions": 53,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "twin-female-aka-pure-evil-is-in-travail-about-to-birth",
     "itemTitle": "TWIN FEMALE Aka ( Pure Evil) Is In Travail About To BIRTH",
     "stem": "TWIN FEMALE aka (Pure Evil) is in Travail about to BIRTH",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/twin-female-aka-pure-evil-is-in-travail-about-to-birth/TWIN%20FEMALE%20aka%20(Pure%20Evil)%20is%20in%20Travail%20about%20to%20BIRTH.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

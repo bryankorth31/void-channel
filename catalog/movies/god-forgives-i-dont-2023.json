@@ -17,35 +17,39 @@
   "huntedAt": "2026-10-15T13:57:26.746Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "BudSpencerTerenceHill1967GodForgivesIDontRidAldrigEnsam",
-    "itemTitle": "Bud Spencer& Terence Hill 1967 God Forgives I Dont Rid Aldrig Ensam",
-    "stem": "BudSpencer&TerenceHill_1967-GodForgivesIDont_RidAldrigEnsam",
-    "file": "BudSpencer&TerenceHill_1967-GodForgivesIDont_RidAldrigEnsam.mp4",
+    "conf": 0.84,
+    "item": "god-forgives-i-dont-1967",
+    "itemTitle": "God Forgives... I Don't! 1967 ★★★ Eng. Version [1:47:49] Spaghetti Western",
+    "stem": "God Forgives I Don't 1967",
+    "file": "God Forgives I Don't 1967.mp4",
     "format": "MPEG4",
     "playable": true,
     "seconds": 6469,
-    "sizeMB": 2845,
+    "sizeMB": 1082,
     "band": "match",
-    "fileSim": 0.4918032786885246,
-    "url": "https://archive.org/download/BudSpencerTerenceHill1967GodForgivesIDontRidAldrigEnsam/BudSpencer%26TerenceHill_1967-GodForgivesIDont_RidAldrigEnsam.mp4"
+    "fileSim": 1,
+    "url": "https://archive.org/download/god-forgives-i-dont-1967/God%20Forgives%20I%20Don't%201967.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "god-forgives-i-dont-1967",
-      "itemTitle": "God Forgives... I Don't! 1967 ★★★ Eng. Version [1:47:49] Spaghetti Western",
-      "stem": "God Forgives I Don't 1967",
-      "file": "God Forgives I Don't 1967.mp4",
+      "conf": 0.7,
+      "item": "BudSpencerTerenceHill1967GodForgivesIDontRidAldrigEnsam",
+      "itemTitle": "Bud Spencer& Terence Hill 1967 God Forgives I Dont Rid Aldrig Ensam",
+      "stem": "BudSpencer&TerenceHill_1967-GodForgivesIDont_RidAldrigEnsam",
+      "file": "BudSpencer&TerenceHill_1967-GodForgivesIDont_RidAldrigEnsam.mp4",
       "format": "MPEG4",
       "playable": true,
       "seconds": 6469,
-      "sizeMB": 1082,
+      "sizeMB": 2845,
       "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/god-forgives-i-dont-1967/God%20Forgives%20I%20Don't%201967.mp4"
+      "fileSim": 0.4918032786885246,
+      "url": "https://archive.org/download/BudSpencerTerenceHill1967GodForgivesIDontRidAldrigEnsam/BudSpencer%26TerenceHill_1967-GodForgivesIDont_RidAldrigEnsam.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2023)"
+  }
 }

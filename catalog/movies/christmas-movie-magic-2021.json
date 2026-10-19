@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T12:02:45.526Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "OneMagicChristmas",
     "itemTitle": "One Magic Christmas",
     "stem": "one magic christmas",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "christmas-crush-2019-christmas-com-rom-magic-ion",
       "itemTitle": "Christmas Crush (2019 Christmas, Com Rom, Magic, ION)",
       "stem": "Christmas Crush (2019 Christmas, ComRom, Magic, ION)",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/christmas-crush-2019-christmas-com-rom-magic-ion/Christmas%20Crush%20(2019%20Christmas%2C%20ComRom%2C%20Magic%2C%20ION).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "my-santa-2019-christmas-ion",
       "itemTitle": "My Santa (2019 Christmas, ComRom, Magic, ION)",
       "stem": "My Santa (2019 Christmas@ION)",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/my-santa-2019-christmas-ion/My%20Santa%20(2019%20Christmas%40ION).mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "one-magic-christmas-phl-17-broadcast-december-1997-with-commercials",
       "itemTitle": "One Magic Christmas PHL 17 Broadcast December 1992 With Commercials",
       "stem": "One Magic Christmas PHL17 Broadcast December 1997 with Commercials",
@@ -75,5 +75,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/one-magic-christmas-phl-17-broadcast-december-1997-with-commercials/One%20Magic%20Christmas%20PHL17%20Broadcast%20December%201997%20with%20Commercials.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

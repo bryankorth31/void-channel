@@ -20,47 +20,19 @@
   "state": "LIVE",
   "file": {
     "conf": 0.85,
-    "item": "rec-20231117041024",
-    "itemTitle": "Dr. Jekyll and Mr. Hyde (1920)",
-    "stem": "Dr. Jekyll and Mr",
-    "file": "Dr. Jekyll and Mr. Hyde.ia.mp4",
-    "format": "h.264 IA",
+    "item": "DrJekyllandMrHyde",
+    "itemTitle": "Dr. Jekyll and Mr. Hyde",
+    "stem": "DrJekyllandMrHyde_512kb",
+    "file": "DrJekyllandMrHyde_512kb.mp4",
+    "format": "512Kb MPEG4",
     "playable": true,
-    "seconds": 4934,
-    "sizeMB": 2388,
+    "seconds": 4920,
+    "sizeMB": 357,
     "band": "match",
-    "fileSim": 0.8571428571428571,
-    "url": "https://archive.org/download/rec-20231117041024/Dr.%20Jekyll%20and%20Mr.%20Hyde.ia.mp4"
+    "fileSim": 0.8648648648648649,
+    "url": "https://archive.org/download/DrJekyllandMrHyde/DrJekyllandMrHyde_512kb.mp4"
   },
   "alternates": [
-    {
-      "conf": 0.85,
-      "item": "rec-20231117041024",
-      "itemTitle": "Dr. Jekyll and Mr. Hyde (1920)",
-      "stem": "Dr. Jekyll and Mr. Hyde",
-      "file": "Dr. Jekyll and Mr. Hyde.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4934,
-      "sizeMB": 2388,
-      "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/rec-20231117041024/Dr.%20Jekyll%20and%20Mr.%20Hyde.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "DrJekyllandMrHyde",
-      "itemTitle": "Dr. Jekyll and Mr. Hyde",
-      "stem": "DrJekyllandMrHyde_512kb",
-      "file": "DrJekyllandMrHyde_512kb.mp4",
-      "format": "512Kb MPEG4",
-      "playable": true,
-      "seconds": 4920,
-      "sizeMB": 357,
-      "band": "match",
-      "fileSim": 0.8648648648648649,
-      "url": "https://archive.org/download/DrJekyllandMrHyde/DrJekyllandMrHyde_512kb.mp4"
-    },
     {
       "conf": 0.85,
       "item": "DrJekyllandMrHyde",
@@ -74,6 +46,34 @@
       "band": "match",
       "fileSim": 1,
       "url": "https://archive.org/download/DrJekyllandMrHyde/DrJekyllandMrHyde.ogv"
+    },
+    {
+      "conf": 0.84,
+      "item": "rec-20231117041024",
+      "itemTitle": "Dr. Jekyll and Mr. Hyde (1920)",
+      "stem": "Dr. Jekyll and Mr",
+      "file": "Dr. Jekyll and Mr. Hyde.ia.mp4",
+      "format": "h.264 IA",
+      "playable": true,
+      "seconds": 4934,
+      "sizeMB": 2388,
+      "band": "match",
+      "fileSim": 0.8571428571428571,
+      "url": "https://archive.org/download/rec-20231117041024/Dr.%20Jekyll%20and%20Mr.%20Hyde.ia.mp4"
+    },
+    {
+      "conf": 0.84,
+      "item": "rec-20231117041024",
+      "itemTitle": "Dr. Jekyll and Mr. Hyde (1920)",
+      "stem": "Dr. Jekyll and Mr. Hyde",
+      "file": "Dr. Jekyll and Mr. Hyde.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 4934,
+      "sizeMB": 2388,
+      "band": "match",
+      "fileSim": 1,
+      "url": "https://archive.org/download/rec-20231117041024/Dr.%20Jekyll%20and%20Mr.%20Hyde.mp4"
     }
   ]
 }

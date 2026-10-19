@@ -18,38 +18,24 @@
   "huntedAt": "2026-10-13T23:27:30.158Z",
   "archiveMentions": 285,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "669TheCrossing",
-    "itemTitle": "The Crossing",
-    "stem": "669 - The Crossing",
-    "file": "669 - The Crossing.mp4",
-    "format": "MPEG4",
+    "conf": 0.7,
+    "item": "1954GHOSTCATPFOUMACROSSING",
+    "itemTitle": "1954 GHOST CAT OF OUMA CROSSING",
+    "stem": "1954  GHOST CAT PF OUMA CROSSING",
+    "file": "1954  GHOST CAT PF OUMA CROSSING.mp4",
+    "format": "h.264",
     "playable": true,
-    "seconds": 4765,
-    "sizeMB": 1899,
+    "seconds": 4953,
+    "sizeMB": 513,
     "band": "match",
     "fileSim": 0.95,
-    "url": "https://archive.org/download/669TheCrossing/669%20-%20The%20Crossing.mp4"
+    "url": "https://archive.org/download/1954GHOSTCATPFOUMACROSSING/1954%20%20GHOST%20CAT%20PF%20OUMA%20CROSSING.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "1954GHOSTCATPFOUMACROSSING",
-      "itemTitle": "1954 GHOST CAT OF OUMA CROSSING",
-      "stem": "1954  GHOST CAT PF OUMA CROSSING",
-      "file": "1954  GHOST CAT PF OUMA CROSSING.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4953,
-      "sizeMB": 513,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/1954GHOSTCATPFOUMACROSSING/1954%20%20GHOST%20CAT%20PF%20OUMA%20CROSSING.mp4"
-    },
-    {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "20001015am-spiritual-olympics-pt5",
       "itemTitle": "Spiritual Olympics: Crossing The Finish Line (Gary Colville) | Hosanna Porirua",
       "stem": "20001015am Spiritual Olympics Crossing The Finish Line FULL",
@@ -61,20 +47,10 @@
       "band": "near",
       "fileSim": 0.95,
       "url": "https://archive.org/download/20001015am-spiritual-olympics-pt5/20001015am%20Spiritual%20Olympics%20Crossing%20The%20Finish%20Line%20FULL.mp4"
-    },
-    {
-      "conf": 0.5,
-      "item": "AnimalCrossingLatino_201811",
-      "itemTitle": "Animal Crossing Latino",
-      "stem": "subid0_para_5tre4ming_A85/Animal Crossing Latino",
-      "file": "subid0_para_5tre4ming_A85/Animal Crossing Latino.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5263,
-      "sizeMB": 599,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/AnimalCrossingLatino_201811/subid0_para_5tre4ming_A85%2FAnimal%20Crossing%20Latino.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

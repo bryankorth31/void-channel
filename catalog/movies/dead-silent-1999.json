@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T19:47:18.312Z",
   "archiveMentions": 21,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "silent.-hill.-revelation.-2012.1080p.-blu-ray.-egy-dead.-co-m",
     "itemTitle": "Silent. Hill. Revelation. 2012.1080p. Blu Ray. Egy Dead. Co M",
     "stem": "Silent.Hill.Revelation.2012.1080p.BluRay.EgyDead.CoM",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "return.-to.-silent.-hill.-2026.1080p.-hdrip.-egy-dead.-co-m",
       "itemTitle": "Return. To. Silent. Hill. 2026.1080p. HDRip. Egy Dead. Co M",
       "stem": "Return.To.Silent.Hill.2026.1080p.HDRip.EgyDead.CoM",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/return.-to.-silent.-hill.-2026.1080p.-hdrip.-egy-dead.-co-m/Return.To.Silent.Hill.2026.1080p.HDRip.EgyDead.CoM.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "silent.-hill.-2006.1080p.-blu-ray.-egy-dead.-co-m",
       "itemTitle": "Silent. Hill. 2006.1080p. Blu Ray. Egy Dead. Co M",
       "stem": "Silent.Hill.2006.1080p.BluRay.EgyDead.CoM",
@@ -61,5 +61,9 @@
       "fileSim": 0.6153846153846154,
       "url": "https://archive.org/download/silent.-hill.-2006.1080p.-blu-ray.-egy-dead.-co-m/Silent.Hill.2006.1080p.BluRay.EgyDead.CoM.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -15,9 +15,9 @@
   "huntedAt": "2026-10-15T11:44:25.190Z",
   "archiveMentions": 292,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "1x-01-pilot_202508",
     "itemTitle": "American Dreams (2002-2005)",
     "stem": "3x09 - Tidings of Comfort and Joy",
@@ -32,7 +32,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "1x-01-pilot_202508",
       "itemTitle": "American Dreams (2002-2005)",
       "stem": "1x21 - Fear Itself",
@@ -46,7 +46,7 @@
       "url": "https://archive.org/download/1x-01-pilot_202508/1x21%20-%20Fear%20Itself.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "1x-01-pilot_202508",
       "itemTitle": "American Dreams (2002-2005)",
       "stem": "1x01 - Pilot",
@@ -60,7 +60,7 @@
       "url": "https://archive.org/download/1x-01-pilot_202508/1x01%20-%20Pilot.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "1x-01-pilot_202508",
       "itemTitle": "American Dreams (2002-2005)",
       "stem": "1x19 - Where the Boys Are",
@@ -73,5 +73,9 @@
       "fileSim": 0.08695652173913043,
       "url": "https://archive.org/download/1x-01-pilot_202508/1x19%20-%20Where%20the%20Boys%20Are.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

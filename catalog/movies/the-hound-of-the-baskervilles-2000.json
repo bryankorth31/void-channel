@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T05:01:16.579Z",
   "archiveMentions": 42,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-hound-of-the-baskervilles_20210718",
     "itemTitle": "The Hound of the Baskervilles",
     "stem": "The Hound of the Baskervilles",
@@ -36,7 +36,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the.-hound.-of.-the.-baskervilles.-1939",
       "itemTitle": "The Hound of the Baskervilles (1939)",
       "stem": "The Hound Of The Baskervilles (1939)/mp4/The.Hound.Of.The.Baskervilles.1939",
@@ -50,7 +50,7 @@
       "url": "https://archive.org/download/the.-hound.-of.-the.-baskervilles.-1939/The%20Hound%20Of%20The%20Baskervilles%20(1939)%2Fmp4%2FThe.Hound.Of.The.Baskervilles.1939.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-hound-of-the-baskervilles-1939",
       "itemTitle": "The Hound of the Baskervilles (1939)",
       "stem": "The Hound of the Baskervilles (1939)",
@@ -64,7 +64,7 @@
       "url": "https://archive.org/download/the-hound-of-the-baskervilles-1939/The%20Hound%20of%20the%20Baskervilles%20(1939).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-hound-of-the-baskervilles_202407",
       "itemTitle": "The Hound Of The Baskervilles",
       "stem": "The Hound of The Baskervilles",
@@ -77,5 +77,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/the-hound-of-the-baskervilles_202407/The%20Hound%20of%20The%20Baskervilles.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

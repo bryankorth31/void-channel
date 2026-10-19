@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T12:07:56.905Z",
   "archiveMentions": 285,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "2024-01-25-18-43-15",
     "itemTitle": "2023 MOTOGP CHAMPIONSHIP ROUND 20 SPAIN (FULL RACE)",
     "stem": "2024-01-25 18-43-15",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.95,
+      "conf": 0.8,
       "item": "2024-01-26-20-39-59",
       "itemTitle": "2023 FORMULA ONE GRAND PRIX OF SUADIA ARABIA ROUND 2 (FULL RACE)",
       "stem": "2024-01-26 20-39-59",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/2024-01-26-20-39-59/2024-01-26%2020-39-59.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "20230127-embr-live-minecraft-beaconators-applying-random-potion-effects-every-ro",
       "itemTitle": "20230127 EmbrLive_ [Minecraft Beaconators] Applying Random Potion Effects Every Round!! !team !discord !charity !cape",
       "stem": "20230127 EmbrLive_ [Minecraft Beaconators] Applying random potion effects every round!! !team !discord !charity !cape",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/20230127-embr-live-minecraft-beaconators-applying-random-potion-effects-every-ro/20230127%20EmbrLive_%20%5BMinecraft%20Beaconators%5D%20Applying%20random%20potion%20effects%20every%20round!!%20!team%20!discord%20!charity%20!cape.mp4"
     },
     {
-      "conf": 0.75,
+      "conf": 0.6,
       "item": "2024-01-25-15-51-39",
       "itemTitle": "2023 FORMULA ONE GRAND PRIX OF LAS VEGAS ROUND 21 (FULLRACE)",
       "stem": "2024-01-25 15-51-39",
@@ -76,5 +76,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/2024-01-25-15-51-39/2024-01-25%2015-51-39.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

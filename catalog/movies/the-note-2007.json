@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T17:32:25.450Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "00002_20250923",
     "itemTitle": "[BDMV] Death Note (USA) Blu-ray BOX",
     "stem": "[BDMV] Death Note (USA Version) Blu-ray BOX [160301]/DISC6/BDMV/STREAM/00013",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/00002_20250923/%5BBDMV%5D%20Death%20Note%20(USA%20Version)%20Blu-ray%20BOX%20%5B160301%5D%2FDISC6%2FBDMV%2FSTREAM%2F00013.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

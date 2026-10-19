@@ -17,63 +17,11 @@
   "huntedAt": "2026-10-14T02:21:57.600Z",
   "archiveMentions": 14,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "CSPAN2_20200327_024100_Peter_Andreas_Killer_High",
-    "itemTitle": "Peter Andreas, \"Killer High\" : CSPAN2 : March 26, 2020 10:41pm-12:06am EDT",
-    "stem": "CSPAN2_20200327_024100_Peter_Andreas_Killer_High",
-    "file": "CSPAN2_20200327_024100_Peter_Andreas_Killer_High.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5103,
-    "sizeMB": 530,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN2_20200327_024100_Peter_Andreas_Killer_High/CSPAN2_20200327_024100_Peter_Andreas_Killer_High.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "CSPAN2_20200428_003000_Peter_Andreas_Killer_High",
-      "itemTitle": "Peter Andreas, \"Killer High\" : CSPAN2 : April 27, 2020 8:30pm-9:54pm EDT",
-      "stem": "CSPAN2_20200428_003000_Peter_Andreas_Killer_High",
-      "file": "CSPAN2_20200428_003000_Peter_Andreas_Killer_High.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5041,
-      "sizeMB": 524,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN2_20200428_003000_Peter_Andreas_Killer_High/CSPAN2_20200428_003000_Peter_Andreas_Killer_High.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "CSPAN2_20200428_060300_Peter_Andreas_Killer_High",
-      "itemTitle": "Peter Andreas, \"Killer High\" : CSPAN2 : April 28, 2020 2:03am-3:26am EDT",
-      "stem": "CSPAN2_20200428_060300_Peter_Andreas_Killer_High",
-      "file": "CSPAN2_20200428_060300_Peter_Andreas_Killer_High.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5041,
-      "sizeMB": 523,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN2_20200428_060300_Peter_Andreas_Killer_High/CSPAN2_20200428_060300_Peter_Andreas_Killer_High.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "CSPAN2_20200216_003000_Peter_Andreas_Killer_High",
-      "itemTitle": "Peter Andreas, \"Killer High\" : CSPAN2 : February 15, 2020 7:30pm-8:52pm EST",
-      "stem": "CSPAN2_20200216_003000_Peter_Andreas_Killer_High",
-      "file": "CSPAN2_20200216_003000_Peter_Andreas_Killer_High.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4921,
-      "sizeMB": 512,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN2_20200216_003000_Peter_Andreas_Killer_High/CSPAN2_20200216_003000_Peter_Andreas_Killer_High.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-CSPAN2"
+  }
 }

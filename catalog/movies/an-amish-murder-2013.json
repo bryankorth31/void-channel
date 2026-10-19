@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-13T23:46:32.001Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "plain-truth-2004-amish-mys.-drama-inspired-by-actual-event",
     "itemTitle": "Plain Truth ( 2004 +++++ Amish Murder Mystery) Inspired By Actual Event",
     "stem": "Plain Truth (2004 +++++ Amish Mys",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "plain-truth-2004-amish-mys.-drama-inspired-by-actual-event",
       "itemTitle": "Plain Truth ( 2004 +++++ Amish Murder Mystery) Inspired By Actual Event",
       "stem": "Plain Truth (2004 +++++ Amish Mys.Drama) Inspired by Actual Event",
@@ -48,5 +48,9 @@
       "fileSim": 0.475,
       "url": "https://archive.org/download/plain-truth-2004-amish-mys.-drama-inspired-by-actual-event/Plain%20Truth%20(2004%20%2B%2B%2B%2B%2B%20Amish%20Mys.Drama)%20Inspired%20by%20Actual%20Event.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

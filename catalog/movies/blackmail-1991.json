@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T00:56:59.147Z",
   "archiveMentions": 291,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "blackmail_1929",
     "itemTitle": "Blackmail",
     "stem": "Blackmail - (1929)",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "blackmail-1929-by-alfred-hitchcock",
       "itemTitle": "Blackmail (1929)",
       "stem": "Blackmail.1929.1080p.BluRay.x264-[YTS.LT]",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/blackmail-1929-by-alfred-hitchcock/Blackmail.1929.1080p.BluRay.x264-%5BYTS.LT%5D.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "blackmail-1929",
       "itemTitle": "Blackmail ( 1929)",
       "stem": "Blackmail (1929)",
@@ -61,5 +61,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/blackmail-1929/Blackmail%20(1929).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1991)"
+  }
 }

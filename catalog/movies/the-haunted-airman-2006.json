@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T07:22:59.592Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "the.-haunted.-airman-paranoya.-2006.-tr.-dv-drip",
     "itemTitle": "The.Haunted.Airman Paranoya.2006.TR.DvDRip",
     "stem": "The.Haunted.Airman Paranoya.2006.TR.DvDRip",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/the.-haunted.-airman-paranoya.-2006.-tr.-dv-drip/The.Haunted.Airman%20Paranoya.2006.TR.DvDRip.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

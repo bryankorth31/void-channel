@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T16:41:26.308Z",
   "archiveMentions": 244,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "orcavt-Betty_St._Laveau_s_House_of_Horror_-_Last_Woman_on_Earth",
-    "itemTitle": "Betty St. Laveau's House of Horror - Last Woman on Earth",
-    "stem": "Betty_St._Laveau_s_House_of_Horror_-_Last_Woman_on_Earth",
-    "file": "Betty_St._Laveau_s_House_of_Horror_-_Last_Woman_on_Earth.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4240,
-    "sizeMB": 442,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/orcavt-Betty_St._Laveau_s_House_of_Horror_-_Last_Woman_on_Earth/Betty_St._Laveau_s_House_of_Horror_-_Last_Woman_on_Earth.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

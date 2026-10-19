@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T00:21:09.241Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "HiddenCrimes",
     "itemTitle": "Hidden crimes",
     "stem": "mp4",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "1986-hidden-crimes-640x-480",
       "itemTitle": "Hidden Crimes",
       "stem": "1986-Hidden-Crimes~640x480",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/1986-hidden-crimes-640x-480/1986-Hidden-Crimes~640x480.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "HiddenCrimes",
       "itemTitle": "Hidden crimes",
       "stem": "mp4_512kb",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/HiddenCrimes/mp4_512kb.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "youtube-TdQvkOFPSMA",
       "itemTitle": "(Hr 1) WORLD TRADE CENTER BOMBING OF 1993 - Hidden Path to 9/11: Crimes, Cover-Ups and Missing Links",
       "stem": "TdQvkOFPSMA",
@@ -76,5 +76,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/youtube-TdQvkOFPSMA/TdQvkOFPSMA.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

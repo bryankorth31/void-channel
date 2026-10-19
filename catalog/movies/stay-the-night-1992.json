@@ -17,49 +17,11 @@
   "huntedAt": "2026-10-15T06:40:51.536Z",
   "archiveMentions": 121,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "Fate_Stay_Night_Walkthrough_HD_PC",
-    "itemTitle": "Fate\\Stay Night Walkthrough HD PC",
-    "stem": "Fate_stay_Night_Walkthrough_part_01_of_65_HD_PC_Full_Prologue.mkv",
-    "file": "Fate_stay_Night_Walkthrough_part_01_of_65_HD_PC_Full_Prologue.mkv.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 12055,
-    "sizeMB": 1104,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Fate_Stay_Night_Walkthrough_HD_PC/Fate_stay_Night_Walkthrough_part_01_of_65_HD_PC_Full_Prologue.mkv.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "Fate_Stay_Night_Walkthrough_HD_PC",
-      "itemTitle": "Fate\\Stay Night Walkthrough HD PC",
-      "stem": "Fate_stay_Night_Walkthrough_part_11_of_65_HD_PC_Fate_Route",
-      "file": "Fate_stay_Night_Walkthrough_part_11_of_65_HD_PC_Fate_Route.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 9079,
-      "sizeMB": 869,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Fate_Stay_Night_Walkthrough_HD_PC/Fate_stay_Night_Walkthrough_part_11_of_65_HD_PC_Fate_Route.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "Fate_Stay_Night_Walkthrough_HD_PC",
-      "itemTitle": "Fate\\Stay Night Walkthrough HD PC",
-      "stem": "Fate_stay_Night_Walkthrough_part_36_of_65_HD_PC_UBW_Route",
-      "file": "Fate_stay_Night_Walkthrough_part_36_of_65_HD_PC_UBW_Route.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 8444,
-      "sizeMB": 739,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Fate_Stay_Night_Walkthrough_HD_PC/Fate_stay_Night_Walkthrough_part_36_of_65_HD_PC_UBW_Route.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); junk word"
+  }
 }

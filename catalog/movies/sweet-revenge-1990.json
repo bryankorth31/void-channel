@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T04:18:32.103Z",
   "archiveMentions": 47,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "sweetrevenge1984tvmovie",
     "itemTitle": "Sweet Revenge (1984 TV Movie)",
     "stem": "Sweet Revenge (1984 TV Movie)",
@@ -47,5 +47,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/sweet.-revenge/Sweet.Revenge.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1990)"
+  }
 }

@@ -17,49 +17,11 @@
   "huntedAt": "2026-10-14T22:56:46.784Z",
   "archiveMentions": 19,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "topeye-topeye-ed8aa93f48fa",
-    "itemTitle": "MFTWmedia_20201220_844464458_The Hope Buss and Santa delivering  Christmas to Louisville, KY families. .mp4",
-    "stem": "MFTWmedia_20201220_844464458_The Hope Buss and Santa delivering  Christmas to Louisville, KY families. ",
-    "file": "MFTWmedia_20201220_844464458_The Hope Buss and Santa delivering  Christmas to Louisville, KY families. .mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 2719,
-    "sizeMB": 1715,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/topeye-topeye-ed8aa93f48fa/MFTWmedia_20201220_844464458_The%20Hope%20Buss%20and%20Santa%20delivering%20%20Christmas%20to%20Louisville%2C%20KY%20families.%20.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "BBCNEWS_20211203_033000_Delivering_Christmas",
-      "itemTitle": "Delivering Christmas : BBCNEWS : December 3, 2021 3:30am-4:01am GMT",
-      "stem": "BBCNEWS_20211203_033000_Delivering_Christmas",
-      "file": "BBCNEWS_20211203_033000_Delivering_Christmas.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 1860,
-      "sizeMB": 490,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/BBCNEWS_20211203_033000_Delivering_Christmas/BBCNEWS_20211203_033000_Delivering_Christmas.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "topeye-topeye-ed8aa93f48fa",
-      "itemTitle": "MFTWmedia_20201220_844464458_The Hope Buss and Santa delivering  Christmas to Louisville, KY families. .mp4",
-      "stem": "MFTWmedia_20201220_844464458_The Hope Buss and Santa delivering  Christmas to Louisville, KY families",
-      "file": "MFTWmedia_20201220_844464458_The Hope Buss and Santa delivering  Christmas to Louisville, KY families. .ia.mp4",
-      "format": "h.264 IA",
-      "playable": true,
-      "seconds": 2719,
-      "sizeMB": 260,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/topeye-topeye-ed8aa93f48fa/MFTWmedia_20201220_844464458_The%20Hope%20Buss%20and%20Santa%20delivering%20%20Christmas%20to%20Louisville%2C%20KY%20families.%20.ia.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-BBCNEWS"
+  }
 }

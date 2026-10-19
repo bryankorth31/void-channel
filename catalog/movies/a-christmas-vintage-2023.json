@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T19:21:31.201Z",
   "archiveMentions": 116,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a-disney-halloween-restoration-showcase-240p",
     "itemTitle": "A Disney Halloween (1982)/A Vintage Disney Christmas/Misc.",
     "stem": "a_disney_halloween_2024 (240p)",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "a-disney-halloween-restoration-showcase-240p",
       "itemTitle": "A Disney Halloween (1982)/A Vintage Disney Christmas/Misc.",
       "stem": "a_vintage_disney_christmas (240p)",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/a-disney-halloween-restoration-showcase-240p/a_vintage_disney_christmas%20(240p).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

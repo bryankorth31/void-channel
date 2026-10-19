@@ -18,49 +18,11 @@
   "huntedAt": "2026-10-15T00:23:11.018Z",
   "archiveMentions": 176,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "BurrellSchoolHouseRock2011",
-    "itemTitle": "Foxborough Theatre: Burrell - School House Rock 2011",
-    "stem": "BurrellSchoolHouseRock2011",
-    "file": "BurrellSchoolHouseRock2011.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3359,
-    "sizeMB": 349,
-    "band": "short",
-    "fileSim": 0.4,
-    "url": "https://archive.org/download/BurrellSchoolHouseRock2011/BurrellSchoolHouseRock2011.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "vintage-vhs-school-house-rock-science-rock",
-      "itemTitle": "[Vintage VHS] School House Rock!: Science Rock",
-      "stem": "school_house_rock_science_rock_01",
-      "file": "school_house_rock_science_rock_01.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 2041,
-      "sizeMB": 4267,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/vintage-vhs-school-house-rock-science-rock/school_house_rock_science_rock_01.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "HouseOnTheRock",
-      "itemTitle": "House on the Rock",
-      "stem": "house_on_rock_001_Scene 05",
-      "file": "house_on_rock_001_Scene 05.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 2279,
-      "sizeMB": 237,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/HouseOnTheRock/house_on_rock_001_Scene%2005.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

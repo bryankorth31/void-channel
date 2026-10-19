@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T03:23:04.923Z",
   "archiveMentions": 293,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "CSPAN3_20180628_054900_President_Campaigns_in_Fargo_ND",
-    "itemTitle": "President Campaigns in Fargo, ND : CSPAN3 : June 28, 2018 1:49am-3:11am EDT",
-    "stem": "CSPAN3_20180628_054900_President_Campaigns_in_Fargo_ND",
-    "file": "CSPAN3_20180628_054900_President_Campaigns_in_Fargo_ND.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4920,
-    "sizeMB": 513,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN3_20180628_054900_President_Campaigns_in_Fargo_ND/CSPAN3_20180628_054900_President_Campaigns_in_Fargo_ND.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN3"
+  }
 }

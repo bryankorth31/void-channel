@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T12:32:29.780Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "evolutions-child",
     "itemTitle": "evolution's child",
     "stem": "evolution's child",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "evolutions-child-full-film-without-the-universal-logo",
       "itemTitle": "Evolution's Child Full Film Without The Universal Logo",
       "stem": "evolution's child full film without the universal logo",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/evolutions-child-full-film-without-the-universal-logo/evolution's%20child%20full%20film%20without%20the%20universal%20logo.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

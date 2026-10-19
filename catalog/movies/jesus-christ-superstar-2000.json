@@ -35,20 +35,6 @@
   "alternates": [
     {
       "conf": 0.85,
-      "item": "jesus-christ-superstar-1973-film",
-      "itemTitle": "Jesus Christ Superstar",
-      "stem": "Jesus Christ Superstar, 1973",
-      "file": "Jesus Christ Superstar, 1973.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6396,
-      "sizeMB": 876,
-      "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/jesus-christ-superstar-1973-film/Jesus%20Christ%20Superstar%2C%201973.mp4"
-    },
-    {
-      "conf": 0.85,
       "item": "jesus-christ-superstar-vhs",
       "itemTitle": "Jesus Christ Superstar",
       "stem": "Jesus Christ Superstar VHS",
@@ -62,7 +48,21 @@
       "url": "https://archive.org/download/jesus-christ-superstar-vhs/Jesus%20Christ%20Superstar%20VHS.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
+      "item": "jesus-christ-superstar-1973-film",
+      "itemTitle": "Jesus Christ Superstar",
+      "stem": "Jesus Christ Superstar, 1973",
+      "file": "Jesus Christ Superstar, 1973.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 6396,
+      "sizeMB": 876,
+      "band": "match",
+      "fileSim": 1,
+      "url": "https://archive.org/download/jesus-christ-superstar-1973-film/Jesus%20Christ%20Superstar%2C%201973.mp4"
+    },
+    {
+      "conf": 0.7,
       "item": "JCS-TCT",
       "itemTitle": "Jesus Christ Superstar With Credits",
       "stem": "Jesus Christ Superstar with Credits 2",

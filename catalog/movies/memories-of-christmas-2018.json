@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T09:47:24.170Z",
   "archiveMentions": 39,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "fcpmco-SOAP_Memories_of_Christmas_One_Camera",
-    "itemTitle": "SOAP   Memories of Christmas   One Camera",
-    "stem": "SOAP_Memories_of_Christmas_One_Camera",
-    "file": "SOAP_Memories_of_Christmas_One_Camera.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 5641,
-    "sizeMB": 1489,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/fcpmco-SOAP_Memories_of_Christmas_One_Camera/SOAP_Memories_of_Christmas_One_Camera.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

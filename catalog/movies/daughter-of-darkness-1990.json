@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T06:52:28.631Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "daughter-of-darkness-1993-uncut-composite",
     "itemTitle": "Daughter Of Darkness 1993 Uncut Composite Cut",
     "stem": "Daughter Of Darkness 1993 Uncut Composite",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "daughter-of-darkness-1948",
       "itemTitle": "Daughter Of Darkness (1948)",
       "stem": "Daughter of Darkness (1948)",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/daughter-of-darkness_202204/Daughter_of_Darkness_Web.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1990)"
+  }
 }

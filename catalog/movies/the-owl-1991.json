@@ -16,49 +16,11 @@
   "huntedAt": "2026-10-15T04:24:22.895Z",
   "archiveMentions": 293,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.95,
-    "item": "Owl_Classic_Tournament_Basketball_-_Winton_Woods_vs_Talawanda_-_December_27_1991",
-    "itemTitle": "Owl Classic Tournament Basketball: Winton Woods vs Talawanda - December 27, 1991",
-    "stem": "Owl_Classic_Tournament_Basketball_-_Winton_Woods_vs_Talawanda_-_December_27_1991",
-    "file": "Owl_Classic_Tournament_Basketball_-_Winton_Woods_vs_Talawanda_-_December_27_1991.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 5282,
-    "sizeMB": 461,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Owl_Classic_Tournament_Basketball_-_Winton_Woods_vs_Talawanda_-_December_27_1991/Owl_Classic_Tournament_Basketball_-_Winton_Woods_vs_Talawanda_-_December_27_1991.mpeg4"
-  },
-  "alternates": [
-    {
-      "conf": 0.75,
-      "item": "Owl_Classic_Tournament_Basketball_-_Winton_Woods_vs_Mt._Healthy_-_December_27_1991",
-      "itemTitle": "Owl Classic Tournament Basketball: Winton Woods vs Mt. Healthy - December 27, 1991",
-      "stem": "Owl_Classic_Tournament_Basketball_-_Winton_Woods_vs_Mt._Healthy_-_December_27_1991",
-      "file": "Owl_Classic_Tournament_Basketball_-_Winton_Woods_vs_Mt._Healthy_-_December_27_1991.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4251,
-      "sizeMB": 376,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Owl_Classic_Tournament_Basketball_-_Winton_Woods_vs_Mt._Healthy_-_December_27_1991/Owl_Classic_Tournament_Basketball_-_Winton_Woods_vs_Mt._Healthy_-_December_27_1991.mpeg4"
-    },
-    {
-      "conf": 0.75,
-      "item": "Owl_Classic_Tournament_Basketball_-_Mt._Healthy_vs_Newport_-_December_27_1991",
-      "itemTitle": "Owl Classic Tournament Basketball: Mt. Healthy vs Newport - December 27, 1991",
-      "stem": "Owl_Classic_Tournament_Basketball_-_Mt._Healthy_vs_Newport_-_December_27_1991",
-      "file": "Owl_Classic_Tournament_Basketball_-_Mt._Healthy_vs_Newport_-_December_27_1991.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4055,
-      "sizeMB": 348,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Owl_Classic_Tournament_Basketball_-_Mt._Healthy_vs_Newport_-_December_27_1991/Owl_Classic_Tournament_Basketball_-_Mt._Healthy_vs_Newport_-_December_27_1991.mpeg4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

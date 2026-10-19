@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T22:13:53.451Z",
   "archiveMentions": 290,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a.-doggone.-christmas-2016-christmas-family",
     "itemTitle": "A.Doggone.Christmas. (2016 Christmas, Family)",
     "stem": "A.Doggone.Christmas. (2016 Christmas Family)",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/a.-doggone.-christmas-2016-christmas-family/A.Doggone.Christmas.%20(2016%20Christmas%20Family).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

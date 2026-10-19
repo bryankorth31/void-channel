@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T13:29:33.667Z",
   "archiveMentions": 216,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "Best_Buddies_Hollywood_Sweetheart_Pageant_2017",
-    "itemTitle": "Best Buddies Hollywood Sweetheart Pageant 2017",
-    "stem": "Best_Buddies_Hollywood_Sweetheart_Pageant_2017",
-    "file": "Best_Buddies_Hollywood_Sweetheart_Pageant_2017.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4555,
-    "sizeMB": 475,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Best_Buddies_Hollywood_Sweetheart_Pageant_2017/Best_Buddies_Hollywood_Sweetheart_Pageant_2017.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

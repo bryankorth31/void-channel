@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T01:15:22.805Z",
   "archiveMentions": 28,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "Wiseguy",
     "itemTitle": "Wiseguy",
     "stem": "Season 1/Wiseguy - 1x01 - Pilot",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "Wiseguy",
       "itemTitle": "Wiseguy",
       "stem": "Season 4/Wiseguy - 4x01 - Fruit of the Poisonous Tree",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/Wiseguy/Season%204%2FWiseguy%20-%204x01%20-%20Fruit%20of%20the%20Poisonous%20Tree.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "ot_20251116",
       "itemTitle": "Wiseguy",
       "stem": "Wiseguy S01E01  Pilot",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/ot_20251116/Wiseguy%20S01E01%20%20Pilot.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "ot_20251116",
       "itemTitle": "Wiseguy",
       "stem": "Wiseguy S04E01-02 Fruit of the Poisonous Tree",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/ot_20251116/Wiseguy%20S04E01-02%20Fruit%20of%20the%20Poisonous%20Tree.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

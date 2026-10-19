@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T20:29:14.949Z",
   "archiveMentions": 232,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "00001_20260723_0401",
     "itemTitle": "Best Player (HD Blu-Ray Rip)",
     "stem": "00001",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/00001_20260723_0401/00001.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

@@ -15,9 +15,9 @@
   "huntedAt": "2026-10-15T10:19:13.435Z",
   "archiveMentions": 287,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "2007-2008-Regular-Season-ROCKETS-x-HAWKS-3.12.2008",
     "itemTitle": "Houston Rockets vs. Atlanta Hawks (Rockets Break the NBA All-Time Winning Streak Record; Mar. 12th, 2008)",
     "stem": "Rockets x Hawks (Rockets break winning streak record; Mar. 12th, 2008)",
@@ -30,5 +30,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/2007-2008-Regular-Season-ROCKETS-x-HAWKS-3.12.2008/Rockets%20x%20Hawks%20(Rockets%20break%20winning%20streak%20record%3B%20Mar.%2012th%2C%202008).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

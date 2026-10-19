@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T09:23:57.894Z",
   "archiveMentions": 284,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "Suddenly_1954",
     "itemTitle": "Suddenly",
     "stem": "Suddenly_1954",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/suddenly/suddenly_512kb.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1996)"
+  }
 }

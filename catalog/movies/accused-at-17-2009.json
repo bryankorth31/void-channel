@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T13:19:31.561Z",
   "archiveMentions": 13,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "CSPAN_20210417_154400_Day_12_of_Trial_for_Derek_Chauvin_Accused_in_Death_of_George_Floyd",
-    "itemTitle": "Day 12 of Trial for Derek Chauvin Accused in Death of George Floyd : CSPAN : April 17, 2021 11:44am-12:51pm EDT",
-    "stem": "CSPAN_20210417_154400_Day_12_of_Trial_for_Derek_Chauvin_Accused_in_Death_of_George_Floyd",
-    "file": "CSPAN_20210417_154400_Day_12_of_Trial_for_Derek_Chauvin_Accused_in_Death_of_George_Floyd.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4021,
-    "sizeMB": 720,
-    "band": "near",
-    "fileSim": 0.475,
-    "url": "https://archive.org/download/CSPAN_20210417_154400_Day_12_of_Trial_for_Derek_Chauvin_Accused_in_Death_of_George_Floyd/CSPAN_20210417_154400_Day_12_of_Trial_for_Derek_Chauvin_Accused_in_Death_of_George_Floyd.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN"
+  }
 }

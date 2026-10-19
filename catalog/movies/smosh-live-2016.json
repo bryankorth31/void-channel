@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T17:46:15.312Z",
   "archiveMentions": 8,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "smosh-live-shows_20260810",
     "itemTitle": "Smosh Live Shows",
     "stem": "WAGD_S2_E1",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "smosh-live-shows_20260810",
       "itemTitle": "Smosh Live Shows",
       "stem": "Just For Laughs 2025 - Smosh Reads Reddit Stories",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/smosh-live-shows_20260810/Just%20For%20Laughs%202025%20-%20Smosh%20Reads%20Reddit%20Stories.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "smosh-live-shows_20260810",
       "itemTitle": "Smosh Live Shows",
       "stem": "DAY1 Netflix is a Joke - Smosh Reads Reddit Stories Live",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/smosh-live-shows_20260810/DAY1%20Netflix%20is%20a%20Joke%20-%20Smosh%20Reads%20Reddit%20Stories%20Live.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "smosh-live-shows_20260810",
       "itemTitle": "Smosh Live Shows",
       "stem": "DAY2 Netflix Is A Joke - Smosh Reads Reddit Stories Live",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/smosh-live-shows_20260810/DAY2%20Netflix%20Is%20A%20Joke%20-%20Smosh%20Reads%20Reddit%20Stories%20Live.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T01:58:52.530Z",
   "archiveMentions": 28,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "honor-student-2019-thriller",
     "itemTitle": "Honor Student (2019 THRILLER!)",
     "stem": "Honor Student (2019 THRILLER!)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/honor-student-2019-thriller/Honor%20Student%20(2019%20THRILLER!).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2014)"
+  }
 }

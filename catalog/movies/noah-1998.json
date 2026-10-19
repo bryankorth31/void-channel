@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T01:22:37.589Z",
   "archiveMentions": 286,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "04-07-10-noahtokyo-dome-part-2withcommentary",
     "itemTitle": "NOAH 2004",
     "stem": "04-07-10NOAHTokyoDomePart3",
@@ -33,5 +33,9 @@
     "fileSim": 0.23076923076923078,
     "url": "https://archive.org/download/04-07-10-noahtokyo-dome-part-2withcommentary/04-07-10NOAHTokyoDomePart3.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1998)"
+  }
 }

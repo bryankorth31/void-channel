@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-13T23:58:45.633Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "earths-final-hours-robert-knepper",
     "itemTitle": "Earths Final Hours Robert Knepper",
     "stem": "earths final hours Robert Knepper",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/earths.-final.-hours.-2011.-brrip.-xvi-d-pg-13/Earths.Final.Hours.2011.BRRip.XviD%20(PG%2B13).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

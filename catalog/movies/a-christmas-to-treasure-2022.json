@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T11:28:43.000Z",
   "archiveMentions": 18,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a-christmas-treasure-2004-vhs-higher-quality-0001",
     "itemTitle": "HIT Entertainment Children's Favorites: A Christmas Treasure (2004 VHS) (High Quality)",
     "stem": "A Christmas Treasure (2004 VHS) (Higher Quality) - 0001",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "childrensfavoriteschristmas",
       "itemTitle": "HIT Entertainment Children's Favorites: A Christmas Treasure (DVD)",
       "stem": "bandicam 2020-03-11 23-36-43-135",
@@ -47,5 +47,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/childrensfavoriteschristmas/bandicam%202020-03-11%2023-36-43-135.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

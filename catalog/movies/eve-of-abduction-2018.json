@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T12:48:12.906Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-Rr9cUD1Ig4A",
     "itemTitle": "Alien Abduction, MILABS & Complex Trauma: Exploring the Interdimensional Zoo with counselor Eve Lorg",
     "stem": "Rr9cUD1Ig4A",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/youtube-Rr9cUD1Ig4A/Rr9cUD1Ig4A.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -35,20 +35,6 @@
   "alternates": [
     {
       "conf": 0.95,
-      "item": "f8_1998-08-12_orlean-brink-collier_read",
-      "itemTitle": "Reading: Susan Orlean, Andre Phillippus Brink, Michael Collier",
-      "stem": "f8_1998-08-12_orlean-brink-collier_read",
-      "file": "f8_1998-08-12_orlean-brink-collier_read.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5694,
-      "sizeMB": 563,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/f8_1998-08-12_orlean-brink-collier_read/f8_1998-08-12_orlean-brink-collier_read.mp4"
-    },
-    {
-      "conf": 0.95,
       "item": "Brink-DCOM-1998",
       "itemTitle": "Brink! (1998)",
       "stem": "Brink! (1998)",
@@ -62,7 +48,21 @@
       "url": "https://archive.org/download/Brink-DCOM-1998/Brink!%20(1998).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.8,
+      "item": "f8_1998-08-12_orlean-brink-collier_read",
+      "itemTitle": "Reading: Susan Orlean, Andre Phillippus Brink, Michael Collier",
+      "stem": "f8_1998-08-12_orlean-brink-collier_read",
+      "file": "f8_1998-08-12_orlean-brink-collier_read.mp4",
+      "format": "h.264",
+      "playable": true,
+      "seconds": 5694,
+      "sizeMB": 563,
+      "band": "match",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/f8_1998-08-12_orlean-brink-collier_read/f8_1998-08-12_orlean-brink-collier_read.mp4"
+    },
+    {
+      "conf": 0.7,
       "item": "SMA_8981",
       "itemTitle": "Salmon on the Brink",
       "stem": "8981",

@@ -16,63 +16,11 @@
   "huntedAt": "2026-10-15T06:08:03.289Z",
   "archiveMentions": 66,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.8,
-    "item": "pontimi-11-14-2024_Master_Plan_Community_Engagement",
-    "itemTitle": "11-14-2024 Master Plan Community Engagement",
-    "stem": "11-14-2024_Master_Plan_Community_Engagement",
-    "file": "11-14-2024_Master_Plan_Community_Engagement.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 7709,
-    "sizeMB": 476,
-    "band": "feature",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/pontimi-11-14-2024_Master_Plan_Community_Engagement/11-14-2024_Master_Plan_Community_Engagement.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.7,
-      "item": "openpublica-st_paul-minnesota-79d0289d-06e3-11ee-95dd-0050569183fa",
-      "itemTitle": "Saint Paul Planning Commission Meeting – June 9, 2023: Budget Engagement and Rondo Plan Update",
-      "stem": "79d0289d-06e3-11ee-95dd-0050569183fa",
-      "file": "79d0289d-06e3-11ee-95dd-0050569183fa.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5294,
-      "sizeMB": 678,
-      "band": "feature",
-      "fileSim": 0.047619047619047616,
-      "url": "https://archive.org/download/openpublica-st_paul-minnesota-79d0289d-06e3-11ee-95dd-0050569183fa/79d0289d-06e3-11ee-95dd-0050569183fa.mp4"
-    },
-    {
-      "conf": 0.7,
-      "item": "openpublica-alameda-california-8ac0bef5-1e2f-11f1-bb28-005056a89546",
-      "itemTitle": "Alameda Climate Action & Resiliency Plan Update & Commission Engagement Discussion - March 12, 2026",
-      "stem": "8ac0bef5-1e2f-11f1-bb28-005056a89546",
-      "file": "8ac0bef5-1e2f-11f1-bb28-005056a89546.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 7378,
-      "sizeMB": 431,
-      "band": "feature",
-      "fileSim": 0,
-      "url": "https://archive.org/download/openpublica-alameda-california-8ac0bef5-1e2f-11f1-bb28-005056a89546/8ac0bef5-1e2f-11f1-bb28-005056a89546.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "cpslfl-Parks_Recreation_-_ADA_Transition_Plan_Community_Engagement_Meeting_-_06_20_2024",
-      "itemTitle": "Parks & Recreation - ADA Transition Plan Community Engagement Meeting - 06/20/2024",
-      "stem": "Parks_Recreation_-_ADA_Transition_Plan_Community_Engagement_Meeting_-_06_20_2024",
-      "file": "Parks_Recreation_-_ADA_Transition_Plan_Community_Engagement_Meeting_-_06_20_2024.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3415,
-      "sizeMB": 333,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/cpslfl-Parks_Recreation_-_ADA_Transition_Plan_Community_Engagement_Meeting_-_06_20_2024/Parks_Recreation_-_ADA_Transition_Plan_Community_Engagement_Meeting_-_06_20_2024.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

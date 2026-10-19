@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T20:53:10.472Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "indiscreet.-1958.1080p.-blu-ray.-h-264.-aac-rarbg",
     "itemTitle": "Indiscreet (1958)",
     "stem": "Indiscreet.1958.1080p.BluRay.H264",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "indiscreet.-1958.1080p.-blu-ray.-h-264.-aac-rarbg",
       "itemTitle": "Indiscreet (1958)",
       "stem": "Indiscreet.1958.1080p.BluRay.H264.AAC-RARBG",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/indiscreet.-1958.1080p.-blu-ray.-h-264.-aac-rarbg/Indiscreet.1958.1080p.BluRay.H264.AAC-RARBG.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "indiscreet-1958-classic-comedy-romance",
       "itemTitle": "Indiscreet (1958 +++++ Classic Comedy Romance)",
       "stem": "Indiscreet (1958 +++++ Classic Comedy Romance)",
@@ -74,5 +74,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/Indiscreet/Indiscreet.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1998)"
+  }
 }

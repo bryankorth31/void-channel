@@ -18,36 +18,11 @@
   "huntedAt": "2026-10-15T01:59:20.382Z",
   "archiveMentions": 294,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "Moonstone_Arts_Presents_-_Mentor_and_Mentored_07",
-    "itemTitle": "Moonstone Arts Presents:  Mentor and Mentored 07",
-    "stem": "Moonstone_Arts_Presents_-_Mentor_and_Mentored_07",
-    "file": "Moonstone_Arts_Presents_-_Mentor_and_Mentored_07.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3760,
-    "sizeMB": 393,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Moonstone_Arts_Presents_-_Mentor_and_Mentored_07/Moonstone_Arts_Presents_-_Mentor_and_Mentored_07.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "Moonstone_Arts_Presents_-_Mentor_and_Mentored_07",
-      "itemTitle": "Moonstone Arts Presents:  Mentor and Mentored 07",
-      "stem": "Moonstone_Arts_Presents_-_Mentor_and_Mentored_07.pegssc",
-      "file": "Moonstone_Arts_Presents_-_Mentor_and_Mentored_07.pegssc.mpeg",
-      "format": "MPEG2",
-      "playable": false,
-      "codecRisk": "container (MPEG2)",
-      "seconds": 3760,
-      "sizeMB": 2567,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Moonstone_Arts_Presents_-_Mentor_and_Mentored_07/Moonstone_Arts_Presents_-_Mentor_and_Mentored_07.pegssc.mpeg"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T11:10:52.613Z",
   "archiveMentions": 18,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "grendel-grendel-grendel-vhs-family-home-entertainment",
     "itemTitle": "Grendel Grendel Grendel VHS By Family Home Entertainment",
     "stem": "y2mate",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "grendel-grendel-grendel-vhs-family-home-entertainment",
       "itemTitle": "Grendel Grendel Grendel VHS By Family Home Entertainment",
       "stem": "y2mate.com - FULL VHS TAPE Grendel Grendel Grendel 1984 Family Home Entertainment_480p",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/grendelgrendelgrendelpart1merge1/Grendel%20Grendel%20Grendel-%20Part%201_Merge(1).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

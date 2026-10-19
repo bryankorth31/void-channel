@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T00:11:34.789Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-flight-before-christmas-2008",
     "itemTitle": "The Flight Before Christmas",
     "stem": "The Flight Before Christmas 2008",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/the-flight-before-christmas-2008/The%20Flight%20Before%20Christmas%202008.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2015)"
+  }
 }

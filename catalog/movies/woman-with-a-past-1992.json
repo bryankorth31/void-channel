@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T02:44:36.733Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "woman-with-a-past-1994",
     "itemTitle": "Woman With A Past 1994",
     "stem": "Woman With A Past 1994",
@@ -31,5 +31,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/woman-with-a-past-1994/Woman%20With%20A%20Past%201994.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

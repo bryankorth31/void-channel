@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T05:41:25.066Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "meat-loaf-bat-out-of-hell-ii-picture-show-1994-mca-music-video-vhs-rip",
     "itemTitle": "MEAT LOAF BAT OUT OF HELL II PICTURE SHOW 1994 MCA MUSIC VIDEO VHS RIP",
     "stem": "MEAT LOAF BAT OUT OF HELL II PICTURE SHOW 1994 MCA MUSIC VIDEO VHS RIP",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "meat-loaf-hits-out-of-hell",
       "itemTitle": "Meat Loaf Hits Out Of Hell",
       "stem": "Meat Loaf Hits Out Of Hell",
@@ -61,5 +61,9 @@
       "fileSim": 0.7317073170731707,
       "url": "https://archive.org/download/hits-out-of-hell-meatloaf-timecoded-vhs/Hits%20Out%20Of%20Hell%20-%20Meatloaf%20VHS.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

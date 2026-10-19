@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-13T21:42:53.205Z",
   "archiveMentions": 62,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "01-james-dean",
     "itemTitle": "James Dean",
     "stem": "Come Back to the 5 & Dime, Jimmy Dean, Jimmy Dean (1982) 1080p",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "JamesDeanOldFilm",
       "itemTitle": "James Dean = Old Film",
       "stem": "james dean = old film",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/JamesDeanOldFilm/james%20dean%20%3D%20old%20film.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "youtube-hEN9Wy8UAZE",
       "itemTitle": "Veterans Today Radio 8 25 14 Stew Webb, Gordon Duff, Jim Dean, Preston James, Gene Tatum failed conv",
       "stem": "hEN9Wy8UAZE",
@@ -74,5 +74,9 @@
       "fileSim": 0.16,
       "url": "https://archive.org/download/01-james-dean/1955%20East%20of%20Eden%20(1920x752).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

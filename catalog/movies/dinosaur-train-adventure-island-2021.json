@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T18:50:32.926Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "dinosaur-train-season-5-completeadventure-island-movie",
     "itemTitle": "TheFirstArchives: Dinosaur Train Complete Season 5 + Full Adventure Island Movie",
     "stem": "Dinosaur Train Adventure Island movie",
@@ -34,5 +34,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/dinosaur-train-season-5-completeadventure-island-movie/Dinosaur%20Train%20Adventure%20Island%20movie.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

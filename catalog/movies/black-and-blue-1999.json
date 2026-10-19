@@ -16,35 +16,24 @@
   "huntedAt": "2026-10-14T18:19:10.393Z",
   "archiveMentions": 225,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "NewsOneNowBlackBlueAmericaRaceCrisisVideoPodcast",
-    "itemTitle": "News One Now Black Blue America Race Crisis Video Podcast",
-    "stem": "NewsOneNow_BlackBlueAmericaRaceCrisisVideoPodcast",
-    "file": "NewsOneNow_BlackBlueAmericaRaceCrisisVideoPodcast.mp4",
-    "format": "MPEG4",
+    "conf": 0.84,
+    "item": "black-and-blue-1980",
+    "itemTitle": "Black and Blue (1980)",
+    "stem": "Black Sabbath and Blue Oyster Cult - Black and Blue (1980)",
+    "file": "Black Sabbath and Blue Oyster Cult - Black and Blue (1980).mp4",
+    "format": "h.264",
     "playable": true,
-    "seconds": 5467,
-    "sizeMB": 1255,
+    "seconds": 5189,
+    "sizeMB": 498,
     "band": "match",
-    "fileSim": 0.23529411764705882,
-    "url": "https://archive.org/download/NewsOneNowBlackBlueAmericaRaceCrisisVideoPodcast/NewsOneNow_BlackBlueAmericaRaceCrisisVideoPodcast.mp4"
+    "fileSim": 0.95,
+    "url": "https://archive.org/download/black-and-blue-1980/Black%20Sabbath%20and%20Blue%20Oyster%20Cult%20-%20Black%20and%20Blue%20(1980).mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "black-and-blue-1980",
-      "itemTitle": "Black and Blue (1980)",
-      "stem": "Black Sabbath and Blue Oyster Cult - Black and Blue (1980)",
-      "file": "Black Sabbath and Blue Oyster Cult - Black and Blue (1980).mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5189,
-      "sizeMB": 498,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/black-and-blue-1980/Black%20Sabbath%20and%20Blue%20Oyster%20Cult%20-%20Black%20and%20Blue%20(1980).mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1999)"
+  }
 }

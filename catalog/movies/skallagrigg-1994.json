@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T08:44:19.398Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "s-10-e-02-skallagrigg",
     "itemTitle": "S10E02 Skallagrigg",
     "stem": "S10E02 Skallagrigg",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/s-10-e-02-skallagrigg/S10E02%20Skallagrigg.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

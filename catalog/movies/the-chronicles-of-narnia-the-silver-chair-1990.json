@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T19:28:40.813Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "vid-20230702-120347",
     "itemTitle": "The Chronicles of Narnia: The Silver Chair (1995 UK VHS)",
     "stem": "VID_20230702_120347",
@@ -33,5 +33,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/vid-20230702-120347/VID_20230702_120347.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1990)"
+  }
 }

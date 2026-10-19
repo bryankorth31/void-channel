@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T22:21:59.430Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "cider-with-rosie-1971",
     "itemTitle": "Cider With Rosie (1971 TV Period drama)",
     "stem": "Cider with Rosie (1971)",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/cider-with-rosie-1971/Cider%20with%20Rosie%20(1971).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1998)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T17:36:43.823Z",
   "archiveMentions": 91,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "no-surrender-full-movie",
     "itemTitle": "No Surrender Full Movie",
     "stem": "No Surrender - Full Movie",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/no-surrender-full-movie/No%20Surrender%20-%20Full%20Movie.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

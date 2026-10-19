@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T03:25:18.024Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "iron-invader-film-d-action-film-complet-en-francais-720-p-hd",
     "itemTitle": "Iron Invader ( Film D Action) Film Complet En Français( 720 P HD)",
     "stem": "Iron invader (Film d_Action) Film complet en français(720P_HD)",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/iron-invader-film-d-action-film-complet-en-francais-720-p-hd/Iron%20invader%20(Film%20d_Action)%20Film%20complet%20en%20fran%C3%A7ais(720P_HD).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

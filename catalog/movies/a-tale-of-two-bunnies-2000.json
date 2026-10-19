@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-14T20:59:03.201Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "vintage-vhs-the-tale-of-the-flopsy-bunnies--mrs-tittlemouse-two-bad-mice--johnny-town-mouse",
-    "itemTitle": "[Vintage VHS] The Tale of the Flopsy Bunnies & Mrs. Tittlemouse; Two Bad Mice & Johnny Town-Mouse",
-    "stem": "the_tale_of_the_flopsy_bunnies_and_mrs_tittlemouse_and_the_tale_of_two_bad_mice_and_johnny_town_mouse_01",
-    "file": "the_tale_of_the_flopsy_bunnies_and_mrs_tittlemouse_and_the_tale_of_two_bad_mice_and_johnny_town_mouse_01.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3139,
-    "sizeMB": 6601,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/vintage-vhs-the-tale-of-the-flopsy-bunnies--mrs-tittlemouse-two-bad-mice--johnny-town-mouse/the_tale_of_the_flopsy_bunnies_and_mrs_tittlemouse_and_the_tale_of_two_bad_mice_and_johnny_town_mouse_01.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); runtime not within 15% of the TMDB runtime"
+  }
 }

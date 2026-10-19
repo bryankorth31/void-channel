@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T05:00:50.034Z",
   "archiveMentions": 286,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "WXBSnwG4YOUFF158XIEogU0DYrIp4GyJgV2ZXUA5hBBVBl4WrPPBhRseG33716Ea",
     "itemTitle": "Spree (2020) [1080p] [BluRay] [5.1] [YTS.MX]",
     "stem": "Spree (2020) [1080p] [BluRay] [5.1] [YTS.MX]/Spree.2020.1080p.BluRay.x264.AAC5.1-[YTS.MX]",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "SpreeakaSurvivalRun1979",
       "itemTitle": "Spree (aka Survival Run) ( 1979)",
       "stem": "Spree (aka Survival run) (1979)-",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/SpreeakaSurvivalRun1979/Spree%20(aka%20Survival%20run)%20(1979)-.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "S201805",
       "itemTitle": "Spree (aka Survival Run) ( 1979)",
       "stem": "Spree (aka Survival run) (1979)-",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/S201805/Spree%20(aka%20Survival%20run)%20(1979)-.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "SpreeakaSurvivalRun1979",
       "itemTitle": "Spree (aka Survival Run) ( 1979)",
       "stem": "Going Steady (1979)-",
@@ -75,5 +75,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/SpreeakaSurvivalRun1979/Going%20Steady%20(1979)-.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1998)"
+  }
 }

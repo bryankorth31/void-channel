@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T19:41:37.258Z",
   "archiveMentions": 279,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "beauty-investigator-1993-uncut",
     "itemTitle": "Beauty Investigator (1993) UNCUT Moon Lee, Yukari Oshima, Gam Chi-Gei, Choi Jeong-Il, Melvin Wong, Billy Chow, Tai Bo, Sophia Crawford, Fat Chung (elmudo)",
     "stem": "Beauty Investigator (1993) UNCUT",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/beauty-investigator-1993-uncut/Beauty%20Investigator%20(1993)%20UNCUT.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

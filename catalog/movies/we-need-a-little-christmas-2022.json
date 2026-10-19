@@ -18,35 +18,11 @@
   "huntedAt": "2026-10-14T12:04:56.480Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "tctvct-Smile_a_While_etc._We_Need_a_Little_Christmas",
-    "itemTitle": "Smile a While etc. We Need a Little Christmas",
-    "stem": "Smile_a_While_etc._We_Need_a_Little_Christmas",
-    "file": "Smile_a_While_etc._We_Need_a_Little_Christmas.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5388,
-    "sizeMB": 551,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/tctvct-Smile_a_While_etc._We_Need_a_Little_Christmas/Smile_a_While_etc._We_Need_a_Little_Christmas.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "wstotvwi-We_Need_a_Little_Christmas_12_11_22",
-      "itemTitle": "We Need a Little Christmas 12/11/22",
-      "stem": "We_Need_a_Little_Christmas_12_11_22",
-      "file": "We_Need_a_Little_Christmas_12_11_22.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3895,
-      "sizeMB": 351,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/wstotvwi-We_Need_a_Little_Christmas_12_11_22/We_Need_a_Little_Christmas_12_11_22.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

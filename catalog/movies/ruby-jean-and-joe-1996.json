@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T09:23:18.233Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "ruby-jean-ve-joe-ruby-jean-and-joe-1996",
     "itemTitle": "Ruby Jean Ve Joe  (1996) Türkçe Dublaj",
     "stem": "Ruby Jean Ve Joe  Ruby Jean And Joe (1996)",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/ruby-jean-ve-joe-ruby-jean-and-joe-1996/Ruby%20Jean%20Ve%20Joe%20%20Ruby%20Jean%20And%20Joe%20(1996).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

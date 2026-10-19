@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-14T07:52:37.587Z",
   "archiveMentions": 42,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "mnn_927690_62",
-    "itemTitle": "A Holly Jolly Spotlight Christmas (Season 4 Episode 5)",
-    "stem": "927690_62",
-    "file": "927690_62.m4v",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3477,
-    "sizeMB": 4483,
-    "band": "near",
-    "fileSim": 0,
-    "url": "https://archive.org/download/mnn_927690_62/927690_62.m4v"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "DoubleACS_SpotlightXmas2013",
-      "itemTitle": "Spotlight Tonight Christmas 2013",
-      "stem": "DoubleACS_SpotlightXmas2013",
-      "file": "DoubleACS_SpotlightXmas2013.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 6188,
-      "sizeMB": 645,
-      "band": "near",
-      "fileSim": 0.45454545454545453,
-      "url": "https://archive.org/download/DoubleACS_SpotlightXmas2013/DoubleACS_SpotlightXmas2013.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

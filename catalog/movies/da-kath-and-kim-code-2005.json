@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T18:29:16.196Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "6617777965731",
     "itemTitle": "Kath & Kimderella & Da Kath & Kim Code ",
     "stem": "2687462738487",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "6617777965731",
       "itemTitle": "Kath & Kimderella & Da Kath & Kim Code ",
       "stem": "6617777965731",
@@ -46,5 +46,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/6617777965731/6617777965731.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

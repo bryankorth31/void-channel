@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T10:26:31.587Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "Historic_Hacks_in_Portable_Computing_Bill_Degnan_Evan_Koblentz_2012",
     "itemTitle": " Historic Hacks in Portable Computing   Bill Degnan   Evan Koblentz (2012)",
     "stem": "Historic_Hacks_in_Portable_Computing_Bill_Degnan_Evan_Koblentz_2012",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/Historic_Hacks_in_Portable_Computing_Bill_Degnan_Evan_Koblentz_2012/Historic_Hacks_in_Portable_Computing_Bill_Degnan_Evan_Koblentz_2012.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

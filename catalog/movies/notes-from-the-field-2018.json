@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T03:47:08.801Z",
   "archiveMentions": 29,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "calauem_200201_omvf0000689_ac",
     "itemTitle": "From Field To Clinic: Notes From One Ethnomusicologist’s Journey",
     "stem": "calauem_200201_omvf0000689_ac",
@@ -31,5 +31,9 @@
     "fileSim": 0.05405405405405406,
     "url": "https://archive.org/download/calauem_200201_omvf0000689_ac/calauem_200201_omvf0000689_ac.mpeg4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

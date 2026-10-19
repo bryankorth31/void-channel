@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T18:32:35.461Z",
   "archiveMentions": 24,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "perfect-marriage-revenge-2023-episode-1",
     "itemTitle": "Perfect Marriage Revenge ( 2023) Episode 1",
     "stem": "Perfect Marriage Revenge (2023) Episode 1",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "ep.-1.v-0.1698508516.1080p",
       "itemTitle": "Perfect Marriage Revenge Ep 1",
       "stem": "EP.1.v0.1698508516.1080p",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/ep.-1.v-0.1698508516.1080p/EP.1.v0.1698508516.1080p.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "perfect-marriage-revenge-2023-episode-1",
       "itemTitle": "Perfect Marriage Revenge ( 2023) Episode 1",
       "stem": "Perfect Marriage Revenge (2023) Episode 2",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/perfect-marriage-revenge-2023-episode-1/Perfect%20Marriage%20Revenge%20(2023)%20Episode%202.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "ep.-1.v-0.1698508516.1080p",
       "itemTitle": "Perfect Marriage Revenge Ep 1",
       "stem": "Perfect Marriage Revenge Ep 2",
@@ -75,5 +75,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/ep.-1.v-0.1698508516.1080p/Perfect%20Marriage%20Revenge%20Ep%202.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

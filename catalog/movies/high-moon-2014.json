@@ -18,35 +18,11 @@
   "huntedAt": "2026-10-14T08:47:07.246Z",
   "archiveMentions": 50,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "2015_PAL_High_School_Basketball_Tournament_-_Girls_Semi-Final_-_Menlo-Atherton_vs_Half_Moon_Bay",
-    "itemTitle": "2015 PAL High School Basketball Tournament - Girls Semi-Final - Menlo-Atherton vs Half Moon Bay",
-    "stem": "2015_PAL_High_School_Basketball_Tournament_-_Girls_Semi-Final_-_Menlo-Atherton_vs_Half_Moon_Bay",
-    "file": "2015_PAL_High_School_Basketball_Tournament_-_Girls_Semi-Final_-_Menlo-Atherton_vs_Half_Moon_Bay.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5053,
-    "sizeMB": 525,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/2015_PAL_High_School_Basketball_Tournament_-_Girls_Semi-Final_-_Menlo-Atherton_vs_Half_Moon_Bay/2015_PAL_High_School_Basketball_Tournament_-_Girls_Semi-Final_-_Menlo-Atherton_vs_Half_Moon_Bay.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "2015_PAL_High_School_Basketball_Tournament_-_Boys_Semi-Final_-_Sequoia_vs._Half_Moon_Bay",
-      "itemTitle": "2015 PAL High School Basketball Tournament - Boys Semi-Final - Sequoia vs. Half Moon Bay",
-      "stem": "2015_PAL_High_School_Basketball_Tournament_-_Boys_Semi-Final_-_Sequoia_vs._Half_Moon_Bay",
-      "file": "2015_PAL_High_School_Basketball_Tournament_-_Boys_Semi-Final_-_Sequoia_vs._Half_Moon_Bay.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4390,
-      "sizeMB": 457,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/2015_PAL_High_School_Basketball_Tournament_-_Boys_Semi-Final_-_Sequoia_vs._Half_Moon_Bay/2015_PAL_High_School_Basketball_Tournament_-_Boys_Semi-Final_-_Sequoia_vs._Half_Moon_Bay.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

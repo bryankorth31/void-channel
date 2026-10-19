@@ -34,20 +34,6 @@
   },
   "alternates": [
     {
-      "conf": 0.75,
-      "item": "The_Love_Letter_CBS_WOC_1998-02-01",
-      "itemTitle": " The Love Letter CBS WOC 1998 02 01",
-      "stem": "The_Love_Letter_CBS_WOC_1998-02-01",
-      "file": "The_Love_Letter_CBS_WOC_1998-02-01.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 7036,
-      "sizeMB": 734,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/The_Love_Letter_CBS_WOC_1998-02-01/The_Love_Letter_CBS_WOC_1998-02-01.mp4"
-    },
-    {
       "conf": 0.65,
       "item": "love-letter-1995-1080p-turkce-altyazili-sowon-khan",
       "itemTitle": "Love Letter 1995 1080p Türkçe Altyazılı SowonKhan",
@@ -74,6 +60,20 @@
       "band": "near",
       "fileSim": 0.95,
       "url": "https://archive.org/download/love.-letter.-1995/Love.Letter.1995.mp4"
+    },
+    {
+      "conf": 0.6,
+      "item": "The_Love_Letter_CBS_WOC_1998-02-01",
+      "itemTitle": " The Love Letter CBS WOC 1998 02 01",
+      "stem": "The_Love_Letter_CBS_WOC_1998-02-01",
+      "file": "The_Love_Letter_CBS_WOC_1998-02-01.mp4",
+      "format": "h.264",
+      "playable": true,
+      "seconds": 7036,
+      "sizeMB": 734,
+      "band": "near",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/The_Love_Letter_CBS_WOC_1998-02-01/The_Love_Letter_CBS_WOC_1998-02-01.mp4"
     }
   ]
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T14:42:03.736Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "s-06-e-12-the-kremlin-farewell",
     "itemTitle": "S06E12 The Kremlin Farewell",
     "stem": "S06E12 The Kremlin Farewell",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/s-06-e-12-the-kremlin-farewell/S06E12%20The%20Kremlin%20Farewell.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

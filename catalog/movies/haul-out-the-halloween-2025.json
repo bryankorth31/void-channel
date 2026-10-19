@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T16:05:25.816Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "mkv-king-haul-out-the-halloween-2025-720p-webrip-x-264-aac",
     "itemTitle": "Mkv King Haul Out The Halloween 2025 720p WEBRip X 264 AAC",
     "stem": "_MkvKing_Haul_Out_The_Halloween_2025_720p_WEBRip_x264_AAC",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/mkv-king-haul-out-the-halloween-2025-720p-webrip-x-264-aac/_MkvKing_Haul_Out_The_Halloween_2025_720p_WEBRip_x264_AAC.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

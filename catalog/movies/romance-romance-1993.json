@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-15T15:23:16.344Z",
   "archiveMentions": 286,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "Guilty.of.Romance.Vose_201809",
     "itemTitle": "Guilty.of. Romance. Vose",
     "stem": "Guilty.of.Romance. vose",
@@ -36,7 +36,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "MurphysRomanceOldFilm_201407",
       "itemTitle": "Murphys Romance = Old Film",
       "stem": "murphys romance = old film",
@@ -50,7 +50,7 @@
       "url": "https://archive.org/download/MurphysRomanceOldFilm_201407/murphys%20romance%20%3D%20old%20film.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "ARomanceOfTheRedwoods",
       "itemTitle": "A Romance of the Redwoods",
       "stem": "ARomanceOfTheRedwoods",
@@ -64,7 +64,7 @@
       "url": "https://archive.org/download/ARomanceOfTheRedwoods/ARomanceOfTheRedwoods.ogv"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "ARomanceOfTheRedwoods",
       "itemTitle": "A Romance of the Redwoods",
       "stem": "ARomanceOfTheRedwoods_512kb",
@@ -77,5 +77,9 @@
       "fileSim": 0.4375,
       "url": "https://archive.org/download/ARomanceOfTheRedwoods/ARomanceOfTheRedwoods_512kb.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T08:18:08.489Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "family-sins-2004",
     "itemTitle": "Family Sins - Kirstie Alley, Deanna Milligan",
     "stem": "Family Sins - 2004",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/family-sins-2004/Family%20Sins%20-%202004.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

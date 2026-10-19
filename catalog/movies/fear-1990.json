@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T05:11:18.143Z",
   "archiveMentions": 289,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "1944-ministry-of-fear-el-ministerio-del-miedo-fritz-lang-vose",
     "itemTitle": "1944 - Ministry of Fear - El ministerio del miedo - Fritz Lang - VOSE",
     "stem": "1944 - Ministry of Fear - El ministerio del miedo - Fritz Lang - VOSE",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "1957-hidden-fear-andre-de-toth-vose",
       "itemTitle": "1957 - Hidden Fear - Andre De Toth - VOSE",
       "stem": "1957 - Hidden Fear - Andre De Toth - VOSE",
@@ -48,5 +48,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/1957-hidden-fear-andre-de-toth-vose/1957%20-%20Hidden%20Fear%20-%20Andre%20De%20Toth%20-%20VOSE.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

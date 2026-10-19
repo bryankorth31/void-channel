@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-13T23:35:55.070Z",
   "archiveMentions": 45,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "hell-of-the-living-dead_202502",
     "itemTitle": "Hell Of The Living Dead 1980",
     "stem": "Hell of the Living Dead",
@@ -35,20 +35,6 @@
     "url": "https://archive.org/download/hell-of-the-living-dead_202502/Hell%20of%20the%20Living%20Dead.mp4"
   },
   "alternates": [
-    {
-      "conf": 0.5,
-      "item": "7558852971094",
-      "itemTitle": "Paura nella città dei morti viventi (City of the Living Dead/The Gates of Hell/Miedo en la ciudad de los muertos vivientes, 1980) (castellano/ac3 2.0/extended)",
-      "stem": "7558852971094",
-      "file": "7558852971094.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5564,
-      "sizeMB": 1249,
-      "band": "match",
-      "fileSim": 0,
-      "url": "https://archive.org/download/7558852971094/7558852971094.mp4"
-    },
     {
       "conf": 0.85,
       "item": "living-hell-2008-dvdrip-xvid",
@@ -64,5 +50,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/living-hell-2008-dvdrip-xvid/Living%20Hell%202008%20dvdrip-xvid.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T07:32:04.305Z",
   "archiveMentions": 8,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "holly-and-the-ivy",
     "itemTitle": "Holly And The Ivy",
     "stem": "holly and the ivy",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "TheHollyAndTheIvy1952",
       "itemTitle": "The Holly And The Ivy ( 1952)",
       "stem": "The Holly and the Ivy (1952)",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/TheHollyAndTheIvy1952/The%20Holly%20and%20the%20Ivy%20(1952).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "the-holly-and-the-ivy-1952",
       "itemTitle": "The Holly And The Ivy (1952)",
       "stem": "The Holly And The Ivy (1952)",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/the-holly-and-the-ivy-1952/The%20Holly%20And%20The%20Ivy%20(1952).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

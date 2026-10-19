@@ -17,63 +17,11 @@
   "huntedAt": "2026-10-15T12:41:03.131Z",
   "archiveMentions": 34,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "2004-10-01-evil-con-carne-s01e06-ultimate-evil-search-and-estroy-the-pie-who-loved-me_202506",
-    "itemTitle": "2004-10-01 --- Evil Con Carne S01E06 Ultimate Evil/Search and Estroy/The Pie Who Loved Me",
-    "stem": "2004-10-01 --- Evil Con Carne S01E06 Ultimate EvilSearch and EstroyThe Pie Who Loved Me",
-    "file": "2004-10-01 --- Evil Con Carne S01E06 Ultimate EvilSearch and EstroyThe Pie Who Loved Me.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 1365,
-    "sizeMB": 643,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/2004-10-01-evil-con-carne-s01e06-ultimate-evil-search-and-estroy-the-pie-who-loved-me_202506/2004-10-01%20---%20Evil%20Con%20Carne%20S01E06%20Ultimate%20Evil%EF%80%A2Search%20and%20Estroy%EF%80%A2The%20Pie%20Who%20Loved%20Me.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "2004-10-01-evil-con-carne-s01e03-bring-me-the-face-of-hector-con-carne-devolver_202506",
-      "itemTitle": "2004-10-01 --- Evil Con Carne S01E03 Bring Me the Face of Hector Con Carne/Devolver",
-      "stem": "2004-10-01 --- Evil Con Carne S01E03 Bring Me the Face of Hector Con CarneDevolver",
-      "file": "2004-10-01 --- Evil Con Carne S01E03 Bring Me the Face of Hector Con CarneDevolver.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 1357,
-      "sizeMB": 631,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/2004-10-01-evil-con-carne-s01e03-bring-me-the-face-of-hector-con-carne-devolver_202506/2004-10-01%20---%20Evil%20Con%20Carne%20S01E03%20Bring%20Me%20the%20Face%20of%20Hector%20Con%20Carne%EF%80%A2Devolver.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "2004-10-01-evil-con-carne-s01e01-evil-con-carne-emotional-skarr-evil-goes-wild",
-      "itemTitle": "2004-10-01 --- Evil Con Carne S01E01 Evil Con Carne/Emotional Skarr/Evil Goes Wild",
-      "stem": "2004-10-01 --- Evil Con Carne S01E01 Evil Con CarneEmotional SkarrEvil Goes Wild",
-      "file": "2004-10-01 --- Evil Con Carne S01E01 Evil Con CarneEmotional SkarrEvil Goes Wild.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 1321,
-      "sizeMB": 623,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/2004-10-01-evil-con-carne-s01e01-evil-con-carne-emotional-skarr-evil-goes-wild/2004-10-01%20---%20Evil%20Con%20Carne%20S01E01%20Evil%20Con%20Carne%EF%80%A2Emotional%20Skarr%EF%80%A2Evil%20Goes%20Wild.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "2004-10-01-evil-con-carne-s01e05-max-courage-the-time-hole-incident-christmas-con-carne_202506",
-      "itemTitle": "2004-10-01 --- Evil Con Carne S01E05 Max Courage/The Time Hole Incident/Christmas Con Carne",
-      "stem": "2004-10-01 --- Evil Con Carne S01E05 Max CourageThe Time Hole IncidentChristmas Con Carne",
-      "file": "2004-10-01 --- Evil Con Carne S01E05 Max CourageThe Time Hole IncidentChristmas Con Carne.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 1302,
-      "sizeMB": 613,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/2004-10-01-evil-con-carne-s01e05-max-courage-the-time-hole-incident-christmas-con-carne_202506/2004-10-01%20---%20Evil%20Con%20Carne%20S01E05%20Max%20Courage%EF%80%A2The%20Time%20Hole%20Incident%EF%80%A2Christmas%20Con%20Carne.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); runtime not within 15% of the TMDB runtime"
+  }
 }

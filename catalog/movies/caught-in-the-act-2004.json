@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T01:39:04.451Z",
   "archiveMentions": 80,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "csfpal_000627",
     "itemTitle": "Caught in the Act",
     "stem": "csfpal_000627_access",
@@ -32,5 +32,9 @@
     "fileSim": 0.06896551724137931,
     "url": "https://archive.org/download/csfpal_000627/csfpal_000627_access.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

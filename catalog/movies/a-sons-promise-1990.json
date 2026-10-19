@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T17:05:38.415Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "paymoneywubby-twitch-42539880011",
     "itemTitle": "I PROMISE I WILL NOT GET STUNLOCKED AND WE WILL GET TO THE CONTENT TONIGHT I SWEAR OR MY SONS NAME ISNT ENWARD HEETLER !merch !gg !tts",
     "stem": "42539880011",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "paymoneywubby-twitch-42538801803",
       "itemTitle": "I PROMISE I WILL NOT GET STUNLOCKED AND WE WILL GET TO THE CONTENT TONIGHT I SWEAR OR MY SONS NAME ISNT ENWARD HEETLER !merch !gg !tts",
       "stem": "42538801803",
@@ -47,5 +47,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/paymoneywubby-twitch-42538801803/42538801803.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

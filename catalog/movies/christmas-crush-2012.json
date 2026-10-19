@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T04:40:00.488Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "christmas-crush-2019-christmas-com-rom-magic-ion",
     "itemTitle": "Christmas Crush (2019 Christmas, Com Rom, Magic, ION)",
     "stem": "Christmas Crush (2019 Christmas, ComRom, Magic, ION)",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/christmas-crush-2019-christmas-com-rom-magic-ion/Christmas%20Crush%20(2019%20Christmas%2C%20ComRom%2C%20Magic%2C%20ION).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2012)"
+  }
 }

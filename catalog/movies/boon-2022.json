@@ -20,35 +20,11 @@
   "huntedAt": "2026-10-14T02:45:12.178Z",
   "archiveMentions": 292,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.95,
-    "item": "stvma-Lake_Boon_Comm_Meeting_April_12_2022",
-    "itemTitle": "Lake Boon Comm Meeting April 12 2022",
-    "stem": "Lake_Boon_Comm_Meeting_April_12_2022",
-    "file": "Lake_Boon_Comm_Meeting_April_12_2022.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 5589,
-    "sizeMB": 204,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/stvma-Lake_Boon_Comm_Meeting_April_12_2022/Lake_Boon_Comm_Meeting_April_12_2022.mpeg4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "stvma-Lake_Boon_Commission_Meeting_6_14_22",
-      "itemTitle": "Lake Boon Commission Meeting 6 14 22",
-      "stem": "Lake_Boon_Commission_Meeting_6_14_22",
-      "file": "Lake_Boon_Commission_Meeting_6_14_22.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 7204,
-      "sizeMB": 621,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/stvma-Lake_Boon_Commission_Meeting_6_14_22/Lake_Boon_Commission_Meeting_6_14_22.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

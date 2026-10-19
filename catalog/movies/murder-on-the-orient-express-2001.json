@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T01:25:29.778Z",
   "archiveMentions": 30,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "720p-murder-on-the-orient-express-2017-blu-ray-hin-eng",
     "itemTitle": "720p Murder On The Orient Express 2017 Blu Ray Hin+ Eng",
     "stem": "720p Murder on the Orient Express 2017 BluRay Hin+Eng",
@@ -63,5 +63,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/murder-on-the-orient-express-1974-1080p-pvca/murder-on-the-orient-express-1974-1080p-pvca.mkv"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

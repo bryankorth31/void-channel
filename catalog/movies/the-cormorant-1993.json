@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T02:51:20.963Z",
   "archiveMentions": 21,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.84,
     "item": "rare-the-cormorant-tvrip-1993-givefastlink",
     "itemTitle": "The cormorant",
     "stem": "rare-the-cormorant-tvrip-1993-💎-givefastlink",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/CormorantBetoCarminatti2014/Cormorant%20(Beto%20Carminatti%2C%202014).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

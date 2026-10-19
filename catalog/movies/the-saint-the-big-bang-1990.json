@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T11:30:38.855Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-saint-complete-series-1989",
     "itemTitle": "The Saint - Complete Series 1989",
     "stem": "The Saint  S01E05 - The Big Bang",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/the-saint-complete-series-1989/The%20Saint%20%20S01E05%20-%20The%20Big%20Bang.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

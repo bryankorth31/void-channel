@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T11:45:07.029Z",
   "archiveMentions": 110,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "family-plan-1998_202603",
     "itemTitle": "Family Plan (1998)",
     "stem": "Family Plan (1998)/Family Plan (1998)",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "family-plan-1998",
       "itemTitle": "FAMILY PLAN 1998",
       "stem": "FAMILY PLAN 1998",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/arabseed.-the.-family.-plan.-2023.480p.-web-dl/%5Barabseed%5D.The.Family.Plan.2023.480p.WEB-DL.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2005)"
+  }
 }

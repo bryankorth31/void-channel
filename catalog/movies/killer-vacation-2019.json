@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T02:06:57.882Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "watch-killer-vacation-soap-2day",
     "itemTitle": "Watch Killer Vacation Soap 2day",
     "stem": "Watch Killer Vacation soap2day",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/watch-killer-vacation-soap-2day/Watch%20Killer%20Vacation%20soap2day.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

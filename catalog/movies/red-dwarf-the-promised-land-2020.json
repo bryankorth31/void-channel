@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T08:30:52.428Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "red.-dwarf.-s-13-e-00.-the.-promised.-land.-720p",
     "itemTitle": "Red. Dwarf. S 13 E 00. The. Promised. Land. 720p",
     "stem": "Red.Dwarf.S13E00.The.Promised.Land.720p",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/red.-dwarf.-s-13-e-00.-the.-promised.-land.-720p/Red.Dwarf.S13E00.The.Promised.Land.720p.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

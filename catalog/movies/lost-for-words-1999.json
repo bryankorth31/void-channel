@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T12:30:46.327Z",
   "archiveMentions": 69,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "CSPAN2_20250303_025000_After_Words_Kevin_Fagan_The_Lost_and_the_Found_-_A_True_Story_of...",
-    "itemTitle": "After Words Kevin Fagan, \"The Lost and the Found - A True Story of Homelessness, Found Family, and Second Chance : CSPAN2 : March 2, 2025 9:50pm-11:01pm EST",
-    "stem": "CSPAN2_20250303_025000_After_Words_Kevin_Fagan_The_Lost_and_the_Found_-_A_True_Story_of...",
-    "file": "CSPAN2_20250303_025000_After_Words_Kevin_Fagan_The_Lost_and_the_Found_-_A_True_Story_of....mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4261,
-    "sizeMB": 775,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN2_20250303_025000_After_Words_Kevin_Fagan_The_Lost_and_the_Found_-_A_True_Story_of.../CSPAN2_20250303_025000_After_Words_Kevin_Fagan_The_Lost_and_the_Found_-_A_True_Story_of....mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-CSPAN2"
+  }
 }

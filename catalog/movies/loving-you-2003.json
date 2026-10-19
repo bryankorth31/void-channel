@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T16:46:39.761Z",
   "archiveMentions": 192,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "loving-you-1957-full-length-movie",
     "itemTitle": "Loving You 1957 ( Full Length Movie)",
     "stem": "Loving You 1957 (Full length movie)",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/loving-you-1995-mou-mei-san-taam/Loving%20You%20(1995)%20Mou%20mei%20san%20taam.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2003)"
+  }
 }

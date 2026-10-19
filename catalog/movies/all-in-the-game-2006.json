@@ -16,35 +16,24 @@
   "huntedAt": "2026-10-15T03:31:55.425Z",
   "archiveMentions": 292,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "WCT15832",
-    "itemTitle": "Finneytown/Greenhills All-Star Baseball: Game 2",
-    "stem": "WCT 15832",
-    "file": "WCT 15832.mp4",
-    "format": "h.264",
+    "conf": 0.6,
+    "item": "2006-framingham-little-big-league-all-star-game-by-joe-k",
+    "itemTitle": "2006 Framingham Little Big League All Star Game By Joe K",
+    "stem": "2006 Framingham Little Big League All Star Game by JoeK",
+    "file": "2006 Framingham Little Big League All Star Game by JoeK.mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 5456,
-    "sizeMB": 528,
-    "band": "match",
-    "fileSim": 0,
-    "url": "https://archive.org/download/WCT15832/WCT%2015832.mp4"
+    "seconds": 7219,
+    "sizeMB": 9793,
+    "band": "near",
+    "fileSim": 0.95,
+    "url": "https://archive.org/download/2006-framingham-little-big-league-all-star-game-by-joe-k/2006%20Framingham%20Little%20Big%20League%20All%20Star%20Game%20by%20JoeK.mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.75,
-      "item": "2006-framingham-little-big-league-all-star-game-by-joe-k",
-      "itemTitle": "2006 Framingham Little Big League All Star Game By Joe K",
-      "stem": "2006 Framingham Little Big League All Star Game by JoeK",
-      "file": "2006 Framingham Little Big League All Star Game by JoeK.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 7219,
-      "sizeMB": 9793,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/2006-framingham-little-big-league-all-star-game-by-joe-k/2006%20Framingham%20Little%20Big%20League%20All%20Star%20Game%20by%20JoeK.mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); runtime not within 15% of the TMDB runtime"
+  }
 }

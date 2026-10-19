@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T17:39:29.360Z",
   "archiveMentions": 70,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "fusoku-subs-nagasaki-1945-angelus-no-kane",
     "itemTitle": "[Fusoku Subs] Nagasaki 1945 - Angelus No Kane",
     "stem": "[Fusoku Subs] Nagasaki 1945 - Angelus no Kane",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "orphan-nagasaki-1945-angelus-no-kane-1080p-793-e-06-a-2.-1080",
       "itemTitle": "Nagasaki 1945 ~ The Angelus Bells (English Sub)",
       "stem": "[Orphan] Nagasaki 1945 - Angelus no Kane (1080p) [793E06A2].1080",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/orphan-nagasaki-1945-angelus-no-kane-1080p-793-e-06-a-2.-1080/%5BOrphan%5D%20Nagasaki%201945%20-%20Angelus%20no%20Kane%20(1080p)%20%5B793E06A2%5D.1080.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "angelus-maestre",
       "itemTitle": "Angelus Maestre",
       "stem": "Chilling Adventures of Sabrina%3a A Frustrating Waste of Potential",
@@ -60,5 +60,9 @@
       "fileSim": 0.07547169811320754,
       "url": "https://archive.org/download/angelus-maestre/Chilling%20Adventures%20of%20Sabrina%253a%20A%20Frustrating%20Waste%20of%20Potential.webm"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

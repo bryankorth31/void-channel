@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T23:10:53.233Z",
   "archiveMentions": 279,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "a-maldicao-de-audrey-2020",
     "itemTitle": "A Maldição De Audrey ( 2020)",
     "stem": "A Maldição de Audrey (2020)",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "They-Saved-Hitlers-Brain-1968-IKaH2OrIzrw",
       "itemTitle": "They Saved Hitlers Brain (1968) | Full Movie | Walter Stocker | Audrey Caire | Carlos Rivas",
       "stem": "They Saved Hitlers Brain (1968) [IKaH2OrIzrw]",
@@ -47,5 +47,9 @@
       "fileSim": 0.05555555555555555,
       "url": "https://archive.org/download/They-Saved-Hitlers-Brain-1968-IKaH2OrIzrw/They%20Saved%20Hitlers%20Brain%20(1968)%20%5BIKaH2OrIzrw%5D.webm"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

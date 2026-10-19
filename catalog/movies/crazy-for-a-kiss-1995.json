@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T15:34:10.902Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "kiss-crazy-nights-1988-live-at-budokan-japanese-tv",
     "itemTitle": "KISS Crazy Nights 1988 - Live at the Budokan Hall 1988-04-22 (Japanese TV)",
     "stem": "KISS Crazy Nights 1988 - Live at the Budokan Hall 1988-04-22 (Japanese TV)",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/kiss-crazy-nights-1988-live-at-budokan-japanese-tv/KISS%20Crazy%20Nights%201988%20-%20Live%20at%20the%20Budokan%20Hall%201988-04-22%20(Japanese%20TV).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

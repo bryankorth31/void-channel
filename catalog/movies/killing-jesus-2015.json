@@ -17,63 +17,11 @@
   "huntedAt": "2026-10-13T22:10:24.827Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.75,
-    "item": "FOXNEWSW_20150906_000000_Killing_Jesus",
-    "itemTitle": "Killing Jesus : FOXNEWSW : September 5, 2015 5:00pm-8:01pm PDT",
-    "stem": "FOXNEWSW_20150906_000000_Killing_Jesus",
-    "file": "FOXNEWSW_20150906_000000_Killing_Jesus.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 10861,
-    "sizeMB": 1134,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/FOXNEWSW_20150906_000000_Killing_Jesus/FOXNEWSW_20150906_000000_Killing_Jesus.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.75,
-      "item": "FOXNEWSW_20150404_000000_Killing_Jesus",
-      "itemTitle": "Killing Jesus : FOXNEWSW : April 3, 2015 5:00pm-8:01pm PDT",
-      "stem": "FOXNEWSW_20150404_000000_Killing_Jesus",
-      "file": "FOXNEWSW_20150404_000000_Killing_Jesus.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 10861,
-      "sizeMB": 1133,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/FOXNEWSW_20150404_000000_Killing_Jesus/FOXNEWSW_20150404_000000_Killing_Jesus.mp4"
-    },
-    {
-      "conf": 0.75,
-      "item": "FOXNEWSW_20150406_000000_Killing_Jesus",
-      "itemTitle": "Killing Jesus : FOXNEWSW : April 5, 2015 5:00pm-8:01pm PDT",
-      "stem": "FOXNEWSW_20150406_000000_Killing_Jesus",
-      "file": "FOXNEWSW_20150406_000000_Killing_Jesus.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 10861,
-      "sizeMB": 1133,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/FOXNEWSW_20150406_000000_Killing_Jesus/FOXNEWSW_20150406_000000_Killing_Jesus.mp4"
-    },
-    {
-      "conf": 0.75,
-      "item": "FOXNEWSW_20150406_030000_Killing_Jesus",
-      "itemTitle": "Killing Jesus : FOXNEWSW : April 5, 2015 8:00pm-11:01pm PDT",
-      "stem": "FOXNEWSW_20150406_030000_Killing_Jesus",
-      "file": "FOXNEWSW_20150406_030000_Killing_Jesus.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 10860,
-      "sizeMB": 1132,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/FOXNEWSW_20150406_030000_Killing_Jesus/FOXNEWSW_20150406_030000_Killing_Jesus.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-FOXNEWSW"
+  }
 }

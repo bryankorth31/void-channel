@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T09:11:49.456Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "jean-harlow-the-blonde-bombshell",
     "itemTitle": "Jean Harlow The Blonde Bombshell",
     "stem": "JeanHarlow The Blonde Bombshell",
@@ -31,5 +31,9 @@
     "fileSim": 0.9090909090909091,
     "url": "https://archive.org/download/jean-harlow-the-blonde-bombshell/JeanHarlow%20The%20Blonde%20Bombshell.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

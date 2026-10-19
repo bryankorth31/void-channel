@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T22:48:56.080Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "eric-ernie-movie-silverscreen-tv",
     "itemTitle": "Eric Ernie (2011 Movie Bio Dramatization)",
     "stem": "Eric - Ernie (Movie) Silverscreen TV",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/eric-ernie-movie-silverscreen-tv/Eric%20-%20Ernie%20(Movie)%20Silverscreen%20TV.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

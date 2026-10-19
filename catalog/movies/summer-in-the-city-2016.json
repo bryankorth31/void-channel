@@ -17,35 +17,11 @@
   "huntedAt": "2026-10-14T01:51:53.996Z",
   "archiveMentions": 291,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.95,
-    "item": "Missoula_City_Band_Summer_Concerts_2016_HIGHLIGHTS",
-    "itemTitle": "Missoula City Band Summer Concerts 2016 HIGHLIGHTS",
-    "stem": "Missoula_City_Band_Summer_Concerts_2016_HIGHLIGHTS",
-    "file": "Missoula_City_Band_Summer_Concerts_2016_HIGHLIGHTS.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 5245,
-    "sizeMB": 543,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Missoula_City_Band_Summer_Concerts_2016_HIGHLIGHTS/Missoula_City_Band_Summer_Concerts_2016_HIGHLIGHTS.mpeg4"
-  },
-  "alternates": [
-    {
-      "conf": 0.75,
-      "item": "Missoula_City_Band_Summer_Concerts_2016_5",
-      "itemTitle": "Missoula City Band Summer Concerts 2016 #5",
-      "stem": "Missoula_City_Band_Summer_Concerts_2016_5",
-      "file": "Missoula_City_Band_Summer_Concerts_2016_5.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 3714,
-      "sizeMB": 330,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Missoula_City_Band_Summer_Concerts_2016_5/Missoula_City_Band_Summer_Concerts_2016_5.mpeg4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

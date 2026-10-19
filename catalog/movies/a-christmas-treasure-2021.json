@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T13:34:19.856Z",
   "archiveMentions": 17,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "a-christmas-treasure-2004-vhs-higher-quality-0001",
     "itemTitle": "HIT Entertainment Children's Favorites: A Christmas Treasure (2004 VHS) (High Quality)",
     "stem": "A Christmas Treasure (2004 VHS) (Higher Quality) - 0001",
@@ -47,5 +47,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/childrensfavoriteschristmas/bandicam%202020-03-11%2023-36-43-135.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2021)"
+  }
 }

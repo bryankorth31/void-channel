@@ -20,33 +20,19 @@
   "state": "LIVE",
   "file": {
     "conf": 0.85,
-    "item": "tourist-trap-1979_202411",
-    "itemTitle": "Tourist Trap 1979",
-    "stem": "Tourist Trap 1979",
-    "file": "Tourist Trap 1979.mp4",
-    "format": "MPEG4",
+    "item": "tourist-trap_202604",
+    "itemTitle": "Tourist Trap",
+    "stem": "Tourist Trap",
+    "file": "Tourist Trap.mp4",
+    "format": "h.264",
     "playable": true,
-    "seconds": 5374,
-    "sizeMB": 1711,
+    "seconds": 5391,
+    "sizeMB": 520,
     "band": "match",
     "fileSim": 1,
-    "url": "https://archive.org/download/tourist-trap-1979_202411/Tourist%20Trap%201979.mp4"
+    "url": "https://archive.org/download/tourist-trap_202604/Tourist%20Trap.mp4"
   },
   "alternates": [
-    {
-      "conf": 0.85,
-      "item": "tourist-trap_202604",
-      "itemTitle": "Tourist Trap",
-      "stem": "Tourist Trap",
-      "file": "Tourist Trap.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5391,
-      "sizeMB": 520,
-      "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/tourist-trap_202604/Tourist%20Trap.mp4"
-    },
     {
       "conf": 0.85,
       "item": "tourist-trap1998",
@@ -60,6 +46,20 @@
       "band": "match",
       "fileSim": 1,
       "url": "https://archive.org/download/tourist-trap1998/Tourist%20Trap.mp4"
+    },
+    {
+      "conf": 0.84,
+      "item": "tourist-trap-1979_202411",
+      "itemTitle": "Tourist Trap 1979",
+      "stem": "Tourist Trap 1979",
+      "file": "Tourist Trap 1979.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 5374,
+      "sizeMB": 1711,
+      "band": "match",
+      "fileSim": 1,
+      "url": "https://archive.org/download/tourist-trap-1979_202411/Tourist%20Trap%201979.mp4"
     }
   ]
 }

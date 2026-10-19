@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T03:43:53.462Z",
   "archiveMentions": 291,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "Triangle2009",
     "itemTitle": "Triangle 2009",
     "stem": "Triangle 2009",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "Triangle.2009.720p.BluRay.x264.YIFY",
       "itemTitle": "Triangle. 2009.720p. Blu Ray.x 264. YIFY",
       "stem": "Triangle.2009.720p.BluRay.x264.YIFY",
@@ -48,21 +48,7 @@
       "url": "https://archive.org/download/Triangle.2009.720p.BluRay.x264.YIFY/Triangle.2009.720p.BluRay.x264.YIFY.mp4"
     },
     {
-      "conf": 0.85,
-      "item": "FourSidedTriangle_201905",
-      "itemTitle": "Four Sided Triangle",
-      "stem": "Four Sided Triangle",
-      "file": "Four Sided Triangle.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4897,
-      "sizeMB": 623,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/FourSidedTriangle_201905/Four%20Sided%20Triangle.mp4"
-    },
-    {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "TheTriangle2005",
       "itemTitle": "The Triangle (TV Mini-Series 2005)",
       "stem": "The Triangle 1",
@@ -74,6 +60,24 @@
       "band": "match",
       "fileSim": 0.9523809523809523,
       "url": "https://archive.org/download/TheTriangle2005/The%20Triangle%201.mp4"
+    },
+    {
+      "conf": 0.7,
+      "item": "FourSidedTriangle_201905",
+      "itemTitle": "Four Sided Triangle",
+      "stem": "Four Sided Triangle",
+      "file": "Four Sided Triangle.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 4897,
+      "sizeMB": 623,
+      "band": "match",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/FourSidedTriangle_201905/Four%20Sided%20Triangle.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2001)"
+  }
 }

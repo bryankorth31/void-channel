@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T12:56:20.419Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "the-truth-about-girl-in-room-13-anne-heche-and-the-last-film-of-her-life",
     "itemTitle": "The Truth About Girl In Room 13 Anne Heche And The Last Film Of Her Life",
     "stem": "The Truth about Girl in Room 13 - Anne Heche and the Last Film of Her Life",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/the-truth-about-girl-in-room-13-anne-heche-and-the-last-film-of-her-life/The%20Truth%20about%20Girl%20in%20Room%2013%20-%20Anne%20Heche%20and%20the%20Last%20Film%20of%20Her%20Life.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

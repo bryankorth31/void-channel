@@ -17,49 +17,11 @@
   "huntedAt": "2026-10-15T10:42:57.577Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.95,
-    "item": "FOXNEWSW_20200330_010000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America",
-    "itemTitle": "FOX Presents the iHeart Living Room Concert for America : FOXNEWSW : March 29, 2020 6:00pm-7:00pm PDT",
-    "stem": "FOXNEWSW_20200330_010000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America",
-    "file": "FOXNEWSW_20200330_010000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3661,
-    "sizeMB": 382,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/FOXNEWSW_20200330_010000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America/FOXNEWSW_20200330_010000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.95,
-      "item": "FOXNEWSW_20200330_070000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America",
-      "itemTitle": "FOX Presents the iHeart Living Room Concert for America : FOXNEWSW : March 30, 2020 12:00am-1:00am PDT",
-      "stem": "FOXNEWSW_20200330_070000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America",
-      "file": "FOXNEWSW_20200330_070000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3660,
-      "sizeMB": 381,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/FOXNEWSW_20200330_070000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America/FOXNEWSW_20200330_070000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America.mp4"
-    },
-    {
-      "conf": 0.95,
-      "item": "FOXNEWSW_20200330_040000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America",
-      "itemTitle": "FOX Presents the iHeart Living Room Concert for America : FOXNEWSW : March 29, 2020 9:00pm-10:00pm PDT",
-      "stem": "FOXNEWSW_20200330_040000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America",
-      "file": "FOXNEWSW_20200330_040000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3661,
-      "sizeMB": 381,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/FOXNEWSW_20200330_040000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America/FOXNEWSW_20200330_040000_FOX_Presents_the_iHeart_Living_Room_Concert_for_America.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-FOXNEWSW"
+  }
 }

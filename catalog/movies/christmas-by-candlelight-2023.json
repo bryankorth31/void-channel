@@ -18,63 +18,24 @@
   "huntedAt": "2026-10-14T10:59:19.390Z",
   "archiveMentions": 27,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "comco-Dec._5_Valley_Symphony_s_Christmas_by_Candlelight",
-    "itemTitle": "Dec. 5, Valley Symphony's Christmas by Candlelight",
-    "stem": "Dec._5_Valley_Symphony_s_Christmas_by_Candlelight",
-    "file": "Dec._5_Valley_Symphony_s_Christmas_by_Candlelight.mp4",
-    "format": "h.264",
+    "conf": 0.65,
+    "item": "loma-linda-university-church-christmas-candlelight-concert-2023-2023-12-23",
+    "itemTitle": "Loma Linda University Church Christmas Candlelight Concert 2023 ( 2023 12 23)",
+    "stem": "Loma Linda University Church - Christmas Candlelight Concert 2023 (2023-12-23)",
+    "file": "Loma Linda University Church - Christmas Candlelight Concert 2023 (2023-12-23).mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 6180,
-    "sizeMB": 596,
+    "seconds": 5057,
+    "sizeMB": 438,
     "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/comco-Dec._5_Valley_Symphony_s_Christmas_by_Candlelight/Dec._5_Valley_Symphony_s_Christmas_by_Candlelight.mp4"
+    "fileSim": 0.6333333333333333,
+    "url": "https://archive.org/download/loma-linda-university-church-christmas-candlelight-concert-2023-2023-12-23/Loma%20Linda%20University%20Church%20-%20Christmas%20Candlelight%20Concert%202023%20(2023-12-23).mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "Christmas_By_Candlelight_at_State_Street",
-      "itemTitle": "Christmas By Candlelight at State Street",
-      "stem": "Christmas_By_Candlelight_at_State_Street",
-      "file": "Christmas_By_Candlelight_at_State_Street.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5465,
-      "sizeMB": 531,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Christmas_By_Candlelight_at_State_Street/Christmas_By_Candlelight_at_State_Street.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "comco-Valley_Symphony_s_Christmas_by_Candlelight_A_Colorado_Christmas",
-      "itemTitle": "Valley Symphony's Christmas by Candlelight, A Colorado Christmas",
-      "stem": "Valley_Symphony_s_Christmas_by_Candlelight_A_Colorado_Christmas",
-      "file": "Valley_Symphony_s_Christmas_by_Candlelight_A_Colorado_Christmas.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 7016,
-      "sizeMB": 680,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/comco-Valley_Symphony_s_Christmas_by_Candlelight_A_Colorado_Christmas/Valley_Symphony_s_Christmas_by_Candlelight_A_Colorado_Christmas.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "loma-linda-university-church-christmas-candlelight-concert-2023-2023-12-23",
-      "itemTitle": "Loma Linda University Church Christmas Candlelight Concert 2023 ( 2023 12 23)",
-      "stem": "Loma Linda University Church - Christmas Candlelight Concert 2023 (2023-12-23)",
-      "file": "Loma Linda University Church - Christmas Candlelight Concert 2023 (2023-12-23).mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5057,
-      "sizeMB": 438,
-      "band": "match",
-      "fileSim": 0.6333333333333333,
-      "url": "https://archive.org/download/loma-linda-university-church-christmas-candlelight-concert-2023-2023-12-23/Loma%20Linda%20University%20Church%20-%20Christmas%20Candlelight%20Concert%202023%20(2023-12-23).mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T12:26:54.418Z",
   "archiveMentions": 287,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "MatMen239",
     "itemTitle": "Mat Men Ep. 239 - Where Do We Go Now?",
     "stem": "MatMen239_HD",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/MatMen239/MatMen239_HD.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

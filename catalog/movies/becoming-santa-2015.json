@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T07:05:36.102Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "mark-adamo-becoming-santa-claus-dallas-opera",
     "itemTitle": "Mark Adamo: Becoming Santa Claus (Dallas Opera)",
     "stem": "MarkAdamo-Becoming_Santa_Claus-Dallas_Opera",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/mark-adamo-becoming-santa-claus-dallas-opera/MarkAdamo-Becoming_Santa_Claus-Dallas_Opera.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

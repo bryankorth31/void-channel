@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T16:37:49.490Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-ImqjSdp5vqE",
     "itemTitle": "Nightmare After My Wedding - Nigerian Movies Latest Full Movies | Nollywood Movies | African Movies",
     "stem": "Nightmare_After_My_Wedding_-_Nigerian_Movies_Latest_Full_Movies_Nollywood_Movies_African_Movies-ImqjSdp5vqE",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "youtube-192Qd9oP84g",
       "itemTitle": "Wedding Planning is an Absolute Nightmare | Trash Taste #98",
       "stem": "192Qd9oP84g",
@@ -46,5 +46,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/youtube-192Qd9oP84g/192Qd9oP84g.webm"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

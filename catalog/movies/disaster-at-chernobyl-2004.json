@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T17:28:47.389Z",
   "archiveMentions": 36,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "54204RussianConcertHallFootage",
     "itemTitle": "UKRANIAN ANTI-NUCLEAR WAR / CHERNOBYL DISASTER PROPAGANDA FILM 54204",
     "stem": "54204 Russian Concert Hall Footage",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "xd-14564-chernobyl-vwr",
       "itemTitle": "1986 POST CHERNOBYL DISASTER  BELLORUSSIAN DOCUMENTARY FILM  RETURN TO  EXCLUSION ZONE XD14564",
       "stem": "XD14564+Chernobyl_vwr",
@@ -47,5 +47,9 @@
       "fileSim": 0.475,
       "url": "https://archive.org/download/xd-14564-chernobyl-vwr/XD14564%2BChernobyl_vwr.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T12:51:23.600Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "miss-spiders-sunny-patch-kids-cantonese",
     "itemTitle": "Miss Spider's Sunny Patch Kids (Cantonese Dub with Subtittles) (2008 Innoform DVD Release)",
     "stem": "MISS_SPIDERS_SUNNY_PATCH_KIDS_T1",
@@ -47,5 +47,9 @@
       "fileSim": 0.76,
       "url": "https://archive.org/download/MSSPFTVSeries2004/Miss%20Spiders%20Sunny%20Patch%20Friends%20Special%EF%BD%9C%20The%20Prince%2C%20Princess%20and%20the%20Bee%20(HD%201080p).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2003)"
+  }
 }

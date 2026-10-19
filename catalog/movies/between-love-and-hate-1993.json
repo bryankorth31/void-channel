@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T04:32:30.914Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "erosfilmfactoryTheArtofSeductionATributetoMommartzTheThinLineBetweenLoveandHate",
     "itemTitle": "The Art of Seduction - A Tribute to Mommartz: The Thin Line Between Love and Hate",
     "stem": "artofseduction3_part2_512kb",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "erosfilmfactoryTheArtofSeductionATributetoMommartzTheThinLineBetweenLoveandHate",
       "itemTitle": "The Art of Seduction - A Tribute to Mommartz: The Thin Line Between Love and Hate",
       "stem": "artofseduction3_part2",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/erosfilmfactoryTheArtofSeductionATributetoMommartzTheThinLineBetweenLoveandHate/artofseduction3_part2.ogv"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "erosfilmfactoryTheArtofSeductionATributetoMommartzTheThinLineBetweenLoveandHate",
       "itemTitle": "The Art of Seduction - A Tribute to Mommartz: The Thin Line Between Love and Hate",
       "stem": "artofseduction3_part1_512kb",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/erosfilmfactoryTheArtofSeductionATributetoMommartzTheThinLineBetweenLoveandHate/artofseduction3_part1_512kb.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "erosfilmfactoryTheArtofSeductionATributetoMommartzTheThinLineBetweenLoveandHate",
       "itemTitle": "The Art of Seduction - A Tribute to Mommartz: The Thin Line Between Love and Hate",
       "stem": "artofseduction3_part1",
@@ -75,5 +75,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/erosfilmfactoryTheArtofSeductionATributetoMommartzTheThinLineBetweenLoveandHate/artofseduction3_part1.ogv"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

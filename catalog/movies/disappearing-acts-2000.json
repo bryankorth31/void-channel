@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T03:34:51.349Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "terry-mc-millan-disappearing-acts",
     "itemTitle": "Terry Mc Millan Disappearing Acts",
     "stem": "Terry McMillan    Disappearing Acts",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "terry-mc-millan-disappearing-acts",
       "itemTitle": "Terry Mc Millan Disappearing Acts",
       "stem": "Uptown Saturday Night 1974",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/terry-mc-millan-disappearing-acts/Uptown%20Saturday%20Night%201974.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "terry-mc-millan-disappearing-acts",
       "itemTitle": "Terry Mc Millan Disappearing Acts",
       "stem": "Run Dmc Krush Groove - 1985",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/terry-mc-millan-disappearing-acts/Run%20Dmc%20Krush%20Groove%20-%201985.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "terry-mc-millan-disappearing-acts",
       "itemTitle": "Terry Mc Millan Disappearing Acts",
       "stem": "Polly (1989)",
@@ -75,5 +75,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/terry-mc-millan-disappearing-acts/Polly%20(1989).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

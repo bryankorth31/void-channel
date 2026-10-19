@@ -18,20 +18,11 @@
   "huntedAt": "2026-10-14T17:21:23.739Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "bevcamma-Frozen_and_Fear_vs._Love",
-    "itemTitle": "\"Frozen\" and Fear vs. Love",
-    "stem": "Frozen_and_Fear_vs._Love",
-    "file": "Frozen_and_Fear_vs._Love.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3972,
-    "sizeMB": 195,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/bevcamma-Frozen_and_Fear_vs._Love/Frozen_and_Fear_vs._Love.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

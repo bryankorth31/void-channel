@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T16:10:15.652Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "Guru-Bhagwan_His-Secretary-and-his-Bodyguard_Mit-deutschem-Untertitel_Zuerich_2010",
     "itemTitle": "Guru Bhagwan • His Secretary and his Bodyguard • mit deutschem Untertitel • Zürich 2010",
     "stem": "Guru-Bhagwan-Osho_His-Secretary-and-his-Bodyguard_mit-Untertitel_Zuerich_2010",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/Guru-Bhagwan_His-Secretary-and-his-Bodyguard_Mit-deutschem-Untertitel_Zuerich_2010/Guru-Bhagwan-Osho_His-Secretary-and-his-Bodyguard_mit-Untertitel_Zuerich_2010.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

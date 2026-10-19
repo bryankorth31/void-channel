@@ -20,9 +20,9 @@
   "huntedAt": "2026-10-14T18:30:51.219Z",
   "archiveMentions": 286,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a-colt-is-my-passport",
     "itemTitle": "A Colt Is My Passport",
     "stem": "A Colt is my Passport",
@@ -51,5 +51,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/the-colt-dvdrip-xvid/The%20Colt%20dvdrip%20xvid.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

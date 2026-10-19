@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T10:05:07.267Z",
   "archiveMentions": 292,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "15_alice",
     "itemTitle": "15_alice",
     "stem": "Garfield-2004-HD",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "15_alice",
       "itemTitle": "15_alice",
       "stem": "Lucky-Luke-2009-HD",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/15_alice/Lucky-Luke-2009-HD.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "15_alice",
       "itemTitle": "15_alice",
       "stem": "Ghost-Town-2008-HD",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/15_alice/Ghost-Town-2008-HD.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "15_alice",
       "itemTitle": "15_alice",
       "stem": "Deadgirl-2008-HD",
@@ -75,5 +75,9 @@
       "fileSim": 0.14285714285714285,
       "url": "https://archive.org/download/15_alice/Deadgirl-2008-HD.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

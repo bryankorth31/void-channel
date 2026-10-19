@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T19:57:14.074Z",
   "archiveMentions": 40,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "CriminalSwissIntentStigmatisationOfMinoritiesInSwitzerlandImmigrantsTodayJewsInPast720p",
     "itemTitle": "Criminal Swiss Intent Stigmatisation Of Minorities In Switzerland Immigrants Today & Jews In Past [ 720p]",
     "stem": "Switzerland`s Nazi Templar Banks [720p]",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "CriminalSwissIntentStigmatisationOfMinoritiesInSwitzerlandImmigrantsTodayJewsInPast720p",
       "itemTitle": "Criminal Swiss Intent Stigmatisation Of Minorities In Switzerland Immigrants Today & Jews In Past [ 720p]",
       "stem": "Swiss Finance Business [720p]",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/CriminalSwissIntentStigmatisationOfMinoritiesInSwitzerlandImmigrantsTodayJewsInPast720p/Swiss%20Finance%20Business%20%5B720p%5D.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "CriminalSwissIntentStigmatisationOfMinoritiesInSwitzerlandImmigrantsTodayJewsInPast720p",
       "itemTitle": "Criminal Swiss Intent Stigmatisation Of Minorities In Switzerland Immigrants Today & Jews In Past [ 720p]",
       "stem": "The Real Forces Behind Bundy Ranch Standoff Nevada, BLM, Sen. Reid, Sheriff Mack & Militias [720p]",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/CriminalSwissIntentStigmatisationOfMinoritiesInSwitzerlandImmigrantsTodayJewsInPast720p/The%20Real%20Forces%20Behind%20Bundy%20Ranch%20Standoff%20Nevada%2C%20BLM%2C%20Sen.%20Reid%2C%20Sheriff%20Mack%20%26%20Militias%20%5B720p%5D.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "CriminalSwissIntentStigmatisationOfMinoritiesInSwitzerlandImmigrantsTodayJewsInPast720p",
       "itemTitle": "Criminal Swiss Intent Stigmatisation Of Minorities In Switzerland Immigrants Today & Jews In Past [ 720p]",
       "stem": "Criminal Swiss Intent_ Stigmatisation of Minorities in Switzerland - Immigrants Today & Jews in Past [720p]",
@@ -75,5 +75,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/CriminalSwissIntentStigmatisationOfMinoritiesInSwitzerlandImmigrantsTodayJewsInPast720p/Criminal%20Swiss%20Intent_%20Stigmatisation%20of%20Minorities%20in%20Switzerland%20-%20Immigrants%20Today%20%26%20Jews%20in%20Past%20%5B720p%5D.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

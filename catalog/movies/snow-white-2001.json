@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T20:00:25.324Z",
   "archiveMentions": 274,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "snow-white-on-ice",
     "itemTitle": "Walt Disney's World On Ice - Snow White and the Seven Dwarfs (Disney 1994 - 2001)",
     "stem": "Snow White On Ice",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/snow-white-on-ice/Snow%20White%20On%20Ice.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

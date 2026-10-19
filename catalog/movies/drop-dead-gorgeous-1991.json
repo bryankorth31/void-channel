@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T08:58:31.766Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "watch-drop-dead-gorgeous-hd-free",
     "itemTitle": "Drop Dead Gorgeous 1999",
     "stem": "Watch Drop Dead Gorgeous HD free",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/watch-drop-dead-gorgeous-hd-free/Watch%20Drop%20Dead%20Gorgeous%20HD%20free.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1991)"
+  }
 }

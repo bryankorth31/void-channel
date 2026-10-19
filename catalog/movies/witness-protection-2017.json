@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T05:45:41.258Z",
   "archiveMentions": 33,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "WITNESSPROTECTION1999",
     "itemTitle": "WITNESS PROTECTION 1999",
     "stem": "WITNESS PROTECTION 1999",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/WITNESSPROTECTION1999/WITNESS%20PROTECTION%201999.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2017)"
+  }
 }

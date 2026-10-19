@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T12:59:19.385Z",
   "archiveMentions": 15,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "journey-to-the-christmas-star",
     "itemTitle": "Journey to the Christmas Star (Eng)",
     "stem": "Journey to the Christmas Star full",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "a-christmas-journey-home",
       "itemTitle": "A Christmas Journey Home [VHS Christmas Movie]",
       "stem": "A Christmas Journey Home",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/a-christmas-journey-home/A%20Christmas%20Journey%20Home.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T18:16:54.140Z",
   "archiveMentions": 8,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "girl-with-the-diamond-slipper-1985-webrip",
     "itemTitle": "Girl with the Diamond Slipper (1985) webrip Maggie Cheung, Nat Chan, Wong Jing, Wong Yu, Johnny Wang, Elvis Tsui, Anthony Chan, Brenda Lo, Ngai Yee-Ching, Charlie Cho Shaw Bros (elmudo)",
     "stem": "Girl with the Diamond Slipper (1985) webrip",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/girl-with-the-diamond-slipper-1985-webrip/Girl%20with%20the%20Diamond%20Slipper%20(1985)%20webrip.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

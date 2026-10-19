@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T03:58:47.678Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "house-on-haunted-hill-1959-with-persian-merged-subtitles-by-jamal-kianifar",
     "itemTitle": "Old classic American Horror crime thriller noir Film ( House On Haunted Hill 1959 ) With Persian Merged Subtitles By Jamal Kianifar",
     "stem": "House on Haunted Hill 1959 With Persian merged subtitles by Jamal kianifar ",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "jerome.-c.-house-american-1991-dolls-world-short-horror-films-video-album-2024",
       "itemTitle": "Jerome. C. House ( American, 1991) Doll's World ( Short Horror Films Video Album ( 2024)",
       "stem": "Jerome.C",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/jerome.-c.-house-american-1991-dolls-world-short-horror-films-video-album-2024/Jerome.C.House%20(American%2C1991)-Doll's%20World%20(Short%20Horror%20Films%20Video%20Album%20(2024).ia.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "jerome.-c.-house-american-1991-dolls-world-short-horror-films-video-album-2024",
       "itemTitle": "Jerome. C. House ( American, 1991) Doll's World ( Short Horror Films Video Album ( 2024)",
       "stem": "Jerome.C.House (American,1991)-Doll's World (Short Horror Films Video Album (2024)",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/jerome.-c.-house-american-1991-dolls-world-short-horror-films-video-album-2024/Jerome.C.House%20(American%2C1991)-Doll's%20World%20(Short%20Horror%20Films%20Video%20Album%20(2024).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T04:19:34.158Z",
   "archiveMentions": 14,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "bitchute_-_team-scream_2022",
     "itemTitle": "BitChute - team-scream (2022)",
     "stem": "20221118 - 0KARQxSJnaff - Wake Up, Die, Repeat II/20221118 - 0KARQxSJnaff - Wake Up, Die, Repeat II",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "bitchute_-_team-scream_2022",
       "itemTitle": "BitChute - team-scream (2022)",
       "stem": "20221107 - Bin2O5RJFVYb - Tourists Beware/20221107 - Bin2O5RJFVYb - Tourists Beware",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/bitchute_-_team-scream_2022/20221107%20-%20Bin2O5RJFVYb%20-%20Tourists%20Beware%2F20221107%20-%20Bin2O5RJFVYb%20-%20Tourists%20Beware.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "bitchute_-_team-scream_2022",
       "itemTitle": "BitChute - team-scream (2022)",
       "stem": "20221028 - moI1Ud8gLPsf - Escape From Madness/20221028 - moI1Ud8gLPsf - Escape From Madness",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/bitchute_-_team-scream_2022/20221028%20-%20moI1Ud8gLPsf%20-%20Escape%20From%20Madness%2F20221028%20-%20moI1Ud8gLPsf%20-%20Escape%20From%20Madness.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "bitchute_-_team-scream_2022",
       "itemTitle": "BitChute - team-scream (2022)",
       "stem": "20221017 - jtHJmJ7lF24U - Disturbing Collection/20221017 - jtHJmJ7lF24U - Disturbing Collection",
@@ -75,5 +75,9 @@
       "fileSim": 0.04081632653061224,
       "url": "https://archive.org/download/bitchute_-_team-scream_2022/20221017%20-%20jtHJmJ7lF24U%20-%20Disturbing%20Collection%2F20221017%20-%20jtHJmJ7lF24U%20-%20Disturbing%20Collection.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

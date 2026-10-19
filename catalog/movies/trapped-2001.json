@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T07:25:27.231Z",
   "archiveMentions": 290,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "Trapped_",
     "itemTitle": "Trapped",
     "stem": "Trapped",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "Trapped_",
       "itemTitle": "Trapped",
       "stem": "Trapped_512kb",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/Trapped_/Trapped_512kb.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "MikeMorales-vWgCUCOAoK1r",
       "itemTitle": "IT'S TO LATE TOO LEAVE TRAPPED #WEATHER WARFARE LIVE !!",
       "stem": "MikeMorales-vWgCUCOAoK1r",
@@ -60,5 +60,9 @@
       "fileSim": 0.07142857142857142,
       "url": "https://archive.org/download/MikeMorales-vWgCUCOAoK1r/MikeMorales-vWgCUCOAoK1r.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

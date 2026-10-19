@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T13:21:28.062Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-perfect-roommate-thriller-film-complet-en-francais-360-p",
     "itemTitle": "The Perfect Roommate ( Thriller) Film Complet En Français( 360 P)",
     "stem": "The Perfect Roommate (Thriller) Film Complet en Français(360P)",
@@ -34,5 +34,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/the-perfect-roommate-thriller-film-complet-en-francais-360-p/The%20Perfect%20Roommate%20(Thriller)%20Film%20Complet%20en%20Fran%C3%A7ais(360P).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

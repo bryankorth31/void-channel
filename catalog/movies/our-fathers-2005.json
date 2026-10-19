@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T19:56:18.508Z",
   "archiveMentions": 77,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "foof_20240614",
     "itemTitle": "Flags of Our Fathers Korean Sub VHS (2007)",
     "stem": "foof part 1",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "foof_20240614",
       "itemTitle": "Flags of Our Fathers Korean Sub VHS (2007)",
       "stem": "foof",
@@ -47,5 +47,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/foof_20240614/foof.ia.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

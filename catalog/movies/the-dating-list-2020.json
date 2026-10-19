@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T05:46:01.724Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-Hy4ZKhpJgrA",
     "itemTitle": "The Check List: A Dating Nightmare - Love, Lust, and The Devil Ep 52",
     "stem": "Hy4ZKhpJgrA",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/youtube-Hy4ZKhpJgrA/Hy4ZKhpJgrA.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

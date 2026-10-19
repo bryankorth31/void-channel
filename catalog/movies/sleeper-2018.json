@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T03:15:01.904Z",
   "archiveMentions": 176,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "q-september-11-2018-activate-sleeper-cells",
     "itemTitle": "Q September 11 2018 - Activate Sleeper Cells",
     "stem": "Qanon September 11 2018  - Activate Sleeper Cells 720",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/q-september-11-2018-activate-sleeper-cells/Qanon%20September%2011%202018%20%20-%20Activate%20Sleeper%20Cells%20720.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

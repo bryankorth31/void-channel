@@ -15,9 +15,9 @@
   "huntedAt": "2026-10-15T19:11:41.605Z",
   "archiveMentions": 298,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "ogrewatch-boy_do_we_need_to_talk",
     "itemTitle": "Boy Do We Need TO Talk (April 28 2024) [Archive]",
     "stem": "archive",
@@ -32,7 +32,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "i-think-we-need-to-talk-about-ai",
       "itemTitle": "I Think We Need To Talk About AI",
       "stem": "I Think We Need To Talk About AI",
@@ -45,5 +45,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/i-think-we-need-to-talk-about-ai/I%20Think%20We%20Need%20To%20Talk%20About%20AI.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

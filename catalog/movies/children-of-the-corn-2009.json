@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T20:17:56.810Z",
   "archiveMentions": 30,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "children.-of.-the.-corn.-1984",
     "itemTitle": "Children of the Corn (1984)",
     "stem": "Children Of The Corn (1984)/mp4/Children.Of.The.Corn.1984",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "children-of-the-corn-1984-1080p",
       "itemTitle": "Children Of The Corn (1984) [1080p]",
       "stem": "Children Of The Corn (1984) [1080p]",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/children-of-the-corn-1984-1080p/Children%20Of%20The%20Corn%20(1984)%20%5B1080p%5D.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "childrenofthecorn-2009-fullmovie-",
       "itemTitle": "Children of the corn horror remake film",
       "stem": "25cbf9154e7d339989837ebc339026e142c84ff6",
@@ -61,5 +61,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/childrenofthecorn-2009-fullmovie-/25cbf9154e7d339989837ebc339026e142c84ff6.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2009)"
+  }
 }

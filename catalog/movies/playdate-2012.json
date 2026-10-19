@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T08:04:55.116Z",
   "archiveMentions": 298,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "1000186122",
     "itemTitle": "Nick Playdate (February 9, 2012) Full Recording",
     "stem": "1000186122",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "1000146981",
       "itemTitle": "Nick Playdate (December 27, 2011) Full Recording",
       "stem": "1000146981",
@@ -48,5 +48,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/1000146981/1000146981.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

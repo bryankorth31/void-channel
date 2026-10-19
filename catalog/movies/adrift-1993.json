@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T02:52:08.409Z",
   "archiveMentions": 77,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "360Tv.Adrift.2018WEBDL720pHD1",
     "itemTitle": "360 Tv. Adrift.( 2018) WEB DL 720p HD ( 1)",
     "stem": "360Tv.Adrift.(2018) WEB-DL 720p HD (1)",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "popdefect-live-with-this-adrift-in-america",
       "itemTitle": "Popdefect - Live With This 'Adrift In America'",
       "stem": "Popdefect - Live With This 'adrift in america'",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/adrift-sas-7-10-07-94/Adrift%20%5BSAS-7%2C%20%2010-07-94%5D.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1993)"
+  }
 }

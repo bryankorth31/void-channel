@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T12:43:18.310Z",
   "archiveMentions": 15,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-JNJqQSBCr4Q",
     "itemTitle": "9 Tools From a Hostage Negotiator That Will Get You a Raise | Chris Voss | EP 425",
     "stem": "JNJqQSBCr4Q",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/youtube-JNJqQSBCr4Q/JNJqQSBCr4Q.webm"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

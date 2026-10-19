@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-15T05:30:38.134Z",
   "archiveMentions": 14,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "new_2_202601",
     "itemTitle": "Thunder in Paradise - Nature Of The Beast",
     "stem": "new_2",
@@ -36,7 +36,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-nature-of-the-beast.-1988",
       "itemTitle": "The Nature Of The Beast.( 1988)",
       "stem": "The Nature Of The Beast.(1988)",
@@ -49,5 +49,9 @@
       "fileSim": 0.967741935483871,
       "url": "https://archive.org/download/the-nature-of-the-beast.-1988/The%20Nature%20Of%20The%20Beast.(1988).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

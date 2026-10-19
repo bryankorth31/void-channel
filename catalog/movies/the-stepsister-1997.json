@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T09:31:42.634Z",
   "archiveMentions": 60,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "confessions-of-an-ugly-stepsister",
     "itemTitle": "Confessions of An Ugly Stepsister",
     "stem": "Confessions of an Ugly Stepsister",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/confessions-of-an-ugly-stepsister/Confessions%20of%20an%20Ugly%20Stepsister.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T04:17:54.734Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "one-brother-chose-crime.-the-other-chose-justice-the-lost-capone-1990-full-movie",
     "itemTitle": "One Brother Chose Crime. The Other Chose Justice The Lost Capone ( 1990) Full Movie",
     "stem": "One Brother Chose Crime. The Other Chose Justice The Lost Capone (1990) Full Movie",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/one-brother-chose-crime.-the-other-chose-justice-the-lost-capone-1990-full-movie/One%20Brother%20Chose%20Crime.%20The%20Other%20Chose%20Justice%20The%20Lost%20Capone%20(1990)%20Full%20Movie.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

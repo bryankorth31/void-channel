@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T14:19:28.690Z",
   "archiveMentions": 17,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "dweb-8_1_18_LL_TheJourneytoWeb3",
     "itemTitle": "Talks: The journey to Web 3 - the Builders, the Protocols, and the Challenges Ahead",
     "stem": "8_1_18_LL_The Journey to Web 3",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "relaxing-driving-music-the-journey-ahead-no-binaural-beats-stress-relief-calm-instrumental",
       "itemTitle": "Relaxing Driving Music The Journey Ahead No Binaural Beats Stress Relief Calm Instrumental",
       "stem": "-Driving in the Rain 1 Hour  ASMR Rainy Drive Sounds  Sleep Meditation Study White Noise",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/relaxing-driving-music-the-journey-ahead-no-binaural-beats-stress-relief-calm-instrumental/-Driving%20in%20the%20Rain%201%20Hour%20%20ASMR%20Rainy%20Drive%20Sounds%20%20Sleep%20Meditation%20Study%20White%20Noise.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "relaxing-driving-music-the-journey-ahead-no-binaural-beats-stress-relief-calm-instrumental",
       "itemTitle": "Relaxing Driving Music The Journey Ahead No Binaural Beats Stress Relief Calm Instrumental",
       "stem": "- Relaxing Driving Music The Journey Ahead  no binaural beats Stress Relief Calm Instrumental",
@@ -61,5 +61,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/relaxing-driving-music-the-journey-ahead-no-binaural-beats-stress-relief-calm-instrumental/-%20Relaxing%20Driving%20Music%20The%20Journey%20Ahead%20%20no%20binaural%20beats%20Stress%20Relief%20Calm%20Instrumental.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

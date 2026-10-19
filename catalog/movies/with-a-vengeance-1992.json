@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T04:28:03.128Z",
   "archiveMentions": 268,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "VengeanceValley",
     "itemTitle": "Vengeance Valley",
     "stem": "VengeanceValley",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "VengeanceValley",
       "itemTitle": "Vengeance Valley",
       "stem": "VengeanceValley_512kb",
@@ -47,21 +47,7 @@
       "url": "https://archive.org/download/VengeanceValley/VengeanceValley_512kb.mp4"
     },
     {
-      "conf": 0.85,
-      "item": "blades-of-vengeance-huntress-sega-mega-drive-pal-gameplay-full-game-longplay",
-      "itemTitle": "Blades Of Vengeance Huntress Sega Mega Drive PAL Gameplay",
-      "stem": "Blades Of Vengeance Huntress Sega Mega Drive PAL Gameplay (Full Game Longplay)",
-      "file": "Blades Of Vengeance Huntress Sega Mega Drive PAL Gameplay (Full Game Longplay).mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5798,
-      "sizeMB": 253,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/blades-of-vengeance-huntress-sega-mega-drive-pal-gameplay-full-game-longplay/Blades%20Of%20Vengeance%20Huntress%20Sega%20Mega%20Drive%20PAL%20Gameplay%20(Full%20Game%20Longplay).mp4"
-    },
-    {
-      "conf": 0.75,
+      "conf": 0.6,
       "item": "girl.-camp.-2003.-chained.-vengeance.-2003.-dvdrip.-xvi-d-spri-nter",
       "itemTitle": "Girl Camp: Chained Vengeance (2003)DVDRip",
       "stem": "Girl.Camp.2003.Chained.Vengeance.2003.DVDRip.XviD-SPRiNTER",
@@ -75,5 +61,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/girl.-camp.-2003.-chained.-vengeance.-2003.-dvdrip.-xvi-d-spri-nter/Girl.Camp.2003.Chained.Vengeance.2003.DVDRip.XviD-SPRiNTER.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

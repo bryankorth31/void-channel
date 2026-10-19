@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T11:25:58.114Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "the-play-on-one-1990-s03e06-requested",
     "itemTitle": "The Play On One 1990 S3E06 Yellowbacks",
     "stem": "the-play-on-one-1990-s03e06-requested",
@@ -31,5 +31,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/the-play-on-one-1990-s03e06-requested/the-play-on-one-1990-s03e06-requested.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

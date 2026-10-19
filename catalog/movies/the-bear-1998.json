@@ -20,63 +20,11 @@
   "huntedAt": "2026-10-14T17:19:11.248Z",
   "archiveMentions": 298,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "01-yogi-bear-december-1-2013-5am-est",
-    "itemTitle": "Boomerang - Yogi Bear 2013/14 Airings",
-    "stem": "01 - Yogi Bear - December 1, 2013 - 5am EST",
-    "file": "01 - Yogi Bear - December 1, 2013 - 5am EST.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 1940,
-    "sizeMB": 2601,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/01-yogi-bear-december-1-2013-5am-est/01%20-%20Yogi%20Bear%20-%20December%201%2C%202013%20-%205am%20EST.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "01-yogi-bear-december-1-2013-5am-est",
-      "itemTitle": "Boomerang - Yogi Bear 2013/14 Airings",
-      "stem": "09 - Yogi Bear - January 6, 2014 - 5am EST",
-      "file": "09 - Yogi Bear - January 6, 2014 - 5am EST.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 1942,
-      "sizeMB": 2592,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/01-yogi-bear-december-1-2013-5am-est/09%20-%20Yogi%20Bear%20-%20January%206%2C%202014%20-%205am%20EST.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "01-yogi-bear-december-1-2013-5am-est",
-      "itemTitle": "Boomerang - Yogi Bear 2013/14 Airings",
-      "stem": "06 - Yogi Bear - December 23, 2013 - 5am EST",
-      "file": "06 - Yogi Bear - December 23, 2013 - 5am EST.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 1921,
-      "sizeMB": 2583,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/01-yogi-bear-december-1-2013-5am-est/06%20-%20Yogi%20Bear%20-%20December%2023%2C%202013%20-%205am%20EST.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "01-yogi-bear-december-1-2013-5am-est",
-      "itemTitle": "Boomerang - Yogi Bear 2013/14 Airings",
-      "stem": "08 - Yogi Bear - January 5, 2014 - 5am EST",
-      "file": "08 - Yogi Bear - January 5, 2014 - 5am EST.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 1920,
-      "sizeMB": 2582,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/01-yogi-bear-december-1-2013-5am-est/08%20-%20Yogi%20Bear%20-%20January%205%2C%202014%20-%205am%20EST.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime"
+  }
 }

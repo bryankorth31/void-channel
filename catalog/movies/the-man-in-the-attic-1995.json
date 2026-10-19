@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T22:16:06.290Z",
   "archiveMentions": 33,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "1manintheattic",
     "itemTitle": "Man In The Attic",
     "stem": "1Man in the Attic",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "Man_in_the_Attic_movie",
       "itemTitle": "Man in the Attic",
       "stem": "Man_in_the_Attic",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/Man_in_the_Attic_movie/Man_in_the_Attic.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "ManInTheAttic",
       "itemTitle": "Man in the Attic",
       "stem": "ManInTheAtticPresentedByMoviePowder",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/ManInTheAttic/ManInTheAtticPresentedByMoviePowder.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "man-in-the-attic",
       "itemTitle": "Man In The Attic",
       "stem": "Man in the Attic",
@@ -76,5 +76,9 @@
       "fileSim": 0.96,
       "url": "https://archive.org/download/man-in-the-attic/Man%20in%20the%20Attic.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

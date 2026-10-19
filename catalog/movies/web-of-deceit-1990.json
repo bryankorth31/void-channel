@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T11:30:26.859Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "CSPAN3_20160220_210000_Book_Discussion_on_Web_of_Deceit",
-    "itemTitle": "Book Discussion on Web of Deceit : CSPAN3 : February 20, 2016 4:00pm-5:11pm EST",
-    "stem": "CSPAN3_20160220_210000_Book_Discussion_on_Web_of_Deceit",
-    "file": "CSPAN3_20160220_210000_Book_Discussion_on_Web_of_Deceit.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4260,
-    "sizeMB": 442,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN3_20160220_210000_Book_Discussion_on_Web_of_Deceit/CSPAN3_20160220_210000_Book_Discussion_on_Web_of_Deceit.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN3"
+  }
 }

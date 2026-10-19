@@ -18,20 +18,11 @@
   "huntedAt": "2026-10-14T01:09:37.722Z",
   "archiveMentions": 15,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "Barron_Arts_Holiday_Concert_-_Brothers_in_Harmony",
-    "itemTitle": "Barron Arts Holiday Concert: Brothers in Harmony",
-    "stem": "Barron_Arts_Holiday_Concert_-_Brothers_in_Harmony",
-    "file": "Barron_Arts_Holiday_Concert_-_Brothers_in_Harmony.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5233,
-    "sizeMB": 546,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Barron_Arts_Holiday_Concert_-_Brothers_in_Harmony/Barron_Arts_Holiday_Concert_-_Brothers_in_Harmony.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T16:25:15.838Z",
   "archiveMentions": 57,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "without_warning_1994",
     "itemTitle": "Without Warning (1994)",
     "stem": "Without.Warning.1994.DVDRip.x264-HANDJOB",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "without-warning-1994_202607",
       "itemTitle": "Without Warning (1994)",
       "stem": "Without Warning (1980)",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/without-warning-1994_202607/Without%20Warning%20(1980).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "without-warning-1994_202607",
       "itemTitle": "Without Warning (1994)",
       "stem": "Without Warning, 1994",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/without-warning-1994_202607/Without%20Warning%2C%201994.webm"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "without-warning-1994_202411",
       "itemTitle": "Without Warning (1994)",
       "stem": "Without Warning, 1994",
@@ -75,5 +75,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/without-warning-1994_202411/Without%20Warning%2C%201994.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1999)"
+  }
 }

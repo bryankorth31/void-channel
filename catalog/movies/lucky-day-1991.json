@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T08:56:46.903Z",
   "archiveMentions": 61,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "its-your-lucky-day-october-21-2023-silip-tv.su-merged",
     "itemTitle": "It's Your Lucky Day October 21, 2023",
     "stem": "It's Your Lucky Day October 21, 2023 - SilipTv",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "its-your-lucky-day-october-21-2023-silip-tv.su-merged",
       "itemTitle": "It's Your Lucky Day October 21, 2023",
       "stem": "It's Your Lucky Day October 21, 2023 - SilipTv.su__Merged",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/its-your-lucky-day-october-21-2023-silip-tv.su-merged/It's%20Your%20Lucky%20Day%20October%2021%2C%202023%20-%20SilipTv.su__Merged.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

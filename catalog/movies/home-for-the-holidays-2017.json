@@ -15,49 +15,11 @@
   "huntedAt": "2026-10-15T02:03:40.486Z",
   "archiveMentions": 259,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.95,
-    "item": "chtvma-CCA_Home_Audience_-_Carrie_Marshall_Home_for_the_Holidays_December_12_2017",
-    "itemTitle": "CCA Home Audience: Carrie Marshall Home for the Holidays – December 12, 2017",
-    "stem": "CCA_Home_Audience_-_Carrie_Marshall_Home_for_the_Holidays_December_12_2017",
-    "file": "CCA_Home_Audience_-_Carrie_Marshall_Home_for_the_Holidays_December_12_2017.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 5460,
-    "sizeMB": 269,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/chtvma-CCA_Home_Audience_-_Carrie_Marshall_Home_for_the_Holidays_December_12_2017/CCA_Home_Audience_-_Carrie_Marshall_Home_for_the_Holidays_December_12_2017.mpeg4"
-  },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "nwatvvt-Home_for_the_Holidays_First_Congregational_Church",
-      "itemTitle": "\"Home for the Holidays\" - First Congregational Church",
-      "stem": "Home_for_the_Holidays_First_Congregational_Church",
-      "file": "Home_for_the_Holidays_First_Congregational_Church.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5311,
-      "sizeMB": 363,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/nwatvvt-Home_for_the_Holidays_First_Congregational_Church/Home_for_the_Holidays_First_Congregational_Church.mpeg4"
-    },
-    {
-      "conf": 0.65,
-      "item": "hcamma-Home_For_The_Holidays",
-      "itemTitle": "Home For The Holidays",
-      "stem": "Home_For_The_Holidays",
-      "file": "Home_For_The_Holidays.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4446,
-      "sizeMB": 373,
-      "band": "near",
-      "fileSim": 1,
-      "url": "https://archive.org/download/hcamma-Home_For_The_Holidays/Home_For_The_Holidays.mpeg4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

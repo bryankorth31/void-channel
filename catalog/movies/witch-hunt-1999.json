@@ -20,21 +20,35 @@
   "state": "LIVE",
   "file": {
     "conf": 0.85,
-    "item": "witch-hunt-1994_202308",
-    "itemTitle": "Witch Hunt (1994)",
-    "stem": "Witch Hunt (1994)",
-    "file": "Witch Hunt (1994).mp4",
-    "format": "h.264",
+    "item": "witch-hunt_202608",
+    "itemTitle": "Witch Hunt",
+    "stem": "Witch Hunt",
+    "file": "Witch Hunt.mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 5628,
-    "sizeMB": 583,
+    "seconds": 5446,
+    "sizeMB": 330,
     "band": "match",
     "fileSim": 1,
-    "url": "https://archive.org/download/witch-hunt-1994_202308/Witch%20Hunt%20(1994).mp4"
+    "url": "https://archive.org/download/witch-hunt_202608/Witch%20Hunt.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
+      "item": "witch-hunt-1994_202308",
+      "itemTitle": "Witch Hunt (1994)",
+      "stem": "Witch Hunt (1994)",
+      "file": "Witch Hunt (1994).mp4",
+      "format": "h.264",
+      "playable": true,
+      "seconds": 5628,
+      "sizeMB": 583,
+      "band": "match",
+      "fileSim": 1,
+      "url": "https://archive.org/download/witch-hunt-1994_202308/Witch%20Hunt%20(1994).mp4"
+    },
+    {
+      "conf": 0.84,
       "item": "witch-hunt-1994-paul-schrader-dennis-hopper-hp-lovecraft-tv-movie",
       "itemTitle": "Witch Hunt",
       "stem": "Witch Hunt (1994, Paul Schrader) Dennis Hopper & HP Lovecraft TV Movie",
@@ -46,20 +60,6 @@
       "band": "match",
       "fileSim": 0.95,
       "url": "https://archive.org/download/witch-hunt-1994-paul-schrader-dennis-hopper-hp-lovecraft-tv-movie/Witch%20Hunt%20(1994%2C%20Paul%20Schrader)%20Dennis%20Hopper%20%26%20HP%20Lovecraft%20TV%20Movie.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "witch-hunt_202608",
-      "itemTitle": "Witch Hunt",
-      "stem": "Witch Hunt",
-      "file": "Witch Hunt.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5446,
-      "sizeMB": 330,
-      "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/witch-hunt_202608/Witch%20Hunt.mp4"
     }
   ]
 }

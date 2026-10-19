@@ -21,33 +21,19 @@
   "state": "LIVE",
   "file": {
     "conf": 0.85,
-    "item": "final-run-1989",
-    "itemTitle": "Final Run (1989) HD",
-    "stem": "Final Run (1989)",
-    "file": "Final Run (1989).mp4",
+    "item": "borntofight-5",
+    "itemTitle": "Final Run",
+    "stem": "BORNTOFIGHT5",
+    "file": "BORNTOFIGHT5.mp4",
     "format": "h.264",
     "playable": true,
-    "seconds": 5420,
-    "sizeMB": 521,
+    "seconds": 5180,
+    "sizeMB": 504,
     "band": "match",
-    "fileSim": 1,
-    "url": "https://archive.org/download/final-run-1989/Final%20Run%20(1989).mp4"
+    "fileSim": 0.1111111111111111,
+    "url": "https://archive.org/download/borntofight-5/BORNTOFIGHT5.mp4"
   },
   "alternates": [
-    {
-      "conf": 0.85,
-      "item": "borntofight-5",
-      "itemTitle": "Final Run",
-      "stem": "BORNTOFIGHT5",
-      "file": "BORNTOFIGHT5.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5180,
-      "sizeMB": 504,
-      "band": "match",
-      "fileSim": 0.1111111111111111,
-      "url": "https://archive.org/download/borntofight-5/BORNTOFIGHT5.mp4"
-    },
     {
       "conf": 0.85,
       "item": "borntofight-5",
@@ -63,7 +49,21 @@
       "url": "https://archive.org/download/borntofight-5/BORNTOFIGHT510.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
+      "item": "final-run-1989",
+      "itemTitle": "Final Run (1989) HD",
+      "stem": "Final Run (1989)",
+      "file": "Final Run (1989).mp4",
+      "format": "h.264",
+      "playable": true,
+      "seconds": 5420,
+      "sizeMB": 521,
+      "band": "match",
+      "fileSim": 1,
+      "url": "https://archive.org/download/final-run-1989/Final%20Run%20(1989).mp4"
+    },
+    {
+      "conf": 0.7,
       "item": "FFVIII_-_Speed_Run",
       "itemTitle": "Final Fantasy 8 - Run",
       "stem": "FFVIII_25_-_Leveling_-_Part_1_512kb",

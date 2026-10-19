@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T09:06:36.720Z",
   "archiveMentions": 48,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "7664-holly-rock-a-bye-baby-1993-dvdrip-d_202402",
     "itemTitle": "Holly Rock A Bye Baby (1993) DVDRip Dual",
     "stem": "7664-HollyRock A Bye Baby (1993) DVDRip D",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "rock-a-bye-baby-1958-comedy-jerry-lewis",
       "itemTitle": "Rock A Bye Baby (1958 Comedy, Jerry Lewis)",
       "stem": "Rock a Bye Baby (1958 Comedy Jerry Lewis)",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/rock-a-bye-baby-1958-comedy-jerry-lewis/Rock%20a%20Bye%20Baby%20(1958%20Comedy%20Jerry%20Lewis).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

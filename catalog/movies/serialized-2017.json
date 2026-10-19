@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T01:19:57.547Z",
   "archiveMentions": 31,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "paymoneywubby-twitch-43175738955",
     "itemTitle": "LORD OF THE RINGS SERIALIZED HUNT - BLACK ARAGORN - BLANDALF THE BLACK - BLIMLI SON OF BLOIN - BLEGOLAS - BLOLOM - BLARUMAN THE BLUE !GG",
     "stem": "43175738955",
@@ -33,5 +33,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/paymoneywubby-twitch-43175738955/43175738955.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

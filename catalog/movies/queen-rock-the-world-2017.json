@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T00:29:26.157Z",
   "archiveMentions": 20,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "CNNW_20250727_060000_Live_Aid_When_Rock_n_Roll_Took_on_the_World",
-    "itemTitle": "Live Aid: When Rock 'n' Roll Took on the World : CNNW : July 26, 2025 11:00pm-12:00am PDT",
-    "stem": "CNNW_20250727_060000_Live_Aid_When_Rock_n_Roll_Took_on_the_World",
-    "file": "CNNW_20250727_060000_Live_Aid_When_Rock_n_Roll_Took_on_the_World.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3658,
-    "sizeMB": 981,
-    "band": "match",
-    "fileSim": 0.6333333333333333,
-    "url": "https://archive.org/download/CNNW_20250727_060000_Live_Aid_When_Rock_n_Roll_Took_on_the_World/CNNW_20250727_060000_Live_Aid_When_Rock_n_Roll_Took_on_the_World.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CNNW"
+  }
 }

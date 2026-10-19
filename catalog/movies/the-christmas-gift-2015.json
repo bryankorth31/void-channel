@@ -18,20 +18,11 @@
   "huntedAt": "2026-10-14T06:06:49.543Z",
   "archiveMentions": 222,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "KJCB_Christmas_-_A_Gift_of_Music_NS14B003",
-    "itemTitle": "KJCB \"Christmas: A Gift of Music\" NS14B003",
-    "stem": "KJCB_Christmas_-_A_Gift_of_Music_NS14B003",
-    "file": "KJCB_Christmas_-_A_Gift_of_Music_NS14B003.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 6670,
-    "sizeMB": 583,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/KJCB_Christmas_-_A_Gift_of_Music_NS14B003/KJCB_Christmas_-_A_Gift_of_Music_NS14B003.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

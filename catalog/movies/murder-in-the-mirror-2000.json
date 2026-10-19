@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T05:12:06.087Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-20260224-apokuna-solving-my-kingdoms-murder-mystery-bannerfall-smp",
     "itemTitle": "20260223 apokuna Solving My Kingdom's Murder Mystery - Bannerfall SMP ⏾ Twitch: Youtube Mirror",
     "stem": "20260224 apokuna Solving My Kingdom's Murder Mystery - Bannerfall SMP",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "great-actress-murder-case-the-mirror-crackd-from-side-to-side",
       "itemTitle": "Great Actress Murder Case The Mirror Crack'd From Side To Side",
       "stem": "Great actress murder case The Mirror Crack'd from Side to Side",
@@ -48,5 +48,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/great-actress-murder-case-the-mirror-crackd-from-side-to-side/Great%20actress%20murder%20case%20The%20Mirror%20Crack'd%20from%20Side%20to%20Side.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T05:31:02.490Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "gods-country-and-the-woman-1937_202608",
     "itemTitle": "Gods Country and the Woman (1937)",
     "stem": "Gods Country and the Woman 1937 George Brent Beverly Roberts Bar",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "bressingmytablesins",
       "itemTitle": "Out in gods country",
       "stem": "Diary.Of.A.Country.Priest.1951.1080P.Bluray.X264.Aac-[Yts",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/bressingmytablesins/Diary.Of.A.Country.Priest.1951.1080P.Bluray.X264.Aac-%5BYts.Mx%5D.ia.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "bressingmytablesins",
       "itemTitle": "Out in gods country",
       "stem": "Diary.Of.A.Country.Priest.1951.1080P.Bluray.X264.Aac-[Yts.Mx]",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/bressingmytablesins/Diary.Of.A.Country.Priest.1951.1080P.Bluray.X264.Aac-%5BYts.Mx%5D.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "gods-own-country-2017",
       "itemTitle": "God's Own Country ( 2017)",
       "stem": "God's Own Country (2017)",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/gods-own-country-2017/God's%20Own%20Country%20(2017).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

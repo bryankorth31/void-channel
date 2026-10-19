@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T22:32:22.427Z",
   "archiveMentions": 248,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "TheFootstepsOfJesus",
     "itemTitle": "Footsteps Of Jesus",
     "stem": "The Footsteps of Jesus",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "In_The_Footsteps_Of_Alexander_The_Great_PBS_Home_Video_1997",
       "itemTitle": " In The Footsteps Of Alexander The Great PBS Home Video 1997",
       "stem": "In The Footsteps Of Alexander The Great PBS Home Video 1997 Tape 1",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/In_The_Footsteps_Of_Alexander_The_Great_PBS_Home_Video_1997/In%20The%20Footsteps%20Of%20Alexander%20The%20Great%20PBS%20Home%20Video%201997%20Tape%201.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "In_The_Footsteps_Of_Alexander_The_Great_PBS_Home_Video_1997",
       "itemTitle": " In The Footsteps Of Alexander The Great PBS Home Video 1997",
       "stem": "In The Footsteps Of Alexander The Great PBS Home Video 1997 Tape 2",
@@ -75,5 +75,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/footsteps_2006/footsteps.2006.DVDRIP.XViD-CG.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

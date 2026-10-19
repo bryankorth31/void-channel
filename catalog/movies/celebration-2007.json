@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T10:14:46.375Z",
   "archiveMentions": 287,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "100th-anniversary-celebration_202504",
     "itemTitle": "100th Anniversary Celebration",
     "stem": "0035. South Park S25E07 The Streaming Wars",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "100th-anniversary-celebration_202504",
       "itemTitle": "100th Anniversary Celebration",
       "stem": "0020. Mickey Mouse Clubhouse S04E15 Minnie's Winter Bow Show",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/100th-anniversary-celebration_202504/0020.%20Mickey%20Mouse%20Clubhouse%20S04E15%20Minnie's%20Winter%20Bow%20Show.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "100th-anniversary-celebration_202504",
       "itemTitle": "100th Anniversary Celebration",
       "stem": "0031. Scout & Friends Ep. 01 Phonics Farm",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/100th-anniversary-celebration_202504/0031.%20Scout%20%26%20Friends%20Ep.%2001%20Phonics%20Farm.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "100th-anniversary-celebration_202504",
       "itemTitle": "100th Anniversary Celebration",
       "stem": "0020. Mickey Mouse Clubhouse S04E13 Mickey's Pirate Adventure",
@@ -74,5 +74,9 @@
       "fileSim": 0.07547169811320754,
       "url": "https://archive.org/download/100th-anniversary-celebration_202504/0020.%20Mickey%20Mouse%20Clubhouse%20S04E13%20Mickey's%20Pirate%20Adventure.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

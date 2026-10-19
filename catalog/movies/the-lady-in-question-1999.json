@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T12:27:52.330Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-lady-in-question-1940",
     "itemTitle": "The Lady In Question",
     "stem": "The Lady in Question (1940)",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-lady-in-question-281940-29-rita-hayworth-2-c-glenn-ford-2-c-brian-aherne-26-evelyn-keyes",
       "itemTitle": "THE LADY IN QUESTION",
       "stem": "The Lady in Question %281940%29 - Rita Hayworth%2C Glenn Ford%2C Brian Aherne %26 Evelyn Keyes",
@@ -76,5 +76,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/glenn-ford-the-lady-in-question/Glenn%20Ford%20-%20The%20lady%20in%20question.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1999)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T15:27:55.150Z",
   "archiveMentions": 33,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "boy-meets-girl-1984-leos-carax-franca-672517234-456239103-1080p",
     "itemTitle": "Boy Meets Girl (1984)",
     "stem": "Boy Meets Girl (1984) - Leos Carax - França_672517234_456239103_1080p",
@@ -61,5 +61,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/boy.-meets.-girl.-1984/Boy.Meets.Girl.1984.FRENCH.1080p.BluRay.H264.AAC-VXT.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1993)"
+  }
 }

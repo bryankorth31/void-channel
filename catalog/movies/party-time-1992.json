@@ -16,50 +16,11 @@
   "huntedAt": "2026-10-15T11:45:45.435Z",
   "archiveMentions": 291,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.7,
-    "item": "957SOAPartytime2003",
-    "itemTitle": "Party Time",
-    "stem": "957 - SOA Party time 2003",
-    "file": "957 - SOA Party time 2003.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3699,
-    "sizeMB": 1474,
-    "band": "feature",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/957SOAPartytime2003/957%20-%20SOA%20Party%20time%202003.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "1993-selover-library-story-time-graduation-party-09-03-1993",
-      "itemTitle": "1993 Selover Library Story Time Graduation Party (Chesterville, Ohio)",
-      "stem": "1993 Selover Library Story Time Graduation Party 09-03-1993",
-      "file": "1993 Selover Library Story Time Graduation Party 09-03-1993.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 1695,
-      "sizeMB": 404,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/1993-selover-library-story-time-graduation-party-09-03-1993/1993%20Selover%20Library%20Story%20Time%20Graduation%20Party%2009-03-1993.mp4"
-    },
-    {
-      "conf": 0.6,
-      "item": "957SOAPartytime2003",
-      "itemTitle": "Party Time",
-      "stem": "957 - SOA Party time 2003.pegssc",
-      "file": "957 - SOA Party time 2003.pegssc.mpeg",
-      "format": "MPEG2",
-      "playable": false,
-      "codecRisk": "container (MPEG2)",
-      "seconds": 3699,
-      "sizeMB": 2481,
-      "band": "feature",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/957SOAPartytime2003/957%20-%20SOA%20Party%20time%202003.pegssc.mpeg"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T03:24:25.299Z",
   "archiveMentions": 288,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "los-ninos-de-san-judas",
     "itemTitle": "Los Niños De San Judas",
     "stem": "Los niños de San Judas",
@@ -47,5 +47,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/TheJudas/2019%20JFH%20-%20The%20Holocaust%20-%20Shifting%20the%20Blame%20-%20Part%202%20-%20%5BBitchute%20-%20Y9MPrw1Vqctq%5D.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

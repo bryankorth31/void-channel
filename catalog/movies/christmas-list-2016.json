@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T00:54:48.101Z",
   "archiveMentions": 48,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a-christmas-list-tv-movie-from-1997",
     "itemTitle": "A Christmas List Tv Movie From 1997",
     "stem": "A Christmas list tv movie from 1997",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/a-christmas-list-tv-movie-from-1997/A%20Christmas%20list%20tv%20movie%20from%201997.m4v"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

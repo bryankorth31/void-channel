@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T01:39:29.819Z",
   "archiveMentions": 80,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "torn-apart-1989",
     "itemTitle": "Torn Apart - Cecilia Peck, Adrian Pasdar",
     "stem": "Torn Apart - 1989",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "y-2mate.com-torn-apart-1990-480p",
       "itemTitle": "Torn Apart (1990)",
       "stem": "y2mate",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/y-2mate.com-torn-apart-1990-480p/y2mate.com%20-%20Torn%20Apart%201990_480p.ia.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "y-2mate.com-torn-apart-1990-480p",
       "itemTitle": "Torn Apart (1990)",
       "stem": "y2mate.com - Torn Apart 1990_480p",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/y-2mate.com-torn-apart-1990-480p/y2mate.com%20-%20Torn%20Apart%201990_480p.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2004)"
+  }
 }

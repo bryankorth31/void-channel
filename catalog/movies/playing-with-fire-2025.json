@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T08:28:44.422Z",
   "archiveMentions": 151,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-8eNPmrNNYSk",
     "itemTitle": "After Playing With Fire, Israel Is Getting Burnt",
     "stem": "8eNPmrNNYSk",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/aaf-playing.with.fire.2008.dvdrip.xvid/aaf-playing.with.fire.2008.dvdrip.xvid.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T07:52:18.930Z",
   "archiveMentions": 293,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "00SAMO",
     "itemTitle": "Glass Beach - 8",
     "stem": "602Happy",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "00SAMO",
       "itemTitle": "Glass Beach - 8",
       "stem": "z804Wench",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/00SAMO/z804Wench.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "00SAMO",
       "itemTitle": "Glass Beach - 8",
       "stem": "604Absolute",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/00SAMO/604Absolute.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "00SAMO",
       "itemTitle": "Glass Beach - 8",
       "stem": "605Cherubim",
@@ -75,5 +75,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/00SAMO/605Cherubim.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

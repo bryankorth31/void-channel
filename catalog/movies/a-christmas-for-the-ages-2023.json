@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T02:17:36.589Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-2WQuA1P0PRw",
     "itemTitle": "All Ages Christmas Drag Show, Amarillo Texas Rich Penkoski",
     "stem": "2WQuA1P0PRw",
@@ -33,5 +33,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/youtube-2WQuA1P0PRw/2WQuA1P0PRw.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

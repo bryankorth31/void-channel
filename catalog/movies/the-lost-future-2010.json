@@ -17,49 +17,11 @@
   "huntedAt": "2026-10-13T20:47:52.188Z",
   "archiveMentions": 33,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "CSPAN3_20141001_000000_Future_of_Getting_Lost",
-    "itemTitle": "Future of Getting Lost : CSPAN3 : September 30, 2014 8:00pm-9:15pm EDT",
-    "stem": "CSPAN3_20141001_000000_Future_of_Getting_Lost",
-    "file": "CSPAN3_20141001_000000_Future_of_Getting_Lost.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4500,
-    "sizeMB": 468,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN3_20141001_000000_Future_of_Getting_Lost/CSPAN3_20141001_000000_Future_of_Getting_Lost.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "CSPAN_20140901_140100_Future_of_Getting_Lost",
-      "itemTitle": "Future of Getting Lost : CSPAN : September 1, 2014 10:01am-11:15am EDT",
-      "stem": "CSPAN_20140901_140100_Future_of_Getting_Lost",
-      "file": "CSPAN_20140901_140100_Future_of_Getting_Lost.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4441,
-      "sizeMB": 459,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN_20140901_140100_Future_of_Getting_Lost/CSPAN_20140901_140100_Future_of_Getting_Lost.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "CSPAN3_20141125_032400_Future_of_Getting_Lost",
-      "itemTitle": "Future of Getting Lost : CSPAN3 : November 24, 2014 10:24pm-11:36pm EST",
-      "stem": "CSPAN3_20141125_032400_Future_of_Getting_Lost",
-      "file": "CSPAN3_20141125_032400_Future_of_Getting_Lost.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4321,
-      "sizeMB": 450,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN3_20141125_032400_Future_of_Getting_Lost/CSPAN3_20141125_032400_Future_of_Getting_Lost.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN3, TV-CSPAN"
+  }
 }

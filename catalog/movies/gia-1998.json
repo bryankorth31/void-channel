@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T18:40:01.986Z",
   "archiveMentions": 242,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "GiaKimThuatSu",
     "itemTitle": "Gia Kim Thuat Su",
     "stem": "gia kim thuat su",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "XemPhimGianhLTtCVietSubThuytMinhHDMonsterFamily2017",
       "itemTitle": "Xem Phim Gia Đình Là Tất Cả Viet Sub Thuyết Minh HD Monster Family 2017",
       "stem": "Xem Phim Gia Đình Là Tất Cả VietSub - Thuyết Minh - HD _ Monster Family 2017",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/XemPhimGianhLTtCVietSubThuytMinhHDMonsterFamily2017/Xem%20Phim%20Gia%20%C4%90%C3%ACnh%20L%C3%A0%20T%E1%BA%A5t%20C%E1%BA%A3%20VietSub%20-%20Thuy%E1%BA%BFt%20Minh%20-%20HD%20_%20Monster%20Family%202017.MP4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "GiaMaMeCung3Hdvn1Sub",
       "itemTitle": "Gia Ma Me Cung 3 Hdvn 1 Sub",
       "stem": "gia ma me cung3 hdvn1 sub",
@@ -61,5 +61,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/GiaMaMeCung3Hdvn1Sub/gia%20ma%20me%20cung3%20hdvn1%20sub.MP4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

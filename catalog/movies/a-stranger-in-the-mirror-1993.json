@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T01:05:14.798Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "video-stranger-in-the-mirror-1763113945060",
     "itemTitle": "Stranger in the Mirror",
     "stem": "1763113945060",
@@ -31,5 +31,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/video-stranger-in-the-mirror-1763113945060/1763113945060.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

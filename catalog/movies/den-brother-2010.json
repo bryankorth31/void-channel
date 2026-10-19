@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-13T21:07:02.224Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "20C3-591-Berichte_von_den_Big_Brother_Awards",
     "itemTitle": "20C3-591-Berichte von den Big Brother Awards",
     "stem": "20C3-591-Berichte_von_den_Big_Brother_Awards",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/20C3-591-Berichte_von_den_Big_Brother_Awards/20C3-591-Berichte_von_den_Big_Brother_Awards.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -19,20 +19,11 @@
   "huntedAt": "2026-10-15T03:15:46.766Z",
   "archiveMentions": 26,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "BET_20010918_000000_Deadlocked",
-    "itemTitle": "Deadlocked : BET : September 17, 2001 8:00pm-9:08pm EDT",
-    "stem": "BET_20010918_000000_Deadlocked",
-    "file": "BET_20010918_000000_Deadlocked.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4108,
-    "sizeMB": 410,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/BET_20010918_000000_Deadlocked/BET_20010918_000000_Deadlocked.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-BET"
+  }
 }

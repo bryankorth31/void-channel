@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T01:46:16.686Z",
   "archiveMentions": 205,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "rapid-fire_202608",
     "itemTitle": "Rapid Fire",
     "stem": "Rapid Fire",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "one-hour-of-gordon-ramsay-uncensored-rapid-fire-insults",
       "itemTitle": "One Hour Of Gordon Ramsay Uncensored Rapid Fire Insults",
       "stem": "One hour of Gordon Ramsay Uncensored Rapid Fire insults",
@@ -48,5 +48,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/one-hour-of-gordon-ramsay-uncensored-rapid-fire-insults/One%20hour%20of%20Gordon%20Ramsay%20Uncensored%20Rapid%20Fire%20insults.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

@@ -21,33 +21,19 @@
   "state": "REVIEW",
   "file": {
     "conf": 0.65,
-    "item": "sesame-street-elmos-christmas-countdown_202202",
-    "itemTitle": "Sesame Street Elmo's Christmas Countdown",
-    "stem": "Sesame Street_ Elmo's Christmas Countdown",
-    "file": "Sesame Street_ Elmo's Christmas Countdown.mp4",
+    "item": "elmos-christmas-countdown_202506",
+    "itemTitle": "Elmo's Christmas Countdown!",
+    "stem": "Elmo's Christmas Countdown",
+    "file": "Elmo's Christmas Countdown.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 2662,
-    "sizeMB": 1026,
+    "seconds": 2667,
+    "sizeMB": 501,
     "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/sesame-street-elmos-christmas-countdown_202202/Sesame%20Street_%20Elmo's%20Christmas%20Countdown.mp4"
+    "fileSim": 1,
+    "url": "https://archive.org/download/elmos-christmas-countdown_202506/Elmo's%20Christmas%20Countdown.mp4"
   },
   "alternates": [
-    {
-      "conf": 0.65,
-      "item": "elmos-christmas-countdown_202506",
-      "itemTitle": "Elmo's Christmas Countdown!",
-      "stem": "Elmo's Christmas Countdown",
-      "file": "Elmo's Christmas Countdown.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 2667,
-      "sizeMB": 501,
-      "band": "near",
-      "fileSim": 1,
-      "url": "https://archive.org/download/elmos-christmas-countdown_202506/Elmo's%20Christmas%20Countdown.mp4"
-    },
     {
       "conf": 0.65,
       "item": "elmos-christmas-countdown_202507",
@@ -61,6 +47,20 @@
       "band": "near",
       "fileSim": 1,
       "url": "https://archive.org/download/elmos-christmas-countdown_202507/Elmo's%20Christmas%20Countdown.mp4"
+    },
+    {
+      "conf": 0.5,
+      "item": "sesame-street-elmos-christmas-countdown_202202",
+      "itemTitle": "Sesame Street Elmo's Christmas Countdown",
+      "stem": "Sesame Street_ Elmo's Christmas Countdown",
+      "file": "Sesame Street_ Elmo's Christmas Countdown.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 2662,
+      "sizeMB": 1026,
+      "band": "near",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/sesame-street-elmos-christmas-countdown_202202/Sesame%20Street_%20Elmo's%20Christmas%20Countdown.mp4"
     }
   ]
 }

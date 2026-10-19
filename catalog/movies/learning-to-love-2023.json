@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T19:12:31.107Z",
   "archiveMentions": 78,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "orcavt-Osher_Lifelong_Learning_Institute_-_So_Many_Reasons_to_Love_Trees",
-    "itemTitle": "Osher Lifelong Learning Institute - So Many Reasons to Love Trees",
-    "stem": "Osher_Lifelong_Learning_Institute_-_So_Many_Reasons_to_Love_Trees",
-    "file": "Osher_Lifelong_Learning_Institute_-_So_Many_Reasons_to_Love_Trees.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4406,
-    "sizeMB": 430,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/orcavt-Osher_Lifelong_Learning_Institute_-_So_Many_Reasons_to_Love_Trees/Osher_Lifelong_Learning_Institute_-_So_Many_Reasons_to_Love_Trees.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

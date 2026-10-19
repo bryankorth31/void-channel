@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T15:13:11.712Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "losing-track",
     "itemTitle": "S04E07 Losing Track",
     "stem": "Losing Track",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/losing-track/Losing%20Track.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

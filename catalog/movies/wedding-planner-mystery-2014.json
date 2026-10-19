@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T04:13:26.505Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "kwp.-s-1-e.-2014-murder-mys-rom-kincaid.-the.-wedding.-planner.-mystery",
     "itemTitle": "(KWP.2014 Murder Mys Rom) Kincaid.The.Wedding.Planner.Mystery",
     "stem": "(KWP.S1E.2014 Murder Mys Rom) Kincaid.The.Wedding.Planner.Mystery",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/kwp.-s-1-e.-2014-murder-mys-rom-kincaid.-the.-wedding.-planner.-mystery/(KWP.S1E.2014%20Murder%20Mys%20Rom)%20Kincaid.The.Wedding.Planner.Mystery.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

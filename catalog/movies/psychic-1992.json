@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T01:00:40.545Z",
   "archiveMentions": 293,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "1.Intro_201905",
     "itemTitle": "La edad de Oro - Psychic Tv, Derek Jarman, Vagina Dentata Organ",
     "stem": "2. La edad de Oro - P35 _ 16-11-1984",
@@ -33,5 +33,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/1.Intro_201905/2.%20La%20edad%20de%20Oro%20-%20P35%20_%2016-11-1984.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

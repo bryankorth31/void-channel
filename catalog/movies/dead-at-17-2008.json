@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T16:27:00.985Z",
   "archiveMentions": 199,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "trutyireddead2jatszas2020.01.24171006h08min",
     "itemTitle": "Trutyi Red Dead 2 Játszás 2020.01.24 17 10 ( 06h 08min)",
     "stem": "Trutyi Red dead 2 Játszás  2020.01.25  01-01  (01h 31min)",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "trutyireddead2jatszas2020.01.24171006h08min",
       "itemTitle": "Trutyi Red Dead 2 Játszás 2020.01.24 17 10 ( 06h 08min)",
       "stem": "Trutymó remingtonszvillantós live D teljes verzió 2020.01.24  (01h 17min)",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/trutyireddead2jatszas2020.01.24171006h08min/Trutym%C3%B3%20remingtonszvillant%C3%B3s%20live%20D%20teljes%20verzi%C3%B3%202020.01.24%20%20(01h%2017min).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "the-city-of-the-dead-1960_202410",
       "itemTitle": "Horror Hotel/The City Of The Dead 1960 ★★★★ (CC) Horror [1:17:59]",
       "stem": "The City Of The Dead 1960",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/the-city-of-the-dead-1960_202410/The%20City%20Of%20The%20Dead%201960.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "trutyireddead2jatszas2020.01.24171006h08min",
       "itemTitle": "Trutyi Red Dead 2 Játszás 2020.01.24 17 10 ( 06h 08min)",
       "stem": "Trutyi Red dead 2 Játszás  2020.01.24  19-10  (01h 58min)",
@@ -76,5 +76,9 @@
       "fileSim": 0.475,
       "url": "https://archive.org/download/trutyireddead2jatszas2020.01.24171006h08min/Trutyi%20Red%20dead%202%20J%C3%A1tsz%C3%A1s%20%202020.01.24%20%2019-10%20%20(01h%2058min).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

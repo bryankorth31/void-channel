@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T15:10:29.140Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "s-08-e-03-the-count-of-solar",
     "itemTitle": "S08E03 The Count Of Solar",
     "stem": "S08E03 The Count of Solar",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/s-08-e-03-the-count-of-solar/S08E03%20The%20Count%20of%20Solar.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

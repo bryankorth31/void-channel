@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T09:39:37.824Z",
   "archiveMentions": 26,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "natalee-holloway",
     "itemTitle": "Natalee Holloway",
     "stem": "Natalee Holloway",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "Missingpersonstv-39518-2",
       "itemTitle": "39 Natalee Holloway FOUND, Nancy Moyer, Molly Datillo, Mary Nunes, Genevieve Kelley, Scott Kelley, A",
       "stem": "Missingpersonstv-39518",
@@ -47,5 +47,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/Missingpersonstv-39518-2/Missingpersonstv-39518.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

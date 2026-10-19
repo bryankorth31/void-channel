@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T14:22:21.565Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "s-10-e-05-o-mary-this-london",
     "itemTitle": "S10E05 O Mary This London",
     "stem": "S10E05 O Mary This London",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/s-10-e-05-o-mary-this-london/S10E05%20O%20Mary%20This%20London.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

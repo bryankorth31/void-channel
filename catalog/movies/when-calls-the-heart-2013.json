@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T01:12:21.320Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "when-calls-the-heart-tv-series-s-04",
     "itemTitle": "::::::: When Calls The Heart [ TV Series] Season 4 ::::::",
     "stem": "When Calls the Heart [TV Series]_S04E01_ When Calls the Heart Christmas",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "when-calls-the-heart-tv-series-s-03-e-01-new-years-wish",
       "itemTitle": "█▓▒ When Calls The Heart [ TV Series] Season 03",
       "stem": "When Calls the Heart [TV Series]_S03E01_ New Year's Wish",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/when-calls-the-heart-tv-series-s-03-e-01-new-years-wish/When%20Calls%20the%20Heart%20%5BTV%20Series%5D_S03E01_%20New%20Year's%20Wish.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "when-calls-the-heart-tv-series-s-05",
       "itemTitle": ":::: When Calls The Heart [ TV Series] Season 5 ::::",
       "stem": "When Calls the Heart [TV Series]_S05E01_ The Christmas Wishing Tree",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/when-calls-the-heart-tv-series-s-05/When%20Calls%20the%20Heart%20%5BTV%20Series%5D_S05E01_%20The%20Christmas%20Wishing%20Tree.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "when-calls-the-heart-tv-series-s-06",
       "itemTitle": "When Calls The Heart [ TV Series] Season 06",
       "stem": "When Calls the Heart [TV Series]_S06E01_ The Greatest Christmas Blessing",
@@ -76,5 +76,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/when-calls-the-heart-tv-series-s-06/When%20Calls%20the%20Heart%20%5BTV%20Series%5D_S06E01_%20The%20Greatest%20Christmas%20Blessing.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

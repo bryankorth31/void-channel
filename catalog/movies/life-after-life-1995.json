@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T15:41:37.362Z",
   "archiveMentions": 298,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "19980816pm-is-there-life-after-sin",
     "itemTitle": "Is There Life After Sin? (Gary Colville) | Hosanna Porirua",
     "stem": "19980816pm Is There Life After Sin EDIT",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "00-life-after-people",
       "itemTitle": "Life After People Documentary + Season 01",
       "stem": "00 Life After People",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/00-life-after-people/00%20Life%20After%20People.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "19980816pm-is-there-life-after-sin",
       "itemTitle": "Is There Life After Sin? (Gary Colville) | Hosanna Porirua",
       "stem": "19980816pm Is There Life After Sin FULL",
@@ -59,20 +59,10 @@
       "band": "match",
       "fileSim": 0.95,
       "url": "https://archive.org/download/19980816pm-is-there-life-after-sin/19980816pm%20Is%20There%20Life%20After%20Sin%20FULL.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "CSPAN3_20200704_122000_Life_After_the_Declaration_of_Independence",
-      "itemTitle": "Life After the Declaration of Independence : CSPAN3 : July 4, 2020 8:20am-10:01am EDT",
-      "stem": "CSPAN3_20200704_122000_Life_After_the_Declaration_of_Independence",
-      "file": "CSPAN3_20200704_122000_Life_After_the_Declaration_of_Independence.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 6062,
-      "sizeMB": 631,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN3_20200704_122000_Life_After_the_Declaration_of_Independence/CSPAN3_20200704_122000_Life_After_the_Declaration_of_Independence.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

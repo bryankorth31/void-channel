@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T05:11:37.979Z",
   "archiveMentions": 278,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "BodyAndSoul_201403",
     "itemTitle": "Body and Soul",
     "stem": "Body_and_Soul.1947",
@@ -60,5 +60,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/BodyAndSoul_201807/Body_and_Soul.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2000)"
+  }
 }

@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T13:10:19.108Z",
   "archiveMentions": 16,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "Intuition.OurSecondSight",
-    "itemTitle": "Intuition. Our Second Sight",
-    "stem": "Intuition. Our Second Sight",
-    "file": "Intuition. Our Second Sight.m4v",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3561,
-    "sizeMB": 768,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Intuition.OurSecondSight/Intuition.%20Our%20Second%20Sight.m4v"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

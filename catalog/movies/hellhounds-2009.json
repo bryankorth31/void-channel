@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T11:12:02.812Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "hellhounds-2013",
     "itemTitle": "Hellhounds (2013)",
     "stem": "HellhoundsRentalHD",
@@ -34,5 +34,9 @@
     "fileSim": 0.72,
     "url": "https://archive.org/download/hellhounds-2013/HellhoundsRentalHD.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2009)"
+  }
 }

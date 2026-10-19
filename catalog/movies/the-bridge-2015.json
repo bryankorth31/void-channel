@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-14T01:14:12.581Z",
   "archiveMentions": 296,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "09_01_15_First_Tuesday_at_The_Archives_-_Toll_Bridge_and_Trail_of_Tears",
-    "itemTitle": "09/01/15 First Tuesday at The Archives: Toll Bridge and Trail of Tears",
-    "stem": "09_01_15_First_Tuesday_at_The_Archives_-_Toll_Bridge_and_Trail_of_Tears",
-    "file": "09_01_15_First_Tuesday_at_The_Archives_-_Toll_Bridge_and_Trail_of_Tears.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 4492,
-    "sizeMB": 203,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/09_01_15_First_Tuesday_at_The_Archives_-_Toll_Bridge_and_Trail_of_Tears/09_01_15_First_Tuesday_at_The_Archives_-_Toll_Bridge_and_Trail_of_Tears.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

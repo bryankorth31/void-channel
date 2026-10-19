@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T14:43:08.701Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-cradle-will-fall-1983",
     "itemTitle": "The Cradle Will Fall (1983)",
     "stem": "the-cradle-will-fall-1983",
@@ -31,5 +31,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/the-cradle-will-fall-1983/the-cradle-will-fall-1983.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2004)"
+  }
 }

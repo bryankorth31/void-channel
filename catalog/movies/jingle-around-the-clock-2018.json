@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T03:39:01.490Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "Holiday_Around_the_clock",
-    "itemTitle": "Holiday  Around the clock",
-    "stem": "Holiday_Around_the_clock",
-    "file": "Holiday_Around_the_clock.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5346,
-    "sizeMB": 555,
-    "band": "match",
-    "fileSim": 0.6666666666666666,
-    "url": "https://archive.org/download/Holiday_Around_the_clock/Holiday_Around_the_clock.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

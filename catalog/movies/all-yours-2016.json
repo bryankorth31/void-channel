@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T06:23:54.783Z",
   "archiveMentions": 52,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "its-all-yours-1937",
     "itemTitle": "It's All Yours 1937",
     "stem": "It's All Yours 1937",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/its-all-yours-1937/It's%20All%20Yours%201937.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

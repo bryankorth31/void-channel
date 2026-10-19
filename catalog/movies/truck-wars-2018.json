@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T19:09:51.820Z",
   "archiveMentions": 11,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "game-gear-longplay-monster-truck-wars-us",
-    "itemTitle": "Game Gear Longplay - Monster Truck Wars (US/EU)",
-    "stem": "Game_Gear_Longplay_-_Monster_Truck_Wars_-_US",
-    "file": "Game_Gear_Longplay_-_Monster_Truck_Wars_-_US.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3663,
-    "sizeMB": 166,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/game-gear-longplay-monster-truck-wars-us/Game_Gear_Longplay_-_Monster_Truck_Wars_-_US.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime; junk word"
+  }
 }

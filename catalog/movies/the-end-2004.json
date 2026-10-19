@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T07:37:53.043Z",
   "archiveMentions": 280,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "0131_20240201",
     "itemTitle": "The End Of Evangelion Video Edition (Netflix and ADV Dub)",
     "stem": "EoE Video ADV Dub",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "0131_20240201",
       "itemTitle": "The End Of Evangelion Video Edition (Netflix and ADV Dub)",
       "stem": "EoE Video NETFLIX Dub",
@@ -46,5 +46,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/0131_20240201/EoE%20Video%20NETFLIX%20Dub.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T02:48:29.583Z",
   "archiveMentions": 35,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "ggav-Special_Presentation_-_Not_My_Family_Forum_Series_-_Fix_My_Pain_-_January_24_2019",
-    "itemTitle": "Special Presentation - Not My Family Forum Series - Fix My Pain - January 24, 2019",
-    "stem": "Special_Presentation_-_Not_My_Family_Forum_Series_-_Fix_My_Pain_-_January_24_2019.HD",
-    "file": "Special_Presentation_-_Not_My_Family_Forum_Series_-_Fix_My_Pain_-_January_24_2019.HD.mov",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 4915,
-    "sizeMB": 2037,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/ggav-Special_Presentation_-_Not_My_Family_Forum_Series_-_Fix_My_Pain_-_January_24_2019/Special_Presentation_-_Not_My_Family_Forum_Series_-_Fix_My_Pain_-_January_24_2019.HD.mov"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T02:39:48.876Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "solomon-northups-odyssey-gordon-parks-1984",
     "itemTitle": "Solomon Northup's Odyssey (Gordon Parks, 1984)",
     "stem": "Solomon Northup's Odyssey (Gordon Parks, 1984)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/solomon-northups-odyssey-gordon-parks-1984/Solomon%20Northup's%20Odyssey%20(Gordon%20Parks%2C%201984).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1991)"
+  }
 }

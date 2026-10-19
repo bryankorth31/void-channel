@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T17:40:56.186Z",
   "archiveMentions": 150,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "TheRoadToVictory",
     "itemTitle": "The Road To Victory: Hitting 'em Harder 1943-1944",
     "stem": "The Road to Victory",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "2010.08.22-jorge-santiago-23-8-c-vs.-kazuo-misaki-22-10-2-sengoku-middle-wvr-sen",
       "itemTitle": "Best of: Sengoku (World Victory Road / Sengoku Raiden Championships)",
       "stem": "2010.08.22 Jorge Santiago (23-8) [c] vs. Kazuo Misaki (22-10-2) [SENGOKU MIDDLE] [WVR Sengoku Raiden Championships 14]",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/2010.08.22-jorge-santiago-23-8-c-vs.-kazuo-misaki-22-10-2-sengoku-middle-wvr-sen/2010.08.22%20Jorge%20Santiago%20(23-8)%20%5Bc%5D%20vs.%20Kazuo%20Misaki%20(22-10-2)%20%5BSENGOKU%20MIDDLE%5D%20%5BWVR%20Sengoku%20Raiden%20Championships%2014%5D.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "2010.08.22-jorge-santiago-23-8-c-vs.-kazuo-misaki-22-10-2-sengoku-middle-wvr-sen",
       "itemTitle": "Best of: Sengoku (World Victory Road / Sengoku Raiden Championships)",
       "stem": "2010.12.30 Marlon Sandro (17-1) [c] vs. Hatsu Hioki (22-4-2) [SENGOKU FEATHER] [WVR Sengoku 16 - Soul of Fight]",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/2010.08.22-jorge-santiago-23-8-c-vs.-kazuo-misaki-22-10-2-sengoku-middle-wvr-sen/2010.12.30%20Marlon%20Sandro%20(17-1)%20%5Bc%5D%20vs.%20Hatsu%20Hioki%20(22-4-2)%20%5BSENGOKU%20FEATHER%5D%20%5BWVR%20Sengoku%2016%20-%20Soul%20of%20Fight%5D.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "2010.08.22-jorge-santiago-23-8-c-vs.-kazuo-misaki-22-10-2-sengoku-middle-wvr-sen",
       "itemTitle": "Best of: Sengoku (World Victory Road / Sengoku Raiden Championships)",
       "stem": "2009.01.04 Kazuo Misaki (21-8-2) vs. Jorge Santiago (21-7) [World Victory Road Sengoku No Ran 2009]",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/2010.08.22-jorge-santiago-23-8-c-vs.-kazuo-misaki-22-10-2-sengoku-middle-wvr-sen/2009.01.04%20Kazuo%20Misaki%20(21-8-2)%20vs.%20Jorge%20Santiago%20(21-7)%20%5BWorld%20Victory%20Road%20Sengoku%20No%20Ran%202009%5D.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2015)"
+  }
 }

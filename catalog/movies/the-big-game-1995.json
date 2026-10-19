@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T11:59:34.600Z",
   "archiveMentions": 266,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "dvd-transfer-44",
     "itemTitle": "DVD Transfer 45 (Mostly Cartoon Network Big Game and Super Bowl XXXII)",
     "stem": "VTS_01_3",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "dvd-transfer-44",
       "itemTitle": "DVD Transfer 45 (Mostly Cartoon Network Big Game and Super Bowl XXXII)",
       "stem": "VTS_01_4",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/dvd-transfer-44/VTS_01_4.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "dvd-transfer-44",
       "itemTitle": "DVD Transfer 45 (Mostly Cartoon Network Big Game and Super Bowl XXXII)",
       "stem": "VTS_01_2",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/dvd-transfer-44/VTS_01_2.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "road-runner-vs-coyote-the-big-game-xxviii-batman-pokemon-batman-beyond-men-in-bl",
       "itemTitle": "Road Runner Vs Coyote The Big Game XXVIII Batman Pokemon Batman Beyond Men in Black The Series CN Kids WB 1999-2001 WOC",
       "stem": "Road Runner Vs Coyote The Big Game XXVIII Batman Pokemon Batman Beyond Men in Black The Series CN Kids WB 1999-2001 WOC/VTS_01_1",
@@ -74,5 +74,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/road-runner-vs-coyote-the-big-game-xxviii-batman-pokemon-batman-beyond-men-in-bl/Road%20Runner%20Vs%20Coyote%20The%20Big%20Game%20XXVIII%20Batman%20Pokemon%20Batman%20Beyond%20Men%20in%20Black%20The%20Series%20CN%20Kids%20WB%201999-2001%20WOC%2FVTS_01_1.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

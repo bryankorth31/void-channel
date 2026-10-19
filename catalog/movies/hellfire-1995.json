@@ -17,35 +17,35 @@
   "huntedAt": "2026-10-14T19:36:43.056Z",
   "archiveMentions": 130,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
-    "item": "blood-song_202608",
-    "itemTitle": "Blood Song (Hellfire)",
-    "stem": "Blood Song (1995)",
-    "file": "Blood Song (1995).mp4",
-    "format": "h.264",
+    "conf": 0.84,
+    "item": "hellfire-2026",
+    "itemTitle": "Hellfire ( 2026)",
+    "stem": "Hellfire (2026)",
+    "file": "Hellfire (2026).mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 5370,
-    "sizeMB": 547,
+    "seconds": 5713,
+    "sizeMB": 1885,
     "band": "match",
-    "fileSim": 0,
-    "url": "https://archive.org/download/blood-song_202608/Blood%20Song%20(1995).mp4"
+    "fileSim": 1,
+    "url": "https://archive.org/download/hellfire-2026/Hellfire%20(2026).mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "hellfire-2026",
-      "itemTitle": "Hellfire ( 2026)",
-      "stem": "Hellfire (2026)",
-      "file": "Hellfire (2026).mp4",
-      "format": "MPEG4",
+      "conf": 0.84,
+      "item": "blood-song_202608",
+      "itemTitle": "Blood Song (Hellfire)",
+      "stem": "Blood Song (1995)",
+      "file": "Blood Song (1995).mp4",
+      "format": "h.264",
       "playable": true,
-      "seconds": 5713,
-      "sizeMB": 1885,
+      "seconds": 5370,
+      "sizeMB": 547,
       "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/hellfire-2026/Hellfire%20(2026).mp4"
+      "fileSim": 0,
+      "url": "https://archive.org/download/blood-song_202608/Blood%20Song%20(1995).mp4"
     },
     {
       "conf": 0.55,
@@ -77,5 +77,9 @@
       "fileSim": 0.03333333333333333,
       "url": "https://archive.org/download/episode-5_202501/Midnight.Mass.S01E06.Book.VI.Acts.of.the.Apostles.1080p.NF.WEB-DL.DDP5.1.Atmos.x264-AGLET.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1995)"
+  }
 }

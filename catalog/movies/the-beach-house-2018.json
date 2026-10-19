@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-13T23:33:03.075Z",
   "archiveMentions": 203,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "CSPAN_20190509_065700_Road_to_the_White_House_2020_President_Trump_Holds_Rally_in_Panama_City...",
-    "itemTitle": "Road to the White House 2020 President Trump Holds Rally in Panama City Beach, Florida : CSPAN : May 9, 2019 2:57am-4:25am EDT",
-    "stem": "CSPAN_20190509_065700_Road_to_the_White_House_2020_President_Trump_Holds_Rally_in_Panama_City...",
-    "file": "CSPAN_20190509_065700_Road_to_the_White_House_2020_President_Trump_Holds_Rally_in_Panama_City....mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5281,
-    "sizeMB": 550,
-    "band": "match",
-    "fileSim": 0.475,
-    "url": "https://archive.org/download/CSPAN_20190509_065700_Road_to_the_White_House_2020_President_Trump_Holds_Rally_in_Panama_City.../CSPAN_20190509_065700_Road_to_the_White_House_2020_President_Trump_Holds_Rally_in_Panama_City....mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-CSPAN"
+  }
 }

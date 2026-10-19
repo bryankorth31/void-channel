@@ -17,35 +17,24 @@
   "huntedAt": "2026-10-14T15:31:25.143Z",
   "archiveMentions": 36,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "Love_Thy_Neighbor",
-    "itemTitle": "Love Thy Neighbor",
-    "stem": "Love_Thy_Neighbor",
-    "file": "Love_Thy_Neighbor.mp4",
+    "conf": 0.84,
+    "item": "love-thy-neighbor-1940-",
+    "itemTitle": "Love Thy Neighbor (1940)",
+    "stem": "Love Thy Neighbor (1940) Mark Sandrich, Jack Benny, Fred Allen,",
+    "file": "Love Thy Neighbor (1940) Mark Sandrich, Jack Benny, Fred Allen,.mp4",
     "format": "h.264",
     "playable": true,
-    "seconds": 5316,
-    "sizeMB": 553,
+    "seconds": 4800,
+    "sizeMB": 461,
     "band": "match",
-    "fileSim": 1,
-    "url": "https://archive.org/download/Love_Thy_Neighbor/Love_Thy_Neighbor.mp4"
+    "fileSim": 0.95,
+    "url": "https://archive.org/download/love-thy-neighbor-1940-/Love%20Thy%20Neighbor%20(1940)%20Mark%20Sandrich%2C%20Jack%20Benny%2C%20Fred%20Allen%2C.mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "love-thy-neighbor-1940-",
-      "itemTitle": "Love Thy Neighbor (1940)",
-      "stem": "Love Thy Neighbor (1940) Mark Sandrich, Jack Benny, Fred Allen,",
-      "file": "Love Thy Neighbor (1940) Mark Sandrich, Jack Benny, Fred Allen,.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4800,
-      "sizeMB": 461,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/love-thy-neighbor-1940-/Love%20Thy%20Neighbor%20(1940)%20Mark%20Sandrich%2C%20Jack%20Benny%2C%20Fred%20Allen%2C.mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2006)"
+  }
 }

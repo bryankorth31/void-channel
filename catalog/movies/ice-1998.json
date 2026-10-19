@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T07:40:22.136Z",
   "archiveMentions": 268,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "2002-ice-age-2002-20th-century-fox-vhs-480p-h-264",
     "itemTitle": "2002 Ice Age (2002 20th Century Fox VHS)",
     "stem": "2002 Ice Age (2002 20th Century Fox VHS) 480p H264",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/2002-ice-age-2002-20th-century-fox-vhs-480p-h-264/2002%20Ice%20Age%20(2002%2020th%20Century%20Fox%20VHS)%20480p%20H264.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

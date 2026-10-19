@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T02:16:57.214Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "AmishGraceCT_201612",
     "itemTitle": "Amish Grace CT",
     "stem": "Deleted/Amish GraceCT",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "AmishGraceCT_201612",
       "itemTitle": "Amish Grace CT",
       "stem": "Deleted/AmishGraceCT_201612.thumbs/Amish GraceCT",
@@ -46,5 +46,9 @@
       "fileSim": 0.9,
       "url": "https://archive.org/download/AmishGraceCT_201612/Deleted%2FAmishGraceCT_201612.thumbs%2FAmish%20GraceCT.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

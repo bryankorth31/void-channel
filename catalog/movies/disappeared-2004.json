@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T07:36:02.149Z",
   "archiveMentions": 288,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "if-cats-disappeared-from-the-world-2016-1080p-blu-ray",
     "itemTitle": "If Cats Disappeared From The World (2016)",
     "stem": "If Cats Disappeared from The World (2016) [1080p] [BluRay]",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "tntd_20230114",
       "itemTitle": "The Neighborhood That Disappeared - A Film by Mary Paley",
       "stem": "TNTD",
@@ -47,5 +47,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/tntd_20230114/TNTD.m4v"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

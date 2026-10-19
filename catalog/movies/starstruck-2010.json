@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-13T18:31:48.465Z",
   "archiveMentions": 61,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "starstruck.-1995.-vhsrip.x-264.bigape-cg",
     "itemTitle": "Starstruck",
     "stem": "Starstruck.1995.VHSRip.x264.bigape[CG]",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/starstruck.-1995.-vhsrip.x-264.bigape-cg/Starstruck.1995.VHSRip.x264.bigape%5BCG%5D.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2010)"
+  }
 }

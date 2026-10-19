@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T07:19:12.884Z",
   "archiveMentions": 48,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "christmas-in-my-hometown-aka-a-holiday-for-love-lifetime-broadcast-with-commercials-12-06-2001",
     "itemTitle": "Christmas In My Hometown ( AKA A Holiday For Love) Lifetime Broadcast With Commercials ( 12 06 2001)",
     "stem": "Christmas in My Hometown (AKA A Holiday For Love) Lifetime Broadcast with Commercials (12-06-2001)",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/christmas-in-my-hometown-aka-a-holiday-for-love-lifetime-broadcast-with-commercials-12-06-2001/Christmas%20in%20My%20Hometown%20(AKA%20A%20Holiday%20For%20Love)%20Lifetime%20Broadcast%20with%20Commercials%20(12-06-2001).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

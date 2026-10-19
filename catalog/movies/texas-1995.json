@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T23:39:00.110Z",
   "archiveMentions": 286,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "1996-ArenaLeague-Regular-Season-W12-TX-Terror-x-MINN-Fighting-Pike-7.19.96",
     "itemTitle": "Texas Terror vs. Minnesota Fighting Pike (July 19th, 1996)",
     "stem": "1996 Season - Week 12_ Texas Terror at Minnesota Fighting Pike (July 19, 1996)",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "19951229-texas-a-m-alamo-bowl",
       "itemTitle": "19951229 Texas A& M (Alamo Bowl)",
       "stem": "19951229 Texas A&M (Alamo Bowl)",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/19951229-texas-a-m-alamo-bowl/19951229%20Texas%20A%26M%20(Alamo%20Bowl).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

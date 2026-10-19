@@ -18,20 +18,11 @@
   "huntedAt": "2026-10-15T09:04:50.730Z",
   "archiveMentions": 38,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "game-boy-longplay-darkman-us",
-    "itemTitle": "Game Boy Longplay - Darkman",
-    "stem": "Game_Boy_Longplay_-_Darkman_-_US",
-    "file": "Game_Boy_Longplay_-_Darkman_-_US.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 2118,
-    "sizeMB": 195,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/game-boy-longplay-darkman-us/Game_Boy_Longplay_-_Darkman_-_US.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "runtime not within 15% of the TMDB runtime; junk word"
+  }
 }

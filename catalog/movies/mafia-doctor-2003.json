@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T09:58:57.235Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "mafia-doctor",
     "itemTitle": "Mafia Doctor",
     "stem": "Mafia Doctor",
@@ -31,5 +31,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/mafia-doctor/Mafia%20Doctor.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

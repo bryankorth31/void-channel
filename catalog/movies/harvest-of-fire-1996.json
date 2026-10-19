@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T18:12:18.487Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "harvest-0f-fire-1996-drama-amish",
     "itemTitle": "Harvest+ 0f+ Fire (1996 +++++ Drama Amish)",
     "stem": "Harvest+0f+Fire (1996 +++++ Drama Amish)",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/harvest-0f-fire-1996-drama-amish/Harvest%2B0f%2BFire%20(1996%20%2B%2B%2B%2B%2B%20Drama%20Amish).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

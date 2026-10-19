@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T02:16:47.892Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the_initiation_of_sarah",
     "itemTitle": "The Initiation of Sarah (1978)",
     "stem": "The Initiation of Sarah.1978.BDRip",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-initiation-of-sarah-1978-tv-movie-with-morgan-fairchild-and-shelley-winters",
       "itemTitle": "The Initiation Of Sarah 1978 TV Movie With Morgan Fairchild and Shelley Winters",
       "stem": "The Initiation of Sarah - 1978 TV movie with Shelley Winters",
@@ -63,5 +63,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/the_initiation_of_sarah_2006/The.Initiation.of.Sarah.2006.1080p.AMZN.WEB-DL.DDP5.1.H.264-ABM.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2006)"
+  }
 }

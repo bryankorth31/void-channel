@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T16:08:39.702Z",
   "archiveMentions": 284,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "jre-misc-mma-show-fight-companion-best-of-the-week-highlights-etc.",
     "itemTitle": "JRE_Misc (MMA Show, Fight Companion, Best of the Week, Highlights, etc.)",
     "stem": "JRE_Misc (MMA Show, Fight Companion, Best of the Week, Highlights, etc.)/JRE MMA Show/JRE MMA Show #31 with Daniel Straus & Joe Schilling",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "jre-misc-mma-show-fight-companion-best-of-the-week-highlights-etc.",
       "itemTitle": "JRE_Misc (MMA Show, Fight Companion, Best of the Week, Highlights, etc.)",
       "stem": "JRE_Misc (MMA Show, Fight Companion, Best of the Week, Highlights, etc.)/JRE MMA Show/JRE MMA Show #4 with Justin Wren",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/jre-misc-mma-show-fight-companion-best-of-the-week-highlights-etc./JRE_Misc%20(MMA%20Show%2C%20Fight%20Companion%2C%20Best%20of%20the%20Week%2C%20Highlights%2C%20etc.)%2FJRE%20MMA%20Show%2FJRE%20MMA%20Show%20%234%20with%20Justin%20Wren.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "jre-misc-mma-show-fight-companion-best-of-the-week-highlights-etc.",
       "itemTitle": "JRE_Misc (MMA Show, Fight Companion, Best of the Week, Highlights, etc.)",
       "stem": "JRE_Misc (MMA Show, Fight Companion, Best of the Week, Highlights, etc.)/JRE MMA Show/JRE MMA Show #50 with Yves Edwards",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/jre-misc-mma-show-fight-companion-best-of-the-week-highlights-etc./JRE_Misc%20(MMA%20Show%2C%20Fight%20Companion%2C%20Best%20of%20the%20Week%2C%20Highlights%2C%20etc.)%2FJRE%20MMA%20Show%2FJRE%20MMA%20Show%20%2350%20with%20Yves%20Edwards.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "jre-misc-mma-show-fight-companion-best-of-the-week-highlights-etc.",
       "itemTitle": "JRE_Misc (MMA Show, Fight Companion, Best of the Week, Highlights, etc.)",
       "stem": "JRE_Misc (MMA Show, Fight Companion, Best of the Week, Highlights, etc.)/JRE MMA Show/JRE MMA Show #23 with Alexander Gustafsson",
@@ -76,5 +76,9 @@
       "fileSim": 0.13333333333333333,
       "url": "https://archive.org/download/jre-misc-mma-show-fight-companion-best-of-the-week-highlights-etc./JRE_Misc%20(MMA%20Show%2C%20Fight%20Companion%2C%20Best%20of%20the%20Week%2C%20Highlights%2C%20etc.)%2FJRE%20MMA%20Show%2FJRE%20MMA%20Show%20%2323%20with%20Alexander%20Gustafsson.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

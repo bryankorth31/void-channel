@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-14T20:07:16.060Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "Heroin_-_Cape_Cod_USA_Documentary_Panel_Discussion",
-    "itemTitle": "\"Heroin: Cape Cod, USA\" Documentary Panel Discussion",
-    "stem": "Heroin_-_Cape_Cod_USA_Documentary_Panel_Discussion",
-    "file": "Heroin_-_Cape_Cod_USA_Documentary_Panel_Discussion.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4081,
-    "sizeMB": 424,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Heroin_-_Cape_Cod_USA_Documentary_Panel_Discussion/Heroin_-_Cape_Cod_USA_Documentary_Panel_Discussion.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

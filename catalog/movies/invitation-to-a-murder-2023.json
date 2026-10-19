@@ -19,7 +19,7 @@
   "itemsOpened": 6,
   "state": "REVIEW",
   "file": {
-    "conf": 0.65,
+    "conf": 0.5,
     "item": "house-of-mystery-s-1-e-12-murder-by-invitation",
     "itemTitle": "House of Mystery S1-E12 - Murder By Invitation",
     "stem": "House of Mystery S1-E12 - Murder by Invitation",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "MurderByInvitation-WeirdnessBadMovie",
       "itemTitle": "Murder By Invitation - Weirdness Bad Movie",
       "stem": "WRBM_Murder by Invitation_WS_fixed",
@@ -46,21 +46,6 @@
       "band": "near",
       "fileSim": 0.95,
       "url": "https://archive.org/download/MurderByInvitation-WeirdnessBadMovie/WRBM_Murder%20by%20Invitation_WS_fixed.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "MurderByInvitation-WeirdnessBadMovie",
-      "itemTitle": "Murder By Invitation - Weirdness Bad Movie",
-      "stem": "WRBM_Murder By Invitation_xvid",
-      "file": "WRBM_Murder By Invitation_xvid.mp4",
-      "format": "h.264",
-      "playable": false,
-      "codecRisk": "video (xvid)",
-      "seconds": 7085,
-      "sizeMB": 734,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/MurderByInvitation-WeirdnessBadMovie/WRBM_Murder%20By%20Invitation_xvid.mp4"
     }
   ]
 }

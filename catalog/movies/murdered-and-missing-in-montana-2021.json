@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-15T10:45:38.111Z",
   "archiveMentions": 23,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "CSPAN_20190315_085700_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered...",
-    "itemTitle": "House Natural Resources Subcommitee Hearing on Missing and Murdered Indigenous Women : CSPAN : March 15, 2019 4:57am-6:10am EDT",
-    "stem": "CSPAN_20190315_085700_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered...",
-    "file": "CSPAN_20190315_085700_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered....mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4381,
-    "sizeMB": 456,
-    "band": "match",
-    "fileSim": 0.6333333333333333,
-    "url": "https://archive.org/download/CSPAN_20190315_085700_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered.../CSPAN_20190315_085700_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered....mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "CSPAN_20190314_211200_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered...",
-      "itemTitle": "House Natural Resources Subcommitee Hearing on Missing and Murdered Indigenous Women : CSPAN : March 14, 2019 5:12pm-6:25pm EDT",
-      "stem": "CSPAN_20190314_211200_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered...",
-      "file": "CSPAN_20190314_211200_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered....mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4381,
-      "sizeMB": 456,
-      "band": "match",
-      "fileSim": 0.6333333333333333,
-      "url": "https://archive.org/download/CSPAN_20190314_211200_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered.../CSPAN_20190314_211200_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered....mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN"
+  }
 }

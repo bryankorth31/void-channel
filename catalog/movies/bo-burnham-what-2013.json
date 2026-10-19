@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-13T19:50:33.870Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "what.-bo-burnham-but-with-better-music",
     "itemTitle": "What. Bo Burnham But With Better Music",
     "stem": "what. Bo Burnham but with better Music",
@@ -46,5 +46,9 @@
       "fileSim": 0.6333333333333333,
       "url": "https://archive.org/download/bo-burnham-make-happy-06_03_2016/Bo%20Burnham-%20Make%20Happy.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

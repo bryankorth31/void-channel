@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T19:51:06.388Z",
   "archiveMentions": 272,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "Jewel_CBS_Movie_WOC_2001-02-07",
     "itemTitle": " Jewel CBS Movie WOC 2001 02 07",
     "stem": "Jewel_CBS_Movie_WOC_2001-02-07",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/Jewel_CBS_Movie_WOC_2001-02-07/Jewel_CBS_Movie_WOC_2001-02-07.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

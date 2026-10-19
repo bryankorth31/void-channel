@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T20:01:28.793Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "death-in-paradise-christmas-special-2023-watch-in-hd-for-free-fusion-movies",
     "itemTitle": "Death In Paradise ( Christmas Special) 2023",
     "stem": "Death in Paradise (Christmas Special) 2023 Watch in HD for Free - Fusion Movies",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "journey-to-paradise-2010-christmas-movie",
       "itemTitle": "Journey To Paradise (2010 +++++ Christmas Drama)",
       "stem": "Journey to Paradise (2010 +++++ Christmas Movie)",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/journey-to-paradise-2010-christmas-movie/Journey%20to%20Paradise%20(2010%20%2B%2B%2B%2B%2B%20Christmas%20Movie).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

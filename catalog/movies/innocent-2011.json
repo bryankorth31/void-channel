@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T09:10:51.916Z",
   "archiveMentions": 293,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "Troy_Davis_Execution_Day-9_21_11",
     "itemTitle": "Did Georgia Execute An Innocent Man?",
     "stem": "Troy_Davis_Execution_Day-1",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/Troy_Davis_Execution_Day-9_21_11/Troy_Davis_Execution_Day-1.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T11:38:27.367Z",
   "archiveMentions": 43,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "a-christmas-list-tv-movie-from-1997",
     "itemTitle": "A Christmas List Tv Movie From 1997",
     "stem": "A Christmas list tv movie from 1997",
@@ -34,20 +34,6 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "naughty-or-nice-im-makin-the-list-christmas-stream-supekrazybones",
-      "itemTitle": "🔥💀 ⋆ Naughty OR Nice !!｜ I'm Makin' The LIST !! Christmas Stream ⋆ 💀🔥 - SuperKrazyBones",
-      "stem": "🔥💀 ⋆ Naughty OR Nice !!｜I'm makin' the LIST !! Christmas Stream ⋆ 💀🔥 [v1688877331]",
-      "file": "🔥💀 ⋆ Naughty OR Nice !!｜I'm makin' the LIST !! Christmas Stream ⋆ 💀🔥 [v1688877331].mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5259,
-      "sizeMB": 1462,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/naughty-or-nice-im-makin-the-list-christmas-stream-supekrazybones/%F0%9F%94%A5%F0%9F%92%80%20%E2%8B%86%20Naughty%20OR%20Nice%20!!%EF%BD%9CI'm%20makin'%20the%20LIST%20!!%20Christmas%20Stream%20%E2%8B%86%20%F0%9F%92%80%F0%9F%94%A5%20%5Bv1688877331%5D.mp4"
-    },
-    {
       "conf": 0.75,
       "item": "the-christmas-list-1997-fox-family-broadcast",
       "itemTitle": "The Christmas List ( 1997) Fox Family Broadcast",
@@ -60,6 +46,24 @@
       "band": "near",
       "fileSim": 0.95,
       "url": "https://archive.org/download/the-christmas-list-1997-fox-family-broadcast/The%20Christmas%20List%20(1997)%20Fox%20Family%20Broadcast%20-%20.mp4"
+    },
+    {
+      "conf": 0.7,
+      "item": "naughty-or-nice-im-makin-the-list-christmas-stream-supekrazybones",
+      "itemTitle": "🔥💀 ⋆ Naughty OR Nice !!｜ I'm Makin' The LIST !! Christmas Stream ⋆ 💀🔥 - SuperKrazyBones",
+      "stem": "🔥💀 ⋆ Naughty OR Nice !!｜I'm makin' the LIST !! Christmas Stream ⋆ 💀🔥 [v1688877331]",
+      "file": "🔥💀 ⋆ Naughty OR Nice !!｜I'm makin' the LIST !! Christmas Stream ⋆ 💀🔥 [v1688877331].mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 5259,
+      "sizeMB": 1462,
+      "band": "match",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/naughty-or-nice-im-makin-the-list-christmas-stream-supekrazybones/%F0%9F%94%A5%F0%9F%92%80%20%E2%8B%86%20Naughty%20OR%20Nice%20!!%EF%BD%9CI'm%20makin'%20the%20LIST%20!!%20Christmas%20Stream%20%E2%8B%86%20%F0%9F%92%80%F0%9F%94%A5%20%5Bv1688877331%5D.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T07:39:38.427Z",
   "archiveMentions": 296,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "20240904_20240904_1721",
     "itemTitle": "DB-Z-Super Movies (JAP Audio PT-BR Subs) - (BQ Found)",
     "stem": "3 - Dragon Ball Super/MV03 - Broly [2018]",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "20240904_20240904_1721",
       "itemTitle": "DB-Z-Super Movies (JAP Audio PT-BR Subs) - (BQ Found)",
       "stem": "3 - Dragon Ball Super/MV04 - Super Hero",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/20240904_20240904_1721/3%20-%20Dragon%20Ball%20Super%2FMV04%20-%20Super%20Hero.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "20240904_20240904_1721",
       "itemTitle": "DB-Z-Super Movies (JAP Audio PT-BR Subs) - (BQ Found)",
       "stem": "3 - Dragon Ball Super/MV02 - Resurrection F [2015] [v2]",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/20240904_20240904_1721/3%20-%20Dragon%20Ball%20Super%2FMV02%20-%20Resurrection%20F%20%5B2015%5D%20%5Bv2%5D.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "20240904_20240904_1721",
       "itemTitle": "DB-Z-Super Movies (JAP Audio PT-BR Subs) - (BQ Found)",
       "stem": "3 - Dragon Ball Super/MV01 - Battle of Gods [2013] [v3] [Extended]",
@@ -75,5 +75,9 @@
       "fileSim": 0.06896551724137931,
       "url": "https://archive.org/download/20240904_20240904_1721/3%20-%20Dragon%20Ball%20Super%2FMV01%20-%20Battle%20of%20Gods%20%5B2013%5D%20%5Bv3%5D%20%5BExtended%5D.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

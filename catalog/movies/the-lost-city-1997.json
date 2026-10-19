@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T16:02:38.055Z",
   "archiveMentions": 274,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "tarzan_and_the_lost_city_1998___59b659f184e67",
     "itemTitle": "Tarzan And The Lost City 1998 In Color",
     "stem": "tarzan_and_the_lost_city_1998___59b659f184e67",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "city-of-lost-children-the-jean-pierre-jeunet-marc-caro-1995",
       "itemTitle": "City Of Lost Children, The - Jean Pierre Jeunet & Marc Caro (1995)",
       "stem": "City of Lost Children, The -Jean-Pierre Jeunet & Marc Caro (1995)",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/city-of-lost-children-the-jean-pierre-jeunet-marc-caro-1995/City%20of%20Lost%20Children%2C%20The%20-Jean-Pierre%20Jeunet%20%26%20Marc%20Caro%20(1995).m4v"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T07:07:57.541Z",
   "archiveMentions": 18,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "wide-open-marriage-hausfrauen-report-4-1973",
     "itemTitle": "Wide Open Marriage, Hausfrauen Report 4 1973",
     "stem": "Wide Open Marriage, Hausfrauen Report 4  -1973",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "wide-open-marriage-hausfrauen-report-4-1973_202606",
       "itemTitle": "Wide Open Marriage, Hausfrauen Report 4 1973",
       "stem": "Wide Open Marriage, Hausfrauen Report 4  -1973",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/wide-open-marriage-hausfrauen-report-4-1973_202606/Wide%20Open%20Marriage%2C%20Hausfrauen%20Report%204%20%20-1973.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T07:30:03.169Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "codfl-A_Storybook_Christmas_-_2015_Destin_Christmas_Parade",
-    "itemTitle": "A Storybook Christmas - 2015 Destin Christmas Parade",
-    "stem": "A_Storybook_Christmas_-_2015_Destin_Christmas_Parade",
-    "file": "A_Storybook_Christmas_-_2015_Destin_Christmas_Parade.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 4054,
-    "sizeMB": 356,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/codfl-A_Storybook_Christmas_-_2015_Destin_Christmas_Parade/A_Storybook_Christmas_-_2015_Destin_Christmas_Parade.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

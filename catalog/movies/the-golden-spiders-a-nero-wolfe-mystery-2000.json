@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T19:48:03.731Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a-nero-wolfe-mystery-s-01",
     "itemTitle": "A Nero Wolfe Mystery Season 1",
     "stem": "A Nero Wolfe  Golden Spiders S01 E00 Mystery",
@@ -46,5 +46,9 @@
       "fileSim": 0.57,
       "url": "https://archive.org/download/a-nero-wolfe-mystery-s-01/A%20Nero%20Wolfe%20Mystery%20%20S01%20E01%20%20The%20Doorbell%20Rang.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

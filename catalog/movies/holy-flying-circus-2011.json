@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T05:40:59.643Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "holy-grail-hd",
     "itemTitle": "\"Monty Python and the Holy Grail\" Full Movie Complete [AI Enhanced to FHD] Flying Circus 1975 Spamalot",
     "stem": "holy grail hd",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "holy-grail-hd",
       "itemTitle": "\"Monty Python and the Holy Grail\" Full Movie Complete [AI Enhanced to FHD] Flying Circus 1975 Spamalot",
       "stem": "holy-grail-hd",
@@ -77,5 +77,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/holy.-flying.-circus.-2011.720p.-blu-ray.-dd-5.1.x-264-cri-sc/Holy.Flying.Circus.2011.720p.BluRay.DD5.1.x264-CRiSC.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

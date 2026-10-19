@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T15:10:51.323Z",
   "archiveMentions": 82,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "puss-in-boots-the-last-wish_202601",
     "itemTitle": "Puss In Boots: The Last Wish",
     "stem": "PussInBootsTheLastWish",
@@ -31,5 +31,9 @@
     "fileSim": 0.5185185185185185,
     "url": "https://archive.org/download/puss-in-boots-the-last-wish_202601/PussInBootsTheLastWish.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

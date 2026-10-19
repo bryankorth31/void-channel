@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T00:47:42.570Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "comedy-central-roast-of-donald-trump",
     "itemTitle": "Comedy Central Roast Of Donald Trump",
     "stem": "Comedy Central Roasts - S01E10 - Comedy Central Roast of Donald Trump",
@@ -47,5 +47,9 @@
       "fileSim": 0.7272727272727273,
       "url": "https://archive.org/download/roastofdonaldtrumpuncensored/roast%20of%20donald%20trump%20uncensored.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

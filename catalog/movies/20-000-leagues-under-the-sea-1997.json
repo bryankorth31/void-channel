@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T07:57:14.632Z",
   "archiveMentions": 29,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "191620000LeaguesUnderTheSea",
     "itemTitle": "20, 000 Leagues Under The Sea (1916)",
     "stem": "1916 20,000 Leagues Under The Sea (Stuart Paton) Dvdrip (English(p2Pforum It - Cultura Libera p2P",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "191620000LeaguesUnderTheSea_201508",
       "itemTitle": "1916 20, 000 Leagues Under The Sea",
       "stem": "20000_Leagues_Under_the_Sea",
@@ -76,5 +76,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/20-000-leagues-under-the-sea-1954_20251111/20%2C000%20Leagues%20Under%20The%20Sea%20(1954)%2F20%2C000%20Leagues%20Under%20The%20Sea%20-%201954.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1997)"
+  }
 }

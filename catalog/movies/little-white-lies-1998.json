@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T07:10:35.604Z",
   "archiveMentions": 25,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "white-lies_1989",
     "itemTitle": "Little White Lies (TV Movie 1989)",
     "stem": "WHITE LIES",
@@ -31,5 +31,9 @@
     "fileSim": 0.8,
     "url": "https://archive.org/download/white-lies_1989/WHITE%20LIES.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1998)"
+  }
 }

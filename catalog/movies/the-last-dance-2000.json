@@ -16,36 +16,22 @@
   "huntedAt": "2026-10-15T05:10:02.274Z",
   "archiveMentions": 184,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "csfpal_000568",
-    "itemTitle": "5/15/45 The Last Dance (Demo and Full Program)",
-    "stem": "csfpal_000568_access",
-    "file": "csfpal_000568_access.mp4",
-    "format": "h.264",
+    "conf": 0.75,
+    "item": "last-dance-2000",
+    "itemTitle": "The Last Dance - Maureen O'Hara, Eric Stoltz",
+    "stem": "Last Dance - 2000",
+    "file": "Last Dance - 2000.mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 5490,
-    "sizeMB": 534,
-    "band": "match",
-    "fileSim": 0.07407407407407407,
-    "url": "https://archive.org/download/csfpal_000568/csfpal_000568_access.mp4"
+    "seconds": 5280,
+    "sizeMB": 2730,
+    "band": "near",
+    "fileSim": 0.95,
+    "url": "https://archive.org/download/last-dance-2000/Last%20Dance%20-%202000.mp4"
   },
   "alternates": [
-    {
-      "conf": 0.75,
-      "item": "last-dance-2000",
-      "itemTitle": "The Last Dance - Maureen O'Hara, Eric Stoltz",
-      "stem": "Last Dance - 2000",
-      "file": "Last Dance - 2000.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5280,
-      "sizeMB": 2730,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/last-dance-2000/Last%20Dance%20-%202000.mp4"
-    },
     {
       "conf": 0.75,
       "item": "the-last-dance-2000-superb-family-drama",
@@ -61,7 +47,21 @@
       "url": "https://archive.org/download/the-last-dance-2000-superb-family-drama/-%20The%20Last%20Dance%20(2000%20%2B%2B%2B%2B%2B%20SUPERB%20Family%20Drama).mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.7,
+      "item": "csfpal_000568",
+      "itemTitle": "5/15/45 The Last Dance (Demo and Full Program)",
+      "stem": "csfpal_000568_access",
+      "file": "csfpal_000568_access.mp4",
+      "format": "h.264",
+      "playable": true,
+      "seconds": 5490,
+      "sizeMB": 534,
+      "band": "match",
+      "fileSim": 0.07407407407407407,
+      "url": "https://archive.org/download/csfpal_000568/csfpal_000568_access.mp4"
+    },
+    {
+      "conf": 0.5,
       "item": "a13.Diabolik.Vol39.Shout.DVDrip.TheLastDance",
       "itemTitle": "MST3K - The Last Dance Raw",
       "stem": "a13.Diabolik.Vol39.Shout.DVDrip.TheLastDance",
@@ -74,5 +74,9 @@
       "fileSim": 0.5238095238095238,
       "url": "https://archive.org/download/a13.Diabolik.Vol39.Shout.DVDrip.TheLastDance/a13.Diabolik.Vol39.Shout.DVDrip.TheLastDance.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "runtime not within 15% of the TMDB runtime"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T23:26:47.127Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "dancin-thru-the-dark",
     "itemTitle": "S03E04 Dancin' Thru The Dark",
     "stem": "Dancin' Thru the Dark",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/dancin-thru-the-dark/Dancin'%20Thru%20the%20Dark.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

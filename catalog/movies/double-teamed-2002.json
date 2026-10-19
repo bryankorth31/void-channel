@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T22:46:48.555Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "double-teamed_202507",
     "itemTitle": "Double Teamed! (DCOM) (VHS Rip)",
     "stem": "Double Teamed!",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/double-teamed_202507/Double%20Teamed!.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T19:40:55.125Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "national-lampoons-dads-week-off-1997-ai",
     "itemTitle": "National Lampoons Dads Week Off (1997)",
     "stem": "National Lampoons Dads Week Off (1997)/National Lampoons Dads Week Off (1997) (AI)",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.95,
+      "conf": 0.8,
       "item": "national-lampoons-dads-week-off-1997-ai",
       "itemTitle": "National Lampoons Dads Week Off (1997)",
       "stem": "National Lampoons Dads Week Off (1997)/National Lampoons Dads Week Off (1997)",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/national-lampoons-dads-week-off-1997-ai/National%20Lampoons%20Dads%20Week%20Off%20(1997)%2FNational%20Lampoons%20Dads%20Week%20Off%20(1997).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

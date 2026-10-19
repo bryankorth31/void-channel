@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T11:01:29.406Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "jennifer-lopez-lets-get-loud-in-puerto-rico-ede-67dbe-71.360",
     "itemTitle": "Jennifer Lopez Lets Get Loud In Puerto Rico Ede 67dbe 71.360",
     "stem": "Jennifer Lopez - Lets Get Loud_in_Puerto Rico_ede67dbe71.360",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/jennifer-lopez-lets-get-loud-in-puerto-rico-ede-67dbe-71.360/Jennifer%20Lopez%20-%20Lets%20Get%20Loud_in_Puerto%20Rico_ede67dbe71.360.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

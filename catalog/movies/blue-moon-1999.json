@@ -16,52 +16,24 @@
   "huntedAt": "2026-10-15T05:06:48.665Z",
   "archiveMentions": 142,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.84,
     "item": "DocuCollection",
     "itemTitle": "Documentary View. From.a. Blue. Moon 2015.1080p. DTS",
-    "stem": "Documentary - Sex.The.Annabel.Chong.Story - 1999.720x480.AAC",
-    "file": "Documentary - Sex.The.Annabel.Chong.Story - 1999.720x480.AAC.mp4",
+    "stem": "Documentary - We.Are.Legion.The.Story.of.the.Hacktivists - 2012.1080p.AAC",
+    "file": "Documentary - We.Are.Legion.The.Story.of.the.Hacktivists - 2012.1080p.AAC.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 5234,
-    "sizeMB": 1454,
+    "seconds": 5801,
+    "sizeMB": 3154,
     "band": "match",
     "fileSim": 0.043478260869565216,
-    "url": "https://archive.org/download/DocuCollection/Documentary%20-%20Sex.The.Annabel.Chong.Story%20-%201999.720x480.AAC.mp4"
+    "url": "https://archive.org/download/DocuCollection/Documentary%20-%20We.Are.Legion.The.Story.of.the.Hacktivists%20-%202012.1080p.AAC.mp4"
   },
   "alternates": [
     {
-      "conf": 0.95,
-      "item": "DocuCollection",
-      "itemTitle": "Documentary View. From.a. Blue. Moon 2015.1080p. DTS",
-      "stem": "Documentary - Pirates.of.Silicon.Valley - 1999.576x432.MP3",
-      "file": "Documentary - Pirates.of.Silicon.Valley - 1999.576x432.MP3.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5806,
-      "sizeMB": 604,
-      "band": "match",
-      "fileSim": 0.04081632653061224,
-      "url": "https://archive.org/download/DocuCollection/Documentary%20-%20Pirates.of.Silicon.Valley%20-%201999.576x432.MP3.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "DocuCollection",
-      "itemTitle": "Documentary View. From.a. Blue. Moon 2015.1080p. DTS",
-      "stem": "Documentary - We.Are.Legion.The.Story.of.the.Hacktivists - 2012.1080p.AAC",
-      "file": "Documentary - We.Are.Legion.The.Story.of.the.Hacktivists - 2012.1080p.AAC.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5801,
-      "sizeMB": 3154,
-      "band": "match",
-      "fileSim": 0.043478260869565216,
-      "url": "https://archive.org/download/DocuCollection/Documentary%20-%20We.Are.Legion.The.Story.of.the.Hacktivists%20-%202012.1080p.AAC.mp4"
-    },
-    {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "DocuCollection",
       "itemTitle": "Documentary View. From.a. Blue. Moon 2015.1080p. DTS",
       "stem": "Documentary - Us.and.the.Game.Industry - 2014.720p.AAC",
@@ -73,6 +45,38 @@
       "band": "match",
       "fileSim": 0,
       "url": "https://archive.org/download/DocuCollection/Documentary%20-%20Us.and.the.Game.Industry%20-%202014.720p.AAC.mp4"
+    },
+    {
+      "conf": 0.84,
+      "item": "DocuCollection",
+      "itemTitle": "Documentary View. From.a. Blue. Moon 2015.1080p. DTS",
+      "stem": "Documentary - Sex.The.Annabel.Chong.Story - 1999.720x480.AAC",
+      "file": "Documentary - Sex.The.Annabel.Chong.Story - 1999.720x480.AAC.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 5234,
+      "sizeMB": 1454,
+      "band": "match",
+      "fileSim": 0.043478260869565216,
+      "url": "https://archive.org/download/DocuCollection/Documentary%20-%20Sex.The.Annabel.Chong.Story%20-%201999.720x480.AAC.mp4"
+    },
+    {
+      "conf": 0.84,
+      "item": "DocuCollection",
+      "itemTitle": "Documentary View. From.a. Blue. Moon 2015.1080p. DTS",
+      "stem": "Documentary - Pirates.of.Silicon.Valley - 1999.576x432.MP3",
+      "file": "Documentary - Pirates.of.Silicon.Valley - 1999.576x432.MP3.mp4",
+      "format": "h.264",
+      "playable": true,
+      "seconds": 5806,
+      "sizeMB": 604,
+      "band": "match",
+      "fileSim": 0.04081632653061224,
+      "url": "https://archive.org/download/DocuCollection/Documentary%20-%20Pirates.of.Silicon.Valley%20-%201999.576x432.MP3.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1999)"
+  }
 }

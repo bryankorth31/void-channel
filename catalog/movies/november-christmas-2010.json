@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T04:36:18.079Z",
   "archiveMentions": 137,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "november-christmas",
     "itemTitle": "November Christmas",
     "stem": "november christmas",
@@ -31,5 +31,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/november-christmas/november%20christmas.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

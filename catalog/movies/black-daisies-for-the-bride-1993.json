@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T15:28:41.147Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "black-daisies-for-the-bride",
     "itemTitle": "S08E00 Black Daisies For The Bride",
     "stem": "Black Daisies For The Bride",
@@ -33,5 +33,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/black-daisies-for-the-bride/Black%20Daisies%20For%20The%20Bride.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T11:54:04.561Z",
   "archiveMentions": 13,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "p-2.-my-marriage-is-a-spy-war-my-wife-and-i-try-to-destroy-each-other-after-tragedy",
     "itemTitle": "👨‍💼📕 P 2. My Marriage Is A SPY WAR？! My Wife And I Try To Destroy Each Other After Tragedy!",
     "stem": "📕P9[Complete].My Wife FORCED Me to DIVORCE AND SOLD ME to Her BEST FRIEND for $1M.. Now She's REGRET",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "p-2.-my-marriage-is-a-spy-war-my-wife-and-i-try-to-destroy-each-other-after-tragedy",
       "itemTitle": "👨‍💼📕 P 2. My Marriage Is A SPY WAR？! My Wife And I Try To Destroy Each Other After Tragedy!",
       "stem": "📕P16[Completed].I Woke Up with Amnesia, and Two Different Women Claimed to Be My Girlfriend",
@@ -46,5 +46,9 @@
       "fileSim": 0.14285714285714285,
       "url": "https://archive.org/download/p-2.-my-marriage-is-a-spy-war-my-wife-and-i-try-to-destroy-each-other-after-tragedy/%F0%9F%93%95P16%5BCompleted%5D.I%20Woke%20Up%20with%20Amnesia%2C%20and%20Two%20Different%20Women%20Claimed%20to%20Be%20My%20Girlfriend.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

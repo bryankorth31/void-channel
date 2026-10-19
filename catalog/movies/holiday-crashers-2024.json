@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T10:28:01.863Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "roosterteeth-29924",
     "itemTitle": "The Holiday Party Crashers - #523",
     "stem": "2018-12-18_The_Holiday_Party_Crashers_-_523_[29924]",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/roosterteeth-29924/2018-12-18_The_Holiday_Party_Crashers_-_523_%5B29924%5D.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

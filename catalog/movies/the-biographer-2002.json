@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T16:37:05.320Z",
   "archiveMentions": 54,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "ictvil-Obama_Biographer_David_Garrow_Speech_on_his_Book_Rising_Star",
-    "itemTitle": "Obama Biographer, David Garrow Speech on his Book \"Rising Star\"",
-    "stem": "Obama_Biographer_David_Garrow_Speech_on_his_Book_Rising_Star",
-    "file": "Obama_Biographer_David_Garrow_Speech_on_his_Book_Rising_Star.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3951,
-    "sizeMB": 184,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/ictvil-Obama_Biographer_David_Garrow_Speech_on_his_Book_Rising_Star/Obama_Biographer_David_Garrow_Speech_on_his_Book_Rising_Star.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

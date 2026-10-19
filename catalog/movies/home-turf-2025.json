@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T02:23:51.721Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "hcgfl-Home_Turf_Advantage_-_Home_Lawn_Management_the_Florida-Friendly_Way",
-    "itemTitle": "\"Home Turf Advantage - Home Lawn Management the Florida-Friendly Way\"",
-    "stem": "Home_Turf_Advantage_-_Home_Lawn_Management_the_Florida-Friendly_Way",
-    "file": "Home_Turf_Advantage_-_Home_Lawn_Management_the_Florida-Friendly_Way.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4403,
-    "sizeMB": 332,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/hcgfl-Home_Turf_Advantage_-_Home_Lawn_Management_the_Florida-Friendly_Way/Home_Turf_Advantage_-_Home_Lawn_Management_the_Florida-Friendly_Way.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

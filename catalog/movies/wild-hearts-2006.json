@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T19:58:13.883Z",
   "archiveMentions": 49,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "our-wild-hearts-2013-country-life-family",
     "itemTitle": "Our Wild Hearts (2013 Country Life, Family)",
     "stem": "Our-Wild-Hearts (2013 Country Life, Family)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/our-wild-hearts-2013-country-life-family/Our-Wild-Hearts%20(2013%20Country%20Life%2C%20Family).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

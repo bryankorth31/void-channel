@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T23:55:24.006Z",
   "archiveMentions": 293,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "RatsNightOfTerror",
     "itemTitle": "Rats Night Of Terror",
     "stem": "Rats night of terror",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "MonkeysRatsandMe",
       "itemTitle": "Monkeys, Rats and Me: Animal Testing",
       "stem": "monkeysratsandme_512kb",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/MonkeysRatsandMe/monkeysratsandme_512kb.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "MonkeysRatsandMe",
       "itemTitle": "Monkeys, Rats and Me: Animal Testing",
       "stem": "monkeysratsandme",
@@ -61,5 +61,9 @@
       "fileSim": 0.2857142857142857,
       "url": "https://archive.org/download/MonkeysRatsandMe/monkeysratsandme.ogv"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T07:40:51.221Z",
   "archiveMentions": 296,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "1968-great-silence-the_202405",
     "itemTitle": "1968 The Great Silence",
     "stem": "1968 Great Silence, The",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/1968-great-silence-the_202405/1968%20Great%20Silence%2C%20The.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

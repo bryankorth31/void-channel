@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-14T17:43:52.183Z",
   "archiveMentions": 29,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "CSPAN2_20210606_070100_Julie_DiCaro_Sidelined_-_Sports_Culture_and_Being_a_Woman_in_America",
-    "itemTitle": "Julie DiCaro, \"Sidelined - Sports, Culture, and Being a Woman in America\" : CSPAN2 : June 6, 2021 3:01am-4:11am EDT",
-    "stem": "CSPAN2_20210606_070100_Julie_DiCaro_Sidelined_-_Sports_Culture_and_Being_a_Woman_in_America",
-    "file": "CSPAN2_20210606_070100_Julie_DiCaro_Sidelined_-_Sports_Culture_and_Being_a_Woman_in_America.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4201,
-    "sizeMB": 767,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN2_20210606_070100_Julie_DiCaro_Sidelined_-_Sports_Culture_and_Being_a_Woman_in_America/CSPAN2_20210606_070100_Julie_DiCaro_Sidelined_-_Sports_Culture_and_Being_a_Woman_in_America.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "CSPAN2_20210424_142000_Julie_DiCaro_Sidelined_-_Sports_Culture_and_Being_a_Woman_in_America",
-      "itemTitle": "Julie DiCaro, \"Sidelined - Sports, Culture, and Being a Woman in America\" : CSPAN2 : April 24, 2021 10:20am-11:26am EDT",
-      "stem": "CSPAN2_20210424_142000_Julie_DiCaro_Sidelined_-_Sports_Culture_and_Being_a_Woman_in_America",
-      "file": "CSPAN2_20210424_142000_Julie_DiCaro_Sidelined_-_Sports_Culture_and_Being_a_Woman_in_America.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3961,
-      "sizeMB": 739,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN2_20210424_142000_Julie_DiCaro_Sidelined_-_Sports_Culture_and_Being_a_Woman_in_America/CSPAN2_20210424_142000_Julie_DiCaro_Sidelined_-_Sports_Culture_and_Being_a_Woman_in_America.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN2"
+  }
 }

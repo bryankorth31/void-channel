@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T18:19:25.815Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "on-the-edge-of-bladerunner-documentary-by-mark-kermode",
     "itemTitle": "On The Edge Of Blade Runner Documentary By Mark Kermode",
     "stem": "On the Edge of Bladerunner (documentary) by Mark Kermode",
@@ -46,5 +46,9 @@
       "fileSim": 0.6333333333333333,
       "url": "https://archive.org/download/youtube-sttm8Q9rOdQ/Cyberpunk_Documentary_PART_1_Neuromancer_Blade_Runner_Shadowrun_Akira-sttm8Q9rOdQ.webm"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

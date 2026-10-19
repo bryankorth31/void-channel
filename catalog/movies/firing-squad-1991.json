@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-15T11:35:15.792Z",
   "archiveMentions": 42,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "CSPAN_20220510_052700_Justices_Hear_Case_on_Firing_Squad_Execution_Request",
-    "itemTitle": "Justices Hear Case on Firing Squad Execution Request : CSPAN : May 10, 2022 1:27am-2:57am EDT",
-    "stem": "CSPAN_20220510_052700_Justices_Hear_Case_on_Firing_Squad_Execution_Request",
-    "file": "CSPAN_20220510_052700_Justices_Hear_Case_on_Firing_Squad_Execution_Request.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5401,
-    "sizeMB": 198,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN_20220510_052700_Justices_Hear_Case_on_Firing_Squad_Execution_Request/CSPAN_20220510_052700_Justices_Hear_Case_on_Firing_Squad_Execution_Request.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "CSPAN_20220510_003300_Justices_Hear_Case_on_Firing_Squad_Execution_Request",
-      "itemTitle": "Justices Hear Case on Firing Squad Execution Request : CSPAN : May 9, 2022 8:33pm-10:01pm EDT",
-      "stem": "CSPAN_20220510_003300_Justices_Hear_Case_on_Firing_Squad_Execution_Request",
-      "file": "CSPAN_20220510_003300_Justices_Hear_Case_on_Firing_Squad_Execution_Request.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5281,
-      "sizeMB": 184,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN_20220510_003300_Justices_Hear_Case_on_Firing_Squad_Execution_Request/CSPAN_20220510_003300_Justices_Hear_Case_on_Firing_Squad_Execution_Request.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-CSPAN"
+  }
 }

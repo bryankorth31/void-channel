@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-14T21:36:56.043Z",
   "archiveMentions": 21,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "CSPAN_20190318_014300_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered...",
-    "itemTitle": "House Natural Resources Subcommitee Hearing on Missing and Murdered Indigenous Women : CSPAN : March 17, 2019 9:43pm-10:53pm EDT",
-    "stem": "CSPAN_20190318_014300_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered...",
-    "file": "CSPAN_20190318_014300_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered....mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4201,
-    "sizeMB": 437,
-    "band": "near",
-    "fileSim": 0.475,
-    "url": "https://archive.org/download/CSPAN_20190318_014300_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered.../CSPAN_20190318_014300_House_Natural_Resources_Subcommitee_Hearing_on_Missing_and_Murdered....mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN"
+  }
 }

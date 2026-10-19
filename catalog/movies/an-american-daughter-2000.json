@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T01:26:32.852Z",
   "archiveMentions": 40,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "american-daughter-1995",
     "itemTitle": "American Daughter (1995)",
     "stem": "American Daughter (1995)",
@@ -31,5 +31,9 @@
     "fileSim": 0.9655172413793104,
     "url": "https://archive.org/download/american-daughter-1995/American%20Daughter%20(1995).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2000)"
+  }
 }

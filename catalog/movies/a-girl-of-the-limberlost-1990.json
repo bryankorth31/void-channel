@@ -35,6 +35,20 @@
   "alternates": [
     {
       "conf": 0.85,
+      "item": "a-girl-of-the-limberlost",
+      "itemTitle": "A Girl Of The Limberlost",
+      "stem": "A Girl of The Limberlost",
+      "file": "A Girl of The Limberlost.mp4",
+      "format": "h.264",
+      "playable": true,
+      "seconds": 6327,
+      "sizeMB": 644,
+      "band": "match",
+      "fileSim": 1,
+      "url": "https://archive.org/download/a-girl-of-the-limberlost/A%20Girl%20of%20The%20Limberlost.mp4"
+    },
+    {
+      "conf": 0.84,
       "item": "vintage-vhs-a-girl-of-the-limberlost",
       "itemTitle": "[Vintage VHS] A Girl of the Limberlost",
       "stem": "a_girl_of_the_limberlost_01",
@@ -48,7 +62,7 @@
       "url": "https://archive.org/download/vintage-vhs-a-girl-of-the-limberlost/a_girl_of_the_limberlost_01.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "dvd-transfer-181",
       "itemTitle": "DVD Transfer 181 (The Treasure Seekers and A Girl of the Limberlost)",
       "stem": "Title 1 - The Treasure Seekers (1996 British movie)",
@@ -60,20 +74,6 @@
       "band": "match",
       "fileSim": 0.13636363636363635,
       "url": "https://archive.org/download/dvd-transfer-181/Title%201%20-%20The%20Treasure%20Seekers%20(1996%20British%20movie).mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "a-girl-of-the-limberlost",
-      "itemTitle": "A Girl Of The Limberlost",
-      "stem": "A Girl of The Limberlost",
-      "file": "A Girl of The Limberlost.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 6327,
-      "sizeMB": 644,
-      "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/a-girl-of-the-limberlost/A%20Girl%20of%20The%20Limberlost.mp4"
     }
   ]
 }

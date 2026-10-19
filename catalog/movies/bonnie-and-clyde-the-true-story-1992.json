@@ -18,21 +18,11 @@
   "huntedAt": "2026-10-15T06:41:03.748Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "Bonnie_And_Clyde_The_True_Story_FOX_WOC_1993-08-30",
-    "itemTitle": "Bonnie And Clyde The True Story FOX WOC 1993-08-30",
-    "stem": "Bonnie And Clyde The True Story FOX WOC 1993-08-30",
-    "file": "Bonnie And Clyde The True Story FOX WOC 1993-08-30.mkv",
-    "format": "Matroska",
-    "playable": false,
-    "codecRisk": "container (Matroska)",
-    "seconds": 6900,
-    "sizeMB": 2061,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Bonnie_And_Clyde_The_True_Story_FOX_WOC_1993-08-30/Bonnie%20And%20Clyde%20The%20True%20Story%20FOX%20WOC%201993-08-30.mkv"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime; not playable in a browser"
+  }
 }

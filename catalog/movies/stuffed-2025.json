@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T06:12:15.275Z",
   "archiveMentions": 283,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "detvde-Rosemary-Stuffed_Chicken_Zesty_Green_Beans_The_Chef_Dana_Show",
-    "itemTitle": "Rosemary-Stuffed Chicken & Zesty Green Beans - The Chef Dana Show",
-    "stem": "Rosemary-Stuffed_Chicken_Zesty_Green_Beans_The_Chef_Dana_Show",
-    "file": "Rosemary-Stuffed_Chicken_Zesty_Green_Beans_The_Chef_Dana_Show.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 2953,
-    "sizeMB": 288,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/detvde-Rosemary-Stuffed_Chicken_Zesty_Green_Beans_The_Chef_Dana_Show/Rosemary-Stuffed_Chicken_Zesty_Green_Beans_The_Chef_Dana_Show.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

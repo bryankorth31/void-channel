@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T11:39:29.085Z",
   "archiveMentions": 97,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "critical-condition-1987-vhs",
     "itemTitle": "Critical Condition 1987 VHS",
     "stem": "Critical Condition 1987 VHS",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "youtube-4uRyZxB58oY",
       "itemTitle": "Tales of a Dragon Slayer with a Clean Room | Critical Condition, TPS #262",
       "stem": "Tales_of_a_Dragon_Slayer_with_a_Clean_Room_Critical_Condition_TPS_262-4uRyZxB58oY",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/youtube-4uRyZxB58oY/Tales_of_a_Dragon_Slayer_with_a_Clean_Room_Critical_Condition_TPS_262-4uRyZxB58oY.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

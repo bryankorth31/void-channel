@@ -17,35 +17,24 @@
   "huntedAt": "2026-10-14T15:46:22.774Z",
   "archiveMentions": 198,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "Music_Mondays_HD_-_The_Gino_Michaels_Band",
-    "itemTitle": "Music Mondays HD - The Gino Michaels Band",
-    "stem": "Music_Mondays_HD_-_The_Gino_Michaels_Band",
-    "file": "Music_Mondays_HD_-_The_Gino_Michaels_Band.mp4",
-    "format": "h.264",
+    "conf": 0.5,
+    "item": "youtube-_j8ZAmlBxPI",
+    "itemTitle": "FL v. Curtis Reeves Trial Day 1 - Defense Opening Statement by Dino Michaels",
+    "stem": "_j8ZAmlBxPI",
+    "file": "_j8ZAmlBxPI.webm",
+    "format": "WebM",
     "playable": true,
-    "seconds": 5022,
-    "sizeMB": 523,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Music_Mondays_HD_-_The_Gino_Michaels_Band/Music_Mondays_HD_-_The_Gino_Michaels_Band.mp4"
+    "seconds": 4502,
+    "sizeMB": 348,
+    "band": "near",
+    "fileSim": 0,
+    "url": "https://archive.org/download/youtube-_j8ZAmlBxPI/_j8ZAmlBxPI.webm"
   },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "youtube-_j8ZAmlBxPI",
-      "itemTitle": "FL v. Curtis Reeves Trial Day 1 - Defense Opening Statement by Dino Michaels",
-      "stem": "_j8ZAmlBxPI",
-      "file": "_j8ZAmlBxPI.webm",
-      "format": "WebM",
-      "playable": true,
-      "seconds": 4502,
-      "sizeMB": 348,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/youtube-_j8ZAmlBxPI/_j8ZAmlBxPI.webm"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime"
+  }
 }

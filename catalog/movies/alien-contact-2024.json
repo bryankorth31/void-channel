@@ -16,24 +16,38 @@
   "huntedAt": "2026-10-15T18:28:01.674Z",
   "archiveMentions": 25,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "Mcrost01-RealAlienContactLegendadoPTBR801",
-    "itemTitle": "Real alien contact (Legendado PT-BR)",
-    "stem": "Mcrost01-RealAlienContactLegendadoPTBR801",
-    "file": "Mcrost01-RealAlienContactLegendadoPTBR801.ogv",
-    "format": "Ogg Video",
+    "conf": 0.84,
+    "item": "alien-contact-2003",
+    "itemTitle": "Alien Contact ( 2003)",
+    "stem": "Alien Contact (2003)",
+    "file": "Alien Contact (2003).mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 2913,
-    "sizeMB": 224,
+    "seconds": 2738,
+    "sizeMB": 112,
     "band": "match",
-    "fileSim": 0.46808510638297873,
-    "url": "https://archive.org/download/Mcrost01-RealAlienContactLegendadoPTBR801/Mcrost01-RealAlienContactLegendadoPTBR801.ogv"
+    "fileSim": 1,
+    "url": "https://archive.org/download/alien-contact-2003/Alien%20Contact%20(2003).mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
+      "item": "Mcrost01-RealAlienContactLegendadoPTBR801",
+      "itemTitle": "Real alien contact (Legendado PT-BR)",
+      "stem": "Mcrost01-RealAlienContactLegendadoPTBR801",
+      "file": "Mcrost01-RealAlienContactLegendadoPTBR801.ogv",
+      "format": "Ogg Video",
+      "playable": true,
+      "seconds": 2913,
+      "sizeMB": 224,
+      "band": "match",
+      "fileSim": 0.46808510638297873,
+      "url": "https://archive.org/download/Mcrost01-RealAlienContactLegendadoPTBR801/Mcrost01-RealAlienContactLegendadoPTBR801.ogv"
+    },
+    {
+      "conf": 0.7,
       "item": "Mcrost01-RealAlienContactLegendadoPTBR801",
       "itemTitle": "Real alien contact (Legendado PT-BR)",
       "stem": "Mcrost01-RealAlienContactLegendadoPTBR801_512kb",
@@ -45,20 +59,6 @@
       "band": "match",
       "fileSim": 0.4230769230769231,
       "url": "https://archive.org/download/Mcrost01-RealAlienContactLegendadoPTBR801/Mcrost01-RealAlienContactLegendadoPTBR801_512kb.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "alien-contact-2003",
-      "itemTitle": "Alien Contact ( 2003)",
-      "stem": "Alien Contact (2003)",
-      "file": "Alien Contact (2003).mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 2738,
-      "sizeMB": 112,
-      "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/alien-contact-2003/Alien%20Contact%20(2003).mp4"
     },
     {
       "conf": 0.65,
@@ -74,5 +74,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/youtube-sF-gTs0cujg/sF-gTs0cujg.webm"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2024)"
+  }
 }

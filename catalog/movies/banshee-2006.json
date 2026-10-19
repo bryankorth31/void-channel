@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T06:38:43.623Z",
   "archiveMentions": 101,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "cry-of-the-banshee-1970",
     "itemTitle": "Cry Of The Banshee 1970",
     "stem": "Cry of the Banshee 1970",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/cry-of-the-banshee-1970/Cry%20of%20the%20Banshee%201970.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

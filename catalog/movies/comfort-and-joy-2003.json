@@ -18,35 +18,24 @@
   "huntedAt": "2026-10-15T00:10:59.137Z",
   "archiveMentions": 22,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "pctca-Bruce_Latimer_Show_-_999_-_Comfort_Joy_Revue",
-    "itemTitle": "Bruce Latimer Show - 999 - Comfort & Joy Revue",
-    "stem": "Bruce_Latimer_Show_-_999_-_Comfort_Joy_Revue",
-    "file": "Bruce_Latimer_Show_-_999_-_Comfort_Joy_Revue.mpeg4",
+    "conf": 0.65,
+    "item": "comfort-and-joy-1984",
+    "itemTitle": "Comfort and Joy (1984)",
+    "stem": "Comfort and Joy (1984)",
+    "file": "Comfort and Joy (1984).mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 5355,
-    "sizeMB": 365,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/pctca-Bruce_Latimer_Show_-_999_-_Comfort_Joy_Revue/Bruce_Latimer_Show_-_999_-_Comfort_Joy_Revue.mpeg4"
+    "seconds": 6268,
+    "sizeMB": 1106,
+    "band": "near",
+    "fileSim": 1,
+    "url": "https://archive.org/download/comfort-and-joy-1984/Comfort%20and%20Joy%20(1984).mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "comfort-and-joy-1984",
-      "itemTitle": "Comfort and Joy (1984)",
-      "stem": "Comfort and Joy (1984)",
-      "file": "Comfort and Joy (1984).mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6268,
-      "sizeMB": 1106,
-      "band": "near",
-      "fileSim": 1,
-      "url": "https://archive.org/download/comfort-and-joy-1984/Comfort%20and%20Joy%20(1984).mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "runtime not within 15% of the TMDB runtime"
+  }
 }

@@ -17,38 +17,24 @@
   "huntedAt": "2026-10-14T22:06:04.233Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "MegaDriveLongplay239RainbowIslandsExtra",
-    "itemTitle": "Mega Drive Longplay [239] Rainbow Islands Extra",
-    "stem": "Mega_Drive_Longplay_239_Rainbow_Islands_Extra",
-    "file": "Mega_Drive_Longplay_239_Rainbow_Islands_Extra.mp4",
+    "conf": 0.5,
+    "item": "YninsCartridgeBlowersEp.10-DrinkAndDriveAndFallOffTheRainbow",
+    "itemTitle": "YNIN's Cartridge Blowers : Ep. 10 - Drink And Drive And Fall Off The Rainbow Road",
+    "stem": "lgcbEpisode10-DrinkAndDriveAndFallOffTheRainbowRoad",
+    "file": "lgcbEpisode10-DrinkAndDriveAndFallOffTheRainbowRoad.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 5753,
-    "sizeMB": 299,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/MegaDriveLongplay239RainbowIslandsExtra/Mega_Drive_Longplay_239_Rainbow_Islands_Extra.mp4"
+    "seconds": 4333,
+    "sizeMB": 392,
+    "band": "near",
+    "fileSim": 0.36363636363636365,
+    "url": "https://archive.org/download/YninsCartridgeBlowersEp.10-DrinkAndDriveAndFallOffTheRainbow/lgcbEpisode10-DrinkAndDriveAndFallOffTheRainbowRoad.mp4"
   },
   "alternates": [
     {
-      "conf": 0.65,
-      "item": "YninsCartridgeBlowersEp.10-DrinkAndDriveAndFallOffTheRainbow",
-      "itemTitle": "YNIN's Cartridge Blowers : Ep. 10 - Drink And Drive And Fall Off The Rainbow Road",
-      "stem": "lgcbEpisode10-DrinkAndDriveAndFallOffTheRainbowRoad",
-      "file": "lgcbEpisode10-DrinkAndDriveAndFallOffTheRainbowRoad.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4333,
-      "sizeMB": 392,
-      "band": "near",
-      "fileSim": 0.36363636363636365,
-      "url": "https://archive.org/download/YninsCartridgeBlowersEp.10-DrinkAndDriveAndFallOffTheRainbow/lgcbEpisode10-DrinkAndDriveAndFallOffTheRainbowRoad.mp4"
-    },
-    {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "YninsCartridgeBlowersEp.10-DrinkAndDriveAndFallOffTheRainbow",
       "itemTitle": "YNIN's Cartridge Blowers : Ep. 10 - Drink And Drive And Fall Off The Rainbow Road",
       "stem": "smcbEpisode10-DrinkAndDriveAndFallOffTheRainbowRoad",
@@ -61,5 +47,9 @@
       "fileSim": 0.36363636363636365,
       "url": "https://archive.org/download/YninsCartridgeBlowersEp.10-DrinkAndDriveAndFallOffTheRainbow/smcbEpisode10-DrinkAndDriveAndFallOffTheRainbowRoad.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); runtime not within 15% of the TMDB runtime"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T23:56:44.354Z",
   "archiveMentions": 36,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "video-love-s-last-test-1769568442969",
     "itemTitle": "love-s-last-test",
     "stem": "1769568442969",
@@ -31,5 +31,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/video-love-s-last-test-1769568442969/1769568442969.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

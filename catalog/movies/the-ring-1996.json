@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T17:14:41.249Z",
   "archiveMentions": 290,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "3rd-rock-from-the-sun-wull-and-grace-the-jeff-foxworthy-show-mr.-rock-the-ring-o",
-    "itemTitle": "3rd Rock From The Sun Wull And Grace The Jeff Foxworthy Show Mr. Rock The Ring Orlando Night News Partial",
-    "stem": "3rd Rock from the Sun Wull and Grace The Jeff Foxworthy Show Mr. Rock The Ring Orlando night news partial",
-    "file": "3rd Rock from the Sun Wull and Grace The Jeff Foxworthy Show Mr. Rock The Ring Orlando night news partial.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 14905,
-    "sizeMB": 4615,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/3rd-rock-from-the-sun-wull-and-grace-the-jeff-foxworthy-show-mr.-rock-the-ring-o/3rd%20Rock%20from%20the%20Sun%20Wull%20and%20Grace%20The%20Jeff%20Foxworthy%20Show%20Mr.%20Rock%20The%20Ring%20Orlando%20night%20news%20partial.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: news"
+  }
 }

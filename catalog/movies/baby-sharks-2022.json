@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T06:00:31.156Z",
   "archiveMentions": 27,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "youtube-5HwRd5_xb7o",
-    "itemTitle": "Sunrise Life Podcast episode with Raven Lynette: posing w/ sharks & dreaded baby oil predators!",
-    "stem": "5HwRd5_xb7o",
-    "file": "5HwRd5_xb7o.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3126,
-    "sizeMB": 299,
-    "band": "near",
-    "fileSim": 0,
-    "url": "https://archive.org/download/youtube-5HwRd5_xb7o/5HwRd5_xb7o.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); runtime not within 15% of the TMDB runtime; junk word"
+  }
 }

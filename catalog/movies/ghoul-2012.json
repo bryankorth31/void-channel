@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T11:51:11.717Z",
   "archiveMentions": 269,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "homv-s-0-e-6-b-night-of-the-ghoul-titans-of-british-horror-version",
     "itemTitle": "House Of Master Vyle Presents S0-E06B - Night Of The Ghoul (Titans Of British Horror Version)",
     "stem": "HOMV S0-E6B - Night of the Ghoul (Titans of British Horror Version)",
@@ -32,48 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/homv-s-0-e-6-b-night-of-the-ghoul-titans-of-british-horror-version/HOMV%20S0-E6B%20-%20Night%20of%20the%20Ghoul%20(Titans%20of%20British%20Horror%20Version).mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "dom-168221-theghoul1933",
-      "itemTitle": "The Ghoul 1933",
-      "stem": "The_Ghoul",
-      "file": "The_Ghoul.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4127,
-      "sizeMB": 414,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/dom-168221-theghoul1933/The_Ghoul.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "dom-168221-theghoul1933",
-      "itemTitle": "The Ghoul 1933",
-      "stem": "The_Ghoul_512kb",
-      "file": "The_Ghoul_512kb.mp4",
-      "format": "512Kb MPEG4",
-      "playable": true,
-      "seconds": 4127,
-      "sizeMB": 314,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/dom-168221-theghoul1933/The_Ghoul_512kb.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "scm-27110-ghoullog-mortimer",
-      "itemTitle": "Ghoul Log - Mortimer!",
-      "stem": "0000_ghoul_log_mortimer",
-      "file": "0000_ghoul_log_mortimer.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3488,
-      "sizeMB": 361,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/scm-27110-ghoullog-mortimer/0000_ghoul_log_mortimer.mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

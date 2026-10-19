@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T19:28:16.422Z",
   "archiveMentions": 132,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "8.4GrandDeceptions",
     "itemTitle": "8.4 Grand Deceptions",
     "stem": "8.4 Grand Deceptions",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/8.4GrandDeceptions/8.4%20Grand%20Deceptions.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

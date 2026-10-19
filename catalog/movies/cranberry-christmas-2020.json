@@ -18,20 +18,11 @@
   "huntedAt": "2026-10-14T06:27:57.187Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "PWP147",
-    "itemTitle": "Podcast Without Pretense Ep. 147 - Cranberry Rubdowns For Christmas",
-    "stem": "PWP147_HD",
-    "file": "PWP147_HD.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3615,
-    "sizeMB": 739,
-    "band": "near",
-    "fileSim": 0,
-    "url": "https://archive.org/download/PWP147/PWP147_HD.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); runtime not within 15% of the TMDB runtime; junk word"
+  }
 }

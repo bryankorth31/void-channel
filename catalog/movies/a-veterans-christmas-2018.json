@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T00:25:58.270Z",
   "archiveMentions": 13,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "Veterans_Events_-_Christmas_Celebration_2014_by_American_Legion_Band",
-    "itemTitle": "Veterans Events: Christmas Celebration 2014 by American Legion Band",
-    "stem": "Veterans_Events_-_Christmas_Celebration_2014_by_American_Legion_Band",
-    "file": "Veterans_Events_-_Christmas_Celebration_2014_by_American_Legion_Band.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4289,
-    "sizeMB": 446,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Veterans_Events_-_Christmas_Celebration_2014_by_American_Legion_Band/Veterans_Events_-_Christmas_Celebration_2014_by_American_Legion_Band.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

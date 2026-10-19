@@ -17,63 +17,11 @@
   "huntedAt": "2026-10-14T13:05:57.572Z",
   "archiveMentions": 186,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "PC_Longplay_468_Metro_Last_Light",
-    "itemTitle": "PC Longplay 468 Metro Last Light",
-    "stem": "PC_Longplay_468_Metro_Last_Light_part_1_of_4",
-    "file": "PC_Longplay_468_Metro_Last_Light_part_1_of_4.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 8334,
-    "sizeMB": 867,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/PC_Longplay_468_Metro_Last_Light/PC_Longplay_468_Metro_Last_Light_part_1_of_4.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "PC_Longplay_468_Metro_Last_Light",
-      "itemTitle": "PC Longplay 468 Metro Last Light",
-      "stem": "PC_Longplay_468_Metro_Last_Light_part_2_of_4",
-      "file": "PC_Longplay_468_Metro_Last_Light_part_2_of_4.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 8001,
-      "sizeMB": 832,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/PC_Longplay_468_Metro_Last_Light/PC_Longplay_468_Metro_Last_Light_part_2_of_4.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "Metro_Last_light_Walkthrough_HD_1080p_PC_Ultra",
-      "itemTitle": "Metro Last Light Walkthrough HD 1080p PC Ultra",
-      "stem": "Metro_Last_light_Walkthrough_part_2_of_7_HD_1080p_PC_Ultra",
-      "file": "Metro_Last_light_Walkthrough_part_2_of_7_HD_1080p_PC_Ultra.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4965,
-      "sizeMB": 515,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Metro_Last_light_Walkthrough_HD_1080p_PC_Ultra/Metro_Last_light_Walkthrough_part_2_of_7_HD_1080p_PC_Ultra.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "Metro_Last_light_Walkthrough_HD_1080p_PC_Ultra",
-      "itemTitle": "Metro Last Light Walkthrough HD 1080p PC Ultra",
-      "stem": "Metro_2033_Walkthrough_part_01_HD_1080p_PC_Ultra",
-      "file": "Metro_2033_Walkthrough_part_01_HD_1080p_PC_Ultra.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4821,
-      "sizeMB": 500,
-      "band": "near",
-      "fileSim": 0.058823529411764705,
-      "url": "https://archive.org/download/Metro_Last_light_Walkthrough_HD_1080p_PC_Ultra/Metro_2033_Walkthrough_part_01_HD_1080p_PC_Ultra.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime; junk word"
+  }
 }

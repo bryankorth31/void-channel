@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T13:30:32.618Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "snowbound.-4.-christmas-2019-christmas-pg-uptv",
     "itemTitle": "Snowbound. 4. Christmas (2019 Christmas PG, UPTV)",
     "stem": "- Snowbound.4.Christmas (2019 Christmas PG, UPTV)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/snowbound.-4.-christmas-2019-christmas-pg-uptv/-%20Snowbound.4.Christmas%20(2019%20Christmas%20PG%2C%20UPTV).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

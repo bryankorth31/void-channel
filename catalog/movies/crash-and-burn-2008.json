@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T15:34:56.916Z",
   "archiveMentions": 49,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "crash-and-burn-1990-1080p",
     "itemTitle": "Crash And Burn (1990) [1080p]",
     "stem": "Crash and Burn (1990) [1080p]",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "crash-and-burn-1990_202506",
       "itemTitle": "Crash and Burn 1990",
       "stem": "Crash and Burn 1990",
@@ -48,5 +48,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/crash-and-burn-1990_202506/Crash%20and%20Burn%201990.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2008)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T08:11:02.884Z",
   "archiveMentions": 18,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "ThePlainTruthAboutChristmas",
     "itemTitle": "The Plain Truth About Christmas",
     "stem": "The Plain Truth about Christmas",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/ThePlainTruthAboutChristmas/The%20Plain%20Truth%20about%20Christmas.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

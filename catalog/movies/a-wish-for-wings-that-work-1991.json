@@ -20,7 +20,7 @@
   "itemsOpened": 4,
   "state": "REVIEW",
   "file": {
-    "conf": 0.8,
+    "conf": 0.65,
     "item": "1991.12.18-wcbs-a-wish-for-wings-that-work-hbo-paul-simons-concert-in-the-park-c",
     "itemTitle": "1991.12.18 WCBS A Wish For Wings That Work HBO Paul Simon’s Concert In The Park CPTV Pledge Drive With Parts Of The Moody Blues & Doors Documentaries [ Redump] TE NOS",
     "stem": "1991.12.18 - WCBS - A Wish for Wings That Work - HBO - Paul Simon’s Concert in The Park - CPTV - Pledge Drive with parts of the Moody Blues & Doors Documentaries [Redump]_TE_NOS",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.8,
+      "conf": 0.65,
       "item": "1991.12.18-wcbs-a-wish-for-wings-that-work-hbo-paul-simons-concert-in-the-park-c",
       "itemTitle": "1991.12.18 WCBS A Wish For Wings That Work HBO Paul Simon’s Concert In The Park CPTV Pledge Drive With Parts Of The Moody Blues & Doors Documentaries [ Redump] TE NOS",
       "stem": "1991.12",
@@ -47,20 +47,6 @@
       "band": "feature",
       "fileSim": 0,
       "url": "https://archive.org/download/1991.12.18-wcbs-a-wish-for-wings-that-work-hbo-paul-simons-concert-in-the-park-c/1991.12.18%20-%20WCBS%20-%20A%20Wish%20for%20Wings%20That%20Work%20-%20HBO%20-%20Paul%20Simon%E2%80%99s%20Concert%20in%20The%20Park%20-%20CPTV%20-%20Pledge%20Drive%20with%20parts%20of%20the%20Moody%20Blues%20%26%20Doors%20Documentaries%20%5BRedump%5D_TE_NOS.ia.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "Opus_Bill_A_Wish_For_Wings_That_Work_1991",
-      "itemTitle": " Opus & Bill   A Wish For Wings That Work (1991)",
-      "stem": "Opus__Bill_A_Wish_For_Wings_That_Work_1991",
-      "file": "Opus__Bill_A_Wish_For_Wings_That_Work_1991.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 1401,
-      "sizeMB": 139,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Opus_Bill_A_Wish_For_Wings_That_Work_1991/Opus__Bill_A_Wish_For_Wings_That_Work_1991.mp4"
     },
     {
       "conf": 0.55,
@@ -75,6 +61,20 @@
       "band": "short",
       "fileSim": 1,
       "url": "https://archive.org/download/a-wish-for-wings-that-work-480p/A%20Wish%20For%20Wings%20That%20Work%20(480p).mp4"
+    },
+    {
+      "conf": 0.5,
+      "item": "Opus_Bill_A_Wish_For_Wings_That_Work_1991",
+      "itemTitle": " Opus & Bill   A Wish For Wings That Work (1991)",
+      "stem": "Opus__Bill_A_Wish_For_Wings_That_Work_1991",
+      "file": "Opus__Bill_A_Wish_For_Wings_That_Work_1991.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 1401,
+      "sizeMB": 139,
+      "band": "short",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/Opus_Bill_A_Wish_For_Wings_That_Work_1991/Opus__Bill_A_Wish_For_Wings_That_Work_1991.mp4"
     }
   ]
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-13T19:09:44.576Z",
   "archiveMentions": 8,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-OwVfLeTIg20",
     "itemTitle": "Fighting Off Zombie Bosses from HELL on Night 21 - 7 Days to Die",
     "stem": "OwVfLeTIg20",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "roosterteeth-50655",
       "itemTitle": "Fighting Off Zombie Bosses from HELL on Night 21 - 7 Days to Die",
       "stem": "2023-04-01_Fighting_Off_Zombie_Bosses_from_HELL_on_Night_21_-_7_Days_to_Die_[50655]",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/roosterteeth-50655/2023-04-01_Fighting_Off_Zombie_Bosses_from_HELL_on_Night_21_-_7_Days_to_Die_%5B50655%5D.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

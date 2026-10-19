@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T08:59:13.192Z",
   "archiveMentions": 15,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "hasu-104-11",
     "itemTitle": "[EN Sub] Link! Like! Love Live! 104th Term Episode 11 \"Bloom the Dream\"",
     "stem": "ENSUB_104EP11",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/hasu-104-11/ENSUB_104EP11.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

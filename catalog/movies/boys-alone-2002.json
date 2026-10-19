@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T12:45:28.279Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "boys-and-girls-alone",
     "itemTitle": "Boys And Girls Alone",
     "stem": "Boys and Girls Alone - Episode 1",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "boys-and-girls-alone-e-02-2009.02.10",
       "itemTitle": "Boys And Girls Alone Documentary",
       "stem": "Boys and Girls Alone E01 2009.02.03",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/boys-and-girls-alone-e-02-2009.02.10/Boys%20and%20Girls%20Alone%20E01%202009.02.03.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "boys-and-girls-alone",
       "itemTitle": "Boys And Girls Alone",
       "stem": "Boys and Girls Alone - Episode 2",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/boys-and-girls-alone/Boys%20and%20Girls%20Alone%20-%20Episode%202.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "boys-and-girls-alone-e-02-2009.02.10",
       "itemTitle": "Boys And Girls Alone Documentary",
       "stem": "Boys and Girls Alone E02 2009.02.10",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/boys-and-girls-alone-e-02-2009.02.10/Boys%20and%20Girls%20Alone%20E02%202009.02.10.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

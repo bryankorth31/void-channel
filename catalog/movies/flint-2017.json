@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-14T13:27:15.932Z",
   "archiveMentions": 283,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "Flint_Memorial_Library_Presents_The_Past_Present_Future_of_Chesnut_Trees_In_America_2_22_17",
-    "itemTitle": "Flint Memorial Library Presents The Past, Present, & Future of Chesnut Trees In America 2/22/17",
-    "stem": "Flint_Memorial_Library_Presents_The_Past_Present_Future_of_Chesnut_Trees_In_America_2_22_17",
-    "file": "Flint_Memorial_Library_Presents_The_Past_Present_Future_of_Chesnut_Trees_In_America_2_22_17.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5759,
-    "sizeMB": 599,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Flint_Memorial_Library_Presents_The_Past_Present_Future_of_Chesnut_Trees_In_America_2_22_17/Flint_Memorial_Library_Presents_The_Past_Present_Future_of_Chesnut_Trees_In_America_2_22_17.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "Flint_Memorial_Library_Presents_An_Evening_with_Jerry_Thorton_11_13_18",
-      "itemTitle": "Flint Memorial Library Presents An Evening with Jerry Thorton 11/13/18",
-      "stem": "Flint_Memorial_Library_Presents_An_Evening_with_Jerry_Thorton_11_13_18",
-      "file": "Flint_Memorial_Library_Presents_An_Evening_with_Jerry_Thorton_11_13_18.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4086,
-      "sizeMB": 425,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Flint_Memorial_Library_Presents_An_Evening_with_Jerry_Thorton_11_13_18/Flint_Memorial_Library_Presents_An_Evening_with_Jerry_Thorton_11_13_18.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T11:41:47.184Z",
   "archiveMentions": 280,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a-christmas-carol-the-musical_202605",
     "itemTitle": "A Christmas Carol: The Musical",
     "stem": "A Christmas Carol_ The Musical _ FULL MOVIE _ Kelsey Grammer, Jennifer Love Hewitt",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/a-christmas-carol-the-musical_202605/A%20Christmas%20Carol_%20The%20Musical%20_%20FULL%20MOVIE%20_%20Kelsey%20Grammer%2C%20Jennifer%20Love%20Hewitt.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

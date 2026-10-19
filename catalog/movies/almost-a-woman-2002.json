@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T12:48:52.831Z",
   "archiveMentions": 17,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "woman-they-almost-lynched-1953",
     "itemTitle": "Woman They Almost Lynched 1953 colorized (Joan Leslie)",
     "stem": "Woman They Almost Lynched 1953",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "woman-they-almost-lynched-1953_202410",
       "itemTitle": "Woman They Almost Lynched",
       "stem": "Woman They Almost Lynched 1953",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/woman-they-almost-lynched-1953_202410/Woman%20They%20Almost%20Lynched%201953.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

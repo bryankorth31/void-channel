@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T14:54:39.184Z",
   "archiveMentions": 73,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "Entertaining.the.Troops",
     "itemTitle": "Entertaining the Troops: American Entertainers in World War II",
     "stem": "04",
@@ -46,5 +46,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/vid-20230223-144525/VID_20230223_144525.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

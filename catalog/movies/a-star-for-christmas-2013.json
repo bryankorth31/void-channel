@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T03:25:43.957Z",
   "archiveMentions": 101,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "journey-to-the-christmas-star",
     "itemTitle": "Journey to the Christmas Star (Eng)",
     "stem": "Journey to the Christmas Star full",
@@ -33,34 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/journey-to-the-christmas-star/Journey%20to%20the%20Christmas%20Star%20full.mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "A_USO_Christmas...A_Star-Studded_Star-Spangled_Musical_Tribute_to_the_USO_Shows_of_World_War_II",
-      "itemTitle": "A USO Christmas...A Star-Studded, Star-Spangled Musical Tribute to the USO Shows of World War II",
-      "stem": "A_USO_Christmas...A_Star-Studded_Star-Spangled_Musical_Tribute_to_the_USO_Shows_of_World_War_II",
-      "file": "A_USO_Christmas...A_Star-Studded_Star-Spangled_Musical_Tribute_to_the_USO_Shows_of_World_War_II.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 7096,
-      "sizeMB": 738,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/A_USO_Christmas...A_Star-Studded_Star-Spangled_Musical_Tribute_to_the_USO_Shows_of_World_War_II/A_USO_Christmas...A_Star-Studded_Star-Spangled_Musical_Tribute_to_the_USO_Shows_of_World_War_II.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "Parade_and_Tree_Lighting_-_Star_Spangled_Christmas",
-      "itemTitle": "Parade and Tree Lighting - Star Spangled Christmas",
-      "stem": "Parade_and_Tree_Lighting_-_Star_Spangled_Christmas",
-      "file": "Parade_and_Tree_Lighting_-_Star_Spangled_Christmas.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6653,
-      "sizeMB": 716,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Parade_and_Tree_Lighting_-_Star_Spangled_Christmas/Parade_and_Tree_Lighting_-_Star_Spangled_Christmas.mpeg4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

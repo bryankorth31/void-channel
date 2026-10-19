@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T04:35:54.380Z",
   "archiveMentions": 38,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "price_of_love_2015",
     "itemTitle": "Price of Love (2015)",
     "stem": "Price of Love (2015)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/price_of_love_2015/Price%20of%20Love%20(2015).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1995)"
+  }
 }

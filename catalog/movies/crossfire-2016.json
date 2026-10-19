@@ -17,63 +17,11 @@
   "huntedAt": "2026-10-14T08:49:25.084Z",
   "archiveMentions": 291,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "CSPAN2_20201204_183200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire...",
-    "itemTitle": "Senate Homeland Security Committee Holds Hearing on FBI's Crossfire Hurricane Investigation : CSPAN2 : December 4, 2020 1:32pm-2:51pm EST",
-    "stem": "CSPAN2_20201204_183200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire...",
-    "file": "CSPAN2_20201204_183200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire....mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4741,
-    "sizeMB": 467,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN2_20201204_183200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire.../CSPAN2_20201204_183200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire....mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "CSPAN2_20201204_010100_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire...",
-      "itemTitle": "Senate Homeland Security Committee Holds Hearing on FBI's Crossfire Hurricane Investigation : CSPAN2 : December 3, 2020 8:01pm-9:49pm EST",
-      "stem": "CSPAN2_20201204_010100_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire...",
-      "file": "CSPAN2_20201204_010100_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire....mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 6481,
-      "sizeMB": 638,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN2_20201204_010100_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire.../CSPAN2_20201204_010100_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire....mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "CSPAN2_20201204_070200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire...",
-      "itemTitle": "Senate Homeland Security Committee Holds Hearing on FBI's Crossfire Hurricane Investigation : CSPAN2 : December 4, 2020 2:02am-3:49am EST",
-      "stem": "CSPAN2_20201204_070200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire...",
-      "file": "CSPAN2_20201204_070200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire....mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 6481,
-      "sizeMB": 638,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN2_20201204_070200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire.../CSPAN2_20201204_070200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire....mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "CSPAN2_20201205_111200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire...",
-      "itemTitle": "Senate Homeland Security Committee Holds Hearing on FBI's Crossfire Hurricane Investigation : CSPAN2 : December 5, 2020 6:12am-8:00am EST",
-      "stem": "CSPAN2_20201205_111200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire...",
-      "file": "CSPAN2_20201205_111200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire....mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 6481,
-      "sizeMB": 638,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN2_20201205_111200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire.../CSPAN2_20201205_111200_Senate_Homeland_Security_Committee_Holds_Hearing_on_FBIs_Crossfire....mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-CSPAN2"
+  }
 }

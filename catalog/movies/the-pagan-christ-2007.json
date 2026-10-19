@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T13:11:30.790Z",
   "archiveMentions": 11,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "solomons-temple-872",
     "itemTitle": "Is This Proof That Jesus Christ Never Existed? | Pagan Christ | Timeline - Ancient Technology - Solomon's Temple Investigation Marathon 872",
     "stem": "Solomon's Temple 872",
@@ -32,5 +32,9 @@
     "fileSim": 0.06896551724137931,
     "url": "https://archive.org/download/solomons-temple-872/Solomon's%20Temple%20872.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

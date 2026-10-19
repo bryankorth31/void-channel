@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T05:43:24.739Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "CSPAN3_20250510_224000_Dylan_Mulvaney_Paper_Doll_-_Notes_from_a_Late_Bloomer",
-    "itemTitle": "Dylan Mulvaney, \"Paper Doll - Notes from a Late Bloomer\" : CSPAN3 : May 10, 2025 6:40pm-7:56pm EDT",
-    "stem": "CSPAN3_20250510_224000_Dylan_Mulvaney_Paper_Doll_-_Notes_from_a_Late_Bloomer",
-    "file": "CSPAN3_20250510_224000_Dylan_Mulvaney_Paper_Doll_-_Notes_from_a_Late_Bloomer.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4621,
-    "sizeMB": 847,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN3_20250510_224000_Dylan_Mulvaney_Paper_Doll_-_Notes_from_a_Late_Bloomer/CSPAN3_20250510_224000_Dylan_Mulvaney_Paper_Doll_-_Notes_from_a_Late_Bloomer.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-CSPAN3"
+  }
 }

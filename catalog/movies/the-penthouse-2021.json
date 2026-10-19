@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T13:34:11.880Z",
   "archiveMentions": 184,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "the-penthouse-3-ep-2-mmsub-hd",
     "itemTitle": "The Penthouse 3 အပိုင်း( ၂ ) VPN ပိတ်၍ကြည့်ပါ",
     "stem": "The Penthouse 3 Ep2 Mmsub HD",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "penthouse-3-ep-9-shwe-mmsub-hd-454-mb",
       "itemTitle": "Penthouse 3 အပိုင်း( ၉ )454MB VPNပိတ်၍ကြည့်ပါ",
       "stem": "Penthouse 3 Ep-9 Shwe mmsub HD454MB",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/penthouse-3-ep-9-shwe-mmsub-hd-454-mb/Penthouse%203%20Ep-9%20Shwe%20mmsub%20HD454MB.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "penthouse-3-ep-10-mmsub-hd-445-mb",
       "itemTitle": "Penthouse 3 အပိုင်း( ၁၀ )445MB VPNပိတ်၍ကြည့်ပါ",
       "stem": "Penthouse 3 Ep-10 MMsub HD 445MB",
@@ -61,5 +61,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/penthouse-3-ep-10-mmsub-hd-445-mb/Penthouse%203%20Ep-10%20MMsub%20HD%20445MB.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

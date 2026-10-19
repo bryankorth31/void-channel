@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T15:21:42.491Z",
   "archiveMentions": 13,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "MeteoritesOldFilm",
     "itemTitle": "Meteorites = Old Film",
     "stem": "meteorites = old film",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.75,
+      "conf": 0.6,
       "item": "Meteorites_USA_Network_WOC_1998-06-03",
       "itemTitle": " Meteorites USA Network WOC 1998 06 03",
       "stem": "Meteorites_USA_Network_WOC_1998-06-03",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/Meteorites_USA_Network_WOC_1998-06-03/Meteorites_USA_Network_WOC_1998-06-03.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

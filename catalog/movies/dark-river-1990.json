@@ -16,49 +16,11 @@
   "huntedAt": "2026-10-15T14:35:46.773Z",
   "archiveMentions": 27,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "hot-tub-sleep-machine-deep-dark-river-waterfall-box-fan-asmr-relaxing-favorite-1-hour",
-    "itemTitle": "Hot Tub Sleep Machine - Deep Dark River Waterfall - Rain Shower - Box Fan",
-    "stem": "Hot Tub Sleep Machine - Deep Dark River Waterfall - Box Fan ASMR relaxing favorite 1 hour",
-    "file": "Hot Tub Sleep Machine - Deep Dark River Waterfall - Box Fan ASMR relaxing favorite 1 hour.webm",
-    "format": "WebM",
-    "playable": true,
-    "seconds": 3585,
-    "sizeMB": 192,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/hot-tub-sleep-machine-deep-dark-river-waterfall-box-fan-asmr-relaxing-favorite-1-hour/Hot%20Tub%20Sleep%20Machine%20-%20Deep%20Dark%20River%20Waterfall%20-%20Box%20Fan%20ASMR%20relaxing%20favorite%201%20hour.webm"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "DarkOmen_2007-05-12_Ghabry_vs._bembelimen_Bretonischer_Fluss",
-      "itemTitle": "Warhammer Dark Omen Multiplayer Fight - 2007-05-12 Ghabry vs. bembelimen Bretonnian River",
-      "stem": "DarkOmen_2007-05-12_Ghabry_vs._bembelimen_Bretonischer_Fluss",
-      "file": "DarkOmen_2007-05-12_Ghabry_vs._bembelimen_Bretonischer_Fluss.avi",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 1333,
-      "sizeMB": 178,
-      "band": "short",
-      "fileSim": 0.16,
-      "url": "https://archive.org/download/DarkOmen_2007-05-12_Ghabry_vs._bembelimen_Bretonischer_Fluss/DarkOmen_2007-05-12_Ghabry_vs._bembelimen_Bretonischer_Fluss.avi"
-    },
-    {
-      "conf": 0.55,
-      "item": "DarkOmen_2007-05-12_Ghabry_vs._bembelimen_Bretonischer_Fluss",
-      "itemTitle": "Warhammer Dark Omen Multiplayer Fight - 2007-05-12 Ghabry vs. bembelimen Bretonnian River",
-      "stem": "DarkOmen_2007-05-12_Ghabry_vs._bembelimen_Bretonischer_Fluss_512kb",
-      "file": "DarkOmen_2007-05-12_Ghabry_vs._bembelimen_Bretonischer_Fluss_512kb.mp4",
-      "format": "512Kb MPEG4",
-      "playable": true,
-      "seconds": 1333,
-      "sizeMB": 96,
-      "band": "short",
-      "fileSim": 0.1509433962264151,
-      "url": "https://archive.org/download/DarkOmen_2007-05-12_Ghabry_vs._bembelimen_Bretonischer_Fluss/DarkOmen_2007-05-12_Ghabry_vs._bembelimen_Bretonischer_Fluss_512kb.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime"
+  }
 }

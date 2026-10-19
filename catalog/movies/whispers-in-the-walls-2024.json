@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T14:03:08.883Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "youtube--WFtVxAI_gE",
-    "itemTitle": "Warframe Whispers In The Walls Gameplay Demo | Tennocon 2023",
-    "stem": "-WFtVxAI_gE",
-    "file": "-WFtVxAI_gE.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 1258,
-    "sizeMB": 425,
-    "band": "short",
-    "fileSim": 0,
-    "url": "https://archive.org/download/youtube--WFtVxAI_gE/-WFtVxAI_gE.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime; junk word"
+  }
 }

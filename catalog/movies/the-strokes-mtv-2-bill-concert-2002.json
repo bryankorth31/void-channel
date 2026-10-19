@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T07:30:06.589Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "the-strokes-live-at-mtv-2-dollar-bill-concert-2002-full-hq",
     "itemTitle": "The Strokes Live At MTV $ 2 Dollar Bill Concert 2002 [ Full] [ HQ]",
     "stem": "The Strokes - Live at MTV $2 Dollar Bill Concert 2002 [Full] [HQ]",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/the-strokes-live-at-mtv-2-dollar-bill-concert-2002-full-hq/The%20Strokes%20-%20Live%20at%20MTV%20%242%20Dollar%20Bill%20Concert%202002%20%5BFull%5D%20%5BHQ%5D.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T11:48:04.657Z",
   "archiveMentions": 11,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "candles-in-the-dark-session-1-the-mirror-larken-rose-part-1-of-7",
     "itemTitle": "Candles In The Dark Seminar",
     "stem": "Candles In The Dark - Session 7.0_7",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "candles-in-the-dark-session-1-the-mirror-larken-rose-part-1-of-7",
       "itemTitle": "Candles In The Dark Seminar",
       "stem": "Candles In The Dark - Session 7.0_7.4 - The Briefing, Maxwell, Amanda, Larken, Observations [Larken Rose] [Part 7 of 7]",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/candles-in-the-dark-session-1-the-mirror-larken-rose-part-1-of-7/Candles%20In%20The%20Dark%20-%20Session%207.0_7.4%20-%20The%20Briefing%2C%20Maxwell%2C%20Amanda%2C%20Larken%2C%20Observations%20%5BLarken%20Rose%5D%20%5BPart%207%20of%207%5D.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "lavender-coffee-candles-after-dark",
       "itemTitle": "Candles' After Dark (Alternative Health and Sexual Education) - Lavender Coffee",
       "stem": "2024-10-29 Condoms 101",
@@ -74,5 +74,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/youtube-tBZpYWIup2o/tBZpYWIup2o.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

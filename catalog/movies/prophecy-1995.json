@@ -16,38 +16,24 @@
   "huntedAt": "2026-10-15T09:20:36.329Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
-    "item": "Prophecy_and_Revelations_1995_Time-Life_Video_Tape",
-    "itemTitle": "Prophecy and Revelations 1995 Time-Life Video Tape",
-    "stem": "Prophecy and Revelations 1995 Time-Life Video Tape",
-    "file": "Prophecy and Revelations 1995 Time-Life Video Tape.mp4",
-    "format": "h.264",
+    "conf": 0.84,
+    "item": "86414825",
+    "itemTitle": "Prophecy",
+    "stem": "Prophecy-KlassischeEuropaeischeProphetieAmBeispielAloisIrlmaier720p",
+    "file": "Prophecy-KlassischeEuropaeischeProphetieAmBeispielAloisIrlmaier720p.mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 3112,
-    "sizeMB": 310,
+    "seconds": 2816,
+    "sizeMB": 407,
     "band": "match",
     "fileSim": 0.95,
-    "url": "https://archive.org/download/Prophecy_and_Revelations_1995_Time-Life_Video_Tape/Prophecy%20and%20Revelations%201995%20Time-Life%20Video%20Tape.mp4"
+    "url": "https://archive.org/download/86414825/Prophecy-KlassischeEuropaeischeProphetieAmBeispielAloisIrlmaier720p.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "86414825",
-      "itemTitle": "Prophecy",
-      "stem": "Prophecy-KlassischeEuropaeischeProphetieAmBeispielAloisIrlmaier720p",
-      "file": "Prophecy-KlassischeEuropaeischeProphetieAmBeispielAloisIrlmaier720p.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 2816,
-      "sizeMB": 407,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/86414825/Prophecy-KlassischeEuropaeischeProphetieAmBeispielAloisIrlmaier720p.mp4"
-    },
-    {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "86414825",
       "itemTitle": "Prophecy",
       "stem": "Prophecy-IchSehsGanzDeutlichMichaelVogtNikiVogtTimeToDo480p",
@@ -61,7 +47,21 @@
       "url": "https://archive.org/download/86414825/Prophecy-IchSehsGanzDeutlichMichaelVogtNikiVogtTimeToDo480p.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.8,
+      "item": "Prophecy_and_Revelations_1995_Time-Life_Video_Tape",
+      "itemTitle": "Prophecy and Revelations 1995 Time-Life Video Tape",
+      "stem": "Prophecy and Revelations 1995 Time-Life Video Tape",
+      "file": "Prophecy and Revelations 1995 Time-Life Video Tape.mp4",
+      "format": "h.264",
+      "playable": true,
+      "seconds": 3112,
+      "sizeMB": 310,
+      "band": "match",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/Prophecy_and_Revelations_1995_Time-Life_Video_Tape/Prophecy%20and%20Revelations%201995%20Time-Life%20Video%20Tape.mp4"
+    },
+    {
+      "conf": 0.7,
       "item": "SaudiHornsOfSatan",
       "itemTitle": "\"Horns Of Satan\" - The Wahabbi and Saudi Families are All JEWISH - (Part 2; Jewish Tribes In Saudi/Arab History and Islamic Prophecy)",
       "stem": "Sirah - The story of Banu Qaynuqa - (Qaynuqa Tribes - Jews of Medina) - يهود المدين",
@@ -74,5 +74,9 @@
       "fileSim": 0.043478260869565216,
       "url": "https://archive.org/download/SaudiHornsOfSatan/Sirah%20-%20The%20story%20of%20Banu%20Qaynuqa%20-%20(Qaynuqa%20Tribes%20-%20Jews%20of%20Medina)%20-%20%D9%8A%D9%87%D9%88%D8%AF%20%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

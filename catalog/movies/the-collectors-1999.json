@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T22:25:26.367Z",
   "archiveMentions": 288,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "collectors_202201",
     "itemTitle": "Collectors",
     "stem": "Collectors",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "collectors-2020-thai",
       "itemTitle": "Collectors 2020 THAI",
       "stem": "ShadesOfTheHeart2021",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/collectors-2020-thai/ShadesOfTheHeart2021.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "MRCCT_2000_Part_II",
       "itemTitle": "Military Radio Collectors Group 2000 Part II",
       "stem": "MRCCT_2000_Part_II",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/MRCCT_2000_Part_II/MRCCT_2000_Part_II.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "power-puff-girls-z-collectors-edition-dvd-box-scans.-7z",
       "itemTitle": "PowerPuff Girls Z Collectors Edition DVD Box",
       "stem": "PPGZ_CE_03",
@@ -75,5 +75,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/power-puff-girls-z-collectors-edition-dvd-box-scans.-7z/PPGZ_CE_03.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

@@ -17,49 +17,11 @@
   "huntedAt": "2026-10-14T21:18:34.939Z",
   "archiveMentions": 13,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "MSNBCW_20180625_010000_All_the_Presidents_Men_Revisited",
-    "itemTitle": "All the President's Men Revisited : MSNBCW : June 24, 2018 6:00pm-8:00pm PDT",
-    "stem": "MSNBCW_20180625_010000_All_the_Presidents_Men_Revisited",
-    "file": "MSNBCW_20180625_010000_All_the_Presidents_Men_Revisited.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 7261,
-    "sizeMB": 759,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/MSNBCW_20180625_010000_All_the_Presidents_Men_Revisited/MSNBCW_20180625_010000_All_the_Presidents_Men_Revisited.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "MSNBCW_20180910_020000_All_the_Presidents_Men_Revisited",
-      "itemTitle": "All the President's Men Revisited : MSNBCW : September 9, 2018 7:00pm-9:00pm PDT",
-      "stem": "MSNBCW_20180910_020000_All_the_Presidents_Men_Revisited",
-      "file": "MSNBCW_20180910_020000_All_the_Presidents_Men_Revisited.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 7261,
-      "sizeMB": 759,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/MSNBCW_20180910_020000_All_the_Presidents_Men_Revisited/MSNBCW_20180910_020000_All_the_Presidents_Men_Revisited.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "MSNBCW_20170704_030000_All_the_Presidents_Men_Revisited",
-      "itemTitle": "All the President's Men Revisited : MSNBCW : July 3, 2017 8:00pm-10:01pm PDT",
-      "stem": "MSNBCW_20170704_030000_All_the_Presidents_Men_Revisited",
-      "file": "MSNBCW_20170704_030000_All_the_Presidents_Men_Revisited.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 7261,
-      "sizeMB": 758,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/MSNBCW_20170704_030000_All_the_Presidents_Men_Revisited/MSNBCW_20170704_030000_All_the_Presidents_Men_Revisited.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-MSNBCW"
+  }
 }

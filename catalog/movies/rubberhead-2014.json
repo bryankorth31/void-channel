@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T05:40:30.344Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "jash-presents-rubberhead-hd",
     "itemTitle": "JASH Presents RUBBERHEAD HD",
     "stem": "JASH Presents RUBBERHEAD-HD",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/jash-presents-rubberhead-hd/JASH%20Presents%20RUBBERHEAD-HD.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

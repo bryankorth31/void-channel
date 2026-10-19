@@ -16,35 +16,39 @@
   "huntedAt": "2026-10-15T06:39:30.839Z",
   "archiveMentions": 26,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "little-heroes-3",
-    "itemTitle": "LITTLE HEROES 3",
-    "stem": "LITTLE_HEROES_3",
-    "file": "LITTLE_HEROES_3.mp4",
+    "conf": 0.84,
+    "item": "little_heroes",
+    "itemTitle": "Little Heroes (1983)",
+    "stem": "Young Heroes.1983",
+    "file": "Young Heroes.1983.mp4",
     "format": "h.264",
     "playable": true,
-    "seconds": 5435,
-    "sizeMB": 547,
+    "seconds": 5028,
+    "sizeMB": 491,
     "band": "match",
-    "fileSim": 0.9565217391304348,
-    "url": "https://archive.org/download/little-heroes-3/LITTLE_HEROES_3.mp4"
+    "fileSim": 0.47619047619047616,
+    "url": "https://archive.org/download/little_heroes/Young%20Heroes.1983.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "little_heroes",
-      "itemTitle": "Little Heroes (1983)",
-      "stem": "Young Heroes.1983",
-      "file": "Young Heroes.1983.mp4",
+      "conf": 0.7,
+      "item": "little-heroes-3",
+      "itemTitle": "LITTLE HEROES 3",
+      "stem": "LITTLE_HEROES_3",
+      "file": "LITTLE_HEROES_3.mp4",
       "format": "h.264",
       "playable": true,
-      "seconds": 5028,
-      "sizeMB": 491,
+      "seconds": 5435,
+      "sizeMB": 547,
       "band": "match",
-      "fileSim": 0.47619047619047616,
-      "url": "https://archive.org/download/little_heroes/Young%20Heroes.1983.mp4"
+      "fileSim": 0.9565217391304348,
+      "url": "https://archive.org/download/little-heroes-3/LITTLE_HEROES_3.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1991)"
+  }
 }

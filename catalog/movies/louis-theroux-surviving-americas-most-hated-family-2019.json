@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T14:09:45.086Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "Louis_Theroux_-_Surviving_Americas_Most_Hated_Family_m0006vv7_signed",
     "itemTitle": " Louis Theroux   Surviving Americas Most Hated Family m0006vv7 signed",
     "stem": "Louis_Theroux_-_Surviving_Americas_Most_Hated_Family_m0006vv7_signed",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/Louis_Theroux_-_Surviving_Americas_Most_Hated_Family_m0006vv7_signed/Louis_Theroux_-_Surviving_Americas_Most_Hated_Family_m0006vv7_signed.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

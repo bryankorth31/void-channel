@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T20:08:35.227Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "christian-woman-is-deceived-by-christianity-rehan-dawah-wise-360p-h-264",
     "itemTitle": "Christian Woman Is Deceived By Christianity Rehan Dawah Wise",
     "stem": "Christian Woman Is Deceived By Christianity  Rehan - DawahWise (360p, h264)",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/christian-woman-is-deceived-by-christianity-rehan-dawah-wise-360p-h-264/Christian%20Woman%20Is%20Deceived%20By%20Christianity%20%20Rehan%20-%20DawahWise%20(360p%2C%20h264).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

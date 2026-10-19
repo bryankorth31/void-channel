@@ -17,36 +17,11 @@
   "huntedAt": "2026-10-15T14:27:28.309Z",
   "archiveMentions": 285,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.7,
-    "item": "LWVSchoolOverrideForum",
-    "itemTitle": "LWV: School Override Forum",
-    "stem": "9967-1-LWV FORUM 9-28-2016-TRMS  Letterbox",
-    "file": "9967-1-LWV FORUM 9-28-2016-TRMS  Letterbox.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 7209,
-    "sizeMB": 752,
-    "band": "feature",
-    "fileSim": 0.05714285714285714,
-    "url": "https://archive.org/download/LWVSchoolOverrideForum/9967-1-LWV%20FORUM%209-28-2016-TRMS%20%20Letterbox.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.6,
-      "item": "LWVSchoolOverrideForum",
-      "itemTitle": "LWV: School Override Forum",
-      "stem": "9967-1-LWV FORUM 9-28-2016-TRMS  Letterbox.pegssc",
-      "file": "9967-1-LWV FORUM 9-28-2016-TRMS  Letterbox.pegssc.mpeg",
-      "format": "MPEG2",
-      "playable": false,
-      "codecRisk": "container (MPEG2)",
-      "seconds": 7209,
-      "sizeMB": 4303,
-      "band": "feature",
-      "fileSim": 0.04878048780487805,
-      "url": "https://archive.org/download/LWVSchoolOverrideForum/9967-1-LWV%20FORUM%209-28-2016-TRMS%20%20Letterbox.pegssc.mpeg"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T02:19:22.816Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "the-lawrence-welk-show-christmas-reunion-and-new-years-party-vhs",
     "itemTitle": "The Lawrence Welk Show: Christmas Reunion and New Year's Party",
     "stem": "The Lawrence Welk Show Christmas Reunion and New Years Party VHS",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "father-knows-best-home-for-christmas-1977-tv-reunion-movie",
       "itemTitle": "Father Knows Best Home For Christmas (1977 *****) TV Reunion Movie",
       "stem": "Father Knows Best Home For Christmas (1977 +++++) TV Reunion Movie)",
@@ -48,5 +48,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/father-knows-best-home-for-christmas-1977-tv-reunion-movie/Father%20Knows%20Best%20Home%20For%20Christmas%20(1977%20%2B%2B%2B%2B%2B)%20TV%20Reunion%20Movie).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

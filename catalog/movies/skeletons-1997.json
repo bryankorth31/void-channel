@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T18:13:19.002Z",
   "archiveMentions": 201,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "skeletons_202409",
     "itemTitle": "Skeletons",
     "stem": "Skeletons",
@@ -33,5 +33,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/skeletons_202409/Skeletons.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

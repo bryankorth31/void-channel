@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T04:34:00.499Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "5-kpp-50-174",
     "itemTitle": "5KPP50-174 | Cults | Wonder Woman 1984 | 90's Films | Better Off Dead Was On TV",
     "stem": "5KPP50-174 _ Cults _ Wonder Woman 1984 _ 90_s Films _ Better Off Dead Was On TV-018",
@@ -60,5 +60,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/better-off-dead-1985/Better%20Off%20Dead%20(1985).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

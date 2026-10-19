@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T08:27:45.797Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "shattered-vows-1984",
     "itemTitle": "Shattered Vows (1984)",
     "stem": "Shattered Vows (1984)",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/shattered-vows-1984/Shattered%20Vows%20(1984).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2025)"
+  }
 }

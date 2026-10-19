@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T18:27:05.886Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "ill-be-seeing-you-1944",
     "itemTitle": "I'll Be Seeing You (1944)",
     "stem": "I'll.Be.Seeing.You.1944.1080p.BluRay.x264-[YTS.AG]",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "ill-be-seeing-you-1944-ginger-rogers-joseph-cotten-shirley-temple",
       "itemTitle": "I'll Be Seeing You (1944) Ginger Rogers, Joseph Cotten, Shirley Temple",
       "stem": "I'll Be Seeing You (1944) [Ginger Rogers, Joseph Cotten, Shirley Temple; Dir",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/ill-be-seeing-you-1944-ginger-rogers-joseph-cotten-shirley-temple/I'll%20Be%20Seeing%20You%20(1944)%20%5BGinger%20Rogers%2C%20Joseph%20Cotten%2C%20Shirley%20Temple%3B%20Dir.%20William%20Dieterle%2C%20George%20Cukor%5D.ia.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "ill-be-seeing-you-1944-ginger-rogers-joseph-cotten-shirley-temple",
       "itemTitle": "I'll Be Seeing You (1944) Ginger Rogers, Joseph Cotten, Shirley Temple",
       "stem": "I'll Be Seeing You (1944) [Ginger Rogers, Joseph Cotten, Shirley Temple; Dir. William Dieterle, George Cukor]",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/ill-be-seeing-you-1944-ginger-rogers-joseph-cotten-shirley-temple/I'll%20Be%20Seeing%20You%20(1944)%20%5BGinger%20Rogers%2C%20Joseph%20Cotten%2C%20Shirley%20Temple%3B%20Dir.%20William%20Dieterle%2C%20George%20Cukor%5D.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "ill-be-seeing-you-1944_202506",
       "itemTitle": "I'll Be Seeing You",
       "stem": "I'll Be Seeing You (1944)",
@@ -74,5 +74,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/ill-be-seeing-you-1944_202506/I'll%20Be%20Seeing%20You%20(1944).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2004)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T19:32:21.679Z",
   "archiveMentions": 45,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "let-it-shine",
     "itemTitle": "LET IT SHINE",
     "stem": "LET_IT_SHINE",
@@ -47,5 +47,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/let-it-shine/MAYDAY_A.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

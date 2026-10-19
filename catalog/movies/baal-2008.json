@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T08:02:03.890Z",
   "archiveMentions": 299,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "baal-german",
     "itemTitle": "Baal (1970)",
     "stem": "Baal (1970) USA Criterion Bluray Bluray",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "baal-2004",
       "itemTitle": "Baal (2004)",
       "stem": "Baal (2004)",
@@ -62,5 +62,9 @@
       "fileSim": 0.12244897959183673,
       "url": "https://archive.org/download/baala-the-rhythm-of-life-samir-satpathy-rabi-mishra-aparajita-tarang-plus/Baala-%20The%20Rhythm%20of%20Life%20Samir%20Satpathy%2C%20Rabi%20Mishra%2C%20Aparajita-Tarang%20Plus.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2008)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T06:13:48.299Z",
   "archiveMentions": 234,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "impact-wrestling-hidden-gems-14-12-23",
     "itemTitle": "Impact Wrestling Hidden Gems 14-12-23",
     "stem": "Impact Wrestling Hidden Gems 14-12-23",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/impact-wrestling-hidden-gems-14-12-23/Impact%20Wrestling%20Hidden%20Gems%2014-12-23.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

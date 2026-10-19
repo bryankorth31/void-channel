@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-15T04:10:25.180Z",
   "archiveMentions": 94,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "on_20251109",
     "itemTitle": "M. A. N. T. I. S.",
     "stem": "M.A.N.T.I.S. S01E10-11Thou Shalt Not Kill-Revelation",
@@ -36,7 +36,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "ghost-in-the-machine_202401",
       "itemTitle": "G H O S T I N T H E M A C H I N E - Full Movie Free",
       "stem": "Ğhost In The Machine",
@@ -77,5 +77,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/m.-a.-n.-t.-i.-s.-pilot/M.A.N.T.I.S.%20Pilot.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

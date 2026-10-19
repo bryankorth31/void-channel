@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T15:09:09.944Z",
   "archiveMentions": 147,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "BadGirl1931",
     "itemTitle": "Bad Girl",
     "stem": "BadGirl1931",
@@ -31,5 +31,9 @@
     "fileSim": 0.75,
     "url": "https://archive.org/download/BadGirl1931/BadGirl1931.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

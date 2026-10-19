@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T15:14:59.577Z",
   "archiveMentions": 32,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "SecondsOutPart1",
     "itemTitle": "Seconds Out Part 1",
     "stem": "SecondsOutPart1",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "SecondsOutPart2",
       "itemTitle": "Seconds Out Part 2",
       "stem": "SecondsOutPart2",
@@ -47,5 +47,9 @@
       "fileSim": 0.782608695652174,
       "url": "https://archive.org/download/SecondsOutPart2/SecondsOutPart2.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

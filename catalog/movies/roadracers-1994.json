@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-13T22:46:15.312Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "roadracers_201907",
     "itemTitle": "Roadracers",
     "stem": "Roadracers",
@@ -33,5 +33,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/roadracers_201907/Roadracers.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

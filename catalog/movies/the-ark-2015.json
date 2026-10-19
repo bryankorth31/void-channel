@@ -17,35 +17,11 @@
   "huntedAt": "2026-10-14T17:40:22.584Z",
   "archiveMentions": 286,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "CrowdsourcedCinemaRaiders",
-    "itemTitle": "Crowdsourced Cinema - Raiders Of The Lost Ark",
-    "stem": "Crowdsourced Cinema- Raiders of the Lost Ark with 2 original scenes",
-    "file": "Crowdsourced Cinema- Raiders of the Lost Ark with 2 original scenes.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 5787,
-    "sizeMB": 10994,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CrowdsourcedCinemaRaiders/Crowdsourced%20Cinema-%20Raiders%20of%20the%20Lost%20Ark%20with%202%20original%20scenes.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "CrowdsourcedCinemaRaiders",
-      "itemTitle": "Crowdsourced Cinema - Raiders Of The Lost Ark",
-      "stem": "RaidersForYoutubeAndArchive",
-      "file": "RaidersForYoutubeAndArchive.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5410,
-      "sizeMB": 2835,
-      "band": "match",
-      "fileSim": 0.12903225806451613,
-      "url": "https://archive.org/download/CrowdsourcedCinemaRaiders/RaidersForYoutubeAndArchive.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

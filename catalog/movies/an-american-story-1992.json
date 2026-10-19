@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T00:59:10.252Z",
   "archiveMentions": 292,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "american-story-the-battle-of-athens-1946",
     "itemTitle": "An American Story: The Battle Of Athens, Tennessee, 1946",
     "stem": "American Story The Battle of Athens 1946 Athens Tennessee Full M",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/american-story-the-battle-of-athens-1946/American%20Story%20The%20Battle%20of%20Athens%201946%20Athens%20Tennessee%20Full%20M.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1992)"
+  }
 }

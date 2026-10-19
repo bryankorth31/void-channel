@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T02:40:13.040Z",
   "archiveMentions": 11,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "47281919",
     "itemTitle": "\"The Wiz Live!\" | #AVerySpecialPresentations",
     "stem": "3828281",
@@ -31,5 +31,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/47281919/3828281.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

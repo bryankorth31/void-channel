@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T07:12:08.567Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-rs6De4pIEOk",
     "itemTitle": "Episode 1867 Scott Adams: Come Watch Me Change The Political Narrative Right In Front Of Your Eyes",
     "stem": "rs6De4pIEOk",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/youtube-rs6De4pIEOk/rs6De4pIEOk.webm"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

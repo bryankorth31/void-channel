@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T16:15:18.221Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "calawgf_000062",
     "itemTitle": "Words Into Pictures 1999: Killer Deal Making 101: You Got What?",
     "stem": "calawgf_000062_access",
@@ -32,5 +32,9 @@
     "fileSim": 0.08,
     "url": "https://archive.org/download/calawgf_000062/calawgf_000062_access.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

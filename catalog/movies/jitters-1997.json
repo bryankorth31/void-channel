@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T16:01:25.620Z",
   "archiveMentions": 54,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "jitters_2010",
     "itemTitle": "Jitters (2010)",
     "stem": "Baldvin Zophoniasson - (2011) Jitters",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/jitters-1997-lifetime-movie-may-5-1997-with-original-commercials/Jitters%20(1997)%20Lifetime%20Movie%20May%205%201997%20with%20Original%20Commercials.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1997)"
+  }
 }

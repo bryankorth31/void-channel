@@ -15,63 +15,11 @@
   "huntedAt": "2026-10-15T14:27:59.482Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.7,
-    "item": "orcavt-North_Branch_Nature_Center_-_Naturalist_Journeys_-_Wolves",
-    "itemTitle": "North Branch Nature Center - Naturalist Journeys - Wolves",
-    "stem": "North_Branch_Nature_Center_-_Naturalist_Journeys_-_Wolves",
-    "file": "North_Branch_Nature_Center_-_Naturalist_Journeys_-_Wolves.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 6170,
-    "sizeMB": 637,
-    "band": "feature",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/orcavt-North_Branch_Nature_Center_-_Naturalist_Journeys_-_Wolves/North_Branch_Nature_Center_-_Naturalist_Journeys_-_Wolves.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.7,
-      "item": "orcavt-North_Branch_Nature_Center_-_Naturalist_Journeys_-_Botanical_Exploration_in_Uapishka_Quebec",
-      "itemTitle": "North Branch Nature Center - Naturalist Journeys - Botanical Exploration in Uapishka, Quebec",
-      "stem": "North_Branch_Nature_Center_-_Naturalist_Journeys_-_Botanical_Exploration_in_Uapishka_Quebec",
-      "file": "North_Branch_Nature_Center_-_Naturalist_Journeys_-_Botanical_Exploration_in_Uapishka_Quebec.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5642,
-      "sizeMB": 584,
-      "band": "feature",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/orcavt-North_Branch_Nature_Center_-_Naturalist_Journeys_-_Botanical_Exploration_in_Uapishka_Quebec/North_Branch_Nature_Center_-_Naturalist_Journeys_-_Botanical_Exploration_in_Uapishka_Quebec.mp4"
-    },
-    {
-      "conf": 0.7,
-      "item": "orcavt-Naturalist_Journeys_2026_-_Riverside_Wildlife_of_the_North_Branch_-_LIVE_3_12_2026",
-      "itemTitle": "Naturalist Journeys 2026: Riverside Wildlife of the North Branch: LIVE 3/12/2026",
-      "stem": "Naturalist_Journeys_2026_-_Riverside_Wildlife_of_the_North_Branch_-_LIVE_3_12_2026",
-      "file": "Naturalist_Journeys_2026_-_Riverside_Wildlife_of_the_North_Branch_-_LIVE_3_12_2026.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4175,
-      "sizeMB": 385,
-      "band": "feature",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/orcavt-Naturalist_Journeys_2026_-_Riverside_Wildlife_of_the_North_Branch_-_LIVE_3_12_2026/Naturalist_Journeys_2026_-_Riverside_Wildlife_of_the_North_Branch_-_LIVE_3_12_2026.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "british-rail-journeys-north-wales-1995-rv-tv-vhs-480p",
-      "itemTitle": "British Rail Journeys North Wales (1995 RV TV VHS)",
-      "stem": "British Rail Journeys North Wales (1995 RV TV VHS) 480p",
-      "file": "British Rail Journeys North Wales (1995 RV TV VHS) 480p.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 3179,
-      "sizeMB": 4106,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/british-rail-journeys-north-wales-1995-rv-tv-vhs-480p/British%20Rail%20Journeys%20North%20Wales%20(1995%20RV%20TV%20VHS)%20480p.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

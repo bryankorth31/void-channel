@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T19:29:55.322Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "lethal-lolita-amy-fisher-my-story-1992",
     "itemTitle": "Lethal Lolita Amy Fisher My Story (1992)",
     "stem": "Lethal Lolita Amy Fisher My Story  (1992)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/lethal-lolita-amy-fisher-my-story-1992/Lethal%20Lolita%20Amy%20Fisher%20My%20Story%20%20(1992).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

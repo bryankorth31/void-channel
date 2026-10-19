@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T04:19:29.321Z",
   "archiveMentions": 18,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-lawless-breed-western-1953-rock-hudson-mary-castle-julie-adams",
     "itemTitle": "The Lawless Breed ( Western 1953) Rock Hudson, Mary Castle & Julie Adams",
     "stem": "The Lawless Breed  (Western 1953)  Rock Hudson  720p/The Lawless Breed  (Western 1953)  Rock Hudson, Mary Castle & Julie Adams",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "RockHudsonEMBRYO1976",
       "itemTitle": "Rock Hudson EMBRYO 1976",
       "stem": "Rock Hudson - - EMBRYO - - 1976",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/RockHudsonEMBRYO1976/Rock%20Hudson%20-%20-%20EMBRYO%20-%20-%201976.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-star-maker-1981-tv-movie-with-suzanne-pleshette-rock-hudson-melanie-griffith",
       "itemTitle": "The Star Maker - 1981 TV movie with Suzanne Pleshette, Rock Hudson, Melanie Griffith, Brenda Vaccaro - parts 1 & 2",
       "stem": "the-star-maker-1981-suzanne-pleshette-rock-hudson-melanie-griffith-1",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/the-star-maker-1981-tv-movie-with-suzanne-pleshette-rock-hudson-melanie-griffith/the-star-maker-1981-suzanne-pleshette-rock-hudson-melanie-griffith-1.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-star-maker-1981-tv-movie-with-suzanne-pleshette-rock-hudson-melanie-griffith",
       "itemTitle": "The Star Maker - 1981 TV movie with Suzanne Pleshette, Rock Hudson, Melanie Griffith, Brenda Vaccaro - parts 1 & 2",
       "stem": "the-star-maker-1981-suzanne-pleshette-rock-hudson-brenda-vaccaro-2",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/the-star-maker-1981-tv-movie-with-suzanne-pleshette-rock-hudson-melanie-griffith/the-star-maker-1981-suzanne-pleshette-rock-hudson-brenda-vaccaro-2.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1990)"
+  }
 }

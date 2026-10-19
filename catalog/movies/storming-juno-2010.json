@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-13T23:31:21.435Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "storming-juno-title-1",
     "itemTitle": "STORMING JUNO Title 1",
     "stem": "STORMING_JUNO_Title1",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/storming-juno-title-1/STORMING_JUNO_Title1.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

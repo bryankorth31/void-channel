@@ -19,21 +19,35 @@
   "state": "LIVE",
   "file": {
     "conf": 0.85,
-    "item": "the-virginian_1929",
-    "itemTitle": "The Virginian",
-    "stem": "the-virginian_1929",
-    "file": "the-virginian_1929.mp4",
+    "item": "the-virginian-sd",
+    "itemTitle": "The Virginian Sd",
+    "stem": "The Virginian_sd",
+    "file": "The Virginian_sd.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 5469,
-    "sizeMB": 3365,
+    "seconds": 5510,
+    "sizeMB": 913,
     "band": "match",
     "fileSim": 1,
-    "url": "https://archive.org/download/the-virginian_1929/the-virginian_1929.mp4"
+    "url": "https://archive.org/download/the-virginian-sd/The%20Virginian_sd.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
+      "item": "the-virginian_1929",
+      "itemTitle": "The Virginian",
+      "stem": "the-virginian_1929",
+      "file": "the-virginian_1929.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 5469,
+      "sizeMB": 3365,
+      "band": "match",
+      "fileSim": 1,
+      "url": "https://archive.org/download/the-virginian_1929/the-virginian_1929.mp4"
+    },
+    {
+      "conf": 0.84,
       "item": "the-virginian_1929_202506",
       "itemTitle": "The Virginian (1929)",
       "stem": "the-virginian_1929",
@@ -45,20 +59,6 @@
       "band": "match",
       "fileSim": 1,
       "url": "https://archive.org/download/the-virginian_1929_202506/the-virginian_1929.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "the-virginian-sd",
-      "itemTitle": "The Virginian Sd",
-      "stem": "The Virginian_sd",
-      "file": "The Virginian_sd.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5510,
-      "sizeMB": 913,
-      "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/the-virginian-sd/The%20Virginian_sd.mp4"
     }
   ]
 }

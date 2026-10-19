@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T07:59:53.717Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "1933TheLightOfMaternalInstinct",
     "itemTitle": "The Light Of Maternal Instinct (母性之光) - Silent, English subtitles",
     "stem": "1933-TheLightOfMaternalInstinct母性之光",
@@ -31,5 +31,9 @@
     "fileSim": 0.7567567567567568,
     "url": "https://archive.org/download/1933TheLightOfMaternalInstinct/1933-TheLightOfMaternalInstinct%E6%AF%8D%E6%80%A7%E4%B9%8B%E5%85%89.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

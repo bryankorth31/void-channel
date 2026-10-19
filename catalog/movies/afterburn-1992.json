@@ -16,35 +16,39 @@
   "huntedAt": "2026-10-14T22:13:30.970Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "afterburn-aftershock",
-    "itemTitle": "AFTERBURN AFTERSHOCK",
-    "stem": "AFTERBURN AFTERSHOCK",
-    "file": "AFTERBURN AFTERSHOCK.mp4",
+    "conf": 0.84,
+    "item": "afterburn-2025",
+    "itemTitle": "Afterburn ( 2025)",
+    "stem": "afterburn (2025)",
+    "file": "afterburn (2025).mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 5894,
-    "sizeMB": 308,
+    "seconds": 6350,
+    "sizeMB": 169,
     "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/afterburn-aftershock/AFTERBURN%20AFTERSHOCK.mp4"
+    "fileSim": 1,
+    "url": "https://archive.org/download/afterburn-2025/afterburn%20(2025).mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "afterburn-2025",
-      "itemTitle": "Afterburn ( 2025)",
-      "stem": "afterburn (2025)",
-      "file": "afterburn (2025).mp4",
+      "conf": 0.7,
+      "item": "afterburn-aftershock",
+      "itemTitle": "AFTERBURN AFTERSHOCK",
+      "stem": "AFTERBURN AFTERSHOCK",
+      "file": "AFTERBURN AFTERSHOCK.mp4",
       "format": "MPEG4",
       "playable": true,
-      "seconds": 6350,
-      "sizeMB": 169,
+      "seconds": 5894,
+      "sizeMB": 308,
       "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/afterburn-2025/afterburn%20(2025).mp4"
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/afterburn-aftershock/AFTERBURN%20AFTERSHOCK.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1992)"
+  }
 }

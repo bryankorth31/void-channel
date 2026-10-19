@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-13T19:29:12.977Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.6,
-    "item": "acorazonabiertosomethingthelordmade2004onlineespanollatino",
-    "itemTitle": "A Corazón Abierto Something The Lord Made ( 2004) Online Español Latino",
-    "stem": "A corazón abierto Something the Lord Made (2004) Online Español Latino",
-    "file": "A corazón abierto Something the Lord Made (2004) Online Español Latino.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 6395,
-    "sizeMB": 345,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/acorazonabiertosomethingthelordmade2004onlineespanollatino/A%20coraz%C3%B3n%20abierto%20Something%20the%20Lord%20Made%20(2004)%20Online%20Espa%C3%B1ol%20Latino.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is inside a longer title; language risk"
+  }
 }

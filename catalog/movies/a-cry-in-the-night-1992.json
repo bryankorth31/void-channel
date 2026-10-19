@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T00:58:48.999Z",
   "archiveMentions": 20,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "monster-movie-night-cry-of-the-banshee-season-15-ep-6-ep-324",
     "itemTitle": "Monster Movie Night Cry Of The Banshee Season 15 Ep 6 Ep 324",
     "stem": "Monster Movie Night Cry of the Banshee Season 15 ep 6 ep324",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/a-cry-in-the-night-1956_202604/A%20CRY%20IN%20THE%20NIGHT%20(1956).mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "CryForTheStrangersCBSSaturdayNightMovieDec.111982",
       "itemTitle": "Cry For The Strangers CBS Saturday Night Movie Dec. 11, 1982",
       "stem": "Cry for the Strangers - CBS Saturday Night Movie Dec.11,1982",
@@ -61,5 +61,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/CryForTheStrangersCBSSaturdayNightMovieDec.111982/Cry%20for%20the%20Strangers%20-%20CBS%20Saturday%20Night%20Movie%20Dec.11%2C1982.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T08:19:50.970Z",
   "archiveMentions": 32,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "ftltvfl-51st_Annual_Seminole_Hard_Rock_Winterfest_Boat_Parade",
-    "itemTitle": "51st Annual Seminole Hard Rock Winterfest Boat Parade",
-    "stem": "51st_Annual_Seminole_Hard_Rock_Winterfest_Boat_Parade",
-    "file": "51st_Annual_Seminole_Hard_Rock_Winterfest_Boat_Parade.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5070,
-    "sizeMB": 492,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/ftltvfl-51st_Annual_Seminole_Hard_Rock_Winterfest_Boat_Parade/51st_Annual_Seminole_Hard_Rock_Winterfest_Boat_Parade.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

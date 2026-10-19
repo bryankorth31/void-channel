@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T11:26:29.579Z",
   "archiveMentions": 285,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "macys-parade-ny-90",
     "itemTitle": "1990 Macy's Thanksgiving Day Parade (incomplete)",
     "stem": "Macys Parade NY '90",
@@ -31,5 +31,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/macys-parade-ny-90/Macys%20Parade%20NY%20'90.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

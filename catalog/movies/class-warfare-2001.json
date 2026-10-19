@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T00:06:18.520Z",
   "archiveMentions": 48,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "youtube-OnYJ83O26Pg",
     "itemTitle": "Class Warfare - Drama, thriller, Movie of the Week",
     "stem": "Class Warfare - Drama, thriller, Movie of the Week [OnYJ83O26Pg]",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/youtube-OnYJ83O26Pg/Class%20Warfare%20-%20Drama%2C%20thriller%2C%20Movie%20of%20the%20Week%20%5BOnYJ83O26Pg%5D.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

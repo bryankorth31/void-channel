@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-13T21:01:18.831Z",
   "archiveMentions": 28,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "the-blair-witch-project-1999-house-of-svengoolie",
     "itemTitle": "The Blair Witch Project 1999 House Of Svengoolie",
     "stem": "The Blair Witch Project 1999 House of Svengoolie",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "WITCHHOUSEVAPORWAVESEAPUNK90sMEGAMIXByBLBCKWRISTRfzmLCHSnw8",
       "itemTitle": "WITCH HOUSE VAPORWAVE SEAPUNK 90s MEGAMIX By † BLΔ CK WRIST † Rfzm LCHSnw 8",
       "stem": "WITCH HOUSE _ VAPORWAVE _ SEAPUNK 90s MEGAMIX  by † BLΔCK WRIST †-rfzmLCHSnw8",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/WITCHHOUSEVAPORWAVESEAPUNK90sMEGAMIXByBLBCKWRISTRfzmLCHSnw8/WITCH%20HOUSE%20_%20VAPORWAVE%20_%20SEAPUNK%2090s%20MEGAMIX%20%20by%20%E2%80%A0%20BL%CE%94CK%20WRIST%20%E2%80%A0-rfzmLCHSnw8.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

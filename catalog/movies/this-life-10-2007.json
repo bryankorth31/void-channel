@@ -17,63 +17,11 @@
   "huntedAt": "2026-10-15T00:18:25.489Z",
   "archiveMentions": 187,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "CNNW_20191111_030000_This_Is_Life_With_Lisa_Ling",
-    "itemTitle": "This Is Life With Lisa Ling : CNNW : November 10, 2019 7:00pm-8:00pm PST",
-    "stem": "CNNW_20191111_030000_This_Is_Life_With_Lisa_Ling",
-    "file": "CNNW_20191111_030000_This_Is_Life_With_Lisa_Ling.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3661,
-    "sizeMB": 384,
-    "band": "near",
-    "fileSim": 0.6333333333333333,
-    "url": "https://archive.org/download/CNNW_20191111_030000_This_Is_Life_With_Lisa_Ling/CNNW_20191111_030000_This_Is_Life_With_Lisa_Ling.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "CNNW_20171016_050000_This_Is_Life_With_Lisa_Ling",
-      "itemTitle": "This Is Life With Lisa Ling : CNNW : October 15, 2017 10:00pm-11:00pm PDT",
-      "stem": "CNNW_20171016_050000_This_Is_Life_With_Lisa_Ling",
-      "file": "CNNW_20171016_050000_This_Is_Life_With_Lisa_Ling.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3661,
-      "sizeMB": 384,
-      "band": "near",
-      "fileSim": 0.6333333333333333,
-      "url": "https://archive.org/download/CNNW_20171016_050000_This_Is_Life_With_Lisa_Ling/CNNW_20171016_050000_This_Is_Life_With_Lisa_Ling.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "CNNW_20190930_050000_This_Is_Life_With_Lisa_Ling",
-      "itemTitle": "This Is Life With Lisa Ling : CNNW : September 29, 2019 10:00pm-11:00pm PDT",
-      "stem": "CNNW_20190930_050000_This_Is_Life_With_Lisa_Ling",
-      "file": "CNNW_20190930_050000_This_Is_Life_With_Lisa_Ling.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3650,
-      "sizeMB": 383,
-      "band": "near",
-      "fileSim": 0.6333333333333333,
-      "url": "https://archive.org/download/CNNW_20190930_050000_This_Is_Life_With_Lisa_Ling/CNNW_20190930_050000_This_Is_Life_With_Lisa_Ling.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "CNNW_20191021_050000_This_Is_Life_With_Lisa_Ling",
-      "itemTitle": "This Is Life With Lisa Ling : CNNW : October 20, 2019 10:00pm-11:00pm PDT",
-      "stem": "CNNW_20191021_050000_This_Is_Life_With_Lisa_Ling",
-      "file": "CNNW_20191021_050000_This_Is_Life_With_Lisa_Ling.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3659,
-      "sizeMB": 383,
-      "band": "near",
-      "fileSim": 0.6333333333333333,
-      "url": "https://archive.org/download/CNNW_20191021_050000_This_Is_Life_With_Lisa_Ling/CNNW_20191021_050000_This_Is_Life_With_Lisa_Ling.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CNNW"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T00:29:03.906Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "deadly-lessons-1995",
     "itemTitle": "Deadly Lessons",
     "stem": "Deadly lessons 1995",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "deadly.-lessons.-1983.",
       "itemTitle": "Deadly Lessons 1983",
       "stem": "Deadly.Lessons.1983. ",
@@ -46,5 +46,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/deadly.-lessons.-1983./Deadly.Lessons.1983.%20.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2017)"
+  }
 }

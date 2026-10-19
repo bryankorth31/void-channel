@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T16:04:49.879Z",
   "archiveMentions": 25,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "profile-of-a-serial-killer-2004",
     "itemTitle": "'Profile of a Serial Killer' (2004)",
     "stem": "Profile Of A Serial Killer (2004)",
@@ -33,5 +33,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/profile-of-a-serial-killer-2004/Profile%20Of%20A%20Serial%20Killer%20(2004).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1998)"
+  }
 }

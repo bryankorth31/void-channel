@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T18:01:54.940Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "caught-time-is-imminent-by-the-only-source-that-could-expose-this-love-truth-live-together",
     "itemTitle": "CAUGHT !! TIME Is IMMINENT! By The ONLY SOURCE That COULD EXPOSE THIS !! LOVE & TRUTH LIVE TOGETHER",
     "stem": "CAUGHT !! TIME Is IMMINENT! By The ONLY SOURCE That COULD EXPOSE THIS !! LOVE & TRUTH LIVE TOGETHER",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/caught-time-is-imminent-by-the-only-source-that-could-expose-this-love-truth-live-together/CAUGHT%20!!%20TIME%20Is%20IMMINENT!%20By%20The%20ONLY%20SOURCE%20That%20COULD%20EXPOSE%20THIS%20!!%20LOVE%20%26%20TRUTH%20LIVE%20TOGETHER.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

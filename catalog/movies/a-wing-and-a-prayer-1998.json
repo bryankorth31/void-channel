@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T12:23:22.991Z",
   "archiveMentions": 13,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "wing-and-a-prayer-1944",
     "itemTitle": "Wing And A Prayer",
     "stem": "Wing and a Prayer (1944)",
@@ -33,5 +33,9 @@
     "fileSim": 0.9629629629629629,
     "url": "https://archive.org/download/wing-and-a-prayer-1944/Wing%20and%20a%20Prayer%20(1944).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1998)"
+  }
 }

@@ -17,35 +17,24 @@
   "huntedAt": "2026-10-14T04:36:42.779Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "ffmcia-Court_on_the_Road_Iowa_Supreme_Court_Fairfield_Iowa_4.21.26",
-    "itemTitle": "Court on the Road - Iowa Supreme Court Fairfield Iowa 4.21.26",
-    "stem": "Court_on_the_Road_Iowa_Supreme_Court_Fairfield_Iowa_4.21.26",
-    "file": "Court_on_the_Road_Iowa_Supreme_Court_Fairfield_Iowa_4.21.26.mp4",
-    "format": "h.264",
+    "conf": 0.5,
+    "item": "periscope-1yNGapwEDdNKj",
+    "itemTitle": "Tulsi Gabbard - Tulsi Gabbard LIVE on the road - Tulsi Town Hall - Fairfield, IA #TulsiGabbard #Tulsi2020 #Tulsi #TownHall #Iowa",
+    "stem": "1yNGapwEDdNKj",
+    "file": "1yNGapwEDdNKj.mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 5084,
-    "sizeMB": 495,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/ffmcia-Court_on_the_Road_Iowa_Supreme_Court_Fairfield_Iowa_4.21.26/Court_on_the_Road_Iowa_Supreme_Court_Fairfield_Iowa_4.21.26.mp4"
+    "seconds": 6328,
+    "sizeMB": 643,
+    "band": "near",
+    "fileSim": 0,
+    "url": "https://archive.org/download/periscope-1yNGapwEDdNKj/1yNGapwEDdNKj.mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "periscope-1yNGapwEDdNKj",
-      "itemTitle": "Tulsi Gabbard - Tulsi Gabbard LIVE on the road - Tulsi Town Hall - Fairfield, IA #TulsiGabbard #Tulsi2020 #Tulsi #TownHall #Iowa",
-      "stem": "1yNGapwEDdNKj",
-      "file": "1yNGapwEDdNKj.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6328,
-      "sizeMB": 643,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/periscope-1yNGapwEDdNKj/1yNGapwEDdNKj.mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); runtime not within 15% of the TMDB runtime"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T00:15:55.348Z",
   "archiveMentions": 17,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "recipe-for-love-tv-series",
     "itemTitle": "Recipe for Love (TV series)",
     "stem": "Recipe For Love 50",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "recipe-for-love-tv-series",
       "itemTitle": "Recipe for Love (TV series)",
       "stem": "Recipe For Love 1",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/recipe-for-love-tv-series/Recipe%20For%20Love%201.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "recipe-for-love-tv-series",
       "itemTitle": "Recipe for Love (TV series)",
       "stem": "Recipe For Love 3",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/recipe-for-love-tv-series/Recipe%20For%20Love%203.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "recipe-for-love-tv-series",
       "itemTitle": "Recipe for Love (TV series)",
       "stem": "Recipe For Love 2",
@@ -75,5 +75,9 @@
       "fileSim": 0.96,
       "url": "https://archive.org/download/recipe-for-love-tv-series/Recipe%20For%20Love%202.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

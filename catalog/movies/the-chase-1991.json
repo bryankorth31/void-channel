@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T06:34:53.772Z",
   "archiveMentions": 283,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "6.6-the-chase-1946",
     "itemTitle": "The Chase 1946",
     "stem": "6",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "6.6-the-chase-1946",
       "itemTitle": "The Chase 1946",
       "stem": "6.6 The Chase  (1946)",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/6.6-the-chase-1946/6.6%20The%20Chase%20%20(1946).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1991)"
+  }
 }

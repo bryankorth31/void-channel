@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T14:38:46.184Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "1990-09-08-seriously...-phil-collins-original-full-broadcast-with-commercials-koin-6-portland-or",
     "itemTitle": "1990-09-08 | Seriously... Phil Collins | Original Full Broadcast with Commercials | KOIN 6 Portland, OR",
     "stem": "1990-09-08 ¦ Seriously..",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.95,
+      "conf": 0.8,
       "item": "1990-09-08-seriously...-phil-collins-original-full-broadcast-with-commercials-koin-6-portland-or",
       "itemTitle": "1990-09-08 | Seriously... Phil Collins | Original Full Broadcast with Commercials | KOIN 6 Portland, OR",
       "stem": "1990-09-08 ¦ Seriously... Phil Collins ¦ Original Full Broadcast with Commercials ¦ KOIN 6 Portland, OR",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/1990-09-08-seriously...-phil-collins-original-full-broadcast-with-commercials-koin-6-portland-or/1990-09-08%20%C2%A6%20Seriously...%20Phil%20Collins%20%C2%A6%20Original%20Full%20Broadcast%20with%20Commercials%20%C2%A6%20KOIN%206%20Portland%2C%20OR.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -17,35 +17,11 @@
   "huntedAt": "2026-10-14T17:51:19.062Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "CSPAN2_20190426_035900_Robert_Brown_You_Cant_Go_Wrong_Doing_Right",
-    "itemTitle": "Robert Brown, \"You Can't Go Wrong Doing Right\" : CSPAN2 : April 25, 2019 11:59pm-1:33am EDT",
-    "stem": "CSPAN2_20190426_035900_Robert_Brown_You_Cant_Go_Wrong_Doing_Right",
-    "file": "CSPAN2_20190426_035900_Robert_Brown_You_Cant_Go_Wrong_Doing_Right.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5641,
-    "sizeMB": 587,
-    "band": "match",
-    "fileSim": 0.6333333333333333,
-    "url": "https://archive.org/download/CSPAN2_20190426_035900_Robert_Brown_You_Cant_Go_Wrong_Doing_Right/CSPAN2_20190426_035900_Robert_Brown_You_Cant_Go_Wrong_Doing_Right.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "CSPAN2_20190426_093100_Robert_Brown_You_Cant_Go_Wrong_Doing_Right",
-      "itemTitle": "Robert Brown, \"You Can't Go Wrong Doing Right\" : CSPAN2 : April 26, 2019 5:31am-7:04am EDT",
-      "stem": "CSPAN2_20190426_093100_Robert_Brown_You_Cant_Go_Wrong_Doing_Right",
-      "file": "CSPAN2_20190426_093100_Robert_Brown_You_Cant_Go_Wrong_Doing_Right.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5641,
-      "sizeMB": 587,
-      "band": "match",
-      "fileSim": 0.6333333333333333,
-      "url": "https://archive.org/download/CSPAN2_20190426_093100_Robert_Brown_You_Cant_Go_Wrong_Doing_Right/CSPAN2_20190426_093100_Robert_Brown_You_Cant_Go_Wrong_Doing_Right.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN2"
+  }
 }

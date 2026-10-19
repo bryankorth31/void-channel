@@ -17,38 +17,24 @@
   "huntedAt": "2026-10-14T08:33:10.648Z",
   "archiveMentions": 103,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "youtube-W6xEMXwQVFM",
-    "itemTitle": "Unwrapping a Star Wars and Netflix Christmas | The Escapist Movie Podcast",
-    "stem": "W6xEMXwQVFM",
-    "file": "W6xEMXwQVFM.webm",
-    "format": "WebM",
+    "conf": 0.7,
+    "item": "mr.-christmas-2004-5-star-christmas",
+    "itemTitle": "Mr. Christmas (2004 5 Star Christmas)",
+    "stem": "Mr. Christmas (2004 5 star Christmas)",
+    "file": "Mr. Christmas (2004 5 star Christmas).mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 5215,
-    "sizeMB": 898,
+    "seconds": 5124,
+    "sizeMB": 257,
     "band": "match",
-    "fileSim": 0,
-    "url": "https://archive.org/download/youtube-W6xEMXwQVFM/W6xEMXwQVFM.webm"
+    "fileSim": 0.95,
+    "url": "https://archive.org/download/mr.-christmas-2004-5-star-christmas/Mr.%20Christmas%20(2004%205%20star%20Christmas).mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "mr.-christmas-2004-5-star-christmas",
-      "itemTitle": "Mr. Christmas (2004 5 Star Christmas)",
-      "stem": "Mr. Christmas (2004 5 star Christmas)",
-      "file": "Mr. Christmas (2004 5 star Christmas).mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5124,
-      "sizeMB": 257,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/mr.-christmas-2004-5-star-christmas/Mr.%20Christmas%20(2004%205%20star%20Christmas).mp4"
-    },
-    {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "fallen-angel-2003-5-star-christmas",
       "itemTitle": "Fallen Angel (2003 5 Star Christmas)",
       "stem": "Fallen Angel (2003 5 star Christmas)",
@@ -61,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/fallen-angel-2003-5-star-christmas/Fallen%20Angel%20(2003%205%20star%20Christmas).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

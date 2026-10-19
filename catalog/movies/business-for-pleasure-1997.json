@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T09:31:36.087Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a-pleasure-doing-business-1979",
     "itemTitle": "A Pleasure Doing Business - Misty Rowe",
     "stem": "A Pleasure Doing Business - 1979",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "business-and-pleasure-1932",
       "itemTitle": "Business And Pleasure (1932)",
       "stem": "Business and Pleasure (1932)",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/business-and-pleasure-1932/Business%20and%20Pleasure%20(1932).mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "business-and-pleasure-1932-",
       "itemTitle": "Business And Pleasure (1932)",
       "stem": "Business and Pleasure (1932) Will Rogers, Joel McCrea, Boris Karloff",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/business-and-pleasure-1932-/Business%20and%20Pleasure%20(1932)%20Will%20Rogers%2C%20Joel%20McCrea%2C%20Boris%20Karloff.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

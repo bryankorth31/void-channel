@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T02:08:04.872Z",
   "archiveMentions": 24,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a_royal_christmas_ball_2017___5a530fe9f35b1",
     "itemTitle": "a royal christmas ball 2017___5a530fe9f35b1",
     "stem": "a_royal_christmas_ball_2017___5a530fe9f35b1",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "best-christmas-ball-ever-2019-christmas-romance-asylum-ion-no-music-for-final-waltz",
       "itemTitle": "Best Christmas Ball Ever! (2019 Christmas, Romance, Asylum, ION) No Music For Final Waltz",
       "stem": "BestChristmas BallEver! (2019 Christmas, Romance, Asylum, ION) No music for final waltz",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/best-christmas-ball-ever-2019-christmas-romance-asylum-ion-no-music-for-final-waltz/BestChristmas%20BallEver!%20(2019%20Christmas%2C%20Romance%2C%20Asylum%2C%20ION)%20No%20music%20for%20final%20waltz.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "aroyal-christmas-ball-2017-christmas-royal-romance-no-music-for-final-dance",
       "itemTitle": "ARoyal Christmas Ball (2017 Christmas, Royal, Romance) No MUSIC For Final Dance",
       "stem": "ARoyal ChristmasBall (2017 Christmas, Royal, Romance) No MUSIC for final dance",
@@ -62,5 +62,9 @@
       "fileSim": 0.475,
       "url": "https://archive.org/download/aroyal-christmas-ball-2017-christmas-royal-romance-no-music-for-final-dance/ARoyal%20ChristmasBall%20(2017%20Christmas%2C%20Royal%2C%20Romance)%20No%20MUSIC%20for%20final%20dance.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

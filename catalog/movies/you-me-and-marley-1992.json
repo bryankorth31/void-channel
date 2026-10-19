@@ -19,33 +19,19 @@
   "state": "LIVE",
   "file": {
     "conf": 0.85,
-    "item": "you-me-and-marley",
-    "itemTitle": "S07E13 You, Me And Marley",
-    "stem": "You, Me And Marley",
-    "file": "You, Me And Marley.mp4",
+    "item": "you-me-marley",
+    "itemTitle": "You, Me & Marley",
+    "stem": "You, Me & Marley",
+    "file": "You, Me & Marley.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 5014,
-    "sizeMB": 534,
+    "seconds": 5030,
+    "sizeMB": 407,
     "band": "match",
     "fileSim": 1,
-    "url": "https://archive.org/download/you-me-and-marley/You%2C%20Me%20And%20Marley.mp4"
+    "url": "https://archive.org/download/you-me-marley/You%2C%20Me%20%26%20Marley.mp4"
   },
   "alternates": [
-    {
-      "conf": 0.85,
-      "item": "you-me-marley",
-      "itemTitle": "You, Me & Marley",
-      "stem": "You, Me & Marley",
-      "file": "You, Me & Marley.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5030,
-      "sizeMB": 407,
-      "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/you-me-marley/You%2C%20Me%20%26%20Marley.mp4"
-    },
     {
       "conf": 0.85,
       "item": "you-me-marley_202108",
@@ -73,6 +59,20 @@
       "band": "match",
       "fileSim": 0.95,
       "url": "https://archive.org/download/you-me-and-marley-duration-1-23-51._202502/YOU%20ME%20AND%20MARLEY%20-%20Duration-%201-23-51..mp4"
+    },
+    {
+      "conf": 0.84,
+      "item": "you-me-and-marley",
+      "itemTitle": "S07E13 You, Me And Marley",
+      "stem": "You, Me And Marley",
+      "file": "You, Me And Marley.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 5014,
+      "sizeMB": 534,
+      "band": "match",
+      "fileSim": 1,
+      "url": "https://archive.org/download/you-me-and-marley/You%2C%20Me%20And%20Marley.mp4"
     }
   ]
 }

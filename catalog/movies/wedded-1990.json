@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T14:41:17.699Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "buck-rogers-s-1-e-12-escape-from-wedded-bliss",
-    "itemTitle": "Buck Rogers S 1 E 12 Escape From Wedded Bliss",
-    "stem": "Buck Rogers-S1 E12 Escape From Wedded Bliss",
-    "file": "Buck Rogers-S1 E12 Escape From Wedded Bliss.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 2938,
-    "sizeMB": 284,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/buck-rogers-s-1-e-12-escape-from-wedded-bliss/Buck%20Rogers-S1%20E12%20Escape%20From%20Wedded%20Bliss.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime"
+  }
 }

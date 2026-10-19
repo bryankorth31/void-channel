@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T09:10:32.726Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "nochildrenhere",
-    "itemTitle": "There Are No Children Here, TEN Late Night News (Incomplete, ADS-10, 05/09/94)",
-    "stem": "nochildrenhere",
-    "file": "nochildrenhere.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 8589,
-    "sizeMB": 910,
-    "band": "near",
-    "fileSim": 0.8888888888888888,
-    "url": "https://archive.org/download/nochildrenhere/nochildrenhere.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: news"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T20:39:30.307Z",
   "archiveMentions": 172,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "wb445551256",
     "itemTitle": "La baby sitter",
     "stem": "wb445551256",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "sitter-cam",
       "itemTitle": "Sitter Cam",
       "stem": "sitter cam/data/sitter cam",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/sitter-cam/sitter%20cam%2Fdata%2Fsitter%20cam.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

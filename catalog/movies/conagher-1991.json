@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T06:15:34.107Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "vlc-record-2025-01-24-17h00m57s-dvd____E__-",
     "itemTitle": "Louis L'Amour's Conagher VHS (10-16-91) (USA)",
     "stem": "vlc-record-2025-01-24-17h00m57s-dvd____E__-",
@@ -31,5 +31,9 @@
     "fileSim": 0.06896551724137931,
     "url": "https://archive.org/download/vlc-record-2025-01-24-17h00m57s-dvd____E__-/vlc-record-2025-01-24-17h00m57s-dvd____E__-.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

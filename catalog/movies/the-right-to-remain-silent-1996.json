@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T04:40:08.762Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "YouHaveNORightToRemainSilentByAbuBaraa",
     "itemTitle": "You Have NO Right To Remain Silent By Abu Baraa",
     "stem": "You have NO right to remain Silent by Abu Baraa",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/YouHaveNORightToRemainSilentByAbuBaraa/You%20have%20NO%20right%20to%20remain%20Silent%20by%20Abu%20Baraa.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T18:03:36.708Z",
   "archiveMentions": 282,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.75,
-    "item": "ALJAZ_20200509_060000_Kissing_Mother_Goodbye",
-    "itemTitle": "Kissing Mother Goodbye : ALJAZ : May 9, 2020 9:00am-10:01am +03",
-    "stem": "ALJAZ_20200509_060000_Kissing_Mother_Goodbye",
-    "file": "ALJAZ_20200509_060000_Kissing_Mother_Goodbye.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3668,
-    "sizeMB": 381,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/ALJAZ_20200509_060000_Kissing_Mother_Goodbye/ALJAZ_20200509_060000_Kissing_Mother_Goodbye.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-ALJAZ"
+  }
 }

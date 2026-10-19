@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T06:32:56.966Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "amazon-land-of-the-flooded-forest-1991",
     "itemTitle": "National Geographic—Amazon: Land of the Flooded Forest (1991)",
     "stem": "AmazonForest",
@@ -31,5 +31,9 @@
     "fileSim": 0.5263157894736842,
     "url": "https://archive.org/download/amazon-land-of-the-flooded-forest-1991/AmazonForest.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

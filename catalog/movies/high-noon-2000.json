@@ -21,21 +21,35 @@
   "state": "LIVE",
   "file": {
     "conf": 0.85,
-    "item": "high.-noon.-1952.-remastered.-1080p",
-    "itemTitle": "High. Noon. 1952.",
-    "stem": "High.Noon.1952.REMASTERED",
-    "file": "High.Noon.1952.REMASTERED.1080p.ia.mp4",
-    "format": "h.264 IA",
+    "item": "HighNoon_201603",
+    "itemTitle": "High Noon",
+    "stem": "High Noon",
+    "file": "High Noon.mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 5083,
-    "sizeMB": 1735,
+    "seconds": 4870,
+    "sizeMB": 516,
     "band": "match",
     "fileSim": 1,
-    "url": "https://archive.org/download/high.-noon.-1952.-remastered.-1080p/High.Noon.1952.REMASTERED.1080p.ia.mp4"
+    "url": "https://archive.org/download/HighNoon_201603/High%20Noon.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
+      "item": "high.-noon.-1952.-remastered.-1080p",
+      "itemTitle": "High. Noon. 1952.",
+      "stem": "High.Noon.1952.REMASTERED",
+      "file": "High.Noon.1952.REMASTERED.1080p.ia.mp4",
+      "format": "h.264 IA",
+      "playable": true,
+      "seconds": 5083,
+      "sizeMB": 1735,
+      "band": "match",
+      "fileSim": 1,
+      "url": "https://archive.org/download/high.-noon.-1952.-remastered.-1080p/High.Noon.1952.REMASTERED.1080p.ia.mp4"
+    },
+    {
+      "conf": 0.84,
       "item": "high.-noon.-1952.-remastered.-1080p",
       "itemTitle": "High. Noon. 1952.",
       "stem": "High.Noon.1952.REMASTERED.1080p",
@@ -47,20 +61,6 @@
       "band": "match",
       "fileSim": 1,
       "url": "https://archive.org/download/high.-noon.-1952.-remastered.-1080p/High.Noon.1952.REMASTERED.1080p.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "HighNoon_201603",
-      "itemTitle": "High Noon",
-      "stem": "High Noon",
-      "file": "High Noon.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4870,
-      "sizeMB": 516,
-      "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/HighNoon_201603/High%20Noon.mp4"
     }
   ]
 }

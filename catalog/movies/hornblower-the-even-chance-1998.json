@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T00:44:51.441Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "hornblower-the-even-chance-2002-uk-vhs",
     "itemTitle": "Hornblower The Even Chance (2002 UK VHS)",
     "stem": "Hornblower The Even Chance (2002 UK VHS)",
@@ -32,5 +32,9 @@
     "fileSim": 0.9545454545454546,
     "url": "https://archive.org/download/hornblower-the-even-chance-2002-uk-vhs/Hornblower%20The%20Even%20Chance%20(2002%20UK%20VHS).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1998)"
+  }
 }

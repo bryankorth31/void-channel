@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T00:52:05.963Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "yt_LjFk2YnBUfI",
-    "itemTitle": "US National Archives - The Lincoln Lectures — Giants: The Parallel Lives of Frederick Douglass and Abraham Lincoln (YouTube)",
-    "stem": "LjFk2YnBUfI",
-    "file": "LjFk2YnBUfI.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 4963,
-    "sizeMB": 552,
-    "band": "near",
-    "fileSim": 0,
-    "url": "https://archive.org/download/yt_LjFk2YnBUfI/LjFk2YnBUfI.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

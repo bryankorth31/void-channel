@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T13:00:55.834Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "predators-at-war",
     "itemTitle": "Predators At War",
     "stem": "Predators At War",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "youtube-ZG-Ps4E--n8",
       "itemTitle": "John Rich on Diddy, Demons, the Antichrist, How to Hear God, and His War on Child Predators",
       "stem": "ZG-Ps4E--n8",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/youtube-ZG-Ps4E--n8/ZG-Ps4E--n8.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "youtube-fHOhiVObRUM",
       "itemTitle": "The Culture War EP.44 - Fighting Child Predators & Saving Kids w/Alex Rosen & Shane Cashman",
       "stem": "fHOhiVObRUM",
@@ -60,5 +60,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/youtube-fHOhiVObRUM/fHOhiVObRUM.webm"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

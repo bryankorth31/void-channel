@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-14T02:56:58.762Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "SkyWarn_Tornado_Spotting_Workshop_-_February_23_1995",
-    "itemTitle": "\"SkyWarn\" Tornado Spotting Workshop: February 23, 1995",
-    "stem": "SkyWarn_Tornado_Spotting_Workshop_-_February_23_1995",
-    "file": "SkyWarn_Tornado_Spotting_Workshop_-_February_23_1995.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 5563,
-    "sizeMB": 321,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/SkyWarn_Tornado_Spotting_Workshop_-_February_23_1995/SkyWarn_Tornado_Spotting_Workshop_-_February_23_1995.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

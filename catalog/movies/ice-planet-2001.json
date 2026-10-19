@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T11:40:37.866Z",
   "archiveMentions": 34,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "the-gun-on-ice-planet-zero-telefilm",
     "itemTitle": "The Gun On Ice Planet Zero Telefilm",
     "stem": "The Gun On Ice Planet Zero telefilm",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/the-gun-on-ice-planet-zero-telefilm/The%20Gun%20On%20Ice%20Planet%20Zero%20telefilm.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

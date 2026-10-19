@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T09:22:27.429Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "pretty-poison-1968-noel-black",
     "itemTitle": "Pretty Poison 1968 Noel Black",
     "stem": "Pretty Poison 1968 Noel Black",
@@ -47,5 +47,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/652200512035-2/652200512035%20(2).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1996)"
+  }
 }

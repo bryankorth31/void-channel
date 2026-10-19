@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T11:24:17.454Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "can-you-hear-me-thinking",
     "itemTitle": "S02E05 Can You Hear Me Thinking",
     "stem": "Can You Hear Me Thinking",
@@ -31,5 +31,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/can-you-hear-me-thinking/Can%20You%20Hear%20Me%20Thinking.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

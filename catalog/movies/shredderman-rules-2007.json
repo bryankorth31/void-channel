@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T08:01:09.157Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "shredderman-rules-720p-master",
     "itemTitle": "Shredderman Rules! [High Quality] (Full Movie)",
     "stem": "Shredderman Rules! [720p master]",
@@ -49,5 +49,9 @@
       "fileSim": 0.5384615384615384,
       "url": "https://archive.org/download/Shredderwall/Shredderwall.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

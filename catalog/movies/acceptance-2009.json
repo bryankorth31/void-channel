@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-14T20:03:41.904Z",
   "archiveMentions": 299,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.95,
-    "item": "PortlandMetroCouncilDec102009UrbanGrowthPlanAcceptance",
-    "itemTitle": "Portland Metro Council VIDEO: Dec 10,2009 Urban Growth Plan Acceptance",
-    "stem": "portlandmetrocouncil12102009urbangrowthplan",
-    "file": "portlandmetrocouncil12102009urbangrowthplan.ogv",
-    "format": "Ogg Video",
-    "playable": true,
-    "seconds": 5254,
-    "sizeMB": 412,
-    "band": "match",
-    "fileSim": 0.08695652173913043,
-    "url": "https://archive.org/download/PortlandMetroCouncilDec102009UrbanGrowthPlanAcceptance/portlandmetrocouncil12102009urbangrowthplan.ogv"
-  },
-  "alternates": [
-    {
-      "conf": 0.95,
-      "item": "PortlandMetroCouncilDec102009UrbanGrowthPlanAcceptance",
-      "itemTitle": "Portland Metro Council VIDEO: Dec 10,2009 Urban Growth Plan Acceptance",
-      "stem": "portlandmetrocouncil12102009urbangrowthplan_512kb",
-      "file": "portlandmetrocouncil12102009urbangrowthplan_512kb.mp4",
-      "format": "512Kb MPEG4",
-      "playable": true,
-      "seconds": 5254,
-      "sizeMB": 381,
-      "band": "match",
-      "fileSim": 0.08,
-      "url": "https://archive.org/download/PortlandMetroCouncilDec102009UrbanGrowthPlanAcceptance/portlandmetrocouncil12102009urbangrowthplan_512kb.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: council"
+  }
 }

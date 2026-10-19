@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T06:49:24.766Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "Festival_on_the_Green_2017_-_Upstate_Rubdown",
-    "itemTitle": "Festival on the Green 2017: Upstate Rubdown",
-    "stem": "Festival_on_the_Green_2017_-_Upstate_Rubdown",
-    "file": "Festival_on_the_Green_2017_-_Upstate_Rubdown.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5296,
-    "sizeMB": 553,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Festival_on_the_Green_2017_-_Upstate_Rubdown/Festival_on_the_Green_2017_-_Upstate_Rubdown.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

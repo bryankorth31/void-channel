@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T08:51:07.971Z",
   "archiveMentions": 14,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "nbn-late-edition-news-pacific-drive-personals-2000-infomercial-partial-nbn-3-27-05-96",
-    "itemTitle": "NBN Late Edition News, Pacific Drive, Personals 2000 Infomercial (partial, NBN-3, 27/05/96)",
-    "stem": "NBN Late Edition News, Pacific Drive, Personals 2000 Infomercial [Partial, NBN-3, 27-05-96]",
-    "file": "NBN Late Edition News, Pacific Drive, Personals 2000 Infomercial [Partial, NBN-3, 27-05-96].mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5763,
-    "sizeMB": 587,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/nbn-late-edition-news-pacific-drive-personals-2000-infomercial-partial-nbn-3-27-05-96/NBN%20Late%20Edition%20News%2C%20Pacific%20Drive%2C%20Personals%202000%20Infomercial%20%5BPartial%2C%20NBN-3%2C%2027-05-96%5D.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: news"
+  }
 }

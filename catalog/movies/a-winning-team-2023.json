@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T19:09:39.868Z",
   "archiveMentions": 94,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "20230503-gallaxee-minecraft-nations-season-4-day-1.5-air-team-pov-winning-team-pov",
     "itemTitle": "20230503 Gallaxee Minecraft Nations Season 4 - Day 1.5 [Air Team POV] [Winning Team POV]",
     "stem": "Minecraft Nations Season 4  Day 15 Air Team POV Winning Team POV_c3a7b",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "20230503-waxel_live-nations-s4-winning-team-pov-team-air",
       "itemTitle": "20230503 Waxel_LIVE Nations | S4. Winning Team POV: | Team Air",
       "stem": "Nations  S4 Winning Team POV  Team Air_e1194",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/20230503-waxel_live-nations-s4-winning-team-pov-team-air/Nations%20%20S4%20Winning%20Team%20POV%20%20Team%20Air_e1194.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "20230502-gallaxee-minecraft-nations-season-4-air-team-pov-winning-team-pov",
       "itemTitle": "20230502 Gallaxee Minecraft Nations Season 4 [Air Team POV] [Winning Team POV]",
       "stem": "Minecraft Nations Season 4 Air Team POV Winning Team POV_1169d",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/20230502-gallaxee-minecraft-nations-season-4-air-team-pov-winning-team-pov/Minecraft%20Nations%20Season%204%20Air%20Team%20POV%20Winning%20Team%20POV_1169d.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "20230504-gallaxee-minecraft-nations-season-4-day-2-running-for-leader-air-team-pov-winning-team-pov",
       "itemTitle": "20230504 Gallaxee Minecraft Nations Season 4 - Day 2 [Running for leader] [Air Team POV] [Winning Team POV]",
       "stem": "Minecraft Nations Season 4  Day 2 Running for leader Air Team POV Winning Team POV_b8893",
@@ -75,5 +75,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/20230504-gallaxee-minecraft-nations-season-4-day-2-running-for-leader-air-team-pov-winning-team-pov/Minecraft%20Nations%20Season%204%20%20Day%202%20Running%20for%20leader%20Air%20Team%20POV%20Winning%20Team%20POV_b8893.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

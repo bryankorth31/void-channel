@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T09:49:54.991Z",
   "archiveMentions": 21,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "on-golden-pond_20260102",
     "itemTitle": "On Golden Pond",
     "stem": "On Golden Pond (1981)",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "on-golden-pond_202403",
       "itemTitle": "On Golden Pond",
       "stem": "On Golden Pond",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/on-golden-pond_202403/On%20Golden%20Pond.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "OnGoldenPond",
       "itemTitle": "On Golden Pond",
       "stem": "On Golden Pond",
@@ -60,5 +60,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/OnGoldenPond/On%20Golden%20Pond.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2001)"
+  }
 }

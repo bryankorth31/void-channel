@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T01:44:30.547Z",
   "archiveMentions": 33,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "christmas_parade_-_live_air_12.1.18",
-    "itemTitle": "christmas parade - live air 12.1.18",
-    "stem": "christmas_parade_-_live_air_12.1.18",
-    "file": "christmas_parade_-_live_air_12.1.18.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3662,
-    "sizeMB": 381,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/christmas_parade_-_live_air_12.1.18/christmas_parade_-_live_air_12.1.18.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

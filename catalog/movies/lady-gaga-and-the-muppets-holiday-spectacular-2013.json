@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T09:12:07.794Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "lady-gaga-the-muppets-the-muppets-holiday-spectacular-november-28-2013",
     "itemTitle": "Lady Gaga & The Muppets_The Muppet's Holiday Spectacular (November 28, 2013)",
     "stem": "Lady Gaga & The Muppets_The Muppet's Holiday Spectacular (November 28, 2013)",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/lady-gaga-the-muppets-the-muppets-holiday-spectacular-november-28-2013/Lady%20Gaga%20%26%20The%20Muppets_The%20Muppet's%20Holiday%20Spectacular%20(November%2028%2C%202013).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

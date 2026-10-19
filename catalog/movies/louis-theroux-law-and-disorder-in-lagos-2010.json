@@ -16,24 +16,38 @@
   "huntedAt": "2026-10-14T09:10:29.221Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "LawAndDisorderInLagosNigeria-LouisTheroux",
-    "itemTitle": "Law and Disorder in Lagos, Nigeria - Louis Theroux",
-    "stem": "law.and.disorder.in.lagos_512kb",
-    "file": "law.and.disorder.in.lagos_512kb.mp4",
-    "format": "512Kb MPEG4",
+    "conf": 0.7,
+    "item": "LawAndDisorderInLagos",
+    "itemTitle": "Law And Disorder In Lagos",
+    "stem": "Law and Disorder in Lagos",
+    "file": "Law and Disorder in Lagos.mp4",
+    "format": "h.264",
     "playable": true,
-    "seconds": 3517,
-    "sizeMB": 268,
+    "seconds": 3518,
+    "sizeMB": 365,
     "band": "match",
-    "fileSim": 0.7307692307692307,
-    "url": "https://archive.org/download/LawAndDisorderInLagosNigeria-LouisTheroux/law.and.disorder.in.lagos_512kb.mp4"
+    "fileSim": 0.8085106382978723,
+    "url": "https://archive.org/download/LawAndDisorderInLagos/Law%20and%20Disorder%20in%20Lagos.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
+      "item": "LawAndDisorderInLagosNigeria-LouisTheroux",
+      "itemTitle": "Law and Disorder in Lagos, Nigeria - Louis Theroux",
+      "stem": "law.and.disorder.in.lagos_512kb",
+      "file": "law.and.disorder.in.lagos_512kb.mp4",
+      "format": "512Kb MPEG4",
+      "playable": true,
+      "seconds": 3517,
+      "sizeMB": 268,
+      "band": "match",
+      "fileSim": 0.7307692307692307,
+      "url": "https://archive.org/download/LawAndDisorderInLagosNigeria-LouisTheroux/law.and.disorder.in.lagos_512kb.mp4"
+    },
+    {
+      "conf": 0.7,
       "item": "LawAndDisorderInLagosNigeria-LouisTheroux",
       "itemTitle": "Law and Disorder in Lagos, Nigeria - Louis Theroux",
       "stem": "law.and.disorder.in.lagos",
@@ -45,20 +59,10 @@
       "band": "match",
       "fileSim": 0.8085106382978723,
       "url": "https://archive.org/download/LawAndDisorderInLagosNigeria-LouisTheroux/law.and.disorder.in.lagos.ogv"
-    },
-    {
-      "conf": 0.7,
-      "item": "LawAndDisorderInLagos",
-      "itemTitle": "Law And Disorder In Lagos",
-      "stem": "Law and Disorder in Lagos",
-      "file": "Law and Disorder in Lagos.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3518,
-      "sizeMB": 365,
-      "band": "match",
-      "fileSim": 0.8085106382978723,
-      "url": "https://archive.org/download/LawAndDisorderInLagos/Law%20and%20Disorder%20in%20Lagos.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

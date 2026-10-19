@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T14:31:55.949Z",
   "archiveMentions": 232,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "A_Dangerous_Affair_ABC_WOC_1995-01-01",
     "itemTitle": "A Dangerous Affair ABC WOC 1995-01-01",
     "stem": "A Dangerous Affair ABC WOC 1995-01-01",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "LoveAffair",
       "itemTitle": "Love Affair",
       "stem": "LoveAffair",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/LoveAffair/LoveAffair.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "LoveAffair",
       "itemTitle": "Love Affair",
       "stem": "LoveAffair_512kb",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/LoveAffair/LoveAffair_512kb.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "LoveAffair_742",
       "itemTitle": "Love Affair",
       "stem": "LeoMccareysLoveAffair1939CharlesBoyerAndIreneDunne",
@@ -75,5 +75,9 @@
       "fileSim": 0.23076923076923078,
       "url": "https://archive.org/download/LoveAffair_742/LeoMccareysLoveAffair1939CharlesBoyerAndIreneDunne.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

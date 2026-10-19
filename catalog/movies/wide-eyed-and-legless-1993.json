@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T11:51:48.278Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "wide-eyed-and-legless",
     "itemTitle": "S05E01 Wide Eyed And Legless",
     "stem": "Wide Eyed And Legless",
@@ -33,5 +33,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/wide-eyed-and-legless/Wide%20Eyed%20And%20Legless.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

@@ -20,20 +20,11 @@
   "huntedAt": "2026-10-15T12:49:48.217Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "the-grim-adventures-of-billy-mandy-s-01-e-010-billy-mandys-jacked-up-halloween",
-    "itemTitle": "The Grim Adventures Of Billy & Mandy S 01 E 010 Billy & Mandy's Jacked Up Halloween x400 Upscale",
-    "stem": "The Grim Adventures Of Billy & Mandy S01 E010 Billy & Mandy's Jacked-Up Halloween 4.00X 2560X1920 Alq-12-1",
-    "file": "The Grim Adventures Of Billy & Mandy S01 E010 Billy & Mandy's Jacked-Up Halloween 4.00X 2560X1920 Alq-12-1.m4v",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 1441,
-    "sizeMB": 540,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/the-grim-adventures-of-billy-mandy-s-01-e-010-billy-mandys-jacked-up-halloween/The%20Grim%20Adventures%20Of%20Billy%20%26%20Mandy%20S01%20E010%20Billy%20%26%20Mandy's%20Jacked-Up%20Halloween%204.00X%202560X1920%20Alq-12-1.m4v"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime"
+  }
 }

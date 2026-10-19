@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T14:28:28.625Z",
   "archiveMentions": 294,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "LakeCounty",
     "itemTitle": "Alien Abduction Incident In Lake County",
     "stem": "Alien Abduction Incident in Lake County",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/LakeCounty/Alien%20Abduction%20Incident%20in%20Lake%20County.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

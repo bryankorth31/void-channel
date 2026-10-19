@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T15:15:04.653Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "adam-bede_202609",
     "itemTitle": "S03E09 Adam Bede",
     "stem": "Adam Bede",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/adam-bede_202609/Adam%20Bede.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

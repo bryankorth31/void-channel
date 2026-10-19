@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T11:54:04.501Z",
   "archiveMentions": 75,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "money-for-nothing-inside-the-federal-reserve-jim-bruce-2013",
     "itemTitle": "Money For Nothing - Inside The Federal Reserve",
     "stem": "Money for Nothing - Inside the Federal Reserve - Jim Bruce - 2013",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/money-for-nothing-inside-the-federal-reserve-jim-bruce-2013/Money%20for%20Nothing%20-%20Inside%20the%20Federal%20Reserve%20-%20Jim%20Bruce%20-%202013.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1993)"
+  }
 }

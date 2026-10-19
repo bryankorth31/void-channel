@@ -16,49 +16,24 @@
   "huntedAt": "2026-10-15T08:44:11.086Z",
   "archiveMentions": 220,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "Holy_Terror_Podcast_Halloween",
-    "itemTitle": "At Midnight I Will Take Your Soul",
-    "stem": "ht_videopodcast_1_512kb",
-    "file": "ht_videopodcast_1_512kb.mp4",
-    "format": "512Kb MPEG4",
+    "conf": 0.7,
+    "item": "pentathlon-full-movie-dolph-lundgren-action-movies-the-midnight-screening",
+    "itemTitle": "PENTATHLON Full Movie Dolph Lundgren Action Movies The Midnight Screening",
+    "stem": "PENTATHLON Full Movie _ Dolph Lundgren _ Action Movies _ The Midnight Screening",
+    "file": "PENTATHLON Full Movie _ Dolph Lundgren _ Action Movies _ The Midnight Screening.mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 4955,
-    "sizeMB": 349,
+    "seconds": 5818,
+    "sizeMB": 216,
     "band": "match",
-    "fileSim": 0.15384615384615385,
-    "url": "https://archive.org/download/Holy_Terror_Podcast_Halloween/ht_videopodcast_1_512kb.mp4"
+    "fileSim": 0.95,
+    "url": "https://archive.org/download/pentathlon-full-movie-dolph-lundgren-action-movies-the-midnight-screening/PENTATHLON%20Full%20Movie%20_%20Dolph%20Lundgren%20_%20Action%20Movies%20_%20The%20Midnight%20Screening.mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "Holy_Terror_Podcast_Halloween",
-      "itemTitle": "At Midnight I Will Take Your Soul",
-      "stem": "ht_videopodcast_1",
-      "file": "ht_videopodcast_1.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4955,
-      "sizeMB": 315,
-      "band": "match",
-      "fileSim": 0.19047619047619047,
-      "url": "https://archive.org/download/Holy_Terror_Podcast_Halloween/ht_videopodcast_1.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "pentathlon-full-movie-dolph-lundgren-action-movies-the-midnight-screening",
-      "itemTitle": "PENTATHLON Full Movie Dolph Lundgren Action Movies The Midnight Screening",
-      "stem": "PENTATHLON Full Movie _ Dolph Lundgren _ Action Movies _ The Midnight Screening",
-      "file": "PENTATHLON Full Movie _ Dolph Lundgren _ Action Movies _ The Midnight Screening.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5818,
-      "sizeMB": 216,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/pentathlon-full-movie-dolph-lundgren-action-movies-the-midnight-screening/PENTATHLON%20Full%20Movie%20_%20Dolph%20Lundgren%20_%20Action%20Movies%20_%20The%20Midnight%20Screening.mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

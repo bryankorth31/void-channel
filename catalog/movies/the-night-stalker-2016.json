@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T08:08:11.580Z",
   "archiveMentions": 32,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "kolchak-the-night-stalker-complete-series-1972",
     "itemTitle": "Kolchak - The Night Stalker - Complete Series 1972",
     "stem": "Kolchak The Night Stalker S00E02 - The Night Strangler",
@@ -36,7 +36,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "kolchak-the-night-stalker-complete-series-1972",
       "itemTitle": "Kolchak - The Night Stalker - Complete Series 1972",
       "stem": "Kolchak The Night Stalker S00E02 The Night Strangler",
@@ -77,5 +77,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/y-2-mate.is-the-night-stalker-1972-3g-fy-2-ugby-xu-720p-1628475318113/Y2Mate.is%20-%20The%20Night%20Stalker%20(1972)-3gFY2UGbyXU-720p-1628475318113.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2016)"
+  }
 }

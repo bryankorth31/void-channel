@@ -35,6 +35,20 @@
   "alternates": [
     {
       "conf": 0.85,
+      "item": "screen-two-northanger-abbey",
+      "itemTitle": "(Screen Two) Northanger Abbey",
+      "stem": "Screen Two - Northanger Abbey",
+      "file": "Screen Two - Northanger Abbey.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 5371,
+      "sizeMB": 658,
+      "band": "match",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/screen-two-northanger-abbey/Screen%20Two%20-%20Northanger%20Abbey.mp4"
+    },
+    {
+      "conf": 0.7,
       "item": "northhanger-abbey-1990-uk-vhs",
       "itemTitle": "Northhanger Abbey (1990 UK VHS)",
       "stem": "Northhanger Abbey (1990 UK VHS)",
@@ -48,7 +62,7 @@
       "url": "https://archive.org/download/northhanger-abbey-1990-uk-vhs/Northhanger%20Abbey%20(1990%20UK%20VHS).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "s-03-e-07-northanger-abbey",
       "itemTitle": "S03E07 Northanger Abbey",
       "stem": "S03E07 Northanger Abbey",
@@ -60,20 +74,6 @@
       "band": "match",
       "fileSim": 0.95,
       "url": "https://archive.org/download/s-03-e-07-northanger-abbey/S03E07%20Northanger%20Abbey.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "screen-two-northanger-abbey",
-      "itemTitle": "(Screen Two) Northanger Abbey",
-      "stem": "Screen Two - Northanger Abbey",
-      "file": "Screen Two - Northanger Abbey.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5371,
-      "sizeMB": 658,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/screen-two-northanger-abbey/Screen%20Two%20-%20Northanger%20Abbey.mp4"
     }
   ]
 }

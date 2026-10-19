@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T00:01:30.313Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "1949-knock-on-any-door-llamad-a-cualquier-puerta-nicholas-ray-vose",
     "itemTitle": "1949 - Knock on Any Door - LLamad a cualquier puerta - Nicholas Ray - VOSE",
     "stem": "1949 - Knock on Any Door - LLamad a cualquier puerta - Nicholas Ray - VOSE",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "000.BTV2.BeyondTheDoor.000",
       "itemTitle": "000. BTV 2. Beyond The Door. 000",
       "stem": "000.BTV2.BeyondTheDoor.000",
@@ -46,5 +46,9 @@
       "fileSim": 0.24,
       "url": "https://archive.org/download/000.BTV2.BeyondTheDoor.000/000.BTV2.BeyondTheDoor.000.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -17,35 +17,11 @@
   "huntedAt": "2026-10-15T17:20:18.412Z",
   "archiveMentions": 14,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "DkSII01ThingsBetwixtMuxed",
-    "itemTitle": "Let's Play Dark Souls Ep. 01 - Things Betwixt",
-    "stem": "DkSII-01 Things Betwixt-muxed",
-    "file": "DkSII-01 Things Betwixt-muxed.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 1843,
-    "sizeMB": 1153,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/DkSII01ThingsBetwixtMuxed/DkSII-01%20Things%20Betwixt-muxed.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "youtube-eI0MCRjqgsQ",
-      "itemTitle": "Town Betwixt the Stars | Full Album",
-      "stem": "eI0MCRjqgsQ",
-      "file": "eI0MCRjqgsQ.webm",
-      "format": "WebM",
-      "playable": true,
-      "seconds": 1698,
-      "sizeMB": 152,
-      "band": "short",
-      "fileSim": 0,
-      "url": "https://archive.org/download/youtube-eI0MCRjqgsQ/eI0MCRjqgsQ.webm"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime; junk word"
+  }
 }

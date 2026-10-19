@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T07:17:53.983Z",
   "archiveMentions": 297,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "Sweetwater2013_201605",
     "itemTitle": "Sweetwater 2013",
     "stem": "Sweetwater 2013",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/Sweetwater2013_201605/Sweetwater%202013.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1999)"
+  }
 }

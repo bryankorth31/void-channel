@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T22:12:21.885Z",
   "archiveMentions": 8,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "s-09-e-12-the-railway-station-man",
     "itemTitle": "S09E12 The Railway Station Man",
     "stem": "S09E12 The Railway Station Man",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/s-09-e-12-the-railway-station-man/S09E12%20The%20Railway%20Station%20Man.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

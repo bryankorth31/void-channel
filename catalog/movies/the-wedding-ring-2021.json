@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T14:12:02.504Z",
   "archiveMentions": 29,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "wedding-ring_202005",
     "itemTitle": "Wedding Ring // Konyaku Yubiwa 1950",
     "stem": "Wedding Ring",
@@ -34,5 +34,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/wedding-ring_202005/Wedding%20Ring.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2021)"
+  }
 }

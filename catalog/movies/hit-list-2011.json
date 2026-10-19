@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T15:40:55.698Z",
   "archiveMentions": 95,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "hit-list-1988",
     "itemTitle": "Hit List (1989)",
     "stem": "Hit List_(1988)",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/hit-list-1988/Hit%20List_(1988).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2011)"
+  }
 }

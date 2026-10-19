@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T02:30:34.064Z",
   "archiveMentions": 15,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "borrowed-hearts-1997-christmas-tv-movie",
     "itemTitle": "Borrowed Hearts ( 1997 +++++ Christmas TV Movie)",
     "stem": "BorrowedHearts (1997 +++++ Christmas TV Movie)",
@@ -31,5 +31,9 @@
     "fileSim": 0.6842105263157895,
     "url": "https://archive.org/download/borrowed-hearts-1997-christmas-tv-movie/BorrowedHearts%20(1997%20%2B%2B%2B%2B%2B%20Christmas%20TV%20Movie).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

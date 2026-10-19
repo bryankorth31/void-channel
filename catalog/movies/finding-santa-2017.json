@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-13T22:22:25.609Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "tell-me-2024",
     "itemTitle": "Finding and old letter from Santa",
     "stem": "Santa Tell Me (2024)",
@@ -31,5 +31,9 @@
     "fileSim": 0.475,
     "url": "https://archive.org/download/tell-me-2024/Santa%20Tell%20Me%20(2024).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

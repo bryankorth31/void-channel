@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T14:56:13.094Z",
   "archiveMentions": 280,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a-hill-of-redemption",
     "itemTitle": "A Hill of Redemption - Japan’s Christian Past (1990) [VHS]",
     "stem": "A Hill of Redemption",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "TheRaidRedemptio_dr58h",
       "itemTitle": "The Raid Redemption",
       "stem": "The Raid Redemption_new",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/TheRaidRedemptio_dr58h/The%20Raid%20Redemption_new.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

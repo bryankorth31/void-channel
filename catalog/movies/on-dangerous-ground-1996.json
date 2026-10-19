@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T22:18:29.355Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "on-dangerous-ground-1951-robert-ryan-ida-lupino-ward-bond-720p",
     "itemTitle": "On Dangerous Ground (1951) Robert Ryan, Ida Lupino, Ward Bond",
     "stem": "On Dangerous Ground (1951) [Robert Ryan, Ida Lupino, Ward Bond; 720p]",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "dangerous-ground-1997",
       "itemTitle": "Dangerous Ground (1997)",
       "stem": "Dangerous Ground (1997)",
@@ -47,5 +47,9 @@
       "fileSim": 0.96,
       "url": "https://archive.org/download/dangerous-ground-1997/Dangerous%20Ground%20(1997).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1996)"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T07:14:53.626Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "snl-christmas",
     "itemTitle": "Saturday Night Live - The Christmas Specials",
     "stem": "SNL - Christmas 2002 - 2002",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "snl-christmas",
       "itemTitle": "Saturday Night Live - The Christmas Specials",
       "stem": "SNL - Christmas Past - 1990",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/snl-christmas/SNL%20-%20Christmas%20Past%20-%201990.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "snl-christmas",
       "itemTitle": "Saturday Night Live - The Christmas Specials",
       "stem": "SNL - A Gilly Christmas - 2010",
@@ -60,5 +60,9 @@
       "fileSim": 0.38095238095238093,
       "url": "https://archive.org/download/snl-christmas/SNL%20-%20A%20Gilly%20Christmas%20-%202010.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T08:11:35.673Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "critical-role-talks-machina-009-c1e81-what-lies-beneath-the-surface",
     "itemTitle": "Talks Machina #009 What Lies Beneath the Surface (C1E81)",
     "stem": "critical-role-talks-machina-009-c1e81-what-lies-beneath-the-surface",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "talks-machina-009-c1e81-what-lies-beneath-the-surface",
       "itemTitle": "Talks Machina 009 C1E81 What Lies Beneath The Surface",
       "stem": "Talks Machina 009 - C1E81 - What Lies Beneath the Surface",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/talks-machina-009-c1e81-what-lies-beneath-the-surface/Talks%20Machina%20009%20-%20C1E81%20-%20What%20Lies%20Beneath%20the%20Surface.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

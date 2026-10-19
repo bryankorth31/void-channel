@@ -16,63 +16,11 @@
   "huntedAt": "2026-10-15T17:49:06.586Z",
   "archiveMentions": 13,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.95,
-    "item": "FOXNEWSW_20161205_040000_OBJECTified_Donald_Trump",
-    "itemTitle": "OBJECTified: Donald Trump : FOXNEWSW : December 4, 2016 8:00pm-9:01pm PST",
-    "stem": "FOXNEWSW_20161205_040000_OBJECTified_Donald_Trump",
-    "file": "FOXNEWSW_20161205_040000_OBJECTified_Donald_Trump.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3661,
-    "sizeMB": 383,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/FOXNEWSW_20161205_040000_OBJECTified_Donald_Trump/FOXNEWSW_20161205_040000_OBJECTified_Donald_Trump.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.95,
-      "item": "FOXNEWSW_20161205_010000_OBJECTified_Donald_Trump",
-      "itemTitle": "OBJECTified: Donald Trump : FOXNEWSW : December 4, 2016 5:00pm-6:01pm PST",
-      "stem": "FOXNEWSW_20161205_010000_OBJECTified_Donald_Trump",
-      "file": "FOXNEWSW_20161205_010000_OBJECTified_Donald_Trump.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3661,
-      "sizeMB": 383,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/FOXNEWSW_20161205_010000_OBJECTified_Donald_Trump/FOXNEWSW_20161205_010000_OBJECTified_Donald_Trump.mp4"
-    },
-    {
-      "conf": 0.95,
-      "item": "FOXNEWSW_20161225_090000_OBJECTified_Donald_Trump",
-      "itemTitle": "OBJECTified: Donald Trump : FOXNEWSW : December 25, 2016 1:00am-2:01am PST",
-      "stem": "FOXNEWSW_20161225_090000_OBJECTified_Donald_Trump",
-      "file": "FOXNEWSW_20161225_090000_OBJECTified_Donald_Trump.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3661,
-      "sizeMB": 383,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/FOXNEWSW_20161225_090000_OBJECTified_Donald_Trump/FOXNEWSW_20161225_090000_OBJECTified_Donald_Trump.mp4"
-    },
-    {
-      "conf": 0.95,
-      "item": "FOXNEWSW_20161125_020000_OBJECTified_Donald_Trump",
-      "itemTitle": "OBJECTified: Donald Trump : FOXNEWSW : November 24, 2016 6:00pm-7:01pm PST",
-      "stem": "FOXNEWSW_20161125_020000_OBJECTified_Donald_Trump",
-      "file": "FOXNEWSW_20161125_020000_OBJECTified_Donald_Trump.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3661,
-      "sizeMB": 383,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/FOXNEWSW_20161125_020000_OBJECTified_Donald_Trump/FOXNEWSW_20161125_020000_OBJECTified_Donald_Trump.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-FOXNEWSW"
+  }
 }

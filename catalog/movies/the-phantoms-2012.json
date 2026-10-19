@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-15T13:20:55.685Z",
   "archiveMentions": 138,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "hcsva-Kecoughtan_Lady_Warriors_vs._Phoebus_Lady_Phantoms_-_Basketball_-_December_3_2013",
-    "itemTitle": "Kecoughtan Lady Warriors vs. Phoebus Lady Phantoms - Basketball - December 3, 2013",
-    "stem": "Kecoughtan_Lady_Warriors_vs._Phoebus_Lady_Phantoms_-_Basketball_-_December_3_2013",
-    "file": "Kecoughtan_Lady_Warriors_vs._Phoebus_Lady_Phantoms_-_Basketball_-_December_3_2013.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 7053,
-    "sizeMB": 805,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/hcsva-Kecoughtan_Lady_Warriors_vs._Phoebus_Lady_Phantoms_-_Basketball_-_December_3_2013/Kecoughtan_Lady_Warriors_vs._Phoebus_Lady_Phantoms_-_Basketball_-_December_3_2013.mpeg4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "ppldco-Phantoms_in_the_Archives_-_Unlocking_a_Manitou_Springs_Mystery",
-      "itemTitle": "Phantoms in the Archives: Unlocking a Manitou Springs Mystery",
-      "stem": "Phantoms_in_the_Archives_-_Unlocking_a_Manitou_Springs_Mystery",
-      "file": "Phantoms_in_the_Archives_-_Unlocking_a_Manitou_Springs_Mystery.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4149,
-      "sizeMB": 406,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/ppldco-Phantoms_in_the_Archives_-_Unlocking_a_Manitou_Springs_Mystery/Phantoms_in_the_Archives_-_Unlocking_a_Manitou_Springs_Mystery.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

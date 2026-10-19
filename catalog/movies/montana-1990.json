@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-14T22:08:58.966Z",
   "archiveMentions": 289,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "CSPAN2_20181019_002800_President_Trump_Campaign_Rally_in_Montana",
-    "itemTitle": "President Trump Campaign Rally in Montana : CSPAN2 : October 18, 2018 8:28pm-9:48pm EDT",
-    "stem": "CSPAN2_20181019_002800_President_Trump_Campaign_Rally_in_Montana",
-    "file": "CSPAN2_20181019_002800_President_Trump_Campaign_Rally_in_Montana.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4801,
-    "sizeMB": 499,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN2_20181019_002800_President_Trump_Campaign_Rally_in_Montana/CSPAN2_20181019_002800_President_Trump_Campaign_Rally_in_Montana.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN2"
+  }
 }

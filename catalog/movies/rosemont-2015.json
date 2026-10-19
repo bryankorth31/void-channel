@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T09:43:43.240Z",
   "archiveMentions": 147,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "christmasat-rosemont-2015-christmas-drama",
     "itemTitle": "~ Christmas`at` Rosemont~ (2015 +++++ Christmas, Drama)",
     "stem": "~Christmas`at`Rosemont~ (2015 +++++ Christmas, Drama)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/christmasat-rosemont-2015-christmas-drama/~Christmas%60at%60Rosemont~%20(2015%20%2B%2B%2B%2B%2B%20Christmas%2C%20Drama).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

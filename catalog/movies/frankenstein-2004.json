@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T02:48:03.005Z",
   "archiveMentions": 252,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "blood-cove-original-directors-cut",
     "itemTitle": "Frankenstein vs. the Creature from Blood Cove (2005) - ORIGINAL UNEDITED DIRECTOR'S CUT",
     "stem": "Blood Cove Original Director's Cut",
@@ -36,7 +36,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "blood-cove-720x-480-60i-utube-2",
       "itemTitle": "Frankenstein vs the Creature from Blood Cove - 90 minute horror film",
       "stem": "BloodCove720x480 60i utube#2",
@@ -49,5 +49,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/blood-cove-720x-480-60i-utube-2/BloodCove720x480%2060i%20utube%232.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

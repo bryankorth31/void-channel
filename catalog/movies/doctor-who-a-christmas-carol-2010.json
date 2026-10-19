@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-13T20:02:13.960Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "doctor-who-s-06-e-00-a-christmas-carol-2_202510",
     "itemTitle": "Doctor Who A Christmas Carol Specials",
     "stem": "Doctor_Who_S06E00_A_Christmas_Carol_2",
@@ -46,5 +46,9 @@
       "fileSim": 0.6511627906976745,
       "url": "https://archive.org/download/doctor-who-season-4-2005/S05E14%20A%20Christmas%20Carol.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

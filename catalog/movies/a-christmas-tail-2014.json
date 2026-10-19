@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T21:19:51.907Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "dogwalkers-christmas",
     "itemTitle": "Dogwalker's Christmas Tail",
     "stem": "A Dogwalker's Christmas Tale (2015)",
@@ -33,5 +33,9 @@
     "fileSim": 0.5454545454545454,
     "url": "https://archive.org/download/dogwalkers-christmas/A%20Dogwalker's%20Christmas%20Tale%20(2015).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

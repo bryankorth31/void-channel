@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T07:40:24.325Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "Microsoft_Research_Video_104449",
     "itemTitle": "Microsoft Research Video 104449: Abducted: How People Come to Believe They Were Kidnapped by Aliens",
     "stem": "Microsoft_Research_Video_104449",
@@ -31,5 +31,9 @@
     "fileSim": 0.058823529411764705,
     "url": "https://archive.org/download/Microsoft_Research_Video_104449/Microsoft_Research_Video_104449.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T18:25:53.605Z",
   "archiveMentions": 76,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "acamma-Causeway_Kings_-_The_Podcast_Episode_8",
-    "itemTitle": "Causeway Kings - The Podcast; Episode #8",
-    "stem": "Causeway_Kings_-_The_Podcast_Episode_8",
-    "file": "Causeway_Kings_-_The_Podcast_Episode_8.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3650,
-    "sizeMB": 359,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/acamma-Causeway_Kings_-_The_Podcast_Episode_8/Causeway_Kings_-_The_Podcast_Episode_8.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

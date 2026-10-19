@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T21:42:01.896Z",
   "archiveMentions": 293,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "20210722-Nyheter-Direkt-Utoya-10-ar---minnesceremoni-i-Oslo",
     "itemTitle": "20210722-Nyheter-Direkt-Utoya-10-ar---minnesceremoni-i-Oslo",
     "stem": "Nyheter Direkt-20210722-Utöya 10 år - minnesceremoni i Oslo",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "20210722-Nyheter-Direkt-Utoya-10-ar---minnesgudstjanst-Oslo-domkyrka",
       "itemTitle": "20210722-Nyheter-Direkt-Utoya-10-ar---minnesgudstjanst-Oslo-domkyrka",
       "stem": "Nyheter Direkt-20210722-Utöya 10 år - minnesgudstjänst Oslo domkyrka",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/20210722-Nyheter-Direkt-Utoya-10-ar---minnesgudstjanst-Oslo-domkyrka/Nyheter%20Direkt-20210722-Ut%C3%B6ya%2010%20%C3%A5r%20-%20minnesgudstj%C3%A4nst%20Oslo%20domkyrka.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

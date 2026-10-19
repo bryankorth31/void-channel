@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T09:30:19.044Z",
   "archiveMentions": 14,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "ope-ration-delta-force-4-neat",
     "itemTitle": "OPÉRATION DELTA FORCE 4 (1999) [v.f. de Operation Delta Force 4: Deep Fault]",
     "stem": "OPÉRATION DELTA FORCE 4_neat",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "delta-force-2-operation-stranglehold",
       "itemTitle": "Delta Force 2 Operation Stranglehold",
       "stem": "Delta_Force_2_Operation_Stranglehold",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/delta-force-2-operation-stranglehold/Delta_Force_2_Operation_Stranglehold.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

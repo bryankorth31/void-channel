@@ -17,35 +17,39 @@
   "huntedAt": "2026-10-15T07:52:31.589Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "star-trek-25th-anniversary-special-fox-wtxf-tv-philadelphia-september-1991",
-    "itemTitle": "Star Trek 25th Anniversary Special FOX WTXF TV Philadelphia September 1991",
-    "stem": "Star Trek 25th Anniversary Special FOX WTXF-TV Philadelphia September 1991",
-    "file": "Star Trek 25th Anniversary Special FOX WTXF-TV Philadelphia September 1991.mp4",
+    "conf": 0.75,
+    "item": "fox-25th-anniversary-special-2012",
+    "itemTitle": "Fox 25th Anniversary Special",
+    "stem": "Fox 25th Anniversary Special - 2012",
+    "file": "Fox 25th Anniversary Special - 2012.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 7328,
-    "sizeMB": 1492,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/star-trek-25th-anniversary-special-fox-wtxf-tv-philadelphia-september-1991/Star%20Trek%2025th%20Anniversary%20Special%20FOX%20WTXF-TV%20Philadelphia%20September%201991.mp4"
+    "seconds": 5118,
+    "sizeMB": 2646,
+    "band": "near",
+    "fileSim": 1,
+    "url": "https://archive.org/download/fox-25th-anniversary-special-2012/Fox%2025th%20Anniversary%20Special%20-%202012.mp4"
   },
   "alternates": [
     {
-      "conf": 0.75,
-      "item": "fox-25th-anniversary-special-2012",
-      "itemTitle": "Fox 25th Anniversary Special",
-      "stem": "Fox 25th Anniversary Special - 2012",
-      "file": "Fox 25th Anniversary Special - 2012.mp4",
+      "conf": 0.7,
+      "item": "star-trek-25th-anniversary-special-fox-wtxf-tv-philadelphia-september-1991",
+      "itemTitle": "Star Trek 25th Anniversary Special FOX WTXF TV Philadelphia September 1991",
+      "stem": "Star Trek 25th Anniversary Special FOX WTXF-TV Philadelphia September 1991",
+      "file": "Star Trek 25th Anniversary Special FOX WTXF-TV Philadelphia September 1991.mp4",
       "format": "MPEG4",
       "playable": true,
-      "seconds": 5118,
-      "sizeMB": 2646,
-      "band": "near",
-      "fileSim": 1,
-      "url": "https://archive.org/download/fox-25th-anniversary-special-2012/Fox%2025th%20Anniversary%20Special%20-%202012.mp4"
+      "seconds": 7328,
+      "sizeMB": 1492,
+      "band": "match",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/star-trek-25th-anniversary-special-fox-wtxf-tv-philadelphia-september-1991/Star%20Trek%2025th%20Anniversary%20Special%20FOX%20WTXF-TV%20Philadelphia%20September%201991.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "runtime not within 15% of the TMDB runtime"
+  }
 }

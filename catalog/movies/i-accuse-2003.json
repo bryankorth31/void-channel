@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T06:57:29.895Z",
   "archiveMentions": 24,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "i-accuse-1958.jose-ferrer-anton-walbrook",
     "itemTitle": "I Accuse!-1958",
     "stem": "i-accuse-1958.jose-ferrer-anton-walbrook",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/i-accuse-1938/I%20Accuse%20(1938).mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "IAccuseMyParents",
       "itemTitle": "I Accuse My Parents",
       "stem": "IAccuseMyParents",
@@ -74,5 +74,9 @@
       "fileSim": 0.5714285714285714,
       "url": "https://archive.org/download/IAccuseMyParents/IAccuseMyParents.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2003)"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T16:40:43.204Z",
   "archiveMentions": 197,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "kardinal-judas-vi-das-geheimvideo-der-heiligen-inquisition-2003-pilt",
     "itemTitle": "Kardinal Judas VI Das Geheimvideo Der Heiligen Inquisition 2003 Pilt",
     "stem": "Kardinal Judas VI - Das Geheimvideo der Heiligen Inquisition 2003 Pilt",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "CatholicInquisition",
       "itemTitle": "Catholic Inquisition",
       "stem": "CATHOLIC_INQUISITION_512kb",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/CatholicInquisition/CATHOLIC_INQUISITION_512kb.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "CatholicInquisition",
       "itemTitle": "Catholic Inquisition",
       "stem": "CATHOLIC_INQUISITION",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/CatholicInquisition/CATHOLIC_INQUISITION.ogv"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

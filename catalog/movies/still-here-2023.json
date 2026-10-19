@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T08:20:25.004Z",
   "archiveMentions": 291,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "shubble-mcc-might-be-gone-but-mcci-is-still-here-with-jojo-01-08-2023",
     "itemTitle": "Mcc Might Be Gone But Mcci Is Still Here - With Jojo 01/08/2023",
     "stem": "Shubble_mcc might be gone but mcci is still here - with jojo_01-08-2023",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.95,
+      "conf": 0.8,
       "item": "shubble-mcc-might-be-gone-but-mcci-is-still-here-with-jojo-01-08-2023",
       "itemTitle": "Mcc Might Be Gone But Mcci Is Still Here - With Jojo 01/08/2023",
       "stem": "p2Shubble_mcc might be gone but mcci is still here - with jojo_01-08-2023",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/shubble-mcc-might-be-gone-but-mcci-is-still-here-with-jojo-01-08-2023/p2Shubble_mcc%20might%20be%20gone%20but%20mcci%20is%20still%20here%20-%20with%20jojo_01-08-2023.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

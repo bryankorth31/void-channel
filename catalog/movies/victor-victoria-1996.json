@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T03:08:38.049Z",
   "archiveMentions": 57,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "victo.-victoria-1982",
     "itemTitle": "Victor/Victoria (1982)",
     "stem": "Victor.Victoria.1982.1080p.BluRay.H264",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "victo.-victoria-1982",
       "itemTitle": "Victor/Victoria (1982)",
       "stem": "Victor.Victoria.1982.1080p.BluRay.H264.AAC-RARBG",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/victo.-victoria-1982/Victor.Victoria.1982.1080p.BluRay.H264.AAC-RARBG.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "victor-victoria-1982_202603",
       "itemTitle": "Victor Victoria (1982)",
       "stem": "Victor Victoria (1982)",
@@ -62,5 +62,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/victor-victoria-1982_202603/Victor%20Victoria%20(1982).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1996)"
+  }
 }

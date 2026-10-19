@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-13T20:20:21.772Z",
   "archiveMentions": 58,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "cormi-Richmond_Community_Choir_-_Winter_Wonderland_-_Christmas_2019",
-    "itemTitle": "Richmond Community Choir: Winter Wonderland - Christmas 2019",
-    "stem": "Richmond_Community_Choir_-_Winter_Wonderland_-_Christmas_2019",
-    "file": "Richmond_Community_Choir_-_Winter_Wonderland_-_Christmas_2019.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5075,
-    "sizeMB": 490,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/cormi-Richmond_Community_Choir_-_Winter_Wonderland_-_Christmas_2019/Richmond_Community_Choir_-_Winter_Wonderland_-_Christmas_2019.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

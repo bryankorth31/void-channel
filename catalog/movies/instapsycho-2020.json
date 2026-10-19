@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T18:49:14.938Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "instapsycho",
     "itemTitle": "Insta Psycho",
     "stem": "InstaPsycho",
@@ -31,5 +31,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/instapsycho/InstaPsycho.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

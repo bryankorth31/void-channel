@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T07:15:14.660Z",
   "archiveMentions": 23,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a-country-wedding-2015-drama-rom-aka-sealed-with-a-kiss",
     "itemTitle": "A Country Wedding (2015 Drama Rom) Aka Sealed With A Kiss",
     "stem": ". A-Country-Wedding (2015 DramaRom) aka Sealed with a Kiss",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/romeo-and-juliet-sealed-with-a-kiss/Romeo%20and%20Juliet%20-%20Sealed%20With%20a%20Kiss.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T03:48:34.397Z",
   "archiveMentions": 288,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "2019.10.30-anthony-seeger-afternoon-part-one",
     "itemTitle": "Talk by Anthony Seeger for Ethnomusicology 215A",
     "stem": "2019.10.30 Anthony Seeger Afternoon Part One",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "2019.10.30-anthony-seeger-afternoon-part-one",
       "itemTitle": "Talk by Anthony Seeger for Ethnomusicology 215A",
       "stem": "2019.10.30 Anthony Seeger Morning Presentation",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/2019.10.30-anthony-seeger-afternoon-part-one/2019.10.30%20Anthony%20Seeger%20Morning%20Presentation.mpeg4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "2019.10.30-anthony-seeger-afternoon-part-one",
       "itemTitle": "Talk by Anthony Seeger for Ethnomusicology 215A",
       "stem": "2019.10",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/2019.10.30-anthony-seeger-afternoon-part-one/2019.10.30%20Anthony%20Seeger%20Afternoon%20Part%20One.ia.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "2019.10.30-anthony-seeger-afternoon-part-one",
       "itemTitle": "Talk by Anthony Seeger for Ethnomusicology 215A",
       "stem": "2019.10.30 Anthony Seeger Afternoon Part Two",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/2019.10.30-anthony-seeger-afternoon-part-one/2019.10.30%20Anthony%20Seeger%20Afternoon%20Part%20Two.mpeg4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

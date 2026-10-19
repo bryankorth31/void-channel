@@ -19,49 +19,11 @@
   "huntedAt": "2026-10-14T04:07:42.766Z",
   "archiveMentions": 300,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "BLOOMBERG_20161127_230000_Bloomberg_Daybreak_Asia",
-    "itemTitle": "Bloomberg Daybreak: Asia : BLOOMBERG : November 27, 2016 6:00pm-8:01pm EST",
-    "stem": "BLOOMBERG_20161127_230000_Bloomberg_Daybreak_Asia",
-    "file": "BLOOMBERG_20161127_230000_Bloomberg_Daybreak_Asia.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 7260,
-    "sizeMB": 756,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/BLOOMBERG_20161127_230000_Bloomberg_Daybreak_Asia/BLOOMBERG_20161127_230000_Bloomberg_Daybreak_Asia.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "BLOOMBERG_20170116_230000_Bloomberg_Daybreak_Asia",
-      "itemTitle": "Bloomberg Daybreak: Asia : BLOOMBERG : January 16, 2017 6:00pm-8:01pm EST",
-      "stem": "BLOOMBERG_20170116_230000_Bloomberg_Daybreak_Asia",
-      "file": "BLOOMBERG_20170116_230000_Bloomberg_Daybreak_Asia.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 7261,
-      "sizeMB": 756,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/BLOOMBERG_20170116_230000_Bloomberg_Daybreak_Asia/BLOOMBERG_20170116_230000_Bloomberg_Daybreak_Asia.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "BLOOMBERG_20160911_230000_Daybreak_Asia",
-      "itemTitle": "Daybreak Asia : BLOOMBERG : September 11, 2016 7:00pm-9:01pm EDT",
-      "stem": "BLOOMBERG_20160911_230000_Daybreak_Asia",
-      "file": "BLOOMBERG_20160911_230000_Daybreak_Asia.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 7260,
-      "sizeMB": 755,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/BLOOMBERG_20160911_230000_Daybreak_Asia/BLOOMBERG_20160911_230000_Daybreak_Asia.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-BLOOMBERG"
+  }
 }

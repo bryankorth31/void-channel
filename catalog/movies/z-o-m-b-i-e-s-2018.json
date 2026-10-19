@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-13T18:43:40.180Z",
   "archiveMentions": 8,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "z-o-m-b-i-e-s-2_360",
     "itemTitle": "Z-O-M-B-I-E-S 2 2020",
     "stem": "z-o-m-b-i-e-s-2_360",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "zombies-3_360",
       "itemTitle": "Z-O-M-B-I-E-S 3 2022",
       "stem": "zombies-3_360",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/zombies-3_360/zombies-3_360.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "zombies-4-dawn-of-the-vampires_360",
       "itemTitle": "Z-O-M-B-I-E-S 4 Dawn Of The Vampires 2025",
       "stem": "zombies-4-dawn-of-the-vampires_360",
@@ -77,5 +77,9 @@
       "fileSim": 0.6,
       "url": "https://archive.org/download/zombies.-2018.-hdrip.-xvi-d.-ac-3-evo/Zombies.2018.HDRip.XviD.AC3-EVO.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

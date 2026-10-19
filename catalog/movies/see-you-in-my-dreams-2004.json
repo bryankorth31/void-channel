@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T16:52:17.266Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "if-i-see-you-in-my-dreams-complete-collection-dvd-122025",
     "itemTitle": "If I See You in My Dreams Complete OVA and TV Series [DVD ISO]",
     "stem": "In My Dreams",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "if-i-see-you-in-my-dreams-complete-collection-dvd-122025",
       "itemTitle": "If I See You in My Dreams Complete OVA and TV Series [DVD ISO]",
       "stem": "In My Dreams Vol2",
@@ -47,5 +47,9 @@
       "fileSim": 0.6428571428571429,
       "url": "https://archive.org/download/if-i-see-you-in-my-dreams-complete-collection-dvd-122025/In%20My%20Dreams%20Vol2.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T14:13:18.699Z",
   "archiveMentions": 14,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "cctvma-Making_Spirits_Bright_2018",
-    "itemTitle": "Making Spirits Bright 2018",
-    "stem": "Making_Spirits_Bright_2018",
-    "file": "Making_Spirits_Bright_2018.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 6833,
-    "sizeMB": 423,
-    "band": "near",
-    "fileSim": 1,
-    "url": "https://archive.org/download/cctvma-Making_Spirits_Bright_2018/Making_Spirits_Bright_2018.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "i-married-a-monster",
       "itemTitle": "I Married a Monster from Outer Space 1958 colorized (Gloria Talbott)",
       "stem": "I Married a Monster 1958",
@@ -48,21 +48,7 @@
       "url": "https://archive.org/download/i-married-a-monster/I%20Married%20a%20Monster%201958.mp4"
     },
     {
-      "conf": 0.85,
-      "item": "CUSA19881008",
-      "itemTitle": "Commander USA - 1988-10-08 - I Married A Monster From Outer Space (DVD) WOC",
-      "stem": "CUSA-1988-10-08",
-      "file": "CUSA-1988-10-08.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5795,
-      "sizeMB": 602,
-      "band": "match",
-      "fileSim": 0,
-      "url": "https://archive.org/download/CUSA19881008/CUSA-1988-10-08.mp4"
-    },
-    {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "i-married-a-monster-1958",
       "itemTitle": "I Married A Monster From Outer Space 1958",
       "stem": "I Married a Monster 1958",
@@ -74,6 +60,20 @@
       "band": "match",
       "fileSim": 1,
       "url": "https://archive.org/download/i-married-a-monster-1958/I%20Married%20a%20Monster%201958.mp4"
+    },
+    {
+      "conf": 0.7,
+      "item": "CUSA19881008",
+      "itemTitle": "Commander USA - 1988-10-08 - I Married A Monster From Outer Space (DVD) WOC",
+      "stem": "CUSA-1988-10-08",
+      "file": "CUSA-1988-10-08.mp4",
+      "format": "h.264",
+      "playable": true,
+      "seconds": 5795,
+      "sizeMB": 602,
+      "band": "match",
+      "fileSim": 0,
+      "url": "https://archive.org/download/CUSA19881008/CUSA-1988-10-08.mp4"
     }
   ]
 }

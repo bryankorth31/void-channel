@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-13T20:51:54.637Z",
   "archiveMentions": 180,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "stone-cold",
     "itemTitle": "Stone Cold",
     "stem": "Stone Cold",
@@ -33,5 +33,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/stone-cold/Stone%20Cold.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

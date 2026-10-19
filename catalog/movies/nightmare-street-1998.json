@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T01:20:07.295Z",
   "archiveMentions": 236,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "a_nightmare_on_elm_street",
     "itemTitle": "A Nightmare on Elm Street (Full Franchise + TV Series)",
     "stem": "A Nightmare on Elm Street/01. A Nightmare on Elm Street (1984)/A.Nightmare.On.Elm.Street.1984.720p.BrRip.x264.bitloks",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "a_nightmare_on_elm_street",
       "itemTitle": "A Nightmare on Elm Street (Full Franchise + TV Series)",
       "stem": "A Nightmare on Elm Street/01. A Nightmare on Elm Street (1984)/A.Nightmare.On.Elm.Street.1984.720p.BrRip.x264.bitloks.YIFY",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/a_nightmare_on_elm_street/A%20Nightmare%20on%20Elm%20Street%2F01.%20A%20Nightmare%20on%20Elm%20Street%20(1984)%2FA.Nightmare.On.Elm.Street.1984.720p.BrRip.x264.bitloks.YIFY.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "a-nightmare-on-elm-street-1984_202402",
       "itemTitle": "A Nightmare On Elm Street (1984) (FULL MOVIE!)",
       "stem": "A Nightmare on Elm Street (1984)",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/a-nightmare-on-elm-street-1984_202402/A%20Nightmare%20on%20Elm%20Street%20(1984).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "a_nightmare_on_elm_street",
       "itemTitle": "A Nightmare on Elm Street (Full Franchise + TV Series)",
       "stem": "A Nightmare on Elm Street/06. Freddys Dead The Final Nightmare (1991)/Freddys.Dead.The.Final.Nightmare.1991.1080p.BrRip.x264.BOKUTOX.YIFY",
@@ -75,5 +75,9 @@
       "fileSim": 0.475,
       "url": "https://archive.org/download/a_nightmare_on_elm_street/A%20Nightmare%20on%20Elm%20Street%2F06.%20Freddys%20Dead%20The%20Final%20Nightmare%20(1991)%2FFreddys.Dead.The.Final.Nightmare.1991.1080p.BrRip.x264.BOKUTOX.YIFY.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

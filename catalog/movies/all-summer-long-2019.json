@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-14T06:47:36.648Z",
   "archiveMentions": 28,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.75,
-    "item": "Concerts_on_the_Common_2019_-_All_Summer_Long",
-    "itemTitle": "Concerts on the Common 2019 - All Summer Long",
-    "stem": "Concerts_on_the_Common_2019_-_All_Summer_Long",
-    "file": "Concerts_on_the_Common_2019_-_All_Summer_Long.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 6637,
-    "sizeMB": 599,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Concerts_on_the_Common_2019_-_All_Summer_Long/Concerts_on_the_Common_2019_-_All_Summer_Long.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

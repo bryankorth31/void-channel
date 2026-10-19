@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T02:18:30.278Z",
   "archiveMentions": 19,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "5172023",
     "itemTitle": "THE ROAD TO CONCORD CLASS #185: What Is 'Biblical Love,' and How Do We Get It Wrong?",
     "stem": "157364812",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/5172023/157364812.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

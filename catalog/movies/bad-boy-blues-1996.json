@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T12:10:40.016Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "s-13-e-04-bad-boy-blues",
     "itemTitle": "S13E04 Bad Boy Blues",
     "stem": "S13E04 Bad Boy Blues",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "s-13-e-04-bad-boy-blues_202609",
       "itemTitle": "S13E04 Bad Boy Blues",
       "stem": "S13E04 Bad Boy Blues",
@@ -48,5 +48,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/s-13-e-04-bad-boy-blues_202609/S13E04%20Bad%20Boy%20Blues.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

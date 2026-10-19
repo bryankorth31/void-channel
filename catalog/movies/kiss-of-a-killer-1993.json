@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T04:32:00.157Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "perry-mason-the-case-of-the-killer-kiss-1993-vhs-recording-2014",
     "itemTitle": "Perry Mason, The Case Of The Killer Kiss (NBC-TV Movie, 1993) (VHS Recording, 2014)",
     "stem": "Perry Mason, The Case of The Killer Kiss (1993) (VHS Recording, 2014)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/perry-mason-the-case-of-the-killer-kiss-1993-vhs-recording-2014/Perry%20Mason%2C%20The%20Case%20of%20The%20Killer%20Kiss%20(1993)%20(VHS%20Recording%2C%202014).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

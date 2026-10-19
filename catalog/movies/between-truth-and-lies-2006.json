@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-15T13:04:41.151Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "CNNW_20180426_000000_James_Comey_Truth_Lies__Leadership_Town_Hall",
-    "itemTitle": "James Comey: Truth, Lies & Leadership: Town Hall : CNNW : April 25, 2018 5:00pm-6:15pm PDT",
-    "stem": "CNNW_20180426_000000_James_Comey_Truth_Lies__Leadership_Town_Hall",
-    "file": "CNNW_20180426_000000_James_Comey_Truth_Lies__Leadership_Town_Hall.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4561,
-    "sizeMB": 475,
-    "band": "match",
-    "fileSim": 0.6333333333333333,
-    "url": "https://archive.org/download/CNNW_20180426_000000_James_Comey_Truth_Lies__Leadership_Town_Hall/CNNW_20180426_000000_James_Comey_Truth_Lies__Leadership_Town_Hall.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "CNNW_20180426_040000_James_Comey_Truth_Lies__Leadership_Town_Hall",
-      "itemTitle": "James Comey: Truth, Lies & Leadership: Town Hall : CNNW : April 25, 2018 9:00pm-10:15pm PDT",
-      "stem": "CNNW_20180426_040000_James_Comey_Truth_Lies__Leadership_Town_Hall",
-      "file": "CNNW_20180426_040000_James_Comey_Truth_Lies__Leadership_Town_Hall.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4561,
-      "sizeMB": 474,
-      "band": "match",
-      "fileSim": 0.6333333333333333,
-      "url": "https://archive.org/download/CNNW_20180426_040000_James_Comey_Truth_Lies__Leadership_Town_Hall/CNNW_20180426_040000_James_Comey_Truth_Lies__Leadership_Town_Hall.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CNNW"
+  }
 }

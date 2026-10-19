@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T23:25:22.919Z",
   "archiveMentions": 82,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "cubanc_000446",
     "itemTitle": "Natural Selection Ecoforestry",
     "stem": "cubanc_000446_access.HD",
@@ -36,7 +36,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "cubanc_000446",
       "itemTitle": "Natural Selection Ecoforestry",
       "stem": "cubanc_000446_access",
@@ -49,5 +49,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/cubanc_000446/cubanc_000446_access.HD.ia.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

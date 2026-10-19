@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-14T06:12:21.453Z",
   "archiveMentions": 48,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "roosterteeth-46533",
-    "itemTitle": "Best New Years Resolution Tournament Showdown - Funhaus Podcast",
-    "stem": "2022-01-19_Best_New_Years_Resolution_Tournament_Showdown_-_Funhaus_Podcast_[46533]",
-    "file": "2022-01-19_Best_New_Years_Resolution_Tournament_Showdown_-_Funhaus_Podcast_[46533].mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 4481,
-    "sizeMB": 2353,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/roosterteeth-46533/2022-01-19_Best_New_Years_Resolution_Tournament_Showdown_-_Funhaus_Podcast_%5B46533%5D.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "youtube-fVPR5QcOsw0",
-      "itemTitle": "Best New Years Resolution Tournament Showdown - Funhaus Podcast",
-      "stem": "fVPR5QcOsw0",
-      "file": "fVPR5QcOsw0.webm",
-      "format": "WebM",
-      "playable": true,
-      "seconds": 4595,
-      "sizeMB": 698,
-      "band": "match",
-      "fileSim": 0,
-      "url": "https://archive.org/download/youtube-fVPR5QcOsw0/fVPR5QcOsw0.webm"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title; junk word"
+  }
 }

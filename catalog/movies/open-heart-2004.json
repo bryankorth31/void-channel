@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T12:57:46.117Z",
   "archiveMentions": 184,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "vvaa_mrvtv_033",
-    "itemTitle": "Rotary at Open Heart",
-    "stem": "mrvtv-033",
-    "file": "mrvtv-033.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3844,
-    "sizeMB": 1187,
-    "band": "near",
-    "fileSim": 0,
-    "url": "https://archive.org/download/vvaa_mrvtv_033/mrvtv-033.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

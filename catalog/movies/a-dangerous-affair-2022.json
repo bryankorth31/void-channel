@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T16:55:31.936Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "a-dangerous-affair-1995",
     "itemTitle": "A Dangerous Affair 1995",
     "stem": "A Dangerous Affair 1995",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "A_Dangerous_Affair_ABC_WOC_1995-01-01",
       "itemTitle": "A Dangerous Affair ABC WOC 1995-01-01",
       "stem": "A Dangerous Affair ABC WOC 1995-01-01",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/A_Dangerous_Affair_ABC_WOC_1995-01-01/A%20Dangerous%20Affair%20ABC%20WOC%201995-01-01.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2022)"
+  }
 }

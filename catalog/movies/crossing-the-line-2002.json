@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T01:33:13.149Z",
   "archiveMentions": 78,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "CrossingTheLineEnglishFilm",
     "itemTitle": "Crossing The Line = English Film",
     "stem": "crossing the line = english film",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "hot-2025-crossing-the-line-with-my-neighbor-video-dailymotion",
       "itemTitle": "[ Hot 2025] Crossing The Line With My Neighbor Video Dailymotion",
       "stem": "[Hot 2025] Crossing The Line With My Neighbor - video Dailymotion",
@@ -48,5 +48,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/hot-2025-crossing-the-line-with-my-neighbor-video-dailymotion/%5BHot%202025%5D%20Crossing%20The%20Line%20With%20My%20Neighbor%20-%20video%20Dailymotion.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

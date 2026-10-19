@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T16:53:51.284Z",
   "archiveMentions": 291,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "CSPAN2_20200812_204500_Aspen_Security_Forum_Discussion_with_Former_Deputy_Secretary_of_State...",
-    "itemTitle": "Aspen Security Forum Discussion with Former Deputy Secretary of State Antony Blinken : CSPAN2 : August 12, 2020 4:45pm-5:43pm EDT",
-    "stem": "CSPAN2_20200812_204500_Aspen_Security_Forum_Discussion_with_Former_Deputy_Secretary_of_State...",
-    "file": "CSPAN2_20200812_204500_Aspen_Security_Forum_Discussion_with_Former_Deputy_Secretary_of_State....mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3481,
-    "sizeMB": 363,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN2_20200812_204500_Aspen_Security_Forum_Discussion_with_Former_Deputy_Secretary_of_State.../CSPAN2_20200812_204500_Aspen_Security_Forum_Discussion_with_Former_Deputy_Secretary_of_State....mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-CSPAN2"
+  }
 }

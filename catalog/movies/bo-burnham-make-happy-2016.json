@@ -19,21 +19,35 @@
   "state": "LIVE",
   "file": {
     "conf": 0.85,
-    "item": "bo-burnham-make-happy-but-with-better-music",
-    "itemTitle": "Bo Burnham Make Happy But With Better Music",
-    "stem": "Bo Burnham - Make Happy but with better music",
-    "file": "Bo Burnham - Make Happy but with better music.mp4",
+    "item": "bo-burnham-make-happy-06_03_2016",
+    "itemTitle": "Bo Burnham: Make Happy",
+    "stem": "Bo Burnham- Make Happy",
+    "file": "Bo Burnham- Make Happy.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 3610,
-    "sizeMB": 3579,
+    "seconds": 3615,
+    "sizeMB": 1234,
     "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/bo-burnham-make-happy-but-with-better-music/Bo%20Burnham%20-%20Make%20Happy%20but%20with%20better%20music.mp4"
+    "fileSim": 1,
+    "url": "https://archive.org/download/bo-burnham-make-happy-06_03_2016/Bo%20Burnham-%20Make%20Happy.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
+      "item": "bo-burnham-make-happy-but-with-better-music",
+      "itemTitle": "Bo Burnham Make Happy But With Better Music",
+      "stem": "Bo Burnham - Make Happy but with better music",
+      "file": "Bo Burnham - Make Happy but with better music.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 3610,
+      "sizeMB": 3579,
+      "band": "match",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/bo-burnham-make-happy-but-with-better-music/Bo%20Burnham%20-%20Make%20Happy%20but%20with%20better%20music.mp4"
+    },
+    {
+      "conf": 0.7,
       "item": "bo-burnham-the-make-happy-tour-live-in-new-york-city",
       "itemTitle": "Bo Burnham - The Make Happy Tour ( Live In New York City)",
       "stem": "Bo Burnham - The Make Happy Tour (Live In New York City)",
@@ -45,20 +59,6 @@
       "band": "match",
       "fileSim": 0.95,
       "url": "https://archive.org/download/bo-burnham-the-make-happy-tour-live-in-new-york-city/Bo%20Burnham%20-%20The%20Make%20Happy%20Tour%20(Live%20In%20New%20York%20City).mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "bo-burnham-make-happy-06_03_2016",
-      "itemTitle": "Bo Burnham: Make Happy",
-      "stem": "Bo Burnham- Make Happy",
-      "file": "Bo Burnham- Make Happy.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 3615,
-      "sizeMB": 1234,
-      "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/bo-burnham-make-happy-06_03_2016/Bo%20Burnham-%20Make%20Happy.mp4"
     }
   ]
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T05:14:37.826Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "bibleman-live-breaking-the-bonds-of-disobedience",
     "itemTitle": "The Bibleman Show: Breaking the Bonds of Disobedience Live - DVD Rip",
     "stem": "Breaking the Bonds of Disobedience Live [2002]",
@@ -32,5 +32,9 @@
     "fileSim": 0.8181818181818182,
     "url": "https://archive.org/download/bibleman-live-breaking-the-bonds-of-disobedience/Breaking%20the%20Bonds%20of%20Disobedience%20Live%20%5B2002%5D.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

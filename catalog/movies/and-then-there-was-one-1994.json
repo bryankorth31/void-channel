@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T00:50:56.028Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "RegardingWickedScholars",
     "itemTitle": "Islamic State - [English Education] - Regarding Wicked Scholars---------------------------Abu Dhar said, \"I was with the Prophet (SAW) one day and I heard him saying: \"There is something I fear for my Ummah than the Dajjal.\" It was then that I became afraid, so I said: \"Oh Rasool Allah! Which thing is that?\" He (SAW) said; \"Misguided and astray scholars.\"  [Musnad Ahmad (5/145) No. 21334 and 21335]",
     "stem": "Wicked Scholars/47 Signs Of A Wicked Scholar - Sheikh Abdullah Faisal",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "RegardingWickedScholars",
       "itemTitle": "Islamic State - [English Education] - Regarding Wicked Scholars---------------------------Abu Dhar said, \"I was with the Prophet (SAW) one day and I heard him saying: \"There is something I fear for my Ummah than the Dajjal.\" It was then that I became afraid, so I said: \"Oh Rasool Allah! Which thing is that?\" He (SAW) said; \"Misguided and astray scholars.\"  [Musnad Ahmad (5/145) No. 21334 and 21335]",
       "stem": "Wicked Scholars/The Hypocrisy Of The Evil 'Scholars' - Scholars of Haqq",
@@ -46,5 +46,9 @@
       "fileSim": 0.1276595744680851,
       "url": "https://archive.org/download/RegardingWickedScholars/Wicked%20Scholars%2FThe%20Hypocrisy%20Of%20The%20Evil%20'Scholars'%20-%20Scholars%20of%20Haqq.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

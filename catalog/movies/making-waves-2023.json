@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T16:58:40.641Z",
   "archiveMentions": 95,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "youtube-CnaJaRY_3KE",
     "itemTitle": "Making Waves: The Art of Cinematic Sound (1080p) FULL DOCUMENTARY - George Lucas, David Lynch, Film",
     "stem": "CnaJaRY_3KE",
@@ -32,20 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/youtube-CnaJaRY_3KE/CnaJaRY_3KE.webm"
   },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "rvca-Making_Waves_with_Saint_Sophie",
-      "itemTitle": "Making Waves with Saint Sophie",
-      "stem": "Making_Waves_with_Saint_Sophie",
-      "file": "Making_Waves_with_Saint_Sophie.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4797,
-      "sizeMB": 313,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/rvca-Making_Waves_with_Saint_Sophie/Making_Waves_with_Saint_Sophie.mpeg4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

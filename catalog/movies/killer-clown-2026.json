@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T14:11:57.490Z",
   "archiveMentions": 31,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "sickserialinsaneclownkiller",
     "itemTitle": "S.I.C.K. Serial Insane Clown Killer",
     "stem": "Grim Weekend",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "sickserialinsaneclownkiller",
       "itemTitle": "S.I.C.K. Serial Insane Clown Killer",
       "stem": "S.I.C.K. Serial Insane Clown Killer",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/sickserialinsaneclownkiller/S.I.C.K.%20Serial%20Insane%20Clown%20Killer.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

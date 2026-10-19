@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T23:01:18.089Z",
   "archiveMentions": 247,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "01-jesus",
     "itemTitle": "Jesus",
     "stem": "The Greatest Story Ever Told  (1965)",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "01-jesus",
       "itemTitle": "Jesus",
       "stem": "The Last Temptation of Christ (1988)",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/01-jesus/The%20Last%20Temptation%20of%20Christ%20(1988).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "01-jesus",
       "itemTitle": "Jesus",
       "stem": "The Gospel According to Luke (audio Bible with scrolling text)",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/01-jesus/The%20Gospel%20According%20to%20Luke%20(audio%20Bible%20with%20scrolling%20text).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "01-jesus",
       "itemTitle": "Jesus",
       "stem": "The Gospel According to Matthew (audio Bible with scrolling text)",
@@ -75,5 +75,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/01-jesus/The%20Gospel%20According%20to%20Matthew%20(audio%20Bible%20with%20scrolling%20text).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

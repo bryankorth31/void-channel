@@ -17,35 +17,11 @@
   "huntedAt": "2026-10-14T07:16:34.754Z",
   "archiveMentions": 13,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "cosmca-Santa_Monica_Travel_Tourism_Summit_Full_Report_-_May_8_2019",
-    "itemTitle": "Santa Monica Travel & Tourism Summit (Full Report) - May 8, 2019",
-    "stem": "Santa_Monica_Travel_Tourism_Summit_Full_Report_-_May_8_2019",
-    "file": "Santa_Monica_Travel_Tourism_Summit_Full_Report_-_May_8_2019.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4951,
-    "sizeMB": 515,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/cosmca-Santa_Monica_Travel_Tourism_Summit_Full_Report_-_May_8_2019/Santa_Monica_Travel_Tourism_Summit_Full_Report_-_May_8_2019.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.75,
-      "item": "tvsbca-UCSB_Economic_Forecast_Project_-_2023_Santa_Barbara_County_Economic_Summit",
-      "itemTitle": "UCSB Economic Forecast Project: 2023 Santa Barbara County Economic Summit",
-      "stem": "UCSB_Economic_Forecast_Project_-_2023_Santa_Barbara_County_Economic_Summit",
-      "file": "UCSB_Economic_Forecast_Project_-_2023_Santa_Barbara_County_Economic_Summit.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6457,
-      "sizeMB": 1158,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/tvsbca-UCSB_Economic_Forecast_Project_-_2023_Santa_Barbara_County_Economic_Summit/UCSB_Economic_Forecast_Project_-_2023_Santa_Barbara_County_Economic_Summit.mpeg4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

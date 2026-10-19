@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T22:07:48.714Z",
   "archiveMentions": 297,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "20260610_20260610_0139",
     "itemTitle": "The Image (1975)",
     "stem": "8947278285464",
@@ -31,5 +31,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/20260610_20260610_0139/8947278285464.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1990)"
+  }
 }

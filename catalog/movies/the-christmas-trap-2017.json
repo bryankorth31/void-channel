@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-15T13:32:49.323Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "minecraft-the-grinch-s-crazy-trap-christmas-trolling-custom-map-5",
-    "itemTitle": "Minecraft THE GRINCH' S CRAZY TRAP! Christmas Trolling Custom Map [ 5]",
-    "stem": "Minecraft THE GRINCH'S CRAZY TRAP! - Christmas Trolling - Custom Map [5]",
-    "file": "Minecraft THE GRINCH'S CRAZY TRAP! - Christmas Trolling - Custom Map [5].mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 2060,
-    "sizeMB": 595,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/minecraft-the-grinch-s-crazy-trap-christmas-trolling-custom-map-5/Minecraft%20THE%20GRINCH'S%20CRAZY%20TRAP!%20-%20Christmas%20Trolling%20-%20Custom%20Map%20%5B5%5D.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "ChristmasMusicMixBestTrapDubstepEDM",
-      "itemTitle": "Christmas Music Mix 🎅 Best Trap Dubstep EDM �",
-      "stem": "Christmas Music Mix 🎅 Best Trap - Dubstep - EDM �",
-      "file": "Christmas Music Mix 🎅 Best Trap - Dubstep - EDM �.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 2463,
-      "sizeMB": 323,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/ChristmasMusicMixBestTrapDubstepEDM/Christmas%20Music%20Mix%20%F0%9F%8E%85%20Best%20Trap%20-%20Dubstep%20-%20EDM%20%EF%BF%BD.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); runtime not within 15% of the TMDB runtime"
+  }
 }

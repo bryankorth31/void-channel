@@ -16,24 +16,38 @@
   "huntedAt": "2026-10-15T12:13:59.865Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "garth-brooks-live-from-central-park_202404",
-    "itemTitle": "Garth Brooks Live From Central Park",
-    "stem": "Garth Brooks - Live From Central Park",
-    "file": "Garth Brooks - Live From Central Park.mp4",
-    "format": "MPEG4",
+    "conf": 0.75,
+    "item": "HBO_Garth_Live_From_Central_Park_1997-08-07",
+    "itemTitle": " HBO Garth Live From Central Park 1997 08 07",
+    "stem": "HBO_Garth_Live_From_Central_Park_1997-08-07",
+    "file": "HBO_Garth_Live_From_Central_Park_1997-08-07.mp4",
+    "format": "h.264",
     "playable": true,
-    "seconds": 4774,
-    "sizeMB": 481,
-    "band": "match",
+    "seconds": 6302,
+    "sizeMB": 656,
+    "band": "near",
     "fileSim": 0.95,
-    "url": "https://archive.org/download/garth-brooks-live-from-central-park_202404/Garth%20Brooks%20-%20Live%20From%20Central%20Park.mp4"
+    "url": "https://archive.org/download/HBO_Garth_Live_From_Central_Park_1997-08-07/HBO_Garth_Live_From_Central_Park_1997-08-07.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
+      "item": "garth-brooks-live-from-central-park_202404",
+      "itemTitle": "Garth Brooks Live From Central Park",
+      "stem": "Garth Brooks - Live From Central Park",
+      "file": "Garth Brooks - Live From Central Park.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 4774,
+      "sizeMB": 481,
+      "band": "match",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/garth-brooks-live-from-central-park_202404/Garth%20Brooks%20-%20Live%20From%20Central%20Park.mp4"
+    },
+    {
+      "conf": 0.7,
       "item": "garth-brooks-live-from-central-park_202501",
       "itemTitle": "Garth Brooks Live From Central Park",
       "stem": "Garth Brooks - Live From Central Park",
@@ -47,7 +61,7 @@
       "url": "https://archive.org/download/garth-brooks-live-from-central-park_202501/Garth%20Brooks%20-%20Live%20From%20Central%20Park.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "garth-brooks-live-from-central-park",
       "itemTitle": "Garth Brooks Live From Central Park",
       "stem": "Garth Brooks - Live From Central Park",
@@ -59,20 +73,10 @@
       "band": "match",
       "fileSim": 0.95,
       "url": "https://archive.org/download/garth-brooks-live-from-central-park/Garth%20Brooks%20-%20Live%20From%20Central%20Park.mp4"
-    },
-    {
-      "conf": 0.75,
-      "item": "HBO_Garth_Live_From_Central_Park_1997-08-07",
-      "itemTitle": " HBO Garth Live From Central Park 1997 08 07",
-      "stem": "HBO_Garth_Live_From_Central_Park_1997-08-07",
-      "file": "HBO_Garth_Live_From_Central_Park_1997-08-07.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 6302,
-      "sizeMB": 656,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/HBO_Garth_Live_From_Central_Park_1997-08-07/HBO_Garth_Live_From_Central_Park_1997-08-07.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "runtime not within 15% of the TMDB runtime"
+  }
 }

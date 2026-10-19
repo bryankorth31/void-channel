@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T03:40:19.629Z",
   "archiveMentions": 276,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "AlteredGenesTwistedTruthByStevenDrukerHD1080p",
     "itemTitle": "Altered Genes, Twisted Truth By Steven Druker HD 1080p",
     "stem": "Altered Genes, Twisted Truth by Steven Druker-HD 1080p",
@@ -31,48 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/AlteredGenesTwistedTruthByStevenDrukerHD1080p/Altered%20Genes%2C%20Twisted%20Truth%20by%20Steven%20Druker-HD%201080p.mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "CSPAN2_20171001_113000_Altered_Genes_Twisted_Truth",
-      "itemTitle": "Altered Genes, Twisted Truth : CSPAN2 : October 1, 2017 7:30am-9:01am EDT",
-      "stem": "CSPAN2_20171001_113000_Altered_Genes_Twisted_Truth",
-      "file": "CSPAN2_20171001_113000_Altered_Genes_Twisted_Truth.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5461,
-      "sizeMB": 569,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN2_20171001_113000_Altered_Genes_Twisted_Truth/CSPAN2_20171001_113000_Altered_Genes_Twisted_Truth.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "CSPAN2_20170910_180200_Altered_Genes_Twisted_Truth",
-      "itemTitle": "Altered Genes, Twisted Truth : CSPAN2 : September 10, 2017 2:02pm-3:33pm EDT",
-      "stem": "CSPAN2_20170910_180200_Altered_Genes_Twisted_Truth",
-      "file": "CSPAN2_20170910_180200_Altered_Genes_Twisted_Truth.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5461,
-      "sizeMB": 568,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN2_20170910_180200_Altered_Genes_Twisted_Truth/CSPAN2_20170910_180200_Altered_Genes_Twisted_Truth.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "CSPAN2_20170910_030000_Altered_Genes_Twisted_Truth",
-      "itemTitle": "Altered Genes, Twisted Truth : CSPAN2 : September 9, 2017 11:00pm-12:31am EDT",
-      "stem": "CSPAN2_20170910_030000_Altered_Genes_Twisted_Truth",
-      "file": "CSPAN2_20170910_030000_Altered_Genes_Twisted_Truth.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5461,
-      "sizeMB": 568,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN2_20170910_030000_Altered_Genes_Twisted_Truth/CSPAN2_20170910_030000_Altered_Genes_Twisted_Truth.mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

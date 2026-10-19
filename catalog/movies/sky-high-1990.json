@@ -36,20 +36,6 @@
   "alternates": [
     {
       "conf": 0.65,
-      "item": "w-ing-12-10-91",
-      "itemTitle": "W*ING - 1991/12/10 - SKY HIGH AGAIN (Handheld)",
-      "stem": "W_ING 12_10_91",
-      "file": "W_ING 12_10_91.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6803,
-      "sizeMB": 816,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/w-ing-12-10-91/W_ING%2012_10_91.mp4"
-    },
-    {
-      "conf": 0.65,
       "item": "sky-high",
       "itemTitle": "Sky High",
       "stem": "Spy High",
@@ -75,6 +61,20 @@
       "band": "near",
       "fileSim": 0.475,
       "url": "https://archive.org/download/sky-high/Spy%20High%20with%20subtitles.mp4"
+    },
+    {
+      "conf": 0.5,
+      "item": "w-ing-12-10-91",
+      "itemTitle": "W*ING - 1991/12/10 - SKY HIGH AGAIN (Handheld)",
+      "stem": "W_ING 12_10_91",
+      "file": "W_ING 12_10_91.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 6803,
+      "sizeMB": 816,
+      "band": "near",
+      "fileSim": 0,
+      "url": "https://archive.org/download/w-ing-12-10-91/W_ING%2012_10_91.mp4"
     }
   ]
 }

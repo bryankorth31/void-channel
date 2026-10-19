@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-15T05:27:18.328Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.7,
-    "item": "CSPAN_20211213_180000_Fmr._Rep._Tom_Graves__Policy_Analysts_on_Earmarks",
-    "itemTitle": "Fmr. Rep. Tom Graves & Policy Analysts on Earmarks : CSPAN : December 13, 2021 1:00pm-4:01pm EST",
-    "stem": "CSPAN_20211213_180000_Fmr._Rep._Tom_Graves__Policy_Analysts_on_Earmarks",
-    "file": "CSPAN_20211213_180000_Fmr._Rep._Tom_Graves__Policy_Analysts_on_Earmarks.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 10861,
-    "sizeMB": 1223,
-    "band": "feature",
-    "fileSim": 0.475,
-    "url": "https://archive.org/download/CSPAN_20211213_180000_Fmr._Rep._Tom_Graves__Policy_Analysts_on_Earmarks/CSPAN_20211213_180000_Fmr._Rep._Tom_Graves__Policy_Analysts_on_Earmarks.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "scm-387737-tvni-forfeb13warwordsjurisdic",
-      "itemTitle": "TvNI - for Feb 13 Wargasm! Word War Dr Frederick Graves Jurisdictionary We can do it!",
-      "stem": "tvni_14_02_13_jurisdictionary",
-      "file": "tvni_14_02_13_jurisdictionary.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3501,
-      "sizeMB": 363,
-      "band": "short",
-      "fileSim": 0.475,
-      "url": "https://archive.org/download/scm-387737-tvni-forfeb13warwordsjurisdic/tvni_14_02_13_jurisdictionary.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN, newsandpublicaffairs"
+  }
 }

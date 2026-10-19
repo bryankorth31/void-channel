@@ -17,49 +17,11 @@
   "huntedAt": "2026-10-15T17:56:31.115Z",
   "archiveMentions": 21,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.7,
-    "item": "orcavt-Senior_Moments_-_Cellblock_Visions_-_Prison_Art_in_America_with_Phyllis_Kornfeld",
-    "itemTitle": "Senior Moments - Cellblock Visions - Prison Art in America with Phyllis Kornfeld",
-    "stem": "Senior_Moments_-_Cellblock_Visions_-_Prison_Art_in_America_with_Phyllis_Kornfeld",
-    "file": "Senior_Moments_-_Cellblock_Visions_-_Prison_Art_in_America_with_Phyllis_Kornfeld.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3961,
-    "sizeMB": 409,
-    "band": "feature",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/orcavt-Senior_Moments_-_Cellblock_Visions_-_Prison_Art_in_America_with_Phyllis_Kornfeld/Senior_Moments_-_Cellblock_Visions_-_Prison_Art_in_America_with_Phyllis_Kornfeld.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "ADXPrisonInmatesForgingBlackArtVICENewsTonightFullEpisode",
-      "itemTitle": "ADX Prison Inmates & Forging Black Art: VICE News Tonight Full Episode",
-      "stem": "ADX Prison Inmates & Forging Black Art： VICE News Tonight Full Episode [YCSXBSeQlXU]",
-      "file": "ADX Prison Inmates & Forging Black Art： VICE News Tonight Full Episode [YCSXBSeQlXU].webm",
-      "format": "WebM",
-      "playable": true,
-      "seconds": 1643,
-      "sizeMB": 284,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/ADXPrisonInmatesForgingBlackArtVICENewsTonightFullEpisode/ADX%20Prison%20Inmates%20%26%20Forging%20Black%20Art%EF%BC%9A%20VICE%20News%20Tonight%20Full%20Episode%20%5BYCSXBSeQlXU%5D.webm"
-    },
-    {
-      "conf": 0.55,
-      "item": "calauem_000023",
-      "itemTitle": "Art and the Prison Crisis (1982)",
-      "stem": "calauem_000023_access",
-      "file": "calauem_000023_access.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 1728,
-      "sizeMB": 180,
-      "band": "short",
-      "fileSim": 0,
-      "url": "https://archive.org/download/calauem_000023/calauem_000023_access.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs, news"
+  }
 }

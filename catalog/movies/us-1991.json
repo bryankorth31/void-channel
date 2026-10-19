@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T04:25:52.396Z",
   "archiveMentions": 298,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "02a.-james-learns-a-lesson-us-vhs-strand-vci-1990_202402",
     "itemTitle": "Thomas & Friends US VHS Collection",
     "stem": "Blockbuster release 1. Thomas’ Useful Stories (US VHS)[1998]",
@@ -33,21 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "02a.-james-learns-a-lesson-us-vhs-strand-vci-1990_202402",
-      "itemTitle": "Thomas & Friends US VHS Collection",
-      "stem": "Special 1",
-      "file": "Special 1. Thomas and the Magic Railroad (US VHS) [2000].ia.mp4",
-      "format": "h.264 IA",
-      "playable": true,
-      "seconds": 5442,
-      "sizeMB": 639,
-      "band": "match",
-      "fileSim": 0,
-      "url": "https://archive.org/download/02a.-james-learns-a-lesson-us-vhs-strand-vci-1990_202402/Special%201.%20Thomas%20and%20the%20Magic%20Railroad%20(US%20VHS)%20%5B2000%5D.ia.mp4"
-    },
-    {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "02a.-james-learns-a-lesson-us-vhs-strand-vci-1990_202402",
       "itemTitle": "Thomas & Friends US VHS Collection",
       "stem": "Special 1. Thomas and the Magic Railroad (US VHS) [2000]",
@@ -61,7 +47,21 @@
       "url": "https://archive.org/download/02a.-james-learns-a-lesson-us-vhs-strand-vci-1990_202402/Special%201.%20Thomas%20and%20the%20Magic%20Railroad%20(US%20VHS)%20%5B2000%5D.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.7,
+      "item": "02a.-james-learns-a-lesson-us-vhs-strand-vci-1990_202402",
+      "itemTitle": "Thomas & Friends US VHS Collection",
+      "stem": "Special 1",
+      "file": "Special 1. Thomas and the Magic Railroad (US VHS) [2000].ia.mp4",
+      "format": "h.264 IA",
+      "playable": true,
+      "seconds": 5442,
+      "sizeMB": 639,
+      "band": "match",
+      "fileSim": 0,
+      "url": "https://archive.org/download/02a.-james-learns-a-lesson-us-vhs-strand-vci-1990_202402/Special%201.%20Thomas%20and%20the%20Magic%20Railroad%20(US%20VHS)%20%5B2000%5D.ia.mp4"
+    },
+    {
+      "conf": 0.5,
       "item": "02a.-james-learns-a-lesson-us-vhs-strand-vci-1990_202402",
       "itemTitle": "Thomas & Friends US VHS Collection",
       "stem": "Special 2",
@@ -74,5 +74,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/02a.-james-learns-a-lesson-us-vhs-strand-vci-1990_202402/Special%202.%20Calling%20All%20Engines!%20(US%20VHS)%20%5B2005%5D.ia.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1991)"
+  }
 }

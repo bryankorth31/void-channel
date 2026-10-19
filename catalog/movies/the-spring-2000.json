@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T13:11:21.175Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "20000329CHSSpringConcert",
     "itemTitle": "Chelmsford High School Spring Concert 3-29-2000",
     "stem": "2000 03 29 CHS Spring Concert",
@@ -31,20 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/20000329CHSSpringConcert/2000%2003%2029%20CHS%20Spring%20Concert.mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.95,
-      "item": "20000330FHSSpring",
-      "itemTitle": "Foxborough Music: FHS Spring Concert 2000",
-      "stem": "2000_03_30_FHSSpring",
-      "file": "2000_03_30_FHSSpring.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5955,
-      "sizeMB": 621,
-      "band": "match",
-      "fileSim": 0.5,
-      "url": "https://archive.org/download/20000330FHSSpring/2000_03_30_FHSSpring.mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

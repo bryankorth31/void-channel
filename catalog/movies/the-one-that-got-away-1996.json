@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T23:45:57.088Z",
   "archiveMentions": 29,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-one-that-got-away-1957",
     "itemTitle": "The One That Got Away ( 1957)",
     "stem": "The One That Got Away (1957)",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-one-that-got-away-1957_202506",
       "itemTitle": "The One That Got Away (1957)",
       "stem": "The One That Got Away (1957)",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/the-one-that-got-away-1957_202506/The%20One%20That%20Got%20Away%20(1957).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "OneGotAway5783",
       "itemTitle": "The One That Got Away",
       "stem": "The_One_That_Got_Away_1957",
@@ -61,5 +61,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/OneGotAway5783/The_One_That_Got_Away_1957.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1996)"
+  }
 }

@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T06:33:33.513Z",
   "archiveMentions": 46,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "blind-justice-1986",
     "itemTitle": "Blind Justice (1986) TV Movie",
     "stem": "Blind Justice (1986)",
@@ -63,5 +63,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/blind.-justice.-1994.1080p.-hmax.-web-dl.-dd-2.0.x-264-Cisco/Blind.Justice.1994.1080p.HMAX.WEB-DL.DD2.0.x264-SiGLA.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1994)"
+  }
 }

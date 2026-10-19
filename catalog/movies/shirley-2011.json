@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T03:39:29.932Z",
   "archiveMentions": 290,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "JustAroundTheCorner1938ShirleyTempleengFr",
     "itemTitle": "Just Around The Corner 1938 Shirley Temple (eng Fr)",
     "stem": "Just Around The Corner 1938 - Shirley Temple (eng -fr)",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/JustAroundTheCorner1938ShirleyTempleengFr/Just%20Around%20The%20Corner%201938%20-%20Shirley%20Temple%20(eng%20-fr).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

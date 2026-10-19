@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T11:15:22.092Z",
   "archiveMentions": 28,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "cafe-sci-silicon-valley-what-happened-to-cold-fusion-merged",
     "itemTitle": "SRI - Dr. Michael McKubre, What Happened to Cold Fusion?, Cafe Sci Silicon Valley, October 11, 2011",
     "stem": "Cafe Sci Silicon Valley What Happened to Cold Fusion (Merged)",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "cold-fusion-fire-from-water-documentary-agenda-21-truth",
       "itemTitle": "Cold Fusion Fire From Water Documentary Agenda 21 Truth",
       "stem": "Cold-Fusion-Fire-From-Water-Documentary-Agenda21Truth",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/cold-fusion-fire-from-water-documentary-agenda-21-truth/Cold-Fusion-Fire-From-Water-Documentary-Agenda21Truth.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "SmartScarecrow-20110217ColdFusionFromPonsFleischmannToRossiFocardi852",
       "itemTitle": "20110217-Cold Fusion from Pons/Fleischmann to Rossi/Focardi",
       "stem": "SmartScarecrow-20110217ColdFusionFromPonsFleischmannToRossiFocardi852_512kb",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/SmartScarecrow-20110217ColdFusionFromPonsFleischmannToRossiFocardi852/SmartScarecrow-20110217ColdFusionFromPonsFleischmannToRossiFocardi852_512kb.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "SmartScarecrow-20110217ColdFusionFromPonsFleischmannToRossiFocardi852",
       "itemTitle": "20110217-Cold Fusion from Pons/Fleischmann to Rossi/Focardi",
       "stem": "SmartScarecrow-20110217ColdFusionFromPonsFleischmannToRossiFocardi852",
@@ -75,5 +75,9 @@
       "fileSim": 0.26865671641791045,
       "url": "https://archive.org/download/SmartScarecrow-20110217ColdFusionFromPonsFleischmannToRossiFocardi852/SmartScarecrow-20110217ColdFusionFromPonsFleischmannToRossiFocardi852.ogv"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

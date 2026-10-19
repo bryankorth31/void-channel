@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T02:24:43.477Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-iPhF_YwWvoM",
     "itemTitle": "BARBARIANS AT THE GATE-story of ROSS JOHNSON-nabisco takeover",
     "stem": "iPhF_YwWvoM",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/youtube-iPhF_YwWvoM/iPhF_YwWvoM.webm"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

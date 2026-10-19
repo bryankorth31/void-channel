@@ -18,35 +18,39 @@
   "huntedAt": "2026-10-14T21:06:46.000Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
-    "item": "the-perfect-husband-the-laci-peterson-story-2004",
-    "itemTitle": "The Perfect Husband The Laci Peterson Story 2004",
-    "stem": "The Perfect Husband The Laci Peterson Story 2004",
-    "file": "The Perfect Husband The Laci Peterson Story 2004.mp4",
-    "format": "h.264",
+    "conf": 0.84,
+    "item": "video-the-perfect-husband-1757597307009",
+    "itemTitle": "The Perfect Husband",
+    "stem": "1757597307010",
+    "file": "1757597307010.mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 5061,
-    "sizeMB": 468,
+    "seconds": 6222,
+    "sizeMB": 619,
     "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/the-perfect-husband-the-laci-peterson-story-2004/The%20Perfect%20Husband%20The%20Laci%20Peterson%20Story%202004.mp4"
+    "fileSim": 0,
+    "url": "https://archive.org/download/video-the-perfect-husband-1757597307009/1757597307010.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "video-the-perfect-husband-1757597307009",
-      "itemTitle": "The Perfect Husband",
-      "stem": "1757597307010",
-      "file": "1757597307010.mp4",
-      "format": "MPEG4",
+      "conf": 0.8,
+      "item": "the-perfect-husband-the-laci-peterson-story-2004",
+      "itemTitle": "The Perfect Husband The Laci Peterson Story 2004",
+      "stem": "The Perfect Husband The Laci Peterson Story 2004",
+      "file": "The Perfect Husband The Laci Peterson Story 2004.mp4",
+      "format": "h.264",
       "playable": true,
-      "seconds": 6222,
-      "sizeMB": 619,
+      "seconds": 5061,
+      "sizeMB": 468,
       "band": "match",
-      "fileSim": 0,
-      "url": "https://archive.org/download/video-the-perfect-husband-1757597307009/1757597307010.mp4"
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/the-perfect-husband-the-laci-peterson-story-2004/The%20Perfect%20Husband%20The%20Laci%20Peterson%20Story%202004.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

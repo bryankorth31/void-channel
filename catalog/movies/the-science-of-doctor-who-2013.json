@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T13:58:55.319Z",
   "archiveMentions": 22,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "doctorwho2005s07es100specialthescienceofdoctorwho",
     "itemTitle": "Doctor Who The Science Of Doctor Who",
     "stem": "Doctor Who 2005 S07Es100 Special The Science Of Doctor Who",
@@ -46,5 +46,9 @@
       "fileSim": 0.2564102564102564,
       "url": "https://archive.org/download/1-smith-and-jones/_(13)%20The%20Last%20of%20the%20Timelords.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T04:30:32.949Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "12-days-of-christmas-eve-2004-family-christmas",
     "itemTitle": "12 Days Of Christmas Eve (2004 Family, Christmas)",
     "stem": "12-Days-Of-Christmas-Eve (2004 Family, Christmas)",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/12-days-of-christmas-eve-2004-family-christmas/12-Days-Of-Christmas-Eve%20(2004%20Family%2C%20Christmas).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2022)"
+  }
 }

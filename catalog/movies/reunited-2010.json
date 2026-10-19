@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T10:23:27.067Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "reunited-worlds-thaiep-09",
     "itemTitle": "Reunited Worlds THAIEP 09",
     "stem": "ReunitedWorldsTHAIEP09",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "reunited-worlds-thaiep-09",
       "itemTitle": "Reunited Worlds THAIEP 09",
       "stem": "ReunitedWorldsTHAIEP10",
@@ -47,5 +47,9 @@
       "fileSim": 0.5,
       "url": "https://archive.org/download/reunited-worlds-thaiep-09/ReunitedWorldsTHAIEP10.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

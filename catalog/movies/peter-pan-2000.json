@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T13:48:42.144Z",
   "archiveMentions": 253,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "cathy-rigby-is-peter-pan",
     "itemTitle": "Cathy Rigby is Peter Pan",
     "stem": "Cathy Rigby is Peter Pan",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/cathy-rigby-is-peter-pan/Cathy%20Rigby%20is%20Peter%20Pan.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

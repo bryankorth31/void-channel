@@ -16,36 +16,11 @@
   "huntedAt": "2026-10-14T23:35:08.530Z",
   "archiveMentions": 8,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "scm-365397-michaeldantoniomortalsinsweb",
-    "itemTitle": "Michael DAntonio: Mortal Sins web",
-    "stem": "piratetv_web_dantonio_0_0",
-    "file": "piratetv_web_dantonio_0_0.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4732,
-    "sizeMB": 492,
-    "band": "near",
-    "fileSim": 0,
-    "url": "https://archive.org/download/scm-365397-michaeldantoniomortalsinsweb/piratetv_web_dantonio_0_0.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "scm-365397-michaeldantoniomortalsinsweb",
-      "itemTitle": "Michael DAntonio: Mortal Sins web",
-      "stem": "piratetv_web_dantonio_0_0.pegssc",
-      "file": "piratetv_web_dantonio_0_0.pegssc.mpeg",
-      "format": "MPEG2",
-      "playable": false,
-      "codecRisk": "container (MPEG2)",
-      "seconds": 4732,
-      "sizeMB": 4191,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/scm-365397-michaeldantoniomortalsinsweb/piratetv_web_dantonio_0_0.pegssc.mpeg"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

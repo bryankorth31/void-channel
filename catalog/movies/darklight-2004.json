@@ -18,36 +18,11 @@
   "huntedAt": "2026-10-14T06:37:44.908Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "1906darklightofdawn",
-    "itemTitle": "Darklight of Dawn, Dateline-San Salvador, Ben Linder",
-    "stem": "1906darklightofdawn",
-    "file": "1906darklightofdawn.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 5606,
-    "sizeMB": 1592,
-    "band": "match",
-    "fileSim": 0.64,
-    "url": "https://archive.org/download/1906darklightofdawn/1906darklightofdawn.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.75,
-      "item": "1906darklightofdawn",
-      "itemTitle": "Darklight of Dawn, Dateline-San Salvador, Ben Linder",
-      "stem": "1906darklightofdawn.pegssc",
-      "file": "1906darklightofdawn.pegssc.mpeg",
-      "format": "MPEG2",
-      "playable": false,
-      "codecRisk": "container (MPEG2)",
-      "seconds": 5606,
-      "sizeMB": 3755,
-      "band": "match",
-      "fileSim": 0.5161290322580645,
-      "url": "https://archive.org/download/1906darklightofdawn/1906darklightofdawn.pegssc.mpeg"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

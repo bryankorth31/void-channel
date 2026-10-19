@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T01:32:41.483Z",
   "archiveMentions": 63,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "miami-vice-s-01-e-01-e-02-brothers-keeper-pilot-720p-blu-ray-eng-x-2-audio",
     "itemTitle": "MIAMI VICE S 01 E 01 E 02 Brother's Keeper, PILOT ( 720p Blu Ray ENG X 2 Audio)",
     "stem": "MIAMI VICE - S01 E01-E02 - Brother's Keeper, PILOT (720p BluRay - ENG x2 Audio)",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/miami-vice-s-01-e-01-e-02-brothers-keeper-pilot-720p-blu-ray-eng-x-2-audio/MIAMI%20VICE%20-%20S01%20E01-E02%20-%20Brother's%20Keeper%2C%20PILOT%20(720p%20BluRay%20-%20ENG%20x2%20Audio).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

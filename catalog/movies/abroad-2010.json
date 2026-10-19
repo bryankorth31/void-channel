@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T17:20:59.914Z",
   "archiveMentions": 299,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "CarryOnAbroad1972",
     "itemTitle": "Carry On Abroad (1972)",
     "stem": "Carry On Abroad (1972)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/CarryOnAbroad1972/Carry%20On%20Abroad%20(1972).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

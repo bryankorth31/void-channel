@@ -18,35 +18,11 @@
   "huntedAt": "2026-10-15T18:24:12.240Z",
   "archiveMentions": 79,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.7,
-    "item": "mmcmor-McMinnville_Grizzlies_vs._Glencoe_Crimson_Tide_High_School_Football_9_13_24_AUDIO_NOT_SYNC",
-    "itemTitle": "McMinnville Grizzlies vs. Glencoe Crimson Tide High School Football 9/13/24 (AUDIO NOT SYNCED)",
-    "stem": "McMinnville_Grizzlies_vs._Glencoe_Crimson_Tide_High_School_Football_9_13_24_AUDIO_NOT_SYNC",
-    "file": "McMinnville_Grizzlies_vs._Glencoe_Crimson_Tide_High_School_Football_9_13_24_AUDIO_NOT_SYNC.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 9015,
-    "sizeMB": 810,
-    "band": "feature",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/mmcmor-McMinnville_Grizzlies_vs._Glencoe_Crimson_Tide_High_School_Football_9_13_24_AUDIO_NOT_SYNC/McMinnville_Grizzlies_vs._Glencoe_Crimson_Tide_High_School_Football_9_13_24_AUDIO_NOT_SYNC.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "slowly-falling-in-love-with-the-grumpiest-bot-alive-a-high-tide-playlist",
-      "itemTitle": "Slowly Falling in Love with the Grumpiest Bot Alive - A High Tide Playlist",
-      "stem": "Slowly Falling in Love with the Grumpiest Bot Alive - A High Tide Playlist",
-      "file": "Slowly Falling in Love with the Grumpiest Bot Alive - A High Tide Playlist.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 1344,
-      "sizeMB": 39,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/slowly-falling-in-love-with-the-grumpiest-bot-alive-a-high-tide-playlist/Slowly%20Falling%20in%20Love%20with%20the%20Grumpiest%20Bot%20Alive%20-%20A%20High%20Tide%20Playlist.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

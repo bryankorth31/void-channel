@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T22:21:15.521Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "comedy-central-roast-of-charlie-sheen",
     "itemTitle": "Comedy Central Roast Of Charlie Sheen",
     "stem": "Comedy Central Roasts - S01E11 - Comedy Central Roast of Charlie Sheen",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/comedy-central-roast-of-charlie-sheen/Comedy%20Central%20Roasts%20-%20S01E11%20-%20Comedy%20Central%20Roast%20of%20Charlie%20Sheen.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

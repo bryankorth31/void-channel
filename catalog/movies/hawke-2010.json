@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T03:38:44.283Z",
   "archiveMentions": 47,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "seymour-an-introduction-ethan-hawke-2015",
     "itemTitle": "Seymour, An Introduction - Ethan Hawke (2015)",
     "stem": "Seymour- An Introduction -Ethan Hawke (2015)",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "the-crimes-of-stephen-hawke-1936-1",
       "itemTitle": "The Crimes Of Stephen Hawke 1936",
       "stem": "The Crimes Of Stephen Hawke 1936 (1)",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/the-crimes-of-stephen-hawke-1936-1/The%20Crimes%20Of%20Stephen%20Hawke%201936%20(1).mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "TheCrimesOfStephenHawke",
       "itemTitle": "The Crimes of Stephen Hawke",
       "stem": "The Crimes of Stephen Hawke",
@@ -61,5 +61,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/TheCrimesOfStephenHawke/The%20Crimes%20of%20Stephen%20Hawke.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

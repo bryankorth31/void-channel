@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T08:25:00.290Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "youtube-eHdL5q5KfBk",
     "itemTitle": "A Grandpa For Christmas",
     "stem": "eHdL5q5KfBk",
@@ -32,20 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/youtube-eHdL5q5KfBk/eHdL5q5KfBk.webm"
   },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "KRUU_FM_s_Grandpa_D_-_2016_Christmas_Special",
-      "itemTitle": "KRUU FM's Grandpa D - 2016 Christmas Special",
-      "stem": "KRUU_FM_s_Grandpa_D_-_2016_Christmas_Special",
-      "file": "KRUU_FM_s_Grandpa_D_-_2016_Christmas_Special.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 7081,
-      "sizeMB": 737,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/KRUU_FM_s_Grandpa_D_-_2016_Christmas_Special/KRUU_FM_s_Grandpa_D_-_2016_Christmas_Special.mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

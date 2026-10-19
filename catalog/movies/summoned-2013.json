@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T07:25:57.338Z",
   "archiveMentions": 81,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "callan-where-else-could-i-go-summoned-to-appear-1987-uk-vhs",
     "itemTitle": "Callan Where Else Could I Go Summoned To Appear (1987 UK VHS)",
     "stem": "Callan - Where Else Could I Go Summoned to Appear (1987 UK VHS)",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/callan-where-else-could-i-go-summoned-to-appear-1987-uk-vhs/Callan%20-%20Where%20Else%20Could%20I%20Go%20Summoned%20to%20Appear%20(1987%20UK%20VHS).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

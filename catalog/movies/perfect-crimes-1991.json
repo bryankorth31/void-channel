@@ -15,9 +15,9 @@
   "huntedAt": "2026-10-15T09:00:09.857Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "history-channel-perfect-crimes-nickell-taylor",
     "itemTitle": "History Channel VHS Perfect Crimes? Episode Nickell-Taylor",
     "stem": "History Channel Perfect Crimes Nickell-Taylor",
@@ -32,7 +32,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "youtube-eWhqo_5gpOU",
       "itemTitle": "Almost Perfect Crimes: The Papin Sisters | Free Documentary History",
       "stem": "eWhqo_5gpOU",
@@ -45,5 +45,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/youtube-eWhqo_5gpOU/eWhqo_5gpOU.webm"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

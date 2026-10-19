@@ -17,49 +17,11 @@
   "huntedAt": "2026-10-15T09:14:30.975Z",
   "archiveMentions": 8,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "PA6958644",
-    "itemTitle": "Clowning Around: Clown Magic, Part 2",
-    "stem": "PA_695_8644",
-    "file": "PA_695_8644.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 1625,
-    "sizeMB": 1316,
-    "band": "short",
-    "fileSim": 0,
-    "url": "https://archive.org/download/PA6958644/PA_695_8644.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "truthhertzradio-4f1f526023853e5483f5e73adf73c5284099c276",
-      "itemTitle": "More Clowning Around in Newtown Part 2",
-      "stem": "truthhertzradio-4f1f526023853e5483f5e73adf73c5284099c276",
-      "file": "truthhertzradio-4f1f526023853e5483f5e73adf73c5284099c276.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 3452,
-      "sizeMB": 580,
-      "band": "short",
-      "fileSim": 0,
-      "url": "https://archive.org/download/truthhertzradio-4f1f526023853e5483f5e73adf73c5284099c276/truthhertzradio-4f1f526023853e5483f5e73adf73c5284099c276.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "honey-i-shrunk-the-kids-tv-show-season-2-episode-21-honey-im-not-just-clowning-around",
-      "itemTitle": "Honey I shrunk the kids TV show Season 2 Episode 21 Honey, I'm Not Just Clowning Around",
-      "stem": "HISTK S02E21-xiw1262ytdzx",
-      "file": "HISTK S02E21-xiw1262ytdzx.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 2613,
-      "sizeMB": 107,
-      "band": "short",
-      "fileSim": 0,
-      "url": "https://archive.org/download/honey-i-shrunk-the-kids-tv-show-season-2-episode-21-honey-im-not-just-clowning-around/HISTK%20S02E21-xiw1262ytdzx.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

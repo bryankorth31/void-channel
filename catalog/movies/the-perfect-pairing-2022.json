@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T06:50:28.354Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "roosterteeth-36765",
     "itemTitle": "The Perfect Parasite Food Pairing - #583",
     "stem": "2020-02-11_The_Perfect_Parasite_Food_Pairing_-_583_[36765]",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/roosterteeth-36765/2020-02-11_The_Perfect_Parasite_Food_Pairing_-_583_%5B36765%5D.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

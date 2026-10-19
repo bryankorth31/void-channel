@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T09:35:52.703Z",
   "archiveMentions": 53,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-girl-next-door-2007_202101",
     "itemTitle": "The Girl Next Door( 2007)",
     "stem": "The Girl Next Door(2007)",
@@ -74,5 +74,9 @@
       "fileSim": 0.09090909090909091,
       "url": "https://archive.org/download/the-girl-next-door-2007_202101/Lifeforce(1985).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1998)"
+  }
 }

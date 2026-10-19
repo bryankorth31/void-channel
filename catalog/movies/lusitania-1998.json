@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T16:07:23.398Z",
   "archiveMentions": 52,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "CSPAN3_20150516_143300_100th_Anniversary_of_the_Sinking_of_the_Lusitania",
-    "itemTitle": "100th Anniversary of the Sinking of the Lusitania : CSPAN3 : May 16, 2015 10:33am-11:55am EDT",
-    "stem": "CSPAN3_20150516_143300_100th_Anniversary_of_the_Sinking_of_the_Lusitania",
-    "file": "CSPAN3_20150516_143300_100th_Anniversary_of_the_Sinking_of_the_Lusitania.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4920,
-    "sizeMB": 511,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN3_20150516_143300_100th_Anniversary_of_the_Sinking_of_the_Lusitania/CSPAN3_20150516_143300_100th_Anniversary_of_the_Sinking_of_the_Lusitania.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN3"
+  }
 }

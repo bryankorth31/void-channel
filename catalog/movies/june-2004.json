@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T03:27:55.086Z",
   "archiveMentions": 292,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "0098581-c-deal-or-no-deal-2013-12-12-t-121000-z-challenge",
     "itemTitle": "Challenge TV Airings From 7th October 2013 - 23rd June 2016",
     "stem": "0010E506-321-2013-12-29T164500Z-Challenge",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "0098581-c-deal-or-no-deal-2013-12-12-t-121000-z-challenge",
       "itemTitle": "Challenge TV Airings From 7th October 2013 - 23rd June 2016",
       "stem": "06A4FE6A-Timeline-2014-03-08T011500Z-Challenge",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/0098581-c-deal-or-no-deal-2013-12-12-t-121000-z-challenge/06A4FE6A-Timeline-2014-03-08T011500Z-Challenge.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "0098581-c-deal-or-no-deal-2013-12-12-t-121000-z-challenge",
       "itemTitle": "Challenge TV Airings From 7th October 2013 - 23rd June 2016",
       "stem": "0306815B-Killer-Karaoke-2014-08-11T003000Z-Challenge",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/0098581-c-deal-or-no-deal-2013-12-12-t-121000-z-challenge/0306815B-Killer-Karaoke-2014-08-11T003000Z-Challenge.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "0098581-c-deal-or-no-deal-2013-12-12-t-121000-z-challenge",
       "itemTitle": "Challenge TV Airings From 7th October 2013 - 23rd June 2016",
       "stem": "06798007-Duck-Quacks-Dont-Echo-2014-11-08T210000Z-Challenge",
@@ -74,5 +74,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/0098581-c-deal-or-no-deal-2013-12-12-t-121000-z-challenge/06798007-Duck-Quacks-Dont-Echo-2014-11-08T210000Z-Challenge.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

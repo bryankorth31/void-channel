@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T04:51:58.015Z",
   "archiveMentions": 11,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "just-like-a-woman-1993",
     "itemTitle": "Just Like A Woman (1993)",
     "stem": "Just Like A Woman (1993)",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/just-like-a-woman-1993/Just%20Like%20A%20Woman%20(1993).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2013)"
+  }
 }

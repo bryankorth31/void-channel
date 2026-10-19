@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T06:02:58.329Z",
   "archiveMentions": 241,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the.-black.-cat.-1934",
     "itemTitle": "The Black Cat (1934)",
     "stem": "The Black Cat (1934)/The.Black.Cat.1934",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "PhantasmagoriaTheater-TheBlackCat1934948-2",
       "itemTitle": "The Black Cat (1934)",
       "stem": "PhantasmagoriaTheater-TheBlackCat1934948",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/PhantasmagoriaTheater-TheBlackCat1934948-2/PhantasmagoriaTheater-TheBlackCat1934948.ogv"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "PhantasmagoriaTheater-TheBlackCat1934948-2",
       "itemTitle": "The Black Cat (1934)",
       "stem": "PhantasmagoriaTheater-TheBlackCat1934948_512kb",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/black-cat-1941/Black%20Cat%20(1941)%20.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2007)"
+  }
 }

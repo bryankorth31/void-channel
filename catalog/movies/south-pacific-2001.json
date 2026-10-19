@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T19:50:07.102Z",
   "archiveMentions": 127,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "south-pacific-1958-movie",
     "itemTitle": "South Pacific (1958)",
     "stem": "South Pacific (1958)",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "south-pacific-1958_202507",
       "itemTitle": "South Pacific (1958)",
       "stem": "South Pacific (1958)",
@@ -62,5 +62,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/south-pacific_202609/South%20Pacific.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2001)"
+  }
 }

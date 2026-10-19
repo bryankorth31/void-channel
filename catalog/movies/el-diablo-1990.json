@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T05:59:21.994Z",
   "archiveMentions": 160,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "el-diablo-viste-a-la-moda_202101",
     "itemTitle": "EL DIABLO VISTE A LA MODA",
     "stem": "EL DIABLO VISTE A LA MODA (720)",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "el-gangster-el-policia-y-el-diablo-hd",
       "itemTitle": "El Gangster, El Policía Y El Diablo película hd",
       "stem": "El gangster, el policía y el diablo hd",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/el-gangster-el-policia-y-el-diablo-hd/El%20gangster%2C%20el%20polic%C3%ADa%20y%20el%20diablo%20hd.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "ElDespertarDelDiablo2006",
       "itemTitle": "El Despertar Del Diablo 2006",
       "stem": "El despertar del diablo (2006) - pelicula Terror Online",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/ElDespertarDelDiablo2006/El%20despertar%20del%20diablo%20(2006)%20-%20pelicula%20Terror%20Online.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "y-2-mate.is-pelicula-entre-monjas-anda-el-diablo-hf-8e-py-apymc-480p-1639444135763",
       "itemTitle": "Entre Monjas Anda El Diablo(1973)",
       "stem": "Y2Mate",
@@ -75,5 +75,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/y-2-mate.is-pelicula-entre-monjas-anda-el-diablo-hf-8e-py-apymc-480p-1639444135763/Y2Mate.is%20-%20Pel%C3%ADcula%20entre%20monjas%20anda%20el%20diablo-Hf8ePyAPymc-480p-1639444135763.ia.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T08:06:38.652Z",
   "archiveMentions": 37,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-dark-tower-1943-edited",
     "itemTitle": "The Dark Tower (1943)",
     "stem": "The Dark Tower (1943) EDITED",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-dark-tower-2017-1080p-bluray-x-264-yts-ag_202509",
       "itemTitle": "The Dark Tower (2017) 1080p Blu-ay x 264 [YTS AG]",
       "stem": "The.Dark.Tower.2017.1080p.BluRay.x264-[YTS.AG]",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/the-dark-tower-2017-1080p-bluray-x-264-yts-ag_202509/The.Dark.Tower.2017.1080p.BluRay.x264-%5BYTS.AG%5D.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "Dark_Tower_1943",
       "itemTitle": "The Dark Tower",
       "stem": "Dark_Tower_1943",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/Dark_Tower_1943/Dark_Tower_1943.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "Dark_Tower_1943",
       "itemTitle": "The Dark Tower",
       "stem": "Dark_Tower_1943_512kb",
@@ -75,5 +75,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/Dark_Tower_1943/Dark_Tower_1943_512kb.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2020)"
+  }
 }

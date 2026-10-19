@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T10:54:25.587Z",
   "archiveMentions": 278,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "morgaes-my-horror-stalker-story",
     "itemTitle": "mörgaes Stalker Videos",
     "stem": "2. update: it got worse",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "morgaes-my-horror-stalker-story",
       "itemTitle": "mörgaes Stalker Videos",
       "stem": "4. My Horror Stalker Story.",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/morgaes-my-horror-stalker-story/4.%20My%20Horror%20Stalker%20Story..mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

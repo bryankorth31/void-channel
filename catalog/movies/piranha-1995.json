@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-13T21:52:09.522Z",
   "archiveMentions": 120,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "piranha_202409",
     "itemTitle": "Piranha",
     "stem": "DVD Player 2024-09-18 19-57-39-309",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "piranha-1978-1080p",
       "itemTitle": "Piranha (1978) 1080p",
       "stem": "Piranha.1978.1080p.BluRay.x264",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/piranha-1978-1080p/Piranha.1978.1080p.BluRay.x264.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "piranha.-1978",
       "itemTitle": "Piranha (1978)",
       "stem": "Piranha.(1978)",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/piranha.-1978/Piranha.(1978).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "Piranha2010_20161021",
       "itemTitle": "Piranha ( 2010)",
       "stem": "Piranha (2010)",
@@ -74,5 +74,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/Piranha2010_20161021/Piranha%20(2010).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

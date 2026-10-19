@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T12:50:46.008Z",
   "archiveMentions": 121,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "breaking-vegas-s-1-e-00-the-movie-mit-blackjack-team",
     "itemTitle": "Breaking Vegas - The Movie - The MIT Blackjack Team",
     "stem": "Breaking Vegas S1E00 - The Movie - MIT Blackjack Team",
@@ -47,5 +47,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/b-2-t-01_202601/B2_t01.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

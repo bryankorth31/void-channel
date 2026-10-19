@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T01:53:30.959Z",
   "archiveMentions": 17,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "StayAtHomeDadsTheDadRevolution_963",
     "itemTitle": "Stay At Home Dads: The Dad Revolution",
     "stem": "StayathomeDadsthedadrevolution",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "StayAtHomeDadsTheDadRevolution_963",
       "itemTitle": "Stay At Home Dads: The Dad Revolution",
       "stem": "StayathomeDadsthedadrevolution_512kb",
@@ -46,5 +46,9 @@
       "fileSim": 0.3333333333333333,
       "url": "https://archive.org/download/StayAtHomeDadsTheDadRevolution_963/StayathomeDadsthedadrevolution_512kb.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

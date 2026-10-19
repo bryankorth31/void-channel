@@ -18,35 +18,11 @@
   "huntedAt": "2026-10-14T22:11:14.033Z",
   "archiveMentions": 28,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "i-know-what-you-screamed-last-halloween",
-    "itemTitle": "I Know What You Screamed Last Halloween (2000)",
-    "stem": "I Know What You Screamed Last Halloween (2000)",
-    "file": "I Know What You Screamed Last Halloween (2000).mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 2328,
-    "sizeMB": 343,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/i-know-what-you-screamed-last-halloween/I%20Know%20What%20You%20Screamed%20Last%20Halloween%20(2000).mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "bptvpa-Bethel_Park_Gaming_Episode_96_-_Five_Nights_at_Wario_s_4_-_Last_One_For_The_2nd_Halloween_Se",
-      "itemTitle": "Bethel Park Gaming Episode 96 - Five Nights at Wario's 4 - Last One For The 2nd Halloween Series",
-      "stem": "Bethel_Park_Gaming_Episode_96_-_Five_Nights_at_Wario_s_4_-_Last_One_For_The_2nd_Halloween_Series",
-      "file": "Bethel_Park_Gaming_Episode_96_-_Five_Nights_at_Wario_s_4_-_Last_One_For_The_2nd_Halloween_Series.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 1445,
-      "sizeMB": 265,
-      "band": "short",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/bptvpa-Bethel_Park_Gaming_Episode_96_-_Five_Nights_at_Wario_s_4_-_Last_One_For_The_2nd_Halloween_Se/Bethel_Park_Gaming_Episode_96_-_Five_Nights_at_Wario_s_4_-_Last_One_For_The_2nd_Halloween_Series.mpeg4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

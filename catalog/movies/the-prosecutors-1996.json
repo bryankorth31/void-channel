@@ -16,35 +16,24 @@
   "huntedAt": "2026-10-15T15:50:25.704Z",
   "archiveMentions": 261,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "An_Inside_Look_at_the_Grand_Jury_-_Marion_County_Prosecutor_s_Office_-_Community_Justice_Academy",
-    "itemTitle": "An Inside Look at the Grand Jury - Marion County Prosecutor's Office - Community Justice Academy",
-    "stem": "An_Inside_Look_at_the_Grand_Jury_-_Marion_County_Prosecutor_s_Office_-_Community_Justice_Academy",
-    "file": "An_Inside_Look_at_the_Grand_Jury_-_Marion_County_Prosecutor_s_Office_-_Community_Justice_Academy.mpeg4",
+    "conf": 0.75,
+    "item": "the-prosecutors-tv-movie-12-2-1996",
+    "itemTitle": "The Prosecutors TV Movie 12 2 1996",
+    "stem": "The Prosecutors TV movie 12-2-1996",
+    "file": "The Prosecutors TV movie 12-2-1996.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 4996,
-    "sizeMB": 218,
-    "band": "match",
-    "fileSim": 0.3,
-    "url": "https://archive.org/download/An_Inside_Look_at_the_Grand_Jury_-_Marion_County_Prosecutor_s_Office_-_Community_Justice_Academy/An_Inside_Look_at_the_Grand_Jury_-_Marion_County_Prosecutor_s_Office_-_Community_Justice_Academy.mpeg4"
+    "seconds": 7302,
+    "sizeMB": 1487,
+    "band": "near",
+    "fileSim": 0.95,
+    "url": "https://archive.org/download/the-prosecutors-tv-movie-12-2-1996/The%20Prosecutors%20TV%20movie%2012-2-1996.mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.75,
-      "item": "the-prosecutors-tv-movie-12-2-1996",
-      "itemTitle": "The Prosecutors TV Movie 12 2 1996",
-      "stem": "The Prosecutors TV movie 12-2-1996",
-      "file": "The Prosecutors TV movie 12-2-1996.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 7302,
-      "sizeMB": 1487,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/the-prosecutors-tv-movie-12-2-1996/The%20Prosecutors%20TV%20movie%2012-2-1996.mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "runtime not within 15% of the TMDB runtime"
+  }
 }

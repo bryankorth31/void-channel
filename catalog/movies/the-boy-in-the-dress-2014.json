@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T04:23:44.323Z",
   "archiveMentions": 11,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "boy-in-a-dress-2024",
     "itemTitle": "Boy in a Dress: A Documentary (2024)",
     "stem": "Boy in a Dress - A Documentary (2024)",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/boy-in-a-dress-2024/Boy%20in%20a%20Dress%20-%20A%20Documentary%20(2024).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

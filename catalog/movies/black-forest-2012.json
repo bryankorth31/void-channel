@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T05:28:31.085Z",
   "archiveMentions": 87,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-i-q8Ii6G4tg",
     "itemTitle": "BLACK FOREST 4 - Nigerian Movies Latest Full Movies | Nollywood Movies | African Movies",
     "stem": "BLACK_FOREST_4_-_Nigerian_Movies_Latest_Full_Movies_Nollywood_Movies_African_Movies-i-q8Ii6G4tg",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "youtube-XU8eg0zs938",
       "itemTitle": "BLACK FOREST 2 - Nigerian Movies Latest Full Movies | Nollywood Movies | African Movies",
       "stem": "BLACK_FOREST_2_-_Nigerian_Movies_Latest_Full_Movies_Nollywood_Movies_African_Movies-XU8eg0zs938",
@@ -48,5 +48,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/youtube-XU8eg0zs938/BLACK_FOREST_2_-_Nigerian_Movies_Latest_Full_Movies_Nollywood_Movies_African_Movies-XU8eg0zs938.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

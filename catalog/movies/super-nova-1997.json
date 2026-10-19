@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T09:29:03.693Z",
   "archiveMentions": 66,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "ASuperMaquinaKnightRider44TemporadaEpisodio01ANovaAparenciaDeK.I.T.T",
     "itemTitle": "A Super Máquina Knight Rider 4ª Temporada Episódio 01 A Nova Aparência De K. I. T. T",
     "stem": "A_Super_Máquina_Knight_Rider_4ª_Temporada_-_Episódio_01_A_Nova_Aparência_de_K.I.T.T",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "a-nova-super-maquina-filme-2008",
       "itemTitle": "A Nova Super Máquina Filme 2008",
       "stem": "A Nova Super Máquina Filme 2008",
@@ -49,21 +49,7 @@
       "url": "https://archive.org/download/a-nova-super-maquina-filme-2008/A%20Nova%20Super%20M%C3%A1quina%20Filme%202008.mp4"
     },
     {
-      "conf": 0.65,
-      "item": "SNES_Longplay_215_Super_Nova",
-      "itemTitle": "SNES Longplay [215] Super Nova",
-      "stem": "SNES_Longplay_215_Super_Nova",
-      "file": "SNES_Longplay_215_Super_Nova.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6676,
-      "sizeMB": 1555,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/SNES_Longplay_215_Super_Nova/SNES_Longplay_215_Super_Nova.mp4"
-    },
-    {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "a-nova-super-maquina-episodio-0",
       "itemTitle": "A Nova Super Maquina Episódio 0",
       "stem": "A Nova Super Maquina - Episódio 0",
@@ -76,5 +62,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/a-nova-super-maquina-episodio-0/A%20Nova%20Super%20Maquina%20-%20Epis%C3%B3dio%200.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

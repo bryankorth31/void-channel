@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T18:24:27.072Z",
   "archiveMentions": 16,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "the-second-woman-1950_202602",
     "itemTitle": "The Second Woman 1950 ★★★ (CC) Film-noir/Mystery [1:30:49]",
     "stem": "The Second Woman 1950",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "the-woman-in-green-1945_202507",
       "itemTitle": "Sherlock Holmes The Woman In Green 1945 ★★★½ (CC) Horror/Mystery [1:07:45]",
       "stem": "The Woman In Green 1945",
@@ -48,5 +48,9 @@
       "fileSim": 0.475,
       "url": "https://archive.org/download/the-woman-in-green-1945_202507/The%20Woman%20In%20Green%201945.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

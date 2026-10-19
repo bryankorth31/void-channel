@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T00:36:22.562Z",
   "archiveMentions": 279,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "00DB07",
     "itemTitle": "David Brown - 9",
     "stem": "King1927",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "00DB07",
       "itemTitle": "David Brown - 9",
       "stem": "Crusades1935",
@@ -47,5 +47,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/00DB07/Crusades1935.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

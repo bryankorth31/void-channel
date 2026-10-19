@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T14:44:23.758Z",
   "archiveMentions": 48,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-widowmaker-hd_202601",
     "itemTitle": "The Widowmaker ( HD)",
     "stem": "The Widowmaker (HD)",
@@ -32,5 +32,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/the-widowmaker-hd_202601/The%20Widowmaker%20(HD).m4v"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

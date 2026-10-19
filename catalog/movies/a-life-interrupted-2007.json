@@ -17,63 +17,11 @@
   "huntedAt": "2026-10-14T17:32:55.089Z",
   "archiveMentions": 13,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.7,
-    "item": "CSPAN2_20150601_020000_Book_Discussion_on_A_Lucky_Life_Interrupted",
-    "itemTitle": "Book Discussion on A Lucky Life Interrupted : CSPAN2 : May 31, 2015 10:00pm-11:11pm EDT",
-    "stem": "CSPAN2_20150601_020000_Book_Discussion_on_A_Lucky_Life_Interrupted",
-    "file": "CSPAN2_20150601_020000_Book_Discussion_on_A_Lucky_Life_Interrupted.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4261,
-    "sizeMB": 443,
-    "band": "feature",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN2_20150601_020000_Book_Discussion_on_A_Lucky_Life_Interrupted/CSPAN2_20150601_020000_Book_Discussion_on_A_Lucky_Life_Interrupted.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.7,
-      "item": "CSPAN2_20150601_100000_Book_Discussion_on_A_Lucky_Life_Interrupted",
-      "itemTitle": "Book Discussion on A Lucky Life Interrupted : CSPAN2 : June 1, 2015 6:00am-7:11am EDT",
-      "stem": "CSPAN2_20150601_100000_Book_Discussion_on_A_Lucky_Life_Interrupted",
-      "file": "CSPAN2_20150601_100000_Book_Discussion_on_A_Lucky_Life_Interrupted.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4261,
-      "sizeMB": 443,
-      "band": "feature",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN2_20150601_100000_Book_Discussion_on_A_Lucky_Life_Interrupted/CSPAN2_20150601_100000_Book_Discussion_on_A_Lucky_Life_Interrupted.mp4"
-    },
-    {
-      "conf": 0.7,
-      "item": "CSPAN2_20150816_114500_Book_Discussion_on_A_Lucky_Life_Interrupted",
-      "itemTitle": "Book Discussion on A Lucky Life Interrupted : CSPAN2 : August 16, 2015 7:45am-8:55am EDT",
-      "stem": "CSPAN2_20150816_114500_Book_Discussion_on_A_Lucky_Life_Interrupted",
-      "file": "CSPAN2_20150816_114500_Book_Discussion_on_A_Lucky_Life_Interrupted.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4201,
-      "sizeMB": 437,
-      "band": "feature",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN2_20150816_114500_Book_Discussion_on_A_Lucky_Life_Interrupted/CSPAN2_20150816_114500_Book_Discussion_on_A_Lucky_Life_Interrupted.mp4"
-    },
-    {
-      "conf": 0.7,
-      "item": "9339198InterruptedLifeIncarceratedMothersInTheUS",
-      "itemTitle": " Interrupted Life: Incarcerated Mothers In The US",
-      "stem": "9339198 Interrupted Life Incarcerated Mothers in the US",
-      "file": "9339198 Interrupted Life Incarcerated Mothers in the US.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4230,
-      "sizeMB": 436,
-      "band": "feature",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/9339198InterruptedLifeIncarceratedMothersInTheUS/9339198%20Interrupted%20Life%20Incarcerated%20Mothers%20in%20the%20US.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN2, newsandpublicaffairs"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T16:58:34.341Z",
   "archiveMentions": 291,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "B-001-001-551",
     "itemTitle": "Visions of Greece: Off The Beaten Path. DVD. A Poetic Aerial Tour of this Storied Land. As Seen on Public Television",
     "stem": "Image",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "B-001-001-551",
       "itemTitle": "Visions of Greece: Off The Beaten Path. DVD. A Poetic Aerial Tour of this Storied Land. As Seen on Public Television",
       "stem": "Image6",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/B-001-001-551/Image6.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "B-001-001-551",
       "itemTitle": "Visions of Greece: Off The Beaten Path. DVD. A Poetic Aerial Tour of this Storied Land. As Seen on Public Television",
       "stem": "Image2",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/B-001-001-551/Image2.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "B-001-001-551",
       "itemTitle": "Visions of Greece: Off The Beaten Path. DVD. A Poetic Aerial Tour of this Storied Land. As Seen on Public Television",
       "stem": "Image3",
@@ -74,5 +74,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/B-001-001-551/Image3.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

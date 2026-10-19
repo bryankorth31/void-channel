@@ -34,21 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "MyMusicalChristmasJoy",
-      "itemTitle": "My Musical Christmas Joy",
-      "stem": "My Musical Christmas Joy",
-      "file": "My Musical Christmas Joy.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5324,
-      "sizeMB": 8714,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/MyMusicalChristmasJoy/My%20Musical%20Christmas%20Joy.mp4"
-    },
-    {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "christmas-joy_202312",
       "itemTitle": "Christmas Joy",
       "stem": "Christmas Joy",
@@ -60,6 +46,20 @@
       "band": "match",
       "fileSim": 1,
       "url": "https://archive.org/download/christmas-joy_202312/Christmas%20Joy.ogv"
+    },
+    {
+      "conf": 0.7,
+      "item": "MyMusicalChristmasJoy",
+      "itemTitle": "My Musical Christmas Joy",
+      "stem": "My Musical Christmas Joy",
+      "file": "My Musical Christmas Joy.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 5324,
+      "sizeMB": 8714,
+      "band": "match",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/MyMusicalChristmasJoy/My%20Musical%20Christmas%20Joy.mp4"
     }
   ]
 }

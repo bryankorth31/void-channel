@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T07:03:53.550Z",
   "archiveMentions": 24,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "tales-from-a-dead-dark-place",
     "itemTitle": "Tales From A Dead Dark Place",
     "stem": "Tales from a dead dark place",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/tales-from-a-dead-dark-place/Tales%20from%20a%20dead%20dark%20place.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

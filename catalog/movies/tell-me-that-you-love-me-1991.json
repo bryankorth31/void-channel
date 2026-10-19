@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T14:51:16.131Z",
   "archiveMentions": 11,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "tell-me-that-you-love-me-junie-moon-dime-que-me-amas-junie-moon-1970-otto-preminger-vose-fac-5",
     "itemTitle": "Tell Me That You Love Me, Junie Moon ( Dime Que Me Amas, Junie Moon) 1970, Otto Preminger VOSE FAC 5",
     "stem": "Tell Me that You Love Me, Junie Moon (Dime que me amas, Junie Moon) 1970, Otto Preminger  VOSE FAC 5",
@@ -48,5 +48,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/tell-me-that-you-love-me-junie-moon-1970/Tell%20Me%20That%20You%20Love%20Me%2C%20Junie%20Moon%20(1970).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1991)"
+  }
 }

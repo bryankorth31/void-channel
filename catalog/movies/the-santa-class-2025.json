@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T18:35:12.547Z",
   "archiveMentions": 8,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "film-80-m-class-recording-week-1.2-2021-04-01",
     "itemTitle": "Brewster Kahle speaks to UC Santa Cruz \"Understanding Media\" class",
     "stem": "Film_80M_Class_Recording_Week_1.2_2021-04-01",
@@ -32,5 +32,9 @@
     "fileSim": 0.475,
     "url": "https://archive.org/download/film-80-m-class-recording-week-1.2-2021-04-01/Film_80M_Class_Recording_Week_1.2_2021-04-01.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

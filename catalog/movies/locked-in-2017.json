@@ -16,63 +16,11 @@
   "huntedAt": "2026-10-14T21:29:37.013Z",
   "archiveMentions": 298,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.95,
-    "item": "CSPAN2_20170603_200000_Locked_In",
-    "itemTitle": "Locked In : CSPAN2 : June 3, 2017 4:00pm-5:31pm EDT",
-    "stem": "CSPAN2_20170603_200000_Locked_In",
-    "file": "CSPAN2_20170603_200000_Locked_In.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5461,
-    "sizeMB": 567,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN2_20170603_200000_Locked_In/CSPAN2_20170603_200000_Locked_In.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.75,
-      "item": "MSNBCW_20170313_010000_Locked_Up_Abroad",
-      "itemTitle": "Locked Up Abroad : MSNBCW : March 12, 2017 6:00pm-7:01pm PDT",
-      "stem": "MSNBCW_20170313_010000_Locked_Up_Abroad",
-      "file": "MSNBCW_20170313_010000_Locked_Up_Abroad.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3661,
-      "sizeMB": 384,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/MSNBCW_20170313_010000_Locked_Up_Abroad/MSNBCW_20170313_010000_Locked_Up_Abroad.mp4"
-    },
-    {
-      "conf": 0.75,
-      "item": "MSNBCW_20170320_000000_Locked_Up_Abroad",
-      "itemTitle": "Locked Up Abroad : MSNBCW : March 19, 2017 5:00pm-6:01pm PDT",
-      "stem": "MSNBCW_20170320_000000_Locked_Up_Abroad",
-      "file": "MSNBCW_20170320_000000_Locked_Up_Abroad.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3661,
-      "sizeMB": 383,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/MSNBCW_20170320_000000_Locked_Up_Abroad/MSNBCW_20170320_000000_Locked_Up_Abroad.mp4"
-    },
-    {
-      "conf": 0.75,
-      "item": "MSNBCW_20170320_010000_Locked_Up_Abroad",
-      "itemTitle": "Locked Up Abroad : MSNBCW : March 19, 2017 6:00pm-7:01pm PDT",
-      "stem": "MSNBCW_20170320_010000_Locked_Up_Abroad",
-      "file": "MSNBCW_20170320_010000_Locked_Up_Abroad.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3661,
-      "sizeMB": 383,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/MSNBCW_20170320_010000_Locked_Up_Abroad/MSNBCW_20170320_010000_Locked_Up_Abroad.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-CSPAN2, TV-MSNBCW"
+  }
 }

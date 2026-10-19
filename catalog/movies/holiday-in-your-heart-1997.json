@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T09:32:57.467Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "15-dec.-14-1997-le-ann-rimes-holiday-in-your-heart-the-le-ann-rimes-story",
     "itemTitle": "Dec.14,1997 15 Year Old LeAnn Rimes In Holiday In Your Heart The LeAnn Rimes Story.",
     "stem": "15 Dec",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.95,
+      "conf": 0.8,
       "item": "15-dec.-14-1997-le-ann-rimes-holiday-in-your-heart-the-le-ann-rimes-story",
       "itemTitle": "Dec.14,1997 15 Year Old LeAnn Rimes In Holiday In Your Heart The LeAnn Rimes Story.",
       "stem": "15 Dec.14,1997 LeAnn Rimes Holiday In Your Heart-The LeAnn Rimes Story",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/15-dec.-14-1997-le-ann-rimes-holiday-in-your-heart-the-le-ann-rimes-story/15%20Dec.14%2C1997%20LeAnn%20Rimes%20Holiday%20In%20Your%20Heart-The%20LeAnn%20Rimes%20Story.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

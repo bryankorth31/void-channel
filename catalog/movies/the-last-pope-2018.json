@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T13:35:16.893Z",
   "archiveMentions": 17,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "TheLastPopeHistoryChannelDocumentary2018",
     "itemTitle": "The Last Pope History Channel Documentary 2018",
     "stem": "The Last Pope_History Channel Documentary_2018",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/TheLastPopeHistoryChannelDocumentary2018/The%20Last%20Pope_History%20Channel%20Documentary_2018.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

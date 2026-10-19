@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T20:02:40.080Z",
   "archiveMentions": 52,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "christmas.w.a.-prince-becoming-royal-2018-christmas-romance-uptv",
     "itemTitle": "Christmas.w.a. Prince Becoming Royal (2018 Christmas Romance UPTV)",
     "stem": "- Christmas.w.a.Prince-Becoming Royal (2018 Christmas Romance UPTV)",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "a_royal_christmas_ball_2017___5a530fe9f35b1",
       "itemTitle": "a royal christmas ball 2017___5a530fe9f35b1",
       "stem": "a_royal_christmas_ball_2017___5a530fe9f35b1",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/a_royal_christmas_ball_2017___5a530fe9f35b1/a_royal_christmas_ball_2017___5a530fe9f35b1.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "christmas-in-royal-fashion-2018-christmas-hybrid-ion",
       "itemTitle": "Christmas In Royal Fashion (2018 Christmas@ Hybrid ION)",
       "stem": "Christmas in Royal Fashion (2018 Christmas@Hybrid - ION)",
@@ -61,5 +61,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/christmas-in-royal-fashion-2018-christmas-hybrid-ion/Christmas%20in%20Royal%20Fashion%20(2018%20Christmas%40Hybrid%20-%20ION).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

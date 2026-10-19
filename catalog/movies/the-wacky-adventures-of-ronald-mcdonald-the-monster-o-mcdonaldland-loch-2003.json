@@ -19,36 +19,22 @@
   "huntedAt": "2026-10-15T03:21:39.302Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "wacky-adventures-of-ronald-mc-donald-s-01-e-06-the-legend-o-mc-donaldland-loch-2001",
-    "itemTitle": "The Wacky Adventures Of Ronald McDonald The Monster Of McDonaldland Loch",
-    "stem": "Wacky Adventures of Ronald McDonald - S01E06 The Legend 'o McDonaldland Loch (2001)",
-    "file": "Wacky Adventures of Ronald McDonald - S01E06 The Legend 'o McDonaldland Loch (2001).mp4",
-    "format": "MPEG4",
+    "conf": 0.7,
+    "item": "TheLegendoMcDonaldlandLoch",
+    "itemTitle": "The Wacky Adventures Of Ronald McDonald \"The Legend 'o McDonaldland Loch\"",
+    "stem": "The Wacky Adventures of Ronald McDonald - 'The Legend 'o McDonaldland Loch'-teVhLjCqm3M",
+    "file": "The Wacky Adventures of Ronald McDonald - 'The Legend 'o McDonaldland Loch'-teVhLjCqm3M.mp4",
+    "format": "h.264",
     "playable": true,
     "seconds": 2362,
-    "sizeMB": 138,
+    "sizeMB": 246,
     "band": "match",
     "fileSim": 0.8312499999999999,
-    "url": "https://archive.org/download/wacky-adventures-of-ronald-mc-donald-s-01-e-06-the-legend-o-mc-donaldland-loch-2001/Wacky%20Adventures%20of%20Ronald%20McDonald%20-%20S01E06%20The%20Legend%20'o%20McDonaldland%20Loch%20(2001).mp4"
+    "url": "https://archive.org/download/TheLegendoMcDonaldlandLoch/The%20Wacky%20Adventures%20of%20Ronald%20McDonald%20-%20'The%20Legend%20'o%20McDonaldland%20Loch'-teVhLjCqm3M.mp4"
   },
   "alternates": [
-    {
-      "conf": 0.7,
-      "item": "TheLegendoMcDonaldlandLoch",
-      "itemTitle": "The Wacky Adventures Of Ronald McDonald \"The Legend 'o McDonaldland Loch\"",
-      "stem": "The Wacky Adventures of Ronald McDonald - 'The Legend 'o McDonaldland Loch'-teVhLjCqm3M",
-      "file": "The Wacky Adventures of Ronald McDonald - 'The Legend 'o McDonaldland Loch'-teVhLjCqm3M.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 2362,
-      "sizeMB": 246,
-      "band": "match",
-      "fileSim": 0.8312499999999999,
-      "url": "https://archive.org/download/TheLegendoMcDonaldlandLoch/The%20Wacky%20Adventures%20of%20Ronald%20McDonald%20-%20'The%20Legend%20'o%20McDonaldland%20Loch'-teVhLjCqm3M.mp4"
-    },
     {
       "conf": 0.7,
       "item": "youtube-hd0qmaWSVB4",
@@ -65,6 +51,20 @@
     },
     {
       "conf": 0.7,
+      "item": "wacky-adventures-of-ronald-mc-donald-s-01-e-06-the-legend-o-mc-donaldland-loch-2001",
+      "itemTitle": "The Wacky Adventures Of Ronald McDonald The Monster Of McDonaldland Loch",
+      "stem": "Wacky Adventures of Ronald McDonald - S01E06 The Legend 'o McDonaldland Loch (2001)",
+      "file": "Wacky Adventures of Ronald McDonald - S01E06 The Legend 'o McDonaldland Loch (2001).mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 2362,
+      "sizeMB": 138,
+      "band": "match",
+      "fileSim": 0.8312499999999999,
+      "url": "https://archive.org/download/wacky-adventures-of-ronald-mc-donald-s-01-e-06-the-legend-o-mc-donaldland-loch-2001/Wacky%20Adventures%20of%20Ronald%20McDonald%20-%20S01E06%20The%20Legend%20'o%20McDonaldland%20Loch%20(2001).mp4"
+    },
+    {
+      "conf": 0.7,
       "item": "TheLegendoMcDonaldlandLoch",
       "itemTitle": "The Wacky Adventures Of Ronald McDonald \"The Legend 'o McDonaldland Loch\"",
       "stem": "The Wacky Adventures of Ronald McDonald - 'The Legend 'o McDonaldland Loch' FIXED AUDIO-hd0qmaWSVB4",
@@ -77,5 +77,9 @@
       "fileSim": 0.8312499999999999,
       "url": "https://archive.org/download/TheLegendoMcDonaldlandLoch/The%20Wacky%20Adventures%20of%20Ronald%20McDonald%20-%20'The%20Legend%20'o%20McDonaldland%20Loch'%20FIXED%20AUDIO-hd0qmaWSVB4.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T15:55:14.256Z",
   "archiveMentions": 32,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "captain-kidd-1945-sea-adventure-classic-colourized",
     "itemTitle": "Captain Kidd ( 1945 +++++ Sea, Adventure, Classic, Colourized)",
     "stem": "Captain Kidd (1945  +++++ Sea, Adventure, Classic, Colourized)",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/captain-kidd-1945-sea-adventure-classic-colourized/Captain%20Kidd%20(1945%20%20%2B%2B%2B%2B%2B%20Sea%2C%20Adventure%2C%20Classic%2C%20Colourized).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

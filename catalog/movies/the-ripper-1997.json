@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T10:00:04.890Z",
   "archiveMentions": 290,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "mind-ripper-1995-1080p",
     "itemTitle": "Mind Ripper (1995) [1080p]",
     "stem": "Mind Ripper (1995) [1080p]",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/mind-ripper-1995-1080p/Mind%20Ripper%20(1995)%20%5B1080p%5D.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

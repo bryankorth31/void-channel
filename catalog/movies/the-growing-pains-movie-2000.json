@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T15:23:56.820Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "ElviraThrillerVideo03",
     "itemTitle": "Elvira ThrillerVideo - Dead of Night, Growing Pains, Attack of the Swamp Creature VHS",
     "stem": "Elvira-03",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "ElviraThrillerVideo03",
       "itemTitle": "Elvira ThrillerVideo - Dead of Night, Growing Pains, Attack of the Swamp Creature VHS",
       "stem": "Elvira-031",
@@ -46,20 +46,10 @@
       "band": "match",
       "fileSim": 0,
       "url": "https://archive.org/download/ElviraThrillerVideo03/Elvira-031.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "gpnfhca-Growing_Pains_with_Nicholas_Flores_103_-_Dr._Aaron_Donaldson",
-      "itemTitle": "Growing Pains with Nicholas Flores #103 - Dr. Aaron Donaldson",
-      "stem": "Growing_Pains_with_Nicholas_Flores_103_-_Dr._Aaron_Donaldson",
-      "file": "Growing_Pains_with_Nicholas_Flores_103_-_Dr._Aaron_Donaldson.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6915,
-      "sizeMB": 1363,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/gpnfhca-Growing_Pains_with_Nicholas_Flores_103_-_Dr._Aaron_Donaldson/Growing_Pains_with_Nicholas_Flores_103_-_Dr._Aaron_Donaldson.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

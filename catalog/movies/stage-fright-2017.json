@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T17:43:25.314Z",
   "archiveMentions": 53,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "stage.-fright.-2014",
     "itemTitle": "Stage. Fright. 2014",
     "stem": "Stage.Fright",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "stage.-fright.-2014",
       "itemTitle": "Stage. Fright. 2014",
       "stem": "Stage.Fright.2014",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/stage.-fright.-2014/Stage.Fright.2014.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "stage-fright",
       "itemTitle": "Stage Fright (1987)",
       "stem": "Stage Fright",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/stage-fright/Stage%20Fright.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "y-2-mate.is-stagefright-1987-full-movie.-cw-jff-wtx-u-8-m-720p-1628488874807",
       "itemTitle": "Stage Fright(1987)",
       "stem": "Y2Mate.is - Stagefright 1987 Full Movie.-CwJffWtxU8M-720p-1628488874807",
@@ -74,5 +74,9 @@
       "fileSim": 0.4,
       "url": "https://archive.org/download/y-2-mate.is-stagefright-1987-full-movie.-cw-jff-wtx-u-8-m-720p-1628488874807/Y2Mate.is%20-%20Stagefright%201987%20Full%20Movie.-CwJffWtxU8M-720p-1628488874807.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2017)"
+  }
 }

@@ -18,20 +18,11 @@
   "huntedAt": "2026-10-15T01:02:02.607Z",
   "archiveMentions": 287,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "Game_Boy_Advance_Longplay_094_Prince_Of_Persia_-_The_Sands_Of_Time",
-    "itemTitle": "Game Boy Advance_Longplay [094] Prince Of Persia - The Sands Of Time",
-    "stem": "Game_Boy_Advance_Longplay_094_Prince_Of_Persia_-_The_Sands_Of_Time",
-    "file": "Game_Boy_Advance_Longplay_094_Prince_Of_Persia_-_The_Sands_Of_Time.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 6593,
-    "sizeMB": 684,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Game_Boy_Advance_Longplay_094_Prince_Of_Persia_-_The_Sands_Of_Time/Game_Boy_Advance_Longplay_094_Prince_Of_Persia_-_The_Sands_Of_Time.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); runtime not within 15% of the TMDB runtime; junk word"
+  }
 }

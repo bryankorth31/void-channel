@@ -16,35 +16,39 @@
   "huntedAt": "2026-10-15T15:30:32.345Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
-    "item": "the-countess-alice-1993-masterpiece-theater",
-    "itemTitle": "The Countess Alice (1993 Masterpiece Theater S7E1)",
-    "stem": "The Countess Alice (1993 Masterpiece Theater)",
-    "file": "The Countess Alice (1993 Masterpiece Theater).mp4",
-    "format": "MPEG4",
+    "conf": 0.84,
+    "item": "the-countess-alice",
+    "itemTitle": "S07E01 The Countess Alice",
+    "stem": "The Countess Alice",
+    "file": "The Countess Alice.mp4",
+    "format": "h.264",
     "playable": true,
     "seconds": 4947,
-    "sizeMB": 245,
+    "sizeMB": 483,
     "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/the-countess-alice-1993-masterpiece-theater/The%20Countess%20Alice%20(1993%20Masterpiece%20Theater).mp4"
+    "fileSim": 1,
+    "url": "https://archive.org/download/the-countess-alice/The%20Countess%20Alice.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "the-countess-alice",
-      "itemTitle": "S07E01 The Countess Alice",
-      "stem": "The Countess Alice",
-      "file": "The Countess Alice.mp4",
-      "format": "h.264",
+      "conf": 0.84,
+      "item": "the-countess-alice-1993-masterpiece-theater",
+      "itemTitle": "The Countess Alice (1993 Masterpiece Theater S7E1)",
+      "stem": "The Countess Alice (1993 Masterpiece Theater)",
+      "file": "The Countess Alice (1993 Masterpiece Theater).mp4",
+      "format": "MPEG4",
       "playable": true,
       "seconds": 4947,
-      "sizeMB": 483,
+      "sizeMB": 245,
       "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/the-countess-alice/The%20Countess%20Alice.mp4"
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/the-countess-alice-1993-masterpiece-theater/The%20Countess%20Alice%20(1993%20Masterpiece%20Theater).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

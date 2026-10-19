@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T03:28:53.547Z",
   "archiveMentions": 286,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.75,
-    "item": "bptvpa-New_Song_Church_Christmas_Eve_Mass_2017",
-    "itemTitle": "New Song Church   Christmas Eve Mass 2017",
-    "stem": "New_Song_Church_Christmas_Eve_Mass_2017",
-    "file": "New_Song_Church_Christmas_Eve_Mass_2017.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3596,
-    "sizeMB": 166,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/bptvpa-New_Song_Church_Christmas_Eve_Mass_2017/New_Song_Church_Christmas_Eve_Mass_2017.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

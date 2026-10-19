@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T04:02:16.184Z",
   "archiveMentions": 290,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-3NFmEgm-Q7Y",
     "itemTitle": "The Man Who Would Be King | Chapo Trap House",
     "stem": "3NFmEgm-Q7Y",
@@ -33,5 +33,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/youtube-3NFmEgm-Q7Y/3NFmEgm-Q7Y.webm"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

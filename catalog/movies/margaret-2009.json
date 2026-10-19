@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T01:52:34.562Z",
   "archiveMentions": 294,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "DoubleACS_ArtFestival03",
-    "itemTitle": "Festival of Art at LaSalette Shrine - Margaret McWenthy - Painting the Still Life",
-    "stem": "DoubleACS_ArtFestival03",
-    "file": "DoubleACS_ArtFestival03.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 6878,
-    "sizeMB": 717,
-    "band": "match",
-    "fileSim": 0.07407407407407407,
-    "url": "https://archive.org/download/DoubleACS_ArtFestival03/DoubleACS_ArtFestival03.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

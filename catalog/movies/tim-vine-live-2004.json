@@ -15,9 +15,9 @@
   "huntedAt": "2026-10-15T11:12:20.785Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "tim.-vine.-tim.-timinee.-tim.-timinee.-tim.-tim.-to.-you.-live.-2016.-dvdrip.x-264-haggi-s",
     "itemTitle": "Tim Vine Live",
     "stem": "Tim.Vine.Tim.Timinee.Tim.Timinee.Tim.Tim.To.You.Live.2016.DVDRip.x264-HAGGiS",
@@ -32,7 +32,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "tim.-vine.-tim.-timinee.-tim.-timinee.-tim.-tim.-to.-you.-live.-2016.-dvdrip.x-264-haggi-s",
       "itemTitle": "Tim Vine Live",
       "stem": "Tim.Vine.Sunset.Milk.Idiot.Live.2019.DVDRip.x264-HAGGiS",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/tim.-vine.-tim.-timinee.-tim.-timinee.-tim.-tim.-to.-you.-live.-2016.-dvdrip.x-264-haggi-s/tim.vine.punslinger.live.dvdrip.xvid-haggis.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2004)"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T23:47:25.475Z",
   "archiveMentions": 69,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "DeannaSpingolaAndJ.BruceCampbell-BehindTheHolocaustAndHitlers",
     "itemTitle": "Deanna Spingola and J. Bruce Campbell - Behind the Holocaust and Hitlers Unforgivable Sin",
     "stem": "DeannaSpingolaAndJ.BruceCampbell-BehindTheHolocaustAndHitlersUnforgivableSin2",
@@ -31,5 +31,9 @@
     "fileSim": 0.3013698630136986,
     "url": "https://archive.org/download/DeannaSpingolaAndJ.BruceCampbell-BehindTheHolocaustAndHitlers/DeannaSpingolaAndJ.BruceCampbell-BehindTheHolocaustAndHitlersUnforgivableSin2.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

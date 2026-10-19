@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T01:06:23.951Z",
   "archiveMentions": 45,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "vid-20231029-110559",
     "itemTitle": "The Borrowers: Series One (1993 UK VHS)",
     "stem": "VID_20231029_110559",
@@ -36,7 +36,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "vid-20231029-110559",
       "itemTitle": "The Borrowers: Series One (1993 UK VHS)",
       "stem": "VID_20231029_123227",
@@ -50,7 +50,7 @@
       "url": "https://archive.org/download/vid-20231029-110559/VID_20231029_123227.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-borrowers",
       "itemTitle": "THE BORROWERS",
       "stem": "yt1s",
@@ -64,7 +64,7 @@
       "url": "https://archive.org/download/the-borrowers/yt1s.com%20-THE%20BORROWERS%20%20FULL%20MOVIE%20%201973_480p.ia.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-borrowers",
       "itemTitle": "THE BORROWERS",
       "stem": "yt1s.com -THE BORROWERS  FULL MOVIE  1973_480p",
@@ -77,5 +77,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/the-borrowers/yt1s.com%20-THE%20BORROWERS%20%20FULL%20MOVIE%20%201973_480p.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2011)"
+  }
 }

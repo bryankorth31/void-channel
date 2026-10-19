@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T06:26:19.239Z",
   "archiveMentions": 39,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "GameBoyAdvanceLongplay343RiverCityRansomEX",
-    "itemTitle": "Game Boy Advance Longplay [343] River City Ransom EX",
-    "stem": "Game_Boy_Advance_Longplay_343_River_City_Ransom_EX",
-    "file": "Game_Boy_Advance_Longplay_343_River_City_Ransom_EX.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 6670,
-    "sizeMB": 694,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/GameBoyAdvanceLongplay343RiverCityRansomEX/Game_Boy_Advance_Longplay_343_River_City_Ransom_EX.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); junk word"
+  }
 }

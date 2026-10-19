@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T07:17:20.996Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "ellery-queen-dont-look-behind-you",
     "itemTitle": "Ellery Queen Don't Look Behind You (1971)",
     "stem": "Ellery Queen Don't Look Behind You ",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "ellery-queen-dont-look-behind-you_202209",
       "itemTitle": "Ellery Queen Don't Look Behind You (1971)",
       "stem": "Ellery Queen Don't Look Behind You ",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/ellery-queen-dont-look-behind-you_202209/Ellery%20Queen%20Don't%20Look%20Behind%20You%20.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

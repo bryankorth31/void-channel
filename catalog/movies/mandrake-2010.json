@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T07:00:26.779Z",
   "archiveMentions": 25,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "MTMPart1",
     "itemTitle": "Mandrake, the Magician (1939) Serial - Part 1",
     "stem": "MTM-Part 1",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "mandrake-1979",
       "itemTitle": "Mandrake (1979)",
       "stem": "Mandrake (1979)",
@@ -46,5 +46,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/mandrake-1979/Mandrake%20(1979).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2010)"
+  }
 }

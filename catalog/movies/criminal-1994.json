@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T14:33:23.364Z",
   "archiveMentions": 292,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "1953-vice-squad-investigacion-criminal-arnold-laven-vose",
     "itemTitle": "1953 - Vice Squad - Investigación criminal - Arnold Laven - VOSE",
     "stem": "1953 - Vice Squad - Investigación criminal - Arnold Laven - VOSE",
@@ -35,20 +35,6 @@
   "alternates": [
     {
       "conf": 0.65,
-      "item": "1931-the-criminal-code-el-codigo-criminal-howard-hawks-vo",
-      "itemTitle": "1931 - The Criminal Code - El código criminal - Howard Hawks - VO",
-      "stem": "1931 - The Criminal Code - El código criminal - Howard Hawks - VO",
-      "file": "1931 - The Criminal Code - El código criminal - Howard Hawks - VO.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5786,
-      "sizeMB": 772,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/1931-the-criminal-code-el-codigo-criminal-howard-hawks-vo/1931%20-%20The%20Criminal%20Code%20-%20El%20c%C3%B3digo%20criminal%20-%20Howard%20Hawks%20-%20VO.mp4"
-    },
-    {
-      "conf": 0.65,
       "item": "1960-the-criminal-el-criminal-joseph-losey-vose_202008",
       "itemTitle": "1960 - The Criminal - El criminal - Joseph Losey - VOSE",
       "stem": "1960 - The Criminal - El criminal - Joseph Losey - VOSE",
@@ -62,7 +48,21 @@
       "url": "https://archive.org/download/1960-the-criminal-el-criminal-joseph-losey-vose_202008/1960%20-%20The%20Criminal%20-%20El%20criminal%20-%20Joseph%20Losey%20-%20VOSE.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
+      "item": "1931-the-criminal-code-el-codigo-criminal-howard-hawks-vo",
+      "itemTitle": "1931 - The Criminal Code - El código criminal - Howard Hawks - VO",
+      "stem": "1931 - The Criminal Code - El código criminal - Howard Hawks - VO",
+      "file": "1931 - The Criminal Code - El código criminal - Howard Hawks - VO.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 5786,
+      "sizeMB": 772,
+      "band": "near",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/1931-the-criminal-code-el-codigo-criminal-howard-hawks-vo/1931%20-%20The%20Criminal%20Code%20-%20El%20c%C3%B3digo%20criminal%20-%20Howard%20Hawks%20-%20VO.mp4"
+    },
+    {
+      "conf": 0.5,
       "item": "1959-compulsion-impulso-criminal-richard-fleischer-vose",
       "itemTitle": "1959 - Compulsion - Impulso criminal - Richard Fleischer",
       "stem": "1959 - Compulsion - Impulso criminal - Richard Fleischer - VOSE",
@@ -75,5 +75,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/1959-compulsion-impulso-criminal-richard-fleischer-vose/1959%20-%20Compulsion%20-%20Impulso%20criminal%20-%20Richard%20Fleischer%20-%20VOSE.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

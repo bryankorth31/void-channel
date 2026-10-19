@@ -18,20 +18,11 @@
   "huntedAt": "2026-10-15T01:00:06.236Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "Winchester_Academy_-_Are_You_Lonesome_Tonight",
-    "itemTitle": "Winchester Academy: Are You Lonesome Tonight?",
-    "stem": "Winchester_Academy_-_Are_You_Lonesome_Tonight",
-    "file": "Winchester_Academy_-_Are_You_Lonesome_Tonight.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4799,
-    "sizeMB": 469,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Winchester_Academy_-_Are_You_Lonesome_Tonight/Winchester_Academy_-_Are_You_Lonesome_Tonight.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

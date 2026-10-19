@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T04:17:30.179Z",
   "archiveMentions": 61,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "my-only-one-tv-series",
     "itemTitle": "My Only One (TV series)",
     "stem": "My Only One 55 56",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "my-only-one-tv-series",
       "itemTitle": "My Only One (TV series)",
       "stem": "My Only One 47 48",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/my-only-one-tv-series/My%20Only%20One%2047%2048.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "my-only-one-tv-series",
       "itemTitle": "My Only One (TV series)",
       "stem": "My Only One 15 16",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/my-only-one-tv-series/My%20Only%20One%2015%2016.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "my-only-one-tv-series",
       "itemTitle": "My Only One (TV series)",
       "stem": "My Only One 59 60",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/my-only-one-tv-series/My%20Only%20One%2059%2060.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T13:08:47.218Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "BuenTrabajo.ClaireDenis.1999Vose",
     "itemTitle": "Buen Trabajo.( Claire Denis. 1999) Vose",
     "stem": "Buen trabajo.(Claire Denis.1999) vose",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/BuenTrabajo.ClaireDenis.1999Vose/Buen%20trabajo.(Claire%20Denis.1999)%20vose.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

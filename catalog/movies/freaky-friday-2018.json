@@ -18,20 +18,11 @@
   "huntedAt": "2026-10-13T21:03:46.073Z",
   "archiveMentions": 153,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "pvhsnj-PV_Theater_-_Freaky_Friday_2019",
-    "itemTitle": "PV Theater: Freaky Friday 2019",
-    "stem": "PV_Theater_-_Freaky_Friday_2019",
-    "file": "PV_Theater_-_Freaky_Friday_2019.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 7036,
-    "sizeMB": 677,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/pvhsnj-PV_Theater_-_Freaky_Friday_2019/PV_Theater_-_Freaky_Friday_2019.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

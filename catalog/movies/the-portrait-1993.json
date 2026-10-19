@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T04:33:35.738Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "9.1MurderASelfPortrait",
     "itemTitle": "9.1 Murder A Self Portrait",
     "stem": "9.1 Murder A Self Portrait",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "ADayInTheLifeOfADictatorportraitOfCrazinessInPowerDocumentary",
       "itemTitle": "A Day In The Life Of A Dictator (portrait Of Craziness In Power) Documentary",
       "stem": "A Day in The Life of a Dictator (portrait of craziness in power) - Documentary",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/ADayInTheLifeOfADictatorportraitOfCrazinessInPowerDocumentary/A%20Day%20in%20The%20Life%20of%20a%20Dictator%20(portrait%20of%20craziness%20in%20power)%20-%20Documentary.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "APortraitOfTheArtistAsFilipino",
       "itemTitle": "A Portrait Of The Artist As Filipino 1965",
       "stem": "A Portrait of the Artist as Filipino Pinoy Movies Hub Full Movies Online",
@@ -59,20 +59,10 @@
       "band": "near",
       "fileSim": 0.95,
       "url": "https://archive.org/download/APortraitOfTheArtistAsFilipino/A%20Portrait%20of%20the%20Artist%20as%20Filipino%20Pinoy%20Movies%20Hub%20Full%20Movies%20Online.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "730088LatinaPortrait",
-      "itemTitle": "Latina Portrait",
-      "stem": "730088 Latina Portrait",
-      "file": "730088 Latina Portrait.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4522,
-      "sizeMB": 469,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/730088LatinaPortrait/730088%20Latina%20Portrait.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

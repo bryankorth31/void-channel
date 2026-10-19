@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T16:25:20.377Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "videos-lethal-obsession-2007-ok.-ru",
     "itemTitle": "Videos Lethal Obsession 2007 | OK. RU",
     "stem": "Kids' Choice Awards 2021",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.95,
+      "conf": 0.8,
       "item": "videos-lethal-obsession-2007-ok.-ru",
       "itemTitle": "Videos Lethal Obsession 2007 | OK. RU",
       "stem": "RoyalFamily1969",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/videos-lethal-obsession-2007-ok.-ru/RoyalFamily1969.mp4"
     },
     {
-      "conf": 0.95,
+      "conf": 0.8,
       "item": "videos-lethal-obsession-2007-ok.-ru",
       "itemTitle": "Videos Lethal Obsession 2007 | OK. RU",
       "stem": "Catwoman",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/videos-lethal-obsession-2007-ok.-ru/Catwoman.mp4"
     },
     {
-      "conf": 0.95,
+      "conf": 0.8,
       "item": "videos-lethal-obsession-2007-ok.-ru",
       "itemTitle": "Videos Lethal Obsession 2007 | OK. RU",
       "stem": "tcmtb-vip3r",
@@ -74,5 +74,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/videos-lethal-obsession-2007-ok.-ru/tcmtb-vip3r.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

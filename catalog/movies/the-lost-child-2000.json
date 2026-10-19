@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T00:03:39.825Z",
   "archiveMentions": 83,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "besthorrordramamovies2018lostchildfullmovie_201907",
     "itemTitle": "Lost Child",
     "stem": "Best horror drama movies 2018 - Lost Child full movie",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "paradise-lost-the-child-murders-at-robin-hood-hills-1996",
       "itemTitle": "Paradise Lost - The Child Murders At Robin Hood Hills 1996",
       "stem": "Paradise Lost - 03 - Purgatory",
@@ -46,5 +46,9 @@
       "fileSim": 0.475,
       "url": "https://archive.org/download/paradise-lost-the-child-murders-at-robin-hood-hills-1996/Paradise%20Lost%20-%2003%20-%20Purgatory.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2000)"
+  }
 }

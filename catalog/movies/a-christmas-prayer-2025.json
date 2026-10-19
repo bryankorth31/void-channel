@@ -18,20 +18,11 @@
   "huntedAt": "2026-10-15T02:25:07.106Z",
   "archiveMentions": 14,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "Midnight_Prayer_International_Thoughts_about_Christmas_Dec_2016",
-    "itemTitle": "Midnight Prayer International Thoughts about Christmas Dec 2016",
-    "stem": "Midnight_Prayer_International_Thoughts_about_Christmas_Dec_2016",
-    "file": "Midnight_Prayer_International_Thoughts_about_Christmas_Dec_2016.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3538,
-    "sizeMB": 156,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Midnight_Prayer_International_Thoughts_about_Christmas_Dec_2016/Midnight_Prayer_International_Thoughts_about_Christmas_Dec_2016.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

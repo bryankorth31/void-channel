@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T06:35:51.404Z",
   "archiveMentions": 19,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "converge-the-long-road-home",
     "itemTitle": "Converge - The Long Road Home",
     "stem": "Converge - The Long Road Home/01 Converge - The Long Road Home (2003)",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/2021-02-26-the-long-road-home/2021%2002%2026%20-%20The%20Long%20Road%20Home.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1991)"
+  }
 }

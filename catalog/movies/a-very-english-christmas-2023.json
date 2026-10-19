@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T16:00:05.049Z",
   "archiveMentions": 27,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "NSFW_107",
     "itemTitle": "NSFW 107: A Very Korean Christmas",
     "stem": "nsfw0107_h264b_864x480_500",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "Disney_s_Very_Merry_Christmas_Parade_1994-kUEQ7N1z6Ys",
       "itemTitle": "Disney s Very Merry Christmas Parade 1994-kUEQ7N1z6Ys",
       "stem": "Disney_s_Very_Merry_Christmas_Parade_1994-kUEQ7N1z6Ys",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/Disney_s_Very_Merry_Christmas_Parade_1994-kUEQ7N1z6Ys/Disney_s_Very_Merry_Christmas_Parade_1994-kUEQ7N1z6Ys.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "Disney_s_Very_Merry_Christmas_Parade_1993-Q1KoTq-amZM",
       "itemTitle": "Disney s Very Merry Christmas Parade 1993-Q1KoTq-amZM",
       "stem": "Disney_s_Very_Merry_Christmas_Parade_1993-Q1KoTq-amZM",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/Disney_s_Very_Merry_Christmas_Parade_1993-Q1KoTq-amZM/Disney_s_Very_Merry_Christmas_Parade_1993-Q1KoTq-amZM.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "Disney_s_Very_Merry_Christmas_Parade_1995-ncfNslABxsU",
       "itemTitle": "Disney s Very Merry Christmas Parade 1995-ncfNslABxsU",
       "stem": "Disney_s_Very_Merry_Christmas_Parade_1995-ncfNslABxsU",
@@ -75,5 +75,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/Disney_s_Very_Merry_Christmas_Parade_1995-ncfNslABxsU/Disney_s_Very_Merry_Christmas_Parade_1995-ncfNslABxsU.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

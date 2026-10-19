@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T03:53:38.161Z",
   "archiveMentions": 232,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "vid-20221022-103325",
     "itemTitle": "Dad's Army: The Enemy Within the Gates (1993 UK VHS)",
     "stem": "VID_20221022_103325",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/vid-20221022-103325/VID_20221022_103325.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

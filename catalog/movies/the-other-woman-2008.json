@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T10:18:03.528Z",
   "archiveMentions": 65,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-other-woman-1992",
     "itemTitle": "The Other Woman - Lee Anne Beaman, Adrian Zmed",
     "stem": "The Other Woman - 1992",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-other-woman-1954_202605",
       "itemTitle": "The Other Woman 1954",
       "stem": "The Other Woman 1954 ",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/the-other-woman-1954_202605/The%20Other%20Woman%201954%20.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "TheOtherWoman1992",
       "itemTitle": "The Other Woman (1992)",
       "stem": "The Other Woman (1992)",
@@ -62,5 +62,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/TheOtherWoman1992/The%20Other%20Woman%20(1992).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2008)"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-13T20:38:57.856Z",
   "archiveMentions": 20,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "collesium-home-video-andre-the-giant",
     "itemTitle": "Coliseum Home Video Andre The Giant",
     "stem": "Collesium Home Video Andre the Giant",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/collesium-home-video-andre-the-giant/Collesium%20Home%20Video%20Andre%20the%20Giant.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

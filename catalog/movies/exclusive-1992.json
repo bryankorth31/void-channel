@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T09:01:09.259Z",
   "archiveMentions": 270,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "6139CS",
     "itemTitle": "Disney's Exclusive Archive Collection: Alice in Wonderland (Laserdisc) (Supplemental Material only)",
     "stem": "Alice in Wonderland Disc 2b",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "4-peanuts-specials-1997-blockbuster-exclusive-vhs",
       "itemTitle": "4 Peanuts Specials! (1997 Blockbuster Exclusive VHS)",
       "stem": "4 Peanuts Specials! (1997 Blockbuster Exclusive VHS)",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/4-peanuts-specials-1997-blockbuster-exclusive-vhs/4%20Peanuts%20Specials!%20(1997%20Blockbuster%20Exclusive%20VHS).mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "6139CS",
       "itemTitle": "Disney's Exclusive Archive Collection: Alice in Wonderland (Laserdisc) (Supplemental Material only)",
       "stem": "Alice in Wonderland Disc 3",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/6139CS/Alice%20in%20Wonderland%20Disc%203.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "1587CS",
       "itemTitle": "Disney's Exclusive Archive Collection: 20,000 Leagues Under the Sea (Laserdisc) (Supplemental material only)",
       "stem": "20,000 Leagues Under the Sea Supplementals",
@@ -74,5 +74,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/1587CS/20%2C000%20Leagues%20Under%20the%20Sea%20Supplementals.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

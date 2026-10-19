@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-13T21:11:36.489Z",
   "archiveMentions": 298,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "00wit",
     "itemTitle": "00 WIT",
     "stem": "8",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "1-oo-wit-para-ky-stella-26",
       "itemTitle": "1OO @wit Para K@y Stella 26",
       "stem": "1OO @wit para k@y stella-26",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/1-oo-wit-para-ky-stella-26/1OO%20%40wit%20para%20k%40y%20stella-26.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

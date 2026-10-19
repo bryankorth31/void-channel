@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T18:46:28.096Z",
   "archiveMentions": 25,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "live-wire-silent-hill-shattered-memories",
     "itemTitle": "Live Wire - Silent Hill Shattered Memories",
     "stem": "Live Wire - Silent Hill Shattered Memories - Part 3 of 3",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "live-wire-silent-hill-shattered-memories",
       "itemTitle": "Live Wire - Silent Hill Shattered Memories",
       "stem": "Live Wire - Silent Hill Shattered Memories - Part 1 of 3",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/live-wire-silent-hill-shattered-memories/Live%20Wire%20-%20Silent%20Hill%20Shattered%20Memories%20-%20Part%201%20of%203.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "live-wire-silent-hill-shattered-memories",
       "itemTitle": "Live Wire - Silent Hill Shattered Memories",
       "stem": "Live Wire - Silent Hill Shattered Memories - Part 2 of 3",
@@ -61,5 +61,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/live-wire-silent-hill-shattered-memories/Live%20Wire%20-%20Silent%20Hill%20Shattered%20Memories%20-%20Part%202%20of%203.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

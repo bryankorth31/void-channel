@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T01:21:26.370Z",
   "archiveMentions": 267,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "DantesInferno_201705",
     "itemTitle": "Dante's Inferno",
     "stem": "Dante's Inferno",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/Inferno_201809/Inferno.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "DantesInferno1911_201905",
       "itemTitle": "Dante's Inferno( 1911)",
       "stem": "Dante's Inferno(1911)",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/DantesInferno1911_201905/Dante's%20Inferno(1911).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

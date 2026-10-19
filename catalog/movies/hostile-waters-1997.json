@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T04:32:09.505Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "hostile-waters_202609",
     "itemTitle": "S09E02 Hostile Waters",
     "stem": "HOSTILE WATERS",
@@ -33,48 +33,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/hostile-waters_202609/HOSTILE%20WATERS.mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "HostileWatersLongplayPart6Of7",
-      "itemTitle": "Hostile Waters Longplay",
-      "stem": "Hostile Waters Longplay Part 1 of 7",
-      "file": "Hostile Waters Longplay Part 1 of 7.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6386,
-      "sizeMB": 291,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/HostileWatersLongplayPart6Of7/Hostile%20Waters%20Longplay%20Part%201%20of%207.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "HostileWatersLongplayPart6Of7",
-      "itemTitle": "Hostile Waters Longplay",
-      "stem": "Hostile Waters Longplay Part 7 of 7",
-      "file": "Hostile Waters Longplay Part 7 of 7.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4818,
-      "sizeMB": 248,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/HostileWatersLongplayPart6Of7/Hostile%20Waters%20Longplay%20Part%207%20of%207.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "HostileWatersLongplayPart6Of7",
-      "itemTitle": "Hostile Waters Longplay",
-      "stem": "Hostile Waters Longplay Part 4 of 7",
-      "file": "Hostile Waters Longplay Part 4 of 7.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 7168,
-      "sizeMB": 393,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/HostileWatersLongplayPart6Of7/Hostile%20Waters%20Longplay%20Part%204%20of%207.mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

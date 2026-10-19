@@ -19,22 +19,36 @@
   "itemsOpened": 6,
   "state": "REVIEW",
   "file": {
-    "conf": 0.65,
-    "item": "Vive_l_Europe_Boris_nous_parle_du_Marquis_de_Sade_Juillet_2016_Daniel_Conversano",
-    "itemTitle": "Vive l'Europe : Boris nous parle du Marquis de Sade (Juillet 2016) [Daniel Conversano]",
-    "stem": "Vive_l_Europe_Boris_nous_parle_du_Marquis_de_Sade_Juillet_2016_Daniel_Conversano",
-    "file": "Vive_l_Europe_Boris_nous_parle_du_Marquis_de_Sade_Juillet_2016_Daniel_Conversano.mp4",
+    "conf": 0.55,
+    "item": "marquis-1989_202506",
+    "itemTitle": "Marquis (1989)",
+    "stem": "Marquis (1989)",
+    "file": "Marquis (1989).mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 7421,
-    "sizeMB": 337,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Vive_l_Europe_Boris_nous_parle_du_Marquis_de_Sade_Juillet_2016_Daniel_Conversano/Vive_l_Europe_Boris_nous_parle_du_Marquis_de_Sade_Juillet_2016_Daniel_Conversano.mp4"
+    "seconds": 4758,
+    "sizeMB": 239,
+    "band": "match",
+    "fileSim": 0.7058823529411765,
+    "url": "https://archive.org/download/marquis-1989_202506/Marquis%20(1989).mp4"
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
+      "item": "Vive_l_Europe_Boris_nous_parle_du_Marquis_de_Sade_Juillet_2016_Daniel_Conversano",
+      "itemTitle": "Vive l'Europe : Boris nous parle du Marquis de Sade (Juillet 2016) [Daniel Conversano]",
+      "stem": "Vive_l_Europe_Boris_nous_parle_du_Marquis_de_Sade_Juillet_2016_Daniel_Conversano",
+      "file": "Vive_l_Europe_Boris_nous_parle_du_Marquis_de_Sade_Juillet_2016_Daniel_Conversano.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 7421,
+      "sizeMB": 337,
+      "band": "near",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/Vive_l_Europe_Boris_nous_parle_du_Marquis_de_Sade_Juillet_2016_Daniel_Conversano/Vive_l_Europe_Boris_nous_parle_du_Marquis_de_Sade_Juillet_2016_Daniel_Conversano.mp4"
+    },
+    {
+      "conf": 0.5,
       "item": "i-marquis-de-sade-1967-low",
       "itemTitle": "I Marquis De Sade 1967 Low",
       "stem": "I_ Marquis de Sade 1967_Low",
@@ -46,20 +60,6 @@
       "band": "near",
       "fileSim": 0.95,
       "url": "https://archive.org/download/i-marquis-de-sade-1967-low/I_%20Marquis%20de%20Sade%201967_Low.mp4"
-    },
-    {
-      "conf": 0.55,
-      "item": "marquis-1989_202506",
-      "itemTitle": "Marquis (1989)",
-      "stem": "Marquis (1989)",
-      "file": "Marquis (1989).mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4758,
-      "sizeMB": 239,
-      "band": "match",
-      "fileSim": 0.7058823529411765,
-      "url": "https://archive.org/download/marquis-1989_202506/Marquis%20(1989).mp4"
     }
   ]
 }

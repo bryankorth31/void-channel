@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T21:39:39.454Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "the-women-of-country-1993",
     "itemTitle": "The Women Of Country - Loretta Lynn, Patsy Montana",
     "stem": "The Women of Country - 1993",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/the-women-of-country-1993/The%20Women%20of%20Country%20-%201993.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

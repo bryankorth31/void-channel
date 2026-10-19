@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T03:49:01.213Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "circle-of-deception-1960",
     "itemTitle": "Circle of Deception (1960)",
     "stem": "y2mate",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "circle-of-deception-1960",
       "itemTitle": "Circle of Deception (1960)",
       "stem": "y2mate.com - Circle of Deception_480p",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/circle-of-deception-1960/y2mate.com%20-%20Circle%20of%20Deception_480p.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2021)"
+  }
 }

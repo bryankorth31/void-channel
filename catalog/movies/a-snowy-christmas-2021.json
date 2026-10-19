@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T15:56:17.711Z",
   "archiveMentions": 13,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "thomas-friends-and-numberjacks-christmas-and-snowy-adventures",
     "itemTitle": "Thomas & Friends And Numberjacks Christmas And Snowy Adventures",
     "stem": "Thomas & Friends and Numberjacks Christmas and Snowy Adventures",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "christmas-snowy-and-holiday-cartoon-dvd-pack",
       "itemTitle": "Adventures of Christmas and Snowy Fun! (DVD)",
       "stem": "Disc 1",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/christmas-snowy-and-holiday-cartoon-dvd-pack/Disc%201.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "christmas-snowy-and-holiday-cartoon-dvd-pack",
       "itemTitle": "Adventures of Christmas and Snowy Fun! (DVD)",
       "stem": "Bonus - Rudolph the Red Nosed Reindeer (1998)",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/christmas-snowy-and-holiday-cartoon-dvd-pack/Bonus%20-%20Rudolph%20the%20Red%20Nosed%20Reindeer%20(1998).mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "christmas-snowy-and-holiday-cartoon-dvd-pack",
       "itemTitle": "Adventures of Christmas and Snowy Fun! (DVD)",
       "stem": "Disc 5",
@@ -76,5 +76,9 @@
       "fileSim": 0.11764705882352941,
       "url": "https://archive.org/download/christmas-snowy-and-holiday-cartoon-dvd-pack/Disc%205.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

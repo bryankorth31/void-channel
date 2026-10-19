@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T01:51:47.480Z",
   "archiveMentions": 31,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "compulsion-1959-edited",
     "itemTitle": "Compulsion (1959)",
     "stem": "Compulsion (1959) EDITED",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "compulsion-1959",
       "itemTitle": "Compulsion (1959)",
       "stem": "Compulsion 1959 1080p BluRay x264 YIFY",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/compulsion-1959/Compulsion%201959%201080p%20BluRay%20x264%20YIFY.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "1959-compulsion-impulso-criminal-richard-fleischer-vose",
       "itemTitle": "1959 - Compulsion - Impulso criminal - Richard Fleischer",
       "stem": "1959 - Compulsion - Impulso criminal - Richard Fleischer - VOSE",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/1959-compulsion-impulso-criminal-richard-fleischer-vose/1959%20-%20Compulsion%20-%20Impulso%20criminal%20-%20Richard%20Fleischer%20-%20VOSE.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "compulsion_202311",
       "itemTitle": "Compulsion",
       "stem": "Compulsion",
@@ -75,5 +75,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/compulsion_202311/Compulsion.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2008)"
+  }
 }

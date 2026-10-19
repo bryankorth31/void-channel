@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T15:36:34.277Z",
   "archiveMentions": 41,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "nothing-but-the-truth-1941_202507",
     "itemTitle": "Nothing but the Truth (1941)",
     "stem": "Nothing but the Truth (1941)",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "nothing-but-the-truth-1941_202211",
       "itemTitle": "Nothing But The Truth (1941)",
       "stem": "Nothing But The Truth (1941)",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/nothing-but-the-truth-1941_202211/Nothing%20But%20The%20Truth%20(1941).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "nothing-but-the-truth-1941",
       "itemTitle": "Nothing But The Truth (1941)",
       "stem": "Nothing But The Truth (1941) ",
@@ -76,5 +76,9 @@
       "fileSim": 0.875,
       "url": "https://archive.org/download/NothingButTheTruth1929/NothingButTheTruth1929.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1995)"
+  }
 }

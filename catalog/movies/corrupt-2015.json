@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T13:28:28.804Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "CSPAN3_20161122_044000_Discussion_Focuses_on_the_Foreign_Corrupt_Practices_Act",
-    "itemTitle": "Discussion Focuses on the Foreign Corrupt Practices Act : CSPAN3 : November 21, 2016 11:40pm-1:14am EST",
-    "stem": "CSPAN3_20161122_044000_Discussion_Focuses_on_the_Foreign_Corrupt_Practices_Act",
-    "file": "CSPAN3_20161122_044000_Discussion_Focuses_on_the_Foreign_Corrupt_Practices_Act.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5641,
-    "sizeMB": 587,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN3_20161122_044000_Discussion_Focuses_on_the_Foreign_Corrupt_Practices_Act/CSPAN3_20161122_044000_Discussion_Focuses_on_the_Foreign_Corrupt_Practices_Act.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-CSPAN3"
+  }
 }

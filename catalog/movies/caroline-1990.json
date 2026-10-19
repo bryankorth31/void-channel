@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T18:06:22.894Z",
   "archiveMentions": 297,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "EdouardEtCarolineZo",
     "itemTitle": "Edouard Et Caroline Zo",
     "stem": "Edouard et Caroline  zo",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/EdouardEtCarolineZo/Edouard%20et%20Caroline%20%20zo.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

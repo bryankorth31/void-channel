@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T15:20:01.830Z",
   "archiveMentions": 42,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-mikado_202504",
     "itemTitle": "The Mikado",
     "stem": "The Mikado",
@@ -47,5 +47,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/the-mikado-1982/The_Mikado-1982.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

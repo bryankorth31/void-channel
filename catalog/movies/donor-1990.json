@@ -16,38 +16,38 @@
   "huntedAt": "2026-10-15T06:30:24.591Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "vid-20230216-131500",
-    "itemTitle": "Hancock: The Blood Donor (1994 Reissue UK VHS)",
-    "stem": "VID_20230216_131500",
-    "file": "VID_20230216_131500.mp4",
+    "conf": 0.84,
+    "item": "Donor",
+    "itemTitle": "Masato Sasaki's Donor",
+    "stem": "Donor",
+    "file": "Donor.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 5185,
-    "sizeMB": 2774,
+    "seconds": 5380,
+    "sizeMB": 1667,
     "band": "match",
-    "fileSim": 0,
-    "url": "https://archive.org/download/vid-20230216-131500/VID_20230216_131500.mp4"
+    "fileSim": 1,
+    "url": "https://archive.org/download/Donor/Donor.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
-      "item": "Donor",
-      "itemTitle": "Masato Sasaki's Donor",
-      "stem": "Donor",
-      "file": "Donor.mp4",
+      "conf": 0.7,
+      "item": "vid-20230216-131500",
+      "itemTitle": "Hancock: The Blood Donor (1994 Reissue UK VHS)",
+      "stem": "VID_20230216_131500",
+      "file": "VID_20230216_131500.mp4",
       "format": "MPEG4",
       "playable": true,
-      "seconds": 5380,
-      "sizeMB": 1667,
+      "seconds": 5185,
+      "sizeMB": 2774,
       "band": "match",
-      "fileSim": 1,
-      "url": "https://archive.org/download/Donor/Donor.mp4"
+      "fileSim": 0,
+      "url": "https://archive.org/download/vid-20230216-131500/VID_20230216_131500.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "hancock-the-blood-donor-1985-uk-vhs",
       "itemTitle": "Hancock The Blood Donor (1985 UK VHS)",
       "stem": "Hancock The Blood Donor (1985 UK VHS)",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/hancock-the-blood-donor-1985-uk-vhs/Hancock%20The%20Blood%20Donor%20(1985%20UK%20VHS).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T01:21:50.698Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "midnight-kiss-1080p",
     "itemTitle": "Midnight Kiss (1993)",
     "stem": "Midnight Kiss 1080p",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.75,
+      "conf": 0.6,
       "item": "kiss-me-at-the-stroke-of-midnight-2019-1080p-blu-ray",
       "itemTitle": "Kiss Me at The Stroke of Midnight (2019)",
       "stem": "Kiss Me At The Stroke Of Midnight (2019) [1080p] [BluRay]",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/kiss-me-at-the-stroke-of-midnight-2019-1080p-blu-ray/Kiss%20Me%20At%20The%20Stroke%20Of%20Midnight%20(2019)%20%5B1080p%5D%20%5BBluRay%5D.mp4"
     },
     {
-      "conf": 0.75,
+      "conf": 0.6,
       "item": "kiss-me-at-th-stroke-of-midnight-2019-1080p-turkce-altyazili.fgen",
       "itemTitle": "Kiss Me At The Stroke Of Midnight 2019 1080p Türkçe Altyazılı.fgen",
       "stem": "Kiss Me At Th  Stroke Of Midnight 2019 1080p Türkçe Altyazılı.fgen",
@@ -61,5 +61,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/kiss-me-at-th-stroke-of-midnight-2019-1080p-turkce-altyazili.fgen/Kiss%20Me%20At%20Th%20%20Stroke%20Of%20Midnight%202019%201080p%20T%C3%BCrk%C3%A7e%20Altyaz%C4%B1l%C4%B1.fgen.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2019)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T01:29:02.973Z",
   "archiveMentions": 39,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-CWb4iKkpxBE",
     "itemTitle": "Lovevibez Love Stream - Black Ice Bash",
     "stem": "CWb4iKkpxBE",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/youtube-CWb4iKkpxBE/CWb4iKkpxBE.webm"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

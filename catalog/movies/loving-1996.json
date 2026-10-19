@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T09:27:23.780Z",
   "archiveMentions": 291,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "CarryOnLoving1970",
     "itemTitle": "Carry On Loving ( 1970)",
     "stem": "Carry On Loving (1970)",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/CarryOnLoving1970/Carry%20On%20Loving%20(1970).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

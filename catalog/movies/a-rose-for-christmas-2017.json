@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T02:03:04.125Z",
   "archiveMentions": 15,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "coatx-Vintage_Christmas_with_Rose_Mary_Rumbley",
-    "itemTitle": "Vintage Christmas with Rose Mary Rumbley",
-    "stem": "Vintage_Christmas_with_Rose_Mary_Rumbley",
-    "file": "Vintage_Christmas_with_Rose_Mary_Rumbley.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5522,
-    "sizeMB": 573,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/coatx-Vintage_Christmas_with_Rose_Mary_Rumbley/Vintage_Christmas_with_Rose_Mary_Rumbley.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

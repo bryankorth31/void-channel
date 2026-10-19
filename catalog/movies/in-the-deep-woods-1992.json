@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T12:25:12.936Z",
   "archiveMentions": 34,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "aufonddesbois",
     "itemTitle": "Deep in the woods (Au Fond Des Bois) 2010",
     "stem": "Au fond des bois (2010)",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "10v2ScaryDeepWoodsCryptidsStoriesFromTheMiddleOfNowhereTRUEStoriesForestVideo",
       "itemTitle": "10v 2 Scary Deep Woods & Cryptids Stories From The Middle Of Nowhere TRUE Stories Forest Video",
       "stem": "10v2 Scary Deep Woods & Cryptids Stories From The Middle Of Nowhere - TRUE Stories - Forest Video",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/10v2ScaryDeepWoodsCryptidsStoriesFromTheMiddleOfNowhereTRUEStoriesForestVideo/10v2%20Scary%20Deep%20Woods%20%26%20Cryptids%20Stories%20From%20The%20Middle%20Of%20Nowhere%20-%20TRUE%20Stories%20-%20Forest%20Video.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "5v220TRUEAbsolutelyTerrifyingDeepWoodsMiddleOfNowhereStoriesToFuelYourNightmares",
       "itemTitle": "5v 2 20 TRUE Absolutely Terrifying Deep Woods & Middle Of Nowhere Stories To Fuel Your Nightmares",
       "stem": "5v2 20 TRUE Absolutely Terrifying Deep Woods & Middle Of Nowhere Stories to Fuel Your Nightmares",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/5v220TRUEAbsolutelyTerrifyingDeepWoodsMiddleOfNowhereStoriesToFuelYourNightmares/5v2%2020%20TRUE%20Absolutely%20Terrifying%20Deep%20Woods%20%26%20Middle%20Of%20Nowhere%20Stories%20to%20Fuel%20Your%20Nightmares.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "8v220TRUETERRIFYINGCampingDeepWoodsStoriesFromTheMiddleOfNowhereScaryStories",
       "itemTitle": "8v 2 20 TRUE TERRIFYING Camping & Deep Woods Stories From The Middle Of Nowhere ( Scary Stories)",
       "stem": "8v2 20 TRUE TERRIFYING Camping & Deep Woods Stories from the Middle Of Nowhere - (Scary Stories)",
@@ -76,5 +76,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/8v220TRUETERRIFYINGCampingDeepWoodsStoriesFromTheMiddleOfNowhereScaryStories/8v2%2020%20TRUE%20TERRIFYING%20Camping%20%26%20Deep%20Woods%20Stories%20from%20the%20Middle%20Of%20Nowhere%20-%20(Scary%20Stories).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T06:38:56.271Z",
   "archiveMentions": 291,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "frogs.-1972.1080p.-blu-ray.-h-264.-aac-rarbg",
     "itemTitle": "Frogs(1972) BD RIP",
     "stem": "Frogs.1972.1080p.BluRay.H264",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "frogs.-1972.1080p.-blu-ray.-h-264.-aac-rarbg",
       "itemTitle": "Frogs(1972) BD RIP",
       "stem": "Frogs.1972.1080p.BluRay.H264.AAC-RARBG",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/frogs.-1972.1080p.-blu-ray.-h-264.-aac-rarbg/Frogs.1972.1080p.BluRay.H264.AAC-RARBG.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "frogs-1972_202502",
       "itemTitle": "Frogs 1972",
       "stem": "Frogs 1972",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/frogs-1972_202502/Frogs%201972.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "Frogs.",
       "itemTitle": "Frogs.",
       "stem": "Frogs.",
@@ -76,5 +76,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/Frogs./Frogs..mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1991)"
+  }
 }

@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T08:23:57.678Z",
   "archiveMentions": 291,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "1948rawdealjustavenganzaelejecutoranthonymann",
     "itemTitle": "1948 - Raw Deal - Justa venganza - El ejecutor - Anthony Mann",
     "stem": "1948 - Raw Deal - Justa venganza - El ejecutor - Anthony Mann - VOSE",
@@ -34,5 +34,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/1948rawdealjustavenganzaelejecutoranthonymann/1948%20-%20Raw%20Deal%20-%20Justa%20venganza%20-%20El%20ejecutor%20-%20Anthony%20Mann%20-%20VOSE.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

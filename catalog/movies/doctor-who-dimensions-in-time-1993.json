@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T14:31:02.721Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "doctor-who-dimensions-in-time-3-d-sbs-cross-eye",
-    "itemTitle": "Doctor Who: Dimensions In Time 3D — Full with Extras (Pulfrich Conversion to Full SBS • 4:3 aspect)",
-    "stem": "Doctor Who - Dimensions in time 3D (SBS & cross eye)",
-    "file": "Doctor Who - Dimensions in time 3D (SBS & cross eye).mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 1419,
-    "sizeMB": 398,
-    "band": "short",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/doctor-who-dimensions-in-time-3-d-sbs-cross-eye/Doctor%20Who%20-%20Dimensions%20in%20time%203D%20(SBS%20%26%20cross%20eye).mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime"
+  }
 }

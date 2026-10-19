@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T13:12:35.980Z",
   "archiveMentions": 11,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "BSidesDC2015-Saturday-ActionableThreatIntelligenceISISSuperBallSuperFishAndYourLessMagical8-ball",
     "itemTitle": "BSides DC 2015 - Saturday - Actionable Threat Intelligence: ISIS, SuperBall, SuperFish, and your less magical 8-ball",
     "stem": "1130-ISIS",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "superfish-pbs-nature",
       "itemTitle": "Superfish",
       "stem": "Superfish",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/superfish-pbs-nature/Superfish.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "chadhamilton",
       "itemTitle": "Chad Hamilton / Superfish Victim",
       "stem": "20220105 - In depth Look at Illegal Mojo public spying [k4hq0zeJTQw]",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/chadhamilton/20220105%20-%20In%20depth%20Look%20at%20Illegal%20Mojo%20public%20spying%20%5Bk4hq0zeJTQw%5D.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "chadhamilton",
       "itemTitle": "Chad Hamilton / Superfish Victim",
       "stem": "20200916 - Chromebook hacked right before your eyes [XJiiBvZmgBA]",
@@ -74,5 +74,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/chadhamilton/20200916%20-%20Chromebook%20hacked%20right%20before%20your%20eyes%20%5BXJiiBvZmgBA%5D.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2008)"
+  }
 }

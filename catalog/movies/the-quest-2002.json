@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T16:41:21.243Z",
   "archiveMentions": 281,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "091922-2316",
     "itemTitle": "Jonny Quest: Hadji In Mysteries of the East (Animated)",
     "stem": "091922-2316",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "1998-quest-for-camelot-1998-warner-vhs-480p-h-264",
       "itemTitle": "1998 Quest For Camelot (1998 Warner VHS)",
       "stem": "1998 Quest For Camelot (1998 Warner VHS) 480p H264",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/1998-quest-for-camelot-1998-warner-vhs-480p-h-264/1998%20Quest%20For%20Camelot%20(1998%20Warner%20VHS)%20480p%20H264.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

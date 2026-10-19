@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T01:35:25.987Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "twitch-vod-v1685032777",
     "itemTitle": "Charming Jo 3rd single 'I hate Christmas' waiting stream 차밍조 오리지날 캐롤곡 대기방",
     "stem": "v1685032777",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/twitch-vod-v1685032777/v1685032777.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

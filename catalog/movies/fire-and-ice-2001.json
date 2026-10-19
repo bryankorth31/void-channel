@@ -15,9 +15,9 @@
   "huntedAt": "2026-10-15T09:50:51.997Z",
   "archiveMentions": 281,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "a137ee3e2a37701695abd791d95bfeaf-1080p",
     "itemTitle": "Fire and Ice 1983",
     "stem": "a137ee3e2a37701695abd791d95bfeaf-1080p",
@@ -32,7 +32,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "fire-and-ice-1983-1080p-5.1-blu-ray",
       "itemTitle": "Fire And Ice ( 1983)",
       "stem": "Fire and Ice (1983) 1080p 5.1 Blu-ray",
@@ -45,5 +45,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/fire-and-ice-1983-1080p-5.1-blu-ray/Fire%20and%20Ice%20(1983)%201080p%205.1%20Blu-ray.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2001)"
+  }
 }

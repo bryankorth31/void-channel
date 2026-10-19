@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T04:31:24.272Z",
   "archiveMentions": 292,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "hoffnung-gala-festival-in-prague-1992",
     "itemTitle": "Hoffnung Gala Festival in Prague (1992) with Japanese Subtitles",
     "stem": "Hoffnung Gala Festival in Prague (1992)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/hoffnung-gala-festival-in-prague-1992/Hoffnung%20Gala%20Festival%20in%20Prague%20(1992).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

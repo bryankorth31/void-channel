@@ -19,63 +19,24 @@
   "huntedAt": "2026-10-14T04:45:31.876Z",
   "archiveMentions": 55,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "patvny-Great_Neck_Plaza_Summer_Concert_Series_-_Just_Sixties",
-    "itemTitle": "Great Neck Plaza Summer Concert Series: Just Sixties",
-    "stem": "Great_Neck_Plaza_Summer_Concert_Series_-_Just_Sixties",
-    "file": "Great_Neck_Plaza_Summer_Concert_Series_-_Just_Sixties.mpeg4",
-    "format": "MPEG4",
+    "conf": 0.5,
+    "item": "youtube-dDk9PJzgoOI",
+    "itemTitle": "The Fraternity Question: \"White Boy Summer\" or Just White Kids Being Used? | VFTR | May 6 2024",
+    "stem": "dDk9PJzgoOI",
+    "file": "dDk9PJzgoOI.webm",
+    "format": "WebM",
     "playable": true,
-    "seconds": 4718,
-    "sizeMB": 366,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/patvny-Great_Neck_Plaza_Summer_Concert_Series_-_Just_Sixties/Great_Neck_Plaza_Summer_Concert_Series_-_Just_Sixties.mpeg4"
+    "seconds": 4112,
+    "sizeMB": 93,
+    "band": "near",
+    "fileSim": 0,
+    "url": "https://archive.org/download/youtube-dDk9PJzgoOI/dDk9PJzgoOI.webm"
   },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "tbcama-Summer_Concert_Series_-_Just_2_Guys_7-18-19",
-      "itemTitle": "Summer Concert Series - Just 2 Guys 7-18-19",
-      "stem": "Summer_Concert_Series_-_Just_2_Guys_7-18-19",
-      "file": "Summer_Concert_Series_-_Just_2_Guys_7-18-19.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 3975,
-      "sizeMB": 365,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/tbcama-Summer_Concert_Series_-_Just_2_Guys_7-18-19/Summer_Concert_Series_-_Just_2_Guys_7-18-19.mpeg4"
-    },
-    {
-      "conf": 0.65,
-      "item": "tbcama-Summer_Concert_Series_-_Just_2_Guys_8-29-19",
-      "itemTitle": "Summer Concert Series - Just 2 Guys 8-29-19",
-      "stem": "Summer_Concert_Series_-_Just_2_Guys_8-29-19",
-      "file": "Summer_Concert_Series_-_Just_2_Guys_8-29-19.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4214,
-      "sizeMB": 355,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/tbcama-Summer_Concert_Series_-_Just_2_Guys_8-29-19/Summer_Concert_Series_-_Just_2_Guys_8-29-19.mpeg4"
-    },
-    {
-      "conf": 0.65,
-      "item": "youtube-dDk9PJzgoOI",
-      "itemTitle": "The Fraternity Question: \"White Boy Summer\" or Just White Kids Being Used? | VFTR | May 6 2024",
-      "stem": "dDk9PJzgoOI",
-      "file": "dDk9PJzgoOI.webm",
-      "format": "WebM",
-      "playable": true,
-      "seconds": 4112,
-      "sizeMB": 93,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/youtube-dDk9PJzgoOI/dDk9PJzgoOI.webm"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); runtime not within 15% of the TMDB runtime"
+  }
 }

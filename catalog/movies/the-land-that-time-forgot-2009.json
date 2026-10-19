@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T02:01:27.031Z",
   "archiveMentions": 14,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "caprona-duology-1974-77",
     "itemTitle": "The Land That Time Forgot (1974) & The People That Time Forgot (1977) Caprona Duology",
     "stem": "Caprona Duology (1974 - 77)/01 The Land That Time Forgot (1974)",
@@ -36,7 +36,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "caprona-duology-1974-77",
       "itemTitle": "The Land That Time Forgot (1974) & The People That Time Forgot (1977) Caprona Duology",
       "stem": "Caprona Duology (1974 - 77)/02 The People That Time Forgot (1977)",
@@ -50,7 +50,7 @@
       "url": "https://archive.org/download/caprona-duology-1974-77/Caprona%20Duology%20(1974%20-%2077)%2F02%20The%20People%20That%20Time%20Forgot%20(1977).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-land-that-time-forgot-1975",
       "itemTitle": "The Land That Time Forgot (1975)",
       "stem": "The Land That Time Forgot (1975)",
@@ -64,7 +64,7 @@
       "url": "https://archive.org/download/the-land-that-time-forgot-1975/The%20Land%20That%20Time%20Forgot%20(1975).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-land-that-time-forgot-duology-1974-1977",
       "itemTitle": "The Land That Time Forgot - Duology 1974 - 1977",
       "stem": "The Land That Time Forgot - 01 1975",
@@ -77,5 +77,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/the-land-that-time-forgot-duology-1974-1977/The%20Land%20That%20Time%20Forgot%20-%2001%201975.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2009)"
+  }
 }

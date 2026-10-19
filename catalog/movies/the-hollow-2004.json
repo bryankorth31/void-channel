@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T05:26:09.458Z",
   "archiveMentions": 296,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "TheBeastOfHollowMoauntain",
     "itemTitle": "The Beast Of Hollow Mountain",
     "stem": "TheBeastOfHollowMoauntain",
@@ -46,5 +46,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/The_Hollow_1975/videoplayback.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

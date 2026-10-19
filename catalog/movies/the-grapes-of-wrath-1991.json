@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T14:49:16.806Z",
   "archiveMentions": 46,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-grapes-of-wrath-1940",
     "itemTitle": "The Grapes Of Wrath ( 1940)",
     "stem": "The Grapes Of Wrath (1940)",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-grapes-of-wrath-1940-1080p",
       "itemTitle": "The Grapes of Wrath (1940)",
       "stem": "The Grapes of Wrath (1940) [1080p]",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/the-grapes-of-wrath-1940-1080p/The%20Grapes%20of%20Wrath%20(1940)%20%5B1080p%5D.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the_grapes_of_wrath_1940",
       "itemTitle": "the_grapes_of_wrath_1940",
       "stem": "the_grapes_of_wrath_1940",
@@ -60,5 +60,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/the_grapes_of_wrath_1940/the_grapes_of_wrath_1940.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1991)"
+  }
 }

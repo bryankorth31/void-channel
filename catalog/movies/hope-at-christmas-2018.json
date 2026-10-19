@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T03:30:24.854Z",
   "archiveMentions": 107,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.75,
-    "item": "mtvmi-Faith_Covenant_Church_-_Hope_Of_Christmas_2018-12-14",
-    "itemTitle": "Faith Covenant Church - Hope Of Christmas 2018-12-14",
-    "stem": "Faith_Covenant_Church_-_Hope_Of_Christmas_2018-12-14",
-    "file": "Faith_Covenant_Church_-_Hope_Of_Christmas_2018-12-14.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 7373,
-    "sizeMB": 567,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/mtvmi-Faith_Covenant_Church_-_Hope_Of_Christmas_2018-12-14/Faith_Covenant_Church_-_Hope_Of_Christmas_2018-12-14.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

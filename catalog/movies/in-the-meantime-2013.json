@@ -19,7 +19,7 @@
   "itemsOpened": 6,
   "state": "REVIEW",
   "file": {
-    "conf": 0.7,
+    "conf": 0.55,
     "item": "meantime-film-1983",
     "itemTitle": "Meantime (film) [1983]",
     "stem": "Meantime (film) [1983]/Meantime (film) [1983]",
@@ -32,21 +32,5 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/meantime-film-1983/Meantime%20(film)%20%5B1983%5D%2FMeantime%20(film)%20%5B1983%5D.mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.6,
-      "item": "meantime-1983",
-      "itemTitle": "Meantime (1983)",
-      "stem": "Meantime 1983 Criterion 1080p BluRay HEVC x265 BONE",
-      "file": "Meantime 1983 Criterion 1080p BluRay HEVC x265 BONE.mp4",
-      "format": "h.264",
-      "playable": false,
-      "codecRisk": "video (HEVC)",
-      "seconds": 6443,
-      "sizeMB": 613,
-      "band": "feature",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/meantime-1983/Meantime%201983%20Criterion%201080p%20BluRay%20HEVC%20x265%20BONE.mp4"
-    }
-  ]
+  "alternates": []
 }

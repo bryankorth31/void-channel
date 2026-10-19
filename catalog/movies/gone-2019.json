@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T15:52:33.409Z",
   "archiveMentions": 283,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "10-minutes-gone-2019_202601",
     "itemTitle": "10 Minutes Gone ( 2019)",
     "stem": "10 Minutes Gone (2019)",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "2014_20200906",
       "itemTitle": "⎡ 我虽死去 ⎦  ⎡ Though I am gone ⎦",
       "stem": "我虽死去 2014 英文 大文件",
@@ -47,5 +47,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/2014_20200906/%E6%88%91%E8%99%BD%E6%AD%BB%E5%8E%BB%202014%20%E8%8B%B1%E6%96%87%20%E5%A4%A7%E6%96%87%E4%BB%B6.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

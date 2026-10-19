@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T00:10:00.019Z",
   "archiveMentions": 205,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "rooster-teeth-21st-anniversary-stream-01-04-24",
     "itemTitle": "The Rooster Teeth Final First Annual 21st Birthday Party: A Party to Die For - LIVE",
     "stem": "Rooster Teeth 21st Anniversary Stream 01-04-24",
@@ -32,5 +32,9 @@
     "fileSim": 0.09302325581395349,
     "url": "https://archive.org/download/rooster-teeth-21st-anniversary-stream-01-04-24/Rooster%20Teeth%2021st%20Anniversary%20Stream%2001-04-24.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

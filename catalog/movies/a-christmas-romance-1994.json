@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T09:57:04.367Z",
   "archiveMentions": 27,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "christmas.w.a.-prince-becoming-royal-2018-christmas-romance-uptv",
     "itemTitle": "Christmas.w.a. Prince Becoming Royal (2018 Christmas Romance UPTV)",
     "stem": "- Christmas.w.a.Prince-Becoming Royal (2018 Christmas Romance UPTV)",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "northern-lights-2009-christmas-drama-romance",
       "itemTitle": "Northern Lights (2009 Christmas, Drama, Romance)",
       "stem": "Northern Lights (2009 Christmas, Drama, Romance)",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/northern-lights-2009-christmas-drama-romance/Northern%20Lights%20(2009%20Christmas%2C%20Drama%2C%20Romance).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "a-dolls-house-1973-christmas-drama-romance",
       "itemTitle": "A Doll's House (1973 Christmas, Drama, Romance)",
       "stem": "A Doll's House (1973 Christmas, Drama, Romance)",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/a-dolls-house-1973-christmas-drama-romance/A%20Doll's%20House%20(1973%20Christmas%2C%20Drama%2C%20Romance).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "christmas-in-paris-2019-romanice-comedy-uptv",
       "itemTitle": "`Christmas-In-Paris`(2019 Comedy Romance UPTV)",
       "stem": "`Christmas in Paris`(2019 Romanice Comedy UPTV)",
@@ -76,5 +76,9 @@
       "fileSim": 0.5909090909090909,
       "url": "https://archive.org/download/christmas-in-paris-2019-romanice-comedy-uptv/%60Christmas%20in%20Paris%60(2019%20Romanice%20Comedy%20UPTV).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

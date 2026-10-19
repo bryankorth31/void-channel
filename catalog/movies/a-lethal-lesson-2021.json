@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T15:55:30.245Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "perry-mason-and-the-case-of-the-lethal-lesson",
     "itemTitle": "Perry Mason And The Case Of The Lethal Lesson",
     "stem": "Perry Mason And The Case Of The Lethal Lesson",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/perry-mason-and-the-case-of-the-lethal-lesson/Perry%20Mason%20And%20The%20Case%20Of%20The%20Lethal%20Lesson.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

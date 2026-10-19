@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T12:37:58.676Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "they-hunted-her-now-shes-hunting-them-action-thriller-full-movie-in-english",
     "itemTitle": "Deadly Sibling Rivalry They Hunted Her Now She's Hunting Them Action Times",
     "stem": "They Hunted Her, Now She’s Hunting Them _ Action Thriller _ Full Movie in English",
@@ -32,5 +32,9 @@
     "fileSim": 0.11764705882352941,
     "url": "https://archive.org/download/they-hunted-her-now-shes-hunting-them-action-thriller-full-movie-in-english/They%20Hunted%20Her%2C%20Now%20She%E2%80%99s%20Hunting%20Them%20_%20Action%20Thriller%20_%20Full%20Movie%20in%20English.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

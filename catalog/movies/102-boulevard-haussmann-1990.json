@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T11:29:06.602Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "s-07-e-05-102-boulevard-haussmann",
     "itemTitle": "S07E05 102 Boulevard Haussmann",
     "stem": "S07E05 102 Boulevard Haussmann",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/s-07-e-05-102-boulevard-haussmann/S07E05%20102%20Boulevard%20Haussmann.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T13:00:05.438Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "Deck_the_Walls_TEAM_First_Friday",
-    "itemTitle": "Deck the Walls -- TEAM First Friday",
-    "stem": "Deck_the_Walls_TEAM_First_Friday",
-    "file": "Deck_the_Walls_TEAM_First_Friday.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 4885,
-    "sizeMB": 223,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Deck_the_Walls_TEAM_First_Friday/Deck_the_Walls_TEAM_First_Friday.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-13T19:12:19.655Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "flowers-in-the-attic-1987",
     "itemTitle": "Flowers In The Attic( 1987)",
     "stem": "Flowers in the Attic(1987)",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "flowers-in-the-attic-1987_202510",
       "itemTitle": "Flowers In The Attic (1987)",
       "stem": "Flowers in the Attic - 1987/Flowers in the Attic - 1987",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/flowers-in-the-attic-1987_202510/Flowers%20in%20the%20Attic%20-%201987%2FFlowers%20in%20the%20Attic%20-%201987.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "flowers-in-the-attic-1987",
       "itemTitle": "Flowers In The Attic( 1987)",
       "stem": "Out of Control (1985)",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/flowers-in-the-attic-1987/Out%20of%20Control%20(1985).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "flowers-in-the-attic-1987",
       "itemTitle": "Flowers In The Attic( 1987)",
       "stem": "Cats Eye(1985)",
@@ -76,5 +76,9 @@
       "fileSim": 0.09090909090909091,
       "url": "https://archive.org/download/flowers-in-the-attic-1987/Cats%20Eye(1985).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2014)"
+  }
 }

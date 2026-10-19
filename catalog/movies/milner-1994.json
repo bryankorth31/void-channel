@@ -16,38 +16,24 @@
   "huntedAt": "2026-10-15T11:15:56.373Z",
   "archiveMentions": 32,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "scm-227084-glenmilnerthedangersofnuclear",
-    "itemTitle": "Glen Milner: The Dangers of Nuclear Weapons in our Neighborhood Web",
-    "stem": "milnerweb",
-    "file": "milnerweb.mp4",
-    "format": "h.264",
+    "conf": 0.5,
+    "item": "2016.07.26Plenary3Stiglitz",
+    "itemTitle": "24th IPSA World Congress Of Political Science In Poznań, Poland - Plenary: Inequality in the 21st Century: A problem for Politics – Joseph E Stiglitz (VIDEO PRESENTATION): Responses by Phil Cerny, John Gaventa, Helen Milner, Lourdes Sola ",
+    "stem": "2016.07.26_Plenary 3_Stiglitz",
+    "file": "2016.07.26_Plenary 3_Stiglitz.mp4",
+    "format": "MPEG4",
     "playable": true,
-    "seconds": 3688,
-    "sizeMB": 384,
-    "band": "match",
-    "fileSim": 0.7692307692307693,
-    "url": "https://archive.org/download/scm-227084-glenmilnerthedangersofnuclear/milnerweb.mp4"
+    "seconds": 5087,
+    "sizeMB": 1168,
+    "band": "near",
+    "fileSim": 0,
+    "url": "https://archive.org/download/2016.07.26Plenary3Stiglitz/2016.07.26_Plenary%203_Stiglitz.mp4"
   },
   "alternates": [
     {
-      "conf": 0.65,
-      "item": "2016.07.26Plenary3Stiglitz",
-      "itemTitle": "24th IPSA World Congress Of Political Science In Poznań, Poland - Plenary: Inequality in the 21st Century: A problem for Politics – Joseph E Stiglitz (VIDEO PRESENTATION): Responses by Phil Cerny, John Gaventa, Helen Milner, Lourdes Sola ",
-      "stem": "2016.07.26_Plenary 3_Stiglitz",
-      "file": "2016.07.26_Plenary 3_Stiglitz.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5087,
-      "sizeMB": 1168,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/2016.07.26Plenary3Stiglitz/2016.07.26_Plenary%203_Stiglitz.mp4"
-    },
-    {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "sweet-smell-of-success-1958",
       "itemTitle": "Sweet Smell of Success (1957) Directed by Alexander Mackendrick, Starring Burt Lancaster, Tony Curtis, Susan Harrison, Martin Milner",
       "stem": "Sweet Smell Of Success 1958 HD - Tony Curtis, Burt Lancaster, Susan Harriso_x264",
@@ -59,20 +45,10 @@
       "band": "near",
       "fileSim": 0.038461538461538464,
       "url": "https://archive.org/download/sweet-smell-of-success-1958/Sweet%20Smell%20Of%20Success%201958%20HD%20-%20Tony%20Curtis%2C%20Burt%20Lancaster%2C%20Susan%20Harriso_x264.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "scm-227083-glenmilnerthedangersofnuclear",
-      "itemTitle": "Glen Milner: The Dangers of Nuclear Weapons in our Neighborhood",
-      "stem": "milner",
-      "file": "milner.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3469,
-      "sizeMB": 361,
-      "band": "near",
-      "fileSim": 1,
-      "url": "https://archive.org/download/scm-227083-glenmilnerthedangersofnuclear/milner.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title; runtime not within 15% of the TMDB runtime"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T11:20:10.285Z",
   "archiveMentions": 15,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "terror-eyes-night-school-1981-vhs",
     "itemTitle": "Terror Eyes 1981 VHS",
     "stem": "Terror Eyes Night School 1981 VHS",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "terror-eyes",
       "itemTitle": "Terror Eyes (1989)",
       "stem": "Terror Eyes",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/terror-eyes/Terror%20Eyes.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T09:53:39.410Z",
   "archiveMentions": 283,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "blackout-7-c-english-full-movie-7-c-crime-drama-horror",
     "itemTitle": "BLACKOUT",
     "stem": "Blackout %7C English Full Movie %7C Crime Drama Horror",
@@ -47,5 +47,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/blackout_202211/Blackout.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

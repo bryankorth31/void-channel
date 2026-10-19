@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T03:44:40.828Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-BDZv57p1Ixk",
     "itemTitle": "The CIA's Deadly Deceits and the Vietnam War w/ Ex-CIA Officer Ralph McGehee",
     "stem": "BDZv57p1Ixk",
@@ -31,5 +31,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/youtube-BDZv57p1Ixk/BDZv57p1Ixk.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

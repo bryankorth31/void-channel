@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T12:36:13.634Z",
   "archiveMentions": 101,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "ToHellAndBackByDoctorRawlingsNdeNearDeathExperienceDocumentary",
     "itemTitle": "To Hell and Back by Doctor Rawlings, NDE Near Death Experience Documentary",
     "stem": "To_Hell_And_Back_Dr_Rawlings_Med_512kb",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "ToHellAndBackByDoctorRawlingsNdeNearDeathExperienceDocumentary",
       "itemTitle": "To Hell and Back by Doctor Rawlings, NDE Near Death Experience Documentary",
       "stem": "To_Hell_And_Back_Dr_Rawlings_Med",
@@ -48,5 +48,9 @@
       "fileSim": 0.09302325581395349,
       "url": "https://archive.org/download/ToHellAndBackByDoctorRawlingsNdeNearDeathExperienceDocumentary/To_Hell_And_Back_Dr_Rawlings_Med.ogv"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

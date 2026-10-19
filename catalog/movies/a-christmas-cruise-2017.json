@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T11:55:50.402Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "1130_20251201",
     "itemTitle": "The Love Boat: The Christmas Cruise (December 25, 1986) [November 30, 2025 MeTV airing]",
     "stem": "1130",
@@ -33,5 +33,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/1130_20251201/1130.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2017)"
+  }
 }

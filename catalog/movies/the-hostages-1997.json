@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-15T16:04:21.860Z",
   "archiveMentions": 298,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.7,
-    "item": "CSPAN3_20220717_050000_After_Words_Betsy_DeVos_Hostages_No_More_-_The_Fight_for_Education...",
-    "itemTitle": "After Words Betsy DeVos, \"Hostages No More - The Fight for Education Freedom and the Future of the American Chil : CSPAN3 : July 17, 2022 1:00am-2:01am EDT",
-    "stem": "CSPAN3_20220717_050000_After_Words_Betsy_DeVos_Hostages_No_More_-_The_Fight_for_Education...",
-    "file": "CSPAN3_20220717_050000_After_Words_Betsy_DeVos_Hostages_No_More_-_The_Fight_for_Education....mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3661,
-    "sizeMB": 678,
-    "band": "feature",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/CSPAN3_20220717_050000_After_Words_Betsy_DeVos_Hostages_No_More_-_The_Fight_for_Education.../CSPAN3_20220717_050000_After_Words_Betsy_DeVos_Hostages_No_More_-_The_Fight_for_Education....mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "BritishHostagesInIraq",
-      "itemTitle": "British hostages in Iraq",
-      "stem": "BritishHostagesInIraq",
-      "file": "BritishHostagesInIraq.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 1969,
-      "sizeMB": 205,
-      "band": "short",
-      "fileSim": 0.4666666666666667,
-      "url": "https://archive.org/download/BritishHostagesInIraq/BritishHostagesInIraq.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-CSPAN3, newsandpublicaffairs"
+  }
 }

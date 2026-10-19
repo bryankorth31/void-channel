@@ -16,63 +16,11 @@
   "huntedAt": "2026-10-15T08:45:02.061Z",
   "archiveMentions": 33,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "Laker_Girls_VS_Sacopee_Valley_12-15-2017",
-    "itemTitle": "Laker Girls VS Sacopee Valley 12-15-2017",
-    "stem": "Laker_Girls_VS_Sacopee_Valley_12-15-2017",
-    "file": "Laker_Girls_VS_Sacopee_Valley_12-15-2017.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 4873,
-    "sizeMB": 2631,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Laker_Girls_VS_Sacopee_Valley_12-15-2017/Laker_Girls_VS_Sacopee_Valley_12-15-2017.mpeg4"
-  },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "Laker_Girls_VS_Wells_12-16-2017",
-      "itemTitle": "Laker Girls VS Wells 12-16-2017",
-      "stem": "Laker_Girls_VS_Wells_12-16-2017",
-      "file": "Laker_Girls_VS_Wells_12-16-2017.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5024,
-      "sizeMB": 1118,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Laker_Girls_VS_Wells_12-16-2017/Laker_Girls_VS_Wells_12-16-2017.mpeg4"
-    },
-    {
-      "conf": 0.85,
-      "item": "Laker_Girls_vs_Fryeburg_2-4-17",
-      "itemTitle": "Laker Girls vs Fryeburg 2-4-17",
-      "stem": "Laker_Girls_vs_Fryeburg_2-4-17",
-      "file": "Laker_Girls_vs_Fryeburg_2-4-17.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6191,
-      "sizeMB": 1077,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Laker_Girls_vs_Fryeburg_2-4-17/Laker_Girls_vs_Fryeburg_2-4-17.mpeg4"
-    },
-    {
-      "conf": 0.85,
-      "item": "Laker_Girls_Vs_Wells_BB_12-9-16",
-      "itemTitle": "Laker Girls Vs Wells BB 12-9-16",
-      "stem": "Laker_Girls_Vs_Wells_BB_12-9-16",
-      "file": "Laker_Girls_Vs_Wells_BB_12-9-16.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5228,
-      "sizeMB": 916,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/Laker_Girls_Vs_Wells_BB_12-9-16/Laker_Girls_Vs_Wells_BB_12-9-16.mpeg4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

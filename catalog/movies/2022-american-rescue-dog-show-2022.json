@@ -15,9 +15,9 @@
   "huntedAt": "2026-10-15T05:58:58.069Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "0830_20250828",
     "itemTitle": "\"The American Rescue Dog Show\" | #AVerySpecialPresentations",
     "stem": "0830",
@@ -30,5 +30,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/0830_20250828/0830.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

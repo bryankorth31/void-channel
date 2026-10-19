@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T01:58:11.484Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "AnatomyOfAGreatDeception911",
     "itemTitle": "Anatomy Of A Great Deception9 11 ",
     "stem": "9_11 - Anatomy of a Great Deception ",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "youtube-27a2gZ09eEg",
       "itemTitle": "911 - Anatomy of a Great Deception (Full version)",
       "stem": "911_-_Anatomy_of_a_Great_Deception_Full_version-27a2gZ09eEg",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/youtube-27a2gZ09eEg/911_-_Anatomy_of_a_Great_Deception_Full_version-27a2gZ09eEg.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "youtube-DVUXFNPhGHs",
       "itemTitle": "ANATOMY OF A GREAT DECEPTION 9/11",
       "stem": "DVUXFNPhGHs",
@@ -61,5 +61,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/youtube-DVUXFNPhGHs/DVUXFNPhGHs.webm"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

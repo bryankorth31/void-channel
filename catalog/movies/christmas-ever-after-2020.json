@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T13:32:26.358Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "ever-after-high-1-hour-christmas-compilationn-christmas-speciala-cartoons-for-kid",
     "itemTitle": "Ever After High💖❄️1 HOUR CHRISTMAS COMPILATION💖❄️Christmas Special💖Cartoons for Kids",
     "stem": "Ever After High💖❄️1 HOUR CHRISTMAS COMPILATION💖❄️Christmas Special💖Cartoons for Kid",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "ever-after-high-christmas-special-1-hour-compilation-n-cartoons-for-kids",
       "itemTitle": "Ever After High 💖❄️ CHRISTMAS SPECIAL 💖❄️ 1 Hour Compilation 💖 Cartoons for Kids",
       "stem": "Ever After High 💖❄️ CHRISTMAS SPECIAL 💖❄️ 1 Hour Compilation 💖 Cartoons for Kids",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/ever-after-high-christmas-special-1-hour-compilation-n-cartoons-for-kids/Ever%20After%20High%20%F0%9F%92%96%E2%9D%84%EF%B8%8F%20CHRISTMAS%20SPECIAL%20%F0%9F%92%96%E2%9D%84%EF%B8%8F%201%20Hour%20Compilation%20%F0%9F%92%96%20Cartoons%20for%20Kids.webm"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

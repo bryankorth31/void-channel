@@ -17,63 +17,11 @@
   "huntedAt": "2026-10-14T10:40:36.936Z",
   "archiveMentions": 34,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "1179VagabondKing",
-    "itemTitle": "Valley Light Opera \" Vagabond King\"",
-    "stem": "1179-VagabondKing",
-    "file": "1179-VagabondKing.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 8031,
-    "sizeMB": 3201,
-    "band": "near",
-    "fileSim": 0.06666666666666667,
-    "url": "https://archive.org/download/1179VagabondKing/1179-VagabondKing.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "1211Iolanthe",
-      "itemTitle": "Valley Light Opera \"Iolanthe\"",
-      "stem": "1211-Iolanthe",
-      "file": "1211-Iolanthe.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 7720,
-      "sizeMB": 3076,
-      "band": "near",
-      "fileSim": 0.15384615384615385,
-      "url": "https://archive.org/download/1211Iolanthe/1211-Iolanthe.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "1124VLOPinaFore",
-      "itemTitle": "Valley Light Opera",
-      "stem": "1124-VLOPinaFore",
-      "file": "1124-VLOPinaFore.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6725,
-      "sizeMB": 2680,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/1124VLOPinaFore/1124-VLOPinaFore.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "1123MikadoAct1",
-      "itemTitle": "Valley Light Opera",
-      "stem": "1123-MikadoAct1",
-      "file": "1123-MikadoAct1.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4597,
-      "sizeMB": 1838,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/1123MikadoAct1/1123-MikadoAct1.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

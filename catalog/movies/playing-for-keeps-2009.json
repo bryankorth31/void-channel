@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T17:34:26.906Z",
   "archiveMentions": 17,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "playing-for-keeps-aka-what-color-is-love-1995",
     "itemTitle": "Playing For Keeps-AKA-What Color Is Love (++++) 1995",
     "stem": "Playing For Keeps AKA--WhatColorIsLove (++++) 1995",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/playing-for-keeps-aka-what-color-is-love-1995/Playing%20For%20Keeps%20AKA--WhatColorIsLove%20(%2B%2B%2B%2B)%201995.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2009)"
+  }
 }

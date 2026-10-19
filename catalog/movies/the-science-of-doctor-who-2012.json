@@ -19,34 +19,20 @@
   "itemsOpened": 6,
   "state": "REVIEW",
   "file": {
-    "conf": 0.65,
-    "item": "doctorwho2005s07es100specialthescienceofdoctorwho",
-    "itemTitle": "Doctor Who The Science Of Doctor Who",
-    "stem": "Doctor Who 2005 S07Es100 Special The Science Of Doctor Who",
-    "file": "Doctor Who 2005 S07Es100 Special The Science Of Doctor Who.mp4",
+    "conf": 0.55,
+    "item": "1-smith-and-jones",
+    "itemTitle": "Doctor Who(2005) Season 3",
+    "stem": "(7) 42",
+    "file": "(7) 42.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 3559,
-    "sizeMB": 315,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/doctorwho2005s07es100specialthescienceofdoctorwho/Doctor%20Who%202005%20S07Es100%20Special%20The%20Science%20Of%20Doctor%20Who.mp4"
+    "seconds": 2868,
+    "sizeMB": 171,
+    "band": "match",
+    "fileSim": 0,
+    "url": "https://archive.org/download/1-smith-and-jones/(7)%2042.mp4"
   },
   "alternates": [
-    {
-      "conf": 0.55,
-      "item": "1-smith-and-jones",
-      "itemTitle": "Doctor Who(2005) Season 3",
-      "stem": "(7) 42",
-      "file": "(7) 42.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 2868,
-      "sizeMB": 171,
-      "band": "match",
-      "fileSim": 0,
-      "url": "https://archive.org/download/1-smith-and-jones/(7)%2042.mp4"
-    },
     {
       "conf": 0.55,
       "item": "1-smith-and-jones",
@@ -74,6 +60,20 @@
       "band": "match",
       "fileSim": 0.05405405405405406,
       "url": "https://archive.org/download/1-smith-and-jones/(4)%20Daleks%20in%20Manhatten.mp4"
+    },
+    {
+      "conf": 0.5,
+      "item": "doctorwho2005s07es100specialthescienceofdoctorwho",
+      "itemTitle": "Doctor Who The Science Of Doctor Who",
+      "stem": "Doctor Who 2005 S07Es100 Special The Science Of Doctor Who",
+      "file": "Doctor Who 2005 S07Es100 Special The Science Of Doctor Who.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 3559,
+      "sizeMB": 315,
+      "band": "near",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/doctorwho2005s07es100specialthescienceofdoctorwho/Doctor%20Who%202005%20S07Es100%20Special%20The%20Science%20Of%20Doctor%20Who.mp4"
     }
   ]
 }

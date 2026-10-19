@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T04:55:18.821Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "PMNJoySoundChristmasShort",
-    "itemTitle": "Special Feature - The Joyous Sounds of Christmas",
-    "stem": "JoySoundChristmasShort",
-    "file": "JoySoundChristmasShort.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5370,
-    "sizeMB": 560,
-    "band": "match",
-    "fileSim": 0.6111111111111112,
-    "url": "https://archive.org/download/PMNJoySoundChristmasShort/JoySoundChristmasShort.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

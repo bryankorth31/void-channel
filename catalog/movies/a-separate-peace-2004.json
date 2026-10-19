@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T22:33:58.530Z",
   "archiveMentions": 3,
   "itemsOpened": 3,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "a-separate-peace-1972-film",
     "itemTitle": "A Separate Peace (1972)",
     "stem": "A Separate Peace (1972)",
@@ -31,5 +31,9 @@
     "fileSim": 1,
     "url": "https://archive.org/download/a-separate-peace-1972-film/A%20Separate%20Peace%20(1972).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2004)"
+  }
 }

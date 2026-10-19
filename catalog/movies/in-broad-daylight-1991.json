@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T23:29:20.984Z",
   "archiveMentions": 72,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "in-broad-daylight-brian-dennehy-1991-idrz-w-6zn-j-c-320x-240_202605",
     "itemTitle": "In Broad Daylight Brian Dennehy 1991[ IDrz W 6zn J C][ 320x 240]",
     "stem": "In Broad Daylight Brian Dennehy 1991[IDrzW6znJ_c][320x240]",
@@ -33,20 +33,6 @@
     "url": "https://archive.org/download/in-broad-daylight-brian-dennehy-1991-idrz-w-6zn-j-c-320x-240_202605/In%20Broad%20Daylight%20Brian%20Dennehy%201991%5BIDrzW6znJ_c%5D%5B320x240%5D.mp4"
   },
   "alternates": [
-    {
-      "conf": 0.65,
-      "item": "taken-in-broad-daylight-2009",
-      "itemTitle": "Taken In Broad Daylight 2009",
-      "stem": "Taken-in-Broad-Daylight-2009-",
-      "file": "Taken-in-Broad-Daylight-2009-.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 7330,
-      "sizeMB": 853,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/taken-in-broad-daylight-2009/Taken-in-Broad-Daylight-2009-.mp4"
-    },
     {
       "conf": 0.65,
       "item": "in-broad-daylight",
@@ -74,6 +60,24 @@
       "band": "near",
       "fileSim": 1,
       "url": "https://archive.org/download/in-broad-daylight-1971/In%20Broad%20Daylight%20(1971).mp4"
+    },
+    {
+      "conf": 0.5,
+      "item": "taken-in-broad-daylight-2009",
+      "itemTitle": "Taken In Broad Daylight 2009",
+      "stem": "Taken-in-Broad-Daylight-2009-",
+      "file": "Taken-in-Broad-Daylight-2009-.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 7330,
+      "sizeMB": 853,
+      "band": "near",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/taken-in-broad-daylight-2009/Taken-in-Broad-Daylight-2009-.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

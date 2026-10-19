@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T16:16:40.019Z",
   "archiveMentions": 116,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "crime-and-punishment-1970",
     "itemTitle": "Crime and Punishment (1970)",
     "stem": "Crime and Punishment (1970) pt 1",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "crime-and-punishment-1970",
       "itemTitle": "Crime and Punishment (1970)",
       "stem": "Crime and Punishment (1970) pt 2",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/crime-and-punishment-1970/Crime%20and%20Punishment%20(1970)%20pt%202.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "silent-crime-and-punishment",
       "itemTitle": "Crime and Punishment",
       "stem": "Crime and Punishment",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/1998-zbrodnia-i-kara-crime-and-punishment/(1998)%20Zbrodnia%20i%20kara%20-%20Crime%20and%20Punishment.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1998)"
+  }
 }

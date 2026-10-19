@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T05:16:26.847Z",
   "archiveMentions": 16,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "a.-raisin.-in.-the.-sun.-1961",
     "itemTitle": "A. Raisin. In. The. Sun. 1961",
     "stem": "A.Raisin.In.The.Sun.1961",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "a-raisin-in-the-sun-1961_202412",
       "itemTitle": "A Raisin in the Sun (Film, 1961)",
       "stem": "A Raisin in the Sun (1961)",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/a-raisin-in-the-sun-1961_202412/A%20Raisin%20in%20the%20Sun%20(1961).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "a-raisin-in-the-sun-1961_202507",
       "itemTitle": "A Raisin In The Sun (1961)",
       "stem": "A Raisin In The Sun (1961)",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/a-raisin-in-the-sun-1961_202507/A%20Raisin%20In%20The%20Sun%20(1961).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "a-raisin-in-the-sun-hd",
       "itemTitle": "A Raisin In The Su‪n‬ ( HD)",
       "stem": "A Raisin In the Su‪n‬ (HD)",
@@ -74,5 +74,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/a-raisin-in-the-sun-hd/A%20Raisin%20In%20the%20Su%E2%80%AAn%E2%80%AC%20(HD).m4v"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2008)"
+  }
 }

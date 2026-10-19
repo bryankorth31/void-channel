@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T06:45:01.985Z",
   "archiveMentions": 51,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "scramble_202310",
     "itemTitle": "Scramble: Blind Spot of Conflict",
     "stem": "Scramble",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/blind-spot-1947-edited/Blind%20Spot%20(1947)%20EDITED.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

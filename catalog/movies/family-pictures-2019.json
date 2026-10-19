@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T23:00:16.014Z",
   "archiveMentions": 35,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "universal-pictures-and-20th-century-fox-two-versions-of-beethoven-1992-movie",
     "itemTitle": "Universal Pictures And 20th Century Fox Two Versions Of Beethoven Rated PG 1992 Movie Family/Comedy",
     "stem": "1.Universal Pictures Beethoven (1992 Movie)",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "universal-pictures-and-20th-century-fox-two-versions-of-beethoven-1992-movie",
       "itemTitle": "Universal Pictures And 20th Century Fox Two Versions Of Beethoven Rated PG 1992 Movie Family/Comedy",
       "stem": "2",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/universal-pictures-and-20th-century-fox-two-versions-of-beethoven-1992-movie/2.20th%20Century%20Fox%20Beethoven%20(1992%20Movie).ia.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "universal-pictures-and-20th-century-fox-two-versions-of-beethoven-1992-movie",
       "itemTitle": "Universal Pictures And 20th Century Fox Two Versions Of Beethoven Rated PG 1992 Movie Family/Comedy",
       "stem": "2.20th Century Fox Beethoven (1992 Movie)",
@@ -60,5 +60,9 @@
       "fileSim": 0.11764705882352941,
       "url": "https://archive.org/download/universal-pictures-and-20th-century-fox-two-versions-of-beethoven-1992-movie/2.20th%20Century%20Fox%20Beethoven%20(1992%20Movie).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

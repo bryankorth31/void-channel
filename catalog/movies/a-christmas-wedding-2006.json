@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T06:19:52.255Z",
   "archiveMentions": 10,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "cold-feet-at-christmas-christmas-wedding-runaway-2019-christmas-romady-uptv",
     "itemTitle": "Cold Feet At Christmas Christmas Wedding Runaway (2019 Christmas Romady, UPTV)",
     "stem": "- Cold Feet at Christmas_ChristmasWeddingRunaway (2019 Christmas Romady, UPTV)",
@@ -33,5 +33,9 @@
     "fileSim": 0.5084745762711864,
     "url": "https://archive.org/download/cold-feet-at-christmas-christmas-wedding-runaway-2019-christmas-romady-uptv/-%20Cold%20Feet%20at%20Christmas_ChristmasWeddingRunaway%20(2019%20Christmas%20Romady%2C%20UPTV).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T13:00:39.457Z",
   "archiveMentions": 95,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "2018.05.31-music-of-java-mantle-hoods-100th-birthday",
     "itemTitle": "Gamelan Khjai Mendung: Honoring Mantle Hood's Centenary",
     "stem": "2018.05.31 Music of Java - Mantle Hood's 100th birthday",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "philip-mantle-set-1",
       "itemTitle": "PHILIP MANTLE SET 1",
       "stem": "PHILIP MANTLE-SET-1",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/philip-mantle-set-1/PHILIP%20MANTLE-SET-1.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "MickeyMantleTheDefinitiveStoryMLBBaseballSportsDocumentary",
       "itemTitle": "Mickey Mantle The Definitive Story ( MLB Baseball Sports Documentary)",
       "stem": "Mickey Mantle- The Definitive Story (MLB Baseball Sports Documentary)",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/MickeyMantleTheDefinitiveStoryMLBBaseballSportsDocumentary/Mickey%20Mantle-%20The%20Definitive%20Story%20(MLB%20Baseball%20Sports%20Documentary).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

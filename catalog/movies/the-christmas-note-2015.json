@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T02:50:29.358Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "etvmn-Eagan_Women_of_Note_Winter_Concert_-_Now_and_Forever_Christmas",
-    "itemTitle": "Eagan Women of Note Winter Concert: Now and Forever Christmas",
-    "stem": "Eagan_Women_of_Note_Winter_Concert_-_Now_and_Forever_Christmas",
-    "file": "Eagan_Women_of_Note_Winter_Concert_-_Now_and_Forever_Christmas.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4920,
-    "sizeMB": 488,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/etvmn-Eagan_Women_of_Note_Winter_Concert_-_Now_and_Forever_Christmas/Eagan_Women_of_Note_Winter_Concert_-_Now_and_Forever_Christmas.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

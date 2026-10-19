@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-13T22:26:46.079Z",
   "archiveMentions": 274,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "5.5NowYouSeeHim",
     "itemTitle": "5.5 Now You See Him",
     "stem": "5.5 Now You See Him",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/5.5NowYouSeeHim/5.5%20Now%20You%20See%20Him.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T23:58:58.831Z",
   "archiveMentions": 108,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "love_letters_of_a_portuguese_nun",
     "itemTitle": "Love Letters of a Portuguese Nun (1977) - Jesús Franco",
     "stem": "Cartas de amor de una monja portuguesa Die Liebesbriefe einer po",
@@ -32,5 +32,9 @@
     "fileSim": 0.07407407407407407,
     "url": "https://archive.org/download/love_letters_of_a_portuguese_nun/Cartas%20de%20amor%20de%20una%20monja%20portuguesa%20Die%20Liebesbriefe%20einer%20po.webm"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

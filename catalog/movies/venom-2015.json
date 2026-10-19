@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T13:27:00.722Z",
   "archiveMentions": 280,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "cinematic-venom-rob-boor-archive",
     "itemTitle": "Cinematic Venom: The Full Archive",
     "stem": "21 Jump Street (2012) - CLASSIC Cinematic Venom (2015) (Feat",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.95,
+      "conf": 0.8,
       "item": "cinematic-venom-rob-boor-archive",
       "itemTitle": "Cinematic Venom: The Full Archive",
       "stem": "21 Jump Street (2012) - CLASSIC Cinematic Venom (2015) (Feat. The Movie Doctorful) (480p_30fps_H264-128kbit_AAC)",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/cinematic-venom-rob-boor-archive/21%20Jump%20Street%20(2012)%20-%20CLASSIC%20Cinematic%20Venom%20(2015)%20(Feat.%20The%20Movie%20Doctorful)%20(480p_30fps_H264-128kbit_AAC).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "cinematic-venom-rob-boor-archive",
       "itemTitle": "Cinematic Venom: The Full Archive",
       "stem": "Terminator_ Dark Fate (2019) - Cinematic Venom (Feat",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/cinematic-venom-rob-boor-archive/Terminator_%20Dark%20Fate%20(2019)%20-%20Cinematic%20Venom%20(Feat.%20Planet%20Rewind)%20(1080p_30fps_H264-128kbit_AAC).ia.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "cinematic-venom-rob-boor-archive",
       "itemTitle": "Cinematic Venom: The Full Archive",
       "stem": "Terminator_ Dark Fate (2019) - Cinematic Venom (Feat. Planet Rewind) (1080p_30fps_H264-128kbit_AAC)",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/cinematic-venom-rob-boor-archive/Terminator_%20Dark%20Fate%20(2019)%20-%20Cinematic%20Venom%20(Feat.%20Planet%20Rewind)%20(1080p_30fps_H264-128kbit_AAC).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

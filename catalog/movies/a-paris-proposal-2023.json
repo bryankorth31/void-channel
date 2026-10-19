@@ -17,35 +17,11 @@
   "huntedAt": "2026-10-14T07:15:19.361Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "roosterteeth-1490-bonus",
-    "itemTitle": "Disneyland Paris Apologizes for Ruining a Wedding Proposal?! - (June 2022 Live Stream)",
-    "stem": "2022-06-13_Disneyland_Paris_Apologizes_for_Ruining_a_Wedding_Proposal_-_June_2022_Live_Stream_[1490-bonus]",
-    "file": "2022-06-13_Disneyland_Paris_Apologizes_for_Ruining_a_Wedding_Proposal_-_June_2022_Live_Stream_[1490-bonus].mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 6779,
-    "sizeMB": 3560,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/roosterteeth-1490-bonus/2022-06-13_Disneyland_Paris_Apologizes_for_Ruining_a_Wedding_Proposal_-_June_2022_Live_Stream_%5B1490-bonus%5D.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "youtube-Dpsly0ehtAc",
-      "itemTitle": "Disneyland Paris Apologizes for Ruining a Wedding Proposal?! - (June 2022 Live Stream)",
-      "stem": "Dpsly0ehtAc",
-      "file": "Dpsly0ehtAc.webm",
-      "format": "WebM",
-      "playable": true,
-      "seconds": 6799,
-      "sizeMB": 1089,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/youtube-Dpsly0ehtAc/Dpsly0ehtAc.webm"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "the title is not a phrase in the file or upload name (word overlap only); runtime not within 15% of the TMDB runtime; junk word"
+  }
 }

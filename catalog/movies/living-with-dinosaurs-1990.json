@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T06:29:33.478Z",
   "archiveMentions": 8,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "living-with-dinosaurs",
     "itemTitle": "Living With Dinosaurs (2000)",
     "stem": "Living With Dinosaurs",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "youtube-dhwxpw2QqWI",
       "itemTitle": "Evidence Of Mankind & Dinosaurs Living Together.",
       "stem": "dhwxpw2QqWI",
@@ -48,5 +48,9 @@
       "fileSim": 0.07407407407407407,
       "url": "https://archive.org/download/youtube-dhwxpw2QqWI/dhwxpw2QqWI.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1990)"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T11:34:03.890Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "s-07-e-07-the-laughter-of-god",
     "itemTitle": "S07E07 The Laughter Of God",
     "stem": "S07E07 The Laughter of God",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/s-07-e-07-the-laughter-of-god/S07E07%20The%20Laughter%20of%20God.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

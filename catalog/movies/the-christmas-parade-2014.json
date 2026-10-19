@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T02:39:34.207Z",
   "archiveMentions": 288,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.95,
-    "item": "2014_Kannapolis_Christmas_Parade",
-    "itemTitle": "2014 Kannapolis Christmas Parade",
-    "stem": "2014_Kannapolis_Christmas_Parade",
-    "file": "2014_Kannapolis_Christmas_Parade.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 5138,
-    "sizeMB": 536,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/2014_Kannapolis_Christmas_Parade/2014_Kannapolis_Christmas_Parade.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

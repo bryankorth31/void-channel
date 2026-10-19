@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T06:45:28.521Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.55,
-    "item": "gmatvvt-Lamoille_Union_High_School_Pops_Concert_6_1_22_-_LIVE",
-    "itemTitle": "Lamoille Union High School Pops Concert, 6/1/22 - [LIVE]",
-    "stem": "Lamoille_Union_High_School_Pops_Concert_6_1_22_-_LIVE",
-    "file": "Lamoille_Union_High_School_Pops_Concert_6_1_22_-_LIVE.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 4573,
-    "sizeMB": 410,
-    "band": "match",
-    "fileSim": 0.6333333333333333,
-    "url": "https://archive.org/download/gmatvvt-Lamoille_Union_High_School_Pops_Concert_6_1_22_-_LIVE/Lamoille_Union_High_School_Pops_Concert_6_1_22_-_LIVE.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

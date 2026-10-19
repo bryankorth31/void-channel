@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T04:09:37.715Z",
   "archiveMentions": 15,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "how-to-make-a-monster-svengoolie",
     "itemTitle": "How To Make A Monster Svengoolie",
     "stem": "How to Make a Monster Svengoolie",
@@ -76,5 +76,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/how-to-make-a-monster-1958/How%20To%20Make%20A%20Monster%201958.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

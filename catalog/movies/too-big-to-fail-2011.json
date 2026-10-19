@@ -17,63 +17,11 @@
   "huntedAt": "2026-10-13T19:49:53.571Z",
   "archiveMentions": 44,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "730081AmericasWorkforceTooBigToFail",
-    "itemTitle": "Americas Workforce: Too Big To Fail",
-    "stem": "730081 Americas Workforce Too Big to Fail",
-    "file": "730081 Americas Workforce Too Big to Fail.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 6030,
-    "sizeMB": 625,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/730081AmericasWorkforceTooBigToFail/730081%20Americas%20Workforce%20Too%20Big%20to%20Fail.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "CSPAN_20120519_194414_Too_Big_to_Fail_Hearing",
-      "itemTitle": "Too Big to Fail Hearing : CSPAN : May 19, 2012 3:44pm-5:45pm EDT",
-      "stem": "CSPAN_20120519_194414_Too_Big_to_Fail_Hearing",
-      "file": "CSPAN_20120519_194414_Too_Big_to_Fail_Hearing.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 7247,
-      "sizeMB": 739,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/CSPAN_20120519_194414_Too_Big_to_Fail_Hearing/CSPAN_20120519_194414_Too_Big_to_Fail_Hearing.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "gov.house.ogr.tarp.20110330.2",
-      "itemTitle": "Has Dodd-Frank Ended Too Big to Fail? (Part 2 of 2)",
-      "stem": "gov.house.ogr.tarp.20110330.2",
-      "file": "gov.house.ogr.tarp.20110330.2.ogv",
-      "format": "Ogg Video",
-      "playable": true,
-      "seconds": 4503,
-      "sizeMB": 346,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/gov.house.ogr.tarp.20110330.2/gov.house.ogr.tarp.20110330.2.ogv"
-    },
-    {
-      "conf": 0.65,
-      "item": "gov.house.ogr.tarp.20110330.2",
-      "itemTitle": "Has Dodd-Frank Ended Too Big to Fail? (Part 2 of 2)",
-      "stem": "gov.house.ogr.tarp.20110330.2_512kb",
-      "file": "gov.house.ogr.tarp.20110330.2_512kb.mp4",
-      "format": "512Kb MPEG4",
-      "playable": true,
-      "seconds": 4503,
-      "sizeMB": 345,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/gov.house.ogr.tarp.20110330.2/gov.house.ogr.tarp.20110330.2_512kb.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs, TV-CSPAN"
+  }
 }

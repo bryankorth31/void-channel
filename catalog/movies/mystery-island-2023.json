@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T03:32:52.855Z",
   "archiveMentions": 51,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "roosterteeth-46772",
     "itemTitle": "The Curse of Oak Island's Money Pit | Oak Island Mystery",
     "stem": "2022-02-13_The_Curse_of_Oak_Islands_Money_Pit__Oak_Island_Mystery_[46772]",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "youtube-JJB2s8AtBFQ",
       "itemTitle": "The Curse of Oak Island's Money Pit | Oak Island Mystery",
       "stem": "JJB2s8AtBFQ",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/youtube-JJB2s8AtBFQ/JJB2s8AtBFQ.webm"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "1981.-mystery-on-monster-island",
       "itemTitle": "1981. Mystery on Monster Island",
       "stem": "1981. Mystery on Monster Island",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/1981.-mystery-on-monster-island/1981.%20Mystery%20on%20Monster%20Island.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

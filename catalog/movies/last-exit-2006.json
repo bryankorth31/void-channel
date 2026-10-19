@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T09:37:24.819Z",
   "archiveMentions": 11,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-last-exit",
     "itemTitle": "The Last Exit (2023)",
     "stem": "The Last Exit 2023",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/the-last-exit/The%20Last%20Exit%202023.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2006)"
+  }
 }

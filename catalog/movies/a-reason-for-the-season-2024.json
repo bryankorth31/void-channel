@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T07:55:27.970Z",
   "archiveMentions": 33,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "2023-12-10-the-reason-for-the-season",
     "itemTitle": "New Wine Church of Fullerton Ca 2023 12 10 The Reason For The Season",
     "stem": "2023-12-10 The Reason For the Season",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/2023-12-10-the-reason-for-the-season/2023-12-10%20The%20Reason%20For%20the%20Season.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

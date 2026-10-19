@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T01:29:10.851Z",
   "archiveMentions": 288,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "13en_Reviving_the_Islamic_Spirit_truthwaytv",
     "itemTitle": "13EN. Reviving the Islamic Spirit",
     "stem": "13en_Reviving_the_Islamic_Spirit_high_truthwaytv",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "13en_Reviving_the_Islamic_Spirit_truthwaytv",
       "itemTitle": "13EN. Reviving the Islamic Spirit",
       "stem": "13en_Reviving_the_Islamic_Spirit_VCD_truthwaytv",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/13en_Reviving_the_Islamic_Spirit_truthwaytv/13en_Reviving_the_Islamic_Spirit_VCD_truthwaytv.ogv"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "13en_Reviving_the_Islamic_Spirit_truthwaytv",
       "itemTitle": "13EN. Reviving the Islamic Spirit",
       "stem": "13en_Reviving_the_Islamic_Spirit_medium_truthwaytv",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/13en_Reviving_the_Islamic_Spirit_truthwaytv/13en_Reviving_the_Islamic_Spirit_medium_truthwaytv.ogv"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "13en_Reviving_the_Islamic_Spirit_truthwaytv",
       "itemTitle": "13EN. Reviving the Islamic Spirit",
       "stem": "13en_Reviving_the_Islamic_Spirit_VCD_truthwaytv_512kb",
@@ -76,5 +76,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/13en_Reviving_the_Islamic_Spirit_truthwaytv/13en_Reviving_the_Islamic_Spirit_VCD_truthwaytv_512kb.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

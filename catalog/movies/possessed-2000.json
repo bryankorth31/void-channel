@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T03:21:15.110Z",
   "archiveMentions": 229,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "tannisroot",
     "itemTitle": "Possessed",
     "stem": "Possession.1981.REPACK.1080p.BluRay.x264.AAC-[YTS.MX]",
@@ -75,5 +75,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/possessed_2014/Possessed.2014.1080p.AMZN.WEB-DL.DDP2.0.H.264-PSTX.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

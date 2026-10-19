@@ -18,36 +18,11 @@
   "huntedAt": "2026-10-14T20:06:02.905Z",
   "archiveMentions": 285,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "RSA_Replay_-_On_Being_Touched_and_Moved",
-    "itemTitle": "RSA Replay: On Being Touched and Moved",
-    "stem": "RSA_Replay_-_On_Being_Touched_and_Moved",
-    "file": "RSA_Replay_-_On_Being_Touched_and_Moved.mp4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 3804,
-    "sizeMB": 577,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/RSA_Replay_-_On_Being_Touched_and_Moved/RSA_Replay_-_On_Being_Touched_and_Moved.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.55,
-      "item": "RSA_Replay_-_On_Being_Touched_and_Moved",
-      "itemTitle": "RSA Replay: On Being Touched and Moved",
-      "stem": "RSA_Replay_-_On_Being_Touched_and_Moved.pegssc",
-      "file": "RSA_Replay_-_On_Being_Touched_and_Moved.pegssc.mpeg",
-      "format": "MPEG2",
-      "playable": false,
-      "codecRisk": "container (MPEG2)",
-      "seconds": 3804,
-      "sizeMB": 2124,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/RSA_Replay_-_On_Being_Touched_and_Moved/RSA_Replay_-_On_Being_Touched_and_Moved.pegssc.mpeg"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T06:53:57.388Z",
   "archiveMentions": 294,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "1952-kansas-city-confidential-el-cuarto-hombre-phil-karlson",
     "itemTitle": "1952 - Kansas City Confidential - El cuarto hombre - Phil Karlson",
     "stem": "1952 - Kansas City Confidential - El cuarto hombre - Phil Karlson",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "20250412_20250412_1738",
       "itemTitle": "CBS The 108th ~ 1997 Tournament Of Roses Parade (January 2, 1997) ~ The 61st Annual Cotton Bowl Kansas State @ BYU (first 6.5 Minutes) Same Day",
       "stem": "CBS The 108th ~ 1997 Tournament of Roses Parade (January 2, 1997) ~ The 61st Annual Cotton Bowl Kansas State @ BYU  (first 6.5 minutes) same day",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/20250412_20250412_1738/CBS%20The%20108th%20~%201997%20Tournament%20of%20Roses%20Parade%20(January%202%2C%201997)%20~%20The%2061st%20Annual%20Cotton%20Bowl%20Kansas%20State%20%40%20BYU%20%20(first%206.5%20minutes)%20same%20day.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

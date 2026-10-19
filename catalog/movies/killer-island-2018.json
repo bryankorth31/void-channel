@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-14T20:10:51.347Z",
   "archiveMentions": 15,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "Grim_Paradise_-_The_Cold_Case_Search_for_the_Mackinac_Island_Killer_with_Rod_Sadler",
-    "itemTitle": "\"Grim Paradise: The Cold Case Search for the Mackinac Island Killer\" with Rod Sadler",
-    "stem": "Grim_Paradise_-_The_Cold_Case_Search_for_the_Mackinac_Island_Killer_with_Rod_Sadler",
-    "file": "Grim_Paradise_-_The_Cold_Case_Search_for_the_Mackinac_Island_Killer_with_Rod_Sadler.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4725,
-    "sizeMB": 461,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Grim_Paradise_-_The_Cold_Case_Search_for_the_Mackinac_Island_Killer_with_Rod_Sadler/Grim_Paradise_-_The_Cold_Case_Search_for_the_Mackinac_Island_Killer_with_Rod_Sadler.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

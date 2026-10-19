@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T14:21:49.938Z",
   "archiveMentions": 296,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "real-love-music-archive-nov-22-2023",
     "itemTitle": "Real Love Music Archive: Nov 22 2023",
     "stem": "PopSlinger - ALBUM LISTENING PARTY!/PopSlinger - ALBUM LISTENING PARTY! (1080p_60fps_H264-128kbit_AAC)",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.75,
+      "conf": 0.6,
       "item": "real-love-music-archive-nov-22-2023",
       "itemTitle": "Real Love Music Archive: Nov 22 2023",
       "stem": "Best of QB9 🗻💌🌸🌴 FUTURE FUNK MIXTAPE/Best of QB9 🗻💌🌸🌴 FUTURE FUNK MIXTAPE (1080p_30fps_H264-128kbit_AAC)",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/real-love-music-archive-nov-22-2023/Best%20of%20QB9%20%F0%9F%97%BB%F0%9F%92%8C%F0%9F%8C%B8%F0%9F%8C%B4%20FUTURE%20FUNK%20MIXTAPE%2FBest%20of%20QB9%20%F0%9F%97%BB%F0%9F%92%8C%F0%9F%8C%B8%F0%9F%8C%B4%20FUTURE%20FUNK%20MIXTAPE%20(1080p_30fps_H264-128kbit_AAC).mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "odysee_-_real_love_music_2023",
       "itemTitle": "Odysee - Real Love Music (2023)",
       "stem": "20230130 - c0e62bc9a1b8ea5c3c55c8dc807b5d9b9c5bf9a9 - Best of QB9 🗻💌🌸🌴 FUTURE FUNK MIXTAPE/20230130 - c0e62bc9a1b8ea5c3c55c8dc807b5d9b9c5bf9a9 - Best of QB9 🗻💌🌸🌴 FUTURE FUNK MIXTAPE",
@@ -62,5 +62,9 @@
       "fileSim": 0.05555555555555555,
       "url": "https://archive.org/download/odysee_-_real_love_music_2023/20230130%20-%20c0e62bc9a1b8ea5c3c55c8dc807b5d9b9c5bf9a9%20-%20Best%20of%20QB9%20%F0%9F%97%BB%F0%9F%92%8C%F0%9F%8C%B8%F0%9F%8C%B4%20FUTURE%20FUNK%20MIXTAPE%2F20230130%20-%20c0e62bc9a1b8ea5c3c55c8dc807b5d9b9c5bf9a9%20-%20Best%20of%20QB9%20%F0%9F%97%BB%F0%9F%92%8C%F0%9F%8C%B8%F0%9F%8C%B4%20FUTURE%20FUNK%20MIXTAPE.mkv"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T09:39:15.744Z",
   "archiveMentions": 25,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "final-justice-1984-getonlinevideos",
     "itemTitle": "Final Justice(1984)",
     "stem": "final-justice-1984-getonlinevideos",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "ultraman-cosmos-vs-ultraman-justice-the-final-battle-raw",
       "itemTitle": "Ultraman Cosmos VS Ultraman Justice: The Final Battle (RAW)",
       "stem": "Ultraman Cosmos VS Ultraman Justice - The Final Battle",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/ultraman-cosmos-vs-ultraman-justice-the-final-battle-raw/Ultraman%20Cosmos%20VS%20Ultraman%20Justice%20-%20The%20Final%20Battle.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "UltramanCosmosVsUltramanJusticeTheFinalBattle",
       "itemTitle": "Ultraman Cosmos Vs Ultraman Justice The Final Battle",
       "stem": "Ultraman Cosmos Vs Ultraman Justice The Final Battle",
@@ -75,5 +75,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/final.-justice.-1984.1080p.-blu-ray.x-265-rarbg_202206/Final.Justice.1984.1080p.BluRay.x265-RARBG.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1998)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T04:45:12.864Z",
   "archiveMentions": 291,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "barney-lets-go-to-the-firehouse-the-crossover",
     "itemTitle": "Barney: Let’s Go To The Firehouse: The Crossover",
     "stem": "videoplayback",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/barney-lets-go-to-the-firehouse-the-crossover/videoplayback.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

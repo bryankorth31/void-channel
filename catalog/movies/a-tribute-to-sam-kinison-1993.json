@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T06:45:43.251Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "b-1-t-00_20251023_2206",
     "itemTitle": "Back From Hell: A Tribute to Sam Kinison 2010 (DVD Rip)",
     "stem": "Back from Hell: A Tribute to Sam Kinison/B1_t00",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/b-1-t-00_20251023_2206/Back%20from%20Hell%3A%20A%20Tribute%20to%20Sam%20Kinison%2FB1_t00.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1993)"
+  }
 }

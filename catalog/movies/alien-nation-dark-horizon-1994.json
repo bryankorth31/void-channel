@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T05:58:43.500Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "REVIEW",
+  "state": "LIVE",
   "file": {
-    "conf": 0.55,
+    "conf": 0.85,
     "item": "m-01-dark-horizon",
     "itemTitle": "M 01 Dark Horizon",
     "stem": "Alien_Nation_Full_Episodes__Films/M01   Dark Horizon",
@@ -75,5 +75,9 @@
       "fileSim": 0.125,
       "url": "https://archive.org/download/m-01-dark-horizon/Alien_Nation_Full_Episodes__Films%2FM03%20%20%20Millennium.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "title is a phrase in the name, runtime and year agree"
+  }
 }

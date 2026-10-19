@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-14T08:07:46.867Z",
   "archiveMentions": 257,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.75,
-    "item": "bcatvma-BHS_Girls_Ice_Hockey_2016-17_Vs_Reading",
-    "itemTitle": "BHS Girls Ice Hockey 2016-17  Vs Reading",
-    "stem": "BHS_Girls_Ice_Hockey_2016-17_Vs_Reading",
-    "file": "BHS_Girls_Ice_Hockey_2016-17_Vs_Reading.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4361,
-    "sizeMB": 454,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/bcatvma-BHS_Girls_Ice_Hockey_2016-17_Vs_Reading/BHS_Girls_Ice_Hockey_2016-17_Vs_Reading.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "iceHockey_girls_vsAndover_022815-CL19",
-      "itemTitle": "BHS Sports TV Presents: Varsity Girls Ice Hockey - Belmont/Watertown \"Maraiders\" vs Andover Warriors 02/28/15 ",
-      "stem": "iceHockey_girls_vsAndover_022815-CL19",
-      "file": "iceHockey_girls_vsAndover_022815-CL19.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4167,
-      "sizeMB": 432,
-      "band": "near",
-      "fileSim": 0.475,
-      "url": "https://archive.org/download/iceHockey_girls_vsAndover_022815-CL19/iceHockey_girls_vsAndover_022815-CL19.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

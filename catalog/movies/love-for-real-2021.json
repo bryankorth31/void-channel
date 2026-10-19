@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T12:01:35.537Z",
   "archiveMentions": 295,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "odysee_-_real_love_music_2022",
     "itemTitle": "Odysee - Real Love Music (2022)",
     "stem": "20220506 - e603bd3889d612a620be1bf3e019c99c18f5f877 - PopSlinger - ALBUM LISTENING PARTY!/20220506 - e603bd3889d612a620be1bf3e019c99c18f5f877 - PopSlinger - ALBUM LISTENING PARTY!",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "odysee_-_real_love_music_2022",
       "itemTitle": "Odysee - Real Love Music (2022)",
       "stem": "20220601 - 2c09178439f1b72b8c49e69987e45f0effb459d5 - 𝙁𝙪𝙩𝙪𝙧𝙚 𝙁𝙪𝙣𝙠 🇯🇵 𝐂𝐎𝐌𝐏𝐈𝐋𝐀𝐓𝐈𝐎𝐍 『未来ファンク』/20220601 - 2c09178439f1b72b8c49e69987e45f0effb459d5 - 𝙁𝙪𝙩𝙪𝙧𝙚 𝙁𝙪𝙣𝙠 🇯🇵 𝐂𝐎𝐌𝐏𝐈𝐋𝐀𝐓𝐈𝐎𝐍 『未来ファンク』",
@@ -47,5 +47,9 @@
       "fileSim": 0.03636363636363636,
       "url": "https://archive.org/download/odysee_-_real_love_music_2022/20220601%20-%202c09178439f1b72b8c49e69987e45f0effb459d5%20-%20%F0%9D%99%81%F0%9D%99%AA%F0%9D%99%A9%F0%9D%99%AA%F0%9D%99%A7%F0%9D%99%9A%20%F0%9D%99%81%F0%9D%99%AA%F0%9D%99%A3%F0%9D%99%A0%20%F0%9F%87%AF%F0%9F%87%B5%20%F0%9D%90%82%F0%9D%90%8E%F0%9D%90%8C%F0%9D%90%8F%F0%9D%90%88%F0%9D%90%8B%F0%9D%90%80%F0%9D%90%93%F0%9D%90%88%F0%9D%90%8E%F0%9D%90%8D%20%E3%80%8E%E6%9C%AA%E6%9D%A5%E3%83%95%E3%82%A1%E3%83%B3%E3%82%AF%E3%80%8F%2F20220601%20-%202c09178439f1b72b8c49e69987e45f0effb459d5%20-%20%F0%9D%99%81%F0%9D%99%AA%F0%9D%99%A9%F0%9D%99%AA%F0%9D%99%A7%F0%9D%99%9A%20%F0%9D%99%81%F0%9D%99%AA%F0%9D%99%A3%F0%9D%99%A0%20%F0%9F%87%AF%F0%9F%87%B5%20%F0%9D%90%82%F0%9D%90%8E%F0%9D%90%8C%F0%9D%90%8F%F0%9D%90%88%F0%9D%90%8B%F0%9D%90%80%F0%9D%90%93%F0%9D%90%88%F0%9D%90%8E%F0%9D%90%8D%20%E3%80%8E%E6%9C%AA%E6%9D%A5%E3%83%95%E3%82%A1%E3%83%B3%E3%82%AF%E3%80%8F.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

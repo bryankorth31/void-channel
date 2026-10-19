@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T11:14:26.067Z",
   "archiveMentions": 280,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "7zMXnud87_E",
     "itemTitle": "Esophageal Cancer Risk Factors For Physicians & Patients! With Ron Watson",
     "stem": "7zMXnud87_E/7zMXnud87_E - 20190403 -  NA - Winnipeg Alternative Media - Esophageal Cancer Risk Factors For Physicians & Patients! With Ron Watson",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "DanielKahanCulturalCognitionofRiskandEmergingTechnologies_NanotechnologyandSyntheticBi",
       "itemTitle": "Cultural Cognition of Risk and Emerging Technologies: Nanotechnology and Synthetic Biology",
       "stem": "output",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/DanielKahanCulturalCognitionofRiskandEmergingTechnologies_NanotechnologyandSyntheticBi/output.ogv"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "DanielKahanCulturalCognitionofRiskandEmergingTechnologies_NanotechnologyandSyntheticBi",
       "itemTitle": "Cultural Cognition of Risk and Emerging Technologies: Nanotechnology and Synthetic Biology",
       "stem": "output_512kb",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/DanielKahanCulturalCognitionofRiskandEmergingTechnologies_NanotechnologyandSyntheticBi/output_512kb.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "DecliningByDegreesHigherEducationAtRisk",
       "itemTitle": "Declining by Degrees: Higher Education at Risk",
       "stem": "DecliningByDegrees-HigherEducationAtRisk",
@@ -75,5 +75,9 @@
       "fileSim": 0.2564102564102564,
       "url": "https://archive.org/download/DecliningByDegreesHigherEducationAtRisk/DecliningByDegrees-HigherEducationAtRisk.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

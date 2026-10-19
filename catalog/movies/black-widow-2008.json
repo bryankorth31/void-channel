@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T15:34:32.491Z",
   "archiveMentions": 179,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "BlackWidow1954",
     "itemTitle": "Black Widow ( 1954)",
     "stem": "Black Widow (1954)",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "black-widow-1954-1080p-pvca",
       "itemTitle": "Black Widow (1954)",
       "stem": "black-widow-1954-1080p-pvca",
@@ -62,5 +62,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/1987-black-widow/1987%20BLACK%20WIDOW.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2008)"
+  }
 }

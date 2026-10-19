@@ -23,21 +23,35 @@
   "state": "LIVE",
   "file": {
     "conf": 0.85,
-    "item": "dog-gone-angel-dog-karate-dog",
-    "itemTitle": "Triple Feature: Dog Gone, Angel Dog, & The Karate Dog (DVD ISO)",
-    "stem": "DOG_GONE_ANGEL_DOG_KARATE_DOG4",
-    "file": "DOG_GONE_ANGEL_DOG_KARATE_DOG4.mp4",
+    "item": "karate-dog",
+    "itemTitle": "Karate Dog (2004) DVD ISO",
+    "stem": "KARATE_DOG",
+    "file": "KARATE_DOG.mp4",
     "format": "h.264",
     "playable": true,
-    "seconds": 5137,
-    "sizeMB": 515,
+    "seconds": 5036,
+    "sizeMB": 511,
     "band": "match",
     "fileSim": 0.95,
-    "url": "https://archive.org/download/dog-gone-angel-dog-karate-dog/DOG_GONE_ANGEL_DOG_KARATE_DOG4.mp4"
+    "url": "https://archive.org/download/karate-dog/KARATE_DOG.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
+      "item": "dog-gone-angel-dog-karate-dog",
+      "itemTitle": "Triple Feature: Dog Gone, Angel Dog, & The Karate Dog (DVD ISO)",
+      "stem": "DOG_GONE_ANGEL_DOG_KARATE_DOG4",
+      "file": "DOG_GONE_ANGEL_DOG_KARATE_DOG4.mp4",
+      "format": "h.264",
+      "playable": true,
+      "seconds": 5137,
+      "sizeMB": 515,
+      "band": "match",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/dog-gone-angel-dog-karate-dog/DOG_GONE_ANGEL_DOG_KARATE_DOG4.mp4"
+    },
+    {
+      "conf": 0.7,
       "item": "dog-gone-angel-dog-karate-dog",
       "itemTitle": "Triple Feature: Dog Gone, Angel Dog, & The Karate Dog (DVD ISO)",
       "stem": "DOG_GONE_ANGEL_DOG_KARATE_DOG3",
@@ -51,21 +65,7 @@
       "url": "https://archive.org/download/dog-gone-angel-dog-karate-dog/DOG_GONE_ANGEL_DOG_KARATE_DOG3.mp4"
     },
     {
-      "conf": 0.85,
-      "item": "karate-dog",
-      "itemTitle": "Karate Dog (2004) DVD ISO",
-      "stem": "KARATE_DOG",
-      "file": "KARATE_DOG.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5036,
-      "sizeMB": 511,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/karate-dog/KARATE_DOG.mp4"
-    },
-    {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "dog-gone-angel-dog-karate-dog",
       "itemTitle": "Triple Feature: Dog Gone, Angel Dog, & The Karate Dog (DVD ISO)",
       "stem": "DOG_GONE_ANGEL_DOG_KARATE_DOG",

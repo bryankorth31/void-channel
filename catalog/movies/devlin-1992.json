@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T04:27:41.203Z",
   "archiveMentions": 292,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "DJMarkDevlinTalks",
     "itemTitle": "Talks by DJ Mark Devlin",
     "stem": "MARK DEVLIN PRESENTATION AT OPEN MINDS IRELAND CONFERENCE, 2018-JanYUPicLWE",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "DJMarkDevlinTalks",
       "itemTitle": "Talks by DJ Mark Devlin",
       "stem": "MARK DEVLIN_ MUSICAL TRUTH BOOK TOUR AT NEW HORIZONS, 2016-qxIFm-6vqB4",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/DJMarkDevlinTalks/MARK%20DEVLIN_%20MUSICAL%20TRUTH%20BOOK%20TOUR%20AT%20NEW%20HORIZONS%2C%202016-qxIFm-6vqB4.webm"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "DJMarkDevlinTalks",
       "itemTitle": "Talks by DJ Mark Devlin",
       "stem": "MARK DEVLIN PRESENTATION AT TRUTH JUICE, BRISTOL, JULY 2018-k_aKvZ-V2R4",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/DJMarkDevlinTalks/MARK%20DEVLIN%20PRESENTATION%20AT%20TRUTH%20JUICE%2C%20BRISTOL%2C%20JULY%202018-k_aKvZ-V2R4.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "DJMarkDevlinTalks",
       "itemTitle": "Talks by DJ Mark Devlin",
       "stem": "Musical Truth - Mark Devlin--4J2B1o-Pyw",
@@ -75,5 +75,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/DJMarkDevlinTalks/Musical%20Truth%20-%20Mark%20Devlin--4J2B1o-Pyw.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

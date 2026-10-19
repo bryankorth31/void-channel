@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T19:41:13.618Z",
   "archiveMentions": 187,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "outsider-1967",
     "itemTitle": "The Outsider (1967)",
     "stem": "Outsider (1967) ,",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-outsider-1939",
       "itemTitle": "The Outsider 1939",
       "stem": "The Outsider1939",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/the-outsider-1939/The%20Outsider1939.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-outsider-1948",
       "itemTitle": "The Outsider (1948)",
       "stem": "The Outsider (1948)",
@@ -76,5 +76,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/the-outsider-1961/The%20Outsider%20(1961).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1997)"
+  }
 }

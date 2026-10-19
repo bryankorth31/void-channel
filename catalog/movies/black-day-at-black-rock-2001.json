@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T16:34:34.109Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "the-a-team-s-01-e-06-black-day-at-bad-rock",
     "itemTitle": "The A Team S 01 E 05 Black Day At Bad Rock",
     "stem": "The A-Team S01E06 Black Day at Bad Rock",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/the-a-team-s-01-e-06-black-day-at-bad-rock/The%20A-Team%20S01E06%20Black%20Day%20at%20Bad%20Rock.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

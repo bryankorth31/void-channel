@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T08:37:20.736Z",
   "archiveMentions": 19,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "VirtualHistorySecretPlotToKillHitler",
     "itemTitle": "Virtual History ● Secret Plot To Kill Hitler",
     "stem": "Virtual History ● Secret Plot To Kill Hitler",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "valkyrietheplottokillhitler",
       "itemTitle": "Valkyrie The Plot To Kill Hitler",
       "stem": "Valkyrie-The Plot to Kill Hitler",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/valkyrietheplottokillhitler/Valkyrie-The%20Plot%20to%20Kill%20Hitler.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "valkyrie-the-plot-to-kill-hitler-2008",
       "itemTitle": "Valkyrie The Plot To Kill Hitler ( 2008)",
       "stem": "Valkyrie_The_Plot_to_Kill_Hitler_(2008)_BluRay_high_(fzmovies.net)_74dff04ef3e4f5f16890cbbb54ef17e7",
@@ -61,5 +61,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/valkyrie-the-plot-to-kill-hitler-2008/Valkyrie_The_Plot_to_Kill_Hitler_(2008)_BluRay_high_(fzmovies.net)_74dff04ef3e4f5f16890cbbb54ef17e7.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

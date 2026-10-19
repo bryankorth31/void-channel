@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T15:16:17.542Z",
   "archiveMentions": 92,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "geronimo-an-american-legend-1993-cz-dubbing",
     "itemTitle": "Geronimo An American Legend (1993) CZ Dubbing",
     "stem": "Geronimo An American Legend (1993)-CZ Dubbing",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.95,
+      "conf": 0.8,
       "item": "geronimo-an-american-legend-1993-it-dubbing",
       "itemTitle": "Geronimo An American Legend (1993) IT Dubbing",
       "stem": "Geronimo An American Legend (1993)-IT Dubbing",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/geronimo-an-american-legend-1993-it-dubbing/Geronimo%20An%20American%20Legend%20(1993)-IT%20Dubbing.mp4"
     },
     {
-      "conf": 0.95,
+      "conf": 0.8,
       "item": "geronimo-an-american-legend-1993-en-dubbing",
       "itemTitle": "Geronimo An American Legend (1993) EN Dubbing",
       "stem": "Geronimo An American Legend (1993)-EN Dubbing",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/geronimo-an-american-legend-1993-en-dubbing/Geronimo%20An%20American%20Legend%20(1993)-EN%20Dubbing.mp4"
     },
     {
-      "conf": 0.95,
+      "conf": 0.8,
       "item": "geronimo-an-american-legend-1993-fr-dubbing_202312",
       "itemTitle": "Geronimo An American Legend (1993) FR Dubbing",
       "stem": "Geronimo An American Legend (1993)-FR Dubbing",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/geronimo-an-american-legend-1993-fr-dubbing_202312/Geronimo%20An%20American%20Legend%20(1993)-FR%20Dubbing.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

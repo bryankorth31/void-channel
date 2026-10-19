@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-13T19:52:14.112Z",
   "archiveMentions": 12,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "an-inspector-calls",
     "itemTitle": "An Inspector Calls",
     "stem": "An Inspector Calls",
@@ -36,7 +36,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "an-inspector-calls-1954-film",
       "itemTitle": "An Inspector Calls 1954 Film",
       "stem": "An Inspector Calls 1954 Film",
@@ -63,5 +63,9 @@
       "fileSim": 0.8823529411764706,
       "url": "https://archive.org/download/AnInspectorCalls1954_201508/AnInspectorCalls1954.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "short title: no year in the name and runtime not within 5%"
+  }
 }

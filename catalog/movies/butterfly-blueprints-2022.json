@@ -16,63 +16,11 @@
   "huntedAt": "2026-10-15T18:17:06.644Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "DW_20231018_091500_Butterfly_Blueprints",
-    "itemTitle": "Butterfly Blueprints : DW : October 18, 2023 11:15am-12:01pm CEST",
-    "stem": "DW_20231018_091500_Butterfly_Blueprints",
-    "file": "DW_20231018_091500_Butterfly_Blueprints.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 2761,
-    "sizeMB": 745,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/DW_20231018_091500_Butterfly_Blueprints/DW_20231018_091500_Butterfly_Blueprints.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "DW_20231019_121500_Butterfly_Blueprints",
-      "itemTitle": "Butterfly Blueprints : DW : October 19, 2023 2:15pm-3:01pm CEST",
-      "stem": "DW_20231019_121500_Butterfly_Blueprints",
-      "file": "DW_20231019_121500_Butterfly_Blueprints.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 2762,
-      "sizeMB": 743,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/DW_20231019_121500_Butterfly_Blueprints/DW_20231019_121500_Butterfly_Blueprints.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "DW_20231017_011500_Butterfly_Blueprints",
-      "itemTitle": "Butterfly Blueprints : DW : October 17, 2023 3:15am-4:00am CEST",
-      "stem": "DW_20231017_011500_Butterfly_Blueprints",
-      "file": "DW_20231017_011500_Butterfly_Blueprints.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 2755,
-      "sizeMB": 742,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/DW_20231017_011500_Butterfly_Blueprints/DW_20231017_011500_Butterfly_Blueprints.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "DW_20231021_081500_Butterfly_Blueprints",
-      "itemTitle": "Butterfly Blueprints : DW : October 21, 2023 10:15am-11:00am CEST",
-      "stem": "DW_20231021_081500_Butterfly_Blueprints",
-      "file": "DW_20231021_081500_Butterfly_Blueprints.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 2755,
-      "sizeMB": 741,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/DW_20231021_081500_Butterfly_Blueprints/DW_20231021_081500_Butterfly_Blueprints.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: TV-DW"
+  }
 }

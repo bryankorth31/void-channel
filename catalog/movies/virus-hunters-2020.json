@@ -16,63 +16,11 @@
   "huntedAt": "2026-10-15T13:44:18.519Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "ALJAZ_20210301_053000_101_East__The_Virus_Hunters",
-    "itemTitle": "101 East : The Virus Hunters : ALJAZ : March 1, 2021 8:30am-9:01am +03",
-    "stem": "ALJAZ_20210301_053000_101_East__The_Virus_Hunters",
-    "file": "ALJAZ_20210301_053000_101_East__The_Virus_Hunters.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 1867,
-    "sizeMB": 184,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/ALJAZ_20210301_053000_101_East__The_Virus_Hunters/ALJAZ_20210301_053000_101_East__The_Virus_Hunters.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "ALJAZ_20210302_233000_101_East__The_Virus_Hunters",
-      "itemTitle": "101 East : The Virus Hunters : ALJAZ : March 3, 2021 2:30am-3:01am +03",
-      "stem": "ALJAZ_20210302_233000_101_East__The_Virus_Hunters",
-      "file": "ALJAZ_20210302_233000_101_East__The_Virus_Hunters.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 1860,
-      "sizeMB": 183,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/ALJAZ_20210302_233000_101_East__The_Virus_Hunters/ALJAZ_20210302_233000_101_East__The_Virus_Hunters.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "ALJAZ_20210227_033000_101_East__The_Virus_Hunters",
-      "itemTitle": "101 East : The Virus Hunters : ALJAZ : February 27, 2021 6:30am-7:00am +03",
-      "stem": "ALJAZ_20210227_033000_101_East__The_Virus_Hunters",
-      "file": "ALJAZ_20210227_033000_101_East__The_Virus_Hunters.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 1860,
-      "sizeMB": 183,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/ALJAZ_20210227_033000_101_East__The_Virus_Hunters/ALJAZ_20210227_033000_101_East__The_Virus_Hunters.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "ALJAZ_20210302_023000_101_East__The_Virus_Hunters",
-      "itemTitle": "101 East : The Virus Hunters : ALJAZ : March 2, 2021 5:30am-6:01am +03",
-      "stem": "ALJAZ_20210302_023000_101_East__The_Virus_Hunters",
-      "file": "ALJAZ_20210302_023000_101_East__The_Virus_Hunters.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 1860,
-      "sizeMB": 183,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/ALJAZ_20210302_023000_101_East__The_Virus_Hunters/ALJAZ_20210302_023000_101_East__The_Virus_Hunters.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-ALJAZ"
+  }
 }

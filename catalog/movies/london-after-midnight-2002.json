@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T14:40:33.349Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "london-after-midnight_1927",
     "itemTitle": "London After Midnight",
     "stem": "london-after-midnight_1927",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "1927-london-after-midnight-tod-browning-lon-chaney",
       "itemTitle": "( 1927) London After Midnight ( Tod Browning), Lon Chaney",
       "stem": "(1927) London After Midnight (Tod Browning), Lon Chaney",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/1927-london-after-midnight-tod-browning-lon-chaney/(1927)%20London%20After%20Midnight%20(Tod%20Browning)%2C%20Lon%20Chaney.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "london-after-midnight-1927-reconstruction",
       "itemTitle": "London After Midnight ( 1927) RECONSTRUCTION",
       "stem": "London After Midnight (1927) RECONSTRUCTION",
@@ -76,5 +76,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/london-after-midnight-1927-sdtv-mp-3-1.0-divx/London%20After%20Midnight%20(1927)%20-%20%5BSDTV%5D%5BMP3%201.0%5D%5BDIVX%5D.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2002)"
+  }
 }

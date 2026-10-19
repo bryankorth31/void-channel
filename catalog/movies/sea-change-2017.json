@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-14T06:25:23.558Z",
   "archiveMentions": 54,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "metvfl-Climate_Change_Mangrove_Migration_Necessitated_by_Sea_Level_Rise",
-    "itemTitle": "Climate Change & Mangrove Migration Necessitated by Sea Level Rise",
-    "stem": "Climate_Change_Mangrove_Migration_Necessitated_by_Sea_Level_Rise",
-    "file": "Climate_Change_Mangrove_Migration_Necessitated_by_Sea_Level_Rise.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3449,
-    "sizeMB": 280,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/metvfl-Climate_Change_Mangrove_Migration_Necessitated_by_Sea_Level_Rise/Climate_Change_Mangrove_Migration_Necessitated_by_Sea_Level_Rise.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

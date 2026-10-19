@@ -17,20 +17,11 @@
   "huntedAt": "2026-10-15T12:08:18.029Z",
   "archiveMentions": 23,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "Remembering_the_Innocent_Victims_of_Connecticut_s_Witch_Trials",
-    "itemTitle": "Remembering the Innocent Victims of Connecticut’s Witch Trials",
-    "stem": "Remembering_the_Innocent_Victims_of_Connecticut_s_Witch_Trials",
-    "file": "Remembering_the_Innocent_Victims_of_Connecticut_s_Witch_Trials.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 7429,
-    "sizeMB": 721,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/Remembering_the_Innocent_Victims_of_Connecticut_s_Witch_Trials/Remembering_the_Innocent_Victims_of_Connecticut_s_Witch_Trials.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

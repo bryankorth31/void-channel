@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T04:06:48.255Z",
   "archiveMentions": 66,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "censored.tv_-_get_off_my_lawn_2022",
     "itemTitle": "censored.tv - GET OFF MY LAWN (2022)",
     "stem": "2022-04-06 - S4E103 - ROAD TRIP",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "censored.tv_-_get_off_my_lawn_2022",
       "itemTitle": "censored.tv - GET OFF MY LAWN (2022)",
       "stem": "2022-08-19 - S4E156 - 10 THINGS I LEARNED ABOUT PUERTO RICANS",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/censored.tv_-_get_off_my_lawn_2022/2022-08-19%20-%20S4E156%20-%2010%20THINGS%20I%20LEARNED%20ABOUT%20PUERTO%20RICANS.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "censored.tv_-_get_off_my_lawn_2022",
       "itemTitle": "censored.tv - GET OFF MY LAWN (2022)",
       "stem": "2022-07-15 - S4E142 - BIG JUICY BOOTY",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/censored.tv_-_get_off_my_lawn_2022/2022-07-15%20-%20S4E142%20-%20BIG%20JUICY%20BOOTY.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "censored.tv_-_get_off_my_lawn_2022",
       "itemTitle": "censored.tv - GET OFF MY LAWN (2022)",
       "stem": "2022-07-04 - S4EP137 - JULY FOURTH IS TRUMP DAY",
@@ -74,5 +74,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/censored.tv_-_get_off_my_lawn_2022/2022-07-04%20-%20S4EP137%20-%20JULY%20FOURTH%20IS%20TRUMP%20DAY.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

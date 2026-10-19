@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T17:52:12.470Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "PapaVsHitlerVsPopeNT",
     "itemTitle": "Papa Vs Hitler Vs Pope, NT",
     "stem": "Papa vs Hitler vs Pope, NT",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/PapaVsHitlerVsPopeNT/Papa%20vs%20Hitler%20vs%20Pope%2C%20NT.MP4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

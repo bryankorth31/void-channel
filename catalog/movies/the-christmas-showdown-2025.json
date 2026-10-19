@@ -17,63 +17,11 @@
   "huntedAt": "2026-10-15T18:36:35.519Z",
   "archiveMentions": 19,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.75,
-    "item": "FOXNEWSW_20251225_060000_2025_Christmas_Showdown",
-    "itemTitle": "2025 Christmas Showdown : FOXNEWSW : December 24, 2025 10:00pm-11:00pm PST",
-    "stem": "FOXNEWSW_20251225_060000_2025_Christmas_Showdown",
-    "file": "FOXNEWSW_20251225_060000_2025_Christmas_Showdown.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3663,
-    "sizeMB": 982,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/FOXNEWSW_20251225_060000_2025_Christmas_Showdown/FOXNEWSW_20251225_060000_2025_Christmas_Showdown.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.75,
-      "item": "FOXNEWSW_20251226_050000_2025_Christmas_Showdown",
-      "itemTitle": "2025 Christmas Showdown : FOXNEWSW : December 25, 2025 9:00pm-10:01pm PST",
-      "stem": "FOXNEWSW_20251226_050000_2025_Christmas_Showdown",
-      "file": "FOXNEWSW_20251226_050000_2025_Christmas_Showdown.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3663,
-      "sizeMB": 982,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/FOXNEWSW_20251226_050000_2025_Christmas_Showdown/FOXNEWSW_20251226_050000_2025_Christmas_Showdown.mp4"
-    },
-    {
-      "conf": 0.75,
-      "item": "FOXNEWSW_20251225_010000_2025_Christmas_Showdown",
-      "itemTitle": "2025 Christmas Showdown : FOXNEWSW : December 24, 2025 5:00pm-6:00pm PST",
-      "stem": "FOXNEWSW_20251225_010000_2025_Christmas_Showdown",
-      "file": "FOXNEWSW_20251225_010000_2025_Christmas_Showdown.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3663,
-      "sizeMB": 982,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/FOXNEWSW_20251225_010000_2025_Christmas_Showdown/FOXNEWSW_20251225_010000_2025_Christmas_Showdown.mp4"
-    },
-    {
-      "conf": 0.75,
-      "item": "FOXNEWSW_20251225_020000_2024_Christmas_Showdown",
-      "itemTitle": "2024 Christmas Showdown : FOXNEWSW : December 24, 2025 6:00pm-7:00pm PST",
-      "stem": "FOXNEWSW_20251225_020000_2024_Christmas_Showdown",
-      "file": "FOXNEWSW_20251225_020000_2024_Christmas_Showdown.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 3663,
-      "sizeMB": 979,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/FOXNEWSW_20251225_020000_2024_Christmas_Showdown/FOXNEWSW_20251225_020000_2024_Christmas_Showdown.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-FOXNEWSW"
+  }
 }

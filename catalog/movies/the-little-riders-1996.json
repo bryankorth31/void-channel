@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T12:11:49.556Z",
   "archiveMentions": 4,
   "itemsOpened": 4,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "acfrma-Little_Red_The_Riders_-_2019_Concert_on_the_Green",
-    "itemTitle": "Little Red & The Riders - 2019 Concert on the Green",
-    "stem": "Little_Red_The_Riders_-_2019_Concert_on_the_Green",
-    "file": "Little_Red_The_Riders_-_2019_Concert_on_the_Green.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 5146,
-    "sizeMB": 461,
-    "band": "match",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/acfrma-Little_Red_The_Riders_-_2019_Concert_on_the_Green/Little_Red_The_Riders_-_2019_Concert_on_the_Green.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

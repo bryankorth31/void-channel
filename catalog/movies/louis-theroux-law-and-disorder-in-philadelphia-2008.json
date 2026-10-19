@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T07:44:16.529Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "LawAndDisorderInPhiladelphia-LouisTheroux",
     "itemTitle": "Law and Disorder in Philadelphia - Louis Theroux",
     "stem": "LawAndDisorderInPhiladelphia",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "LawAndDisorderInPhiladelphia-LouisTheroux",
       "itemTitle": "Law and Disorder in Philadelphia - Louis Theroux",
       "stem": "LawAndDisorderInPhiladelphia_512kb",
@@ -46,5 +46,9 @@
       "fileSim": 0.7666666666666667,
       "url": "https://archive.org/download/LawAndDisorderInPhiladelphia-LouisTheroux/LawAndDisorderInPhiladelphia_512kb.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title words are in another order and nothing backs it: no year in the name, runtime not within 5%"
+  }
 }

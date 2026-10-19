@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T06:37:07.774Z",
   "archiveMentions": 50,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "rog56_mail_105",
     "itemTitle": "THE BLACK CAT, Storm over the Nile, MAN MADE MONSTER, HORROR ISLAND",
     "stem": "102",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "rog56_mail_105",
       "itemTitle": "THE BLACK CAT, Storm over the Nile, MAN MADE MONSTER, HORROR ISLAND",
       "stem": "102E",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/rog56_mail_105/102E.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "MonsterIslandBuddies",
       "itemTitle": "Monster Island Buddies",
       "stem": "MIB/GODZILLA BATTLE ROYALE!!!",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/MonsterIslandBuddies/MIB%2FGODZILLA%20BATTLE%20ROYALE!!!.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "ape_1976_202102",
       "itemTitle": "Blood Beast of Monster Island (1975)",
       "stem": "videoplayback (1)",
@@ -76,5 +76,9 @@
       "fileSim": 0.08,
       "url": "https://archive.org/download/ape_1976_202102/videoplayback%20(1).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

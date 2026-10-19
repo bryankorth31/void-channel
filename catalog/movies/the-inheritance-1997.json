@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "victorian-era-inheritance-1987-louisa-may-alcott",
       "itemTitle": "Victorian Era (Inheritance) (1987 Adapted from Louisa May Alcott novel)",
       "stem": "Victorian Era (Inheritance) (1987 Louisa May Alcott)",
@@ -46,20 +46,6 @@
       "band": "match",
       "fileSim": 0.95,
       "url": "https://archive.org/download/victorian-era-inheritance-1987-louisa-may-alcott/Victorian%20Era%20(Inheritance)%20(1987%20Louisa%20May%20Alcott).mp4"
-    },
-    {
-      "conf": 0.75,
-      "item": "the-inheritance-tv-movie-april-6-1997",
-      "itemTitle": "The Inheritance TV Movie April 6 1997",
-      "stem": "The Inheritance TV Movie April 6 1997",
-      "file": "The Inheritance TV Movie April 6 1997.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 7157,
-      "sizeMB": 1448,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/the-inheritance-tv-movie-april-6-1997/The%20Inheritance%20TV%20Movie%20April%206%201997.mp4"
     },
     {
       "conf": 0.65,
@@ -74,6 +60,20 @@
       "band": "near",
       "fileSim": 1,
       "url": "https://archive.org/download/the-inheritance/The%20Inheritance.m4v"
+    },
+    {
+      "conf": 0.6,
+      "item": "the-inheritance-tv-movie-april-6-1997",
+      "itemTitle": "The Inheritance TV Movie April 6 1997",
+      "stem": "The Inheritance TV Movie April 6 1997",
+      "file": "The Inheritance TV Movie April 6 1997.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 7157,
+      "sizeMB": 1448,
+      "band": "near",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/the-inheritance-tv-movie-april-6-1997/The%20Inheritance%20TV%20Movie%20April%206%201997.mp4"
     }
   ]
 }

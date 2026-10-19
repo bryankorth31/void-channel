@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T23:53:00.425Z",
   "archiveMentions": 75,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "PROPHET1OPAMBOUREBENEZERADARKWAYIADOMNARRATESHISLIFESSTORY",
     "itemTitle": "PROPHET 1 OPAMBOUR EBENEZER ADARKWA YIADOM-Ghanasankofa",
     "stem": "OpambourTheProphet1-opambourkrom-kumasi-ghana-africa",
@@ -33,5 +33,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/PROPHET1OPAMBOUREBENEZERADARKWAYIADOMNARRATESHISLIFESSTORY/OpambourTheProphet1-opambourkrom-kumasi-ghana-africa.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

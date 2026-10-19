@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T22:54:02.392Z",
   "archiveMentions": 5,
   "itemsOpened": 5,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "my-one-christmas-wish-2019-christmas-uptv",
     "itemTitle": "My One Christmas Wish (2019 +++++ Christmas UPTV)",
     "stem": "My One Christmas Wish (2019 +++++ Christmas UPTV)",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/my-one-christmas-wish-2019-christmas-uptv/My%20One%20Christmas%20Wish%20(2019%20%2B%2B%2B%2B%2B%20Christmas%20UPTV).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2015)"
+  }
 }

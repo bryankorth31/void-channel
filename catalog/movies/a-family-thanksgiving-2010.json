@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T11:13:42.083Z",
   "archiveMentions": 107,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "family-thanksgiving-2021",
     "itemTitle": "Family Thanksgiving (2021)",
     "stem": "yt5s.com-Family Thanksgiving _ Cocoa Brown _ Home is Where the Chaos Is _ Full, Free Maverick Movie",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/family-thanksgiving-2021/yt5s.com-Family%20Thanksgiving%20_%20Cocoa%20Brown%20_%20Home%20is%20Where%20the%20Chaos%20Is%20_%20Full%2C%20Free%20Maverick%20Movie.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2010)"
+  }
 }

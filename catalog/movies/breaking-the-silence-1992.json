@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T15:08:28.843Z",
   "archiveMentions": 166,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "mytv26ca-Breaking_the_Silence_The_Movie",
-    "itemTitle": "Breaking the Silence The Movie",
-    "stem": "Breaking_the_Silence_The_Movie",
-    "file": "Breaking_the_Silence_The_Movie.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 5139,
-    "sizeMB": 642,
-    "band": "match",
-    "fileSim": 0.9714285714285714,
-    "url": "https://archive.org/download/mytv26ca-Breaking_the_Silence_The_Movie/Breaking_the_Silence_The_Movie.mpeg4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

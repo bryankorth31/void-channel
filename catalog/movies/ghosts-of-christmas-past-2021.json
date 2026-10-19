@@ -18,63 +18,24 @@
   "huntedAt": "2026-10-14T07:12:32.123Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "PA6569243",
-    "itemTitle": "The Naz: Ghosts of Christmas Past - Past Hurts",
-    "stem": "PA_656_9243",
-    "file": "PA_656_9243.mp4",
-    "format": "MPEG4",
+    "conf": 0.84,
+    "item": "MMGOCP2004",
+    "itemTitle": "Midsomer Murders - Ghosts of Christmas Past (2004)",
+    "stem": "Midsomer Murders - Ghosts of Christmas Past (2004)",
+    "file": "Midsomer Murders - Ghosts of Christmas Past (2004).mp4",
+    "format": "h.264",
     "playable": true,
-    "seconds": 5351,
-    "sizeMB": 4245,
+    "seconds": 5703,
+    "sizeMB": 564,
     "band": "match",
-    "fileSim": 0.08,
-    "url": "https://archive.org/download/PA6569243/PA_656_9243.mp4"
+    "fileSim": 0.95,
+    "url": "https://archive.org/download/MMGOCP2004/Midsomer%20Murders%20-%20Ghosts%20of%20Christmas%20Past%20(2004).mp4"
   },
-  "alternates": [
-    {
-      "conf": 0.85,
-      "item": "PA6569238",
-      "itemTitle": "The Naz: Ghosts Of Christmas Past - Past Loss",
-      "stem": "PA_656_9238",
-      "file": "PA_656_9238.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 5176,
-      "sizeMB": 4200,
-      "band": "match",
-      "fileSim": 0.08,
-      "url": "https://archive.org/download/PA6569238/PA_656_9238.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "PA6569237",
-      "itemTitle": "The Naz: Ghosts of Christmas Past - Getting Past Your Past",
-      "stem": "PA_656_9237",
-      "file": "PA_656_9237.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4500,
-      "sizeMB": 3550,
-      "band": "match",
-      "fileSim": 0.08,
-      "url": "https://archive.org/download/PA6569237/PA_656_9237.mp4"
-    },
-    {
-      "conf": 0.85,
-      "item": "MMGOCP2004",
-      "itemTitle": "Midsomer Murders - Ghosts of Christmas Past (2004)",
-      "stem": "Midsomer Murders - Ghosts of Christmas Past (2004)",
-      "file": "Midsomer Murders - Ghosts of Christmas Past (2004).mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 5703,
-      "sizeMB": 564,
-      "band": "match",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/MMGOCP2004/Midsomer%20Murders%20-%20Ghosts%20of%20Christmas%20Past%20(2004).mp4"
-    }
-  ]
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2021)"
+  }
 }

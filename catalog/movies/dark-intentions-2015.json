@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T16:35:49.392Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-jZD-Yu-Qc80",
     "itemTitle": "Dark Morality : How Good Political Intentions Can Lead to Immoral Acts",
     "stem": "jZD-Yu-Qc80",
@@ -47,5 +47,9 @@
       "fileSim": 0.64,
       "url": "https://archive.org/download/cruel-intentions_202507/Cruel%20Intentions.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -19,9 +19,9 @@
   "huntedAt": "2026-10-14T13:50:16.159Z",
   "archiveMentions": 281,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "percy-the-park-keeper-after-the-storm-and-one-snowy-night-uk-vhs-2001",
     "itemTitle": "Percy The Park Keeper - After The Storm And One Snowy Night (UK VHS, 2001)",
     "stem": "Percy The Park Keeper - After The Storm and One Snowy Night (UK VHS, 2001)",
@@ -34,5 +34,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/percy-the-park-keeper-after-the-storm-and-one-snowy-night-uk-vhs-2001/Percy%20The%20Park%20Keeper%20-%20After%20The%20Storm%20and%20One%20Snowy%20Night%20(UK%20VHS%2C%202001).MP4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

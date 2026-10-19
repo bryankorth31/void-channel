@@ -16,35 +16,11 @@
   "huntedAt": "2026-10-14T15:33:04.932Z",
   "archiveMentions": 208,
   "itemsOpened": 6,
-  "state": "LIVE",
-  "file": {
-    "conf": 0.85,
-    "item": "gov.house.hbs.hrs02INT2212_070124.1",
-    "itemTitle": "South Sudan: The Comprehensive Peace Agreement on Life Support (Part 1 of 3)",
-    "stem": "hrs02INT2212_070124.1",
-    "file": "hrs02INT2212_070124.1.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4625,
-    "sizeMB": 479,
-    "band": "match",
-    "fileSim": 0,
-    "url": "https://archive.org/download/gov.house.hbs.hrs02INT2212_070124.1/hrs02INT2212_070124.1.mp4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "gov.house.hbs.hrs02INT2212_070124.3",
-      "itemTitle": "South Sudan: The Comprehensive Peace Agreement on Life Support (Part 3 of 3)",
-      "stem": "hrs02INT2212_070124.3",
-      "file": "hrs02INT2212_070124.3.mp4",
-      "format": "h.264",
-      "playable": true,
-      "seconds": 4092,
-      "sizeMB": 426,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/gov.house.hbs.hrs02INT2212_070124.3/hrs02INT2212_070124.3.mp4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

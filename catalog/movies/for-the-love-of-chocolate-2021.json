@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T15:02:10.461Z",
   "archiveMentions": 24,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-1GktFC6A93s",
     "itemTitle": "Playboy Bunnies: The Hottest Easter Tradition Since Chocolate Eggs - Love, Lust, and The Devil Ep 51",
     "stem": "1GktFC6A93s",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "faith-love-and-chocolate-2017-dramady",
       "itemTitle": "Faith, Love and Chocolate (2017 +++++ Dramady)",
       "stem": "Faith Love and Chocolate (2017 +++++ Dramady)",
@@ -48,5 +48,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/faith-love-and-chocolate-2017-dramady/Faith%20Love%20and%20Chocolate%20(2017%20%2B%2B%2B%2B%2B%20Dramady).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

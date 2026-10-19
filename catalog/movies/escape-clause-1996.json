@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T11:04:19.004Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "the-santa-clause-3-the-escape-clause-2006_202607",
     "itemTitle": "The Santa Clause 3: The Escape Clause (2006)",
     "stem": "The Santa Clause 3 The Escape Clause (2006)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/the-santa-clause-3-the-escape-clause-2006_202607/The%20Santa%20Clause%203%20The%20Escape%20Clause%20(2006).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1996)"
+  }
 }

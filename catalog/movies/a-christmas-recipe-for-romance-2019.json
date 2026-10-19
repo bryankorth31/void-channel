@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T11:58:35.556Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "harlequin-a-christmas-recipe-to-romance-2019-christmas-romady-up-tv",
     "itemTitle": "Harlequin A Christmas Recipe To Romance (2019 +++++ Christmas Romady Up Tv)",
     "stem": "Harlequin A-Christmas-Recipe-to-Romance (2019 +++++ Christmas Romady UpTv)",
@@ -31,5 +31,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/harlequin-a-christmas-recipe-to-romance-2019-christmas-romady-up-tv/Harlequin%20A-Christmas-Recipe-to-Romance%20(2019%20%2B%2B%2B%2B%2B%20Christmas%20Romady%20UpTv).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

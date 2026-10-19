@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T05:02:12.222Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "a-perfect-getaway-2009-dvdrip",
     "itemTitle": "A Perfect Getaway",
     "stem": "A Perfect Getaway 2009 dvdrip",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/a-perfect-getaway-2009-dvdrip/A%20Perfect%20Getaway%202009%20dvdrip.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1998)"
+  }
 }

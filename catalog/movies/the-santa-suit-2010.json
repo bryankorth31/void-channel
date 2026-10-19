@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T07:01:47.844Z",
   "archiveMentions": 9,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "man-in-the-santa-claus-suit-1979",
     "itemTitle": "The Man In The Santa Claus Suit - Fred Astaire",
     "stem": "Man in the Santa Claus Suit - 1979",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "the-man-in-the-santa-claus-suit-1979-wor-tv-9-movie-special-secaucus-nj-december",
       "itemTitle": "The Man In The Santa Claus Suit ( 1979) WOR TV 9 Movie Special Secaucus NJ December 1984 With Commercials",
       "stem": "The Man In The Santa Claus Suit (1979) WOR-TV 9 Movie Special Secaucus NJ December 1984 with Commercials ",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/the-man-in-the-santa-claus-suit-1979-wor-tv-9-movie-special-secaucus-nj-december/The%20Man%20In%20The%20Santa%20Claus%20Suit%20(1979)%20WOR-TV%209%20Movie%20Special%20Secaucus%20NJ%20December%201984%20with%20Commercials%20.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "a-man-in-a-santa-claus-suit",
       "itemTitle": "A Man In A Santa Claus Suit",
       "stem": "A Man in a Santa Claus Suit",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/a-man-in-a-santa-claus-suit/A%20Man%20in%20a%20Santa%20Claus%20Suit.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "the-man-in-the-santa-claus-suit-1979-christmas-fred-astaire",
       "itemTitle": "The Man In The Santa Claus Suit (1979 +++++ Christmas, Fred Astaire)",
       "stem": "The Man In The Santa Claus Suit (1979 +++++ Christmas, Fred Astaire)",
@@ -76,5 +76,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/the-man-in-the-santa-claus-suit-1979-christmas-fred-astaire/The%20Man%20In%20The%20Santa%20Claus%20Suit%20(1979%20%2B%2B%2B%2B%2B%20Christmas%2C%20Fred%20Astaire).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

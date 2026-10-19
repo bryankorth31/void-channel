@@ -13,20 +13,11 @@
   "huntedAt": "2026-10-15T14:16:12.202Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.75,
-    "item": "KPIX_20251214_040000_CBS_News_Presents_A_Town_Hall_With_Erika_Kirk",
-    "itemTitle": "CBS News Presents: A Town Hall With Erika Kirk : KPIX : December 13, 2025 8:00pm-9:01pm PST",
-    "stem": "KPIX_20251214_040000_CBS_News_Presents_A_Town_Hall_With_Erika_Kirk",
-    "file": "KPIX_20251214_040000_CBS_News_Presents_A_Town_Hall_With_Erika_Kirk.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 3722,
-    "sizeMB": 1008,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/KPIX_20251214_040000_CBS_News_Presents_A_Town_Hall_With_Erika_Kirk/KPIX_20251214_040000_CBS_News_Presents_A_Town_Hall_With_Erika_Kirk.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-KPIX"
+  }
 }

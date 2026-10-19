@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T12:37:28.562Z",
   "archiveMentions": 293,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "2020-04-04_QuarantineSessions",
     "itemTitle": "JVonD Radio - Quarantine Sessions - 4/4/20",
     "stem": "2020-04-04_JVonDRadio_QuarantineSessions",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "bitchute_-_quarantine-beat_2022",
       "itemTitle": "BitChute - quarantine-beat (2022)",
       "stem": "20220421 - MFdGmzTxNkuu - A Topic for You! - Flatten the Curve - Flat Earth Documentary - Tawk Amongst Yaselves/20220421 - MFdGmzTxNkuu - A Topic for You! - Flatten the Curve - Flat Earth Documentary - Tawk Amongst Yaselves",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/bitchute_-_quarantine-beat_2022/20220421%20-%20MFdGmzTxNkuu%20-%20A%20Topic%20for%20You!%20-%20Flatten%20the%20Curve%20-%20Flat%20Earth%20Documentary%20-%20Tawk%20Amongst%20Yaselves%2F20220421%20-%20MFdGmzTxNkuu%20-%20A%20Topic%20for%20You!%20-%20Flatten%20the%20Curve%20-%20Flat%20Earth%20Documentary%20-%20Tawk%20Amongst%20Yaselves.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "bitchute_-_quarantine-beat_2022",
       "itemTitle": "BitChute - quarantine-beat (2022)",
       "stem": "20220430 - LUC97swmKFfI - HOW TO KILL BILLIONS & GET AWAY WITH IT - ELECTROMAGNETIC & SCALAR WEAPONS - LT. COL. TOM BEARDEN/20220430 - LUC97swmKFfI - HOW TO KILL BILLIONS & GET AWAY WITH IT - ELECTROMAGNETIC & SCALAR WEAPONS - LT. COL. TOM BEARDEN",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/bitchute_-_quarantine-beat_2022/20220430%20-%20LUC97swmKFfI%20-%20HOW%20TO%20KILL%20BILLIONS%20%26%20GET%20AWAY%20WITH%20IT%20-%20ELECTROMAGNETIC%20%26%20SCALAR%20WEAPONS%20-%20LT.%20COL.%20TOM%20BEARDEN%2F20220430%20-%20LUC97swmKFfI%20-%20HOW%20TO%20KILL%20BILLIONS%20%26%20GET%20AWAY%20WITH%20IT%20-%20ELECTROMAGNETIC%20%26%20SCALAR%20WEAPONS%20-%20LT.%20COL.%20TOM%20BEARDEN.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "bitchute_-_quarantine-beat_2021",
       "itemTitle": "BitChute - quarantine-beat (2021)",
       "stem": "20210911 - 3M2WzLqGBVd4 - FALSE FLAG REVISITED - 9_🏬🏬 - CHRISTIAN VIDEO VAULT/20210911 - 3M2WzLqGBVd4 - FALSE FLAG REVISITED - 9_🏬🏬 - CHRISTIAN VIDEO VAULT",
@@ -75,5 +75,9 @@
       "fileSim": 0.0625,
       "url": "https://archive.org/download/bitchute_-_quarantine-beat_2021/20210911%20-%203M2WzLqGBVd4%20-%20FALSE%20FLAG%20REVISITED%20-%209_%F0%9F%8F%AC%F0%9F%8F%AC%20-%20CHRISTIAN%20VIDEO%20VAULT%2F20210911%20-%203M2WzLqGBVd4%20-%20FALSE%20FLAG%20REVISITED%20-%209_%F0%9F%8F%AC%F0%9F%8F%AC%20-%20CHRISTIAN%20VIDEO%20VAULT.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

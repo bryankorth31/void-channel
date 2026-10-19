@@ -20,9 +20,9 @@
   "huntedAt": "2026-10-15T07:31:48.781Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "the-adventures-of-jimmy-neutron-boy-genius-operation-rescue-jet-fusion",
     "itemTitle": "The Adventures Of Jimmy Neutron, Boy Genius - Operation: Rescue Jet Fusion",
     "stem": "The Adventures of Jimmy Neutro,n Boy Genius - Operation Rescue Jet Fusion",
@@ -35,5 +35,9 @@
     "fileSim": 0.7916666666666666,
     "url": "https://archive.org/download/the-adventures-of-jimmy-neutron-boy-genius-operation-rescue-jet-fusion/The%20Adventures%20of%20Jimmy%20Neutro%2Cn%20Boy%20Genius%20-%20Operation%20Rescue%20Jet%20Fusion.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

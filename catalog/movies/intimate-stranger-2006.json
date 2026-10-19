@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-15T05:27:43.487Z",
   "archiveMentions": 6,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "theintimatestranger1956_202002",
     "itemTitle": "The Intimate Stranger (1956, UK) Dir: Joseph Losey, Starring Richard Basehart, Constance Cummings - Film Noir Full Movie",
     "stem": "The Intimate Stranger (1956, UK) Featuring Richard Basehart, Constance Cummings - Noir Full Movie",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "1956-the-intimate-stranger-intimidad-con-un-extrano-joseph-losey-alec-c.-snowden-vose",
       "itemTitle": "1956 - The Intimate Stranger - Intimidad Con un extraño - Joseph Losey - Alec C. Snowden - VOSE",
       "stem": "1956 - The Intimate Stranger - Intimidad con un extraño - Joseph Losey - Alec C. Snowden - VOSE",
@@ -49,7 +49,7 @@
       "url": "https://archive.org/download/1956-the-intimate-stranger-intimidad-con-un-extrano-joseph-losey-alec-c.-snowden-vose/1956%20-%20The%20Intimate%20Stranger%20-%20Intimidad%20con%20un%20extra%C3%B1o%20-%20Joseph%20Losey%20-%20Alec%20C.%20Snowden%20-%20VOSE.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "1956-the-intimate-stranger-intimidad-con-un-extrano-joseph-losey-alec-c.-snowden-vo",
       "itemTitle": "1956 - The Intimate Stranger - Intimidad con un extraño - Joseph Losey - Alec C. Snowden - VO",
       "stem": "1956 - The Intimate Stranger - Intimidad con un extraño - Joseph Losey - Alec C. Snowden - VO",
@@ -63,7 +63,7 @@
       "url": "https://archive.org/download/1956-the-intimate-stranger-intimidad-con-un-extrano-joseph-losey-alec-c.-snowden-vo/1956%20-%20The%20Intimate%20Stranger%20-%20Intimidad%20con%20un%20extra%C3%B1o%20-%20Joseph%20Losey%20-%20Alec%20C.%20Snowden%20-%20VO.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "youtube-9hDnukWvnGo",
       "itemTitle": "Finger of Guilt aka The Intimate Stranger (1956)",
       "stem": "9hDnukWvnGo",
@@ -76,5 +76,9 @@
       "fileSim": 0.08,
       "url": "https://archive.org/download/youtube-9hDnukWvnGo/9hDnukWvnGo.webm"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2006)"
+  }
 }

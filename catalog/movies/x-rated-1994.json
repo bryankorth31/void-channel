@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T08:42:59.827Z",
   "archiveMentions": 69,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "life-changing-movies-rated-r-18-x-rated",
     "itemTitle": "Life Changing Movies (Rated R 18+ X Rated)",
     "stem": "Requiem for a Dream (2000) English, English subtitles",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "life-changing-movies-rated-r-18-x-rated",
       "itemTitle": "Life Changing Movies (Rated R 18+ X Rated)",
       "stem": "Mysterious Skin (2004)",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/life-changing-movies-rated-r-18-x-rated/Mysterious%20Skin%20(2004).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "life-changing-movies-rated-r-18-x-rated",
       "itemTitle": "Life Changing Movies (Rated R 18+ X Rated)",
       "stem": "Kill List, by Ben Wheatley (2011)",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/life-changing-movies-rated-r-18-x-rated/Kill%20List%2C%20by%20Ben%20Wheatley%20(2011).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "life-changing-movies-rated-r-18-x-rated",
       "itemTitle": "Life Changing Movies (Rated R 18+ X Rated)",
       "stem": "Baraka (1992)",
@@ -74,5 +74,9 @@
       "fileSim": 0.2,
       "url": "https://archive.org/download/life-changing-movies-rated-r-18-x-rated/Baraka%20(1992).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

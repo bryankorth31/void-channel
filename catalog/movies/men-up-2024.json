@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T21:57:26.900Z",
   "archiveMentions": 230,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.95,
+    "conf": 0.8,
     "item": "tsunubi-2024-07-20-i-often-have-dreams-about-being-picked-up-and-thrown-around-b",
     "itemTitle": "[Tsunubi] [2024-07-20] I often have dreams about being picked up and thrown around by bigger and stronger men 720p60",
     "stem": "[Tsunubi] [2024-07-20] I often have dreams about being picked up and thrown around by bigger and stronger men 720p60",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.75,
+      "conf": 0.6,
       "item": "2024-08-03_Destiny_MEN_CAN_HAVE_KIDS_Tim_Pool_Makes_Stuff_Up_And_Confuses_Himsel",
       "itemTitle": "MEN CAN HAVE KIDS!？ Tim Pool Makes Stuff Up And Confuses Himself",
       "stem": "2024-08-03__MEN_CAN_HAVE_KIDS_Tim_Pool_Makes_Stuff_Up_And_Confuses_Himself",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/2024-08-03_Destiny_MEN_CAN_HAVE_KIDS_Tim_Pool_Makes_Stuff_Up_And_Confuses_Himsel/2024-08-03__MEN_CAN_HAVE_KIDS_Tim_Pool_Makes_Stuff_Up_And_Confuses_Himself.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "youtube-ZFm-Yu6_dDU",
       "itemTitle": "Poor Victim Women, and 'Men' Taking Up! IDC! | Tue 1-30-24",
       "stem": "ZFm-Yu6_dDU",
@@ -61,5 +61,9 @@
       "fileSim": 0,
       "url": "https://archive.org/download/youtube-ZFm-Yu6_dDU/ZFm-Yu6_dDU.webm"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

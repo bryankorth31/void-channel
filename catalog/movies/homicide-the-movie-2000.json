@@ -17,24 +17,38 @@
   "huntedAt": "2026-10-14T07:20:51.572Z",
   "archiveMentions": 17,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
-    "item": "Homicide_The_Movie_Rough_Cut",
-    "itemTitle": " Homicide  The Movie Rough Cut",
-    "stem": "Homicide_The_Movie_Rough_Cut",
-    "file": "Homicide_The_Movie_Rough_Cut.mp4",
+    "conf": 0.75,
+    "item": "homicide-the-movie-daniel-baldwin-ned-beatty-2000-nbc-full-movie-with-original-commercials",
+    "itemTitle": "Homicide The Movie ( Daniel Baldwin, Ned Beatty) 2000 NBC Full Movie With Original Commercials",
+    "stem": "Homicide The Movie (Daniel Baldwin, Ned Beatty) _ 2000 NBC Full Movie with Original Commercials",
+    "file": "Homicide The Movie (Daniel Baldwin, Ned Beatty) _ 2000 NBC Full Movie with Original Commercials.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 5326,
-    "sizeMB": 4500,
-    "band": "match",
+    "seconds": 6891,
+    "sizeMB": 304,
+    "band": "near",
     "fileSim": 0.95,
-    "url": "https://archive.org/download/Homicide_The_Movie_Rough_Cut/Homicide_The_Movie_Rough_Cut.mp4"
+    "url": "https://archive.org/download/homicide-the-movie-daniel-baldwin-ned-beatty-2000-nbc-full-movie-with-original-commercials/Homicide%20The%20Movie%20(Daniel%20Baldwin%2C%20Ned%20Beatty)%20_%202000%20NBC%20Full%20Movie%20with%20Original%20Commercials.mp4"
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
+      "item": "Homicide_The_Movie_Rough_Cut",
+      "itemTitle": " Homicide  The Movie Rough Cut",
+      "stem": "Homicide_The_Movie_Rough_Cut",
+      "file": "Homicide_The_Movie_Rough_Cut.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 5326,
+      "sizeMB": 4500,
+      "band": "match",
+      "fileSim": 0.95,
+      "url": "https://archive.org/download/Homicide_The_Movie_Rough_Cut/Homicide_The_Movie_Rough_Cut.mp4"
+    },
+    {
+      "conf": 0.7,
       "item": "Homicide1930",
       "itemTitle": "Homicide 1930 Claudette Colbert, Fredric March, Natalie Moorhead, Richard Tucker",
       "stem": "Homicide 1930",
@@ -46,20 +60,10 @@
       "band": "match",
       "fileSim": 0.95,
       "url": "https://archive.org/download/Homicide1930/Homicide%201930.mp4"
-    },
-    {
-      "conf": 0.75,
-      "item": "homicide-the-movie-daniel-baldwin-ned-beatty-2000-nbc-full-movie-with-original-commercials",
-      "itemTitle": "Homicide The Movie ( Daniel Baldwin, Ned Beatty) 2000 NBC Full Movie With Original Commercials",
-      "stem": "Homicide The Movie (Daniel Baldwin, Ned Beatty) _ 2000 NBC Full Movie with Original Commercials",
-      "file": "Homicide The Movie (Daniel Baldwin, Ned Beatty) _ 2000 NBC Full Movie with Original Commercials.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6891,
-      "sizeMB": 304,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/homicide-the-movie-daniel-baldwin-ned-beatty-2000-nbc-full-movie-with-original-commercials/Homicide%20The%20Movie%20(Daniel%20Baldwin%2C%20Ned%20Beatty)%20_%202000%20NBC%20Full%20Movie%20with%20Original%20Commercials.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "runtime not within 15% of the TMDB runtime"
+  }
 }

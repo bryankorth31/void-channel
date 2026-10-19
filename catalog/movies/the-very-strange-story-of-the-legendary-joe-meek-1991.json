@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T11:36:51.177Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "joe_meek",
     "itemTitle": "The Very Strange Story Of… The Legendary Joe Meek (BBC Four's Arena series, season 16, episode 10)",
     "stem": "Video 21",
@@ -32,5 +32,9 @@
     "fileSim": 0,
     "url": "https://archive.org/download/joe_meek/Video%2021.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name reads as an episode of a series (S01E02, 1x03, Season 2)"
+  }
 }

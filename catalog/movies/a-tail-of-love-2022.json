@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T10:23:34.640Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "fairy-tail-movie-2-dragon-cry-love-stoorey-210.net-lovestoorey-210.blogspot.com-",
     "itemTitle": "Fairy Tail Movie 2 Dragon Cry Love Stoorey 210.net Lovestoorey 210.blogspot.com Stoorey 210 Drama.blogspot.com Love Stoorey 210 Upload.blogspot.com Uploaderanime.wordpress.com By Love Stoorey 210",
     "stem": "Fairy Tail Movie - Houou no Miko _love-stoorey210.net_lovestoorey210.blogspot.com_stoorey210-drama.blogspot.com_love-stoorey210-upload.blogspot.com_uploaderanime.wordpress.com_by_love_stoorey210",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "fairy-tail-movie-2-dragon-cry-love-stoorey-210.net-lovestoorey-210.blogspot.com-",
       "itemTitle": "Fairy Tail Movie 2 Dragon Cry Love Stoorey 210.net Lovestoorey 210.blogspot.com Stoorey 210 Drama.blogspot.com Love Stoorey 210 Upload.blogspot.com Uploaderanime.wordpress.com By Love Stoorey 210",
       "stem": "Fairy Tail Movie 2 - Dragon Cry_love-stoorey210.net_lovestoorey210.blogspot.com_stoorey210-drama.blogspot.com_love-stoorey210-upload.blogspot.com_uploaderanime.wordpress.com_by_love_stoorey210",
@@ -47,5 +47,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/fairy-tail-movie-2-dragon-cry-love-stoorey-210.net-lovestoorey-210.blogspot.com-/Fairy%20Tail%20Movie%202%20-%20Dragon%20Cry_love-stoorey210.net_lovestoorey210.blogspot.com_stoorey210-drama.blogspot.com_love-stoorey210-upload.blogspot.com_uploaderanime.wordpress.com_by_love_stoorey210.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

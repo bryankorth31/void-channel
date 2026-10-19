@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T18:25:42.547Z",
   "archiveMentions": 11,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "vid-20240323-120052",
     "itemTitle": "The Mayor of Casterbridge (1991 UK VHS)",
     "stem": "VID_20240323_120052",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "vid-20240323-120052",
       "itemTitle": "The Mayor of Casterbridge (1991 UK VHS)",
       "stem": "VID_20240324_115505",
@@ -47,7 +47,7 @@
       "url": "https://archive.org/download/vid-20240323-120052/VID_20240324_115505.mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-mayor-of-casterbridge-part-two-1991-uk-vhs",
       "itemTitle": "The Mayor Of Casterbridge Part Two (1991 UK VHS)",
       "stem": "The Mayor of Casterbridge Part Two (1991 UK VHS)",
@@ -61,7 +61,7 @@
       "url": "https://archive.org/download/the-mayor-of-casterbridge-part-two-1991-uk-vhs/The%20Mayor%20of%20Casterbridge%20Part%20Two%20(1991%20UK%20VHS).mp4"
     },
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "the-mayor-of-casterbridge-part-one-1991-uk-vhs",
       "itemTitle": "The Mayor Of Casterbridge Part One (1991 UK VHS)",
       "stem": "The Mayor of Casterbridge Part One (1991 UK VHS)",
@@ -74,5 +74,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/the-mayor-of-casterbridge-part-one-1991-uk-vhs/The%20Mayor%20of%20Casterbridge%20Part%20One%20(1991%20UK%20VHS).mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2003)"
+  }
 }

@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T10:49:23.736Z",
   "archiveMentions": 7,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "youtube-qshy-tnmj6Y",
     "itemTitle": "MARRIAGE LIES - 2017 Latest Nigerian Movies African Nollywood Full Movies 2017",
     "stem": "MARRIAGE_LIES_-_2017_Latest_Nigerian_Movies_African_Nollywood_Full_Movies_2017-qshy-tnmj6Y",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/youtube-qshy-tnmj6Y/MARRIAGE_LIES_-_2017_Latest_Nigerian_Movies_African_Nollywood_Full_Movies_2017-qshy-tnmj6Y.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T07:54:40.150Z",
   "archiveMentions": 24,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "20221224_captainpuffy_christmas-eve-cookie-and-gingerbread-house-making-stream-with-ellum",
     "itemTitle": "CHRISTMAS EVE COOKIE AND GINGERBREAD HOUSE MAKING STREAM WITH ELLUM!!!",
     "stem": "20221224_1687760422_CaptainPuffy_CHRISTMAS EVE COOKIE AND GINGERBREAD HOUSE MAKING STREAM WITH ELLUM!!!",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "20221223_georgenotfound_dream-team-christmas-stream-gingerbread-house",
       "itemTitle": "DREAM TEAM CHRISTMAS STREAM!!! GINGERBREAD HOUSE",
       "stem": "20221223_1687360323_GeorgeNotFound_DREAM TEAM CHRISTMAS STREAM!!! GINGERBREAD HOUSE",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/20221223_georgenotfound_dream-team-christmas-stream-gingerbread-house/20221223_1687360323_GeorgeNotFound_DREAM%20TEAM%20CHRISTMAS%20STREAM!!!%20GINGERBREAD%20HOUSE.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "dream-team-christmas-stream-gingerbread-house",
       "itemTitle": "DREAM TEAM CHRISTMAS STREAM!!! GINGERBREAD HOUSE",
       "stem": "george_12_23_vod",
@@ -61,5 +61,9 @@
       "fileSim": 0.06451612903225806,
       "url": "https://archive.org/download/dream-team-christmas-stream-gingerbread-house/george_12_23_vod.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

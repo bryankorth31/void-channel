@@ -18,20 +18,11 @@
   "huntedAt": "2026-10-15T03:14:58.120Z",
   "archiveMentions": 1,
   "itemsOpened": 1,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "WSBK_20010915_000000_Max_Knight_Ultra_Spy",
-    "itemTitle": "Max Knight: Ultra Spy : WSBK : September 14, 2001 8:00pm-9:59pm EDT",
-    "stem": "WSBK_20010915_000000_Max_Knight_Ultra_Spy",
-    "file": "WSBK_20010915_000000_Max_Knight_Ultra_Spy.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 7192,
-    "sizeMB": 724,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/WSBK_20010915_000000_Max_Knight_Ultra_Spy/WSBK_20010915_000000_Max_Knight_Ultra_Spy.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: TV-WSBK"
+  }
 }

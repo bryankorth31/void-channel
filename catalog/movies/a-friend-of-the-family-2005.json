@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-15T05:22:35.517Z",
   "archiveMentions": 64,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "moochie-of-the-little-league-1959-family-w-d-a-diamond-is-a-boys-best-friend",
     "itemTitle": "Moochie Of The Little League (1959 Family, W~D) ''A Diamond Is A Boy's Best Friend''",
     "stem": "Moochie of the Little League (1959 Family, W~D) A Diamond is a Boy's Best Friend",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/moochie-of-the-little-league-1959-family-w-d-a-diamond-is-a-boys-best-friend/Moochie%20of%20the%20Little%20League%20(1959%20Family%2C%20W~D)%20A%20Diamond%20is%20a%20Boy's%20Best%20Friend.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

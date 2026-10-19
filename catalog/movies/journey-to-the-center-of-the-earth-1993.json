@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T10:31:48.983Z",
   "archiveMentions": 65,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "1988.-journey-to-the-center-of-the-earth",
     "itemTitle": "1988. Journey to the Center of the Earth",
     "stem": "1988. Journey to the Center of the Earth",
@@ -35,7 +35,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "journey.to.the.-center.of.the.-earth.-2008",
       "itemTitle": "Journey to the Center of the Earth 2008",
       "stem": "Journey.to.the.Center.of.the.Earth.2008",
@@ -48,5 +48,9 @@
       "fileSim": 1,
       "url": "https://archive.org/download/journey.to.the.-center.of.the.-earth.-2008/Journey.to.the.Center.of.the.Earth.2008.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (1993)"
+  }
 }

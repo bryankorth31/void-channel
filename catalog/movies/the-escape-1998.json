@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T23:53:49.874Z",
   "archiveMentions": 283,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "03-escape-from-the-planet-of-the-apes-1971-dehn-cut",
     "itemTitle": "Escape From The Planet Of The Apes (1971) The Dehn Cut",
     "stem": "03 - Escape From The Planet Of The Apes (1971) Dehn Cut",
@@ -34,7 +34,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.7,
       "item": "03-escape-from-the-planet-of-the-apes-1971-dehn-cut",
       "itemTitle": "Escape From The Planet Of The Apes (1971) The Dehn Cut",
       "stem": "03 - Escape From The Planet Of The Apes (1971) Original Cut",
@@ -48,7 +48,7 @@
       "url": "https://archive.org/download/03-escape-from-the-planet-of-the-apes-1971-dehn-cut/03%20-%20Escape%20From%20The%20Planet%20Of%20The%20Apes%20(1971)%20Original%20Cut.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "876-desert-escape",
       "itemTitle": "876 Desert Escape",
       "stem": "876-DesertEscape",
@@ -62,7 +62,7 @@
       "url": "https://archive.org/download/876-desert-escape/876-DesertEscape.mp4"
     },
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "1981-escape-to-victory",
       "itemTitle": "(1981) ESCAPE TO VICTORY FULL MOVIE",
       "stem": "(1981) ESCAPE TO VICTORY",
@@ -75,5 +75,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/1981-escape-to-victory/(1981)%20ESCAPE%20TO%20VICTORY.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }

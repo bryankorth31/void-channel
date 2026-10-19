@@ -16,49 +16,11 @@
   "huntedAt": "2026-10-13T20:26:48.741Z",
   "archiveMentions": 40,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.75,
-    "item": "2017_Royal_Coronation_-_Saint_Paul_Winter_Carnival",
-    "itemTitle": "2017 Royal Coronation - Saint Paul Winter Carnival",
-    "stem": "2017_Royal_Coronation_-_Saint_Paul_Winter_Carnival",
-    "file": "2017_Royal_Coronation_-_Saint_Paul_Winter_Carnival.mpeg4",
-    "format": "MPEG4",
-    "playable": true,
-    "seconds": 6368,
-    "sizeMB": 479,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/2017_Royal_Coronation_-_Saint_Paul_Winter_Carnival/2017_Royal_Coronation_-_Saint_Paul_Winter_Carnival.mpeg4"
-  },
-  "alternates": [
-    {
-      "conf": 0.65,
-      "item": "2018_Royal_Coronation_-_Saint_Paul_Winter_Carnival",
-      "itemTitle": "2018 Royal Coronation - Saint Paul Winter Carnival",
-      "stem": "2018_Royal_Coronation_-_Saint_Paul_Winter_Carnival",
-      "file": "2018_Royal_Coronation_-_Saint_Paul_Winter_Carnival.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6293,
-      "sizeMB": 483,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/2018_Royal_Coronation_-_Saint_Paul_Winter_Carnival/2018_Royal_Coronation_-_Saint_Paul_Winter_Carnival.mpeg4"
-    },
-    {
-      "conf": 0.65,
-      "item": "2018_Saint_Paul_Winter_Carnival_Royal_Coronation",
-      "itemTitle": "2018 Saint Paul Winter Carnival Royal Coronation",
-      "stem": "2018_Saint_Paul_Winter_Carnival_Royal_Coronation",
-      "file": "2018_Saint_Paul_Winter_Carnival_Royal_Coronation.mpeg4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 6300,
-      "sizeMB": 457,
-      "band": "near",
-      "fileSim": 0.95,
-      "url": "https://archive.org/download/2018_Saint_Paul_Winter_Carnival_Royal_Coronation/2018_Saint_Paul_Winter_Carnival_Royal_Coronation.mpeg4"
-    }
-  ]
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "hard exclude: newsandpublicaffairs"
+  }
 }

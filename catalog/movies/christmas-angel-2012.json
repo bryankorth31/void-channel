@@ -17,9 +17,9 @@
   "huntedAt": "2026-10-14T08:04:25.403Z",
   "archiveMentions": 50,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "winter-angel-2011-christmas-family-drama-runaway",
     "itemTitle": "Winter Angel (2011 Christmas, Family, Drama)",
     "stem": "Winter Angel (2011 Christmas, Family, Drama, Runaway)",
@@ -32,5 +32,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/winter-angel-2011-christmas-family-drama-runaway/Winter%20Angel%20(2011%20Christmas%2C%20Family%2C%20Drama%2C%20Runaway).mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T07:48:45.976Z",
   "archiveMentions": 24,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "hello-kittys-paradise-learn-with-love-full-2003-adv-films-vhs",
     "itemTitle": "Hello Kitty's Paradise Learn With Love ( Full 2003 ADV Films VHS)",
     "stem": "Hello Kitty's Paradise_ Learn With Love (Full 2003 ADV Films VHS)",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.65,
+      "conf": 0.5,
       "item": "youtube-r2rHiISQeC4",
       "itemTitle": "LOVE IN PARADISE 2 (Full HD Movies) latest nigerian movies - Nollywood Movies",
       "stem": "LOVE_IN_PARADISE_2_Full_HD_Movies_latest_nigerian_movies_-_Nollywood_Movies-r2rHiISQeC4",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/youtube-r2rHiISQeC4/LOVE_IN_PARADISE_2_Full_HD_Movies_latest_nigerian_movies_-_Nollywood_Movies-r2rHiISQeC4.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is not a phrase in the file or upload name (word overlap only)"
+  }
 }

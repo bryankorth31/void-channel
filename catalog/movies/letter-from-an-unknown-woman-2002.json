@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-14T22:29:35.210Z",
   "archiveMentions": 2,
   "itemsOpened": 2,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "letter.from.an.-unknown.-woman.-1948.-remastered.-1080p.-blu-ray.-h-264.-aac-rarbg",
     "itemTitle": "Letter from an Unknown Woman (1948)",
     "stem": "Letter.from.an.Unknown.Woman.1948.REMASTERED.1080p.BluRay.H264",
@@ -33,7 +33,7 @@
   },
   "alternates": [
     {
-      "conf": 0.85,
+      "conf": 0.84,
       "item": "letter.from.an.-unknown.-woman.-1948.-remastered.-1080p.-blu-ray.-h-264.-aac-rarbg",
       "itemTitle": "Letter from an Unknown Woman (1948)",
       "stem": "Letter.from.an.Unknown.Woman.1948.REMASTERED.1080p.BluRay.H264.AAC-RARBG",
@@ -46,5 +46,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/letter.from.an.-unknown.-woman.-1948.-remastered.-1080p.-blu-ray.-h-264.-aac-rarbg/Letter.from.an.Unknown.Woman.1948.REMASTERED.1080p.BluRay.H264.AAC-RARBG.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2002)"
+  }
 }

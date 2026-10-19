@@ -16,9 +16,9 @@
   "huntedAt": "2026-10-15T13:07:23.295Z",
   "archiveMentions": 281,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.84,
     "item": "into-the-fire-1988",
     "itemTitle": "Into The Fire (1988) DVDRip",
     "stem": "Into the Fire 1988",
@@ -60,5 +60,9 @@
       "fileSim": 0.95,
       "url": "https://archive.org/download/into-the-fire-2011-doc/Into%20The%20Fire%20(2011)%20doc.mp4"
     }
-  ]
+  ],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the name carries a year that is not the movie's (2006)"
+  }
 }

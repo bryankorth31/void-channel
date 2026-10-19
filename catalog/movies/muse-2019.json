@@ -18,22 +18,36 @@
   "itemsOpened": 6,
   "state": "REVIEW",
   "file": {
-    "conf": 0.75,
-    "item": "20190425OpenAIMuseNetConcert",
-    "itemTitle": "2019-04-25 - Open AI Muse Net Concert",
-    "stem": "2019-04-25 - OpenAI - MuseNet Concert",
-    "file": "2019-04-25 - OpenAI - MuseNet Concert.mp4",
+    "conf": 0.65,
+    "item": "20181114LiveAtIheartradioTheaterNewYork",
+    "itemTitle": "Muse - Live at iHeartRadio Theater in New York - Simulation Theory Album Release Party, 11.14.2018",
+    "stem": "20181114 - live at iheartradio theater new york",
+    "file": "20181114 - live at iheartradio theater new york.mp4",
     "format": "MPEG4",
     "playable": true,
-    "seconds": 6741,
-    "sizeMB": 2952,
+    "seconds": 4081,
+    "sizeMB": 2394,
     "band": "near",
-    "fileSim": 0.24,
-    "url": "https://archive.org/download/20190425OpenAIMuseNetConcert/2019-04-25%20-%20OpenAI%20-%20MuseNet%20Concert.mp4"
+    "fileSim": 0,
+    "url": "https://archive.org/download/20181114LiveAtIheartradioTheaterNewYork/20181114%20-%20live%20at%20iheartradio%20theater%20new%20york.mp4"
   },
   "alternates": [
     {
-      "conf": 0.75,
+      "conf": 0.6,
+      "item": "20190425OpenAIMuseNetConcert",
+      "itemTitle": "2019-04-25 - Open AI Muse Net Concert",
+      "stem": "2019-04-25 - OpenAI - MuseNet Concert",
+      "file": "2019-04-25 - OpenAI - MuseNet Concert.mp4",
+      "format": "MPEG4",
+      "playable": true,
+      "seconds": 6741,
+      "sizeMB": 2952,
+      "band": "near",
+      "fileSim": 0.24,
+      "url": "https://archive.org/download/20190425OpenAIMuseNetConcert/2019-04-25%20-%20OpenAI%20-%20MuseNet%20Concert.mp4"
+    },
+    {
+      "conf": 0.6,
       "item": "20190425OpenAIMuseNetConcert2",
       "itemTitle": "2019-04-25 Open AI Muse Net Concert 2",
       "stem": "2019-04-25 - OpenAI - MuseNet Concert 2",
@@ -45,20 +59,6 @@
       "band": "near",
       "fileSim": 0.23076923076923078,
       "url": "https://archive.org/download/20190425OpenAIMuseNetConcert2/2019-04-25%20-%20OpenAI%20-%20MuseNet%20Concert%202.mp4"
-    },
-    {
-      "conf": 0.65,
-      "item": "20181114LiveAtIheartradioTheaterNewYork",
-      "itemTitle": "Muse - Live at iHeartRadio Theater in New York - Simulation Theory Album Release Party, 11.14.2018",
-      "stem": "20181114 - live at iheartradio theater new york",
-      "file": "20181114 - live at iheartradio theater new york.mp4",
-      "format": "MPEG4",
-      "playable": true,
-      "seconds": 4081,
-      "sizeMB": 2394,
-      "band": "near",
-      "fileSim": 0,
-      "url": "https://archive.org/download/20181114LiveAtIheartradioTheaterNewYork/20181114%20-%20live%20at%20iheartradio%20theater%20new%20york.mp4"
     }
   ]
 }

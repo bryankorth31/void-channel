@@ -16,20 +16,11 @@
   "huntedAt": "2026-10-15T18:05:38.935Z",
   "archiveMentions": 284,
   "itemsOpened": 6,
-  "state": "REVIEW",
-  "file": {
-    "conf": 0.65,
-    "item": "pclongplaylimboen",
-    "itemTitle": "PC Longplay Limbo EN",
-    "stem": "PC_Longplay_-Limbo_-_EN",
-    "file": "PC_Longplay_-Limbo_-_EN.mp4",
-    "format": "h.264",
-    "playable": true,
-    "seconds": 4572,
-    "sizeMB": 479,
-    "band": "near",
-    "fileSim": 0.95,
-    "url": "https://archive.org/download/pclongplaylimboen/PC_Longplay_-Limbo_-_EN.mp4"
-  },
-  "alternates": []
+  "state": "MISSING",
+  "file": null,
+  "alternates": [],
+  "rescored": {
+    "was": "REVIEW",
+    "why": "runtime not within 15% of the TMDB runtime; junk word"
+  }
 }

@@ -18,9 +18,9 @@
   "huntedAt": "2026-10-14T17:34:54.986Z",
   "archiveMentions": 13,
   "itemsOpened": 6,
-  "state": "LIVE",
+  "state": "REVIEW",
   "file": {
-    "conf": 0.85,
+    "conf": 0.7,
     "item": "mp_Don_Covay_Live_at_Woodys_on_the_Beach_Night_1_Marks_Angle_Stage_Center_and_Rever",
     "itemTitle": " Don Covay Live at Woodys on the Beach Night 1 Marks Angle Stage Center and Reverse Angle",
     "stem": "Don_Covay_Live_at_Woodys_on_the_Beach_Night_1_Marks_Angle_Stage_Center_and_Reverse_Angle",
@@ -33,5 +33,9 @@
     "fileSim": 0.95,
     "url": "https://archive.org/download/mp_Don_Covay_Live_at_Woodys_on_the_Beach_Night_1_Marks_Angle_Stage_Center_and_Rever/Don_Covay_Live_at_Woodys_on_the_Beach_Night_1_Marks_Angle_Stage_Center_and_Reverse_Angle.mp4"
   },
-  "alternates": []
+  "alternates": [],
+  "rescored": {
+    "was": "LIVE",
+    "why": "the title is inside a longer title"
+  }
 }
