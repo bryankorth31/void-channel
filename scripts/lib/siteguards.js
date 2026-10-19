@@ -105,11 +105,25 @@ function shrinkVerdict(now, before) {
   if (Number.isFinite(before.episodes) && Number.isFinite(now.episodes) && fell(before.episodes, now.episodes)) parts.push(`episodes ${before.episodes} -> ${now.episodes}`);
   return { fell: parts.length > 0, parts };
 }
-// The counts the site last went out with. publish-state.json (this PC, written by publish.js after a push) wins; the committed
-// count.json (written by publish.js into every Catalog commit) is what a Cloudflare build can see, because catalog/cache is not in git.
+// The counts the site last went out with, on this PC: catalog/cache/publish-state.json, which publish.js writes after every push and
+// whose numbers publish.js itself refuses a 10 percent drop against. Null when it does not exist yet.
 function readLastCounts(catalogDir) {
-  const tryRead = (p, source) => { try { const s = JSON.parse(fs.readFileSync(p, 'utf8')); if (Number.isFinite(s.shows) && Number.isFinite(s.episodes)) return { shows: s.shows, episodes: s.episodes, source }; } catch (e) { /* missing or unreadable */ } return null; };
-  return tryRead(path.join(catalogDir, 'cache', 'publish-state.json'), 'catalog/cache/publish-state.json') || tryRead(path.join(catalogDir, 'count.json'), 'catalog/count.json');
+  try { const s = JSON.parse(fs.readFileSync(path.join(catalogDir, 'cache', 'publish-state.json'), 'utf8')); if (Number.isFinite(s.shows) && Number.isFinite(s.episodes)) return { shows: s.shows, episodes: s.episodes, source: 'catalog/cache/publish-state.json' }; } catch (e) { /* missing or unreadable */ }
+  return null;
+}
+// The same numbers, as the live site itself reports them in /version.txt (shows= and episodes=, written by every build since this change).
+const countsFromVersion = (text) => { const v = parseVersion(text); return v.shows != null && v.episodes != null ? { shows: v.shows, episodes: v.episodes } : null; };
+// A Cloudflare Pages build has no catalog/cache, so there the last counts are read from the site that is live right now: one request to
+// <base>/version.txt (outside the password gate), made with a child process because the build is synchronous. Ten second limit. Any
+// trouble (no network, the site down, an older version.txt without counts) gives null and the build goes on without the check.
+function liveCountsSync(url, spawn) {
+  try {
+    if (!/^https?:\/\//.test(url)) return null;
+    const run = spawn || require('child_process').spawnSync;
+    const r = run(process.execPath, ['-e', "fetch(process.argv[1],{signal:AbortSignal.timeout(10000)}).then((r)=>r.ok?r.text():'').then((t)=>process.stdout.write(t),()=>{})", url], { encoding: 'utf8', timeout: 15000, windowsHide: true });
+    const c = countsFromVersion(r && r.stdout);
+    return c ? { ...c, source: url } : null;
+  } catch (e) { return null; }
 }
 // Show grids that exist but do not parse. assemble() drops such a show without a word.
 function unreadableGrids(showsDir) {
@@ -182,7 +196,7 @@ function liveVersionLight({ liveSha, remote, nowMs }) {
 
 // now and before are { shows, episodes }; before.source says where the old numbers came from.
 function shrinkLight(now, before) {
-  if (!before) return light('shrink', 'yellow', 'no published count to compare with yet', 'It appears after the first publish (catalog/cache/publish-state.json and catalog/count.json).');
+  if (!before) return light('shrink', 'yellow', 'no published count to compare with yet', 'It appears after the first publish on this PC (catalog/cache/publish-state.json).');
   const v = shrinkVerdict(now, before);
   const pct = before.shows > 0 ? Math.round(((before.shows - now.shows) / before.shows) * 100) : 0;
   if (v.fell) return light('shrink', 'red', `${v.parts.join(', ')}: down more than 10% against the last publish (${before.source})`, 'Something emptied the catalog. Do not publish yet: check git status in catalog/ and HQ > Jobs for a match that went wrong, and restore with git checkout -- catalog. If the drop is meant, node scripts/publish.js --allow-shrink.');
@@ -227,6 +241,6 @@ async function liveLights({ base, versionTextBody, doFetch, remote, nowMs }) {
 module.exports = {
   LIMITS, SECURITY_HEADERS, CSP,
   isGated, routesFor, headersFile, missingSecurityHeaders, versionText, parseVersion,
-  checkOutput, shrinkVerdict, readLastCounts, unreadableGrids,
+  checkOutput, shrinkVerdict, readLastCounts, countsFromVersion, liveCountsSync, unreadableGrids,
   filesLight, gateLight, wwwLight, headersLight, liveVersionLight, shrinkLight, backupLight, liveLights,
 };

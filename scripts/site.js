@@ -38,15 +38,17 @@ fs.mkdirSync(path.join(OUT, 'data', 'shows'), { recursive: true });
 const data = assemble();
 const MIN_SHOWS = PROFILE.name === 'voidtv' ? 100 : 1; // VOIDtv ships thousands; a small profile (public access, a demo) is legitimately tiny
 if (data.shows.length < MIN_SHOWS) { console.error('SITE WOULD SHIP WITH ' + data.shows.length + ' SHOWS: the list or the catalog did not load; refusing to build'); process.exit(1); }
-// Catalog shrink (audit CF-018). The counts the last publish went out with: catalog/count.json is committed by publish.js into every
-// Catalog commit, so a Cloudflare build (which has no catalog/cache) can see it; on this PC publish-state.json is used when it exists.
-// A build more than 10 percent smaller is refused: the old site stays up. SITE_ALLOW_SHRINK=1 lets one build through when the drop is meant.
+// Catalog shrink (audit CF-018). The counts the site last went out with: on this PC catalog/cache/publish-state.json (the numbers publish.js
+// refuses a 10 percent drop against); on a Cloudflare Pages build, which has no catalog/cache, the live site's own /version.txt (shows= and
+// episodes=). A build more than 10 percent smaller is refused: the old site stays up. SITE_ALLOW_SHRINK=1 lets one build through when the drop is meant.
 const EPISODES = data.shows.reduce((n, s) => n + (s.eps || 0), 0);
-{ const before = guards.readLastCounts(PROFILE.catalogDir), v = guards.shrinkVerdict({ shows: data.shows.length, episodes: EPISODES }, before);
+{ let before = guards.readLastCounts(PROFILE.catalogDir);
+  if (!before && process.env.CF_PAGES === '1') before = guards.liveCountsSync(ORIGIN + '/version.txt');
+  const v = guards.shrinkVerdict({ shows: data.shows.length, episodes: EPISODES }, before);
   if (v.fell) {
     if (process.env.SITE_ALLOW_SHRINK === '1') console.warn('WARNING: ' + v.parts.join(', ') + ' against ' + before.source + ' (more than 10% down); SITE_ALLOW_SHRINK=1 is set, so the build goes on');
-    else { console.error('CATALOG SHRANK: ' + v.parts.join(', ') + ' against ' + before.source + ' (more than 10% down); refusing to build, the old site stays up. If the drop is meant: run node scripts/publish.js --allow-shrink, or edit catalog/count.json to the new numbers and commit, or set SITE_ALLOW_SHRINK=1 as a plain variable for one build.'); process.exit(1); }
-  } else if (!before) console.warn('NOTE: no earlier published count to compare with (catalog/count.json is written by the next publish); the shrink check is skipped');
+    else { console.error('CATALOG SHRANK: ' + v.parts.join(', ') + ' against ' + before.source + ' (more than 10% down); refusing to build, the old site stays up. If the drop is meant: run node scripts/publish.js --allow-shrink for a publish, and for the Cloudflare build set SITE_ALLOW_SHRINK = 1 as a plain variable for that one deploy, then delete it (docs/DEPLOY.md).'); process.exit(1); }
+  } else if (!before) console.warn('NOTE: no earlier published count to compare with (this PC has no catalog/cache/publish-state.json, and the live version.txt has no counts yet); the shrink check is skipped');
   const unreadable = guards.unreadableGrids(path.join(PROFILE.catalogDir, 'shows'));
   if (unreadable.length) console.warn('WARNING: ' + unreadable.length + ' show grid file' + (unreadable.length === 1 ? '' : 's') + ' did not parse and ' + (unreadable.length === 1 ? 'is' : 'are') + ' missing from the site: ' + unreadable.slice(0, 5).join(', ') + (unreadable.length > 5 ? ' and ' + (unreadable.length - 5) + ' more' : '') + '. Re-match them from HQ.'); }
 
