@@ -221,8 +221,8 @@ function episodeNumberOf(name, cores) {
 }
 const hasSeasonEpisode = (f) => !!(f.ep && f.ep.season != null && f.ep.episode != null);
 // The files the fallback may list for a show TVmaze knows: items whose TITLE names the show, files the strict pass placed or
-// found no match for, inside the runtime band, and with positive episode evidence (S/E, an airdate, or one of 5+ numbered files
-// in the same item). Files the strict pass placed need no further evidence. ctx.whyNot(file, item) gives the reason a skipped-for-length file would have been turned away.
+// found no match for, inside the runtime band, and with positive episode evidence (S/E, an airdate, one of 5+ numbered files in
+// the same item, or an item whose title names the show that holds 5+ video files inside the band). Files the strict pass placed need no further evidence. ctx.whyNot(file, item) gives the reason a skipped-for-length file would have been turned away.
 function fallbackCand(cand, tags, ctx) {
   const { tv, cores } = ctx;
   const tagOf = (f, it) => { const t = tags.get(f); return t === 'wrong-length' && ctx.whyNot ? ctx.whyNot(f, it) : t; };
@@ -232,7 +232,9 @@ function fallbackCand(cand, tags, ctx) {
     if (isExtras(it.title, cores) || isExtras(it.id, cores)) continue;
     let files = it.files.filter((f) => { const t = tagOf(f, it); return (t === 'no-match' || t === 'placed') && !isExtras(f.name, cores) && (!tv.runtime || inRuntimeBand(f.seconds, tv.runtime)); });
     const run = new Set(files.map((f) => episodeNumberOf(f.name, cores)).filter((n) => n != null));
-    files = files.filter((f) => tags.get(f) === 'placed' || hasSeasonEpisode(f) || fileDate(f.name) || (run.size >= 5 && episodeNumberOf(f.name, cores) != null));
+    const video = (f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !isJunkFile(f.name, cores);
+    const season = files.filter(video).length >= 5; // a titled upload of its own that holds a season's worth of episode-length files
+    files = files.filter((f) => tags.get(f) === 'placed' || hasSeasonEpisode(f) || fileDate(f.name) || (run.size >= 5 && episodeNumberOf(f.name, cores) != null) || (season && video(f)));
     if (files.length) items.push({ ...it, files });
   }
   return { ...cand, items };

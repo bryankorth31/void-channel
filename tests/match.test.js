@@ -169,20 +169,31 @@ describe('the self-list fallback gate (CP-001)', () => {
     const { grid } = run(files);
     assert.equal(grid.selfListed, undefined);
   });
-  test('refuses files with no positive episode evidence', () => {
-    const files = range(25).map((i) => mkFile(`Zork Show Funny Clip ${String.fromCharCode(64 + i)}.mp4`));
-    assert.equal(run(files).grid.selfListed, undefined);
+  test('refuses files with no positive episode evidence: clips in items of fewer than five', () => {
+    const items = range(6).map((n) => ({ id: 'zork-' + n, title: 'Zork Show Season ' + n, files: range(4).map((i) => mkFile(`Zork Show Funny Clip ${String.fromCharCode(64 + i)}${n}.mp4`)) }));
+    assert.equal(M.gridFor(ENTRY, { items }, mkTv(), { ov: {} }).selfListed, undefined);
   });
-  test('a numbered run of five or more in one item is evidence; four is not', () => {
+  test('five or more numbered files in one item are evidence; four are not', () => {
     const pool = (n) => {
-      const files = [...range(n).map((i) => mkFile(`Zork Show Part ${i}.mp4`)), ...range(10).map((i) => mkFile(`Zork Show Funny Clip ${String.fromCharCode(64 + i)}.mp4`))];
+      const files = range(n).map((i) => mkFile(`Zork Show Part ${i}.mp4`));
       return { cand: { items: [{ id: 'zork', title: 'Zork Show', files }] }, tags: new Map(files.map((f) => [f, 'no-match'])) };
     };
     const ctx = { tv: { runtime: 30 }, namesTitle: () => true, cores: ['zork show'] };
     const four = pool(4), five = pool(5);
     assert.equal(M.fallbackCand(four.cand, four.tags, ctx).items.length, 0, 'four numbered files are not a run');
-    assert.equal(M.fallbackCand(five.cand, five.tags, ctx).items[0].files.length, 5, 'five are, and the unnumbered clips stay out');
+    assert.equal(M.fallbackCand(five.cand, five.tags, ctx).items[0].files.length, 5, 'five are');
     assert.equal(run(range(25).map((i) => mkFile(`Zork Show Part ${i}.mp4`))).grid.selfListed, true, 'a whole upload of numbered files is accepted');
+  });
+  test('an item whose title names the show and holds five or more video files in the band is evidence on its own', () => {
+    const clips = (n, mk = (i) => `Zork Show Funny Clip ${String.fromCharCode(64 + i)}.mp4`, o = {}) => range(n).map((i) => mkFile(mk(i), o));
+    assert.equal(run(clips(25), { title: 'Zork Show Season 9' }).grid.selfListed, true, 'titled episodes with no numbers, from the show\'s own item');
+    assert.equal(run(clips(25), { title: 'Zork Show Jam' }).grid.selfListed, undefined, 'not when the title is a longer title');
+    assert.equal(run(clips(25), { title: 'Mystery Upload', id: 'zork-show-s9' }).grid.selfListed, undefined, 'not when the title does not name the show, whatever the identifier says');
+    assert.equal(run(clips(25, undefined, { seconds: 900 }), { title: 'Zork Show Season 9' }).grid.selfListed, undefined, 'not outside the runtime band');
+    const mixed = [...clips(4), ...range(21).map((i) => mkFile(`Zork Show Commentary ${i}.mp4`))];
+    assert.equal(run(mixed, { title: 'Zork Show Season 9' }).grid.selfListed, undefined, 'junk-named files do not count towards the five');
+    const four = M.gridFor(ENTRY, { items: [{ id: 'a', title: 'Zork Show Season 1', files: clips(4) }, ...range(5).map((n) => ({ id: 'b' + n, title: 'Zork Show Season ' + (n + 2), files: clips(4).map((f) => ({ ...f, name: f.name + n, file: f.name + n })) }))] }, mkTv(), { ov: {} });
+    assert.equal(four.selfListed, undefined, 'items of four are not enough');
   });
   test('refuses files outside the TVmaze runtime band', () => {
     const files = range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i), seconds: 900 }));
