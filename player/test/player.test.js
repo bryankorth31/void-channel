@@ -35,14 +35,16 @@ const episode = (id, n, tag) => ({ id, title: id, show: 'Show', files: Array.fro
 function open(opts) {
   opts = opts || {};
   const seen = { src: [], play: 0, removed: 0 }, events = [], asked = [], pending = [];
+  const listeners = {}, html = [], live = new Map(); let rid = 0, cancelled = 0; // the video's listeners, the markup the player wrote, the frame callbacks outstanding
   const video = fakeNode({
     paused: true, ended: false, readyState: 0, networkState: 0, volume: 1, muted: false, currentTime: 0, duration: NaN, buffered: { length: 0 }, playbackRate: 1,
     seeking: false, videoWidth: 0, textTracks: [], getVideoPlaybackQuality: undefined, requestVideoFrameCallback: undefined,
     play() { seen.play++; return Promise.resolve(); }, pause() {}, load() {},
     getAttribute(k) { return k === 'src' && seen.src.length ? seen.src[seen.src.length - 1] : null; },
-    removeAttribute(k) { if (k === 'src') seen.removed++; }, canPlayType() { return 'maybe'; }, addEventListener() {}, removeEventListener() {}, querySelectorAll() { return []; },
+    removeAttribute(k) { if (k === 'src') seen.removed++; }, canPlayType() { return 'maybe'; }, addEventListener(ev, fn) { (listeners[ev] = listeners[ev] || []).push(fn); }, removeEventListener() {}, querySelectorAll() { return []; },
+    requestVideoFrameCallback: opts.rvfc ? (cb) => { live.set(++rid, cb); return rid; } : undefined, cancelVideoFrameCallback: opts.rvfc ? (id) => { cancelled++; live.delete(id); } : undefined,
   }, (k, v) => { if (k === 'src') seen.src.push(v); });
-  const rootNode = fakeNode({ querySelector: (sel) => (sel === 'video' ? video : fakeNode()), querySelectorAll: () => [], remove() {} });
+  const rootNode = fakeNode({ querySelector: (sel) => (sel === 'video' ? video : fakeNode()), querySelectorAll: () => [], remove() {}, clientWidth: opts.width }, (k, v) => { if (k === 'innerHTML') html.push(v); });
   const ctx = {
     document: { createElement: () => rootNode, activeElement: null, fullscreenElement: null, hidden: false, addEventListener() {}, removeEventListener() {} },
     navigator: { userAgent: 'test', hardwareConcurrency: 4 }, screen: { width: 1, height: 1 }, performance,
@@ -61,10 +63,12 @@ function open(opts) {
   ctx.self = ctx;
   vm.createContext(ctx);
   vm.runInContext(BUNDLE, ctx);
-  const player = ctx.VoidPlayer.create(fakeNode(), { resolveServers: true, metadataTimeoutMs: opts.timeout || 5000, onEvent: (e) => events.push(e) });
+  const player = ctx.VoidPlayer.create(fakeNode(), Object.assign({ resolveServers: true, metadataTimeoutMs: opts.timeout || 5000, onEvent: (e) => events.push(e) }, opts.options));
   const settle = async () => { for (let i = 0; i < 8; i++) await new Promise((r) => setImmediate(r)); };
   const answer = async (ok) => { pending.splice(0).forEach((f) => f(ok !== false)); await settle(); };
-  const x = { player, seen, events, asked, answer, settle, kinds: (t) => events.filter((e) => e.type === t) };
+  // Run every frame callback that is outstanding, as the browser does for a presented frame (media time, display time).
+  const deliver = (mediaTime) => { const cbs = [...live.values()]; live.clear(); cbs.forEach((cb) => cb(0, { mediaTime: mediaTime || 0, expectedDisplayTime: performance.now() + 16 })); return cbs.length; };
+  const x = { player, video, seen, events, asked, answer, settle, listeners, html, live, deliver, cancelled: () => cancelled, kinds: (t) => events.filter((e) => e.type === t) };
   opened.push(x);
   return x;
 }
@@ -305,4 +309,95 @@ test('SP-026: a later copy that is already in the session cache needs no lookup 
   assert.strictEqual(lookups(x, 'item2'), 0);
   assert.strictEqual(x.seen.src.length, 2, 'started at once');
   assert.ok(x.seen.src[1].includes('ia800002.us.archive.org'));
+});
+
+// ---------- A-022: the "Out of sync?" control, the frame feed's lifetime, what the core is told ----------
+test('A-022: the bar carries an "Out of sync?" button, keyboard reachable like the other controls, and a host can leave it out', () => {
+  const x = open(); const html = x.html.join('');
+  assert.ok(/<button type="button" data-a="avsync"[^>]*>Out of sync\?<\/button>/.test(html), 'a real button in the bar');
+  assert.ok(html.indexOf('data-a="avsync"') > html.indexOf('class="vpx-row"') && html.indexOf('data-a="avsync"') < html.indexOf('data-a="fs"'), 'inside the control row, which the arrow keys and Tab walk');
+  assert.ok(!/class=/.test(html.match(/<button[^>]*data-a="avsync"[^>]*>/)[0]), 'no class of its own, so no class without the vpx- prefix');
+  const off = open({ options: { outOfSync: false } }); assert.ok(!off.html.join('').includes('avsync'));
+});
+
+test('A-022: pressing it stamps the moment once, changes nothing about playback, and twice within 10 s stamps once', async () => {
+  const x = open(); x.player._ctx = { slug: 'a' };
+  x.player.load(episode('a/1x1', 2), { autoplay: true }); await x.settle(); await x.answer(true);
+  watch(x.player, 20);
+  const src0 = x.seen.src.length, play0 = x.seen.play, acts0 = x.player.core.log.length;
+  x.player._do('avsync'); // what a click on the button runs
+  const e = x.kinds('user-avsync');
+  assert.strictEqual(e.length, 1);
+  assert.strictEqual(e[0].source, 'copy1@primary'); assert.strictEqual(e[0].server, 'ia800000.us.archive.org'); assert.strictEqual(e[0].episode, 'a/1x1');
+  for (const k of ['position', 'duration', 'frames', 'sourceFps', 'presentedFps', 'decodedFps', 'droppedShare', 'gaps', 'hitches', 'throttles', 'measure', 'state', 'rate', 'size', 'when']) assert.ok(k in e[0], 'the stamp has ' + k);
+  assert.ok(Array.isArray(e[0].gaps) && Array.isArray(e[0].hitches));
+  assert.ok(!('events' in e[0]) && !('decisions' in e[0]), 'a small stamp, not the whole diagnostics');
+  assert.strictEqual(x.player.core.summary().outOfSyncPresses, 1);
+  x.player._do('avsync'); x.player._do('avsync');
+  assert.strictEqual(x.kinds('user-avsync').length, 1, 'again within 10 s: still one');
+  assert.strictEqual(x.player.core.summary().outOfSyncPresses, 1);
+  x.player._avAt -= 11000; x.player._do('avsync');
+  assert.strictEqual(x.kinds('user-avsync').length, 2, 'after 10 s it stamps again');
+  assert.strictEqual(J(x.player.diagnostics().avStamps).length, 2, 'the stamps are in the diagnostics too');
+  assert.deepStrictEqual([x.seen.src.length, x.seen.play, x.player.core.log.filter((d) => d.did !== 'user-avsync').length], [src0, play0, acts0], 'no seek, reload, hop or restart: it only records');
+  x.player.destroy();
+});
+
+test('A-022: pressing it with nothing loaded stamps nothing, and with an episode loaded it does', async () => {
+  const x = open(); x.player._do('avsync'); assert.strictEqual(x.kinds('user-avsync').length, 0);
+  x.player.load(episode('a/1x1', 1), { autoplay: true }); await x.settle(); await x.answer(true);
+  x.player._do('avsync'); assert.strictEqual(x.kinds('user-avsync').length, 1); x.player.destroy();
+});
+
+test('A-022: the button hides below 720 px of player width (no room), shows above', () => {
+  const narrow = open({ width: 500 }); narrow.player._fit(); assert.strictEqual(narrow.player.ui.sync.style.display, 'none');
+  const wide = open({ width: 1000 }); wide.player._fit(); assert.strictEqual(wide.player.ui.sync.style.display, '');
+});
+
+test('A-022: the frame feed is one callback at a time, passes the display time and the drawing beat, and stops on replace, ended and destroy', async () => {
+  const x = open({ rvfc: true });
+  const frames = []; const real = x.player.core.frame; x.player.core.frame = (...a) => { frames.push(a); return real(...a); };
+  assert.strictEqual(x.live.size, 1, 'armed when the player is built');
+  assert.strictEqual(x.deliver(12.5), 1); assert.strictEqual(x.live.size, 1, 'renewed after each frame: one outstanding, never two');
+  assert.strictEqual(frames.length, 1); assert.strictEqual(frames[0].length, 5); assert.strictEqual(frames[0][0], 12.5); assert.ok(frames[0][3] > 0, 'expectedDisplayTime'); assert.strictEqual(typeof frames[0][4], 'number', 'the drawing beat');
+  // replace: the old episode's callback is cancelled at once and a late one does nothing; the new episode arms its own after the lookup
+  const old = [...x.live.values()][0];
+  x.player.load(episode('a/1x1', 1), { autoplay: true });
+  assert.strictEqual(x.live.size, 0, 'cancelled the moment the episode is replaced'); assert.ok(x.cancelled() >= 1);
+  old(0, { mediaTime: 1, expectedDisplayTime: 1 }); assert.strictEqual(frames.length, 1, 'a callback that was already queued does nothing'); assert.strictEqual(x.live.size, 0, 'and does not renew itself');
+  await x.settle(); await x.answer(true);
+  assert.strictEqual(x.live.size, 1, 'the new episode is fed');
+  // ended: stopped; play: started again
+  x.listeners.ended.forEach((f) => f()); assert.strictEqual(x.live.size, 0, 'stopped when the video ends');
+  x.listeners.play.forEach((f) => f()); assert.strictEqual(x.live.size, 1, 'and again on play'); x.listeners.playing.forEach((f) => f()); assert.strictEqual(x.live.size, 1, 'never two');
+  // destroy: stopped for good
+  const last = [...x.live.values()][0]; x.player.destroy();
+  assert.strictEqual(x.live.size, 0); const n = frames.length; last(0, { mediaTime: 2, expectedDisplayTime: 2 });
+  assert.strictEqual(frames.length, n); assert.strictEqual(x.live.size, 0, 'a destroyed player is never fed or re-armed');
+  x.listeners.play.forEach((f) => f()); assert.strictEqual(x.live.size, 0, 'not even by a late play event');
+});
+
+test('A-022: a browser without requestVideoFrameCallback arms nothing and the core is told there is no per-frame timing', async () => {
+  const x = open(); assert.strictEqual(x.live.size, 0);
+  const told = []; const real = x.player.core.sample; x.player.core.sample = (s) => { told.push(s); return real(s); };
+  x.player._sample();
+  assert.strictEqual(told[0].rvfc, false);
+  assert.strictEqual(x.player.core.summary().avMeasure, 'unavailable');
+  x.player.destroy();
+});
+
+test('A-022: the sample tells the core the speed and why the page may be away (hidden, off screen, picture-in-picture, not drawing)', () => {
+  const x = open({ rvfc: true }); const told = []; const real = x.player.core.sample; x.player.core.sample = (s) => { told.push(s); return real(s); };
+  x.player._sample();
+  const s = told[0];
+  assert.strictEqual(s.rvfc, true); assert.ok('rate' in s && 'docHidden' in s && 'offscreen' in s && 'pip' in s && 'raf' in s);
+  assert.strictEqual(s.docHidden, false); assert.strictEqual(s.pip, false);
+  x.player.destroy();
+});
+
+test('A-022: the page going away or coming back is told to the core (visibility, picture-in-picture)', () => {
+  const x = open({ rvfc: true }); const told = []; const real = x.player.core.event; x.player.core.event = (n, t, i) => { told.push(n); return real(n, t, i); };
+  x.listeners.enterpictureinpicture.forEach((f) => f()); x.listeners.leavepictureinpicture.forEach((f) => f());
+  assert.deepStrictEqual(told, ['away', 'away']);
+  x.player.destroy();
 });
