@@ -144,6 +144,30 @@ until the buffer is gone. The core now also watches where the buffered range end
   needless hops. Healthy play must show none; if it does, raise `BUFFER_STALL_MS` or lower `BUFFER_LOW_S`
   in the config block at the top of `core.js`.
 
+### What the 3 second goal needs, and what it costs (plainly)
+
+The goal is "no pause over 3 seconds". The buffer watch reaches it only in good conditions:
+
+- **It holds while video is still buffered when the download stops, and the new server answers within about
+  2.7 s.** The hop happens 4 s after the download stops, with video still left to play, so the viewer sees
+  only the new connection's start. Measured on the lab's made-up clock: with 5 s or more buffered and a first
+  byte after 1.2 s the picture stands still for about 1.3 s; after 2.7 s, about 2.8 s; after 3.5 s, about
+  3.5 s, which just misses. The first-picture time on the Archive is 0.1 to 2.7 s on a good day and
+  sometimes 3.5 s.
+- **It does not hold when the buffer is thin or empty** (under about 2 s: a slow line, just after a seek,
+  early in an episode). The watch still needs 4 s of flat buffer, so the picture stops and the old
+  stopped-picture ladder decides: about 4 s of waiting plus the reconnect, a fraction of a second better than
+  before and still over 3 s. Only a shorter watch for a thin buffer, or the hot standby (a second hidden
+  connection ready to take over, SP-021 step 2), would change that. It is to be built only if Sentry still
+  shows pauses over 3 s.
+- **Hangs that would have healed inside the buffer now cost a pause.** The hop throws the buffered video
+  away, so a hang that the buffer would have carried through unseen (the server comes back after 5 to 15 s)
+  now shows a pause of about 1 to 3 s (the new connection's start), where before the viewer saw nothing.
+  That is the price of the watch. If the soak or Sentry show too many of these, raise `BUFFER_STALL_MS`
+  (4000) to 6000 or 8000: fewer needless pauses, a longer wait on a real hang.
+- **A playhead stuck on buffered data** (a browser hiccup, not a hang) still waits 6 s per rung of the
+  nudge, reload, switch ladder. The watch does not touch it.
+
 ### What leaves the page
 
 Everything goes through the host's `onEvent`. VOIDtv's `vpEvent` (in `scripts/lib/app.js`) sends, through
