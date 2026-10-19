@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
+const { nearNameGuard, rejectLine, saveRejected } = require('./lib/tvmazeguard');
 const CACHE = path.join(PROFILE.catalogDir, 'cache');
 const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const OVERRIDES = JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8'));
@@ -28,8 +29,7 @@ async function cast(id) {
   for (const x of c.slice(0, 4)) { if (x.person && x.person.name) names.push(x.person.name); if (x.character && x.character.name) names.push(x.character.name); }
   return [...new Set(names)].filter((n) => n.split(' ').length >= 2 && !/^(self|himself|herself|various|narrator|host)$/i.test(n));
 }
-// Same guard as hunt.js: the hit must share most of its words with our title, else a web series gets a stranger's episodes.
-function similar(a, b) { const bag = (t) => new Set(norm(t).replace(/^the /, '').split(' ').filter((w) => w.length > 2)); const A = bag(a), B = bag(b); if (!A.size || !B.size) return false; let hit = 0; for (const w of A) if (B.has(w)) hit++; return hit / Math.max(A.size, B.size) >= 0.6; }
+// Same guard as hunt.js (scripts/lib/tvmazeguard.js, audit CP-034): the same name, or a near name that the year, or a whole-word phrase with the same language and type, ties to the list entry. A refused near name is logged and kept for HQ.
 
 (async () => {
   let ok = 0, miss = 0, skip = 0;
@@ -39,7 +39,14 @@ function similar(a, b) { const bag = (t) => new Set(norm(t).replace(/^the /, '')
     try {
       let show = ov.tvmazeId ? await get(`https://api.tvmaze.com/shows/${ov.tvmazeId}`) : await get('https://api.tvmaze.com/singlesearch/shows?q=' + encodeURIComponent(entry.name.replace(/[^\w\s'&!.-]/g, ' ').replace(/\s+/g, ' ').trim()));
       await sleep(600);
-      if (!show || (!ov.tvmazeId && !similar(entry.name, show.name))) { miss++; console.log(`${entry.name}: no TVmaze match${show ? ' (nearest: ' + show.name + ')' : ''}`); continue; }
+      const g = show && !ov.tvmazeId ? nearNameGuard(entry, show) : null;
+      if (!show || (g && !g.ok)) {
+        miss++;
+        if (g) { console.log(`${entry.name}: ${rejectLine(entry.name, show.name, g).trim()}`); saveRejected(CACHE, { listName: entry.name, tvmazeId: show.id, tvmazeName: show.name, premiered: show.premiered || null, kind: g.kind, reason: g.reason }); }
+        else console.log(`${entry.name}: no TVmaze match`);
+        continue;
+      }
+      if (g && g.near) console.log(`${entry.name}: near name "${show.name}" accepted (${g.reason})`);
       const eps = (await get(`https://api.tvmaze.com/shows/${show.id}/episodes`)) || [];
       await sleep(600);
       const out = { id: show.id, name: show.name, runtime: show.runtime || show.averageRuntime || null, premiered: show.premiered || null, network: ((show.network || show.webChannel || {}).name) || null,

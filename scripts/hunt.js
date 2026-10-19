@@ -21,6 +21,7 @@ const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
+const { nearNameGuard, rejectLine, saveRejected } = require('./lib/tvmazeguard');
 // Archive uploaders are usually e-mail addresses: third-party personal data that must not be committed. The hunters keep
 // a short hash instead (first 12 hex characters of sha1 of the trimmed, lowercased address): enough to tell uploaders
 // apart (scripts/hunt.js candidates, scripts/scout.js via), not enough to read who they are.
@@ -98,7 +99,8 @@ async function tvmaze(show) {
     const r = await fetch(ov.tvmazeId ? 'https://api.tvmaze.com/shows/' + ov.tvmazeId : 'https://api.tvmaze.com/singlesearch/shows?q=' + encodeURIComponent(show.replace(/[^\w\s'&!.-]/g, ' ').replace(/\s+/g, ' ').trim()), { signal: AbortSignal.timeout(20000) });
     if (!r.ok) return null;
     const s = await r.json();
-    if (!ov.tvmazeId) { const a = norm(show).replace(/\(.*?\)/g, '').trim(), b = norm(s.name); const bag = (t) => new Set(t.split(' ').filter((w) => w.length > 2)); const A = bag(a), B = bag(b); let hit = 0; for (const w of A) if (B.has(w)) hit++; const sim = A.size ? hit / A.size : 0; if (!b.includes(a) && !a.includes(b) && sim < 0.6) { console.log(`   TVmaze offered "${s.name}" for "${show}": not the same show, treating as no match`); return null; } }
+    // The name guard (scripts/lib/tvmazeguard.js, audit CP-034): the same name, or a near name that the year, or a whole-word phrase with the same language and type, ties to the list entry. A refused near name is logged and kept for HQ.
+    if (!ov.tvmazeId) { const entry = LIST.shows.find((e) => e.name === show) || { name: show }; const g = nearNameGuard(entry, s); if (!g.ok) { console.log(rejectLine(show, s.name, g)); saveRejected(CACHE_DIR, { listName: show, tvmazeId: s.id, tvmazeName: s.name, premiered: s.premiered || null, kind: g.kind, reason: g.reason }); return null; } if (g.near) console.log(`   TVmaze name "${s.name}" accepted for "${show}" (${g.reason})`); }
     const er = await fetch(`https://api.tvmaze.com/shows/${s.id}/episodes`, { signal: AbortSignal.timeout(20000) });
     const eps = er.ok ? await er.json() : [];
     const out = {
