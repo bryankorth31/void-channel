@@ -377,7 +377,7 @@ e0e38879adecf003107b62fa1dc04afb *./docs/KIDS.md
 c19cb4a6fd3c82b2d1195eb02af0662b *./docs/NETWORKS.md
 bbf7a3e33e38aecd2d6ef758ff912232 *./docs/PLAYER.md
 f67e97f4f6741a819ce4c8219f25a251 *./docs/ROADMAP_2026-06-12.md
-18e898b442b9f77dc04d74d729cb90a7 *./docs/RUNBOOK.md
+0d3ec2c6ac35e2db64db29e8d13a26ba *./docs/RUNBOOK.md
 d6b23962f9df4c645494c66acf8502c5 *./docs/SCOUT.md
 1aef184a3a77ee3736898de81c1d3f8d *./docs/SELF_LISTED.md
 d812b69bb309482216bc5426be53ecf9 *./docs/SESSION_FULL_2026-06-13.md
@@ -560,15 +560,15 @@ ea61a031adbb18ba22fceced1b298cf9 *./scripts/backup-cache.js
 9807e01bf2dc2f92afc3d20d5328aade *./scripts/candidates.js
 9560dc03424837fbf9f56ee28d607272 *./scripts/db.js
 bb2d863fcbd34884c614103656f61cbb *./scripts/doctor.js
-06f4937c63adb87b55b014c78447b786 *./scripts/hq.js
-6a8cb73a9d45d6f29323255f20416b05 *./scripts/hq/index.html
+154beb21b3e8893c2aef4538e44ea151 *./scripts/hq.js
+244aeb4c2a50c0c38d8d5ae1c44c46d9 *./scripts/hq/index.html
 8aa6d04c0895abdb7dc067315dd07975 *./scripts/hunt-movies.js
 1a5c9d48a0ff08696c8c379d23864574 *./scripts/hunt.js
 d536423d07f087809deaaba5d2bf402b *./scripts/launch-check.js
 1a5ca8a19186ec5438074ff2efefac32 *./scripts/lib/app-fetch.js
 efe61051ef4caad5c936a9f39748f269 *./scripts/lib/app-me.js
-40542e20b3ec57a1945aea9a671bac52 *./scripts/lib/app.js
-9e10c0c833d68033b5d3c587c03f7cc3 *./scripts/lib/cfa.js
+7eb695c044c2f1b15d1f038a20f1f220 *./scripts/lib/app.js
+d1de95bc2a4ada31f08b58c3a2f1caa9 *./scripts/lib/cfa.js
 53c73635af77fcd46aa730d4f312b770 *./scripts/lib/hardexclude.js
 7bfa7dc78e2fac43c0d916ca82ba1763 *./scripts/lib/hqcheck.js
 e3e10b6699cefcbccdac12d85538f78c *./scripts/lib/matchcheck.js
@@ -623,7 +623,7 @@ fa1daa0664d73f5a36b6c4ba3af379ff *./tests/app-fetch.test.js
 82eba5415c137531758fa7575ef02a69 *./tests/app-me.test.js
 115aae4752d89771af4775efbd83ada7 *./tests/app-view.test.js
 6d6b71d3336921cdca9753a7c936e730 *./tests/backup-cache.test.js
-26e9108f24aecdd611057e90f1711b69 *./tests/brand.test.js
+c8b4e814a01c16d890841c3cc7197707 *./tests/brand.test.js
 f4b76cc60f24485fb65d51442692f79f *./tests/hq-lab.test.js
 0f62329e325c616761cbe184187117b8 *./tests/hq.test.js
 48c3da6b3f6d0ce7ed41dc5635c46b76 *./tests/hunt-movies.test.js
@@ -635,6 +635,7 @@ a918cfe846ef4b1de2336a1c0e131f4b *./tests/match.test.js
 d98e3378197dfc147b7240e8e79b565c *./tests/site-build.test.js
 de88286c1e85228e8626193221aebfe8 *./tests/site-guards.test.js
 d283c6c3f945db9f6fb4a8f5767eab70 *./tests/site-middleware.test.js
+bb6b04c389364793323648f830cddb7f *./tests/wrongfilm.test.js
 f0ff021d78b651ab0fb80f1905f0795a *./vercel.json
 9a33b94e8d4d063978ffbc7026a30c72 *./videos/voidtv-hold/.gitignore
 d2fa22d82b9fcdf9c4b73cf1a22bad2d *./videos/voidtv-hold/AGENTS.md
