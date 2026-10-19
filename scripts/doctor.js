@@ -163,6 +163,9 @@ async function main() {
   if (!list || !list.shows || list.shows.length < 100) add('catalog', 'red', 'scripts/show-list.json is missing or tiny', 'Restore it from git: git checkout -- scripts/show-list.json');
   else if (bad || reserved) add('catalog', 'red', `${bad} unreadable grid(s), ${reserved} reserved-name file(s) of ${n}`, 'Delete or re-match the bad grids (HQ > Shows > Re-match now). A reserved-name file needs the \\\\?\\ path to delete.');
   else add('catalog', 'green', `${n} grids readable, list has ${list.shows.length} shows`);
+  // 5b. the matcher: its self-test, the share of S/E-plus-title picks below LIVE, grids restamped on one day, fallback grids an older matcher left (scripts/lib/matchcheck.js)
+  const ml = (() => { try { return require('./lib/matchcheck').matcherLight({ showsDir }); } catch (e) { return { level: 'red', detail: 'self-test could not run: ' + e.message.slice(0, 80) }; } })();
+  add('matcher', ml.level, ml.detail, ml.fix);
   try {
     const { assemble } = require('./lib/app');
     const data = assemble();

@@ -92,7 +92,7 @@ function assemble() {
       const p = readJson(path.join(PEOPLE_DIR, s.slug + '.json'), null);
       return {
         show: s.show, slug: s.slug, type: s.type, network: s.network, year: (s.tvmaze.premiered || a.year || '').slice(0, 4), runtime: s.tvmaze.runtime, tags: entry.tags || [],
-        poster: a.poster || null, backdrop: a.backdrop || null, overview: a.overview || '', genres: a.genres || [], rating: a.rating || null, country: a.country || null, matchedAt: s.matchedAt,
+        poster: a.poster || null, backdrop: a.backdrop || null, overview: a.overview || '', genres: a.genres || [], rating: a.rating || null, country: a.country || null, matchedAt: s.matchedAt, addedAt: s.addedAt,
         seasons: s.seasons.map((se) => ({ season: se.season, episodes: se.episodes.filter((e) => e.file && e.file.playable && !e.file.langRisk).map((e) => epOut(e)) })).filter((se) => se.episodes.length),
         vault: s.seasons.flatMap((se) => se.episodes.filter((e) => e.file && !e.file.playable && !e.file.langRisk).map((e) => ({ season: se.season, n: e.number, name: e.name, url: e.file.url, min: Math.round(e.file.seconds / 60), risk: (e.file.codecRisk || 'format').replace(/^(video|audio|container) /, '').replace(/[()]/g, '') }))),
         cast: p ? p.cast.slice(0, 14).map((c) => ({ id: c.id, name: c.name, photo: c.photo, as: c.character, eps: c.episodes })) : [],
