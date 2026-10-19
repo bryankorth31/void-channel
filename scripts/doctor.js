@@ -136,6 +136,13 @@ async function main() {
     add('jobs', hunts > 2 ? 'red' : 'green', hunts + ' Archive-facing job(s) running (ceiling 2)', hunts > 2 ? 'Stop one from HQ > Jobs; three at once gets this address throttled.' : undefined);
   } catch (e) { add('jobs', 'yellow', 'could not list processes'); }
 
+  // 4b. local servers: HQ must turn away a page from another port, a body that is not JSON and a call without its token (CF-004)
+  try {
+    const r = await require('./lib/hqcheck').probe(PROFILE.port);
+    if (r.down) add('local-servers', 'green', 'HQ is not running on port ' + PROFILE.port + ', nothing to probe');
+    else add('local-servers', r.ok ? 'green' : 'red', r.detail, r.ok ? undefined : 'Close HQ and the desktop app and start them again from the current scripts/hq.js (HQ.cmd or the desktop app). A copy started before the CF-004 fix still answers any page on this PC.');
+  } catch (e) { add('local-servers', 'yellow', 'could not probe HQ: ' + String(e.message).slice(0, 80)); }
+
   // 5. catalog integrity (cheap: parse every grid, look for reserved names and empty essentials)
   const showsDir = path.join(PROFILE.catalogDir, 'shows');
   let bad = 0, n = 0, reserved = 0;
