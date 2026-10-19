@@ -34,11 +34,11 @@ say out loud, with a plain `GATE` = `off`.
 
 | what the build sees | gate | routes (`_routes.json`) | `version.txt` | what happens |
 |---|---|---|---|---|
-| `SITE_PASSWORD` (type Text) | on | `include /*, exclude /assets/*` | `gate=on` | every page and data file runs through the gate Function and counts against the free 100,000 Function requests a day |
+| `SITE_PASSWORD` (type Text) | on | `include /*, exclude /assets/*` | `gate=on` | every page and data file runs through the gate Function and counts as a Function request (Workers Paid is on since 18 Oct 2026: 10 million requests a month are included, then 0.30 dollars per million) |
 | `GATE` = `on` (type Text), with the password kept as a Secret | on | same | `gate=on` | the same; the running gate still checks the password from the Secret |
 | `GATE` = `off` (type Text) and no `SITE_PASSWORD` | off, the site is OPEN | `include /api/*, /q/*` | `gate=off` | pages and data files are plain static files and do not count; only the analytics intake and the QR redirects run as Functions |
 | `GATE` = `off` and `SITE_PASSWORD` both | | | | the build stops with exit 1 (they say opposite things); the old site stays up |
-| neither, on a Cloudflare build of VOIDtv | | | | the build stops with exit 1 and a message that names both variables; the old (gated) site stays up |
+| neither, on a Cloudflare build of voidtv.net | | | | the build stops with exit 1 and a message that names both variables; the old (gated) site stays up |
 | neither, on a local build or another profile (kids, public access) | off | narrow | `gate=off` | written open, with a note in the log. A local build runs no Functions, so the password does not apply to it; do not upload a local `site/` folder by hand to a project that should have a password |
 
 - **Type `SITE_PASSWORD` as Text (plain text), not Secret,** or keep it a Secret and add a Text `GATE` = `on` beside it. The
@@ -49,8 +49,12 @@ say out loud, with a plain `GATE` = `off`.
   and the two could disagree: the site came up open, with no password and no analytics. Passing it now fails the
   build at once (exit 2, message "--open no longer exists"), so an old build command is noticed and the old site
   stays up.
-- Preview deployments (other branches) have their own variable list. A preview build of VOIDtv with neither variable
-  is refused like the Production one, so set `GATE` there too (`on` keeps previews private, `off` leaves them open).
+- Preview deployments (other branches) have their own variable list, and whether previews are built at all is a separate
+  Cloudflare setting that you check (Workers & Pages > `voidtvsite` > Settings > Builds > Branch control). `GATE` = `on` in the
+  Production list keeps only the production build gated; it does not put a password on previews, because `GATE` is read by the build
+  only and the running gate checks `SITE_PASSWORD`. A preview is private only if its own list also has the password (`SITE_PASSWORD` as Text, or as a Secret
+  beside a Text `GATE` = `on`). With `GATE` = `on` and no password the preview is open, and `GATE` = `off` opens it on purpose. A preview build of voidtv.net with neither variable is refused like the
+  Production one. The simplest safe choice is to turn preview deployments off.
 - The doctor's `gate` light checks it from outside: it reads `gate=` from `https://voidtv.net/version.txt`, then
   `gate=on` must answer 401 on `/`, and `gate=off` must answer 200 on `/` and 200 on `/api/e`. A mismatch is red.
   If `GATE` = `off` is set while the password is still saved as a Secret, the build opens the pages but the running site
@@ -85,8 +89,10 @@ sees. Dashboard path: dash.cloudflare.com > Workers & Pages > `voidtvsite` > Set
    a Secret. If it is a Secret, either add a plain Text variable `GATE` = `on` beside it, or delete it and add it again as Text
    with the same value (keep `GATE_KEY` as it is: the same password and the same key keep every visitor's 30-day cookie valid).
    `GATE_KEY`, if it exists, may stay a Secret: only the running gate reads it.
-2. **Preview list:** if you want preview builds to work, add a Text `GATE` there too (`on` keeps them private). A VOIDtv build that
-   sees neither variable stops, in Preview as in Production.
+2. **Previews:** `GATE` = `on` in the Production list keeps only the production build gated; it does not put a password on
+   previews. Previews are a separate Cloudflare setting that you check: Workers & Pages > `voidtvsite` > Settings > Builds >
+   Branch control. Turn preview deployments off, or give the Preview list its own `SITE_PASSWORD` (Text). A voidtv.net build that sees
+   neither variable stops, in Preview as in Production, until the Preview list has one.
 3. **Build command** under Settings > Builds: exactly `node scripts/site.js --base https://voidtv.net`. If it still carries
    `--open`, the build stops with exit 2 and the old site stays up.
 4. `NODE_VERSION` = `24` is still there, and no `SITE_ALLOW_SHRINK` variable is set.
@@ -99,8 +105,8 @@ sees. Dashboard path: dash.cloudflare.com > Workers & Pages > `voidtvsite` > Set
 
 ### The day itself
 
-Three clicks on the Cloudflare zone, then two in the Pages project. The first three can be done any time before;
-none of them changes what a visitor sees today. All paths below start at dash.cloudflare.com.
+Four clicks in the Cloudflare dashboard (three on the zone, one for the account's notifications), then two in the Pages
+project. The first four can be done any time before; none of them changes what a visitor sees today. All paths below start at dash.cloudflare.com.
 
 1. **www to the bare domain, for good.** Select the `voidtv.net` domain > Rules > Redirect Rules > Create rule.
    - Name: `www to bare domain`
@@ -131,7 +137,10 @@ none of them changes what a visitor sees today. All paths below start at dash.cl
    `/api/e` also refuses, by itself, any request that does not carry `Sec-Fetch-Site: same-origin` (or `same-site`), any
    body over 16 KB, and any event whose show, episode, view or session id has the wrong shape (audit CF-013). A browser
    from before Safari 16.4 does not send that header, so its visits are not counted in analytics.
-4. **Open the site.** Workers & Pages > `voidtvsite` > Settings > Variables and Secrets, Production list:
+4. **Email when a deploy fails.** A failed build leaves the old site up and says nothing, so ask Cloudflare to tell you:
+   Cloudflare dashboard > Notifications > Add > Workers and Pages > the event for a Pages project deployment failed >
+   send it to your own email address. If a label differs, pick the notification named for a failed Pages deployment.
+5. **Open the site.** Workers & Pages > `voidtvsite` > Settings > Variables and Secrets, Production list:
    - delete `SITE_PASSWORD` (a Secret too), and delete `GATE` if it is there as `on`;
    - add a variable of type **Text** named `GATE` with the value `off`;
    - Deployments > latest > Retry deployment.
@@ -139,7 +148,7 @@ none of them changes what a visitor sees today. All paths below start at dash.cl
    Both halves are needed. Deleting the password alone does not open the site: the build then sees neither variable and stops
    with `GATE UNKNOWN`, the old gated site stays up, and nothing is lost. Adding `GATE` = `off` while the password is still
    there also stops the build ("GATE=off but SITE_PASSWORD is also set").
-5. **Check, about two minutes later.** Open `https://voidtv.net/version.txt`: the second line must start `gate=off`.
+6. **Check, about two minutes later.** Open `https://voidtv.net/version.txt`: the second line must start `gate=off`.
    Open `https://voidtv.net/` in a private window: no password page (it answers 200). Run the full doctor (HQ > Overview > Run
    doctor, or `node scripts/doctor.js`) and read these lights:
 
@@ -155,7 +164,7 @@ none of them changes what a visitor sees today. All paths below start at dash.cl
 
    `gate` red with "`/api/e` answered 401" means a password is still set where the running site can see it, usually a
    Secret the build could not read; delete it, redeploy.
-6. **To close the site again:** delete `GATE` (or set it to `on`), add `SITE_PASSWORD` (type Text), and Retry deployment.
+7. **To close the site again:** delete `GATE` (or set it to `on`), add `SITE_PASSWORD` (type Text), and Retry deployment.
    `version.txt` returns to `gate=on` and the doctor's `gate` light wants a 401.
 
 ## What `version.txt` shows
@@ -220,6 +229,20 @@ open (home, a show, play an episode, search, the TV channel, the password page),
 It warns, and goes on, at 18,000 files, and when a show grid file does not parse (that show is missing from the site; re-match it
 from HQ). The doctor's `files` light reads the same counts from the live site: yellow at 18,000, red at 19,500 or a file over 24 MiB.
 
+### The file limit, by hand
+
+The count is almost all shows: each show on the site is two files (its page and its data file) plus about 1.24 person pages.
+Yellow (18,000 files) means Pages will soon refuse a deploy; red (19,500) means this build already refuses, and the old site
+stays up. What you can do yourself, in this order:
+
+1. Stop the growth: stop the hunts that add shows (HQ > Jobs) until the count is down.
+2. Lower the count: in HQ open a show you can do without and press Hide from the site, then Publish now. A hidden show leaves
+   the site together with its two files. This buys room one show at a time.
+3. The lasting fix is a change to what the site writes: fewer per-show pages, or a data split (audit F-005). It is not a button;
+   ask the audit chat.
+
+The next deploy writes the new `files=` count into `version.txt`, and the `files` light follows.
+
 ## Local test of the exact build
 
 ```
@@ -232,8 +255,9 @@ Then open `http://127.0.0.1:8766/` and `http://127.0.0.1:8766/show/seinfeld/`. P
 
 ## Limits that matter
 
-Cloudflare Pages free: unlimited bandwidth, 500 builds a month, 20,000 files per deploy, 25 MiB per
-file, and (Workers Free) 100,000 Function requests a day. On 18 Oct 2026 the build was about 15,450 files and 680 MB, growing about
+Cloudflare Pages (Free plan): unlimited bandwidth, 500 builds a month, 20,000 files per deploy, 25 MiB per
+file. Workers Paid has been on since 18 Oct 2026, so Function requests have no daily cap: 10 million a month are included,
+then 0.30 dollars per million. The narrow routes of an open site save cost, not a cap. On 18 Oct 2026 the build was about 15,450 files and 680 MB, growing about
 350 files a day while hunts added shows; the build guard above and the doctor's `files` light exist because of that.
 The TV-movie reference list (9 MB) is not part of the site.
 
