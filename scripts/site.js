@@ -99,6 +99,8 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
   fs.writeFileSync(path.join(dst, 'voidplayer.js'), ['core.js', 'icons.js', 'player.js'].map((f) => fs.readFileSync(path.join(P, f), 'utf8')).join('\n;\n'));
   fs.copyFileSync(path.join(P, 'player.css'), path.join(dst, 'player.css')); }
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
+// Browsers, search engines and feed readers ask for /favicon.ico on their own; without the file they got the home page.
+if (fs.existsSync(path.join(brandSrc, 'favicon.ico'))) fs.copyFileSync(path.join(brandSrc, 'favicon.ico'), path.join(OUT, 'favicon.ico'));
 // Caching plus the security headers for static files (the same set functions/_middleware.js puts on every Function answer).
 fs.writeFileSync(path.join(OUT, '_headers'), guards.headersFile());
 fs.writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\nDisallow: /data/\n');
