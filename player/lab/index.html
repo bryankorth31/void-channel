@@ -32,6 +32,10 @@ h3{margin:0 0 8px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;c
 .note{color:var(--dim);font-size:12px;margin:6px 0 0}
 table{width:100%;border-collapse:collapse;font-size:12px}td,th{text-align:left;padding:4px 6px;border-bottom:1px solid var(--line)}th{color:var(--dim);font-weight:500}
 label{color:var(--dim)}
+.wrap>section{min-width:0}.scroll{overflow-x:auto}.scroll table{min-width:1500px}td,th{white-space:nowrap}
+.flag{display:inline-block;color:#07080c;background:var(--gold);border-radius:4px;padding:0 5px;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.04em}.flag.red{background:var(--red)}
+.kv dd.wrapdd{white-space:normal;overflow:visible}
+.periods{font:12px/1.5 ui-monospace,Consolas,monospace;max-height:22vh;overflow:auto}.periods div{border-top:1px solid var(--line);padding:2px 0}
 </style>
 </head>
 <body>
@@ -53,11 +57,15 @@ label{color:var(--dim)}
       <p class="note">Network and decode errors are reported to the player's brain exactly as the browser would report them, so the real recovery steps run. The dead-copy tests use genuinely broken links. A real frozen picture can't be faked from a page; it is caught live while you watch, and logged below.</p>
       <p><label><input type="checkbox" id="soak"> Soak test: play the next episode in the list automatically</label></p>
     </div>
-    <div class="panel" style="margin-top:12px"><h3>Session results <button id="copyAll" style="float:right" class="btns">Copy all</button></h3><table><thead><tr><th>Episode</th><th>Start</th><th>Watched</th><th>Stalls</th><th>Longest pause</th><th>Freezes</th><th>Drifts</th><th>Fixed</th><th>Switches</th><th>End</th></tr></thead><tbody id="results"></tbody></table></div>
+    <div class="panel" style="margin-top:12px"><h3>Session results <span class="btns" style="float:right;margin:0;text-transform:none;letter-spacing:0"><button id="copyAll">Copy all</button><button id="copySoak">Copy soak.json</button></span></h3>
+      <div class="scroll"><table><thead><tr><th>Episode</th><th>Start</th><th>Watched</th><th>Stalls</th><th>Longest pause</th><th>Freezes</th><th>Drifts</th><th>Presented fps</th><th>File fps (estimate)</th><th>Decoded fps</th><th>Dropped</th><th>Minutes behind</th><th>Hitches</th><th>Longest hitch</th><th>A/V lag events</th><th>Max A/V gap</th><th>Out-of-sync presses</th><th>Hidden time</th><th>Throttled time</th><th>Fixed</th><th>Switches</th><th>End</th></tr></thead><tbody id="results"></tbody></table></div>
+      <p class="note">Presented, file and decoded fps are averages over the steady playing of the episode. File fps is an estimate from the media-time steps of the frames shown, not the file's header: a good file reads low when the browser skips frames. "n/a" means this browser gives no per-frame timing, which is not the same as zero. Hidden time is the page not visible; throttled time is the browser not calling for frames while the sound ran on a visible page. Both are left out of every other figure.</p></div>
   </section>
   <section>
     <div class="panel"><h3>Live</h3><dl class="kv" id="live"></dl><div class="copies" id="copies"></div>
       <div class="btns"><button id="copyDiag">Copy diagnostics</button></div></div>
+    <div class="panel" style="margin-top:12px"><h3>Hidden and throttled</h3><div class="periods" id="periods"></div>
+      <p class="note">Hidden: the page was not visible (a covered or minimised window, another tab). Throttled: the browser stopped calling for frames for over a second while the sound ran on a visible page; "page drawing paused too" means the whole page was held back, "video only" means the page kept drawing.</p></div>
     <div class="panel" style="margin-top:12px"><h3>Decisions and events</h3><div class="log" id="log"></div></div>
   </section>
 </div>
@@ -71,41 +79,99 @@ label{color:var(--dim)}
   let EPS = [], cur = -1;
   const results = JSON.parse(localStorage.getItem('vplab:results') || '[]');
   const saveResults = () => { try { localStorage.setItem('vplab:results', JSON.stringify(results.slice(-200))); } catch (e) {} };
+  const SESSION = new Date().toISOString(); // this page load: Copy soak.json is about the rows of this session
+  const keep = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v.slice(-200))); } catch (e) {} };
+  const stored = (k) => { try { return JSON.parse(localStorage.getItem(k) || '[]'); } catch (e) { return []; } };
+  const vis = stored('vplab:vis'), thr = stored('vplab:thr'), epStart = {}; // every change of the page's visibility with its time and length; every throttled stretch the player logged
+  let visState = document.visibilityState, visSince = Date.now();
+  const fmtMs = (ms) => (ms == null ? '\u2013' : ms < 1000 ? Math.round(ms) + ' ms' : ms < 60000 ? (ms / 1000).toFixed(1) + ' s' : Math.floor(ms / 60000) + ' min ' + Math.round(ms % 60000 / 1000) + ' s');
+  const n1 = (v) => (v == null ? '\u2013' : String(Math.round(v * 10) / 10)), n2 = (v) => (v == null ? '\u2013' : String(Math.round(v * 100) / 100)), pct = (v) => (v == null ? '\u2013' : Math.round(v * 1000) / 10 + '%');
+  // Hidden time inside [a, b] (epoch ms), from the visibility log plus the stretch that is still open.
+  function hiddenIn(a, b) {
+    let n = 0;
+    vis.concat([{ state: visState, at: new Date(visSince).toISOString(), ms: Date.now() - visSince }]).forEach((p) => {
+      if (p.state !== 'hidden') return;
+      const st = Date.parse(p.at); n += Math.max(0, Math.min(st + p.ms, b) - Math.max(st, a));
+    });
+    return Math.round(n);
+  }
+  document.addEventListener('visibilitychange', () => {
+    const t = Date.now();
+    vis.push({ state: visState, at: new Date(visSince).toISOString(), ms: t - visSince, session: SESSION });
+    visState = document.visibilityState; visSince = t; keep('vplab:vis', vis);
+    logLine('page ' + visState, visState === 'hidden' ? 'w' : '');
+  });
 
   const player = VoidPlayer.create($('stage'), {
-    globalKeys: true,
+    globalKeys: true, syncButton: true, // the lab shows the Out of sync? button in the control row
     onNext: () => playIndex(cur + 1),
     onPrev: () => playIndex(cur - 1),
     onEnded: async (p) => { if ($('soak').checked && EPS[cur + 1]) { if (await p.upNext(EPS[cur + 1].show + ' · ' + EPS[cur + 1].title, 8)) playIndex(cur + 1); } },
-    onEvent: (e) => { logEvent(e); if (e.type === 'summary' || e.type === 'failed') record(e); },
+    onEvent: (e) => {
+      logEvent(e); if (e.type === 'summary' || e.type === 'failed') record(e);
+      if (e.type === 'throttle') { thr.push({ at: new Date().toISOString(), episode: EPS[cur] && EPS[cur].id, ms: e.ms, raf: e.raf, t: Math.round(e.t), session: SESSION }); keep('vplab:thr', thr); }
+    },
   });
   window.player = player; // for poking from the console
 
+  function logLine(text, cls) {
+    const line = document.createElement('div'); line.className = cls || '';
+    line.textContent = new Date().toLocaleTimeString() + '  ' + text;
+    const log = $('log'); log.prepend(line); while (log.children.length > 150) log.lastChild.remove();
+  }
   function logEvent(e) {
     if (e.type === 'quality' && !e.dropPct) return;
-    const cls = /freeze|drift|stall|action|switch/.test(e.type) ? 'w' : /error|failed/.test(e.type) ? 'e' : /recovered|started/.test(e.type) ? 'g' : '';
-    const t = new Date().toLocaleTimeString();
-    const d = Object.assign({}, e); delete d.at; delete d.type;
-    const line = document.createElement('div'); line.className = cls;
-    line.textContent = t + '  ' + e.type + '  ' + JSON.stringify(d);
-    const log = $('log'); log.prepend(line); while (log.children.length > 150) log.lastChild.remove();
+    const cls = /freeze|drift|stall|action|switch|hitch|avlag|lowfps|decodelag|throttle|user-avsync/.test(e.type) ? 'w' : /error|failed/.test(e.type) ? 'e' : /recovered|started/.test(e.type) ? 'g' : '';
+    const d = Object.assign({}, e); delete d.at; delete d.type; delete d.gaps; delete d.hitches; delete d.throttles; // the stamp's arrays are in Copy diagnostics
+    logLine(e.type + '  ' + JSON.stringify(d), cls);
   }
   function record(e) {
     if (cur < 0) return;
     const s = e.summary || player.core.summary(), ep = (e.episode && EPS.find((x) => x.id === e.episode)) || EPS[cur]; // a summary says which episode it is about: the player sends one when it loads the next
-    const row = { id: ep.id, show: ep.show, title: ep.title, startupMs: s.startupMs, watchMin: Math.round((s.watchMs || 0) / 6000) / 10, stalls: s.stalls, pauseS: Math.round((s.longestPauseMs || 0) / 100) / 10, freezes: s.freezes, drifts: s.drifts, recovered: s.recovered, switches: s.switches, end: e.type === 'failed' ? 'failed' : s.state, source: s.source, at: new Date().toISOString(), ua: navigator.userAgent };
+    const row = { id: ep.id, show: ep.show, title: ep.title, session: SESSION, startedAt: new Date(epStart[ep.id] || Date.now()).toISOString(), startupMs: s.startupMs, watchMs: s.watchMs, watchMin: Math.round((s.watchMs || 0) / 6000) / 10, stalls: s.stalls, pauseS: Math.round((s.longestPauseMs || 0) / 100) / 10, pauseMs: s.longestPauseMs, freezes: s.freezes, drifts: s.drifts,
+      presentedFps: s.meanPresentedFps, sourceFps: s.sourceFps, decodedFps: s.meanDecodedFps, droppedShare: s.meanDroppedShare, minutesBehind: s.minutesBehind, minutesMeasured: s.minutesMeasured,
+      hitches: s.hitches, longestHitchMs: s.longestHitchMs, avlags: s.avlags, maxAvGapMs: s.maxAvGapMs, outOfSyncPresses: s.outOfSyncPresses, avMeasure: s.avMeasure,
+      hiddenMs: hiddenIn(epStart[ep.id] || Date.now(), Date.now()), throttledMs: s.throttledMs, throttles: s.throttles, throttlesPageWide: s.throttlesPageWide,
+      recovered: s.recovered, switches: s.switches, end: e.type === 'failed' ? 'failed' : s.state, source: s.source, at: new Date().toISOString(), ua: navigator.userAgent };
     const i = results.findIndex((r) => r.id === row.id && r.at.slice(0, 13) === row.at.slice(0, 13));
     if (i >= 0) results[i] = row; else results.push(row);
     saveResults(); drawResults();
   }
   function drawResults() {
-    $('results').innerHTML = results.slice(-30).reverse().map((r) => '<tr><td>' + esc(r.show + ' · ' + r.title) + '</td><td>' + (r.startupMs == null ? '–' : (r.startupMs / 1000).toFixed(1) + 's') + '</td><td>' + r.watchMin + 'm</td><td>' + r.stalls + '</td><td>' + (r.pauseS == null ? '-' : r.pauseS + 's') + '</td><td>' + r.freezes + '</td><td>' + r.drifts + '</td><td>' + r.recovered + '</td><td>' + r.switches + '</td><td>' + esc(r.end) + '</td></tr>').join('');
+    const flag = (v, text) => (v ? '<span class="flag">' + text + '</span> ' : '');
+    $('results').innerHTML = results.slice(-30).reverse().map((r) => '<tr><td>' + esc(r.show + ' \u00b7 ' + r.title) + '</td><td>' + (r.startupMs == null ? '\u2013' : (r.startupMs / 1000).toFixed(1) + 's') + '</td><td>' + r.watchMin + 'm</td><td>' + r.stalls + '</td><td>' + (r.pauseS == null ? '-' : r.pauseS + 's') + '</td><td>' + r.freezes + '</td><td>' + r.drifts
+      + '</td><td>' + (r.avMeasure === 'unavailable' ? 'n/a' : n1(r.presentedFps)) + '</td><td>' + n2(r.sourceFps) + '</td><td>' + n1(r.decodedFps) + '</td><td>' + pct(r.droppedShare)
+      + '</td><td>' + (r.minutesMeasured == null ? '\u2013' : flag(r.minutesBehind, 'behind') + r.minutesBehind + ' of ' + r.minutesMeasured)
+      + '</td><td>' + (r.hitches == null ? 'n/a' : r.hitches) + '</td><td>' + (r.longestHitchMs == null ? 'n/a' : r.longestHitchMs + ' ms') + '</td><td>' + (r.avlags == null ? 'n/a' : r.avlags) + '</td><td>' + (r.avMeasure === 'unavailable' ? 'n/a' : r.maxAvGapMs == null ? '\u2013' : r.maxAvGapMs + ' ms')
+      + '</td><td>' + (r.outOfSyncPresses == null ? '\u2013' : r.outOfSyncPresses) + '</td><td>' + fmtMs(r.hiddenMs) + '</td><td>' + (r.avMeasure === 'unavailable' ? 'n/a' : (r.throttles ? flag(1, 'throttled') : '') + fmtMs(r.throttledMs))
+      + '</td><td>' + r.recovered + '</td><td>' + r.switches + '</td><td>' + esc(r.end) + '</td></tr>').join('');
+  }
+  // The one JSON for the launch check: the soak of this page load, totals first, then a row per episode.
+  function soakJson() {
+    if (cur >= 0) record({ type: 'summary', summary: player.core.summary() }); // the episode on screen counts too
+    const rows = results.filter((r) => r.session === SESSION);
+    const sum = (k) => { const v = rows.map((r) => r[k]).filter((x) => x != null); return v.length ? v.reduce((a, b) => a + b, 0) : null; };
+    const max = (k) => { const v = rows.map((r) => r[k]).filter((x) => x != null); return v.length ? Math.max.apply(null, v) : null; };
+    const mean = (k, d) => { const v = rows.filter((r) => r[k] != null && r.watchMs > 0); const w = v.reduce((a, r) => a + r.watchMs, 0); return w ? Math.round(v.reduce((a, r) => a + r[k] * r.watchMs, 0) / w * (d || 10)) / (d || 10) : null; };
+    return {
+      at: rows.length ? rows.map((r) => r.startedAt || r.at).sort()[0] : SESSION, durationMs: sum('watchMs'), longestPauseMs: max('pauseMs'), stalls: sum('stalls'), freezes: sum('freezes'), drifts: sum('drifts'),
+      hitches: sum('hitches'), avlags: sum('avlags'), maxAvGapMs: max('maxAvGapMs'), presentedFps: mean('presentedFps'), sourceFps: mean('sourceFps', 100), sourceFpsBasis: 'estimate from the frames shown', outOfSyncPresses: sum('outOfSyncPresses'),
+      decodedFps: mean('decodedFps'), droppedShare: mean('droppedShare', 1000), minutesBehind: sum('minutesBehind'), minutesMeasured: sum('minutesMeasured'), hiddenMs: sum('hiddenMs'),
+      throttledMs: sum('throttledMs'), throttles: sum('throttles'), throttlesPageWide: sum('throttlesPageWide'),
+      hiddenPeriods: vis.filter((p) => p.session === SESSION && p.state === 'hidden').map((p) => ({ at: p.at, ms: p.ms })).concat(document.visibilityState === 'hidden' ? [{ at: new Date(visSince).toISOString(), ms: Date.now() - visSince, open: true }] : []),
+      throttlePeriods: thr.filter((p) => p.session === SESSION).map((p) => ({ at: p.at, episode: p.episode, ms: p.ms, pageDrawing: p.raf === 'alive' })),
+      visibility: vis.filter((p) => p.session === SESSION).map((p) => ({ state: p.state, at: p.at, ms: p.ms })),
+      episodes: rows.map((r) => ({ id: r.id, title: r.show + ' \u00b7 ' + r.title, startedAt: r.startedAt || r.at, watchMs: r.watchMs, startupMs: r.startupMs, longestPauseMs: r.pauseMs, stalls: r.stalls, freezes: r.freezes, drifts: r.drifts, hitches: r.hitches, longestHitchMs: r.longestHitchMs, avlags: r.avlags, maxAvGapMs: r.maxAvGapMs,
+        presentedFps: r.presentedFps, sourceFps: r.sourceFps, decodedFps: r.decodedFps, droppedShare: r.droppedShare, minutesBehind: r.minutesBehind, minutesMeasured: r.minutesMeasured, outOfSyncPresses: r.outOfSyncPresses,
+        hiddenMs: r.hiddenMs, throttledMs: r.throttledMs, throttles: r.throttles, throttlesPageWide: r.throttlesPageWide, end: r.end, source: r.source })),
+    };
   }
 
   function playIndex(i) {
     if (i < 0 || i >= EPS.length) return;
     if (cur >= 0) record({ type: 'summary', summary: player.core.summary() });
     cur = i;
+    epStart[EPS[i].id] = Date.now();
     document.querySelectorAll('.eps button').forEach((b) => b.classList.toggle('on', +b.dataset.i === i));
     const ep = EPS[i];
     player.load({ id: ep.id, title: 'S' + ep.season + 'E' + ep.n + ' · ' + ep.title, show: ep.show, files: ep.files }, { autoplay: true });
@@ -118,11 +184,27 @@ label{color:var(--dim)}
   }
   setInterval(() => {
     if (cur < 0) return;
-    const d = player.diagnostics(), s = d.summary;
-    const rows = [['State', '<span class="st ' + d.state + '">' + d.state + '</span>'], ['Source', esc(d.source ? d.source.label : '–')], ['Server', esc(d.source ? d.source.url.split('/')[2] : '–')], ['Time', d.time + ' / ' + d.duration + ' s'], ['Buffered ahead', d.ahead + ' s'], ['Picture', esc(d.size)], ['Dropped frames', d.frames ? d.frames.dropped + ' of ' + d.frames.total : 'n/a'], ['Startup', s.startupMs == null ? '–' : (s.startupMs / 1000).toFixed(2) + ' s'], ['Stalls / time', s.stalls + ' / ' + (s.stallMs / 1000).toFixed(1) + ' s'], ['Longest pause', ((s.longestPauseMs || 0) / 1000).toFixed(1) + ' s'],['Freezes · drifts', s.freezes + ' · ' + s.drifts], ['Fixes tried · worked', s.actions + ' · ' + s.recovered], ['Copy/server switches', s.switches + ' (on ' + (s.sourceIndex + 1) + ' of ' + s.sources + ')'], ['Rebuffer ratio', (s.rebufferRatio * 100).toFixed(1) + '%'], ['Frame timing', player._rvfc ? 'per frame (best)' : 'decoder count (fallback)'], ['Page being drawn', d.pageDrawing ? 'yes' : 'no (freeze checks paused)']];
-    $('live').innerHTML = rows.map(([k, v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
-    drawCopies();
+    const d = player.diagnostics(), s = d.summary, tm = d.timing, none = tm.measure === 'unavailable';
+    const behind = tm.live && tm.decodedFps != null && tm.sourceFps && tm.decodedFps < 0.9 * tm.sourceFps; // decoded frames a second under 90 percent of the file's rate
+    const pics = (none ? 'no per-frame timing in this browser; decoded ' + n1(tm.decodedFps) + ', dropped ' + pct(tm.droppedShare) : 'file ~' + n2(tm.sourceFps) + ' (est.) / decoded ' + n1(tm.decodedFps) + ' / shown ' + n1(tm.presentedFps) + ', dropped ' + pct(tm.droppedShare))
+      + (tm.throttled ? ' <span class="flag red">throttled</span>' : '') + (behind ? ' <span class="flag">behind</span>' : '') + (tm.live || tm.throttled ? '' : ' <span class="note">(last reading, not steady now)</span>');
+    const gap = tm.gaps.length ? Math.round(tm.gaps[tm.gaps.length - 1] * 1000) + ' ms' : '\u2013';
+    const rows = [['State', '<span class="st ' + d.state + '">' + d.state + '</span>'], ['Source', esc(d.source ? d.source.label : '\u2013')], ['Server', esc(d.source ? d.source.url.split('/')[2] : '\u2013')], ['Time', d.time + ' / ' + d.duration + ' s'], ['Buffered ahead', d.ahead + ' s'], ['Picture', esc(d.size)], ['Dropped frames', d.frames ? d.frames.dropped + ' of ' + d.frames.total : 'n/a'],
+      ['Pictures a second', pics, 1], ['File rate (estimate from the frames shown)', n2(tm.sourceFps) + ' <span class="note">only the file\'s own header gives the true rate; a low estimate with a high dropped share or a low decoded rate means the browser fell behind</span>', 1], ['Minutes behind', s.minutesMeasured ? s.minutesBehind + ' of ' + s.minutesMeasured + ' steady minutes' : '\u2013 (none measured yet)'],
+      ['A/V gap now \u00b7 largest', none ? 'no measure' : gap + ' \u00b7 ' + (s.maxAvGapMs == null ? '\u2013' : s.maxAvGapMs + ' ms')], ['A/V lag events', none ? 'no measure' : s.avlags], ['Hitches \u00b7 longest', none ? 'no measure' : s.hitches + ' \u00b7 ' + s.longestHitchMs + ' ms'],
+      ['Throttled', none ? 'no measure' : s.throttles + (s.throttles ? ' (' + fmtMs(s.throttledMs) + ', ' + s.throttlesPageWide + ' with page drawing paused)' : '')], ['Page now', document.visibilityState + ', hidden ' + fmtMs(hiddenIn(epStart[EPS[cur].id] || Date.now(), Date.now())) + ' this episode'], ['Out of sync? presses', s.outOfSyncPresses],
+      ['Startup', s.startupMs == null ? '\u2013' : (s.startupMs / 1000).toFixed(2) + ' s'], ['Stalls / time', s.stalls + ' / ' + (s.stallMs / 1000).toFixed(1) + ' s'], ['Longest pause', ((s.longestPauseMs || 0) / 1000).toFixed(1) + ' s'],['Freezes \u00b7 drifts', s.freezes + ' \u00b7 ' + s.drifts], ['Fixes tried \u00b7 worked', s.actions + ' \u00b7 ' + s.recovered], ['Copy/server switches', s.switches + ' (on ' + (s.sourceIndex + 1) + ' of ' + s.sources + ')'], ['Rebuffer ratio', (s.rebufferRatio * 100).toFixed(1) + '%'], ['Frame timing', player._rvfc ? 'per frame (best)' : 'decoder count (fallback)'], ['Page being drawn', d.pageDrawing ? 'yes' : 'no (freeze checks paused)']];
+    $('live').innerHTML = rows.map(([k, v, w]) => '<dt>' + k + '</dt><dd' + (w ? ' class="wrapdd"' : '') + '>' + v + '</dd>').join('');
+    drawCopies(); drawPeriods();
   }, 500);
+  // The last hidden stretches (the page not visible) and throttled stretches (no frame callbacks while the sound ran), newest first.
+  function drawPeriods() {
+    const hid = vis.filter((p) => p.state === 'hidden').map((p) => ({ at: p.at, text: 'hidden ' + fmtMs(p.ms) }));
+    if (visState === 'hidden') hid.push({ at: new Date(visSince).toISOString(), text: 'hidden ' + fmtMs(Date.now() - visSince) + ' (still)' });
+    const th = thr.map((p) => ({ at: p.at, text: 'throttled ' + fmtMs(p.ms) + (p.raf === 'paused' ? ', page drawing paused too' : ', video only (page kept drawing)') }));
+    const all = hid.concat(th).sort((a, b) => (a.at < b.at ? 1 : -1)).slice(0, 12);
+    $('periods').innerHTML = all.length ? all.map((p) => '<div>' + esc(new Date(p.at).toLocaleTimeString()) + '  ' + esc(p.text) + '</div>').join('') : '<div class="note">None yet.</div>';
+  }
 
   // Fault tests
   document.querySelector('.btns').addEventListener('click', (e) => {
@@ -137,7 +219,13 @@ label{color:var(--dim)}
     if (t === 'nothing') player.load({ id: 'none', title: 'No playable copy', show: ep.show, files: [] }, { autoplay: true });
   });
   $('copyDiag').onclick = () => navigator.clipboard.writeText(JSON.stringify(player.diagnostics(), null, 1));
-  $('copyAll').onclick = () => navigator.clipboard.writeText(JSON.stringify(results, null, 1));
+  const copy = (txt, btn, label) => {
+    const done = () => { btn.textContent = 'Copied'; setTimeout(() => { btn.textContent = label; }, 1500); };
+    if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done, () => window.prompt('Copy this:', txt)); else window.prompt('Copy this:', txt);
+  };
+  $('copyAll').onclick = () => { if (cur >= 0) record({ type: 'summary', summary: player.core.summary() }); copy(JSON.stringify({ rows: results, visibility: vis, throttles: thr }, null, 1), $('copyAll'), 'Copy all'); };
+  $('copySoak').onclick = () => copy(JSON.stringify(soakJson(), null, 1), $('copySoak'), 'Copy soak.json');
+  window.soakJson = soakJson; // for poking from the console
 
   fetch('episodes.json').then((r) => r.json()).then((list) => {
     EPS = list;
@@ -149,7 +237,7 @@ label{color:var(--dim)}
     });
     $('eps').innerHTML = h;
     $('eps').onclick = (e) => { const b = e.target.closest('button'); if (b) playIndex(+b.dataset.i); };
-    drawResults();
+    drawResults(); drawPeriods();
   }).catch(() => { $('eps').textContent = 'Could not load episodes.json. Run: node player/tools/rank-sources.js --lab'; });
 })();
 </script>

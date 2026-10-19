@@ -21,7 +21,11 @@
   const DEFAULTS = {
     skipBack: 10, skipFwd: 30, arrowSkip: 10, volumeKeys: true, storageKey: 'voidplayer', globalKeys: false, resolveServers: true, metadataTimeoutMs: 2500,
     onEvent: null, onEnded: null, onNext: null, onPrev: null, onReport: null, config: null,
+    syncButton: false, // the "Out of sync?" button in the control row: for testers and the lab, not for viewers (the failure card has its own "Picture out of sync" choice)
   };
+  const AVSYNC_MIN_WIDTH = 720; // a player narrower than this has no room for the control, as with speed and picture-in-picture, which player.css hides sooner
+  const AVSYNC_NOTE = 'Noted. Thank you.', AVSYNC_NOTE_MS = 2500; // the line shown after a press, and how long
+  const AVSYNC_REPEAT_MS = 10000; // pressing it again within this long stamps nothing new
 
   // ---------- Archive servers: every item lives on a primary and a backup storage server ----------
   const serverCache = new Map();
@@ -87,6 +91,7 @@
       this._fail = null;
       this._playedCtx = this._ctx || null; // whatever the host hung on _ctx for this episode, kept for its summary
       this._teardown(); // stop the previous episode now, not after the server lookup
+      this._stopFrames(); // the frame feed belongs to the episode it was started for; the new one starts its own below
       this._resetUi();
       this._setTitle();
       this._cancelUpNext(); // a countdown left over from the last episode must not skip this one
@@ -120,7 +125,8 @@
       // From here the core holds this episode's figures, so its end-of-play summary is due (not before: while the
       // lookup above is pending the core still holds the figures of the episode that was replaced, and a summary
       // sent then would repeat them under the wrong episode).
-      this._summed = false; this._coreEp = ep;
+      this._summed = false; this._coreEp = ep; this._avAt = 0; this._avStamps = [];
+      this._armFrames();
       this.core.load(list, opts.startAt || 0, now(), opts.autoplay !== false);
     }
     play() { this.core.event('user-play', now()); const p = this.v.play(); if (p && p.catch) p.catch(() => this._needTap()); }
@@ -136,8 +142,8 @@
         when: new Date().toISOString(), episode: this.ep && { id: this.ep.id, title: this.ep.title, show: this.ep.show },
         state: this.core.state, failure: this._fail || null, source: this.core.source && { label: this.core.source.label, url: this.core.source.url },
         time: Math.round(v.currentTime * 10) / 10, duration: Math.round((v.duration || 0) * 10) / 10, ahead: Math.round(this._ahead() * 10) / 10,
-        readyState: v.readyState, networkState: v.networkState, error: v.error && v.error.code, size: v.videoWidth + 'x' + v.videoHeight,
-        frames: q && { total: q.totalVideoFrames, dropped: q.droppedVideoFrames }, pageDrawing: !!this._drawing, summary: this.core.summary(), decisions: this.core.log,
+        readyState: v.readyState, networkState: v.networkState, rate: v.playbackRate, error: v.error && v.error.code, size: v.videoWidth + 'x' + v.videoHeight,
+        frames: q && { total: q.totalVideoFrames, dropped: q.droppedVideoFrames }, pageDrawing: !!this._drawing, summary: this.core.summary(), timing: this.core.timing(), avStamps: (this._avStamps || []).slice(), decisions: this.core.log,
         events: this.events.slice(-40), ua: navigator.userAgent,
         env: { screen: screen.width + 'x' + screen.height, dpr: root.devicePixelRatio, cores: navigator.hardwareConcurrency, memGB: navigator.deviceMemory, net: navigator.connection ? { type: navigator.connection.effectiveType, downMbps: navigator.connection.downlink, saveData: navigator.connection.saveData } : null, frameTiming: this._rvfc ? 'per-frame' : 'decoder-count', fullscreen: document.fullscreenElement === this.root },
       };
@@ -150,12 +156,14 @@
       clearInterval(this._statsT); this._timers.delete(this._statsT);
       if (!on) return;
       const draw = () => {
-        const d = this.diagnostics(), m = d.summary;
+        const d = this.diagnostics(), m = d.summary, tm = d.timing, f1 = (x) => (x == null ? '-' : String(x)), pct = (x) => (x == null ? '-' : Math.round(x * 1000) / 10 + '%');
         const lines = [
           'state      ' + d.state + (d.pageDrawing ? '' : '  (page not drawn: freeze checks paused)'),
           'source     ' + (d.source ? d.source.label + '  ' + d.source.url.split('/')[2] : '-'),
           'time       ' + d.time + ' / ' + d.duration + ' s   buffered ahead ' + d.ahead + ' s',
           'picture    ' + d.size + '   frames ' + (d.frames ? d.frames.total + ', dropped ' + d.frames.dropped : 'n/a') + '   timing ' + d.env.frameTiming,
+          'pictures/s file ~' + f1(tm.sourceFps) + ' (estimate from the frames shown) / decoded ' + f1(tm.decodedFps) + ' / shown ' + f1(tm.presentedFps) + '   dropped ' + pct(tm.droppedShare) + (tm.throttled ? '   THROTTLED now' : ''),
+          'sync       ' + (m.avMeasure === 'unavailable' ? 'no measure in this browser' : 'lag events ' + m.avlags + ' (largest gap ' + (m.maxAvGapMs == null ? '-' : m.maxAvGapMs + ' ms') + ')  hitches ' + m.hitches + ' (longest ' + m.longestHitchMs + ' ms)  throttled ' + m.throttles),
           'startup    ' + (m.startupMs == null ? '-' : (m.startupMs / 1000).toFixed(2) + ' s'),
           'trouble    stalls ' + m.stalls + ' (' + (m.stallMs / 1000).toFixed(1) + ' s, longest ' + ((m.longestPauseMs || 0) / 1000).toFixed(1) + ' s)  freezes ' + m.freezes + '  drifts ' + m.drifts,
           'fixes      tried ' + m.actions + '  worked ' + m.recovered + '  switches ' + m.switches,
@@ -188,6 +196,8 @@
       this._emitSummary();
       this.ep = null;
       clearInterval(this._loop);
+      this._gone = true; this._stopFrames();
+      if (this._ro) this._ro.disconnect();
       if (this._raf && root.cancelAnimationFrame) cancelAnimationFrame(this._raf);
       this._timers.forEach((t) => { clearInterval(t); clearTimeout(t); });
       this._listeners.forEach(([t, ev, fn, o]) => t.removeEventListener(ev, fn, o));
@@ -220,13 +230,14 @@
         + '<span class="vpx-time" aria-live="off">0:00 / 0:00</span><span class="vpx-sp"></span>'
         + b('mute', 'volume', 'Mute (M)') + '<input class="vpx-vol" type="range" min="0" max="100" step="1" value="100" aria-label="Volume">'
         + b('cc', 'captions', 'Captions (C)') + '<button type="button" data-a="speed" class="vpx-speed" aria-label="Playback speed" title="Playback speed">1×</button>'
+        + (this.o.syncButton ? '<button type="button" data-a="avsync" aria-label="Out of sync? Tell us the picture and the sound do not match" title="Picture and sound out of sync? Tell us">Out of sync?</button>' : '')
         + b('pip', 'pip', 'Picture in picture') + (this.o.onNext ? b('next', 'next', 'Next episode (N)') : '') + b('fs', 'fullscreen', 'Fullscreen (F)')
         + '</div></div>';
       container.appendChild(r);
       this.root = r;
       this.v = r.querySelector('video');
       const q = (s) => r.querySelector(s);
-      this.ui = { seek: q('.vpx-seek input'), played: q('.vpx-played'), buf: q('.vpx-buf'), time: q('.vpx-time'), vol: q('.vpx-vol'), status: q('.vpx-status'), statusT: q('.vpx-status-t'), card: q('.vpx-card'), flash: q('.vpx-flash'), title: q('.vpx-title'), stats: q('.vpx-stats'), speed: q('.vpx-speed'), mute: q('[data-a=mute]'), cc: q('[data-a=cc]'), fs: q('[data-a=fs]') };
+      this.ui = { seek: q('.vpx-seek input'), played: q('.vpx-played'), buf: q('.vpx-buf'), time: q('.vpx-time'), vol: q('.vpx-vol'), status: q('.vpx-status'), statusT: q('.vpx-status-t'), card: q('.vpx-card'), flash: q('.vpx-flash'), title: q('.vpx-title'), stats: q('.vpx-stats'), speed: q('.vpx-speed'), sync: q('[data-a=avsync]'), mute: q('[data-a=mute]'), cc: q('[data-a=cc]'), fs: q('[data-a=fs]') };
       const sv = store.get(this.o.storageKey + ':vol');
       if (sv != null && !isNaN(+sv)) this.v.volume = Math.max(0, Math.min(1, +sv));
       this._syncVol();
@@ -239,10 +250,7 @@
       // Frame timing: the only reliable way to see a frozen or lagging picture.
       this._frames = 0;
       this._rvfc = typeof v.requestVideoFrameCallback === 'function';
-      if (this._rvfc) {
-        const cb = (t, meta) => { this._frames += 1; this.core.frame(meta.mediaTime, v.currentTime, now()); this._rvfcId = v.requestVideoFrameCallback(cb); };
-        this._rvfcId = v.requestVideoFrameCallback(cb);
-      }
+      this._armFrames();
       // Is the page actually being drawn? Embedded views, covered windows and some TV browsers report
       // "visible" while drawing nothing; then no video frames arrive either, and that is not a freeze.
       // The browser's own drawing heartbeat (requestAnimationFrame) is the only honest signal.
@@ -251,7 +259,7 @@
       if (root.requestAnimationFrame) this._raf = requestAnimationFrame(beat);
       // Off-screen or hidden video gets no frames; tell the core so it never mistakes that for a freeze.
       this._visible = true;
-      if (typeof IntersectionObserver !== 'undefined') { this._io = new IntersectionObserver((es) => { this._visible = es[es.length - 1].isIntersecting; }); this._io.observe(r); }
+      if (typeof IntersectionObserver !== 'undefined') { this._io = new IntersectionObserver((es) => { this._visible = es[es.length - 1].isIntersecting; this.core.event('away', now()); }); this._io.observe(r); }
 
       this._on(this.ui.stats, 'click', (e) => {
         const b = e.target.closest('[data-s]'); if (!b) return;
@@ -288,18 +296,80 @@
       this._on(ui.seek, 'input', () => { if (v.duration) { this.seek(ui.seek.value / 1000 * v.duration); } this._show(); });
       this._on(ui.vol, 'input', () => { v.volume = ui.vol.value / 100; v.muted = +ui.vol.value === 0; store.set(this.o.storageKey + ':vol', String(v.volume)); this._show(); });
 
-      this._on(v, 'play', () => this._icons());
+      this._on(v, 'play', () => { this._icons(); this._armFrames(); }); // a video that ended is fed again when it is played again
+      this._on(v, 'playing', () => this._armFrames());
+      // The page going off screen, hidden or into picture-in-picture, and back: no frame callbacks then is not throttling (the core is told when it happens)
+      this._on(document, 'visibilitychange', () => this.core.event('away', now()));
+      this._on(v, 'enterpictureinpicture', () => this.core.event('away', now()));
+      this._on(v, 'leavepictureinpicture', () => this.core.event('away', now()));
       this._on(v, 'pause', () => this._icons());
       this._on(v, 'volumechange', () => this._syncVol());
       this._on(v, 'timeupdate', () => this._progress());
       this._on(v, 'progress', () => this._progress());
       this._on(v, 'loadedmetadata', () => { this._progress(); if (v.textTracks.length) { ui.cc.classList.add('vpx-has'); v.textTracks[0].mode = 'hidden'; } });
       this._on(v, 'error', () => { if (!v.getAttribute('src')) return; this.core.event('error', now(), { code: v.error && v.error.code, neverLoaded: v.readyState === 0 }); });
-      this._on(v, 'ended', () => { this._icons(); this._emitSummary(); if (this.o.onEnded) this.o.onEnded(this); });
-      this._on(document, 'fullscreenchange', () => { const on = document.fullscreenElement === r; r.classList.toggle('vpx-fs', on); ui.fs.innerHTML = ICON[on ? 'exit-fullscreen' : 'fullscreen'] || ''; ui.fs.setAttribute('aria-label', on ? 'Exit fullscreen (F)' : 'Fullscreen (F)'); });
+      this._on(v, 'ended', () => { this._stopFrames(); this._icons(); this._emitSummary(); if (this.o.onEnded) this.o.onEnded(this); });
+      this._on(document, 'fullscreenchange', () => { const on = document.fullscreenElement === r; r.classList.toggle('vpx-fs', on); ui.fs.innerHTML = ICON[on ? 'exit-fullscreen' : 'fullscreen'] || ''; ui.fs.setAttribute('aria-label', on ? 'Exit fullscreen (F)' : 'Fullscreen (F)'); this._fit(); });
       this._on(root, 'pagehide', () => this._emitSummary());
+      if (typeof ResizeObserver !== 'undefined') { this._ro = new ResizeObserver(() => this._fit()); this._ro.observe(r); }
+      this._fit();
       this._icons();
     }
+
+    // The per-frame feed (requestVideoFrameCallback): one callback outstanding at a time, renewed by itself after each
+    // frame, nothing allocated here per frame. It is stopped on destroy, when an episode replaces the last, and when the
+    // video ends, so a finished or abandoned video never feeds the core; play starts it again. A callback that was
+    // already queued when it was stopped finds its generation changed and does nothing.
+    _armFrames() {
+      const v = this.v;
+      if (!this._rvfc || this._rvfcId != null || this._gone) return;
+      const gen = this._fgen = (this._fgen || 0) + 1;
+      const cb = (t, meta) => {
+        if (gen !== this._fgen) return;
+        this._frames += 1;
+        this.core.frame(meta.mediaTime, v.currentTime, now(), meta.expectedDisplayTime, this._lastRaf);
+        this._rvfcId = v.requestVideoFrameCallback(cb);
+      };
+      this._rvfcId = v.requestVideoFrameCallback(cb);
+    }
+    _stopFrames() {
+      this._fgen = (this._fgen || 0) + 1;
+      if (this._rvfcId != null && this.v.cancelVideoFrameCallback) { try { this.v.cancelVideoFrameCallback(this._rvfcId); } catch (e) { /* the video is gone */ } }
+      this._rvfcId = null;
+    }
+
+    // "Out of sync?": the viewer says the sound and picture do not match. Nothing is changed or fixed; the moment is stamped
+    // (where, which copy and server, the frame rates, the last gap readings and hitches) and sent on as one event for the host.
+    // Pressed twice within AVSYNC_REPEAT_MS it stamps once. The stamp is small on purpose: not the whole diagnostics.
+    // From the control-row button the stamp goes out as a `user-avsync` event. From the failure card (viaCard) it is
+    // returned instead, and the card hands it to the host's onReport with kind 'avsync', so it leaves once, by one path.
+    markOutOfSync(viaCard) {
+      const t = now();
+      if (!viaCard) {
+        this._status(AVSYNC_NOTE, AVSYNC_NOTE_MS);
+        // _sample only clears a status that has run its time while the core says "playing", so a press while paused (a natural
+        // moment to press it) would leave the line over the picture. It clears on its own timer, whatever the play state.
+        this._timers.delete(this._noteT); clearTimeout(this._noteT);
+        this._noteT = setTimeout(() => { this._timers.delete(this._noteT); if (this.ui.statusT.textContent === AVSYNC_NOTE) this._status(''); }, AVSYNC_NOTE_MS);
+        this._timers.add(this._noteT);
+      }
+      if (!this.ep || (this._avAt && t - this._avAt < AVSYNC_REPEAT_MS)) return false;
+      this._avAt = t;
+      this.core.event('user-avsync', t);
+      const v = this.v, q = v.getVideoPlaybackQuality ? v.getVideoPlaybackQuality() : null, tm = this.core.timing(), src = this.core.source;
+      const stamp = {
+        type: 'user-avsync', at: t, when: new Date().toISOString(), episode: this.ep.id, position: Math.round(v.currentTime * 10) / 10, duration: Math.round((v.duration || 0) * 10) / 10,
+        source: src && src.label, server: src && src.url ? src.url.split('/')[2] : '', state: this.core.state, paused: v.paused, rate: v.playbackRate, size: v.videoWidth + 'x' + v.videoHeight,
+        frames: q ? { total: q.totalVideoFrames, dropped: q.droppedVideoFrames } : null, sourceFps: tm.sourceFps, sourceFpsBasis: tm.sourceFpsBasis, presentedFps: tm.presentedFps, decodedFps: tm.decodedFps, droppedShare: tm.droppedShare,
+        measure: tm.measure, gaps: tm.gaps, hitches: tm.hitches, throttles: tm.throttles,
+      };
+      (this._avStamps = this._avStamps || []).push(stamp); if (this._avStamps.length > 5) this._avStamps.shift();
+      if (viaCard) return stamp;
+      this._emit(stamp);
+      return true;
+    }
+    // The button (when the host asked for it) only shows when the player is wide enough: the bar has no room on a phone.
+    _fit() { const b = this.ui && this.ui.sync; if (!b) return; const w = this.root.clientWidth; b.style.display = w && w < AVSYNC_MIN_WIDTH ? 'none' : ''; }
 
     // ---------- carrying out the core's decisions ----------
     _act(a) {
@@ -377,7 +447,8 @@
       this.core.sample({
         now: now(), t: v.currentTime, paused: v.paused && !this._lazyWait, seeking: v.seeking, ended: v.ended, ready: v.readyState, hidden,
         hasVideo: v.readyState >= 1 ? v.videoWidth > 0 : undefined,
-        frames: this._rvfc ? this._frames : total, dropped, totalFrames: total, ahead: this._ahead(),
+        frames: this._rvfc ? this._frames : total, dropped, totalFrames: total, ahead: this._ahead(), rate: v.playbackRate, rvfc: this._rvfc,
+        docHidden: document.hidden, offscreen: !this._visible, pip: document.pictureInPictureElement === v, raf: this._drawing, // why a page may be away, for the throttle log
         bufEnd: this._bufEnd(), duration: v.duration, networkState: v.networkState, // the buffer watch (SP-021)
       });
       const st = this.core.state;
@@ -415,6 +486,7 @@
       if (a === 'fwd') return this.skip(this.o.skipFwd);
       if (a === 'mute') { v.muted = !v.muted; if (!v.muted && v.volume === 0) v.volume = 0.5; return; }
       if (a === 'cc') return this._captions();
+      if (a === 'avsync') { this.markOutOfSync(); return; }
       if (a === 'speed') { const r = [1, 1.25, 1.5, 1.75, 2, 0.75]; v.playbackRate = r[(r.indexOf(v.playbackRate) + 1) % r.length]; this.ui.speed.textContent = v.playbackRate + '×'; this.ui.speed.classList.toggle('vpx-on', v.playbackRate !== 1); return; }
       if (a === 'pip') { if (document.pictureInPictureElement) document.exitPictureInPicture().catch(() => {}); else if (v.requestPictureInPicture) v.requestPictureInPicture().catch(() => {}); return; }
       if (a === 'next') { if (this.o.onNext) this.o.onNext(this); return; }
@@ -535,7 +607,7 @@
       const c = this.ui.card;
       c.className = 'vpx-card' + (look ? ' ' + look : '');
       c.innerHTML = html; c.hidden = false;
-      c.onclick = (e) => { const b = e.target.closest('[data-c]'); if (b) onPick(b.dataset.c); };
+      c.onclick = (e) => { const b = e.target.closest('[data-c]'); if (b) onPick(b.dataset.c, b); };
       const first = c.querySelector('button'); if (first && !c.contains(document.activeElement)) first.focus({ preventScroll: true });
     }
     _hideCard() { this.ui.card.hidden = true; this.ui.card.innerHTML = ''; this.ui.card.className = 'vpx-card'; }
@@ -549,10 +621,12 @@
         + '<div class="vpx-acts"><button data-c="retry" class="vpx-primary">' + (ICON.retry || '') + 'Try again</button>'
         + (f ? '<a class="vpx-btn" href="' + esc(f.url) + '" target="_blank" rel="noopener" download>' + (ICON.download || '') + 'Download</a>' : '')
         + (this.o.onNext ? '<button data-c="next">' + (ICON.next || '') + 'Next episode</button>' : '')
-        + (this.o.onReport ? '<button data-c="report">' + (ICON.flag || '') + 'Report</button>' : '') + '</div>', (c) => {
+        + (this.o.onReport ? '<button data-c="report">' + (ICON.flag || '') + 'Report</button><button data-c="avsync">Picture out of sync</button>' : '') + '</div>', (c, btn) => {
         if (c === 'retry') { this._hideCard(); this.core.event('retry', now()); }
         if (c === 'next' && this.o.onNext) { this._hideCard(); this.o.onNext(this); }
         if (c === 'report' && this.o.onReport) this.o.onReport(this.diagnostics(), this);
+        // The viewer says the picture and sound were out of step: stamp this moment and send it down the same path as Report, kind 'avsync'.
+        if (c === 'avsync' && this.o.onReport) { const st = this.markOutOfSync(true); if (btn) btn.textContent = AVSYNC_NOTE; if (st) this.o.onReport(Object.assign(this.diagnostics(), { avsync: st }), this, 'avsync'); }
       }, 'static');
     }
 

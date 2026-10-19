@@ -64,6 +64,9 @@ need a relay in between; that is a separate decision (Cloudflare terms and cost)
   (`requestVideoFrameCallback` media time against the playhead). 0.1 s of natural lag is ignored.
 - **Errors:** network errors and never-loaded sources get one retry; decode and format errors do not.
 - **Slow start:** nothing plays within 15 s of asking.
+- **Report only, never acted on:** hitches, A/V lag, the pictures a second (file, decoded, shown, dropped share),
+  and throttled stretches. They change nothing (no seek, no speed change, no hop, no switch) and only count while
+  the picture plays steadily. See "Picture and sound out of step" below.
 
 ### What it does, per source, escalating if trouble repeats within two minutes
 
@@ -144,6 +147,157 @@ until the buffer is gone. The core now also watches where the buffered range end
   needless hops. Healthy play must show none; if it does, raise `BUFFER_STALL_MS` or lower `BUFFER_LOW_S`
   in the config block at the top of `core.js`.
 
+## Picture and sound out of step (audit ask A-022)
+
+What a viewer sees: the picture stops for a moment while the sound goes on, then jumps ahead; or the words do not
+match the lips. Bryan saw it on Marco Polo S1E1 during the 2-hour soak while the lab showed 0 freezes, 0 drifts and
+0 stalls. The freeze and drift checks were doing their job; they were built for something else, and this section is
+what was added so the soak sees this too.
+
+### Why the old measures missed it
+
+1. **A freeze needs 1.5 s** with no new picture while the sound runs. A hitch of 0.3 to 1.4 s never counted. After
+   one, the browser drops the late frames to catch up, so by the time frames flow again the gap is near zero.
+2. **Drift needs the picture 0.45 s behind for six frames in a row.** Lip-sync errors between about 0.1 s and 0.45 s
+   are plain to a person and sit under that line.
+3. **An offset built into the file plays "on time" by the file's own clock.** If the audio and video timestamps
+   disagree, or one track is slightly longer so the gap grows over the episode, the page's media time and the
+   playhead agree while the lips are off. No measure inside the page can see that.
+
+### What each new measure catches (and what it does not)
+
+All of them only count **while the picture plays steadily**: not paused, seeking, waiting for data, hidden or off
+screen, in picture-in-picture, settling after play, a seek, a hop or a resume, not in the first 2 s of steady
+playing (`STEADY_MS`), only at speed 1, and with the page drawing. They only measure and report. Where the browser
+has no `requestVideoFrameCallback` the sync, hitch and shown-rate figures say "no measure" (null in the summary, "n/a"
+in the lab), never zero.
+
+| Measure | In plain words | Fires when | Catches | Cannot catch |
+|---|---|---|---|---|
+| `hitch` | the picture stood still for a moment and caught up | a shown frame arrives 250 ms or more after the last (and more than 3 frames of the file's own pace), while the sound ran, under 1 s | the 0.3 to 1 s stutters the freeze check never sees | a stop over 1 s: that is a throttled stretch (below); over 1.5 s the freeze check takes it. A picture-only stop of **1.0 to 1.5 s is neither a hitch nor a freeze**: it shows only as a throttled stretch in the lab, which the page never sends |
+| `avlag` | picture and sound apart for a while | the gap over 0.25 s for 1 s without a break, counted again at most every 10 s while it lasts; `maxAvGapMs` is the largest single reading | the decoder falling behind: lips off by 0.25 to 0.45 s, under the 0.45 s drift level that acts | **an offset baked into the file**: the gap is measured against the file's own clock, so it reads 0 while the lips are off |
+| `lowfps` | the page shows far fewer pictures a second than the file seems to hold | shown frames a second under 60 percent of the file's rate **estimate** for 10 s of steady play, once | a machine that cannot keep up | which side is at fault (read it with the next numbers); it rests on the estimate, so it can also fire on a variable-frame-rate file that holds frames, and it stays silent when the browser skips frames in a regular pattern |
+| `decodelag` | the browser is falling behind | more than 10 percent of its frames dropped over the window, for 10 s of steady play, once | a weak or throttled decoder | |
+| `throttle` | the browser stopped asking for frames while the sound ran on a visible page | no frame callback for over 1 s while the sound moved and the page was on screen; says whether the page's own drawing stopped too | Edge efficiency mode, power throttling of the process, a covered window the browser still calls visible | |
+| Out of sync? | the viewer says so | the "Picture out of sync" choice on the failure card, or the button where a tester has turned it on (below) | **the offset built into the file**, and anything else a person notices | |
+
+The gap is read with the frame's `expectedDisplayTime` taken into account: the playhead is read when the page is
+called for a frame, the frame is shown a moment later, so the normal one-frame offset (more on a slow machine) is
+not lag. Without `expectedDisplayTime` the plain difference is all there is.
+
+**The honest limit.** A file whose audio and video timestamps disagree (or whose tracks differ in length) is caught
+only by a person (the failure card choice, or the button) or by an offline look at the file's audio and video start times and durations with
+ffprobe. A proposal for Bryan, not built: one small header read per suspect file, which is an Archive call and needs
+his OK.
+
+### Reading the four numbers: the file, the decoder, the screen, and the drops
+
+| File rate (an estimate from the frames shown) | Decoded (frames the browser makes a second) | Shown (frames the page presents a second) | Dropped share | Reading |
+|---|---|---|---|---|
+| about 24 | about 24 | about 24 | near 0 | the player keeps up. If the lips are still off, the offset is in the file: use the button, check the file offline |
+| about 24 | far under 24 (under 90 percent) | far under | over 10 percent | the playback side on that machine is falling behind (decoder, power saving, throttling, a covered window), not the file. `decodelag`, `lowfps` |
+| about 24 | about 24 | far under | high | made but not shown in time: the display path (compositor, GPU, a slow screen) |
+| low (say about 7) | about the same | about the same | near 0 | **the page cannot tell** a file that really holds few frames from a browser that skips frames without counting them as dropped. It claims nothing; only the file's own header says (below) |
+| about 24 | far under | far under | low, with throttled stretches in the log | the browser was held back (Edge efficiency mode, sleeping tabs, Windows power throttling): see the throttle log |
+
+The "file rate" is an **estimate** from the media-time step between consecutive shown frames (`SRC_MIN_STEPS` = 24 steps
+before it is reported); the lab labels it "File rate (estimate from the frames shown)". A browser that falls behind shows only some of the frames, so many steps are 2, 3, 4 frames
+long; the file's step is the smallest one that keeps turning up (at least 3 steps, and 2 percent of them, within 12
+percent of each other). A test feeds steps of 50/1199 s with two of every three frames missing at random and reads
+23.98. The limit: if the browser shows frames in a perfectly regular pattern (every third frame, always), every step
+is 3 frames long and nothing in the steps says otherwise; the estimate reads a third of the real rate. If the missing
+frames are also not counted as dropped (`getVideoPlaybackQuality` never sees them), file, decoded and shown all read the
+same low number and nothing in the page can tell that from a file that really holds few frames. An earlier version
+sent a `lowsourcefps` event ("the file has too few pictures") for a low estimate; it was removed because it could blame a
+good file for what the browser did, and it is not sent to analytics or Sentry.
+
+**Only the file's own header gives the true rate** (an ffprobe look, like the Marco Polo probe below). On the page, a low
+estimate together with a high dropped share, or a decoded rate under the estimate, means the browser fell behind, not that
+the file is poor.
+
+**Marco Polo S1E1 (19 Oct 2026).** The file is clean: h264 Main 960x480, progressive, 23.98 frames a second (1199/50),
+73,020 frames over 3,045.04 s, audio and video both starting at 0.000 (header probe). In the soak the browser decoded
+about 2.8 frames a second over 206 s and dropped a third of them, with hardware decode confirmed on (the NVIDIA card,
+Direct Composition and overlays on). The old measures said nothing because the sound never stopped and the gap stayed
+under 0.45 s. With these numbers the lab reads: file rate estimate 23.98 (which matches the header), decoded far under it, dropped 30
+percent and more: the playback side of that PC, not the file.
+
+### Throttled and hidden time
+
+The lab keeps two logs, apart from every counted measure. **Hidden:** every change of `document.visibilityState`
+with its time and length. **Throttled:** the core logs a stretch whenever no frame callback arrived for over 1 s
+(`THROTTLE_MS`) while the sound moved and the page was on screen, and whether `requestAnimationFrame` was also paused
+in that stretch (a page-wide throttle) or not (video only). Time hidden or throttled is left out of hitch, lag and
+dropped-frame figures: the windows start again afterwards. While a stretch is going on the lab shows "throttled" next
+to the pictures-a-second readout. (A video that is simply dropping every frame also stops calling back; the
+dropped share and the decoded rate tell that apart from a throttle.)
+
+### The "Out of sync?" choices
+
+The player has no menu, and the control bar has no room for a button every viewer would see, so there are two places,
+neither of which changes the normal controls:
+
+- **The failure card** (viewers). When the host gives the player a Report handler, the card shows "Picture out of sync"
+  beside Report, in the card's own buttons (no class of its own, reached by Tab like the others). It stamps the moment
+  and calls the host's `onReport` with the diagnostics (the stamp is in `diagnostics.avsync`) and a third argument,
+  kind `'avsync'`. The page's `vpReport` then sends "Viewer saw sound out of sync: <slug>" to Sentry and `pq:user-avsync`
+  to analytics, once per stamp. It leaves by this one path only (no second `user-avsync` event). In kids it is a count
+  and nothing else.
+- **The control-row button** (testers). `syncButton` is false by default. The lab turns it on, and on the real site it
+  appears with `?dbg=1` (`mkPlayer` passes `syncButton: !!state.dbg`), so Bryan can use it during a soak. It is a text
+  button between speed and picture-in-picture (`data-a="avsync"`, no class), reached by Tab and by Left and Right on a TV
+  remote. Its press emits one `user-avsync` event, which `vpEvent` sends the same way. Because the bar has no room on a
+  phone and `player.css` hides the speed and picture-in-picture buttons there, it also hides when the player is narrower
+  than 720 px (kept: a tester on a phone in `?dbg=1` is not the case it is for).
+
+A press only records: it stamps the moment (position, copy and server, frames and dropped, file rate estimate /
+decoded / shown rates, the dropped share, the last 30 gap readings, the last hitches and throttled stretches) and counts
+in the summary (`outOfSyncPresses`). Twice within 10 s stamps once (from the button the status line says "Noted. Thank you."
+and clears itself after 2.5 s whatever the play state; on the card the button itself says so). It never seeks, reloads, hops
+or changes the speed.
+
+### The new settings (the top of `core.js`)
+
+| Name | Value | Meaning |
+|---|---|---|
+| `HITCH_MS` / `HITCH_SRC_FRAMES` | 250 / 3 | a shown-frame interval over both = a hitch (the second keeps a slow file from being all hitches) |
+| `HITCH_EMIT_MS` / `HITCH_EMIT_MAX` | 1000 / 20 | one hitch event a second, 20 an episode; every hitch is still counted |
+| `AVLAG_S` / `AVLAG_HOLD_MS` / `AVLAG_EVERY_MS` | 0.25 / 1000 / 10000 | the gap, how long it must hold, and how often a lasting lag is counted again |
+| `GAP_SAMPLE_MS` | 500 | one gap reading kept per this long (30 are kept) |
+| `STEADY_MS` | 2000 | the measures start this long after play, seek, hop or resume |
+| `RATE_WINDOW_MS` / `RATE_MIN_MS` / `RATE_MIN_FRAMES` | 10000 / 3000 / 10 | the rolling window for decoded, shown and dropped, and what it needs before it reports |
+| `SRC_MIN_STEPS` | 24 | steps before the file's frame rate estimate is reported |
+| `LOWFPS_RATIO` / `LOWFPS_MS` | 0.6 / 10000 | shown under this share of the file's rate for this long = `lowfps` |
+| `DECODELAG_SHARE` / `DECODELAG_MS` | 0.1 / 10000 | dropped over this share for this long = `decodelag` |
+| `BEHIND_RATIO` | 0.9 | a steady minute with decoded frames a second under this share of the file's rate counts as a minute behind |
+| `THROTTLE_MS` / `THROTTLE_EMIT_MAX` | 1000 / 50 | no callbacks this long = a throttled stretch; events an episode |
+
+The per-frame path allocates nothing: counters and rings made once (a rolling window of 64 samples, 240 media-time
+steps, 30 gap readings, 8 hitches, 10 throttled stretches). Events are made only when something fires.
+
+### Reading it on the lab (and `soak.json`)
+
+The live readout "Pictures a second" shows `file ~N (est.) / decoded N / shown N, dropped N%`, with BEHIND when decoded is
+under 90 percent of the file's rate and THROTTLED while a stretch is going on. Session results gains Presented fps,
+File fps (estimate), Decoded fps, Dropped, Minutes behind, Hitches, Longest hitch, A/V lag events, Max A/V gap, Out-of-sync presses,
+Hidden time and Throttled time (episode averages for the rates, "n/a" where the browser gives no per-frame timing).
+Copy all also holds the visibility and throttle logs. **Copy soak.json** copies, for the launch check, the soak of
+this page load (reloading the lab starts a new one):
+
+```
+{ "at": start of the first episode (ISO), "durationMs": watched time, "longestPauseMs", "stalls", "freezes", "drifts",
+  "hitches", "avlags", "maxAvGapMs", "presentedFps", "sourceFps" (the estimate), "outOfSyncPresses",
+  "sourceFpsBasis": "estimate from the frames shown", "decodedFps", "droppedShare", "minutesBehind", "minutesMeasured", "hiddenMs", "throttledMs", "throttles",
+  "throttlesPageWide", "hiddenPeriods": [{ at, ms }], "throttlePeriods": [{ at, episode, ms, pageDrawing }],
+  "visibility": [{ state, at, ms }],
+  "episodes": [ { id, title, startedAt, watchMs, startupMs, longestPauseMs, stalls, freezes, drifts, hitches, longestHitchMs,
+                  avlags, maxAvGapMs, presentedFps, sourceFps, decodedFps, droppedShare, minutesBehind, minutesMeasured,
+                  outOfSyncPresses, hiddenMs, throttledMs, throttles, throttlesPageWide, end, source } ] }
+```
+
+Counts and times are sums over the episodes, the largest values are maxima, the frame rates and the dropped share are
+means weighted by watched time. A value is null when no episode could measure it (a browser without per-frame timing).
+
 ### What the 3 second goal needs, and what it costs (plainly)
 
 The goal is "no pause over 3 seconds". The buffer watch reaches it only in good conditions:
@@ -182,6 +336,16 @@ the existing `/api/e` intake (no server change; `pos`, `dur` and `n` are stored 
 | failure | `error` | n = 2 network, 3 decode, 4 format, otherwise the media error code (0 if none) |
 | the first copy's server lookup failed | `act` `pq:lookup-failed` | none |
 | Report on the failure card | `report` | x = `fail:<cause>:<reason> <item>` |
+| a lag the viewer could see: picture and sound apart for a second (at most 5 an episode) | `act` `pq:avlag` | n = the gap in ms |
+| a hitch (at most 5 an episode) | `act` `pq:hitch` | n = its length in ms |
+| shown frames far under the file's rate estimate (once) | `act` `pq:lowfps` | n = shown a second x 10, pos = file rate estimate x 10 |
+| the browser dropping its frames (once) | `act` `pq:decodelag` | n = dropped share x 1000, pos = decoded a second x 10, dur = file rate estimate x 10 |
+| the viewer said the sound was out of sync (the failure card choice, or the tester button; at most 3 an episode), and a Sentry message "Viewer saw sound out of sync: <slug>" with the stamp and the diagnostics | `act` `pq:user-avsync` | pos = seconds into the episode, n = file rate estimate x 10, dur = shown a second x 10 |
+
+The Out of sync? Sentry message and the Sentry trouble report only exist where Sentry loads (voidtv.net); the kids build
+has no Sentry and its intake keeps only the event name and the show and episode key, so there a press is a count and
+nothing else. `vpTrouble` counts any lag, more than 2 hitches, `lowfps` and `decodelag` like a freeze (its tag `file_fps_estimate` says what the number is).
+Throttled and hidden stretches are not sent anywhere; they live in the lab.
 
 The summary is flushed at once (the page's own pagehide handler runs before the player's and would
 otherwise have missed it). Sentry gets the same trouble reports as before, now also sent on pagehide
@@ -242,7 +406,7 @@ once its source list is built.
 
 ## Testing
 
-- `node --test player/test/core.test.js`: 58 scenarios: healthy play, short buffering left alone,
+- `node --test player/test/core.test.js`: 90 scenarios: healthy play, short buffering left alone,
   freeze nudged and recovered, repeated freezes escalate to the backup server, drift caught, natural lag
   ignored, long stall ladder, network error retry then switch then fail, decode error switches at once,
   slow start, paused viewer untouched, hidden tab, browsers without frame timing, viewer seeking, Retry,
@@ -252,15 +416,29 @@ once its source list is built.
   settle time ends; a backup that needs 5 s to send is left alone; it never ends playback, over four
   separate healed hangs on a pair or two on a lone source; the allowance refills after two minutes) and the
   pause maths across hops, and the servers of a later copy handed to the core when it first moves onto it
-  (`core.expand`: in front of the Archive link, only for its own copy, then the copy cycles its servers).
-- `node --test player/test/player.test.js`: 20 scenarios on the page side (the real `player.js` in a bare
+  (`core.expand`: in front of the Archive link, only for its own copy, then the copy cycles its servers); and since A-022
+  a playback model with real frames (the file's frame step, a display queue, frames shown, dropped or never made,
+  switches for hidden, off screen, picture-in-picture, a stopped page, waiting, speed, no callbacks): the file's rate
+  from steps of 50/1199 s with two of three frames missing reads 23.98; `lowfps`; the estimate (a film that seems to hold 7.5 a second, a
+  browser that drops or silently skips frames) and that no event ever blames the file; `decodelag` (34 percent fires once, 0.8 percent never), `avlag` (held 1 s, the display delay
+  allowed for, nothing done about it), `hitch` (the clock must move, a slow file is not all hitches, events limited),
+  minutes behind, "no measure" without per-frame timing, the Out of sync? count, throttled stretches (page drawing or
+  not, away marks, a gap no sample saw), and each exclusion (a bad stretch while hidden, off screen, in
+  picture-in-picture, not drawing, waiting, at speed 1.5, in the first seconds, after a seek or a resume leaves no mark,
+  with a control that fires without the excuse).
+- `node --test player/test/player.test.js`: 33 scenarios on the page side (the real `player.js` in a bare
   vm with a fake page, no video, no network): the first source starts on the first copy's lookup alone, a
   cached later copy keeps its servers, a failed lookup is reported once, a destroyed or replaced load says
   nothing and starts nothing, a pending "Up next" ends when an episode loads, the end-of-play summary of a
   reused player is sent once per episode, under that episode, with its own figures; and the lazy lookup of
   a later copy on the first switch to it: a fast answer starts on its primary server, a slow one is given
   up at the time limit, a failed one keeps the Archive link and is never asked twice, a destroyed player or
-  a replaced or moved-on load starts nothing, and the core is told the page is not paused meanwhile.
+  a replaced or moved-on load starts nothing, and the core is told the page is not paused meanwhile; and since A-022 the
+  Out of sync? button (absent by default, present with `syncButton`, stamps once, twice within 10 s once, changes
+  nothing about playback, hides on a narrow player, its line clears on its own timer also while paused), the failure card's
+  "Picture out of sync" choice (beside Report only when there is a Report handler, stamps once, reaches `onReport` with kind
+  `avsync` and the stamp, changes nothing about playback), the frame feed (one callback at a time, the display time and the
+  drawing beat passed on, stopped on replace, ended and destroy, started again on play) and what the sample tells the core.
 - `player/lab/hop.html`: the same core driven by invented samples on a made-up clock: no video, nothing
   downloaded. It shows, with and without the buffer watch, how long after the download stops the core
   hops, how long the picture stays stopped, and the cause of a final failure. Seven cases carry an "as
