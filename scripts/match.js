@@ -136,6 +136,11 @@ function namesOtherShow(text, show, aliases = [], list = OTHER_SHOWS) { return o
 const BUILTIN_ALIASES = {
   'forensic-files': ['Medical Detectives'], // Forensic Files began as Medical Detectives; both are on the list
   'duckman': ['Duckman: Private Dick/Family Man'], // TVmaze's own name for the show (catalog/cache/tvmaze-duckman.json, field name); the list says Duckman
+  // Shows with no TVmaze list whose own uploads carry a longer title (the title rule calls "<name> <ordinary word>" a longer title). Both are the show's
+  // own uploads, read by title: "MTV TRL Total Request Live Archive (1998-2001)" (id trl-archive, 66 files), "Medical Detectives original format" (id
+  // medical-detectives-original-format, 32 files) and "Medical Detectives Sealed With A Kiss" (1 file). The grids were lost when the title rule came in (audit CP-001, agent2-matcher.md 11.4).
+  'total-request-live': ['Total Request Live Archive'],
+  'medical-detectives': ['Medical Detectives original format', 'Medical Detectives Sealed With A Kiss'],
 };
 
 const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')) : {};

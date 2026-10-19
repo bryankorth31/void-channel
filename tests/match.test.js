@@ -711,3 +711,38 @@ describe('doctor checks on the grids on disk (CP-004, CP-005)', () => {
     });
   });
 });
+
+// ---------------------------------------------------------------- batch C: two shows with no TVmaze list get their own uploads back (audit CP-001, agent2-matcher.md 11.4)
+describe('aliases for Total Request Live and Medical Detectives', () => {
+  const trl = { name: 'Total Request Live', type: 'MTV', network: 'MTV' };
+  const md = { name: 'Medical Detectives', type: 'Documentary & Geographic', network: 'TLC' };
+  const upload = (id, title, n, stamp) => ({ id, title, files: range(n).map((i) => mkFile(`${stamp} ${pad2(i)}.mp4`, { seconds: 2700, nameHit: false })) });
+  const aliasesOf = (entry) => (M.BUILTIN_ALIASES[M.slug(entry.name)] || []).map(M.norm);
+  const episodes = (g) => (g ? g.seasons.reduce((n, s) => n + s.episodes.length, 0) : 0);
+
+  test('both shows carry their own uploads\' longer titles as aliases', () => {
+    assert.deepEqual(M.BUILTIN_ALIASES['total-request-live'], ['Total Request Live Archive']);
+    assert.deepEqual(M.BUILTIN_ALIASES['medical-detectives'], ['Medical Detectives original format', 'Medical Detectives Sealed With A Kiss']);
+    assert.ok(M.BUILTIN_ALIASES['forensic-files'].includes('Medical Detectives'), 'the existing Medical Detectives to Forensic Files mapping is untouched');
+  });
+  test('Total Request Live: "MTV TRL Total Request Live Archive (1998-2001)" is the show\'s upload, and without the alias it is a longer title', () => {
+    const cand = { items: [upload('trl-archive', 'MTV TRL Total Request Live Archive (1998-2001)', 66, 'TRL show')] };
+    assert.equal(M.selfGrid(trl, cand, []), null, 'no alias: "Total Request Live" runs on into "Archive"');
+    const g = M.gridFor(trl, cand, null, { ov: {} });
+    assert.equal(g.selfListed, true);
+    assert.equal(episodes(g), 66);
+    assert.equal(g.coverage.review, 66, 'a self-list is all REVIEW');
+  });
+  test('Medical Detectives: both of its upload titles count, and a Forensic Files upload does not', () => {
+    const cand = { items: [upload('medical-detectives-original-format', 'Medical Detectives original format', 32, 'MD ep'), upload('medical-detectives-sealed-with-a-kiss_202507', 'Medical Detectives Sealed With A Kiss', 1, 'MD kiss')] };
+    assert.equal(M.selfGrid(md, cand, []), null, 'no alias: both titles run on into other words');
+    assert.equal(episodes(M.gridFor(md, cand, null, { ov: {} })), 33);
+    const other = { items: [upload('ff-1', 'Forensic Files Season 1', 30, 'FF ep')] };
+    assert.equal(M.gridFor(md, other, null, { ov: {} }).noTvmaze, true, 'another show\'s upload gives no grid');
+  });
+  test('an alias is only ever this show\'s: another show\'s name with the same words is not helped', () => {
+    const cand = { items: [upload('trl-archive', 'MTV TRL Total Request Live Archive (1998-2001)', 66, 'TRL show')] };
+    assert.equal(M.selfGrid({ name: 'Total Request Lunch', type: 'MTV', network: 'MTV' }, cand, aliasesOf({ name: 'Total Request Lunch' })), null);
+    assert.equal(M.selfGrid(trl, cand, aliasesOf(trl)) !== null, true);
+  });
+});
