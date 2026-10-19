@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VOID Player Lab: hops and causes</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--bg:#07080c;--card:#10121a;--line:rgba(255,255,255,.09);--ink:#e8e8ee;--dim:#9aa0b4;--cyan:#5fd4ff;--gold:#f2a93b;--red:#ff6b6b;--green:#5fe0a0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,Segoe UI,Roboto,sans-serif}
+header{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding:14px 18px;border-bottom:1px solid var(--line)}
+header b{font-size:18px}header span{color:var(--dim)}header a{color:var(--cyan)}
+main{max-width:1100px;margin:0 auto;padding:14px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:14px;min-width:0}
+h2{margin:0 0 6px;font-size:15px}h3{margin:0 0 8px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+p{margin:6px 0}.dim{color:var(--dim)}
+.badge{display:inline-block;border-radius:999px;padding:1px 9px;font-size:12px;font-weight:700;margin-left:8px;vertical-align:middle}
+.badge.ok{background:rgba(95,224,160,.15);color:var(--green)}.badge.bad{background:rgba(255,107,107,.15);color:var(--red)}
+table{width:100%;border-collapse:collapse;font:12px/1.4 ui-monospace,Consolas,monospace;margin:8px 0}
+td,th{text-align:left;padding:3px 8px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--dim);font-weight:500}
+table.cmp td:first-child{color:var(--dim);width:34%}table.cmp td.new{color:var(--green)}
+td.w{color:var(--gold)}td.e{color:var(--red)}td.g{color:var(--green)}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 16px;margin:8px 0}
+.form label{display:block;color:var(--dim)}.form input,.form select{width:100%;background:#0b0d14;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 7px;font:inherit}
+button{background:#161925;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:7px 12px;cursor:pointer;font:inherit}
+button:hover,button:focus-visible{border-color:var(--cyan);outline:none}
+details summary{cursor:pointer;color:var(--dim);margin-top:8px}
+</style>
+</head>
+<body>
+<header><b>VOID Player Lab: hops and causes</b><span>the core only, on a made-up clock. No video, no Archive, nothing downloaded or played.</span><a href="index.html">Back to the lab</a></header>
+<main>
+  <div class="panel">
+    <h3>What this page shows</h3>
+    <p>It feeds the player's brain (<code>core.js</code>) invented samples, 250 ms apart, the way the page does while a video plays, and prints what the core decides: when it hops to the other server, how long the picture is stopped, and why a failure is called network, format or playback. A run takes no real time.</p>
+    <p>Every case runs twice: with the buffer watch (the new trigger: hop when the buffered end has stopped growing) and without it (only the older triggers, which wait for the picture to stop). The pause a viewer sees in life also includes the new connection's own start (measured 0.1 to 3.5 s on the Archive); here you set it.</p>
+    <p class="dim">Each card ends in "as designed" or "NOT as designed" against DESIGN.md ("Why it failed: the cause table" and "The buffer watch"). For a real video and a real stall, use the main lab and its soak test.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Try your own hang</h3>
+    <div class="form">
+      <label>Seconds buffered ahead when the download stops<input type="number" id="cAhead" value="8" min="0" max="60" step="0.5"></label>
+      <label>Buffer flat this long = hop (ms)<input type="number" id="cFlat" value="4000" min="500" max="30000" step="500"></label>
+      <label>...and less than this buffered (s)<input type="number" id="cLow" value="10" min="1" max="60" step="1"></label>
+      <label>Servers for this episode<select id="cSrv"><option value="3">3: primary, backup, the Archive link</option><option value="1">1: lookup failed, one link only</option></select></label>
+      <label>A new connection starts sending after (ms)<input type="number" id="cBack" value="1200" min="0" max="30000" step="100"></label>
+      <label>Simulate for (s)<input type="number" id="cLen" value="40" min="5" max="300" step="5"></label>
+      <label>The browser paused the download itself<select id="cIdle"><option value="0">no, the network is loading</option><option value="1">yes, networkState idle</option></select></label>
+      <label>The servers you hop to<select id="cAlso"><option value="0">answer</option><option value="1">also hang</option></select></label>
+    </div>
+    <button id="runCustom">Run it</button>
+    <div id="custom"></div>
+  </div>
+
+  <div id="cards"></div>
+</main>
+<script src="../src/core.js"></script>
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const THREE = [ // one episode: its primary server, its backup server and the Archive's own link
+    { url: 'primary', label: 'copy1@primary', fileKey: 0 }, { url: 'backup', label: 'copy1@backup', fileKey: 0 }, { url: 'archive', label: 'copy1@archive', fileKey: 0 },
+  ];
+  const ONE = [{ url: 'archive', label: 'copy1@archive', fileKey: 0 }]; // the server lookup failed or timed out
+  const fmtS = (ms) => (ms / 1000).toFixed(1) + ' s';
+
+  // A made-up playback on a virtual clock. The playhead moves 1 s per second unless it has caught up with the
+  // buffered end. The download adds `fill` seconds of video per second (0 = the server hangs). When the core asks for
+  // a new source the old buffer is gone (the page empties the one video element) and the picture stops until the new
+  // connection starts sending, `back` ms later, unless `hangs` (that server hangs too).
+  function makeWorld(srcs, config, back, hangs) {
+    const events = [], acts = [];
+    const core = VoidCore.create({ emit: (e) => events.push(e), act: (a) => acts.push(a), config });
+    const w = { core, events, acts, now: 1000, t: 0, bufEnd: 0, fill: 1.2, duration: 3000, networkState: 2, stopped: false, connectAt: 0, seen: 0 };
+    core.load(srcs, 0, w.now, true);
+    w.seen = acts.length; // the first source starts on its own: only later requests are reconnects
+    w.step = () => {
+      for (; w.seen < acts.length; w.seen++) {
+        const a = acts[w.seen];
+        if (a.type === 'set-source' || a.type === 'reload') { w.bufEnd = w.t; w.fill = 0; w.stopped = true; w.connectAt = w.now + back; }
+      }
+      if (w.connectAt && w.now >= w.connectAt && !hangs) { w.fill = 1.5; w.stopped = false; w.connectAt = 0; }
+      w.now += 250;
+      w.bufEnd = Math.min(w.duration, w.bufEnd + w.fill * 0.25);
+      const moving = !w.stopped && w.t + 0.25 <= w.bufEnd + 1e-9;
+      if (moving) w.t += 0.25;
+      core.sample({ now: w.now, t: w.t, paused: false, seeking: false, ended: false, ready: 4, hidden: false, hasVideo: true, frames: Math.round(w.t * 24), dropped: 0, totalFrames: Math.round(w.t * 24), ahead: Math.max(0, w.bufEnd - w.t), bufEnd: w.bufEnd, duration: w.duration, networkState: w.networkState });
+    };
+    w.run = (ms) => { for (let x = 0; x < ms; x += 250) w.step(); };
+    return w;
+  }
+
+  // Start up, settle into a buffer that keeps pace `ahead` seconds in front of the playhead, play 10 s, then the
+  // download stops (t0). `watch` false turns the buffer watch off (BUFFER_STALL_MS far away): only the older
+  // triggers, which wait for the picture to stop, remain.
+  function runHang(o, watch) {
+    const config = { BUFFER_STALL_MS: watch ? o.flat : 1e9, BUFFER_LOW_S: o.low };
+    const w = makeWorld(o.srcs, config, o.back, o.also);
+    w.run(2000);
+    w.bufEnd = w.t + o.ahead; w.fill = 1; w.run(10000);
+    const t0 = w.now; w.fill = o.keep ? o.keep : 0; w.networkState = o.idle ? 1 : 2;
+    w.run(o.len * 1000);
+    return { w, t0, o, watch };
+  }
+  function stats(r) {
+    const w = r.w, t0 = r.t0, ev = w.events;
+    const hop = ev.find((e) => (e.type === 'switch' || (e.type === 'action' && e.step === 'retry')) && e.at >= t0);
+    const st = ev.find((e) => e.type === 'stall' && e.at >= t0);
+    const failed = ev.find((e) => e.type === 'failed');
+    const rec = ev.find((e) => e.type === 'recovered' && e.at >= t0);
+    const sum = w.core.summary();
+    return { hop, st, failed, rec, sum, reloads: w.acts.filter((a) => a.type === 'reload').length, cards: w.acts.filter((a) => a.type === 'show-failure').length };
+  }
+  const cell = (s, f) => {
+    const hop = s.hop ? '+' + fmtS(s.hop.at - f.t0) + (s.st ? ' (' + (s.st.trigger === 'buffer' ? 'buffer watch, ' + s.st.ahead + ' s of video left' : 'after the picture stopped') + ')' : '') : 'no hop';
+    const pause = s.sum.longestPauseMs ? fmtS(s.sum.longestPauseMs) : (s.hop && !s.rec ? 'never came back' : 'none');
+    return [hop, pause, s.sum.switches + ' hop(s), ' + s.reloads + ' reload(s)', s.rec ? 'yes, +' + fmtS(s.rec.at - f.t0) : 'no', s.failed ? 'yes: cause ' + s.failed.cause + ', reason ' + s.failed.reason + ' at +' + fmtS(s.failed.at - f.t0) : 'no'];
+  };
+  const LABELS = ['First hop, from the moment the download stopped', 'Longest time the picture was stopped, hop to picture back', 'Switches and reloads', 'Recovered', 'Gave up (failure card)'];
+  function compare(a, b) {
+    const ca = cell(a.s, a.r), cb = cell(b.s, b.r);
+    return '<table class="cmp"><thead><tr><th></th><th>With the buffer watch (new)</th><th>Older triggers only</th></tr></thead><tbody>'
+      + LABELS.map((l, i) => '<tr><td>' + esc(l) + '</td><td class="new">' + esc(ca[i]) + '</td><td>' + esc(cb[i]) + '</td></tr>').join('') + '</tbody></table>';
+  }
+  function timeline(r) {
+    const keep = ['stall', 'action', 'switch', 'recovered', 'failed'];
+    const body = r.w.events.filter((e) => keep.includes(e.type)).map((e) => {
+      const cls = e.type === 'failed' ? 'e' : e.type === 'recovered' ? 'g' : 'w';
+      const d = Object.assign({}, e); delete d.at; delete d.type;
+      return '<tr><td>' + ((e.at - r.t0 >= 0) ? '+' : '') + fmtS(e.at - r.t0) + '</td><td class="' + cls + '">' + esc(e.type) + '</td><td>' + esc(JSON.stringify(d)) + '</td></tr>';
+    }).join('');
+    return '<details><summary>Timeline with the buffer watch (time from the moment the download stopped)</summary><table><thead><tr><th>When</th><th>Event</th><th>Detail</th></tr></thead><tbody>' + body + '</tbody></table></details>';
+  }
+
+  const BASE = { srcs: THREE, ahead: 8, flat: 4000, low: 10, back: 1200, len: 40, also: false, idle: false };
+  const CARDS = [
+    {
+      title: 'The download stops while the picture plays',
+      what: 'The server hangs with 8 s buffered. The older triggers wait for the picture to stop (after 8 s) and then 3.6 s more. The buffer watch hops 4 s after the buffer goes flat, while there is still video to play.',
+      expect: 'First hop about 4.0 s after the download stopped, with the picture still playing; recovered; no failure.',
+      o: BASE,
+      check: (s, f) => s.hop && s.st && s.st.trigger === 'buffer' && Math.abs(s.hop.at - f.t0 - 4000) <= 300 && s.rec && !s.failed,
+    },
+    {
+      title: 'Almost nothing buffered',
+      what: 'The download stops with half a second buffered, so the picture stops at once. The older trigger needs 0.6 s to call it a stall and then waits 3 s. The buffer watch still counts 4 s from when the buffer went flat.',
+      expect: 'First hop about 4 s after the download stopped; recovered.',
+      o: Object.assign({}, BASE, { ahead: 0.5 }),
+      check: (s, f) => s.hop && s.hop.at - f.t0 <= 4500 && s.rec && !s.failed,
+    },
+    {
+      title: 'A slow line that is still delivering',
+      what: 'The buffer keeps growing, only slower than the video plays (0.9 s of video per second). The server is not hung, the line is slow, so the core must not hop.',
+      expect: 'No hop and no stall for the whole run.',
+      o: Object.assign({}, BASE, { keep: 0.9, len: 60 }),
+      check: (s) => !s.hop && !s.failed && s.sum.stalls === 0,
+    },
+    {
+      title: 'The browser paused its own download',
+      what: 'The buffer is flat because the browser decided to stop fetching (networkState idle). That is not a hung server. The same flat buffer with the network loading does hop (first card). Simulated for 6 s, while the picture still has video.',
+      expect: 'No hop while the picture still has buffered video.',
+      o: Object.assign({}, BASE, { idle: true, len: 6 }),
+      check: (s) => !s.hop && !s.failed,
+    },
+    {
+      title: 'The Archive stops sending on every server',
+      what: 'One episode, three servers, all hung (finding SP-019). The buffer watch hops while video is still buffered; once the hops are spent only the stopped picture can end it, so the card appears after the picture has really stopped. The card must say the Archive stopped sending, which the page shows only for the cause "network".',
+      expect: 'Failed with cause network and reason starved (not format), after the picture stopped.',
+      o: Object.assign({}, BASE, { also: true, len: 90, back: 1000 }),
+      check: (s, f) => s.failed && s.failed.cause === 'network' && s.failed.reason === 'starved' && s.cards === 1 && s.failed.at - f.t0 > 8000,
+    },
+    {
+      title: 'One server only, and it hangs',
+      what: 'The server lookup failed, so there is one link and nowhere to hop. The buffer watch leaves a lone server alone (a reload throws the buffered video away, and the watch must never end playback), so both columns wait for the picture to stop. Then the core reloads that link once (the Archive may redirect to another server) and, if that fails too, shows the card.',
+      expect: 'Exactly one reload, after the picture stopped, then one failure card, cause network.',
+      o: Object.assign({}, BASE, { srcs: ONE, also: true, len: 60, back: 1000 }),
+      check: (s) => s.failed && s.failed.cause === 'network' && s.reloads === 1 && s.cards === 1,
+    },
+    {
+      title: 'One server only, and the reload reaches a server that sends',
+      what: 'The same single link and the same wait for the picture to stop, but this time the reload works.',
+      expect: 'One reload, recovered, no failure card.',
+      o: Object.assign({}, BASE, { srcs: ONE, len: 60 }),
+      check: (s) => !s.failed && s.rec && s.reloads === 1,
+    },
+  ];
+
+  function oneCard(title, what, expect, o, check) {
+    const rn = runHang(o, true), ro = runHang(o, false);
+    const a = { r: rn, s: stats(rn) }, b = { r: ro, s: stats(ro) };
+    let ok = true;
+    if (check) { try { ok = !!check(a.s, a.r); } catch (e) { ok = false; } }
+    return '<div class="panel"><h2>' + esc(title) + (check ? '<span class="badge ' + (ok ? 'ok' : 'bad') + '">' + (ok ? 'as designed' : 'NOT as designed') + '</span>' : '') + '</h2>'
+      + (what ? '<p>' + esc(what) + '</p>' : '') + (expect ? '<p class="dim">Expected: ' + esc(expect) + '</p>' : '') + compare(a, b) + timeline(rn) + '</div>';
+  }
+  $('cards').innerHTML = CARDS.map((c) => oneCard(c.title, c.what, c.expect, c.o, c.check)).join('');
+
+  $('runCustom').onclick = () => {
+    const n = (id) => +$(id).value;
+    const o = { srcs: $('cSrv').value === '1' ? ONE : THREE, ahead: n('cAhead'), flat: n('cFlat'), low: n('cLow'), back: n('cBack'), len: n('cLen'), also: $('cAlso').value === '1', idle: $('cIdle').value === '1' };
+    $('custom').innerHTML = oneCard('Your hang', '', '', o, null);
+  };
+  $('runCustom').click();
+})();
+</script>
+</body>
+</html>

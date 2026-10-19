@@ -49,6 +49,15 @@
     return p;
   }
 
+  // The session cache only, never the network: a copy whose servers are already known (looked up on an earlier view
+  // this hour) keeps its primary and backup entries; a copy that is not known gets the Archive's own link and nothing else.
+  function cachedServers(item) {
+    if (!item) return null;
+    const cached = sstore.get('voidplayer:srv:' + item);
+    if (!cached) return null;
+    try { const c = JSON.parse(cached); return c.at > Date.now() - 3600e3 ? c : null; } catch (e) { return null; }
+  }
+
   // Which copies this browser can play at all.
   function supported(f, video) {
     if (f.needs === 'mkv') return !!video.canPlayType('video/x-matroska; codecs="avc1.640028, mp4a.40.2"') || !!video.canPlayType('video/webm; codecs="avc1.640028"');
@@ -73,28 +82,45 @@
     // ---------- public API ----------
     async load(ep, opts) {
       opts = opts || {};
+      this._emitSummary(); // a reused player: the episode being replaced gets its end-of-play figures first, with its own frame counts
       this.ep = ep;
+      this._fail = null;
+      this._playedCtx = this._ctx || null; // whatever the host hung on _ctx for this episode, kept for its summary
       this._teardown(); // stop the previous episode now, not after the server lookup
       this._resetUi();
       this._setTitle();
+      this._cancelUpNext(); // a countdown left over from the last episode must not skip this one
       this._token = (this._token || 0) + 1;
       const token = this._token;
       const v = this.v;
       const files = (ep.files || []).filter((f) => f && f.url && supported(f, v));
       // Build the try-order: each copy on its primary server, then its backup server, then the Archive's
-      // normal link (which lets the Archive pick a server). One small lookup per item, cached.
+      // normal link (which lets the Archive pick a server). The viewer waits for ONE lookup, the first copy's
+      // (cached for an hour); the other copies use a lookup that is already cached and otherwise only the
+      // Archive's own link, which still works and costs the Archive nothing (SP-026).
       let srv = [];
-      if (this.o.resolveServers) srv = await Promise.all(files.map((f) => servers(f.item, this.o.metadataTimeoutMs)));
+      if (this.o.resolveServers && files.length) {
+        srv = files.map((f, i) => (i ? cachedServers(f.item) : null));
+        srv[0] = await servers(files[0].item, this.o.metadataTimeoutMs);
+        if (token !== this._token) return; // a newer load() won, or destroy() ran: say nothing, start nothing
+        if (!srv[0] && files[0].item) this._emit({ type: 'lookup-failed', item: files[0].item, at: now() });
+      }
       if (token !== this._token) return; // a newer load() won
       const list = [];
       files.forEach((f, i) => {
         const tag = 'copy' + (i + 1);
         const s = srv[i];
         if (s && f.path) s.hosts.forEach((h, k) => list.push({ url: 'https://' + h + s.dir + '/' + f.path, label: tag + (k ? '@backup' : '@primary'), file: f, fileKey: i, server: h }));
-        list.push({ url: f.url, label: tag + '@archive', file: f, fileKey: i, server: 'archive.org' });
+        // A later copy whose servers are not known yet carries lazy: the first time the core moves onto it, its
+        // servers are looked up then (_lazySource), so the first press stays fast and a hop can still use them.
+        list.push({ url: f.url, label: tag + '@archive', file: f, fileKey: i, server: 'archive.org', lazy: !!(this.o.resolveServers && i > 0 && !s && f.item && f.path) });
       });
       this._emit({ type: 'load', id: ep.id, title: ep.title, sources: list.map((x) => x.label), at: now() });
       this._setMedia(ep);
+      // From here the core holds this episode's figures, so its end-of-play summary is due (not before: while the
+      // lookup above is pending the core still holds the figures of the episode that was replaced, and a summary
+      // sent then would repeat them under the wrong episode).
+      this._summed = false; this._coreEp = ep;
       this.core.load(list, opts.startAt || 0, now(), opts.autoplay !== false);
     }
     play() { this.core.event('user-play', now()); const p = this.v.play(); if (p && p.catch) p.catch(() => this._needTap()); }
@@ -108,7 +134,7 @@
       const v = this.v, q = v.getVideoPlaybackQuality ? v.getVideoPlaybackQuality() : null;
       return {
         when: new Date().toISOString(), episode: this.ep && { id: this.ep.id, title: this.ep.title, show: this.ep.show },
-        state: this.core.state, source: this.core.source && { label: this.core.source.label, url: this.core.source.url },
+        state: this.core.state, failure: this._fail || null, source: this.core.source && { label: this.core.source.label, url: this.core.source.url },
         time: Math.round(v.currentTime * 10) / 10, duration: Math.round((v.duration || 0) * 10) / 10, ahead: Math.round(this._ahead() * 10) / 10,
         readyState: v.readyState, networkState: v.networkState, error: v.error && v.error.code, size: v.videoWidth + 'x' + v.videoHeight,
         frames: q && { total: q.totalVideoFrames, dropped: q.droppedVideoFrames }, pageDrawing: !!this._drawing, summary: this.core.summary(), decisions: this.core.log,
@@ -131,11 +157,11 @@
           'time       ' + d.time + ' / ' + d.duration + ' s   buffered ahead ' + d.ahead + ' s',
           'picture    ' + d.size + '   frames ' + (d.frames ? d.frames.total + ', dropped ' + d.frames.dropped : 'n/a') + '   timing ' + d.env.frameTiming,
           'startup    ' + (m.startupMs == null ? '-' : (m.startupMs / 1000).toFixed(2) + ' s'),
-          'trouble    stalls ' + m.stalls + ' (' + (m.stallMs / 1000).toFixed(1) + ' s)  freezes ' + m.freezes + '  drifts ' + m.drifts,
+          'trouble    stalls ' + m.stalls + ' (' + (m.stallMs / 1000).toFixed(1) + ' s, longest ' + ((m.longestPauseMs || 0) / 1000).toFixed(1) + ' s)  freezes ' + m.freezes + '  drifts ' + m.drifts,
           'fixes      tried ' + m.actions + '  worked ' + m.recovered + '  switches ' + m.switches,
           'network    ' + (d.env.net ? d.env.net.type + ' ~' + d.env.net.downMbps + ' Mbps' : 'n/a'),
           '',
-        ].concat(d.decisions.slice(-8).map((x) => String(x.sec).padStart(6) + 's  ' + x.did + (x.kind ? ' ' + x.kind : '') + (x.ms ? ' ' + x.ms + 'ms' : '') + (x.lag != null ? ' lag ' + x.lag + 's' : '') + (x.ahead != null ? ' ahead ' + x.ahead + 's' : '') + (x.to ? ' -> ' + x.to : '')));
+        ].concat(d.decisions.slice(-8).map((x) => String(x.sec).padStart(6) + 's  ' + x.did + (x.kind ? ' ' + x.kind : '') + (x.trigger ? ' by ' + x.trigger : '') + (x.ms ? ' ' + x.ms + 'ms' : '') + (x.lag != null ? ' lag ' + x.lag + 's' : '') + (x.ahead != null ? ' ahead ' + x.ahead + 's' : '') + (x.to ? ' -> ' + x.to : '')));
         box.querySelector('pre').textContent = lines.join(String.fromCharCode(10));
       };
       draw();
@@ -146,7 +172,8 @@
       seconds = seconds || 10;
       return new Promise((resolve) => {
         let n = seconds;
-        const finish = (go) => { clearInterval(iv); this._timers.delete(iv); this._hideCard(); resolve(go); };
+        const finish = (go) => { clearInterval(iv); this._timers.delete(iv); this._upFinish = null; this._hideCard(); resolve(go); };
+        this._upFinish = finish;
         this._card('<p class="vpx-k">Up next</p><p class="vpx-t">' + esc(title) + '</p>'
           + '<div class="vpx-acts"><span class="vpx-ring" aria-hidden="true"><svg viewBox="0 0 36 36"><circle class="bg" cx="18" cy="18" r="16"/><circle class="fg" cx="18" cy="18" r="16" style="animation-duration:' + seconds + 's"/></svg><b>' + n + '</b></span>'
           + '<button data-c="go" class="vpx-primary">Play now</button><button data-c="stop">Cancel</button></div>', (c) => finish(c === 'go'), 'upnext');
@@ -155,8 +182,10 @@
         this._timers.add(iv);
       });
     }
+    _cancelUpNext() { if (this._upFinish) this._upFinish(false); }
     destroy() {
-      if (this.ep) this._emit({ type: 'summary', summary: this.core.summary(), at: now() });
+      this._token = (this._token || 0) + 1; // a load() still waiting for the server lookup checks this token when it wakes and gives up; without it the destroyed player's detached video would get a source and start by itself
+      this._emitSummary();
       this.ep = null;
       clearInterval(this._loop);
       if (this._raf && root.cancelAnimationFrame) cancelAnimationFrame(this._raf);
@@ -266,16 +295,16 @@
       this._on(v, 'progress', () => this._progress());
       this._on(v, 'loadedmetadata', () => { this._progress(); if (v.textTracks.length) { ui.cc.classList.add('vpx-has'); v.textTracks[0].mode = 'hidden'; } });
       this._on(v, 'error', () => { if (!v.getAttribute('src')) return; this.core.event('error', now(), { code: v.error && v.error.code, neverLoaded: v.readyState === 0 }); });
-      this._on(v, 'ended', () => { this._icons(); this._emit({ type: 'summary', summary: this.core.summary(), at: now() }); if (this.o.onEnded) this.o.onEnded(this); });
+      this._on(v, 'ended', () => { this._icons(); this._emitSummary(); if (this.o.onEnded) this.o.onEnded(this); });
       this._on(document, 'fullscreenchange', () => { const on = document.fullscreenElement === r; r.classList.toggle('vpx-fs', on); ui.fs.innerHTML = ICON[on ? 'exit-fullscreen' : 'fullscreen'] || ''; ui.fs.setAttribute('aria-label', on ? 'Exit fullscreen (F)' : 'Fullscreen (F)'); });
-      this._on(root, 'pagehide', () => this._emit({ type: 'summary', summary: this.core.summary(), at: now() }));
+      this._on(root, 'pagehide', () => this._emitSummary());
       this._icons();
     }
 
     // ---------- carrying out the core's decisions ----------
     _act(a) {
       const v = this.v;
-      if (a.type === 'set-source') return this._setSrc(a.source.url, a.at, a.play);
+      if (a.type === 'set-source') return a.source.lazy ? this._lazySource(a) : this._setSrc(a.source.url, a.at, a.play);
       if (a.type === 'seek') { v.currentTime = a.at; this._status('Catching up…', 1500); return; }
       if (a.type === 'reload') {
         this._status('Reconnecting…');
@@ -283,8 +312,29 @@
         if (a.delayMs) { const t = setTimeout(go, a.delayMs); this._timers.add(t); } else go();
         return;
       }
-      if (a.type === 'show-failure') return this._failure(a.reason);
+      if (a.type === 'show-failure') return this._failure(a.reason, a.cause, a.code);
       if (a.type === 'show-notice') return this._notice(a.reason);
+    }
+
+    // The core has moved onto a copy whose servers were never looked up (SP-026: only the first copy is looked up
+    // before the first picture). Look them up now, once, within the same limit as every lookup (metadataTimeoutMs,
+    // and an hour of sessionStorage cache as always), tell the core, and start on the copy's primary server, as if
+    // they had been known from the start. A failed or slow lookup keeps the Archive link, reported as lookup-failed.
+    // The copy is marked done before the wait, so this can never run twice for it (no loop). If the load was
+    // replaced or the player destroyed while waiting, or the core has moved on, nothing starts.
+    async _lazySource(a) {
+      const src = a.source, token = this._token, f = src.file;
+      src.lazy = false;
+      this._teardown(true); // the source being left is abandoned now, as in every switch
+      this._lazyWait = !!a.play; // the page is between sources, not paused by the viewer: the core must not read it as a pause
+      let s = null;
+      try { s = await servers(f.item, this.o.metadataTimeoutMs); } catch (e) { /* a failed lookup is just null */ }
+      this._lazyWait = false;
+      if (token !== this._token || this.core.source !== src) return; // replaced, destroyed, or the core moved on: start nothing
+      let cur = src;
+      if (s && f.path) cur = this.core.expand(s.hosts.map((h, k) => ({ url: 'https://' + h + s.dir + '/' + f.path, label: src.label.split('@')[0] + (k ? '@backup' : '@primary'), file: f, fileKey: src.fileKey, server: h })));
+      else this._emit({ type: 'lookup-failed', item: f.item, at: now() });
+      this._setSrc(cur.url, a.at, a.play);
     }
 
     // Swap the source on the ONE video element, shutting the previous stream down properly first.
@@ -325,9 +375,10 @@
       this._drawing = !root.requestAnimationFrame || now() - this._lastRaf < 500;
       const hidden = document.hidden || !this._visible || !this._drawing || document.pictureInPictureElement === v;
       this.core.sample({
-        now: now(), t: v.currentTime, paused: v.paused, seeking: v.seeking, ended: v.ended, ready: v.readyState, hidden,
+        now: now(), t: v.currentTime, paused: v.paused && !this._lazyWait, seeking: v.seeking, ended: v.ended, ready: v.readyState, hidden,
         hasVideo: v.readyState >= 1 ? v.videoWidth > 0 : undefined,
         frames: this._rvfc ? this._frames : total, dropped, totalFrames: total, ahead: this._ahead(),
+        bufEnd: this._bufEnd(), duration: v.duration, networkState: v.networkState, // the buffer watch (SP-021)
       });
       const st = this.core.state;
       this.root.classList.toggle('vpx-wait', st === 'buffering' || st === 'loading' || st === 'recovering');
@@ -335,6 +386,18 @@
       if (st === 'playing' && this._statusUntil && now() > this._statusUntil) this._status('');
     }
     _ahead() { const v = this.v, b = v.buffered; for (let i = 0; i < b.length; i++) if (b.start(i) <= v.currentTime + 0.1 && b.end(i) >= v.currentTime) return b.end(i) - v.currentTime; return 0; }
+    // Where the buffered range under the playhead ends (the playhead itself when nothing is buffered there).
+    _bufEnd() { const v = this.v, b = v.buffered; for (let i = 0; i < b.length; i++) if (b.start(i) <= v.currentTime + 0.1 && b.end(i) >= v.currentTime) return b.end(i); return v.currentTime; }
+    // The end-of-play figures, once per episode: on ended, on leaving (destroy), on pagehide, or when the same player
+    // loads the next episode, whichever comes first. The frame counts come from the video element, which the core
+    // does not see. The event says which episode it is about (episode: its id, ctx: what the host had put on _ctx
+    // when it loaded it), because by the time a reused player loads the next one the host's _ctx already names that.
+    _emitSummary() {
+      if (!this.ep || this._summed || this._coreEp !== this.ep) return;
+      this._summed = true;
+      const q = this.v.getVideoPlaybackQuality ? this.v.getVideoPlaybackQuality() : null;
+      this._emit({ type: 'summary', summary: this.core.summary(), frames: q && { total: q.totalVideoFrames, dropped: q.droppedVideoFrames }, episode: this.ep.id, ctx: this._playedCtx || null, at: now() });
+    }
 
     _emit(e) {
       this.events.push(e); if (this.events.length > 200) this.events.shift();
@@ -476,12 +539,13 @@
       const first = c.querySelector('button'); if (first && !c.contains(document.activeElement)) first.focus({ preventScroll: true });
     }
     _hideCard() { this.ui.card.hidden = true; this.ui.card.innerHTML = ''; this.ui.card.className = 'vpx-card'; }
-    _failure(reason) {
+    _failure(reason, cause, code) {
       this._status('');
+      this._fail = { reason: reason || '', cause: cause || '', code: code == null ? null : code, at: Math.round(now()) }; // the Report button sends this with the diagnostics
       const f = this.ep && (this.ep.files || [])[0];
-      const net = /net|stall|slow/.test(reason || '');
+      const net = cause === 'network'; // the core decides the cause; the page does not guess it from the reason text
       this._card('<span class="vpx-nosig" aria-hidden="true">' + (ICON['no-signal'] || '') + '</span><p class="vpx-k">' + (net ? 'The Archive is not sending this episode right now' : 'This episode will not play in this browser') + '</p>'
-        + '<p class="vpx-dim">' + (net ? 'We tried every copy and both of its servers. They hiccup now and then; trying again in a minute usually works.' : 'We tried every copy we have. You can download the file and play it in VLC.') + '</p>'
+        + '<p class="vpx-dim">' + (net ? 'We tried every copy and every server we could reach. They hiccup now and then; trying again in a minute usually works.' : 'We tried every copy we have. You can download the file and play it in VLC.') + '</p>'
         + '<div class="vpx-acts"><button data-c="retry" class="vpx-primary">' + (ICON.retry || '') + 'Try again</button>'
         + (f ? '<a class="vpx-btn" href="' + esc(f.url) + '" target="_blank" rel="noopener" download>' + (ICON.download || '') + 'Download</a>' : '')
         + (this.o.onNext ? '<button data-c="next">' + (ICON.next || '') + 'Next episode</button>' : '')
