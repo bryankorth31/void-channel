@@ -414,7 +414,7 @@ function hqReportsPage(answers) {
   const asked = [];
   const ctx = {
     document: { querySelector: () => ({ content: '' }) },
-    api: async (p) => { asked.push(p); if (!(p in answers)) throw new Error('unexpected call ' + p); return answers[p]; },
+    api: async (p) => { asked.push(p); if (!(p in answers)) throw new Error('unexpected call ' + p); if (answers[p] instanceof Error) throw answers[p]; return answers[p]; },
   };
   vm.createContext(ctx);
   vm.runInContext(head + '\n' + HQ_HTML.slice(s0, s1) + '\n;globalThis.__reports=reports;', ctx);
@@ -461,6 +461,41 @@ test('HQ page: no reports says None, a full 3000 rows says the counts may be low
   const off = hqReportsPage({ '/api/analytics/reports?days=30': { unconfigured: true, rows: [] } });
   assert.match(await off.draw(), /Analytics are not connected yet/);
   assert.deepEqual(off.asked, ['/api/analytics/reports?days=30'], 'and nothing else is asked');
+});
+
+test('HQ page: a wrongfilm query that fails (it has never run against the live SQL API) says so in one line and the rest of the Reports page still draws', async () => {
+  const rows = [{ slug: 'movie-9', file: 'item-z Z.mp4', day: '2026-10-18', n: 1 }];
+  const oldReports = { '/api/analytics/reports?days=30': { rows }, '/api/analytics/errors?days=30': { rows: [{ slug: 'some-show', ep: '1x1', file: 'f.mp4', code: 3, n: 2 }] } };
+  const failures = [
+    new Error('SQL API 400: unable to parse the query ' + 'x'.repeat(400)),    // the Cloudflare SQL API refuses it
+    new SyntaxError('Unexpected token < in JSON at position 0'),               // the answer was not JSON
+  ];
+  for (const err of failures) {
+    const html = await hqReportsPage({ ...oldReports, '/api/analytics/wrongfilm?days=30': err }).draw();
+    assert.match(html, /<h2>Wrong-file reports/, 'the older list is still there');
+    assert.match(html, /<h2>Playback errors/, 'and the errors list');
+    assert.match(html, /Could not load wrong film reports\./);
+    assert.ok(html.includes(err.message.slice(0, 15)), 'the reason is shown, cut short');
+    assert.ok(!html.includes('x'.repeat(200)), 'a long reason is cut to 160 characters');
+    assert.doesNotMatch(html, /<table><tr><th>record id/);
+  }
+  // an answer of the wrong shape (rows is not a list) is the same failure, not a blank page
+  const odd = await hqReportsPage({ ...oldReports, '/api/analytics/wrongfilm?days=30': { rows: 5 } }).draw();
+  assert.match(odd, /Could not load wrong film reports\./);
+  assert.match(odd, /<h2>Playback errors/);
+  // and a reason with markup in it is escaped
+  const markup = await hqReportsPage({ ...oldReports, '/api/analytics/wrongfilm?days=30': new Error('<img src=x onerror=alert(1)>') }).draw();
+  assert.ok(!markup.includes('<img src=x'));
+  assert.match(markup, /&lt;img src=x/);
+});
+
+test('HQ: the older Wrong-file list leaves the Not the right film reports out, so the two do not mix', () => {
+  const cfa = require(path.join(REPO, 'scripts', 'lib', 'cfa.js'));
+  const old = cfa.REPORTS.reports(30);
+  assert.match(old, /AND blob1 = 'report' AND blob12 != 'wrongfilm' ORDER BY timestamp DESC LIMIT 300$/, 'the filter is one more condition on the existing query');
+  assert.match(old, /^SELECT timestamp, blob2 AS slug, blob3 AS ep, blob14 AS file, blob5 AS country, blob8 AS device FROM voidtv_events WHERE /, 'the rest of the query is as it was');
+  loadHq();
+  assert.match(cfa.REPORTS.wrongfilm(30), /blob12 = 'wrongfilm'/, 'and the new list is exactly what the old one leaves out');
 });
 
 // ============================ 5. the checks catch the bugs they are for ====================================================
