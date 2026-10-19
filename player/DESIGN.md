@@ -45,12 +45,14 @@ need a relay in between; that is a separate decision (Cloudflare terms and cost)
 - **Buffer watch (hop before the picture stops):** the buffered end has not moved for 4 s while less than
   10 s is buffered ahead, and the picture is still playing (or has just stopped with under 1 s left). The
   download has stalled, so the core opens a fresh connection to the item's other server now, instead of
-  waiting for the picture to stop and then 3.6 s more. See "The buffer watch" below.
+  waiting for the picture to stop and then 3.6 s more. It may only move (another server, the next copy);
+  it never ends playback. See "The buffer watch" below.
 - **Starved stall:** the playhead stops with under 1 s buffered: the server stopped sending. After 3 s the
   player opens a fresh connection to the item's other server at the same moment; if that starves too, it
   keeps cycling (the first may have recovered), and after two full passes it tries the next copy. A copy
-  with one server only (the lookup failed) has nowhere to hop: if it is the last source it is reloaded once
-  before the player gives up (the Archive link may redirect to another server), and never more than once.
+  with one server only (the lookup failed) has nowhere to hop: if it is the last source it is reloaded once,
+  once the picture has stopped, before the player gives up (the Archive link may redirect to another server),
+  and never more than once per hang (the allowance refills after two minutes of playing).
 - **Buffered stall:** the playhead stops with video still buffered (a browser hiccup). Left alone for 6 s,
   then the nudge / reload / switch ladder below.
 - **Freeze:** the sound clock moves but no new frames arrive for 1.5 s, *while the page is actually being
@@ -117,7 +119,17 @@ until the buffer is gone. The core now also watches where the buffered range end
   buffered). It counts as a starving stall: one `stall` event (with `trigger: "buffer"`, `ahead`, `flatMs`
   and `grewS`, the seconds of video the buffer gained in the last 10 s or so) and then the same hop to the
   other server. The hop discards what was buffered (one reused `<video>`), so the pause the viewer sees is
-  the new connection's start, not 4 s of waiting plus that.
+  the new connection's start, not 4 s of waiting plus that. The 4 s clock runs from the end of the 2.5 s
+  settle after the last hop, so a fresh connection gets about 6.5 s to send its first byte before the core
+  tries another (without the watch, about 6 s); a hop that starts the clock at the hop itself gave it only 4.
+- **It never ends playback:** the watch only moves: to another server of the copy, or to the next copy. When
+  the only move left would be to fail (the last copy with its server passes spent) or to reload a lone server
+  (a reload throws away the 4 to 9 s still buffered), it does nothing and leaves it to the stopped-picture
+  path, which fails honestly once the picture has really stopped. This is decided before the stall event is
+  sent, so a declining watch makes no noise. Without it, four 6 s hangs that each healed on their own ended in
+  the failure card with 9 s still buffered.
+- **The hop allowance is per hang:** the server passes and the lone reload come back after two minutes
+  (`REPEAT_WINDOW_MS`) of playing with no hop or reload.
 - **When it never fires:** while the viewer has paused, is seeking, or the episode has ended (each also
   restarts the 4 s clock); while the buffer is still growing, however slowly (a slow line is not a hung
   server); while the browser itself paused the download (`networkState` idle, the browser decided it had
@@ -142,7 +154,7 @@ the existing `/api/e` intake (no server change; `pos`, `dur` and `n` are stored 
 | first picture | `act` `pq:started` | n = start time in ms |
 | a stall | `act` `pq:stall` | pos = seconds buffered when it began |
 | trouble and fixes | `act` `pq:<event>[:<step>][:<kind>][><to>]`, for example `pq:freeze`, `pq:drift`, `pq:action:nudge:freeze`, `pq:switch>copy1@backup`, `pq:recovered:switch:starved`, `pq:silent` | none |
-| end of play (once per episode: on ended, on leaving the page, or on pagehide, whichever is first; only if something played) | `act` `pq:summary` | pos = rebuffer ratio x 1000, dur = watch time in ms, n = dropped frames x 1000 / frames |
+| end of play (once per episode: on ended, on leaving the page, on pagehide, or when the same player loads the next episode, whichever is first; only if something played; the event names the episode it is about, so a reused player such as Live TV reports each one under its own show; n is left out when the frame count is unknown) | `act` `pq:summary` | pos = rebuffer ratio x 1000, dur = watch time in ms, n = dropped frames x 1000 / frames |
 | failure | `error` | n = 2 network, 3 decode, 4 format, otherwise the media error code (0 if none) |
 | Report on the failure card | `report` | x = `fail:<cause>:<reason> <item>` |
 
@@ -185,14 +197,16 @@ Polo: two servers, both serving at several times the 0.1 MB/s the episode needs.
 
 ## Testing
 
-- `node --test player/test/core.test.js`: 47 scenarios: healthy play, short buffering left alone,
+- `node --test player/test/core.test.js`: 55 scenarios: healthy play, short buffering left alone,
   freeze nudged and recovered, repeated freezes escalate to the backup server, drift caught, natural lag
   ignored, long stall ladder, network error retry then switch then fail, decode error switches at once,
   slow start, paused viewer untouched, hidden tab, browsers without frame timing, viewer seeking, Retry,
   no sources, summary maths, starved stalls and server cycling; and since fix batch B: the cause of every
   kind of failure, a lone server reloaded once, the buffer watch (fires on a flat buffer while playing;
-  silent while paused, seeking, ended, growing, idle, complete or unmeasured; waits out the settle time)
-  and the pause maths across hops.
+  silent while paused, seeking, ended, growing, idle, complete or unmeasured; its clock starts when the
+  settle time ends; a backup that needs 5 s to send is left alone; it never ends playback, over four
+  separate healed hangs on a pair or two on a lone source; the allowance refills after two minutes) and the
+  pause maths across hops.
 - `player/lab/hop.html`: the same core driven by invented samples on a made-up clock: no video, nothing
   downloaded. It shows, with and without the buffer watch, how long after the download stops the core
   hops, how long the picture stays stopped, and the cause of a final failure. Seven cases carry an "as
