@@ -209,9 +209,17 @@ Polo: two servers, both serving at several times the 0.1 MB/s the episode needs.
 
 The viewer waits for one lookup only, the first copy's. That copy starts on its primary server as soon as
 the answer arrives (before, `load()` waited for every copy's lookup, so one slow call held the picture back
-by up to 2.5 s). Copies 2 and up use a lookup that is already in the session cache and otherwise only the
-Archive's own link, which still works. If the first copy's lookup fails or times out, the player starts on
-the Archive link and sends `lookup-failed` (the page logs it as `pq:lookup-failed`). A `load()` that a newer
+by up to 2.5 s). Copies 2 and up use a lookup that is already in the session cache; otherwise they are
+listed with only the Archive's own link, marked lazy, and their servers are looked up the first time the core
+moves onto the copy (a decode error, a copy that starves, a slow start): the player drops the source being
+left, looks the copy up within the same 2.5 s limit (and the same hour of `sessionStorage` cache), hands the
+servers to the core (`core.expand`, which puts them in front of the copy's Archive link and moves onto the
+first, the old order: primary, backup, link) and starts on the copy's primary server. A failed or slow lookup
+keeps the Archive link and sends `lookup-failed`. The copy is marked done before the wait, so it is looked
+up once and never in a loop; a load replaced, a player destroyed, or a core that has moved on while the
+lookup runs starts nothing. During the wait the core is told the page is not paused (it is between
+sources), so the pause measurement stays whole. If the first copy's lookup fails or times out, the player
+starts on the Archive link and sends `lookup-failed` (the page logs it as `pq:lookup-failed`). A `load()` that a newer
 `load()` or `destroy()` replaced while it waited says nothing and starts nothing; `destroy()` bumps the
 token for exactly that reason (a player destroyed during the lookup once set a source and played on its
 detached video). `load()` also ends an unfinished "Up next" countdown, so a reused player cannot skip the
@@ -234,7 +242,7 @@ once its source list is built.
 
 ## Testing
 
-- `node --test player/test/core.test.js`: 55 scenarios: healthy play, short buffering left alone,
+- `node --test player/test/core.test.js`: 58 scenarios: healthy play, short buffering left alone,
   freeze nudged and recovered, repeated freezes escalate to the backup server, drift caught, natural lag
   ignored, long stall ladder, network error retry then switch then fail, decode error switches at once,
   slow start, paused viewer untouched, hidden tab, browsers without frame timing, viewer seeking, Retry,
@@ -243,12 +251,16 @@ once its source list is built.
   silent while paused, seeking, ended, growing, idle, complete or unmeasured; its clock starts when the
   settle time ends; a backup that needs 5 s to send is left alone; it never ends playback, over four
   separate healed hangs on a pair or two on a lone source; the allowance refills after two minutes) and the
-  pause maths across hops.
-- `node --test player/test/player.test.js`: 12 scenarios on the page side (the real `player.js` in a bare
+  pause maths across hops, and the servers of a later copy handed to the core when it first moves onto it
+  (`core.expand`: in front of the Archive link, only for its own copy, then the copy cycles its servers).
+- `node --test player/test/player.test.js`: 20 scenarios on the page side (the real `player.js` in a bare
   vm with a fake page, no video, no network): the first source starts on the first copy's lookup alone, a
   cached later copy keeps its servers, a failed lookup is reported once, a destroyed or replaced load says
-  nothing and starts nothing, a pending "Up next" ends when an episode loads, and the end-of-play summary
-  of a reused player is sent once per episode, under that episode, with its own figures.
+  nothing and starts nothing, a pending "Up next" ends when an episode loads, the end-of-play summary of a
+  reused player is sent once per episode, under that episode, with its own figures; and the lazy lookup of
+  a later copy on the first switch to it: a fast answer starts on its primary server, a slow one is given
+  up at the time limit, a failed one keeps the Archive link and is never asked twice, a destroyed player or
+  a replaced or moved-on load starts nothing, and the core is told the page is not paused meanwhile.
 - `player/lab/hop.html`: the same core driven by invented samples on a made-up clock: no video, nothing
   downloaded. It shows, with and without the buffer watch, how long after the download stops the core
   hops, how long the picture stays stopped, and the cause of a final failure. Seven cases carry an "as
