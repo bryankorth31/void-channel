@@ -49,6 +49,15 @@
     return p;
   }
 
+  // The session cache only, never the network: a copy whose servers are already known (looked up on an earlier view
+  // this hour) keeps its primary and backup entries; a copy that is not known gets the Archive's own link and nothing else.
+  function cachedServers(item) {
+    if (!item) return null;
+    const cached = sstore.get('voidplayer:srv:' + item);
+    if (!cached) return null;
+    try { const c = JSON.parse(cached); return c.at > Date.now() - 3600e3 ? c : null; } catch (e) { return null; }
+  }
+
   // Which copies this browser can play at all.
   function supported(f, video) {
     if (f.needs === 'mkv') return !!video.canPlayType('video/x-matroska; codecs="avc1.640028, mp4a.40.2"') || !!video.canPlayType('video/webm; codecs="avc1.640028"');
@@ -75,19 +84,27 @@
       opts = opts || {};
       this._emitSummary(); // a reused player: the episode being replaced gets its end-of-play figures first, with its own frame counts
       this.ep = ep;
-      this._summed = false; this._fail = null; // a new episode: its end-of-play figures are due again
+      this._fail = null;
       this._playedCtx = this._ctx || null; // whatever the host hung on _ctx for this episode, kept for its summary
       this._teardown(); // stop the previous episode now, not after the server lookup
       this._resetUi();
       this._setTitle();
+      this._cancelUpNext(); // a countdown left over from the last episode must not skip this one
       this._token = (this._token || 0) + 1;
       const token = this._token;
       const v = this.v;
       const files = (ep.files || []).filter((f) => f && f.url && supported(f, v));
       // Build the try-order: each copy on its primary server, then its backup server, then the Archive's
-      // normal link (which lets the Archive pick a server). One small lookup per item, cached.
+      // normal link (which lets the Archive pick a server). The viewer waits for ONE lookup, the first copy's
+      // (cached for an hour); the other copies use a lookup that is already cached and otherwise only the
+      // Archive's own link, which still works and costs the Archive nothing (SP-026).
       let srv = [];
-      if (this.o.resolveServers) srv = await Promise.all(files.map((f) => servers(f.item, this.o.metadataTimeoutMs)));
+      if (this.o.resolveServers && files.length) {
+        srv = files.map((f, i) => (i ? cachedServers(f.item) : null));
+        srv[0] = await servers(files[0].item, this.o.metadataTimeoutMs);
+        if (token !== this._token) return; // a newer load() won, or destroy() ran: say nothing, start nothing
+        if (!srv[0] && files[0].item) this._emit({ type: 'lookup-failed', item: files[0].item, at: now() });
+      }
       if (token !== this._token) return; // a newer load() won
       const list = [];
       files.forEach((f, i) => {
@@ -98,6 +115,10 @@
       });
       this._emit({ type: 'load', id: ep.id, title: ep.title, sources: list.map((x) => x.label), at: now() });
       this._setMedia(ep);
+      // From here the core holds this episode's figures, so its end-of-play summary is due (not before: while the
+      // lookup above is pending the core still holds the figures of the episode that was replaced, and a summary
+      // sent then would repeat them under the wrong episode).
+      this._summed = false; this._coreEp = ep;
       this.core.load(list, opts.startAt || 0, now(), opts.autoplay !== false);
     }
     play() { this.core.event('user-play', now()); const p = this.v.play(); if (p && p.catch) p.catch(() => this._needTap()); }
@@ -149,7 +170,8 @@
       seconds = seconds || 10;
       return new Promise((resolve) => {
         let n = seconds;
-        const finish = (go) => { clearInterval(iv); this._timers.delete(iv); this._hideCard(); resolve(go); };
+        const finish = (go) => { clearInterval(iv); this._timers.delete(iv); this._upFinish = null; this._hideCard(); resolve(go); };
+        this._upFinish = finish;
         this._card('<p class="vpx-k">Up next</p><p class="vpx-t">' + esc(title) + '</p>'
           + '<div class="vpx-acts"><span class="vpx-ring" aria-hidden="true"><svg viewBox="0 0 36 36"><circle class="bg" cx="18" cy="18" r="16"/><circle class="fg" cx="18" cy="18" r="16" style="animation-duration:' + seconds + 's"/></svg><b>' + n + '</b></span>'
           + '<button data-c="go" class="vpx-primary">Play now</button><button data-c="stop">Cancel</button></div>', (c) => finish(c === 'go'), 'upnext');
@@ -158,7 +180,9 @@
         this._timers.add(iv);
       });
     }
+    _cancelUpNext() { if (this._upFinish) this._upFinish(false); }
     destroy() {
+      this._token = (this._token || 0) + 1; // a load() still waiting for the server lookup checks this token when it wakes and gives up; without it the destroyed player's detached video would get a source and start by itself
       this._emitSummary();
       this.ep = null;
       clearInterval(this._loop);
@@ -346,7 +370,7 @@
     // does not see. The event says which episode it is about (episode: its id, ctx: what the host had put on _ctx
     // when it loaded it), because by the time a reused player loads the next one the host's _ctx already names that.
     _emitSummary() {
-      if (!this.ep || this._summed) return;
+      if (!this.ep || this._summed || this._coreEp !== this.ep) return;
       this._summed = true;
       const q = this.v.getVideoPlaybackQuality ? this.v.getVideoPlaybackQuality() : null;
       this._emit({ type: 'summary', summary: this.core.summary(), frames: q && { total: q.totalVideoFrames, dropped: q.droppedVideoFrames }, episode: this.ep.id, ctx: this._playedCtx || null, at: now() });
