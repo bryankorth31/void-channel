@@ -180,6 +180,7 @@ the existing `/api/e` intake (no server change; `pos`, `dur` and `n` are stored 
 | trouble and fixes | `act` `pq:<event>[:<step>][:<kind>][><to>]`, for example `pq:freeze`, `pq:drift`, `pq:action:nudge:freeze`, `pq:switch>copy1@backup`, `pq:recovered:switch:starved`, `pq:silent` | none |
 | end of play (once per episode: on ended, on leaving the page, on pagehide, or when the same player loads the next episode, whichever is first; only if something played; the event names the episode it is about, so a reused player such as Live TV reports each one under its own show; n is left out when the frame count is unknown) | `act` `pq:summary` | pos = rebuffer ratio x 1000, dur = watch time in ms, n = dropped frames x 1000 / frames |
 | failure | `error` | n = 2 network, 3 decode, 4 format, otherwise the media error code (0 if none) |
+| the first copy's server lookup failed | `act` `pq:lookup-failed` | none |
 | Report on the failure card | `report` | x = `fail:<cause>:<reason> <item>` |
 
 The summary is flushed at once (the page's own pagehide handler runs before the player's and would
@@ -206,6 +207,18 @@ give the item's primary and backup storage servers. Results are cached in memory
 `sessionStorage` for an hour; a 2.5 s timeout falls back to the Archive's normal link. Measured on Marco
 Polo: two servers, both serving at several times the 0.1 MB/s the episode needs.
 
+The viewer waits for one lookup only, the first copy's. That copy starts on its primary server as soon as
+the answer arrives (before, `load()` waited for every copy's lookup, so one slow call held the picture back
+by up to 2.5 s). Copies 2 and up use a lookup that is already in the session cache and otherwise only the
+Archive's own link, which still works. If the first copy's lookup fails or times out, the player starts on
+the Archive link and sends `lookup-failed` (the page logs it as `pq:lookup-failed`). A `load()` that a newer
+`load()` or `destroy()` replaced while it waited says nothing and starts nothing; `destroy()` bumps the
+token for exactly that reason (a player destroyed during the lookup once set a source and played on its
+detached video). `load()` also ends an unfinished "Up next" countdown, so a reused player cannot skip the
+episode that was just chosen. A player that is reused sends the replaced episode's summary as the next one
+loads, and not for an episode whose lookup was still pending: the core holds that episode's figures only
+once its source list is built.
+
 ### Experience
 
 - Real `<button>`s with labels; the slider has a spoken value; focus is always visible and large on TVs.
@@ -231,6 +244,11 @@ Polo: two servers, both serving at several times the 0.1 MB/s the episode needs.
   settle time ends; a backup that needs 5 s to send is left alone; it never ends playback, over four
   separate healed hangs on a pair or two on a lone source; the allowance refills after two minutes) and the
   pause maths across hops.
+- `node --test player/test/player.test.js`: 12 scenarios on the page side (the real `player.js` in a bare
+  vm with a fake page, no video, no network): the first source starts on the first copy's lookup alone, a
+  cached later copy keeps its servers, a failed lookup is reported once, a destroyed or replaced load says
+  nothing and starts nothing, a pending "Up next" ends when an episode loads, and the end-of-play summary
+  of a reused player is sent once per episode, under that episode, with its own figures.
 - `player/lab/hop.html`: the same core driven by invented samples on a made-up clock: no video, nothing
   downloaded. It shows, with and without the buffer watch, how long after the download stops the core
   hops, how long the picture stays stopped, and the cause of a final failure. Seven cases carry an "as
