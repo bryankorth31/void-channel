@@ -39,7 +39,7 @@ async function startServer(repo) {
 let win = null, tray = null;
 function createWindow() {
   win = new BrowserWindow({
-    width: 1440, height: 920, minWidth: 900, minHeight: 600, backgroundColor: '#07080c', title: 'VOIDtv HQ', icon: ICON,
+    width: 1440, height: 920, minWidth: 900, minHeight: 600, backgroundColor: '#07080c', title: 'voidtv.net HQ', icon: ICON,
     autoHideMenuBar: true, webPreferences: { contextIsolation: true, sandbox: true },
   });
   // The page comes from HQ itself, so it carries HQ's per-start token (a meta tag the page sends back as X-HQ-Token) and
