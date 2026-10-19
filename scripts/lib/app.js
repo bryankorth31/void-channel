@@ -489,9 +489,9 @@ window.addEventListener('scroll',()=>{if(state.fillT)return;state.fillT=setTimeo
 function slide(id,dir){const t=$(id);if(!t)return;const step=168;t.scrollBy({left:dir*Math.max(step,Math.floor((t.clientWidth-120)/step)*step),behavior:'smooth'})}
 // Re-rendering replaces the whole page, so remember where each shelf was scrolled and put it back (no animation).
 function blip(host){const h=host||$('main');if(!h||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const b=document.createElement('div');b.className='blip';h.appendChild(b);setTimeout(()=>b.remove(),200)}
-function column(){const main=$('main');if(!main)return;const old=main.querySelector('.column');if(old)old.remove();const v=document.body.dataset.view;if(v==='show'||v==='tv')return;const H=main.scrollHeight;if(H<1200)return;const W=main.clientWidth||innerWidth;const phone=innerWidth<=700;const T=Math.round(W*(phone?1.25:0.558));
+function column(){const main=$('main');if(!main)return;const old=main.querySelector('.column');if(old)old.remove();const v=document.body.dataset.view;if(v==='show'||v==='tv')return;const H=main.scrollHeight;if(H<1200)return;const W=main.clientWidth||innerWidth;const phone=innerWidth<=700;const T=Math.round(W*(phone?1.25:0.558));if(!(T>=50)){column.tries=(column.tries||0)+1;if(column.tries<=20)setTimeout(field,500);return}column.tries=0;
  const neon=['wall','sign-pink','watcher-purple','sign-orange','watcher-orange'],stat=['static-glitch','static-bolt','static-dark'],sfx=phone?'-m':'';
- const c=document.createElement('div');c.className='column';c.style.height=H+'px';let h='';const n=Math.ceil(H/T)+1;
+ const c=document.createElement('div');c.className='column';c.style.height=H+'px';let h='';const n=Math.min(Math.ceil(H/T)+1,400);
  for(let i=0;i<n;i++)h+='<i class="neon" style="top:'+(i*T)+'px;height:'+T+'px;background-image:url('+BASE+'assets/brand/bg/col/'+neon[i%neon.length]+sfx+'.jpg);--kbd:'+(64+(i%4)*11)+'s;animation-delay:-'+((i*19)%64)+'s"></i>';
  for(let i=0;i<n;i++)h+='<i class="stat" style="top:'+Math.round((i+1)*T-T/2)+'px;height:'+T+'px;background-image:url('+BASE+'assets/brand/bg/col/'+stat[i%stat.length]+sfx+'.jpg)"></i>';
  c.innerHTML=h;main.appendChild(c)}
