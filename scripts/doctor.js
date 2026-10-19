@@ -12,6 +12,10 @@ const PROFILE = require('./lib/profile');
 const CACHE = path.join(PROFILE.catalogDir, 'cache');
 const QUICK = process.argv.includes('--quick');
 const { taskNames } = require('./lib/tasks');
+// The rules behind the gate, files, www, headers, shrink, backup and live-version lights live in scripts/lib/siteguards.js (pure, tested in
+// tests/site-guards.test.js), the same module scripts/site.js builds with. Loaded softly: a tree that has only some of the scripts (the
+// publish test copies a few) still gets every other light, and the missing module is itself a light.
+let guards = null; try { guards = require('./lib/siteguards'); } catch (e) { /* reported as the site-guards light below */ }
 const checks = [];
 const add = (id, level, msg, fix) => checks.push({ id, level, msg, fix: fix || undefined }); // level: green | yellow | red
 const run = (c) => execSync(c, { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
@@ -166,14 +170,32 @@ async function main() {
   // 5b. the matcher: its self-test, the share of S/E-plus-title picks below LIVE, grids restamped on one day, fallback grids an older matcher left (scripts/lib/matchcheck.js)
   const ml = (() => { try { return require('./lib/matchcheck').matcherLight({ showsDir }); } catch (e) { return { level: 'red', detail: 'self-test could not run: ' + e.message.slice(0, 80) }; } })();
   add('matcher', ml.level, ml.detail, ml.fix);
+  let built = null; // the counts assemble() gives, for the shrink light
   try {
     const { assemble } = require('./lib/app');
     const data = assemble();
+    built = { shows: data.shows.length, episodes: data.shows.reduce((n, s) => n + (s.eps || 0), 0) };
     const nulls = data.channels.reduce((k, c) => k + c.items.filter((it) => it[0] == null || !data.shows[it[0]]).length, 0);
     if (data.shows.length < 300) add('build', 'red', 'the site would ship with only ' + data.shows.length + ' titles', 'Something emptied the catalog; check git status in catalog/.');
     else if (nulls) add('build', 'red', nulls + ' TV channel items point at no show', 'buildChannels index drift; re-run node scripts/site.js and look at the error.');
     else add('build', 'green', `${data.shows.length} titles, ${data.channels.length} channels, home order ${data.homeOrder.length} shelves`);
   } catch (e) { add('build', 'red', 'assemble() threw: ' + e.message.slice(0, 120), 'The page cannot be built; the last error line names the file.'); }
+
+  // 5b. shrink: the show count now against the one the last publish went out with (audit CF-018). Red when down more than 10 percent,
+  //     the same rule publish.js and scripts/site.js refuse on. The last count is catalog/cache/publish-state.json, else the committed catalog/count.json.
+  // 5c. backup: catalog/cache is not in git and holds the only copy of every TVmaze episode list (audit CP-012). scripts/backup-cache.js writes
+  //     catalog/cache/backup-stamp.json; green under 7 days old, yellow older, red when there is none.
+  if (!guards) add('site-guards', 'yellow', 'scripts/lib/siteguards.js is missing, so the gate, files, www, headers, shrink, backup and live-version lights cannot run', 'Restore it from git: git checkout -- scripts/lib/siteguards.js');
+  else {
+    try {
+      if (built) { const l = guards.shrinkLight(built, guards.readLastCounts(PROFILE.catalogDir)); add(l.id, l.level, l.msg, l.fix); }
+      else add('shrink', 'yellow', 'could not count the shows (the build light says why)', 'Fix the build light first.');
+    } catch (e) { add('shrink', 'yellow', 'could not work out the shrink check: ' + String(e.message).slice(0, 80)); }
+    try {
+      let stamp = null; try { stamp = JSON.parse(fs.readFileSync(path.join(CACHE, 'backup-stamp.json'), 'utf8')); } catch (e) { /* none yet */ }
+      const l = guards.backupLight(stamp, Date.now()); add(l.id, l.level, l.msg, l.fix);
+    } catch (e) { add('backup', 'yellow', 'could not read the backup stamp: ' + String(e.message).slice(0, 80)); }
+  }
 
   // 6. external services and the live site
   if (!QUICK) {
@@ -186,8 +208,23 @@ async function main() {
     const tok = (env.match(/^TMDB_READ_TOKEN=(.+)$/m) || [])[1];
     if (tok) await ping('tmdb', 'https://api.themoviedb.org/3/configuration', { headers: { Authorization: 'Bearer ' + tok.trim() } }, null, 'TMDB token rejected or TMDB down; art fetches will fail.');
     else add('tmdb', 'yellow', 'no TMDB_READ_TOKEN in backend/.env', 'Art and people lookups need it.');
-    let head = ''; try { head = run('git rev-parse --short HEAD'); } catch (e) { /* no git */ }
-    await ping('live', PROFILE.domain + '/version.txt', {}, async (r) => { if (!r.ok) return false; const v = (await r.text()).trim(); if (head && !v.startsWith(head)) { add('live:version', 'yellow', `voidtv.net serves ${v.slice(0, 12)}, this PC is at ${head}`, 'Cloudflare has not built the latest push yet, or the build failed: dash.cloudflare.com > voidtvsite > Deployments.'); } return true; }, PROFILE.domain + ' did not answer; check Cloudflare Pages.');
+    let liveText = null;
+    await ping('live', PROFILE.domain + '/version.txt', {}, async (r) => { if (!r.ok) return false; liveText = (await r.text()).trim(); return true; }, PROFILE.domain + ' did not answer; check Cloudflare Pages.');
+    // What the live site says about itself (audit batch B, B3): live:version (CF-016) compares version.txt with origin/master as this PC last saw
+    // it (no fetch) and only turns yellow once that commit is over 10 minutes old, so a build in progress is not a false alarm; gate (CF-002, CF-003)
+    // reads gate=on|off from version.txt and checks / answers 401 or 200 to match; files (F-005) reads the file count and the largest file;
+    // www (F-004, CF-025) wants a 301 to https://voidtv.net/; headers (CF-012) wants HSTS, X-Frame-Options and nosniff on / and /version.txt.
+    if (liveText !== null && guards) {
+      let remote = null;
+      try {
+        const sha = gitOut(['rev-parse', 'origin/master']), atMs = +gitOut(['log', '-1', '--format=%ct', 'origin/master']) * 1000, liveSha = guards.parseVersion(liveText).sha;
+        let liveIsNewer = false; // the live commit is a descendant of origin/master: this PC has simply not fetched yet
+        if (/^[0-9a-f]{7,40}$/.test(liveSha) && !sha.startsWith(liveSha)) { try { gitRaw(['merge-base', '--is-ancestor', sha, liveSha]); liveIsNewer = true; } catch (e) { /* not a descendant, or not known here */ } }
+        remote = { sha, atMs, liveIsNewer };
+      } catch (e) { /* no origin/master on this PC: the commit comparison is skipped */ }
+      try { for (const c of await guards.liveLights({ base: PROFILE.domain, versionTextBody: liveText, doFetch: fetch, remote, nowMs: Date.now() })) add(c.id, c.level, c.msg, c.fix); }
+      catch (e) { add('live:site', 'yellow', 'could not check the live site: ' + String(e.message).slice(0, 80)); }
+    }
     const cfa = (env.match(/^CF_ANALYTICS_TOKEN=(.+)$/m) || [])[1];
     add('analytics', cfa ? 'green' : 'yellow', cfa ? 'analytics token present' : 'analytics not connected (no CF_ANALYTICS_TOKEN)', cfa ? undefined : 'HQ > Reports explains the two Cloudflare steps.');
   }
