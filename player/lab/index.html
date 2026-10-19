@@ -92,7 +92,7 @@ label{color:var(--dim)}
   }
   function record(e) {
     if (cur < 0) return;
-    const s = e.summary || player.core.summary(), ep = EPS[cur];
+    const s = e.summary || player.core.summary(), ep = (e.episode && EPS.find((x) => x.id === e.episode)) || EPS[cur]; // a summary says which episode it is about: the player sends one when it loads the next
     const row = { id: ep.id, show: ep.show, title: ep.title, startupMs: s.startupMs, watchMin: Math.round((s.watchMs || 0) / 6000) / 10, stalls: s.stalls, pauseS: Math.round((s.longestPauseMs || 0) / 100) / 10, freezes: s.freezes, drifts: s.drifts, recovered: s.recovered, switches: s.switches, end: e.type === 'failed' ? 'failed' : s.state, source: s.source, at: new Date().toISOString(), ua: navigator.userAgent };
     const i = results.findIndex((r) => r.id === row.id && r.at.slice(0, 13) === row.at.slice(0, 13));
     if (i >= 0) results[i] = row; else results.push(row);

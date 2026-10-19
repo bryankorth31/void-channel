@@ -73,8 +73,10 @@
     // ---------- public API ----------
     async load(ep, opts) {
       opts = opts || {};
+      this._emitSummary(); // a reused player: the episode being replaced gets its end-of-play figures first, with its own frame counts
       this.ep = ep;
       this._summed = false; this._fail = null; // a new episode: its end-of-play figures are due again
+      this._playedCtx = this._ctx || null; // whatever the host hung on _ctx for this episode, kept for its summary
       this._teardown(); // stop the previous episode now, not after the server lookup
       this._resetUi();
       this._setTitle();
@@ -339,13 +341,15 @@
     _ahead() { const v = this.v, b = v.buffered; for (let i = 0; i < b.length; i++) if (b.start(i) <= v.currentTime + 0.1 && b.end(i) >= v.currentTime) return b.end(i) - v.currentTime; return 0; }
     // Where the buffered range under the playhead ends (the playhead itself when nothing is buffered there).
     _bufEnd() { const v = this.v, b = v.buffered; for (let i = 0; i < b.length; i++) if (b.start(i) <= v.currentTime + 0.1 && b.end(i) >= v.currentTime) return b.end(i); return v.currentTime; }
-    // The end-of-play figures, once per episode: on ended, on leaving (destroy) or on pagehide, whichever comes first.
-    // The frame counts come from the video element, which the core does not see.
+    // The end-of-play figures, once per episode: on ended, on leaving (destroy), on pagehide, or when the same player
+    // loads the next episode, whichever comes first. The frame counts come from the video element, which the core
+    // does not see. The event says which episode it is about (episode: its id, ctx: what the host had put on _ctx
+    // when it loaded it), because by the time a reused player loads the next one the host's _ctx already names that.
     _emitSummary() {
       if (!this.ep || this._summed) return;
       this._summed = true;
       const q = this.v.getVideoPlaybackQuality ? this.v.getVideoPlaybackQuality() : null;
-      this._emit({ type: 'summary', summary: this.core.summary(), frames: q && { total: q.totalVideoFrames, dropped: q.droppedVideoFrames }, at: now() });
+      this._emit({ type: 'summary', summary: this.core.summary(), frames: q && { total: q.totalVideoFrames, dropped: q.droppedVideoFrames }, episode: this.ep.id, ctx: this._playedCtx || null, at: now() });
     }
 
     _emit(e) {
