@@ -39,7 +39,9 @@ function fresh() {
   git(work, 'remote', 'add', 'origin', origin);
   write(work, '.gitignore', 'catalog/cache/\n');
   write(work, 'scripts/show-list.json', JSON.stringify({ types: ['Drama'], shows: [] }, null, 2) + '\n');
-  write(work, 'docs/README.md', '# docs\n');
+  write(work, 'docs/README.md', '# docs\n');          // hand-written: publish never stages it
+  write(work, 'docs/HUNT.md', '# The Hunt\n');         // generated reports: publish stages these
+  write(work, 'docs/COVERAGE.md', '# Coverage\n');
   for (let i = 0; i < 10; i++) putShow(work, i);
   git(work, 'add', '-A');
   git(work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (12 files)');
@@ -205,14 +207,14 @@ test('an added address or token is refused and the file named; an Archive file n
   assert.strictEqual(publish(c.work).status, 1);
   assert.match(outcome(c.work), /refused: catalog\/shows\/test-show-3\.json would add an address-shaped string/);
   putShow(c.work, 3);                                                           // back to the clean file
-  write(c.work, 'docs/NOTES.md', 'key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0\n');
+  write(c.work, 'docs/SCOUT.md', 'key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0\n');   // a generated report, so publish stages it
   assert.strictEqual(publish(c.work).status, 1);
-  assert.match(outcome(c.work), /refused: docs\/NOTES\.md would add token-shaped text/);
-  fs.rmSync(path.join(c.work, 'docs', 'NOTES.md'));
-  write(c.work, 'docs/ENV.md', 'TMDB_READ_TOKEN=abcdef1234567890abcdef\n');
+  assert.match(outcome(c.work), /refused: docs\/SCOUT\.md would add token-shaped text/);
+  fs.rmSync(path.join(c.work, 'docs', 'SCOUT.md'));
+  write(c.work, 'docs/NETWORKS.md', 'TMDB_READ_TOKEN=abcdef1234567890abcdef\n');
   assert.strictEqual(publish(c.work).status, 1);
-  assert.match(outcome(c.work), /refused: docs\/ENV\.md would add token-shaped text/);
-  fs.rmSync(path.join(c.work, 'docs', 'ENV.md'));
+  assert.match(outcome(c.work), /refused: docs\/NETWORKS\.md would add token-shaped text/);
+  fs.rmSync(path.join(c.work, 'docs', 'NETWORKS.md'));
   assert.strictEqual(head(c.work), before);
   putShow(c.work, 3, 5, (g) => { g.seasons[0].episodes[0].file.file = 'Clip@720p.mp4'; g.seasons[0].episodes[0].file.name = 'Clip@Sessions.at.West54th.PBS.tv-vhs.XviD'; });
   const r = publish(c.work);
@@ -242,6 +244,48 @@ test('docs/_drafts is never published', () => {
   putShow(c.work, 10);
   assert.strictEqual(publish(c.work).status, 0);
   assert.strictEqual(git(c.origin, 'show', '--name-only', '--format=', 'master'), 'catalog/shows/test-show-10.json');
+});
+
+test('docs: only the generated reports are staged; hand-written docs are left alone, even modified, and the log says so once', () => {
+  const c = fresh();
+  write(c.work, 'docs/NOTES.md', 'hand written\n');
+  git(c.work, 'add', 'docs/NOTES.md');
+  git(c.work, 'commit', '-q', '-m', 'Add a hand-written doc');
+  git(c.work, 'push', '-q', 'origin', 'master');                               // a tracked hand-written doc, already published by hand
+  write(c.work, 'docs/NOTES.md', 'hand written, edited\n');                    // modified hand-written doc
+  write(c.work, 'docs/README.md', '# docs, edited\n');                         // modified hand-written doc
+  write(c.work, 'docs/NEWDRAFT.md', 'brand new\n');                            // new hand-written doc
+  write(c.work, 'docs/_drafts/idea.md', 'draft\n');                            // a draft
+  write(c.work, 'docs/HUNT.md', '# The Hunt\n\nnew results\n');                // modified generated report
+  const r = publish(c.work);
+  assert.strictEqual(r.status, 0, r.out);
+  assert.match(outcome(c.work), /pushed [0-9a-f]+: Catalog: 10 shows, 50 episodes \(1 files\)$/);
+  assert.strictEqual(git(c.origin, 'show', '--name-only', '--format=', 'master'), 'docs/HUNT.md');   // only the report went out
+  assert.strictEqual(staged(c.work), '');
+  const left = git(c.work, 'status', '--porcelain', '-uall', '--', 'docs').split('\n').map((l) => l.replace(/^\s*\S+\s+/, '')).sort();
+  assert.deepStrictEqual(left, ['docs/NEWDRAFT.md', 'docs/NOTES.md', 'docs/README.md', 'docs/_drafts/idea.md']); // all still there, still not committed
+  assert.strictEqual(logLines(c.work).filter((l) => /left alone:/.test(l)).length, 1);
+  assert.match(logLines(c.work).find((l) => /left alone:/.test(l)), /left alone: 4 hand-written docs under docs\//);
+});
+
+test('a Catalog: commit that touches only generated reports is publish\'s own; one that also touches a hand-written doc is not', () => {
+  const c = fresh();
+  write(c.work, 'docs/HUNT.md', '# The Hunt\n\nresults\n');
+  git(c.work, 'add', 'docs/HUNT.md');
+  git(c.work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (a report only)');
+  assert.strictEqual(publish(c.work).status, 0);                               // its own commit waiting: pushed, not held
+  assert.match(outcome(c.work), /pushed [0-9a-f]+: Catalog: 10 shows, 50 episodes \(a report only\)$/);
+  assert.strictEqual(originSubject(c), 'Catalog: 10 shows, 50 episodes (a report only)');
+  write(c.work, 'docs/README.md', '# docs, edited by hand\n');
+  git(c.work, 'add', 'docs/README.md');
+  git(c.work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (and a hand-written doc)');
+  assert.strictEqual(publish(c.work).status, 0);                               // not its own: nothing of publish's is waiting
+  assert.match(outcome(c.work), /nothing new$/);
+  assert.strictEqual(ahead(c.work), '1');
+  putShow(c.work, 10);
+  assert.strictEqual(publish(c.work).status, 0);
+  assert.match(outcome(c.work), /held: 1 other commit waiting: Catalog: 10 shows, 50 episodes \(and a hand-written doc\) \[also touches files outside/);
+  assert.strictEqual(originSubject(c), 'Catalog: 10 shows, 50 episodes (a report only)');
 });
 
 test('works the way this PC is set up: core.autocrlf=true and CRLF files in the working tree', () => {
@@ -350,7 +394,7 @@ test('a file that changes after it was scanned is caught in the commit itself: t
     (c) => assert.ok(fs.readFileSync(path.join(c.work, 'catalog/shows/test-show-10.json'), 'utf8').includes('writer@'), 'the file on disk is left for a person to fix'));
   drift('catalog/shows/test-show-10.json', '{ "broken": ', /refused: catalog\/shows\/test-show-10\.json \(.*\) is not valid JSON in the commit/);
   drift('scripts/show-list.json', '{ "types": [', /refused: scripts\/show-list\.json \(.*\) is not valid JSON in the commit/);        // the list file is checked too
-  drift('docs/README.md', 'TOKEN=abcdef1234567890abcdef\n', /refused: docs\/README\.md carries token-shaped text in the commit/); // tracked and unchanged when staged, so only the commit sees it
+  drift('docs/HUNT.md', 'TOKEN=abcdef1234567890abcdef\n', /refused: docs\/HUNT\.md carries token-shaped text in the commit/); // tracked and unchanged when staged, so only the commit sees it
 });
 
 test('a broken list file is refused like a broken catalog file', () => {

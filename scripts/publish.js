@@ -3,11 +3,13 @@
 // nothing when there is nothing new. Scheduled every two hours while hunts run (see docs/DEPLOY.md).
 //
 // What it will do and what it will refuse (audit of 18 Oct 2026: CP-013 CP-014 CP-015 CP-024 CF-006 CF-007 F-011):
-//   * It stages and commits only its own paths (the profile's catalog folder, docs folder and list file),
-//     by path. Anything else that is staged, or already committed on this PC, is never swept in.
+//   * It stages and commits only its own paths, by path: the profile's catalog folder, its list file, and the generated
+//     reports listed in DOC_REPORTS below (not the whole docs folder). Hand-written docs are left alone, even when modified,
+//     and the log says how many ("left alone: N hand-written docs"). Anything else that is staged, or already committed
+//     on this PC, is never swept in.
 //   * It only runs on master. On any other branch it logs one FAILED line and stops.
 //   * It will not push while commits that publish did not make are waiting to be pushed. A commit is publish's
-//     own only when its subject starts with "Catalog:" and it touches nothing outside the three paths above.
+//     own only when its subject starts with "Catalog:" and it touches nothing outside those paths.
 //     It still makes its own commit, so the work is kept, and logs "held". --allow-other-commits pushes them anyway.
 //   * A push that fails is retried three times (10 s, 30 s, 90 s apart), each try limited to 120 s. If it
 //     still fails, the commit stays local and the next run pushes it first, even when nothing new is staged.
@@ -33,6 +35,13 @@ const fs = require('fs');
 const { execFileSync } = require('child_process');
 
 const PROFILE = require('./lib/profile');
+// The generated reports in the docs folder, and the only files under docs/ that publish stages (audit CP-024, F-011). Every script that
+// writes into the profile's docs folder was searched for (18 Oct 2026): hunt.js writes HUNT.md, hunt-movies.js MOVIES.md, match.js
+// COVERAGE.md, scout.js SCOUT.md, networks.js NETWORKS.md, candidates.js CANDIDATES.md, show-probe.js SHOW_PROBE.md. Not listed on purpose:
+// BASELINE.md5 (lock.js relock writes it, and docs/LOCK.md says to commit it by hand with the code it covers) and SELF_LISTED.md (no script
+// writes it; it was made once by hand). To add a report: put its file name here (just the name, no folder), keep the same list in
+// scripts/doctor.js, and add it to the comment above. Anything not listed is treated as hand-written and left alone.
+const DOC_REPORTS = ['CANDIDATES.md', 'COVERAGE.md', 'HUNT.md', 'MOVIES.md', 'NETWORKS.md', 'SCOUT.md', 'SHOW_PROBE.md'];
 const argv = process.argv.slice(2);
 // Only these exact options are accepted. Anything else (a typo such as --dry-run, or --root=DIR) is refused, never ignored:
 // an ignored option would turn a hoped-for dry run into a real publish.
@@ -55,12 +64,12 @@ if (rootArg !== null) for (const k of ['catalogDir', 'docsDir', 'listFile']) PRO
 
 const rel = (p) => path.relative(ROOT, p).replace(/\\/g, '/');
 const CATALOG = rel(PROFILE.catalogDir);
-// The three paths publish owns. A commit counts as publish's own only when it touches nothing outside them.
-const OWN_PATHS = [CATALOG, rel(PROFILE.docsDir), rel(PROFILE.listFile)];
+// The paths publish owns: the catalog folder, the list file and the generated reports. A commit counts as publish's own only when it
+// touches nothing outside them. Hand-written docs and docs/_drafts are not among them, so they are never staged or committed.
+const DOCS = rel(PROFILE.docsDir);
+const OWN_PATHS = [CATALOG, rel(PROFILE.listFile), ...DOC_REPORTS.map((n) => DOCS + '/' + n)];
 const inOwnPaths = (f) => OWN_PATHS.some((p) => f === p || f.startsWith(p + '/'));
-const PATHS = OWN_PATHS.filter((p) => fs.existsSync(path.join(ROOT, p)));
-// Hand-written drafts can live in docs/_drafts; they are never published (F-011).
-const SPEC = [...PATHS, ':(exclude)' + rel(PROFILE.docsDir) + '/_drafts'];
+let PATHS = [], SPEC = []; // the own paths that exist (or are tracked), worked out when a run starts
 const LOG = path.join(PROFILE.catalogDir, 'cache', 'publish.log');
 const STATE = path.join(PROFILE.catalogDir, 'cache', 'publish-state.json');
 const LOG_MAX = 1024 * 1024;
@@ -107,7 +116,7 @@ function why(e) {
   const lines = text.split(/\r?\n/).map((s) => s.trim()).filter((l) => l && !/^(warning:|The file will have its original line endings)/i.test(l));
   return (lines.slice(-3).join(' | ') || 'unknown error').slice(0, 600);
 }
-const unstage = () => { try { git(['reset', '-q', '--', ...PATHS]); } catch (_) {} }; // only our own paths
+const unstage = () => { if (PATHS.length) try { git(['reset', '-q', '--', ...PATHS]); } catch (_) {} }; // only our own paths; with none, a bare reset would clear the whole index
 
 function trimLog() {
   try {
@@ -237,17 +246,32 @@ function pushStep(counts, extra) {
   return 'pushed';
 }
 
+// Own paths that exist on disk or that git tracks (a tracked report that was deleted must still be staged as deleted).
+function ownPathsNow() {
+  let tracked = new Set();
+  try { tracked = new Set(git(['ls-files', '-z', '--', DOCS]).split('\0').filter(Boolean)); } catch (_) {}
+  return OWN_PATHS.filter((p) => fs.existsSync(path.join(ROOT, p)) || tracked.has(p));
+}
+// How many changed or new files under docs/ are not generated reports. They are not staged; this is only so the log says so.
+function handWrittenDocs() {
+  let out; try { out = git(['status', '--porcelain', '-z', '-uall', '--', DOCS]); } catch (_) { return 0; }
+  return out.split('\0').filter((e) => e.length > 3).map((e) => e.slice(3)).filter((f) => !DOC_REPORTS.some((n) => f === DOCS + '/' + n)).length;
+}
+
 function main() {
   trimLog();
   let branch;
   try { branch = git(['branch', '--show-current']).trim(); } catch (e) { log('FAILED: ' + why(e)); return 1; }
   if (branch !== 'master') { log(`FAILED: the checked-out branch is ${branch || 'no branch (detached HEAD)'}, publish only runs on master; nothing was staged or pushed`); return 1; }
+  PATHS = SPEC = ownPathsNow();
   if (!PATHS.length) { log('nothing new'); return 0; }
   let ahead;
   try { ahead = getAhead(); } catch (e) { log('FAILED: cannot compare with origin/master: ' + why(e)); return 1; }
   const waiting = ahead.some((c) => c.own); // own commits from an earlier run whose push did not go through
 
   try { git(['add', '--', ...SPEC]); } catch (e) { unstage(); log('FAILED: ' + why(e)); return 1; }
+  const left = handWrittenDocs();
+  if (left) log(`left alone: ${left} hand-written doc${left === 1 ? '' : 's'} under ${DOCS}/ (changed or new, not in the publish list, so not committed)`);
   const changed = git(['diff', '--cached', '--name-only', '-z', '--', ...SPEC]).split('\0').filter(Boolean);
   if (!changed.length) {
     if (!waiting) { log('nothing new'); return 0; }

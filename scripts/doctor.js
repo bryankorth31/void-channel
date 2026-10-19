@@ -15,7 +15,9 @@ const { taskNames } = require('./lib/tasks');
 const checks = [];
 const add = (id, level, msg, fix) => checks.push({ id, level, msg, fix: fix || undefined }); // level: green | yellow | red
 const run = (c) => execSync(c, { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
-const gitRaw = (args) => execFileSync('git', ['-c', 'core.quotepath=off', ...args], { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'], windowsHide: true, maxBuffer: 256 * 1024 * 1024 }).toString(); // no shell, so a format string needs no quoting
+// The generated reports publish.js stages from the docs folder; a commit that touches anything else under docs/ is not publish's own. Keep in step with DOC_REPORTS in scripts/publish.js.
+const DOC_REPORTS = ['CANDIDATES.md', 'COVERAGE.md', 'HUNT.md', 'MOVIES.md', 'NETWORKS.md', 'SCOUT.md', 'SHOW_PROBE.md'];
+const gitRaw =(args) => execFileSync('git', ['-c', 'core.quotepath=off', ...args], { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'], windowsHide: true, maxBuffer: 256 * 1024 * 1024 }).toString(); // no shell, so a format string needs no quoting
 const gitOut = (args) => gitRaw(args).trim();
 const tailLines = (p, n) => { try { return fs.readFileSync(p, 'utf8').trim().split('\n').slice(-n); } catch (e) { return []; } };
 const hours = (iso) => (Date.now() - new Date(iso).getTime()) / 36e5;
@@ -85,7 +87,8 @@ async function main() {
   //     Yellow while a commit that publish did not make waits (publish will not push it); red once a "Catalog:" commit has waited over 30 minutes.
   try {
     // Same rule as publish.js: a commit is publish's own only when its subject starts with "Catalog:" and it touches nothing outside the catalog, docs and list paths.
-    const ownPaths = [PROFILE.catalogDir, PROFILE.docsDir, PROFILE.listFile].map((p) => path.relative(ROOT, p).replace(/\\/g, '/'));
+    const relp = (p) => path.relative(ROOT, p).replace(/\\/g, '/');
+    const ownPaths = [relp(PROFILE.catalogDir), relp(PROFILE.listFile), ...DOC_REPORTS.map((n) => relp(PROFILE.docsDir) + '/' + n)];
     const inOwn = (f) => ownPaths.some((p) => f === p || f.startsWith(p + '/'));
     const rows = gitRaw(['log', '--format=%x01%ct%x09%s', '--name-only', 'origin/master..master']).split('\x01').filter((b) => b.trim()).map((b) => {
       const [head, ...files] = b.split('\n'); const i = head.indexOf('\t');
