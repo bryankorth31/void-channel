@@ -355,6 +355,10 @@ video:fullscreen,video:-webkit-full-screen{width:100%;height:100%;max-height:non
 .now{flex-wrap:wrap}@media(hover:none){.hint{display:none}}
 video{width:100%;max-height:70vh;background:#000;border-radius:8px;outline:none}
 .now{display:flex;justify-content:space-between;align-items:center;margin:10px 0 0;gap:10px}.now b{font-size:17px}
+.now .wf{flex:1 0 100%;display:flex;flex-wrap:wrap;align-items:center;gap:2px 14px;font-size:13px;color:var(--dim)}.now .wfhint{flex:1 0 100%;margin:0 0 2px}
+.now .wfchip{display:inline-block;margin-left:4px;padding:0 5px;border:1px solid var(--rev);border-radius:4px;color:var(--rev);font-size:11px;line-height:1.6;vertical-align:1px;cursor:pointer;white-space:nowrap}.now .wfchip:hover,.now .wfchip:focus-visible{background:rgba(243,201,105,.14);outline:none}.now .wfchip:focus-visible{box-shadow:0 0 0 2px var(--acc)}
+.now .wfbox{display:inline-flex;align-items:center;gap:8px;min-height:32px;color:var(--fg);cursor:pointer}.now .wfbox input{width:18px;height:18px;margin:0;accent-color:var(--acc);cursor:pointer}.now .wfthanks{color:var(--acc)}
+@media(hover:none){.now .wfbox{min-height:44px}.now .wfchip{padding:2px 7px;font-size:12px}}
 .btn{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:8px 14px;border-radius:8px;cursor:pointer;white-space:nowrap}
 .eps{max-height:76vh;overflow:auto;background:var(--panel);border-radius:8px;padding:6px}
 .eps h3{margin:10px 8px 4px;color:var(--dim);font-weight:600;letter-spacing:.06em;font-size:11px}
@@ -446,6 +450,25 @@ const repKey=(s,se,ep)=>s.slug+'/'+se.season+'/'+ep.n;
 function repBtn(s,se,ep){const on=!!ME.reports[repKey(s,se,ep)];return '<button class="btn'+(on?' on':'')+'" id="rep" title="Tell the builder this file is the wrong episode or will not play" onclick="report()"><i class="ico flag"></i>'+(on?'Reported':'Wrong file?')+'</button>'}
 function shareMoment(){const s=state.show,se=s.seasons[state.se],ep=se.episodes[state.e];const t=VP?Math.floor(VP.currentTime):0;const u=location.origin+urlFor(s.slug)+'?s='+se.season+'&e='+ep.n+(t>5?'&t='+t:'');const done=()=>{const b=$('share');if(b){b.innerHTML='<i class="ico check"></i>Link copied';setTimeout(()=>{if($('share'))$('share').innerHTML='<i class="ico arrow-up"></i>Share this moment'},2200)}};if(navigator.clipboard)navigator.clipboard.writeText(u).then(done,()=>prompt('Copy this link',u));else prompt('Copy this link',u)}
 function report(){const s=state.show,se=s.seasons[state.se],ep=se.episodes[state.e],k=repKey(s,se,ep);if(ME.reports[k])delete ME.reports[k];else{ME.reports[k]={show:s.show,season:se.season,ep:ep.n,name:ep.name,item:ep.item,url:ep.url,at:Date.now()};track('report',{slug:s.slug,ep:se.season+'x'+ep.n,x:(ep.item||'')+' '+(ep.url||'').slice(-90)})}saveMe();const b=$('rep');if(b)b.outerHTML=repBtn(s,se,ep)}
+// TV movies the builder could not confirm (state REVIEW, slug movie-<tmdb id>): a plain label on the now-playing row and one box to
+// say it is not the right film. Ticking sends ONE report (q 'wrongfilm', x = Archive item, a space, file name) and is remembered per
+// film in ME.wf (the saved blob, so every storage call is already guarded); a second tick sends nothing. It never hides a film
+// and never touches playback. Series episodes and LIVE movies get none of this.
+const WF_NOTE='We matched this film by its name on the Internet Archive and could not confirm it is the right one.';
+function wfInfo(s,ep){const m=s&&ep&&ep.state==='REVIEW'?/^movie-([0-9]{1,9})$/.exec(s.slug||''):null;if(!m)return null;
+ const it=String(ep.item||'').slice(0,199);let f=String(ep.url||'').split(/[?#]/)[0].split('/').pop()||'';try{f=decodeURIComponent(f)}catch(e){}
+ return {id:m[1],x:it+' '+f.slice(0,199-it.length)}}
+function wfMap(){return ME.wf&&typeof ME.wf==='object'&&!Array.isArray(ME.wf)?ME.wf:{}}
+function wfDone(id){return meHas(wfMap(),id)}
+function wfChip(){return ' <span class="rv wfchip" role="button" tabindex="0" aria-expanded="false" aria-controls="wf-hint" title="'+WF_NOTE+'" onclick="wfHint(this)" onkeydown="wfKey(event,this)">Unconfirmed match</span>'}
+function wfRow(s,ep){const w=wfInfo(s,ep);if(!w)return '';const on=wfDone(w.id);
+ return '<div class="wf"><p class="wfhint" id="wf-hint" hidden>'+WF_NOTE+'</p><label class="wfbox"><input type="checkbox" id="wf-box"'+(on?' checked':'')+' onchange="wrongFilm(this)"> Not the right film</label><span class="wfthanks" id="wf-thanks" role="status">'+(on?'Thanks, we will check it.':'')+'</span></div>'}
+function wfHint(b){const h=$('wf-hint');if(!h)return;h.hidden=!h.hidden;b.setAttribute('aria-expanded',h.hidden?'false':'true')}
+function wfKey(e,b){if(e.key==='Enter'||e.key===' '){e.preventDefault();wfHint(b)}}
+function wrongFilm(el){const s=state.show,se=s&&s.seasons&&s.seasons[state.se],ep=se&&se.episodes[state.e],w=wfInfo(s,ep);if(!w)return;
+ el.checked=true;try{meSync()}catch(e){}
+ if(!wfDone(w.id)){ME.wf=Object.assign({},wfMap(),{[w.id]:Date.now()});try{saveMe()}catch(e){}track('report',{slug:s.slug,ep:se.season+'x'+ep.n,q:'wrongfilm',x:w.x})}
+ const t=$('wf-thanks');if(t)t.textContent='Thanks, we will check it.'}
 function exportMe(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(ME,null,1)],{type:'application/json'}));a.download='voidtv-mine.json';a.click()}
 // An import is merged, never laid over: per entry the newest time wins, every entry is checked (numbers where numbers
 // belong), and a reported file's key (show/season/episode, with slashes) has its own pattern. See meImportMerge.
@@ -624,7 +647,7 @@ function bindEpisodeEvents(p){const v=p.v;
 function canReuse(s){const h=$('vph');return !!(VP&&VP._show===s.slug&&h&&VP.root&&h.contains(VP.root)&&document.querySelector('.show .player .vcol'))}
 function swapEpisode(s,se,ep){const sh=document.querySelector('.show'),hero=sh.querySelector('.hero');if(hero)hero.remove();
  const had=document.activeElement&&document.activeElement.closest&&document.activeElement.closest('.now');
- const now=sh.querySelector('.now');if(now)now.outerHTML=nowRow(se,ep);
+ const now=sh.querySelector('.now');if(now)now.outerHTML=nowRow(se,ep,s);
  const row=sh.querySelector('.mine-row');if(row)row.outerHTML=mineRow(s,se,ep);
  const old=sh.querySelector('.inep'),x=epXray(s,se,ep);
  if(old){if(x)old.outerHTML=x;else old.remove()}else if(x){const eps=sh.querySelector('.eps');if(eps)eps.insertAdjacentHTML('beforebegin',x)}
@@ -646,11 +669,11 @@ function showView(autoplay){const s=state.show;if(!s.seasons){killPlayer();$('ma
  if(autoplay&&canReuse(s)){swapEpisode(s,se,ep);return}
  let h='<div class="show"><button class="back" onclick="go(\\'\\')">← Browse</button>';
  if(!autoplay)h+='<div class="hero">'+(s.backdrop?'<img src="'+s.backdrop+'" alt="">':'')+'<div class="t"><b>'+esc(s.show)+'</b>'+(s.overview?'<p>'+esc(s.overview.slice(0,260))+(s.overview.length>260?'…':'')+'</p>':'')+'<div class="g">'+[s.network,s.year,s.genres.join(' · '),s.rating?'★ '+s.rating:'',s.eps+' episodes'].filter(Boolean).join('  ·  ')+'</div></div></div>';
- h+='<div class="player"><div class="vcol"><div class="vpx-host" id="vph"></div>'+nowRow(se,ep)+'<p class="hint">Space / K play-pause · ← → 10s · J / L −10 / +30s · N next · F fullscreen · C captions. "review" = the builder is not sure this file is this episode.</p>'+mineRow(s,se,ep)+'</div>'+epXray(s,se,ep);
+ h+='<div class="player"><div class="vcol"><div class="vpx-host" id="vph"></div>'+nowRow(se,ep,s)+'<p class="hint">Space / K play-pause · ← → 10s · J / L −10 / +30s · N next · F fullscreen · C captions. "review" = the builder is not sure this file is this episode.</p>'+mineRow(s,se,ep)+'</div>'+epXray(s,se,ep);
  h+=epsMarkup(s)+'</div>';
  h+=xray(s)+'</div>';
  killPlayer();$('main').innerHTML=h;mountShow(s,se,ep,autoplay)}
-function nowRow(se,ep){return '<div class="now"><div><b>S'+String(se.season).padStart(2,'0')+'E'+String(ep.n).padStart(2,'0')+'</b> · '+esc(ep.name)+(ep.state==='REVIEW'?' <span class="rv">review</span>':'')+'</div><button class="btn" onclick="next()">Next episode <i class="ico next"></i></button></div>'}
+function nowRow(se,ep,s){return '<div class="now"><div><b>S'+String(se.season).padStart(2,'0')+'E'+String(ep.n).padStart(2,'0')+'</b> · '+esc(ep.name)+(ep.state==='REVIEW'?(wfInfo(s,ep)?wfChip():' <span class="rv">review</span>'):'')+'</div><button class="btn" onclick="next()">Next episode <i class="ico next"></i></button>'+wfRow(s,ep)+'</div>'}
 function mineRow(s,se,ep){return '<div class="acts mine-row"><span class="mine" data-slug="'+s.slug+'">'+acts(s)+'</span>'+repBtn(s,se,ep)+'<button class="btn" id="share" title="Copy a link to this episode at the current time" onclick="shareMoment()"><i class="ico arrow-up"></i>Share this moment</button><a class="btn" href="'+ep.url+'" target="_blank" rel="noopener" download title="The original file from the Archive, for VLC, a USB stick or a flight" data-t="act" data-x="download" onclick="track(this.dataset.t,{slug:state.show.slug,x:this.dataset.x})"><i class="ico arrow-down sm"></i>Download</a></div>'}
 function face(p){const open=state.person===p.id;return '<div class="face'+(open?' on':'')+'" onclick="person('+p.id+')">'+(p.photo?'<img loading="lazy" src="'+p.photo+'" alt="">':'<div class="ph"></div>')+'<b>'+esc(p.name)+'</b><small>'+esc(p.as||'')+'</small></div>'}
 function findPerson(s,id){const pool=[...(s.cast||[]),...(s.crew||[])];for(const c of Object.values(s.credits||{}))pool.push(...c.d,...c.w,...c.g);return pool.find(x=>x.id===id)||{name:'',photo:null}}
@@ -711,7 +734,7 @@ function privacyPage(){textPage('About ${BRAND} and your privacy',
  +'<li>No account, no sign-up, no email.</li>'
  +'<li>One cookie, only while the site is in testing, that remembers you entered the test password. It is no longer set when the site opens to the public, and copies already in browsers expire within 30 days.</li>'
  +'<li>Anonymous usage counts: when a page is opened, when a show is played and for how long, when a search is made (with the search words, up to 80 characters), and when playback has trouble. Each count carries a random session id that lives only in your browser and changes every month, plus your country, region, city, time zone and the data center that answered you, as reported by our hosting provider. It also carries your browser, operating system and device type, and the name of the site you came from, if any. Our own usage counts store no IP address. Nothing is sold or shared.</li>'
- +'<li>Your Mine page (list, likes, watch history) is kept in your own browser, and we do not receive it as a list. We do count the actions, as anonymous usage counts like the rest: when you like or hide a show, add it to your list or play an episode. A file you report with "Wrong file?" is sent to us, with the show and episode.</li>'
+ +'<li>Your Mine page (list, likes, watch history) is kept in your own browser, and we do not receive it as a list. We do count the actions, as anonymous usage counts like the rest: when you like or hide a show, add it to your list or play an episode. A file you report with "Wrong file?" is sent to us, with the show and episode. Ticking "Not the right film" on a movie likewise sends us the movie and its file.</li>'
  +'<li>Errors and playback trouble are reported to an error service (Sentry) with the show, the episode and what the player measured, so we can fix stalls. Those reports carry no name and no account. The Sentry script (js.sentry-cdn.com) loads on every page view, so your browser contacts Sentry whenever you open the site.</li>'
  +'<li>Posters and photos load from The Movie Database (TMDB), so your browser contacts their servers for images.</li></ul>'
  +'<h2>What we do not do</h2><p>No advertising, no tracking across sites, no selling of data, no profiles.</p>'

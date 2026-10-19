@@ -46,7 +46,7 @@ const REPORTS = {
   episodes: (d) => `SELECT blob2 AS slug, blob3 AS ep, blob1 AS type, ${n} FROM ${DATASET} WHERE ${since(d)} AND blob1 IN ('play', 'tick', 'end') GROUP BY slug, ep, type ORDER BY n DESC LIMIT 1000`,
   searches: (d) => `SELECT blob12 AS q, MIN(double3) AS results, ${n} FROM ${DATASET} WHERE ${since(d)} AND blob1 = 'search' GROUP BY q ORDER BY n DESC LIMIT 300`,
   errors: (d) => `SELECT blob2 AS slug, blob3 AS ep, blob14 AS file, MAX(double3) AS code, ${n} FROM ${DATASET} WHERE ${since(d)} AND blob1 = 'error' GROUP BY slug, ep, file ORDER BY n DESC LIMIT 300`,
-  reports: (d) => `SELECT timestamp, blob2 AS slug, blob3 AS ep, blob14 AS file, blob5 AS country, blob8 AS device FROM ${DATASET} WHERE ${since(d)} AND blob1 = 'report' ORDER BY timestamp DESC LIMIT 300`,
+  reports: (d) => `SELECT timestamp, blob2 AS slug, blob3 AS ep, blob14 AS file, blob5 AS country, blob8 AS device FROM ${DATASET} WHERE ${since(d)} AND blob1 = 'report' AND blob12 != 'wrongfilm' ORDER BY timestamp DESC LIMIT 300`,
   referrers: (d) => `SELECT blob11 AS host, ${n} FROM ${DATASET} WHERE ${since(d)} AND blob11 != '' GROUP BY host ORDER BY n DESC LIMIT 100`,
   tv: (d) => `SELECT blob2 AS channel, blob1 AS type, ${n} FROM ${DATASET} WHERE ${since(d)} AND blob1 IN ('tune', 'tvplay') GROUP BY channel, type ORDER BY n DESC LIMIT 200`,
   acts: (d) => `SELECT blob2 AS slug, blob14 AS act, ${n} FROM ${DATASET} WHERE ${since(d)} AND blob1 = 'act' GROUP BY slug, act ORDER BY n DESC LIMIT 500`,

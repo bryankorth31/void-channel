@@ -132,7 +132,7 @@ test('/privacy: the approved text, the address, and no placeholder left', () => 
     'plus your country, region, city, time zone and the data center that answered you, as reported by our hosting provider.',
     'It also carries your browser, operating system and device type, and the name of the site you came from, if any.',
     'Our own usage counts store no IP address. Nothing is sold or shared.',
-    'Your Mine page (list, likes, watch history) is kept in your own browser, and we do not receive it as a list. We do count the actions, as anonymous usage counts like the rest: when you like or hide a show, add it to your list or play an episode. A file you report with "Wrong file?" is sent to us, with the show and episode.',
+    'Your Mine page (list, likes, watch history) is kept in your own browser, and we do not receive it as a list. We do count the actions, as anonymous usage counts like the rest: when you like or hide a show, add it to your list or play an episode. A file you report with "Wrong file?" is sent to us, with the show and episode. Ticking "Not the right film" on a movie likewise sends us the movie and its file.',
     'Errors and playback trouble are reported to an error service (Sentry) with the show, the episode and what the player measured',
     'Those reports carry no name and no account.',
     'The Sentry script (js.sentry-cdn.com) loads on every page view, so your browser contacts Sentry whenever you open the site.',
@@ -189,6 +189,10 @@ test('the privacy page tells only what the code does: cookie life, stored fields
   assert.match(SCRIPT, /<h2>Reported files</, 'a reported file shows on the Mine page');
   assert.match(SCRIPT, /'Wrong file\?'/);
   assert.match(SCRIPT, /track\('report'/, 'a reported file is sent');
+  // the "Not the right film" box on an unconfirmed TV movie: the privacy sentence says it sends the movie and its file, and this is what it sends
+  assert.match(SCRIPT, /Not the right film<\/label>/, 'the box exists');
+  assert.match(SCRIPT, /track\('report',\{slug:s\.slug,ep:se\.season\+'x'\+ep\.n,q:'wrongfilm',x:w\.x\}\)/, 'ticking it sends the movie (slug) and its file (item and file name), nothing else');
+  assert.match(SCRIPT, /return \{id:m\[1\],x:it\+' '\+f\.slice\(0,199-it\.length\)\}/, 'x is the Archive item and the file name');
   assert.match(SCRIPT, /track\('search',\{q,n\}\)/, 'the search words are sent');
   // the Mine page stays in the browser, but its actions are counted: like, hide, list and every play
   assert.match(SCRIPT, /track\('act',\{slug,x:ME\.likes\[slug\]>0\?'like':ME\.likes\[slug\]<0\?'hide':'unlike'\}\)/);

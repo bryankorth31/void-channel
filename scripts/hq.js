@@ -10,6 +10,10 @@ const path = require('path');
 const crypto = require('crypto');
 const { spawn, execSync, execFile, execFileSync } = require('child_process');
 const cfa = require('./lib/cfa');
+// One more named query for /api/analytics/<name>: the "Wrong film reports" list on the Reports page (viewers ticking "Not the right
+// film" on a TV movie marked "Unconfirmed match"; the page sends type report with q wrongfilm, x = Archive item, a space, file name).
+// Day buckets, added up by the page, so it uses only what the other queries in lib/cfa.js already use. Read-only; it hides nothing.
+cfa.REPORTS.wrongfilm = (d) => `SELECT blob2 AS slug, blob14 AS file, toStartOfInterval(timestamp, INTERVAL '1' DAY) AS day, SUM(_sample_interval) AS n FROM voidtv_events WHERE timestamp > NOW() - INTERVAL '${Math.max(1, Math.min(90, +d || 30))}' DAY AND blob1 = 'report' AND blob12 = 'wrongfilm' GROUP BY slug, file, day ORDER BY day DESC LIMIT 3000`;
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
@@ -38,6 +42,16 @@ const FILES = {
 const readJson = (p, fb) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fb; } };
 const writeJson = (p, v) => { const tmp = p + '.tmp'; fs.writeFileSync(tmp, JSON.stringify(v, null, 2) + '\n'); fs.renameSync(tmp, p); };
 const slugify = (s) => String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/['\u2019]/g, '').replace(/[^a-z0-9]+/g, ' ').trim().replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show'); // identical to match.js slug(): apostrophes vanish, & becomes and
+// Film titles for the Wrong film reports list: TMDB id to "Title (year)", read from the local catalog (catalog/tvmovies-list.json, no network),
+// once, and again only when that file changes. An id that is not there gets no title and the page shows the record id alone.
+let filmTitles = { mtime: 0, map: new Map() };
+function movieTitles() {
+  const f = path.join(PROFILE.catalogDir, 'tvmovies-list.json');
+  let m = 0; try { m = fs.statSync(f).mtimeMs; } catch (e) { return filmTitles.map; }
+  if (m !== filmTitles.mtime) filmTitles = { mtime: m, map: new Map((readJson(f, { items: [] }).items || []).map((i) => [String(i.tmdbId), String(i.title || '') + (i.year ? ' (' + i.year + ')' : '')])) };
+  return filmTitles.map;
+}
+const withFilmTitles = (name, rows) => { if (name !== 'wrongfilm') return rows; const t = movieTitles(); return rows.map((r) => ({ ...r, title: t.get(String(r.slug || '').replace(/^movie-/, '')) || '' })); };
 const tail = (p, lines) => { try { return fs.readFileSync(p, 'utf8').trim().split('\n').slice(-lines).join('\n'); } catch (e) { return ''; } };
 
 // ---- catalog views ----------------------------------------------------------------------------
@@ -383,7 +397,7 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(206, { 'content-type': type, 'content-length': z - a + 1, 'content-range': `bytes ${a}-${z}/${size}`, 'accept-ranges': 'bytes', 'cache-control': 'no-store' });
       return fs.createReadStream(f, { start: a, end: z }).pipe(res);
     }
-    if (p.startsWith('/api/analytics/')) { const name = p.slice(15); if (!cfa.configured()) return send(res, 200, { unconfigured: true, rows: [] }); return send(res, 200, { rows: await cfa.report(name, url.searchParams.get('days') || 7) }); }
+    if (p.startsWith('/api/analytics/')) { const name = p.slice(15); if (!cfa.configured()) return send(res, 200, { unconfigured: true, rows: [] }); return send(res, 200, { rows: withFilmTitles(name, await cfa.report(name, url.searchParams.get('days') || 7)) }); }
     return send(res, 404, { error: 'not found' });
   } catch (e) { return send(res, 500, { error: e.message }); }
 });
