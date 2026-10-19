@@ -189,14 +189,14 @@ describe('the self-list fallback gate (CP-001)', () => {
     assert.equal(run(clips(25), { title: 'Zork Show Season 9' }).grid.selfListed, true, 'titled episodes with no numbers, from the show\'s own item');
     assert.equal(run(clips(25), { title: 'Zork Show Jam' }).grid.selfListed, undefined, 'not when the title is a longer title');
     assert.equal(run(clips(25), { title: 'Mystery Upload', id: 'zork-show-s9' }).grid.selfListed, undefined, 'not when the title does not name the show, whatever the identifier says');
-    assert.equal(run(clips(25, undefined, { seconds: 900 }), { title: 'Zork Show Season 9' }).grid.selfListed, undefined, 'not outside the runtime band');
+    assert.equal(run(clips(25, undefined, { seconds: 600 }), { title: 'Zork Show Season 9' }).grid.selfListed, undefined, 'not outside the runtime band');
     const mixed = [...clips(4), ...range(21).map((i) => mkFile(`Zork Show Commentary ${i}.mp4`))];
     assert.equal(run(mixed, { title: 'Zork Show Season 9' }).grid.selfListed, undefined, 'junk-named files do not count towards the five');
     const four = M.gridFor(ENTRY, { items: [{ id: 'a', title: 'Zork Show Season 1', files: clips(4) }, ...range(5).map((n) => ({ id: 'b' + n, title: 'Zork Show Season ' + (n + 2), files: clips(4).map((f) => ({ ...f, name: f.name + n, file: f.name + n })) }))] }, mkTv(), { ov: {} });
     assert.equal(four.selfListed, undefined, 'items of four are not enough');
   });
   test('refuses files outside the TVmaze runtime band', () => {
-    const files = range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i), seconds: 900 }));
+    const files = range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i), seconds: 600 }));
     assert.equal(run(files).grid.selfListed, undefined);
   });
   test('files skipped for length are judged again: kept when TVmaze has no runtime, refused outside a known runtime band', () => {
@@ -264,10 +264,24 @@ describe('Archive identifier rule (CP-003)', () => {
     assert.equal(M.episodeNumberOf('The_Parkers_S01E02_720p.mp4', ['parkers']), null);
     assert.equal(M.stripShow('The_Parkers_Walkthrough', ['parkers']), 'the walkthrough');
     assert.equal(M.inRuntimeBand(1800, 30), true);
-    assert.equal(M.inRuntimeBand(3600, 30), true, 'a double episode');
-    assert.equal(M.inRuntimeBand(900, 30), false);
+    assert.equal(M.inRuntimeBand(3600, 30), false, 'a double episode is a compilation');
+    assert.equal(M.inRuntimeBand(600, 30), false);
     assert.equal(M.inRuntimeBand(5400, 30), false);
     assert.equal(M.inRuntimeBand(1800, null), false);
+  });
+  test('the fallback band is half to one and a quarter of the TVmaze runtime, because the runtime is the broadcast slot', () => {
+    assert.equal(M.inRuntimeBand(30 * 60, 60), true, 'half the slot');
+    assert.equal(M.inRuntimeBand(41 * 60, 60), true, 'a 60-minute show is about 41 minutes without the ads (Iron Chef)');
+    assert.equal(M.inRuntimeBand(29 * 60, 60), false);
+    assert.equal(M.inRuntimeBand(2.4 * 60, 4), true, 'a short web series listed rounded up (Jake and Amir: 4 listed, 2.4 real)');
+    assert.equal(M.inRuntimeBand(5 * 60, 4), true, 'one and a quarter');
+    assert.equal(M.inRuntimeBand(5.2 * 60, 4), false);
+    assert.equal(M.inRuntimeBand(60 * 60, 30), false, 'long is a compilation');
+    const ad = (seconds) => range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i), seconds }));
+    const tv60 = { ...mkTv(), runtime: 60 }, noRuntime = { ...mkTv(), runtime: null };
+    assert.equal(run(ad(41 * 60), { tv: tv60 }).grid.selfListed, true, 'ad-stripped episodes pass');
+    assert.equal(run(ad(100 * 60), { tv: tv60 }).grid.selfListed, undefined, 'a compilation does not');
+    assert.equal(run(ad(41 * 60), { tv: noRuntime }).grid.selfListed, true, 'no runtime, no band');
   });
 });
 

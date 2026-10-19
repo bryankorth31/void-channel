@@ -207,11 +207,13 @@ function stripShow(text, cores) { let t = ' ' + norm(text) + ' '; for (const c o
 const isJunkItem = (text, cores) => JUNK_ITEM.test(stripShow(text, cores));
 const isJunkFile = (name, cores) => JUNK_FILE.test(stripShow(name, cores));
 const isExtras = (text, cores) => EXTRAS.test(stripShow(text, cores));
-// Inside the TVmaze runtime band: the same single-episode and double-episode bands the strict pass cuts files into.
+// Inside the TVmaze runtime band. TVmaze's runtime is the broadcast slot, not the content: a 60-minute show is 40 to 45 minutes once the ads are
+// stripped, and short web series are listed rounded up to whole minutes (Jake and Amir: 4 listed, 2.4 real). So a file passes from half the runtime to
+// one and a quarter of it: short is normal, long is a compilation. (The strict pass keeps its own, narrower bands: 0.7 to 1.35 for one episode, 1.7 to 2.5 for two.)
 function inRuntimeBand(seconds, runtimeMin) {
   if (!(seconds > 0) || !(runtimeMin > 0)) return false;
   const m = seconds / 60;
-  return (m >= runtimeMin * 0.7 && m <= runtimeMin * 1.35) || (m >= runtimeMin * 1.7 && m <= runtimeMin * 2.5);
+  return m >= runtimeMin * 0.5 && m <= runtimeMin * 1.25;
 }
 // The small number in a file name once the show name, S/E, years and quality tags are taken out ("Parker's Puzzle (7)" gives 7).
 function episodeNumberOf(name, cores) {
