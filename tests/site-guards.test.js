@@ -273,8 +273,9 @@ test('another domain gets no www light (only voidtv.net is checked for www)', as
 });
 
 test('no em dash in the files this batch wrote', () => {
-  for (const f of ['scripts/lib/siteguards.js', 'scripts/backup-cache.js', 'scripts/site.js', 'functions/_middleware.js', 'functions/api/e.js']) {
+  const dash = String.fromCharCode(0x2014); // written as a code so this file has none itself
+  for (const f of ['scripts/lib/siteguards.js', 'scripts/backup-cache.js', 'scripts/site.js', 'scripts/doctor.js', 'functions/_middleware.js', 'functions/api/e.js', 'docs/DEPLOY.md', 'docs/RUNBOOK.md', 'tests/site-guards.test.js', 'tests/site-middleware.test.js', 'tests/site-build.test.js', 'tests/backup-cache.test.js']) {
     const text = fs.readFileSync(path.join(__dirname, '..', f), 'utf8');
-    assert.ok(!text.includes('—'), f + ' has an em dash');
+    assert.ok(!text.includes(dash), f + ' has an em dash');
   }
 });
