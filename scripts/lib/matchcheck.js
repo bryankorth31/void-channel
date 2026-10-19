@@ -43,11 +43,12 @@ function matcherCheck(opts = {}) {
     try { g = JSON.parse(text); } catch (e) { continue; }
     if (!g.tvmazeWeak) continue;
     const cores = [M.norm(g.show).replace(/^the /, ''), ...(M.BUILTIN_ALIASES[g.slug] || []).map(M.norm)];
+    const nets = g.tvmaze && typeof g.tvmaze.network === 'string' && M.norm(g.tvmaze.network) ? [M.norm(g.tvmaze.network)] : []; // the show's own network
     let picks = 0, unnamed = 0, junk = 0;
     for (const se of g.seasons || []) for (const e of se.episodes || []) {
       if (!e.file) continue;
       picks++;
-      if (!M.namesTitle(e.file.itemTitle || '', cores)) unnamed++;
+      if (!M.namesTitle(e.file.itemTitle || '', cores, nets)) unnamed++;
       if (M.isJunkItem(e.file.itemTitle || '', cores) || M.isJunkFile(e.file.name || '', cores)) junk++;
     }
     grids.push({ slug: g.slug || f.slice(0, -5), show: g.show, picks, unnamed, share: picks ? +(unnamed / picks).toFixed(2) : 0, junk });

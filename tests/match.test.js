@@ -320,6 +320,20 @@ describe('the upload title names the show', () => {
     assert.equal(names('Naruto Shippuden - 001', 'Naruto', ['Naruto Shippuden']), true);
     assert.equal(names('Zork Show Jam, then Zork Show - Season 2', 'Zork Show'), true);
   });
+  test('the show\'s own network, from its TVmaze record, may follow the name; no other network may', () => {
+    const cores = ['dimension 20'];
+    assert.equal(M.namesTitle('Dimension 20 Dropout TV Seasons 01-22', cores), false, 'without the network it is a longer title');
+    assert.equal(M.namesTitle('Dimension 20 Dropout TV Seasons 01-22', cores, ['dropout']), true);
+    assert.equal(M.namesTitle('Dimension 20 Netflix Specials', cores, ['dropout']), false, 'another network does not count');
+    assert.equal(M.namesTitle('Dimension 20 Special Dropout', cores, ['dropout']), false, 'it must follow the name directly');
+    assert.equal(M.namesTitle('Mysteries of the Bible A&E Media Series', ['mysteries of the bible'], ['a and e']), true, 'a network written with an ampersand');
+    assert.equal(M.namesTitle('Body Language Paramount with Showtime Specials', ['body language'], ['paramount with showtime']), true, 'a network of several words');
+    assert.equal(M.namesTitle('Body Language Paramount Guy', ['body language'], ['paramount with showtime']), false);
+    // end to end: the TVmaze record of the made-up show says its network is "Nowhere"
+    const files = range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i) }));
+    assert.equal(run(files, { title: 'Zork Show Nowhere Seasons 01-02' }).grid.selfListed, true, 'an upload titled with the show and its own network');
+    assert.equal(run(files, { title: 'Zork Show Elsewhere Seasons 01-02' }).grid.selfListed, undefined, 'not with another network');
+  });
   test('the fallback, the identifier rule and the sequence guess all use it', () => {
     // the fallback gate: an upload titled "Zork Show Jam" is not an upload of Zork Show, whatever its files are called
     const evidence = range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i) }));

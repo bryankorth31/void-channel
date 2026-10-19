@@ -132,7 +132,9 @@ function otherShowCores(text, show, aliases = [], list = OTHER_SHOWS) {
 }
 function namesOtherShow(text, show, aliases = [], list = OTHER_SHOWS) { return otherShowCores(text, show, aliases, list).length > 0; }
 // Other names a show goes by, for the matcher's own tests. catalog/overrides.json aliases (set from HQ) add to these.
-const BUILTIN_ALIASES = { 'forensic-files': ['Medical Detectives'] }; // Forensic Files began as Medical Detectives; both are on the list
+const BUILTIN_ALIASES = {
+  'forensic-files': ['Medical Detectives'], // Forensic Files began as Medical Detectives; both are on the list
+};
 
 const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')) : {};
 // Re-read per show: HQ rewrites the file while long matches run, and a decision made mid-run should count.
@@ -157,30 +159,32 @@ function nameRe(core) {
   r.lastIndex = 0;
   return r;
 }
-function closesName(rest) {
+function closesName(rest, nets = []) {
   const run = /^[^a-z0-9]*/.exec(rest)[0];
   if (run.length === rest.length) return true; // the name ends the text
   const gap = run.replace(/_/g, ' ');
   if (NAME_SEP.test(gap) || NAME_DASH.test(gap)) return true; // a separator follows it
   const toks = rest.slice(run.length).split(/[^a-z0-9]+/).filter(Boolean);
+  for (const net of nets) { const w = net.split(' '); if (w.length && w.every((x, k) => toks[k] === x)) return true; } // "Dimension 20 Dropout": the show's own network after its name
   let i = 0;
   while (i < 2 && i < toks.length - 1 && NAME_FILLER.has(toks[i])) i++;
   return NAME_TAIL.test(toks[i]) || (/^(?:s|e|\d+x)$/.test(toks[i]) && /^\d+$/.test(toks[i + 1] || '')); // "S 2", "1x 4": SxxEyy written with a space
 }
-// cores: the show's normalised name (without a leading "the") and its normalised aliases.
+// cores: the show's normalised name (without a leading "the") and its normalised aliases. nets: the show's own network or web channel, normalised, from its TVmaze record
+// (never any other network): it may follow the name like a separator, so "Dimension 20 Dropout" names Dimension 20.
 // 'names': the name stands as whole words and closes; 'longer': the name is there as whole words but only ever runs on into another word (a longer title); 'none'.
-function titleNaming(text, cores) {
+function titleNaming(text, cores, nets = []) {
   const t = String(text == null ? '' : text).toLowerCase().replace(/&/g, ' and ').replace(/['\u2019`]/g, '');
   let found = false;
   for (const core of cores || []) {
     if (!core) continue;
     const re = nameRe(core);
     let m;
-    while ((m = re.exec(t))) { found = true; if (closesName(t.slice(m.index + m[0].length))) return 'names'; if (m[0].length === 0) re.lastIndex++; }
+    while ((m = re.exec(t))) { found = true; if (closesName(t.slice(m.index + m[0].length), nets)) return 'names'; if (m[0].length === 0) re.lastIndex++; }
   }
   return found ? 'longer' : 'none';
 }
-const namesTitle = (text, cores) => titleNaming(text, cores) === 'names';
+const namesTitle = (text, cores, nets) => titleNaming(text, cores, nets) === 'names';
 
 // ---- The self-list fallback: what it may take, and why the strict pass turned files away ----
 // Every episode-band file the strict loop sees gets one tag:
@@ -268,6 +272,7 @@ function decideGrid(entry, cand, tv, ctx) {
   if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, cand, aliases); return sg || { show, type: entry.type, network: entry.network, noTvmaze: true }; }
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const core = norm(show).replace(/^the /, '');
+  const nets = typeof tv.network === 'string' && norm(tv.network) ? [norm(tv.network)] : []; // the show's own network, for the title test
   const namesShow = (txt) => { const t = norm(txt); return t.includes(core) || aliases.some((a) => t.includes(a)); };
   const idNamesShow = (id) => { const t = norm(id).replace(/ /g, ''); return t.includes(core.replace(/ /g, '')) || aliases.some((a) => t.includes(a.replace(/ /g, ''))); };
   const DEAD = (ctx.readDead || (() => ({})))();
@@ -284,7 +289,7 @@ function decideGrid(entry, cand, tv, ctx) {
     const itemNamesMe = norm(itemText).includes(core) || norm(item.id).includes(core.replace(/ /g, ''));
     const itemNamesOther = namesOtherShow(item.title || '', show, aliases);
     const itemTitled = namesShow(item.title || '') || idNamesShow(item.id); // the upload itself says it is this show
-    const itemLonger = titleNaming(item.title || '', [core, ...aliases]) === 'longer'; // its title runs on into a longer title ("Naruto Shippuden"): an episode name that merely looks alike proves nothing
+    const itemLonger = titleNaming(item.title || '', [core, ...aliases], nets) === 'longer'; // its title runs on into a longer title ("Naruto Shippuden"): an episode name that merely looks alike proves nothing
     const unmatched = []; // episode-band files this item could not place by number or title
     for (const f of item.files) {
       // Files hunted before the show had a TVmaze runtime carry generic bands (half-hour, hour); re-band them now that we know the runtime.
@@ -352,7 +357,7 @@ function decideGrid(entry, cand, tv, ctx) {
     // If the ITEM names the show, holds 5+ unplaced episode-length files and no other show, offer
     // them in natural order as consecutive episodes of the season the item title suggests
     // (volume/season N, else 1) at REVIEW confidence. A human confirms with a glance.
-    const titleNamesMe = namesTitle(item.title || '', [core, ...aliases]); // the upload's TITLE names the show (an identifier does not)
+    const titleNamesMe = namesTitle(item.title || '', [core, ...aliases], nets); // the upload's TITLE names the show (an identifier does not)
     if (titleNamesMe && !itemNamesOther && unmatched.length >= 5 && !REACT.test(item.title || '') && !langRisk(item.title)) {
       const m = /\b(?:season|series|volume|vol\.?)\s*(\d{1,2}|one|two|three|four|five|six|seven|eight|nine|ten)\b/i.exec(item.title || '');
       const words = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
@@ -395,7 +400,7 @@ function decideGrid(entry, cand, tv, ctx) {
   const pool = cand.items.reduce((n, it) => n + it.files.filter((f) => f.band !== 'block' && f.band !== 'odd').length, 0);
   if (placed * 6 < pool && pool >= 20 && dateRejected < pool / 2) {
     const whyNot = (f, item) => rejectionTag({ other: namesOtherShow(f.name, show, aliases) || (!namesShow(f.name) && namesOtherShow(item.title || '', show, aliases)), react: REACT.test(tagText(f.name)) || REACT.test(tagText(item.title || '')), foreign: langRisk(f.name) || langRisk(item.title), notNamed: !namesShow(f.name) && !(namesShow(item.title || '') || idNamesShow(item.id)) });
-    const sg = selfGrid(entry, fallbackCand(cand, tags, { tv, namesTitle: (t) => namesTitle(t, [core, ...aliases]), cores: [core, ...aliases], whyNot }), aliases);
+    const sg = selfGrid(entry, fallbackCand(cand, tags, { tv, namesTitle: (t) => namesTitle(t, [core, ...aliases], nets), cores: [core, ...aliases], whyNot }), aliases, nets);
     const sgPlaced = sg ? sg.seasons.reduce((n, se) => n + se.episodes.length, 0) : 0;
     if (sgPlaced >= Math.max(20, placed * 3)) { sg.tvmazeWeak = { id: tv.id, name: tv.name, placed }; return sg; }
   }
@@ -412,12 +417,12 @@ function decideGrid(entry, cand, tv, ctx) {
 // No TVmaze entry (web series, one-off documentaries, local shows): list the show from its own files.
 // Only uploads that NAME the show count; S/E in filenames sets the order, the rest follow in name
 // order as season 1. Everything is REVIEW: honest about where the order came from.
-function selfGrid(entry, cand, aliases) {
+function selfGrid(entry, cand, aliases, nets = []) {
   const show = entry.name;
   const core = norm(show).replace(/^the /, '').replace(/\(.*?\)/g, '').trim();
   if (core.length < 5 && core.split(' ').length < 2 && !aliases.length) return null; // 'Bu', 'Oz': too short a name to trust inside other titles
   const cores = [core, ...aliases];
-  const names = (t) => namesTitle(t, cores); // whole words, and the name must close (see namesTitle)
+  const names = (t) => namesTitle(t, cores, nets); // whole words, and the name must close (see namesTitle)
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const items = cand.items.map((item) => {
     const t = norm(item.title || ''), idn = norm(item.id).replace(/ /g, '');
