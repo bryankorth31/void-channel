@@ -179,6 +179,16 @@ async function main() {
     if (data.shows.length < 300) add('build', 'red', 'the site would ship with only ' + data.shows.length + ' titles', 'Something emptied the catalog; check git status in catalog/.');
     else if (nulls) add('build', 'red', nulls + ' TV channel items point at no show', 'buildChannels index drift; re-run node scripts/site.js and look at the error.');
     else add('build', 'green', `${data.shows.length} titles, ${data.channels.length} channels, home order ${data.homeOrder.length} shelves`);
+    // The page itself must carry the guards the audit asked for: a show that fails to load ends in a card, not a spinner
+    // (SP-006), the player is kept across episodes (SP-020), a leftover player cannot start after the page is left, and saves of Mine
+    // are merged, not overwritten (SP-012).
+    try {
+      const html = require('./lib/app').page({ data, mode: 'split', routes: 'path', base: '/' });
+      const need = ['async function fetchJson', 'This show did not load.', 'Your session ended.', 'That show is not here any more.', 'function swapEpisode', 'function meSync', 'p._token=(p._token||0)+1'];
+      const gone = need.filter((s) => !html.includes(s));
+      if (gone.length) add('page-guards', 'red', 'the page that would ship is missing: ' + gone.join(', '), 'Someone changed scripts/lib/app.js and dropped a guard. Look at git log -p scripts/lib/app.js and put it back; node --test tests/app-fetch.test.js tests/app-me.test.js tests/app-view.test.js says which.');
+      else add('page-guards', 'green', 'the page carries the show-load cards, the kept player, the leave-during-lookup guard and the safe save of Mine');
+    } catch (e) { add('page-guards', 'yellow', 'could not render the page to check it: ' + String(e.message).slice(0, 80)); }
   } catch (e) { add('build', 'red', 'assemble() threw: ' + e.message.slice(0, 120), 'The page cannot be built; the last error line names the file.'); }
 
   // 5b. shrink: the show count now against the one the last publish went out with (audit CF-018). Red when down more than 10 percent,
@@ -224,6 +234,18 @@ async function main() {
       } catch (e) { /* no origin/master on this PC: the commit comparison is skipped */ }
       try { for (const c of await guards.liveLights({ base: PROFILE.domain, versionTextBody: liveText, doFetch: fetch, remote, nowMs: Date.now() })) add(c.id, c.level, c.msg, c.fix); }
       catch (e) { add('live:site', 'yellow', 'could not check the live site: ' + String(e.message).slice(0, 80)); }
+    }
+    // Pages answers a path it has no file for with the home page and status 200 (audit SP-006, SP-043), so r.ok never fails for a
+    // missing file. The page copes (fetchJson in scripts/lib/app-fetch.js); this light only reports what the host does. Both probes
+    // use made-up names. /data/* sits behind the password gate, so there a 401 is all that can be seen from here.
+    {
+      const probe = async (p) => { try { const r = await fetch(PROFILE.domain + p, { redirect: 'manual', signal: AbortSignal.timeout(15000) }); return { status: r.status, type: (r.headers.get('content-type') || '').split(';')[0].trim().toLowerCase() }; } catch (e) { return { err: String(e.message).slice(0, 60) }; } };
+      const a = await probe('/assets/zz-check.png'), d = await probe('/data/shows/zz-check.json');
+      const say = (x) => (x.err ? 'unreachable (' + x.err + ')' : x.status + ' ' + (x.type || 'no type'));
+      const json200 = (x) => x.status === 200 && /json/.test(x.type);
+      if (json200(a) || json200(d)) add('live:missing-files', 'red', 'a file that does not exist came back as JSON: ' + say(a) + ' / ' + say(d), 'Something is serving made-up data for missing paths. Look at _redirects and functions/ in the last deploy.');
+      else if (a.err || d.err) add('live:missing-files', 'yellow', 'could not probe a missing file: ' + say(a) + ' / ' + say(d));
+      else add('live:missing-files', 'green', 'missing /assets file: ' + say(a) + '; missing /data file: ' + say(d) + (a.status === 200 && a.type === 'text/html' ? ' (the host answers with the home page; the page copes)' : ''));
     }
     const cfa = (env.match(/^CF_ANALYTICS_TOKEN=(.+)$/m) || [])[1];
     add('analytics', cfa ? 'green' : 'yellow', cfa ? 'analytics token present' : 'analytics not connected (no CF_ANALYTICS_TOKEN)', cfa ? undefined : 'HQ > Reports explains the two Cloudflare steps.');
