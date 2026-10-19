@@ -44,7 +44,7 @@ say out loud, with a plain `GATE` = `off`.
 - **Type `SITE_PASSWORD` as Text (plain text), not Secret,** or keep it a Secret and add a Text `GATE` = `on` beside it. The
   build log has a line starting `GATE:` that says which it saw, and `version.txt` records it (below).
 - **A Cloudflare build that stops with `GATE UNKNOWN` did the safe thing.** The old site stays up. Add the variable the
-  message names and Retry deployment.
+  message names and Retry deployment (not yet checked on screen).
 - **`--open` no longer exists.** It used to narrow the routes by hand while the variable said something else,
   and the two could disagree: the site came up open, with no password and no analytics. Passing it now fails the
   build at once (exit 2, message "--open no longer exists"), so an old build command is noticed and the old site
@@ -80,7 +80,7 @@ address, so the old www line never worked (audit F-004, CF-025).
 
 ## Opening day (whenever B says)
 
-Opening the site is two edits to the Production variables of the Pages project and one rebuild. Nothing opens it by itself. No script does it: the launch check only reads, and the build only follows the variables. The password stays on until step 5 below, and step 5 is yours.
+Opening the site is two edits to the Production variables of the Pages project and one rebuild. Nothing opens it by itself. No script does it: the launch check only reads, and the build only follows the variables. The password stays on until step 5 below, and step 5 is yours. Where a line carries the tag `(not yet checked on screen)`, that click, label or behavior could not be confirmed even from Cloudflare's own documentation: tick it off when you have seen it on the screen, and if the screen differs, tell the audit chat so this page is corrected.
 
 ### What the switch does
 
@@ -136,11 +136,11 @@ All paths start at dash.cloudflare.com. None of these changes what a visitor see
    - Then: Target URL `https://${1}`, Status code `301`, Preserve query string on.
    - Deploy.
 
-   (This is the "redirect www to root" example in Cloudflare's own documentation, so it keeps the path: `https://www.voidtv.net/show/seinfeld` goes to `https://voidtv.net/show/seinfeld`.)
+   (This is the "redirect www to root" example in Cloudflare's own documentation, so it should keep the path: `https://www.voidtv.net/show/seinfeld` goes to `https://voidtv.net/show/seinfeld` (not yet checked on screen). After you save the rule, run `curl.exe -sI https://www.voidtv.net/show/seinfeld` and look for that address in the `location:` line. The rule matches `https` addresses only.)
 
    Why it is needed: once the password is off, `_routes.json` keeps pages away from the Function, so the middleware's www redirect only sees `/api/*` and `/q/*`. Only this rule redirects the pages. The `www` DNS record must stay proxied (orange cloud) for a redirect rule to run. How to tell it worked: `curl.exe -sI https://www.voidtv.net/` starts with a line ending `301` and has `location: https://voidtv.net/`. (While the password is on, the middleware already does this redirect, so the check also passes before the rule exists; the rule is what keeps it working after opening day.) The doctor's `www` light wants the same answer.
 2. **HSTS.** Select the `voidtv.net` domain > SSL/TLS > Edge Certificates > HTTP Strict Transport Security (HSTS) > Enable HSTS > "I understand" > Next. Max age 12 months, leave "Apply HSTS policy to subdomains" off, leave Preload off, then Save. The site already sends `Strict-Transport-Security: max-age=31536000` itself (see "Security headers"); the zone setting also covers answers Cloudflare gives without Pages, such as the redirect rule above. How to tell it worked: the Edge Certificates page shows HSTS as enabled. The doctor's `headers` light is yellow when only HSTS is missing.
-3. **Rate limit /api/e.** Select the `voidtv.net` domain > Security rules > Create rule > Rate limiting rules. The free plan allows one rule, which is this one.
+3. **Rate limit /api/e.** Select the `voidtv.net` domain > Security rules > Create rule > Rate limiting rules. The free plan allows one rule, which is this one, and 10 seconds is the period and the block time it offers (not yet checked on screen). If the form refuses the numbers below, tell the audit chat.
    - Rule name: `api e flood`
    - When incoming requests match: Field `URI Path`, operator `equals`, value `/api/e`
    - With the same characteristics: `IP`
@@ -149,10 +149,10 @@ All paths start at dash.cloudflare.com. None of these changes what a visitor see
    - Deploy.
 
    How to tell it worked: the rule is listed as enabled. `/api/e` also refuses, by itself, any request that does not carry `Sec-Fetch-Site: same-origin` (or `same-site`), any body over 16 KB, and any event whose show, episode, view or session id has the wrong shape (audit CF-013). A browser from before Safari 16.4 does not send that header, so its visits are not counted in analytics.
-4. **Email when a deploy fails.** A failed build leaves the old site up and says nothing, so ask Cloudflare to tell you: Notifications > Add > Workers and Pages (Cloudflare's own notification list names the entry Pages, under the heading Project updates; pick the one for Pages projects). Filter to the project `voidtvsite`, the Production environment and the event Deployment failed, and send it to your own email address. How to tell it worked: the notification is listed. (The list also offers Deployment started and Deployment success; leave those off or you will get an email for every push.)
+4. **Email when a deploy fails.** A failed build leaves the old site up and says nothing, so ask Cloudflare to tell you: Notifications > Add > Workers and Pages (not yet checked on screen). Cloudflare's own notification list names the entry Pages, under the heading Project updates; pick the one for Pages projects. Filter to the project `voidtvsite`, the Production environment and the event Deployment failed (not yet checked on screen), and send it to your own email address. How to tell it worked: the notification is listed. (The list also offers Deployment started and Deployment success; leave those off or you will get an email for every push.)
 5. **Previews.** Workers & Pages > `voidtvsite` > Settings > Builds > Branch control > Preview branch: choose None (Disable automatic branch deployments). Without this, a push to any other branch could publish a copy of the site with no password at a guessable address. (`GATE` in the Production list does not protect previews: the Preview list has its own variables.) How to tell it worked: Preview branch reads None. A voidtv.net build that sees neither variable is refused in Preview as in Production.
 6. **The Production variables.** Workers & Pages > `voidtvsite` > Settings > Variables and Secrets, Production list. What must be there, and how to tell:
-   - `SITE_PASSWORD`, type Text (its value can be read in the list), or a Secret with a Text `GATE` = `on` beside it. The build cannot see a Secret.
+   - `SITE_PASSWORD`, type Text (not yet checked on screen), whose value can be read in the list, or a Secret with a Text `GATE` = `on` beside it. Cloudflare's own pages call the Text type plaintext. The build cannot see a Secret.
    - `GATE_KEY` (a Secret is fine: only the running gate reads it).
    - `NODE_VERSION` = `24`.
    - No `SITE_ALLOW_SHRINK` (it is set for one deliberate shrink and deleted again).
@@ -164,16 +164,16 @@ All paths start at dash.cloudflare.com. None of these changes what a visitor see
 Each step says how to tell it worked. If a step does not work, stop there: nothing later depends on guessing.
 
 1. **Run the launch check:** `node scripts/launch-check.js`. It worked when the line that starts `Verdict:` says GO and the exit code is 0 (the verdict is followed by a few lines of notes). If it says NO-GO, stop: each NO-GO row says what to do by hand, then run it again. If row 2 says the doctor result is old, run `node scripts/launch-check.js --fresh`. Then look yourself at the two things it does not check: the playback pause rate in Sentry against the target, and the catalog standard.
-2. **Confirm Workers Paid is on.** Open the account's Billing page in the dashboard and check that Workers Paid is listed as active. It worked when you can see it there. Why: with the password off, `/api/e` and `/q/*` still run as Functions, and without Workers Paid they would stop at the free daily limit (the pages would not). With it, 10 million Function requests a month are included, then 0.30 dollars per million.
-3. **Confirm `GATE_KEY` is set.** Settings > Variables and Secrets, Production list: the name `GATE_KEY` is listed (a Secret shows only its name). It matters if you ever put the password back: the cookie the gate hands out is then a signed value you can rotate (change the key to sign everyone out) instead of a plain hash of the password. If it is missing, add it as a Secret with a long random value you make up and keep only there. A changed variable is picked up by the next build, which is step 6.
+2. **Confirm Workers Paid is on.** Open the account's Billing page in the dashboard and check that Workers Paid is listed as active (not yet checked on screen). The page name and where the plan shows are not confirmed. It worked when you can see it there. Why: with the password off, `/api/e` and `/q/*` still run as Functions, and without Workers Paid they would stop at the free daily limit (the pages would not). With it, 10 million Function requests a month are included, then 0.30 dollars per million.
+3. **Confirm `GATE_KEY` is set.** Settings > Variables and Secrets, Production list: the name `GATE_KEY` is listed (a Secret shows only its name). It matters if you ever put the password back: the cookie the gate hands out is then a signed value you can rotate (change the key to sign everyone out) instead of a plain hash of the password. If it is missing, add it as a Secret with a long random value you make up and keep only there. A changed variable is picked up by the next build, which is step 6 (not yet checked on screen). Cloudflare's pages say a binding needs a redeploy and do not say it for plain variables.
 4. **Say go.** Nothing below happens until you do. First make sure setup steps 1 to 6 above are done (the www rule, HSTS, the rate-limit rule, the failure email, previews off and the Production variables): the launch check cannot see the Cloudflare dashboard, so it says GO whether or not they are. Make sure `https://voidtv.net/version.txt` still shows `gate=on` and the launch check was run on the same day.
 5. **Open the site.** Settings > Variables and Secrets, Production list:
    - delete `SITE_PASSWORD` (a Secret too);
    - delete `GATE` if it is there as `on`;
-   - add a variable of type **Text** named `GATE` with the value `off`.
+   - add a variable of type **Text** (not yet checked on screen) named `GATE` with the value `off`.
 
-   Both halves are needed. Deleting the password alone does not open the site: the build sees neither variable, stops with `GATE UNKNOWN`, and the old gated site stays up. Adding `GATE` = `off` while the password is still there also stops the build ("GATE=off but SITE_PASSWORD is also set"). It worked when the list shows `GATE` = `off` and no `SITE_PASSWORD`. Visitors still see the password page: nothing changes until the rebuild.
-6. **Rebuild.** Deployments > the newest production deployment > its actions menu > Retry deployment. (If that item is not there, push any commit to `master`: Cloudflare builds on every push. Push only on your word.) It takes about a minute. It worked when the deployment shows success and its build log has the line `GATE: off (GATE=off was set on purpose). The site will be OPEN`. If the build stops with `GATE UNKNOWN` or "GATE=off but SITE_PASSWORD is also set", do what the message says; the old gated site is still up and nothing was lost.
+   Both halves are needed. Deleting the password alone does not open the site: the build sees neither variable, stops with `GATE UNKNOWN`, and the old gated site stays up. Adding `GATE` = `off` while the password is still there also stops the build ("GATE=off but SITE_PASSWORD is also set"). It worked when the list shows `GATE` = `off` and no `SITE_PASSWORD`. Visitors still see the password page: nothing changes until the rebuild (not yet checked on screen). See step 3.
+6. **Rebuild.** Deployments > the newest production deployment > its actions menu > Retry deployment (not yet checked on screen). (If that item is not there, push any commit to `master`: Cloudflare builds on every push. Push only on your word.) It takes about a minute. It worked when the deployment shows success and its build log has the line `GATE: off (GATE=off was set on purpose). The site will be OPEN`. If the build stops with `GATE UNKNOWN` or "GATE=off but SITE_PASSWORD is also set", do what the message says; the old gated site is still up and nothing was lost.
 7. **Confirm the site says so.** About two minutes after the deploy goes live:
    - Open `https://voidtv.net/version.txt` (or `curl.exe -s https://voidtv.net/version.txt`). Line 2 must start `gate=off`, and the first word must equal the start of `git ls-remote origin master`.
    - Open `https://voidtv.net/` in a private window: no password page.
@@ -196,7 +196,7 @@ Each step says how to tell it worked. If a step does not work, stop there: nothi
    - `curl.exe -sI https://voidtv.net/` : the first line ends `200` and the headers include `strict-transport-security`, `x-frame-options: DENY`, `x-content-type-options: nosniff`, `referrer-policy`, `permissions-policy` and `content-security-policy-report-only`.
 
    (In PowerShell, plain `curl` is a different command; type `curl.exe`.) It worked when you see those lines. If the www answer is not a 301, setup step 1 is not done. The Content-Security-Policy is report-only: it blocks nothing, and a browser lists what it would have blocked under F12 > Console.
-9. **Run the launch check again:** `node scripts/launch-check.js`. It worked when row 7 reads `gate=off: the site is OPEN (front page 200, /api/e 200), and every required row is GO` and the line that starts `Verdict:` says GO. If only row 3 is NO-GO, that is usually the two-hourly publish having pushed a new commit that Cloudflare is still building: wait two minutes and run it again. If any other required row is NO-GO now, row 7 is NO-GO too: the site is open on a failing check, so close it (next section) and fix the row.
+9. **Run the launch check again:** `node scripts/launch-check.js`. It worked when row 7 reads `gate=off: the site is OPEN (front page 200, /api/e 200), and no required row is NO-GO` and the line that starts `Verdict:` says GO. If only row 3 is NO-GO, that is usually the two-hourly publish having pushed a new commit that Cloudflare is still building: wait two minutes and run it again. If any other required row is NO-GO now, row 7 is NO-GO too: the site is open on a failing check, so close it (next section) and fix the row.
 10. **Watch for 48 hours before any promo.** Promo videos start only after 48 hours with the site open and no red row.
     - Sentry (organisation `church-of-american-strength-ho`, project `voidtv`): new issues named "Playback trouble: <show>", and the pause rate against the target.
     - Analytics: HQ > Analytics and HQ > Reports. Events keep arriving all day; a day with none while the site is open means the intake stopped (launch check row 5 says WARN for it). Reports lists what viewers flagged with "Wrong file?".
@@ -209,8 +209,8 @@ There are two ways. Use the first to make the site private again. Use the second
 
 **A. Put the password back (a new build, certain).**
 
-1. Settings > Variables and Secrets, Production list: add `SITE_PASSWORD` (type Text) with the password. Delete `GATE`, or set it to `on`. (The same password and the same `GATE_KEY` keep every earlier visitor's 30-day cookie valid.)
-2. Rebuild: Deployments > the newest production deployment > actions menu > Retry deployment (or push; push only on your word).
+1. Settings > Variables and Secrets, Production list: add `SITE_PASSWORD` as type Text (not yet checked on screen) with the password. Delete `GATE`, or set it to `on`. (The same password and the same `GATE_KEY` keep every earlier visitor's 30-day cookie valid.)
+2. Rebuild: Deployments > the newest production deployment > actions menu > Retry deployment (not yet checked on screen), or push; push only on your word.
 3. It worked when line 2 of `https://voidtv.net/version.txt` starts `gate=on`, `curl.exe -sI https://voidtv.net/` answers 401, and the doctor's `gate` light is green. Run `node scripts/launch-check.js`: row 7 reads `gate=on and the front page answers 401`.
 
 **B. Roll back to the previous good deployment (instant, no build).**
@@ -218,7 +218,7 @@ There are two ways. Use the first to make the site private again. Use the second
 1. Workers & Pages > `voidtvsite` > Deployments > All deployments.
 2. Find the last deployment that worked: look at its time and commit. Only production deployments that built successfully can be chosen.
 3. Open its actions menu (the three dots) > Rollback to this deployment > confirm.
-4. It worked when `https://voidtv.net/version.txt` starts with that deployment's commit. Then check the gate: line 2 says `gate=on` or `gate=off` as that old build was made, and the front page must agree (`gate=on` answers 401, `gate=off` answers 200 with `curl.exe -sI https://voidtv.net/`). The Cloudflare page on rollbacks does not say whether a rolled-back build runs with the password variables it had then or the ones set now. If the two disagree, or the site is open and you want it closed, do A.
+4. It worked when `https://voidtv.net/version.txt` starts with that deployment's commit. Then check the gate: line 2 says `gate=on` or `gate=off` as that old build was made, and the front page must agree (`gate=on` answers 401, `gate=off` answers 200 with `curl.exe -sI https://voidtv.net/`). The Cloudflare page on rollbacks does not say whether a rolled-back build runs with the password variables it had then or the ones set now (not yet checked on screen). If the two disagree, or the site is open and you want it closed, do A.
 
 What to know about B:
 
@@ -288,7 +288,7 @@ open (home, a show, play an episode, search, the TV channel, the password page),
   `catalog/cache/publish-state.json`; on a Cloudflare build (which has no cache folder) it is the live `https://voidtv.net/version.txt`.
   A drop that is meant needs **two overrides**, because publish and the Cloudflare build each check it: `node scripts/publish.js --allow-shrink`
   lets the push go out, and then a plain Text variable `SITE_ALLOW_SHRINK` = `1` (Production list) must be set for that one deploy
-  (Retry deployment), and deleted again afterwards. With only the first, the push goes through and the build is refused;
+  (Retry deployment) (not yet checked on screen), and deleted again afterwards. With only the first, the push goes through and the build is refused;
 - 19,500 files or more (Pages refuses 20,000), or any file over 24 MiB (Pages refuses 25 MiB). The output folder is deleted so
   nothing half-built can be deployed by hand.
 

@@ -419,6 +419,16 @@ test('the printed table names which rows are required, says it only reads, and k
   assert.match(freshLines, /It ran the quick doctor first, which rewrote catalog\/cache\/health\.json as the doctor always does\./);
   assert.match(lines, /playback pause rate in Sentry/);
   assert.match(lines, /the Cloudflare dashboard \(docs\/DEPLOY\.md, setup steps 1 to 6\)/);
+  // the known gaps nobody covers (comparer's gap list: criteria 3, 4, 7 and 9), each with the DEPLOY.md place if there is one
+  assert.match(lines, /Not covered by any check yet, here or by hand \(known gaps\):/);
+  assert.match(lines, /something outside this PC that watches version\.txt against origin\/master \(nothing covers it\)/);
+  assert.match(lines, /a counter of Cloudflare builds against the plan's monthly limit \(nothing counts them; setup step 4 only emails you about a failed build\)/);
+  assert.match(lines, /a rehearsed rollback \(docs\/DEPLOY\.md, "Rollback and closing the site again", says it has not been tried\)/);
+  assert.match(lines, /analytics volume against the plan's ceiling \(step 10 watches that events arrive; nothing compares the count with the ceiling\)/);
+  assert.match(lines, /the kids site gate page and intake, checked live after its merge \(nothing covers it; CF-009 keeps row 1 NO-GO until then\)/);
+  assert.ok(lines.indexOf('Verdict:') < lines.indexOf('known gaps'), 'the gaps come after the verdict, with the other notes');
+  assert.ok(row(LC.evaluate(openSite()), 7).text.endsWith('and no required row is NO-GO'), 'row 7 does not claim every required row is GO when one is only a WARN');
+  assert.ok(!/every required row is GO/.test(row(LC.evaluate(openSite({ analytics: { events: 0 } })), 7).text));
   assert.match(lines, /docs\/DEPLOY\.md/);
   const bad = LC.render(LC.evaluate({ ...good(), backup: { error: 'none' } }), { nowMs: NOW }).join('\n');
   assert.match(bad, /By hand: [\s\S]*backup-cache\.js/, 'a NO-GO row prints its by-hand fix');
@@ -782,5 +792,18 @@ test('no em dash in the files this piece wrote, and the opening-day section name
   assert.match(doc, /flagged launch-blocking/);
   assert.ok(!/It changes nothing and cannot open/.test(doc), 'with --fresh the doctor rewrites health.json');
   assert.match(doc, /the one thing that writes is `--fresh`/);
+  // dashboard clicks and labels nobody has seen on the screen carry one short tag, explained once at the top of "Opening day"
+  const TAG = '(not yet checked on screen)';
+  const opening = doc.slice(doc.indexOf('## Opening day'));
+  assert.ok(opening.slice(0, 1200).includes('Where a line carries the tag `' + TAG + '`'), 'the tag is explained at the top of Opening day');
+  assert.match(opening.slice(0, 1200), /tick it off when you have seen it on the screen/);
+  const tagged = (needle) => doc.split(/\r?\n/).filter((l) => l.includes(needle)).every((l) => l.includes(TAG));
+  for (const needle of ['> Retry deployment', 'Open the account\'s Billing page', 'whether a rolled-back build runs with the password variables', 'Notifications > Add', 'A changed variable is picked up by the next build', 'The free plan allows one rule', 'so it should keep the path', 'add a variable of type **Text**', 'type Text (not yet', 'as type Text (not yet']) {
+    assert.ok(doc.includes(needle), 'the doc still has: ' + needle);
+    if (needle.endsWith('(not yet')) continue; // the two type-name places are checked by the next lines
+    assert.ok(tagged(needle), 'the line with "' + needle + '" carries the tag ' + TAG);
+  }
+  assert.ok(doc.split(/\r?\n/).filter((l) => /Retry deployment/.test(l)).every((l) => l.includes(TAG)), 'every Retry deployment carries the tag');
+  assert.ok(!/\(not yet checked on screen[;:,]/.test(doc), 'the tag is written one way everywhere');
   assert.match(doc, /a HEAD on `https:\/\/voidtv\.net\/` and, for `gate=off`, a GET on `\/api\/e`/);
 });

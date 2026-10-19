@@ -254,7 +254,7 @@ function rowGate(live, site, others) {
   if (v.gate === 'on') { const row = r(GO, 'gate=on and the front page answers 401, the password page: the site is private, as it must be until you open it'); row.detail = [needs]; return row; }
   const bad = others.filter((x) => x.status === NOGO);
   if (bad.length) return r(NOGO, `gate=off: the site is OPEN (front page ${site.rootStatus}, /api/e ${site.apiStatus}) while ${bad.length === 1 ? 'row' : 'rows'} ${bad.map((x) => x.n).join(', ')} ${bad.length === 1 ? 'is' : 'are'} NO-GO. The site must not be open on a failing check`, { fix: 'Close it now: add SITE_PASSWORD (type Text) and delete GATE (or set it to on), then retry the deployment. docs/DEPLOY.md, "Rollback and closing the site again". Then fix the NO-GO rows.' });
-  return r(GO, `gate=off: the site is OPEN (front page ${site.rootStatus}, /api/e ${site.apiStatus}), and every required row is GO`);
+  return r(GO, `gate=off: the site is OPEN (front page ${site.rootStatus}, /api/e ${site.apiStatus}), and no required row is NO-GO`);
 }
 
 function evaluate(inputs) {
@@ -306,6 +306,12 @@ function render(result, ctx) {
   out.push('  - the playback pause rate in Sentry (org church-of-american-strength-ho, project voidtv) against the target;');
   out.push('  - the catalog standard (the report you were shown) and the System check page in HQ;');
   out.push('  - the Cloudflare dashboard (docs/DEPLOY.md, setup steps 1 to 6) and the doctor\'s www, headers and live:missing-files lights (steps 7 and 8).');
+  out.push('Not covered by any check yet, here or by hand (known gaps):');
+  out.push('  - something outside this PC that watches version.txt against origin/master (nothing covers it);');
+  out.push('  - a counter of Cloudflare builds against the plan\'s monthly limit (nothing counts them; setup step 4 only emails you about a failed build);');
+  out.push('  - a rehearsed rollback (docs/DEPLOY.md, "Rollback and closing the site again", says it has not been tried);');
+  out.push('  - the day\'s analytics volume against the plan\'s ceiling (step 10 watches that events arrive; nothing compares the count with the ceiling);');
+  out.push('  - the kids site gate page and intake, checked live after its merge (nothing covers it; CF-009 keeps row 1 NO-GO until then).');
   out.push('When every row is GO and you say so: docs/DEPLOY.md, "Opening day", has the steps and the rollback.');
   return out.map((l) => scrub(l, secrets));
 }
