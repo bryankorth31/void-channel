@@ -18,6 +18,9 @@
 //     published counts (kept in catalog/cache/publish-state.json), when a catalog .json file does not
 //     parse, or when the staged diff adds an address-shaped or token-shaped string. --allow-shrink lets a
 //     real shrink through.
+//   * Every Catalog commit it makes also carries catalog/count.json ({"shows": N, "episodes": M}), written only when the
+//     numbers change. scripts/site.js reads it on the Cloudflare build, which cannot see catalog/cache/publish-state.json,
+//     and refuses a build more than 10% smaller (audit CF-018).
 //   * The commit takes the files as they are at commit time, so the commit itself is checked again (every .json in
 //     it parses, nothing added carries an address or token). On a hit the commit is undone and nothing is pushed.
 //   * An option it does not know (--dry-run, --root=DIR) is refused with exit 2, never ignored.
@@ -297,12 +300,23 @@ function main() {
 
   const msg = `Catalog: ${shows} shows, ${eps} episodes (${changed.length} files)`;
   if (DRY) { log(`would commit ${changed.length} files: ${msg}`); unstage(); return pushStep(null, 1) === 'failed' ? 1 : 0; }
-  try { git(['commit', '-q', '-m', msg, '--', ...SPEC]); } catch (e) { unstage(); log('FAILED: ' + why(e)); return 1; }
+  // catalog/count.json: the counts this commit goes out with, committed beside the catalog so the Cloudflare build (which cannot see
+  // catalog/cache/publish-state.json) can refuse a build more than 10% smaller (scripts/site.js, audit CF-018). Written only when the
+  // numbers change, and added after the file list above so the commit message's file count is unchanged.
+  const COUNT_FILE = path.join(PROFILE.catalogDir, 'count.json'), countText = JSON.stringify({ shows, episodes: eps }) + '\n';
+  let countBefore = null; try { countBefore = fs.readFileSync(COUNT_FILE, 'utf8'); } catch (_) {}
+  const putCountBack = () => { try { if (countBefore === null) fs.rmSync(COUNT_FILE, { force: true }); else fs.writeFileSync(COUNT_FILE, countBefore); } catch (_) {} }; // when the commit does not happen, the file goes back as it was
+  if (countBefore !== countText) {
+    try { fs.writeFileSync(COUNT_FILE, countText); git(['add', '--', rel(COUNT_FILE)]); }
+    catch (e) { unstage(); putCountBack(); log('FAILED: could not write catalog/count.json: ' + why(e)); return 1; }
+  }
+  try { git(['commit', '-q', '-m', msg, '--', ...SPEC]); } catch (e) { unstage(); putCountBack(); log('FAILED: ' + why(e)); return 1; }
   // The commit took the files as they are now, not as they were scanned. Check the commit itself before anything leaves this PC.
   let hash, problem;
   try { hash = git(['rev-parse', 'HEAD']).trim(); problem = problemInCommit(hash); } catch (e) { problem = `the commit could not be checked (${why(e)})`; }
   if (problem) {
     try { git(['reset', '--soft', 'HEAD~1']); } catch (e) { log(`FAILED: the new commit ${String(hash).slice(0, 9)} is not safe to publish (${problem}) and could not be undone (${why(e)}); it was not pushed`); return 1; }
+    putCountBack();
     return refuse(`${problem}; the commit was undone and nothing was pushed`);
   }
   return pushStep({ shows, eps }) === 'failed' ? 1 : 0;
