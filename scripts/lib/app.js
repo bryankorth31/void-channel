@@ -574,7 +574,8 @@ function finder(){const series=VIS().filter(t=>!t.slug.startsWith('movie-'));con
  const pills=(key,list)=>'<span class="pills">'+list.map(([v,c])=>'<span class="chip'+(state[key]===v?' on':'')+'" onclick="state.'+key+'=\\''+esc(v)+'\\';render();window.scrollTo(0,0)">'+esc(v)+(c?'<small>'+c+'</small>':'')+'</span>').join('')+'</span>';
  const genres=tally('genres').filter(([g])=>!SKIP_GENRES.has(g)).slice(0,14);const nets=tally('network').filter(([,c])=>c>=4).slice(0,16);const decs=[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,series.filter(t=>decade(t.year)===d).length]).filter(x=>x[1]);
  return '<div class="finder"><div class="frow"><span class="lbl">Genre</span>'+pills('genre',genres)+'</div><div class="frow"><span class="lbl">Network</span>'+pills('network',nets)+'</div><div class="frow"><span class="lbl">Decade</span>'+pills('decade',decs)+'</div></div>'}
-function heroPool(){if(state.heroPool)return state.heroPool;const ok=SHOWS.filter(t=>t.backdrop&&t.overview&&!t.slug.startsWith('movie-')&&!hidden(t)&&!gated(t)&&t.eps>=6);
+function heroPool(){if(state.heroPool)return state.heroPool;const ok=SHOWS.filter(t=>t.backdrop&&t.overview&&!t.slug.startsWith('movie-')&&!hidden(t)&&!gated(t)&&t.eps>=6&&t.type!=='Classic TV'&&!(parseInt(t.year,10)<1980));
+ // no oldies in the showcase (Bryan, 19 Oct 2026): the Classic TV row and shows that started before 1980 stay out of all three decks; they keep their own rows
  // three decks: the well-known (rated and deep), the cult (deep but under-rated), the shelves (two from every row and collection); dealt popular-first, then interleaved
  const QUIET=new Set(['World TV','Anime','Reality & Talk','Late Night','Internet Comedy','Classic TV']);const main=ok.filter(t=>!QUIET.has(t.type));
  const byR=main.filter(t=>t.rating>=7&&t.eps>=10).sort((a,b)=>b.rating-a.rating||b.eps-a.eps);const popular=byR.slice(0,80);const pop=new Set(popular);
