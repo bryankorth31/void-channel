@@ -17,19 +17,29 @@ function world(opts = {}) {
   const core = VoidCore.create({ emit: (e) => events.push(e), act: (a) => actions.push(a), config: opts.config });
   const w = { core, events, actions, now: 1000, t: 0, frames: 0, paused: false, seeking: false, ended: false, hidden: false, hasVideo: true, ahead: 20, useFrames: opts.useFrames !== false, rvfc: !!opts.rvfc };
   w.load = (srcs = SOURCES, at = 0) => { core.load(srcs, at, w.now, true); };
+  // A modelled buffer for the buffer-watch tests: set w.bufEnd (where the buffered range ends) and w.fill (seconds of
+  // video the download adds per second; 0 = the server hangs). Then ahead follows from the playhead, the playhead
+  // cannot pass the buffered end, and the core is also told the file's duration and the networkState. Left unset,
+  // ahead stays the fixed w.ahead and the buffer watch (which needs a duration) is off, as in the older tests.
+  w.bufEnd = null; w.fill = 0; w.duration = undefined; w.networkState = undefined;
   // Advance time. mode: 'play' (picture and sound move), 'freeze' (sound moves, no frames), 'stall' (nothing moves),
   // 'drift' (frames arrive but lag the sound by `lag` seconds; needs rvfc).
   w.run = (ms, mode = 'play', lag = 0) => {
     for (let x = 0; x < ms; x += 250) {
       w.now += 250;
-      if (!w.paused && !w.seeking && mode !== 'stall') w.t += 0.25;
-      if (!w.paused && !w.seeking && (mode === 'play' || mode === 'drift')) {
+      const buf = w.bufEnd != null;
+      if (buf) w.bufEnd += w.fill * 0.25;
+      const room = !buf || w.t + 0.25 <= w.bufEnd + 1e-9; // a playhead cannot pass the end of what is buffered
+      if (!w.paused && !w.seeking && mode !== 'stall' && room) w.t += 0.25;
+      if (!w.paused && !w.seeking && room && (mode === 'play' || mode === 'drift')) {
         w.frames += 6;
         if (w.rvfc) for (let k = 0; k < 6; k++) core.frame(w.t - lag - 0.03, w.t, w.now);
       }
-      core.sample({ now: w.now, t: w.t, paused: w.paused, seeking: w.seeking, ended: w.ended, ready: 4, hidden: w.hidden, hasVideo: w.hasVideo, frames: w.useFrames ? w.frames : undefined, dropped: 0, totalFrames: w.frames, ahead: w.ahead });
+      core.sample({ now: w.now, t: w.t, paused: w.paused, seeking: w.seeking, ended: w.ended, ready: 4, hidden: w.hidden, hasVideo: w.hasVideo, frames: w.useFrames ? w.frames : undefined, dropped: 0, totalFrames: w.frames, ahead: buf ? Math.max(0, w.bufEnd - w.t) : w.ahead, bufEnd: buf ? w.bufEnd : undefined, duration: w.duration, networkState: w.networkState });
     }
   };
+  // A buffer that keeps pace with playback, `lead` seconds ahead (the usual healthy state).
+  w.healthyBuffer = (lead = 8, duration = 3000) => { w.bufEnd = w.t + lead; w.fill = 1; w.duration = duration; };
   w.kinds = (type) => events.filter((e) => e.type === type);
   w.acts = (type) => actions.filter((a) => a.type === type);
   return w;
@@ -226,4 +236,232 @@ test('servers that keep starving are cycled, then the next copy is tried', () =>
 test('a stall with video still buffered keeps the gentle ladder (nudge first)', () => {
   const w = world(); w.load(); w.run(10000); w.ahead = 15; w.run(7000, 'stall');
   assert.strictEqual(w.kinds('action')[0].step, 'nudge');
+});
+
+// ---------- Fix batch B (SP-019, SP-021, SP-022): why it failed, the buffer watch, honest pause maths ----------
+
+const LONE = SOURCES.slice(0, 1); // one source only (the server lookup failed or timed out)
+
+// Play, then the Archive stops sending on every server. The picture stops, the core cycles through the servers
+// and the next copy, and in the end it fails. It must say "network": the page shows the Archive text only for it.
+test('SP-019: every server starving ends in a failure whose cause is network', () => {
+  const w = world(); w.load(); w.run(10000); w.ahead = 0; w.run(80000, 'stall');
+  const f = w.kinds('failed');
+  assert.strictEqual(f.length, 1);
+  assert.strictEqual(f[0].reason, 'starved');
+  assert.strictEqual(f[0].cause, 'network');
+  assert.strictEqual(w.acts('show-failure').length, 1);
+  assert.strictEqual(w.acts('show-failure')[0].cause, 'network');
+  assert.strictEqual(w.core.state, 'failed');
+});
+
+test('SP-019: the finding reproduction, one file on three servers all starving: cycles twice over, then fails as network', () => {
+  const three = [{ url: 'https://ia1/a.mp4', label: 'copy1@primary', fileKey: 0 }, { url: 'https://ia2/a.mp4', label: 'copy1@backup', fileKey: 0 }, { url: 'https://archive.org/download/x/a.mp4', label: 'copy1@archive', fileKey: 0 }];
+  const w = world(); w.load(three); w.run(10000); w.ahead = 0; const t0 = w.now; w.run(60000, 'stall');
+  const f = w.kinds('failed');
+  assert.strictEqual(f.length, 1);
+  assert.deepStrictEqual([f[0].reason, f[0].cause], ['starved', 'network']);
+  assert.deepStrictEqual(w.kinds('switch').map((x) => x.to), ['copy1@backup', 'copy1@archive', 'copy1@primary', 'copy1@backup', 'copy1@archive']);
+  assert.strictEqual(w.acts('reload').length, 0, 'a file with several servers cycles; the lone-server reload is not used');
+  const took = (f[0].at - t0) / 1000;
+  assert.ok(took > 25 && took < 40, 'failed ' + took + ' s after the stall began (the finding measured 33 s)');
+});
+
+test('SP-019: one source that starves is reloaded once, then fails with cause network', () => {
+  const w = world(); w.load(LONE); w.run(10000); w.ahead = 0; w.run(4000, 'stall');
+  const acts = w.kinds('action');
+  assert.strictEqual(acts.length, 1);
+  assert.strictEqual(acts[0].step, 'retry');
+  assert.strictEqual(acts[0].kind, 'starved');
+  assert.strictEqual(w.acts('reload').length, 1, 'one reload of the same source');
+  assert.strictEqual(w.acts('show-failure').length, 0, 'no card while the retry runs, so no download link can appear because of it');
+  assert.strictEqual(w.core.state, 'recovering');
+  w.run(30000, 'stall');
+  assert.strictEqual(w.acts('reload').length, 1, 'capped at one: no loop');
+  assert.strictEqual(w.kinds('failed').length, 1);
+  assert.strictEqual(w.kinds('failed')[0].cause, 'network');
+  assert.strictEqual(w.acts('show-failure').length, 1);
+  assert.strictEqual(w.kinds('switch').length, 0, 'nowhere to hop to');
+});
+
+test('SP-019: a lone source that recovers after its reload is reported as fixed', () => {
+  const w = world(); w.load(LONE); w.run(10000); w.ahead = 0; w.run(4000, 'stall'); w.ahead = 20; w.run(12000);
+  assert.strictEqual(w.kinds('recovered').length, 1);
+  assert.strictEqual(w.kinds('failed').length, 0);
+  assert.strictEqual(w.core.state, 'playing');
+});
+
+test('SP-019: Try again gives a lone source its one reload back', () => {
+  const w = world(); w.load(LONE); w.run(10000); w.ahead = 0; w.run(40000, 'stall');
+  assert.strictEqual(w.core.state, 'failed');
+  w.core.event('retry', w.now);
+  assert.strictEqual(w.core.state, 'recovering');
+  w.run(8000, 'stall');
+  assert.strictEqual(w.acts('reload').length, 2, 'the viewer got a fresh start, with the full allowance');
+  w.run(30000, 'stall');
+  assert.strictEqual(w.kinds('failed').length, 2);
+});
+
+test('SP-019: a lone server that is not the last source moves on at once; only the last one is reloaded', () => {
+  const two = [{ url: 'https://archive.org/download/x/a.mp4', label: 'a@archive', fileKey: 0 }, { url: 'https://archive.org/download/y/b.mp4', label: 'b@archive', fileKey: 1 }];
+  const w = world(); w.load(two); w.run(10000); w.ahead = 0; w.run(4000, 'stall');
+  assert.strictEqual(w.kinds('switch').length, 1);
+  assert.strictEqual(w.core.source.label, 'b@archive');
+  assert.strictEqual(w.acts('reload').length, 0);
+  w.run(30000, 'stall');
+  assert.strictEqual(w.acts('reload').length, 1, 'the last source gets its reload');
+  assert.strictEqual(w.kinds('failed')[0].cause, 'network');
+});
+
+test('SP-019: the cause follows the reason: network errors and slow starts are network, decode and format errors are format, a frozen picture is playback', () => {
+  // network error, retried once then out of sources
+  let w = world(); w.load(LONE); w.run(3000);
+  w.core.event('error', w.now, { code: 2 }); w.run(4000); w.core.event('error', w.now, { code: 2 });
+  assert.deepStrictEqual([w.kinds('failed')[0].reason, w.kinds('failed')[0].cause, w.kinds('failed')[0].code], ['error-net', 'network', 2]);
+  // decode error and not-supported error
+  w = world(); w.load(LONE); w.run(3000); w.core.event('error', w.now, { code: 3 });
+  assert.deepStrictEqual([w.kinds('failed')[0].reason, w.kinds('failed')[0].cause, w.kinds('failed')[0].code], ['error-fatal', 'format', 3]);
+  assert.deepStrictEqual([w.acts('show-failure')[0].cause, w.acts('show-failure')[0].code], ['format', 3], 'the card is told the same');
+  w = world(); w.load(LONE); w.run(3000); w.core.event('error', w.now, { code: 4 });
+  assert.deepStrictEqual([w.kinds('failed')[0].cause, w.kinds('failed')[0].code], ['format', 4]);
+  // aborted load is neither
+  w = world(); w.load(LONE); w.run(3000); w.core.event('error', w.now, { code: 1 });
+  assert.strictEqual(w.kinds('failed')[0].cause, 'playback');
+  // nothing plays within 15 s
+  w = world(); w.load(LONE); w.run(16000, 'stall');
+  assert.deepStrictEqual([w.kinds('failed')[0].reason, w.kinds('failed')[0].cause], ['slow-start', 'network']);
+  // frozen picture again and again
+  w = world(); w.load(LONE); w.run(20000);
+  for (let k = 0; k < 3; k++) { w.run(2000, 'freeze'); w.run(8000); }
+  assert.deepStrictEqual([w.kinds('failed')[0].reason, w.kinds('failed')[0].cause], ['freeze', 'playback']);
+  // no copy this browser can play
+  w = world(); w.load([]);
+  assert.deepStrictEqual([w.kinds('failed')[0].reason, w.kinds('failed')[0].cause], ['no-sources', 'format']);
+  assert.strictEqual(w.acts('show-failure')[0].cause, 'format');
+  w.core.event('retry', w.now); // Try again with nothing to try fails the same way
+  assert.deepStrictEqual([w.kinds('failed')[1].reason, w.kinds('failed')[1].cause], ['no-sources', 'format']);
+});
+
+// A hung download: the buffered end stops growing while the picture still plays. Hop then, not when the picture stops.
+function hung(opts) { // play 6 s on the fixed buffer, then 8 s on a modelled one that keeps pace, then the server hangs
+  const w = world(opts); w.load(); w.run(6000); w.healthyBuffer(8); w.run(8000);
+  w.hangAt = w.now; w.fill = 0;
+  return w;
+}
+
+test('SP-021: a buffer that stops growing hops after 4 s while the picture is still playing', () => {
+  const w = hung(); w.run(4000);
+  const sw = w.kinds('switch');
+  assert.strictEqual(sw.length, 1);
+  assert.strictEqual(sw[0].reason, 'starved');
+  assert.strictEqual(w.core.source.label, 'copy1@backup');
+  const took = sw[0].at - w.hangAt;
+  assert.ok(took >= 4000 && took <= 4500, 'hop ' + took + ' ms after the buffer went flat');
+  const st = w.kinds('stall');
+  assert.strictEqual(st.length, 1);
+  assert.strictEqual(st[0].trigger, 'buffer');
+  assert.ok(st[0].ahead > 3 && st[0].ahead < 5, 'ahead is in the stall event, and the picture still had video left: ' + st[0].ahead);
+  assert.ok(st[0].flatMs >= 4000, 'how long the buffer was flat is in it too: ' + st[0].flatMs);
+  assert.strictEqual(typeof st[0].grewS, 'number');
+  assert.ok(w.acts('set-source').pop().at >= w.t - 0.5, 'the hop keeps the viewer place');
+  assert.strictEqual(w.kinds('action')[0].kind, 'starved');
+});
+
+test('SP-021: the stall event also says how much the buffer grew when the picture stops first', () => {
+  const w = world(); w.load(); w.run(20000); w.ahead = 0; w.run(1500, 'stall');
+  const st = w.kinds('stall');
+  assert.strictEqual(st.length, 1);
+  assert.strictEqual(st[0].trigger, 'picture');
+  assert.strictEqual(typeof st[0].grewS, 'number');
+  assert.strictEqual(typeof st[0].flatMs, 'number');
+});
+
+test('SP-021: nothing hops while the viewer has paused', () => {
+  const w = hung(); w.paused = true; w.core.event('user-pause', w.now); w.run(60000);
+  assert.strictEqual(w.kinds('action').length, 0);
+  assert.strictEqual(w.core.state, 'paused');
+  // time spent paused does not count towards the 4 s: the clock starts again when playing resumes
+  w.paused = false; w.core.event('user-play', w.now); w.run(3000);
+  assert.strictEqual(w.kinds('action').length, 0);
+});
+
+test('SP-021: nothing hops while the viewer is seeking', () => {
+  const w = hung(); w.seeking = true; w.core.event('user-seek', w.now, { t: 600 }); w.run(60000, 'stall');
+  assert.strictEqual(w.kinds('action').length, 0);
+  w.seeking = false; w.t = 600; w.healthyBuffer(8); w.run(10000);
+  assert.strictEqual(w.kinds('action').length, 0, 'a buffer that keeps pace after the seek is fine');
+});
+
+test('SP-021: nothing hops once the episode has ended', () => {
+  const w = hung(); w.ended = true; w.run(60000);
+  assert.strictEqual(w.kinds('action').length, 0);
+  assert.strictEqual(w.core.state, 'ended');
+});
+
+test('SP-021: a slow line whose buffer still grows is left alone', () => {
+  const w = world(); w.load(); w.run(6000); w.healthyBuffer(8); w.fill = 0.9; w.run(60000);
+  assert.strictEqual(w.kinds('action').length, 0);
+  assert.strictEqual(w.kinds('stall').length, 0);
+  assert.strictEqual(w.core.state, 'playing');
+});
+
+test('SP-021: plenty buffered (10 s or more) is not a hang, however flat', () => {
+  const w = world(); w.load(); w.run(6000); w.healthyBuffer(30); w.run(5000); w.fill = 0; w.run(15000);
+  assert.strictEqual(w.kinds('action').length, 0);
+});
+
+test('SP-021: a browser that paused its own download (networkState idle) is not a hung server', () => {
+  const idle = hung(); idle.networkState = 1; idle.run(6000);
+  assert.strictEqual(idle.kinds('action').length, 0);
+  const loading = hung(); loading.networkState = 2; loading.run(6000);
+  assert.strictEqual(loading.kinds('switch').length, 1, 'the same flat buffer with the network loading does hop');
+});
+
+test('SP-021: a buffer that is flat because the whole file is in it never hops', () => {
+  const w = world(); w.load(); w.run(6000);
+  w.t = 100; w.bufEnd = 120; w.fill = 0; w.duration = 120; w.run(19000);
+  assert.strictEqual(w.kinds('action').length, 0);
+});
+
+test('SP-021: without the file length the watch stays off (the picture-stop triggers still work)', () => {
+  const w = hung(); w.duration = undefined; w.run(7000);
+  assert.strictEqual(w.kinds('action').length, 0, 'still playing from the buffer, nothing hopped yet');
+  w.run(12000);
+  assert.strictEqual(w.kinds('switch').length >= 1, true, 'once the picture stops, the old trigger takes over');
+  assert.strictEqual(w.kinds('stall')[0].trigger, 'picture');
+});
+
+test('SP-021: a playhead stuck on buffered data is a browser hiccup and keeps the gentle ladder', () => {
+  const w = world(); w.load(); w.run(6000); w.healthyBuffer(5); w.run(6000); w.fill = 0; w.run(7000, 'stall');
+  const a = w.kinds('action');
+  assert.strictEqual(a[0].step, 'nudge');
+  assert.strictEqual(a[0].kind, 'stall');
+  assert.strictEqual(w.kinds('switch').length, 0);
+});
+
+test('SP-021: after a hop the core waits out the settle time, even when the buffer limit is shorter', () => {
+  const w = hung({ config: { BUFFER_STALL_MS: 1000 } }); w.run(9000);
+  const hops = w.kinds('switch');
+  assert.ok(hops.length >= 2, 'hops: ' + hops.length);
+  const gap = hops[1].at - hops[0].at;
+  assert.ok(gap >= 2500 && gap <= 2750, 'second hop ' + gap + ' ms after the first (settle is 2500)');
+});
+
+test('SP-021: the pause the viewer saw is counted from the hop to the picture coming back', () => {
+  const w = hung(); w.run(4000);
+  assert.strictEqual(w.kinds('switch').length, 1);
+  w.run(1500, 'stall'); w.healthyBuffer(8); w.run(10000);
+  const s = w.core.summary();
+  assert.ok(s.stallMs >= 1500 && s.stallMs <= 2000, 'stall time ' + s.stallMs);
+  assert.strictEqual(s.longestPauseMs, s.stallMs);
+  assert.ok(s.rebufferRatio > 0 && s.rebufferRatio < 0.2);
+  assert.strictEqual(s.stalls, 1);
+  assert.strictEqual(w.core.state, 'playing');
+});
+
+test('SP-022: a hop after a stopped picture still counts the pause from where it stopped (it used to be lost)', () => {
+  const w = world(); w.load(); w.run(20000); w.ahead = 0; w.run(4000, 'stall'); w.ahead = 20; w.run(1000, 'stall'); w.run(12000);
+  const s = w.core.summary();
+  assert.ok(s.stallMs >= 4500 && s.stallMs <= 5500, 'stall time ' + s.stallMs);
+  assert.strictEqual(s.longestPauseMs, s.stallMs);
 });
