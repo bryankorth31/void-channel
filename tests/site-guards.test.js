@@ -10,7 +10,7 @@ const path = require('path');
 const G = require('../scripts/lib/siteguards');
 const MiB = 1024 * 1024;
 
-test('the switch: SITE_PASSWORD (or the spare GATE=on) turns the gate on, nothing else does', () => {
+test('the switch: SITE_PASSWORD (or a plain GATE=on) turns the gate on, only a plain GATE=off opens it', () => {
   assert.equal(G.isGated({}), false);
   assert.equal(G.isGated({ SITE_PASSWORD: '' }), false);
   assert.equal(G.isGated({ SITE_PASSWORD: 'x' }), true);
@@ -18,8 +18,46 @@ test('the switch: SITE_PASSWORD (or the spare GATE=on) turns the gate on, nothin
   assert.equal(G.isGated({ GATE: 'ON ' }), true);
   assert.equal(G.isGated({ GATE: 'off' }), false);
   assert.equal(G.isGated({ GATE: '1' }), false);
+  assert.equal(G.isGated({ SITE_PASSWORD: 'x', GATE: 'off' }), false, 'a conflict is not gated; the build refuses it');
   assert.deepEqual(G.routesFor(true), { version: 1, include: ['/*'], exclude: ['/assets/*'] });
   assert.deepEqual(G.routesFor(false), { version: 1, include: ['/api/*', '/q/*'], exclude: [] });
+});
+
+test('gate mode: nothing visible is never "open"; open needs a plain GATE=off, and opposite words are a conflict', () => {
+  const m = G.gateMode;
+  assert.equal(m({}), 'unset');
+  assert.equal(m({ SITE_PASSWORD: '' }), 'unset');
+  assert.equal(m({ GATE: '' }), 'unset');
+  assert.equal(m({ GATE: 'true' }), 'unset', 'only the words on and off count');
+  assert.equal(m({ GATE: 'maybe', SITE_PASSWORD: '' }), 'unset');
+  assert.equal(m({ SITE_PASSWORD: 'x' }), 'on');
+  assert.equal(m({ GATE: 'on' }), 'on');
+  assert.equal(m({ GATE: ' On ', SITE_PASSWORD: 'x' }), 'on');
+  assert.equal(m({ GATE: 'off' }), 'off');
+  assert.equal(m({ GATE: 'OFF ' }), 'off');
+  assert.equal(m({ GATE: 'off', SITE_PASSWORD: 'x' }), 'conflict');
+});
+
+test('gate decision: a Cloudflare build of VOIDtv that sees neither variable is refused, everything else keeps working', () => {
+  const d = (env, cloudflare, profile) => G.gateDecision(env, { cloudflare, profile });
+  // the case the reviewer found: the password is an encrypted Secret, so the build sees nothing
+  const hidden = d({}, true, 'voidtv');
+  assert.ok(hidden.error, 'refused');
+  assert.equal(hidden.gated, false);
+  assert.match(hidden.error, /SITE_PASSWORD/); assert.match(hidden.error, /GATE = on/); assert.match(hidden.error, /GATE = off/);
+  assert.match(hidden.error, /old site stays up/);
+  assert.ok(d({ GATE: 'maybe' }, true, 'voidtv').error, 'a word that is neither on nor off is also refused');
+  // gated, on Cloudflare or not
+  for (const cf of [true, false]) { assert.deepEqual(d({ SITE_PASSWORD: 'x' }, cf, 'voidtv'), { mode: 'on', gated: true, error: null }); assert.deepEqual(d({ GATE: 'on' }, cf, 'voidtv'), { mode: 'on', gated: true, error: null }); }
+  // open on purpose
+  assert.deepEqual(d({ GATE: 'off' }, true, 'voidtv'), { mode: 'off', gated: false, error: null });
+  // opposite words are refused everywhere
+  for (const [cf, p] of [[true, 'voidtv'], [false, 'voidtv'], [true, 'kids'], [false, 'tiny']]) { const r = d({ GATE: 'off', SITE_PASSWORD: 'x' }, cf, p); assert.ok(r.error && /opposite/.test(r.error), p); }
+  // local builds and other profiles with nothing set are written open, as before
+  assert.deepEqual(d({}, false, 'voidtv'), { mode: 'unset', gated: false, error: null });
+  assert.deepEqual(d({}, true, 'kids'), { mode: 'unset', gated: false, error: null });
+  assert.deepEqual(d({}, true, 'public-access'), { mode: 'unset', gated: false, error: null });
+  assert.deepEqual(d({}, false, 'tiny'), { mode: 'unset', gated: false, error: null });
 });
 
 test('version.txt: line one is what it always was, line two carries gate and the counts, and it reads back', () => {
@@ -199,6 +237,7 @@ test('shrink light: red when the show count is down more than 10 percent against
   assert.equal(G.shrinkLight({ shows: 150, episodes: 900 }, before).level, 'red');
   assert.match(G.shrinkLight({ shows: 150, episodes: 900 }, before).msg, /shows 4774 -> 150/);
   assert.match(G.shrinkLight({ shows: 150, episodes: 900 }, before).fix, /--allow-shrink/);
+  assert.match(G.shrinkLight({ shows: 150, episodes: 900 }, before).fix, /SITE_ALLOW_SHRINK = 1/, 'a meant shrink needs the Cloudflare override too');
   assert.equal(G.shrinkLight({ shows: 150, episodes: 900 }, null).level, 'yellow');
 });
 

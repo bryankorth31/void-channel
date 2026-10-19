@@ -68,6 +68,63 @@ test('SITE_PASSWORD not set: only /api and /q run as Functions, version.txt says
   assert.deepEqual(differ.sort(), ['_routes.json', 'version.txt']);
 });
 
+const NOWHERE = ['--base', 'http://127.0.0.1:9']; // a closed local port: a Cloudflare build asks the base address for its live version.txt, and a test must never reach the real site
+// The reviewer's finding (H1): an encrypted Secret is invisible to the build, so "no variable visible" must never open the site.
+// These tests fail if that guard is taken out of scripts/site.js or siteguards.js.
+test('Cloudflare build of VOIDtv with neither SITE_PASSWORD nor GATE: refused, exit 1, nothing touched, the message names both variables', () => {
+  const root = tree({ shows: 100, profile: 'voidtv' });
+  assert.equal(build(root, { profile: 'voidtv' }).status, 0, 'a local build with neither still works (written open)');
+  const before = read(root, 'site/version.txt'), routes = read(root, 'site/_routes.json');
+  const r = build(root, { profile: 'voidtv', env: { CF_PAGES: '1' }, args: NOWHERE });
+  assert.equal(r.status, 1, r.out);
+  assert.match(r.out, /GATE UNKNOWN/); assert.match(r.out, /SITE_PASSWORD/); assert.match(r.out, /GATE = on/); assert.match(r.out, /GATE = off/);
+  assert.match(r.out, /old site stays up/);
+  assert.equal(read(root, 'site/version.txt'), before, 'the earlier output was not deleted or rewritten');
+  assert.equal(read(root, 'site/_routes.json'), routes);
+  assert.ok(!/SITE WOULD SHIP|CATALOG SHRANK/.test(r.out), 'it stopped at the gate check, before assembling anything');
+});
+
+test('Cloudflare build of VOIDtv: a plain GATE=off with no password opens the site (narrow routes, gate=off), SITE_PASSWORD or GATE=on keep it closed', () => {
+  const root = tree({ shows: 100, profile: 'voidtv' });
+  const run = (env) => build(root, { profile: 'voidtv', env: { CF_PAGES: '1', ...env }, args: NOWHERE });
+  let r = run({ GATE: 'off' });
+  assert.equal(r.status, 0, r.out);
+  assert.deepEqual(JSON.parse(read(root, 'site/_routes.json')), { version: 1, include: ['/api/*', '/q/*'], exclude: [] });
+  assert.match(read(root, 'site/version.txt'), /\ngate=off files=/);
+  assert.match(r.out, /GATE: off \(GATE=off was set on purpose\)/);
+  r = run({ SITE_PASSWORD: 'x' });
+  assert.equal(r.status, 0, r.out);
+  assert.deepEqual(JSON.parse(read(root, 'site/_routes.json')).include, ['/*']);
+  assert.match(read(root, 'site/version.txt'), /\ngate=on files=/);
+  r = run({ GATE: 'on' });
+  assert.equal(r.status, 0, r.out);
+  assert.deepEqual(JSON.parse(read(root, 'site/_routes.json')).include, ['/*']);
+  assert.match(read(root, 'site/version.txt'), /\ngate=on files=/);
+});
+
+test('GATE=off together with a visible SITE_PASSWORD is refused on a Cloudflare build and on a local one', () => {
+  const root = tree({ shows: 12 });
+  assert.equal(build(root).status, 0);
+  const before = read(root, 'site/version.txt');
+  for (const env of [{ GATE: 'off', SITE_PASSWORD: 'x', CF_PAGES: '1' }, { GATE: 'off', SITE_PASSWORD: 'x' }]) {
+    const r = build(root, { env, args: NOWHERE });
+    assert.equal(r.status, 1, r.out); assert.match(r.out, /GATE=off but SITE_PASSWORD is also set/);
+    assert.equal(read(root, 'site/version.txt'), before);
+  }
+});
+
+test('local builds and other profiles keep working with neither variable (written open, with a note)', () => {
+  const a = tree({ shows: 12 });
+  const local = build(a);
+  assert.equal(local.status, 0, local.out); assert.match(local.out, /neither SITE_PASSWORD nor GATE is set/);
+  assert.deepEqual(JSON.parse(read(a, 'site/_routes.json')).include, ['/api/*', '/q/*']);
+  const b = tree({ shows: 12 });
+  assert.equal(build(b, { env: { CF_PAGES: '1' }, args: NOWHERE }).status, 0, 'another profile on Cloudflare (kids, public access) is not refused');
+  const c = tree({ shows: 100, profile: 'voidtv' });
+  const lv = build(c, { profile: 'voidtv' });
+  assert.equal(lv.status, 0, lv.out); assert.match(read(c, 'site/version.txt'), /\ngate=off files=/);
+});
+
 test('the spare GATE=on variable switches the gate on for a build that cannot see an encrypted SITE_PASSWORD', () => {
   const root = tree();
   assert.equal(build(root, { env: { GATE: 'on' } }).status, 0);
