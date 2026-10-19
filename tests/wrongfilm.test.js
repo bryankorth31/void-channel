@@ -354,7 +354,11 @@ const get = (port, p) => new Promise((ok, no) => {
 test('HQ: the wrongfilm query is served by /api/analytics/<name> like the others, asks for the right columns, and an unknown name still fails', async () => {
   const saved = { fetch: global.fetch, account: process.env.CF_ACCOUNT_ID, token: process.env.CF_ANALYTICS_TOKEN };
   process.env.CF_ACCOUNT_ID = 'test-account-id'; process.env.CF_ANALYTICS_TOKEN = 'test-token-not-real';
-  const fake = [{ slug: 'movie-1080498', file: '111-gramercy-park 111 Gramercy Park.mp4', day: '2026-10-18 00:00:00', n: 3 }];
+  const list = JSON.parse(fs.readFileSync(path.join(REPO, 'catalog', 'tvmovies-list.json'), 'utf8')).items;
+  const known = list[0], knownTitle = known.title + (known.year ? ' (' + known.year + ')' : '');
+  const fake = [{ slug: 'movie-' + known.tmdbId, file: '111-gramercy-park 111 Gramercy Park.mp4', day: '2026-10-18 00:00:00', n: 3 }, { slug: 'movie-999999999', file: 'item-q Q.mp4', day: '2026-10-17 00:00:00', n: 1 }];
+  const realRead = fs.readFileSync; let listReads = 0;
+  fs.readFileSync = function (p, ...a) { if (/tvmovies-list\.json$/.test(String(p))) listReads++; return realRead.call(this, p, ...a); };
   const calls = [];
   global.fetch = async (url, opts) => { calls.push({ url: String(url), body: String(opts && opts.body), auth: opts && opts.headers && opts.headers.Authorization }); return { ok: true, status: 200, text: async () => JSON.stringify({ data: fake }) }; };
   const hq = loadHq();
@@ -363,8 +367,11 @@ test('HQ: the wrongfilm query is served by /api/analytics/<name> like the others
   try {
     const ok = await get(srv.port, '/api/analytics/wrongfilm?days=30');
     assert.equal(ok.status, 200);
-    assert.deepEqual(ok.json.rows, fake);
+    assert.deepEqual(ok.json.rows, [{ ...fake[0], title: knownTitle }, { ...fake[1], title: '' }], 'each row carries the film title from the local catalog by record id; an id the catalog does not have gets an empty title');
     assert.equal(calls.length, 1, 'exactly one call, to the stub');
+    for (let i = 0; i < 3; i++) await get(srv.port, '/api/analytics/wrongfilm?days=30');
+    assert.equal(listReads, 1, 'the title list is read once for four requests, not once per request');
+    calls.length = 1;
     assert.equal(calls[0].url, 'https://api.cloudflare.com/client/v4/accounts/test-account-id/analytics_engine/sql');
     assert.equal(calls[0].auth, 'Bearer test-token-not-real');
     assert.equal(calls[0].body, cfa.REPORTS.wrongfilm(30));
@@ -375,7 +382,9 @@ test('HQ: the wrongfilm query is served by /api/analytics/<name> like the others
     const reports = await get(srv.port, '/api/analytics/reports?days=30');
     assert.equal(reports.status, 200, 'the older queries are still served');
     assert.equal(calls.length, 2);
+    assert.ok(!('title' in reports.json.rows[0]), 'and get no title column');
   } finally {
+    fs.readFileSync = realRead;
     await new Promise((done) => { srv.server.close(done); if (srv.server.closeAllConnections) srv.server.closeAllConnections(); });
     global.fetch = saved.fetch;
     for (const [k, v] of [['CF_ACCOUNT_ID', saved.account], ['CF_ANALYTICS_TOKEN', saved.token]]) { if (v === undefined) delete process.env[k]; else process.env[k] = v; }
@@ -424,12 +433,12 @@ const answersFor = (wfRows, extra = {}) => ({ '/api/analytics/reports?days=30': 
 
 test('HQ page: the Wrong film reports table adds up the days, sorts by count, links the Archive item and the film, and has nothing that changes anything', async () => {
   const rows = [
-    { slug: 'movie-111', file: 'item-a Name A.mp4', day: '2026-10-18 00:00:00', n: 1 },
-    { slug: 'movie-222', file: 'item-b Name B.mp4', day: '2026-10-17 00:00:00', n: 2 },
-    { slug: 'movie-222', file: 'item-b Name B.mp4', day: '2026-10-19 00:00:00', n: 3 },
-    { slug: 'movie-222', file: 'item-b Name B.mp4', day: '2026-10-12 00:00:00', n: 1 },
+    { slug: 'movie-111', file: 'item-a Name A.mp4', day: '2026-10-18 00:00:00', n: 1, title: 'Film A (2001)' },
+    { slug: 'movie-222', file: 'item-b Name B.mp4', day: '2026-10-17 00:00:00', n: 2, title: 'Film B (1999)' },
+    { slug: 'movie-222', file: 'item-b Name B.mp4', day: '2026-10-19 00:00:00', n: 3, title: 'Film B (1999)' },
+    { slug: 'movie-222', file: 'item-b Name B.mp4', day: '2026-10-12 00:00:00', n: 1, title: 'Film B (1999)' },
     { slug: 'movie-333', file: 'item-c Other.mp4', day: '2026-10-19 00:00:00', n: 1 },
-    { slug: 'movie-444', file: 'item-x <img src=x onerror=alert(1)> "bad".mp4', day: '2026-10-01', n: 1 },
+    { slug: 'movie-444', file: 'item-x <img src=x onerror=alert(1)> "bad".mp4', day: '2026-10-01', n: 1, title: '<b>Bold</b> & "quoted"' },
     { slug: 'movie-555', file: ' only a file name.mp4', day: '2026-10-02', n: 1 },
     { slug: 'movie-666', file: 'item-d ', day: '2026-10-03', n: 1 },
   ];
@@ -440,16 +449,18 @@ test('HQ page: the Wrong film reports table adds up the days, sorts by count, li
   const tbl = html.slice(html.indexOf('Wrong film reports'), html.indexOf('Playback errors'));
   const trs = tbl.split('<tr>').slice(2);
   const cells = trs.map((tr) => [...tr.matchAll(/<td[^>]*>(.*?)<\/td>/g)].map((m) => m[1].replace(/<[^>]+>/g, '')));
-  assert.deepEqual(cells[0], ['222', 'item-b', 'Name B.mp4', '6', '2026-10-19', 'open on voidtv.net'], 'the most reported film first: 2 + 3 + 1 added up, the latest day');
-  assert.deepEqual(cells[1].slice(0, 5), ['333', 'item-c', 'Other.mp4', '1', '2026-10-19'], 'ties: the newest report first');
-  assert.deepEqual(cells[2].slice(0, 5), ['111', 'item-a', 'Name A.mp4', '1', '2026-10-18']);
+  assert.deepEqual(cells[0], ['Film B (1999)', '222', 'item-b', 'Name B.mp4', '6', '2026-10-19', 'open on voidtv.net'], 'the most reported film first: 2 + 3 + 1 added up, the latest day');
+  assert.deepEqual(cells[1].slice(0, 6), ['not in the catalog', '333', 'item-c', 'Other.mp4', '1', '2026-10-19'], 'ties: the newest report first; a film the catalog does not know shows the record id alone');
+  assert.deepEqual(cells[2].slice(0, 6), ['Film A (2001)', '111', 'item-a', 'Name A.mp4', '1', '2026-10-18']);
+  assert.match(tbl, /<th>title<\/th><th>record id<\/th><th>Archive item<\/th><th>file<\/th><th class="num">reports<\/th><th>last report<\/th>/, 'the columns: title, record id, Archive item, file, count, last report');
+  assert.ok(!tbl.includes('<b>Bold</b>') && tbl.includes('&lt;b&gt;Bold&lt;/b&gt; &amp; &quot;quoted&quot;'), 'a title is text, not markup');
   assert.equal(cells.length, 6, 'one row per film and file');
   assert.match(tbl, /<a href="https:\/\/archive\.org\/details\/item-b" target="_blank" rel="noopener">item-b<\/a>/);
   assert.match(tbl, /<a href="https:\/\/voidtv\.net\/show\/movie-222" target="_blank" rel="noopener">open on voidtv\.net<\/a>/);
   assert.ok(!tbl.includes('<img'), 'what a viewer cannot type into a report is escaped anyway');
   assert.match(tbl, /&lt;img src=x onerror=alert\(1\)&gt; &quot;bad&quot;\.mp4/);
-  assert.ok(cells.some((c) => c[0] === '555' && c[1] === 'not sent'), 'no Archive item sent: said so');
-  assert.ok(cells.some((c) => c[0] === '666' && c[2] === 'not sent'), 'no file name sent: said so');
+  assert.ok(cells.some((c) => c[1] === '555' && c[2] === 'not sent'), 'no Archive item sent: said so');
+  assert.ok(cells.some((c) => c[1] === '666' && c[3] === 'not sent'), 'no file name sent: said so');
   assert.doesNotMatch(tbl, /<button|onclick|<input|<form/, 'read only: nothing to press');
   assert.ok(!tbl.includes(String.fromCharCode(0x2014)) && !tbl.includes(String.fromCharCode(0x2013)));
 });
