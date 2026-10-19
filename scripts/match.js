@@ -162,13 +162,21 @@ function nameRe(core) {
   r.lastIndex = 0;
   return r;
 }
+const netRes = new Map();
+function netRe(net) { // the network's words, whole, from the start of what follows the name
+  let r = netRes.get(net);
+  if (!r) { r = new RegExp('^' + net.split(' ').map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('[^a-z0-9]+') + '(?![a-z0-9])'); netRes.set(net, r); }
+  return r;
+}
+// What follows the show's own network must end the name as well ("Dimension 20 Dropout TV Seasons 01-22" does; "Zork Show NBC Split Screen Credits" is a clip of something else). The network may carry a descriptor ("TV", "Media").
+const closesAfterNet = (r) => closesName(r) || closesName(r.replace(/^[^a-z0-9]*(?:tv|media)(?![a-z0-9])/, ''));
 function closesName(rest, nets = []) {
   const run = /^[^a-z0-9]*/.exec(rest)[0];
   if (run.length === rest.length) return true; // the name ends the text
   const gap = run.replace(/_/g, ' ');
   if (NAME_SEP.test(gap) || NAME_DASH.test(gap) || NAME_MARK.test(gap) || NAME_PUNCT.test(gap)) return true; // a separator follows it
   const toks = rest.slice(run.length).split(/[^a-z0-9]+/).filter(Boolean);
-  for (const net of nets) { const w = net.split(' '); if (w.length && w.every((x, k) => toks[k] === x)) return true; } // "Dimension 20 Dropout": the show's own network after its name
+  for (const net of nets) { const m = net && netRe(net).exec(rest.slice(run.length)); if (m && closesAfterNet(rest.slice(run.length + m[0].length))) return true; } // "Dimension 20 Dropout": the show's own network after its name, then the name must close
   let i = 0;
   while (i < 2 && i < toks.length - 1 && NAME_FILLER.has(toks[i])) i++;
   return NAME_TAIL.test(toks[i]) || (/^(?:s|e|\d+x)$/.test(toks[i]) && /^\d+$/.test(toks[i + 1] || '')); // "S 2", "1x 4": SxxEyy written with a space

@@ -368,12 +368,18 @@ describe('the upload title names the show', () => {
     assert.equal(M.namesTitle('Dimension 20 Netflix Specials', cores, ['dropout']), false, 'another network does not count');
     assert.equal(M.namesTitle('Dimension 20 Special Dropout', cores, ['dropout']), false, 'it must follow the name directly');
     assert.equal(M.namesTitle('Mysteries of the Bible A&E Media Series', ['mysteries of the bible'], ['a and e']), true, 'a network written with an ampersand');
-    assert.equal(M.namesTitle('Body Language Paramount with Showtime Specials', ['body language'], ['paramount with showtime']), true, 'a network of several words');
+    assert.equal(M.namesTitle('Body Language Paramount with Showtime Season 2', ['body language'], ['paramount with showtime']), true, 'a network of several words');
     assert.equal(M.namesTitle('Body Language Paramount Guy', ['body language'], ['paramount with showtime']), false);
+    // after the network the rest of the title must end the name too: a clip of the show's credits is not the show
+    const zork = ['zork show'], nbc = ['nbc'];
+    for (const t of ['Zork Show NBC', 'Zork Show NBC 1999', 'Zork Show NBC Season 2', 'Zork Show NBC - Split Screen Credits', 'Zork Show NBC (Split Screen Credits)', 'Zork Show NBC S01E02', 'Zork Show NBC TV Complete Series', 'Zork Show NBC Media Series']) assert.equal(M.namesTitle(t, zork, nbc), true, t);
+    for (const t of ['Zork Show NBC Split Screen Credits', 'Zork Show NBC WOC 2001 10 18', 'Zork Show NBC segments collection', 'Zork Show NBC TV Jam']) assert.equal(M.namesTitle(t, zork, nbc), false, t);
+    assert.equal(M.namesTitle('Dimension 20 Dropout Split Screen Credits', cores, ['dropout']), false);
     // end to end: the TVmaze record of the made-up show says its network is "Nowhere"
     const files = range(25).map((i) => mkFile(`Zork Show S09E${pad2(i)}.mp4`, { ep: se(9, i) }));
     assert.equal(run(files, { title: 'Zork Show Nowhere Seasons 01-02' }).grid.selfListed, true, 'an upload titled with the show and its own network');
     assert.equal(run(files, { title: 'Zork Show Elsewhere Seasons 01-02' }).grid.selfListed, undefined, 'not with another network');
+    assert.equal(run(files, { title: 'Zork Show Nowhere Split Screen Credits' }).grid.selfListed, undefined, 'and the rest of the title must end the name');
   });
   test('Duckman: TVmaze\'s own name for the show is an alias', () => {
     assert.ok(M.BUILTIN_ALIASES.duckman.includes('Duckman: Private Dick/Family Man'));
