@@ -183,4 +183,43 @@ function moviesLights(opts = {}) {
   return { phrase, hardExclude: hard, check: m };
 }
 
-module.exports = { matcherCheck, seTitleCheck, sameDayCheck, matcherLight, moviesCheck, moviesLights };
+// The gate on the TV-movie rows (movieShips in scripts/lib/app.js): the site shows a movie only when it is LIVE, or when a person approved it
+// in catalog/overrides.json ("movie-<tmdbId>": { "approved": true }). This counts what the gate does, using that same function, so the doctor and the
+// build cannot disagree. It is information, not an alarm: the light is green whatever the numbers are. The one exception is an overrides.json that
+// does not parse, because the build then ignores every approval without saying so (yellow, R-019). Reads only, no network.
+//   live         LIVE movies that ship            reviewHidden  playable REVIEW movies with no approval, kept off the site
+//   approved     approved REVIEW movies that ship  hardSkipped   playable picks the hard-exclude gate skips whatever their state or approval (0 after the rescore)
+//   idle         approvals that show nothing (no playable file, or hard excluded)
+//   const { level, detail, fix, live, reviewHidden, approved, hardSkipped, idle } = require('./lib/matchcheck').moviesGate({ moviesDir, overridesFile });
+function moviesGate(opts = {}) {
+  const { movieShips, movieApproved } = require('./app'), HX = require('./hardexclude');
+  const dir = opts.moviesDir || path.join(PROFILE.catalogDir, 'movies');
+  const file = opts.overridesFile || path.join(PROFILE.catalogDir, 'overrides.json');
+  let OV = opts.overrides, broken = false;
+  if (!OV) { try { OV = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (e) { OV = {}; broken = e.code !== 'ENOENT'; } }
+  if (!OV || typeof OV !== 'object' || Array.isArray(OV)) { OV = {}; broken = true; }
+  const out = { scanned: 0, live: 0, reviewHidden: 0, approved: 0, hardSkipped: 0, idle: 0 };
+  const wanted = new Set(Object.keys(OV).filter((k) => /^movie-\d+$/.test(k) && OV[k] && OV[k].approved === true));
+  let shippedApproved = 0;
+  for (const f of GRID_FILES(dir)) {
+    let text;
+    try { text = fs.readFileSync(path.join(dir, f), 'utf8'); } catch (e) { continue; }
+    out.scanned++;
+    if (text.includes('"state": "MISSING"')) continue; // nothing plays and nothing ships: skip the parse
+    let r;
+    try { r = JSON.parse(text); } catch (e) { continue; }
+    const p = r.file;
+    if (!p || !p.playable || r.state === 'MISSING') continue;
+    if (HX.hardExclude({ title: p.itemTitle, stem: p.stem, item: p.item, collection: p.collection }, r.title)) out.hardSkipped++;
+    if (movieShips(r, OV)) { if (wanted.has('movie-' + r.tmdbId)) shippedApproved++; if (r.state === 'LIVE') out.live++; else out.approved++; }
+    else if (r.state === 'REVIEW' && !movieApproved(r, OV)) out.reviewHidden++;
+  }
+  out.idle = wanted.size - shippedApproved;
+  const parts = [`${out.live} LIVE movies ship`, `${out.reviewHidden} REVIEW movies are hidden until a person approves one`, `${out.approved} approved REVIEW movies ship`,
+    `the hard-exclude gate skips ${out.hardSkipped} (C-SPAN, hearing, council or news material${out.hardSkipped ? '' : ', as it should be'})`];
+  if (out.idle) parts.push(`${out.idle} approval${out.idle === 1 ? '' : 's'} in catalog/overrides.json show nothing (no playable file, or hard excluded)`);
+  if (broken) return { ...out, level: 'yellow', detail: 'catalog/overrides.json does not parse as JSON, so the build ignores every movie approval; ' + parts.join('; '), fix: 'Open catalog/overrides.json and fix the JSON (a missing comma or quote); git diff catalog/overrides.json shows what changed since the last commit. Do not git checkout the file: that also throws away your other HQ decisions (docs/RUNBOOK.md, movies:review-hidden).' };
+  return { ...out, level: 'green', detail: parts.join('; ') };
+}
+
+module.exports = { matcherCheck, seTitleCheck, sameDayCheck, matcherLight, moviesCheck, moviesLights, moviesGate };

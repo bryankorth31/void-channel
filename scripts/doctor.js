@@ -173,6 +173,9 @@ async function main() {
   // 5c. the TV movies: LIVE picks whose title is not a phrase in the name, and shipped picks that are C-SPAN, hearing, council or news material (scripts/lib/matchcheck.js, docs/RUNBOOK.md, movies)
   try { const mv = require('./lib/matchcheck').moviesLights({ moviesDir: path.join(PROFILE.catalogDir, 'movies') }); add('movies:phrase', mv.phrase.level, mv.phrase.detail, mv.phrase.fix); add('movies:hard-exclude', mv.hardExclude.level, mv.hardExclude.detail, mv.hardExclude.fix); }
   catch (e) { add('movies:phrase', 'yellow', 'could not read the movie records: ' + String(e.message).slice(0, 80)); }
+  // 5c2. the gate on the TV-movie rows: how many REVIEW movies the site keeps hidden, how many approved ones it shows (information, always green; scripts/lib/matchcheck.js moviesGate)
+  try { const g = require('./lib/matchcheck').moviesGate({ moviesDir: path.join(PROFILE.catalogDir, 'movies'), overridesFile: path.join(PROFILE.catalogDir, 'overrides.json') }); add('movies:review-hidden', g.level, g.detail, g.fix); }
+  catch (e) { add('movies:review-hidden', 'yellow', 'could not count the movie gate: ' + String(e.message).slice(0, 80)); }
   let built = null; // the counts assemble() gives, for the shrink light
   try {
     const { assemble } = require('./lib/app');
