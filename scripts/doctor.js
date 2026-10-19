@@ -5,7 +5,7 @@
 //   node scripts/doctor.js [--quick]     (--quick skips the network checks)
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const { execSync, execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
@@ -15,18 +15,93 @@ const { taskNames } = require('./lib/tasks');
 const checks = [];
 const add = (id, level, msg, fix) => checks.push({ id, level, msg, fix: fix || undefined }); // level: green | yellow | red
 const run = (c) => execSync(c, { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+// The generated reports publish.js stages from the docs folder; a commit that touches anything else under docs/ is not publish's own. Keep in step with DOC_REPORTS in scripts/publish.js.
+const DOC_REPORTS = ['CANDIDATES.md', 'COVERAGE.md', 'HUNT.md', 'MOVIES.md', 'NETWORKS.md', 'SCOUT.md', 'SHOW_PROBE.md'];
+const gitRaw =(args) => execFileSync('git', ['-c', 'core.quotepath=off', ...args], { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'], windowsHide: true, maxBuffer: 256 * 1024 * 1024 }).toString(); // no shell, so a format string needs no quoting
+const gitOut = (args) => gitRaw(args).trim();
 const tailLines = (p, n) => { try { return fs.readFileSync(p, 'utf8').trim().split('\n').slice(-n); } catch (e) { return []; } };
 const hours = (iso) => (Date.now() - new Date(iso).getTime()) / 36e5;
 
+// Address-shaped text under the catalog folder (not cache, which is never committed). An Archive file name can look like an address
+// ("show@720p.mp4", or a stem such as "clip@Sessions.at.West54th.PBS.tv-vhs.XviD") and is the Archive's own public path, so what follows the @
+// must end in something that can be a top-level domain: two letters, or one of the common generic ones, and not a media extension. Keep in step
+// with scripts/publish.js. A file without an @ byte is skipped without being decoded, so the scan runs close to disk speed (a few seconds).
+const ADDR = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;
+const MEDIA_END = new Set(['ts', 'mp4', 'm4v', 'mkv', 'avi', 'webm', 'ogv', 'ogg', 'mpg', 'mpeg', 'mov', 'wmv', 'flv', '3gp', 'divx', 'm2ts', 'vob', 'mp3', 'm4a', 'flac', 'wav']);
+const GENERIC_TLD = new Set(['com', 'net', 'org', 'edu', 'gov', 'mil', 'int', 'info', 'biz', 'name', 'pro', 'mobi', 'asia', 'tel', 'travel', 'jobs', 'museum', 'aero', 'coop', 'xyz', 'online', 'site', 'app', 'dev', 'club', 'shop', 'store', 'blog', 'tech', 'live', 'news', 'email', 'cloud', 'world', 'today', 'top', 'vip', 'link', 'space', 'fun']);
+const isTld = (s) => { const t = s.toLowerCase(); return !MEDIA_END.has(t) && (/^[a-z]{2}$/.test(t) || GENERIC_TLD.has(t)); };
+function scanAddresses(dir) {
+  const out = { scanned: 0, files: 0, hits: 0, where: [] };
+  const scanFile = (p) => {
+    out.scanned++;
+    let buf; try { buf = fs.readFileSync(p); } catch (e) { return; } // tracked but missing on disk: nothing to read
+    if (buf.indexOf(64) < 0) return;
+    const text = buf.toString('utf8'); let n = 0;
+    for (const m of text.matchAll(ADDR)) {
+      const run = /^[A-Za-z0-9.-]*/.exec(text.slice(m.index + m[0].indexOf('@') + 1))[0].replace(/\.+$/, '');
+      if (isTld(run.split('.').pop())) n++;
+    }
+    if (n) { out.hits += n; out.files++; if (out.where.length < 3) out.where.push(path.relative(ROOT, p).replace(/\\/g, '/')); }
+  };
+  // What counts is what git tracks (what gets published): the .json files git lists under the catalog folder. Ignored files such as
+  // catalog/cache, catalog/voidtv.db or a generated preview are not read. Without git (not a repository) every .json under the folder is read.
+  let listed = null;
+  try { listed = gitRaw(['ls-files', '-z', '--', path.relative(ROOT, dir).replace(/\\/g, '/')]).split('\0').filter((f) => /\.json$/i.test(f)); } catch (e) { /* no git here */ }
+  if (listed) { for (const f of listed) scanFile(path.join(ROOT, f)); return out; }
+  const walk = (d, top) => {
+    let ents; try { ents = fs.readdirSync(d, { withFileTypes: true }); } catch (e) { return; }
+    for (const e of ents) {
+      const p = path.join(d, e.name);
+      if (e.isDirectory()) { if (!(top && e.name === 'cache')) walk(p, false); continue; }
+      if (/\.json$/i.test(e.name)) scanFile(p);
+    }
+  };
+  walk(dir, true);
+  return out;
+}
+
 async function main() {
-  // 1. publish freshness
-  const pub = tailLines(path.join(CACHE, 'publish.log'), 60).filter((l) => /pushed|FAILED|nothing new/.test(l));
-  const lastPush = [...pub].reverse().find((l) => /pushed/.test(l));
-  const lastAny = pub[pub.length - 1] || '';
-  if (!lastAny) add('publish', 'yellow', 'no publish has run yet');
-  else if (/FAILED/.test(lastAny)) add('publish', 'red', 'the last publish failed: ' + lastAny.slice(25, 160), 'Open HQ > Jobs > publish.log; the error is at the end. A file git cannot add (odd name, locked) is the usual cause.');
-  else if (lastPush && hours(lastPush.slice(0, 24)) > 6) add('publish', 'yellow', 'last successful push was ' + Math.round(hours(lastPush.slice(0, 24))) + ' h ago', 'Check the VoidTV Publish task exists and the PC was on.');
-  else add('publish', 'green', (lastPush || lastAny).slice(25, 120));
+  // 1. publish. The light follows the LAST dated outcome line in publish.log, found by reading the whole file from the
+  //    end. (It used to read the last 60 lines: one failed publish wrote thousands of git warning lines and pushed the real
+  //    outcome out of that window, so a failure read as "no publish has run yet".) publish.js ends every run with exactly one of:
+  //    "nothing new", "pushed <hash>: ...", "refused: ...", "FAILED: ...", "held: ...". Lines from a --dry run start "dry:" and never match.
+  const OUTCOME = /^(\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d+)?Z) (nothing new|pushed |refused:|FAILED:|held:)/;
+  let lastOut = null, lastPush = null;
+  try {
+    const lines = fs.readFileSync(path.join(CACHE, 'publish.log'), 'utf8').split('\n');
+    for (let i = lines.length - 1; i >= 0 && !(lastOut && lastPush); i--) {
+      const m = OUTCOME.exec(lines[i]); if (!m) continue;
+      const hit = { at: m[1], word: m[2].replace(/[: ]+$/, ''), text: lines[i].replace(/\r$/, '').slice(m[1].length + 1) };
+      if (!lastOut) lastOut = hit;
+      if (!lastPush && hit.word === 'pushed') lastPush = hit;
+    }
+  } catch (e) { /* no log yet */ }
+  if (!lastOut) add('publish', 'yellow', 'no publish has run yet');
+  else if (lastOut.word === 'FAILED') add('publish', 'red', 'the last publish failed: ' + lastOut.text.replace(/^FAILED: /, '').slice(0, 160), 'Open HQ > Jobs > publish.log; the FAILED line says why (a file git cannot add, a push that did not go through, a branch that is not master). The next scheduled run tries again; node scripts/publish.js runs it now.');
+  else if (lastOut.word === 'refused') add('publish', 'red', 'the last publish was refused: ' + lastOut.text.replace(/^refused: /, '').slice(0, 160), 'Nothing was committed. publish.log has the reason. A shrink: find out what emptied the catalog first; if it is meant, run node scripts/publish.js --allow-shrink. A file that is not JSON, or an address or token: fix the file it names.');
+  else if (lastOut.word === 'held') add('publish', 'yellow', lastOut.text.slice(0, 160), 'The catalog is committed but not pushed: commits that publish did not make are waiting. Push them by hand when you mean to, or run node scripts/publish.js --allow-other-commits.');
+  else if (hours(lastOut.at) > 6) add('publish', 'yellow', 'last publish run was ' + Math.round(hours(lastOut.at)) + ' h ago', 'Check the VoidTV Publish task exists and the PC was on.');
+  else add('publish', 'green', (lastPush || lastOut).text.slice(0, 120));
+
+  // 1b. unpushed: commits on master that origin/master does not have yet. Local refs only, no fetch (no network in the doctor).
+  //     Yellow while a commit that publish did not make waits (publish will not push it); red once a "Catalog:" commit has waited over 30 minutes.
+  try {
+    // Same rule as publish.js: a commit is publish's own only when its subject starts with "Catalog:" and it touches nothing outside the catalog, docs and list paths.
+    const relp = (p) => path.relative(ROOT, p).replace(/\\/g, '/');
+    const ownPaths = [relp(PROFILE.catalogDir), relp(PROFILE.listFile), ...DOC_REPORTS.map((n) => relp(PROFILE.docsDir) + '/' + n)];
+    const inOwn = (f) => ownPaths.some((p) => f === p || f.startsWith(p + '/'));
+    const rows = gitRaw(['log', '--format=%x01%ct%x09%s', '--name-only', 'origin/master..master']).split('\x01').filter((b) => b.trim()).map((b) => {
+      const [head, ...files] = b.split('\n'); const i = head.indexOf('\t');
+      return { at: +head.slice(0, i) * 1000, subject: head.slice(i + 1).trim(), own: /^Catalog: /.test(head.slice(i + 1)) && files.map((f) => f.trim()).filter(Boolean).every(inOwn) };
+    });
+    const own = rows.filter((r) => r.own), other = rows.filter((r) => !r.own);
+    const waited = own.length ? Math.round((Date.now() - Math.min(...own.map((r) => r.at))) / 60000) : 0;
+    const names = other.slice(0, 4).map((r) => r.subject.slice(0, 60)).join(' | ') + (other.length > 4 ? ` | and ${other.length - 4} more` : '');
+    if (own.length && waited > 30) add('unpushed', 'red', `${own.length} Catalog commit${own.length === 1 ? '' : 's'} waiting ${waited} min to be pushed` + (other.length ? `, with ${other.length} other commit${other.length === 1 ? '' : 's'}` : ''), 'The push failed or is being held. publish.log has the reason; node scripts/publish.js tries the push again (it pushes waiting commits first).');
+    else if (other.length) add('unpushed', 'yellow', `${other.length} commit${other.length === 1 ? '' : 's'} not made by publish waiting to be pushed: ${names}`, 'They stay on this PC until you push them; the scheduled publish will not send them (it logs "held"). node scripts/publish.js --allow-other-commits sends them with the catalog.');
+    else if (own.length) add('unpushed', 'green', `${own.length} Catalog commit${own.length === 1 ? '' : 's'} made ${waited} min ago, not pushed yet`);
+    else add('unpushed', 'green', 'nothing waiting: master is level with origin/master');
+  } catch (e) { add('unpushed', 'yellow', 'could not compare master with origin/master', 'Run git status in the repo folder; origin/master may not exist here yet.'); }
 
   // 2. nightly
   const nl = tailLines(path.join(CACHE, 'nightly.log'), 80);
@@ -121,6 +196,11 @@ async function main() {
     const dirty = run('git status --porcelain -- catalog docs scripts/show-list.json').split('\n').filter(Boolean).length;
     add('repo', gitBytes > 4e9 ? 'yellow' : 'green', `.git ${(gitBytes / 1e9).toFixed(1)} GB, ${dirty} unpublished catalog files`, gitBytes > 4e9 ? 'The catalog history is getting heavy: run git gc, or start a fresh catalog repo (docs/RUNBOOK.md).' : undefined);
   } catch (e) { add('repo', 'yellow', 'git not readable'); }
+
+  // 9. addresses: uploader e-mail addresses are third-party personal data and must not sit in the published catalog (audit CP-025). Should be 0.
+  const adr = scanAddresses(PROFILE.catalogDir);
+  if (adr.hits) add('addresses', 'red', `${adr.hits} address-shaped string${adr.hits === 1 ? '' : 's'} in ${adr.files} catalog file${adr.files === 1 ? '' : 's'}, e.g. ${adr.where.join(', ')}`, 'In the named files remove the uploader field, or replace the text with [email]. publish.js refuses to add new ones, so a hunter that writes one will stop the publish until it is fixed.');
+  else add('addresses', 'green', `no address-shaped text in ${adr.scanned} catalog files`);
 
   const worst = checks.some((c) => c.level === 'red') ? 'red' : checks.some((c) => c.level === 'yellow') ? 'yellow' : 'green';
   const out = { at: new Date().toISOString(), level: worst, checks };

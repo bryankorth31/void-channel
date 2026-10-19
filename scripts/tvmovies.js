@@ -10,6 +10,9 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
+// Free text copied from the Archive (descriptions, titles) or from TMDB (overviews) can carry an e-mail address. It is masked here, before
+// anything is written, so a hunt can never put an address into committed data (and publish never has to refuse for that reason).
+const noEmail = (s) => (typeof s === 'string' ? s.replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g, '[email]') : s);
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache', 'tmdb-discover');
 const OUT = path.join(PROFILE.catalogDir, 'tvmovies-list.json');
 const env = fs.existsSync(path.join(ROOT, 'backend', '.env')) ? fs.readFileSync(path.join(ROOT, 'backend', '.env'), 'utf8') : '';
@@ -74,8 +77,8 @@ async function discoverSpecials() {
 
 function slim(m, kind) {
   return {
-    tmdbId: m.id, kind, title: m.title, original: m.original_title !== m.title ? m.original_title : undefined,
-    year: (m.release_date || '').slice(0, 4) || null, overview: m.overview || '', popularity: Math.round(m.popularity || 0),
+    tmdbId: m.id, kind, title: noEmail(m.title), original: noEmail(m.original_title !== m.title ? m.original_title : undefined),
+    year: (m.release_date || '').slice(0, 4) || null, overview: noEmail(m.overview || ''), popularity: Math.round(m.popularity || 0),
     rating: m.vote_average ? Math.round(m.vote_average * 10) / 10 : null, votes: m.vote_count || 0,
     poster: m.poster_path ? 'https://image.tmdb.org/t/p/w342' + m.poster_path : null,
     backdrop: m.backdrop_path ? 'https://image.tmdb.org/t/p/w1280' + m.backdrop_path : null,
@@ -97,7 +100,7 @@ async function main() {
       try {
         const d = await tmdb('/movie/' + m.tmdbId);
         m.runtime = d.runtime || 0; m.imdb = d.imdb_id || null;
-        m.companies = (d.production_companies || []).map((c) => c.name).slice(0, 4);
+        m.companies = (d.production_companies || []).map((c) => noEmail(c.name)).slice(0, 4);
         // Kids' networks make kids' movies; B's rule keeps them off the shelf.
         m.kids = m.companies.some((c) => /disney|nickelodeon|nick jr|cartoon network|pbs kids|boomerang|mattel|hasbro|dreamworks animation|sesame/i.test(c)) || undefined;
         n++;
