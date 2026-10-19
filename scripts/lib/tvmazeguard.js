@@ -30,7 +30,9 @@ const path = require('path');
 const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/×/g, ' x ').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
 // The name for the "same name" test: a trailing "(...)" on the list name and every article (the, a, an) set aside.
 const key = (name) => norm(String(name || '').replace(/\(.*?\)/g, ' ')).split(' ').filter((w) => w && !/^(?:the|a|an)$/.test(w)).join(' ');
-// The old rule, kept as the first filter so this guard can only be stricter than it was: containment, or 60% of the longer word list.
+// The old rule, kept as the first filter so this guard can only be stricter than hunt.js's old check was: containment, or 60% of the longer word list
+// (hunt.js counted 60% of the list name's words only; retvmaze.js had no containment test, so a phrase near name such as "The Trap Door" for "The Trap" is the one
+// thing retvmaze.js refused that this function lets on to the year, language and type checks).
 function oldCheckAccepts(listName, tvName) {
   const a = norm(String(listName || '').replace(/\(.*?\)/g, '')), b = norm(tvName);
   if (!a || !b) return false;

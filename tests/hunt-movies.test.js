@@ -462,7 +462,7 @@ describe('TVmaze near-name guard (CP-034)', () => {
     assert.equal(G.nearNameGuard(E('Zork', 'Drama'), tv({ genres: ['Anime'] })).kind, 'type');
     assert.equal(G.nearNameGuard(null, null).ok, false);
   });
-  test('a near name the old check would have refused is still refused: the guard is never looser than the old rule', () => {
+  test('a name the old hunt.js check would have refused is still refused: the guard is never looser than that rule', () => {
     for (const [list, tvName] of [['Loveline', 'Liveline: Call Back'], ['Terra X', 'Terra e Paixão'], ['M*A*S*H', 'A Teacher']]) {
       assert.equal(G.oldCheckAccepts(list, tvName), false);
       assert.equal(G.nearNameGuard(E(list, 'Late Night'), { name: tvName, premiered: '2000-01-01' }).ok, false, list);
