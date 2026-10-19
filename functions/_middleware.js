@@ -6,8 +6,9 @@
 //     Once the gate is off, scripts/site.js narrows _routes.json to /api/* and /q/*, so this Function only sees those paths
 //     and a Cloudflare Redirect Rule on the zone has to do the www redirect for pages (docs/DEPLOY.md, opening day).
 //   * Every answer, the gate page included, carries the security headers below (CF-012). The 401 page also gets Cache-Control: no-store.
-//   * The gate itself is unchanged and still follows only the SITE_PASSWORD variable; the build reads the same variable to
-//     choose the routes (scripts/site.js), so the two cannot disagree (CF-003).
+//   * The gate itself is unchanged and still follows only the SITE_PASSWORD variable. The build reads that variable (as plain Text) or a
+//     plain GATE = on / off to choose the routes (scripts/site.js), and refuses a Cloudflare build that sees neither, so a password
+//     the build cannot see never opens the site (CF-003).
 const COOKIE = 'voidtv_gate';
 // Keep in step with SECURITY_HEADERS in scripts/lib/siteguards.js (a Function cannot import from scripts/);
 // tests/site-middleware.test.js fails when the two differ. The Content-Security-Policy is report-only: it blocks nothing.

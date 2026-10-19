@@ -4,10 +4,11 @@
 // scripts/site.js uses it to decide the routing, the headers, the version.txt line and the build refusals,
 // scripts/doctor.js uses it to turn the same numbers into lights, and tests/site-guards.test.js tests it.
 //
-// The one switch: the SITE_PASSWORD variable on the Cloudflare Pages project. Set (as a plain-text variable, which is
-// the only kind the build can see) = the gate is on and every page goes through the gate Function. Not set = the
-// site is open and only /api/* and /q/* still run as Functions. GATE=on is a spare, for the case where SITE_PASSWORD
-// has to be an encrypted secret (a secret is hidden from the build, so the build is told by this plain variable).
+// The one switch, on the Cloudflare Pages project. SITE_PASSWORD set as a plain-text variable (the only kind the build can see)
+// = the gate is on and every page goes through the gate Function. A plain GATE=on does the same for a password kept as an
+// encrypted Secret (a Secret is hidden from the build). The site is opened only by a plain GATE=off with no password: the
+// narrow routes (only /api/* and /q/* run as Functions). Neither variable on a Cloudflare build of VOIDtv is refused, because a
+// hidden Secret looks exactly like that and must not open the site (see gateDecision).
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -22,7 +23,25 @@ const BACKUP_DAYS = 7;
 const mb = (n) => (n / 1e6).toFixed(1) + ' MB';
 
 // 1. The switch ---------------------------------------------------------------------------------------------------
-const isGated = (env) => Boolean(env && env.SITE_PASSWORD) || String((env && env.GATE) || '').trim().toLowerCase() === 'on';
+// What the build can see of the switch. 'on': SITE_PASSWORD is visible, or a plain GATE=on says the password is a Secret.
+// 'off': a plain GATE=off and no visible password, i.e. opening the site is done on purpose. 'conflict': GATE=off together with a
+// visible password (they say opposite things). 'unset': neither is visible. An encrypted Secret is invisible to the build, so 'unset'
+// must never be read as "open": gateDecision refuses it on a Cloudflare build of the VOIDtv site.
+function gateMode(env) {
+  const pw = Boolean(env && env.SITE_PASSWORD), g = String((env && env.GATE) || '').trim().toLowerCase();
+  if (g === 'off') return pw ? 'conflict' : 'off';
+  return pw || g === 'on' ? 'on' : 'unset';
+}
+const isGated = (env) => gateMode(env) === 'on';
+// The build's decision: { mode, gated, error }. error is a message and the build must exit 1 (the old, gated site stays up).
+// cloudflare is true on a Pages build (CF_PAGES=1); profile is the profile name. A local build, or a build of another profile (kids,
+// public access, the tests), with neither variable is written open as before: a local build has no Functions to run anyway.
+function gateDecision(env, { cloudflare, profile }) {
+  const mode = gateMode(env);
+  if (mode === 'conflict') return { mode, gated: false, error: 'GATE=off but SITE_PASSWORD is also set: they say opposite things. Remove one of them (docs/DEPLOY.md, "The one switch"). Refusing to build; the old site stays up.' };
+  if (mode === 'unset' && cloudflare && profile === 'voidtv') return { mode, gated: false, error: 'GATE UNKNOWN: this build sees neither SITE_PASSWORD nor GATE. A password saved as an encrypted Secret is invisible to the build, so "nothing set" cannot be read as "open". Set SITE_PASSWORD as a plain Text variable, or a plain Text GATE = on beside the Secret, to keep the password; set a plain Text GATE = off (and delete SITE_PASSWORD) to open the site on purpose. Refusing to build; the old site stays up (docs/DEPLOY.md, "The one switch").' };
+  return { mode, gated: mode === 'on', error: null };
+}
 // Gated: everything but the brand assets runs through the gate Function. Open: pages are plain static files and
 // only the analytics intake and the QR redirects are Functions.
 const routesFor = (gated) => (gated ? { version: 1, include: ['/*'], exclude: ['/assets/*'] } : { version: 1, include: ['/api/*', '/q/*'], exclude: [] });
@@ -158,7 +177,7 @@ function gateLight({ gate, rootStatus, apiStatus }) {
     return light('gate', 'red', `version.txt says gate=on but the front page answered ${rootStatus}, not 401`, 'The build thinks the password is set but the running site disagrees. In Cloudflare, Workers & Pages > voidtvsite > Settings > Variables and Secrets: SITE_PASSWORD (and GATE, if you added it) must be set the same way, then Deployments > Retry deployment.');
   }
   if (rootStatus !== 200) return light('gate', 'red', `version.txt says gate=off but the front page answered ${rootStatus}, not 200`, 'The build was told the site is open but the running site still shows the password page or an error. Check Workers & Pages > voidtvsite > Settings > Variables and Secrets for SITE_PASSWORD in the Preview and Production lists, then Deployments > Retry deployment.');
-  if (apiStatus === 401) return light('gate', 'red', 'gate=off, the pages are open, but the analytics intake (/api/e) answered 401', 'The password is still set where the running site can see it (probably as an encrypted secret the build cannot read). Delete SITE_PASSWORD completely, or, if the site should stay private, add a plain-text GATE = on beside it. Then Deployments > Retry deployment.');
+  if (apiStatus === 401) return light('gate', 'red', 'gate=off, the pages are open, but the analytics intake (/api/e) answered 401', 'The password is still set where the running site can see it, as an encrypted Secret the build cannot read, while GATE = off told the build to open the site. To open the site, delete SITE_PASSWORD from the Production list. To keep it private, change GATE to on. Then Deployments > Retry deployment.');
   if (apiStatus != null && apiStatus !== 200) return light('gate', 'yellow', `gate=off and the pages are open, but /api/e answered ${apiStatus} (200 expected)`, 'Analytics may not be collecting. Check functions/api/e.js deployed: Workers & Pages > voidtvsite > Deployments > the latest > Functions.');
   return light('gate', 'green', 'gate=off: the site is OPEN to everyone and the analytics intake answers (right after opening day, wrong before it)');
 }
@@ -199,7 +218,7 @@ function shrinkLight(now, before) {
   if (!before) return light('shrink', 'yellow', 'no published count to compare with yet', 'It appears after the first publish on this PC (catalog/cache/publish-state.json).');
   const v = shrinkVerdict(now, before);
   const pct = before.shows > 0 ? Math.round(((before.shows - now.shows) / before.shows) * 100) : 0;
-  if (v.fell) return light('shrink', 'red', `${v.parts.join(', ')}: down more than 10% against the last publish (${before.source})`, 'Something emptied the catalog. Do not publish yet: check git status in catalog/ and HQ > Jobs for a match that went wrong, and restore with git checkout -- catalog. If the drop is meant, node scripts/publish.js --allow-shrink.');
+  if (v.fell) return light('shrink', 'red', `${v.parts.join(', ')}: down more than 10% against the last publish (${before.source})`, 'Something emptied the catalog. Do not publish yet: check git status in catalog/ and HQ > Jobs for a match that went wrong, and restore with git checkout -- catalog. If the drop is meant it needs two overrides: node scripts/publish.js --allow-shrink for the publish, and then on Cloudflare a plain Text variable SITE_ALLOW_SHRINK = 1 for that one deploy (Workers & Pages > voidtvsite > Settings > Variables and Secrets, then Retry deployment), deleted again afterwards. Without the second one the build refuses and the old site stays up.');
   return light('shrink', 'green', `${now.shows} shows now, ${before.shows} at the last publish (${pct > 0 ? 'down ' + pct + '%' : 'not down'}; limit 10%)`);
 }
 
@@ -240,7 +259,7 @@ async function liveLights({ base, versionTextBody, doFetch, remote, nowMs }) {
 
 module.exports = {
   LIMITS, SECURITY_HEADERS, CSP,
-  isGated, routesFor, headersFile, missingSecurityHeaders, versionText, parseVersion,
+  gateMode, gateDecision, isGated, routesFor, headersFile, missingSecurityHeaders, versionText, parseVersion,
   checkOutput, shrinkVerdict, readLastCounts, countsFromVersion, liveCountsSync, unreadableGrids,
   filesLight, gateLight, wwwLight, headersLight, liveVersionLight, shrinkLight, backupLight, liveLights,
 };

@@ -8,8 +8,9 @@
 //   site/_headers                   caching and the security headers (scripts/lib/siteguards.js has the list)
 //   site/_routes.json               which paths run as Pages Functions: everything while the password is on, /api and /q once it is off
 //   site/version.txt                commit, time, gate=on|off and the file counts; the doctor reads it from the live site
-// The one switch is the SITE_PASSWORD variable on the Pages project (plain text, so the build can see it): set = gate on,
-// not set = open. See docs/DEPLOY.md. The build refuses to ship under 100 shows, a catalog more than 10 percent smaller than the
+// The one switch is two plain-text variables on the Pages project, because the build cannot see an encrypted Secret:
+// SITE_PASSWORD (or GATE = on) = gate on; GATE = off with no password = open; neither on a Cloudflare build of VOIDtv = refused.
+// See docs/DEPLOY.md, "The one switch". The build refuses to ship under 100 shows, a catalog more than 10 percent smaller than the
 // last publish, 19,500 files (Pages allows 20,000) or a file over 24 MiB.
 // Usage: node scripts/site.js [--base https://voidtv.net]
 const fs = require('fs');
@@ -25,13 +26,19 @@ const args = process.argv.slice(2);
 // --open used to narrow the routes by hand while the password variable said something else; the two could disagree and the
 // site came up open with no analytics (audit CF-003). It is gone. Passing it is an error so an old build command fails loudly
 // (the old site stays up) instead of being ignored.
-if (args.includes('--open')) { console.error('--open no longer exists. The SITE_PASSWORD variable on the Pages project is the only switch: set = password on, not set = site open (docs/DEPLOY.md). Remove --open from the build command.'); process.exit(2); }
+if (args.includes('--open')) { console.error('--open no longer exists. The SITE_PASSWORD and GATE variables on the Pages project are the only switch: SITE_PASSWORD (or GATE = on) = password on, GATE = off = site open (docs/DEPLOY.md, "The one switch"). Remove --open from the build command.'); process.exit(2); }
 const bi = args.indexOf('--base');
 const ORIGIN = bi >= 0 ? args[bi + 1].replace(/\/$/, '') : PROFILE.domain;
-const GATED = guards.isGated(process.env);
+// "Open" is a positive act: a plain GATE=off. A password saved as an encrypted Secret is invisible to this build, so seeing neither
+// variable on a Cloudflare build of VOIDtv is refused (exit 1, the old gated site stays up) instead of being written open.
+const GATE = guards.gateDecision(process.env, { cloudflare: process.env.CF_PAGES === '1', profile: PROFILE.name });
+if (GATE.error) { console.error(GATE.error); process.exit(1); }
+const GATED = GATE.gated;
 console.log(GATED
-  ? 'GATE: on (SITE_PASSWORD or GATE is set). Every page runs through the password Function.'
-  : 'GATE: off (SITE_PASSWORD is not set, or is an encrypted secret this build cannot see). The site will be OPEN: pages are served as plain files and only /api and /q run as Functions.');
+  ? 'GATE: on (SITE_PASSWORD is visible, or GATE=on says the password is a Secret). Every page runs through the password Function.'
+  : GATE.mode === 'off'
+    ? 'GATE: off (GATE=off was set on purpose). The site will be OPEN: pages are served as plain files and only /api and /q run as Functions.'
+    : 'GATE: off (neither SITE_PASSWORD nor GATE is set; this is a local or non-VOIDtv build, written open with no Functions for pages). Do not upload this folder by hand to a project that should have a password.');
 
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'data', 'shows'), { recursive: true });
