@@ -292,7 +292,7 @@ function decideGrid(entry, cand, tv, ctx) {
     const itemNamesMe = norm(itemText).includes(core) || norm(item.id).includes(core.replace(/ /g, ''));
     const itemNamesOther = namesOtherShow(item.title || '', show, aliases);
     const itemTitled = namesShow(item.title || '') || idNamesShow(item.id); // the upload itself says it is this show
-    const itemLonger = titleNaming(item.title || '', [core, ...aliases], nets) === 'longer'; // its title runs on into a longer title ("Naruto Shippuden"): an episode name that merely looks alike proves nothing
+    const itemLonger = titleNaming(item.title || '', [core, ...aliases], nets) === 'longer'; // its title runs on into a longer title ("Naruto Shippuden"): an episode name that merely looks alike proves nothing, unless the file's own name also names the show
     const unmatched = []; // episode-band files this item could not place by number or title
     for (const f of item.files) {
       // Files hunted before the show had a TVmaze runtime carry generic bands (half-hour, hour); re-band them now that we know the runtime.
@@ -320,7 +320,7 @@ function decideGrid(entry, cand, tv, ctx) {
       // upload that does not name the show is how Tweenies ended up under Look Around You.
       const titleAlone = !namesShow(f.name) && !itemTitled;
       const strongTitle = best && norm(best.name).split(' ').filter((w) => !STOP.has(w) && w.length > 2).length >= 2;
-      if (!dateHit && best && bestSim >= 0.6 && (!titleAlone || strongTitle) && !itemLonger) {
+      if (!dateHit && best && bestSim >= 0.6 && (!titleAlone || strongTitle) && !(itemLonger && !namesTitle(f.name, [core, ...aliases], nets))) {
         const existing = candidates.find((c) => c.ep === best);
         if (existing) { existing.base += bestSim >= 0.8 ? 0.3 : 0.15; existing.why += ' + title match'; }
         else candidates.push({ ep: best, base: bestSim >= 0.8 ? 0.5 : 0.3, why: `title ~ "${best.name}" (${bestSim.toFixed(2)})` });

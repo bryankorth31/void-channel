@@ -375,9 +375,13 @@ describe('the upload title names the show', () => {
     assert.equal(guessed('Zork Show Season 1'), 4);
     assert.equal(guessed("Zork Show Jam Season 1"), 0);
     // the strict pass: an episode name that merely looks alike is no proof when the upload's title is a longer title
-    const alike = (title) => run([mkFile('Zork Show Jam - Velvet Anchor.mp4')], { title }).grid.seasons.flatMap((s) => s.episodes).find((e) => e.name === 'Velvet Anchor').file;
+    const alike = (title, name = 'Zork Show Jam - Velvet Anchor.mp4') => run([mkFile(name)], { title }).grid.seasons.flatMap((s) => s.episodes).find((e) => e.name === 'Velvet Anchor').file;
     assert.ok(alike('Zork Show Season 1'), 'placed from an upload titled as the show');
     assert.equal(alike('Zork Show Jam'), null, 'not placed from an upload titled as a longer title');
+    // ...unless the file's own name also names the show: the longer title then does not decide (NOVA, Airline, Just Shoot Me)
+    assert.ok(alike('Zork Show Jam', 'Zork Show - Velvet Anchor.mp4'), 'the file names the show, whatever the upload is called');
+    assert.equal(alike('Zork Show Jam', 'Velvet Anchor.mp4'), null, 'a file that does not name the show stays out of the longer title\'s upload');
+    assert.equal(alike('Zork Show Jam', 'Zork Show Jam Special - Velvet Anchor.mp4'), null, 'a file that itself runs on into a longer title stays out');
   });
 });
 
