@@ -277,6 +277,30 @@ test('daylight saving: across a clock change the airings still tile time, and wh
   for (let t = t0; t < t1; t += 9 * 60000) { const n = G.chanNow(ch, lib, t); assert.ok(n.a.st <= t && t < n.a.en); }
 });
 
+test('daylight saving: on both switch nights every show keeps its real length, and the day is 25 or 23 hours long', () => {
+  const nights = [
+    { name: 'clocks back, 1 Nov 2026', SW: Date.UTC(2026, 10, 1, 7, 0), before: -5 * H, after: -6 * H, hours: 25 },
+    { name: 'clocks forward, 8 Mar 2026', SW: Date.UTC(2026, 2, 8, 8, 0), before: -6 * H, after: -5 * H, hours: 23 },
+  ];
+  for (const z of nights) {
+    const G = T.tvgridFactory();
+    G.setOff((ms) => (ms < z.SW ? z.before : z.after));
+    const { ch, lib } = big();
+    const bd = G.dayOf(z.SW - H);
+    const day = G.planDay(ch, lib, bd), air = G.dayAirings(ch, lib, bd), next = G.dayAirings(ch, lib, bd + 1);
+    assert.equal(air.length, day.length, z.name);
+    for (let u = 0; u < air.length; u++) {
+      assert.ok(air[u].en > air[u].st, z.name + ': airing ' + u + ' has a length');
+      if (u + 1 < day.length && day[u + 1].st === day[u].st + day[u].du) assert.equal(air[u].en - air[u].st, day[u].du * 60000, z.name + ': airing ' + u + ' runs its real length');
+    }
+    assert.equal(air[air.length - 1].en, next[0].st, z.name + ': the day hands over to the next with no hole');
+    assert.equal(next[0].st - air[0].st, z.hours * H, z.name + ': 6 am to 6 am is ' + z.hours + ' hours');
+    const wall = (t) => { const d = new Date(t + (t < z.SW ? z.before : z.after)); return d.getUTCHours() * 60 + d.getUTCMinutes(); };
+    assert.equal(wall(air[0].st), 360, z.name + ': the day starts at 6:00 am on the wall clock');
+    assert.equal(wall(next[0].st), 360, z.name + ': and the next day too');
+  }
+});
+
 test('epCode and epTotal read the runs: the whole show, season by season, and a gap in the numbers', () => {
   const G = sched();
   const lib = { rt: [22], lib: [[1, 1, 3, 2, 5, 2, 3, 1, 1]] };

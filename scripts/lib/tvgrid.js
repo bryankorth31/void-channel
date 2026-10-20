@@ -32,6 +32,25 @@ function tvgridFactory() {
   function dayOf(ms) { return Math.floor((ms + OFF(ms) - DAY0 * MIN) / DAYMS); }
   // A local wall-clock moment, written as milliseconds as if local were UTC, back to a real instant.
   function toAbs(lms) { const g = lms - OFF(lms); return lms - OFF(g); }
+  // A wall-clock moment to an instant, for the day plan: a repeated hour (clocks back) takes its first pass, a skipped
+  // hour (clocks forward) moves on to the moment the clock jumps to, the way a station's schedule does.
+  function wallAt(lms) {
+    const a = toAbs(lms), H12 = DAYMS / 2;
+    const c = [lms - OFF(a - H12), lms - OFF(a), lms - OFF(a + H12)];
+    let ok = null, hi = c[0];
+    for (let i = 0; i < 3; i++) {
+      if (c[i] + OFF(c[i]) === lms && (ok === null || c[i] < ok)) ok = c[i];
+      if (c[i] > hi) hi = c[i];
+    }
+    return ok !== null ? ok : hi;
+  }
+  // One broadcast day in real minutes: where it starts, how a wall-clock minute of it (360 = 6:00 am) reads as a real
+  // minute counted from the same 360, and where it ends (1800 on most days, 1740 or 1860 on the two switch nights).
+  function dayClock(bd) {
+    const S = wallAt(bd * DAYMS + DAY0 * MIN);
+    const R = (m) => DAY0 + Math.round((wallAt(bd * DAYMS + m * MIN) - S) / MIN);
+    return { S: S, R: R, end: R(DAYEND) };
+  }
   const dowOf = (bd) => mod(bd + 4, 7);
   const weekOfDay = (bd) => Math.floor((bd + 4) / 7);
 
@@ -58,7 +77,9 @@ function tvgridFactory() {
     const rt = (s) => lib.rt[s] || 30;
     let t = DAY0;
     const put = (s, k) => { const du = rt(s); out.push({ s: s, st: t, du: du, j: cnt[s] || 0, k: k }); cnt[s] = (cnt[s] || 0) + 1; t += du; };
-    const wins = windows(dow);
+    // Dayparts are wall-clock times; the day is filled in real minutes, so a switch night keeps every show its real length.
+    const C = dayClock(bd);
+    const wins = windows(dow).map((x) => ({ k: x.k, a: C.R(x.a), b: C.R(x.b) }));
     for (let di = 0; di < wins.length; di++) {
       const win = wins[di];
       if (t < win.a) t = win.a;
@@ -149,12 +170,12 @@ function tvgridFactory() {
       for (let u = 0; u < day.length; u++) per[day[u].s] = (per[day[u].s] || 0) + 1;
     }
     const air = days.map((day, d) => {
-      const bd = w * 7 - 4 + d;
+      const bd = w * 7 - 4 + d, C = dayClock(bd);
       return day.map((x, u) => {
         const i = epPick(lib, x.s, w, per[x.s], base[d][x.s] || 0, x.j);
         const c = epCode(lib, x.s, i);
-        const st = toAbs(bd * DAYMS + x.st * MIN);
-        const en = toAbs(bd * DAYMS + (u + 1 < day.length ? day[u + 1].st : DAYEND) * MIN);
+        const st = C.S + (x.st - DAY0) * MIN;
+        const en = C.S + ((u + 1 < day.length ? day[u + 1].st : C.end) - DAY0) * MIN;
         return { s: x.s, i: i, se: c[0], n: c[1], st: st, en: en, du: x.du, k: x.k };
       });
     });

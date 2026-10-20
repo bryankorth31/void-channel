@@ -36,7 +36,7 @@ once was a cold run).
 **Not done / known.**
 * No filler or "up next" cards (Q2). A short episode makes the next one start early, a long one is joined where the clock is.
 * A viewer who stays on one channel for hours can drift a few minutes ahead of the guide; any channel change or reload resets it.
-* Daylight saving: one airing in the overnight window is an hour off on the two switch nights.
+* Daylight saving: FIXED 20 Oct (Chief of staff). Dayparts stay wall-clock times, the day is filled in real minutes, so every show keeps its real length on the two switch nights (the day is 25 or 23 hours). Tested on both nights and in six real zones over two years.
 * Gaps: about 1 in 4 daypart changes ends with an unfilled stretch (median 10 minutes, 90th percentile 14, worst 94 on channels whose
   episodes are 2 hours long, such as Dropout, TNT, ITV). In that stretch the next daypart's first show starts early.
 * Kids and cartoons are a genre guess. The Void (all shows) also airs shows nobody marked adult in late night (for example The Jerry
@@ -142,7 +142,7 @@ real file can differ by a few minutes:
   Q3 below.
 
 Daylight saving: the schedule is in local wall-clock minutes; a plan minute maps to a real instant through the
-viewer's offset at that time. On the two switch nights one airing in the overnight window is an hour off. Accepted.
+viewer's offset at that time. Fixed 20 Oct: the plan is filled in real minutes against wall-clock dayparts (dayClock, wallAt in tvgrid.js); a repeated hour takes its first pass, a skipped hour jumps forward.
 
 ## 3. Data shape (`data/tv.json`)
 
