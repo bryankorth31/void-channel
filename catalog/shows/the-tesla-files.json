@@ -1,0 +1,119 @@
+{
+  "show": "The Tesla Files",
+  "slug": "the-tesla-files",
+  "type": "Documentary & Geographic",
+  "network": "History",
+  "matchedAt": "2026-10-20T09:03:40.185Z",
+  "addedAt": "2026-10-20T09:03:40.186Z",
+  "tvmaze": {
+    "id": 36493,
+    "name": "The Tesla Files",
+    "runtime": 60,
+    "premiered": "2018-05-04",
+    "network": "History"
+  },
+  "coverage": {
+    "total": 5,
+    "live": 0,
+    "review": 3,
+    "missing": 2,
+    "pct": 60
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Without a Trace",
+          "airdate": "2018-05-04",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Without a Trace\" (0.95)",
+            "item": "tesla-files",
+            "itemTitle": "Tesla Files",
+            "file": "The Tesla Files  Without a Trace.mp4",
+            "name": "The Tesla Files  Without a Trace",
+            "url": "https://archive.org/download/tesla-files/The%20Tesla%20Files%20%20Without%20a%20Trace.mp4",
+            "seconds": 2540,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 402
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Colorado Experiment",
+          "airdate": "2018-05-11",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Colorado Experiment\" (0.98)",
+            "item": "tesla-files",
+            "itemTitle": "Tesla Files",
+            "file": "The Tesla Files  The Colorado Experiment.mp4",
+            "name": "The Tesla Files  The Colorado Experiment",
+            "url": "https://archive.org/download/tesla-files/The%20Tesla%20Files%20%20The%20Colorado%20Experiment.mp4",
+            "seconds": 2530,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 401
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Tesla's Tower",
+          "airdate": "2018-05-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Secret Weapons",
+          "airdate": "2018-05-25",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Secret Weapons\" (0.95)",
+            "item": "tesla-files",
+            "itemTitle": "Tesla Files",
+            "file": "The Tesla Files  Secret Weapons for the U.S. Military.ia.mp4",
+            "name": "The Tesla Files  Secret Weapons for the U.S",
+            "url": "https://archive.org/download/tesla-files/The%20Tesla%20Files%20%20Secret%20Weapons%20for%20the%20U.S.%20Military.ia.mp4",
+            "seconds": 2542,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 403
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Secret Weapons\" (0.95)",
+              "item": "tesla-files",
+              "itemTitle": "Tesla Files",
+              "file": "The Tesla Files  Secret Weapons for the U.S. Military.mp4",
+              "name": "The Tesla Files  Secret Weapons for the U.S. Military",
+              "url": "https://archive.org/download/tesla-files/The%20Tesla%20Files%20%20Secret%20Weapons%20for%20the%20U.S.%20Military.mp4",
+              "seconds": 2542,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 403
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "name": "Fowl Play",
+          "airdate": "2018-06-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

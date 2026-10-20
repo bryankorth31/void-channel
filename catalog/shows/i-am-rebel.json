@@ -1,0 +1,87 @@
+{
+  "show": "I Am Rebel",
+  "slug": "i-am-rebel",
+  "type": "Documentary & Geographic",
+  "network": "National Geographic",
+  "matchedAt": "2026-10-20T08:17:15.909Z",
+  "addedAt": "2026-10-20T08:17:15.909Z",
+  "tvmaze": {
+    "id": 17985,
+    "name": "I Am Rebel",
+    "runtime": 60,
+    "premiered": "2016-06-05",
+    "network": "National Geographic"
+  },
+  "coverage": {
+    "total": 4,
+    "live": 1,
+    "review": 0,
+    "missing": 3,
+    "pct": 25
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Jacked",
+          "airdate": "2016-06-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Weegee the Famous",
+          "airdate": "2016-06-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Love Drug",
+          "airdate": "2016-06-19",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "the-love-drug-i-am-rebel-s01e03-alt",
+            "itemTitle": "The Love Drug (I Am Rebel, S01E03) [Alternate]",
+            "file": "The Love Drug (I Am Rebel, S01E03) [alt].mp4",
+            "name": "The Love Drug (I Am Rebel, S01E03) [alt]",
+            "url": "https://archive.org/download/the-love-drug-i-am-rebel-s01e03-alt/The%20Love%20Drug%20(I%20Am%20Rebel%2C%20S01E03)%20%5Balt%5D.mp4",
+            "seconds": 2883,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 576
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "the-love-drug-i-am-rebel-s01e03",
+              "itemTitle": "The Love Drug (I Am Rebel, S01E03)",
+              "file": "The Love Drug (I Am Rebel, S01E03).mp4",
+              "name": "The Love Drug (I Am Rebel, S01E03)",
+              "url": "https://archive.org/download/the-love-drug-i-am-rebel-s01e03/The%20Love%20Drug%20(I%20Am%20Rebel%2C%20S01E03).mp4",
+              "seconds": 2643,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 418
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "name": "Phreaks and Geeks",
+          "airdate": "2016-06-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

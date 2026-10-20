@@ -1,0 +1,69 @@
+{
+  "show": "Blackbeard",
+  "slug": "blackbeard",
+  "type": "Documentary & Geographic",
+  "network": "Animal Planet",
+  "matchedAt": "2026-10-20T08:29:52.953Z",
+  "addedAt": "2026-10-20T08:29:52.953Z",
+  "tvmaze": {
+    "id": 32259,
+    "name": "Blackbeard",
+    "runtime": 120,
+    "premiered": "2006-06-17",
+    "network": "Hallmark Channel"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Part 1",
+          "airdate": "2006-06-17",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Part 1\" (1.00)",
+            "item": "rt-1_20251027",
+            "itemTitle": "Blackbeard",
+            "file": "Blackbeard Part 1.mp4",
+            "name": "Blackbeard Part 1",
+            "url": "https://archive.org/download/rt-1_20251027/Blackbeard%20Part%201.mp4",
+            "seconds": 5103,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1741
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Part 2",
+          "airdate": "2006-06-18",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Part 2\" (1.00)",
+            "item": "rt-1_20251027",
+            "itemTitle": "Blackbeard",
+            "file": "Blackbeard Part 2.mp4",
+            "name": "Blackbeard Part 2",
+            "url": "https://archive.org/download/rt-1_20251027/Blackbeard%20Part%202.mp4",
+            "seconds": 5105,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1104
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
