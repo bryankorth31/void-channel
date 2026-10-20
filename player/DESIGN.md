@@ -401,7 +401,9 @@ screen". The bar is inside the player root, and the root is what goes fullscreen
   title are those exact words; class `vpx-ch`), larger than the other controls, in the site's brand pink `#ff4fc8` at 60%
   opacity (`rgba(255,79,200,.6)`). They show and hide with the bar like every other control, in and out of fullscreen
   (`_show`, `_hideT` and `_holdBar` are untouched), and Tab and Left/Right reach them. The root also gets `vpx-tv`.
-  On a phone-sized Live TV player the elapsed time is hidden (`.vpx-tv .vpx-time` under 420 px) so the buttons fit.
+  On a Live TV player up to 720 px wide the buttons are compact (52 by 48 px, still larger than the other controls) and the
+  elapsed time is hidden (`.vpx-tv .vpx-time`), so the fullscreen button always fits the row (the review of c71cf4bf0 measured it
+  cut off at 430 to 470 px and 561 to 700 px with the first version).
   Live TV's old "Next episode (N)" button (it only changed the channel) is not drawn when `channelButtons` is given; the N key
   and the media keys still do the same thing.
 - **Remote keys.** With `channelButtons` set, ChannelUp and PageUp call `onNext`, ChannelDown and PageDown call `onPrev`

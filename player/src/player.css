@@ -144,11 +144,15 @@
   .vpx-row button.vpx-ch{min-width:52px;height:48px;padding:0 8px;margin-left:2px;font-size:14px}
   .vpx-chname{top:8px;right:8px;max-width:calc(100% - 16px);padding:6px 12px;font-size:16px}
 }
-/* the channel buttons need the room: on a phone-sized Live TV player the elapsed time gives way */
-@container (max-width:420px){.vpx-tv .vpx-time{display:none}}
-@supports not (container-type:inline-size){@media (max-width:600px){
+@supports not (container-type:inline-size){@media (max-width:760px){
   .vpx-row button.vpx-ch{min-width:52px;height:48px;padding:0 8px;margin-left:2px;font-size:14px}
   .vpx-tv .vpx-time{display:none}
 }}
 @media (min-width:1600px) and (hover:none),(min-width:1900px){.vpx-row button.vpx-ch{min-width:84px;height:64px;font-size:20px}.vpx-chname{font-size:28px;padding:10px 22px}}
 @media (prefers-reduced-motion:reduce){.vpx-chname,.vpx-chname.vpx-on{transition:none}}
+/* Live TV players up to 720 px wide: the compact channel buttons, and the elapsed time gives way, so the fullscreen button always fits the row
+   (the two big buttons and the time did not fit between 430 and 470 px and between 561 and 700 px, and the row ran past the player's edge). Last in the file so it also beats the 10-foot sizes above in a narrow player. */
+@container (max-width:720px){
+  .vpx-row button.vpx-ch{min-width:52px;height:48px;padding:0 8px;margin-left:2px;font-size:14px}
+  .vpx-tv .vpx-time{display:none}
+}

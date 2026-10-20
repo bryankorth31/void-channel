@@ -32,7 +32,7 @@ function page(opts) {
   };
   const state = Object.assign({ view: 'tv', chan: 'one', tvOn: true, tvFails: 0 }, opts.state);
   const sandbox = {
-    state, SHOWS, ME: { adult: false }, SITE: 'voidtv.net', Date: FDate, Math, mkPlayer, vpEvent() {}, filesFor: () => [{ url: 'u' }], esc: (s) => String(s == null ? '' : s),
+    setTimeout, state, SHOWS, ME: { adult: false }, SITE: 'voidtv.net', Date: FDate, Math, mkPlayer, vpEvent() {}, filesFor: () => [{ url: 'u' }], esc: (s) => String(s == null ? '' : s),
     ensure: async () => {}, track: (k, d) => log.tracked.push([k, d && d.slug]), urlFor: (s) => '/' + s, render: () => { log.render++; },
     history: { replaceState: (x, y, url) => log.replaced.push(url) }, window: { scrollTo: () => { log.scrolled++; } },
     document: { title: '', querySelector: (sel) => (sel === '.guide' ? (opts.noGuide ? null : guide) : sel === '.osd' ? osd : null) },
@@ -107,4 +107,39 @@ test('Live TV: with no player on the page (not turned on yet, or another page) t
   const missing = await playing(); missing.h.tune('no-such-channel');
   assert.equal(missing.log.render, 1, 'an unknown channel goes through render, whose own fallback picks the first channel');
   const nohost = page({ noHost: true }); nohost.h.tune('two'); assert.equal(nohost.log.render, 1);
+});
+
+// Review of c71cf4bf0, fix 2: the 1.5 s "no signal" retry. The player is now reused across channel changes, so the retry has to notice
+// that the viewer has moved to another channel since the failure (TV_TOKEN is bumped by every tvPlay).
+test('Live TV: a failure retry scheduled on one channel does not move the channel the viewer has since tuned to', async () => {
+  const p = await playing(); const p0 = p.getPlayer();
+  p0.o.onEvent({ type: 'failed' }, p0); // the item failed: the page schedules a retry in 1500 ms
+  p.h.surf(1); await settle(); // the viewer presses Next channel at once
+  const loads = p.log.loads.length;
+  await new Promise((r) => setTimeout(r, 1800));
+  assert.equal(p.log.loads.length, loads, 'the old channel\'s retry must not load another item into the new channel');
+  assert.equal(p.h.TVCUR.c.id, 'two');
+});
+
+test('Live TV: a failure retry with no channel change in between still runs, as before: the next item on the same channel', async () => {
+  const p = await playing(); const p0 = p.getPlayer();
+  const loads = p.log.loads.length;
+  p0.o.onEvent({ type: 'failed' }, p0);
+  await new Promise((r) => setTimeout(r, 1800)); await settle();
+  assert.equal(p.log.loads.length, loads + 1, 'the retry loaded the next item');
+  assert.equal(p.h.TVCUR.c.id, 'one', 'on the same channel');
+  assert.equal(p.log.render, 0);
+});
+
+// Review of c71cf4bf0, fix 1: the fullscreen button was cut off the bar on Live TV players about 430 to 470 px and 561 to 700 px wide.
+// The page-side harness has no layout engine, so this checks the CSS text; the proof is the browser measurement in the review.
+test('Live TV: the style sheet makes the channel buttons compact and hides the elapsed time for every player up to 720 px wide (and in the old-browser fallback)', () => {
+  const css = fs.readFileSync(path.join(__dirname, '..', 'src', 'player.css'), 'utf8').replace(/\r\n/g, '\n');
+  const block = /@container \(max-width:720px\)\{([^}]*\}[^}]*)\}/.exec(css);
+  assert.ok(block, 'a container rule up to 720 px');
+  assert.ok(/\.vpx-row button\.vpx-ch\{min-width:52px;height:48px;padding:0 8px;margin-left:2px;font-size:14px\}/.test(block[1]), 'the compact buttons, still bigger than the other controls (40 to 44 px)');
+  assert.ok(/\.vpx-tv \.vpx-time\{display:none/.test(block[1]), 'the elapsed time gives way');
+  assert.ok(/@supports not \(container-type:inline-size\)\{@media \(max-width:760px\)\{[^}]*\}[^}]*\.vpx-tv \.vpx-time\{display:none\}/.test(css), 'the fallback for browsers without container queries covers the same widths');
+  assert.ok(!/max-width:420px\)\{\.vpx-tv/.test(css), 'the old 420 px rule is gone');
+  assert.ok(css.indexOf('@container (max-width:720px)') > css.indexOf('(min-width:1900px)'), 'it comes after the 10-foot sizes, so a narrow player on a big screen is still compact');
 });
