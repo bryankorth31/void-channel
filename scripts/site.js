@@ -62,7 +62,9 @@ const EPISODES = data.shows.reduce((n, s) => n + (s.eps || 0), 0);
 for (const s of data.shows) fs.writeFileSync(path.join(OUT, 'data', 'shows', s.slug + '.json'), JSON.stringify(showFile(s, data)));
 fs.writeFileSync(path.join(OUT, 'data', 'index.js'), 'const SHOWS=' + JSON.stringify(data.shows.map(indexEntry)) + ';');
 fs.writeFileSync(path.join(OUT, 'data', 'graph.json'), JSON.stringify({ people: data.people, links: data.links }));
-fs.writeFileSync(path.join(OUT, 'data', 'tv.json'), JSON.stringify({ channels: data.channels }));
+const TV_JSON = JSON.stringify(data.tv);
+fs.writeFileSync(path.join(OUT, 'data', 'tv.json'), TV_JSON);
+console.log(`data/tv.json: ${Buffer.byteLength(TV_JSON).toLocaleString('en-US')} bytes (the old list of every episode on every channel was about 2 MB)`);
 fs.mkdirSync(path.join(OUT, 'data', 'people'), { recursive: true });
 for (const [id, b] of Object.entries(data.bios || {})) fs.writeFileSync(path.join(OUT, 'data', 'people', id + '.json'), JSON.stringify(b));
 

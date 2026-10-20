@@ -178,9 +178,9 @@ async function main() {
     const { assemble } = require('./lib/app');
     const data = assemble();
     built = { shows: data.shows.length, episodes: data.shows.reduce((n, s) => n + (s.eps || 0), 0) };
-    const nulls = data.channels.reduce((k, c) => k + c.items.filter((it) => it[0] == null || !data.shows[it[0]]).length, 0);
+    const nulls = data.channels.reduce((k, c) => k + Object.values(c.p || {}).reduce((m, pool) => m + pool.filter((i) => i == null || !data.shows[i] || !data.tv.rt[i]).length, 0), 0);
     if (data.shows.length < 300) add('build', 'red', 'the site would ship with only ' + data.shows.length + ' titles', 'Something emptied the catalog; check git status in catalog/.');
-    else if (nulls) add('build', 'red', nulls + ' TV channel items point at no show', 'buildChannels index drift; re-run node scripts/site.js and look at the error.');
+    else if (nulls) add('build', 'red', nulls + ' TV channel pool entries point at no show', 'channel plan index drift (scripts/lib/tvgrid.js); re-run node scripts/site.js and look at the error.');
     else add('build', 'green', `${data.shows.length} titles, ${data.channels.length} channels, home order ${data.homeOrder.length} shelves`);
     // The page itself must carry the guards the audit asked for: a show that fails to load ends in a card, not a spinner
     // (SP-006), the player is kept across episodes (SP-020), a leftover player cannot start after the page is left, and saves of Mine

@@ -13,6 +13,7 @@ const { fetchJsonSource: FETCH_JSON_SRC } = require('./app-fetch');
 const { meSource: ME_SRC } = require('./app-me');
 // Live TV schedule: the builder (Node) and the pure schedule logic the page inlines (see scripts/lib/tvgrid.js).
 const TVGRID = require('./tvgrid');
+const TVGRID_SRC = TVGRID.source;
 // Builds what the browser gets per episode: the best copy (url/item/p/f/m) plus same-episode backups (alt),
 // ranked by player/tools/rank-sources.js (lighter clean copies first; wrong-episode "alternates" dropped).
 function epOut(e) {
@@ -45,10 +46,10 @@ const CREDIT = `<a href="/about" onclick="go('about');return false">About ${BRAN
 function readJson(p, fallback) { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fallback; } }
 
 // ---- data ---------------------------------------------------------------------------------
-// TV WORLD. Channels are the networks, rows and collections; each carries a fixed lineup of every
-// playable episode it holds, interleaved in ~45-minute blocks so it feels like a schedule rather than
-// one show on repeat. "Now playing" is pure arithmetic on the clock (see TV_EPOCH in the page), so
-// every visitor sees the same thing at the same moment with no server.
+// TV WORLD. Channels are the networks, rows and collections. Each carries a plan, not a list of episodes: pools of
+// shows for each daypart of a 24 hour schedule (scripts/lib/tvgrid.js, design in audit/drafts/tv-grid-design.md). What is
+// on, what is next and the guide are pure arithmetic on the viewer's clock, so everyone in a time zone sees the same
+// thing at the same moment with no server.
 const slugify = (s) => String(s).toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 // Which shows sit on which channel (the list and the ids are unchanged since the first Live TV). Returns the lists in
 // channel order, with the place of each show in the FULL list the page indexes.
@@ -74,23 +75,6 @@ function channelLists(shows, types) {
   if (movies.length) make('movies', 'TV Movies and Specials', 'row', movies);
   if (adultList.length) make('row-late-night', 'Late Night', 'row', adultList, true);
   return { lists, idx };
-}
-// The old list shape (every episode of every channel dealt round robin). Kept until the page moves to the schedule.
-function buildChannels(shows, types) {
-  const { lists, idx } = channelLists(shows, types);
-  return lists.map((L) => {
-    const queues = L.list.slice().sort((a, b) => b.eps - a.eps)
-      .map((s) => ({ q: s.seasons.flatMap((se) => se.episodes.map((e) => [idx.get(s.slug), se.season, e.n, Math.max(1, e.min || s.runtime || 30)])) }));
-    const items = [];
-    let active = queues.filter((x) => x.q.length);
-    while (active.length) {
-      for (const x of active) { let m = 0; while (x.q.length && m < 44) { const it = x.q.shift(); items.push(it); m += it[3]; } }
-      active = active.filter((x) => x.q.length);
-    }
-    const c = { id: L.id, name: L.name, kind: L.kind, shows: L.list.length, eps: L.list.reduce((n, s) => n + s.eps, 0), total: items.reduce((n, it) => n + it[3], 0), items };
-    if (L.adult) c.adult = true;
-    return c;
-  });
 }
 // The schedule plan (scripts/lib/tvgrid.js): per channel the pools of shows for each daypart, plus one shared library of typical
 // minutes and episode runs. This is what data/tv.json carries.
@@ -188,14 +172,13 @@ function assemble() {
     ['type', 'World TV'], ['type', 'Specials'], ['type', 'Reality & Talk'], ['tag', 'Variety & Talk'], ['tag', 'Game Shows'],
     ['type', 'Classic TV'], ['tag', 'Late Night Classics'], ['type', 'Late Night'],
   ];
-  const channels = buildChannels(shows, types);
   // HQ can rewrite the order into catalog/home-order.json; the list above is the fallback.
   const fileOrder = readJson(path.join(PROFILE.catalogDir, 'home-order.json'), null);
   const known = new Set([...types.map((t) => 'type:' + t), ...shows.flatMap((s) => (s.tags || []).map((t) => 'tag:' + t))]);
   const cleanOrder = Array.isArray(fileOrder) ? fileOrder.filter((e) => Array.isArray(e) && (e[0] === 'type' || e[0] === 'tag') && typeof e[1] === 'string' && known.has(e[0] + ':' + e[1])) : [];
   const homeOrder = cleanOrder.length ? cleanOrder : HOME_ORDER;
   const tv = buildTv(shows, types);
-  return { shows, people, links, types, bios, channels, tv, homeOrder };
+  return { shows, people, links, types, bios, channels: tv.channels, tv, homeOrder };
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
@@ -714,34 +697,37 @@ function degSuggest(q){const el=$('degs');if(!el)return;q=q.trim().toLowerCase()
 async function degPath(target){if(!GRAPH_LOADED){const out=$('degp');if(out)out.innerHTML='<div class="path"><span class="signal" style="width:28px;height:28px"></span> Loading the connections…</div>';await ensureGraph();if(!GRAPH_LOADED){if(out)out.innerHTML='';return}}const from=state.show.slug;const prev={};prev[from]=null;const via={};const q=[from];let found=from===target;while(q.length&&!found){const a=q.shift();for(const [b,ids] of Object.entries(LINKS[a]||{})){if(prev[b]!==undefined)continue;prev[b]=a;via[b]=ids[0];if(b===target){found=true;break}q.push(b)}}
  const out=$('degp');if($('degs'))$('degs').innerHTML='';if($('degq'))$('degq').value='';if(!found){out.innerHTML='<div class="path">No path to '+esc(BY_SLUG[target].show)+' through the people here (yet).</div>';return}
  const chain=[];for(let c=target;c;c=prev[c])chain.unshift(c);let h='<div class="path">';chain.forEach((sl,i)=>{if(i){const id=via[sl];const p=PEOPLE[id];h+='<span class="v" onclick="person('+id+')">— '+esc(p?p.name:'?')+' —</span>'}h+='<span class="s" onclick="go(\\''+sl+'\\')">'+esc(BY_SLUG[sl].show)+'</span>'});h+='</div><div class="g" style="color:var(--dim);font-size:12px;margin-top:4px">'+(chain.length-1)+' hop'+(chain.length===2?'':'s')+' · every show on the path plays here</div>';out.innerHTML=h}
-const TV_EPOCH=Date.UTC(2026,0,1)/1000;let TV_TOKEN=0;
-// items that failed in the last hour, per channel: the retry and the end of an item skip them, so a dead episode cannot loop (Bryan, 20 Oct 2026)
-const TV_DEAD={};const tvDead=(c,i)=>TV_DEAD[c.id+':'+i]>Date.now()-36e5;
-function tvNextGood(c,i){const L=c.items.length;for(let k=1;k<=L;k++){const j=(i+k)%L;if(!tvDead(c,j))return j}return (i+1)%L}
-async function ensureTV(){if(TV)return TV;const r=await fetch(BASE+'data/tv.json');TV=(await r.json()).channels;return TV}
-function chanNow(c,at){if(!c.pre){let a=0;c.pre=c.items.map(it=>(a+=it[3]*60))}const T=c.pre[c.pre.length-1];const t=((((at||Date.now())/1000-TV_EPOCH)%T)+T)%T;let lo=0,hi=c.pre.length-1;while(lo<hi){const m=(lo+hi)>>1;if(c.pre[m]>t)hi=m;else lo=m+1}const start=lo?c.pre[lo-1]:0;return{i:lo,offset:t-start,remain:c.pre[lo]-t}}
+// LIVE TV. What is on comes from the schedule in scripts/lib/tvgrid.js; the text below IS that file, so the page, the guide and the tests run the same code: dayparts, strips, airings with real start and end times on the viewer's own clock.
+const TVG=${TVGRID_SRC};
+let TV_TOKEN=0;
+// episodes that failed in the last hour, per channel: the retry and the end of an item skip them, so a dead episode cannot loop (Bryan, 20 Oct 2026)
+const TV_DEAD={};const tvKey=(c,a)=>c.id+':'+a.s+':'+a.se+'x'+a.n;const tvDead=(c,a)=>TV_DEAD[tvKey(c,a)]>Date.now()-36e5;
+function tvNextGood(c,a){let x=a;for(let k=0;k<24;k++){x=TVG.nextAiring(c,TVLIB,x);if(!x)return a;if(!tvDead(c,x))return x}return TVG.nextAiring(c,TVLIB,a)||a}
+async function ensureTV(){if(TV&&TVLIB)return TV;const r=await fetch(BASE+'data/tv.json');const j=await r.json();TVLIB={rt:j.rt,lib:j.lib};TV=j.channels;return TV}
+const chanNow=(c,at)=>TVG.chanNow(c,TVLIB,at);
 const mmss=(sec)=>{sec=Math.max(0,Math.round(sec));const h=Math.floor(sec/3600),m=Math.floor(sec%3600/60);return h?h+'h '+String(m).padStart(2,'0')+'m':m+' min'};
 const kindName={all:'every show',row:'row',collection:'collection',network:'network'};
-const code=(it)=>'S'+String(it[1]).padStart(2,'0')+'E'+String(it[2]).padStart(2,'0');
-// The guide rows, one per channel, as tvPage has always drawn them (also redrawn in place by tuneHere).
-function guideRows(chans,cur){return chans.map(c=>{const n=chanNow(c);const ci=c.items[n.i];const cs=SHOWS[ci[0]];return '<div class="ch'+(c.id===cur.id?' on':'')+'" onclick="tune(\\''+c.id+'\\')"><span class="cn">'+esc(c.name)+'<small>'+c.shows+' show'+(c.shows===1?'':'s')+' · '+c.eps+' episodes · '+kindName[c.kind]+'</small></span><span class="np">'+esc(cs?cs.show:'')+' <small>'+code(ci)+' · '+mmss(n.remain)+' left</small></span></div>'}).join('')}
+const code=(a)=>'S'+String(a.se).padStart(2,'0')+'E'+String(a.n).padStart(2,'0');
+const clock=(ms)=>new Date(ms).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});
+// The guide rows, one per channel: what is on now with the time left, and what is next with its start time (also redrawn in place by tuneHere).
+function guideRows(chans,cur){return chans.map(c=>{const n=chanNow(c);if(!n)return '';const nx=TVG.nextAiring(c,TVLIB,n.a),cs=SHOWS[n.a.s],ns=nx&&SHOWS[nx.s];return '<div class="ch'+(c.id===cur.id?' on':'')+'" onclick="tune(\\''+c.id+'\\')"><span class="cn">'+esc(c.name)+'<small>'+c.shows+' show'+(c.shows===1?'':'s')+' · '+c.eps+' episodes · '+kindName[c.kind]+'</small></span><span class="np">'+esc(cs?cs.show:'')+' <small>'+code(n.a)+' · '+mmss(n.remain)+' left</small>'+(nx?'<small>next '+clock(nx.st)+' · '+esc(ns?ns.show:'')+'</small>':'')+'</span></div>'}).join('')}
 // Change channel on the player that is already on the page: same player, same video, same fullscreen, no render(). The page
 // pieces tvPage draws around it (guide, title, the bar under the video) are updated in place; what plays and when is tvPlay's, as always.
 // False when there is no player on the Live TV page to switch (not turned on yet, other page): tune then falls back to render().
 function tuneHere(id){const host=$('vph'),g=document.querySelector('.guide');if(state.view!=='tv'||!TV||!VP||!host||!g||!host.contains(VP.root))return false;
- const chans=TV.filter(c=>!c.adult||ME.adult),cur=chans.find(c=>c.id===id);if(!cur)return false;const now=chanNow(cur),s=SHOWS[cur.items[now.i][0]];
- g.innerHTML=guideRows(chans,cur);document.title=cur.name+' · '+SITE;osd(cur,now.i,s,null);if(VP.flashChannel)VP.flashChannel(cur.name);tvPlay(cur,now.i,now.offset);return true}
+ const chans=TV.filter(c=>!c.adult||ME.adult),cur=chans.find(c=>c.id===id);if(!cur)return false;const now=chanNow(cur);if(!now)return false;const s=SHOWS[now.a.s];
+ g.innerHTML=guideRows(chans,cur);document.title=cur.name+' · '+SITE;osd(cur,now.a,s,null);if(VP.flashChannel)VP.flashChannel(cur.name);tvPlay(cur,now.a,now.offset);return true}
 function tune(id){track('tune',{slug:id});state.chan=id;state.tvOn=true;history.replaceState(null,'',urlFor('tv/'+id));if(!tuneHere(id))render();window.scrollTo(0,0)}
 function surf(dir){if(!TV)return;const list=TV.filter(c=>!c.adult||ME.adult);const i=list.findIndex(c=>c.id===state.chan);tune(list[(i+dir+list.length)%list.length].id)}
-function osd(c,i,s,ep){const el=document.querySelector('.osd');if(!el)return;const it=c.items[i];const n=chanNow(c);const nx=SHOWS[c.items[(i+1)%c.items.length][0]];
- el.innerHTML='<b>'+esc(c.name)+'</b><span>'+esc(s.show)+' · '+code(it)+(ep?' · '+esc(ep.name):'')+'</span><span class="g">'+(n.i===i?mmss(n.remain)+' left · ':'')+'next: '+esc(nx?nx.show:'')+'</span><span class="acts"><button class="btn" onclick="surf(-1)"><i class="ico chevron-left"></i>Ch</button><button class="btn" onclick="surf(1)">Ch<i class="ico chevron-right"></i></button><button class="btn" onclick="go(\\''+s.slug+'\\')">Open show</button></span>'}
-async function tvPlay(c,i,offset){const it=c.items[i];const s=SHOWS[it[0]];const host=$('vph');if(!host||!s)return;const token=++TV_TOKEN;await ensure(s);if(token!==TV_TOKEN||state.view!=='tv')return;const se=(s.seasons||[]).find(x=>x.season===it[1]);const ep=se&&se.episodes.find(e=>e.n===it[2]);if(!ep){tvPlay(c,(i+1)%c.items.length,0);return}osd(c,i,s,ep);track('tvplay',{slug:c.id,x:s.slug+' '+se.season+'x'+ep.n});TVCUR={c,i};if(!VP||!host.contains(VP.root))VP=mkPlayer(host,{volumeKeys:false,onNext:()=>surf(1),onPrev:()=>surf(-1),channelButtons:{onNext:()=>surf(1),onPrev:()=>surf(-1)},onEnded:()=>{const c=TVCUR.c,L=c.items.length,n=chanNow(c),d=(n.i-TVCUR.i+L)%L;if(d>0&&d<=L/2&&!tvDead(c,n.i))tvPlay(c,n.i,n.offset);else tvPlay(c,tvNextGood(c,TVCUR.i),0)},onEvent:(e,p)=>{vpEvent(e,p);if(e.type==='started')state.tvFails=0;if(e.type==='failed'){state.tvFails=(state.tvFails||0)+1;if(state.tvFails>6){state.tvFails=0;const o=document.querySelector('.osd');if(o)o.insertAdjacentHTML('beforeend','<p class="dim">Signal lost on this channel for now. Try another one.</p>');return}const tk=TV_TOKEN;if(TVCUR)TV_DEAD[TVCUR.c.id+':'+TVCUR.i]=Date.now();setTimeout(()=>{if(VP!==p||!TVCUR||tk!==TV_TOKEN)return;tvPlay(TVCUR.c,tvNextGood(TVCUR.c,TVCUR.i),0)},1500)}}});if(!VP)return;VP._ctx={slug:s.slug,ep:se.season+'x'+ep.n,item:ep.item||''};VP.load({id:c.id+'/'+s.slug+'/'+se.season+'x'+ep.n,title:s.show+' · '+ep.name,show:c.name,files:filesFor(ep),artwork:s.poster||''},{startAt:offset>5?offset:0,autoplay:!!state.tvOn})}
+function osd(c,a,s,ep){const el=document.querySelector('.osd');if(!el)return;const left=(a.en-Date.now())/1000,nx=TVG.nextAiring(c,TVLIB,a),ns=nx&&SHOWS[nx.s];
+ el.innerHTML='<b>'+esc(c.name)+'</b><span>'+esc(s.show)+' · '+code(a)+(ep?' · '+esc(ep.name):'')+'</span><span class="g">'+(left>0?mmss(left)+' left · ':'')+'next: '+(nx?clock(nx.st)+' '+esc(ns?ns.show:''):'')+'</span><span class="acts"><button class="btn" onclick="surf(-1)"><i class="ico chevron-left"></i>Ch</button><button class="btn" onclick="surf(1)">Ch<i class="ico chevron-right"></i></button><button class="btn" onclick="go(\\''+s.slug+'\\')">Open show</button></span>'}
+async function tvPlay(c,a,offset,tries){const s=SHOWS[a.s];const host=$('vph');if(!host||!s)return;const token=++TV_TOKEN;await ensure(s);if(token!==TV_TOKEN||state.view!=='tv')return;const se=(s.seasons||[]).find(x=>x.season===a.se);const ep=se&&se.episodes.find(e=>e.n===a.n);tries=tries||0;if(!ep||(offset>0&&ep.min&&offset>=ep.min*60-20)){if(tries<8)tvPlay(c,tvNextGood(c,a),0,tries+1);return}osd(c,a,s,ep);track('tvplay',{slug:c.id,x:s.slug+' '+se.season+'x'+ep.n});TVCUR={c,a};if(!VP||!host.contains(VP.root))VP=mkPlayer(host,{volumeKeys:false,onNext:()=>surf(1),onPrev:()=>surf(-1),channelButtons:{onNext:()=>surf(1),onPrev:()=>surf(-1)},onEnded:()=>{const c=TVCUR.c,cur=TVCUR.a,n=chanNow(c);if(n&&n.a.st>cur.st&&!tvDead(c,n.a))tvPlay(c,n.a,n.offset<180?0:n.offset);else tvPlay(c,tvNextGood(c,cur),0)},onEvent:(e,p)=>{vpEvent(e,p);if(e.type==='started')state.tvFails=0;if(e.type==='failed'){state.tvFails=(state.tvFails||0)+1;if(state.tvFails>6){state.tvFails=0;const o=document.querySelector('.osd');if(o)o.insertAdjacentHTML('beforeend','<p class="dim">Signal lost on this channel for now. Try another one.</p>');return}const tk=TV_TOKEN;if(TVCUR)TV_DEAD[tvKey(TVCUR.c,TVCUR.a)]=Date.now();setTimeout(()=>{if(VP!==p||!TVCUR||tk!==TV_TOKEN)return;tvPlay(TVCUR.c,tvNextGood(TVCUR.c,TVCUR.a),0)},1500)}}});if(!VP)return;VP._ctx={slug:s.slug,ep:se.season+'x'+ep.n,item:ep.item||''};VP.load({id:c.id+'/'+s.slug+'/'+se.season+'x'+ep.n,title:s.show+' · '+ep.name,show:c.name,files:filesFor(ep),artwork:s.poster||''},{startAt:offset>5?offset:0,autoplay:!!state.tvOn})}
 async function tvPage(){const main=$('main');if(!TV){killPlayer();main.innerHTML='<div class="loading"><span class="signal"></span><span>Searching the Void for a signal…</span></div>';try{await ensureTV()}catch(_){killPlayer();main.innerHTML='<div class="loading">The channels did not load.</div>';return}if(state.view!=='tv')return}
- const chans=TV.filter(c=>!c.adult||ME.adult);const cur=chans.find(c=>c.id===state.chan)||chans[0];state.chan=cur.id;const now=chanNow(cur);const it=cur.items[now.i];const s=SHOWS[it[0]];
+ const chans=TV.filter(c=>!c.adult||ME.adult);const cur=chans.find(c=>c.id===state.chan)||chans[0];state.chan=cur.id;const now=chanNow(cur);const s=SHOWS[now.a.s];
  let h='<div class="tv"><div class="pagehead"><img class="door" src="'+BASE+'assets/brand/ui/doors/live.png" alt=""><div><h1>Live TV</h1><div class="g">'+chans.length+' channels, always on, the same for everyone</div></div></div><div class="screen">'+(state.tvOn?'<div class="vpx-host" id="vph"></div>':(innerWidth>700?'<video class="idle" autoplay muted loop playsinline poster="'+BASE+'assets/brand/set-static.jpg"><source src="'+BASE+'assets/brand/video/set.mp4" type="video/mp4"></video>':'<img class="idle" src="'+BASE+'assets/brand/set-poster.jpg" alt="">')+'<button class="on" onclick="state.tvOn=true;render()"><i class="ico play"></i>Turn on</button>')+'<div class="osd"></div></div>';
  h+='<p class="hint">Always on, same for everyone: the clock decides what is playing. ↑ ↓ to surf. Nothing here is recorded in Mine unless you open the show.</p>';
  h+='<div class="guide">'+guideRows(chans,cur)+'</div></div>';
- killPlayer();main.innerHTML=h;document.title=cur.name+' · '+SITE;osd(cur,now.i,s,null);if(state.tvOn)tvPlay(cur,now.i,now.offset)}
+ killPlayer();main.innerHTML=h;document.title=cur.name+' · '+SITE;osd(cur,now.a,s,null);if(state.tvOn)tvPlay(cur,now.a,now.offset)}
 function cashPage(){killPlayer();$('main').innerHTML='<div class="about"><button class="back" onclick="go(\\'\\')"><i class="ico back"></i> Browse</button>'
  +'<div class="pagehead" style="padding-left:0"><img class="door" src="'+BASE+'assets/brand/cash-cross.png" alt="" style="object-fit:contain;padding:10px"><div><h1>CASH</h1><div class="g">the Church of American Strength &amp; Hope · a 501(c)(3)</div></div></div>'
  +'<h2>What CASH does</h2><p>CASH works on ways for people to have good things that fit a busy life and a budget stretched to the max. Some of that work is in person, in the community. Some of it is projects like this one: ${BRAND} is free, stays free, carries no ads and asks for no account, and it exists because the work of building it was worth doing.</p>'
@@ -842,12 +828,12 @@ go(slugFromUrl(),true);
 `;
 
 function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) {
-  const { shows, people, links, types, bios = {}, channels = [], homeOrder = [] } = data;
+  const { shows, people, links, types, bios = {}, tv = { channels: [], rt: [], lib: [] }, homeOrder = [] } = data;
   // Split mode keeps the browse index in one shared, cacheable file (data/index.js) so the hundreds
   // of per-show share pages stay tiny; embed mode inlines everything for the single-file preview.
   const inline = mode === 'embed'
-    ? `const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let TV=${JSON.stringify(channels)};let GRAPH_LOADED=true;`
-    : `const PEOPLE={};const LINKS={};const BIO={};let TV=null;let GRAPH_LOADED=false;`;
+    ? `const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let TV=${JSON.stringify(tv.channels)};let TVLIB=${JSON.stringify({ rt: tv.rt, lib: tv.lib })};let GRAPH_LOADED=true;`
+    : `const PEOPLE={};const LINKS={};const BIO={};let TV=null;let TVLIB=null;let GRAPH_LOADED=false;`;
   const indexScript = `<script src="${base}assets/player/voidplayer.js?v=${PLAYER_V}"></script>` + (mode === 'embed' ? '' : `<script src="${base}data/index.js"></script>`);
   const hx = (v) => String(v == null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const title = hx(meta.title ? `${meta.title} · ${SITE_NAME}` : SITE_NAME);
