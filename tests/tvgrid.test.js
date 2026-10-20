@@ -298,3 +298,44 @@ test('the page gets the same text: the inlined source behaves exactly like the m
   const lines = T.source.split('\n').map((l) => l.replace(/'(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*"/g, ''));
   assert.ok(lines.every((l) => /^\s*\/\//.test(l) || !/[^:]\/\//.test(l)), 'no line comment after code (scripts/site.js refuses those)');
 });
+
+test('guide maths: the filter keeps the right channels (kind, name, a show a channel carries, on now, adult only when allowed)', () => {
+  const G = sched();
+  const mkc = (id, name, kind, p, extra) => Object.assign({ id, name, kind, shows: 1, eps: 1, cap: 2, p: { d: p }, sn: {}, rd: '' }, extra);
+  const chans = [mkc('void', 'The Void', 'all', [0, 1, 2]), mkc('row-a', 'Sitcoms', 'row', [0, 1]), mkc('tag-b', 'Cartoons', 'collection', [2]), mkc('net-c', 'PBS', 'network', [3]), mkc('movies', 'TV Movies', 'row', [4], { mv: 100 }), mkc('row-late', 'Late Night', 'row', [5], { adult: true })];
+  const names = ['seinfeld', 'frasier', 'batman', 'nova', 'big fish', 'taboo'];
+  const lib = { rt: [22, 22, 22, 22, 90, 22], lib: [[1, 1, 9], [1, 1, 9], [1, 1, 9], [1, 1, 9], [1, 1, 1], [1, 1, 9]] };
+  const x = { adult: false, count: names.length, name: (i) => names[i], lib, at: at(...MON, 12, 0) };
+  const ids = (f, xx) => G.filterChannels(chans, f, xx || x).map((c) => c.id);
+  assert.deepEqual(ids({ kind: 'all', q: '', now: false }), ['void', 'row-a', 'tag-b', 'net-c', 'movies'], 'the adult channel stays out');
+  assert.deepEqual(ids({ kind: 'all', q: '', now: false }, Object.assign({}, x, { adult: true })).slice(-1), ['row-late']);
+  assert.deepEqual(ids({ kind: 'row' }), ['row-a'], 'rows without the movies row');
+  assert.deepEqual(ids({ kind: 'collection' }), ['tag-b']); assert.deepEqual(ids({ kind: 'network' }), ['net-c']); assert.deepEqual(ids({ kind: 'movies' }), ['movies']);
+  assert.deepEqual(ids({ q: 'pbs' }), ['net-c'], 'a channel name');
+  assert.deepEqual(ids({ q: 'FRASIER' }), ['void', 'row-a'], 'channels that carry the show');
+  assert.deepEqual(ids({ q: 'frasier', kind: 'row' }), ['row-a'], 'text and kind together');
+  assert.deepEqual(ids({ q: 'taboo' }), [], 'a hidden channel is not found by its show');
+  const onNow = (q) => ids({ q, now: true });
+  const nowShow = (c) => names[G.chanNow(c, lib, x.at).a.s];
+  for (const c of chans.slice(0, 5)) { const s = nowShow(c); assert.ok(onNow(s).includes(c.id), 'on now finds ' + s + ' on ' + c.id); }
+  assert.ok(onNow('pbs').includes('net-c'), 'a channel name still matches');
+  assert.deepEqual(ids({ q: '', now: true }), ids({ q: '' }), 'on now with no text changes nothing');
+  assert.equal(G.blockHit({ s: 1 }, 'frasier', (i) => names[i]), true); assert.equal(G.blockHit({ s: 0 }, 'frasier', (i) => names[i]), false); assert.equal(G.blockHit({ s: 0 }, '', (i) => names[i]), false);
+});
+
+test('guide maths: focusMove on real airings, and the block box tiles with the schedule', () => {
+  const G = sched(); const { ch, lib } = big();
+  const lo = at(...MON, 0, 0), hi = lo + 8 * 86400000 - 1, now = at(...MON, 12, 0);
+  const list = [ch, ch];
+  let fo = { ci: 0, t: now };
+  const cur = G.airingAt(ch, lib, now);
+  fo = G.focusMove(fo, 'ArrowRight', list, lib, lo, hi, now); assert.equal(fo.t, cur.en);
+  fo = G.focusMove(fo, 'ArrowLeft', list, lib, lo, hi, now); assert.equal(fo.t, cur.st);
+  assert.equal(G.focusMove(fo, 'ArrowDown', list, lib, lo, hi, now).ci, 1); assert.equal(G.focusMove({ ci: 1, t: now }, 'ArrowDown', list, lib, lo, hi, now).ci, 1);
+  assert.equal(G.focusMove({ ci: 0, t: lo }, 'ArrowLeft', list, lib, lo, hi, now).t, lo, 'the start holds');
+  assert.equal(G.focusMove({ ci: 0, t: hi }, 'PageDown', list, lib, lo, hi, now).t, hi, 'the end holds');
+  const a = G.airingsBetween(ch, lib, lo, lo + 86400000);
+  for (let k = 0; k + 1 < a.length; k++) { const b1 = G.blockBox(a[k], lo, 5), b2 = G.blockBox(a[k + 1], lo, 5); assert.ok(Math.abs(b1.left + b1.width - b2.left) < 0.02, 'blocks tile'); }
+  const x = G.xOf(now, lo, 5); const bb = G.blockBox(cur, lo, 5); assert.ok(bb.left <= x && x < bb.left + bb.width);
+  assert.ok(Math.abs(G.tOf(G.xOf(now, lo, 5), lo, 5) - now) < 1e-6);
+});

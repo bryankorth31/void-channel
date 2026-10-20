@@ -203,7 +203,78 @@ function tvgridFactory() {
     return 'o';
   }
 
-  return { MIN, DAYMS, DPNAME, setOff, dayOf, toAbs, dowOf, weekOfDay, planDay, weekOf, dayAirings, airingAt, chanNow, nextAiring, airingsBetween, daypartOf, epTotal, epCode, epPick };
+  // ---- the guide's maths: where blocks sit, what is in view, the ruler, the filters and the keys ----
+  // A local clock moment: the day of ms plus some days, at some minutes after local midnight, as a real instant.
+  function localAt(ms, days, minutes) { return toAbs(Math.floor((ms + OFF(ms)) / DAYMS) * DAYMS + days * DAYMS + minutes * MIN); }
+  const xOf = (t, t0, ppm) => ((t - t0) / MIN) * ppm;
+  const tOf = (x, t0, ppm) => t0 + (x / ppm) * MIN;
+  // Where an airing's block sits on the time axis (pixels from the left edge of the time area) and how wide it is.
+  function blockBox(a, t0, ppm) { return { left: Math.round(xOf(a.st, t0, ppm) * 100) / 100, width: Math.round(((a.en - a.st) / MIN) * ppm * 100) / 100 }; }
+  // The rows to draw for a scroll position: from, to (not included), with some rows of margin.
+  function rowSpan(scrollTop, viewH, rowH, n, pad) {
+    const a = Math.min(n, Math.max(0, Math.floor(scrollTop / rowH) - pad)), b = Math.min(n, Math.ceil((scrollTop + viewH) / rowH) + pad);
+    return [a, Math.max(a, b)];
+  }
+  // The half hour marks in [t0, t1): the instant, the local hour and minute, and whether it is local midnight.
+  function halfHours(t0, t1) {
+    const out = [], step = 30 * MIN;
+    let L = Math.ceil((t0 + OFF(t0)) / step) * step;
+    for (let k = 0; k < 4000; k++, L += step) {
+      const t = toAbs(L);
+      if (t >= t1) break;
+      const sod = mod(L, DAYMS) / MIN;
+      out.push({ t: t, h: Math.floor(sod / 60), m: sod % 60, mid: sod === 0 });
+    }
+    return out;
+  }
+  // Which filter a channel answers to: movies (mostly movies), rows and genres, collections, networks, or none (The Void).
+  function chanGroup(c) {
+    if (c.id === 'movies' || c.mv >= 50) return 'movies';
+    return c.kind === 'row' || c.kind === 'collection' || c.kind === 'network' ? c.kind : 'all';
+  }
+  // The channels that pass the filter { kind, q, now }. x: { adult, count, name(i) lower case, lib, at }.
+  // Text matches a channel by its name or by a show it carries; with "on now" only by what is on the air at x.at.
+  function filterChannels(chans, f, x) {
+    const q = String(f.q || '').trim().toLowerCase();
+    let out = chans.filter((c) => (!c.adult || x.adult) && (!f.kind || f.kind === 'all' || chanGroup(c) === f.kind));
+    if (!q) return out;
+    if (f.now) {
+      return out.filter((c) => {
+        if (c.name.toLowerCase().indexOf(q) >= 0) return true;
+        const n = chanNow(c, x.lib, x.at);
+        return !!n && x.name(n.a.s).indexOf(q) >= 0;
+      });
+    }
+    const hit = {};
+    for (let i = 0; i < x.count; i++) if (x.name(i).indexOf(q) >= 0) hit[i] = 1;
+    return out.filter((c) => {
+      if (c.name.toLowerCase().indexOf(q) >= 0) return true;
+      for (const k in c.p) for (let u = 0; u < c.p[k].length; u++) if (hit[c.p[k][u]]) return true;
+      return false;
+    });
+  }
+  // Whether a block should be lit for the text filter.
+  function blockHit(a, q, name) { q = String(q || '').trim().toLowerCase(); return !!q && name(a.s).indexOf(q) >= 0; }
+  // The key a remote or keyboard sends, applied to the focus { ci: row, t: time }: Left and Right go to the previous and next
+  // airing on the channel, Up and Down to the channel above and below at the same time, PageUp and PageDown three hours, Home to now.
+  function focusMove(fo, key, list, lib, lo, hi, now) {
+    const c = list[fo.ci];
+    if (!c) return fo;
+    const cur = airingAt(c, lib, fo.t);
+    let ci = fo.ci, t = fo.t;
+    if (key === 'ArrowLeft') t = airingAt(c, lib, cur.st - 1).st;
+    else if (key === 'ArrowRight') t = cur.en;
+    else if (key === 'ArrowUp') ci = Math.max(0, ci - 1);
+    else if (key === 'ArrowDown') ci = Math.min(list.length - 1, ci + 1);
+    else if (key === 'PageUp') t = fo.t - 180 * MIN;
+    else if (key === 'PageDown') t = fo.t + 180 * MIN;
+    else if (key === 'Home') t = now;
+    else return fo;
+    return { ci: ci, t: Math.max(lo, Math.min(hi, t)) };
+  }
+
+  return { MIN, DAYMS, DPNAME, setOff, dayOf, toAbs, dowOf, weekOfDay, planDay, weekOf, dayAirings, airingAt, chanNow, nextAiring, airingsBetween, daypartOf, epTotal, epCode, epPick,
+    localAt, xOf, tOf, blockBox, rowSpan, halfHours, chanGroup, filterChannels, blockHit, focusMove };
 }
 
 // ---- Node only: the builder ----------------------------------------------------------------------------------------------

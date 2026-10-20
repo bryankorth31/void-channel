@@ -49,7 +49,7 @@ function page(opts) {
     $: (id) => (id === 'vph' && !opts.noHost ? host : null), BASE: '/',
   };
   const ctx = vm.createContext(sandbox);
-  vm.runInContext('let TV=null,VP=null,TVCUR=null,TVLIB=null;\n' + TV_TEXT + '\nthis.h={tune,surf,tuneHere,tvPlay,chanNow,tvNextGood,tvKey,tvDead,TVG,get TV_DEAD(){return TV_DEAD},get VP(){return VP},set VP(v){VP=v},set TV(v){TV=v},set TVLIB(v){TVLIB=v},get TVLIB(){return TVLIB},get TVCUR(){return TVCUR}};', ctx);
+  vm.runInContext('let TV=null,VP=null,TVCUR=null,TVLIB=null;\n' + TV_TEXT + '\nthis.h={tune,surf,tuneHere,tvPlay,chanNow,tvNextGood,tvKey,tvDead,TVG,GD,get TV_DEAD(){return TV_DEAD},get VP(){return VP},set VP(v){VP=v},set TV(v){TV=v},set TVLIB(v){TVLIB=v},get TVLIB(){return TVLIB},get TVCUR(){return TVCUR}};', ctx);
   ctx.h.TV = TV; ctx.h.TVLIB = TVLIB;
   const idOf = (c, x) => c.id + '/' + SHOWS[x.s].slug + '/' + x.se + 'x' + x.n;
   return { h: ctx.h, log, state, guide, osd, TV, TVLIB, SHOWS, sandbox, idOf, getPlayer: () => player, setPlayer: (p) => { player = p; ctx.h.VP = p; } };
@@ -84,9 +84,8 @@ test('Live TV: a change updates the address, the title, the guide and the bar un
   assert.deepEqual(p.log.replaced, ['/tv/three']);
   assert.equal(p.state.chan, 'three'); assert.equal(p.state.tvOn, true);
   assert.equal(p.sandbox.document.title, 'Channel three · voidtv.net');
-  assert.ok(/class="ch on" onclick="tune\('three'\)"/.test(p.guide.innerHTML), 'the guide marks the new channel: ' + p.guide.innerHTML.slice(0, 120));
-  assert.equal((p.guide.innerHTML.match(/class="ch on"/g) || []).length, 1, 'and only that one');
-  assert.equal((p.guide.innerHTML.match(/class="ch"/g) || []).length, 3, 'the other three rows are redrawn');
+  assert.equal(p.h.GD.cur, 'three', 'the guide marks the new channel (it is marked in place: the grid is not rebuilt)');
+  assert.equal(p.guide.innerHTML, '', 'and the guide element itself is left alone');
   assert.ok(p.osd.innerHTML.includes('<b>Channel three</b>'), 'the bar under the video names the new channel (tvPlay then adds the episode)');
   assert.equal(p.log.render, 0);
   assert.equal(p.log.scrolled, 1, 'the page still scrolls back to the picture, as before');
@@ -101,12 +100,12 @@ test('Live TV: what plays and when is tvPlay\'s: the clock decides the airing, t
   assert.equal(p.log.loads[1].startAt, now.offset > 5 ? now.offset : 0);
 });
 
-test('Live TV: the guide rows say what is on now with the time left, and what is next with its start time', async () => {
+test('Live TV: the bar under the video says what is on with the time left, and what is next with its start time', async () => {
   const p = await playing();
   p.h.tune('two'); await settle();
   const c = p.TV[1], n = p.h.chanNow(c), nx = p.h.TVG.nextAiring(c, p.TVLIB, n.a);
-  assert.ok(p.guide.innerHTML.includes('Show ' + p.SHOWS[n.a.s].slug), 'what is on now');
-  assert.ok(/<small>next [^<]* · Show [a-d]<\/small>/.test(p.guide.innerHTML), 'what is next: ' + p.guide.innerHTML.slice(0, 400));
+  assert.ok(p.osd.innerHTML.includes('Show ' + p.SHOWS[n.a.s].slug), 'what is on now');
+  assert.ok(/next: [^<]* Show [a-d]</.test(p.osd.innerHTML), 'what is next: ' + p.osd.innerHTML.slice(0, 300));
   assert.ok(nx.st === n.a.en);
 });
 
