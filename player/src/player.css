@@ -132,3 +132,23 @@
   .vpx button:focus-visible{outline-width:4px}
 }
 @media (prefers-reduced-motion:reduce){.vpx-bar,.vpx-flash{transition:none}.vpx-sig path{animation:none;opacity:.85}.vpx-card.static::before{animation:none}.vpx-card.upnext .vpx-k,.vpx-card.upnext .vpx-t{animation:none}}
+
+/* Live TV: two big channel buttons in the control row (player.js, only when the host passes channelButtons) and the channel-name flash.
+   Brand pink #ff4fc8 at 60% opacity; the row's own rules stay as they are. The selectors carry button.vpx-ch so they beat .vpx-row button:hover. */
+.vpx-row button.vpx-ch{min-width:68px;height:52px;padding:0 14px;gap:2px;margin-left:6px;border-radius:12px;background:rgba(255,79,200,.6);color:#fff;font-weight:800;font-size:16px;letter-spacing:.05em}
+.vpx-row button.vpx-ch:hover{background:rgba(255,79,200,.8)}
+.vpx-row button.vpx-ch svg{width:24px;height:24px}
+.vpx-chname{position:absolute;top:14px;right:14px;max-width:calc(100% - 28px);padding:8px 16px;border-radius:999px;background:rgba(7,8,12,.72);border:2px solid rgba(255,79,200,.6);font-weight:800;font-size:20px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:none;opacity:0;visibility:hidden;transition:opacity .25s,visibility 0s .25s}
+.vpx-chname.vpx-on{opacity:1;visibility:visible;transition:opacity .15s}
+@container (max-width:560px){
+  .vpx-row button.vpx-ch{min-width:52px;height:48px;padding:0 8px;margin-left:2px;font-size:14px}
+  .vpx-chname{top:8px;right:8px;max-width:calc(100% - 16px);padding:6px 12px;font-size:16px}
+}
+/* the channel buttons need the room: on a phone-sized Live TV player the elapsed time gives way */
+@container (max-width:420px){.vpx-tv .vpx-time{display:none}}
+@supports not (container-type:inline-size){@media (max-width:600px){
+  .vpx-row button.vpx-ch{min-width:52px;height:48px;padding:0 8px;margin-left:2px;font-size:14px}
+  .vpx-tv .vpx-time{display:none}
+}}
+@media (min-width:1600px) and (hover:none),(min-width:1900px){.vpx-row button.vpx-ch{min-width:84px;height:64px;font-size:20px}.vpx-chname{font-size:28px;padding:10px 22px}}
+@media (prefers-reduced-motion:reduce){.vpx-chname,.vpx-chname.vpx-on{transition:none}}

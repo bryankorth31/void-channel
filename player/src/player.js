@@ -22,7 +22,9 @@
     skipBack: 10, skipFwd: 30, arrowSkip: 10, volumeKeys: true, storageKey: 'voidplayer', globalKeys: false, resolveServers: true, metadataTimeoutMs: 2500,
     onEvent: null, onEnded: null, onNext: null, onPrev: null, onReport: null, config: null,
     syncButton: false, // the "Out of sync?" button in the control row: for testers and the lab, not for viewers (the failure card has its own "Picture out of sync" choice)
+    channelButtons: null, // Live TV only: { onNext, onPrev } adds the big "Previous channel" and "Next channel" buttons to the control row (and the ChannelUp/ChannelDown and PageUp/PageDown keys)
   };
+  const CHANNEL_FLASH_MS = 2500; // how long the channel name stays over the picture after a channel change
   const AVSYNC_MIN_WIDTH = 720; // a player narrower than this has no room for the control, as with speed and picture-in-picture, which player.css hides sooner
   const AVSYNC_NOTE = 'Noted. Thank you.', AVSYNC_NOTE_MS = 2500; // the line shown after a press, and how long
   const AVSYNC_REPEAT_MS = 10000; // pressing it again within this long stamps nothing new
@@ -210,8 +212,12 @@
     // ---------- building ----------
     _build(container) {
       const b = (a, icon, label, extra) => '<button type="button" data-a="' + a + '" aria-label="' + esc(label) + '" title="' + esc(label) + '"' + (extra || '') + '>' + (ICON[icon] || '') + '</button>';
+      // Live TV: the two channel buttons are real buttons in the control row (so Tab and Left/Right walk to them) and are big and pink (player.css, .vpx-ch).
+      const tv = !!(this.o.channelButtons && typeof this.o.channelButtons === 'object');
+      const chev = (d) => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="' + d + '"/></svg>';
+      const ch = (a, label, svg, first) => '<button type="button" class="vpx-ch" data-a="' + a + '" aria-label="' + label + '" title="' + label + '">' + (first ? svg + '<span aria-hidden="true">CH</span>' : '<span aria-hidden="true">CH</span>' + svg) + '</button>';
       const r = document.createElement('div');
-      r.className = 'vpx paused';
+      r.className = 'vpx paused' + (tv ? ' vpx-tv' : '');
       r.tabIndex = 0;
       r.setAttribute('role', 'region');
       r.setAttribute('aria-label', 'Video player');
@@ -220,6 +226,7 @@
         + '<div class="vpx-status" role="status" aria-live="polite"><span class="vpx-sig" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="vpx-d" cx="24" cy="34" r="3.4"/><path class="a1" d="M17 27a10 10 0 0 1 14 0"/><path class="a2" d="M11.5 21.5a17.7 17.7 0 0 1 25 0"/><path class="a3" d="M6 16a25.4 25.4 0 0 1 36 0"/></svg></span><span class="vpx-status-t"></span></div>'
         + '<button type="button" class="vpx-big" data-a="toggle" aria-label="Play">' + (ICON.play || '') + '</button>'
         + '<div class="vpx-flash" aria-hidden="true"></div>'
+        + (tv ? '<div class="vpx-chname" role="status" aria-live="polite"></div>' : '')
         + '<div class="vpx-card" role="dialog" aria-live="assertive" hidden></div>'
         + '<div class="vpx-stats" hidden><pre></pre><div><button type="button" data-s="copy">Copy for a report</button><button type="button" data-s="close" aria-label="Close stats">' + (ICON.close || 'x') + '</button></div></div>'
         + '<div class="vpx-bar">'
@@ -231,13 +238,15 @@
         + b('mute', 'volume', 'Mute (M)') + '<input class="vpx-vol" type="range" min="0" max="100" step="1" value="100" aria-label="Volume">'
         + b('cc', 'captions', 'Captions (C)') + '<button type="button" data-a="speed" class="vpx-speed" aria-label="Playback speed" title="Playback speed">1×</button>'
         + (this.o.syncButton ? '<button type="button" data-a="avsync" aria-label="Out of sync? Tell us the picture and the sound do not match" title="Picture and sound out of sync? Tell us">Out of sync?</button>' : '')
-        + b('pip', 'pip', 'Picture in picture') + (this.o.onNext ? b('next', 'next', 'Next episode (N)') : '') + b('fs', 'fullscreen', 'Fullscreen (F)')
+        + b('pip', 'pip', 'Picture in picture')
+        + (tv ? ch('chprev', 'Previous channel', chev('M15 5l-7 7 7 7'), true) + ch('chnext', 'Next channel', chev('M9 5l7 7-7 7'), false) : (this.o.onNext ? b('next', 'next', 'Next episode (N)') : '')) // on Live TV "next" would only change the channel, which these two buttons already do
+        + b('fs', 'fullscreen', 'Fullscreen (F)')
         + '</div></div>';
       container.appendChild(r);
       this.root = r;
       this.v = r.querySelector('video');
       const q = (s) => r.querySelector(s);
-      this.ui = { seek: q('.vpx-seek input'), played: q('.vpx-played'), buf: q('.vpx-buf'), time: q('.vpx-time'), vol: q('.vpx-vol'), status: q('.vpx-status'), statusT: q('.vpx-status-t'), card: q('.vpx-card'), flash: q('.vpx-flash'), title: q('.vpx-title'), stats: q('.vpx-stats'), speed: q('.vpx-speed'), sync: q('[data-a=avsync]'), mute: q('[data-a=mute]'), cc: q('[data-a=cc]'), fs: q('[data-a=fs]') };
+      this.ui = { seek: q('.vpx-seek input'), played: q('.vpx-played'), buf: q('.vpx-buf'), time: q('.vpx-time'), vol: q('.vpx-vol'), status: q('.vpx-status'), statusT: q('.vpx-status-t'), card: q('.vpx-card'), flash: q('.vpx-flash'), title: q('.vpx-title'), stats: q('.vpx-stats'), chname: q('.vpx-chname'), speed: q('.vpx-speed'), sync: q('[data-a=avsync]'), mute: q('[data-a=mute]'), cc: q('[data-a=cc]'), fs: q('[data-a=fs]') };
       const sv = store.get(this.o.storageKey + ':vol');
       if (sv != null && !isNaN(+sv)) this.v.volume = Math.max(0, Math.min(1, +sv));
       this._syncVol();
@@ -490,6 +499,7 @@
       if (a === 'speed') { const r = [1, 1.25, 1.5, 1.75, 2, 0.75]; v.playbackRate = r[(r.indexOf(v.playbackRate) + 1) % r.length]; this.ui.speed.textContent = v.playbackRate + '×'; this.ui.speed.classList.toggle('vpx-on', v.playbackRate !== 1); return; }
       if (a === 'pip') { if (document.pictureInPictureElement) document.exitPictureInPicture().catch(() => {}); else if (v.requestPictureInPicture) v.requestPictureInPicture().catch(() => {}); return; }
       if (a === 'next') { if (this.o.onNext) this.o.onNext(this); return; }
+      if (a === 'chnext' || a === 'chprev') return this._chan(a === 'chnext' ? 'next' : 'prev');
       if (a === 'fs') {
         if (document.fullscreenElement) return document.exitFullscreen().catch(() => {});
         if (this.root.requestFullscreen) return this.root.requestFullscreen().catch(() => {});
@@ -525,10 +535,27 @@
       else if (k === 'c' || k === 'C') this._captions();
       else if ((k === 'n' || k === 'N' || k === 'MediaTrackNext') && this.o.onNext) this.o.onNext(this);
       else if (k === 'MediaTrackPrevious' && this.o.onPrev) this.o.onPrev(this);
+      else if (this.o.channelButtons && (k === 'ChannelUp' || k === 'PageUp')) this._chan('next'); // TV remotes: CH+ and CH- (some send PageUp and PageDown)
+      else if (this.o.channelButtons && (k === 'ChannelDown' || k === 'PageDown')) this._chan('prev');
       else if (/^[0-9]$/.test(k) && this.v.duration) this.seek(this.v.duration * +k / 10);
       else if (k === 'Escape' && document.fullscreenElement === this.root) { document.exitFullscreen().catch(() => {}); e.stopPropagation(); }
       else did = false;
       if (did) { e.preventDefault(); this._show(); }
+    }
+    // Live TV: the host changes the channel (it keeps this player, so fullscreen stays) and calls flashChannel with the new name.
+    _chan(dir) {
+      const cb = this.o.channelButtons, f = cb && (dir === 'next' ? cb.onNext : cb.onPrev);
+      if (typeof f === 'function') f(this);
+    }
+    // The channel name over the picture for about 2.5 s. It lives inside the player root (so it shows in fullscreen), at the top, never over the control bar.
+    flashChannel(name) {
+      const f = this.ui.chname;
+      if (!f) return; // not a Live TV player
+      f.textContent = name == null ? '' : String(name);
+      f.className = 'vpx-chname vpx-on';
+      this._timers.delete(this._chanT); clearTimeout(this._chanT);
+      this._chanT = setTimeout(() => { this._timers.delete(this._chanT); f.className = 'vpx-chname'; }, CHANNEL_FLASH_MS);
+      this._timers.add(this._chanT);
     }
     _moveFocus(from, dir) {
       const all = [...this.root.querySelectorAll('.vpx-row button, .vpx-row input')].filter((x) => x.offsetParent !== null);

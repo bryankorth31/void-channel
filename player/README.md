@@ -40,5 +40,7 @@ VOIDtv bundles `src/` into `assets/player/voidplayer.js` at build time (`scripts
 Every class the player puts on the page starts with `vpx-` (states too: `vpx-show`, `vpx-wait`, `vpx-fs`,
 `vpx-recovering`, `vpx-on`...), so the host page's CSS can't reach inside. Short names leaked once:
 VOIDtv's decorative `.fs` rule put a dark radial vignette on the fullscreen video (17 Oct 2026).
+Live TV adds `vpx-tv` (on the root), `vpx-ch` (the two channel buttons in the control row, `data-a="chprev"` and
+`data-a="chnext"`) and `vpx-chname` (the channel-name flash); see DESIGN.md, "Live TV: channel buttons".
 The one exception is `paused` on the root, which VOIDtv reads on purpose (`.vpx:not(.paused)` pauses the
 background effects while a video plays). Keep new classes prefixed. (The Out of sync? button has no class at all: it is found by `data-a="avsync"`.)

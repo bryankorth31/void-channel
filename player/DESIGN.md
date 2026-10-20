@@ -391,6 +391,31 @@ episode that was just chosen. A player that is reused sends the replaced episode
 loads, and not for an episode whose lookup was still pending: the core holds that episode's figures only
 once its source list is built.
 
+### Live TV: channel buttons and a channel change that keeps fullscreen (19 October 2026)
+
+Bryan: "The channel controls need to be on the bar the appears even during full screen to allow switching from full
+screen". The bar is inside the player root, and the root is what goes fullscreen, so the controls have to live in it.
+
+- **The option.** `channelButtons: { onNext, onPrev }` (default `null`; only Live TV passes it). With it the control row
+  gets two real buttons between picture-in-picture and fullscreen, "Previous channel" then "Next channel" (aria-label and
+  title are those exact words; class `vpx-ch`), larger than the other controls, in the site's brand pink `#ff4fc8` at 60%
+  opacity (`rgba(255,79,200,.6)`). They show and hide with the bar like every other control, in and out of fullscreen
+  (`_show`, `_hideT` and `_holdBar` are untouched), and Tab and Left/Right reach them. The root also gets `vpx-tv`.
+  On a phone-sized Live TV player the elapsed time is hidden (`.vpx-tv .vpx-time` under 420 px) so the buttons fit.
+  Live TV's old "Next episode (N)" button (it only changed the channel) is not drawn when `channelButtons` is given; the N key
+  and the media keys still do the same thing.
+- **Remote keys.** With `channelButtons` set, ChannelUp and PageUp call `onNext`, ChannelDown and PageDown call `onPrev`
+  (TV remotes send one pair or the other; webOS sends Page keys for CH+ and CH-). Ctrl, Alt and Meta combinations are left
+  to the browser. The page's own ArrowUp/ArrowDown surfing is unchanged.
+- **The flash.** `player.flashChannel(name)` writes the name into `.vpx-chname`, which is part of the player's own markup
+  (so it shows in fullscreen), at the top right, never over the bar, `pointer-events:none`, for 2.5 s (a new flash renews
+  it; destroy clears it). It has `role="status"`, and is `visibility:hidden` when not showing.
+- **Same player, same fullscreen.** The host (`tune` in `scripts/lib/app.js`) no longer rebuilds the page for a channel
+  change when a player is already on the Live TV page: `tuneHere` updates the address bar, the page title, the guide and the
+  bar under the video in place, flashes the name, and hands the new channel to `tvPlay`, which loads the item into the
+  existing player. Nothing about which item plays or when changed (the clock decides, `tvPlay` as before). When there is no
+  player to reuse (TV not turned on, another page, unknown channel) `tune` calls `render()` as it always did.
+
 ### Experience
 
 - Real `<button>`s with labels; the slider has a spoken value; focus is always visible and large on TVs.

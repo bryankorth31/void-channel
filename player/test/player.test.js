@@ -36,18 +36,21 @@ function open(opts) {
   opts = opts || {};
   const seen = { src: [], play: 0, removed: 0 }, events = [], asked = [], pending = [];
   const listeners = {}, html = [], live = new Map(); let rid = 0, cancelled = 0; // the video's listeners, the markup the player wrote, the frame callbacks outstanding
-  const video = fakeNode({
+  const created = { n: 0 }, docL = {}, rootL = {}; // page nodes the player made; the listeners it put on the document and on its root
+  const on = (map) => (ev, fn) => { (map[ev] = map[ev] || []).push(fn); };
+  const video = fakeNode(Object.assign({
     paused: true, ended: false, readyState: 0, networkState: 0, volume: 1, muted: false, currentTime: 0, duration: NaN, buffered: { length: 0 }, playbackRate: 1,
     seeking: false, videoWidth: 0, textTracks: [], getVideoPlaybackQuality: undefined, requestVideoFrameCallback: undefined,
     play() { seen.play++; return Promise.resolve(); }, pause() {}, load() {},
     getAttribute(k) { return k === 'src' && seen.src.length ? seen.src[seen.src.length - 1] : null; },
     removeAttribute(k) { if (k === 'src') seen.removed++; }, canPlayType() { return 'maybe'; }, addEventListener(ev, fn) { (listeners[ev] = listeners[ev] || []).push(fn); }, removeEventListener() {}, querySelectorAll() { return []; },
     requestVideoFrameCallback: opts.rvfc ? (cb) => { live.set(++rid, cb); return rid; } : undefined, cancelVideoFrameCallback: opts.rvfc ? (id) => { cancelled++; live.delete(id); } : undefined,
-  }, (k, v) => { if (k === 'src') seen.src.push(v); });
-  const rootNode = fakeNode({ querySelector: (sel) => (sel === 'video' ? video : fakeNode()), querySelectorAll: () => [], remove() {}, clientWidth: opts.width }, (k, v) => { if (k === 'innerHTML') html.push(v); });
+  }, opts.video), (k, v) => { if (k === 'src') seen.src.push(v); });
+  // opts.video: extra properties for the video (a test names what this browser's video can do, e.g. requestPictureInPicture: undefined for one that cannot)
+  const rootNode = fakeNode({ querySelector: (sel) => (sel === 'video' ? video : fakeNode()), querySelectorAll: () => [], remove() {}, clientWidth: opts.width, addEventListener: on(rootL), removeEventListener() {} }, (k, v) => { if (k === 'innerHTML') html.push(v); });
   const ctx = {
-    document: { createElement: () => rootNode, activeElement: null, fullscreenElement: null, hidden: false, addEventListener() {}, removeEventListener() {} },
-    navigator: { userAgent: 'test', hardwareConcurrency: 4 }, screen: { width: 1, height: 1 }, performance,
+    document: Object.assign({ createElement: () => { created.n++; return rootNode; }, activeElement: null, fullscreenElement: null, hidden: false, addEventListener: on(docL), removeEventListener() {} }, opts.doc),
+    navigator: Object.assign({ userAgent: 'test', hardwareConcurrency: 4 }, opts.nav), screen: { width: 1, height: 1 }, performance,
     localStorage: { getItem: () => null, setItem() {} },
     sessionStorage: { getItem: (k) => (opts.cached && opts.cached[k.replace('voidplayer:srv:', '')]) ? JSON.stringify(Object.assign({ at: Date.now() }, opts.cached[k.replace('voidplayer:srv:', '')])) : null, setItem() {} },
     setTimeout, clearTimeout, setInterval, clearInterval, AbortController, requestAnimationFrame: () => 1, cancelAnimationFrame() {}, addEventListener() {}, removeEventListener() {}, devicePixelRatio: 1,
@@ -68,7 +71,7 @@ function open(opts) {
   const answer = async (ok) => { pending.splice(0).forEach((f) => f(ok !== false)); await settle(); };
   // Run every frame callback that is outstanding, as the browser does for a presented frame (media time, display time).
   const deliver = (mediaTime) => { const cbs = [...live.values()]; live.clear(); cbs.forEach((cb) => cb(0, { mediaTime: mediaTime || 0, expectedDisplayTime: performance.now() + 16 })); return cbs.length; };
-  const x = { player, video, seen, events, asked, answer, settle, listeners, html, live, deliver, cancelled: () => cancelled, kinds: (t) => events.filter((e) => e.type === t) };
+  const x = { player, video, seen, events, asked, answer, settle, listeners, html, live, deliver, cancelled: () => cancelled, kinds: (t) => events.filter((e) => e.type === t), doc: ctx.document, rootNode, created, docL, rootL };
   opened.push(x);
   return x;
 }
@@ -473,4 +476,81 @@ test('A-022: the failure card choice changes nothing about playback', async () =
   click(x, 'avsync'); assert.strictEqual(x.reports.length, 1, 'it did stamp and report');
   assert.deepStrictEqual([x.seen.src.length, x.seen.play, x.player.core.log.filter((e) => e.did !== 'user-avsync').length], [src0, play0, log0]);
   x.player.destroy();
+});
+
+// ---------- Live TV: the channel buttons, the channel-name flash, and a channel change that keeps the player (and fullscreen) ----------
+const TV_OPTS = () => { const calls = { next: 0, prev: 0 }; return { calls, options: { onNext: () => {}, volumeKeys: false, channelButtons: { onNext: () => { calls.next++; }, onPrev: () => { calls.prev++; } } } }; };
+const keyEvent = (k, extra) => Object.assign({ key: k, target: null, ctrlKey: false, metaKey: false, altKey: false, shiftKey: false, defaultPrevented: false, preventDefault() { this.defaultPrevented = true; } }, extra);
+
+test('Live TV: the two channel buttons are in the control row only when the host asks for them, with the exact labels', () => {
+  const off = open({ options: { onNext: () => {} } });
+  assert.ok(!off.html.join('').includes('data-a="chnext"') && !off.html.join('').includes('data-a="chprev"') && !off.html.join('').includes('vpx-ch'), 'no channel buttons on a show page');
+  assert.ok(off.html.join('').includes('data-a="next"'), 'a show page keeps its Next episode button');
+  const tv = TV_OPTS(); const x = open({ options: tv.options }); const html = x.html.join('');
+  assert.ok(/<button type="button" class="vpx-ch" data-a="chprev" aria-label="Previous channel" title="Previous channel">/.test(html), 'Previous channel is a real button');
+  assert.ok(/<button type="button" class="vpx-ch" data-a="chnext" aria-label="Next channel" title="Next channel">/.test(html), 'Next channel is a real button');
+  const row = html.indexOf('class="vpx-row"');
+  for (const a of ['chprev', 'chnext']) assert.ok(html.indexOf('data-a="' + a + '"') > row && html.indexOf('data-a="' + a + '"') < html.indexOf('data-a="fs"'), a + ' sits in the control row, so Tab and Left/Right reach it, and shows and hides with the bar');
+  assert.ok(html.indexOf('data-a="chprev"') > html.indexOf('data-a="pip"') && html.indexOf('data-a="chprev"') < html.indexOf('data-a="chnext"'), 'previous then next, between picture in picture and fullscreen');
+  assert.ok(!html.includes('data-a="next"'), 'on Live TV the Next episode button would only change the channel: the two channel buttons replace it');
+  assert.ok(/vpx-tv/.test(String(x.rootNode.className)), 'the root says it is a Live TV player (player.css uses it on narrow screens)');
+});
+
+test('Live TV: the buttons call the host\'s callbacks; without channelButtons nothing is called', () => {
+  const tv = TV_OPTS(); const x = open({ options: tv.options });
+  x.player._do('chnext'); x.player._do('chnext'); x.player._do('chprev');
+  assert.deepStrictEqual([tv.calls.next, tv.calls.prev], [2, 1]);
+  const plain = open({ options: { onNext: () => assert.fail('a show page\'s Next episode must not run from a channel button') } });
+  plain.player._do('chnext'); plain.player._do('chprev');
+});
+
+test('Live TV: ChannelUp/ChannelDown and PageUp/PageDown (TV remotes) change channel as well; Ctrl+PageUp stays the browser\'s; arrows are not taken', () => {
+  const tv = TV_OPTS(); const x = open({ options: tv.options });
+  const press = (k, extra) => { const e = keyEvent(k, extra); x.player._key(e); return e; };
+  assert.ok(press('ChannelUp').defaultPrevented); press('PageUp'); press('ChannelDown'); press('PageDown'); press('PageDown');
+  assert.deepStrictEqual([tv.calls.next, tv.calls.prev], [2, 3]);
+  press('PageUp', { target: { type: 'range', matches: () => false, tagName: 'INPUT' } }); // a remote's CH+ while the volume slider has focus
+  assert.strictEqual(tv.calls.next, 3);
+  assert.ok(!press('PageUp', { ctrlKey: true }).defaultPrevented, 'Ctrl+PageUp is the browser\'s tab switch'); assert.strictEqual(tv.calls.next, 3);
+  ['ArrowUp', 'ArrowDown'].forEach((k) => press(k)); // the page's own handler surfs with these; the player (volumeKeys off on Live TV) leaves them alone
+  assert.deepStrictEqual([tv.calls.next, tv.calls.prev], [3, 3]);
+  const off = open({ options: { onNext: () => {} } }); const e = keyEvent('PageUp'); off.player._key(e);
+  assert.ok(!e.defaultPrevented, 'on a show page PageUp still scrolls the page'); clearTimeout(x.player._hideT); clearTimeout(off.player._hideT);
+});
+
+test('Live TV: a channel change loads into the same player: same root, same video, fullscreen untouched, one player and one video after ten changes', async () => {
+  const tv = TV_OPTS(); const x = open({ options: tv.options });
+  let exits = 0; x.doc.exitFullscreen = () => { exits++; return Promise.resolve(); };
+  x.player.load(episode('tv/a/1x1', 1), { autoplay: true }); await x.settle(); await x.answer(true);
+  x.doc.fullscreenElement = x.rootNode; // the viewer went fullscreen on the player
+  const root0 = x.player.root, video0 = x.player.v, markup0 = x.html.length;
+  for (let i = 1; i <= 10; i++) {
+    x.player._do(i % 2 ? 'chnext' : 'chprev'); // the viewer presses a channel button; the host loads the next channel's item into this player
+    x.player.load(episode('tv/c' + i + '/1x1', 1), { autoplay: true }); await x.settle();
+    assert.strictEqual(x.player.root, root0, 'the same player root after change ' + i);
+    assert.strictEqual(x.player.v, video0, 'the same video element');
+    assert.strictEqual(x.doc.fullscreenElement, x.rootNode, 'still the fullscreen element');
+  }
+  assert.strictEqual(x.created.n, 1, 'the page made one player root, ever');
+  assert.strictEqual(x.html.length, markup0, 'the player\'s markup was written once and never rebuilt');
+  assert.strictEqual(exits, 0, 'nothing asked to leave fullscreen');
+  assert.strictEqual(x.seen.src.length, 11, 'eleven episodes, all on the one video');
+  assert.deepStrictEqual(J(x.kinds('load').map((e) => e.id)).slice(-2), ['tv/c9/1x1', 'tv/c10/1x1']);
+  assert.deepStrictEqual([tv.calls.next, tv.calls.prev], [5, 5]);
+});
+
+test('Live TV: the channel name flashes inside the player root for about 2.5 s, again within that time renews it, then clears', async () => {
+  const tv = TV_OPTS(); const x = open({ options: tv.options }); const html = x.html.join('');
+  assert.ok(html.includes('class="vpx-chname"'), 'the flash element is part of the player\'s own markup, so it is inside the root and shows in fullscreen');
+  assert.ok(html.indexOf('class="vpx-chname"') < html.indexOf('class="vpx-bar"'), 'and it is not in the control bar');
+  assert.ok(!open({ options: { onNext: () => {} } }).html.join('').includes('vpx-chname'), 'a show page has none');
+  const f = x.player.ui.chname;
+  x.player.flashChannel('Cartoon Row');
+  assert.strictEqual(f.textContent, 'Cartoon Row'); assert.strictEqual(f.className, 'vpx-chname vpx-on');
+  await new Promise((r) => setTimeout(r, 1500));
+  x.player.flashChannel('Sitcom Row'); // pressed again: the new name, a fresh 2.5 s
+  await new Promise((r) => setTimeout(r, 1500));
+  assert.strictEqual(f.textContent, 'Sitcom Row'); assert.strictEqual(f.className, 'vpx-chname vpx-on', 'the first press\'s timer did not cut it short');
+  await new Promise((r) => setTimeout(r, 1200));
+  assert.strictEqual(f.className, 'vpx-chname', 'cleared 2.5 s after the last change');
 });
