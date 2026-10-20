@@ -56,8 +56,8 @@ Everyone in the same time zone computes the same schedule from the clock, so the
 
 Decision: **elastic chain, not a rigid :00/:30 grid.** An airing starts when the previous one ends, with hard anchors
 at the start of each daypart (6, 9, 17, 20, 23, 2). The builder-side planner (the same code runs in the page) adds
-airings to a daypart until the next one would overshoot the window by more than 12 minutes (30 on a second pass
-if more than 12 minutes would stay empty), looking at the next 6 candidates in the pool for one that fits. So the
+airings to a daypart until the next one would overshoot the window by more than 8 minutes (30 on a second pass
+if more than 14 minutes would stay empty), looking at the next 6 candidates in the pool for one that fits. So the
 day lands within a few minutes of each anchor, prime time starts at 8:00, and the end of a daypart that runs over
 makes the next daypart start a little late ("the slot runs over, the grid catches up": the next daypart fits fewer
 airings). Start times in the guide are real (8:00, 8:24, 8:48), shown to the minute.

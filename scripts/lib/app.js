@@ -11,6 +11,8 @@ const { rankEpisode } = require('../../player/tools/rank-sources');
 // the one JSON loader (SP-006) and the pure parts of saving and importing Mine (SP-012).
 const { fetchJsonSource: FETCH_JSON_SRC } = require('./app-fetch');
 const { meSource: ME_SRC } = require('./app-me');
+// Live TV schedule: the builder (Node) and the pure schedule logic the page inlines (see scripts/lib/tvgrid.js).
+const TVGRID = require('./tvgrid');
 // Builds what the browser gets per episode: the best copy (url/item/p/f/m) plus same-episode backups (alt),
 // ranked by player/tools/rank-sources.js (lighter clean copies first; wrong-episode "alternates" dropped).
 function epOut(e) {
@@ -48,26 +50,20 @@ function readJson(p, fallback) { try { return JSON.parse(fs.readFileSync(p, 'utf
 // one show on repeat. "Now playing" is pure arithmetic on the clock (see TV_EPOCH in the page), so
 // every visitor sees the same thing at the same moment with no server.
 const slugify = (s) => String(s).toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-function buildChannels(shows, types) {
+// Which shows sit on which channel (the list and the ids are unchanged since the first Live TV). Returns the lists in
+// channel order, with the place of each show in the FULL list the page indexes.
+function channelLists(shows, types) {
   const isAdultShow = (s) => s.type === 'Late Night' || (s.tags || []).includes('Late Night') || !!s.adult;
   const adultList = shows.filter((s) => isAdultShow(s) && !s.slug.startsWith('movie-'));
   const idx = new Map(shows.map((s, i) => [s.slug, i])); // against the FULL list the page indexes; filtering first put every item after an adult show off by one
   shows = shows.filter((s) => !isAdultShow(s)); // every other channel stays clean; Late Night is its own door
   const series = shows.filter((s) => !s.slug.startsWith('movie-'));
   const movies = shows.filter((s) => s.slug.startsWith('movie-'));
-  const chans = [];
-  const make = (id, name, kind, list) => {
+  const lists = [];
+  const make = (id, name, kind, list, adult) => {
     const eps = list.reduce((n, s) => n + s.eps, 0);
     if (!list.length || eps < 12) return;
-    const queues = list.slice().sort((a, b) => b.eps - a.eps)
-      .map((s) => ({ q: s.seasons.flatMap((se) => se.episodes.map((e) => [idx.get(s.slug), se.season, e.n, Math.max(1, e.min || s.runtime || 30)])) }));
-    const items = [];
-    let active = queues.filter((x) => x.q.length);
-    while (active.length) {
-      for (const x of active) { let m = 0; while (x.q.length && m < 44) { const it = x.q.shift(); items.push(it); m += it[3]; } }
-      active = active.filter((x) => x.q.length);
-    }
-    chans.push({ id, name, kind, shows: list.length, eps, total: items.reduce((n, it) => n + it[3], 0), items });
+    lists.push({ id, name, kind, list, adult: adult || undefined });
   };
   make('void', 'The Void', 'all', series);
   for (const t of types) make('row-' + slugify(t), t, 'row', series.filter((s) => s.type === t));
@@ -76,8 +72,39 @@ function buildChannels(shows, types) {
   const nets = {}; for (const s of series) if (s.network) (nets[s.network] = nets[s.network] || []).push(s);
   for (const [n, list] of Object.entries(nets).sort((a, b) => b[1].length - a[1].length)) if (list.length >= 2) make('net-' + slugify(n), n, 'network', list);
   if (movies.length) make('movies', 'TV Movies and Specials', 'row', movies);
-  if (adultList.length) { make('row-late-night', 'Late Night', 'row', adultList); const c = chans.find((x) => x.id === 'row-late-night'); if (c) c.adult = true; }
-  return chans;
+  if (adultList.length) make('row-late-night', 'Late Night', 'row', adultList, true);
+  return { lists, idx };
+}
+// The old list shape (every episode of every channel dealt round robin). Kept until the page moves to the schedule.
+function buildChannels(shows, types) {
+  const { lists, idx } = channelLists(shows, types);
+  return lists.map((L) => {
+    const queues = L.list.slice().sort((a, b) => b.eps - a.eps)
+      .map((s) => ({ q: s.seasons.flatMap((se) => se.episodes.map((e) => [idx.get(s.slug), se.season, e.n, Math.max(1, e.min || s.runtime || 30)])) }));
+    const items = [];
+    let active = queues.filter((x) => x.q.length);
+    while (active.length) {
+      for (const x of active) { let m = 0; while (x.q.length && m < 44) { const it = x.q.shift(); items.push(it); m += it[3]; } }
+      active = active.filter((x) => x.q.length);
+    }
+    const c = { id: L.id, name: L.name, kind: L.kind, shows: L.list.length, eps: L.list.reduce((n, s) => n + s.eps, 0), total: items.reduce((n, it) => n + it[3], 0), items };
+    if (L.adult) c.adult = true;
+    return c;
+  });
+}
+// The schedule plan (scripts/lib/tvgrid.js): per channel the pools of shows for each daypart, plus one shared library of typical
+// minutes and episode runs. This is what data/tv.json carries.
+function buildTv(shows, types) {
+  const { lists, idx } = channelLists(shows, types);
+  const lib = TVGRID.buildLib(shows);
+  const used = new Set();
+  const channels = lists.map((L) => {
+    const recs = L.list.map((s) => { const i = idx.get(s.slug); used.add(i); return Object.assign({ i }, lib.infos[i]); });
+    const c = TVGRID.planChannel({ id: L.id, name: L.name, kind: L.kind }, recs, lib.rt);
+    if (L.adult) c.adult = true;
+    return c;
+  });
+  return Object.assign({ v: 2 }, TVGRID.trimLib(lib, used), { channels });
 }
 
 function assemble() {
@@ -167,7 +194,8 @@ function assemble() {
   const known = new Set([...types.map((t) => 'type:' + t), ...shows.flatMap((s) => (s.tags || []).map((t) => 'tag:' + t))]);
   const cleanOrder = Array.isArray(fileOrder) ? fileOrder.filter((e) => Array.isArray(e) && (e[0] === 'type' || e[0] === 'tag') && typeof e[1] === 'string' && known.has(e[0] + ':' + e[1])) : [];
   const homeOrder = cleanOrder.length ? cleanOrder : HOME_ORDER;
-  return { shows, people, links, types, bios, channels, homeOrder };
+  const tv = buildTv(shows, types);
+  return { shows, people, links, types, bios, channels, tv, homeOrder };
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
