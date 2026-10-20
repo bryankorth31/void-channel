@@ -36,7 +36,7 @@ const SITE_NAME = PROFILE.siteName;
 // the web manifest); BRAND is for the sentences, so a later rename is one line here. Header: pink "voidtv", blue ".net".
 const BRAND = 'voidtv.net';
 const CONTACT = 'preacherb@cashvalues.org'; // privacy, takedown and corrections (the /privacy and /takedown pages)
-const DONATE_URL = 'https://square.link/u/dJioBmlW';
+const DONATE_URL = 'https://square.link/u/bJl9PGAC';
 const CREDIT = `<a href="/about" onclick="go('about');return false">About ${BRAND}</a> · <a href="/privacy" onclick="go('privacy');return false">Privacy</a> · <a href="/takedown" onclick="go('takedown');return false">Takedown and corrections</a> · A project of the <a href="https://cashvalues.org" target="_blank" rel="noopener">Church of American Strength &amp; Hope</a>, a 501(c)(3) that works on ways for people to have good things that fit a busy life and a stretched budget. Free to use, no set amount, never required; <a href="${DONATE_URL}" target="_blank" rel="noopener">give back to CASH</a> if the work is worth supporting.<br>Shows stream from the Internet Archive. Artwork and metadata from TMDB; this product uses the TMDB API but is not endorsed or certified by TMDB.`;
 
 function readJson(p, fallback) { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fallback; } }
