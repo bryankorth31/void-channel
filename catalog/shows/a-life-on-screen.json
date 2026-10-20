@@ -1,0 +1,101 @@
+{
+  "show": "A Life on Screen",
+  "slug": "a-life-on-screen",
+  "type": "Documentary & Geographic",
+  "network": "BBC Two",
+  "matchedAt": "2026-10-20T09:23:00.920Z",
+  "addedAt": "2026-10-20T09:23:00.920Z",
+  "tvmaze": {
+    "id": 45506,
+    "name": "A Life on Screen",
+    "runtime": 60,
+    "premiered": "2014-12-24",
+    "network": "BBC Two"
+  },
+  "coverage": {
+    "total": 5,
+    "live": 0,
+    "review": 1,
+    "missing": 4,
+    "pct": 20
+  },
+  "seasons": [
+    {
+      "season": 2014,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Julie Walters",
+          "airdate": "2014-12-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2015,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Stephen Fry",
+          "airdate": "2015-12-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2016,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Lenny Henry",
+          "airdate": "2016-12-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2018,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Michael Palin",
+          "airdate": "2018-01-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2019,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Hugh Grant",
+          "airdate": "2019-12-23",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Hugh Grant\" (0.95)",
+            "item": "A_Life_on_Screen_-_01._Hugh_Grant_m000crhm_signed",
+            "itemTitle": " A Life on Screen   01. Hugh Grant m000crhm signed",
+            "file": "A_Life_on_Screen_-_01._Hugh_Grant_m000crhm_signed.mp4",
+            "name": "A_Life_on_Screen_-_01._Hugh_Grant_m000crhm_signed",
+            "url": "https://archive.org/download/A_Life_on_Screen_-_01._Hugh_Grant_m000crhm_signed/A_Life_on_Screen_-_01._Hugh_Grant_m000crhm_signed.mp4",
+            "seconds": 3566,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2310
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "show": "Amazing Planet",
+  "slug": "amazing-planet",
+  "type": "Documentary & Geographic",
+  "network": "National Geographic",
+  "matchedAt": "2026-10-20T09:58:50.258Z",
+  "addedAt": "2026-10-20T09:58:50.258Z",
+  "tvmaze": {
+    "id": 5475,
+    "name": "Amazing Planet",
+    "runtime": 60,
+    "premiered": "2007-01-23",
+    "network": "National Geographic"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 1,
+    "missing": 2,
+    "pct": 33
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Ocean Realm",
+          "airdate": "2007-02-13",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Ocean Realm\" (1.00)",
+            "item": "amazing-planet-ocean-realm",
+            "itemTitle": "Amazing Planet - Ocean Realm",
+            "file": "Amazing Planet - Ocean Realm.mp4",
+            "name": "Amazing Planet - Ocean Realm",
+            "url": "https://archive.org/download/amazing-planet-ocean-realm/Amazing%20Planet%20-%20Ocean%20Realm.mp4",
+            "seconds": 2722,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 519
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Born of Fire",
+          "airdate": "2007-02-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Destructive Forces",
+          "airdate": "2007-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

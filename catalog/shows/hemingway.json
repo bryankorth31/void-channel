@@ -1,0 +1,77 @@
+{
+  "show": "Hemingway",
+  "slug": "hemingway",
+  "type": "Documentary & Geographic",
+  "network": "PBS",
+  "matchedAt": "2026-10-20T10:46:24.046Z",
+  "addedAt": "2026-10-20T10:46:24.046Z",
+  "tvmaze": {
+    "id": 50323,
+    "name": "Hemingway",
+    "runtime": 120,
+    "premiered": "2021-04-05",
+    "network": "PBS"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 2,
+    "missing": 1,
+    "pct": 67
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "A Writer (1899-1929)",
+          "airdate": "2021-04-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Avatar (1929-1944)",
+          "airdate": "2021-04-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"The Avatar (1929-1944)\" (0.64)",
+            "item": "Ken-Burns-Hemingway",
+            "itemTitle": "Ken Burns: Hemingway",
+            "file": "02 The Avatar (1929-1944).mp4",
+            "name": "02 The Avatar (1929-1944)",
+            "url": "https://archive.org/download/Ken-Burns-Hemingway/02%20The%20Avatar%20(1929-1944).mp4",
+            "seconds": 6417,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2516
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "The Blank Page (1944-1961)",
+          "airdate": "2021-04-07",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"The Blank Page (1944-1961)\" (0.71)",
+            "item": "Ken-Burns-Hemingway",
+            "itemTitle": "Ken Burns: Hemingway",
+            "file": "03 The Blank Page (1944-1961).mp4",
+            "name": "03 The Blank Page (1944-1961)",
+            "url": "https://archive.org/download/Ken-Burns-Hemingway/03%20The%20Blank%20Page%20(1944-1961).mp4",
+            "seconds": 6282,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2463
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

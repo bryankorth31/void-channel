@@ -1,0 +1,147 @@
+{
+  "show": "Wildest Places",
+  "slug": "wildest-places",
+  "type": "Documentary & Geographic",
+  "network": "BBC Two",
+  "matchedAt": "2026-10-20T10:22:34.521Z",
+  "addedAt": "2026-10-20T10:22:34.522Z",
+  "tvmaze": {
+    "id": 47759,
+    "name": "Wildest Places",
+    "runtime": 65,
+    "premiered": "2020-05-06",
+    "network": "BBC Earth"
+  },
+  "coverage": {
+    "total": 7,
+    "live": 0,
+    "review": 4,
+    "missing": 3,
+    "pct": 57
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Pacific: Reefs",
+          "airdate": "2020-05-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Pacific: Bays",
+          "airdate": "2020-05-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Pacific: Barrier Reef",
+          "airdate": "2020-05-20",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Pacific: Barrier Reef\" (0.63)",
+            "item": "WildestPlacesPacific",
+            "itemTitle": "Wildest Places - Pacific",
+            "file": "(3) The Great Barrier Reef.mp4",
+            "name": "(3) The Great Barrier Reef",
+            "url": "https://archive.org/download/WildestPlacesPacific/(3)%20The%20Great%20Barrier%20Reef.mp4",
+            "seconds": 3264,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3351
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Pacific: Islands",
+          "airdate": "2020-05-27",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Pacific: Islands\" (0.64)",
+            "item": "wildest-places-antarctic",
+            "itemTitle": "Wildest Places - Antarctic",
+            "file": "(4) Icy Islands.mp4",
+            "name": "(4) Icy Islands",
+            "url": "https://archive.org/download/wildest-places-antarctic/(4)%20Icy%20Islands.mp4",
+            "seconds": 3253,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3409
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Pacific: Islands\" (0.63)",
+              "item": "WildestPlacesPacific",
+              "itemTitle": "Wildest Places - Pacific",
+              "file": "(4) Islands.mp4",
+              "name": "(4) Islands",
+              "url": "https://archive.org/download/WildestPlacesPacific/(4)%20Islands.mp4",
+              "seconds": 3264,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 3101
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "name": "Antarctic: Currents",
+          "airdate": "2020-06-03",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Antarctic: Currents\" (0.61)",
+            "item": "wildest-places-antarctic",
+            "itemTitle": "Wildest Places - Antarctic",
+            "file": "(1) Currents.mp4",
+            "name": "(1) Currents",
+            "url": "https://archive.org/download/wildest-places-antarctic/(1)%20Currents.mp4",
+            "seconds": 3253,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3791
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Antarctic: Seasons",
+          "airdate": "2020-06-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "Antarctic: Connected Continents",
+          "airdate": "2020-06-17",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Antarctic: Connected Continents\" (0.80)",
+            "item": "wildest-places-antarctic",
+            "itemTitle": "Wildest Places - Antarctic",
+            "file": "(3) Connected Continents.mp4",
+            "name": "(3) Connected Continents",
+            "url": "https://archive.org/download/wildest-places-antarctic/(3)%20Connected%20Continents.mp4",
+            "seconds": 3253,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2870
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
