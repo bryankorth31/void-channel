@@ -84,16 +84,20 @@ function channelLists(shows, types, off) {
 // minutes and episode runs. This is what data/tv.json carries.
 function buildTv(shows, types) {
   const OFF = readJson(path.join(PROFILE.catalogDir, 'live-tv-off.json'), { shows: {} });
-  const { lists, idx } = channelLists(shows, types, new Set(Object.keys(OFF.shows || {})));
+  const offSet = new Set(Object.keys(OFF.shows || {}));
+  const { lists, idx } = channelLists(shows, types, offSet);
   const lib = TVGRID.buildLib(shows);
-  const used = new Set();
+  // TV specials of 60 minutes or less that can take a daypart's last place when it would leave a gap (B, 20 Oct).
+  const sp = TVGRID.buildSpecials(shows, lib.infos, offSet);
+  const used = new Set(sp.map((e) => e[0]));
   const channels = lists.map((L) => {
     const recs = L.list.map((s) => { const i = idx.get(s.slug); used.add(i); return Object.assign({ i }, lib.infos[i]); });
     const c = TVGRID.planChannel({ id: L.id, name: L.name, kind: L.kind }, recs, lib.rt);
     if (L.adult) c.adult = true;
+    if (L.kind === 'network') { const spn = sp.filter((e) => shows[e[0]].network === L.name).map((e) => e[0]); if (spn.length) c.spn = spn; }
     return c;
   });
-  return Object.assign({ v: 2 }, TVGRID.trimLib(lib, used), { channels });
+  return Object.assign({ v: 2 }, TVGRID.trimLib(lib, used), { sp, channels });
 }
 
 function assemble() {
@@ -729,7 +733,7 @@ let TV_TOKEN=0;
 // episodes that failed in the last hour, per channel: the retry and the end of an item skip them, so a dead episode cannot loop (Bryan, 20 Oct 2026)
 const TV_DEAD={};const tvKey=(c,a)=>c.id+':'+a.s+':'+a.se+'x'+a.n;const tvDead=(c,a)=>TV_DEAD[tvKey(c,a)]>Date.now()-36e5;
 function tvNextGood(c,a){let x=a;for(let k=0;k<24;k++){x=TVG.nextAiring(c,TVLIB,x);if(!x)return a;if(!tvDead(c,x))return x}return TVG.nextAiring(c,TVLIB,a)||a}
-async function ensureTV(){if(TV&&TVLIB)return TV;const r=await fetch(BASE+'data/tv.json');const j=await r.json();TVLIB={rt:j.rt,lib:j.lib};TV=j.channels;return TV}
+async function ensureTV(){if(TV&&TVLIB)return TV;const r=await fetch(BASE+'data/tv.json');const j=await r.json();TVLIB={rt:j.rt,lib:j.lib,sp:j.sp||[]};TV=j.channels;return TV}
 const chanNow=(c,at)=>TVG.chanNow(c,TVLIB,at);
 const mmss=(sec)=>{sec=Math.max(0,Math.round(sec));const h=Math.floor(sec/3600),m=Math.floor(sec%3600/60);return h?h+'h '+String(m).padStart(2,'0')+'m':m+' min'};
 const kindName={all:'every show',row:'row',collection:'collection',network:'network'};
@@ -921,7 +925,7 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
   // Split mode keeps the browse index in one shared, cacheable file (data/index.js) so the hundreds
   // of per-show share pages stay tiny; embed mode inlines everything for the single-file preview.
   const inline = mode === 'embed'
-    ? `const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let TV=${JSON.stringify(tv.channels)};let TVLIB=${JSON.stringify({ rt: tv.rt, lib: tv.lib })};let GRAPH_LOADED=true;`
+    ? `const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let TV=${JSON.stringify(tv.channels)};let TVLIB=${JSON.stringify({ rt: tv.rt, lib: tv.lib, sp: tv.sp || [] })};let GRAPH_LOADED=true;`
     : `const PEOPLE={};const LINKS={};const BIO={};let TV=null;let TVLIB=null;let GRAPH_LOADED=false;`;
   const indexScript = `<script src="${base}assets/player/voidplayer.js?v=${PLAYER_V}"></script>` + (mode === 'embed' ? '' : `<script src="${base}data/index.js"></script>`);
   const hx = (v) => String(v == null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

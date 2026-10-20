@@ -68,6 +68,51 @@ function tvgridFactory() {
 
   // One broadcast day of one channel as plain minutes: [{ s: show index, st: minute of the day (360 = 6:00 am), du: minutes,
   // j: how many times this show has already aired today, k: daypart letter }]. The same on every Monday to Friday of a week.
+  // Holiday specials air only in their season (B, 20 Oct): h Halloween in October, t Thanksgiving in November, x Christmas
+  // from 25 November to 31 December, v Valentine's 1 to 14 February, e Easter 15 March to 30 April.
+  function inSeason(code, bd) {
+    const d = new Date(bd * DAYMS), m = d.getUTCMonth() + 1, day = d.getUTCDate();
+    if (code === 'h') return m === 10;
+    if (code === 't') return m === 11;
+    if (code === 'x') return (m === 11 && day >= 25) || m === 12;
+    if (code === 'v') return m === 2 && day <= 14;
+    if (code === 'e') return (m === 3 && day >= 15) || m === 4;
+    return false;
+  }
+  function idHash(id) { let h = 7; id = String(id || ''); for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0; return h; }
+  // A TV special to take the place of a daypart's last show when that show leaves a gap before the next daypart: it must fit
+  // the show's slot plus the gap. lib.sp is [[show, flags]] (k kids, h t x v e holiday). Order: the channel's own network,
+  // then a holiday special in season, then any. Kids mornings and kids channels take kids specials only; Late Night takes none;
+  // a special airs once a day per channel. Returns a show, or -1.
+  function pickSpecial(ch, lib, bd, k, di, room, minDu, cnt) {
+    const sp = lib.sp;
+    if (!sp || !sp.length || ch.adult) return -1;
+    const kidsOnly = ch.kc || (k === 'm' && ch.km);
+    const net = ch.spn || [];
+    const ok = (e) => {
+      const f = e[1] || '';
+      if (cnt[e[0]]) return false;
+      if (kidsOnly && f.indexOf('k') < 0) return false;
+      for (const c of 'htxve') if (f.indexOf(c) >= 0 && !inSeason(c, bd)) return false;
+      return true;
+    };
+    const holiday = (e) => /[htxve]/.test(e[1] || '');
+    const groups = [sp.filter((e) => net.indexOf(e[0]) >= 0), sp.filter(holiday), sp];
+    const r = (s) => lib.rt[s] || 0;
+    const turn = idHash(ch.id) + bd * 31 + di * 7;
+    for (let pass = 0; pass < 2; pass++) {
+      for (const g of groups) {
+        const fit = g.filter((e) => ok(e) && r(e[0]) <= room && (pass === 0 ? r(e[0]) >= room - 3 : r(e[0]) > minDu));
+        if (!fit.length) continue;
+        if (pass === 0) return fit[turn % fit.length][0];
+        let best = fit[0];
+        for (const e of fit) if (r(e[0]) > r(best[0])) best = e;
+        return best[0];
+      }
+    }
+    return -1;
+  }
+
   function planDay(ch, lib, bd) {
     const dow = dowOf(bd), w = weekOfDay(bd);
     const P = ch.p || {};
@@ -128,6 +173,12 @@ function tvgridFactory() {
       };
       fill(TOL1);
       if (win.b - t > GAP) fill(TOL2);
+      // A gap of 3 minutes or more before the next daypart: swap the last show for a TV special that fills its slot and the gap.
+      const last = out[out.length - 1];
+      if (lib.sp && last && last.k === win.k && win.b - t >= 3) {
+        const s = pickSpecial(ch, lib, bd, win.k, di, last.du + (win.b - t), last.du, cnt);
+        if (s >= 0) { out.pop(); cnt[last.s] -= 1; t = last.st; put(s, win.k); out[out.length - 1].sp = 1; }
+      }
     }
     return out;
   }
@@ -389,6 +440,10 @@ function planChannel(meta, recs, rt) {
   const ch = { id: meta.id, name: meta.name, kind: meta.kind, shows: N, eps: recs.reduce((n, r) => n + r.eps, 0), cap: Math.max(2, Math.ceil((1.2 * 1440) / meanRt / Math.max(1, N))), p, sn: {}, rd };
   const mv = Math.round((100 * movies.length) / Math.max(1, N));
   if (mv) ch.mv = mv;
+  // For the gap specials: km = this channel's mornings are kids shows, kc = most of the channel is kids shows (kids specials only).
+  const kidsN = series.filter((r) => r.kids).length;
+  if (!allMovies && kidsN >= 3) ch.km = 1;
+  if (series.length && kidsN / series.length >= 0.5) ch.kc = 1;
   // How many airings each daypart holds on a weekday: the step the weekly (or daily) rotation takes through the pool.
   const REF_BD = 20299;
   const probe = Object.assign({}, ch, { sn: {} });
@@ -396,6 +451,31 @@ function planChannel(meta, recs, rt) {
   for (const a of G.planDay(probe, { rt }, REF_BD)) seen[a.k] = (seen[a.k] || 0) + 1;
   for (const k of Object.keys(seen)) if (k !== 'v') ch.sn[k] = Math.max(1, seen[k]);
   return ch;
+}
+
+// TV specials that can fill a gap (B, 20 Oct): 60 minutes or less. The catalog has no genres for them, so kids comes from the
+// studio or a known kids title, and the holiday from the title. Returns '' (any audience, any time of year) or flags.
+const KIDS_STUDIO = /animation|cartoon|nickelodeon|disney|pixar|dreamworks|hanna-barbera|rankin|mendelson|magic light|pbs kids|sesame|jim henson|nick jr|aardman/i;
+const KIDS_TITLE = /charlie brown|peanuts|snoopy|scooby|mickey|minnie|goofy|donald duck|elmo|sesame|muppet|curious george|arthur.s|arthur christmas|chipmunk|alvin|garfield|grinch|rudolph|frosty|winnie the pooh|pooh|shrek|madagascar|kung fu panda|toy story|monsters, inc|gruffalo|room on the broom|stick man|zog|paddington|peppa|bluey|spongebob|looney|bugs bunny|tom and jerry|smurf|care bears|my little pony|club penguin|yogi|boo boo|flintstone|jetsons|powerpuff|billy and mandy|dexter.s laboratory|olaf|frozen fever|wallace|gromit|shaun the sheep|barney|teletubbies|dora|veggietales/i;
+function specialFlags(s) {
+  const name = String(s.show || ''), net = String(s.network || '');
+  let f = '';
+  if (KIDS_STUDIO.test(net) || KIDS_TITLE.test(name)) f += 'k';
+  if (/halloween|pumpkin|trick or treat/i.test(name)) f += 'h';
+  if (/thanksgiving/i.test(name)) f += 't';
+  if (/christmas|xmas|santa|noel|nutcracker|grinch|rudolph|frosty|scrooge|christmas carol|12 days|twelve days|yuletide/i.test(name)) f += 'x';
+  if (/valentine/i.test(name)) f += 'v';
+  if (/easter/i.test(name)) f += 'e';
+  return f;
+}
+function buildSpecials(shows, infos, off) {
+  const out = [];
+  shows.forEach((s, i) => {
+    if (!isMovieSlug(s.slug) || (off && off.has(s.slug)) || s.adult || s.type === 'Late Night') return;
+    if (!(infos[i].rt > 0 && infos[i].rt <= 60)) return;
+    out.push([i, specialFlags(s)]);
+  });
+  return out;
 }
 
 // The shared library for the whole page: typical minutes and episode runs by place in the full show list (0 where unused).
@@ -408,4 +488,4 @@ function trimLib(lib, used) {
   return { rt: lib.rt.map((v, i) => (used.has(i) ? v : 0)), lib: lib.runs.map((v, i) => (used.has(i) ? v : 0)) };
 }
 
-module.exports = { tvgridFactory, source, showInfo, planChannel, buildLib, trimLib, isMovieSlug, G };
+module.exports = { tvgridFactory, source, showInfo, planChannel, buildLib, trimLib, isMovieSlug, specialFlags, buildSpecials, G };

@@ -363,3 +363,55 @@ test('guide maths: focusMove on real airings, and the block box tiles with the s
   const x = G.xOf(now, lo, 5); const bb = G.blockBox(cur, lo, 5); assert.ok(bb.left <= x && x < bb.left + bb.width);
   assert.ok(Math.abs(G.tOf(G.xOf(now, lo, 5), lo, 5) - now) < 1e-6);
 });
+
+// Gap specials (B, 20 Oct): a daypart's last show that would leave a gap gives its place to a TV special that fills it.
+function spFixture() {
+  const lib = { rt: [22, 25, 26, 25, 25, 24], lib: [[1, 1, 60], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1]], sp: [[1, ''], [2, 'x'], [3, 'k'], [4, 'h'], [5, 'kx']] };
+  const ch = { id: 'sp-test', p: { m: [0], d: [0], e: [0], p: [0], l: [0], o: [0] }, cap: 99, sn: {}, rd: '' };
+  return { lib, ch };
+}
+const spIn = (day) => day.filter((a) => a.sp).map((a) => a.s);
+const bdOn = (y, mo, d) => sched().dayOf(at(y, mo, d, 12, 0));
+
+test('gap specials: the last show of a daypart gives way to a special that fills its slot and the gap', () => {
+  const G = sched(), { lib, ch } = spFixture();
+  const day = G.planDay(ch, lib, bdOn(2026, 10, 21));
+  assert.ok(spIn(day).length > 0, 'some specials air');
+  const plain = G.planDay(ch, { rt: lib.rt, lib: lib.lib }, bdOn(2026, 10, 21));
+  assert.equal(spIn(plain).length, 0, 'with no specials list the plan is as before');
+  const gaps = (d) => d.reduce((n, a, u) => n + Math.max(0, (u + 1 < d.length ? d[u + 1].st : 1800) - a.st - a.du), 0);
+  assert.ok(gaps(day) < gaps(plain), 'less gap time than without specials');
+  for (let u = 0; u + 1 < day.length; u++) assert.ok(day[u].st + day[u].du <= day[u + 1].st + 30, 'a special never runs far over the next start');
+});
+
+test('gap specials: holidays only in season, kids channels take kids specials only, Late Night takes none, no repeat in a day', () => {
+  const G = sched(), { lib, ch } = spFixture();
+  const oct = spIn(G.planDay(ch, lib, bdOn(2026, 10, 21))), dec = [];
+  for (let d = 1; d <= 20; d++) dec.push(...spIn(G.planDay(ch, lib, bdOn(2026, 12, d))));
+  assert.ok(!oct.includes(2) && !oct.includes(5), 'no Christmas special in October');
+  assert.ok(dec.includes(2) || dec.includes(5), 'Christmas specials air in December');
+  for (let d = 1; d <= 28; d++) assert.ok(!spIn(G.planDay(ch, lib, bdOn(2026, 7, d))).includes(4), 'no Halloween special in July');
+  const kids = Object.assign({}, ch, { id: 'sp-kids', kc: 1 });
+  for (let d = 1; d <= 20; d++) for (const s of spIn(G.planDay(kids, lib, bdOn(2026, 12, d)))) assert.ok(s === 3 || s === 5, 'kids channel: kids specials only');
+  const late = Object.assign({}, ch, { id: 'sp-late', adult: true });
+  assert.equal(spIn(G.planDay(late, lib, bdOn(2026, 10, 21))).length, 0, 'Late Night takes no specials');
+  for (let d = 1; d <= 20; d++) { const s = spIn(G.planDay(ch, lib, bdOn(2026, 12, d))); assert.equal(new Set(s).size, s.length, 'no special twice in a day'); }
+});
+
+test('gap specials: the page runs the same plan (the inlined source agrees with the module)', () => {
+  const vm = require('node:vm');
+  const inl = vm.runInNewContext(T.source, { Date, Math, Map, WeakMap, Object, Array });
+  inl.setOff(OFF6);
+  const G = sched(), { lib, ch } = spFixture();
+  for (const t of [at(2026, 10, 21, 8, 50), at(2026, 12, 10, 16, 55), at(2026, 12, 10, 22, 59)]) {
+    const a = G.chanNow(ch, lib, t), b = inl.chanNow(Object.assign({}, ch), lib, t);
+    assert.deepEqual([a.a.s, a.a.st, a.a.en], [b.a.s, b.a.st, b.a.en]);
+  }
+});
+
+test('specialFlags: kids from the studio or a known kids title, holidays from the title', () => {
+  assert.equal(T.specialFlags({ show: 'A Charlie Brown Christmas', network: 'Lee Mendelson Film Productions' }), 'kx');
+  assert.equal(T.specialFlags({ show: 'The David S. Pumpkins Halloween Special', network: 'NBC' }), 'h');
+  assert.equal(T.specialFlags({ show: 'Frozen Planet: The Epic Journey', network: 'BBC' }), '');
+  assert.equal(T.specialFlags({ show: 'Dexter: Early Cuts', network: 'Showtime' }), '');
+});

@@ -246,3 +246,15 @@ end of item, failure, tune) with the rewritten `tv-switch` tests and `tv.json` v
 9. **Same for everyone only within a time zone.** Everyone in the same zone sees the same schedule; a viewer in Los
    Angeles and one in New York see different things at the same clock moment (like regional feeds). Right?
 10. **Rotation speed:** a place changes shows weekly. Faster (every few days) or slower (monthly)?
+
+## 9. Gap specials (added 20 Oct 2026, B's go)
+
+When a daypart's last show would leave 3 minutes or more before the next daypart, it gives its place to a TV special of 60
+minutes or less that fills the show's slot plus the gap (first choice: leaves under 3 minutes; second: the longest that still
+leaves less gap). Order: the channel's own network, then a holiday special in season, then any. Rules: holiday specials only in
+season (Halloween October, Thanksgiving November, Christmas 25 Nov to 31 Dec, Valentine's 1 to 14 Feb, Easter 15 Mar to 30 Apr);
+kids mornings (ch.km) and kids channels (ch.kc, half or more kids shows) take kids specials only; Late Night takes none; a special
+airs once a day per channel. The catalog has no genres for specials, so kids comes from the studio or a known kids title and the
+holiday from the title (specialFlags in tvgrid.js). data/tv.json gains sp (531 specials, about 5 KB). Measured: breaks per
+channel per day median 32 to 18 minutes; over a year, about 60,800 special airings and no rule broken. Also in this round: 66
+uneven shows kept off the mixed channels (catalog/live-tv-off.json), still on their network and on demand.
