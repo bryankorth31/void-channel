@@ -53,10 +53,12 @@ function readJson(p, fallback) { try { return JSON.parse(fs.readFileSync(p, 'utf
 const slugify = (s) => String(s).toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 // Which shows sit on which channel (the list and the ids are unchanged since the first Live TV). Returns the lists in
 // channel order, with the place of each show in the FULL list the page indexes.
-function channelLists(shows, types) {
+function channelLists(shows, types, off) {
   const isAdultShow = (s) => s.type === 'Late Night' || (s.tags || []).includes('Late Night') || !!s.adult;
-  const adultList = shows.filter((s) => isAdultShow(s) && !s.slug.startsWith('movie-'));
   const idx = new Map(shows.map((s, i) => [s.slug, i])); // against the FULL list the page indexes; filtering first put every item after an adult show off by one
+  // Shows B keeps off Live TV (catalog/live-tv-off.json) leave every channel; they stay on demand. Filtered after idx, so places hold.
+  if (off && off.size) shows = shows.filter((s) => !off.has(s.slug));
+  const adultList = shows.filter((s) => isAdultShow(s) && !s.slug.startsWith('movie-'));
   shows = shows.filter((s) => !isAdultShow(s)); // every other channel stays clean; Late Night is its own door
   const series = shows.filter((s) => !s.slug.startsWith('movie-'));
   const movies = shows.filter((s) => s.slug.startsWith('movie-'));
@@ -79,7 +81,8 @@ function channelLists(shows, types) {
 // The schedule plan (scripts/lib/tvgrid.js): per channel the pools of shows for each daypart, plus one shared library of typical
 // minutes and episode runs. This is what data/tv.json carries.
 function buildTv(shows, types) {
-  const { lists, idx } = channelLists(shows, types);
+  const OFF = readJson(path.join(PROFILE.catalogDir, 'live-tv-off.json'), { shows: {} });
+  const { lists, idx } = channelLists(shows, types, new Set(Object.keys(OFF.shows || {})));
   const lib = TVGRID.buildLib(shows);
   const used = new Set();
   const channels = lists.map((L) => {

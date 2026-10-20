@@ -1,0 +1,269 @@
+{
+  "_readme": "Shows kept off the Live TV schedule (they stay on demand). B, 20 Oct 2026: take the 66 shows that leave the most gap time off Live TV. Measured over one week of the schedule: gap = slot length minus the real episode file. Remove a line to put a show back on Live TV.",
+  "shows": {
+    "mcgee-and-me": {
+      "show": "McGee and Me!",
+      "note": "1134 min of gaps a week over 369 airings (typical 5 min)"
+    },
+    "jake-and-amir": {
+      "show": "Jake and Amir",
+      "note": "1038 min of gaps a week over 432 airings (typical 5 min)"
+    },
+    "house-of-cosbys": {
+      "show": "House of Cosbys",
+      "note": "1024 min of gaps a week over 1025 airings (typical 5 min)"
+    },
+    "cold-justice": {
+      "show": "Cold Justice",
+      "note": "715 min of gaps a week over 42 airings (typical 44 min)"
+    },
+    "later-with-bob-costas": {
+      "show": "Later with Bob Costas",
+      "note": "662 min of gaps a week over 28 airings (typical 94 min)"
+    },
+    "um-actually": {
+      "show": "Um, Actually",
+      "note": "436 min of gaps a week over 65 airings (typical 35 min)"
+    },
+    "curb-your-enthusiasm": {
+      "show": "Curb Your Enthusiasm",
+      "note": "429 min of gaps a week over 44 airings (typical 54 min)"
+    },
+    "game-changer": {
+      "show": "Game Changer",
+      "note": "386 min of gaps a week over 68 airings (typical 33 min)"
+    },
+    "internet-historian": {
+      "show": "Internet Historian",
+      "note": "386 min of gaps a week over 56 airings (typical 35 min)"
+    },
+    "the-crocodile-hunter": {
+      "show": "The Crocodile Hunter",
+      "note": "384 min of gaps a week over 101 airings (typical 50 min)"
+    },
+    "troopers": {
+      "show": "Troopers",
+      "note": "376 min of gaps a week over 433 airings (typical 19 min)"
+    },
+    "summer-heights-high": {
+      "show": "Summer Heights High",
+      "note": "369 min of gaps a week over 86 airings (typical 27 min)"
+    },
+    "the-adventures-of-robin-hood": {
+      "show": "The Adventures of Robin Hood",
+      "note": "365 min of gaps a week over 21 airings (typical 26 min)"
+    },
+    "men-in-kilts-a-roadtrip-with-sam-and-graham": {
+      "show": "Men in Kilts: A Roadtrip with Sam and Graham",
+      "note": "341 min of gaps a week over 92 airings (typical 28 min)"
+    },
+    "the-world-according-to-jeff-goldblum": {
+      "show": "The World According to Jeff Goldblum",
+      "note": "338 min of gaps a week over 173 airings (typical 25 min)"
+    },
+    "step-by-step": {
+      "show": "Step by Step",
+      "note": "315 min of gaps a week over 17 airings (typical 71 min)"
+    },
+    "dimension-20": {
+      "show": "Dimension 20",
+      "note": "311 min of gaps a week over 36 airings (typical 129 min)"
+    },
+    "connections": {
+      "show": "Connections",
+      "note": "297 min of gaps a week over 15 airings (typical 49 min)"
+    },
+    "godless": {
+      "show": "Godless",
+      "note": "287 min of gaps a week over 72 airings (typical 71 min)"
+    },
+    "when-dinosaurs-roamed-america": {
+      "show": "When Dinosaurs Roamed America",
+      "note": "267 min of gaps a week over 5 airings (typical 91 min)"
+    },
+    "bibleman": {
+      "show": "Bibleman",
+      "note": "255 min of gaps a week over 67 airings (typical 29 min)"
+    },
+    "make-some-noise": {
+      "show": "Make Some Noise",
+      "note": "255 min of gaps a week over 51 airings (typical 34 min)"
+    },
+    "fat-pizza": {
+      "show": "Fat Pizza",
+      "note": "248 min of gaps a week over 109 airings (typical 48 min)"
+    },
+    "yo-soy-betty-la-fea": {
+      "show": "Yo soy Betty, la fea",
+      "note": "236 min of gaps a week over 159 airings (typical 22 min)"
+    },
+    "the-bible": {
+      "show": "The Bible",
+      "note": "233 min of gaps a week over 34 airings (typical 65 min)"
+    },
+    "the-alienist": {
+      "show": "The Alienist",
+      "note": "228 min of gaps a week over 59 airings (typical 48 min)"
+    },
+    "el-hormiguero": {
+      "show": "El hormiguero",
+      "note": "227 min of gaps a week over 94 airings (typical 10 min)"
+    },
+    "diners-drive-ins-and-dives": {
+      "show": "Diners, Drive-Ins and Dives",
+      "note": "223 min of gaps a week over 245 airings (typical 21 min)"
+    },
+    "good-eats": {
+      "show": "Good Eats",
+      "note": "218 min of gaps a week over 260 airings (typical 21 min)"
+    },
+    "prop-culture": {
+      "show": "Prop Culture",
+      "note": "212 min of gaps a week over 170 airings (typical 32 min)"
+    },
+    "the-jenny-jones-show": {
+      "show": "The Jenny Jones Show",
+      "note": "208 min of gaps a week over 17 airings (typical 71 min)"
+    },
+    "the-savage-eye": {
+      "show": "The Savage Eye",
+      "note": "206 min of gaps a week over 200 airings (typical 26 min)"
+    },
+    "on-flux": {
+      "show": "Æon Flux",
+      "note": "200 min of gaps a week over 23 airings (typical 22 min)"
+    },
+    "hornblower": {
+      "show": "Hornblower",
+      "note": "196 min of gaps a week over 14 airings (typical 121 min)"
+    },
+    "generation-war": {
+      "show": "Generation War",
+      "note": "195 min of gaps a week over 67 airings (typical 5 min)"
+    },
+    "spartacus": {
+      "show": "Spartacus",
+      "note": "192 min of gaps a week over 78 airings (typical 55 min)"
+    },
+    "the-parkers": {
+      "show": "The Parkers",
+      "note": "192 min of gaps a week over 63 airings (typical 30 min)"
+    },
+    "password": {
+      "show": "Password",
+      "note": "183 min of gaps a week over 30 airings (typical 27 min)"
+    },
+    "through-the-wormhole": {
+      "show": "Through the Wormhole",
+      "note": "179 min of gaps a week over 125 airings (typical 46 min)"
+    },
+    "the-walking-dead": {
+      "show": "The Walking Dead",
+      "note": "169 min of gaps a week over 45 airings (typical 53 min)"
+    },
+    "the-missing-piece": {
+      "show": "The Missing Piece",
+      "note": "167 min of gaps a week over 57 airings (typical 18 min)"
+    },
+    "epic-rap-battles-of-history": {
+      "show": "Epic Rap Battles of History",
+      "note": "163 min of gaps a week over 61 airings (typical 5 min)"
+    },
+    "movies-that-shook-the-world": {
+      "show": "Movies That Shook the World",
+      "note": "163 min of gaps a week over 43 airings (typical 23 min)"
+    },
+    "when-calls-the-heart": {
+      "show": "When Calls the Heart",
+      "note": "163 min of gaps a week over 113 airings (typical 42 min)"
+    },
+    "elvis-presley-the-searcher": {
+      "show": "Elvis Presley: The Searcher",
+      "note": "162 min of gaps a week over 13 airings (typical 116 min)"
+    },
+    "beyond-2000": {
+      "show": "Beyond 2000",
+      "note": "160 min of gaps a week over 30 airings (typical 53 min)"
+    },
+    "super-password": {
+      "show": "Super Password",
+      "note": "156 min of gaps a week over 27 airings (typical 29 min)"
+    },
+    "everything-is-terrible": {
+      "show": "Everything Is Terrible!",
+      "note": "133 min of gaps a week over 61 airings (typical 5 min)"
+    },
+    "cartoon-sushi": {
+      "show": "Cartoon Sushi",
+      "note": "132 min of gaps a week over 31 airings (typical 31 min)"
+    },
+    "cuts": {
+      "show": "Cuts",
+      "note": "129 min of gaps a week over 91 airings (typical 22 min)"
+    },
+    "the-show-with-ze-frank": {
+      "show": "The Show with Ze Frank",
+      "note": "128 min of gaps a week over 57 airings (typical 5 min)"
+    },
+    "night-of-too-many-stars": {
+      "show": "Night of Too Many Stars",
+      "note": "126 min of gaps a week over 32 airings (typical 30 min)"
+    },
+    "dirty-laundry": {
+      "show": "Dirty Laundry",
+      "note": "123 min of gaps a week over 52 airings (typical 44 min)"
+    },
+    "spider-man-the-new-animated-series": {
+      "show": "Spider-Man: The New Animated Series",
+      "note": "123 min of gaps a week over 28 airings (typical 21 min)"
+    },
+    "run-bts": {
+      "show": "Run BTS!",
+      "note": "122 min of gaps a week over 12 airings (typical 46 min)"
+    },
+    "headbangers-ball": {
+      "show": "Headbangers Ball",
+      "note": "120 min of gaps a week over 28 airings (typical 30 min)"
+    },
+    "all-you-can-eat": {
+      "show": "All You Can Eat",
+      "note": "119 min of gaps a week over 11 airings (typical 24 min)"
+    },
+    "itv-exposure": {
+      "show": "ITV Exposure",
+      "note": "118 min of gaps a week over 12 airings (typical 64 min)"
+    },
+    "its-okay-to-not-be-okay": {
+      "show": "It's Okay to Not Be Okay",
+      "note": "116 min of gaps a week over 13 airings (typical 76 min)"
+    },
+    "wild-discovery": {
+      "show": "Wild Discovery",
+      "note": "115 min of gaps a week over 34 airings (typical 49 min)"
+    },
+    "adventures-in-odyssey": {
+      "show": "Adventures in Odyssey",
+      "note": "113 min of gaps a week over 322 airings (typical 28 min)"
+    },
+    "mgm-when-the-lion-roars": {
+      "show": "MGM: When the Lion Roars",
+      "note": "112 min of gaps a week over 40 airings (typical 122 min)"
+    },
+    "anne-of-green-gables": {
+      "show": "Anne of Green Gables",
+      "note": "110 min of gaps a week over 29 airings (typical 99 min)"
+    },
+    "high-rollers": {
+      "show": "High Rollers",
+      "note": "109 min of gaps a week over 30 airings (typical 41 min)"
+    },
+    "raw": {
+      "show": "Raw",
+      "note": "109 min of gaps a week over 15 airings (typical 63 min)"
+    },
+    "hometime": {
+      "show": "Hometime",
+      "note": "108 min of gaps a week over 24 airings (typical 73 min)"
+    }
+  }
+}
