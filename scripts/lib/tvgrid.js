@@ -81,7 +81,8 @@ function tvgridFactory() {
   }
   function idHash(id) { let h = 7; id = String(id || ''); for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0; return h; }
   // A TV special to take the place of a daypart's last show when that show leaves a gap before the next daypart: it must fit
-  // the show's slot plus the gap. lib.sp is [[show, flags]] (k kids, h t x v e holiday). Order: the channel's own network,
+  // the show's slot plus the gap. lib.sp is [[show, flags]] (k kids, h t x v e holiday, r racy: after dark only, the
+  // late night and overnight dayparts). Order: the channel's own network,
   // then a holiday special in season, then any. Kids mornings and kids channels take kids specials only; Late Night takes none;
   // a special airs once a day per channel. Returns a show, or -1.
   function pickSpecial(ch, lib, bd, k, di, room, minDu, cnt) {
@@ -93,6 +94,7 @@ function tvgridFactory() {
       const f = e[1] || '';
       if (cnt[e[0]]) return false;
       if (kidsOnly && f.indexOf('k') < 0) return false;
+      if (f.indexOf('r') >= 0 && k !== 'l' && k !== 'o') return false;
       for (const c of 'htxve') if (f.indexOf(c) >= 0 && !inSeason(c, bd)) return false;
       return true;
     };
@@ -465,6 +467,8 @@ function specialFlags(s) {
   if (/thanksgiving/i.test(name)) f += 't';
   if (/christmas|xmas|santa|noel|nutcracker|grinch|rudolph|frosty|scrooge|christmas carol|12 days|twelve days|yuletide/i.test(name)) f += 'x';
   if (/valentine/i.test(name)) f += 'v';
+  // Racy titles air only after dark: the late night and overnight dayparts, 11 pm to 6 am (B, 20 Oct).
+  if (/\bsex\b|porn|nude|naked|erotic|playboy|striptease|stripper|uncensored|xxx|shocking moments/i.test(name)) f += 'r';
   if (/easter/i.test(name)) f += 'e';
   return f;
 }

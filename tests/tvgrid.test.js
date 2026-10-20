@@ -415,3 +415,14 @@ test('specialFlags: kids from the studio or a known kids title, holidays from th
   assert.equal(T.specialFlags({ show: 'Frozen Planet: The Epic Journey', network: 'BBC' }), '');
   assert.equal(T.specialFlags({ show: 'Dexter: Early Cuts', network: 'Showtime' }), '');
 });
+
+test('gap specials: a racy special airs only after dark (late night and overnight, 11 pm to 6 am)', () => {
+  const G = sched();
+  const lib = { rt: [22, 25, 24], lib: [[1, 1, 60], [1, 1, 1], [1, 1, 1]], sp: [[1, 'r'], [2, 'r']] };
+  const ch = { id: 'sp-night', p: { m: [0], d: [0], e: [0], p: [0], l: [0], o: [0] }, cap: 99, sn: {}, rd: '' };
+  let night = 0;
+  for (let d = 1; d <= 28; d++) for (const a of G.planDay(ch, lib, bdOn(2026, 7, d))) if (a.sp) { assert.ok(a.k === 'l' || a.k === 'o', 'racy special in ' + a.k); night++; }
+  assert.ok(night > 0, 'racy specials still air at night');
+  assert.equal(T.specialFlags({ show: 'Shock Video 2001: A Sex Odyssey', network: 'TV Movie' }), 'r');
+  assert.equal(T.specialFlags({ show: 'Sussex Gardens', network: 'BBC' }), '', 'a word that only contains sex is not racy');
+});
