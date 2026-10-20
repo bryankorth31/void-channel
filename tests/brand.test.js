@@ -42,7 +42,7 @@ function render(name) {
   const out = { html: '', title: '' };
   const ctx = {
     document: { get title() { return out.title; }, set title(v) { out.title = v; } },
-    $: () => ({ set innerHTML(v) { out.html = v; } }), killPlayer() {}, go() {}, BASE: '/', DONATE: 'https://square.link/x', SITE: APP.SITE_NAME,
+    $: () => ({ set innerHTML(v) { out.html = v; } }), killPlayer() {}, go() {}, BASE: '/', DONATE: 'https://square.link/x', DONATE_MONTHLY: 'https://square.link/y', SITE: APP.SITE_NAME,
   };
   vm.createContext(ctx);
   vm.runInContext([fn('textPage'), fn('aboutPage'), fn('cashPage'), fn('privacyPage'), fn('takedownPage'), name + '()'].join('\n'), ctx);
