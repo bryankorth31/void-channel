@@ -1,8 +1,62 @@
 # Live TV as a real schedule: design (Step A)
 
-## Report (filled in at the end)
+## Report (21 Oct 2026)
 
-(pending)
+**Branch** `worktree-agent-a6027475de8d91c4a` (cut from master 0bb967e5c). Nothing merged, nothing pushed. Five commits:
+
+| Step | Commit | What |
+|---|---|---|
+| A | 4498b9eb9 | this design note |
+| B | 8ca504601 | `scripts/lib/tvgrid.js`: the schedule builder and the pure schedule, `tests/tvgrid.test.js` |
+| C | 62ae4b268 | the page plays the schedule (tune in, end of item, failure retry, tune/tuneHere), `data/tv.json` v2, tv-switch tests rewritten |
+| D | 20eff78cf | the guide grid (coordinator's 20 Oct change to step D), `player/test/tv-guide.test.js` |
+| note | the commit after D that adds this report | |
+
+**Done.** Every channel (same 93, same ids) now has a 24 hour schedule computed on the viewer's own clock: six dayparts, Saturday
+morning cartoons to noon, kids and cartoons in the morning, the best rated shows and a nightly movie in prime time, late shows at
+night, strips that move one episode per airing and rotate to new shows each week (movies daily), a cap per show per day, real
+start times (an elastic chain re-anchored at each daypart). The guide on the Live TV page is a full grid: sticky channels and time
+ruler, a block per airing as wide as it is long, a clock line, past dimmed, Now / Tonight 8 pm / Tomorrow / the next 7 days,
+filters (kind, text, On now), a card per block with Watch and Open show, arrow keys and a remote (G jumps to the guide), 10 foot
+sizes at 1900 px, a one-channel list under 700 px, only the visible rows and time in the page. Playback and the guide call the same
+functions (`chanNow`, `airingsBetween`, `nextAiring`), and a test checks the block on the clock against what playback joins.
+Kept: the failed-episode memory (now per channel and episode, still an hour), the player kept across channel changes
+(fullscreen survives), onEnded never stepping back, tune/surf/Up-Down surfing.
+
+**Size.** `data/tv.json`: 2,046,131 bytes before, 144,278 after (7 percent of it; the shared library of typical minutes and episode
+runs is 80,333 of that). `site/index.html` grew 149,411 to 178,203 bytes because the schedule code and the guide are inlined in the
+page; the 1.9 MB saving is paid by anyone who opens Live TV. `node scripts/site.js` builds in about 20 s here (the 1 min 47 s I saw
+once was a cold run).
+
+**Tests.** `node --test tests/*.test.js`: 373 pass (352 before; +21 in `tests/tvgrid.test.js`). `node --test player/test/*.test.js`:
+157 pass (137 before; tv-switch 9 to 16, new tv-guide 13). The other test files that copy `scripts/lib/*.js` into temp folders
+(brand, backup-cache, publish, site-build) now copy `tvgrid.js` too. Also checked in the Browser pane on a real build at desktop,
+1920 wide and phone sizes: grid, card, keys, filters and the phone list work.
+
+**Not done / known.**
+* No filler or "up next" cards (Q2). A short episode makes the next one start early, a long one is joined where the clock is.
+* A viewer who stays on one channel for hours can drift a few minutes ahead of the guide; any channel change or reload resets it.
+* Daylight saving: one airing in the overnight window is an hour off on the two switch nights.
+* Gaps: about 1 in 4 daypart changes ends with an unfilled stretch (median 10 minutes, 90th percentile 14, worst 94 on channels whose
+  episodes are 2 hours long, such as Dropout, TNT, ITV). In that stretch the next daypart's first show starts early.
+* Kids and cartoons are a genre guess. The Void (all shows) also airs shows nobody marked adult in late night (for example The Jerry
+  Springer Show, The Dark Side of Porn) and Oz in the daytime. Membership of channels is unchanged from before.
+* Not tried: a real TV browser or remote, Safari, Firefox; the single-file preview (`scripts/preview.js`, embed mode) was not opened.
+* `docs/BASELINE.md5` is not relocked (run `node scripts/lock.js relock` after merging). `audit/` is git-ignored here, so this file was
+  added with `git add -f`. `player/tools/connect-voidtv.js` (an old patcher that matches old page text) is untouched. The old `.ch`
+  list rules in the page CSS are unused now and left in.
+
+**Open questions for Bryan** (the same ten as section 8 below, short form):
+1. Real start times (8:00, 8:24, 8:48) or a strict :00/:30 grid with dead air or filler? I chose real times.
+2. If strict: what fills the gaps (stings, promos, "coming up" cards)? Do you want short "up next" cards made?
+3. Is "kids and cartoons" right as a genre guess (action cartoons like Batman and Samurai Jack in Saturday morning, not Adult Swim or MTV)?
+4. The day starts at 6 am, prime time is 8 to 11 pm, late night 11 pm to 2 am. Right?
+5. A movie at 8 pm every night on channels with 4 or more movies, or only Friday to Sunday?
+6. Day chips and "Tomorrow" land on 8 pm and 8 am. Different landing times?
+7. "On now" means only channels whose airing right now matches the other filters. Something else?
+8. Should Adult Swim (not marked adult in the catalog) wait behind the 18+ door, and should The Void's late night be cleaned of shows like The Jerry Springer Show?
+9. Everyone in the same time zone sees the same schedule, other zones differ (like regional feeds). Right?
+10. Places change shows weekly. Faster or slower?
 
 ---
 
@@ -44,9 +98,11 @@ Everyone in the same time zone computes the same schedule from the clock, so the
   night: movies rotate daily, series rotate weekly). Everything else spreads over Daytime, Early evening and
   Overnight. A pool that is too small for its window is topped up from the best of the rest. A channel with fewer
   shows than it needs simply repeats them.
-* **Variety.** A show may air at most `cap` times a day on a channel, `cap = max(2, ceil(55 / shows))`, and a show
-  can fill at most one place per daypart pass. On a big channel that means at most 2 airings a day (a morning or
-  daytime one and a late repeat only if the pools overlap), on The Void usually 1.
+* **Variety.** A show may air at most `cap` times a day on a channel, `cap = max(2, ceil(1.2 * 1440 / typical minutes / shows))`
+  (so a two show channel of 5 minute shows can repeat them as often as the day needs), and a show can fill at most one place per
+  daypart pass. On a big channel that means at most 2 airings a day (a morning or daytime one and a late repeat only if the
+  pools overlap), on The Void usually 1. The kids pool is never topped up with other shows when it has 3 or more, so Saturday
+  morning is cartoons even when the channel has only 8 of them (they repeat).
 * **Episode picked.** Show `s`, airing number `j` on that day, week `w`: `episode = (w * airingsPerWeek + airingsEarlierThisWeek + j + offset(s)) mod episodes(s)`.
   A show that holds the same place every week moves exactly one episode per airing, forever, and wraps at the end of
   the show. A show that rotates out and back simply continues where the arithmetic says. `offset(s)` is a fixed
@@ -185,7 +241,8 @@ end of item, failure, tune) with the rewritten `tv-switch` tests and `tv.json` v
 7. **"On now"** here means "only channels whose current airing matches my other filters". Did you mean something else
    (for example, hide everything that is not playing right now, or only shows that are in their first minutes)?
 8. **Adult content in the grid:** Late Night rows stay behind the 18+ door as today. Should Adult Swim (not marked
-   adult in the catalog) also wait behind it? Today it does not.
+   adult in the catalog) also wait behind it? Today it does not. Also, The Void (all shows) puts shows nobody marked adult
+   (for example The Jerry Springer Show, The Dark Side of Porn) into its late night hours; should they be kept out?
 9. **Same for everyone only within a time zone.** Everyone in the same zone sees the same schedule; a viewer in Los
    Angeles and one in New York see different things at the same clock moment (like regional feeds). Right?
 10. **Rotation speed:** a place changes shows weekly. Faster (every few days) or slower (monthly)?
