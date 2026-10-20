@@ -56,12 +56,14 @@ const slugify = (s) => String(s).toLowerCase().replace(/&/g, 'and').replace(/[^a
 function channelLists(shows, types, off) {
   const isAdultShow = (s) => s.type === 'Late Night' || (s.tags || []).includes('Late Night') || !!s.adult;
   const idx = new Map(shows.map((s, i) => [s.slug, i])); // against the FULL list the page indexes; filtering first put every item after an adult show off by one
-  // Shows B keeps off Live TV (catalog/live-tv-off.json) leave every channel; they stay on demand. Filtered after idx, so places hold.
-  if (off && off.size) shows = shows.filter((s) => !off.has(s.slug));
-  const adultList = shows.filter((s) => isAdultShow(s) && !s.slug.startsWith('movie-'));
+  // Shows B keeps off Live TV (catalog/live-tv-off.json) leave the mixed channels (The Void, rows, collections, movies,
+  // Late Night) but stay on their own network's channel, so no network channel empties out (B, 20 Oct). They stay on demand.
+  const on = (s) => !(off && off.has(s.slug));
+  const adultList = shows.filter((s) => isAdultShow(s) && !s.slug.startsWith('movie-') && on(s));
   shows = shows.filter((s) => !isAdultShow(s)); // every other channel stays clean; Late Night is its own door
-  const series = shows.filter((s) => !s.slug.startsWith('movie-'));
-  const movies = shows.filter((s) => s.slug.startsWith('movie-'));
+  const allSeries = shows.filter((s) => !s.slug.startsWith('movie-'));
+  const series = allSeries.filter(on);
+  const movies = shows.filter((s) => s.slug.startsWith('movie-') && on(s));
   const lists = [];
   const make = (id, name, kind, list, adult) => {
     const eps = list.reduce((n, s) => n + s.eps, 0);
@@ -72,7 +74,7 @@ function channelLists(shows, types, off) {
   for (const t of types) make('row-' + slugify(t), t, 'row', series.filter((s) => s.type === t));
   const tags = {}; for (const s of series) for (const t of s.tags || []) (tags[t] = tags[t] || []).push(s);
   for (const [t, list] of Object.entries(tags)) make('tag-' + slugify(t), t, 'collection', list);
-  const nets = {}; for (const s of series) if (s.network) (nets[s.network] = nets[s.network] || []).push(s);
+  const nets = {}; for (const s of allSeries) if (s.network) (nets[s.network] = nets[s.network] || []).push(s);
   for (const [n, list] of Object.entries(nets).sort((a, b) => b[1].length - a[1].length)) if (list.length >= 2) make('net-' + slugify(n), n, 'network', list);
   if (movies.length) make('movies', 'TV Movies and Specials', 'row', movies);
   if (adultList.length) make('row-late-night', 'Late Night', 'row', adultList, true);
@@ -951,4 +953,4 @@ ${JS}
 </script></body></html>`;
 }
 
-module.exports = { assemble, page, indexEntry, showFile, SITE_NAME, BRAND };
+module.exports = { assemble, page, indexEntry, showFile, channelLists, SITE_NAME, BRAND };

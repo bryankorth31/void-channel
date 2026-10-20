@@ -1,5 +1,5 @@
 {
-  "_readme": "Shows kept off the Live TV schedule (they stay on demand). B, 20 Oct 2026: take the 66 shows that leave the most gap time off Live TV. Measured over one week of the schedule: gap = slot length minus the real episode file. Remove a line to put a show back on Live TV.",
+  "_readme": "Shows kept off the Live TV schedule (they stay on demand). B, 20 Oct 2026: take the 66 shows that leave the most gap time off Live TV. Measured over one week of the schedule: gap = slot length minus the real episode file. They leave the mixed channels (The Void, rows, collections, movies, Late Night) but stay on their own network channel, so no network channel empties out. Remove a line to put a show back everywhere on Live TV.",
   "shows": {
     "mcgee-and-me": {
       "show": "McGee and Me!",
