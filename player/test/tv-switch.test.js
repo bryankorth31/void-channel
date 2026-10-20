@@ -143,3 +143,21 @@ test('Live TV: the style sheet makes the channel buttons compact and hides the e
   assert.ok(!/max-width:420px\)\{\.vpx-tv/.test(css), 'the old 420 px rule is gone');
   assert.ok(css.indexOf('@container (max-width:720px)') > css.indexOf('(min-width:1900px)'), 'it comes after the 10-foot sizes, so a narrow player on a big screen is still compact');
 });
+
+// Bryan, 20 Oct 2026 (Adult Swim, The Venture Bros. failing): the failed episode was skipped, but when the next, shorter item ended
+// the clock still pointed at the failed slot, so Live TV went back to it, it failed again, and the channel looped.
+test('Live TV: a failed episode is skipped and never played again when the next, shorter item ends while the clock is still in its slot', async () => {
+  const p = page();
+  const c = { id: 'as', name: 'Adult Swim', kind: 'all', items: [[0, 1, 1, 22], [1, 1, 1, 11], [2, 1, 1, 11], [3, 1, 1, 11]] };
+  const n = p.h.chanNow(c); const f = n.i; const L = c.items.length;
+  await p.h.tvPlay(c, f, n.offset); await settle();
+  const p0 = p.getPlayer();
+  assert.equal(p.h.TVCUR.i, f, 'the clock item plays first');
+  p0.o.onEvent({ type: 'failed' }, p0);
+  await new Promise((r) => setTimeout(r, 1800)); await settle();
+  assert.equal(p.h.TVCUR.i, (f + 1) % L, 'the failure skipped to the next item');
+  const seen = [];
+  for (let k = 0; k < 4; k++) { p0.o.onEnded(); await settle(); seen.push(p.h.TVCUR.i); }
+  assert.ok(!seen.includes(f), 'the failed item never comes back while the clock is still in its slot: ' + seen.join(','));
+  assert.equal(seen[0], (f + 2) % L, 'the channel goes forward, not back to the clock');
+});
