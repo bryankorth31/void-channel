@@ -198,6 +198,9 @@ function assemble() {
   const known = new Set([...types.map((t) => 'type:' + t), ...shows.flatMap((s) => (s.tags || []).map((t) => 'tag:' + t))]);
   const cleanOrder = Array.isArray(fileOrder) ? fileOrder.filter((e) => Array.isArray(e) && (e[0] === 'type' || e[0] === 'tag') && typeof e[1] === 'string' && known.has(e[0] + ':' + e[1])) : [];
   const homeOrder = cleanOrder.length ? cleanOrder : HOME_ORDER;
+  // B, 21 Oct 2026: a show or TV movie B marks 18+ in his edits layer (catalog/overrides.json, adult: true; HQ keeps the field) goes
+  // behind the door with the Late Night shows: gated On Demand, in the index as adult, off every open channel, never a filler.
+  for (const s of shows) if (OV[s.slug] && OV[s.slug].adult) s.adult = true;
   const tv = buildTv(shows, types);
   return { shows, people, links, types, bios, channels: tv.channels, tv, homeOrder };
 }
@@ -786,8 +789,10 @@ function tvFailed(p){const T0=TVCUR;if(!T0||!T0.cur)return;state.tvFails=(state.
  const tk=TV_TOKEN;setTimeout(()=>{if(VP!==p||TVCUR!==T0||tk!==TV_TOKEN)return;tvPlay(T0.c,false)},1500)}
 // Plays channel c at the clock. fromEnd: called because the last file ended, so an episode the clock is less than 3 minutes into starts
 // from its beginning (a viewer a little behind misses nothing; never ahead).
+// A run of cards never ends in the past: if the schedule ever has a hole (an airing that is over and nothing after it), the cards hold a
+// minute and ask again, instead of calling tvPlay from inside their own tick until the page runs out of stack (audit 21 Oct 2026, H1).
 async function tvPlay(c,fromEnd,tries){const host=$('vph');if(!host)return;const token=++TV_TOKEN;tries=tries||0;
- const x=tvAt(c,Date.now());if(!x)return;
+ const x=tvAt(c,Date.now());if(!x)return;if(x.k==='card'&&x.until<=Date.now())x.until=Date.now()+6e4;
  if(x.k==='card'||tries>24){tvCards(c,x.k==='card'?x:{k:'card',a:x.a,until:Math.min(x.a.en,Date.now()+6e4)},token);return}
  tvCardsOff();
  const a=x.a,u=x.k==='ep'?'ep':x.u,piece=x.k==='ep'?a:x.it,s=SHOWS[piece.s];
@@ -963,17 +968,17 @@ function takedownPage(){textPage('Takedown and corrections',
  +'<li><b>${BRAND}.</b> Write to <a href="mailto:${CONTACT}">${CONTACT}</a> with the show and episode (the address bar of the page is enough). We remove the listing from ${BRAND} within two business days whether or not the Archive has acted, and we tell you when it is done.</li></ol>'
  +'<h2>Wrong file, wrong show, wrong episode</h2><p>Every episode page has a "Wrong file?" button. Press it and the file is flagged and queued for a person to look at, and the report shows on your Mine page. You can also write to <a href="mailto:${CONTACT}">${CONTACT}</a>.</p>'
  +'<h2>Who we are</h2><p>${BRAND} is a project of CASH, a 501(c)(3) nonprofit.</p>');document.title='Takedown and corrections · '+SITE}
-function personPage(){const id=state.personId;const g=PEOPLE[id];const b=bioFor(id);const from=state.personFrom&&BY_SLUG[state.personFrom];const fp=from?findPerson(from,id):{name:'',photo:null};const name=(b&&b.name)||(g&&g.name)||fp.name||'…';const photo=(b&&b.photo)||(g&&g.photo)||fp.photo;const shows=g?Object.entries(g.shows).map(([sl,role])=>[BY_SLUG[sl],role]).filter(x=>x[0]):[];if(!shows.length&&from)shows.push([from,fp.as||'Credited']);
+function personPage(){const id=state.personId;const g=PEOPLE[id];const b=bioFor(id);const from=state.personFrom&&BY_SLUG[state.personFrom];const fp=from?findPerson(from,id):{name:'',photo:null};const name=(b&&b.name)||(g&&g.name)||fp.name||'…';const photo=(b&&b.photo)||(g&&g.photo)||fp.photo;const shows=g?Object.entries(g.shows).map(([sl,role])=>[BY_SLUG[sl],role]).filter(x=>x[0]&&!gated(x[0])):[];if(!shows.length&&from)shows.push([from,fp.as||'Credited']);
  const facts=b?[b.dept,b.born?'born '+b.born+(b.died?', died '+b.died:''):'',b.place].filter(Boolean).join(' · '):'';
  let h='<div class="ppage"><button class="back" onclick="history.length>1?history.back():go(\\'\\')"><i class="ico back"></i> Back</button><div class="head">'+(photo?'<img src="'+photo+'" alt="">':'')+'<div><b>'+esc(name)+'</b><div class="g">'+esc(facts)+(shows.length?(facts?' · ':'')+shows.length+' show'+(shows.length===1?'':'s')+' on ${BRAND}':'')+'</div>'+(b&&b.bio?'<div class="bio">'+esc(b.bio)+'</div>':(b===null?'<div class="g">Loading…</div>':''))+'</div></div>';
  if(shows.length)h+='<h2>On ${BRAND}</h2><div class="grid">'+shows.map(([t,role])=>'<div class="pcard">'+card(t,'grid')+'<small class="role">'+esc(role)+'</small></div>').join('')+'</div>';
  else if(GRAPH_LOADED)h+='<p class="g">Only one show here so far; open it from the X-Ray panel.</p>';
  killPlayer();$('main').innerHTML=h+'</div>';document.title=name+' · '+SITE}
-function personPanel(id,fallback){const g=PEOPLE[id];const b=bioFor(id);const name=(b&&b.name)||(g?g.name:fallback.name),photo=(g&&g.photo)||fallback.photo||(b&&b.photo);const others=g?Object.entries(g.shows).filter(([sl])=>sl!==state.show.slug&&BY_SLUG[sl]):[];
+function personPanel(id,fallback){const g=PEOPLE[id];const b=bioFor(id);const name=(b&&b.name)||(g?g.name:fallback.name),photo=(g&&g.photo)||fallback.photo||(b&&b.photo);const others=g?Object.entries(g.shows).filter(([sl])=>sl!==state.show.slug&&BY_SLUG[sl]&&!gated(BY_SLUG[sl])):[];
  const facts=b?[b.dept,b.born?'born '+b.born.slice(0,4)+(b.died?'–'+b.died.slice(0,4):''):'',b.place].filter(Boolean).join(' · '):'';
  return '<div class="person">'+(photo?'<img src="'+photo+'" alt="">':'<div></div>')+'<div><b>'+esc(name)+'</b><span class="more" onclick="state.personFrom=state.show.slug;go(\\'person/'+id+'\\')">Open page <i class="ico chevron-right sm"></i></span><div class="g">'+(facts?esc(facts)+' · ':'')+(others.length?'Also on ${BRAND} in '+others.length+' other show'+(others.length===1?'':'s'):'No other ${BRAND} shows yet')+'</div>'+(b&&b.bio?'<div class="bio">'+esc(b.bio.length>320?b.bio.slice(0,320).replace(/\\s+\\S*$/,'')+'…':b.bio)+'</div>':'')
  +(others.length?'<div class="links">'+others.map(([sl,role])=>{const t=BY_SLUG[sl];return '<div class="plink" onclick="go(\\''+sl+'\\')">'+(t.poster?'<img src="'+t.poster+'" alt="">':'')+'<span>'+esc(t.show)+'<small>'+esc(role)+'</small></span></div>'}).join('')+'</div>':'')+'</div></div>'}
-function xray(s){const links=LINKS[s.slug]||{};const conn=Object.entries(links).map(([sl,ids])=>({t:BY_SLUG[sl],via:ids.map(i=>PEOPLE[i]&&PEOPLE[i].name).filter(Boolean)})).filter(c=>c.t).sort((a,b)=>b.via.length-a.via.length).slice(0,24);
+function xray(s){const links=LINKS[s.slug]||{};const conn=Object.entries(links).map(([sl,ids])=>({t:BY_SLUG[sl],via:ids.map(i=>PEOPLE[i]&&PEOPLE[i].name).filter(Boolean)})).filter(c=>c.t&&!gated(c.t)).sort((a,b)=>b.via.length-a.via.length).slice(0,24);
  const cast=s.cast||[],crew=s.crew||[];if(!cast.length&&!crew.length&&!conn.length&&state.person==null)return '';
  let h='<div class="xray">';
  if(cast.length){h+='<h3>CAST</h3><div class="faces">'+cast.map(face).join('')+'</div>';}

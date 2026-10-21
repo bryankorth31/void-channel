@@ -1,5 +1,5 @@
 {
-  "_readme": "B's edits layer, read by match.js and never written by the builder. Per show slug: excludeItems (Archive identifiers that are the wrong show), aliases (other names an upload may use: abbreviations, short titles), later tvmazeId (name collisions).",
+  "_readme": "B's edits layer, read by match.js and never written by the builder. Per show slug: excludeItems (Archive identifiers that are the wrong show), aliases (other names an upload may use: abbreviations, short titles), later tvmazeId (name collisions), adult (true puts the show behind the 18+ door with the Late Night shows: gated On Demand, off every open Live TV channel; B, 21 Oct 2026).",
   "look-around-you": {
     "excludeItems": [
       "razzledazzle-molly-in-the-trolley-15th-may-2009"
@@ -447,5 +447,61 @@
     "excludeItems": [
       "doctor-who-saison12-13-flim"
     ]
+  },
+  "playboy-after-dark": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "the-dark-side-of-porn": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "eurotrash": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "american-playboy-the-hugh-hefner-story": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "movie-37357": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "movie-88103": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "movie-42753": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "movie-1354526": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "movie-844015": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "movie-222628": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "movie-30724": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "movie-115189": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "movie-143481": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "movie-149667": {
+    "adult": true,
+    "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
   }
 }

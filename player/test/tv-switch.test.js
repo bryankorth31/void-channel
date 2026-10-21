@@ -339,3 +339,16 @@ test('Live TV: the page text carries no list of items any more: no TV_EPOCH, no 
   assert.ok(!/TV_EPOCH|c\.items|\.items\.length/.test(TV_TEXT.replace(T.source, '')), 'the schedule replaced the item lists');
 });
 
+
+// Audit 21 Oct 2026 (H1): a channel whose morning pool self-pruning emptied. The old code held the cards "until" an airing that was
+// already over, and the cards called tvPlay inside their own tick until the page ran out of stack (1,837 nested calls, nothing played).
+test('Self-pruning: a channel that lost its morning pool plays at 7 am, and a day with a hole holds the cards for a minute instead of looping', async () => {
+  const p = page(); const one = Object.assign({}, p.TV[0], { p: Object.assign({}, p.TV[0].p) }); delete one.p.m;
+  p.h.TV = [one];
+  await p.h.tvPlay(one); await settle();
+  assert.equal(p.log.loads.length, 1, 'an episode plays at 7 am'); assert.deepEqual(p.log.early, []);
+  const q = page(); const v = Object.assign({}, q.TV[0], { id: 'only-v', p: { v: [0] } }); // one movie at 8 pm, nothing else all day
+  q.h.TV = [v];
+  await q.h.tvPlay(v); await settle();
+  assert.equal(q.log.loads.length, 0); assert.ok(q.log.idle <= 2, 'cards started ' + q.log.idle + ' times'); assert.ok(q.h.TVC_NOW, 'the cards are up');
+});

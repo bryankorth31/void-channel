@@ -622,3 +622,20 @@ test('checkTv (the doctor\'s tv:schedule light, also in HQ): green on a sound pl
   const bad = T.checkTv(Object.assign({}, tv, { sl: slugs.map((x, i) => (i === 3 ? 'not-in-the-build' : x)) }), slugs, at(...MON, 6, 0));
   assert.equal(bad.level, 'red'); assert.ok(/1 shows the TV plan names are not in the build/.test(bad.detail)); assert.ok(bad.fix);
 });
+
+// Audit 21 Oct 2026 (H1): self-pruning can empty a daypart's pool (every show in it gone from the page's list). The day must still tile
+// from 6:00 am, and no daypart may turn into one airing hours long; the empty daypart borrows the nearest pool.
+test('a channel that lost a daypart pool still tiles its day 6:00 am to 6:00 am with no airing longer than two hours', () => {
+  const G = sched(); const { ch, lib } = big();
+  for (const k of ['m', 'd', 'o']) {
+    const c = Object.assign({}, ch, { id: 'no-' + k, p: Object.assign({}, ch.p) });
+    delete c.p[k];
+    for (let d = 0; d < 7; d++) {
+      const list = G.dayAirings(c, lib, G.dayOf(at(2026, 10, 19 + d, 12, 0)));
+      assert.equal(list[0].st, at(2026, 10, 19 + d, 6, 0), 'no ' + k + ', day ' + d + ': starts at 6:00 am');
+      for (let u = 0; u + 1 < list.length; u++) assert.equal(list[u].en, list[u + 1].st);
+      assert.equal(list[list.length - 1].en, at(2026, 10, 20 + d, 6, 0));
+      for (const a of list) assert.ok(a.en - a.st <= 2 * H, 'no ' + k + ', day ' + d + ': an airing of ' + (a.en - a.st) / 60000 + ' min');
+    }
+  }
+});

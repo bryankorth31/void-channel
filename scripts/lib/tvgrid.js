@@ -24,7 +24,7 @@ function tvgridFactory() {
     { k: 'p', a: 1200, b: 1380 }, { k: 'l', a: 1380, b: 1560 }, { k: 'o', a: 1560, b: 1800 },
   ];
   const DPNAME = { m: 'Morning', d: 'Daytime', e: 'Early evening', p: 'Prime time', l: 'Late night', o: 'Overnight', v: 'Movie night' };
-  const LOOK = 6, TOL1 = 8, GAP = 14, TOL2 = 30, SLOT = 30, SHORT = 15;
+  const LOOK = 6, TOL1 = 8, GAP = 14, TOL2 = 30, SLOT = 30, SHORT = 15, SPARE = ['d', 'e', 'p', 'm', 'o', 'l'];
   let OFF = (ms) => -new Date(ms).getTimezoneOffset() * MIN;
   const WK = new WeakMap(), FG = new WeakMap(), SH = new WeakMap();
   const mod = (a, n) => ((a % n) + n) % n;
@@ -178,7 +178,9 @@ function tvgridFactory() {
           if ((use[s] || 0) < cap0 && t + rt(s) <= win.b + TOL2) { put(s, 'v'); break; }
         }
       }
-      const pool = P[win.k];
+      // A daypart left with no pool (self-pruning removed every show in it) borrows the nearest one, so the day still runs 6 am to
+      // 6 am with no hole; a hole left the page holding on an airing that was already over (audit 21 Oct 2026, H1).
+      const pool = P[win.k] && P[win.k].length ? P[win.k] : SPARE.map((x) => P[x]).find((x) => x && x.length);
       if (!pool || !pool.length) continue;
       const n = pool.length;
       const room = win.b - win.a + TOL2;
