@@ -80,36 +80,48 @@ function tvgridFactory() {
     return false;
   }
   function idHash(id) { let h = 7; id = String(id || ''); for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0; return h; }
-  // A TV special to take the place of a daypart's last show when that show leaves a gap before the next daypart: it must fit
-  // the show's slot plus the gap. lib.sp is [[show, flags]] (k kids, h t x v e holiday, r racy: after dark only, the
-  // late night and overnight dayparts). Order: the channel's own network,
-  // then a holiday special in season, then any. Kids mornings and kids channels take kids specials only; Late Night takes none;
-  // a special airs once a day per channel. Returns a show, or -1.
-  function pickSpecial(ch, lib, bd, k, di, room, minDu, cnt) {
+  // THE FILLER LIBRARY (B, 20 Oct): what airs in a gap before the next daypart. lib.sp is [[show, flags, tier]]: tier 0 is
+  // one of B's originals (from catalog/fillers.json, added in HQ; a channel takes only the originals listed in its ch.fo),
+  // no tier is a TV special. Flags: k kids, r after dark only (the late night and overnight dayparts, 11 pm to 6 am),
+  // h t x v e a holiday, aired only in season. Order: B's originals, then the channel's own network's specials, then a
+  // holiday special in season, then any special. Kids mornings and kids channels take kids items only; Late Night takes no
+  // specials (only originals listed for it); an item airs once a day per channel.
+  // mode 'insert': an item that fits inside the gap (room = the gap). mode 'swap': an item to take the place of the
+  // daypart's last show, filling its slot plus the gap (room = both, minDu = the show's length). Returns a show, or -1.
+  function pickFill(ch, lib, bd, k, di, room, minDu, cnt, mode) {
     const sp = lib.sp;
-    if (!sp || !sp.length || ch.adult) return -1;
+    if (!sp || !sp.length) return -1;
     const kidsOnly = ch.kc || (k === 'm' && ch.km);
-    const net = ch.spn || [];
+    const net = ch.spn || [], mine = ch.fo || [];
     const ok = (e) => {
       const f = e[1] || '';
       if (cnt[e[0]]) return false;
+      if (e[2] === 0 ? mine.indexOf(e[0]) < 0 : ch.adult) return false;
       if (kidsOnly && f.indexOf('k') < 0) return false;
       if (f.indexOf('r') >= 0 && k !== 'l' && k !== 'o') return false;
       for (const c of 'htxve') if (f.indexOf(c) >= 0 && !inSeason(c, bd)) return false;
       return true;
     };
-    const holiday = (e) => /[htxve]/.test(e[1] || '');
-    const groups = [sp.filter((e) => net.indexOf(e[0]) >= 0), sp.filter(holiday), sp];
+    const special = (e) => e[2] !== 0;
+    const holiday = (e) => special(e) && /[htxve]/.test(e[1] || '');
+    const groups = [sp.filter((e) => e[2] === 0), sp.filter((e) => special(e) && net.indexOf(e[0]) >= 0), sp.filter(holiday), sp.filter(special)];
     const r = (s) => lib.rt[s] || 0;
     const turn = idHash(ch.id) + bd * 31 + di * 7;
+    const longest = (fit) => { let best = fit[0]; for (const e of fit) if (r(e[0]) > r(best[0])) best = e; return best[0]; };
+    if (mode === 'insert') {
+      for (const g of groups) {
+        const fit = g.filter((e) => ok(e) && r(e[0]) > 0 && r(e[0]) <= room);
+        if (!fit.length) continue;
+        const top = r(longest(fit)), same = fit.filter((e) => r(e[0]) === top);
+        return same[turn % same.length][0];
+      }
+      return -1;
+    }
     for (let pass = 0; pass < 2; pass++) {
       for (const g of groups) {
         const fit = g.filter((e) => ok(e) && r(e[0]) <= room && (pass === 0 ? r(e[0]) >= room - 3 : r(e[0]) > minDu));
         if (!fit.length) continue;
-        if (pass === 0) return fit[turn % fit.length][0];
-        let best = fit[0];
-        for (const e of fit) if (r(e[0]) > r(best[0])) best = e;
-        return best[0];
+        return pass === 0 ? fit[turn % fit.length][0] : longest(fit);
       }
     }
     return -1;
@@ -175,11 +187,19 @@ function tvgridFactory() {
       };
       fill(TOL1);
       if (win.b - t > GAP) fill(TOL2);
-      // A gap of 3 minutes or more before the next daypart: swap the last show for a TV special that fills its slot and the gap.
-      const last = out[out.length - 1];
-      if (lib.sp && last && last.k === win.k && win.b - t >= 3) {
-        const s = pickSpecial(ch, lib, bd, win.k, di, last.du + (win.b - t), last.du, cnt);
-        if (s >= 0) { out.pop(); cnt[last.s] -= 1; t = last.st; put(s, win.k); out[out.length - 1].sp = 1; }
+      // A gap before the next daypart: first whatever from the filler library fits inside it (B's originals first), one after
+      // another; then, if 3 minutes or more are still empty, the last show gives its place to an item that fills its slot and the gap.
+      if (lib.sp) {
+        for (let g = 0; g < 20 && win.b - t >= 1; g++) {
+          const s = pickFill(ch, lib, bd, win.k, di, win.b - t, 0, cnt, 'insert');
+          if (s < 0) break;
+          put(s, win.k); out[out.length - 1].sp = 1;
+        }
+        const last = out[out.length - 1];
+        if (last && last.k === win.k && !last.sp && win.b - t >= 3) {
+          const s = pickFill(ch, lib, bd, win.k, di, last.du + (win.b - t), last.du, cnt, 'swap');
+          if (s >= 0) { out.pop(); cnt[last.s] -= 1; t = last.st; put(s, win.k); out[out.length - 1].sp = 1; }
+        }
       }
     }
     return out;
@@ -481,6 +501,26 @@ function buildSpecials(shows, infos, off) {
   });
   return out;
 }
+// B's originals for the filler library (catalog/fillers.json, written by HQ). Each entry names a show in the catalog by slug
+// (so it plays like any show; a series of skits rotates through its episodes) with audience (everyone, kids, after-dark),
+// season (halloween, thanksgiving, christmas, valentines, easter, or none) and where it may air: channels (ids) and kinds
+// (all, row, collection, network). No channels and no kinds means every channel except Late Night.
+// Returns { items: [[show, flags, 0]], scope(channel) -> the show indices a channel may take }.
+const SEASON_CODE = { halloween: 'h', thanksgiving: 't', christmas: 'x', valentines: 'v', easter: 'e' };
+function buildOriginals(shows, cfg) {
+  const at = new Map(shows.map((s, i) => [s.slug, i]));
+  const list = [];
+  for (const [slug, o] of Object.entries((cfg && cfg.originals) || {})) {
+    if (!at.has(slug) || !o || typeof o !== 'object') continue;
+    let f = '';
+    if (o.audience === 'kids') f += 'k';
+    if (o.audience === 'after-dark') f += 'r';
+    if (SEASON_CODE[o.season]) f += SEASON_CODE[o.season];
+    list.push({ i: at.get(slug), f, channels: Array.isArray(o.channels) ? o.channels : [], kinds: Array.isArray(o.kinds) ? o.kinds : [] });
+  }
+  const scope = (ch) => list.filter((x) => (!x.channels.length && !x.kinds.length ? !ch.adult : x.channels.indexOf(ch.id) >= 0 || x.kinds.indexOf(ch.kind) >= 0)).map((x) => x.i);
+  return { items: list.map((x) => [x.i, x.f, 0]), scope };
+}
 
 // The shared library for the whole page: typical minutes and episode runs by place in the full show list (0 where unused).
 function buildLib(shows) {
@@ -492,4 +532,4 @@ function trimLib(lib, used) {
   return { rt: lib.rt.map((v, i) => (used.has(i) ? v : 0)), lib: lib.runs.map((v, i) => (used.has(i) ? v : 0)) };
 }
 
-module.exports = { tvgridFactory, source, showInfo, planChannel, buildLib, trimLib, isMovieSlug, specialFlags, buildSpecials, G };
+module.exports = { tvgridFactory, source, showInfo, planChannel, buildLib, trimLib, isMovieSlug, specialFlags, buildSpecials, buildOriginals, G };

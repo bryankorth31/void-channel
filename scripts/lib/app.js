@@ -87,14 +87,19 @@ function buildTv(shows, types) {
   const offSet = new Set(Object.keys(OFF.shows || {}));
   const { lists, idx } = channelLists(shows, types, offSet);
   const lib = TVGRID.buildLib(shows);
-  // TV specials of 60 minutes or less that can take a daypart's last place when it would leave a gap (B, 20 Oct).
-  const sp = TVGRID.buildSpecials(shows, lib.infos, offSet);
+  // The filler library for the gaps before each daypart (B, 20 Oct): B's originals (catalog/fillers.json, written by HQ) first,
+  // then TV specials of 60 minutes or less. One list; a show that is both counts as an original.
+  const ORIG = TVGRID.buildOriginals(shows, readJson(path.join(PROFILE.catalogDir, 'fillers.json'), { originals: {} }));
+  const mine = new Set(ORIG.items.map((e) => e[0]));
+  const sp = ORIG.items.concat(TVGRID.buildSpecials(shows, lib.infos, offSet).filter((e) => !mine.has(e[0])));
   const used = new Set(sp.map((e) => e[0]));
   const channels = lists.map((L) => {
     const recs = L.list.map((s) => { const i = idx.get(s.slug); used.add(i); return Object.assign({ i }, lib.infos[i]); });
     const c = TVGRID.planChannel({ id: L.id, name: L.name, kind: L.kind }, recs, lib.rt);
     if (L.adult) c.adult = true;
-    if (L.kind === 'network') { const spn = sp.filter((e) => shows[e[0]].network === L.name).map((e) => e[0]); if (spn.length) c.spn = spn; }
+    if (L.kind === 'network') { const spn = sp.filter((e) => e[2] !== 0 && shows[e[0]].network === L.name).map((e) => e[0]); if (spn.length) c.spn = spn; }
+    const fo = ORIG.scope(c);
+    if (fo.length) c.fo = fo;
     return c;
   });
   return Object.assign({ v: 2 }, TVGRID.trimLib(lib, used), { sp, channels });

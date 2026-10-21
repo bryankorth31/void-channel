@@ -1,0 +1,4 @@
+{
+  "_readme": "B's originals for the Live TV filler library (B, 20 Oct 2026). HQ writes this file. Each key is a show slug in the catalog (add the show the usual way first, so it plays). They fill the gaps before each daypart, ahead of TV specials and break cards. audience: everyone, kids or after-dark (11 pm to 6 am only). season: none, halloween, thanksgiving, christmas, valentines or easter. channels: channel ids; kinds: all, row, collection, network. Leave both empty for every channel except Late Night. Example entry: \"my-skits\": { \"audience\": \"everyone\", \"season\": \"none\", \"channels\": [], \"kinds\": [] }",
+  "originals": {}
+}

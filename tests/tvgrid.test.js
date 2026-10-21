@@ -426,3 +426,39 @@ test('gap specials: a racy special airs only after dark (late night and overnigh
   assert.equal(T.specialFlags({ show: 'Shock Video 2001: A Sex Odyssey', network: 'TV Movie' }), 'r');
   assert.equal(T.specialFlags({ show: 'Sussex Gardens', network: 'BBC' }), '', 'a word that only contains sex is not racy');
 });
+
+// B's originals in the filler library (catalog/fillers.json, HQ): they fill the gaps first, only where they are scoped.
+function origFixture() {
+  // 0: a 22 minute show; 1 and 2: short originals; 3: an after-dark original; 4: a kids original; 5: a TV special.
+  const lib = { rt: [22, 2, 3, 2, 2, 25], lib: [[1, 1, 60], [1, 1, 30], [1, 1, 30], [1, 1, 30], [1, 1, 30], [1, 1, 1]],
+    sp: [[1, '', 0], [2, '', 0], [3, 'r', 0], [4, 'k', 0], [5, '']] };
+  const ch = { id: 'orig', p: { m: [0], d: [0], e: [0], p: [0], l: [0], o: [0] }, cap: 99, sn: {}, rd: '', fo: [1, 2, 3, 4] };
+  return { lib, ch };
+}
+
+test('originals: they fill the gaps first, several in a row, once a day each, and the plan still tiles', () => {
+  const G = sched(), { lib, ch } = origFixture();
+  const day = G.planDay(ch, lib, bdOn(2026, 7, 15));
+  const used = day.filter((a) => a.sp).map((a) => a.s);
+  assert.ok(used.includes(1) && used.includes(2), 'both everyday originals air');
+  assert.equal(new Set(used).size, used.length, 'no item twice in a day');
+  for (let u = 0; u + 1 < day.length; u++) assert.ok(day[u].st + day[u].du <= day[u + 1].st + 30);
+});
+
+test('originals: only on channels they are scoped to; after dark at night only; kids channels take kids originals only', () => {
+  const G = sched(), { lib, ch } = origFixture();
+  const none = Object.assign({}, ch, { id: 'orig-none', fo: undefined });
+  assert.ok(!G.planDay(none, lib, bdOn(2026, 7, 15)).some((a) => a.sp && [1, 2, 3, 4].includes(a.s)), 'no originals where not scoped');
+  for (let d = 1; d <= 20; d++) for (const a of G.planDay(ch, lib, bdOn(2026, 7, d))) if (a.sp && a.s === 3) assert.ok(a.k === 'l' || a.k === 'o', 'after dark original in ' + a.k);
+  const kids = Object.assign({}, ch, { id: 'orig-kids', kc: 1 });
+  for (let d = 1; d <= 20; d++) for (const a of G.planDay(kids, lib, bdOn(2026, 7, d))) if (a.sp) assert.equal(a.s, 4, 'kids channel takes the kids original only');
+});
+
+test('buildOriginals: reads fillers.json; scope by channel id or kind; empty scope means every channel but Late Night', () => {
+  const shows = [{ slug: 'a' }, { slug: 'b' }, { slug: 'c' }];
+  const o = T.buildOriginals(shows, { originals: { a: { audience: 'kids', season: 'christmas' }, b: { audience: 'after-dark', channels: ['void'] }, c: { kinds: ['network'] }, missing: {} } });
+  assert.deepEqual(o.items, [[0, 'kx', 0], [1, 'r', 0], [2, '', 0]]);
+  assert.deepEqual(o.scope({ id: 'void', kind: 'all' }), [0, 1]);
+  assert.deepEqual(o.scope({ id: 'net-x', kind: 'network' }), [0, 2]);
+  assert.deepEqual(o.scope({ id: 'row-late-night', kind: 'row', adult: true }), []);
+});
