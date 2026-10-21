@@ -658,7 +658,7 @@ function prevEp(){const s=state.show;if(!s||!s.seasons)return;if(state.e>0)play(
 function mountShow(s,se,ep,autoplay){const host=$('vph');if(!host)return null;
  VP=mkPlayer(host,{onNext:()=>{if(nextEp())next()},onPrev:()=>prevEp(),onReport:vpReport,onEnded:async(p)=>{const nx=nextEp(),cur=p._cur;if(nx&&await p.upNext(nx.name,10)&&VP===p&&p._cur===cur)next()}});
  if(!VP)return null;
- VP._show=s.slug;bindEpisodeEvents(VP);
+ VP._slug=s.slug;bindEpisodeEvents(VP);
  const at=startAtFor(s,ep);
  if(autoplay)loadEp(VP,s,se,ep,{at});else idleEp(VP,s,se,ep,at);
  return VP.v}
@@ -692,7 +692,7 @@ function bindEpisodeEvents(p){const v=p.v;
  v.addEventListener('ended',()=>{const c=p._cur;if(c)track('end',{slug:c.slug,ep:c.epk,pos:v.currentTime,dur:v.duration||0})});
  v.addEventListener('play',()=>{const c=p._cur;if(!c||!state.show||state.show.slug!==c.slug||state.se!==c.se||state.e!==c.e)return;const r=ME.history[c.slug];if(!r||r.se!==c.se||r.e!==c.e)remember()});
  v.addEventListener('timeupdate',()=>{const c=p._cur;if(!c)return;const t=Date.now();if(t-(p._lastSave||0)>5000){p._lastSave=t;const r=ME.history[c.slug];if(r&&r.se===c.se&&r.e===c.e&&v.readyState>=2){r.pos=Math.floor(v.currentTime);r.at=t;saveMe()}}})}
-function canReuse(s){const h=$('vph');return !!(VP&&VP._show===s.slug&&h&&VP.root&&h.contains(VP.root)&&document.querySelector('.show .player .vcol'))}
+function canReuse(s){const h=$('vph');return !!(VP&&VP._slug===s.slug&&h&&VP.root&&h.contains(VP.root)&&document.querySelector('.show .player .vcol'))}
 function swapEpisode(s,se,ep){const sh=document.querySelector('.show'),hero=sh.querySelector('.hero');if(hero)hero.remove();
  const had=document.activeElement&&document.activeElement.closest&&document.activeElement.closest('.now');
  const now=sh.querySelector('.now');if(now)now.outerHTML=nowRow(se,ep,s);

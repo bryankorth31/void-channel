@@ -1,0 +1,69 @@
+{
+  "show": "Once Upon a Time in Space",
+  "slug": "once-upon-a-time-in-space",
+  "type": "Documentary & Geographic",
+  "network": "BBC Two",
+  "matchedAt": "2026-10-21T10:35:00.421Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Once Upon a Time in Space",
+    "runtime": null,
+    "premiered": null,
+    "network": "BBC Two"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "once-upon-a-time-in-space",
+            "itemTitle": "Once Upon a Time (In Space)",
+            "file": "Once Upon a Time...In Space.ia.mp4",
+            "name": "Once Upon a Time..",
+            "url": "https://archive.org/download/once-upon-a-time-in-space/Once%20Upon%20a%20Time...In%20Space.ia.mp4",
+            "seconds": 2305,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 216,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "once-upon-a-time-in-space",
+            "itemTitle": "Once Upon a Time (In Space)",
+            "file": "Once Upon a Time...In Space.mp4",
+            "name": "Once Upon a Time...In Space",
+            "url": "https://archive.org/download/once-upon-a-time-in-space/Once%20Upon%20a%20Time...In%20Space.mp4",
+            "seconds": 2305,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 216,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

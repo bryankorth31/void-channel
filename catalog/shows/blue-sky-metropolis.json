@@ -1,0 +1,69 @@
+{
+  "show": "Blue Sky Metropolis",
+  "slug": "blue-sky-metropolis",
+  "type": "Documentary & Geographic",
+  "network": "PBS",
+  "matchedAt": "2026-10-21T08:30:43.684Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Blue Sky Metropolis",
+    "runtime": null,
+    "premiered": null,
+    "network": "PBS"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "bluesky1x3",
+          "state": "REVIEW",
+          "file": {
+            "item": "blueskymetropolis1x3",
+            "itemTitle": "Blue Sky Metropolis 1x3 - A Space Odyssey",
+            "file": "bluesky1x3.mp4",
+            "name": "bluesky1x3",
+            "url": "https://archive.org/download/blueskymetropolis1x3/bluesky1x3.mp4",
+            "seconds": 3645,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 380,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "bluesky1x4",
+          "state": "REVIEW",
+          "file": {
+            "item": "blueskymetropolis1x4",
+            "itemTitle": "Blue Sky Metropolis 1x4 - Back to the Future",
+            "file": "bluesky1x4.mp4",
+            "name": "bluesky1x4",
+            "url": "https://archive.org/download/blueskymetropolis1x4/bluesky1x4.mp4",
+            "seconds": 3645,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 380,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
