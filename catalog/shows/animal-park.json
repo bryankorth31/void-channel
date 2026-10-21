@@ -1,0 +1,72 @@
+{
+  "show": "Animal Park",
+  "slug": "animal-park",
+  "type": "Documentary & Geographic",
+  "network": "BBC One",
+  "matchedAt": "2026-10-21T09:10:14.420Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Animal Park",
+    "runtime": null,
+    "premiered": null,
+    "network": "BBC One"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "series 19 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-park-series-19-episode-1_202307",
+            "itemTitle": "Animal Park Series 19 Episode 1",
+            "file": "Animal Park - Series 19 - Episode 1.mp4",
+            "name": "Animal Park - Series 19 - Episode 1",
+            "url": "https://archive.org/download/animal-park-series-19-episode-1_202307/Animal%20Park%20-%20Series%2019%20-%20Episode%201.mp4",
+            "seconds": 2645,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 272,
+            "ep": {
+              "season": null,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "episodes 1 3",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-park-episodes-1-3",
+            "itemTitle": "Animal Park Episodes 1-3 Australian Series ",
+            "file": "Animal Park Episodes 1-3.mp4",
+            "name": "Animal Park Episodes 1-3",
+            "url": "https://archive.org/download/animal-park-episodes-1-3/Animal%20Park%20Episodes%201-3.mp4",
+            "seconds": 4416,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1368,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

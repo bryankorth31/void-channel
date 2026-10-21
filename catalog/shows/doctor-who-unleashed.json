@@ -1,0 +1,95 @@
+{
+  "show": "Doctor Who: Unleashed",
+  "slug": "doctor-who-unleashed",
+  "type": "Documentary & Geographic",
+  "network": "BBC Three",
+  "matchedAt": "2026-10-21T09:01:46.657Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Doctor Who: Unleashed",
+    "runtime": null,
+    "premiered": null,
+    "network": "BBC Three"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 3,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "the star beast",
+          "state": "REVIEW",
+          "file": {
+            "item": "doctor-who-unleashed",
+            "itemTitle": "Doctor Who Unleashed",
+            "file": "Doctor Who Unleashed S01E01 - The Star Beast.mp4",
+            "name": "Doctor Who Unleashed S01E01 - The Star Beast",
+            "url": "https://archive.org/download/doctor-who-unleashed/Doctor%20Who%20Unleashed%20S01E01%20-%20The%20Star%20Beast.mp4",
+            "seconds": 1745,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 173,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "joy to the world",
+          "state": "REVIEW",
+          "file": {
+            "item": "doctor-who-unleashed-joy-to-the-world",
+            "itemTitle": "Doctor Who Unleashed - Joy To The World",
+            "file": "Doctor Who Unleashed - Joy to the World.mp4",
+            "name": "Doctor Who Unleashed - Joy to the World",
+            "url": "https://archive.org/download/doctor-who-unleashed-joy-to-the-world/Doctor%20Who%20Unleashed%20-%20Joy%20to%20the%20World.mp4",
+            "seconds": 1732,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1715,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "children in need",
+          "state": "REVIEW",
+          "file": {
+            "item": "doctor-who-unleashed",
+            "itemTitle": "Doctor Who Unleashed",
+            "file": "Doctor Who Unleashed S01E00 - Children in Need.mp4",
+            "name": "Doctor Who Unleashed S01E00 - Children in Need",
+            "url": "https://archive.org/download/doctor-who-unleashed/Doctor%20Who%20Unleashed%20S01E00%20-%20Children%20in%20Need.mp4",
+            "seconds": 606,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 548,
+            "ep": {
+              "season": 1,
+              "episode": 0
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

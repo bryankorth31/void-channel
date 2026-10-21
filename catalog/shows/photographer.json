@@ -1,0 +1,50 @@
+{
+  "show": "Photographer",
+  "slug": "photographer",
+  "type": "Documentary & Geographic",
+  "network": "National Geographic",
+  "matchedAt": "2026-10-21T08:35:10.135Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Photographer",
+    "runtime": null,
+    "premiered": null,
+    "network": "National Geographic"
+  },
+  "coverage": {
+    "total": 1,
+    "live": 0,
+    "review": 1,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "ntsc",
+          "state": "REVIEW",
+          "file": {
+            "item": "Photographer_NTSC_DivX",
+            "itemTitle": "Photographer",
+            "file": "Photographer_NTSC_DivX.ogv",
+            "name": "Photographer_NTSC_DivX",
+            "url": "https://archive.org/download/Photographer_NTSC_DivX/Photographer_NTSC_DivX.ogv",
+            "seconds": 160,
+            "format": "Ogg Video",
+            "playable": true,
+            "codecRisk": "video (DivX)",
+            "sizeMB": 9,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

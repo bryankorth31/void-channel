@@ -1,0 +1,69 @@
+{
+  "show": "Abraham Lincoln",
+  "slug": "abraham-lincoln",
+  "type": "Documentary & Geographic",
+  "network": "History",
+  "matchedAt": "2026-10-21T08:29:33.440Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Abraham Lincoln",
+    "runtime": null,
+    "premiered": null,
+    "network": "History"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "walter huston restored",
+          "state": "REVIEW",
+          "file": {
+            "item": "AbrahamLincoln1930WalterHustonRESTORED",
+            "itemTitle": "Abraham Lincoln ( 1930) Walter Huston RESTORED",
+            "file": "Abraham Lincoln (1930) Walter Huston RESTORED.mp4",
+            "name": "Abraham Lincoln (1930) Walter Huston RESTORED",
+            "url": "https://archive.org/download/AbrahamLincoln1930WalterHustonRESTORED/Abraham%20Lincoln%20(1930)%20Walter%20Huston%20RESTORED.mp4",
+            "seconds": 5620,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 585,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "AbrahamLincoln_877",
+            "itemTitle": "Abraham Lincoln",
+            "file": "Abraham_Lincoln_1930.mp4",
+            "name": "Abraham_Lincoln_1930",
+            "url": "https://archive.org/download/AbrahamLincoln_877/Abraham_Lincoln_1930.mp4",
+            "seconds": 5080,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 632,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
