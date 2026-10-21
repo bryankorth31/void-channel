@@ -258,3 +258,46 @@ airs once a day per channel. The catalog has no genres for specials, so kids com
 holiday from the title (specialFlags in tvgrid.js). data/tv.json gains sp (531 specials, about 5 KB). Measured: breaks per
 channel per day median 32 to 18 minutes; over a year, about 60,800 special airings and no rule broken. Also in this round: 66
 uneven shows kept off the mixed channels (catalog/live-tv-off.json), still on their network and on demand.
+
+## 10. Full hold on a 30-minute grid (21 Oct 2026, B's go)
+
+B chose full hold (Live TV never starts anything before its time), then asked why a channel could be dark for most of an episode.
+Measured on one real day: 1,157 holds; most were 1 to 3 minutes, but 72 ran 10 minutes or more (up to 32). The root cause was the
+schedule giving every episode its show's median length. B: fix the schedule first, then hold; then "a 30-minute grid like real TV",
+with breaks filled by "my originals first, then the channel's own short episodes, then specials, then the chained cards"; Next during
+a break plays the coming show On Demand; and "a self scaleable and self pruning system so that shows being removed dont brick the
+sites tv".
+
+What is built (scripts/lib/tvgrid.js, scripts/lib/app.js, player):
+- **Real lengths.** Each episode's slot is its file rounded up to the whole minute (the exact seconds ride along from app.js,
+  non-enumerable, so the show files do not grow). data/tv.json carries them as ln: one character per episode (code less 35 =
+  minutes), empty when every episode of a show is its typical length. weekOf plans twice: on typical minutes to settle how many
+  times each show airs in the week (the step to next week's episodes), then on the real length of the very episode each airing plays.
+- **The grid.** Every show starts on the hour or the half hour and takes as many half hours as its episode needs. A show of 15
+  minutes or less packs as many episodes as fit in one half hour (one block in the guide: g0 to g1 on each airing). The overnight
+  daypart may not run past 6 am (it used to: 53 shows a day were cut short and the morning's first show started late).
+- **The breaks** (breakOf): what fills a block after its last episode, the same for everyone. B's originals, then short episodes
+  of other shows in the same daypart's pool on the channel, then TV specials; the same audience, after-dark and season rules as the
+  gap specials; a special or an original once a day per channel, a short episode once a day. The cards cover the rest.
+- **Full hold in the page** (tvAt, tvPlay): what plays is worked out from the clock alone, so a tune-in, a stall or a channel change
+  lands where everyone is. A file that ends early or fails is marked done and the next thing waits for its own start. A dead or
+  missing episode first gives its place to another episode of the same show at the same minute (tvSwap). An episode the clock is
+  under 3 minutes into after a late end starts from its beginning (late, never early).
+- **The holding cards** (tvCards): live HTML over the picture (the player lets go of its file: VoidPlayer.idle, core.stop). 36 lines,
+  4 looks, 9 seconds each; the card on screen is a function of the clock, so everyone sees the same one; the line steps by 7 and the
+  look by 1, so neither repeats twice in a row; every card names the next show, its time and a countdown; the last one stretches to
+  the start. One card carries the CASH donation line. Slow fades and slides only.
+- **Next during a break** (tvNext, tvNow): the coming show opens in the show player at its scheduled episode (On Demand); T26 adds
+  Back to Live. Outside a break Next is the next channel, as before.
+- **Self-pruning** (adopt): data/tv.json names its shows (sl, slugs by place); the page lays the plan onto its own show list by name,
+  so a show removed since either file was built drops out of every pool and the filler list, and a channel left empty drops out. A
+  show file that will not load is skipped like a dead episode. The TV page never throws on a missing show or an empty channel list.
+- **HQ** (rule: everything by hand too): the doctor's tv:schedule light (checkTv), in docs/RUNBOOK.md.
+
+Measured on the build (21 Oct, 96 channels, one day): 3,846 airings, none past its time, every block on the half hour; breaks a median
+12.3 minutes an hour, filled 13% by the channels' own shorts and 16% by specials (no originals yet), cards a median 8.8 minutes an hour
+(worst 17, CN). drift-sim full: no channel ever ahead of the guide. data/tv.json 285 KB, 84 KB gzipped (was 153 KB and 40 KB).
+Planning every channel's day with its breaks: about 0.2 s. Tests: 391 repo, 161 player.
+
+Known and left for later (chief-of-staff/LATER.md): every publish still reshuffles the schedule, because shows are keyed by their
+place in the list (a frozen weekly schedule would keep the guide stable across publishes).

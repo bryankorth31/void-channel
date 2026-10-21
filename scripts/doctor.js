@@ -182,6 +182,9 @@ async function main() {
     if (data.shows.length < 300) add('build', 'red', 'the site would ship with only ' + data.shows.length + ' titles', 'Something emptied the catalog; check git status in catalog/.');
     else if (nulls) add('build', 'red', nulls + ' TV channel pool entries point at no show', 'channel plan index drift (scripts/lib/tvgrid.js); re-run node scripts/site.js and look at the error.');
     else add('build', 'green', `${data.shows.length} titles, ${data.channels.length} channels, home order ${data.homeOrder.length} shelves`);
+    // Live TV (B, 21 Oct 2026): today on every channel, on the 30-minute grid with full hold (scripts/lib/tvgrid.js, checkTv).
+    try { const tvl = require('./lib/tvgrid').checkTv(data.tv, data.shows.map((s) => s.slug), Date.now()); add('tv:schedule', tvl.level, tvl.detail, tvl.fix); }
+    catch (e) { add('tv:schedule', 'red', 'the Live TV check could not run: ' + String(e.message).slice(0, 80), 'node --test tests/tvgrid.test.js shows where the schedule breaks.'); }
     // The page itself must carry the guards the audit asked for: a show that fails to load ends in a card, not a spinner
     // (SP-006), the player is kept across episodes (SP-020), a leftover player cannot start after the page is left, and saves of Mine
     // are merged, not overwritten (SP-012).

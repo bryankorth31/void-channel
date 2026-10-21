@@ -318,6 +318,9 @@
       act({ type: 'set-source', index: si, source: src(), at: goodT, play: want });
     }
 
+    // The host lets go of the episode (Live TV's breaks): nothing plays and nothing is watched until the next load().
+    function stop(now) { sources = []; pending = null; want = false; chainOff(); unsteady(); setState('idle', now); }
+
     // Starved: hop to the copy's next server (cyclically: the first one may have recovered by now). After
     // STARVE_CYCLES full passes without luck, the copy itself is the problem: try the next copy.
     function hopServer(now) {
@@ -708,7 +711,7 @@
       });
     }
 
-    return { load, sample, frame, event, expand, summary, timing, get state() { return state; }, get sourceIndex() { return si; }, get source() { return src(); }, get log() { return log.slice(); }, config: C };
+    return { load, stop, sample, frame, event, expand, summary, timing, get state() { return state; }, get sourceIndex() { return si; }, get source() { return src(); }, get log() { return log.slice(); }, config: C };
   }
 
   return { create, DEFAULTS };

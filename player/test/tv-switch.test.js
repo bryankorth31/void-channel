@@ -4,6 +4,9 @@
 // runs in a bare vm on made-up channels, with a stand-in for the player (it records what it is asked) and for the page. No network, no
 // browser, no video. The clock is a variable the tests move; the zone is fixed so the answers do not depend on the machine.
 // 21 Oct 2026: the channels are plans (pools per daypart) and what is on comes from the schedule, not from a list of items.
+// 21 Oct 2026, later (B): full hold on a 30-minute grid. Nothing starts before its time; a break is filled and then held by the cards; a
+// dead episode gives its place to another episode of the same show; a show that is gone never stops a channel. Every load is checked
+// against the clock (log.early), so a show that starts early fails whichever test it happens in.
 process.env.TZ = 'America/Chicago';
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
@@ -26,7 +29,8 @@ class FDate extends Date { static now() { return CLOCK.t; } } // the clock stand
 function page(opts) {
   opts = opts || {};
   CLOCK.t = Date.UTC(2026, 9, 19, 12, 7, 30);
-  const log = { render: 0, mk: [], loads: [], flashes: [], replaced: [], tracked: [], scrolled: 0, osd: [] };
+  // early: every load of an airing, or of an item in its break, whose start the clock has not reached. Full hold: always empty.
+  const log = { render: 0, mk: [], loads: [], flashes: [], replaced: [], tracked: [], scrolled: 0, osd: [], idle: 0, early: [], go: [], play: [] };
   const mkShow = (slug) => ({ slug, show: 'Show ' + slug, poster: '', seasons: [{ season: 1, episodes: Array.from({ length: 6 }, (_, i) => ({ n: i + 1, name: slug + ' ep ' + (i + 1), min: 22, item: slug + (i + 1), p: 'f.mp4' })) }] });
   const SHOWS = ['a', 'b', 'c', 'd'].map((s) => mkShow(s));
   const rt = opts.rt || [22, 22, 22, 22];
@@ -34,33 +38,42 @@ function page(opts) {
   const rot = (k) => [0, 1, 2, 3].map((x) => (x + k) % 4);
   const TV = ['one', 'two', 'three', 'four'].map((id, i) => ({ id, name: 'Channel ' + id, kind: 'all', shows: 4, eps: 24, cap: 2, p: { m: rot(i), d: rot(i), e: rot(i), p: rot(i), l: rot(i), o: rot(i) }, sn: {}, rd: '' }));
   const guide = { innerHTML: '' }, osd = { innerHTML: '', insertAdjacentHTML() {} };
-  let player = null;
+  let player = null, ctx = null;
   const host = { contains: (el) => !!player && el === player.root };
   const mkPlayer = (h, o) => {
-    const p = { root: { id: 'root' + log.mk.length }, v: {}, o, load(ep, lo) { log.loads.push({ id: ep.id, startAt: lo.startAt, autoplay: lo.autoplay }); }, flashChannel(n) { log.flashes.push(n); } };
+    const p = { root: { id: 'root' + log.mk.length }, v: {}, o, flashChannel(n) { log.flashes.push(n); }, idle() { log.idle++; },
+      load(ep, lo) {
+        const cur = ctx.h.TVCUR;
+        log.loads.push({ id: ep.id, startAt: lo.startAt, autoplay: lo.autoplay, at: CLOCK.t, k: cur && cur.x && cur.x.k });
+        if (cur && (cur.a.st > CLOCK.t || (cur.x && cur.x.it && cur.x.it.st > CLOCK.t))) log.early.push(ep.id);
+      } };
     log.mk.push(o); player = p; return p;
   };
   const state = Object.assign({ view: 'tv', chan: 'one', tvOn: true, tvFails: 0 }, opts.state);
+  const unref = (f) => (fn, ms) => { const t = f(fn, ms); if (t && t.unref) t.unref(); return t; }; // the cards' timers must not keep the test run alive
   const sandbox = {
-    setTimeout, state, SHOWS, ME: { adult: false }, SITE: 'voidtv.net', Date: FDate, Math, Map, WeakMap, Object, Array, mkPlayer, vpEvent() {}, filesFor: () => [{ url: 'u' }], esc: (s) => String(s == null ? '' : s),
-    ensure: async () => {}, track: (k, d) => log.tracked.push([k, d && d.slug]), urlFor: (s) => '/' + s, render: () => { log.render++; },
+    setTimeout, setInterval: unref(setInterval), clearInterval, clearTimeout, state, SHOWS, ME: { adult: false }, SITE: 'voidtv.net', Date: FDate, Math, Map, WeakMap, Object, Array, mkPlayer, vpEvent() {}, filesFor: () => [{ url: 'u' }], esc: (s) => String(s == null ? '' : s),
+    ensure: async (s) => { if (opts.missing && s.slug === opts.missing) throw new Error('the show file is gone (404)'); },
+    track: (k, d) => log.tracked.push([k, d && d.slug]), urlFor: (s) => '/' + s, render: () => { log.render++; },
+    go: async (slug) => { log.go.push(slug); state.view = 'show'; state.show = SHOWS.find((s) => s.slug === slug); }, play: (se, e) => log.play.push([se, e]),
+    fetch: async () => ({ json: async () => opts.tvJson }),
     history: { replaceState: (x, y, url) => log.replaced.push(url) }, window: { scrollTo: () => { log.scrolled++; } },
     document: { title: '', querySelector: (sel) => (sel === '.guide' ? (opts.noGuide ? null : guide) : sel === '.osd' ? osd : null) },
     $: (id) => (id === 'vph' && !opts.noHost ? host : null), BASE: '/',
   };
-  const ctx = vm.createContext(sandbox);
-  vm.runInContext('let TV=null,VP=null,TVCUR=null,TVLIB=null;\n' + TV_TEXT + '\nthis.h={tune,surf,tuneHere,tvPlay,chanNow,tvNextGood,tvKey,tvDead,TVG,GD,get TV_DEAD(){return TV_DEAD},get VP(){return VP},set VP(v){VP=v},set TV(v){TV=v},set TVLIB(v){TVLIB=v},get TVLIB(){return TVLIB},get TVCUR(){return TVCUR}};', ctx);
+  ctx = vm.createContext(sandbox);
+  vm.runInContext('let TV=null,VP=null,TVCUR=null,TVLIB=null;\n' + (opts.text || TV_TEXT) + '\nthis.h={tune,surf,tuneHere,tvPlay,tvAt,tvCard,tvNext,tvNow,ensureTV,chanNow,tvKey,tvDead,TVG,GD,TVC_LINES,TVC_LOOKS,TVC_MS,get TV_DEAD(){return TV_DEAD},get TVC_NOW(){return TVC_NOW},get TV_TOKEN(){return TV_TOKEN},get VP(){return VP},set VP(v){VP=v},set TV(v){TV=v},get TV(){return TV},set TVLIB(v){TVLIB=v},get TVLIB(){return TVLIB},get TVCUR(){return TVCUR}};', ctx);
   ctx.h.TV = TV; ctx.h.TVLIB = TVLIB;
   const idOf = (c, x) => c.id + '/' + SHOWS[x.s].slug + '/' + x.se + 'x' + x.n;
   return { h: ctx.h, log, state, guide, osd, TV, TVLIB, SHOWS, sandbox, idOf, getPlayer: () => player, setPlayer: (p) => { player = p; ctx.h.VP = p; } };
 }
 const settle = async () => { for (let i = 0; i < 6; i++) await new Promise((r) => setImmediate(r)); };
+const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // The page the viewer is on: Live TV turned on, one channel playing in the one player (what tvPage and tvPlay leave behind).
 async function playing() {
   const p = page();
-  const n = p.h.chanNow(p.TV[0]);
-  await p.h.tvPlay(p.TV[0], n.a, n.offset); await settle();
+  await p.h.tvPlay(p.TV[0]); await settle();
   assert.equal(p.log.mk.length, 1, 'the first channel made the player');
   return p;
 }
@@ -141,17 +154,6 @@ test('Live TV: a failure retry scheduled on one channel does not move the channe
   assert.equal(p.h.TVCUR.c.id, 'two');
 });
 
-test('Live TV: a failure retry with no channel change in between still runs, as before: the next airing on the same channel', async () => {
-  const p = await playing(); const p0 = p.getPlayer();
-  const loads = p.log.loads.length, before = p.h.TVCUR.a;
-  p0.o.onEvent({ type: 'failed' }, p0);
-  await new Promise((r) => setTimeout(r, 1800)); await settle();
-  assert.equal(p.log.loads.length, loads + 1, 'the retry loaded the next item');
-  assert.equal(p.h.TVCUR.c.id, 'one', 'on the same channel');
-  assert.equal(p.h.TVCUR.a.st, before.en, 'the airing that follows the failed one');
-  assert.equal(p.log.render, 0);
-});
-
 // Review of c71cf4bf0, fix 1: the fullscreen button was cut off the bar on Live TV players about 430 to 470 px and 561 to 700 px wide.
 // The page-side harness has no layout engine, so this checks the CSS text; the proof is the browser measurement in the review.
 test('Live TV: the style sheet makes the channel buttons compact and hides the elapsed time for every player up to 720 px wide (and in the old-browser fallback)', () => {
@@ -165,32 +167,6 @@ test('Live TV: the style sheet makes the channel buttons compact and hides the e
   assert.ok(css.indexOf('@container (max-width:720px)') > css.indexOf('(min-width:1900px)'), 'it comes after the 10-foot sizes, so a narrow player on a big screen is still compact');
 });
 
-// Bryan, 20 Oct 2026 (Adult Swim, The Venture Bros. failing): the failed episode was skipped, but when the next, shorter item ended
-// the clock still pointed at the failed slot, so Live TV went back to it, it failed again, and the channel looped.
-// On the schedule the same case is: the airing the clock is in fails, the next one plays (it is shorter, so it ends while the clock is still
-// inside the failed airing's time). The end of that airing must go on to the one after, never back.
-test('Live TV: a failed episode is skipped and never played again when the next, shorter item ends while the clock is still in its slot', async () => {
-  const p = page({ rt: [44, 11, 11, 11] });
-  const c = { id: 'as', name: 'Adult Swim', kind: 'all', shows: 4, eps: 24, cap: 4, sn: {}, rd: '', p: { m: [0, 1, 2, 3], d: [0, 1, 2, 3], e: [0, 1, 2, 3], p: [0, 1, 2, 3], l: [0, 1, 2, 3], o: [0, 1, 2, 3] } };
-  // a time when the clock is in a 44 minute airing of show a, followed by 11 minute airings
-  let t = Date.UTC(2026, 9, 19, 12, 0, 0), n = null;
-  for (let k = 0; k < 3000; k += 1) { t += 60000; n = p.h.chanNow(c, t); if (n.a.s === 0 && n.offset >= 1) break; }
-  assert.equal(n.a.s, 0, 'found the long airing');
-  CLOCK.t = t;
-  const f = n.a;
-  await p.h.tvPlay(c, f, n.offset); await settle();
-  const p0 = p.getPlayer();
-  assert.equal(p.h.TVCUR.a.st, f.st, 'the clock airing plays first');
-  p0.o.onEvent({ type: 'failed' }, p0);
-  await new Promise((r) => setTimeout(r, 1800)); await settle();
-  assert.ok(p.h.TVCUR.a.st > f.st, 'the failure skipped to a later airing');
-  const seen = [];
-  for (let k = 0; k < 4; k++) { p0.o.onEnded(); await settle(); seen.push(p.h.TVCUR.a.st); }
-  assert.ok(!seen.includes(f.st), 'the failed airing never comes back while the clock is still in its time: ' + seen.join(','));
-  assert.ok(seen.every((s, k) => k === 0 || s > seen[k - 1]), 'the channel goes forward, never back: ' + seen.join(','));
-  assert.ok(p.h.tvDead(c, f), 'the failed episode is remembered');
-});
-
 test('Live TV: a failure is remembered per channel and episode, so the same episode on another channel still plays', async () => {
   const p = await playing(); const p0 = p.getPlayer();
   const a1 = p.h.TVCUR.a;
@@ -199,30 +175,6 @@ test('Live TV: a failure is remembered per channel and episode, so the same epis
   assert.ok(!p.h.tvDead(p.TV[1], a1), 'another channel does not inherit the failure');
   assert.equal(Object.keys(p.h.TV_DEAD).length, 1);
   assert.ok(/^one:\d+:1x\d+$/.test(Object.keys(p.h.TV_DEAD)[0]), Object.keys(p.h.TV_DEAD)[0]);
-});
-
-test('Live TV: tvNextGood walks the schedule forward past episodes that failed in the last hour, and still moves on when all of them did', async () => {
-  const p = page();
-  const c = p.TV[0], n = p.h.chanNow(c);
-  const n1 = p.h.TVG.nextAiring(c, p.TVLIB, n.a), n2 = p.h.TVG.nextAiring(c, p.TVLIB, n1);
-  assert.equal(p.h.tvNextGood(c, n.a).st, n1.st, 'nothing dead: the next airing');
-  p.h.TV_DEAD[p.h.tvKey(c, n1)] = Date.now();
-  assert.equal(p.h.tvNextGood(c, n.a).st, n2.st, 'the next one is dead: the one after');
-  let x = n.a;
-  for (let k = 0; k < 40; k++) { x = p.h.TVG.nextAiring(c, p.TVLIB, x); p.h.TV_DEAD[p.h.tvKey(c, x)] = Date.now(); }
-  assert.ok(p.h.tvNextGood(c, n.a).st > n.a.st, 'when everything near is dead the channel still goes forward');
-  p.h.TV_DEAD[p.h.tvKey(c, n1)] = Date.now() - 2 * 36e5;
-  assert.equal(p.h.tvNextGood(c, n.a).st, n1.st, 'a failure older than an hour is forgotten');
-});
-
-test('Live TV: the end of an item. Clock still inside the airing (file shorter than planned): the next airing starts from its beginning', async () => {
-  const p = await playing(); const p0 = p.getPlayer();
-  const c = p.TV[0], cur = p.h.TVCUR.a, nx = p.h.TVG.nextAiring(c, p.TVLIB, cur);
-  const n = p.log.loads.length;
-  p0.o.onEnded(); await settle();
-  assert.equal(p.log.loads.length, n + 1);
-  assert.equal(p.log.loads[n].id, p.idOf(c, nx));
-  assert.equal(p.log.loads[n].startAt, 0, 'early start: from the beginning');
 });
 
 test('Live TV: the end of an item. Clock a few minutes into the next airing: the next airing starts from its beginning; further in, it is joined where the clock is', async () => {
@@ -242,20 +194,148 @@ test('Live TV: the end of an item. Clock a few minutes into the next airing: the
   assert.ok(Math.abs(p.log.loads[n].startAt - 600) < 1, 'joined where the clock is: ' + p.log.loads[n].startAt);
 });
 
-test('Live TV: tuning in during the tail of an airing whose file is shorter than planned plays the next airing from its start', async () => {
-  const p = page();
-  const c = p.TV[0], n = p.h.chanNow(c), nx = p.h.TVG.nextAiring(c, p.TVLIB, n.a);
-  await p.h.tvPlay(c, n.a, 22 * 60 + 40); await settle(); // the show's episodes are 22 minutes; the planned airing is longer
-  assert.equal(p.log.loads.length, 1);
-  assert.equal(p.log.loads[0].id, p.idOf(c, nx), 'the next airing');
-  assert.equal(p.log.loads[0].startAt, 0);
-  const p2 = page();
-  const q = p2.h.chanNow(p2.TV[0]);
-  await p2.h.tvPlay(p2.TV[0], q.a, 5 * 60); await settle();
-  assert.equal(p2.log.loads[0].id, p2.idOf(p2.TV[0], q.a), 'five minutes in is simply joined');
-  assert.equal(p2.log.loads[0].startAt, 300);
+
+test('Full hold: a file that ends before the next airing\'s start never starts it early: the cards hold, and the next airing plays at its start, from its beginning', async () => {
+  const p = await playing(); const p0 = p.getPlayer();
+  const c = p.TV[0], cur = p.h.TVCUR.a, nx = p.h.TVG.nextAiring(c, p.TVLIB, cur);
+  assert.equal((nx.st - cur.st) / 60000, 30, 'a 22 minute show holds a half hour'); assert.equal(cur.du, 22);
+  const n = p.log.loads.length;
+  CLOCK.t = cur.st + 21 * 60000 + 50000; // the file ends ten seconds inside its last minute
+  p0.o.onEnded(); await settle();
+  assert.equal(p.log.loads.length, n, 'nothing loads early');
+  assert.equal(p.log.idle, 1, 'the player lets go of the file under the cards');
+  const card = p.h.TVC_NOW;
+  assert.ok(card, 'the holding cards are up');
+  assert.equal(card.show, 'Show ' + p.SHOWS[nx.s].slug, 'they name the next show');
+  assert.ok(Math.abs(card.left - (nx.st - CLOCK.t) / 1000) < 0.01, 'and count down to its start');
+  CLOCK.t = nx.st - 1000; await wait(300); await settle();
+  assert.equal(p.log.loads.length, n, 'one second before the start: still the cards');
+  CLOCK.t = nx.st; await wait(300); await settle();
+  assert.equal(p.log.loads.length, n + 1, 'at the start the next airing loads');
+  assert.equal(p.log.loads[n].id, p.idOf(c, nx)); assert.equal(p.log.loads[n].startAt, 0);
+  assert.equal(p.h.TVC_NOW, null, 'the cards are gone');
+  assert.deepEqual(p.log.early, [], 'nothing started before its time');
+});
+
+test('Full hold: tuning in during a break lands on the cards with the right countdown; five minutes into an episode it is joined at five minutes', async () => {
+  const p = page(); const c = p.TV[0];
+  const a0 = p.h.chanNow(c).a, nx = p.h.TVG.nextAiring(c, p.TVLIB, a0);
+  CLOCK.t = a0.st + 25 * 60000;
+  await p.h.tvPlay(c); await settle();
+  assert.equal(p.log.loads.length, 0, 'no episode loads in a break');
+  assert.equal(p.log.mk.length, 1, 'the player is made, so the channel buttons and fullscreen are there');
+  assert.equal(p.h.TVC_NOW.show, 'Show ' + p.SHOWS[nx.s].slug);
+  assert.equal(p.h.TVC_NOW.left, 300, 'five minutes to the next show');
+  const q = page(); const c2 = q.TV[0], a2 = q.h.chanNow(c2).a;
+  CLOCK.t = a2.st + 5 * 60000;
+  await q.h.tvPlay(c2); await settle();
+  assert.equal(q.log.loads[0].id, q.idOf(c2, a2)); assert.equal(q.log.loads[0].startAt, 300);
+  assert.deepEqual(p.log.early.concat(q.log.early), []);
+});
+
+test('The holding cards: 36 lines in 4 looks; the next card never repeats the line or the look; every card names the next show and its time; everyone sees the same card', () => {
+  const p = page(); const c = p.TV[0], a0 = p.h.chanNow(c).a, nx = p.h.TVG.nextAiring(c, p.TVLIB, a0);
+  assert.equal(p.h.TVC_LINES.length, 36); assert.equal(p.h.TVC_LOOKS.length, 4); assert.equal(p.h.TVC_MS, 9000);
+  assert.ok(p.h.TVC_LINES.every((l) => !l.includes('—')), 'no em dashes');
+  assert.ok(p.h.TVC_LINES.some((l) => /donation goes to CASH/.test(l)), 'the one donation card');
+  const other = page(), until = nx.st, seen = new Set();
+  let prev = null;
+  for (let t = a0.st + 22 * 60000; t < until; t += 1000) {
+    const d = p.h.tvCard(c, a0, until, t);
+    assert.equal(d.show, 'Show ' + p.SHOWS[nx.s].slug); assert.ok(d.at.length > 0); assert.ok(!/[{}]/.test(d.line), 'every placeholder filled: ' + d.line);
+    if (prev && d.k !== prev.k) { assert.equal(prev.k - d.k, 1); assert.notEqual(d.line, prev.line, 'never the same line twice in a row'); assert.notEqual(d.look, prev.look, 'nor the same look'); }
+    assert.deepEqual(JSON.parse(JSON.stringify(other.h.tvCard(other.TV[0], a0, until, t))), JSON.parse(JSON.stringify(d)), 'the same card for everyone at the same moment');
+    seen.add(d.line); prev = d;
+  }
+  assert.equal(prev.k, 0, 'the run ends on its last card, which stretches to the start');
+  assert.equal(seen.size, 36, 'an 8 minute break goes through every line');
+});
+
+test('Full hold: changing channel during a hold stops that channel\'s cards and plays the new channel by its clock', async () => {
+  const p = page(); const c = p.TV[0], a0 = p.h.chanNow(c).a;
+  CLOCK.t = a0.st + 25 * 60000;
+  await p.h.tvPlay(c); await settle();
+  const tok = p.h.TV_TOKEN; assert.ok(p.h.TVC_NOW);
+  p.h.tune('two'); await settle();
+  assert.ok(p.h.TV_TOKEN > tok, 'the old channel\'s timer is retired');
+  assert.equal(p.h.TVCUR.c.id, 'two');
+  const c2 = p.TV[1], nx2 = p.h.TVG.nextAiring(c2, p.TVLIB, p.h.chanNow(c2).a);
+  assert.equal(p.h.TVC_NOW.show, 'Show ' + p.SHOWS[nx2.s].slug, 'the cards now name channel two\'s next show');
+  CLOCK.t = a0.st + 32 * 60000; p.h.tune('three'); await settle();
+  assert.equal(p.log.loads.length, 1, 'a channel that is two minutes into an episode plays at once');
+  assert.equal(p.log.loads[0].startAt, 120); assert.equal(p.h.TVC_NOW, null);
+  assert.equal(p.log.render, 0); assert.deepEqual(p.log.early, []);
+});
+
+test('Next during a break plays the coming show now, On Demand, in the show player; outside a break Next changes channel', async () => {
+  const p = page(); const c = p.TV[0], a0 = p.h.chanNow(c).a, nx = p.h.TVG.nextAiring(c, p.TVLIB, a0);
+  CLOCK.t = a0.st + 25 * 60000;
+  await p.h.tvPlay(c); await settle();
+  p.getPlayer().o.onNext(); await settle();
+  assert.deepEqual(p.log.go, [p.SHOWS[nx.s].slug], 'the coming show opens');
+  assert.deepEqual(p.log.play, [[0, nx.n - 1]], 'at the episode the schedule has next');
+  assert.equal(p.h.TVC_NOW, null, 'the cards are gone');
+  assert.ok(p.log.tracked.some((t) => t[0] === 'ondemand'));
+  const q = await playing(); q.getPlayer().o.onNext(); await settle();
+  assert.equal(q.state.chan, 'two', 'during a show Next is the next channel, as before'); assert.deepEqual(q.log.go, []);
+});
+
+test('Full hold: a dead episode gives its place to another episode of the same show at the same minute; when every one has failed the cards hold to the next airing', async () => {
+  const p = await playing(); const p0 = p.getPlayer();
+  const a0 = p.h.TVCUR.a, slug = p.SHOWS[a0.s].slug, off = (CLOCK.t - a0.st) / 1000;
+  const tried = new Set([a0.n]);
+  for (let k = 0; k < 5; k++) {
+    const n = p.log.loads.length;
+    p0.o.onEvent({ type: 'failed' }, p0);
+    await wait(1700); await settle();
+    assert.equal(p.log.loads.length, n + 1, 'swap ' + (k + 1) + ' loaded');
+    const id = p.log.loads[n].id; assert.ok(id.startsWith('one/' + slug + '/1x'), 'the same show: ' + id);
+    const ep = +id.split('x')[1]; assert.ok(!tried.has(ep), 'another episode each time: ' + id); tried.add(ep);
+    assert.equal(p.log.loads[n].startAt, off, 'joined at the same minute');
+    assert.equal(p.h.TVCUR.a.st, a0.st, 'in the same airing');
+  }
+  const n = p.log.loads.length;
+  p0.o.onEvent({ type: 'failed' }, p0); // all six episodes of the show have failed now
+  await wait(1700); await settle();
+  assert.equal(p.log.loads.length, n, 'nothing left to try in this airing');
+  assert.ok(p.h.TVC_NOW, 'the cards keep the channel alive');
+  assert.deepEqual(p.log.early, []);
+});
+
+test('Self-pruning: a show whose file is gone (removed since the page was built) never stops the channel: the cards hold until the next airing plays', async () => {
+  const p0 = page(); const c0 = p0.TV[0], a0 = p0.h.chanNow(c0).a, nx0 = p0.h.TVG.nextAiring(c0, p0.TVLIB, a0);
+  assert.notEqual(nx0.s, a0.s, 'the next airing is another show (the test needs that)');
+  const p = page({ missing: p0.SHOWS[a0.s].slug }); const c = p.TV[0];
+  await p.h.tvPlay(c); await settle();
+  assert.equal(p.log.loads.length, 0); assert.ok(p.h.TVC_NOW, 'the cards, not a dead screen');
+  const nx = p.h.TVG.nextAiring(c, p.TVLIB, a0);
+  CLOCK.t = nx.st; await wait(300); await settle();
+  assert.equal(p.log.loads.length, 1, 'the next airing plays at its start'); assert.equal(p.log.loads[0].id, p.idOf(c, nx));
+  assert.deepEqual(p.log.early, []);
+});
+
+test('Self-pruning: the TV data is laid onto the page\'s own show list by name, so a show removed since it was built drops out and nothing points at the wrong show', async () => {
+  const tvJson = { v: 2, rt: [22, 22, 22, 22, 22], lib: [[1, 1, 6], [1, 1, 6], [1, 1, 6], [1, 1, 6], [1, 1, 6]], sl: ['gone', 'd', 'c', 'b', 'a'], sp: [],
+    channels: [{ id: 'one', name: 'Channel one', kind: 'all', shows: 5, eps: 30, cap: 2, p: { m: [0, 1, 2], d: [0, 3, 4], e: [1], p: [2], l: [3], o: [4] }, sn: {}, rd: '' },
+      { id: 'lost', name: 'Lost', kind: 'row', shows: 1, eps: 6, cap: 2, p: { d: [0] }, sn: {}, rd: '' }] };
+  const p = page({ tvJson }); p.h.TV = null; p.h.TVLIB = null;
+  const TV = await p.h.ensureTV();
+  const plain = (x) => JSON.parse(JSON.stringify(x)); // arrays made inside the page's vm have that realm's Array
+  assert.deepEqual(plain(TV.map((c) => c.id)), ['one'], 'the channel whose only show is gone drops out');
+  const name = (i) => p.SHOWS[i].slug;
+  assert.deepEqual(plain(TV[0].p.m.map(name)), ['d', 'c']); assert.deepEqual(plain(TV[0].p.d.map(name)), ['b', 'a']);
+  const n = p.h.chanNow(TV[0]); assert.ok(p.SHOWS[n.a.s], 'what is on is a show the page has');
+});
+
+test('Deliberate bug: a page that starts the next airing as soon as a file ends is caught by the clock check', async () => {
+  const text = TV_TEXT.replace("return{k:'card',a,until:a.en}}", "{const nx=TVG.nextAiring(c,TVLIB,a);return{k:'ep',a:nx,off:0}}}");
+  assert.notEqual(text, TV_TEXT, 'the bug went in');
+  const p = page({ text }); await p.h.tvPlay(p.TV[0]); await settle();
+  CLOCK.t = p.h.TVCUR.a.st + 23 * 60000; p.getPlayer().o.onEnded(); await settle();
+  assert.ok(p.log.early.length > 0, 'the early start is seen');
 });
 
 test('Live TV: the page text carries no list of items any more: no TV_EPOCH, no c.items', () => {
   assert.ok(!/TV_EPOCH|c\.items|\.items\.length/.test(TV_TEXT.replace(T.source, '')), 'the schedule replaced the item lists');
 });
+

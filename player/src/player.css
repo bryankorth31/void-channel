@@ -46,6 +46,8 @@
 .vpx-big{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;border:0;background:rgba(7,8,12,.62);color:#fff;display:none;align-items:center;justify-content:center;cursor:pointer}
 .vpx-big svg{width:36px;height:36px;margin-left:4px}
 .vpx.paused:not(.vpx-wait) .vpx-big{display:flex}
+.vpx-idle .vpx-big,.vpx.vpx-idle.paused .vpx-big{display:none}
+.vpx-idle .vpx-seek,.vpx-idle .vpx-time,.vpx-idle [data-a=toggle],.vpx-idle [data-a=back],.vpx-idle [data-a=fwd],.vpx-idle [data-a=speed],.vpx-idle [data-a=cc],.vpx-idle [data-a=pip]{visibility:hidden} /* a Live TV break: nothing to play, seek, caption or pop out; the channel buttons, sound and fullscreen stay */
 .vpx-status{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:none;flex-direction:column;align-items:center;gap:10px;text-align:center;pointer-events:none;text-shadow:0 1px 6px #000}
 .vpx.vpx-wait .vpx-status,.vpx.vpx-has-status .vpx-status{display:flex}
 /* "tuning in": a broadcast signal pulsing outward (replaces the spinner). Smooth fades, no flashing. */

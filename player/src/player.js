@@ -93,6 +93,7 @@
       this._fail = null;
       this._playedCtx = this._ctx || null; // whatever the host hung on _ctx for this episode, kept for its summary
       this._teardown(); // stop the previous episode now, not after the server lookup
+      this.root.classList.remove('vpx-idle');
       this._stopFrames(); // the frame feed belongs to the episode it was started for; the new one starts its own below
       this._resetUi();
       this._setTitle();
@@ -130,6 +131,20 @@
       this._summed = false; this._coreEp = ep; this._avAt = 0; this._avStamps = [];
       this._armFrames();
       this.core.load(list, opts.startAt || 0, now(), opts.autoplay !== false);
+    }
+    // Live TV's breaks: the page draws its holding cards over the picture, so the player lets go of the file (nothing can
+    // resume it under the cards) and stays on the page, in fullscreen if it was. The next load() starts as usual.
+    idle() {
+      this._emitSummary();
+      this._token = (this._token || 0) + 1; // a load() still waiting for its server lookup gives up
+      this._cancelUpNext();
+      this._teardown();
+      this._stopFrames();
+      this.core.stop(now());
+      this.ep = null;
+      this._resetUi(); // the bar must not keep showing the episode that ended (its title, a full progress line)
+      this._setTitle();
+      this.root.classList.add('vpx-idle');
     }
     play() { this.core.event('user-play', now()); const p = this.v.play(); if (p && p.catch) p.catch(() => this._needTap()); }
     pause() { this.core.event('user-pause', now()); this.v.pause(); }

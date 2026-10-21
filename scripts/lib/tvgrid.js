@@ -12,8 +12,10 @@
 // The model in one paragraph: a broadcast day runs 6:00 am to 6:00 am local time. Dayparts (Morning, Daytime, Early evening,
 // Prime time, Late night, Overnight) are filled from per-daypart pools of shows. A show holds a place Monday to Friday and
 // moves one episode per airing; the places rotate to the next shows each week (movies rotate daily). Airings run back to back
-// (an elastic chain) with hard anchors at the start of each daypart, so the day lands within minutes of every anchor. Everyone
-// in a time zone computes the same schedule from the clock, so the guide and what plays always agree.
+// (an elastic chain) with hard anchors at the start of each daypart, so the day lands within minutes of every anchor. Each
+// airing is as long as its own episode (its file, rounded up to the whole minute), so a show never starts before its time
+// and never runs into the next one (B, 21 Oct 2026). Everyone in a time zone computes the same schedule from the clock, so
+// the guide and what plays always agree.
 function tvgridFactory() {
   const MIN = 60000, DAYMS = 86400000;
   const DAY0 = 360, DAYEND = 1800;
@@ -22,9 +24,9 @@ function tvgridFactory() {
     { k: 'p', a: 1200, b: 1380 }, { k: 'l', a: 1380, b: 1560 }, { k: 'o', a: 1560, b: 1800 },
   ];
   const DPNAME = { m: 'Morning', d: 'Daytime', e: 'Early evening', p: 'Prime time', l: 'Late night', o: 'Overnight', v: 'Movie night' };
-  const LOOK = 6, TOL1 = 8, GAP = 14, TOL2 = 30;
+  const LOOK = 6, TOL1 = 8, GAP = 14, TOL2 = 30, SLOT = 30, SHORT = 15;
   let OFF = (ms) => -new Date(ms).getTimezoneOffset() * MIN;
-  const WK = new WeakMap();
+  const WK = new WeakMap(), FG = new WeakMap(), SH = new WeakMap();
   const mod = (a, n) => ((a % n) + n) % n;
 
   function setOff(f) { OFF = f; }
@@ -87,8 +89,10 @@ function tvgridFactory() {
   // holiday special in season, then any special. Kids mornings and kids channels take kids items only; Late Night takes no
   // specials (only originals listed for it); an item airs once a day per channel.
   // mode 'insert': an item that fits inside the gap (room = the gap). mode 'swap': an item to take the place of the
-  // daypart's last show, filling its slot plus the gap (room = both, minDu = the show's length). Returns a show, or -1.
-  function pickFill(ch, lib, bd, k, di, room, minDu, cnt, mode) {
+  // daypart's last show, filling its slot plus the gap (room = both, minDu = the show's length). len(s): the minutes of
+  // the item's next airing (its typical minutes when not given). gs: which of the four groups to look in, in order (all of
+  // them when not given; the breaks ask for the originals and the specials apart). Returns a show, or -1.
+  function pickFill(ch, lib, bd, k, di, room, minDu, cnt, mode, len, gs) {
     const sp = lib.sp;
     if (!sp || !sp.length) return -1;
     const kidsOnly = ch.kc || (k === 'm' && ch.km);
@@ -104,8 +108,13 @@ function tvgridFactory() {
     };
     const special = (e) => e[2] !== 0;
     const holiday = (e) => special(e) && /[htxve]/.test(e[1] || '');
-    const groups = [sp.filter((e) => e[2] === 0), sp.filter((e) => special(e) && net.indexOf(e[0]) >= 0), sp.filter(holiday), sp.filter(special)];
-    const r = (s) => lib.rt[s] || 0;
+    let fg = FG.get(ch);
+    if (!fg || fg.sp !== sp) {
+      fg = { sp: sp, g: [sp.filter((e) => e[2] === 0), sp.filter((e) => special(e) && net.indexOf(e[0]) >= 0), sp.filter(holiday), sp.filter(special)] };
+      FG.set(ch, fg);
+    }
+    const groups = (gs || [0, 1, 2, 3]).map((x) => fg.g[x]);
+    const r = len || ((s) => lib.rt[s] || 0);
     const turn = idHash(ch.id) + bd * 31 + di * 7;
     const longest = (fit) => { let best = fit[0]; for (const e of fit) if (r(e[0]) > r(best[0])) best = e; return best[0]; };
     if (mode === 'insert') {
@@ -127,15 +136,35 @@ function tvgridFactory() {
     return -1;
   }
 
-  function planDay(ch, lib, bd) {
+  // THE GRID (B, 21 Oct 2026: a 30-minute grid like real TV): every show starts on the hour or the half hour and takes as many
+  // half hours as its episode needs. A show whose episode is 15 minutes or less packs as many of its episodes as fit into one
+  // half hour (one block). What is left of a block after its last episode is the break (see breakOf).
+  // One broadcast day of one channel as plain minutes: [{ s: show index, st: minute of the day (360 = 6:00 am), du: the
+  // episode's minutes, j: how many of this show's episodes aired before it today, k: daypart letter, b: the minute its block
+  // starts (packed episodes share it) }]. len(s, j): the minutes of show s's episode number j of the day; without it every
+  // episode takes the show's typical minutes (the first pass of weekOf, and the builder's probe).
+  function planDay(ch, lib, bd, len) {
     const dow = dowOf(bd), w = weekOfDay(bd);
     const P = ch.p || {};
     const cap0 = ch.cap || 2;
-    const cnt = {};
+    const cnt = {}, use = {};
     const out = [];
-    const rt = (s) => lib.rt[s] || 30;
+    const em = len ? (s) => len(s, cnt[s] || 0) : (s) => lib.rt[s] || 30;
+    const packs = (s) => em(s) <= SHORT && epTotal(lib, s) > 1;
+    // rt(s): the minutes the show's next block takes, always whole half hours.
+    const rt = (s) => (packs(s) ? SLOT : Math.ceil(em(s) / SLOT) * SLOT);
     let t = DAY0;
-    const put = (s, k) => { const du = rt(s); out.push({ s: s, st: t, du: du, j: cnt[s] || 0, k: k }); cnt[s] = (cnt[s] || 0) + 1; t += du; };
+    const put = (s, k) => {
+      const b = t, end = t + rt(s), pack = packs(s), E = epTotal(lib, s) || 1;
+      for (let n = 0; n < E && (n === 0 || (pack && t + em(s) <= end)); n++) {
+        const du = em(s);
+        out.push({ s: s, st: t, du: du, j: cnt[s] || 0, k: k, b: b });
+        cnt[s] = (cnt[s] || 0) + 1;
+        t += du;
+      }
+      t = end;
+      use[s] = (use[s] || 0) + 1;
+    };
     // Dayparts are wall-clock times; the day is filled in real minutes, so a switch night keeps every show its real length.
     const C = dayClock(bd);
     const wins = windows(dow).map((x) => ({ k: x.k, a: C.R(x.a), b: C.R(x.b) }));
@@ -146,7 +175,7 @@ function tvgridFactory() {
         const nv = P.v.length;
         for (let i = 0; i < Math.min(nv, LOOK); i++) {
           const s = P.v[mod(bd + i, nv)];
-          if ((cnt[s] || 0) < cap0 && t + rt(s) <= win.b + TOL2) { put(s, 'v'); break; }
+          if ((use[s] || 0) < cap0 && t + rt(s) <= win.b + TOL2) { put(s, 'v'); break; }
         }
       }
       const pool = P[win.k];
@@ -161,7 +190,7 @@ function tvgridFactory() {
             const idx = (pos + k) % n;
             if (taken[idx]) continue;
             const s = pool[idx];
-            if (rt(s) > room || (cnt[s] || 0) >= cap) continue;
+            if (rt(s) > room || (use[s] || 0) >= cap) continue;
             seen++;
             if (t + rt(s) <= win.b + tol) { pick = idx; break; }
           }
@@ -170,7 +199,7 @@ function tvgridFactory() {
               const idx = (pos + k) % n;
               if (taken[idx]) continue;
               const s = pool[idx];
-              if (rt(s) > room || (cnt[s] || 0) >= cap) continue;
+              if (rt(s) > room || (use[s] || 0) >= cap) continue;
               if (t + rt(s) <= win.b + tol) { pick = idx; break; }
             }
             if (pick < 0) return;
@@ -185,20 +214,31 @@ function tvgridFactory() {
           for (let g = 0; g < n && taken[pos]; g++) pos = (pos + 1) % n;
         }
       };
-      fill(TOL1);
-      if (win.b - t > GAP) fill(TOL2);
-      // A gap before the next daypart: first whatever from the filler library fits inside it (B's originals first), one after
-      // another; then, if 3 minutes or more are still empty, the last show gives its place to an item that fills its slot and the gap.
+      // The day's last daypart may not run past 6:00 am: the next broadcast day starts on the clock, so a show that ran over
+      // would be cut short in the guide and the morning's first show would start late.
+      const dayEnd = di === wins.length - 1;
+      fill(dayEnd ? 0 : TOL1);
+      if (!dayEnd && win.b - t > GAP) fill(TOL2);
+      // Half hours before the next daypart that no show of the pool fits: first whatever from the filler library fits inside
+      // them (B's originals first), one after another; then, if any are still empty, the last show gives its place to an item
+      // that fills its block and the gap.
       if (lib.sp) {
+        const mark = (from) => { for (let u = from; u < out.length; u++) out[u].sp = 1; };
         for (let g = 0; g < 20 && win.b - t >= 1; g++) {
-          const s = pickFill(ch, lib, bd, win.k, di, win.b - t, 0, cnt, 'insert');
+          const s = pickFill(ch, lib, bd, win.k, di, win.b - t, 0, cnt, 'insert', rt);
           if (s < 0) break;
-          put(s, win.k); out[out.length - 1].sp = 1;
+          const from = out.length;
+          put(s, win.k); mark(from);
         }
         const last = out[out.length - 1];
         if (last && last.k === win.k && !last.sp && win.b - t >= 3) {
-          const s = pickFill(ch, lib, bd, win.k, di, last.du + (win.b - t), last.du, cnt, 'swap');
-          if (s >= 0) { out.pop(); cnt[last.s] -= 1; t = last.st; put(s, win.k); out[out.length - 1].sp = 1; }
+          const s = pickFill(ch, lib, bd, win.k, di, win.b - last.b, t - last.b, cnt, 'swap', rt);
+          if (s >= 0) {
+            while (out.length && out[out.length - 1].b === last.b) cnt[out.pop().s] -= 1;
+            use[last.s] -= 1; t = last.b;
+            const from = out.length;
+            put(s, win.k); mark(from);
+          }
         }
       }
     }
@@ -228,29 +268,50 @@ function tvgridFactory() {
     const off = (Math.imul(s + 1, 2654435761) >>> 0) % E;
     return mod(w * perWeek + before + j + off, E);
   }
+  // The minutes of episode number i of a show. lib.ln[s] holds one character per episode, in the order of the runs: its
+  // code less 35 is the minutes (the file rounded up). A show with no ln, or an episode without a length, takes the show's typical minutes.
+  function epLen(lib, s, i) {
+    const L = lib.ln && lib.ln[s], m = L ? L.charCodeAt(i) - 35 : 0;
+    return m > 0 ? m : lib.rt[s] || 30;
+  }
 
   // The seven days of a week (Sunday first) for one channel, planned once and kept: airings with real instants.
+  // Two passes when the library has episode lengths: the first plans the week on typical minutes, which settles how many
+  // times each show airs this week (the step from one week's episodes to the next); the second plans it again with each
+  // airing as long as the very episode it will play, so the day is laid out in the real lengths.
   function weekOf(ch, lib, w) {
     let m = WK.get(ch);
     if (!m) { m = new Map(); WK.set(ch, m); }
     let r = m.get(w);
     if (r) return r;
-    const days = [], per = {}, base = [];
-    for (let d = 0; d < 7; d++) {
-      const day = planDay(ch, lib, w * 7 - 4 + d);
-      days.push(day);
-      base.push(Object.assign({}, per));
-      for (let u = 0; u < day.length; u++) per[day[u].s] = (per[day[u].s] || 0) + 1;
-    }
+    const plan = (len) => {
+      const days = [], per = {}, base = [];
+      for (let d = 0; d < 7; d++) {
+        const b = Object.assign({}, per);
+        const day = planDay(ch, lib, w * 7 - 4 + d, len && ((s, j) => len(s, j, b)));
+        days.push(day);
+        base.push(b);
+        for (let u = 0; u < day.length; u++) per[day[u].s] = (per[day[u].s] || 0) + 1;
+      }
+      return { days: days, per: per, base: base };
+    };
+    const first = plan(null);
+    const perWeek = (s) => first.per[s] || 1;
+    const P = lib.ln ? plan((s, j, b) => epLen(lib, s, epPick(lib, s, w, perWeek(s), b[s] || 0, j))) : first;
+    const days = P.days, base = P.base;
+    // An airing: show s, episode i (season se, number n), on the air from st to en (instants). du: the episode's minutes; the
+    // rest of [st, en) is the break. g0, g1: the block it belongs to (packed episodes of one show share one block in the guide).
     const air = days.map((day, d) => {
       const bd = w * 7 - 4 + d, C = dayClock(bd);
-      return day.map((x, u) => {
-        const i = epPick(lib, x.s, w, per[x.s], base[d][x.s] || 0, x.j);
+      const list = day.map((x, u) => {
+        const i = epPick(lib, x.s, w, perWeek(x.s), base[d][x.s] || 0, x.j);
         const c = epCode(lib, x.s, i);
         const st = C.S + (x.st - DAY0) * MIN;
         const en = C.S + ((u + 1 < day.length ? day[u + 1].st : C.end) - DAY0) * MIN;
-        return { s: x.s, i: i, se: c[0], n: c[1], st: st, en: en, du: x.du, k: x.k };
+        return { s: x.s, i: i, se: c[0], n: c[1], st: st, en: en, du: x.du, k: x.k, g0: C.S + (x.b - DAY0) * MIN, g1: en };
       });
+      for (let u = list.length - 2; u >= 0; u--) if (day[u + 1].b === day[u].b) list[u].g1 = list[u + 1].g1;
+      return list;
     });
     r = { air: air };
     m.set(w, r);
@@ -258,6 +319,94 @@ function tvgridFactory() {
     return r;
   }
   function dayAirings(ch, lib, bd) { return weekOf(ch, lib, weekOfDay(bd)).air[dowOf(bd)]; }
+
+  // THE BREAKS (B, 21 Oct 2026): what fills the rest of a block after its show's last episode, the same for everyone. In order:
+  // B's originals, then short episodes (15 minutes or less) of the other shows in the same daypart's pool on this channel, then
+  // TV specials; the player covers what is left, and the seconds a file ends inside its last minute, with the chained cards.
+  // Same audience, after-dark and season rules as the gap specials (pickFill). A special or an original airs once a day per
+  // channel (an original series plays the day's episode); a short episode airs once a day.
+  // An airing with a break of a minute or more gets br: { at, fill: [{ s, i, se, n, st, en, du }], end }: the fill plays back
+  // to back from at, and the cards run from the last one to end (the next block).
+  function shortsOf(ch, lib, k) {
+    let m = SH.get(ch);
+    if (!m || m.lib !== lib) { m = { lib: lib }; SH.set(ch, m); }
+    if (!m[k]) m[k] = ((ch.p || {})[k] || []).filter((s) => (lib.rt[s] || 30) <= SHORT && epTotal(lib, s) > 1);
+    return m[k];
+  }
+  function dayBreaks(ch, lib, bd) {
+    const wk = weekOf(ch, lib, weekOfDay(bd)), d = dowOf(bd), air = wk.air[d];
+    if (!wk.br) wk.br = [];
+    if (wk.br[d]) return air;
+    wk.br[d] = 1;
+    const cnt = {}, used = {};
+    for (const a of air) cnt[a.s] = 1;
+    const one = (s) => mod(idHash(ch.id) + bd, epTotal(lib, s) || 1);
+    const fl = (s) => epLen(lib, s, one(s));
+    for (let u = 0; u < air.length; u++) {
+      const a = air[u], end = a.en, k = a.k === 'v' ? 'p' : a.k;
+      let t = a.st + a.du * MIN;
+      if (end - t < MIN) continue;
+      const fill = [];
+      const add = (s, i) => { const c = epCode(lib, s, i), du = epLen(lib, s, i); fill.push({ s: s, i: i, se: c[0], n: c[1], st: t, en: t + du * MIN, du: du }); t += du * MIN; };
+      const shorts = shortsOf(ch, lib, k), turn = idHash(ch.id) + bd * 31 + u * 7;
+      for (let g = 0; g < 12 && end - t >= MIN; g++) {
+        const room = (end - t) / MIN;
+        let s = pickFill(ch, lib, bd, k, u, room, 0, cnt, 'insert', fl, [0]);
+        if (s >= 0) { cnt[s] = 1; add(s, one(s)); continue; }
+        // A short show steps through its episodes from where today starts (a different place each day), skipping any that
+        // do not fit the room left; used[c] counts how far it has gone today.
+        let hit = -1, hi = 0;
+        for (let q = 0; q < Math.min(shorts.length, 4 * LOOK) && hit < 0; q++) {
+          const c = shorts[(turn + q) % shorts.length], E = epTotal(lib, c), from = (Math.imul(c + 1, 2654435761) >>> 0) + bd * 7;
+          if (c === a.s) continue;
+          for (let y = used[c] || 0; y < Math.min(E, (used[c] || 0) + LOOK); y++) {
+            const i = mod(from + y, E);
+            if (epLen(lib, c, i) <= room) { hit = c; hi = i; used[c] = y + 1; break; }
+          }
+        }
+        if (hit >= 0) { add(hit, hi); continue; }
+        s = pickFill(ch, lib, bd, k, u, room, 0, cnt, 'insert', fl, [1, 2, 3]);
+        if (s >= 0) { cnt[s] = 1; add(s, one(s)); continue; }
+        break;
+      }
+      a.br = { at: a.st + a.du * MIN, fill: fill, end: end };
+    }
+    return air;
+  }
+  // The break after an airing (see dayBreaks), or null when its episode runs into the next airing (a packed episode).
+  function breakOf(ch, lib, a) {
+    const list = dayBreaks(ch, lib, dayOf(a.st));
+    for (let u = 0; u < list.length; u++) if (list[u].st === a.st) return list[u].br || null;
+    return null;
+  }
+
+  // SELF-PRUNING (B, 21 Oct 2026: a removed show must never break the TV). data/tv.json names every show it uses (tv.sl, the
+  // slugs by place), and the page's show list (data/index.js) may come from another build, since each file is cached on its
+  // own. adopt() lays the plan onto the list the page has, by name: a show the page does not have drops out of every pool and
+  // the filler list, and a channel left with no shows drops out. Returns { rt, lib, ln, sp, channels } in the page's places.
+  function adopt(tv, slugs) {
+    const sl = tv.sl, base = { rt: tv.rt, lib: tv.lib, ln: tv.ln || [], sp: tv.sp || [], channels: tv.channels };
+    if (!sl || (sl.length === slugs.length && sl.every((x, i) => !x || x === slugs[i]))) return base;
+    const at = {};
+    for (let i = 0; i < slugs.length; i++) at[slugs[i]] = i;
+    const to = sl.map((x) => (x && at[x] != null ? at[x] : -1));
+    const rt = slugs.map(() => 0), lib = slugs.map(() => 0), ln = slugs.map(() => 0);
+    to.forEach((j, i) => { if (j >= 0) { rt[j] = tv.rt[i]; lib[j] = tv.lib[i]; ln[j] = (tv.ln || [])[i] || 0; } });
+    const map = (list) => (list || []).map((i) => to[i]).filter((j) => j >= 0 && rt[j] > 0);
+    const sp = (tv.sp || []).map((e) => [to[e[0]]].concat(e.slice(1))).filter((e) => e[0] >= 0 && rt[e[0]] > 0);
+    const channels = [];
+    for (const c of tv.channels) {
+      const p = {};
+      let n = 0;
+      for (const k in c.p || {}) { const v = map(c.p[k]); if (v.length) { p[k] = v; n += v.length; } }
+      if (!n) continue;
+      const x = Object.assign({}, c, { p: p });
+      if (c.fo) x.fo = map(c.fo);
+      if (c.spn) x.spn = map(c.spn);
+      channels.push(x);
+    }
+    return { rt: rt, lib: lib, ln: ln, sp: sp, channels: channels };
+  }
 
   // The airing on the air at an instant (the airings of a day tile it, so there is always one).
   function airingAt(ch, lib, at) {
@@ -302,8 +451,10 @@ function tvgridFactory() {
   function localAt(ms, days, minutes) { return toAbs(Math.floor((ms + OFF(ms)) / DAYMS) * DAYMS + days * DAYMS + minutes * MIN); }
   const xOf = (t, t0, ppm) => ((t - t0) / MIN) * ppm;
   const tOf = (x, t0, ppm) => t0 + (x / ppm) * MIN;
-  // Where an airing's block sits on the time axis (pixels from the left edge of the time area) and how wide it is.
-  function blockBox(a, t0, ppm) { return { left: Math.round(xOf(a.st, t0, ppm) * 100) / 100, width: Math.round(((a.en - a.st) / MIN) * ppm * 100) / 100 }; }
+  // Where an airing's block sits on the time axis (pixels from the left edge of the time area) and how wide it is. Packed
+  // episodes share one block: g0 to g1.
+  const g0 = (a) => (a.g0 != null ? a.g0 : a.st), g1 = (a) => (a.g1 != null ? a.g1 : a.en);
+  function blockBox(a, t0, ppm) { return { left: Math.round(xOf(g0(a), t0, ppm) * 100) / 100, width: Math.round(((g1(a) - g0(a)) / MIN) * ppm * 100) / 100 }; }
   // The rows to draw for a scroll position: from, to (not included), with some rows of margin.
   function rowSpan(scrollTop, viewH, rowH, n, pad) {
     const a = Math.min(n, Math.max(0, Math.floor(scrollTop / rowH) - pad)), b = Math.min(n, Math.ceil((scrollTop + viewH) / rowH) + pad);
@@ -350,14 +501,14 @@ function tvgridFactory() {
   // Whether a block should be lit for the text filter.
   function blockHit(a, q, name) { q = String(q || '').trim().toLowerCase(); return !!q && name(a.s).indexOf(q) >= 0; }
   // The key a remote or keyboard sends, applied to the focus { ci: row, t: time }: Left and Right go to the previous and next
-  // airing on the channel, Up and Down to the channel above and below at the same time, PageUp and PageDown three hours, Home to now.
+  // block on the channel, Up and Down to the channel above and below at the same time, PageUp and PageDown three hours, Home to now.
   function focusMove(fo, key, list, lib, lo, hi, now) {
     const c = list[fo.ci];
     if (!c) return fo;
     const cur = airingAt(c, lib, fo.t);
     let ci = fo.ci, t = fo.t;
-    if (key === 'ArrowLeft') t = airingAt(c, lib, cur.st - 1).st;
-    else if (key === 'ArrowRight') t = cur.en;
+    if (key === 'ArrowLeft') t = g0(airingAt(c, lib, g0(cur) - 1));
+    else if (key === 'ArrowRight') t = g1(cur);
     else if (key === 'ArrowUp') ci = Math.max(0, ci - 1);
     else if (key === 'ArrowDown') ci = Math.min(list.length - 1, ci + 1);
     else if (key === 'PageUp') t = fo.t - 180 * MIN;
@@ -367,7 +518,7 @@ function tvgridFactory() {
     return { ci: ci, t: Math.max(lo, Math.min(hi, t)) };
   }
 
-  return { MIN, DAYMS, DPNAME, setOff, dayOf, toAbs, dowOf, weekOfDay, planDay, weekOf, dayAirings, airingAt, chanNow, nextAiring, airingsBetween, daypartOf, epTotal, epCode, epPick,
+  return { MIN, DAYMS, DPNAME, SLOT, setOff, dayOf, toAbs, dowOf, weekOfDay, planDay, weekOf, dayAirings, airingAt, chanNow, nextAiring, airingsBetween, daypartOf, epTotal, epCode, epPick, epLen, breakOf, adopt,
     localAt, xOf, tOf, blockBox, rowSpan, halfHours, chanGroup, filterChannels, blockHit, focusMove };
 }
 
@@ -379,28 +530,35 @@ const median = (a) => { const s = a.slice().sort((x, y) => x - y); return s.leng
 const isMovieSlug = (slug) => String(slug).startsWith('movie-');
 
 // What the schedule needs to know about one assembled show: its typical length, its episodes as runs of
-// [season, first number, count], and the flags that decide which dayparts it can fill.
+// [season, first number, count], each episode's own length (ln, see epLen), and the flags that decide which dayparts it can fill.
+// An episode's slot is its file rounded up to the whole minute (e.sec, the exact seconds, rides along from app.js), so the
+// file always ends inside its slot; without e.sec it is e.min.
+const slotMin = (e) => (e.sec > 0 ? Math.ceil(e.sec / 60) : e.min > 0 ? e.min : 0);
 function showInfo(s) {
-  const mins = [], runs = [];
+  const mins = [], runs = [], each = [];
   let eps = 0;
   for (const se of s.seasons || []) {
     let last = null;
     for (const e of se.episodes || []) {
       eps++;
-      if (e.min > 0) mins.push(e.min);
+      const m = slotMin(e);
+      if (m > 0) mins.push(m);
+      each.push(m);
       if (last && last[0] === se.season && e.n === last[1] + last[2]) last[2]++;
       else { last = [se.season, e.n, 1]; runs.push(last); }
     }
   }
   const movie = isMovieSlug(s.slug);
   const rt = Math.max(5, Math.min(300, median(mins) || s.runtime || (movie ? 90 : 30)));
+  // One character per episode (code = 35 + minutes, at most 600); '' when every episode is the typical length.
+  const ln = each.every((m) => m === rt) ? '' : each.map((m) => String.fromCharCode(35 + Math.min(600, m))).join('');
   const genres = s.genres || [], tags = s.tags || [];
   const has = (g) => genres.indexOf(g) >= 0;
   const late = ['Adult Swim', 'MTV', 'Sketch and Comedy'].indexOf(s.type) >= 0 || tags.some((t) => ['Late Night Classics', 'Variety & Talk', 'Awkward & Absurd'].indexOf(t) >= 0) || has('Talk');
   const edgy = s.type === 'Adult Swim' || s.type === 'MTV' || late;
   const kids = !movie && !edgy && (has('Kids') || (has('Animation') && (has('Family') || has('Action & Adventure') || has('Sci-Fi & Fantasy'))));
   const score = (s.rating || 6) + 0.5 * Math.log10(eps + 1);
-  return { rt, runs: [].concat(...runs), eps, movie, kids, late, score };
+  return { rt, runs: [].concat(...runs), ln, eps, movie, kids, late, score };
 }
 
 // Per-daypart sizes (weekday minutes), used to see how many shows a pool should hold.
@@ -470,7 +628,7 @@ function planChannel(meta, recs, rt) {
   const REF_BD = 20299;
   const probe = Object.assign({}, ch, { sn: {} });
   const seen = {};
-  for (const a of G.planDay(probe, { rt }, REF_BD)) seen[a.k] = (seen[a.k] || 0) + 1;
+  for (const a of G.planDay(probe, { rt }, REF_BD)) if (a.st === a.b) seen[a.k] = (seen[a.k] || 0) + 1;
   for (const k of Object.keys(seen)) if (k !== 'v') ch.sn[k] = Math.max(1, seen[k]);
   return ch;
 }
@@ -522,14 +680,43 @@ function buildOriginals(shows, cfg) {
   return { items: list.map((x) => [x.i, x.f, 0]), scope };
 }
 
-// The shared library for the whole page: typical minutes and episode runs by place in the full show list (0 where unused).
+// The shared library for the whole page: typical minutes, episode runs and episode lengths by place in the full show list (0 where unused).
 function buildLib(shows) {
   const infos = shows.map((s) => showInfo(s));
-  return { infos, rt: infos.map((x) => x.rt), runs: infos.map((x) => x.runs) };
+  return { infos, rt: infos.map((x) => x.rt), runs: infos.map((x) => x.runs), ln: infos.map((x) => x.ln) };
 }
 // Only the shows that sit on some channel are kept in the file; everything else is 0.
 function trimLib(lib, used) {
-  return { rt: lib.rt.map((v, i) => (used.has(i) ? v : 0)), lib: lib.runs.map((v, i) => (used.has(i) ? v : 0)) };
+  return { rt: lib.rt.map((v, i) => (used.has(i) ? v : 0)), lib: lib.runs.map((v, i) => (used.has(i) ? v : 0)), ln: lib.ln.map((v, i) => (used.has(i) && v ? v : 0)) };
 }
 
-module.exports = { tvgridFactory, source, showInfo, planChannel, buildLib, trimLib, isMovieSlug, specialFlags, buildSpecials, buildOriginals, G };
+// THE HQ CHECK (B: every check also runs by hand in HQ, with no AI): the doctor's tv:schedule light. For one day from at, on every
+// channel: the airings tile, every block starts on the hour or the half hour, no episode runs past its airing, and every show the plan
+// names (tv.sl, what the page's self-pruning reads) is in the build; plus how much of the breaks the cards still cover (yellow when a
+// channel shows more than 20 minutes of cards an hour: more originals or shorts would help there).
+function checkTv(tv, slugs, at) {
+  const T = tvgridFactory(), A = T.adopt(tv, slugs), lib = { rt: A.rt, lib: A.lib, ln: A.ln, sp: A.sp };
+  const missing = (tv.sl || []).filter((x, i) => x && slugs[i] !== x).length, dropped = tv.channels.length - A.channels.length;
+  let bad = 0, cards = 0, worst = 0, worstName = '';
+  for (const ch of A.channels) {
+    const air = T.airingsBetween(ch, lib, at, at + 86400000);
+    let c = 0;
+    for (let u = 0; u < air.length; u++) {
+      const a = air[u], d = new Date(a.g0);
+      if (a.st + a.du * 60000 > a.en || (u + 1 < air.length && a.en !== air[u + 1].st) || d.getMinutes() % 30 || d.getSeconds()) bad++;
+      const br = T.breakOf(ch, lib, a);
+      c += (a.en - a.st) / 60000 - a.du - (br ? br.fill.reduce((n, x) => n + x.du, 0) : 0);
+    }
+    cards += c;
+    if (c / 24 > worst) { worst = c / 24; worstName = ch.name; }
+  }
+  const avg = cards / Math.max(1, A.channels.length) / 24;
+  const fix = 'Re-run node scripts/site.js. If this stays red, node --test tests/tvgrid.test.js shows where the schedule breaks.';
+  if (missing || dropped) return { level: 'red', detail: missing + ' shows the TV plan names are not in the build; ' + dropped + ' channels would be left with no shows', fix };
+  if (bad) return { level: 'red', detail: bad + ' airings off the grid, overlapping, or running past their time', fix };
+  const detail = A.channels.length + ' channels fill the day on the 30-minute grid; holding cards ' + avg.toFixed(1) + ' min an hour on average, most ' + worst.toFixed(1) + ' on ' + worstName;
+  if (worst > 20) return { level: 'yellow', detail, fix: 'More of your originals (catalog/fillers.json, in HQ) or short episodes on that channel would fill its breaks.' };
+  return { level: 'green', detail };
+}
+
+module.exports = { tvgridFactory, source, showInfo, planChannel, buildLib, trimLib, isMovieSlug, specialFlags, buildSpecials, buildOriginals, checkTv, G };
