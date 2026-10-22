@@ -93,17 +93,36 @@ function createWindow() {
   });
   // The page comes from HQ itself, so it carries HQ's per-start token (a meta tag the page sends back as X-HQ-Token) and
   // its calls arrive with Origin http://127.0.0.1:<port>, which HQ accepts. This window needs no token of its own.
-  win.loadURL(`http://127.0.0.1:${PORT}/`);
+  win.loadURL(`http://127.0.0.1:${PORT}/`).catch(() => {});
+  win.webContents.on('did-fail-load', (e, code, desc, url, isMainFrame) => { if (isMainFrame && code !== -3) mainFailed = true; });
+  win.webContents.on('did-navigate', () => { mainFailed = false; });
   // Links to the player lab open the lab window; other web links open in the browser.
   win.webContents.setWindowOpenHandler(({ url }) => { if (isLab(url)) openLab(url); else if (/^https?:\/\//i.test(url)) shell.openExternal(url); return { action: 'deny' }; });
   win.webContents.on('will-navigate', (e, url) => { if (!url.startsWith(`http://127.0.0.1:${PORT}/`)) { e.preventDefault(); if (isLab(url)) openLab(url); else if (/^https?:\/\//i.test(url)) shell.openExternal(url); } });
   win.on('close', (e) => { if (!app.quitting) { e.preventDefault(); win.hide(); } });
 }
 
+// The server lives inside this process. If it stops answering (it died on 21 Oct while the app sat in the tray, so the
+// icon only brought back a window pointing at nothing), the app restarts itself: a fresh process starts the server
+// cleanly, which a second start in this one cannot promise. Checked on every open and once a minute.
+let relaunching = false, mainFailed = false;
+async function ensureUp(show) {
+  if (relaunching) return;
+  if (await ping()) {
+    if (show) { if (mainFailed) load(win, `http://127.0.0.1:${PORT}/`); win.show(); win.focus(); }
+    return;
+  }
+  relaunching = true;
+  const visible = show || (win && win.isVisible());
+  app.relaunch({ args: process.argv.slice(1).filter((a) => a !== '--hidden').concat(visible ? [] : ['--hidden']) });
+  app.quitting = true;
+  app.exit(0);
+}
+
 function createTray() {
   tray = new Tray(trayImage());
   const menu = () => Menu.buildFromTemplate([
-    { label: 'Open HQ', click: () => { win.show(); win.focus(); } },
+    { label: 'Open HQ', click: () => ensureUp(true) },
     { label: 'Open in browser', click: () => shell.openExternal(`http://localhost:${PORT}/`) },
     { label: 'Open player lab', click: () => openLab() },
     { type: 'separator' },
@@ -113,11 +132,11 @@ function createTray() {
   ]);
   tray.setToolTip('VOIDtv HQ');
   tray.setContextMenu(menu());
-  tray.on('click', () => { if (win.isVisible()) win.focus(); else win.show(); });
+  tray.on('click', () => ensureUp(true));
 }
 
 if (!app.requestSingleInstanceLock()) app.quit();
-app.on('second-instance', () => { if (win) { win.show(); win.focus(); } });
+app.on('second-instance', () => { if (win) ensureUp(true); });
 app.on('window-all-closed', () => { /* stays in the tray */ });
 app.whenReady().then(async () => {
   const repo = await findRepo();
@@ -130,4 +149,5 @@ app.whenReady().then(async () => {
   createWindow();
   createTray();
   if (process.argv.includes('--hidden')) win.hide();
+  setInterval(() => ensureUp(false), 60000);
 });
