@@ -1,0 +1,69 @@
+{
+  "show": "Random Play",
+  "slug": "random-play",
+  "type": "MTV",
+  "network": "VH1",
+  "matchedAt": "2026-10-22T08:34:14.368Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Random Play",
+    "runtime": null,
+    "premiered": null,
+    "network": "VH1"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "dave tv",
+          "state": "REVIEW",
+          "file": {
+            "item": "random-play-dave-tv-1999",
+            "itemTitle": "Random Play - Jim Gaffigan, Michael Ian Black, Jerry Minor",
+            "file": "Random Play - Dave TV - 1999.mp4",
+            "name": "Random Play - Dave TV - 1999",
+            "url": "https://archive.org/download/random-play-dave-tv-1999/Random%20Play%20-%20Dave%20TV%20-%201999.mp4",
+            "seconds": 1348,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1025,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "random-play-dave-tv-1999",
+            "itemTitle": "Random Play - Jim Gaffigan, Michael Ian Black, Jerry Minor",
+            "file": "Random Play - VH1 - 1999.mp4",
+            "name": "Random Play - VH1 - 1999",
+            "url": "https://archive.org/download/random-play-dave-tv-1999/Random%20Play%20-%20VH1%20-%201999.mp4",
+            "seconds": 1321,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 999,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
