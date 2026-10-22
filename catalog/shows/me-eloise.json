@@ -1,0 +1,97 @@
+{
+  "show": "Me, Eloise",
+  "slug": "me-eloise",
+  "type": "Animated",
+  "network": "Starz",
+  "matchedAt": "2026-10-22T09:38:29.507Z",
+  "addedAt": "2026-10-22T09:38:29.507Z",
+  "tvmaze": {
+    "id": 73747,
+    "name": "Me, Eloise",
+    "runtime": 25,
+    "premiered": "2006-10-08",
+    "network": "Starz Kids & Family"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 1,
+    "missing": 1,
+    "pct": 50
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Me, Eloise (Part 1)",
+          "airdate": "2006-10-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Little Miss Christmas (Part 3)",
+          "airdate": "2006-11-12",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Little Miss Christmas (Part 3)\" (0.95)",
+            "item": "me-eloise-ep-11-little-miss-christmas-part-1-720p-50-wr",
+            "itemTitle": "Me, Eloise! - Little Miss Christmas",
+            "file": "Me, Eloise! ep13 - Little Miss Christmas, part 3 720p50 [WR].mp4",
+            "name": "Me, Eloise! ep13 - Little Miss Christmas, part 3 720p50 [WR]",
+            "url": "https://archive.org/download/me-eloise-ep-11-little-miss-christmas-part-1-720p-50-wr/Me%2C%20Eloise!%20ep13%20-%20Little%20Miss%20Christmas%2C%20part%203%20720p50%20%5BWR%5D.mp4",
+            "seconds": 1350,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1708
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Little Miss Christmas (Part 3)\" (0.95)",
+              "item": "me-eloise-2006",
+              "itemTitle": "Eloise: The Animated Series",
+              "file": "Little Miss Christmas (Part 2).mp4",
+              "name": "Little Miss Christmas (Part 2)",
+              "url": "https://archive.org/download/me-eloise-2006/Little%20Miss%20Christmas%20(Part%202).mp4",
+              "seconds": 1531,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 152
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Little Miss Christmas (Part 3)\" (1.00)",
+              "item": "me-eloise-2006",
+              "itemTitle": "Eloise: The Animated Series",
+              "file": "Little Miss Christmas (Part 3).mp4",
+              "name": "Little Miss Christmas (Part 3)",
+              "url": "https://archive.org/download/me-eloise-2006/Little%20Miss%20Christmas%20(Part%203).mp4",
+              "seconds": 1438,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 127
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Little Miss Christmas (Part 3)\" (0.95)",
+              "item": "me-eloise-2006",
+              "itemTitle": "Eloise: The Animated Series",
+              "file": "Little Miss Christmas (Part 1).mp4",
+              "name": "Little Miss Christmas (Part 1)",
+              "url": "https://archive.org/download/me-eloise-2006/Little%20Miss%20Christmas%20(Part%201).mp4",
+              "seconds": 1379,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 118
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "show": "Get the Picture",
+  "slug": "get-the-picture",
+  "type": "Animated",
+  "network": "Nickelodeon",
+  "matchedAt": "2026-10-22T09:41:06.732Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Get the Picture",
+    "runtime": null,
+    "premiered": null,
+    "network": "Nickelodeon"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "1.340getthepicture-usa-s-1-19910000-tish-ryan-cassidy-jeff-gas-20050000",
+            "itemTitle": "Get The Picture: Tish and Ryan Vs Cassidy and Jeff",
+            "file": "[1.340]getthepicture(USA-S1)19910000-Tish&Ryan-Cassidy&Jeff[GAS20050000].ia.mp4",
+            "name": "[1",
+            "url": "https://archive.org/download/1.340getthepicture-usa-s-1-19910000-tish-ryan-cassidy-jeff-gas-20050000/%5B1.340%5Dgetthepicture(USA-S1)19910000-Tish%26Ryan-Cassidy%26Jeff%5BGAS20050000%5D.ia.mp4",
+            "seconds": 1478,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 102,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 40,
+          "name": "1 getthepicture usa s1 19910000 tish and ryan cassidy and jeff gas20050000",
+          "state": "REVIEW",
+          "file": {
+            "item": "1.340getthepicture-usa-s-1-19910000-tish-ryan-cassidy-jeff-gas-20050000",
+            "itemTitle": "Get The Picture: Tish and Ryan Vs Cassidy and Jeff",
+            "file": "[1.340]getthepicture(USA-S1)19910000-Tish&Ryan-Cassidy&Jeff[GAS20050000].mp4",
+            "name": "[1.340]getthepicture(USA-S1)19910000-Tish&Ryan-Cassidy&Jeff[GAS20050000]",
+            "url": "https://archive.org/download/1.340getthepicture-usa-s-1-19910000-tish-ryan-cassidy-jeff-gas-20050000/%5B1.340%5Dgetthepicture(USA-S1)19910000-Tish%26Ryan-Cassidy%26Jeff%5BGAS20050000%5D.mp4",
+            "seconds": 1478,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 102,
+            "ep": {
+              "season": 3,
+              "episode": 40
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
