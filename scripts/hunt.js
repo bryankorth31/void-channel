@@ -237,7 +237,8 @@ async function openItem(id, show, tv) {
     const secs = parseFloat(best.length) || 0;
     const nameHit = norm(g.stem).includes(core);
     vids.push({
-      name: g.stem, file: best.name, format: best.format, playable: PLAYABLE_FORMATS.has(best.format),
+      // File names can carry an uploader's address too; the url (built below from the raw name, @ as %40) is what plays.
+      name: noEmail(g.stem), file: noEmail(best.name), format: best.format, playable: PLAYABLE_FORMATS.has(best.format),
       seconds: Math.round(secs), band: runtimeBand(secs, tv), sizeMB: Math.round((+best.size || 0) / 1e6),
       nameHit, ep: parseEp(g.stem), url: `https://archive.org/download/${id}/${encodeURIComponent(best.name)}`,
     });

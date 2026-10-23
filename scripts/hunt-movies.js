@@ -107,7 +107,8 @@ async function openItem(id, m, get = getJson) {
     const best = group.find((f) => PLAYABLE.has(f.format) && f.source === 'original') || group.find((f) => PLAYABLE.has(f.format)) || group[0];
     const secs = parseFloat(best.length) || 0;
     const risk = codecRisk(best.name, best.format, PLAYABLE.has(best.format));
-    out.push({ item: id, itemTitle: itemTitle, stem, file: best.name, format: best.format, playable: !risk, codecRisk: risk || undefined, seconds: Math.round(secs), sizeMB: Math.round((+best.size || 0) / 1e6),
+    // File names can carry an uploader's address too; the url (built below from the raw name, @ as %40) is what plays.
+    out.push({ item: id, itemTitle: itemTitle, stem: noEmail(stem), file: noEmail(best.name), format: best.format, playable: !risk, codecRisk: risk || undefined, seconds: Math.round(secs), sizeMB: Math.round((+best.size || 0) / 1e6),
       band: runtimeBand(secs, m.runtime), fileSim: titleSim(stem.split('/').pop(), m.title), url: `https://archive.org/download/${id}/${encodeURIComponent(best.name)}` });
   }
   return { id, title: itemTitle, date: meta.date, files: out };
