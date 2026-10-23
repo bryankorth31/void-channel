@@ -20,6 +20,7 @@ const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
 const { LIVE, REVIEW, tagText, titleSim, itemScore, judgeFile, words } = require('./lib/moviejudge');
 const { hardExclude } = require('./lib/hardexclude');
+const { readCached, writeCached } = require('./lib/cachefile'); // search pages are kept gzipped
 // Free text copied from the Archive (descriptions, titles) or from TMDB (overviews) can carry an e-mail address. It is masked here, before
 // anything is written, so a hunt can never put an address into committed data (and publish never has to refuse for that reason).
 const noEmail = (s) => (typeof s === 'string' ? s.replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g, '[email]') : s);
@@ -48,14 +49,15 @@ const slug = (s) => norm(s).replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-
 
 async function getJson(url, cacheKey) {
   const cf = path.join(CACHE_DIR, cacheKey + '.json');
-  if (fs.existsSync(cf)) return JSON.parse(fs.readFileSync(cf, 'utf8'));
+  const cached = readCached(cf);
+  if (cached !== undefined) return cached;
   if (calls >= budget) throw new Error('budget exhausted');
   for (let attempt = 0; ; attempt++) {
     calls++;
     try {
       const res = await fetch(url, { signal: AbortSignal.timeout(60000), headers: { 'user-agent': 'voidtv-hunt/1 (offline catalog builder; one call at a time)' } });
       const text = await res.text();
-      if (res.ok && text.trim().startsWith('{')) { fs.mkdirSync(CACHE_DIR, { recursive: true }); fs.writeFileSync(cf, text); await sleep(PAUSE_MS); return JSON.parse(text); }
+      if (res.ok && text.trim().startsWith('{')) { fs.mkdirSync(CACHE_DIR, { recursive: true }); writeCached(cf, text); await sleep(PAUSE_MS); return JSON.parse(text); }
       throw new Error(`HTTP ${res.status}`);
     } catch (e) {
       if (attempt >= BACKOFF_MS.length) throw e;
@@ -162,7 +164,7 @@ function collectionLookup(cacheDir) {
     if (!seen.has(rec.tmdbId)) {
       const byItem = new Map();
       for (const k of ['mscrape-title-' + rec.tmdbId, 'mscrape-' + rec.tmdbId]) {
-        try { for (const it of JSON.parse(fs.readFileSync(path.join(cacheDir, k + '.json'), 'utf8')).items || []) if (!byItem.has(it.identifier)) byItem.set(it.identifier, it.collection); } catch (e) { /* page not on this PC */ }
+        try { for (const it of (readCached(path.join(cacheDir, k + '.json')) || {}).items || []) if (!byItem.has(it.identifier)) byItem.set(it.identifier, it.collection); } catch (e) { /* page not on this PC */ }
       }
       seen.set(rec.tmdbId, byItem);
       if (seen.size > 50) seen.delete(seen.keys().next().value);

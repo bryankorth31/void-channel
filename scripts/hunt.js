@@ -22,6 +22,7 @@ const { execFileSync } = require('child_process');
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
 const { nearNameGuard, rejectLine, saveRejected } = require('./lib/tvmazeguard');
+const { readCached, writeCached, cachedPath } = require('./lib/cachefile');
 // Archive uploaders are usually e-mail addresses: third-party personal data that must not be committed. The hunters keep
 // a short hash instead (first 12 hex characters of sha1 of the trimmed, lowercased address): enough to tell uploaders
 // apart (scripts/hunt.js candidates, scripts/scout.js via), not enough to read who they are.
@@ -66,7 +67,8 @@ let REFETCH = false;
 async function getJson(url, cacheKey) {
   const cf = cacheKey && path.join(CACHE_DIR, cacheKey + '.json');
   // --refetch ignores scrape pages older than 14 days, so a re-hunt can see what the Archive has gained since
-  if (cf && fs.existsSync(cf) && !(REFETCH && /^scrape-/.test(cacheKey) && Date.now() - fs.statSync(cf).mtimeMs > 14 * 864e5)) return JSON.parse(fs.readFileSync(cf, 'utf8'));
+  const have = cf && cachedPath(cf); // search pages are kept gzipped (scripts/lib/cachefile.js)
+  if (have && !(REFETCH && /^scrape-/.test(cacheKey) && Date.now() - fs.statSync(have).mtimeMs > 14 * 864e5)) return readCached(cf);
   if (calls >= budget) throw new Error('budget exhausted');
   for (let attempt = 0; ; attempt++) {
     calls++;
@@ -75,7 +77,7 @@ async function getJson(url, cacheKey) {
       const text = await res.text();
       if (res.ok && text.trim().startsWith('{')) {
         const j = JSON.parse(text);
-        if (cf) { fs.mkdirSync(CACHE_DIR, { recursive: true }); fs.writeFileSync(cf, text); }
+        if (cf) { fs.mkdirSync(CACHE_DIR, { recursive: true }); writeCached(cf, text); }
         await sleep(PAUSE_MS);
         return j;
       }

@@ -273,7 +273,13 @@ async function main() {
     if (/^meta-/.test(f) && st.mtimeMs < cutoff) { try { fs.unlinkSync(p); pruned++; continue; } catch (e) { /* locked */ } }
     cacheFiles++; cacheBytes += st.size;
   }
-  add('cache', cacheBytes > 8e9 ? 'yellow' : 'green', `${cacheFiles} files, ${(cacheBytes / 1e9).toFixed(1)} GB` + (pruned ? `, pruned ${pruned} stale metadata files` : ''), cacheBytes > 8e9 ? 'Old scrape pages can go: delete catalog/cache/scrape-* older than 60 days.' : undefined);
+  // The light follows the free disk, not a fixed cache size: the cache grows with the catalog, and its scrape pages save the Archive
+  // thousands of calls on the next hunt (the Archive throttles this address when hammered). A fixed 8 GB line went yellow on 23 Oct
+  // with 128 GB free and nothing old enough to delete.
+  let freeBytes = null; try { const s = fs.statfsSync(fs.existsSync(CACHE) ? CACHE : ROOT); freeBytes = s.bavail * s.bsize; } catch (e) { /* not on this node */ }
+  const lowDisk = freeBytes !== null && freeBytes < 50e9;
+  add('cache', lowDisk ? 'yellow' : 'green', `${cacheFiles} files, ${(cacheBytes / 1e9).toFixed(1)} GB` + (freeBytes !== null ? `; ${(freeBytes / 1e9).toFixed(0)} GB free on the disk` : '') + (pruned ? `, pruned ${pruned} stale metadata files` : ''),
+    lowDisk ? 'The disk is under 50 GB free. Archive search pages (catalog/cache/scrape-*, mscrape-*, scout-*) are the bulk and are fetched again when a hunt needs them: delete the oldest first, and not while a hunt runs (HQ > Jobs).' : undefined);
   try {
     const gitBytes = +run('powershell -NoProfile -Command "(Get-ChildItem -Recurse -Force .git | Measure-Object -Property Length -Sum).Sum"');
     const dirty = run('git status --porcelain -- catalog docs scripts/show-list.json').split('\n').filter(Boolean).length;

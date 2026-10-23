@@ -684,6 +684,17 @@ describe('doctor checks on the grids on disk (CP-004, CP-005)', () => {
       assert.match(r.detail, /27% of the grids \(3 of 11\) carry the matchedAt day 2026-10-18/);
     });
   });
+  test('sameDayCheck: a grid created on its stamp day is a new show, not a restamp', () => {
+    const today = new Date().toISOString().slice(0, 10);       // the files below are created today, so a stamp of today is their first day
+    withDir((dir) => {
+      for (let i = 0; i < 4; i++) put(dir, 'old' + i, live(1), { day: '2026-09-' + String(10 + i) });
+      for (let i = 0; i < 6; i++) put(dir, 'born' + i, live(1), { day: today });
+      const r = sameDayCheck({ showsDir: dir, now: Date.now() });
+      if (fs.statSync(path.join(dir, 'born0.json')).birthtime.toISOString().slice(0, 10) !== today) return; // no creation time on this file system: nothing to test
+      assert.deepEqual([r.warn, r.newGrids, r.grids], [false, 6, 10], 'six new grids in ten is growth, not a rewrite');
+      assert.match(r.detail, /6 grid\(s\) still on the day they were made not counted/);
+    });
+  });
   test('sameDayCheck: one day long past is history, not a rewrite; and the stamp is read without parsing the grid', () => {
     const now = Date.parse('2026-10-18T12:00:00Z');
     withDir((dir) => {

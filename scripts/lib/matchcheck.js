@@ -102,20 +102,29 @@ function sameDayCheck(opts = {}) {
   const dir = opts.showsDir || path.join(PROFILE.catalogDir, 'shows');
   const now = opts.now == null ? Date.now() : +opts.now;
   const maxAgeDays = opts.maxAgeDays == null ? 3 : opts.maxAgeDays;
-  const days = new Map(); let n = 0;
+  // A grid whose file was created on its stamp day still carries its first stamp, so it cannot be a restamp: a restamp puts a later
+  // day on an older file. Counting them read big hunts as rewrites (23 Oct: 2763 of the 2956 grids on the day were new shows).
+  // The writer rewrites a file in place, which keeps its creation time. Where the file system keeps no creation time, every grid
+  // counts as before. A fresh clone gives every file the clone day, so a restamp on that same day would not show.
+  const days = new Map(); const born = new Map(); let n = 0;
   const buf = Buffer.alloc(1200);
   for (const f of GRID_FILES(dir)) {
     let fd;
-    try { fd = fs.openSync(path.join(dir, f), 'r'); const len = fs.readSync(fd, buf, 0, buf.length, 0); const m = /"matchedAt"\s*:\s*"(\d{4}-\d\d-\d\d)/.exec(buf.toString('utf8', 0, len)); if (m) { n++; days.set(m[1], (days.get(m[1]) || 0) + 1); } } catch (e) { /* unreadable: the catalog check says so */ } finally { if (fd !== undefined) try { fs.closeSync(fd); } catch (e) { /* closed */ } }
+    try {
+      fd = fs.openSync(path.join(dir, f), 'r'); const len = fs.readSync(fd, buf, 0, buf.length, 0); const m = /"matchedAt"\s*:\s*"(\d{4}-\d\d-\d\d)/.exec(buf.toString('utf8', 0, len));
+      if (m) { n++; if (fs.fstatSync(fd).birthtime.toISOString().slice(0, 10) === m[1]) born.set(m[1], (born.get(m[1]) || 0) + 1); else days.set(m[1], (days.get(m[1]) || 0) + 1); }
+    } catch (e) { /* unreadable: the catalog check says so */ } finally { if (fd !== undefined) try { fs.closeSync(fd); } catch (e) { /* closed */ } }
   }
   const top = [...days.entries()].sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? 1 : -1))[0];
-  if (!top) return { warn: false, grids: 0, days: 0, detail: 'no matchedAt stamps to measure' };
+  if (!top) return { warn: false, grids: n, days: 0, newGrids: [...born.values()].reduce((a, b) => a + b, 0), detail: n ? 'every grid still carries the stamp of the day it was made' : 'no matchedAt stamps to measure' };
   const [day, count] = top;
   const share = count / n;
   const ageDays = Math.max(0, (now - Date.parse(day + 'T23:59:59Z')) / 864e5);
   const warn = share > 0.2 && ageDays <= maxAgeDays;
-  return { warn, grids: n, days: days.size, day, count, share: +share.toFixed(3), ageDays: +ageDays.toFixed(1), sameDay: share > 0.2,
-    detail: warn ? `${Math.round(share * 100)}% of the grids (${count} of ${n}) carry the matchedAt day ${day}: a run restamped them instead of leaving the unchanged ones alone` : `matchedAt spread over ${days.size} day(s), the most on ${day} (${Math.round(share * 100)}%)` };
+  const newGrids = [...born.values()].reduce((a, b) => a + b, 0);
+  const newNote = newGrids ? `; ${newGrids} grid(s) still on the day they were made not counted` : '';
+  return { warn, grids: n, days: days.size, day, count, newGrids, share: +share.toFixed(3), ageDays: +ageDays.toFixed(1), sameDay: share > 0.2,
+    detail: (warn ? `${Math.round(share * 100)}% of the grids (${count} of ${n}) carry the matchedAt day ${day}: a run restamped them instead of leaving the unchanged ones alone` : `matchedAt spread over ${days.size} day(s), the most on ${day} (${Math.round(share * 100)}%)`) + newNote };
 }
 
 // The doctor's "matcher" light in one call: red when a self-test fails, yellow when any of the three checks warns, green otherwise.
