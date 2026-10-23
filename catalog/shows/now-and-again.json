@@ -3,7 +3,8 @@
   "slug": "now-and-again",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "CBS",
-  "matchedAt": "2026-10-23T00:29:13.682Z",
+  "matchedAt": "2026-10-23T07:02:00.819Z",
+  "addedAt": "2026-10-23T07:02:00.820Z",
   "tvmaze": {
     "id": 2382,
     "name": "Now and Again",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 22,
-    "live": 0,
-    "review": 0,
-    "missing": 22,
-    "pct": 0
+    "live": 1,
+    "review": 14,
+    "missing": 7,
+    "pct": 68
   },
   "seasons": [
     {
@@ -26,64 +27,160 @@
           "number": 1,
           "name": "Origins",
           "airdate": "1999-09-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_01   101 Origin -Heather Matarazzo, John Goodman.mp4",
+            "name": "now_and_again_season_1_-_episode_01   101 Origin -Heather Matarazzo, John Goodman",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_01%20%20%20101%20Origin%20-Heather%20Matarazzo%2C%20John%20Goodman.mp4",
+            "seconds": 2593,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 118
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "On the Town",
           "airdate": "1999-10-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"On the Town\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_02   On The Town -  Dennis Haysbert from insurance comercials.mp4",
+            "name": "now_and_again_season_1_-_episode_02   On The Town -  Dennis Haysbert from insurance comercials",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_02%20%20%20On%20The%20Town%20-%20%20Dennis%20Haysbert%20from%20insurance%20comercials.mp4",
+            "seconds": 2588,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 137
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Over Easy",
           "airdate": "1999-10-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Over Easy\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_03   Over Easy.mp4",
+            "name": "now_and_again_season_1_-_episode_03   Over Easy",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_03%20%20%20Over%20Easy.mp4",
+            "seconds": 2557,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 145
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "One for the Money",
           "airdate": "1999-10-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"One for the Money\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_04   One For The Money.mp4",
+            "name": "now_and_again_season_1_-_episode_04   One For The Money",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_04%20%20%20One%20For%20The%20Money.mp4",
+            "seconds": 2537,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 128
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "The Insurance Man Always Rings Twice",
           "airdate": "1999-10-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Insurance Man Always Rings Twice\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_05   The Insurance Man Always Rings Twice__.mp4",
+            "name": "now_and_again_season_1_-_episode_05   The Insurance Man Always Rings Twice__",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_05%20%20%20The%20Insurance%20Man%20Always%20Rings%20Twice__.mp4",
+            "seconds": 2593,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 116
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Nothing to Fear, but Nothing to Fear",
           "airdate": "1999-11-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Nothing to Fear, but Nothing to Fear\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_06__Nothing to Fear But Nothing To Fear _.mp4",
+            "name": "now_and_again_season_1_-_episode_06__Nothing to Fear But Nothing To Fear _",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_06__Nothing%20to%20Fear%20But%20Nothing%20To%20Fear%20_.mp4",
+            "seconds": 2590,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 121
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "A Girl's Life",
           "airdate": "1999-11-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"A Girl's Life\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_07__A Girl's Life -GS Ian Somerhalder.mp4",
+            "name": "now_and_again_season_1_-_episode_07__A Girl's Life -GS Ian Somerhalder",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_07__A%20Girl's%20Life%20-GS%20Ian%20Somerhalder.mp4",
+            "seconds": 2586,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 120
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Pulp Turkey",
           "airdate": "1999-11-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Pulp Turkey\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_08 Pulp Turkey _-Margaret Colin _eleanor waldorf actress in this too.mp4",
+            "name": "now_and_again_season_1_-_episode_08 Pulp Turkey _-Margaret Colin _eleanor waldorf actress in this too",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_08%20Pulp%20Turkey%20_-Margaret%20Colin%20_eleanor%20waldorf%20actress%20in%20this%20too.mp4",
+            "seconds": 2587,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 130
+          },
           "alternates": []
         },
         {
@@ -98,8 +195,20 @@
           "number": 10,
           "name": "I've Grown Accustomed to His Face",
           "airdate": "1999-12-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"I've Grown Accustomed to His Face\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_10   I've Grown Accustomed To His Face (aired Dec 17, 1999).mp4",
+            "name": "now_and_again_season_1_-_episode_10   I've Grown Accustomed To His Face (aired Dec 17, 1999)",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_10%20%20%20I've%20Grown%20Accustomed%20To%20His%20Face%20(aired%20Dec%2017%2C%201999).mp4",
+            "seconds": 2571,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 140
+          },
           "alternates": []
         },
         {
@@ -114,16 +223,40 @@
           "number": 12,
           "name": "Disco Inferno",
           "airdate": "2000-01-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Disco Inferno\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_12   Disco Inferno _Eric Close.mp4",
+            "name": "now_and_again_season_1_-_episode_12   Disco Inferno _Eric Close",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_12%20%20%20Disco%20Inferno%20_Eric%20Close.mp4",
+            "seconds": 2553,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 118
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "I Am the Greatest",
           "airdate": "2000-01-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"I Am the Greatest\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_13_ I Am The Greatest.mp4",
+            "name": "now_and_again_season_1_-_episode_13_ I Am The Greatest",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_13_%20I%20Am%20The%20Greatest.mp4",
+            "seconds": 2523,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 136
+          },
           "alternates": []
         },
         {
@@ -146,16 +279,40 @@
           "number": 16,
           "name": "Everybody Who's Anybody",
           "airdate": "2000-02-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Everybody Who's Anybody\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_16_Everybody Who's Anybody.mp4",
+            "name": "now_and_again_season_1_-_episode_16_Everybody Who's Anybody",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_16_Everybody%20Who's%20Anybody.mp4",
+            "seconds": 2522,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 129
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "Boy Wonder",
           "airdate": "2000-03-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Boy Wonder\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_17   Boy Wonder ___blurrier.mp4",
+            "name": "now_and_again_season_1_-_episode_17   Boy Wonder ___blurrier",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_17%20%20%20Boy%20Wonder%20___blurrier.mp4",
+            "seconds": 2675,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 227
+          },
           "alternates": []
         },
         {
@@ -178,8 +335,20 @@
           "number": 20,
           "name": "The Bugmeister",
           "airdate": "2000-04-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Bugmeister\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_21__The Bugmeister Part Bee.mp4",
+            "name": "now_and_again_season_1_-_episode_21__The Bugmeister Part Bee",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_21__The%20Bugmeister%20Part%20Bee.mp4",
+            "seconds": 2575,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 136
+          },
           "alternates": []
         },
         {
@@ -194,8 +363,20 @@
           "number": 22,
           "name": "The Eggman Cometh",
           "airdate": "2000-05-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Eggman Cometh\" (0.95)",
+            "item": "now-and-again-1999-2000",
+            "itemTitle": "Now And Again (1999-2000) -all 22 eps - H.Matarazzo",
+            "file": "now_and_again_season_1_-_episode_22   The Eggman Cometh.mp4",
+            "name": "now_and_again_season_1_-_episode_22   The Eggman Cometh",
+            "url": "https://archive.org/download/now-and-again-1999-2000/now_and_again_season_1_-_episode_22%20%20%20The%20Eggman%20Cometh.mp4",
+            "seconds": 2595,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 132
+          },
           "alternates": []
         }
       ]

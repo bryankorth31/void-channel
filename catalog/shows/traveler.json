@@ -1,0 +1,119 @@
+{
+  "show": "Traveler",
+  "slug": "traveler",
+  "type": "Drama",
+  "network": "ABC",
+  "matchedAt": "2026-10-23T15:43:29.759Z",
+  "addedAt": "2026-10-23T15:43:29.760Z",
+  "tvmaze": {
+    "id": 2025,
+    "name": "Traveler",
+    "runtime": 60,
+    "premiered": "2007-05-10",
+    "network": "ABC"
+  },
+  "coverage": {
+    "total": 8,
+    "live": 1,
+    "review": 0,
+    "missing": 7,
+    "pct": 13
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Pilot",
+          "airdate": "2007-05-10",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "traveler-2007",
+            "itemTitle": "Traveler (2007) Matt Bomer - Thriller Drama ABC",
+            "file": "Traveler (2007) 1x01 Season One episode 1 (Pilot) - yt channel The TV Central.mp4",
+            "name": "Traveler (2007) 1x01 Season One episode 1 (Pilot) - yt channel The TV Central",
+            "url": "https://archive.org/download/traveler-2007/Traveler%20(2007)%201x01%20Season%20One%20episode%201%20(Pilot)%20-%20yt%20channel%20The%20TV%20Central.mp4",
+            "seconds": 2532,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 522
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "2_20251115_20251115_1832",
+              "itemTitle": "Traveler",
+              "file": "Traveler S01E01 Pilot.mp4",
+              "name": "Traveler S01E01 Pilot",
+              "url": "https://archive.org/download/2_20251115_20251115_1832/Traveler%20S01E01%20Pilot.mp4",
+              "seconds": 2532,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 427
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "The Retreat",
+          "airdate": "2007-05-30",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "New Haven",
+          "airdate": "2007-06-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Out",
+          "airdate": "2007-06-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "The Tells",
+          "airdate": "2007-06-20",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "The Trader",
+          "airdate": "2007-06-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "The Reunion",
+          "airdate": "2007-07-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "The Exchange",
+          "airdate": "2007-07-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "show": "Totally Outrageous Behavior",
+  "slug": "totally-outrageous-behavior",
+  "type": "2000s and Later Sitcoms",
+  "network": "FOX",
+  "matchedAt": "2026-10-23T03:00:13.424Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Totally Outrageous Behavior",
+    "runtime": null,
+    "premiered": null,
+    "network": "FOX"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "totally-outrageous-behavior-episode-1-1",
+            "itemTitle": "Totally Outrageous Behavior Episode 1",
+            "file": "Totally Outrageous Behavior Episode 1(1).mp4",
+            "name": "Totally Outrageous Behavior Episode 1(1)",
+            "url": "https://archive.org/download/totally-outrageous-behavior-episode-1-1/Totally%20Outrageous%20Behavior%20Episode%201(1).mp4",
+            "seconds": 1230,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1490,
+            "ep": {
+              "season": null,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "one angry ram",
+          "state": "REVIEW",
+          "file": {
+            "item": "totally-outrageous-behavior-one-angry-ram",
+            "itemTitle": "Totally Outrageous Behavior | FULL EPISODES",
+            "file": "Totally Outrageous Behavior - One Angry Ram.mp4",
+            "name": "Totally Outrageous Behavior - One Angry Ram",
+            "url": "https://archive.org/download/totally-outrageous-behavior-one-angry-ram/Totally%20Outrageous%20Behavior%20-%20One%20Angry%20Ram.mp4",
+            "seconds": 1230,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 273,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

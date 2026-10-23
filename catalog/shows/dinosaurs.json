@@ -3,7 +3,7 @@
   "slug": "dinosaurs",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "ABC",
-  "matchedAt": "2026-10-23T01:13:00.824Z",
+  "matchedAt": "2026-10-23T07:17:42.942Z",
   "addedAt": "2026-10-23T01:13:00.824Z",
   "tvmaze": {
     "id": 5987,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 65,
-    "live": 0,
-    "review": 6,
+    "live": 3,
+    "review": 3,
     "missing": 59,
     "pct": 9
   },
@@ -27,61 +27,116 @@
           "number": 1,
           "name": "The Mighty Megalosaurus",
           "airdate": "1991-04-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "walking-with-dinosaurs",
-            "itemTitle": "Walking with Dinosaurs (1999)",
-            "file": "Episode 1 - New Blood.mp4",
-            "name": "Episode 1 - New Blood",
-            "url": "https://archive.org/download/walking-with-dinosaurs/Episode%201%20-%20New%20Blood.mp4",
-            "seconds": 1757,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "sea-monsters-a-walking-with-dinosaurs-trilogy",
+            "itemTitle": "Sea Monsters - A Walking With Dinosaurs Trilogy ( 2003)",
+            "file": "Sea Monsters - A Walking with Dinosaurs Trilogy (2003) - Dangerous Seas - S01E01.m4v",
+            "name": "Sea Monsters - A Walking with Dinosaurs Trilogy (2003) - Dangerous Seas - S01E01",
+            "url": "https://archive.org/download/sea-monsters-a-walking-with-dinosaurs-trilogy/Sea%20Monsters%20-%20A%20Walking%20with%20Dinosaurs%20Trilogy%20(2003)%20-%20Dangerous%20Seas%20-%20S01E01.m4v",
+            "seconds": 1750,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 957
+            "sizeMB": 1384
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "walking-with-dinosaurs",
+              "itemTitle": "Walking with Dinosaurs (1999)",
+              "file": "Episode 1 - New Blood.mp4",
+              "name": "Episode 1 - New Blood",
+              "url": "https://archive.org/download/walking-with-dinosaurs/Episode%201%20-%20New%20Blood.mp4",
+              "seconds": 1757,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 957
+            },
+            {
+              "conf": 0.55,
+              "why": "absolute episode number",
+              "item": "deadly-dinosaurs-03-king-of-the-killers-2018",
+              "itemTitle": "BBC Steve Backshall Folder",
+              "file": "BBC Nature's Greatest Dancers Ep 1 of 2 A Dance for Love (Steve Backshall) (2015).mp4",
+              "name": "BBC Nature's Greatest Dancers Ep 1 of 2 A Dance for Love (Steve Backshall) (2015)",
+              "url": "https://archive.org/download/deadly-dinosaurs-03-king-of-the-killers-2018/BBC%20Nature's%20Greatest%20Dancers%20Ep%201%20of%202%20A%20Dance%20for%20Love%20(Steve%20Backshall)%20(2015).mp4",
+              "seconds": 3477,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 345
+            }
+          ]
         },
         {
           "number": 2,
           "name": "The Mating Dance",
           "airdate": "1991-05-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "walking-with-dinosaurs",
-            "itemTitle": "Walking with Dinosaurs (1999)",
-            "file": "Episode 2 - A Time of the Titans.mp4",
-            "name": "Episode 2 - A Time of the Titans",
-            "url": "https://archive.org/download/walking-with-dinosaurs/Episode%202%20-%20A%20Time%20of%20the%20Titans.mp4",
-            "seconds": 1737,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "sea-monsters-a-walking-with-dinosaurs-trilogy",
+            "itemTitle": "Sea Monsters - A Walking With Dinosaurs Trilogy ( 2003)",
+            "file": "Sea Monsters - A Walking with Dinosaurs Trilogy (2003) - Into the Jaws of Death - S01E02.m4v",
+            "name": "Sea Monsters - A Walking with Dinosaurs Trilogy (2003) - Into the Jaws of Death - S01E02",
+            "url": "https://archive.org/download/sea-monsters-a-walking-with-dinosaurs-trilogy/Sea%20Monsters%20-%20A%20Walking%20with%20Dinosaurs%20Trilogy%20(2003)%20-%20Into%20the%20Jaws%20of%20Death%20-%20S01E02.m4v",
+            "seconds": 1750,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 953
+            "sizeMB": 1406
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "walking-with-dinosaurs",
+              "itemTitle": "Walking with Dinosaurs (1999)",
+              "file": "Episode 2 - A Time of the Titans.mp4",
+              "name": "Episode 2 - A Time of the Titans",
+              "url": "https://archive.org/download/walking-with-dinosaurs/Episode%202%20-%20A%20Time%20of%20the%20Titans.mp4",
+              "seconds": 1737,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 953
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Hurling Day",
           "airdate": "1991-05-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "walking-with-dinosaurs",
-            "itemTitle": "Walking with Dinosaurs (1999)",
-            "file": "Episode 3 - Cruel Sea.mp4",
-            "name": "Episode 3 - Cruel Sea",
-            "url": "https://archive.org/download/walking-with-dinosaurs/Episode%203%20-%20Cruel%20Sea.mp4",
-            "seconds": 1728,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "sea-monsters-a-walking-with-dinosaurs-trilogy",
+            "itemTitle": "Sea Monsters - A Walking With Dinosaurs Trilogy ( 2003)",
+            "file": "Sea Monsters - A Walking with Dinosaurs Trilogy (2003) - To Hell and Back - S01E03.m4v",
+            "name": "Sea Monsters - A Walking with Dinosaurs Trilogy (2003) - To Hell and Back - S01E03",
+            "url": "https://archive.org/download/sea-monsters-a-walking-with-dinosaurs-trilogy/Sea%20Monsters%20-%20A%20Walking%20with%20Dinosaurs%20Trilogy%20(2003)%20-%20To%20Hell%20and%20Back%20-%20S01E03.m4v",
+            "seconds": 1750,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 935
+            "sizeMB": 1339
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.65,
+              "why": "absolute episode number",
+              "item": "walking-with-dinosaurs",
+              "itemTitle": "Walking with Dinosaurs (1999)",
+              "file": "Episode 3 - Cruel Sea.mp4",
+              "name": "Episode 3 - Cruel Sea",
+              "url": "https://archive.org/download/walking-with-dinosaurs/Episode%203%20-%20Cruel%20Sea.mp4",
+              "seconds": 1728,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 935
+            }
+          ]
         },
         {
           "number": 4,

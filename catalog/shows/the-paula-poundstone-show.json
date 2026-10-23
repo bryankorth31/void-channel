@@ -1,0 +1,69 @@
+{
+  "show": "The Paula Poundstone Show",
+  "slug": "the-paula-poundstone-show",
+  "type": "Reality & Talk",
+  "network": "HBO",
+  "matchedAt": "2026-10-23T08:17:30.287Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "The Paula Poundstone Show",
+    "runtime": null,
+    "premiered": null,
+    "network": "HBO"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "the 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-paula-poundstone-show-1.1",
+            "itemTitle": "The Paula Poundstone Show - Paula Poundstone",
+            "file": "The Paula Poundstone Show - 1.1.ia.mp4",
+            "name": "The Paula Poundstone Show - 1",
+            "url": "https://archive.org/download/the-paula-poundstone-show-1.1/The%20Paula%20Poundstone%20Show%20-%201.1.ia.mp4",
+            "seconds": 2654,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 2201,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "the 1 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "the-paula-poundstone-show-1.1",
+            "itemTitle": "The Paula Poundstone Show - Paula Poundstone",
+            "file": "The Paula Poundstone Show - 1.1.mp4",
+            "name": "The Paula Poundstone Show - 1.1",
+            "url": "https://archive.org/download/the-paula-poundstone-show-1.1/The%20Paula%20Poundstone%20Show%20-%201.1.mp4",
+            "seconds": 2654,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2201,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

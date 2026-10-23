@@ -3,7 +3,7 @@
   "slug": "birds-of-prey",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "The WB",
-  "matchedAt": "2026-10-23T00:44:04.385Z",
+  "matchedAt": "2026-10-23T07:08:29.809Z",
   "addedAt": "2026-10-23T00:44:04.385Z",
   "tvmaze": {
     "id": 480,
@@ -29,19 +29,32 @@
           "airdate": "2002-10-09",
           "state": "REVIEW",
           "file": {
-            "conf": 0.75,
+            "conf": 0.8,
             "why": "title ~ \"Pilot\" (0.95)",
-            "item": "birds-of-prey-dc-tv-series-2002",
-            "itemTitle": "Birds of Prey (TV series)",
-            "file": "00.Pilot (Unared).mp4",
-            "name": "00.Pilot (Unared)",
-            "url": "https://archive.org/download/birds-of-prey-dc-tv-series-2002/00.Pilot%20(Unared).mp4",
+            "item": "birds-of-prey-2002-2003-t-01-e-00-unaired-pilot-2002",
+            "itemTitle": "Birds Of Prey T 01 E 00 Unaired Pilot ( 2002)",
+            "file": "Birds of Prey (2002–2003) T01 E00 Unaired Pilot (2002).mp4",
+            "name": "Birds of Prey (2002–2003) T01 E00 Unaired Pilot (2002)",
+            "url": "https://archive.org/download/birds-of-prey-2002-2003-t-01-e-00-unaired-pilot-2002/Birds%20of%20Prey%20(2002%E2%80%932003)%20T01%20E00%20Unaired%20Pilot%20(2002).mp4",
             "seconds": 2996,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 263
+            "sizeMB": 231
           },
           "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Pilot\" (0.95)",
+              "item": "birds-of-prey-dc-tv-series-2002",
+              "itemTitle": "Birds of Prey (TV series)",
+              "file": "00.Pilot (Unared).mp4",
+              "name": "00.Pilot (Unared)",
+              "url": "https://archive.org/download/birds-of-prey-dc-tv-series-2002/00.Pilot%20(Unared).mp4",
+              "seconds": 2996,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 263
+            },
             {
               "conf": 0.75,
               "why": "title ~ \"Pilot\" (0.95)",

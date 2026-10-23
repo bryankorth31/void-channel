@@ -1,0 +1,69 @@
+{
+  "show": "A Wedding Story",
+  "slug": "a-wedding-story",
+  "type": "Reality & Talk",
+  "network": "TLC",
+  "matchedAt": "2026-10-23T06:51:32.192Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "A Wedding Story",
+    "runtime": null,
+    "premiered": null,
+    "network": "TLC"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "acidplanet-audio-00821828",
+            "itemTitle": "A Wedding Story",
+            "file": "00821828.mp4",
+            "name": "00821828",
+            "url": "https://archive.org/download/acidplanet-audio-00821828/00821828.mp4",
+            "seconds": 538,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 55,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "momanddad",
+          "state": "REVIEW",
+          "file": {
+            "item": "AWeddingStory-1960",
+            "itemTitle": "A Wedding Story",
+            "file": "momanddad.ogv",
+            "name": "momanddad",
+            "url": "https://archive.org/download/AWeddingStory-1960/momanddad.ogv",
+            "seconds": 367,
+            "format": "Ogg Video",
+            "playable": true,
+            "sizeMB": 15,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

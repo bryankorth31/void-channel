@@ -3,19 +3,19 @@
   "slug": "prehistoric-park",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "ITV",
-  "matchedAt": "2026-10-23T00:35:20.057Z",
-  "addedAt": "2026-10-23T00:35:20.057Z",
+  "matchedAt": "2026-10-23T07:05:12.916Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 9399,
+    "id": null,
     "name": "Prehistoric Park",
-    "runtime": 60,
-    "premiered": "2006-07-22",
-    "network": "ITV1"
+    "runtime": null,
+    "premiered": null,
+    "network": "ITV"
   },
   "coverage": {
-    "total": 6,
-    "live": 5,
-    "review": 1,
+    "total": 27,
+    "live": 0,
+    "review": 27,
     "missing": 0,
     "pct": 100
   },
@@ -25,312 +25,387 @@
       "episodes": [
         {
           "number": 1,
-          "name": "T-Rex Returns",
-          "airdate": "2006-07-22",
-          "state": "LIVE",
+          "name": "Episode 1",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "absolute episode number + title match",
-            "item": "PrehistoricPark",
-            "itemTitle": "Prehistoric Park [576p quality]",
-            "file": "Prehistoric Park Episode 1 - T. Rex Returns.mp4",
-            "name": "Prehistoric Park Episode 1 - T. Rex Returns",
-            "url": "https://archive.org/download/PrehistoricPark/Prehistoric%20Park%20Episode%201%20-%20T.%20Rex%20Returns.mp4",
-            "seconds": 2892,
+            "item": "Prehistoric_Park_DVD",
+            "itemTitle": "Prehistoric Park 1080p DVD Upscaled",
+            "file": "ep1.mp4",
+            "name": "ep1",
+            "url": "https://archive.org/download/Prehistoric_Park_DVD/ep1.mp4",
+            "seconds": 2889,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1034
+            "sizeMB": 3839,
+            "ep": {
+              "season": null,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.95,
-              "why": "absolute episode number + title match",
-              "item": "prehistoric-park-season-1",
-              "itemTitle": "Prehistoric Park Season 1",
-              "file": "Episode 1 - T. Rex Returns.mp4",
-              "name": "Episode 1 - T. Rex Returns",
-              "url": "https://archive.org/download/prehistoric-park-season-1/Episode%201%20-%20T.%20Rex%20Returns.mp4",
-              "seconds": 2892,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1034
-            },
-            {
-              "conf": 0.8,
-              "why": "absolute episode number + title match",
-              "item": "prehistoric-park-us-version",
-              "itemTitle": "Prehistoric Park (US Version)",
-              "file": "Episode 1 T-rex.mp4",
-              "name": "Episode 1 T-rex",
-              "url": "https://archive.org/download/prehistoric-park-us-version/Episode%201%20T-rex.mp4",
-              "seconds": 2556,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 487
-            },
-            {
-              "conf": 0.8,
-              "why": "absolute episode number + title match",
-              "item": "ep-1-il-ritorno-del-t-rex",
-              "itemTitle": "Prehistoric Park - Ep 1: Il Ritorno Del T-Rex HD ITA",
-              "file": "Ep 1 - Il Ritorno del T-rex.mp4",
-              "name": "Ep 1 - Il Ritorno del T-rex",
-              "url": "https://archive.org/download/ep-1-il-ritorno-del-t-rex/Ep%201%20-%20Il%20Ritorno%20del%20T-rex.mp4",
-              "seconds": 2890,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 292
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
-          "name": "A Mammoth Undertaking",
-          "airdate": "2006-07-29",
-          "state": "LIVE",
+          "name": "Episode 2",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "absolute episode number + title match",
-            "item": "PrehistoricPark",
-            "itemTitle": "Prehistoric Park [576p quality]",
-            "file": "Prehistoric Park Episode 2 - A Mammoth Undertaking.mp4",
-            "name": "Prehistoric Park Episode 2 - A Mammoth Undertaking",
-            "url": "https://archive.org/download/PrehistoricPark/Prehistoric%20Park%20Episode%202%20-%20A%20Mammoth%20Undertaking.mp4",
-            "seconds": 2892,
+            "item": "Prehistoric_Park_DVD",
+            "itemTitle": "Prehistoric Park 1080p DVD Upscaled",
+            "file": "ep2.mp4",
+            "name": "ep2",
+            "url": "https://archive.org/download/Prehistoric_Park_DVD/ep2.mp4",
+            "seconds": 2888,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 827
+            "sizeMB": 3853,
+            "ep": {
+              "season": null,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.95,
-              "why": "absolute episode number + title match",
-              "item": "prehistoric-park-season-1",
-              "itemTitle": "Prehistoric Park Season 1",
-              "file": "Episode 2 - A Mammoth Undertaking.mp4",
-              "name": "Episode 2 - A Mammoth Undertaking",
-              "url": "https://archive.org/download/prehistoric-park-season-1/Episode%202%20-%20A%20Mammoth%20Undertaking.mp4",
-              "seconds": 2892,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 827
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"A Mammoth Undertaking\" (0.95)",
-              "item": "2006-prehistoric-park-e-01-t.-rex-returns",
-              "itemTitle": "Prehistoric Park (2006) 1080p & 720p",
-              "file": "2006 Prehistoric Park E02 A Mammoth Undertaking.mp4",
-              "name": "2006 Prehistoric Park E02 A Mammoth Undertaking",
-              "url": "https://archive.org/download/2006-prehistoric-park-e-01-t.-rex-returns/2006%20Prehistoric%20Park%20E02%20A%20Mammoth%20Undertaking.mp4",
-              "seconds": 2893,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 542
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "prehistoric-park-us-version",
-              "itemTitle": "Prehistoric Park (US Version)",
-              "file": "Episode 2 Mammoth.mp4",
-              "name": "Episode 2 Mammoth",
-              "url": "https://archive.org/download/prehistoric-park-us-version/Episode%202%20Mammoth.mp4",
-              "seconds": 2553,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 425
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
-          "name": "DinoBirds",
-          "airdate": "2006-08-05",
-          "state": "LIVE",
+          "name": "Episode 3",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "absolute episode number + title match",
-            "item": "PrehistoricPark",
-            "itemTitle": "Prehistoric Park [576p quality]",
-            "file": "Prehistoric Park Episode 3 - Dino-Birds.mp4",
-            "name": "Prehistoric Park Episode 3 - Dino-Birds",
-            "url": "https://archive.org/download/PrehistoricPark/Prehistoric%20Park%20Episode%203%20-%20Dino-Birds.mp4",
-            "seconds": 2890,
+            "item": "Prehistoric_Park_DVD",
+            "itemTitle": "Prehistoric Park 1080p DVD Upscaled",
+            "file": "ep3.mp4",
+            "name": "ep3",
+            "url": "https://archive.org/download/Prehistoric_Park_DVD/ep3.mp4",
+            "seconds": 2887,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1137
+            "sizeMB": 3832,
+            "ep": {
+              "season": null,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.95,
-              "why": "absolute episode number + title match",
-              "item": "prehistoric-park-season-1",
-              "itemTitle": "Prehistoric Park Season 1",
-              "file": "Episode 3 - Dino-Birds.mp4",
-              "name": "Episode 3 - Dino-Birds",
-              "url": "https://archive.org/download/prehistoric-park-season-1/Episode%203%20-%20Dino-Birds.mp4",
-              "seconds": 2890,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1137
-            },
-            {
-              "conf": 0.95,
-              "why": "absolute episode number + title match",
-              "item": "prehistoric-park-us-version",
-              "itemTitle": "Prehistoric Park (US Version)",
-              "file": "Episode 3 Dino Bird.mp4",
-              "name": "Episode 3 Dino Bird",
-              "url": "https://archive.org/download/prehistoric-park-us-version/Episode%203%20Dino%20Bird.mp4",
-              "seconds": 2547,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 492
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"DinoBirds\" (0.95)",
-              "item": "2006-prehistoric-park-e-01-t.-rex-returns",
-              "itemTitle": "Prehistoric Park (2006) 1080p & 720p",
-              "file": "2006 Prehistoric Park E03 Dinobirds.mp4",
-              "name": "2006 Prehistoric Park E03 Dinobirds",
-              "url": "https://archive.org/download/2006-prehistoric-park-e-01-t.-rex-returns/2006%20Prehistoric%20Park%20E03%20Dinobirds.mp4",
-              "seconds": 2869,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 641
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
-          "name": "Saving the Sabretooth",
-          "airdate": "2006-08-12",
-          "state": "LIVE",
+          "name": "Episode 4",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "absolute episode number + title match",
-            "item": "PrehistoricPark",
-            "itemTitle": "Prehistoric Park [576p quality]",
-            "file": "Prehistoric Park Episode 4 - Saving the Sebretooth.mp4",
-            "name": "Prehistoric Park Episode 4 - Saving the Sebretooth",
-            "url": "https://archive.org/download/PrehistoricPark/Prehistoric%20Park%20Episode%204%20-%20Saving%20the%20Sebretooth.mp4",
-            "seconds": 2892,
+            "item": "Prehistoric_Park_DVD",
+            "itemTitle": "Prehistoric Park 1080p DVD Upscaled",
+            "file": "ep4.mp4",
+            "name": "ep4",
+            "url": "https://archive.org/download/Prehistoric_Park_DVD/ep4.mp4",
+            "seconds": 2894,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1159
+            "sizeMB": 3837,
+            "ep": {
+              "season": null,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.95,
-              "why": "absolute episode number + title match",
-              "item": "prehistoric-park-season-1",
-              "itemTitle": "Prehistoric Park Season 1",
-              "file": "Episode 4 - Saving the Sebretooth.mp4",
-              "name": "Episode 4 - Saving the Sebretooth",
-              "url": "https://archive.org/download/prehistoric-park-season-1/Episode%204%20-%20Saving%20the%20Sebretooth.mp4",
-              "seconds": 2892,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1159
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Saving the Sabretooth\" (0.95)",
-              "item": "2006-prehistoric-park-e-01-t.-rex-returns",
-              "itemTitle": "Prehistoric Park (2006) 1080p & 720p",
-              "file": "2006 Prehistoric Park E04 Saving the Sabretooth.mp4",
-              "name": "2006 Prehistoric Park E04 Saving the Sabretooth",
-              "url": "https://archive.org/download/2006-prehistoric-park-e-01-t.-rex-returns/2006%20Prehistoric%20Park%20E04%20Saving%20the%20Sabretooth.mp4",
-              "seconds": 3109,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 682
-            },
-            {
-              "conf": 0.8,
-              "why": "absolute episode number + title match",
-              "item": "prehistoric-park-us-version",
-              "itemTitle": "Prehistoric Park (US Version)",
-              "file": "Episode 4 Sabre Tooth.mp4",
-              "name": "Episode 4 Sabre Tooth",
-              "url": "https://archive.org/download/prehistoric-park-us-version/Episode%204%20Sabre%20Tooth.mp4",
-              "seconds": 2561,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 509
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
-          "name": "The Bug House",
-          "airdate": "2006-08-19",
-          "state": "LIVE",
+          "name": "Episode 5",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
-            "why": "absolute episode number + title match",
-            "item": "PrehistoricPark",
-            "itemTitle": "Prehistoric Park [576p quality]",
-            "file": "Prehistoric Park Episode 5 - The Bug House.mp4",
-            "name": "Prehistoric Park Episode 5 - The Bug House",
-            "url": "https://archive.org/download/PrehistoricPark/Prehistoric%20Park%20Episode%205%20-%20The%20Bug%20House.mp4",
-            "seconds": 2892,
+            "item": "Prehistoric_Park_DVD",
+            "itemTitle": "Prehistoric Park 1080p DVD Upscaled",
+            "file": "ep5.mp4",
+            "name": "ep5",
+            "url": "https://archive.org/download/Prehistoric_Park_DVD/ep5.mp4",
+            "seconds": 2893,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 943
+            "sizeMB": 3842,
+            "ep": {
+              "season": null,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.95,
-              "why": "absolute episode number + title match",
-              "item": "prehistoric-park-season-1",
-              "itemTitle": "Prehistoric Park Season 1",
-              "file": "Episode 5 - The Bug House.mp4",
-              "name": "Episode 5 - The Bug House",
-              "url": "https://archive.org/download/prehistoric-park-season-1/Episode%205%20-%20The%20Bug%20House.mp4",
-              "seconds": 2892,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 943
-            },
-            {
-              "conf": 0.95,
-              "why": "absolute episode number + title match",
-              "item": "prehistoric-park-us-version",
-              "itemTitle": "Prehistoric Park (US Version)",
-              "file": "Episode 5 Bug House.mp4",
-              "name": "Episode 5 Bug House",
-              "url": "https://archive.org/download/prehistoric-park-us-version/Episode%205%20Bug%20House.mp4",
-              "seconds": 2553,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 456
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Bug House\" (0.95)",
-              "item": "2006-prehistoric-park-e-01-t.-rex-returns",
-              "itemTitle": "Prehistoric Park (2006) 1080p & 720p",
-              "file": "2006 Prehistoric Park E05 The Bug House.mp4",
-              "name": "2006 Prehistoric Park E05 The Bug House",
-              "url": "https://archive.org/download/2006-prehistoric-park-e-01-t.-rex-returns/2006%20Prehistoric%20Park%20E05%20The%20Bug%20House.mp4",
-              "seconds": 3130,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 679
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
-          "name": "SuperCroc",
-          "airdate": "2006-08-26",
+          "name": "Episode 6",
           "state": "REVIEW",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"SuperCroc\" (0.95)",
+            "item": "Prehistoric_Park_DVD",
+            "itemTitle": "Prehistoric Park 1080p DVD Upscaled",
+            "file": "ep6.mp4",
+            "name": "ep6",
+            "url": "https://archive.org/download/Prehistoric_Park_DVD/ep6.mp4",
+            "seconds": 2895,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3841,
+            "ep": {
+              "season": null,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "1 t rex",
+          "state": "REVIEW",
+          "file": {
+            "item": "PrehistoricParkBBCAnimalPlanet2006",
+            "itemTitle": "Prehistoric Park (2006 TV series)",
+            "file": "(1) T-Rex.mp4",
+            "name": "(1) T-Rex",
+            "url": "https://archive.org/download/PrehistoricParkBBCAnimalPlanet2006/(1)%20T-Rex.mp4",
+            "seconds": 2884,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 943,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "2 mammoth",
+          "state": "REVIEW",
+          "file": {
+            "item": "PrehistoricParkBBCAnimalPlanet2006",
+            "itemTitle": "Prehistoric Park (2006 TV series)",
+            "file": "(2) Mammoth.mp4",
+            "name": "(2) Mammoth",
+            "url": "https://archive.org/download/PrehistoricParkBBCAnimalPlanet2006/(2)%20Mammoth.mp4",
+            "seconds": 2883,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 949,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "3 bird house",
+          "state": "REVIEW",
+          "file": {
+            "item": "PrehistoricParkBBCAnimalPlanet2006",
+            "itemTitle": "Prehistoric Park (2006 TV series)",
+            "file": "(3) Bird House.mp4",
+            "name": "(3) Bird House",
+            "url": "https://archive.org/download/PrehistoricParkBBCAnimalPlanet2006/(3)%20Bird%20House.mp4",
+            "seconds": 2882,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 937,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "4 sabre tooth",
+          "state": "REVIEW",
+          "file": {
+            "item": "PrehistoricParkBBCAnimalPlanet2006",
+            "itemTitle": "Prehistoric Park (2006 TV series)",
+            "file": "(4) Sabre Tooth.mp4",
+            "name": "(4) Sabre Tooth",
+            "url": "https://archive.org/download/PrehistoricParkBBCAnimalPlanet2006/(4)%20Sabre%20Tooth.mp4",
+            "seconds": 2889,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 937,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "5 insects",
+          "state": "REVIEW",
+          "file": {
+            "item": "PrehistoricParkBBCAnimalPlanet2006",
+            "itemTitle": "Prehistoric Park (2006 TV series)",
+            "file": "(5) Insects.mp4",
+            "name": "(5) Insects",
+            "url": "https://archive.org/download/PrehistoricParkBBCAnimalPlanet2006/(5)%20Insects.mp4",
+            "seconds": 2889,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 934,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "6 giant croc",
+          "state": "REVIEW",
+          "file": {
+            "item": "PrehistoricParkBBCAnimalPlanet2006",
+            "itemTitle": "Prehistoric Park (2006 TV series)",
+            "file": "(6) Giant Croc.mp4",
+            "name": "(6) Giant Croc",
+            "url": "https://archive.org/download/PrehistoricParkBBCAnimalPlanet2006/(6)%20Giant%20Croc.mp4",
+            "seconds": 2891,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 939,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Episode 13",
+          "state": "REVIEW",
+          "file": {
+            "item": "2006-prehistoric-park-e-01-t.-rex-returns",
+            "itemTitle": "Prehistoric Park (2006) 1080p & 720p",
+            "file": "2006 Prehistoric Park E01 T. rex Returns.ia.mp4",
+            "name": "2006 Prehistoric Park E01 T",
+            "url": "https://archive.org/download/2006-prehistoric-park-e-01-t.-rex-returns/2006%20Prehistoric%20Park%20E01%20T.%20rex%20Returns.ia.mp4",
+            "seconds": 2295,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 712,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "e01 t rex returns",
+          "state": "REVIEW",
+          "file": {
+            "item": "2006-prehistoric-park-e-01-t.-rex-returns",
+            "itemTitle": "Prehistoric Park (2006) 1080p & 720p",
+            "file": "2006 Prehistoric Park E01 T. rex Returns.mp4",
+            "name": "2006 Prehistoric Park E01 T. rex Returns",
+            "url": "https://archive.org/download/2006-prehistoric-park-e-01-t.-rex-returns/2006%20Prehistoric%20Park%20E01%20T.%20rex%20Returns.mp4",
+            "seconds": 2295,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 712,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "e02 a mammoth undertaking",
+          "state": "REVIEW",
+          "file": {
+            "item": "2006-prehistoric-park-e-01-t.-rex-returns",
+            "itemTitle": "Prehistoric Park (2006) 1080p & 720p",
+            "file": "2006 Prehistoric Park E02 A Mammoth Undertaking.mp4",
+            "name": "2006 Prehistoric Park E02 A Mammoth Undertaking",
+            "url": "https://archive.org/download/2006-prehistoric-park-e-01-t.-rex-returns/2006%20Prehistoric%20Park%20E02%20A%20Mammoth%20Undertaking.mp4",
+            "seconds": 2893,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 542,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "e03 dinobirds",
+          "state": "REVIEW",
+          "file": {
+            "item": "2006-prehistoric-park-e-01-t.-rex-returns",
+            "itemTitle": "Prehistoric Park (2006) 1080p & 720p",
+            "file": "2006 Prehistoric Park E03 Dinobirds.mp4",
+            "name": "2006 Prehistoric Park E03 Dinobirds",
+            "url": "https://archive.org/download/2006-prehistoric-park-e-01-t.-rex-returns/2006%20Prehistoric%20Park%20E03%20Dinobirds.mp4",
+            "seconds": 2869,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 641,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "e04 saving the sabretooth",
+          "state": "REVIEW",
+          "file": {
+            "item": "2006-prehistoric-park-e-01-t.-rex-returns",
+            "itemTitle": "Prehistoric Park (2006) 1080p & 720p",
+            "file": "2006 Prehistoric Park E04 Saving the Sabretooth.mp4",
+            "name": "2006 Prehistoric Park E04 Saving the Sabretooth",
+            "url": "https://archive.org/download/2006-prehistoric-park-e-01-t.-rex-returns/2006%20Prehistoric%20Park%20E04%20Saving%20the%20Sabretooth.mp4",
+            "seconds": 3109,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 682,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "e05 the bug house",
+          "state": "REVIEW",
+          "file": {
+            "item": "2006-prehistoric-park-e-01-t.-rex-returns",
+            "itemTitle": "Prehistoric Park (2006) 1080p & 720p",
+            "file": "2006 Prehistoric Park E05 The Bug House.mp4",
+            "name": "2006 Prehistoric Park E05 The Bug House",
+            "url": "https://archive.org/download/2006-prehistoric-park-e-01-t.-rex-returns/2006%20Prehistoric%20Park%20E05%20The%20Bug%20House.mp4",
+            "seconds": 3130,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 679,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "e06 supercroc",
+          "state": "REVIEW",
+          "file": {
             "item": "2006-prehistoric-park-e-01-t.-rex-returns",
             "itemTitle": "Prehistoric Park (2006) 1080p & 720p",
             "file": "2006 Prehistoric Park E06 Supercroc.mp4",
@@ -339,51 +414,179 @@
             "seconds": 2881,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 638
+            "sizeMB": 638,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "PrehistoricPark",
-              "itemTitle": "Prehistoric Park [576p quality]",
-              "file": "Prehistoric Park Episode 6 - Dinocroc.mp4",
-              "name": "Prehistoric Park Episode 6 - Dinocroc",
-              "url": "https://archive.org/download/PrehistoricPark/Prehistoric%20Park%20Episode%206%20-%20Dinocroc.mp4",
-              "seconds": 2892,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1103
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "prehistoric-park-season-1",
-              "itemTitle": "Prehistoric Park Season 1",
-              "file": "Episode 6 - Dinocroc.mp4",
-              "name": "Episode 6 - Dinocroc",
-              "url": "https://archive.org/download/prehistoric-park-season-1/Episode%206%20-%20Dinocroc.mp4",
-              "seconds": 2892,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1103
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "prehistoric-park-us-version",
-              "itemTitle": "Prehistoric Park (US Version)",
-              "file": "Episode 6 Giant Croc.mp4",
-              "name": "Episode 6 Giant Croc",
-              "url": "https://archive.org/download/prehistoric-park-us-version/Episode%206%20Giant%20Croc.mp4",
-              "seconds": 2554,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 483
-            }
-          ]
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "episodio 1 la vuelta del tyrannosaurus rex",
+          "state": "REVIEW",
+          "file": {
+            "item": "caminando-entre-dinosaurios-especial-la-garra-gigante-episodio-1",
+            "itemTitle": "Caminando Entre Dinosaurios Especial La Garra Gigante,Tierra De Gigantes y Prehistoric Park",
+            "file": "Prehistoric Park Episodio 1 La Vuelta Del Tyrannosaurus Rex.mp4",
+            "name": "Prehistoric Park Episodio 1 La Vuelta Del Tyrannosaurus Rex",
+            "url": "https://archive.org/download/caminando-entre-dinosaurios-especial-la-garra-gigante-episodio-1/Prehistoric%20Park%20Episodio%201%20La%20Vuelta%20Del%20Tyrannosaurus%20Rex.mp4",
+            "seconds": 2880,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1407,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "episodio 2 los mamuts",
+          "state": "REVIEW",
+          "file": {
+            "item": "caminando-entre-dinosaurios-especial-la-garra-gigante-episodio-1",
+            "itemTitle": "Caminando Entre Dinosaurios Especial La Garra Gigante,Tierra De Gigantes y Prehistoric Park",
+            "file": "Prehistoric Park Episodio 2 Los Mamuts.mp4",
+            "name": "Prehistoric Park Episodio 2 Los Mamuts",
+            "url": "https://archive.org/download/caminando-entre-dinosaurios-especial-la-garra-gigante-episodio-1/Prehistoric%20Park%20Episodio%202%20Los%20Mamuts.mp4",
+            "seconds": 2879,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1258,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "episodio 3 las aves dinosaurio",
+          "state": "REVIEW",
+          "file": {
+            "item": "caminando-entre-dinosaurios-especial-la-garra-gigante-episodio-1",
+            "itemTitle": "Caminando Entre Dinosaurios Especial La Garra Gigante,Tierra De Gigantes y Prehistoric Park",
+            "file": "Prehistoric Park Episodio 3 Las Aves Dinosaurio.mp4",
+            "name": "Prehistoric Park Episodio 3 Las Aves Dinosaurio",
+            "url": "https://archive.org/download/caminando-entre-dinosaurios-especial-la-garra-gigante-episodio-1/Prehistoric%20Park%20Episodio%203%20Las%20Aves%20Dinosaurio.mp4",
+            "seconds": 2872,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 871,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "episodio 4 salvando a los dientes de sable",
+          "state": "REVIEW",
+          "file": {
+            "item": "caminando-entre-dinosaurios-especial-la-garra-gigante-episodio-1",
+            "itemTitle": "Caminando Entre Dinosaurios Especial La Garra Gigante,Tierra De Gigantes y Prehistoric Park",
+            "file": "Prehistoric Park Episodio 4 Salvando A Los Dientes De Sable.mp4",
+            "name": "Prehistoric Park Episodio 4 Salvando A Los Dientes De Sable",
+            "url": "https://archive.org/download/caminando-entre-dinosaurios-especial-la-garra-gigante-episodio-1/Prehistoric%20Park%20Episodio%204%20Salvando%20A%20Los%20Dientes%20De%20Sable.mp4",
+            "seconds": 2880,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1484,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "episodio 5 la caza del insecto gigante",
+          "state": "REVIEW",
+          "file": {
+            "item": "caminando-entre-dinosaurios-especial-la-garra-gigante-episodio-1",
+            "itemTitle": "Caminando Entre Dinosaurios Especial La Garra Gigante,Tierra De Gigantes y Prehistoric Park",
+            "file": "Prehistoric Park Episodio 5 La Caza Del Insecto Gigante.mp4",
+            "name": "Prehistoric Park Episodio 5 La Caza Del Insecto Gigante",
+            "url": "https://archive.org/download/caminando-entre-dinosaurios-especial-la-garra-gigante-episodio-1/Prehistoric%20Park%20Episodio%205%20La%20Caza%20Del%20Insecto%20Gigante.mp4",
+            "seconds": 2879,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1407,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "episodio final super cocodrilos",
+          "state": "REVIEW",
+          "file": {
+            "item": "caminando-entre-dinosaurios-especial-la-garra-gigante-episodio-1",
+            "itemTitle": "Caminando Entre Dinosaurios Especial La Garra Gigante,Tierra De Gigantes y Prehistoric Park",
+            "file": "Prehistoric Park Episodio Final Super Cocodrilos.mp4",
+            "name": "Prehistoric Park Episodio Final Super Cocodrilos",
+            "url": "https://archive.org/download/caminando-entre-dinosaurios-especial-la-garra-gigante-episodio-1/Prehistoric%20Park%20Episodio%20Final%20Super%20Cocodrilos.mp4",
+            "seconds": 2875,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 843,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "prehistorik 01 il ritorno del t rex con nigel marven",
+          "state": "REVIEW",
+          "file": {
+            "item": "prehistorik-park-01-il-ritorno-del-t-rex-con-nigel-marven",
+            "itemTitle": "Prehistoric Park - 01 - Il Ritorno Del T-Rex Con Nigel Marven",
+            "file": "Prehistorik Park - 01 - Il Ritorno del T-Rex - con Nigel Marven.mp4",
+            "name": "Prehistorik Park - 01 - Il Ritorno del T-Rex - con Nigel Marven",
+            "url": "https://archive.org/download/prehistorik-park-01-il-ritorno-del-t-rex-con-nigel-marven/Prehistorik%20Park%20-%2001%20-%20Il%20Ritorno%20del%20T-Rex%20-%20con%20Nigel%20Marven.mp4",
+            "seconds": 2848,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 257,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "special features",
+          "state": "REVIEW",
+          "file": {
+            "item": "Prehistoric_Park_DVD",
+            "itemTitle": "Prehistoric Park 1080p DVD Upscaled",
+            "file": "special features.mp4",
+            "name": "special features",
+            "url": "https://archive.org/download/Prehistoric_Park_DVD/special%20features.mp4",
+            "seconds": 2659,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 3525,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 9399,
+    "name": "Prehistoric Park",
+    "placed": 6
+  }
 }

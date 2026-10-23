@@ -1,0 +1,93 @@
+{
+  "show": "Childhood's End",
+  "slug": "childhoods-end",
+  "type": "Sci-Fi, Fantasy and Horror",
+  "network": "Syfy",
+  "matchedAt": "2026-10-23T03:18:06.504Z",
+  "addedAt": "2026-10-23T03:18:06.504Z",
+  "tvmaze": {
+    "id": 2942,
+    "name": "Childhood's End",
+    "runtime": 120,
+    "premiered": "2015-12-14",
+    "network": "Syfy"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 1,
+    "review": 0,
+    "missing": 2,
+    "pct": 33
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Overlords",
+          "airdate": "2015-12-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Deceivers",
+          "airdate": "2015-12-15",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "childhoods-end-2015-s-01-e-01-the-overlords-1080p-bdrip-x-265-10bit-eac-3-5.1-ainz-tao-e",
+            "itemTitle": "Childhood's End ( 2015) S 01 E 01 The Overlords ( 1080p BDrip X 265 10bit EAC 3 5.1 Ainz)[ TAo E]",
+            "file": "Childhood's End (2015) S01E02 The Deceivers (1080p BDrip x265 10bit EAC3 5.1 - Ainz)[TAoE].mp4",
+            "name": "Childhood's End (2015) S01E02 The Deceivers (1080p BDrip x265 10bit EAC3 5.1 - Ainz)[TAoE]",
+            "url": "https://archive.org/download/childhoods-end-2015-s-01-e-01-the-overlords-1080p-bdrip-x-265-10bit-eac-3-5.1-ainz-tao-e/Childhood's%20End%20(2015)%20S01E02%20The%20Deceivers%20(1080p%20BDrip%20x265%2010bit%20EAC3%205.1%20-%20Ainz)%5BTAoE%5D.mp4",
+            "seconds": 5113,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (EAC3)",
+            "sizeMB": 520
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "childhoods-end-s-01-e-01",
+              "itemTitle": "Childhood's End 2015 Miniseries",
+              "file": "Childhood's End S01E02.mp4",
+              "name": "Childhood's End S01E02",
+              "url": "https://archive.org/download/childhoods-end-s-01-e-01/Childhood's%20End%20S01E02.mp4",
+              "seconds": 5113,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 509
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Deceivers\" (0.95)",
+              "item": "childhoods-end-miniseries",
+              "itemTitle": "Childhood's END (Miniseries)",
+              "file": "Childhood's END - Part 02 of 03, The Deceivers (720p BluRay).mp4",
+              "name": "Childhood's END - Part 02 of 03, The Deceivers (720p BluRay)",
+              "url": "https://archive.org/download/childhoods-end-miniseries/Childhood's%20END%20-%20Part%2002%20of%2003%2C%20The%20Deceivers%20(720p%20BluRay).mp4",
+              "seconds": 5113,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1233
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "name": "The Children",
+          "airdate": "2015-12-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

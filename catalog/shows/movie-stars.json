@@ -1,0 +1,610 @@
+{
+  "show": "Movie Stars",
+  "slug": "movie-stars",
+  "type": "90s Sitcoms",
+  "network": "The WB",
+  "matchedAt": "2026-10-23T08:55:58.296Z",
+  "addedAt": "2026-10-23T08:55:58.296Z",
+  "tvmaze": {
+    "id": 54660,
+    "name": "Movie Stars",
+    "runtime": 30,
+    "premiered": "1999-07-11",
+    "network": "The WB"
+  },
+  "coverage": {
+    "total": 21,
+    "live": 18,
+    "review": 2,
+    "missing": 1,
+    "pct": 95
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Pilot",
+          "airdate": "1999-07-11",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "101 Pilot.mp4",
+            "name": "101 Pilot",
+            "url": "https://archive.org/download/movie-stars-1999/101%20Pilot.mp4",
+            "seconds": 1387,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 137
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Educating Lori",
+          "airdate": "1999-07-12",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "102 Mothers and Brothers.mp4",
+            "name": "102 Mothers and Brothers",
+            "url": "https://archive.org/download/movie-stars-1999/102%20Mothers%20and%20Brothers.mp4",
+            "seconds": 1324,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Educating Lori\" (1.00)",
+              "item": "movie-stars-1999",
+              "itemTitle": "Movie Stars (1999-2000)",
+              "file": "106 Educating Lori.mp4",
+              "name": "106 Educating Lori",
+              "url": "https://archive.org/download/movie-stars-1999/106%20Educating%20Lori.mp4",
+              "seconds": 1392,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 138
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "name": "Bitter Sweet Seventeen",
+          "airdate": "1999-07-18",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "103 Bittersweet Seventeen.mp4",
+            "name": "103 Bittersweet Seventeen",
+            "url": "https://archive.org/download/movie-stars-1999/103%20Bittersweet%20Seventeen.mp4",
+            "seconds": 1367,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 132
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Leap of Faith",
+          "airdate": "1999-07-19",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "104 Bad Boy Whatcha Gonna Do (Missing Ending).mp4",
+            "name": "104 Bad Boy Whatcha Gonna Do (Missing Ending)",
+            "url": "https://archive.org/download/movie-stars-1999/104%20Bad%20Boy%20Whatcha%20Gonna%20Do%20(Missing%20Ending).mp4",
+            "seconds": 1303,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 126
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Mothers & Brothers",
+          "airdate": "1999-07-25",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Mothers & Brothers\" (1.00)",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "102 Mothers and Brothers.mp4",
+            "name": "102 Mothers and Brothers",
+            "url": "https://archive.org/download/movie-stars-1999/102%20Mothers%20and%20Brothers.mp4",
+            "seconds": 1324,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 128
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Like Father, Like Son",
+          "airdate": "1999-08-01",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "106 Educating Lori.mp4",
+            "name": "106 Educating Lori",
+            "url": "https://archive.org/download/movie-stars-1999/106%20Educating%20Lori.mp4",
+            "seconds": 1392,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 138
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Like Father, Like Son\" (1.00)",
+              "item": "movie-stars-1999",
+              "itemTitle": "Movie Stars (1999-2000)",
+              "file": "108 Like Father, Like Son.mp4",
+              "name": "108 Like Father, Like Son",
+              "url": "https://archive.org/download/movie-stars-1999/108%20Like%20Father%2C%20Like%20Son.mp4",
+              "seconds": 1358,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 132
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "name": "Third Time's a Charm",
+          "airdate": "1999-08-08",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "107 Third Time's a Charm.mp4",
+            "name": "107 Third Time's a Charm",
+            "url": "https://archive.org/download/movie-stars-1999/107%20Third%20Time's%20a%20Charm.mp4",
+            "seconds": 1359,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 132
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Bad Boy, Bad Boy, What'cha Gonna Do?",
+          "airdate": "1999-08-15",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "108 Like Father, Like Son.mp4",
+            "name": "108 Like Father, Like Son",
+            "url": "https://archive.org/download/movie-stars-1999/108%20Like%20Father%2C%20Like%20Son.mp4",
+            "seconds": 1358,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 132
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Bad Boy, Bad Boy, What'cha Gonna Do?\" (0.95)",
+              "item": "movie-stars-1999",
+              "itemTitle": "Movie Stars (1999-2000)",
+              "file": "104 Bad Boy Whatcha Gonna Do (Missing Ending).mp4",
+              "name": "104 Bad Boy Whatcha Gonna Do (Missing Ending)",
+              "url": "https://archive.org/download/movie-stars-1999/104%20Bad%20Boy%20Whatcha%20Gonna%20Do%20(Missing%20Ending).mp4",
+              "seconds": 1303,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 126
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Two Faces of Steve",
+          "airdate": "2000-04-02",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "201 Two Guys, Two Girls, and a Guest House.mp4",
+            "name": "201 Two Guys, Two Girls, and a Guest House",
+            "url": "https://archive.org/download/movie-stars-1999/201%20Two%20Guys%2C%20Two%20Girls%2C%20and%20a%20Guest%20House.mp4",
+            "seconds": 1310,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Two Faces of Steve\" (0.95)",
+              "item": "movie-stars-1999",
+              "itemTitle": "Movie Stars (1999-2000)",
+              "file": "203 Two Faces of Steve.mp4",
+              "name": "203 Two Faces of Steve",
+              "url": "https://archive.org/download/movie-stars-1999/203%20Two%20Faces%20of%20Steve.mp4",
+              "seconds": 1285,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Video Gurl",
+          "airdate": "2000-04-09",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "202 No Justice, No Piece.mp4",
+            "name": "202 No Justice, No Piece",
+            "url": "https://archive.org/download/movie-stars-1999/202%20No%20Justice%2C%20No%20Piece.mp4",
+            "seconds": 1285,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 125
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Video Gurl\" (1.00)",
+              "item": "movie-stars-1999",
+              "itemTitle": "Movie Stars (1999-2000)",
+              "file": "206 Video Gurl.mp4",
+              "name": "206 Video Gurl",
+              "url": "https://archive.org/download/movie-stars-1999/206%20Video%20Gurl.mp4",
+              "seconds": 1344,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "name": "The Seduction of Reese Hardin",
+          "airdate": "2000-04-16",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "203 Two Faces of Steve.mp4",
+            "name": "203 Two Faces of Steve",
+            "url": "https://archive.org/download/movie-stars-1999/203%20Two%20Faces%20of%20Steve.mp4",
+            "seconds": 1285,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 125
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Seduction of Reese Hardin\" (1.00)",
+              "item": "movie-stars-1999",
+              "itemTitle": "Movie Stars (1999-2000)",
+              "file": "205 The Seduction of Reese Hardin.mp4",
+              "name": "205 The Seduction of Reese Hardin",
+              "url": "https://archive.org/download/movie-stars-1999/205%20The%20Seduction%20of%20Reese%20Hardin.mp4",
+              "seconds": 1345,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "name": "La Vida Loca",
+          "airdate": "2000-04-23",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "204 Stand By Me.mp4",
+            "name": "204 Stand By Me",
+            "url": "https://archive.org/download/movie-stars-1999/204%20Stand%20By%20Me.mp4",
+            "seconds": 1325,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 129
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"La Vida Loca\" (1.00)",
+              "item": "movie-stars-1999",
+              "itemTitle": "Movie Stars (1999-2000)",
+              "file": "207 La Vida Loca.mp4",
+              "name": "207 La Vida Loca",
+              "url": "https://archive.org/download/movie-stars-1999/207%20La%20Vida%20Loca.mp4",
+              "seconds": 1307,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 127
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "name": "Last Dance",
+          "airdate": "2000-04-30",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "205 The Seduction of Reese Hardin.mp4",
+            "name": "205 The Seduction of Reese Hardin",
+            "url": "https://archive.org/download/movie-stars-1999/205%20The%20Seduction%20of%20Reese%20Hardin.mp4",
+            "seconds": 1345,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Oscar Wild",
+          "airdate": "2000-05-14",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "206 Video Gurl.mp4",
+            "name": "206 Video Gurl",
+            "url": "https://archive.org/download/movie-stars-1999/206%20Video%20Gurl.mp4",
+            "seconds": 1344,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Oscar Wild\" (1.00)",
+              "item": "movie-stars-1999",
+              "itemTitle": "Movie Stars (1999-2000)",
+              "file": "210 Oscar Wild.mp4",
+              "name": "210 Oscar Wild",
+              "url": "https://archive.org/download/movie-stars-1999/210%20Oscar%20Wild.mp4",
+              "seconds": 1261,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 123
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "name": "The Goodbye Guy",
+          "airdate": "2000-05-21",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "207 La Vida Loca.mp4",
+            "name": "207 La Vida Loca",
+            "url": "https://archive.org/download/movie-stars-1999/207%20La%20Vida%20Loca.mp4",
+            "seconds": 1307,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 127
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Goodbye Guy\" (1.00)",
+              "item": "movie-stars-1999",
+              "itemTitle": "Movie Stars (1999-2000)",
+              "file": "208 The Goodbye Guy.mp4",
+              "name": "208 The Goodbye Guy",
+              "url": "https://archive.org/download/movie-stars-1999/208%20The%20Goodbye%20Guy.mp4",
+              "seconds": 1335,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "name": "Two Guys, Two Girls & a Guest House",
+          "airdate": "2000-05-28",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "208 The Goodbye Guy.mp4",
+            "name": "208 The Goodbye Guy",
+            "url": "https://archive.org/download/movie-stars-1999/208%20The%20Goodbye%20Guy.mp4",
+            "seconds": 1335,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 130
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Two Guys, Two Girls & a Guest House\" (1.00)",
+              "item": "movie-stars-1999",
+              "itemTitle": "Movie Stars (1999-2000)",
+              "file": "201 Two Guys, Two Girls, and a Guest House.mp4",
+              "name": "201 Two Guys, Two Girls, and a Guest House",
+              "url": "https://archive.org/download/movie-stars-1999/201%20Two%20Guys%2C%20Two%20Girls%2C%20and%20a%20Guest%20House.mp4",
+              "seconds": 1310,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "name": "No Justice, No Piece",
+          "airdate": "2000-06-04",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "209 Who's on First (Bad Quality).mp4",
+            "name": "209 Who's on First (Bad Quality)",
+            "url": "https://archive.org/download/movie-stars-1999/209%20Who's%20on%20First%20(Bad%20Quality).mp4",
+            "seconds": 1277,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 56
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"No Justice, No Piece\" (1.00)",
+              "item": "movie-stars-1999",
+              "itemTitle": "Movie Stars (1999-2000)",
+              "file": "202 No Justice, No Piece.mp4",
+              "name": "202 No Justice, No Piece",
+              "url": "https://archive.org/download/movie-stars-1999/202%20No%20Justice%2C%20No%20Piece.mp4",
+              "seconds": 1285,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 125
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "name": "Stand by Me",
+          "airdate": "2000-06-11",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "210 Oscar Wild.mp4",
+            "name": "210 Oscar Wild",
+            "url": "https://archive.org/download/movie-stars-1999/210%20Oscar%20Wild.mp4",
+            "seconds": 1261,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123
+          },
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Stand by Me\" (1.00)",
+              "item": "movie-stars-1999",
+              "itemTitle": "Movie Stars (1999-2000)",
+              "file": "204 Stand By Me.mp4",
+              "name": "204 Stand By Me",
+              "url": "https://archive.org/download/movie-stars-1999/204%20Stand%20By%20Me.mp4",
+              "seconds": 1325,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 129
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "name": "He's Reese. He's Here. Get Used to It",
+          "airdate": "2000-06-18",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"He's Reese. He's Here. Get Used to It\" (1.00)",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "213 He's Reese, He's Here, Get Used to It.mp4",
+            "name": "213 He's Reese, He's Here, Get Used to It",
+            "url": "https://archive.org/download/movie-stars-1999/213%20He's%20Reese%2C%20He's%20Here%2C%20Get%20Used%20to%20It.mp4",
+            "seconds": 1277,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "Whose on First?",
+          "airdate": "2000-06-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "Sink-Chronicity",
+          "airdate": "",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "movie-stars-1999",
+            "itemTitle": "Movie Stars (1999-2000)",
+            "file": "213 He's Reese, He's Here, Get Used to It.mp4",
+            "name": "213 He's Reese, He's Here, Get Used to It",
+            "url": "https://archive.org/download/movie-stars-1999/213%20He's%20Reese%2C%20He's%20Here%2C%20Get%20Used%20to%20It.mp4",
+            "seconds": 1277,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 123
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

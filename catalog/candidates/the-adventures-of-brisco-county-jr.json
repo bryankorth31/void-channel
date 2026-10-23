@@ -2,7 +2,7 @@
   "show": "The Adventures of Brisco County, Jr.",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "FOX",
-  "huntedAt": "2026-10-23T00:43:38.502Z",
+  "huntedAt": "2026-10-23T07:08:02.159Z",
   "tvmaze": {
     "id": 1305,
     "runtime": 60,
@@ -10,7 +10,7 @@
     "episodes": 27
   },
   "archiveMentions": 10,
-  "itemsOpened": 8,
+  "itemsOpened": 10,
   "episodeShapedFiles": 52,
   "namedEpisodeFiles": 52,
   "verdict": "FOUND",
@@ -971,6 +971,65 @@
       "searchScore": 0.8,
       "year": 2024,
       "downloads": 104
+    },
+    {
+      "id": "1994-fox-simpsons",
+      "title": "1994 Fox 33 KDAF Dallas / Fort Worth Commercials - Bumpers - Promos",
+      "uploaderHash": "0b3cd24d9272",
+      "date": "1994",
+      "collection": "opensource_movies",
+      "description": "<div>1994, unknown date. </div><div><br /></div><div>Commercials aired during a repeat of The Simpsons episode Homer's Triple Bypass.</div><div><br /></div><div>00:00 Chiefs Auto Parts</div><div>00:18 Eckerd Photo Processing</div><div>00:48 Canada Dry Cranberry Ginger Ale</div><div>01:18 Chevrolet</",
+      "totalVideo": 1,
+      "episodeShaped": 0,
+      "nameHits": 0,
+      "files": [
+        {
+          "name": "1994-fox-simpsons",
+          "file": "1994-fox-simpsons.mp4",
+          "format": "MPEG4",
+          "playable": true,
+          "seconds": 386,
+          "band": "odd",
+          "sizeMB": 365,
+          "nameHit": false,
+          "ep": null,
+          "url": "https://archive.org/download/1994-fox-simpsons/1994-fox-simpsons.mp4"
+        }
+      ],
+      "searchScore": 0.8,
+      "year": 1994,
+      "downloads": 57
+    },
+    {
+      "id": "AVH-HechoEnAmerica-ARG-1993",
+      "title": "AVH - Hecho en América - Avances y Estrenos - 1993",
+      "uploaderHash": "0104aa811736",
+      "date": "1993",
+      "collection": [
+        "vhstrailers",
+        "vhsvault"
+      ],
+      "description": "VHS de la distribuidora AVH.<br /><br />Película: Made In America<br /><br />Contiene: <br /><br />- Benny & Joon | Corazones en Conflicto || Trailer<br />        con Johnny Depp<br /><br />- The Fugitive | El Fugitivo || Teaser<br /><br />- The Adventures of Brisco County Jr. | Las Aventuras de Bri",
+      "totalVideo": 1,
+      "episodeShaped": 0,
+      "nameHits": 0,
+      "files": [
+        {
+          "name": "VHS0013-Hecho",
+          "file": "VHS0013-Hecho.m4v",
+          "format": "MPEG4",
+          "playable": true,
+          "seconds": 332,
+          "band": "odd",
+          "sizeMB": 89,
+          "nameHit": false,
+          "ep": null,
+          "url": "https://archive.org/download/AVH-HechoEnAmerica-ARG-1993/VHS0013-Hecho.m4v"
+        }
+      ],
+      "searchScore": 0.65,
+      "year": 1993,
+      "downloads": 191
     }
   ]
 }

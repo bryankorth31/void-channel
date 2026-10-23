@@ -3,7 +3,7 @@
   "slug": "vr-5",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "FOX",
-  "matchedAt": "2026-10-23T00:51:19.119Z",
+  "matchedAt": "2026-10-23T07:11:15.293Z",
   "addedAt": "2026-10-23T00:51:19.119Z",
   "tvmaze": {
     "id": 18358,
@@ -429,17 +429,17 @@
               "sizeMB": 245
             },
             {
-              "conf": 0.8,
-              "why": "title ~ \"Simon's Choice\" (1.00)",
-              "item": "vr.-5-s-01",
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "vr-5_20260520",
               "itemTitle": "VR.5",
-              "file": "VR.5 S01E08 Simon's Choice.mp4",
-              "name": "VR.5 S01E08 Simon's Choice",
-              "url": "https://archive.org/download/vr.-5-s-01/VR.5%20S01E08%20Simon's%20Choice.mp4",
+              "file": "VR5 1X07 Facing The Fire.mp4",
+              "name": "VR5 1X07 Facing The Fire",
+              "url": "https://archive.org/download/vr-5_20260520/VR5%201X07%20Facing%20The%20Fire.mp4",
               "seconds": 2661,
-              "format": "h.264",
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 257
+              "sizeMB": 240
             }
           ]
         },
@@ -763,6 +763,19 @@
           },
           "alternates": [
             {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "vr-5_20260520",
+              "itemTitle": "VR.5",
+              "file": "VR5 1X13 Reunion.mp4",
+              "name": "VR5 1X13 Reunion",
+              "url": "https://archive.org/download/vr-5_20260520/VR5%201X13%20Reunion.mp4",
+              "seconds": 2615,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 236
+            },
+            {
               "conf": 0.8,
               "why": "title ~ \"Parallel Lives\" (1.00)",
               "item": "vr.-5-s-01",
@@ -787,19 +800,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 4371
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Parallel Lives\" (1.00)",
-              "item": "VR.5TVSeries",
-              "itemTitle": "VR.5 (TV Series)",
-              "file": "112 Parallel Lives.mp4",
-              "name": "112 Parallel Lives",
-              "url": "https://archive.org/download/VR.5TVSeries/112%20Parallel%20Lives.mp4",
-              "seconds": 2554,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 266
             }
           ]
         }

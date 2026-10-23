@@ -1,0 +1,57 @@
+{
+  "show": "Snow Queen",
+  "slug": "snow-queen",
+  "type": "Sci-Fi, Fantasy and Horror",
+  "network": "Animal Planet",
+  "matchedAt": "2026-10-23T08:28:09.171Z",
+  "addedAt": "2026-10-23T08:28:09.172Z",
+  "tvmaze": {
+    "id": 36806,
+    "name": "Snow Queen",
+    "runtime": 90,
+    "premiered": "2002-12-07",
+    "network": "Hallmark Channel"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 1,
+    "missing": 1,
+    "pct": 50
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Part 1",
+          "airdate": "2002-12-07",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Part 1\" (0.95)",
+            "item": "1_20240309",
+            "itemTitle": "The Snow Queen (1999 VHS Rip)",
+            "file": "1.m4v",
+            "name": "1",
+            "url": "https://archive.org/download/1_20240309/1.m4v",
+            "seconds": 5058,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 697
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Part 2",
+          "airdate": "2002-12-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

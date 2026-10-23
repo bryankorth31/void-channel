@@ -1,0 +1,57 @@
+{
+  "show": "Frankenstein",
+  "slug": "frankenstein",
+  "type": "Sci-Fi, Fantasy and Horror",
+  "network": "Animal Planet",
+  "matchedAt": "2026-10-23T02:28:23.976Z",
+  "addedAt": "2026-10-23T02:28:23.977Z",
+  "tvmaze": {
+    "id": 37940,
+    "name": "Frankenstein",
+    "runtime": 120,
+    "premiered": "2004-10-05",
+    "network": "Hallmark Channel"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 1,
+    "missing": 1,
+    "pct": 50
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Part 1",
+          "airdate": "2004-10-05",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "title ~ \"Part 1\" (0.95)",
+            "item": "mbc-halloween-fright-fest-1-son-of-frankenstein-1939",
+            "itemTitle": "MBC Halloween Fright Fest 1 - Son Of Frankenstein (1939)",
+            "file": "MBC Halloween Fright Fest 1 - Son of Frankenstein (1939).mp4",
+            "name": "MBC Halloween Fright Fest 1 - Son of Frankenstein (1939)",
+            "url": "https://archive.org/download/mbc-halloween-fright-fest-1-son-of-frankenstein-1939/MBC%20Halloween%20Fright%20Fest%201%20-%20Son%20of%20Frankenstein%20(1939).mp4",
+            "seconds": 13392,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2293
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Part 2",
+          "airdate": "2004-10-06",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

@@ -320,5 +320,632 @@
    "episodes": 1
   }
  ],
- "fetchedAt": "2026-10-15T07:39:59.941Z"
+ "fetchedAt": "2026-10-15T07:39:59.941Z",
+ "episodes": {
+  "1x1": {
+   "d": [
+    {
+     "id": 59104,
+     "name": "Jonny Campbell",
+     "photo": "https://image.tmdb.org/t/p/w185/iwS1U5YWw2DM1N414aWWODhl2MK.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1213831,
+     "name": "Matthew Graham",
+     "photo": "https://image.tmdb.org/t/p/w185/gCnEZr19KQGMtjl88F0rln8xOn.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 93713,
+     "name": "Amelia Bullmore",
+     "photo": "https://image.tmdb.org/t/p/w185/qsvkxSBAxj1O1pEXUFIyh85YMk9.jpg",
+     "as": "Caroline Price"
+    },
+    {
+     "id": 1213431,
+     "name": "Roy Skelton",
+     "photo": "https://image.tmdb.org/t/p/w185/1FwtcrRZeSKOocHqGnAeDlcw0It.jpg",
+     "as": "Zippy (voice) / George (voice)"
+    },
+    {
+     "id": 55467,
+     "name": "Stephen Campbell Moore",
+     "photo": "https://image.tmdb.org/t/p/w185/5w4EvQfi5YipR5I5lhtN5dCDiEY.jpg",
+     "as": "Evan White"
+    },
+    {
+     "id": 27649,
+     "name": "Joseph Long",
+     "photo": "https://image.tmdb.org/t/p/w185/kIh1s4CVXqcPb57ya3AMY2v1zxc.jpg",
+     "as": "Luigi"
+    },
+    {
+     "id": 1867201,
+     "name": "Nicole Charles",
+     "photo": null,
+     "as": "Nina Akaboa"
+    },
+    {
+     "id": 24622,
+     "name": "Andrew Clover",
+     "photo": "https://image.tmdb.org/t/p/w185/55ap3TtwInfjQmumLd9zi0lzmsA.jpg",
+     "as": "The Clown"
+    },
+    {
+     "id": 47933,
+     "name": "Adam James",
+     "photo": "https://image.tmdb.org/t/p/w185/5aVa1LgnOzkzsIYdcb1QUTxV5g3.jpg",
+     "as": "Edward Markham"
+    },
+    {
+     "id": 1219440,
+     "name": "Geff Francis",
+     "photo": "https://image.tmdb.org/t/p/w185/a7DlC90cAFqhm9jBhwmbKaRNomj.jpg",
+     "as": "Viv James"
+    },
+    {
+     "id": 16702,
+     "name": "Sean Harris",
+     "photo": "https://image.tmdb.org/t/p/w185/jouyaTu0UuZMNBrADRRkCQX1VX1.jpg",
+     "as": "Arthur Layton"
+    },
+    {
+     "id": 1251139,
+     "name": "Grace Vance",
+     "photo": null,
+     "as": "Molly Drake"
+    }
+   ]
+  },
+  "1x2": {
+   "d": [
+    {
+     "id": 59104,
+     "name": "Jonny Campbell",
+     "photo": "https://image.tmdb.org/t/p/w185/iwS1U5YWw2DM1N414aWWODhl2MK.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 150546,
+     "name": "Ashley Pharoah",
+     "photo": "https://image.tmdb.org/t/p/w185/hW1DCy64ubGcNRo6jaGhGAs0koK.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 93713,
+     "name": "Amelia Bullmore",
+     "photo": "https://image.tmdb.org/t/p/w185/qsvkxSBAxj1O1pEXUFIyh85YMk9.jpg",
+     "as": "Caroline Price"
+    },
+    {
+     "id": 1222370,
+     "name": "Steve Strange",
+     "photo": null,
+     "as": "Steve Strange"
+    },
+    {
+     "id": 55467,
+     "name": "Stephen Campbell Moore",
+     "photo": "https://image.tmdb.org/t/p/w185/5w4EvQfi5YipR5I5lhtN5dCDiEY.jpg",
+     "as": "Evan White"
+    },
+    {
+     "id": 27649,
+     "name": "Joseph Long",
+     "photo": "https://image.tmdb.org/t/p/w185/kIh1s4CVXqcPb57ya3AMY2v1zxc.jpg",
+     "as": "Luigi"
+    },
+    {
+     "id": 24622,
+     "name": "Andrew Clover",
+     "photo": "https://image.tmdb.org/t/p/w185/55ap3TtwInfjQmumLd9zi0lzmsA.jpg",
+     "as": "The Clown"
+    },
+    {
+     "id": 1219440,
+     "name": "Geff Francis",
+     "photo": "https://image.tmdb.org/t/p/w185/a7DlC90cAFqhm9jBhwmbKaRNomj.jpg",
+     "as": "Viv James"
+    },
+    {
+     "id": 1251139,
+     "name": "Grace Vance",
+     "photo": null,
+     "as": "Molly Drake"
+    },
+    {
+     "id": 4718673,
+     "name": "Lucy Cole",
+     "photo": null,
+     "as": "Young Alex"
+    },
+    {
+     "id": 11278,
+     "name": "Rupert Graves",
+     "photo": "https://image.tmdb.org/t/p/w185/6tS8XMuTS04xXTfeWFjJED6SFBF.jpg",
+     "as": "Danny Moore"
+    },
+    {
+     "id": 8399,
+     "name": "Christopher Fairbank",
+     "photo": "https://image.tmdb.org/t/p/w185/6bO8JmhkC0GzU4gIBdSMY48E3CD.jpg",
+     "as": "David Bonds"
+    }
+   ]
+  },
+  "1x3": {
+   "d": [
+    {
+     "id": 1222371,
+     "name": "Bille Eltringham",
+     "photo": "https://image.tmdb.org/t/p/w185/a0oo33bhUzuNne0TANz1MtC16Fh.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 130472,
+     "name": "Julie Rutterford",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 93713,
+     "name": "Amelia Bullmore",
+     "photo": "https://image.tmdb.org/t/p/w185/qsvkxSBAxj1O1pEXUFIyh85YMk9.jpg",
+     "as": "Caroline Price"
+    },
+    {
+     "id": 55467,
+     "name": "Stephen Campbell Moore",
+     "photo": "https://image.tmdb.org/t/p/w185/5w4EvQfi5YipR5I5lhtN5dCDiEY.jpg",
+     "as": "Evan White"
+    },
+    {
+     "id": 27649,
+     "name": "Joseph Long",
+     "photo": "https://image.tmdb.org/t/p/w185/kIh1s4CVXqcPb57ya3AMY2v1zxc.jpg",
+     "as": "Luigi"
+    },
+    {
+     "id": 1867201,
+     "name": "Nicole Charles",
+     "photo": null,
+     "as": "Nina Akaboa"
+    },
+    {
+     "id": 24622,
+     "name": "Andrew Clover",
+     "photo": "https://image.tmdb.org/t/p/w185/55ap3TtwInfjQmumLd9zi0lzmsA.jpg",
+     "as": "The Clown"
+    },
+    {
+     "id": 1219440,
+     "name": "Geff Francis",
+     "photo": "https://image.tmdb.org/t/p/w185/a7DlC90cAFqhm9jBhwmbKaRNomj.jpg",
+     "as": "Viv James"
+    },
+    {
+     "id": 1251139,
+     "name": "Grace Vance",
+     "photo": null,
+     "as": "Molly Drake"
+    },
+    {
+     "id": 68384,
+     "name": "Claire Rushbrook",
+     "photo": "https://image.tmdb.org/t/p/w185/kJKFYyTlUeQ2TPhQHUdBhJOpEsM.jpg",
+     "as": "Trixie Walsh"
+    },
+    {
+     "id": 29237,
+     "name": "Leo Bill",
+     "photo": "https://image.tmdb.org/t/p/w185/2x0eBDkpaZ4CGrI5H5w006YEoKk.jpg",
+     "as": "Ryan Burns"
+    },
+    {
+     "id": 71581,
+     "name": "Oliver Coleman",
+     "photo": "https://image.tmdb.org/t/p/w185/uU7Jb9bJSbck9Is7negHAhtL5c2.jpg",
+     "as": "City Boy"
+    }
+   ]
+  },
+  "1x4": {
+   "d": [
+    {
+     "id": 108621,
+     "name": "Catherine Morshead",
+     "photo": "https://image.tmdb.org/t/p/w185/gkjEoFGT64cPK0tJDcPIQgL8QgS.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1877701,
+     "name": "Mark Greig",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 93713,
+     "name": "Amelia Bullmore",
+     "photo": "https://image.tmdb.org/t/p/w185/qsvkxSBAxj1O1pEXUFIyh85YMk9.jpg",
+     "as": "Caroline Price"
+    },
+    {
+     "id": 55467,
+     "name": "Stephen Campbell Moore",
+     "photo": "https://image.tmdb.org/t/p/w185/5w4EvQfi5YipR5I5lhtN5dCDiEY.jpg",
+     "as": "Evan White"
+    },
+    {
+     "id": 27649,
+     "name": "Joseph Long",
+     "photo": "https://image.tmdb.org/t/p/w185/kIh1s4CVXqcPb57ya3AMY2v1zxc.jpg",
+     "as": "Luigi"
+    },
+    {
+     "id": 24622,
+     "name": "Andrew Clover",
+     "photo": "https://image.tmdb.org/t/p/w185/55ap3TtwInfjQmumLd9zi0lzmsA.jpg",
+     "as": "The Clown"
+    },
+    {
+     "id": 1219440,
+     "name": "Geff Francis",
+     "photo": "https://image.tmdb.org/t/p/w185/a7DlC90cAFqhm9jBhwmbKaRNomj.jpg",
+     "as": "Viv James"
+    },
+    {
+     "id": 1251139,
+     "name": "Grace Vance",
+     "photo": null,
+     "as": "Molly Drake"
+    },
+    {
+     "id": 4718673,
+     "name": "Lucy Cole",
+     "photo": null,
+     "as": "Young Alex"
+    },
+    {
+     "id": 82807,
+     "name": "Lydia Leonard",
+     "photo": "https://image.tmdb.org/t/p/w185/hZyocFIvGrZxJD3sDxAtWvMjDyJ.jpg",
+     "as": "Sara Templeton"
+    },
+    {
+     "id": 192922,
+     "name": "Paul Thornley",
+     "photo": "https://image.tmdb.org/t/p/w185/zFrloO5FRGUSXRlOS6r2TvFdDoJ.jpg",
+     "as": "Ian Kay"
+    },
+    {
+     "id": 1370854,
+     "name": "Michael Hadley",
+     "photo": "https://image.tmdb.org/t/p/w185/y8hgFTfeMiMt6rXvsbXa2l30JDN.jpg",
+     "as": "Harvey Dunn"
+    }
+   ]
+  },
+  "1x5": {
+   "d": [
+    {
+     "id": 1222371,
+     "name": "Bille Eltringham",
+     "photo": "https://image.tmdb.org/t/p/w185/a0oo33bhUzuNne0TANz1MtC16Fh.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1877701,
+     "name": "Mark Greig",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 93713,
+     "name": "Amelia Bullmore",
+     "photo": "https://image.tmdb.org/t/p/w185/qsvkxSBAxj1O1pEXUFIyh85YMk9.jpg",
+     "as": "Caroline Price"
+    },
+    {
+     "id": 55467,
+     "name": "Stephen Campbell Moore",
+     "photo": "https://image.tmdb.org/t/p/w185/5w4EvQfi5YipR5I5lhtN5dCDiEY.jpg",
+     "as": "Evan White"
+    },
+    {
+     "id": 27649,
+     "name": "Joseph Long",
+     "photo": "https://image.tmdb.org/t/p/w185/kIh1s4CVXqcPb57ya3AMY2v1zxc.jpg",
+     "as": "Luigi"
+    },
+    {
+     "id": 24622,
+     "name": "Andrew Clover",
+     "photo": "https://image.tmdb.org/t/p/w185/55ap3TtwInfjQmumLd9zi0lzmsA.jpg",
+     "as": "The Clown"
+    },
+    {
+     "id": 1219440,
+     "name": "Geff Francis",
+     "photo": "https://image.tmdb.org/t/p/w185/a7DlC90cAFqhm9jBhwmbKaRNomj.jpg",
+     "as": "Viv James"
+    },
+    {
+     "id": 1251139,
+     "name": "Grace Vance",
+     "photo": null,
+     "as": "Molly Drake"
+    },
+    {
+     "id": 55469,
+     "name": "Russell Tovey",
+     "photo": "https://image.tmdb.org/t/p/w185/p1hNveDVY6vT5FDT0zJXDnZsDw.jpg",
+     "as": "Marcus Johnstone"
+    },
+    {
+     "id": 175400,
+     "name": "Dan Fredenburgh",
+     "photo": "https://image.tmdb.org/t/p/w185/pRSNHqk3ThgJ8AqGGstiWet5DU4.jpg",
+     "as": "Simon Neary"
+    },
+    {
+     "id": 86467,
+     "name": "Jay Simpson",
+     "photo": "https://image.tmdb.org/t/p/w185/4UDQaaRqvMqPwJbUxJVZ7u6P7Wt.jpg",
+     "as": "Reeks"
+    },
+    {
+     "id": 1808656,
+     "name": "Pamela Merrick",
+     "photo": null,
+     "as": "Marcus' Mum"
+    }
+   ]
+  },
+  "1x6": {
+   "d": [
+    {
+     "id": 108621,
+     "name": "Catherine Morshead",
+     "photo": "https://image.tmdb.org/t/p/w185/gkjEoFGT64cPK0tJDcPIQgL8QgS.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 93847,
+     "name": "Mick Ford",
+     "photo": "https://image.tmdb.org/t/p/w185/595XhmvAkkQNLDTtH0mRtFKogGk.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 93713,
+     "name": "Amelia Bullmore",
+     "photo": "https://image.tmdb.org/t/p/w185/qsvkxSBAxj1O1pEXUFIyh85YMk9.jpg",
+     "as": "Caroline Price"
+    },
+    {
+     "id": 55467,
+     "name": "Stephen Campbell Moore",
+     "photo": "https://image.tmdb.org/t/p/w185/5w4EvQfi5YipR5I5lhtN5dCDiEY.jpg",
+     "as": "Evan White"
+    },
+    {
+     "id": 27649,
+     "name": "Joseph Long",
+     "photo": "https://image.tmdb.org/t/p/w185/kIh1s4CVXqcPb57ya3AMY2v1zxc.jpg",
+     "as": "Luigi"
+    },
+    {
+     "id": 77996,
+     "name": "Asa Butterfield",
+     "photo": "https://image.tmdb.org/t/p/w185/1IoQIesuvI9o1IpYZqdjBWvKhRf.jpg",
+     "as": "Donny"
+    },
+    {
+     "id": 24622,
+     "name": "Andrew Clover",
+     "photo": "https://image.tmdb.org/t/p/w185/55ap3TtwInfjQmumLd9zi0lzmsA.jpg",
+     "as": "The Clown"
+    },
+    {
+     "id": 1219440,
+     "name": "Geff Francis",
+     "photo": "https://image.tmdb.org/t/p/w185/a7DlC90cAFqhm9jBhwmbKaRNomj.jpg",
+     "as": "Viv James"
+    },
+    {
+     "id": 1251139,
+     "name": "Grace Vance",
+     "photo": null,
+     "as": "Molly Drake"
+    },
+    {
+     "id": 4718673,
+     "name": "Lucy Cole",
+     "photo": null,
+     "as": "Young Alex"
+    },
+    {
+     "id": 26854,
+     "name": "Phil Davis",
+     "photo": "https://image.tmdb.org/t/p/w185/lrquWFq3xrkPnXHuqfiRF51ZsGT.jpg",
+     "as": "Chas Cale"
+    },
+    {
+     "id": 145632,
+     "name": "Anna Wilson-Jones",
+     "photo": "https://image.tmdb.org/t/p/w185/g4tZz5gjqadHMWdnt0t52ZhaAjl.jpg",
+     "as": "Joan Cale"
+    }
+   ]
+  },
+  "1x7": {
+   "d": [
+    {
+     "id": 59104,
+     "name": "Jonny Campbell",
+     "photo": "https://image.tmdb.org/t/p/w185/iwS1U5YWw2DM1N414aWWODhl2MK.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1213831,
+     "name": "Matthew Graham",
+     "photo": "https://image.tmdb.org/t/p/w185/gCnEZr19KQGMtjl88F0rln8xOn.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 93713,
+     "name": "Amelia Bullmore",
+     "photo": "https://image.tmdb.org/t/p/w185/qsvkxSBAxj1O1pEXUFIyh85YMk9.jpg",
+     "as": "Caroline Price"
+    },
+    {
+     "id": 73172,
+     "name": "Jeremy Clyde",
+     "photo": "https://image.tmdb.org/t/p/w185/gv1hJFYvopKYvFqS0MNrTEstuHp.jpg",
+     "as": "Chief Super"
+    },
+    {
+     "id": 15576,
+     "name": "Matthew Macfadyen",
+     "photo": "https://image.tmdb.org/t/p/w185/sFaIfkykJdftwrc3BdEfpdg2mYW.jpg",
+     "as": "Gil Hollis"
+    },
+    {
+     "id": 55467,
+     "name": "Stephen Campbell Moore",
+     "photo": "https://image.tmdb.org/t/p/w185/5w4EvQfi5YipR5I5lhtN5dCDiEY.jpg",
+     "as": "Evan White"
+    },
+    {
+     "id": 27649,
+     "name": "Joseph Long",
+     "photo": "https://image.tmdb.org/t/p/w185/kIh1s4CVXqcPb57ya3AMY2v1zxc.jpg",
+     "as": "Luigi"
+    },
+    {
+     "id": 1212354,
+     "name": "Terry Wogan",
+     "photo": "https://image.tmdb.org/t/p/w185/n9hdpZtHBSvL9uztZqWCDE7hWpD.jpg",
+     "as": "Terry Wogan (voice)"
+    },
+    {
+     "id": 24622,
+     "name": "Andrew Clover",
+     "photo": "https://image.tmdb.org/t/p/w185/55ap3TtwInfjQmumLd9zi0lzmsA.jpg",
+     "as": "The Clown"
+    },
+    {
+     "id": 1219440,
+     "name": "Geff Francis",
+     "photo": "https://image.tmdb.org/t/p/w185/a7DlC90cAFqhm9jBhwmbKaRNomj.jpg",
+     "as": "Viv James"
+    },
+    {
+     "id": 1251139,
+     "name": "Grace Vance",
+     "photo": null,
+     "as": "Molly Drake"
+    },
+    {
+     "id": 4718673,
+     "name": "Lucy Cole",
+     "photo": null,
+     "as": "Young Alex"
+    }
+   ]
+  },
+  "1x8": {
+   "d": [
+    {
+     "id": 59104,
+     "name": "Jonny Campbell",
+     "photo": "https://image.tmdb.org/t/p/w185/iwS1U5YWw2DM1N414aWWODhl2MK.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 150546,
+     "name": "Ashley Pharoah",
+     "photo": "https://image.tmdb.org/t/p/w185/hW1DCy64ubGcNRo6jaGhGAs0koK.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 10746,
+     "name": "Geoffrey Palmer",
+     "photo": "https://image.tmdb.org/t/p/w185/wfFydeTnTIdtu8oKcY7SCo7u7pg.jpg",
+     "as": "Lord Scarman"
+    },
+    {
+     "id": 93713,
+     "name": "Amelia Bullmore",
+     "photo": "https://image.tmdb.org/t/p/w185/qsvkxSBAxj1O1pEXUFIyh85YMk9.jpg",
+     "as": "Caroline Price"
+    },
+    {
+     "id": 55467,
+     "name": "Stephen Campbell Moore",
+     "photo": "https://image.tmdb.org/t/p/w185/5w4EvQfi5YipR5I5lhtN5dCDiEY.jpg",
+     "as": "Evan White"
+    },
+    {
+     "id": 27649,
+     "name": "Joseph Long",
+     "photo": "https://image.tmdb.org/t/p/w185/kIh1s4CVXqcPb57ya3AMY2v1zxc.jpg",
+     "as": "Luigi"
+    },
+    {
+     "id": 1220445,
+     "name": "Peter Dickson",
+     "photo": "https://image.tmdb.org/t/p/w185/fsKhG5efo33TTKEg8ekmAuYJhMA.jpg",
+     "as": "Advert Voice (voice)"
+    },
+    {
+     "id": 24622,
+     "name": "Andrew Clover",
+     "photo": "https://image.tmdb.org/t/p/w185/55ap3TtwInfjQmumLd9zi0lzmsA.jpg",
+     "as": "The Clown/Tim Price"
+    },
+    {
+     "id": 1219440,
+     "name": "Geff Francis",
+     "photo": "https://image.tmdb.org/t/p/w185/a7DlC90cAFqhm9jBhwmbKaRNomj.jpg",
+     "as": "Viv James"
+    },
+    {
+     "id": 16702,
+     "name": "Sean Harris",
+     "photo": "https://image.tmdb.org/t/p/w185/jouyaTu0UuZMNBrADRRkCQX1VX1.jpg",
+     "as": "Arthur Layton"
+    },
+    {
+     "id": 1251139,
+     "name": "Grace Vance",
+     "photo": null,
+     "as": "Molly Drake"
+    },
+    {
+     "id": 4718673,
+     "name": "Lucy Cole",
+     "photo": null,
+     "as": "Young Alex"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-23T07:34:25.946Z"
 }

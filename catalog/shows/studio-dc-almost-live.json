@@ -1,0 +1,69 @@
+{
+  "show": "Studio DC: Almost Live",
+  "slug": "studio-dc-almost-live",
+  "type": "Reality & Talk",
+  "network": "Spike",
+  "matchedAt": "2026-10-23T09:01:05.275Z",
+  "addedAt": "2026-10-23T09:01:05.275Z",
+  "tvmaze": {
+    "id": 31045,
+    "name": "Studio DC - Almost Live",
+    "runtime": 30,
+    "premiered": "2008-08-03",
+    "network": "Disney Channel"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The First Show",
+          "airdate": "2008-08-03",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 14 in \"Studio DC: Almost Live\"",
+            "item": "studio-dc-almost-live",
+            "itemTitle": "Studio DC: Almost Live",
+            "file": "MDC-0E-UW1.1_DES13.mp4",
+            "name": "MDC-0E-UW1.1_DES13",
+            "url": "https://archive.org/download/studio-dc-almost-live/MDC-0E-UW1.1_DES13.mp4",
+            "seconds": 1464,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 146
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Second Show",
+          "airdate": "2008-10-05",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 2 of 14 in \"Studio DC: Almost Live\"",
+            "item": "studio-dc-almost-live",
+            "itemTitle": "Studio DC: Almost Live",
+            "file": "MDC-0E-UW1.1_DES15.mp4",
+            "name": "MDC-0E-UW1.1_DES15",
+            "url": "https://archive.org/download/studio-dc-almost-live/MDC-0E-UW1.1_DES15.mp4",
+            "seconds": 1464,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 146
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

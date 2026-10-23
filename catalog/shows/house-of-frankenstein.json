@@ -1,0 +1,69 @@
+{
+  "show": "House of Frankenstein",
+  "slug": "house-of-frankenstein",
+  "type": "Sci-Fi, Fantasy and Horror",
+  "network": "NBC",
+  "matchedAt": "2026-10-23T07:54:46.287Z",
+  "addedAt": "2026-10-23T02:48:59.448Z",
+  "tvmaze": {
+    "id": 49150,
+    "name": "House of Frankenstein",
+    "runtime": 65,
+    "premiered": "1997-11-02",
+    "network": "NBC"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Part 1",
+          "airdate": "1997-11-02",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Part 1\" (0.60)",
+            "item": "house-of-frankenstein",
+            "itemTitle": "House Of Frankenstein",
+            "file": "House Of Frankenstein Part I.m4v",
+            "name": "House Of Frankenstein Part I",
+            "url": "https://archive.org/download/house-of-frankenstein/House%20Of%20Frankenstein%20Part%20I.m4v",
+            "seconds": 4888,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 538
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Part 2",
+          "airdate": "1997-11-03",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Part 2\" (0.95)",
+            "item": "house-of-frankenstein-1997-part-1-remastered-1080-p",
+            "itemTitle": "House of Frankenstein (1997) Miniseries - Digitally Restored 1080p",
+            "file": "House of Frankenstein 1997 Part 2 REMASTERED 1080P.mp4",
+            "name": "House of Frankenstein 1997 Part 2 REMASTERED 1080P",
+            "url": "https://archive.org/download/house-of-frankenstein-1997-part-1-remastered-1080-p/House%20of%20Frankenstein%201997%20Part%202%20REMASTERED%201080P.mp4",
+            "seconds": 5145,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 516
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

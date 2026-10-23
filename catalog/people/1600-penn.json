@@ -328,5 +328,930 @@
    "episodes": 1
   }
  ],
- "fetchedAt": "2026-10-15T08:14:24.039Z"
+ "fetchedAt": "2026-10-15T08:14:24.039Z",
+ "episodes": {
+  "1x1": {
+   "d": [
+    {
+     "id": 141675,
+     "name": "Jason Winer",
+     "photo": "https://image.tmdb.org/t/p/w185/fMnQ8tZdlhMvRKdcoSsEcvnk26O.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1591512,
+     "name": "Jon Lovett",
+     "photo": "https://image.tmdb.org/t/p/w185/vMgNRXUHQhqbeA12MQLZxagmnn1.jpg"
+    },
+    {
+     "id": 54415,
+     "name": "Josh Gad",
+     "photo": "https://image.tmdb.org/t/p/w185/17iKlfWZBDTAucqjkhRKHr9xjIz.jpg"
+    },
+    {
+     "id": 141675,
+     "name": "Jason Winer",
+     "photo": "https://image.tmdb.org/t/p/w185/fMnQ8tZdlhMvRKdcoSsEcvnk26O.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 30488,
+     "name": "Miguel Sandoval",
+     "photo": "https://image.tmdb.org/t/p/w185/v5tHxTkgOqcdWgjoEhUj0a50NIK.jpg",
+     "as": "Enrique Desoto"
+    },
+    {
+     "id": 1212247,
+     "name": "Carlos Lacámara",
+     "photo": "https://image.tmdb.org/t/p/w185/1OjIol0aLVtS5TXbMkukvHbZSl5.jpg",
+     "as": "Panamanian President"
+    },
+    {
+     "id": 118045,
+     "name": "Jose Yenque",
+     "photo": "https://image.tmdb.org/t/p/w185/7AOtIGNIAXo3AgXpQyW1ST9dh7t.jpg",
+     "as": "President of Colombia"
+    },
+    {
+     "id": 17420,
+     "name": "Paula Newsome",
+     "photo": "https://image.tmdb.org/t/p/w185/7CdlpBKibe9Aya8QzKGU1sfktWA.jpg",
+     "as": "Atlanta Weaver"
+    },
+    {
+     "id": 62595,
+     "name": "Mary Pat Gleason",
+     "photo": "https://image.tmdb.org/t/p/w185/zS07GnCViZj5XSHqjxqNcrIG9KC.jpg",
+     "as": "Patty"
+    },
+    {
+     "id": 14991,
+     "name": "Jay Leno",
+     "photo": "https://image.tmdb.org/t/p/w185/cplpY6q2VFtR7c1gMHM50wPzdU3.jpg",
+     "as": "Jay Leno"
+    },
+    {
+     "id": 1482960,
+     "name": "Ella Rouhier",
+     "photo": "https://image.tmdb.org/t/p/w185/we84G99FjAYZDBUywt54Ht0Wkjv.jpg",
+     "as": "Adorable Girl"
+    },
+    {
+     "id": 944478,
+     "name": "Chic Daniel",
+     "photo": "https://image.tmdb.org/t/p/w185/tuFLWmWuI3e5FhszPKJoMmcjfee.jpg",
+     "as": "Secret Service Agent"
+    },
+    {
+     "id": 1391612,
+     "name": "John Eddins",
+     "photo": "https://image.tmdb.org/t/p/w185/uxH76wdkIoOl0CdVLexHlphu20e.jpg",
+     "as": "Secret Service Agent Mike"
+    },
+    {
+     "id": 168147,
+     "name": "Juan Carlos Cantu",
+     "photo": "https://image.tmdb.org/t/p/w185/zg0zGiingVYY2MxAsj0nAazHYMA.jpg",
+     "as": "Argentinian President"
+    }
+   ]
+  },
+  "1x2": {
+   "d": [
+    {
+     "id": 141675,
+     "name": "Jason Winer",
+     "photo": "https://image.tmdb.org/t/p/w185/fMnQ8tZdlhMvRKdcoSsEcvnk26O.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1229494,
+     "name": "Mike Royce",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 1255902,
+     "name": "Adam Shapiro",
+     "photo": "https://image.tmdb.org/t/p/w185/AcUpgagCJaCzBTaiN2WQbh9hNYq.jpg",
+     "as": "Evan"
+    },
+    {
+     "id": 20760,
+     "name": "Willie C. Carpenter",
+     "photo": "https://image.tmdb.org/t/p/w185/3xII0HMuXHyPKsrKUx9InnHphv3.jpg",
+     "as": "General Maurer"
+    },
+    {
+     "id": 6916,
+     "name": "Peter Jason",
+     "photo": "https://image.tmdb.org/t/p/w185/xoqIuVvEH6BG6sOg4NnZzUKFnaf.jpg",
+     "as": "General Harrigan"
+    },
+    {
+     "id": 1238770,
+     "name": "Mika Brzezinski",
+     "photo": "https://image.tmdb.org/t/p/w185/h6jjf7z8jHwtsN8GmXLnlsn7SaB.jpg",
+     "as": "Mika Brzezinski"
+    },
+    {
+     "id": 1213859,
+     "name": "Joe Scarborough",
+     "photo": "https://image.tmdb.org/t/p/w185/9pxcyoDJZ1NKsNgNbsLlOuiYqtv.jpg",
+     "as": "Joe Scarborough"
+    },
+    {
+     "id": 1491641,
+     "name": "Willie Geist",
+     "photo": "https://image.tmdb.org/t/p/w185/A8MBR2434SfoJNUSBh8AXKlfPhZ.jpg",
+     "as": "Willie Geist"
+    },
+    {
+     "id": 992393,
+     "name": "Misty Monroe",
+     "photo": "https://image.tmdb.org/t/p/w185/2CWpmBMFuWgSYKW1jkh8qKJWGmj.jpg",
+     "as": "Reporter"
+    },
+    {
+     "id": 929133,
+     "name": "Staci Lawrence",
+     "photo": "https://image.tmdb.org/t/p/w185/glczpgmqnwaH77JwCoY5vG0LFtV.jpg",
+     "as": "Casey"
+    },
+    {
+     "id": 1695644,
+     "name": "Tim Scanlon",
+     "photo": "https://image.tmdb.org/t/p/w185/b7QeJkJ5zkmNVMTc95eY389Mf7b.jpg",
+     "as": "Secret Service Agent"
+    }
+   ]
+  },
+  "1x3": {
+   "d": [
+    {
+     "id": 141675,
+     "name": "Jason Winer",
+     "photo": "https://image.tmdb.org/t/p/w185/fMnQ8tZdlhMvRKdcoSsEcvnk26O.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1220718,
+     "name": "Joe Wiseman",
+     "photo": null
+    },
+    {
+     "id": 1220717,
+     "name": "Joe Port",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 62595,
+     "name": "Mary Pat Gleason",
+     "photo": "https://image.tmdb.org/t/p/w185/zS07GnCViZj5XSHqjxqNcrIG9KC.jpg",
+     "as": "Patty"
+    },
+    {
+     "id": 825,
+     "name": "Stacy Keach",
+     "photo": "https://image.tmdb.org/t/p/w185/gtYepb7Vu9bXcdZ62PXm56KalNl.jpg",
+     "as": "Frohm Thoroughgood"
+    },
+    {
+     "id": 1255901,
+     "name": "Susan Park",
+     "photo": "https://image.tmdb.org/t/p/w185/lwetyIzRTIOvxdHecVxyZIoRBAT.jpg",
+     "as": "Stacey Kim"
+    },
+    {
+     "id": 20276,
+     "name": "Constance Towers",
+     "photo": "https://image.tmdb.org/t/p/w185/7zuktmfwrpZQ9h3Q7wYddZxnOaz.jpg",
+     "as": "Bunny Thoroughgood"
+    },
+    {
+     "id": 588556,
+     "name": "Savannah Guthrie",
+     "photo": "https://image.tmdb.org/t/p/w185/2uhJD0DZNfcijn9FVdi8TBEjROn.jpg",
+     "as": "Savannah Guthrie"
+    },
+    {
+     "id": 97468,
+     "name": "Steve Seagren",
+     "photo": "https://image.tmdb.org/t/p/w185/ePUtoPFhC4znPjfW7vXhQ6F19kZ.jpg",
+     "as": "Mailroom Supervisor"
+    },
+    {
+     "id": 1800985,
+     "name": "Sean Hamrin",
+     "photo": "https://image.tmdb.org/t/p/w185/5UcrcaXuYNPUDbIf8RGuTcMOeXc.jpg",
+     "as": "Thoroughgood's Aide"
+    },
+    {
+     "id": 46931,
+     "name": "Blair Hickey",
+     "photo": "https://image.tmdb.org/t/p/w185/j6LOagef2qy2JI9uCCc05CUDvN3.jpg",
+     "as": "Onlooker"
+    },
+    {
+     "id": 1099819,
+     "name": "Jennifer Christopher",
+     "photo": "https://image.tmdb.org/t/p/w185/smyXk9f0q54YgSNk6akAdaGB8vR.jpg",
+     "as": "Onlooker"
+    },
+    {
+     "id": 2643790,
+     "name": "Nicci T. Carr",
+     "photo": "https://image.tmdb.org/t/p/w185/opZ8iIlePwHBhlsfMHGShnx5IHL.jpg",
+     "as": "Reporter"
+    }
+   ]
+  },
+  "1x4": {
+   "d": [
+    {
+     "id": 141675,
+     "name": "Jason Winer",
+     "photo": "https://image.tmdb.org/t/p/w185/fMnQ8tZdlhMvRKdcoSsEcvnk26O.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1234100,
+     "name": "Peter Knight",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 1391612,
+     "name": "John Eddins",
+     "photo": "https://image.tmdb.org/t/p/w185/uxH76wdkIoOl0CdVLexHlphu20e.jpg",
+     "as": "Secret Service Agent Mike"
+    },
+    {
+     "id": 1255902,
+     "name": "Adam Shapiro",
+     "photo": "https://image.tmdb.org/t/p/w185/AcUpgagCJaCzBTaiN2WQbh9hNYq.jpg",
+     "as": "Evan"
+    },
+    {
+     "id": 20760,
+     "name": "Willie C. Carpenter",
+     "photo": "https://image.tmdb.org/t/p/w185/3xII0HMuXHyPKsrKUx9InnHphv3.jpg",
+     "as": "General Maurer"
+    },
+    {
+     "id": 6916,
+     "name": "Peter Jason",
+     "photo": "https://image.tmdb.org/t/p/w185/xoqIuVvEH6BG6sOg4NnZzUKFnaf.jpg",
+     "as": "General Harrigan"
+    },
+    {
+     "id": 992393,
+     "name": "Misty Monroe",
+     "photo": "https://image.tmdb.org/t/p/w185/2CWpmBMFuWgSYKW1jkh8qKJWGmj.jpg",
+     "as": "Reporter"
+    },
+    {
+     "id": 9807,
+     "name": "René Auberjonois",
+     "photo": "https://image.tmdb.org/t/p/w185/1EZ6FnJGzwRl7XndkX8fBo8Tej3.jpg",
+     "as": "Winslow Hannum"
+    },
+    {
+     "id": 1223726,
+     "name": "Robbie Amell",
+     "photo": "https://image.tmdb.org/t/p/w185/5MPx1TEdgPs9UEXV65nd80JikSH.jpg",
+     "as": "D.B."
+    },
+    {
+     "id": 60632,
+     "name": "Rebecca Wisocky",
+     "photo": "https://image.tmdb.org/t/p/w185/rR3LZIHFs0pQz0wd9zDPdVvd3nv.jpg",
+     "as": "Bianca"
+    },
+    {
+     "id": 1598,
+     "name": "David St. James",
+     "photo": "https://image.tmdb.org/t/p/w185/bj8ICLc3bMlAwnIWtDyP57ApQt8.jpg",
+     "as": "Klaus"
+    },
+    {
+     "id": 2076036,
+     "name": "Adam Kaiz",
+     "photo": "https://image.tmdb.org/t/p/w185/oBXURNuneygRLYOA8Eo2xlECK5Z.jpg",
+     "as": "Steward"
+    }
+   ]
+  },
+  "1x5": {
+   "d": [
+    {
+     "id": 1341766,
+     "name": "Jennifer Getzinger",
+     "photo": "https://image.tmdb.org/t/p/w185/4r5ne782DlVyYA9OrzrGhMPGiHT.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1591531,
+     "name": "Sanjay Shah",
+     "photo": "https://image.tmdb.org/t/p/w185/3m9IdN9spGVCxpoSwRXZGWv3jRI.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 929133,
+     "name": "Staci Lawrence",
+     "photo": "https://image.tmdb.org/t/p/w185/glczpgmqnwaH77JwCoY5vG0LFtV.jpg",
+     "as": "Casey"
+    },
+    {
+     "id": 1294,
+     "name": "Missi Pyle",
+     "photo": "https://image.tmdb.org/t/p/w185/aGRSmafxwPmpRCLRGEJN1ygeh8D.jpg",
+     "as": "Sarah Harlan"
+    },
+    {
+     "id": 156980,
+     "name": "Jane Edith Wilson",
+     "photo": "https://image.tmdb.org/t/p/w185/h0mWf8lpdClrQhVmRlSABZx6kAH.jpg",
+     "as": "Mrs. Stitchcomb"
+    },
+    {
+     "id": 1466613,
+     "name": "Danika Yarosh",
+     "photo": "https://image.tmdb.org/t/p/w185/i0Z0XnAFxf2BlhfJe26ach2HAVz.jpg",
+     "as": "Jessica"
+    },
+    {
+     "id": 1653068,
+     "name": "Dave Anthony",
+     "photo": "https://image.tmdb.org/t/p/w185/ueQxprXZgicYOh66zZGUuoZEnQX.jpg",
+     "as": "Mark"
+    },
+    {
+     "id": 1503837,
+     "name": "Janet Hoskins",
+     "photo": "https://image.tmdb.org/t/p/w185/Ab9wA1GipllwMV63t3IlNOfR77S.jpg",
+     "as": "Protester"
+    },
+    {
+     "id": 3940522,
+     "name": "Lano Medina",
+     "photo": "https://image.tmdb.org/t/p/w185/xerMB8SiofySzcPzeiTmJi3vRZz.jpg",
+     "as": "Protester"
+    },
+    {
+     "id": 149774,
+     "name": "Ryan Raddatz",
+     "photo": "https://image.tmdb.org/t/p/w185/vGtgFZtVbCOY3jXUVBXNauxwS7d.jpg",
+     "as": "Protester"
+    },
+    {
+     "id": 1680886,
+     "name": "Sam Adler",
+     "photo": null,
+     "as": "A/V Club Reporter"
+    },
+    {
+     "id": 995003,
+     "name": "Elijah Nelson",
+     "photo": "https://image.tmdb.org/t/p/w185/zCFLtUlVMSlmRvfAIrh3kHu8l25.jpg",
+     "as": "Misfit"
+    }
+   ]
+  },
+  "1x6": {
+   "d": [
+    {
+     "id": 141675,
+     "name": "Jason Winer",
+     "photo": "https://image.tmdb.org/t/p/w185/fMnQ8tZdlhMvRKdcoSsEcvnk26O.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1591533,
+     "name": "Laura Gutin",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 62595,
+     "name": "Mary Pat Gleason",
+     "photo": "https://image.tmdb.org/t/p/w185/zS07GnCViZj5XSHqjxqNcrIG9KC.jpg",
+     "as": "Patty"
+    },
+    {
+     "id": 1223726,
+     "name": "Robbie Amell",
+     "photo": "https://image.tmdb.org/t/p/w185/5MPx1TEdgPs9UEXV65nd80JikSH.jpg",
+     "as": "D.B."
+    },
+    {
+     "id": 11357,
+     "name": "Bruce Campbell",
+     "photo": "https://image.tmdb.org/t/p/w185/p9335ljr7luOWsfwZSOlsIzFJKE.jpg",
+     "as": "Doug Gilchrist"
+    },
+    {
+     "id": 52937,
+     "name": "Rob Benedict",
+     "photo": "https://image.tmdb.org/t/p/w185/h5QhbmA7GzmpJIonxr2sPaKbg2G.jpg",
+     "as": "Skeptic"
+    },
+    {
+     "id": 1223103,
+     "name": "Mary Hart",
+     "photo": "https://image.tmdb.org/t/p/w185/eRkGCVGAcCWJYVDs0b5rbAfiR6C.jpg",
+     "as": "Mary Hart"
+    },
+    {
+     "id": 198137,
+     "name": "Rory O'Malley",
+     "photo": "https://image.tmdb.org/t/p/w185/1qgbNAWp4PQCqIQmQ4QPeNZtqfM.jpg",
+     "as": "Tour Guide"
+    },
+    {
+     "id": 1791057,
+     "name": "Sapna Gandhi",
+     "photo": "https://image.tmdb.org/t/p/w185/6S1wbqMB3BPPiLXEiXLIBTTegKJ.jpg",
+     "as": "Press Aide"
+    },
+    {
+     "id": 1230890,
+     "name": "Nadege August",
+     "photo": "https://image.tmdb.org/t/p/w185/4SGgBlHdAymZb6XrwkE0ossROUx.jpg",
+     "as": "Vanessa"
+    },
+    {
+     "id": 154867,
+     "name": "Lou Richards",
+     "photo": "https://image.tmdb.org/t/p/w185/5R9kZPXG2jIyQvSt3w63EtoaVax.jpg",
+     "as": "Cabinet Secretary"
+    },
+    {
+     "id": 167759,
+     "name": "Carole Gutierrez",
+     "photo": "https://image.tmdb.org/t/p/w185/kBF3tccPYqG3Ns708nbhSzwU4g9.jpg",
+     "as": "Cabinet Secretary"
+    }
+   ]
+  },
+  "1x7": {
+   "d": [
+    {
+     "id": 1212689,
+     "name": "Ken Whittingham",
+     "photo": "https://image.tmdb.org/t/p/w185/bylFyXnjWWIuoyAkhL9NZE7UKYT.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1223179,
+     "name": "Bridget Bedard",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 1315943,
+     "name": "Wyatt Nash",
+     "photo": "https://image.tmdb.org/t/p/w185/6LPO0QqF84MMNzn5FXLVSIxYhfw.jpg",
+     "as": "Tad"
+    },
+    {
+     "id": 1391612,
+     "name": "John Eddins",
+     "photo": "https://image.tmdb.org/t/p/w185/uxH76wdkIoOl0CdVLexHlphu20e.jpg",
+     "as": "Secret Service Agent Mike"
+    },
+    {
+     "id": 1255901,
+     "name": "Susan Park",
+     "photo": "https://image.tmdb.org/t/p/w185/lwetyIzRTIOvxdHecVxyZIoRBAT.jpg",
+     "as": "Stacey Kim"
+    },
+    {
+     "id": 1223726,
+     "name": "Robbie Amell",
+     "photo": "https://image.tmdb.org/t/p/w185/5MPx1TEdgPs9UEXV65nd80JikSH.jpg",
+     "as": "D.B."
+    },
+    {
+     "id": 1231885,
+     "name": "Chuck Todd",
+     "photo": "https://image.tmdb.org/t/p/w185/kucETnFGnwx2GCsXx9sScSKjYAT.jpg",
+     "as": "Chuck Todd"
+    },
+    {
+     "id": 993608,
+     "name": "Boo Arnold",
+     "photo": "https://image.tmdb.org/t/p/w185/j95qPFwdrb6I6JnoUN3bXBIDngc.jpg",
+     "as": "Secret Service Agent Terry"
+    },
+    {
+     "id": 1323221,
+     "name": "Darlene Kardon",
+     "photo": "https://image.tmdb.org/t/p/w185/An5EA43wwVYKqGAhdWXTiMSWGhg.jpg",
+     "as": "Reporter"
+    }
+   ]
+  },
+  "1x8": {
+   "d": [
+    {
+     "id": 141675,
+     "name": "Jason Winer",
+     "photo": "https://image.tmdb.org/t/p/w185/fMnQ8tZdlhMvRKdcoSsEcvnk26O.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 149774,
+     "name": "Ryan Raddatz",
+     "photo": "https://image.tmdb.org/t/p/w185/vGtgFZtVbCOY3jXUVBXNauxwS7d.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 53400,
+     "name": "Tim Bagley",
+     "photo": "https://image.tmdb.org/t/p/w185/l00IDn897RHTbTB7GcU1Pm9dKsO.jpg",
+     "as": "Mr. Norgel"
+    },
+    {
+     "id": 582122,
+     "name": "Lucia Vecchio",
+     "photo": "https://image.tmdb.org/t/p/w185/slyEwtCqQPzrL5J6XMB2Go6QpSd.jpg",
+     "as": "Kayla"
+    },
+    {
+     "id": 1316480,
+     "name": "Mike Moonves",
+     "photo": null,
+     "as": "Blogger"
+    },
+    {
+     "id": 2853604,
+     "name": "Marilyn Zack",
+     "photo": null,
+     "as": "Midwestern Tourist"
+    }
+   ]
+  },
+  "1x9": {
+   "d": [
+    {
+     "id": 141675,
+     "name": "Jason Winer",
+     "photo": "https://image.tmdb.org/t/p/w185/fMnQ8tZdlhMvRKdcoSsEcvnk26O.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1380819,
+     "name": "Dan Hernandez",
+     "photo": "https://image.tmdb.org/t/p/w185/qymuWtigXVSn4QNxdkwArAIYxpH.jpg"
+    },
+    {
+     "id": 1380820,
+     "name": "Benji Samit",
+     "photo": "https://image.tmdb.org/t/p/w185/rFwzLOAG5KXqlLkEsg7oDsom40W.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1255902,
+     "name": "Adam Shapiro",
+     "photo": "https://image.tmdb.org/t/p/w185/AcUpgagCJaCzBTaiN2WQbh9hNYq.jpg",
+     "as": "Evan"
+    },
+    {
+     "id": 20760,
+     "name": "Willie C. Carpenter",
+     "photo": "https://image.tmdb.org/t/p/w185/3xII0HMuXHyPKsrKUx9InnHphv3.jpg",
+     "as": "General Maurer"
+    },
+    {
+     "id": 6916,
+     "name": "Peter Jason",
+     "photo": "https://image.tmdb.org/t/p/w185/xoqIuVvEH6BG6sOg4NnZzUKFnaf.jpg",
+     "as": "General Harrigan"
+    },
+    {
+     "id": 1255901,
+     "name": "Susan Park",
+     "photo": "https://image.tmdb.org/t/p/w185/lwetyIzRTIOvxdHecVxyZIoRBAT.jpg",
+     "as": "Stacey Kim"
+    },
+    {
+     "id": 1223726,
+     "name": "Robbie Amell",
+     "photo": "https://image.tmdb.org/t/p/w185/5MPx1TEdgPs9UEXV65nd80JikSH.jpg",
+     "as": "D.B."
+    },
+    {
+     "id": 111451,
+     "name": "Matt Corboy",
+     "photo": "https://image.tmdb.org/t/p/w185/hkyyIuwqN6AqLZj6YHUPfYa2EKF.jpg",
+     "as": "Tommy"
+    },
+    {
+     "id": 1465283,
+     "name": "Jon Donahue",
+     "photo": "https://image.tmdb.org/t/p/w185/fX2ydOdOVb2g4awWvU4VPFiwh37.jpg",
+     "as": "NSC Geek"
+    },
+    {
+     "id": 1154103,
+     "name": "Randy Bautista",
+     "photo": null,
+     "as": "NSC Geek"
+    }
+   ]
+  },
+  "1x10": {
+   "d": [
+    {
+     "id": 43954,
+     "name": "David Grossman",
+     "photo": "https://image.tmdb.org/t/p/w185/rDZ1xOyWCOuGZpXM6OTZqfsRt54.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1220718,
+     "name": "Joe Wiseman",
+     "photo": null
+    },
+    {
+     "id": 1220717,
+     "name": "Joe Port",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 31903,
+     "name": "Henry Winkler",
+     "photo": "https://image.tmdb.org/t/p/w185/5Y51B0maVYvKRoS43lwlYh1M52X.jpg",
+     "as": "Senator Faxler"
+    },
+    {
+     "id": 1219537,
+     "name": "Matt Price",
+     "photo": "https://image.tmdb.org/t/p/w185/cqIWGoKF6R9mcOqwmqwromuJRrC.jpg",
+     "as": "Congressman Shapiro"
+    },
+    {
+     "id": 55270,
+     "name": "Tom Wright",
+     "photo": "https://image.tmdb.org/t/p/w185/lJ4L5fdXBeNr528gBB4eMTdvfd4.jpg",
+     "as": "Interviewer"
+    },
+    {
+     "id": 1791057,
+     "name": "Sapna Gandhi",
+     "photo": "https://image.tmdb.org/t/p/w185/6S1wbqMB3BPPiLXEiXLIBTTegKJ.jpg",
+     "as": "Staffer"
+    },
+    {
+     "id": 1990649,
+     "name": "Alexis Wolfe",
+     "photo": null,
+     "as": "Staffer"
+    },
+    {
+     "id": 1973267,
+     "name": "Oscar Magana Jr.",
+     "photo": null,
+     "as": "Larry King Crew Member"
+    }
+   ]
+  },
+  "1x11": {
+   "d": [
+    {
+     "id": 1212755,
+     "name": "Gail Mancuso",
+     "photo": "https://image.tmdb.org/t/p/w185/yacqdjB95BaD28ZW1zhy3yeBujm.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1591531,
+     "name": "Sanjay Shah",
+     "photo": "https://image.tmdb.org/t/p/w185/3m9IdN9spGVCxpoSwRXZGWv3jRI.jpg"
+    },
+    {
+     "id": 1591512,
+     "name": "Jon Lovett",
+     "photo": "https://image.tmdb.org/t/p/w185/vMgNRXUHQhqbeA12MQLZxagmnn1.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1223726,
+     "name": "Robbie Amell",
+     "photo": "https://image.tmdb.org/t/p/w185/5MPx1TEdgPs9UEXV65nd80JikSH.jpg",
+     "as": "D.B."
+    },
+    {
+     "id": 126471,
+     "name": "Tom Amandes",
+     "photo": "https://image.tmdb.org/t/p/w185/aDvaQEPNWKjjyVWG0zl3ZwEWirf.jpg",
+     "as": "Bernard"
+    },
+    {
+     "id": 52628,
+     "name": "Sofia Milos",
+     "photo": "https://image.tmdb.org/t/p/w185/ryK5xo9FTDAtTkC0P4oDes3szS1.jpg",
+     "as": "Bernice"
+    },
+    {
+     "id": 168913,
+     "name": "Rafael J. Noble",
+     "photo": null,
+     "as": "Lou Berryman"
+    }
+   ]
+  },
+  "1x12": {
+   "d": [
+    {
+     "id": 141675,
+     "name": "Jason Winer",
+     "photo": "https://image.tmdb.org/t/p/w185/fMnQ8tZdlhMvRKdcoSsEcvnk26O.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1234100,
+     "name": "Peter Knight",
+     "photo": null
+    },
+    {
+     "id": 1591533,
+     "name": "Laura Gutin",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 62595,
+     "name": "Mary Pat Gleason",
+     "photo": "https://image.tmdb.org/t/p/w185/zS07GnCViZj5XSHqjxqNcrIG9KC.jpg",
+     "as": "Patty"
+    },
+    {
+     "id": 1255902,
+     "name": "Adam Shapiro",
+     "photo": "https://image.tmdb.org/t/p/w185/AcUpgagCJaCzBTaiN2WQbh9hNYq.jpg",
+     "as": "Evan"
+    },
+    {
+     "id": 1255901,
+     "name": "Susan Park",
+     "photo": "https://image.tmdb.org/t/p/w185/lwetyIzRTIOvxdHecVxyZIoRBAT.jpg",
+     "as": "Stacey Kim"
+    },
+    {
+     "id": 1223726,
+     "name": "Robbie Amell",
+     "photo": "https://image.tmdb.org/t/p/w185/5MPx1TEdgPs9UEXV65nd80JikSH.jpg",
+     "as": "D.B."
+    },
+    {
+     "id": 1181326,
+     "name": "Hannah Simone",
+     "photo": "https://image.tmdb.org/t/p/w185/vF2K5xd73ZvRhBjFuIfiSTLMNYB.jpg",
+     "as": "Princess Abigail"
+    },
+    {
+     "id": 159365,
+     "name": "Pete Gardner",
+     "photo": "https://image.tmdb.org/t/p/w185/76GF2TxPsrioQKa6xxfmyfTNI2P.jpg",
+     "as": "Pete"
+    },
+    {
+     "id": 1187517,
+     "name": "Nancy Cheryll Davis",
+     "photo": null,
+     "as": "Hillary"
+    },
+    {
+     "id": 1212221,
+     "name": "Maura Soden",
+     "photo": null,
+     "as": "Madeline"
+    },
+    {
+     "id": 1334840,
+     "name": "Andy Favreau",
+     "photo": "https://image.tmdb.org/t/p/w185/xtz7faaIq05fodLk5tSC7gkopQu.jpg",
+     "as": "John"
+    },
+    {
+     "id": 119590,
+     "name": "D.C. Pierson",
+     "photo": "https://image.tmdb.org/t/p/w185/iFLtp81zcfpWEUr8Qcj4BOkJDXt.jpg",
+     "as": "Casanova"
+    }
+   ]
+  },
+  "1x13": {
+   "d": [
+    {
+     "id": 141675,
+     "name": "Jason Winer",
+     "photo": "https://image.tmdb.org/t/p/w185/fMnQ8tZdlhMvRKdcoSsEcvnk26O.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1229494,
+     "name": "Mike Royce",
+     "photo": null
+    },
+    {
+     "id": 1591512,
+     "name": "Jon Lovett",
+     "photo": "https://image.tmdb.org/t/p/w185/vMgNRXUHQhqbeA12MQLZxagmnn1.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 1255902,
+     "name": "Adam Shapiro",
+     "photo": "https://image.tmdb.org/t/p/w185/AcUpgagCJaCzBTaiN2WQbh9hNYq.jpg",
+     "as": "Evan"
+    },
+    {
+     "id": 825,
+     "name": "Stacy Keach",
+     "photo": "https://image.tmdb.org/t/p/w185/gtYepb7Vu9bXcdZ62PXm56KalNl.jpg",
+     "as": "Frohm Thoroughgood"
+    },
+    {
+     "id": 1255901,
+     "name": "Susan Park",
+     "photo": "https://image.tmdb.org/t/p/w185/lwetyIzRTIOvxdHecVxyZIoRBAT.jpg",
+     "as": "Stacey Kim"
+    },
+    {
+     "id": 97468,
+     "name": "Steve Seagren",
+     "photo": "https://image.tmdb.org/t/p/w185/ePUtoPFhC4znPjfW7vXhQ6F19kZ.jpg",
+     "as": "Mailroom Supervisor"
+    },
+    {
+     "id": 9807,
+     "name": "René Auberjonois",
+     "photo": "https://image.tmdb.org/t/p/w185/1EZ6FnJGzwRl7XndkX8fBo8Tej3.jpg",
+     "as": "Winslow Hannum"
+    },
+    {
+     "id": 1223726,
+     "name": "Robbie Amell",
+     "photo": "https://image.tmdb.org/t/p/w185/5MPx1TEdgPs9UEXV65nd80JikSH.jpg",
+     "as": "D.B."
+    },
+    {
+     "id": 1231885,
+     "name": "Chuck Todd",
+     "photo": "https://image.tmdb.org/t/p/w185/kucETnFGnwx2GCsXx9sScSKjYAT.jpg",
+     "as": "Chuck Todd"
+    },
+    {
+     "id": 111451,
+     "name": "Matt Corboy",
+     "photo": "https://image.tmdb.org/t/p/w185/hkyyIuwqN6AqLZj6YHUPfYa2EKF.jpg",
+     "as": "Tommy"
+    },
+    {
+     "id": 159365,
+     "name": "Pete Gardner",
+     "photo": "https://image.tmdb.org/t/p/w185/76GF2TxPsrioQKa6xxfmyfTNI2P.jpg",
+     "as": "Pete"
+    },
+    {
+     "id": 44127,
+     "name": "Larry King",
+     "photo": "https://image.tmdb.org/t/p/w185/afNrrwBSbeFLrh0dVHvlMRRyont.jpg",
+     "as": "Larry King"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-23T07:39:52.300Z"
 }

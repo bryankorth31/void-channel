@@ -3,7 +3,7 @@
   "slug": "millennium",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "FOX",
-  "matchedAt": "2026-10-23T01:19:52.850Z",
+  "matchedAt": "2026-10-23T07:20:02.748Z",
   "addedAt": "2026-10-23T01:19:52.850Z",
   "tvmaze": {
     "id": 1302,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 67,
     "live": 4,
-    "review": 41,
-    "missing": 22,
-    "pct": 67
+    "review": 42,
+    "missing": 21,
+    "pct": 69
   },
   "seasons": [
     {
@@ -828,7 +828,21 @@
             "langRisk": true,
             "sizeMB": 244
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"19:19\" (0.95)",
+              "item": "LoveThroughaMillennium19Nov2016",
+              "itemTitle": "Love Througha Millennium 19 Nov 2016",
+              "file": "LoveThroughaMillennium-19-Nov-2016.mp4",
+              "name": "LoveThroughaMillennium-19-Nov-2016",
+              "url": "https://archive.org/download/LoveThroughaMillennium19Nov2016/LoveThroughaMillennium-19-Nov-2016.mp4",
+              "seconds": 2625,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 209
+            }
+          ]
         },
         {
           "number": 8,
@@ -1247,8 +1261,20 @@
           "number": 10,
           "name": "Borrowed Time",
           "airdate": "1999-01-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Borrowed Time\" (1.00)",
+            "item": "MovieRecordingJan99-May00",
+            "itemTitle": "Blank VHS Tape: Patch Adams, The Practice, Millennium, Judging Amy (1999-2000)",
+            "file": "Millennium - Borrowed Time.mp4",
+            "name": "Millennium - Borrowed Time",
+            "url": "https://archive.org/download/MovieRecordingJan99-May00/Millennium%20-%20Borrowed%20Time.mp4",
+            "seconds": 3576,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1702
+          },
           "alternates": []
         },
         {

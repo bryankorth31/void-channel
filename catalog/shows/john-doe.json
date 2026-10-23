@@ -3,7 +3,7 @@
   "slug": "john-doe",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "FOX",
-  "matchedAt": "2026-10-23T00:34:51.021Z",
+  "matchedAt": "2026-10-23T07:04:47.699Z",
   "addedAt": "2026-10-23T00:34:51.021Z",
   "tvmaze": {
     "id": 3293,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 21,
-    "live": 5,
-    "review": 7,
-    "missing": 9,
-    "pct": 57
+    "live": 12,
+    "review": 4,
+    "missing": 5,
+    "pct": 76
   },
   "seasons": [
     {
@@ -169,61 +169,103 @@
           "number": 6,
           "name": "Low Art",
           "airdate": "2002-11-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 6 of 10 in \"Meet John Doe\"",
-            "item": "meet_john_doe_512kb",
-            "itemTitle": "Meet John Doe",
-            "file": "Deletes/lets_get_tough_512kb.mp4",
-            "name": "Deletes/lets_get_tough_512kb",
-            "url": "https://archive.org/download/meet_john_doe_512kb/Deletes%2Flets_get_tough_512kb.mp4",
-            "seconds": 3250,
-            "format": "512Kb MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "john-doe-s-1-e-06-low-art",
+            "itemTitle": "John Doe S1E06 - Low Art",
+            "file": "John Doe - S1E06 - Low Art.mp4",
+            "name": "John Doe - S1E06 - Low Art",
+            "url": "https://archive.org/download/john-doe-s-1-e-06-low-art/John%20Doe%20-%20S1E06%20-%20Low%20Art.mp4",
+            "seconds": 2543,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 236
+            "sizeMB": 336
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 10 in \"Meet John Doe\"",
+              "item": "meet_john_doe_512kb",
+              "itemTitle": "Meet John Doe",
+              "file": "Deletes/lets_get_tough_512kb.mp4",
+              "name": "Deletes/lets_get_tough_512kb",
+              "url": "https://archive.org/download/meet_john_doe_512kb/Deletes%2Flets_get_tough_512kb.mp4",
+              "seconds": 3250,
+              "format": "512Kb MPEG4",
+              "playable": true,
+              "sizeMB": 236
+            }
+          ]
         },
         {
           "number": 7,
           "name": "Mind Games",
           "airdate": "2002-11-08",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 7 of 10 in \"Meet John Doe\"",
-            "item": "meet_john_doe_512kb",
-            "itemTitle": "Meet John Doe",
-            "file": "Deletes/ManhattanLoveSong.mp4",
-            "name": "Deletes/ManhattanLoveSong",
-            "url": "https://archive.org/download/meet_john_doe_512kb/Deletes%2FManhattanLoveSong.mp4",
-            "seconds": 4177,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "john-doe-s-1-e-07-mind-games",
+            "itemTitle": "John Doe S1E07 - Mind Games",
+            "file": "John Doe - S1E07 - Mind Games.mp4",
+            "name": "John Doe - S1E07 - Mind Games",
+            "url": "https://archive.org/download/john-doe-s-1-e-07-mind-games/John%20Doe%20-%20S1E07%20-%20Mind%20Games.mp4",
+            "seconds": 2532,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 433
+            "sizeMB": 335
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 10 in \"Meet John Doe\"",
+              "item": "meet_john_doe_512kb",
+              "itemTitle": "Meet John Doe",
+              "file": "Deletes/ManhattanLoveSong.mp4",
+              "name": "Deletes/ManhattanLoveSong",
+              "url": "https://archive.org/download/meet_john_doe_512kb/Deletes%2FManhattanLoveSong.mp4",
+              "seconds": 4177,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 433
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Idaho",
           "airdate": "2002-11-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 8 of 10 in \"Meet John Doe\"",
-            "item": "meet_john_doe_512kb",
-            "itemTitle": "Meet John Doe",
-            "file": "Deletes/the_bashful_bachelor_512kb.mp4",
-            "name": "Deletes/the_bashful_bachelor_512kb",
-            "url": "https://archive.org/download/meet_john_doe_512kb/Deletes%2Fthe_bashful_bachelor_512kb.mp4",
-            "seconds": 4576,
-            "format": "512Kb MPEG4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "john-doe-s-1-e-08-idaho",
+            "itemTitle": "John Doe S1E08 - Idaho",
+            "file": "John Doe - S1E08 - Idaho.mp4",
+            "name": "John Doe - S1E08 - Idaho",
+            "url": "https://archive.org/download/john-doe-s-1-e-08-idaho/John%20Doe%20-%20S1E08%20-%20Idaho.mp4",
+            "seconds": 2635,
+            "format": "MPEG4",
             "playable": true,
-            "sizeMB": 333
+            "sizeMB": 347
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 10 in \"Meet John Doe\"",
+              "item": "meet_john_doe_512kb",
+              "itemTitle": "Meet John Doe",
+              "file": "Deletes/the_bashful_bachelor_512kb.mp4",
+              "name": "Deletes/the_bashful_bachelor_512kb",
+              "url": "https://archive.org/download/meet_john_doe_512kb/Deletes%2Fthe_bashful_bachelor_512kb.mp4",
+              "seconds": 4576,
+              "format": "512Kb MPEG4",
+              "playable": true,
+              "sizeMB": 333
+            }
+          ]
         },
         {
           "number": 9,
@@ -289,16 +331,40 @@
           "number": 12,
           "name": "Tone Dead",
           "airdate": "2003-01-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "john-doe-s-1-e-12-tone-dead",
+            "itemTitle": "John Doe S1E12 - Tone Dead",
+            "file": "John Doe - S1E12 - Tone Dead.mp4",
+            "name": "John Doe - S1E12 - Tone Dead",
+            "url": "https://archive.org/download/john-doe-s-1-e-12-tone-dead/John%20Doe%20-%20S1E12%20-%20Tone%20Dead.mp4",
+            "seconds": 2566,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 340
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Family Man",
           "airdate": "2003-01-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "john-doe-s-1-e-13-family-man",
+            "itemTitle": "John Doe S1E13 - Family Man",
+            "file": "John Doe - S1E13 - Family Man.mp4",
+            "name": "John Doe - S1E13 - Family Man",
+            "url": "https://archive.org/download/john-doe-s-1-e-13-family-man/John%20Doe%20-%20S1E13%20-%20Family%20Man.mp4",
+            "seconds": 2608,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 347
+          },
           "alternates": []
         },
         {
@@ -329,8 +395,20 @@
           "number": 17,
           "name": "Doe or Die",
           "airdate": "2003-03-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "john-doe-s-1-e-17-doe-or-die",
+            "itemTitle": "John Doe S1E17 - Doe or Die",
+            "file": "John Doe - S1E17 - Doe or Die.mp4",
+            "name": "John Doe - S1E17 - Doe or Die",
+            "url": "https://archive.org/download/john-doe-s-1-e-17-doe-or-die/John%20Doe%20-%20S1E17%20-%20Doe%20or%20Die.mp4",
+            "seconds": 2624,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 349
+          },
           "alternates": []
         },
         {
@@ -345,8 +423,20 @@
           "number": 19,
           "name": "Shock to the System",
           "airdate": "2003-04-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "john-doe-s-1-e-19-lol",
+            "itemTitle": "John Doe S1E19 - LOL",
+            "file": "John Doe - S1E19 - LOL.mp4",
+            "name": "John Doe - S1E19 - LOL",
+            "url": "https://archive.org/download/john-doe-s-1-e-19-lol/John%20Doe%20-%20S1E19%20-%20LOL.mp4",
+            "seconds": 2628,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 350
+          },
           "alternates": []
         },
         {

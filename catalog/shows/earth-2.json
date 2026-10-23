@@ -3,7 +3,8 @@
   "slug": "earth-2",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "NBC",
-  "matchedAt": "2026-10-23T00:44:43.861Z",
+  "matchedAt": "2026-10-23T07:09:12.726Z",
+  "addedAt": "2026-10-23T07:09:12.726Z",
   "tvmaze": {
     "id": 7136,
     "name": "Earth 2",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 21,
-    "live": 0,
-    "review": 0,
-    "missing": 21,
-    "pct": 0
+    "live": 18,
+    "review": 3,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -26,169 +27,1203 @@
           "number": 1,
           "name": "First Contact",
           "airdate": "1994-11-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"First Contact\" (0.95)",
+            "item": "earth-2_202606",
+            "itemTitle": "Earth 2 (1994) Complete",
+            "file": "Earth 2 E02 First Contact Part 2.mp4",
+            "name": "Earth 2 E02 First Contact Part 2",
+            "url": "https://archive.org/download/earth-2_202606/Earth%202%20E02%20First%20Contact%20Part%202.mp4",
+            "seconds": 2953,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 224
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "The Man Who Fell to Earth (Two)",
           "airdate": "1994-11-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"The Man Who Fell to Earth (Two)\" (0.84)",
+            "item": "et_20251105",
+            "itemTitle": "Earth 2",
+            "file": "Earth 2  S01E03 The Man Who Fell to Earth (Two).mp4",
+            "name": "Earth 2  S01E03 The Man Who Fell to Earth (Two)",
+            "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E03%20The%20Man%20Who%20Fell%20to%20Earth%20(Two).mp4",
+            "seconds": 2811,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 145
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"The Man Who Fell to Earth (Two)\" (0.76)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E03 - The Man Who Fell to Earth Two [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E03 - The Man Who Fell to Earth Two [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E03%20-%20The%20Man%20Who%20Fell%20to%20Earth%20Two%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2811,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 279
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Life Lessons",
           "airdate": "1994-11-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Life Lessons\" (0.95)",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E04 - Life Lessons [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E04 - Life Lessons [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E04%20-%20Life%20Lessons%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2837,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 283
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Life Lessons\" (1.00)",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E04 Life Lessons.mp4",
+              "name": "Earth 2  S01E04 Life Lessons",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E04%20Life%20Lessons.mp4",
+              "seconds": 2837,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 148
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Life Lessons\" (0.95)",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E04 - Life Lessons.mp4",
+              "name": "Earth2 S01E04 - Life Lessons",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E04%20-%20Life%20Lessons.mp4",
+              "seconds": 2677,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 265
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Promises, Promises",
           "airdate": "1994-11-27",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E04 - Life Lessons [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E04 - Life Lessons [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E04%20-%20Life%20Lessons%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2837,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 283
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E04 Life Lessons.mp4",
+              "name": "Earth 2  S01E04 Life Lessons",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E04%20Life%20Lessons.mp4",
+              "seconds": 2837,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 148
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E04 - Life Lessons.mp4",
+              "name": "Earth2 S01E04 - Life Lessons",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E04%20-%20Life%20Lessons.mp4",
+              "seconds": 2677,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 265
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Promises, Promises\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E05 - Promises Promises [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E05 - Promises Promises [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E05%20-%20Promises%20Promises%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2798,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 278
+            }
+          ]
         },
         {
           "number": 5,
           "name": "A Memory Play",
           "airdate": "1994-12-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E05 - Promises Promises [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E05 - Promises Promises [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E05%20-%20Promises%20Promises%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2798,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 278
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E05 Promises, Promises.mp4",
+              "name": "Earth 2  S01E05 Promises, Promises",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E05%20Promises%2C%20Promises.mp4",
+              "seconds": 2798,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 151
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E05 - Promises Promises.mp4",
+              "name": "Earth2 S01E05 - Promises Promises",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E05%20-%20Promises%20Promises.mp4",
+              "seconds": 2643,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 261
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"A Memory Play\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E06 - A Memory Play [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E06 - A Memory Play [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E06%20-%20A%20Memory%20Play%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2825,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 280
+            }
+          ]
         },
         {
           "number": 6,
           "name": "Water",
           "airdate": "1994-12-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E06 - A Memory Play [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E06 - A Memory Play [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E06%20-%20A%20Memory%20Play%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2825,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 280
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E06 A Memory Play.mp4",
+              "name": "Earth 2  S01E06 A Memory Play",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E06%20A%20Memory%20Play.mp4",
+              "seconds": 2825,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 146
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E06 - A Memory Play.mp4",
+              "name": "Earth2 S01E06 - A Memory Play",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E06%20-%20A%20Memory%20Play.mp4",
+              "seconds": 2690,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 265
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Water\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E07 - Water [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E07 - Water [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E07%20-%20Water%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2810,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 280
+            }
+          ]
         },
         {
           "number": 7,
           "name": "The Church of Morgan",
           "airdate": "1994-12-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E07 - Water [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E07 - Water [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E07%20-%20Water%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2810,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 280
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E07 Natural Born Grendlers.mp4",
+              "name": "Earth 2  S01E07 Natural Born Grendlers",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E07%20Natural%20Born%20Grendlers.mp4",
+              "seconds": 2811,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 157
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Church of Morgan\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E08 - The Church of Morgan [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E08 - The Church of Morgan [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E08%20-%20The%20Church%20of%20Morgan%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2833,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 284
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Church of Morgan\" (0.95)",
+              "item": "earth-2_202606",
+              "itemTitle": "Earth 2 (1994) Complete",
+              "file": "Earth 2 E08 - The Church of Morgan.mp4",
+              "name": "Earth 2 E08 - The Church of Morgan",
+              "url": "https://archive.org/download/earth-2_202606/Earth%202%20E08%20-%20The%20Church%20of%20Morgan.mp4",
+              "seconds": 2833,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 147
+            }
+          ]
         },
         {
           "number": 8,
           "name": "The Enemy Within",
           "airdate": "1995-01-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E08 - The Church of Morgan [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E08 - The Church of Morgan [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E08%20-%20The%20Church%20of%20Morgan%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2833,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 284
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E08 Water.mp4",
+              "name": "Earth 2  S01E08 Water",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E08%20Water.mp4",
+              "seconds": 2833,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 154
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E08 - Water.mp4",
+              "name": "Earth2 S01E08 - Water",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E08%20-%20Water.mp4",
+              "seconds": 2682,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 265
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Enemy Within\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E09 - The Enemy Within [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E09 - The Enemy Within [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E09%20-%20The%20Enemy%20Within%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2870,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 288
+            }
+          ]
         },
         {
           "number": 9,
           "name": "Redemption",
           "airdate": "1995-01-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "et_20251105",
+            "itemTitle": "Earth 2",
+            "file": "Earth 2  S01E09 The Church of Morgan.mp4",
+            "name": "Earth 2  S01E09 The Church of Morgan",
+            "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E09%20The%20Church%20of%20Morgan.mp4",
+            "seconds": 2870,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 146
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E09 - The Church of Morgan.mp4",
+              "name": "Earth2 S01E09 - The Church of Morgan",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E09%20-%20The%20Church%20of%20Morgan.mp4",
+              "seconds": 2696,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 268
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Redemption\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E10 - Redemption [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E10 - Redemption [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E10%20-%20Redemption%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2730,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 274
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Redemption\" (1.00)",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E11 Redemption.mp4",
+              "name": "Earth 2  S01E11 Redemption",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E11%20Redemption.mp4",
+              "seconds": 2817,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 10,
           "name": "Moon Cross",
           "airdate": "1995-02-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E10 - Redemption [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E10 - Redemption [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E10%20-%20Redemption%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2730,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 274
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Moon Cross\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E11 - Moon Cross [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E11 - Moon Cross [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E11%20-%20Moon%20Cross%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2817,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 282
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Moon Cross\" (0.95)",
+              "item": "earth-2_202606",
+              "itemTitle": "Earth 2 (1994) Complete",
+              "file": "Earth 2 E11 - Moon Cross.mp4",
+              "name": "Earth 2 E11 - Moon Cross",
+              "url": "https://archive.org/download/earth-2_202606/Earth%202%20E11%20-%20Moon%20Cross.mp4",
+              "seconds": 2817,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 144
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Moon Cross\" (0.95)",
+              "item": "earth-2_202608",
+              "itemTitle": "Earth 2 (1994)",
+              "file": "Earth 2 E11 - Moon Cross.ia.mp4",
+              "name": "Earth 2 E11 - Moon Cross",
+              "url": "https://archive.org/download/earth-2_202608/Earth%202%20E11%20-%20Moon%20Cross.ia.mp4",
+              "seconds": 2817,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 144
+            }
+          ]
         },
         {
           "number": 11,
           "name": "Better Living Through Morganite (1)",
           "airdate": "1995-02-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E11 - Moon Cross [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E11 - Moon Cross [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E11%20-%20Moon%20Cross%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2817,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 282
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E11 Redemption.mp4",
+              "name": "Earth 2  S01E11 Redemption",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E11%20Redemption.mp4",
+              "seconds": 2817,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 145
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E11 - Redemption.mp4",
+              "name": "Earth2 S01E11 - Redemption",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E11%20-%20Redemption.mp4",
+              "seconds": 2628,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 261
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Better Living Through Morganite (1)\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E12 - Better Living Through Morganite 1 [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E12 - Better Living Through Morganite 1 [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E12%20-%20Better%20Living%20Through%20Morganite%201%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2814,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 280
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Better Living Through Morganite (2)",
           "airdate": "1995-02-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E12 - Better Living Through Morganite 1 [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E12 - Better Living Through Morganite 1 [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E12%20-%20Better%20Living%20Through%20Morganite%201%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2814,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 280
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E12 Moon Cross.mp4",
+              "name": "Earth 2  S01E12 Moon Cross",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E12%20Moon%20Cross.mp4",
+              "seconds": 2814,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 135
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E12 - Moon Cross.mp4",
+              "name": "Earth2 S01E12 - Moon Cross",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E12%20-%20Moon%20Cross.mp4",
+              "seconds": 2737,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 272
+            }
+          ]
         },
         {
           "number": 13,
           "name": "Grendlers in the Myst",
           "airdate": "1995-03-05",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E13 - Better Living Through Morganite 2 [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E13 - Better Living Through Morganite 2 [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E13%20-%20Better%20Living%20Through%20Morganite%202%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2591,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 258
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E13 Better Living Through Morganite Part 1.mp4",
+              "name": "Earth 2  S01E13 Better Living Through Morganite Part 1",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E13%20Better%20Living%20Through%20Morganite%20Part%201.mp4",
+              "seconds": 2591,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 126
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E13 - Better Living Through Morganite - Pt-01.mp4",
+              "name": "Earth2 S01E13 - Better Living Through Morganite - Pt-01",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E13%20-%20Better%20Living%20Through%20Morganite%20-%20Pt-01.mp4",
+              "seconds": 2739,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 272
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Grendlers in the Myst\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E14 - Grendlers in the Myst [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E14 - Grendlers in the Myst [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E14%20-%20Grendlers%20in%20the%20Myst%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2785,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 279
+            }
+          ]
         },
         {
           "number": 14,
           "name": "The Greatest Love Story Never Told",
           "airdate": "1995-03-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E14 - Grendlers in the Myst [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E14 - Grendlers in the Myst [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E14%20-%20Grendlers%20in%20the%20Myst%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2785,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 279
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E14 Better Living Through Morganite Part 2.mp4",
+              "name": "Earth 2  S01E14 Better Living Through Morganite Part 2",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E14%20Better%20Living%20Through%20Morganite%20Part%202.mp4",
+              "seconds": 2785,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 152
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Greatest Love Story Never Told\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E15 - The Greatest Love Story Never Told [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E15 - The Greatest Love Story Never Told [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E15%20-%20The%20Greatest%20Love%20Story%20Never%20Told%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2757,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 278
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Greatest Love Story Never Told\" (1.00)",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E16 The Greatest Love Story Never Told.mp4",
+              "name": "Earth 2  S01E16 The Greatest Love Story Never Told",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E16%20The%20Greatest%20Love%20Story%20Never%20Told.mp4",
+              "seconds": 2768,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 150
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Brave New Pacifica",
           "airdate": "1995-03-26",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "et_20251105",
+            "itemTitle": "Earth 2",
+            "file": "Earth 2  S01E15 Grendlers in the Myst.mp4",
+            "name": "Earth 2  S01E15 Grendlers in the Myst",
+            "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E15%20Grendlers%20in%20the%20Myst.mp4",
+            "seconds": 2757,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 127
+          },
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E15 - Grendlers in the Myst.mp4",
+              "name": "Earth2 S01E15 - Grendlers in the Myst",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E15%20-%20Grendlers%20in%20the%20Myst.mp4",
+              "seconds": 2658,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 264
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Brave New Pacifica\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E16 - Brave New Pacifica [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E16 - Brave New Pacifica [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E16%20-%20Brave%20New%20Pacifica%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2767,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 275
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Brave New Pacifica\" (0.95)",
+              "item": "earth-2_202606",
+              "itemTitle": "Earth 2 (1994) Complete",
+              "file": "Earth 2 E16 - Brave New Pacifica.mp4",
+              "name": "Earth 2 E16 - Brave New Pacifica",
+              "url": "https://archive.org/download/earth-2_202606/Earth%202%20E16%20-%20Brave%20New%20Pacifica.mp4",
+              "seconds": 2768,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 160
+            }
+          ]
         },
         {
           "number": 16,
           "name": "The Boy Who Would Be Terrian King",
           "airdate": "1995-04-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E16 - Brave New Pacifica [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E16 - Brave New Pacifica [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E16%20-%20Brave%20New%20Pacifica%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2767,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 275
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Boy Who Would Be Terrian King\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E18 - The Boy Who Would Be Terrian King [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E18 - The Boy Who Would Be Terrian King [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E18%20-%20The%20Boy%20Who%20Would%20Be%20Terrian%20King%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2819,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 283
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Boy Who Would Be Terrian King\" (0.86)",
+              "item": "earth-2_202606",
+              "itemTitle": "Earth 2 (1994) Complete",
+              "file": "Earth 2 E17 - The Boy Who Would Be Terrian.mp4",
+              "name": "Earth 2 E17 - The Boy Who Would Be Terrian",
+              "url": "https://archive.org/download/earth-2_202606/Earth%202%20E17%20-%20The%20Boy%20Who%20Would%20Be%20Terrian.mp4",
+              "seconds": 2734,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 145
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Boy Who Would Be Terrian King\" (0.86)",
+              "item": "earth-2_202608",
+              "itemTitle": "Earth 2 (1994)",
+              "file": "Earth 2 E17 - The Boy Who Would Be Terrian.ia.mp4",
+              "name": "Earth 2 E17 - The Boy Who Would Be Terrian",
+              "url": "https://archive.org/download/earth-2_202608/Earth%202%20E17%20-%20The%20Boy%20Who%20Would%20Be%20Terrian.ia.mp4",
+              "seconds": 2734,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 17,
           "name": "After the Thaw",
           "airdate": "1995-04-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E17 - After the Thaw [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E17 - After the Thaw [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E17%20-%20After%20the%20Thaw%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2734,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 273
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E17 Brave New Pacifica.mp4",
+              "name": "Earth 2  S01E17 Brave New Pacifica",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E17%20Brave%20New%20Pacifica.mp4",
+              "seconds": 2735,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 139
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E17 - Brave New Pacifica.mp4",
+              "name": "Earth2 S01E17 - Brave New Pacifica",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E17%20-%20Brave%20New%20Pacifica.mp4",
+              "seconds": 2627,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 259
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"After the Thaw\" (1.00)",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E19 After the Thaw.mp4",
+              "name": "Earth 2  S01E19 After the Thaw",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E19%20After%20the%20Thaw.mp4",
+              "seconds": 2821,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 18,
           "name": "Survival of the Fittest",
           "airdate": "1995-04-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E18 - The Boy Who Would Be Terrian King [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E18 - The Boy Who Would Be Terrian King [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E18%20-%20The%20Boy%20Who%20Would%20Be%20Terrian%20King%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2819,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 283
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E18 The Boy Who Would Be Terrian King.mp4",
+              "name": "Earth 2  S01E18 The Boy Who Would Be Terrian King",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E18%20The%20Boy%20Who%20Would%20Be%20Terrian%20King.mp4",
+              "seconds": 2819,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 140
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E18 - The Boy Who Would Be Terrian King.mp4",
+              "name": "Earth2 S01E18 - The Boy Who Would Be Terrian King",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E18%20-%20The%20Boy%20Who%20Would%20Be%20Terrian%20King.mp4",
+              "seconds": 2693,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 268
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Survival of the Fittest\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E19 - Survival of the Fittest [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E19 - Survival of the Fittest [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E19%20-%20Survival%20of%20the%20Fittest%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2820,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 281
+            }
+          ]
         },
         {
           "number": 19,
           "name": "All About Eve",
           "airdate": "1995-05-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E19 - Survival of the Fittest [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E19 - Survival of the Fittest [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E19%20-%20Survival%20of%20the%20Fittest%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2820,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 281
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E19 After the Thaw.mp4",
+              "name": "Earth 2  S01E19 After the Thaw",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E19%20After%20the%20Thaw.mp4",
+              "seconds": 2821,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E19 - After the Thaw.mp4",
+              "name": "Earth2 S01E19 - After the Thaw",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E19%20-%20After%20the%20Thaw.mp4",
+              "seconds": 2624,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 260
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"All About Eve\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E20 - All About Eve [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E20 - All About Eve [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E20%20-%20All%20About%20Eve%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2871,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 286
+            }
+          ]
         },
         {
           "number": 20,
           "name": "Natural Born Grendlers",
           "airdate": "1995-05-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "earth-2-1994-tvdb-75799",
+            "itemTitle": "Earth 2 (1994) DVD MKV",
+            "file": "Season 01/Earth 2 (1994) - S01E20 - All About Eve [DVD][AC3 2.0][MPEG2].mp4",
+            "name": "Season 01/Earth 2 (1994) - S01E20 - All About Eve [DVD][AC3 2.0][MPEG2]",
+            "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E20%20-%20All%20About%20Eve%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+            "seconds": 2871,
+            "format": "h.264",
+            "playable": true,
+            "codecRisk": "audio (AC3)",
+            "sizeMB": 286
+          },
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E20 Survival of the Fittest.mp4",
+              "name": "Earth 2  S01E20 Survival of the Fittest",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E20%20Survival%20of%20the%20Fittest.mp4",
+              "seconds": 2871,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 141
+            },
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "earth-2-complete-series-1994",
+              "itemTitle": "Earth 2 - Complete Series 1994",
+              "file": "Earth2 S01E20 - Survival of the Fittest.mp4",
+              "name": "Earth2 S01E20 - Survival of the Fittest",
+              "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E20%20-%20Survival%20of%20the%20Fittest.mp4",
+              "seconds": 2710,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 268
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Natural Born Grendlers\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E21 - Natural Born Grendlers [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E21 - Natural Born Grendlers [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E21%20-%20Natural%20Born%20Grendlers%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2573,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 258
+            }
+          ]
         },
         {
           "number": 21,
           "name": "Flower Child",
           "airdate": "1995-06-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "earth-2-complete-series-1994",
+            "itemTitle": "Earth 2 - Complete Series 1994",
+            "file": "Earth2 S01E21 - Flower Child.mp4",
+            "name": "Earth2 S01E21 - Flower Child",
+            "url": "https://archive.org/download/earth-2-complete-series-1994/Earth2%20S01E21%20-%20Flower%20Child.mp4",
+            "seconds": 2697,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 265
+          },
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "et_20251105",
+              "itemTitle": "Earth 2",
+              "file": "Earth 2  S01E21 Flower Child.mp4",
+              "name": "Earth 2  S01E21 Flower Child",
+              "url": "https://archive.org/download/et_20251105/Earth%202%20%20S01E21%20Flower%20Child.mp4",
+              "seconds": 2573,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 140
+            },
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E21 - Natural Born Grendlers [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E21 - Natural Born Grendlers [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E21%20-%20Natural%20Born%20Grendlers%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2573,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 258
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Flower Child\" (0.95)",
+              "item": "earth-2-1994-tvdb-75799",
+              "itemTitle": "Earth 2 (1994) DVD MKV",
+              "file": "Season 01/Earth 2 (1994) - S01E22 - Flower Child [DVD][AC3 2.0][MPEG2].mp4",
+              "name": "Season 01/Earth 2 (1994) - S01E22 - Flower Child [DVD][AC3 2.0][MPEG2]",
+              "url": "https://archive.org/download/earth-2-1994-tvdb-75799/Season%2001%2FEarth%202%20(1994)%20-%20S01E22%20-%20Flower%20Child%20%5BDVD%5D%5BAC3%202.0%5D%5BMPEG2%5D.mp4",
+              "seconds": 2775,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "audio (AC3)",
+              "sizeMB": 275
+            }
+          ]
         }
       ]
     }

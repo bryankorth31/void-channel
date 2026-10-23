@@ -3,21 +3,21 @@
   "slug": "threshold",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "CBS",
-  "matchedAt": "2026-10-23T00:43:12.198Z",
-  "addedAt": "2026-10-23T00:43:12.198Z",
+  "matchedAt": "2026-10-23T07:07:56.359Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 1963,
+    "id": null,
     "name": "Threshold",
-    "runtime": 60,
-    "premiered": "2005-09-16",
+    "runtime": null,
+    "premiered": null,
     "network": "CBS"
   },
   "coverage": {
-    "total": 13,
+    "total": 25,
     "live": 3,
-    "review": 0,
-    "missing": 10,
-    "pct": 23
+    "review": 22,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -25,28 +25,55 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Trees Made of Glass, Part 1",
-          "airdate": "2005-09-16",
-          "state": "MISSING",
-          "file": null,
+          "name": "trees made of glass pt 01",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-complete-series-2005",
+            "itemTitle": "Threshold - Complete Series 2005",
+            "file": "Threshold S01E01 - Trees Made of Glass - Pt-01.mp4",
+            "name": "Threshold S01E01 - Trees Made of Glass - Pt-01",
+            "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E01%20-%20Trees%20Made%20of%20Glass%20-%20Pt-01.mp4",
+            "seconds": 2440,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 228,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Trees Made of Glass , Part 2",
-          "airdate": "2005-09-16",
-          "state": "MISSING",
-          "file": null,
+          "name": "trees made of glass pt 02",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-complete-series-2005",
+            "itemTitle": "Threshold - Complete Series 2005",
+            "file": "Threshold S01E02 - Trees Made of Glass - Pt-02.mp4",
+            "name": "Threshold S01E02 - Trees Made of Glass - Pt-02",
+            "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E02%20-%20Trees%20Made%20of%20Glass%20-%20Pt-02.mp4",
+            "seconds": 2392,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 224,
+            "ep": {
+              "season": 1,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Blood of the Children",
-          "airdate": "2005-09-23",
+          "name": "blood of the",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "threshold-complete-series-2005",
             "itemTitle": "Threshold - Complete Series 2005",
             "file": "Threshold S01E03 - Blood of the .mp4",
@@ -55,69 +82,90 @@
             "seconds": 2531,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 238
-          },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "threshold-complete-series-2005",
-              "itemTitle": "Threshold - Complete Series 2005",
-              "file": "Threshold S01E03 HD - Blood of the Children_ Season 01 - Episode 03 Full Free.mp4",
-              "name": "Threshold S01E03 HD - Blood of the Children_ Season 01 - Episode 03 Full Free",
-              "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E03%20HD%20-%20Blood%20of%20the%20Children_%20Season%2001%20-%20Episode%2003%20Full%20Free.mp4",
-              "seconds": 2531,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 238
+            "sizeMB": 238,
+            "ep": {
+              "season": 1,
+              "episode": 3
             },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Blood of the Children\" (0.95)",
-              "item": "threshold-2995",
-              "itemTitle": "Threshold (2005)",
-              "file": "Threshold E03  - Blood of the Children.mp4",
-              "name": "Threshold E03  - Blood of the Children",
-              "url": "https://archive.org/download/threshold-2995/Threshold%20E03%20%20-%20Blood%20of%20the%20Children.mp4",
-              "seconds": 2531,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 90
-            }
-          ]
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
+          },
+          "alternates": []
         },
         {
           "number": 4,
-          "name": "The Burning",
-          "airdate": "2005-09-30",
-          "state": "MISSING",
-          "file": null,
+          "name": "the burning",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-complete-series-2005",
+            "itemTitle": "Threshold - Complete Series 2005",
+            "file": "Threshold S01E04 - The Burning.mp4",
+            "name": "Threshold S01E04 - The Burning",
+            "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E04%20-%20The%20Burning.mp4",
+            "seconds": 2502,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 235,
+            "ep": {
+              "season": 1,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Shock",
-          "airdate": "2005-10-07",
-          "state": "MISSING",
-          "file": null,
+          "name": "shock",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-complete-series-2005",
+            "itemTitle": "Threshold - Complete Series 2005",
+            "file": "Threshold S01E05 - Shock.mp4",
+            "name": "Threshold S01E05 - Shock",
+            "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E05%20-%20Shock.mp4",
+            "seconds": 2490,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 234,
+            "ep": {
+              "season": 1,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Pulse",
-          "airdate": "2005-10-14",
-          "state": "MISSING",
-          "file": null,
+          "name": "pulse",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-complete-series-2005",
+            "itemTitle": "Threshold - Complete Series 2005",
+            "file": "Threshold S01E06 - Pulse.mp4",
+            "name": "Threshold S01E06 - Pulse",
+            "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E06%20-%20Pulse.mp4",
+            "seconds": 2475,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 233,
+            "ep": {
+              "season": 1,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 7,
-          "name": "The Order",
-          "airdate": "2005-10-21",
+          "name": "the order",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "threshold-complete-series-2005",
             "itemTitle": "Threshold - Complete Series 2005",
             "file": "Threshold S01E07 - The Order.mp4",
@@ -126,85 +174,136 @@
             "seconds": 2537,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 240
-          },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "threshold-complete-series-2005",
-              "itemTitle": "Threshold - Complete Series 2005",
-              "file": "Threshold S01E07 HD - The Order_ Season 01 - Episode 07 Full Free.mp4",
-              "name": "Threshold S01E07 HD - The Order_ Season 01 - Episode 07 Full Free",
-              "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E07%20HD%20-%20The%20Order_%20Season%2001%20-%20Episode%2007%20Full%20Free.mp4",
-              "seconds": 2537,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 240
+            "sizeMB": 240,
+            "ep": {
+              "season": 1,
+              "episode": 7
             },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The Order\" (0.95)",
-              "item": "threshold-2995",
-              "itemTitle": "Threshold (2005)",
-              "file": "Threshold E07 - The Order.mp4",
-              "name": "Threshold E07 - The Order",
-              "url": "https://archive.org/download/threshold-2995/Threshold%20E07%20-%20The%20Order.mp4",
-              "seconds": 2537,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 130
-            }
-          ]
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
+          },
+          "alternates": []
         },
         {
           "number": 8,
-          "name": "Revelations",
-          "airdate": "2005-11-04",
-          "state": "MISSING",
-          "file": null,
+          "name": "revelations",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-complete-series-2005",
+            "itemTitle": "Threshold - Complete Series 2005",
+            "file": "Threshold S01E08 - Revelations.mp4",
+            "name": "Threshold S01E08 - Revelations",
+            "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E08%20-%20Revelations.mp4",
+            "seconds": 2419,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 229,
+            "ep": {
+              "season": 1,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 9,
-          "name": "Progeny",
-          "airdate": "2005-11-22",
-          "state": "MISSING",
-          "file": null,
+          "name": "progeny",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-complete-series-2005",
+            "itemTitle": "Threshold - Complete Series 2005",
+            "file": "Threshold S01E09 - Progeny.mp4",
+            "name": "Threshold S01E09 - Progeny",
+            "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E09%20-%20Progeny.mp4",
+            "seconds": 2486,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 235,
+            "ep": {
+              "season": 1,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 10,
-          "name": "The Crossing",
-          "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "name": "hd the crossing",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-complete-series-2005",
+            "itemTitle": "Threshold - Complete Series 2005",
+            "file": "Threshold S01E010 HD - The Crossing.mp4",
+            "name": "Threshold S01E010 HD - The Crossing",
+            "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E010%20HD%20-%20The%20Crossing.mp4",
+            "seconds": 2477,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 234,
+            "ep": {
+              "season": 1,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 11,
-          "name": "Outbreak",
-          "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "name": "hd outbreak 01 11 full free",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-complete-series-2005",
+            "itemTitle": "Threshold - Complete Series 2005",
+            "file": "Threshold S01E011 HD - Outbreak_ Season 01 - Episode 11 Full Free.mp4",
+            "name": "Threshold S01E011 HD - Outbreak_ Season 01 - Episode 11 Full Free",
+            "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E011%20HD%20-%20Outbreak_%20Season%2001%20-%20Episode%2011%20Full%20Free.mp4",
+            "seconds": 2397,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 227,
+            "ep": {
+              "season": 1,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 12,
-          "name": "Vigilante",
-          "airdate": "",
-          "state": "MISSING",
-          "file": null,
+          "name": "vigilante",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-complete-series-2005",
+            "itemTitle": "Threshold - Complete Series 2005",
+            "file": "Threshold S01E12 - Vigilante.mp4",
+            "name": "Threshold S01E12 - Vigilante",
+            "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E12%20-%20Vigilante.mp4",
+            "seconds": 2401,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 227,
+            "ep": {
+              "season": 1,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 13,
-          "name": "Alienville",
-          "airdate": "",
+          "name": "alienville",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "threshold-complete-series-2005",
             "itemTitle": "Threshold - Complete Series 2005",
             "file": "Threshold S01E13 - Alienville.mp4",
@@ -213,38 +312,262 @@
             "seconds": 2526,
             "format": "h.264",
             "playable": true,
-            "sizeMB": 239
-          },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "threshold-complete-series-2005",
-              "itemTitle": "Threshold - Complete Series 2005",
-              "file": "Threshold S01E13 HD - Alienville_ Season 01 - Episode 13 Full Free.mp4",
-              "name": "Threshold S01E13 HD - Alienville_ Season 01 - Episode 13 Full Free",
-              "url": "https://archive.org/download/threshold-complete-series-2005/Threshold%20S01E13%20HD%20-%20Alienville_%20Season%2001%20-%20Episode%2013%20Full%20Free.mp4",
-              "seconds": 2526,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 239
+            "sizeMB": 239,
+            "ep": {
+              "season": 1,
+              "episode": 13
             },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Alienville\" (0.95)",
-              "item": "threshold-2995",
-              "itemTitle": "Threshold (2005)",
-              "file": "Threshold E13  - Alienville.mp4",
-              "name": "Threshold E13  - Alienville",
-              "url": "https://archive.org/download/threshold-2995/Threshold%20E13%20%20-%20Alienville.mp4",
-              "seconds": 2526,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 176
-            }
-          ]
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "e01 trees made of glass part 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-2995",
+            "itemTitle": "Threshold (2005)",
+            "file": "Threshold E01 - Trees Made of Glass Part 1.mp4",
+            "name": "Threshold E01 - Trees Made of Glass Part 1",
+            "url": "https://archive.org/download/threshold-2995/Threshold%20E01%20-%20Trees%20Made%20of%20Glass%20Part%201.mp4",
+            "seconds": 2440,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 311,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "e02 trees made of glass part 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-2995",
+            "itemTitle": "Threshold (2005)",
+            "file": "Threshold E02  - Trees Made of Glass Part 2.mp4",
+            "name": "Threshold E02  - Trees Made of Glass Part 2",
+            "url": "https://archive.org/download/threshold-2995/Threshold%20E02%20%20-%20Trees%20Made%20of%20Glass%20Part%202.mp4",
+            "seconds": 2392,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 146,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "e03 blood of the children",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-2995",
+            "itemTitle": "Threshold (2005)",
+            "file": "Threshold E03  - Blood of the Children.mp4",
+            "name": "Threshold E03  - Blood of the Children",
+            "url": "https://archive.org/download/threshold-2995/Threshold%20E03%20%20-%20Blood%20of%20the%20Children.mp4",
+            "seconds": 2531,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 90,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "e05 shock",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-2995",
+            "itemTitle": "Threshold (2005)",
+            "file": "Threshold E05  - Shock, Season.mp4",
+            "name": "Threshold E05  - Shock, Season",
+            "url": "https://archive.org/download/threshold-2995/Threshold%20E05%20%20-%20Shock%2C%20Season.mp4",
+            "seconds": 2491,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 137,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "e06 pulse",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-2995",
+            "itemTitle": "Threshold (2005)",
+            "file": "Threshold E06  - Pulse.mp4",
+            "name": "Threshold E06  - Pulse",
+            "url": "https://archive.org/download/threshold-2995/Threshold%20E06%20%20-%20Pulse.mp4",
+            "seconds": 2475,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 303,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "e07 the order",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-2995",
+            "itemTitle": "Threshold (2005)",
+            "file": "Threshold E07 - The Order.mp4",
+            "name": "Threshold E07 - The Order",
+            "url": "https://archive.org/download/threshold-2995/Threshold%20E07%20-%20The%20Order.mp4",
+            "seconds": 2537,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 130,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "e08 revelations",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-2995",
+            "itemTitle": "Threshold (2005)",
+            "file": "Threshold E08 - Revelations.mp4",
+            "name": "Threshold E08 - Revelations",
+            "url": "https://archive.org/download/threshold-2995/Threshold%20E08%20-%20Revelations.mp4",
+            "seconds": 2419,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 269,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "e09 progeny",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-2995",
+            "itemTitle": "Threshold (2005)",
+            "file": "Threshold E09 - Progeny,.mp4",
+            "name": "Threshold E09 - Progeny,",
+            "url": "https://archive.org/download/threshold-2995/Threshold%20E09%20-%20Progeny%2C.mp4",
+            "seconds": 2485,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 145,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "e10 the crossing",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-2995",
+            "itemTitle": "Threshold (2005)",
+            "file": "Threshold E10  - The Crossing.mp4",
+            "name": "Threshold E10  - The Crossing",
+            "url": "https://archive.org/download/threshold-2995/Threshold%20E10%20%20-%20The%20Crossing.mp4",
+            "seconds": 2477,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 153,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "e11 outbreak",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-2995",
+            "itemTitle": "Threshold (2005)",
+            "file": "Threshold E11  - Outbreak.mp4",
+            "name": "Threshold E11  - Outbreak",
+            "url": "https://archive.org/download/threshold-2995/Threshold%20E11%20%20-%20Outbreak.mp4",
+            "seconds": 2397,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 143,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "e12 vigilante",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-2995",
+            "itemTitle": "Threshold (2005)",
+            "file": "Threshold E12  - Vigilante.mp4",
+            "name": "Threshold E12  - Vigilante",
+            "url": "https://archive.org/download/threshold-2995/Threshold%20E12%20%20-%20Vigilante.mp4",
+            "seconds": 2401,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 133,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "e13 alienville",
+          "state": "REVIEW",
+          "file": {
+            "item": "threshold-2995",
+            "itemTitle": "Threshold (2005)",
+            "file": "Threshold E13  - Alienville.mp4",
+            "name": "Threshold E13  - Alienville",
+            "url": "https://archive.org/download/threshold-2995/Threshold%20E13%20%20-%20Alienville.mp4",
+            "seconds": 2526,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 176,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 1963,
+    "name": "Threshold",
+    "placed": 3
+  }
 }
