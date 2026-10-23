@@ -293,5 +293,630 @@
    "episodes": 1
   }
  ],
- "fetchedAt": "2026-10-15T08:14:14.852Z"
+ "fetchedAt": "2026-10-15T08:14:14.852Z",
+ "episodes": {
+  "1x1": {
+   "d": [
+    {
+     "id": 213614,
+     "name": "Max Winkler",
+     "photo": "https://image.tmdb.org/t/p/w185/m2muv3nWCJEGTFLGSiQKF22vG6a.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 3667790,
+     "name": "Megan Trinrud",
+     "photo": null
+    },
+    {
+     "id": 1885475,
+     "name": "Nate Trinrud",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 62816,
+     "name": "Josh Zuckerman",
+     "photo": "https://image.tmdb.org/t/p/w185/kb0oEHc1a3lZUoPXaSyccfinFOP.jpg",
+     "as": "Mr. Martin"
+    },
+    {
+     "id": 2851077,
+     "name": "Vanessa Prasad",
+     "photo": "https://image.tmdb.org/t/p/w185/kh056Ksix4iV5FDNoXMD8KLKLVV.jpg",
+     "as": "Kirsten"
+    },
+    {
+     "id": 205797,
+     "name": "Maria Dizzia",
+     "photo": "https://image.tmdb.org/t/p/w185/sMsBH9o1kuFeVgjX2QoXvxccKJQ.jpg",
+     "as": "Sandra Nears"
+    },
+    {
+     "id": 25386,
+     "name": "Ian Tracey",
+     "photo": "https://image.tmdb.org/t/p/w185/dUzzLVVUF0pvGzS3xrIZ5tiC2TT.jpg",
+     "as": "Sheriff Baxter"
+    },
+    {
+     "id": 76828,
+     "name": "Patrick Gilmore",
+     "photo": "https://image.tmdb.org/t/p/w185/9jcnrVixk0KCIL4NB66ayMdGEfv.jpg",
+     "as": "Mr. Anderson"
+    },
+    {
+     "id": 62919,
+     "name": "Alex Zahara",
+     "photo": "https://image.tmdb.org/t/p/w185/8T6k1sBrWyLI368Mk9iyYuwpqv2.jpg",
+     "as": "Principal Hartman"
+    },
+    {
+     "id": 1874411,
+     "name": "Kalyn Miles",
+     "photo": "https://image.tmdb.org/t/p/w185/ownA2D9xEyACISwceM332qRwi2k.jpg",
+     "as": "Ms. Fields"
+    },
+    {
+     "id": 83424,
+     "name": "Peter New",
+     "photo": "https://image.tmdb.org/t/p/w185/bT71ieZH2qhgxLNTPyorMlVp3PN.jpg",
+     "as": "Mr. South"
+    },
+    {
+     "id": 2850611,
+     "name": "RaeAnne Boon",
+     "photo": "https://image.tmdb.org/t/p/w185/ebiX37xSuMpeOJGELd76PTpi0GG.jpg",
+     "as": "Dawn"
+    },
+    {
+     "id": 2447703,
+     "name": "Jayce Barreiro",
+     "photo": "https://image.tmdb.org/t/p/w185/csJLNQp5rE9ZoF6Z8IG1e6gG22x.jpg",
+     "as": "Mr. Graziano"
+    }
+   ]
+  },
+  "1x2": {
+   "d": [
+    {
+     "id": 213614,
+     "name": "Max Winkler",
+     "photo": "https://image.tmdb.org/t/p/w185/m2muv3nWCJEGTFLGSiQKF22vG6a.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1219562,
+     "name": "Oliver Goldstick",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 62816,
+     "name": "Josh Zuckerman",
+     "photo": "https://image.tmdb.org/t/p/w185/kb0oEHc1a3lZUoPXaSyccfinFOP.jpg",
+     "as": "Mr. Martin"
+    },
+    {
+     "id": 2851077,
+     "name": "Vanessa Prasad",
+     "photo": "https://image.tmdb.org/t/p/w185/kh056Ksix4iV5FDNoXMD8KLKLVV.jpg",
+     "as": "Kirsten"
+    },
+    {
+     "id": 205797,
+     "name": "Maria Dizzia",
+     "photo": "https://image.tmdb.org/t/p/w185/sMsBH9o1kuFeVgjX2QoXvxccKJQ.jpg",
+     "as": "Sandra Nears"
+    },
+    {
+     "id": 25386,
+     "name": "Ian Tracey",
+     "photo": "https://image.tmdb.org/t/p/w185/dUzzLVVUF0pvGzS3xrIZ5tiC2TT.jpg",
+     "as": "Sheriff Baxter"
+    },
+    {
+     "id": 76828,
+     "name": "Patrick Gilmore",
+     "photo": "https://image.tmdb.org/t/p/w185/9jcnrVixk0KCIL4NB66ayMdGEfv.jpg",
+     "as": "Mr. Anderson"
+    },
+    {
+     "id": 62919,
+     "name": "Alex Zahara",
+     "photo": "https://image.tmdb.org/t/p/w185/8T6k1sBrWyLI368Mk9iyYuwpqv2.jpg",
+     "as": "Principal Hartman"
+    },
+    {
+     "id": 1874411,
+     "name": "Kalyn Miles",
+     "photo": "https://image.tmdb.org/t/p/w185/ownA2D9xEyACISwceM332qRwi2k.jpg",
+     "as": "Ms. Fields"
+    },
+    {
+     "id": 83424,
+     "name": "Peter New",
+     "photo": "https://image.tmdb.org/t/p/w185/bT71ieZH2qhgxLNTPyorMlVp3PN.jpg",
+     "as": "Mr. South"
+    },
+    {
+     "id": 2447703,
+     "name": "Jayce Barreiro",
+     "photo": "https://image.tmdb.org/t/p/w185/csJLNQp5rE9ZoF6Z8IG1e6gG22x.jpg",
+     "as": "Mr. Graziano"
+    },
+    {
+     "id": 1321836,
+     "name": "Austin Falk",
+     "photo": "https://image.tmdb.org/t/p/w185/tLHoCFVjMFxnf6mIkUGbMg7cJrt.jpg",
+     "as": "Lacrosse Player"
+    }
+   ]
+  },
+  "1x3": {
+   "d": [
+    {
+     "id": 2533250,
+     "name": "Oran Zegman",
+     "photo": "https://image.tmdb.org/t/p/w185/wN2Ir2OnVWQkrQCJDB8lxJylEEa.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1479183,
+     "name": "Thomas Higgins",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 62816,
+     "name": "Josh Zuckerman",
+     "photo": "https://image.tmdb.org/t/p/w185/kb0oEHc1a3lZUoPXaSyccfinFOP.jpg",
+     "as": "Mr. Martin"
+    },
+    {
+     "id": 2851077,
+     "name": "Vanessa Prasad",
+     "photo": "https://image.tmdb.org/t/p/w185/kh056Ksix4iV5FDNoXMD8KLKLVV.jpg",
+     "as": "Kirsten"
+    },
+    {
+     "id": 205797,
+     "name": "Maria Dizzia",
+     "photo": "https://image.tmdb.org/t/p/w185/sMsBH9o1kuFeVgjX2QoXvxccKJQ.jpg",
+     "as": "Sandra Nears"
+    },
+    {
+     "id": 25386,
+     "name": "Ian Tracey",
+     "photo": "https://image.tmdb.org/t/p/w185/dUzzLVVUF0pvGzS3xrIZ5tiC2TT.jpg",
+     "as": "Sheriff Baxter"
+    },
+    {
+     "id": 76828,
+     "name": "Patrick Gilmore",
+     "photo": "https://image.tmdb.org/t/p/w185/9jcnrVixk0KCIL4NB66ayMdGEfv.jpg",
+     "as": "Mr. Anderson"
+    },
+    {
+     "id": 2850611,
+     "name": "RaeAnne Boon",
+     "photo": "https://image.tmdb.org/t/p/w185/ebiX37xSuMpeOJGELd76PTpi0GG.jpg",
+     "as": "Dawn"
+    },
+    {
+     "id": 3893830,
+     "name": "Dylan Floyde",
+     "photo": "https://image.tmdb.org/t/p/w185/f6rcFfhRUDdfhM1lV1qmrafPSrF.jpg",
+     "as": "Sheriff's Deputy"
+    },
+    {
+     "id": 1321836,
+     "name": "Austin Falk",
+     "photo": "https://image.tmdb.org/t/p/w185/tLHoCFVjMFxnf6mIkUGbMg7cJrt.jpg",
+     "as": "Lacrosse Player"
+    },
+    {
+     "id": 2835006,
+     "name": "Josh Dohy",
+     "photo": null,
+     "as": "Stoner Student 1"
+    },
+    {
+     "id": 4409283,
+     "name": "Ben Byrnell",
+     "photo": null,
+     "as": "Stoner Student 2"
+    }
+   ]
+  },
+  "1x4": {
+   "d": [
+    {
+     "id": 2533250,
+     "name": "Oran Zegman",
+     "photo": "https://image.tmdb.org/t/p/w185/wN2Ir2OnVWQkrQCJDB8lxJylEEa.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1251559,
+     "name": "Lijah J. Barasz",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 62816,
+     "name": "Josh Zuckerman",
+     "photo": "https://image.tmdb.org/t/p/w185/kb0oEHc1a3lZUoPXaSyccfinFOP.jpg",
+     "as": "Mr. Martin"
+    },
+    {
+     "id": 2851077,
+     "name": "Vanessa Prasad",
+     "photo": "https://image.tmdb.org/t/p/w185/kh056Ksix4iV5FDNoXMD8KLKLVV.jpg",
+     "as": "Kirsten"
+    },
+    {
+     "id": 76828,
+     "name": "Patrick Gilmore",
+     "photo": "https://image.tmdb.org/t/p/w185/9jcnrVixk0KCIL4NB66ayMdGEfv.jpg",
+     "as": "Mr. Anderson"
+    },
+    {
+     "id": 62919,
+     "name": "Alex Zahara",
+     "photo": "https://image.tmdb.org/t/p/w185/8T6k1sBrWyLI368Mk9iyYuwpqv2.jpg",
+     "as": "Principal Hartman"
+    },
+    {
+     "id": 2850611,
+     "name": "RaeAnne Boon",
+     "photo": "https://image.tmdb.org/t/p/w185/ebiX37xSuMpeOJGELd76PTpi0GG.jpg",
+     "as": "Dawn"
+    },
+    {
+     "id": 2428365,
+     "name": "Katarina Mueller",
+     "photo": "https://image.tmdb.org/t/p/w185/9xsaLPiqx8WirwWjh6JxWCMVKOf.jpg",
+     "as": "Tira"
+    },
+    {
+     "id": 1442054,
+     "name": "Alison Thornton",
+     "photo": "https://image.tmdb.org/t/p/w185/hDCMe5RLABbSBA04BIUxJnBmol6.jpg",
+     "as": "Chloe"
+    },
+    {
+     "id": 1371327,
+     "name": "Patti Kim",
+     "photo": "https://image.tmdb.org/t/p/w185/t8tYK7hzrIfzhNtoqMrkhwosmwR.jpg",
+     "as": "Ms. Chung"
+    },
+    {
+     "id": 3981652,
+     "name": "Andrew Alvarez",
+     "photo": "https://image.tmdb.org/t/p/w185/eLUJaYo5OhYGWvfICw0oo6sf15w.jpg",
+     "as": "Young Mr. Figueroa"
+    },
+    {
+     "id": 112644,
+     "name": "Luvia Petersen",
+     "photo": "https://image.tmdb.org/t/p/w185/fWyqLdVQronXra8yAzP8pNyLldJ.jpg",
+     "as": "Hayes"
+    }
+   ]
+  },
+  "1x5": {
+   "d": [
+    {
+     "id": 74259,
+     "name": "Brian Dannelly",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1734721,
+     "name": "Bernadette Luckett",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 62816,
+     "name": "Josh Zuckerman",
+     "photo": "https://image.tmdb.org/t/p/w185/kb0oEHc1a3lZUoPXaSyccfinFOP.jpg",
+     "as": "Mr. Martin"
+    },
+    {
+     "id": 2851077,
+     "name": "Vanessa Prasad",
+     "photo": "https://image.tmdb.org/t/p/w185/kh056Ksix4iV5FDNoXMD8KLKLVV.jpg",
+     "as": "Kirsten"
+    },
+    {
+     "id": 205797,
+     "name": "Maria Dizzia",
+     "photo": "https://image.tmdb.org/t/p/w185/sMsBH9o1kuFeVgjX2QoXvxccKJQ.jpg",
+     "as": "Sandra Nears"
+    },
+    {
+     "id": 25386,
+     "name": "Ian Tracey",
+     "photo": "https://image.tmdb.org/t/p/w185/dUzzLVVUF0pvGzS3xrIZ5tiC2TT.jpg",
+     "as": "Sheriff Baxter"
+    },
+    {
+     "id": 76828,
+     "name": "Patrick Gilmore",
+     "photo": "https://image.tmdb.org/t/p/w185/9jcnrVixk0KCIL4NB66ayMdGEfv.jpg",
+     "as": "Mr. Anderson"
+    },
+    {
+     "id": 62919,
+     "name": "Alex Zahara",
+     "photo": "https://image.tmdb.org/t/p/w185/8T6k1sBrWyLI368Mk9iyYuwpqv2.jpg",
+     "as": "Principal Hartman"
+    },
+    {
+     "id": 1874411,
+     "name": "Kalyn Miles",
+     "photo": "https://image.tmdb.org/t/p/w185/ownA2D9xEyACISwceM332qRwi2k.jpg",
+     "as": "Ms. Fields"
+    },
+    {
+     "id": 83424,
+     "name": "Peter New",
+     "photo": "https://image.tmdb.org/t/p/w185/bT71ieZH2qhgxLNTPyorMlVp3PN.jpg",
+     "as": "Mr. South"
+    },
+    {
+     "id": 2428365,
+     "name": "Katarina Mueller",
+     "photo": "https://image.tmdb.org/t/p/w185/9xsaLPiqx8WirwWjh6JxWCMVKOf.jpg",
+     "as": "Tira"
+    },
+    {
+     "id": 2577027,
+     "name": "Brittany Spiteri",
+     "photo": "https://image.tmdb.org/t/p/w185/76B3rJIG0eXTHtFm7azyQz2aExE.jpg",
+     "as": "Cheerleader 1"
+    }
+   ]
+  },
+  "1x6": {
+   "d": [
+    {
+     "id": 74259,
+     "name": "Brian Dannelly",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 2989981,
+     "name": "Natalia Castells-Esquivel",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 2851077,
+     "name": "Vanessa Prasad",
+     "photo": "https://image.tmdb.org/t/p/w185/kh056Ksix4iV5FDNoXMD8KLKLVV.jpg",
+     "as": "Kirsten"
+    },
+    {
+     "id": 205797,
+     "name": "Maria Dizzia",
+     "photo": "https://image.tmdb.org/t/p/w185/sMsBH9o1kuFeVgjX2QoXvxccKJQ.jpg",
+     "as": "Sandra Nears"
+    },
+    {
+     "id": 25386,
+     "name": "Ian Tracey",
+     "photo": "https://image.tmdb.org/t/p/w185/dUzzLVVUF0pvGzS3xrIZ5tiC2TT.jpg",
+     "as": "Sheriff Baxter"
+    },
+    {
+     "id": 62919,
+     "name": "Alex Zahara",
+     "photo": "https://image.tmdb.org/t/p/w185/8T6k1sBrWyLI368Mk9iyYuwpqv2.jpg",
+     "as": "Principal Hartman"
+    },
+    {
+     "id": 83424,
+     "name": "Peter New",
+     "photo": "https://image.tmdb.org/t/p/w185/bT71ieZH2qhgxLNTPyorMlVp3PN.jpg",
+     "as": "Mr. South"
+    },
+    {
+     "id": 2428365,
+     "name": "Katarina Mueller",
+     "photo": "https://image.tmdb.org/t/p/w185/9xsaLPiqx8WirwWjh6JxWCMVKOf.jpg",
+     "as": "Tira"
+    },
+    {
+     "id": 3893830,
+     "name": "Dylan Floyde",
+     "photo": "https://image.tmdb.org/t/p/w185/f6rcFfhRUDdfhM1lV1qmrafPSrF.jpg",
+     "as": "Sheriff's Deputy"
+    },
+    {
+     "id": 1442054,
+     "name": "Alison Thornton",
+     "photo": "https://image.tmdb.org/t/p/w185/hDCMe5RLABbSBA04BIUxJnBmol6.jpg",
+     "as": "Chloe"
+    },
+    {
+     "id": 1849665,
+     "name": "Andres Soto",
+     "photo": "https://image.tmdb.org/t/p/w185/43si5UUvzOYlY7JtyZd49M4EZJ8.jpg",
+     "as": "Mr. Figueroa"
+    },
+    {
+     "id": 2604617,
+     "name": "Zarina Sterling",
+     "photo": "https://image.tmdb.org/t/p/w185/jTeRtRpQM0myWA3fa00NetumTud.jpg",
+     "as": "Crystal"
+    }
+   ]
+  },
+  "1x7": {
+   "d": [
+    {
+     "id": 1616880,
+     "name": "Hannah Macpherson",
+     "photo": "https://image.tmdb.org/t/p/w185/oEdhRg9GDWvKdht4TEjRrtHmMNO.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1219562,
+     "name": "Oliver Goldstick",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 62816,
+     "name": "Josh Zuckerman",
+     "photo": "https://image.tmdb.org/t/p/w185/kb0oEHc1a3lZUoPXaSyccfinFOP.jpg",
+     "as": "Mr. Martin"
+    },
+    {
+     "id": 205797,
+     "name": "Maria Dizzia",
+     "photo": "https://image.tmdb.org/t/p/w185/sMsBH9o1kuFeVgjX2QoXvxccKJQ.jpg",
+     "as": "Sandra Nears"
+    },
+    {
+     "id": 25386,
+     "name": "Ian Tracey",
+     "photo": "https://image.tmdb.org/t/p/w185/dUzzLVVUF0pvGzS3xrIZ5tiC2TT.jpg",
+     "as": "Sheriff Baxter"
+    },
+    {
+     "id": 1874411,
+     "name": "Kalyn Miles",
+     "photo": "https://image.tmdb.org/t/p/w185/ownA2D9xEyACISwceM332qRwi2k.jpg",
+     "as": "Ms. Fields"
+    },
+    {
+     "id": 83424,
+     "name": "Peter New",
+     "photo": "https://image.tmdb.org/t/p/w185/bT71ieZH2qhgxLNTPyorMlVp3PN.jpg",
+     "as": "Mr. South"
+    },
+    {
+     "id": 2850611,
+     "name": "RaeAnne Boon",
+     "photo": "https://image.tmdb.org/t/p/w185/ebiX37xSuMpeOJGELd76PTpi0GG.jpg",
+     "as": "Dawn"
+    },
+    {
+     "id": 112644,
+     "name": "Luvia Petersen",
+     "photo": "https://image.tmdb.org/t/p/w185/fWyqLdVQronXra8yAzP8pNyLldJ.jpg",
+     "as": "Hayes"
+    },
+    {
+     "id": 4409316,
+     "name": "Lucas Noon",
+     "photo": null,
+     "as": "Pencil-Neck Freshman"
+    },
+    {
+     "id": 1119010,
+     "name": "Mark Chavez",
+     "photo": "https://image.tmdb.org/t/p/w185/h0Zfpi8zNxMOHJacqaGkFRwceMB.jpg",
+     "as": "Mr. Balkin"
+    },
+    {
+     "id": 91337,
+     "name": "Sunita Prasad",
+     "photo": "https://image.tmdb.org/t/p/w185/5D3vNDlHOeixwRg1Bk45YlJUtsl.jpg",
+     "as": "Zeva"
+    }
+   ]
+  },
+  "1x8": {
+   "d": [
+    {
+     "id": 1616880,
+     "name": "Hannah Macpherson",
+     "photo": "https://image.tmdb.org/t/p/w185/oEdhRg9GDWvKdht4TEjRrtHmMNO.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 3667790,
+     "name": "Megan Trinrud",
+     "photo": null
+    },
+    {
+     "id": 1885475,
+     "name": "Nate Trinrud",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 62816,
+     "name": "Josh Zuckerman",
+     "photo": "https://image.tmdb.org/t/p/w185/kb0oEHc1a3lZUoPXaSyccfinFOP.jpg",
+     "as": "Mr. Martin"
+    },
+    {
+     "id": 205797,
+     "name": "Maria Dizzia",
+     "photo": "https://image.tmdb.org/t/p/w185/sMsBH9o1kuFeVgjX2QoXvxccKJQ.jpg",
+     "as": "Sandra Nears"
+    },
+    {
+     "id": 25386,
+     "name": "Ian Tracey",
+     "photo": "https://image.tmdb.org/t/p/w185/dUzzLVVUF0pvGzS3xrIZ5tiC2TT.jpg",
+     "as": "Sheriff Baxter"
+    },
+    {
+     "id": 62919,
+     "name": "Alex Zahara",
+     "photo": "https://image.tmdb.org/t/p/w185/8T6k1sBrWyLI368Mk9iyYuwpqv2.jpg",
+     "as": "Principal Hartman"
+    },
+    {
+     "id": 1874411,
+     "name": "Kalyn Miles",
+     "photo": "https://image.tmdb.org/t/p/w185/ownA2D9xEyACISwceM332qRwi2k.jpg",
+     "as": "Ms. Fields"
+    },
+    {
+     "id": 1353908,
+     "name": "Joanna Gaskell",
+     "photo": "https://image.tmdb.org/t/p/w185/qnea5DI335ZhGqPNjm1F14N7qTw.jpg",
+     "as": "EMT"
+    },
+    {
+     "id": 2059588,
+     "name": "Janet Walmsley",
+     "photo": null,
+     "as": "Bus Station Attendant"
+    },
+    {
+     "id": 5456213,
+     "name": "Babka Haleky",
+     "photo": null,
+     "as": "Middle Aged Man"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-23T16:16:17.172Z"
 }
