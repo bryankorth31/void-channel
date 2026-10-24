@@ -1,0 +1,65 @@
+{
+  "show": "The Kennedys of Massachusetts",
+  "slug": "the-kennedys-of-massachusetts",
+  "type": "Drama",
+  "network": "ABC",
+  "matchedAt": "2026-10-24T19:35:54.447Z",
+  "addedAt": "2026-10-24T19:35:54.447Z",
+  "tvmaze": {
+    "id": 50818,
+    "name": "The Kennedys of Massachusetts",
+    "runtime": 120,
+    "premiered": "1990-02-18",
+    "network": "ABC"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 1,
+    "missing": 2,
+    "pct": 33
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "airdate": "1990-02-18",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "the-kennedys-of-massachusetts-episode-1",
+            "itemTitle": "The Kennedys of Massachusetts 1990",
+            "file": "The Kennedys of Massachusetts Episode 1.mp4",
+            "name": "The Kennedys of Massachusetts Episode 1",
+            "url": "https://archive.org/download/the-kennedys-of-massachusetts-episode-1/The%20Kennedys%20of%20Massachusetts%20Episode%201.mp4",
+            "seconds": 5372,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 6172
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "airdate": "1990-02-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Episode 3",
+          "airdate": "1990-02-21",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

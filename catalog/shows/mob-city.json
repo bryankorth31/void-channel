@@ -1,0 +1,89 @@
+{
+  "show": "Mob City",
+  "slug": "mob-city",
+  "type": "Drama",
+  "network": "TNT",
+  "matchedAt": "2026-10-24T20:59:20.991Z",
+  "addedAt": "2026-10-24T20:59:20.992Z",
+  "tvmaze": {
+    "id": 227,
+    "name": "Mob City",
+    "runtime": 60,
+    "premiered": "2013-12-04",
+    "network": "TNT"
+  },
+  "coverage": {
+    "total": 6,
+    "live": 1,
+    "review": 0,
+    "missing": 5,
+    "pct": 17
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "A Guy Walks Into a Bar",
+          "airdate": "2013-12-04",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "mob-city-s-01-e-01-a-guy-walks-into-a-bar",
+            "itemTitle": "Mob City (2013) [COMPLETE SERIES]",
+            "file": "Mob City - S01E01 - A Guy Walks Into A Bar.mp4",
+            "name": "Mob City - S01E01 - A Guy Walks Into A Bar",
+            "url": "https://archive.org/download/mob-city-s-01-e-01-a-guy-walks-into-a-bar/Mob%20City%20-%20S01E01%20-%20A%20Guy%20Walks%20Into%20A%20Bar.mp4",
+            "seconds": 2770,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 272
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Reason to Kill a Man",
+          "airdate": "2013-12-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Red Light",
+          "airdate": "2013-12-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "His Banana Majesty",
+          "airdate": "2013-12-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Oxpecker",
+          "airdate": "2013-12-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Stay Down",
+          "airdate": "2013-12-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
