@@ -1,0 +1,69 @@
+{
+  "show": "Big Man on Campus",
+  "slug": "big-man-on-campus",
+  "type": "Drama",
+  "network": "The WB",
+  "matchedAt": "2026-10-24T19:11:18.633Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Big Man on Campus",
+    "runtime": null,
+    "premiered": null,
+    "network": "The WB"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "bigmanoncamp",
+          "state": "REVIEW",
+          "file": {
+            "item": "BigManOnCamp",
+            "itemTitle": "Big Man On Campus",
+            "file": "BigManOnCamp.mp4",
+            "name": "BigManOnCamp",
+            "url": "https://archive.org/download/BigManOnCamp/BigManOnCamp.mp4",
+            "seconds": 617,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 64,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "bigmanoncamp edit",
+          "state": "REVIEW",
+          "file": {
+            "item": "BigManOnCamp",
+            "itemTitle": "Big Man On Campus",
+            "file": "BigManOnCamp_edit.mp4",
+            "name": "BigManOnCamp_edit",
+            "url": "https://archive.org/download/BigManOnCamp/BigManOnCamp_edit.mp4",
+            "seconds": 617,
+            "format": "HiRes MPEG4",
+            "playable": true,
+            "sizeMB": 269,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

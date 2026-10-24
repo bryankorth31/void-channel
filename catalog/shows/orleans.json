@@ -1,0 +1,119 @@
+{
+  "show": "Orleans",
+  "slug": "orleans",
+  "type": "Drama",
+  "network": "CBS",
+  "matchedAt": "2026-10-24T18:10:32.296Z",
+  "addedAt": "2026-10-24T18:10:32.297Z",
+  "tvmaze": {
+    "id": 65815,
+    "name": "Orleans",
+    "runtime": 60,
+    "premiered": "1997-01-08",
+    "network": "CBS"
+  },
+  "coverage": {
+    "total": 8,
+    "live": 0,
+    "review": 1,
+    "missing": 7,
+    "pct": 13
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Pilot #1",
+          "airdate": "1997-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Pilot #2",
+          "airdate": "1997-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Why Did the Crawfish Cross the Road?",
+          "airdate": "1997-01-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Baby-sitting",
+          "airdate": "1997-01-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Hijack",
+          "airdate": "1997-01-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Luther's Temptation",
+          "airdate": "1997-03-28",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Luther's Temptation\" (1.00)",
+            "item": "orleans-1997-luthers-temptation-ep.-5",
+            "itemTitle": "Orleans (1997)- Luther's Temptation (Ep. 5)",
+            "file": "Orleans (1997)- Luther's Temptation (Ep. 5.ia.mp4",
+            "name": "Orleans (1997)- Luther's Temptation (Ep",
+            "url": "https://archive.org/download/orleans-1997-luthers-temptation-ep.-5/Orleans%20(1997)-%20Luther's%20Temptation%20(Ep.%205.ia.mp4",
+            "seconds": 2681,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 646
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Luther's Temptation\" (0.97)",
+              "item": "orleans-1997-luthers-temptation-ep.-5",
+              "itemTitle": "Orleans (1997)- Luther's Temptation (Ep. 5)",
+              "file": "Orleans (1997)- Luther's Temptation (Ep. 5.mp4",
+              "name": "Orleans (1997)- Luther's Temptation (Ep. 5",
+              "url": "https://archive.org/download/orleans-1997-luthers-temptation-ep.-5/Orleans%20(1997)-%20Luther's%20Temptation%20(Ep.%205.mp4",
+              "seconds": 2681,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 646
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "name": "When the Saints Go Marching in",
+          "airdate": "1997-04-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "Missing",
+          "airdate": "1997-04-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "show": "Claude's Crib",
+  "type": "Drama",
+  "network": "USA Network",
+  "huntedAt": "2026-10-24T19:14:33.437Z",
+  "tvmaze": {
+    "id": 58434,
+    "runtime": 30,
+    "premiered": "1997-01-05",
+    "episodes": 13
+  },
+  "archiveMentions": 2,
+  "itemsOpened": 2,
+  "episodeShapedFiles": 1,
+  "namedEpisodeFiles": 0,
+  "verdict": "TRACES",
+  "items": [
+    {
+      "id": "claudes-crib-s01e01-pilot-vhsrip",
+      "title": "Claude's Crib - S01E01 - Pilot",
+      "uploaderHash": "1eabb5ee9709",
+      "date": "1996-08-02",
+      "collection": [
+        "television_inbox",
+        "television"
+      ],
+      "description": "Pilot episode of Claude's Crib, digitized from the VHS master.",
+      "totalVideo": 1,
+      "episodeShaped": 1,
+      "nameHits": 0,
+      "files": [
+        {
+          "name": "Pilot",
+          "file": "Pilot.mp4",
+          "format": "MPEG4",
+          "playable": true,
+          "seconds": 1460,
+          "band": "episode",
+          "sizeMB": 571,
+          "nameHit": false,
+          "ep": null,
+          "url": "https://archive.org/download/claudes-crib-s01e01-pilot-vhsrip/Pilot.mp4"
+        }
+      ],
+      "searchScore": 0.75,
+      "year": 1996,
+      "downloads": 312
+    },
+    {
+      "id": "claudepromo",
+      "title": "Promos for Claude's Crib - Absence of Alice",
+      "uploaderHash": "1eabb5ee9709",
+      "collection": "opensource_movies",
+      "description": "Two promos featuring clips from the seventh episode of Claude's Crib.",
+      "totalVideo": 2,
+      "episodeShaped": 0,
+      "nameHits": 0,
+      "files": [
+        {
+          "name": "promo1",
+          "file": "promo1.mp4",
+          "format": "MPEG4",
+          "playable": true,
+          "seconds": 31,
+          "band": "clip",
+          "sizeMB": 4,
+          "nameHit": false,
+          "ep": null,
+          "url": "https://archive.org/download/claudepromo/promo1.mp4"
+        },
+        {
+          "name": "promo2",
+          "file": "promo2.mp4",
+          "format": "MPEG4",
+          "playable": true,
+          "seconds": 10,
+          "band": "clip",
+          "sizeMB": 1,
+          "nameHit": false,
+          "ep": null,
+          "url": "https://archive.org/download/claudepromo/promo2.mp4"
+        }
+      ],
+      "searchScore": 0.7,
+      "downloads": 0
+    }
+  ]
+}

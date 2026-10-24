@@ -1,0 +1,101 @@
+{
+  "show": "2000 Malibu Road",
+  "slug": "2000-malibu-road",
+  "type": "Drama",
+  "network": "CBS",
+  "matchedAt": "2026-10-24T17:42:17.764Z",
+  "addedAt": "2026-10-24T17:42:17.764Z",
+  "tvmaze": {
+    "id": 23043,
+    "name": "2000 Malibu Road",
+    "runtime": 60,
+    "premiered": "1992-08-23",
+    "network": "CBS"
+  },
+  "coverage": {
+    "total": 6,
+    "live": 2,
+    "review": 0,
+    "missing": 4,
+    "pct": 33
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Pilot",
+          "airdate": "1992-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Part 2",
+          "airdate": "1992-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Part 3",
+          "airdate": "1992-08-26",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "2000-malibu-road",
+            "itemTitle": "2000 Malibu Road",
+            "file": "Jennifer Beals in 2000 Malibu Road (episode 3).mp4",
+            "name": "Jennifer Beals in 2000 Malibu Road (episode 3)",
+            "url": "https://archive.org/download/2000-malibu-road/Jennifer%20Beals%20in%202000%20Malibu%20Road%20(episode%203).mp4",
+            "seconds": 2551,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 212
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Part 4",
+          "airdate": "1992-09-02",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "2000-malibu-road",
+            "itemTitle": "2000 Malibu Road",
+            "file": "Jennifer Beals in 2000 Malibu Road, episode 4.mp4",
+            "name": "Jennifer Beals in 2000 Malibu Road, episode 4",
+            "url": "https://archive.org/download/2000-malibu-road/Jennifer%20Beals%20in%202000%20Malibu%20Road%2C%20episode%204.mp4",
+            "seconds": 2727,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 163
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Part 5",
+          "airdate": "1992-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Part 6",
+          "airdate": "1992-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
