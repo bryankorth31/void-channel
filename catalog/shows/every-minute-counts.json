@@ -1,0 +1,89 @@
+{
+  "show": "Every Minute Counts",
+  "slug": "every-minute-counts",
+  "type": "World TV",
+  "network": "Prime Video",
+  "matchedAt": "2026-10-24T16:24:23.236Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Every Minute Counts",
+    "runtime": null,
+    "premiered": null,
+    "network": "Prime Video"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 3,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "0589_Every_Minute_Counts_05_37_38_00",
+            "itemTitle": "Every Minute Counts",
+            "file": "0589_Every_Minute_Counts_05_37_38_00.m4v",
+            "name": "0589_Every_Minute_Counts_05_37_38_00",
+            "url": "https://archive.org/download/0589_Every_Minute_Counts_05_37_38_00/0589_Every_Minute_Counts_05_37_38_00.m4v",
+            "seconds": 620,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 245,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "everymin1944",
+          "state": "REVIEW",
+          "file": {
+            "item": "EveryMin1944",
+            "itemTitle": "Every Minute Counts",
+            "file": "EveryMin1944.mp4",
+            "name": "EveryMin1944",
+            "url": "https://archive.org/download/EveryMin1944/EveryMin1944.mp4",
+            "seconds": 614,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 64,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "everymin1944 edit",
+          "state": "REVIEW",
+          "file": {
+            "item": "EveryMin1944",
+            "itemTitle": "Every Minute Counts",
+            "file": "EveryMin1944_edit.mp4",
+            "name": "EveryMin1944_edit",
+            "url": "https://archive.org/download/EveryMin1944/EveryMin1944_edit.mp4",
+            "seconds": 614,
+            "format": "HiRes MPEG4",
+            "playable": true,
+            "sizeMB": 88,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "show": "Hotel Room",
+  "slug": "hotel-room",
+  "type": "Drama",
+  "network": "HBO",
+  "matchedAt": "2026-10-24T17:15:23.315Z",
+  "addedAt": "2026-10-24T17:15:23.315Z",
+  "tvmaze": {
+    "id": 40773,
+    "name": "Hotel Room",
+    "runtime": 60,
+    "premiered": "1993-01-08",
+    "network": "HBO"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 1,
+    "review": 0,
+    "missing": 2,
+    "pct": 33
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Tricks",
+          "airdate": "1993-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Getting Rid of Robert",
+          "airdate": "1993-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Blackout",
+          "airdate": "1993-01-08",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "hotel_room_1993",
+            "itemTitle": "Hotel Room (1993)",
+            "file": "Hotel Room - S01E03 - Blackout.mp4",
+            "name": "Hotel Room - S01E03 - Blackout",
+            "url": "https://archive.org/download/hotel_room_1993/Hotel%20Room%20-%20S01E03%20-%20Blackout.mp4",
+            "seconds": 2855,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 276
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
