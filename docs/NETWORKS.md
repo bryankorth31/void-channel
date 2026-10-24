@@ -1,24 +1,24 @@
-# Network sweeps — 11685 series on 49 networks (TMDB, 1990+, no kids); 393 not on the list yet
+# Network sweeps — 11685 series on 49 networks (TMDB, 1990+, no kids); 396 not on the list yet
 
-Swept 2026-10-24T00:24. Run `node scripts/networks.js --add` to add them all, or copy names into show-list.json.
+Swept 2026-10-24T11:34. Run `node scripts/networks.js --add` to add them all, or copy names into show-list.json.
 
 ## Genres among the missing (candidate categories)
 
 - Documentary: 114
-- Drama: 109
-- Comedy: 99
-- Reality: 64
+- Drama: 110
+- Comedy: 101
+- Reality: 65
 - Crime: 38
 - Mystery: 26
 - Action & Adventure: 21
 - Sci-Fi & Fantasy: 20
-- Animation: 18
+- Animation: 19
 - Family: 16
 - Talk: 8
 - War & Politics: 7
 - Soap: 3
 
-## Netflix — 62 missing
+## Netflix — 63 missing
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
@@ -27,7 +27,7 @@ Swept 2026-10-24T00:24. Run `node scripts/networks.js --add` to add them all, or
 | Move to Heaven | 2021 | World TV | Drama | 393 |
 | Night Stalker: The Hunt for a Serial Killer | 2021 | Documentary & Geographic | Documentary, Crime, Mystery | 385 |
 | Away | 2020 | Streaming Era | Sci-Fi & Fantasy, Drama | 379 |
-| The Spy | 2019 | Streaming Era | Drama | 365 |
+| The Spy | 2019 | Streaming Era | Drama | 366 |
 | Hollywood | 2020 | Streaming Era | Drama | 363 |
 | The Perfect Couple | 2024 | Streaming Era | Drama, Mystery, Crime | 359 |
 | Rise of Empires: Ottoman | 2020 | Documentary & Geographic | Documentary, War & Politics, Action & Adventure | 354 |
@@ -58,7 +58,7 @@ Swept 2026-10-24T00:24. Run `node scripts/networks.js --add` to add them all, or
 | Flaked | 2016 | Streaming Era | Drama, Comedy | 111 |
 | Money, Explained | 2021 | Documentary & Geographic | Documentary | 97 |
 | The Crystal Cuckoo | 2025 | World TV | Drama, Crime, Mystery | 93 |
-| Michael Jackson: The Verdict | 2026 | Documentary & Geographic | Documentary | 79 |
+| Michael Jackson: The Verdict | 2026 | Documentary & Geographic | Documentary | 80 |
 | 1992 | 2024 | World TV | Drama, Mystery | 72 |
 | Agent Elvis | 2023 | Animated | Animation, Comedy, Action & Adventure | 70 |
 | Hip Hop Evolution | 2016 | Documentary & Geographic | Documentary | 66 |
@@ -77,13 +77,14 @@ Swept 2026-10-24T00:24. Run `node scripts/networks.js --add` to add them all, or
 | Attack on London: Hunting the 7/7 Bombers | 2025 | Documentary & Geographic | Documentary, Crime | 27 |
 | Leviathan | 2025 | Animated | Animation, Action & Adventure, Sci-Fi & Fantasy | 13 |
 | Celebrity Bear Hunt | 2025 | Reality & Talk | Reality | 12 |
+| Hollywood Arts | 2026 | Streaming Era | Comedy, Drama, Family | 11 |
 | Nightmares of Nature | 2025 | Documentary & Geographic | Documentary | 11 |
-| Hollywood Arts | 2026 | Streaming Era | Comedy, Drama, Family | 10 |
-| Money Trap | 2026 | World TV | Comedy, Crime, Action & Adventure | 6 |
+| Money Trap | 2026 | World TV | Comedy, Crime, Action & Adventure | 7 |
 | Did Someone Happen to Mention Me? | 2026 | World TV | Comedy, Drama | 4 |
 | The New Stanford Prison Experiment | 2026 | Reality & Talk | Reality | 4 |
 | The Rewatchables | 2015 | Reality & Talk | Talk | 3 |
 | Driving Mom Crazy | 2026 | World TV | Comedy, Sci-Fi & Fantasy | 0 |
+| Fading Grandeur | 2026 | World TV | Comedy, Drama | 0 |
 
 ## BBC Two — 59 missing
 
@@ -156,7 +157,7 @@ Swept 2026-10-24T00:24. Run `node scripts/networks.js --add` to add them all, or
 | Bling Ring: Hollywood Heist | 2022 | Documentary & Geographic | Documentary, Crime | 23 |
 | Gordon Behind Bars | 2012 | Reality & Talk | Reality | 22 |
 | Balls of Steel | 2005 | British and Beyond | Comedy | 11 |
-| Miriam and Alan: Lost in Scotland | 2021 | Documentary & Geographic | Documentary | 7 |
+| Miriam and Alan: Lost in Scotland | 2021 | Documentary & Geographic | Documentary | 8 |
 | George Clarke's Amazing Spaces | 2012 | Documentary & Geographic | Documentary | 6 |
 | Sean's Show | 1992 | British and Beyond | Comedy | 5 |
 | The Unpleasant World of Penn & Teller | 1994 | British and Beyond | Comedy | 5 |
@@ -259,7 +260,7 @@ Swept 2026-10-24T00:24. Run `node scripts/networks.js --add` to add them all, or
 | Castles | 1995 | British and Beyond | Soap | 0 |
 | Downtown Lagos | 1992 | British and Beyond | Drama | 0 |
 
-## Prime Video — 48 missing
+## Prime Video — 49 missing
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
@@ -270,7 +271,6 @@ Swept 2026-10-24T00:24. Run `node scripts/networks.js --add` to add them all, or
 | When You Least Expect It | 2022 | World TV | Drama | 35 |
 | Borat's American Lockdown & Debunking Borat | 2021 | Reality & Talk | Comedy, Reality | 34 |
 | We Are Golden | 2024 | World TV | Comedy | 29 |
-| LuLaRich | 2021 | Documentary & Geographic | Documentary | 24 |
 | All or Nothing | 2016 | Documentary & Geographic | Documentary, Reality | 21 |
 | Sono Lillo | 2023 | World TV | Comedy | 21 |
 | Fading Gigolo | 2023 | World TV | Comedy | 21 |
@@ -290,6 +290,7 @@ Swept 2026-10-24T00:24. Run `node scripts/networks.js --add` to add them all, or
 | Tokyo Love Story | 2020 | World TV | Drama | 3 |
 | Drag Den | 2022 | Reality & Talk | Reality | 3 |
 | Nicklas Pranker | 2022 | World TV | Comedy | 3 |
+| Last One Laughing: Sweden - Halloween Special | 2025 | Reality & Talk | Reality, Comedy | 3 |
 | MrBeast: Extreme Survival! | 2026 | Reality & Talk | Reality | 3 |
 | American MC | 2017 | Documentary & Geographic | Reality, Documentary | 2 |
 | MrBeast: Luxury Experiences! | 2026 | Reality & Talk | Reality | 2 |
@@ -311,6 +312,7 @@ Swept 2026-10-24T00:24. Run `node scripts/networks.js --add` to add them all, or
 | Isakapatnam | 2026 | World TV | Drama | 0 |
 | SOR | 2026 | World TV | Drama | 0 |
 | The Traitors (Telugu) | 2026 | Reality & Talk | Reality | 0 |
+| Chaar Yaar | 2026 | World TV | Drama | 0 |
 
 ## ITV — 40 missing
 
@@ -357,29 +359,7 @@ Swept 2026-10-24T00:24. Run `node scripts/networks.js --add` to add them all, or
 | Big Star's Bigger Star | 2018 | Reality & Talk | Reality | 0 |
 | Firm Friends | 1992 | British and Beyond | Drama | 0 |
 
-## ABC — 17 missing
-
-| Show | Year | Row | Genres | Votes |
-|---|---|---|---|---|
-| Downward Dog | 2017 | Drama | Comedy, Drama | 20 |
-| Call Your Mother | 2021 | 2000s and Later Sitcoms | Comedy | 20 |
-| The Con | 2020 | Documentary & Geographic | Documentary | 6 |
-| Push | 1998 | Drama | Soap, Drama | 5 |
-| Julie | 1992 | 90s Sitcoms | Comedy | 3 |
-| The Parent Test | 2022 | Reality & Talk | Reality, Family | 3 |
-| Great Minds Think for Themselves | 1997 | Animated | Animation, Documentary | 3 |
-| Billy | 1992 | 90s Sitcoms | Comedy | 2 |
-| American Inventor | 2006 | Drama |  | 2 |
-| The Last Defense | 2018 | Documentary & Geographic | Documentary | 2 |
-| Pooch Perfect | 2021 | Reality & Talk | Reality | 2 |
-| Uppsala Doctor's | 2009 | World TV | Drama | 2 |
-| Monopoly | 1990 | Reality & Talk | Reality | 1 |
-| The Man in the Family | 1991 | 90s Sitcoms | Comedy | 1 |
-| Big Fan | 2017 | Reality & Talk | Talk | 1 |
-| Voices Within: The Lives of Truddi Chase | 1990 | Drama |  | 1 |
-| Opportunity Knocks | 2008 | Drama |  | 0 |
-
-## PBS — 17 missing
+## PBS — 18 missing
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
@@ -400,6 +380,29 @@ Swept 2026-10-24T00:24. Run `node scripts/networks.js --add` to add them all, or
 | Victorian Christmas | 1991 | Documentary & Geographic | Family | 0 |
 | War Machine: World War II | 2025 | Documentary & Geographic | Documentary, War & Politics | 0 |
 | Our New World | 2026 | Documentary & Geographic | Documentary | 0 |
+| Ages of Ice | 2026 | Documentary & Geographic | Documentary | 0 |
+
+## ABC — 17 missing
+
+| Show | Year | Row | Genres | Votes |
+|---|---|---|---|---|
+| Downward Dog | 2017 | Drama | Comedy, Drama | 20 |
+| Call Your Mother | 2021 | 2000s and Later Sitcoms | Comedy | 20 |
+| The Con | 2020 | Documentary & Geographic | Documentary | 6 |
+| Push | 1998 | Drama | Soap, Drama | 5 |
+| Julie | 1992 | 90s Sitcoms | Comedy | 3 |
+| The Parent Test | 2022 | Reality & Talk | Reality, Family | 3 |
+| Great Minds Think for Themselves | 1997 | Animated | Animation, Documentary | 3 |
+| Billy | 1992 | 90s Sitcoms | Comedy | 2 |
+| American Inventor | 2006 | Drama |  | 2 |
+| Science Court | 1997 | Animated | Animation | 2 |
+| The Last Defense | 2018 | Documentary & Geographic | Documentary | 2 |
+| Pooch Perfect | 2021 | Reality & Talk | Reality | 2 |
+| Monopoly | 1990 | Reality & Talk | Reality | 1 |
+| The Man in the Family | 1991 | 90s Sitcoms | Comedy | 1 |
+| Big Fan | 2017 | Reality & Talk | Talk | 1 |
+| Voices Within: The Lives of Truddi Chase | 1990 | Drama |  | 1 |
+| Opportunity Knocks | 2008 | Drama |  | 0 |
 
 ## NBC — 13 missing
 
@@ -512,7 +515,7 @@ Swept 2026-10-24T00:24. Run `node scripts/networks.js --add` to add them all, or
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
-| The Super Popular Show! | 2004 | Animated | Animation, Comedy | 0 |
+| The Super Popular Show | 2004 | Animated | Animation, Comedy | 0 |
 
 ## Apple TV+ — 1 missing
 

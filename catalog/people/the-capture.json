@@ -249,5 +249,944 @@
    "episodes": 2
   }
  ],
- "fetchedAt": "2026-10-15T08:39:11.142Z"
+ "fetchedAt": "2026-10-15T08:39:11.142Z",
+ "episodes": {
+  "1x1": {
+   "d": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 1283880,
+     "name": "Miriam Lucia",
+     "photo": "https://image.tmdb.org/t/p/w185/fRM3TYhU3zEMzbL8tI5W04MeogF.jpg",
+     "as": "Prosecutor"
+    },
+    {
+     "id": 1233854,
+     "name": "Adam Sopp",
+     "photo": "https://image.tmdb.org/t/p/w185/6Z46i5kb1txXN43tn6ZOWLYH5ws.jpg",
+     "as": "Detective One"
+    },
+    {
+     "id": 1674206,
+     "name": "Laurence Ubong Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/wKc9PHuuqrFRIAepLm87AUDdvgt.jpg",
+     "as": "Detective Two"
+    },
+    {
+     "id": 2509935,
+     "name": "Miranda Heath",
+     "photo": "https://image.tmdb.org/t/p/w185/I4WNydKjl9kKbmHq0AIHg61OSq.jpg",
+     "as": "Amina Mahdi"
+    },
+    {
+     "id": 2509937,
+     "name": "Jason Rennie",
+     "photo": "https://image.tmdb.org/t/p/w185/kyyow0E0uQg8j8S2XSCMV7RKZxc.jpg",
+     "as": "Zain Mahdi"
+    },
+    {
+     "id": 2393125,
+     "name": "Savannah Acquah",
+     "photo": "https://image.tmdb.org/t/p/w185/vqCpdiEk14i2a9KlhZoR5SoiDXP.jpg",
+     "as": "Jamila Mahdi"
+    },
+    {
+     "id": 2509933,
+     "name": "Florian Rafuna",
+     "photo": "https://image.tmdb.org/t/p/w185/opjqRDyd9WKm3d8dArjhUf8SGGd.jpg",
+     "as": "Bogdan"
+    },
+    {
+     "id": 1647129,
+     "name": "Derek Siow",
+     "photo": "https://image.tmdb.org/t/p/w185/qvgJitn5JRvyoEQEPqc3VcM7x1e.jpg",
+     "as": "Andy Sim"
+    },
+    {
+     "id": 2452674,
+     "name": "Kevin Garry",
+     "photo": "https://image.tmdb.org/t/p/w185/mABhMAFl4ZIxkuVtwRUXrdBdlko.jpg",
+     "as": "Jamal"
+    },
+    {
+     "id": 2509932,
+     "name": "Luke Sullivan",
+     "photo": "https://image.tmdb.org/t/p/w185/dmNOqAMzeHLWUfzMOJ3bvEFFMaO.jpg",
+     "as": "Quinny"
+    }
+   ]
+  },
+  "1x2": {
+   "d": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 2032948,
+     "name": "Darren Bancroft",
+     "photo": "https://image.tmdb.org/t/p/w185/yn2FwNLPhGeyiATnvsO7cZH1F1m.jpg",
+     "as": "Tech Officer"
+    },
+    {
+     "id": 2509933,
+     "name": "Florian Rafuna",
+     "photo": "https://image.tmdb.org/t/p/w185/opjqRDyd9WKm3d8dArjhUf8SGGd.jpg",
+     "as": "Bogdan"
+    },
+    {
+     "id": 1222072,
+     "name": "Simon Ludders",
+     "photo": "https://image.tmdb.org/t/p/w185/izbYsueYkFonY4qwG034UcppAJW.jpg",
+     "as": "Forensics Officer Nick"
+    },
+    {
+     "id": 1294984,
+     "name": "Faraz Ayub",
+     "photo": "https://image.tmdb.org/t/p/w185/l5Rx4PwWezPFf0YXTwoQ6hmFDfO.jpg",
+     "as": "Operator Two"
+    },
+    {
+     "id": 1197829,
+     "name": "Esther Hall",
+     "photo": "https://image.tmdb.org/t/p/w185/mbJ8Dw2nQPZ5Hd59gjoykDPo6Zn.jpg",
+     "as": "Elaine Hart"
+    },
+    {
+     "id": 2452674,
+     "name": "Kevin Garry",
+     "photo": "https://image.tmdb.org/t/p/w185/mABhMAFl4ZIxkuVtwRUXrdBdlko.jpg",
+     "as": "Jamal"
+    },
+    {
+     "id": 1474028,
+     "name": "Sharon Rooney",
+     "photo": "https://image.tmdb.org/t/p/w185/s2u8N5UkDDwpxCrtDpordyBMP8n.jpg",
+     "as": "Becky"
+    },
+    {
+     "id": 1371051,
+     "name": "Tommy McDonnell",
+     "photo": "https://image.tmdb.org/t/p/w185/zbdub0MlpfiPHgWKNO1m7Q2SYd4.jpg",
+     "as": "Mat Forester"
+    },
+    {
+     "id": 1891263,
+     "name": "Frederick Szkoda",
+     "photo": "https://image.tmdb.org/t/p/w185/w5sRKhl7dMCTcxgMm9ToQmoUm77.jpg",
+     "as": "Ryan"
+    },
+    {
+     "id": 1308934,
+     "name": "Dustin Demri-Burns",
+     "photo": "https://image.tmdb.org/t/p/w185/m0yBhBOqO9HSvsBxj9JzdPfMf3d.jpg",
+     "as": "Francis"
+    }
+   ]
+  },
+  "1x3": {
+   "d": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 2011719,
+     "name": "Christopher Torretto",
+     "photo": "https://image.tmdb.org/t/p/w185/o6tDPu9p9r4gWUtuivOzczFXs6H.jpg",
+     "as": "Tactical Firearms Officer"
+    },
+    {
+     "id": 1647129,
+     "name": "Derek Siow",
+     "photo": "https://image.tmdb.org/t/p/w185/qvgJitn5JRvyoEQEPqc3VcM7x1e.jpg",
+     "as": "Andy Sim"
+    },
+    {
+     "id": 2509981,
+     "name": "Hanna Winter",
+     "photo": null,
+     "as": "Jutca"
+    },
+    {
+     "id": 2303065,
+     "name": "Tibu Fortes",
+     "photo": "https://image.tmdb.org/t/p/w185/11CXKLPOGFSgJUyugzR8xAOebPq.jpg",
+     "as": "Detective Constable"
+    },
+    {
+     "id": 1457026,
+     "name": "Urs Rechn",
+     "photo": "https://image.tmdb.org/t/p/w185/kFeVHoL8FKSOrw9spcnO2kz9fF6.jpg",
+     "as": "Gabor"
+    },
+    {
+     "id": 1294984,
+     "name": "Faraz Ayub",
+     "photo": "https://image.tmdb.org/t/p/w185/l5Rx4PwWezPFf0YXTwoQ6hmFDfO.jpg",
+     "as": "Operator Two"
+    },
+    {
+     "id": 1371051,
+     "name": "Tommy McDonnell",
+     "photo": "https://image.tmdb.org/t/p/w185/zbdub0MlpfiPHgWKNO1m7Q2SYd4.jpg",
+     "as": "Mat Forester"
+    },
+    {
+     "id": 1308934,
+     "name": "Dustin Demri-Burns",
+     "photo": "https://image.tmdb.org/t/p/w185/m0yBhBOqO9HSvsBxj9JzdPfMf3d.jpg",
+     "as": "Francis"
+    },
+    {
+     "id": 1813662,
+     "name": "Marcus Fraser",
+     "photo": "https://image.tmdb.org/t/p/w185/qpAxGk8XjUxNsfcW5B1YMupOff5.jpg",
+     "as": "Guard Mikey"
+    },
+    {
+     "id": 2509919,
+     "name": "Tianna Ellie Gregory",
+     "photo": null,
+     "as": "Jaycee"
+    }
+   ]
+  },
+  "1x4": {
+   "d": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 1294984,
+     "name": "Faraz Ayub",
+     "photo": "https://image.tmdb.org/t/p/w185/l5Rx4PwWezPFf0YXTwoQ6hmFDfO.jpg",
+     "as": "Operator Two"
+    },
+    {
+     "id": 1822370,
+     "name": "Andrew Joshi",
+     "photo": "https://image.tmdb.org/t/p/w185/6IzNELJMLi6tjmmoyDuzK8QbVJf.jpg",
+     "as": "DCI Peter Taylor"
+    },
+    {
+     "id": 1197829,
+     "name": "Esther Hall",
+     "photo": "https://image.tmdb.org/t/p/w185/mbJ8Dw2nQPZ5Hd59gjoykDPo6Zn.jpg",
+     "as": "Elaine Hart"
+    },
+    {
+     "id": 181045,
+     "name": "Charlotte Comer",
+     "photo": "https://image.tmdb.org/t/p/w185/mYGnCrVHKxwKHNQUh7v5Xh15lVH.jpg",
+     "as": "Dee"
+    },
+    {
+     "id": 2197138,
+     "name": "Alex Hughes",
+     "photo": "https://image.tmdb.org/t/p/w185/7cuhi8hDxSNLa48UBdyHA5la30Z.jpg",
+     "as": "Coroner"
+    },
+    {
+     "id": 2452674,
+     "name": "Kevin Garry",
+     "photo": "https://image.tmdb.org/t/p/w185/mABhMAFl4ZIxkuVtwRUXrdBdlko.jpg",
+     "as": "Jamal"
+    },
+    {
+     "id": 1474028,
+     "name": "Sharon Rooney",
+     "photo": "https://image.tmdb.org/t/p/w185/s2u8N5UkDDwpxCrtDpordyBMP8n.jpg",
+     "as": "Becky"
+    },
+    {
+     "id": 1891263,
+     "name": "Frederick Szkoda",
+     "photo": "https://image.tmdb.org/t/p/w185/w5sRKhl7dMCTcxgMm9ToQmoUm77.jpg",
+     "as": "Ryan"
+    },
+    {
+     "id": 1813662,
+     "name": "Marcus Fraser",
+     "photo": "https://image.tmdb.org/t/p/w185/qpAxGk8XjUxNsfcW5B1YMupOff5.jpg",
+     "as": "Guard Mikey"
+    },
+    {
+     "id": 1600494,
+     "name": "Kiran Sonia Sawar",
+     "photo": "https://image.tmdb.org/t/p/w185/sRuFPJIW2yJTvov1cS0T9Baqb8U.jpg",
+     "as": "Naz"
+    }
+   ]
+  },
+  "1x5": {
+   "d": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 1414163,
+     "name": "Daisy Waterstone",
+     "photo": "https://image.tmdb.org/t/p/w185/moKCSGx5dByK7BjZX7sVWqL59Pg.jpg",
+     "as": "Abigail Carey"
+    },
+    {
+     "id": 2452674,
+     "name": "Kevin Garry",
+     "photo": "https://image.tmdb.org/t/p/w185/mABhMAFl4ZIxkuVtwRUXrdBdlko.jpg",
+     "as": "Jamal"
+    },
+    {
+     "id": 2509932,
+     "name": "Luke Sullivan",
+     "photo": "https://image.tmdb.org/t/p/w185/dmNOqAMzeHLWUfzMOJ3bvEFFMaO.jpg",
+     "as": "Quinny"
+    },
+    {
+     "id": 2509929,
+     "name": "Kru Lundy",
+     "photo": "https://image.tmdb.org/t/p/w185/oeSEChizn3pnNrxTNdvxCbWXc99.jpg",
+     "as": "Crispin"
+    },
+    {
+     "id": 1474028,
+     "name": "Sharon Rooney",
+     "photo": "https://image.tmdb.org/t/p/w185/s2u8N5UkDDwpxCrtDpordyBMP8n.jpg",
+     "as": "Becky"
+    },
+    {
+     "id": 1371051,
+     "name": "Tommy McDonnell",
+     "photo": "https://image.tmdb.org/t/p/w185/zbdub0MlpfiPHgWKNO1m7Q2SYd4.jpg",
+     "as": "Mat Forester"
+    },
+    {
+     "id": 1891263,
+     "name": "Frederick Szkoda",
+     "photo": "https://image.tmdb.org/t/p/w185/w5sRKhl7dMCTcxgMm9ToQmoUm77.jpg",
+     "as": "Ryan"
+    },
+    {
+     "id": 1218392,
+     "name": "Mike Noble",
+     "photo": null,
+     "as": "Lee"
+    },
+    {
+     "id": 2509927,
+     "name": "Larry Olubamiwo",
+     "photo": "https://image.tmdb.org/t/p/w185/3LTOTc2E8kRumk9C04hMSwGG8JA.jpg",
+     "as": "Kevin"
+    },
+    {
+     "id": 2510017,
+     "name": "Dan Hagley",
+     "photo": null,
+     "as": "Uniform Officer"
+    }
+   ]
+  },
+  "1x6": {
+   "d": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 1414163,
+     "name": "Daisy Waterstone",
+     "photo": "https://image.tmdb.org/t/p/w185/moKCSGx5dByK7BjZX7sVWqL59Pg.jpg",
+     "as": "Abigail Carey"
+    },
+    {
+     "id": 1308934,
+     "name": "Dustin Demri-Burns",
+     "photo": "https://image.tmdb.org/t/p/w185/m0yBhBOqO9HSvsBxj9JzdPfMf3d.jpg",
+     "as": "Francis"
+    },
+    {
+     "id": 1865769,
+     "name": "Rebecca Scott",
+     "photo": "https://image.tmdb.org/t/p/w185/sGFEjsVuZH3Z7PxSWGyZzoSb5IY.jpg",
+     "as": "Office Manager"
+    },
+    {
+     "id": 1813662,
+     "name": "Marcus Fraser",
+     "photo": "https://image.tmdb.org/t/p/w185/qpAxGk8XjUxNsfcW5B1YMupOff5.jpg",
+     "as": "Guard Mikey"
+    },
+    {
+     "id": 2509919,
+     "name": "Tianna Ellie Gregory",
+     "photo": null,
+     "as": "Jaycee"
+    },
+    {
+     "id": 1600494,
+     "name": "Kiran Sonia Sawar",
+     "photo": "https://image.tmdb.org/t/p/w185/sRuFPJIW2yJTvov1cS0T9Baqb8U.jpg",
+     "as": "Naz"
+    },
+    {
+     "id": 95716,
+     "name": "Ian Pirie",
+     "photo": "https://image.tmdb.org/t/p/w185/63VIC2jPUgrhSLvwAcbn3NeCFF5.jpg",
+     "as": "Kenny Shaw"
+    },
+    {
+     "id": 1371824,
+     "name": "Peter Singh",
+     "photo": "https://image.tmdb.org/t/p/w185/pgiYXat8nW8Hr9C9Z79ioV6RQ2u.jpg",
+     "as": "Operator Phillips"
+    },
+    {
+     "id": 1901394,
+     "name": "Huw Novelli",
+     "photo": "https://image.tmdb.org/t/p/w185/mm3mkwjaAoEeP2pJ23fm1syWf1j.jpg",
+     "as": "Covert OP Bryn"
+    },
+    {
+     "id": 1430712,
+     "name": "Tom Colley",
+     "photo": "https://image.tmdb.org/t/p/w185/cbLcj1pxXGxZpSe4ztAmpGvyI90.jpg",
+     "as": "Operator One"
+    }
+   ]
+  },
+  "3x1": {
+   "d": [
+    {
+     "id": 1252909,
+     "name": "Anthony Philipson",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 65890,
+     "name": "Lia Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/d7BIswSeHeAdIobNjsWEFG2uj1H.jpg",
+     "as": "DSU Gemma Garland"
+    },
+    {
+     "id": 31925,
+     "name": "Hugh Quarshie",
+     "photo": "https://image.tmdb.org/t/p/w185/buBmcE8F8BpbL7M8yyxST2exMRP.jpg",
+     "as": "Commissioner Cameron Yates"
+    },
+    {
+     "id": 1235008,
+     "name": "Andrew Buchan",
+     "photo": "https://image.tmdb.org/t/p/w185/3HvxEwBYJT2C07zJzTecOCYayo6.jpg",
+     "as": "Deputy Commissioner Julian Talbot"
+    },
+    {
+     "id": 1349802,
+     "name": "Amanda Drew",
+     "photo": "https://image.tmdb.org/t/p/w185/dd5NSaGnHJe1F9oEEPHaDGRqcr8.jpg",
+     "as": "Angela Stilton"
+    },
+    {
+     "id": 1643,
+     "name": "Adrian Rawlins",
+     "photo": "https://image.tmdb.org/t/p/w185/G0PGZqTjenuVTAQiib4ScU7vAI.jpg",
+     "as": "Lord Frederickson"
+    },
+    {
+     "id": 3771364,
+     "name": "Isabella Brownson",
+     "photo": "https://image.tmdb.org/t/p/w185/hhP5kScOLUnbNwCBYsqrHKAXVJu.jpg",
+     "as": "Paige Thomas"
+    },
+    {
+     "id": 570296,
+     "name": "Joe Dempsie",
+     "photo": "https://image.tmdb.org/t/p/w185/47XNLVxbLsEBFgGYgbHAIYE5ja9.jpg",
+     "as": "James Whitlock"
+    },
+    {
+     "id": 2679493,
+     "name": "Amy Conachan",
+     "photo": null,
+     "as": "DC Erin Foster"
+    },
+    {
+     "id": 1977127,
+     "name": "Beruce Khan",
+     "photo": "https://image.tmdb.org/t/p/w185/m8U9jbt4SzFJlYWhryG8AxxUAuZ.jpg",
+     "as": "DC Lyons"
+    },
+    {
+     "id": 1312122,
+     "name": "Frederick Schmidt",
+     "photo": "https://image.tmdb.org/t/p/w185/uJbO9kaUJEdE3wlX8XUAf9bIVEe.jpg",
+     "as": "CTSFO Commander George"
+    }
+   ]
+  },
+  "3x2": {
+   "d": [
+    {
+     "id": 1252909,
+     "name": "Anthony Philipson",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 65890,
+     "name": "Lia Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/d7BIswSeHeAdIobNjsWEFG2uj1H.jpg",
+     "as": "DSU Gemma Garland"
+    },
+    {
+     "id": 31925,
+     "name": "Hugh Quarshie",
+     "photo": "https://image.tmdb.org/t/p/w185/buBmcE8F8BpbL7M8yyxST2exMRP.jpg",
+     "as": "Commissioner Cameron Yates"
+    },
+    {
+     "id": 1235008,
+     "name": "Andrew Buchan",
+     "photo": "https://image.tmdb.org/t/p/w185/3HvxEwBYJT2C07zJzTecOCYayo6.jpg",
+     "as": "Deputy Commissioner Julian Talbot"
+    },
+    {
+     "id": 3771364,
+     "name": "Isabella Brownson",
+     "photo": "https://image.tmdb.org/t/p/w185/hhP5kScOLUnbNwCBYsqrHKAXVJu.jpg",
+     "as": "Paige Thomas"
+    },
+    {
+     "id": 570296,
+     "name": "Joe Dempsie",
+     "photo": "https://image.tmdb.org/t/p/w185/47XNLVxbLsEBFgGYgbHAIYE5ja9.jpg",
+     "as": "James Whitlock"
+    },
+    {
+     "id": 2679493,
+     "name": "Amy Conachan",
+     "photo": null,
+     "as": "DC Erin Foster"
+    },
+    {
+     "id": 1977127,
+     "name": "Beruce Khan",
+     "photo": "https://image.tmdb.org/t/p/w185/m8U9jbt4SzFJlYWhryG8AxxUAuZ.jpg",
+     "as": "DC Lyons"
+    },
+    {
+     "id": 1312122,
+     "name": "Frederick Schmidt",
+     "photo": "https://image.tmdb.org/t/p/w185/uJbO9kaUJEdE3wlX8XUAf9bIVEe.jpg",
+     "as": "CTSFO Commander George"
+    },
+    {
+     "id": 3171725,
+     "name": "Georgina Hellier",
+     "photo": "https://image.tmdb.org/t/p/w185/bkkowHcBHYyrcu038WPv8qARPg9.jpg",
+     "as": "DC Jacobs"
+    },
+    {
+     "id": 3593833,
+     "name": "Jude Mack",
+     "photo": "https://image.tmdb.org/t/p/w185/iZbW7IkBCFkt164Hh3Oa2PBpNr8.jpg",
+     "as": "Natasha Hayes"
+    }
+   ]
+  },
+  "3x3": {
+   "d": [
+    {
+     "id": 1252909,
+     "name": "Anthony Philipson",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 65890,
+     "name": "Lia Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/d7BIswSeHeAdIobNjsWEFG2uj1H.jpg",
+     "as": "DSU Gemma Garland"
+    },
+    {
+     "id": 178579,
+     "name": "Ginny Holder",
+     "photo": "https://image.tmdb.org/t/p/w185/gk6BypIs5txRIDe55e1I6xdyf04.jpg",
+     "as": "DC / DI Nadia Latif"
+    },
+    {
+     "id": 6971,
+     "name": "Nigel Lindsay",
+     "photo": "https://image.tmdb.org/t/p/w185/bvkX9ju5Irpw0m1qnW1UuW0F24q.jpg",
+     "as": "DSI / DSU Tom Kendricks"
+    },
+    {
+     "id": 31925,
+     "name": "Hugh Quarshie",
+     "photo": "https://image.tmdb.org/t/p/w185/buBmcE8F8BpbL7M8yyxST2exMRP.jpg",
+     "as": "Commissioner Cameron Yates"
+    },
+    {
+     "id": 3771364,
+     "name": "Isabella Brownson",
+     "photo": "https://image.tmdb.org/t/p/w185/hhP5kScOLUnbNwCBYsqrHKAXVJu.jpg",
+     "as": "Paige Thomas"
+    },
+    {
+     "id": 570296,
+     "name": "Joe Dempsie",
+     "photo": "https://image.tmdb.org/t/p/w185/47XNLVxbLsEBFgGYgbHAIYE5ja9.jpg",
+     "as": "James Whitlock"
+    },
+    {
+     "id": 2679493,
+     "name": "Amy Conachan",
+     "photo": null,
+     "as": "DC Erin Foster"
+    },
+    {
+     "id": 1977127,
+     "name": "Beruce Khan",
+     "photo": "https://image.tmdb.org/t/p/w185/m8U9jbt4SzFJlYWhryG8AxxUAuZ.jpg",
+     "as": "DC Lyons"
+    },
+    {
+     "id": 1312122,
+     "name": "Frederick Schmidt",
+     "photo": "https://image.tmdb.org/t/p/w185/uJbO9kaUJEdE3wlX8XUAf9bIVEe.jpg",
+     "as": "CTSFO Commander George"
+    },
+    {
+     "id": 3171725,
+     "name": "Georgina Hellier",
+     "photo": "https://image.tmdb.org/t/p/w185/bkkowHcBHYyrcu038WPv8qARPg9.jpg",
+     "as": "DC Jacobs"
+    }
+   ]
+  },
+  "3x4": {
+   "d": [
+    {
+     "id": 3577693,
+     "name": "Johnny Allan",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 65890,
+     "name": "Lia Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/d7BIswSeHeAdIobNjsWEFG2uj1H.jpg",
+     "as": "DSU Gemma Garland"
+    },
+    {
+     "id": 178579,
+     "name": "Ginny Holder",
+     "photo": "https://image.tmdb.org/t/p/w185/gk6BypIs5txRIDe55e1I6xdyf04.jpg",
+     "as": "DC / DI Nadia Latif"
+    },
+    {
+     "id": 31925,
+     "name": "Hugh Quarshie",
+     "photo": "https://image.tmdb.org/t/p/w185/buBmcE8F8BpbL7M8yyxST2exMRP.jpg",
+     "as": "Commissioner Cameron Yates"
+    },
+    {
+     "id": 1235008,
+     "name": "Andrew Buchan",
+     "photo": "https://image.tmdb.org/t/p/w185/3HvxEwBYJT2C07zJzTecOCYayo6.jpg",
+     "as": "Deputy Commissioner Julian Talbot"
+    },
+    {
+     "id": 570296,
+     "name": "Joe Dempsie",
+     "photo": "https://image.tmdb.org/t/p/w185/47XNLVxbLsEBFgGYgbHAIYE5ja9.jpg",
+     "as": "James Whitlock"
+    },
+    {
+     "id": 2679493,
+     "name": "Amy Conachan",
+     "photo": null,
+     "as": "DC Erin Foster"
+    },
+    {
+     "id": 1977127,
+     "name": "Beruce Khan",
+     "photo": "https://image.tmdb.org/t/p/w185/m8U9jbt4SzFJlYWhryG8AxxUAuZ.jpg",
+     "as": "DC Lyons"
+    },
+    {
+     "id": 1312122,
+     "name": "Frederick Schmidt",
+     "photo": "https://image.tmdb.org/t/p/w185/uJbO9kaUJEdE3wlX8XUAf9bIVEe.jpg",
+     "as": "CTSFO Commander George"
+    },
+    {
+     "id": 3171725,
+     "name": "Georgina Hellier",
+     "photo": "https://image.tmdb.org/t/p/w185/bkkowHcBHYyrcu038WPv8qARPg9.jpg",
+     "as": "DC Jacobs"
+    },
+    {
+     "id": 1015829,
+     "name": "Barry Aird",
+     "photo": "https://image.tmdb.org/t/p/w185/sVrVkarYgB6FAHX142dwG3RtoOh.jpg",
+     "as": "Jean-Paul"
+    }
+   ]
+  },
+  "3x5": {
+   "d": [
+    {
+     "id": 3577693,
+     "name": "Johnny Allan",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 65890,
+     "name": "Lia Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/d7BIswSeHeAdIobNjsWEFG2uj1H.jpg",
+     "as": "DSU Gemma Garland"
+    },
+    {
+     "id": 178579,
+     "name": "Ginny Holder",
+     "photo": "https://image.tmdb.org/t/p/w185/gk6BypIs5txRIDe55e1I6xdyf04.jpg",
+     "as": "DC / DI Nadia Latif"
+    },
+    {
+     "id": 22810,
+     "name": "Andy Nyman",
+     "photo": "https://image.tmdb.org/t/p/w185/9bN9RVoPWmsmV3VBI7hp4VKD9Kg.jpg",
+     "as": "Rowan Gill"
+    },
+    {
+     "id": 31925,
+     "name": "Hugh Quarshie",
+     "photo": "https://image.tmdb.org/t/p/w185/buBmcE8F8BpbL7M8yyxST2exMRP.jpg",
+     "as": "Commissioner Cameron Yates"
+    },
+    {
+     "id": 1235008,
+     "name": "Andrew Buchan",
+     "photo": "https://image.tmdb.org/t/p/w185/3HvxEwBYJT2C07zJzTecOCYayo6.jpg",
+     "as": "Deputy Commissioner Julian Talbot"
+    },
+    {
+     "id": 1349802,
+     "name": "Amanda Drew",
+     "photo": "https://image.tmdb.org/t/p/w185/dd5NSaGnHJe1F9oEEPHaDGRqcr8.jpg",
+     "as": "Angela Stilton"
+    },
+    {
+     "id": 3771364,
+     "name": "Isabella Brownson",
+     "photo": "https://image.tmdb.org/t/p/w185/hhP5kScOLUnbNwCBYsqrHKAXVJu.jpg",
+     "as": "Paige Thomas"
+    },
+    {
+     "id": 570296,
+     "name": "Joe Dempsie",
+     "photo": "https://image.tmdb.org/t/p/w185/47XNLVxbLsEBFgGYgbHAIYE5ja9.jpg",
+     "as": "James Whitlock"
+    },
+    {
+     "id": 1977127,
+     "name": "Beruce Khan",
+     "photo": "https://image.tmdb.org/t/p/w185/m8U9jbt4SzFJlYWhryG8AxxUAuZ.jpg",
+     "as": "DC Lyons"
+    },
+    {
+     "id": 997569,
+     "name": "Kenneth Collard",
+     "photo": "https://image.tmdb.org/t/p/w185/xUMUdN52gCIRjHzUc1uw1F0ZAfz.jpg",
+     "as": "Wizard"
+    }
+   ]
+  },
+  "3x6": {
+   "d": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1286320,
+     "name": "Ben Chanan",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 65890,
+     "name": "Lia Williams",
+     "photo": "https://image.tmdb.org/t/p/w185/d7BIswSeHeAdIobNjsWEFG2uj1H.jpg",
+     "as": "DSU Gemma Garland"
+    },
+    {
+     "id": 178579,
+     "name": "Ginny Holder",
+     "photo": "https://image.tmdb.org/t/p/w185/gk6BypIs5txRIDe55e1I6xdyf04.jpg",
+     "as": "DC / DI Nadia Latif"
+    },
+    {
+     "id": 22810,
+     "name": "Andy Nyman",
+     "photo": "https://image.tmdb.org/t/p/w185/9bN9RVoPWmsmV3VBI7hp4VKD9Kg.jpg",
+     "as": "Rowan Gill"
+    },
+    {
+     "id": 31925,
+     "name": "Hugh Quarshie",
+     "photo": "https://image.tmdb.org/t/p/w185/buBmcE8F8BpbL7M8yyxST2exMRP.jpg",
+     "as": "Commissioner Cameron Yates"
+    },
+    {
+     "id": 1235008,
+     "name": "Andrew Buchan",
+     "photo": "https://image.tmdb.org/t/p/w185/3HvxEwBYJT2C07zJzTecOCYayo6.jpg",
+     "as": "Deputy Commissioner Julian Talbot"
+    },
+    {
+     "id": 1349802,
+     "name": "Amanda Drew",
+     "photo": "https://image.tmdb.org/t/p/w185/dd5NSaGnHJe1F9oEEPHaDGRqcr8.jpg",
+     "as": "Angela Stilton"
+    },
+    {
+     "id": 1643,
+     "name": "Adrian Rawlins",
+     "photo": "https://image.tmdb.org/t/p/w185/G0PGZqTjenuVTAQiib4ScU7vAI.jpg",
+     "as": "Lord Frederickson"
+    },
+    {
+     "id": 3771364,
+     "name": "Isabella Brownson",
+     "photo": "https://image.tmdb.org/t/p/w185/hhP5kScOLUnbNwCBYsqrHKAXVJu.jpg",
+     "as": "Paige Thomas"
+    },
+    {
+     "id": 570296,
+     "name": "Joe Dempsie",
+     "photo": "https://image.tmdb.org/t/p/w185/47XNLVxbLsEBFgGYgbHAIYE5ja9.jpg",
+     "as": "James Whitlock"
+    },
+    {
+     "id": 1977127,
+     "name": "Beruce Khan",
+     "photo": "https://image.tmdb.org/t/p/w185/m8U9jbt4SzFJlYWhryG8AxxUAuZ.jpg",
+     "as": "DC Lyons"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-24T11:35:56.401Z"
 }

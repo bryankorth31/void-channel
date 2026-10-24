@@ -1,6 +1,6 @@
 # Scout — media we are not looking for yet
 
-2026-10-22T11:31 · 0 Archive calls · 2144 leads from 4 sweeps + 25 trusted uploaders · 59 opened
+2026-10-24T11:31 · 1 Archive calls · 2137 leads from 4 sweeps + 25 trusted uploaders · 59 opened
 
 A lead is a group of Archive uploads whose titles read like a series we do not list. "Ep-shaped" counts files of 18–70 minutes in the best upload. Confirmed = TVmaze knows the show. Add a name to scripts/show-list.json (row suggested) and the hunt takes it from there.
 
@@ -79,4 +79,4 @@ TVmaze types among confirmed leads: Scripted 14 · Animation 3 · Documentary 3 
 
 Genres: Romance 11 · Drama 7 · Comedy 5 · Crime 2 · Children 2 · Family 1 · Thriller 1 · Mystery 1 · Food 1 · Medical 1 · History 1 · Music 1 · Adventure 1
 
-Archive subjects the leads carry (what uploaders call this stuff): community media 1060 · youtube 1056 · peg 1045 · public access tv 596 · public access 309 · maine 287 · california 284 · oregon 273 · county 268 · detective 260 · government access tv 259 · closed 259 · ashland 259 · valley 259 · weather 259 · jay 259 · sign 259 · astrology 258 · chico 258 · siskyou 258 · medford 258 · marnebass 258 · citizen television 258 · fair 258 · sacramento 258 · daily 258 · conan 258 · portland 258 · case 258 · forecast 258 · detective conan 258 · tonight 258 · ran 258 · brien 258 · douglas 258 · conan tv series 258 · kozmickev 257 · tv series 229 · cmntv 226 · kevin durkin 202
+Archive subjects the leads carry (what uploaders call this stuff): community media 1058 · youtube 1050 · peg 1043 · public access tv 594 · public access 309 · maine 285 · california 284 · oregon 273 · county 268 · detective 260 · government access tv 259 · closed 259 · ashland 259 · valley 259 · weather 259 · sign 259 · astrology 258 · chico 258 · siskyou 258 · medford 258 · marnebass 258 · citizen television 258 · fair 258 · sacramento 258 · daily 258 · conan 258 · portland 258 · case 258 · jay 258 · forecast 258 · detective conan 258 · tonight 258 · ran 258 · brien 258 · douglas 258 · conan tv series 258 · kozmickev 257 · cmntv 226 · tv series 222 · kevin durkin 202
