@@ -1,0 +1,49 @@
+{
+  "show": "Before I Forget",
+  "slug": "before-i-forget",
+  "type": "World TV",
+  "network": "HBO Max",
+  "matchedAt": "2026-10-24T14:47:34.596Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Before I Forget",
+    "runtime": null,
+    "premiered": null,
+    "network": "HBO Max"
+  },
+  "coverage": {
+    "total": 1,
+    "live": 0,
+    "review": 1,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "slipknot beforget",
+          "state": "REVIEW",
+          "file": {
+            "item": "before_i_forget_3",
+            "itemTitle": "before i forget",
+            "file": "Slipknot_Beforget_I_Forget.ogv",
+            "name": "Slipknot_Beforget_I_Forget",
+            "url": "https://archive.org/download/before_i_forget_3/Slipknot_Beforget_I_Forget.ogv",
+            "seconds": 241,
+            "format": "Ogg Video",
+            "playable": true,
+            "sizeMB": 18,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
