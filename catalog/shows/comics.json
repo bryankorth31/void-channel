@@ -1,0 +1,71 @@
+{
+  "show": "Comics",
+  "slug": "comics",
+  "type": "British and Beyond",
+  "network": "Channel 4",
+  "matchedAt": "2026-10-24T10:33:17.674Z",
+  "addedAt": "2026-10-24T10:33:17.674Z",
+  "tvmaze": {
+    "id": 51658,
+    "name": "Comics",
+    "runtime": 110,
+    "premiered": "1993-06-06",
+    "network": "Channel 4"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 1,
+    "missing": 1,
+    "pct": 50
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Part I",
+          "airdate": "1993-06-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "title ~ \"Part I\" (0.75)",
+            "item": "comics-part-1-1993",
+            "itemTitle": "Comics (1993) (2 part TV Thriller) (with original adverts)",
+            "file": "Comics (Part 1) (1993).mp4",
+            "name": "Comics (Part 1) (1993)",
+            "url": "https://archive.org/download/comics-part-1-1993/Comics%20(Part%201)%20(1993).mp4",
+            "seconds": 7289,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1073
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Part I\" (0.75)",
+              "item": "comics-part-1-1993",
+              "itemTitle": "Comics (1993) (2 part TV Thriller) (with original adverts)",
+              "file": "Comics (Part 2) (1993).mp4",
+              "name": "Comics (Part 2) (1993)",
+              "url": "https://archive.org/download/comics-part-1-1993/Comics%20(Part%202)%20(1993).mp4",
+              "seconds": 7224,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1051
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Part II",
+          "airdate": "1993-06-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

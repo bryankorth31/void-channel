@@ -1,0 +1,89 @@
+{
+  "show": "A Suitable Boy",
+  "slug": "a-suitable-boy",
+  "type": "British and Beyond",
+  "network": "BBC One",
+  "matchedAt": "2026-10-24T10:33:29.151Z",
+  "addedAt": "2026-10-24T10:33:29.151Z",
+  "tvmaze": {
+    "id": 43348,
+    "name": "A Suitable Boy",
+    "runtime": 60,
+    "premiered": "2020-07-26",
+    "network": "BBC One"
+  },
+  "coverage": {
+    "total": 6,
+    "live": 1,
+    "review": 0,
+    "missing": 5,
+    "pct": 17
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "airdate": "2020-07-26",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "airdate": "2020-08-02",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "a-suitable-boy-s-01-e-02",
+            "itemTitle": "A Suitable Boy S 01 E 02",
+            "file": "A Suitable Boy- S01E02.mp4",
+            "name": "A Suitable Boy- S01E02",
+            "url": "https://archive.org/download/a-suitable-boy-s-01-e-02/A%20Suitable%20Boy-%20S01E02.mp4",
+            "seconds": 3449,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 358
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Episode 3",
+          "airdate": "2020-08-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Episode 4",
+          "airdate": "2020-08-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Episode 5",
+          "airdate": "2020-08-23",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Episode 6",
+          "airdate": "2020-08-24",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
