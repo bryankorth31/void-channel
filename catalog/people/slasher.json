@@ -302,5 +302,632 @@
    "episodes": 2
   }
  ],
- "fetchedAt": "2026-10-15T08:25:15.903Z"
+ "fetchedAt": "2026-10-15T08:25:15.903Z",
+ "episodes": {
+  "1x1": {
+   "d": [
+    {
+     "id": 2014914,
+     "name": "Craig Wallace",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 197332,
+     "name": "Aaron Martin",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 190961,
+     "name": "Patrick Garrow",
+     "photo": "https://image.tmdb.org/t/p/w185/gWu8E3zYnwBVa5zTZzQP3JO1uLI.jpg",
+     "as": "Tom Winston"
+    },
+    {
+     "id": 65771,
+     "name": "Dean McDermott",
+     "photo": "https://image.tmdb.org/t/p/w185/wd57g6kU5yJSVLHLtgUWurDNNO5.jpg",
+     "as": "Chief Iain Vaughn"
+    },
+    {
+     "id": 29879,
+     "name": "Mayko Nguyen",
+     "photo": "https://image.tmdb.org/t/p/w185/etSVpTK2HYgp1D1nKSGdv7Pq3zS.jpg",
+     "as": "Alison Sutherland"
+    },
+    {
+     "id": 7005,
+     "name": "Mary Walsh",
+     "photo": "https://image.tmdb.org/t/p/w185/aMvQu5iI4I5fFjYrDI2UzUTDEbk.jpg",
+     "as": "Verna McBride"
+    },
+    {
+     "id": 59313,
+     "name": "Erin Karpluk",
+     "photo": "https://image.tmdb.org/t/p/w185/jibU5x89Al5XgqMmQH2sTOtHErk.jpg",
+     "as": "Heather Peterson"
+    },
+    {
+     "id": 62522,
+     "name": "Christopher Jacot",
+     "photo": "https://image.tmdb.org/t/p/w185/988yC8uMpunCzIVCNUv8AyzbWIA.jpg",
+     "as": "Robin Turner"
+    },
+    {
+     "id": 1226195,
+     "name": "Rob Stewart",
+     "photo": "https://image.tmdb.org/t/p/w185/trovYCjXppTKZjvVznYKTaLf0Q.jpg",
+     "as": "Alan Henry"
+    },
+    {
+     "id": 55614,
+     "name": "Dylan Taylor",
+     "photo": "https://image.tmdb.org/t/p/w185/kXboHqwzfsoi1V7PO5yQ6BGtp89.jpg",
+     "as": "Bryan Ingram"
+    },
+    {
+     "id": 1261371,
+     "name": "Mark Ghanimé",
+     "photo": "https://image.tmdb.org/t/p/w185/rdk7i7vL6MV7gvLG4J6SxN9dTcD.jpg",
+     "as": "Justin Faysal"
+    },
+    {
+     "id": 1378866,
+     "name": "Jessica Sipos",
+     "photo": "https://image.tmdb.org/t/p/w185/vSdpkXpq0naOW0mbQeiQ1a97Hzy.jpg",
+     "as": "June Henry"
+    }
+   ]
+  },
+  "1x2": {
+   "d": [
+    {
+     "id": 3874282,
+     "name": "Craig Wallace",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 197332,
+     "name": "Aaron Martin",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 190961,
+     "name": "Patrick Garrow",
+     "photo": "https://image.tmdb.org/t/p/w185/gWu8E3zYnwBVa5zTZzQP3JO1uLI.jpg",
+     "as": "Tom Winston"
+    },
+    {
+     "id": 65771,
+     "name": "Dean McDermott",
+     "photo": "https://image.tmdb.org/t/p/w185/wd57g6kU5yJSVLHLtgUWurDNNO5.jpg",
+     "as": "Chief Iain Vaughn"
+    },
+    {
+     "id": 29879,
+     "name": "Mayko Nguyen",
+     "photo": "https://image.tmdb.org/t/p/w185/etSVpTK2HYgp1D1nKSGdv7Pq3zS.jpg",
+     "as": "Alison Sutherland"
+    },
+    {
+     "id": 59313,
+     "name": "Erin Karpluk",
+     "photo": "https://image.tmdb.org/t/p/w185/jibU5x89Al5XgqMmQH2sTOtHErk.jpg",
+     "as": "Heather Peterson"
+    },
+    {
+     "id": 62522,
+     "name": "Christopher Jacot",
+     "photo": "https://image.tmdb.org/t/p/w185/988yC8uMpunCzIVCNUv8AyzbWIA.jpg",
+     "as": "Robin Turner"
+    },
+    {
+     "id": 1226195,
+     "name": "Rob Stewart",
+     "photo": "https://image.tmdb.org/t/p/w185/trovYCjXppTKZjvVznYKTaLf0Q.jpg",
+     "as": "Alan Henry"
+    },
+    {
+     "id": 55614,
+     "name": "Dylan Taylor",
+     "photo": "https://image.tmdb.org/t/p/w185/kXboHqwzfsoi1V7PO5yQ6BGtp89.jpg",
+     "as": "Bryan Ingram"
+    },
+    {
+     "id": 1261371,
+     "name": "Mark Ghanimé",
+     "photo": "https://image.tmdb.org/t/p/w185/rdk7i7vL6MV7gvLG4J6SxN9dTcD.jpg",
+     "as": "Justin Faysal"
+    },
+    {
+     "id": 1378866,
+     "name": "Jessica Sipos",
+     "photo": "https://image.tmdb.org/t/p/w185/vSdpkXpq0naOW0mbQeiQ1a97Hzy.jpg",
+     "as": "June Henry"
+    },
+    {
+     "id": 1376611,
+     "name": "Alysa King",
+     "photo": "https://image.tmdb.org/t/p/w185/pYBrnyIRIM1uPT5M5XAW5NZTmQe.jpg",
+     "as": "Rachel Ingram"
+    }
+   ]
+  },
+  "1x3": {
+   "d": [
+    {
+     "id": 504692,
+     "name": "Craig Wallace",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 197332,
+     "name": "Aaron Martin",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 190961,
+     "name": "Patrick Garrow",
+     "photo": "https://image.tmdb.org/t/p/w185/gWu8E3zYnwBVa5zTZzQP3JO1uLI.jpg",
+     "as": "Tom Winston"
+    },
+    {
+     "id": 65771,
+     "name": "Dean McDermott",
+     "photo": "https://image.tmdb.org/t/p/w185/wd57g6kU5yJSVLHLtgUWurDNNO5.jpg",
+     "as": "Chief Iain Vaughn"
+    },
+    {
+     "id": 29879,
+     "name": "Mayko Nguyen",
+     "photo": "https://image.tmdb.org/t/p/w185/etSVpTK2HYgp1D1nKSGdv7Pq3zS.jpg",
+     "as": "Alison Sutherland"
+    },
+    {
+     "id": 59313,
+     "name": "Erin Karpluk",
+     "photo": "https://image.tmdb.org/t/p/w185/jibU5x89Al5XgqMmQH2sTOtHErk.jpg",
+     "as": "Heather Peterson"
+    },
+    {
+     "id": 62522,
+     "name": "Christopher Jacot",
+     "photo": "https://image.tmdb.org/t/p/w185/988yC8uMpunCzIVCNUv8AyzbWIA.jpg",
+     "as": "Robin Turner"
+    },
+    {
+     "id": 1261371,
+     "name": "Mark Ghanimé",
+     "photo": "https://image.tmdb.org/t/p/w185/rdk7i7vL6MV7gvLG4J6SxN9dTcD.jpg",
+     "as": "Justin Faysal"
+    },
+    {
+     "id": 1378866,
+     "name": "Jessica Sipos",
+     "photo": "https://image.tmdb.org/t/p/w185/vSdpkXpq0naOW0mbQeiQ1a97Hzy.jpg",
+     "as": "June Henry"
+    },
+    {
+     "id": 1376611,
+     "name": "Alysa King",
+     "photo": "https://image.tmdb.org/t/p/w185/pYBrnyIRIM1uPT5M5XAW5NZTmQe.jpg",
+     "as": "Rachel Ingram (uncredited)"
+    },
+    {
+     "id": 19957,
+     "name": "Wendy Crewson",
+     "photo": "https://image.tmdb.org/t/p/w185/6hplkzK8KV5Cw8Z8SVKwlt3nU5I.jpg",
+     "as": "Brenda Merritt"
+    },
+    {
+     "id": 83530,
+     "name": "Jefferson Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/8iVOZvnjT7JFAG2glNQA9I5sFVw.jpg",
+     "as": "Trent McBride"
+    }
+   ]
+  },
+  "1x4": {
+   "d": [
+    {
+     "id": 2040875,
+     "name": "Craig Wallace",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 197332,
+     "name": "Aaron Martin",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 190961,
+     "name": "Patrick Garrow",
+     "photo": "https://image.tmdb.org/t/p/w185/gWu8E3zYnwBVa5zTZzQP3JO1uLI.jpg",
+     "as": "Tom Winston"
+    },
+    {
+     "id": 65771,
+     "name": "Dean McDermott",
+     "photo": "https://image.tmdb.org/t/p/w185/wd57g6kU5yJSVLHLtgUWurDNNO5.jpg",
+     "as": "Chief Iain Vaughn"
+    },
+    {
+     "id": 29879,
+     "name": "Mayko Nguyen",
+     "photo": "https://image.tmdb.org/t/p/w185/etSVpTK2HYgp1D1nKSGdv7Pq3zS.jpg",
+     "as": "Alison Sutherland"
+    },
+    {
+     "id": 59313,
+     "name": "Erin Karpluk",
+     "photo": "https://image.tmdb.org/t/p/w185/jibU5x89Al5XgqMmQH2sTOtHErk.jpg",
+     "as": "Heather Peterson"
+    },
+    {
+     "id": 62522,
+     "name": "Christopher Jacot",
+     "photo": "https://image.tmdb.org/t/p/w185/988yC8uMpunCzIVCNUv8AyzbWIA.jpg",
+     "as": "Robin Turner"
+    },
+    {
+     "id": 1226195,
+     "name": "Rob Stewart",
+     "photo": "https://image.tmdb.org/t/p/w185/trovYCjXppTKZjvVznYKTaLf0Q.jpg",
+     "as": "Alan Henry"
+    },
+    {
+     "id": 1378866,
+     "name": "Jessica Sipos",
+     "photo": "https://image.tmdb.org/t/p/w185/vSdpkXpq0naOW0mbQeiQ1a97Hzy.jpg",
+     "as": "June Henry"
+    },
+    {
+     "id": 19957,
+     "name": "Wendy Crewson",
+     "photo": "https://image.tmdb.org/t/p/w185/6hplkzK8KV5Cw8Z8SVKwlt3nU5I.jpg",
+     "as": "Brenda Merritt"
+    },
+    {
+     "id": 83530,
+     "name": "Jefferson Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/8iVOZvnjT7JFAG2glNQA9I5sFVw.jpg",
+     "as": "Trent McBride"
+    },
+    {
+     "id": 90364,
+     "name": "Enuka Okuma",
+     "photo": "https://image.tmdb.org/t/p/w185/1nhcDs0mHViQnxAV0CvtFCquRFt.jpg",
+     "as": "Lisa-Ann Follows"
+    }
+   ]
+  },
+  "1x5": {
+   "d": [
+    {
+     "id": 2014914,
+     "name": "Craig Wallace",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 197332,
+     "name": "Aaron Martin",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 190961,
+     "name": "Patrick Garrow",
+     "photo": "https://image.tmdb.org/t/p/w185/gWu8E3zYnwBVa5zTZzQP3JO1uLI.jpg",
+     "as": "Tom Winston"
+    },
+    {
+     "id": 65771,
+     "name": "Dean McDermott",
+     "photo": "https://image.tmdb.org/t/p/w185/wd57g6kU5yJSVLHLtgUWurDNNO5.jpg",
+     "as": "Chief Iain Vaughn"
+    },
+    {
+     "id": 29879,
+     "name": "Mayko Nguyen",
+     "photo": "https://image.tmdb.org/t/p/w185/etSVpTK2HYgp1D1nKSGdv7Pq3zS.jpg",
+     "as": "Alison Sutherland"
+    },
+    {
+     "id": 59313,
+     "name": "Erin Karpluk",
+     "photo": "https://image.tmdb.org/t/p/w185/jibU5x89Al5XgqMmQH2sTOtHErk.jpg",
+     "as": "Heather Peterson"
+    },
+    {
+     "id": 62522,
+     "name": "Christopher Jacot",
+     "photo": "https://image.tmdb.org/t/p/w185/988yC8uMpunCzIVCNUv8AyzbWIA.jpg",
+     "as": "Robin Turner"
+    },
+    {
+     "id": 1226195,
+     "name": "Rob Stewart",
+     "photo": "https://image.tmdb.org/t/p/w185/trovYCjXppTKZjvVznYKTaLf0Q.jpg",
+     "as": "Alan Henry"
+    },
+    {
+     "id": 1378866,
+     "name": "Jessica Sipos",
+     "photo": "https://image.tmdb.org/t/p/w185/vSdpkXpq0naOW0mbQeiQ1a97Hzy.jpg",
+     "as": "June Henry"
+    },
+    {
+     "id": 1376611,
+     "name": "Alysa King",
+     "photo": "https://image.tmdb.org/t/p/w185/pYBrnyIRIM1uPT5M5XAW5NZTmQe.jpg",
+     "as": "Rachel Ingram"
+    },
+    {
+     "id": 1235779,
+     "name": "Susannah Hoffmann",
+     "photo": "https://image.tmdb.org/t/p/w185/pFNpxjg7zIlXJBPZ2UAPgdXZVGC.jpg",
+     "as": "Marjorie Travers"
+    },
+    {
+     "id": 1077574,
+     "name": "David Patrick Flemming",
+     "photo": "https://image.tmdb.org/t/p/w185/A6p8XFkrduxI7HQRWOn3tNog0vJ.jpg",
+     "as": "Young Tom Winston"
+    }
+   ]
+  },
+  "1x6": {
+   "d": [
+    {
+     "id": 3874282,
+     "name": "Craig Wallace",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 197332,
+     "name": "Aaron Martin",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 190961,
+     "name": "Patrick Garrow",
+     "photo": "https://image.tmdb.org/t/p/w185/gWu8E3zYnwBVa5zTZzQP3JO1uLI.jpg",
+     "as": "Tom Winston"
+    },
+    {
+     "id": 65771,
+     "name": "Dean McDermott",
+     "photo": "https://image.tmdb.org/t/p/w185/wd57g6kU5yJSVLHLtgUWurDNNO5.jpg",
+     "as": "Chief Iain Vaughn"
+    },
+    {
+     "id": 59313,
+     "name": "Erin Karpluk",
+     "photo": "https://image.tmdb.org/t/p/w185/jibU5x89Al5XgqMmQH2sTOtHErk.jpg",
+     "as": "Heather Peterson"
+    },
+    {
+     "id": 1378866,
+     "name": "Jessica Sipos",
+     "photo": "https://image.tmdb.org/t/p/w185/vSdpkXpq0naOW0mbQeiQ1a97Hzy.jpg",
+     "as": "June Henry"
+    },
+    {
+     "id": 1235779,
+     "name": "Susannah Hoffmann",
+     "photo": "https://image.tmdb.org/t/p/w185/pFNpxjg7zIlXJBPZ2UAPgdXZVGC.jpg",
+     "as": "Marjorie Travers"
+    },
+    {
+     "id": 83530,
+     "name": "Jefferson Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/8iVOZvnjT7JFAG2glNQA9I5sFVw.jpg",
+     "as": "Trent McBride"
+    },
+    {
+     "id": 90364,
+     "name": "Enuka Okuma",
+     "photo": "https://image.tmdb.org/t/p/w185/1nhcDs0mHViQnxAV0CvtFCquRFt.jpg",
+     "as": "Lisa Ann-Follows"
+    },
+    {
+     "id": 131008,
+     "name": "Hannah Endicott-Douglas",
+     "photo": "https://image.tmdb.org/t/p/w185/9SwCLeSlnFhXFC89eWfv8OPSei6.jpg",
+     "as": "Ariel Peterson"
+    },
+    {
+     "id": 1512134,
+     "name": "Aidan Wojtak-Hissong",
+     "photo": "https://image.tmdb.org/t/p/w185/iAf7SNYAikqwl9VDtuFrEWkEycv.jpg",
+     "as": "Jake Vaughn (as Aiden Wojtak)"
+    },
+    {
+     "id": 142736,
+     "name": "Sabrina Grdevich",
+     "photo": "https://image.tmdb.org/t/p/w185/pcTeiiMSRUbgqQ60v0TuiDHvBze.jpg",
+     "as": "Nancy Vaughn"
+    }
+   ]
+  },
+  "1x7": {
+   "d": [
+    {
+     "id": 2040875,
+     "name": "Craig Wallace",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 197332,
+     "name": "Aaron Martin",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 190961,
+     "name": "Patrick Garrow",
+     "photo": "https://image.tmdb.org/t/p/w185/gWu8E3zYnwBVa5zTZzQP3JO1uLI.jpg",
+     "as": "Tom Winston"
+    },
+    {
+     "id": 62522,
+     "name": "Christopher Jacot",
+     "photo": "https://image.tmdb.org/t/p/w185/988yC8uMpunCzIVCNUv8AyzbWIA.jpg",
+     "as": "Robin Turner"
+    },
+    {
+     "id": 1226195,
+     "name": "Rob Stewart",
+     "photo": "https://image.tmdb.org/t/p/w185/trovYCjXppTKZjvVznYKTaLf0Q.jpg",
+     "as": "Alan Henry"
+    },
+    {
+     "id": 55614,
+     "name": "Dylan Taylor",
+     "photo": "https://image.tmdb.org/t/p/w185/kXboHqwzfsoi1V7PO5yQ6BGtp89.jpg",
+     "as": "Bryan Ingram"
+    },
+    {
+     "id": 1376611,
+     "name": "Alysa King",
+     "photo": "https://image.tmdb.org/t/p/w185/pYBrnyIRIM1uPT5M5XAW5NZTmQe.jpg",
+     "as": "Rachel Ingram"
+    },
+    {
+     "id": 1077574,
+     "name": "David Patrick Flemming",
+     "photo": "https://image.tmdb.org/t/p/w185/A6p8XFkrduxI7HQRWOn3tNog0vJ.jpg",
+     "as": "Young Tom Winston"
+    },
+    {
+     "id": 1460685,
+     "name": "Jim Watson",
+     "photo": "https://image.tmdb.org/t/p/w185/2ZVVbf2c72OLShp6U4nYAy15kab.jpg",
+     "as": "Young Alan Henry"
+    },
+    {
+     "id": 90364,
+     "name": "Enuka Okuma",
+     "photo": "https://image.tmdb.org/t/p/w185/1nhcDs0mHViQnxAV0CvtFCquRFt.jpg",
+     "as": "Lisa-Ann Follows"
+    },
+    {
+     "id": 1649211,
+     "name": "Shawn Ahmed",
+     "photo": "https://image.tmdb.org/t/p/w185/gjLCf0RRpqznqzPHTEM7g3atPFm.jpg",
+     "as": "P.C. Sharma"
+    },
+    {
+     "id": 1024492,
+     "name": "Rob Archer",
+     "photo": "https://image.tmdb.org/t/p/w185/7z9egtEbLEwh7cxfJ39l6OOPlzh.jpg",
+     "as": "Prisoner"
+    }
+   ]
+  },
+  "1x8": {
+   "d": [
+    {
+     "id": 504692,
+     "name": "Craig Wallace",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 197332,
+     "name": "Aaron Martin",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 62522,
+     "name": "Christopher Jacot",
+     "photo": "https://image.tmdb.org/t/p/w185/988yC8uMpunCzIVCNUv8AyzbWIA.jpg",
+     "as": "Robin Turner"
+    },
+    {
+     "id": 1226195,
+     "name": "Rob Stewart",
+     "photo": "https://image.tmdb.org/t/p/w185/trovYCjXppTKZjvVznYKTaLf0Q.jpg",
+     "as": "Alan Henry"
+    },
+    {
+     "id": 1570335,
+     "name": "Wayne St-George",
+     "photo": null,
+     "as": "Doug Franklin"
+    },
+    {
+     "id": 1649211,
+     "name": "Shawn Ahmed",
+     "photo": "https://image.tmdb.org/t/p/w185/gjLCf0RRpqznqzPHTEM7g3atPFm.jpg",
+     "as": "P.C. Sharma"
+    },
+    {
+     "id": 44098,
+     "name": "Anthony Lemke",
+     "photo": "https://image.tmdb.org/t/p/w185/yR9mpiDDczUt6RlXntWwq49yacm.jpg",
+     "as": "Lawyer"
+    },
+    {
+     "id": 99181,
+     "name": "Joanne Boland",
+     "photo": "https://image.tmdb.org/t/p/w185/8apZ6tb3GhNyO4jbCLzHG614mLD.jpg",
+     "as": "Suzy Henry"
+    },
+    {
+     "id": 1564454,
+     "name": "Tristan Culbert",
+     "photo": null,
+     "as": "Young Cam Henry"
+    },
+    {
+     "id": 1503535,
+     "name": "Natasha Negovanlis",
+     "photo": "https://image.tmdb.org/t/p/w185/5o843BNtmFfeok7z8RAzwx0MeEp.jpg",
+     "as": "Natasha"
+    },
+    {
+     "id": 1503534,
+     "name": "Elise Bauman",
+     "photo": "https://image.tmdb.org/t/p/w185/lsItiN8M8XgOX2QyJ5vlidJ7iVf.jpg",
+     "as": "Elise"
+    },
+    {
+     "id": 1516081,
+     "name": "Sarah Abbott",
+     "photo": "https://image.tmdb.org/t/p/w185/riLNrHSQNFL2jgT3IRhIYOiBCXG.jpg",
+     "as": "Scotia"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-25T07:36:13.193Z"
 }

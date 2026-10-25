@@ -322,5 +322,788 @@
    "episodes": 1
   }
  ],
- "fetchedAt": "2026-10-15T09:06:59.226Z"
+ "fetchedAt": "2026-10-15T09:06:59.226Z",
+ "episodes": {
+  "1x1": {
+   "d": [
+    {
+     "id": 102402,
+     "name": "Rick Jacobson",
+     "photo": "https://image.tmdb.org/t/p/w185/aazCWUhZTGV2m4jDGPQoTsBnGVO.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1213074,
+     "name": "Steven S. DeKnight",
+     "photo": "https://image.tmdb.org/t/p/w185/4xI7zn54omKDrKa0lshPsJZ53tK.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 20584,
+     "name": "Lucy Lawless",
+     "photo": "https://image.tmdb.org/t/p/w185/7fYfVk6jtdCWuJEo9pEqc6O2JkD.jpg",
+     "as": "Lucretia"
+    },
+    {
+     "id": 3513813,
+     "name": "Joe Davidson",
+     "photo": "https://image.tmdb.org/t/p/w185/qaHMSkDOsXqXq4BdGvXIfEKvQxj.jpg",
+     "as": "Logas"
+    },
+    {
+     "id": 3094194,
+     "name": "Evander Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/35PEYFWT6xXhHkySACgZm5uuArc.jpg",
+     "as": "Ephesius"
+    },
+    {
+     "id": 2231488,
+     "name": "Graham Vincent",
+     "photo": "https://image.tmdb.org/t/p/w185/lIdHyV6lLIaH54Wr8XkrLSijcud.jpg",
+     "as": "Hedylus"
+    },
+    {
+     "id": 1575059,
+     "name": "Louis Hunter",
+     "photo": "https://image.tmdb.org/t/p/w185/5nqSaQi4DMMdLydwGNwnxxM3KQD.jpg",
+     "as": "Erato"
+    },
+    {
+     "id": 3756329,
+     "name": "Donald Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/xSWJ7MK6tsJM8UxWX22Hf48779P.jpg",
+     "as": "Salvius"
+    },
+    {
+     "id": 3039577,
+     "name": "Dan Hamill",
+     "photo": "https://image.tmdb.org/t/p/w185/6X204rEG5OwbXKHqpCsjTwMBJfv.jpg",
+     "as": "Celadus"
+    },
+    {
+     "id": 4035348,
+     "name": "Stephen Madsen",
+     "photo": "https://image.tmdb.org/t/p/w185/yPgsJxJvyg70s34AMScWHcCWkwE.jpg",
+     "as": "Creticus"
+    },
+    {
+     "id": 2966859,
+     "name": "George Burgess",
+     "photo": "https://image.tmdb.org/t/p/w185/fxTvtnpfjU5uKFKu4GoAVD1o7i0.jpg",
+     "as": "Rhodius"
+    },
+    {
+     "id": 5864200,
+     "name": "Mikey Thompson",
+     "photo": "https://image.tmdb.org/t/p/w185/wKvuTbvqXZsIzOVhmD5kAqJYDOZ.jpg",
+     "as": "Musicus"
+    }
+   ]
+  },
+  "1x2": {
+   "d": [
+    {
+     "id": 102402,
+     "name": "Rick Jacobson",
+     "photo": "https://image.tmdb.org/t/p/w185/aazCWUhZTGV2m4jDGPQoTsBnGVO.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 209762,
+     "name": "Aaron Helbing",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 3094194,
+     "name": "Evander Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/35PEYFWT6xXhHkySACgZm5uuArc.jpg",
+     "as": "Ephesius"
+    },
+    {
+     "id": 2231488,
+     "name": "Graham Vincent",
+     "photo": "https://image.tmdb.org/t/p/w185/lIdHyV6lLIaH54Wr8XkrLSijcud.jpg",
+     "as": "Hedylus"
+    },
+    {
+     "id": 1575059,
+     "name": "Louis Hunter",
+     "photo": "https://image.tmdb.org/t/p/w185/5nqSaQi4DMMdLydwGNwnxxM3KQD.jpg",
+     "as": "Erato"
+    },
+    {
+     "id": 3756329,
+     "name": "Donald Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/xSWJ7MK6tsJM8UxWX22Hf48779P.jpg",
+     "as": "Salvius"
+    },
+    {
+     "id": 3039577,
+     "name": "Dan Hamill",
+     "photo": "https://image.tmdb.org/t/p/w185/6X204rEG5OwbXKHqpCsjTwMBJfv.jpg",
+     "as": "Celadus"
+    },
+    {
+     "id": 4035348,
+     "name": "Stephen Madsen",
+     "photo": "https://image.tmdb.org/t/p/w185/yPgsJxJvyg70s34AMScWHcCWkwE.jpg",
+     "as": "Creticus"
+    },
+    {
+     "id": 5864200,
+     "name": "Mikey Thompson",
+     "photo": "https://image.tmdb.org/t/p/w185/wKvuTbvqXZsIzOVhmD5kAqJYDOZ.jpg",
+     "as": "Musicus"
+    },
+    {
+     "id": 2748186,
+     "name": "Daniel Bos",
+     "photo": "https://image.tmdb.org/t/p/w185/f0yDZx5jV741YfCG81pSZpzGyff.jpg",
+     "as": "Balbus"
+    },
+    {
+     "id": 128957,
+     "name": "Andrew McFarlane",
+     "photo": "https://image.tmdb.org/t/p/w185/pdpAlxzORlISDu0M7aA5YyJqdJy.jpg",
+     "as": "Gabinius"
+    },
+    {
+     "id": 1761049,
+     "name": "Simon Arblaster",
+     "photo": "https://image.tmdb.org/t/p/w185/ln4Bgr8bU7EJEGtvOoQ9eYuJxi4.jpg",
+     "as": "Proculus"
+    }
+   ]
+  },
+  "1x3": {
+   "d": [
+    {
+     "id": 5873881,
+     "name": "Michael Hurst",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 3499273,
+     "name": "Sid Quashie",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 3094194,
+     "name": "Evander Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/35PEYFWT6xXhHkySACgZm5uuArc.jpg",
+     "as": "Ephesius"
+    },
+    {
+     "id": 2231488,
+     "name": "Graham Vincent",
+     "photo": "https://image.tmdb.org/t/p/w185/lIdHyV6lLIaH54Wr8XkrLSijcud.jpg",
+     "as": "Hedylus"
+    },
+    {
+     "id": 1575059,
+     "name": "Louis Hunter",
+     "photo": "https://image.tmdb.org/t/p/w185/5nqSaQi4DMMdLydwGNwnxxM3KQD.jpg",
+     "as": "Erato"
+    },
+    {
+     "id": 3756329,
+     "name": "Donald Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/xSWJ7MK6tsJM8UxWX22Hf48779P.jpg",
+     "as": "Salvius"
+    },
+    {
+     "id": 3039577,
+     "name": "Dan Hamill",
+     "photo": "https://image.tmdb.org/t/p/w185/6X204rEG5OwbXKHqpCsjTwMBJfv.jpg",
+     "as": "Celadus"
+    },
+    {
+     "id": 128957,
+     "name": "Andrew McFarlane",
+     "photo": "https://image.tmdb.org/t/p/w185/pdpAlxzORlISDu0M7aA5YyJqdJy.jpg",
+     "as": "Gabinius"
+    },
+    {
+     "id": 1852809,
+     "name": "Arlo Gibson",
+     "photo": "https://image.tmdb.org/t/p/w185/46mKpVgomN75UEvkpLkqAEht1gY.jpg",
+     "as": "Opiter"
+    },
+    {
+     "id": 110515,
+     "name": "Lisa Chappell",
+     "photo": "https://image.tmdb.org/t/p/w185/15y2GtGFUMAPYGY8dhkLGbDOIyv.jpg",
+     "as": "Horatia"
+    },
+    {
+     "id": 2613658,
+     "name": "Mel Odedra",
+     "photo": "https://image.tmdb.org/t/p/w185/6J0xsF2uqBvcz89BcX6S5AfFe3o.jpg",
+     "as": "Fides"
+    },
+    {
+     "id": 1615098,
+     "name": "Duane Evans Jr.",
+     "photo": "https://image.tmdb.org/t/p/w185/tqTeJG1QEwddgU97UNkEW6nOsm0.jpg",
+     "as": "Dacus"
+    }
+   ]
+  },
+  "1x4": {
+   "d": [
+    {
+     "id": 1484303,
+     "name": "Maja Vrvilo",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 2754528,
+     "name": "Ihuoma Ofordire",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 3094194,
+     "name": "Evander Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/35PEYFWT6xXhHkySACgZm5uuArc.jpg",
+     "as": "Ephesius"
+    },
+    {
+     "id": 2231488,
+     "name": "Graham Vincent",
+     "photo": "https://image.tmdb.org/t/p/w185/lIdHyV6lLIaH54Wr8XkrLSijcud.jpg",
+     "as": "Hedylus"
+    },
+    {
+     "id": 1575059,
+     "name": "Louis Hunter",
+     "photo": "https://image.tmdb.org/t/p/w185/5nqSaQi4DMMdLydwGNwnxxM3KQD.jpg",
+     "as": "Erato"
+    },
+    {
+     "id": 3756329,
+     "name": "Donald Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/xSWJ7MK6tsJM8UxWX22Hf48779P.jpg",
+     "as": "Salvius"
+    },
+    {
+     "id": 3039577,
+     "name": "Dan Hamill",
+     "photo": "https://image.tmdb.org/t/p/w185/6X204rEG5OwbXKHqpCsjTwMBJfv.jpg",
+     "as": "Celadus"
+    },
+    {
+     "id": 5864200,
+     "name": "Mikey Thompson",
+     "photo": "https://image.tmdb.org/t/p/w185/wKvuTbvqXZsIzOVhmD5kAqJYDOZ.jpg",
+     "as": "Musicus"
+    },
+    {
+     "id": 2748186,
+     "name": "Daniel Bos",
+     "photo": "https://image.tmdb.org/t/p/w185/f0yDZx5jV741YfCG81pSZpzGyff.jpg",
+     "as": "Balbus"
+    },
+    {
+     "id": 128957,
+     "name": "Andrew McFarlane",
+     "photo": "https://image.tmdb.org/t/p/w185/pdpAlxzORlISDu0M7aA5YyJqdJy.jpg",
+     "as": "Gabinius"
+    },
+    {
+     "id": 1761049,
+     "name": "Simon Arblaster",
+     "photo": "https://image.tmdb.org/t/p/w185/ln4Bgr8bU7EJEGtvOoQ9eYuJxi4.jpg",
+     "as": "Proculus"
+    },
+    {
+     "id": 1852809,
+     "name": "Arlo Gibson",
+     "photo": "https://image.tmdb.org/t/p/w185/46mKpVgomN75UEvkpLkqAEht1gY.jpg",
+     "as": "Opiter"
+    }
+   ]
+  },
+  "1x5": {
+   "d": [
+    {
+     "id": 152193,
+     "name": "Julian Holmes",
+     "photo": "https://image.tmdb.org/t/p/w185/l0UxRQGVkN1XyifK2OSJhkJYFhg.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 5941472,
+     "name": "Adam T. Bradley",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 3094194,
+     "name": "Evander Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/35PEYFWT6xXhHkySACgZm5uuArc.jpg",
+     "as": "Ephesius"
+    },
+    {
+     "id": 2231488,
+     "name": "Graham Vincent",
+     "photo": "https://image.tmdb.org/t/p/w185/lIdHyV6lLIaH54Wr8XkrLSijcud.jpg",
+     "as": "Hedylus"
+    },
+    {
+     "id": 1575059,
+     "name": "Louis Hunter",
+     "photo": "https://image.tmdb.org/t/p/w185/5nqSaQi4DMMdLydwGNwnxxM3KQD.jpg",
+     "as": "Erato"
+    },
+    {
+     "id": 3756329,
+     "name": "Donald Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/xSWJ7MK6tsJM8UxWX22Hf48779P.jpg",
+     "as": "Salvius"
+    },
+    {
+     "id": 3039577,
+     "name": "Dan Hamill",
+     "photo": "https://image.tmdb.org/t/p/w185/6X204rEG5OwbXKHqpCsjTwMBJfv.jpg",
+     "as": "Celadus"
+    },
+    {
+     "id": 5864200,
+     "name": "Mikey Thompson",
+     "photo": "https://image.tmdb.org/t/p/w185/wKvuTbvqXZsIzOVhmD5kAqJYDOZ.jpg",
+     "as": "Musicus"
+    },
+    {
+     "id": 2748186,
+     "name": "Daniel Bos",
+     "photo": "https://image.tmdb.org/t/p/w185/f0yDZx5jV741YfCG81pSZpzGyff.jpg",
+     "as": "Balbus"
+    },
+    {
+     "id": 128957,
+     "name": "Andrew McFarlane",
+     "photo": "https://image.tmdb.org/t/p/w185/pdpAlxzORlISDu0M7aA5YyJqdJy.jpg",
+     "as": "Gabinius"
+    },
+    {
+     "id": 1761049,
+     "name": "Simon Arblaster",
+     "photo": "https://image.tmdb.org/t/p/w185/ln4Bgr8bU7EJEGtvOoQ9eYuJxi4.jpg",
+     "as": "Proculus"
+    },
+    {
+     "id": 1852809,
+     "name": "Arlo Gibson",
+     "photo": "https://image.tmdb.org/t/p/w185/46mKpVgomN75UEvkpLkqAEht1gY.jpg",
+     "as": "Opiter"
+    }
+   ]
+  },
+  "1x6": {
+   "d": [
+    {
+     "id": 226051,
+     "name": "Debs Paterson",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 4107079,
+     "name": "Eliana Pipes",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 3094194,
+     "name": "Evander Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/35PEYFWT6xXhHkySACgZm5uuArc.jpg",
+     "as": "Ephesius"
+    },
+    {
+     "id": 2231488,
+     "name": "Graham Vincent",
+     "photo": "https://image.tmdb.org/t/p/w185/lIdHyV6lLIaH54Wr8XkrLSijcud.jpg",
+     "as": "Hedylus"
+    },
+    {
+     "id": 1575059,
+     "name": "Louis Hunter",
+     "photo": "https://image.tmdb.org/t/p/w185/5nqSaQi4DMMdLydwGNwnxxM3KQD.jpg",
+     "as": "Erato"
+    },
+    {
+     "id": 3756329,
+     "name": "Donald Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/xSWJ7MK6tsJM8UxWX22Hf48779P.jpg",
+     "as": "Salvius"
+    },
+    {
+     "id": 3039577,
+     "name": "Dan Hamill",
+     "photo": "https://image.tmdb.org/t/p/w185/6X204rEG5OwbXKHqpCsjTwMBJfv.jpg",
+     "as": "Celadus"
+    },
+    {
+     "id": 5864200,
+     "name": "Mikey Thompson",
+     "photo": "https://image.tmdb.org/t/p/w185/wKvuTbvqXZsIzOVhmD5kAqJYDOZ.jpg",
+     "as": "Musicus"
+    },
+    {
+     "id": 2748186,
+     "name": "Daniel Bos",
+     "photo": "https://image.tmdb.org/t/p/w185/f0yDZx5jV741YfCG81pSZpzGyff.jpg",
+     "as": "Balbus"
+    },
+    {
+     "id": 128957,
+     "name": "Andrew McFarlane",
+     "photo": "https://image.tmdb.org/t/p/w185/pdpAlxzORlISDu0M7aA5YyJqdJy.jpg",
+     "as": "Gabinius"
+    },
+    {
+     "id": 1761049,
+     "name": "Simon Arblaster",
+     "photo": "https://image.tmdb.org/t/p/w185/ln4Bgr8bU7EJEGtvOoQ9eYuJxi4.jpg",
+     "as": "Proculus"
+    },
+    {
+     "id": 1852809,
+     "name": "Arlo Gibson",
+     "photo": "https://image.tmdb.org/t/p/w185/46mKpVgomN75UEvkpLkqAEht1gY.jpg",
+     "as": "Opiter"
+    }
+   ]
+  },
+  "1x7": {
+   "d": [
+    {
+     "id": 173587,
+     "name": "Mark Beesley",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 5302409,
+     "name": "Beverly Okhio",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 3094194,
+     "name": "Evander Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/35PEYFWT6xXhHkySACgZm5uuArc.jpg",
+     "as": "Ephesius"
+    },
+    {
+     "id": 2231488,
+     "name": "Graham Vincent",
+     "photo": "https://image.tmdb.org/t/p/w185/lIdHyV6lLIaH54Wr8XkrLSijcud.jpg",
+     "as": "Hedylus"
+    },
+    {
+     "id": 1575059,
+     "name": "Louis Hunter",
+     "photo": "https://image.tmdb.org/t/p/w185/5nqSaQi4DMMdLydwGNwnxxM3KQD.jpg",
+     "as": "Erato"
+    },
+    {
+     "id": 3756329,
+     "name": "Donald Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/xSWJ7MK6tsJM8UxWX22Hf48779P.jpg",
+     "as": "Salvius"
+    },
+    {
+     "id": 3039577,
+     "name": "Dan Hamill",
+     "photo": "https://image.tmdb.org/t/p/w185/6X204rEG5OwbXKHqpCsjTwMBJfv.jpg",
+     "as": "Celadus"
+    },
+    {
+     "id": 5864200,
+     "name": "Mikey Thompson",
+     "photo": "https://image.tmdb.org/t/p/w185/wKvuTbvqXZsIzOVhmD5kAqJYDOZ.jpg",
+     "as": "Musicus"
+    },
+    {
+     "id": 2748186,
+     "name": "Daniel Bos",
+     "photo": "https://image.tmdb.org/t/p/w185/f0yDZx5jV741YfCG81pSZpzGyff.jpg",
+     "as": "Balbus"
+    },
+    {
+     "id": 128957,
+     "name": "Andrew McFarlane",
+     "photo": "https://image.tmdb.org/t/p/w185/pdpAlxzORlISDu0M7aA5YyJqdJy.jpg",
+     "as": "Gabinius"
+    },
+    {
+     "id": 1761049,
+     "name": "Simon Arblaster",
+     "photo": "https://image.tmdb.org/t/p/w185/ln4Bgr8bU7EJEGtvOoQ9eYuJxi4.jpg",
+     "as": "Proculus"
+    },
+    {
+     "id": 1852809,
+     "name": "Arlo Gibson",
+     "photo": "https://image.tmdb.org/t/p/w185/46mKpVgomN75UEvkpLkqAEht1gY.jpg",
+     "as": "Opiter"
+    }
+   ]
+  },
+  "1x8": {
+   "d": [
+    {
+     "id": 73875,
+     "name": "Toa Fraser",
+     "photo": "https://image.tmdb.org/t/p/w185/qzG6o1uczG1ffBmdRcfF2cLGWIg.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1213074,
+     "name": "Steven S. DeKnight",
+     "photo": "https://image.tmdb.org/t/p/w185/4xI7zn54omKDrKa0lshPsJZ53tK.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 3094194,
+     "name": "Evander Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/35PEYFWT6xXhHkySACgZm5uuArc.jpg",
+     "as": "Ephesius"
+    },
+    {
+     "id": 2231488,
+     "name": "Graham Vincent",
+     "photo": "https://image.tmdb.org/t/p/w185/lIdHyV6lLIaH54Wr8XkrLSijcud.jpg",
+     "as": "Hedylus"
+    },
+    {
+     "id": 1575059,
+     "name": "Louis Hunter",
+     "photo": "https://image.tmdb.org/t/p/w185/5nqSaQi4DMMdLydwGNwnxxM3KQD.jpg",
+     "as": "Erato"
+    },
+    {
+     "id": 3756329,
+     "name": "Donald Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/xSWJ7MK6tsJM8UxWX22Hf48779P.jpg",
+     "as": "Salvius"
+    },
+    {
+     "id": 3039577,
+     "name": "Dan Hamill",
+     "photo": "https://image.tmdb.org/t/p/w185/6X204rEG5OwbXKHqpCsjTwMBJfv.jpg",
+     "as": "Celadus"
+    },
+    {
+     "id": 128957,
+     "name": "Andrew McFarlane",
+     "photo": "https://image.tmdb.org/t/p/w185/pdpAlxzORlISDu0M7aA5YyJqdJy.jpg",
+     "as": "Gabinius"
+    },
+    {
+     "id": 1761049,
+     "name": "Simon Arblaster",
+     "photo": "https://image.tmdb.org/t/p/w185/ln4Bgr8bU7EJEGtvOoQ9eYuJxi4.jpg",
+     "as": "Proculus"
+    },
+    {
+     "id": 5540,
+     "name": "Cameron Rhodes",
+     "photo": "https://image.tmdb.org/t/p/w185/iyRxPuFHP4VnA8BTsjkMgYAqtjE.jpg",
+     "as": "Uvidus"
+    },
+    {
+     "id": 1615098,
+     "name": "Duane Evans Jr.",
+     "photo": "https://image.tmdb.org/t/p/w185/tqTeJG1QEwddgU97UNkEW6nOsm0.jpg",
+     "as": "Dacus"
+    },
+    {
+     "id": 4359739,
+     "name": "Eden Hart",
+     "photo": "https://image.tmdb.org/t/p/w185/kV2gj2zeXUskWRtjC0h34ErZGgY.jpg",
+     "as": "Elata"
+    }
+   ]
+  },
+  "1x9": {
+   "d": [
+    {
+     "id": 1517638,
+     "name": "Robyn Grace",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 3170005,
+     "name": "Diya Mishra",
+     "photo": null
+    }
+   ],
+   "g": [
+    {
+     "id": 3094194,
+     "name": "Evander Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/35PEYFWT6xXhHkySACgZm5uuArc.jpg",
+     "as": "Ephesius"
+    },
+    {
+     "id": 2231488,
+     "name": "Graham Vincent",
+     "photo": "https://image.tmdb.org/t/p/w185/lIdHyV6lLIaH54Wr8XkrLSijcud.jpg",
+     "as": "Hedylus"
+    },
+    {
+     "id": 1575059,
+     "name": "Louis Hunter",
+     "photo": "https://image.tmdb.org/t/p/w185/5nqSaQi4DMMdLydwGNwnxxM3KQD.jpg",
+     "as": "Erato"
+    },
+    {
+     "id": 3756329,
+     "name": "Donald Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/xSWJ7MK6tsJM8UxWX22Hf48779P.jpg",
+     "as": "Salvius"
+    },
+    {
+     "id": 3039577,
+     "name": "Dan Hamill",
+     "photo": "https://image.tmdb.org/t/p/w185/6X204rEG5OwbXKHqpCsjTwMBJfv.jpg",
+     "as": "Celadus"
+    },
+    {
+     "id": 128957,
+     "name": "Andrew McFarlane",
+     "photo": "https://image.tmdb.org/t/p/w185/pdpAlxzORlISDu0M7aA5YyJqdJy.jpg",
+     "as": "Gabinius"
+    },
+    {
+     "id": 5540,
+     "name": "Cameron Rhodes",
+     "photo": "https://image.tmdb.org/t/p/w185/iyRxPuFHP4VnA8BTsjkMgYAqtjE.jpg",
+     "as": "Uvidus"
+    },
+    {
+     "id": 1615098,
+     "name": "Duane Evans Jr.",
+     "photo": "https://image.tmdb.org/t/p/w185/tqTeJG1QEwddgU97UNkEW6nOsm0.jpg",
+     "as": "Dacus"
+    },
+    {
+     "id": 1333767,
+     "name": "Jackson Gallagher",
+     "photo": "https://image.tmdb.org/t/p/w185/lMZR7HRDOCm2phsGR1uLvxX4mas.jpg",
+     "as": "Caesar"
+    },
+    {
+     "id": 33310,
+     "name": "Tandi Wright",
+     "photo": "https://image.tmdb.org/t/p/w185/xLQ9j4pJ46HZhs5jMJ87w9zjv82.jpg",
+     "as": "Lafrenia"
+    }
+   ]
+  },
+  "1x10": {
+   "d": [
+    {
+     "id": 102402,
+     "name": "Rick Jacobson",
+     "photo": "https://image.tmdb.org/t/p/w185/aazCWUhZTGV2m4jDGPQoTsBnGVO.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1213074,
+     "name": "Steven S. DeKnight",
+     "photo": "https://image.tmdb.org/t/p/w185/4xI7zn54omKDrKa0lshPsJZ53tK.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 3094194,
+     "name": "Evander Brown",
+     "photo": "https://image.tmdb.org/t/p/w185/35PEYFWT6xXhHkySACgZm5uuArc.jpg",
+     "as": "Ephesius"
+    },
+    {
+     "id": 2231488,
+     "name": "Graham Vincent",
+     "photo": "https://image.tmdb.org/t/p/w185/lIdHyV6lLIaH54Wr8XkrLSijcud.jpg",
+     "as": "Hedylus"
+    },
+    {
+     "id": 1575059,
+     "name": "Louis Hunter",
+     "photo": "https://image.tmdb.org/t/p/w185/5nqSaQi4DMMdLydwGNwnxxM3KQD.jpg",
+     "as": "Erato"
+    },
+    {
+     "id": 3756329,
+     "name": "Donald Ross",
+     "photo": "https://image.tmdb.org/t/p/w185/xSWJ7MK6tsJM8UxWX22Hf48779P.jpg",
+     "as": "Salvius"
+    },
+    {
+     "id": 3039577,
+     "name": "Dan Hamill",
+     "photo": "https://image.tmdb.org/t/p/w185/6X204rEG5OwbXKHqpCsjTwMBJfv.jpg",
+     "as": "Celadus"
+    },
+    {
+     "id": 128957,
+     "name": "Andrew McFarlane",
+     "photo": "https://image.tmdb.org/t/p/w185/pdpAlxzORlISDu0M7aA5YyJqdJy.jpg",
+     "as": "Gabinius"
+    },
+    {
+     "id": 1761049,
+     "name": "Simon Arblaster",
+     "photo": "https://image.tmdb.org/t/p/w185/ln4Bgr8bU7EJEGtvOoQ9eYuJxi4.jpg",
+     "as": "Proculus"
+    },
+    {
+     "id": 5540,
+     "name": "Cameron Rhodes",
+     "photo": "https://image.tmdb.org/t/p/w185/iyRxPuFHP4VnA8BTsjkMgYAqtjE.jpg",
+     "as": "Uvidus"
+    },
+    {
+     "id": 1615098,
+     "name": "Duane Evans Jr.",
+     "photo": "https://image.tmdb.org/t/p/w185/tqTeJG1QEwddgU97UNkEW6nOsm0.jpg",
+     "as": "Dacus"
+    },
+    {
+     "id": 1333767,
+     "name": "Jackson Gallagher",
+     "photo": "https://image.tmdb.org/t/p/w185/lMZR7HRDOCm2phsGR1uLvxX4mas.jpg",
+     "as": "Caesar"
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-25T07:37:30.456Z"
 }
