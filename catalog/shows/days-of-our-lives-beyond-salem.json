@@ -1,0 +1,127 @@
+{
+  "show": "Days of Our Lives: Beyond Salem",
+  "slug": "days-of-our-lives-beyond-salem",
+  "type": "Streaming Era",
+  "network": "Peacock",
+  "matchedAt": "2026-10-25T02:35:12.199Z",
+  "addedAt": "2026-10-25T02:35:12.199Z",
+  "tvmaze": {
+    "id": 56604,
+    "name": "Days of Our Lives: Beyond Salem",
+    "runtime": 46,
+    "premiered": "2021-09-06",
+    "network": "Peacock"
+  },
+  "coverage": {
+    "total": 10,
+    "live": 0,
+    "review": 1,
+    "missing": 9,
+    "pct": 10
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Alamainian Peacock",
+          "airdate": "2021-09-06",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "title ~ \"The Alamainian Peacock\" (0.95) | not browser-playable: container (Matroska)",
+            "item": "days-of-our-lives-beyond-salem-season-1",
+            "itemTitle": "Days Of Our Lives: Beyond Salem Season 1",
+            "file": "Days_of_Our_Lives_Beyond_Salem_S01E01_The_Alamainian_Peacock.mkv",
+            "name": "Days_of_Our_Lives_Beyond_Salem_S01E01_The_Alamainian_Peacock",
+            "url": "https://archive.org/download/days-of-our-lives-beyond-salem-season-1/Days_of_Our_Lives_Beyond_Salem_S01E01_The_Alamainian_Peacock.mkv",
+            "seconds": 2910,
+            "format": "Matroska",
+            "playable": false,
+            "codecRisk": "container (Matroska)",
+            "sizeMB": 2029
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "This Means War",
+          "airdate": "2021-09-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Cat and Mouse",
+          "airdate": "2021-09-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Dressed to Kill",
+          "airdate": "2021-09-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Endgame",
+          "airdate": "2021-09-10",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Reunion",
+          "airdate": "2022-07-11",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Three Prisms",
+          "airdate": "2022-07-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "A Gala and a Wedding",
+          "airdate": "2022-07-13",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Extra Life",
+          "airdate": "2022-07-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Second Chances",
+          "airdate": "2022-07-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
