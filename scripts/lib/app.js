@@ -98,7 +98,7 @@ function buildTv(shows, types) {
   const sp = ORIG.items.concat(TVGRID.buildSpecials(shows, lib.infos, offSet).filter((e) => !mine.has(e[0])));
   const used = new Set(sp.map((e) => e[0]));
   const channels = lists.map((L) => {
-    const recs = L.list.map((s) => { const i = idx.get(s.slug); used.add(i); return Object.assign({ i }, lib.infos[i]); });
+    const recs = L.list.map((s) => { const i = idx.get(s.slug); used.add(i); return Object.assign({ i, sl: s.slug }, lib.infos[i]); });
     const c = TVGRID.planChannel({ id: L.id, name: L.name, kind: L.kind }, recs, lib.rt);
     if (L.adult) c.adult = true;
     if (L.kind === 'network') { const spn = sp.filter((e) => e[2] !== 0 && shows[e[0]].network === L.name).map((e) => e[0]); if (spn.length) c.spn = spn; }
@@ -229,8 +229,12 @@ function assemble() {
   // B, 21 Oct 2026: a show or TV movie B marks 18+ in his edits layer (catalog/overrides.json, adult: true; HQ keeps the field) goes
   // behind the door with the Late Night shows: gated On Demand, in the index as adult, off every open channel, never a filler.
   for (const s of shows) if (OV[s.slug] && OV[s.slug].adult) s.adult = true;
-  const tv = buildTv(shows, types);
-  return { shows, people, links, types, bios, channels: tv.channels, tv, homeOrder };
+  // Live TV, one lineup a week (B, 25 Oct 2026): this week's plan from catalog/tv-lineup.json once stored, next week's from today's
+  // catalog until its Monday begins (scripts/lib/tvweek.js). tvLineup carries what the publish writes back and the doctor shows.
+  const TW = require('./tvweek');
+  const tvLineup = TW.lineup(buildTv(shows, types), TW.read(path.join(PROFILE.catalogDir, 'tv-lineup.json')), +process.env.VOID_TV_NOW || Date.now()); // VOID_TV_NOW: tests pin the clock
+  const tv = tvLineup.tv;
+  return { shows, people, links, types, bios, channels: tv.channels, tv, tvLineup, homeOrder };
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
@@ -780,7 +784,7 @@ let TV_TOKEN=0;
 // episodes that failed in the last hour, per channel: the airing gives its place to another episode of the same show, and a dead episode cannot loop (Bryan, 20 Oct 2026)
 const TV_DEAD={};const tvKey=(c,a)=>c.id+':'+a.s+':'+a.se+'x'+a.n;const tvDead=(c,a)=>TV_DEAD[tvKey(c,a)]>Date.now()-36e5;
 // The plan is laid onto this page's own show list by name (TVG.adopt), so a show removed since either file was built drops out instead of breaking the TV (B, 21 Oct 2026).
-async function ensureTV(){if(TV&&TVLIB)return TV;const r=await fetch(BASE+'data/tv.json');const j=await r.json();const A=TVG.adopt(j,SHOWS.map(s=>s.slug));TVLIB={rt:A.rt,lib:A.lib,ln:A.ln,sp:A.sp};TV=A.channels;return TV}
+async function ensureTV(){if(TV&&TVLIB)return TV;const j=typeof TVJ!=='undefined'?TVJ:await (await fetch(BASE+'data/tv.json')).json();const A=TVG.adopt(j,SHOWS.map(s=>s.slug));TVLIB=A;TV=A.channels;return TV}
 const chanNow=(c,at)=>TVG.chanNow(c,TVLIB,at);
 const mmss=(sec)=>{sec=Math.max(0,Math.round(sec));const h=Math.floor(sec/3600),m=Math.floor(sec%3600/60);return h?h+'h '+String(m).padStart(2,'0')+'m':m+' min'};
 const kindName={all:'every show',row:'row',collection:'collection',network:'network'};
@@ -1057,7 +1061,7 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
   // Split mode keeps the browse index in one shared, cacheable file (data/index.js) so the hundreds
   // of per-show share pages stay tiny; embed mode inlines everything for the single-file preview.
   const inline = mode === 'embed'
-    ? `const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let TV=${JSON.stringify(tv.channels)};let TVLIB=${JSON.stringify({ rt: tv.rt, lib: tv.lib, ln: tv.ln || [], sp: tv.sp || [] })};let GRAPH_LOADED=true;`
+    ? `const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let TV=null;let TVLIB=null;const TVJ=${JSON.stringify(tv)};let GRAPH_LOADED=true;`
     : `const PEOPLE={};const LINKS={};const BIO={};let TV=null;let TVLIB=null;let GRAPH_LOADED=false;`;
   const indexScript = `<script src="${base}assets/player/voidplayer.js?v=${PLAYER_V}"></script>` + (mode === 'embed' ? '' : `<script src="${base}data/index.js"></script>`);
   const hx = (v) => String(v == null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

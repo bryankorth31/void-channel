@@ -100,7 +100,7 @@ const SHOULD_SHIP = ['movie-100', 'movie-102'];
 
 function tree(appText) {
   const root = fs.mkdtempSync(path.join(TMP, 'case-'));
-  for (const f of ['scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/profile.js', 'scripts/lib/hardexclude.js', 'player/tools/rank-sources.js']) {
+  for (const f of ['scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'scripts/lib/profile.js', 'scripts/lib/hardexclude.js', 'player/tools/rank-sources.js']) {
     write(root, f, f === 'scripts/lib/app.js' && appText != null ? appText : fs.readFileSync(path.join(REPO, f), 'utf8'));
   }
   write(root, 'scripts/show-list.json', JSON.stringify({ types: ['Drama'], shows: [] }));

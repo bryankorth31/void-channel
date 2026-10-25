@@ -43,14 +43,27 @@ function fresh() {
   write(work, 'docs/HUNT.md', '# The Hunt\n');         // generated reports: publish stages these
   write(work, 'docs/COVERAGE.md', '# Coverage\n');
   for (let i = 0; i < 10; i++) putShow(work, i);
+  lineup(work);
   git(work, 'add', '-A');
   git(work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (12 files)');
   git(work, 'push', '-q', 'origin', 'master');
   return { dir, origin, work };
 }
 
+// The Live TV lineup (catalog/tv-lineup.json, scripts/lib/tvweek.js) as the repo holds it after its first publish. The clock is pinned
+// to a Monday noon (UTC), when this week and next have both begun somewhere, so both are frozen and a catalog change leaves the file alone.
+const REPO = path.join(__dirname, '..');
+const TV_NOW = String(Date.parse('2026-10-26T12:00:00Z'));
+function lineup(work) {
+  const req = (m) => 'require(' + JSON.stringify(path.join(REPO, 'scripts', 'lib', m)) + ')';
+  const code = "const path=require('path'),P=" + req('profile') + ";for(const k of ['catalogDir','docsDir','listFile'])P[k]=path.join(process.argv[1],path.relative(P.ROOT,P[k]));"
+    + 'const d=' + req('app') + '.assemble();' + req('tvweek') + ".write(path.join(P.catalogDir,'tv-lineup.json'),d.tvLineup.store)";
+  const e = { ...process.env, VOID_TV_NOW: TV_NOW }; delete e.VOID_PROFILE;
+  execFileSync(process.execPath, ['-e', code, work], { env: e, stdio: ['ignore', 'pipe', 'pipe'] });
+}
+
 function publish(work, args = [], env = {}) {
-  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30,30,30', PUBLISH_PUSH_TIMEOUT_MS: '30000', ...env };
+  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30,30,30', PUBLISH_PUSH_TIMEOUT_MS: '30000', VOID_TV_NOW: TV_NOW, ...env };
   delete e.VOID_PROFILE;
   const r = spawnSync(process.execPath, [PUBLISH, '--root', work, ...args], { encoding: 'utf8', env: e });
   return { status: r.status, out: (r.stdout || '') + (r.stderr || '') };
@@ -301,7 +314,7 @@ test('works the way this PC is set up: core.autocrlf=true and CRLF files in the 
 test('no flags: the scheduled run, started from inside its own tree, finds the same paths without --root', () => {
   const c = fresh();
   const root = path.join(__dirname, '..');
-  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
+  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
   git(c.work, 'add', 'scripts', 'player');
   git(c.work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (the tooling for this test)'); // a Catalog commit so nothing is "other"
   git(c.work, 'push', '-q', 'origin', 'master');
@@ -319,7 +332,7 @@ test('no flags: the scheduled run, started from inside its own tree, finds the s
 const STUB_APP = "const fs = require('fs');\nconst real = require('./app-real');\nmodule.exports = { assemble() { const d = real.assemble(); if (process.env.TEST_DRIFT_FILE) fs.writeFileSync(process.env.TEST_DRIFT_FILE, process.env.TEST_DRIFT_TEXT); return d; } };\n";
 function copyTools(work, stub) {
   const root = path.join(__dirname, '..');
-  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'player/tools/rank-sources.js']) write(work, f, fs.readFileSync(path.join(root, f), 'utf8'));
+  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'player/tools/rank-sources.js']) write(work, f, fs.readFileSync(path.join(root, f), 'utf8'));
   const app = fs.readFileSync(path.join(root, 'scripts/lib/app.js'), 'utf8');
   if (stub) { write(work, 'scripts/lib/app-real.js', app); write(work, 'scripts/lib/app.js', STUB_APP); } else write(work, 'scripts/lib/app.js', app);
 }
@@ -446,7 +459,7 @@ test('publish.log is cut back to its last megabyte', () => {
 test('the doctor: publish light follows the last outcome line, unpushed turns yellow then red, addresses are counted', () => {
   const c = fresh();
   const root = path.join(__dirname, '..');
-  for (const f of ['scripts/doctor.js', 'scripts/lib/profile.js', 'scripts/lib/tasks.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
+  for (const f of ['scripts/doctor.js', 'scripts/lib/profile.js', 'scripts/lib/tasks.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
   git(c.work, 'add', 'scripts', 'player');
   git(c.work, 'commit', '-q', '-m', 'Add the tooling for this test');
   git(c.work, 'push', '-q', 'origin', 'master');
@@ -517,4 +530,21 @@ test('the hunters mask address text in the free-text fields and file names they 
     for (const n of needles) assert.ok(src.includes(n), `${file} should contain ${n}`);
     assert.ok(!/uploader: (m|o|meta)\.uploader/.test(src), file + ' must not write the uploader address');
   }
+});
+
+test('Live TV lineup: a frozen week is left alone by a catalog change; removing the file has the next publish store it again, in the same commit', () => {
+  const c = fresh(), file = path.join(c.work, 'catalog', 'tv-lineup.json');
+  const files = () => git(c.work, 'show', '--name-only', '--format=', 'HEAD').split('\n').filter(Boolean);
+  putShow(c.work, 10);                                    // a new show waits for next Monday: both stored weeks stay as they are
+  let r = publish(c.work);
+  assert.strictEqual(r.status, 0, r.out);
+  assert.ok(files().includes('catalog/shows/test-show-10.json'));
+  assert.ok(!files().includes('catalog/tv-lineup.json'), 'the frozen lineup did not change');
+  fs.rmSync(file);                                        // by hand: rebuild this week's lineup from today's catalog
+  putShow(c.work, 11);
+  r = publish(c.work);
+  assert.strictEqual(r.status, 0, r.out);
+  assert.ok(files().includes('catalog/tv-lineup.json'), 'stored again and committed with the catalog');
+  assert.strictEqual(Object.keys(JSON.parse(fs.readFileSync(file, 'utf8')).weeks).length, 2);
+  assert.strictEqual(git(c.work, 'status', '--porcelain', '--', 'catalog'), '');
 });

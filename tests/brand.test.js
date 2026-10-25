@@ -235,7 +235,7 @@ test('a built site: manifest, share cards, show pages and the password page say 
   try {
     const root = path.join(TMP, 'tree');
     const put = (rel, body) => { const p = path.join(root, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, body); };
-    for (const f of ['scripts/site.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/profile.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js', 'player/src/core.js', 'player/src/icons.js', 'player/src/player.js', 'player/src/player.css', 'profiles/voidtv/profile.json']) put(f, fs.readFileSync(path.join(REPO, f)));
+    for (const f of ['scripts/site.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'scripts/lib/profile.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js', 'player/src/core.js', 'player/src/icons.js', 'player/src/player.js', 'player/src/player.css', 'profiles/voidtv/profile.json']) put(f, fs.readFileSync(path.join(REPO, f)));
     fs.cpSync(path.join(REPO, 'functions'), path.join(root, 'functions'), { recursive: true });
     put('assets/brand/icon-512-maskable.png', fs.readFileSync(path.join(REPO, 'assets', 'brand', 'icon-512-maskable.png'))); // the real file must exist in the repo; the build copies the brand folder
     put('scripts/show-list.json', JSON.stringify({ types: ['Drama'], shows: [] }));

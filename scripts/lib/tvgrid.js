@@ -54,7 +54,15 @@ function tvgridFactory() {
     return { S: S, R: R, end: R(DAYEND) };
   }
   const dowOf = (bd) => mod(bd + 4, 7);
-  const weekOfDay = (bd) => Math.floor((bd + 4) / 7);
+  // The week turns on Monday at 6:00 am (B, 25 Oct 2026: new shows join Live TV once a week, on Monday). dayIn: Monday 0 to Sunday 6.
+  const weekOfDay = (bd) => Math.floor((bd + 3) / 7);
+  const dayIn = (bd) => mod(bd + 3, 7);
+  // A show's own number for the episode rotation: from its name (lib.key, set by adopt), so a show added or removed elsewhere in the
+  // list never moves another show's episodes. A plan without names (an old tv.json) falls back to the show's place.
+  const keyOf = (lib, s) => (lib.key ? lib.key[s] >>> 0 : Math.imul(s + 1, 2654435761) >>> 0);
+  // Two weeks in one plan: from week lib.nw on, a channel plays its next-week plan (ch.nx with lib.nx), so every viewer turns to the
+  // new lineup at 6:00 am on their own Monday. A channel with no next-week plan keeps this one.
+  function forWeek(ch, lib, w) { return lib.nx && lib.nw != null && w >= lib.nw && ch.nx ? [ch.nx, lib.nx] : [ch, lib]; }
 
   function windows(dow) {
     if (dow !== 6) return DP;
@@ -267,7 +275,7 @@ function tvgridFactory() {
   // Which episode a show airs: one more per airing for a show that holds the same place every week.
   function epPick(lib, s, w, perWeek, before, j) {
     const E = epTotal(lib, s) || 1;
-    const off = (Math.imul(s + 1, 2654435761) >>> 0) % E;
+    const off = keyOf(lib, s) % E;
     return mod(w * perWeek + before + j + off, E);
   }
   // The minutes of episode number i of a show. lib.ln[s] holds one character per episode, in the order of the runs: its
@@ -277,11 +285,13 @@ function tvgridFactory() {
     return m > 0 ? m : lib.rt[s] || 30;
   }
 
-  // The seven days of a week (Sunday first) for one channel, planned once and kept: airings with real instants.
+  // The seven days of a week (Monday first) for one channel, planned once and kept: airings with real instants.
   // Two passes when the library has episode lengths: the first plans the week on typical minutes, which settles how many
   // times each show airs this week (the step from one week's episodes to the next); the second plans it again with each
   // airing as long as the very episode it will play, so the day is laid out in the real lengths.
   function weekOf(ch, lib, w) {
+    const q = forWeek(ch, lib, w);
+    ch = q[0]; lib = q[1];
     let m = WK.get(ch);
     if (!m) { m = new Map(); WK.set(ch, m); }
     let r = m.get(w);
@@ -290,7 +300,7 @@ function tvgridFactory() {
       const days = [], per = {}, base = [];
       for (let d = 0; d < 7; d++) {
         const b = Object.assign({}, per);
-        const day = planDay(ch, lib, w * 7 - 4 + d, len && ((s, j) => len(s, j, b)));
+        const day = planDay(ch, lib, w * 7 - 3 + d, len && ((s, j) => len(s, j, b)));
         days.push(day);
         base.push(b);
         for (let u = 0; u < day.length; u++) per[day[u].s] = (per[day[u].s] || 0) + 1;
@@ -304,7 +314,7 @@ function tvgridFactory() {
     // An airing: show s, episode i (season se, number n), on the air from st to en (instants). du: the episode's minutes; the
     // rest of [st, en) is the break. g0, g1: the block it belongs to (packed episodes of one show share one block in the guide).
     const air = days.map((day, d) => {
-      const bd = w * 7 - 4 + d, C = dayClock(bd);
+      const bd = w * 7 - 3 + d, C = dayClock(bd);
       const list = day.map((x, u) => {
         const i = epPick(lib, x.s, w, perWeek(x.s), base[d][x.s] || 0, x.j);
         const c = epCode(lib, x.s, i);
@@ -320,7 +330,7 @@ function tvgridFactory() {
     if (m.size > 6) m.delete(m.keys().next().value);
     return r;
   }
-  function dayAirings(ch, lib, bd) { return weekOf(ch, lib, weekOfDay(bd)).air[dowOf(bd)]; }
+  function dayAirings(ch, lib, bd) { return weekOf(ch, lib, weekOfDay(bd)).air[dayIn(bd)]; }
 
   // THE BREAKS (B, 21 Oct 2026): what fills the rest of a block after its show's last episode, the same for everyone. In order:
   // B's originals, then short episodes (15 minutes or less) of the other shows in the same daypart's pool on this channel, then
@@ -332,11 +342,13 @@ function tvgridFactory() {
   function shortsOf(ch, lib, k) {
     let m = SH.get(ch);
     if (!m || m.lib !== lib) { m = { lib: lib }; SH.set(ch, m); }
-    if (!m[k]) m[k] = ((ch.p || {})[k] || []).filter((s) => (lib.rt[s] || 30) <= SHORT && epTotal(lib, s) > 1);
+    if (!m[k]) m[k] = ((ch.p || {})[k] || []).filter((s) => (lib.rt[s] || 30) <= SHORT && epTotal(lib, s) > 1 && !(lib.gh && lib.gh[s]));
     return m[k];
   }
   function dayBreaks(ch, lib, bd) {
-    const wk = weekOf(ch, lib, weekOfDay(bd)), d = dowOf(bd), air = wk.air[d];
+    const fw = forWeek(ch, lib, weekOfDay(bd));
+    ch = fw[0]; lib = fw[1];
+    const wk = weekOf(ch, lib, weekOfDay(bd)), d = dayIn(bd), air = wk.air[d];
     if (!wk.br) wk.br = [];
     if (wk.br[d]) return air;
     wk.br[d] = 1;
@@ -346,7 +358,8 @@ function tvgridFactory() {
     const fl = (s) => epLen(lib, s, one(s));
     for (let u = 0; u < air.length; u++) {
       const a = air[u], end = a.en, k = a.k === 'v' ? 'p' : a.k;
-      let t = a.st + a.du * MIN;
+      // A show that left the site during a frozen week (lib.gh, see adopt) keeps its slot: the whole slot is break, filled from its start.
+      let t = a.st + (lib.gh && lib.gh[a.s] ? 0 : a.du * MIN);
       if (end - t < MIN) continue;
       const fill = [];
       const add = (s, i) => { const c = epCode(lib, s, i), du = epLen(lib, s, i); fill.push({ s: s, i: i, se: c[0], n: c[1], st: t, en: t + du * MIN, du: du }); t += du * MIN; };
@@ -359,7 +372,7 @@ function tvgridFactory() {
         // do not fit the room left; used[c] counts how far it has gone today.
         let hit = -1, hi = 0;
         for (let q = 0; q < Math.min(shorts.length, 4 * LOOK) && hit < 0; q++) {
-          const c = shorts[(turn + q) % shorts.length], E = epTotal(lib, c), from = (Math.imul(c + 1, 2654435761) >>> 0) + bd * 7;
+          const c = shorts[(turn + q) % shorts.length], E = epTotal(lib, c), from = keyOf(lib, c) + bd * 7;
           if (c === a.s) continue;
           for (let y = used[c] || 0; y < Math.min(E, (used[c] || 0) + LOOK); y++) {
             const i = mod(from + y, E);
@@ -371,7 +384,7 @@ function tvgridFactory() {
         if (s >= 0) { cnt[s] = 1; add(s, one(s)); continue; }
         break;
       }
-      a.br = { at: a.st + a.du * MIN, fill: fill, end: end };
+      a.br = { at: lib.gh && lib.gh[a.s] ? a.st : a.st + a.du * MIN, fill: fill, end: end };
     }
     return air;
   }
@@ -385,29 +398,51 @@ function tvgridFactory() {
   // SELF-PRUNING (B, 21 Oct 2026: a removed show must never break the TV). data/tv.json names every show it uses (tv.sl, the
   // slugs by place), and the page's show list (data/index.js) may come from another build, since each file is cached on its
   // own. adopt() lays the plan onto the list the page has, by name: a show the page does not have drops out of every pool and
-  // the filler list, and a channel left with no shows drops out. Returns { rt, lib, ln, sp, channels } in the page's places.
+  // the filler list, and a channel left with no shows drops out. Returns { rt, lib, ln, sp, key, gh, channels } in the page's places.
+  // A FROZEN week (tv.fz, B 25 Oct 2026: a publish never moves a show mid-week) keeps a show the page no longer has as a stand-in at
+  // a place after the page's list (gh marks it): its slots keep their times and play as breaks (originals, shorts, specials, then the
+  // cards), so no other show moves up. It is never used as a filler. A channel whose shows have all gone still drops out.
+  // tv.nx (next week's plan, from week tv.nx.w on) is laid on the same way: each channel carries its next-week self as nx, and the
+  // result carries nx (the next week's library) and nw (the week it starts), which weekOf and dayBreaks switch to.
   function adopt(tv, slugs) {
-    const sl = tv.sl, base = { rt: tv.rt, lib: tv.lib, ln: tv.ln || [], sp: tv.sp || [], channels: tv.channels };
-    if (!sl || (sl.length === slugs.length && sl.every((x, i) => !x || x === slugs[i]))) return base;
-    const at = {};
-    for (let i = 0; i < slugs.length; i++) at[slugs[i]] = i;
-    const to = sl.map((x) => (x && at[x] != null ? at[x] : -1));
-    const rt = slugs.map(() => 0), lib = slugs.map(() => 0), ln = slugs.map(() => 0);
-    to.forEach((j, i) => { if (j >= 0) { rt[j] = tv.rt[i]; lib[j] = tv.lib[i]; ln[j] = (tv.ln || [])[i] || 0; } });
-    const map = (list) => (list || []).map((i) => to[i]).filter((j) => j >= 0 && rt[j] > 0);
-    const sp = (tv.sp || []).map((e) => [to[e[0]]].concat(e.slice(1))).filter((e) => e[0] >= 0 && rt[e[0]] > 0);
-    const channels = [];
-    for (const c of tv.channels) {
-      const p = {};
-      let n = 0;
-      for (const k in c.p || {}) { const v = map(c.p[k]); if (v.length) { p[k] = v; n += v.length; } }
-      if (!n) continue;
-      const x = Object.assign({}, c, { p: p });
-      if (c.fo) x.fo = map(c.fo);
-      if (c.spn) x.spn = map(c.spn);
-      channels.push(x);
+    const one = (t) => {
+      const sl = t.sl, n0 = slugs.length;
+      if (!sl || (sl.length === n0 && sl.every((x, i) => !x || x === slugs[i]))) {
+        return { rt: t.rt, lib: t.lib, ln: t.ln || [], sp: t.sp || [], key: sl ? sl.map((x, i) => idHash(x || slugs[i])) : null, gh: null, channels: t.channels };
+      }
+      const at = {};
+      for (let i = 0; i < n0; i++) at[slugs[i]] = i;
+      let extra = n0;
+      const to = sl.map((x) => (!x ? -1 : at[x] != null ? at[x] : t.fz ? extra++ : -1));
+      const rt = [], lib = [], ln = [], key = [], gh = [];
+      for (let j = 0; j < extra; j++) { rt.push(0); lib.push(0); ln.push(0); key.push(j < n0 ? idHash(slugs[j]) : 0); gh.push(j < n0 ? 0 : 1); }
+      to.forEach((j, i) => { if (j >= 0) { rt[j] = t.rt[i]; lib[j] = t.lib[i]; ln[j] = (t.ln || [])[i] || 0; key[j] = idHash(sl[i]); } });
+      const map = (list) => (list || []).map((i) => to[i]).filter((j) => j >= 0 && rt[j] > 0);
+      const real = (list) => map(list).filter((j) => !gh[j]);
+      const sp = (t.sp || []).map((e) => [to[e[0]]].concat(e.slice(1))).filter((e) => e[0] >= 0 && rt[e[0]] > 0 && !gh[e[0]]);
+      const channels = [];
+      for (const c of t.channels) {
+        const p = {};
+        let n = 0;
+        for (const k in c.p || {}) { const v = map(c.p[k]); if (v.length) { p[k] = v; for (const j of v) if (!gh[j]) n++; } }
+        if (!n) continue;
+        const x = Object.assign({}, c, { p: p });
+        if (c.fo) x.fo = real(c.fo);
+        if (c.spn) x.spn = real(c.spn);
+        channels.push(x);
+      }
+      return { rt: rt, lib: lib, ln: ln, sp: sp, key: key, gh: gh, channels: channels };
+    };
+    const A = one(tv);
+    if (tv.nx && tv.nx.channels) {
+      const B = one(tv.nx), by = {};
+      for (const c of B.channels) by[c.id] = c;
+      A.channels = A.channels.map((c) => (by[c.id] ? Object.assign({}, c, { nx: by[c.id] }) : c));
+      A.nx = { rt: B.rt, lib: B.lib, ln: B.ln, sp: B.sp, key: B.key, gh: B.gh };
+      A.nw = tv.nx.w;
+      A.nxn = B.channels.length;
     }
-    return { rt: rt, lib: lib, ln: ln, sp: sp, channels: channels };
+    return A;
   }
 
   // The airing on the air at an instant (the airings of a day tile it, so there is always one).
@@ -567,9 +602,10 @@ function showInfo(s) {
 const WIN = { m: 180, d: 480, e: 180, p: 180, l: 180, o: 240 };
 
 // One channel's plan from its shows. recs: [{ i, rt, eps, movie, kids, late, score }] (i = the show's place in the full list).
-// Returns the channel as stored in tv.json. Pure and deterministic: ties break on the show's place.
+// Returns the channel as stored in tv.json. Pure and deterministic: ties break on the show's name (sl, its slug; B 25 Oct 2026: a show
+// added elsewhere in the list must not reorder a pool), then its place.
 function planChannel(meta, recs, rt) {
-  const byScore = (a, b) => b.score - a.score || a.i - b.i;
+  const byScore = (a, b) => b.score - a.score || (a.sl && b.sl && a.sl !== b.sl ? (a.sl < b.sl ? -1 : 1) : a.i - b.i);
   const all = recs.slice().sort(byScore);
   const N = all.length;
   const avg = Math.max(15, Math.min(90, all.reduce((n, r) => n + r.rt, 0) / Math.max(1, N)));
@@ -695,10 +731,20 @@ function trimLib(lib, used) {
 // THE HQ CHECK (B: every check also runs by hand in HQ, with no AI): the doctor's tv:schedule light. For one day from at, on every
 // channel: the airings tile, every block starts on the hour or the half hour, no episode runs past its airing, and every show the plan
 // names (tv.sl, what the page's self-pruning reads) is in the build; plus how much of the breaks the cards still cover (yellow when a
-// channel shows more than 20 minutes of cards an hour: more originals or shorts would help there).
+// channel shows more than 20 minutes of cards an hour: more originals or shorts would help there). A FROZEN week (tv.fz, or tv.nx.fz)
+// may name shows that left the site since its Monday: their slots hold as breaks (adopt), which is by design, so they are counted in
+// the message, not as a fault. A fresh plan that names a missing show is a fault (red), as before.
 function checkTv(tv, slugs, at) {
-  const T = tvgridFactory(), A = T.adopt(tv, slugs), lib = { rt: A.rt, lib: A.lib, ln: A.ln, sp: A.sp };
-  const missing = (tv.sl || []).filter((x, i) => x && slugs[i] !== x).length, dropped = tv.channels.length - A.channels.length;
+  const T = tvgridFactory(), A = T.adopt(tv, slugs), lib = A;
+  const have = new Set(slugs), plans = [tv].concat(tv.nx && tv.nx.channels ? [tv.nx] : []);
+  const miss = new Set();
+  let held = 0, dropped = 0;
+  for (const p of plans) {
+    const gone = (p.sl || []).filter((x) => x && !have.has(x));
+    const left = p === tv ? A.channels.length : A.nxn || 0;
+    if (p.fz) held = Math.max(held, gone.length); else { for (const x of gone) miss.add(x); dropped = Math.max(dropped, p.channels.length - left); }
+  }
+  const missing = miss.size;
   let bad = 0, cards = 0, worst = 0, worstName = '';
   for (const ch of A.channels) {
     const air = T.airingsBetween(ch, lib, at, at + 86400000);
@@ -716,7 +762,8 @@ function checkTv(tv, slugs, at) {
   const fix = 'Re-run node scripts/site.js. If this stays red, node --test tests/tvgrid.test.js shows where the schedule breaks.';
   if (missing || dropped) return { level: 'red', detail: missing + ' shows the TV plan names are not in the build; ' + dropped + ' channels would be left with no shows', fix };
   if (bad) return { level: 'red', detail: bad + ' airings off the grid, overlapping, or running past their time', fix };
-  const detail = A.channels.length + ' channels fill the day on the 30-minute grid; holding cards ' + avg.toFixed(1) + ' min an hour on average, most ' + worst.toFixed(1) + ' on ' + worstName;
+  const detail = A.channels.length + ' channels fill the day on the 30-minute grid; holding cards ' + avg.toFixed(1) + ' min an hour on average, most ' + worst.toFixed(1) + ' on ' + worstName
+    + (held ? '; ' + held + ' show' + (held === 1 ? '' : 's') + ' left the site since the lineup was frozen, their slots hold as breaks until Monday' : '');
   if (worst > 20) return { level: 'yellow', detail, fix: 'More of your originals (catalog/fillers.json, in HQ) or short episodes on that channel would fill its breaks.' };
   return { level: 'green', detail };
 }

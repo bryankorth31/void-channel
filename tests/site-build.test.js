@@ -29,7 +29,7 @@ let n = 0;
 // A copy of the build with `shows` grids. profile 'tiny' (any size) or the default voidtv profile (refuses under 100 shows).
 function tree({ shows = 12, profile = 'tiny' } = {}) {
   const root = path.join(TMP, 'case' + (++n));
-  for (const f of ['scripts/site.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/profile.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js', 'player/src/core.js', 'player/src/icons.js', 'player/src/player.js', 'player/src/player.css']) write(root, f, fs.readFileSync(path.join(REPO, f), 'utf8'));
+  for (const f of ['scripts/site.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'scripts/lib/profile.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js', 'player/src/core.js', 'player/src/icons.js', 'player/src/player.js', 'player/src/player.css']) write(root, f, fs.readFileSync(path.join(REPO, f), 'utf8'));
   fs.cpSync(path.join(REPO, 'functions'), path.join(root, 'functions'), { recursive: true });
   write(root, 'scripts/show-list.json', JSON.stringify({ types: ['Drama'], shows: [] }));
   if (profile !== 'voidtv') write(root, `profiles/${profile}/profile.json`, JSON.stringify({ siteName: 'Tiny', domain: 'https://tiny.test' }));

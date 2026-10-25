@@ -286,6 +286,15 @@ function main() {
   }
   const { assemble } = require('./lib/app');
   const data = assemble();
+  // The Live TV lineup this build settles (B, 25 Oct 2026: new shows join Live TV once a week): this week's plan stays frozen in
+  // catalog/tv-lineup.json, next week's follows the catalog until its Monday (scripts/lib/tvweek.js). Written and staged here, so it
+  // goes out with this commit and is scanned with the rest. A run with nothing new leaves it be: the stored weeks still hold. --dry writes nothing.
+  const lineupFile = path.join(PROFILE.catalogDir, 'tv-lineup.json');
+  if (DRY) log(`would write ${rel(lineupFile)} if Live TV's lineup changed (this week from ${data.tvLineup.monday}${data.tvLineup.curFrozen ? ', frozen' : ', not frozen yet'})`);
+  else if (require('./lib/tvweek').write(lineupFile, data.tvLineup.store)) {
+    try { git(['add', '--', rel(lineupFile)]); } catch (e) { return refuse(`${rel(lineupFile)} could not be staged (${why(e)})`); }
+    if (!changed.includes(rel(lineupFile))) changed.push(rel(lineupFile));
+  }
   const shows = data.shows.length, eps = data.shows.reduce((n, s) => n + s.eps, 0);
   const before = lastPublished();
   if (before && !ALLOW_SHRINK) {

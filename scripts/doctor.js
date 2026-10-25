@@ -191,6 +191,12 @@ async function main() {
     // Live TV (B, 21 Oct 2026): today on every channel, on the 30-minute grid with full hold (scripts/lib/tvgrid.js, checkTv).
     try { const tvl = require('./lib/tvgrid').checkTv(data.tv, data.shows.map((s) => s.slug), Date.now()); add('tv:schedule', tvl.level, tvl.detail, tvl.fix); }
     catch (e) { add('tv:schedule', 'red', 'the Live TV check could not run: ' + String(e.message).slice(0, 80), 'node --test tests/tvgrid.test.js shows where the schedule breaks.'); }
+    // The weekly lineup (B, 25 Oct 2026: new shows join Live TV once a week; scripts/lib/tvweek.js): is this week's plan frozen in catalog/tv-lineup.json?
+    try {
+      const L = data.tvLineup;
+      if (L.curFrozen) add('tv:lineup', 'green', `this week's lineup (from Monday ${L.monday}) is frozen; next week's (from ${L.nextMonday}) ${L.nextFrozen ? 'is frozen too' : 'follows the catalog until its Monday'}`);
+      else add('tv:lineup', 'yellow', `this week's lineup (from Monday ${L.monday}) is not frozen: no publish has stored it since its Monday, so each build makes it again from the catalog and a publish can move shows`, 'Publish (HQ > Publish, or node scripts/publish.js) with any catalog change: it stores the lineup of this week in catalog/tv-lineup.json (docs/RUNBOOK.md, tv:lineup).');
+    } catch (e) { add('tv:lineup', 'yellow', 'could not read the weekly lineup: ' + String(e.message).slice(0, 80)); }
     // The page itself must carry the guards the audit asked for: a show that fails to load ends in a card, not a spinner
     // (SP-006), the player is kept across episodes (SP-020), a leftover player cannot start after the page is left, and saves of Mine
     // are merged, not overwritten (SP-012).
