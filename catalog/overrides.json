@@ -1,5 +1,5 @@
 {
-  "_readme": "B's edits layer, read by match.js and never written by the builder. Per show slug: excludeItems (Archive identifiers that are the wrong show), aliases (other names an upload may use: abbreviations, short titles), later tvmazeId (name collisions), adult (true puts the show behind the 18+ door with the Late Night shows: gated On Demand, off every open Live TV channel; B, 21 Oct 2026).",
+  "_readme": "B's edits layer, read by match.js and never written by the builder. Per show slug: excludeItems (Archive identifiers that are the wrong show), aliases (other names an upload may use: abbreviations, short titles), later tvmazeId (name collisions), adult (true puts the show behind the 18+ door with the Late Night shows: gated On Demand, off every open Live TV channel; B, 21 Oct 2026). guideOnly (keep the TVmaze grid, never self-list) and noGuess (no sequence guesses from unnamed disc files), B 25 Oct.",
   "look-around-you": {
     "excludeItems": [
       "razzledazzle-molly-in-the-trolley-15th-may-2009"
@@ -503,5 +503,10 @@
   "movie-149667": {
     "adult": true,
     "note": "18+ (B, 21 Oct 2026: gate the racy shows)"
+  },
+  "spongebob-squarepants": {
+    "guideOnly": true,
+    "note": "guideOnly (B, 25 Oct): use the real episode guide (TVmaze 713); the uploads are DVD discs, so a guessed order put Disc 13 as episode 1. noGuess: the discs carry no episode names, so no file is placed by position; a wrong episode is worse than a missing one.",
+    "noGuess": true
   }
 }

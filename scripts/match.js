@@ -387,7 +387,8 @@ function decideGrid(entry, cand, tv, ctx) {
     // them in natural order as consecutive episodes of the season the item title suggests
     // (volume/season N, else 1) at REVIEW confidence. A human confirms with a glance.
     const titleNamesMe = namesTitle(item.title || '', [core, ...aliases], nets); // the upload's TITLE names the show (an identifier does not)
-    if (titleNamesMe && !itemNamesOther && unmatched.length >= 5 && !REACT.test(item.title || '') && !langRisk(item.title)) {
+    // noGuess (overrides.json) turns this off for one show, when its disc rips cannot be trusted in order (SpongeBob, B 25 Oct).
+    if (!ov.noGuess && titleNamesMe && !itemNamesOther && unmatched.length >= 5 && !REACT.test(item.title || '') && !langRisk(item.title)) {
       const m = /\b(?:season|series|volume|vol\.?)\s*(\d{1,2}|one|two|three|four|five|six|seven|eight|nine|ten)\b/i.exec(item.title || '');
       const words = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
       const season = m ? (words[m[1].toLowerCase()] || +m[1]) : 1;
@@ -427,7 +428,9 @@ function decideGrid(entry, cand, tv, ctx) {
   // the grid reaches disk only if it is the one returned.
   const placed = live + review;
   const pool = cand.items.reduce((n, it) => n + it.files.filter((f) => f.band !== 'block' && f.band !== 'odd').length, 0);
-  if (placed * 6 < pool && pool >= 20 && dateRejected < pool / 2) {
+  // guideOnly (overrides.json): keep the TVmaze grid even when few files place, rather than guess an order from the files
+  // (B, 25 Oct: SpongeBob's guessed "episode 1" was Disc 13 of a season 5 DVD, and a visitor gave up on it).
+  if (!ov.guideOnly && placed * 6 < pool && pool >= 20 && dateRejected < pool / 2) {
     const whyNot = (f, item) => rejectionTag({ other: namesOtherShow(f.name, show, aliases) || (!namesShow(f.name) && namesOtherShow(item.title || '', show, aliases)), react: REACT.test(tagText(f.name)) || REACT.test(tagText(item.title || '')), foreign: langRisk(f.name) || langRisk(item.title), notNamed: !namesShow(f.name) && !(namesShow(item.title || '') || idNamesShow(item.id)) });
     const sg = selfGrid(entry, fallbackCand(withoutRejected(cand), tags, { tv, namesTitle: (t) => namesTitle(t, [core, ...aliases], nets), cores: [core, ...aliases], whyNot }), aliases, nets);
     const sgPlaced = sg ? sg.seasons.reduce((n, se) => n + se.episodes.length, 0) : 0;
