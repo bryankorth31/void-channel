@@ -125,7 +125,7 @@ test('a show with no episode guide: a placed file takes the slot B typed, LIVE; 
 const write = (root, rel, text) => { const p = path.join(root, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, text); };
 function siteTree(grids) {
   const root = fs.mkdtempSync(path.join(TMP, 'site-'));
-  for (const f of ['scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/profile.js', 'scripts/lib/hardexclude.js', 'player/tools/rank-sources.js']) write(root, f, fs.readFileSync(path.join(REPO, f), 'utf8'));
+  for (const f of ['scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'scripts/lib/profile.js', 'scripts/lib/hardexclude.js', 'player/tools/rank-sources.js']) write(root, f, fs.readFileSync(path.join(REPO, f), 'utf8'));
   write(root, 'scripts/show-list.json', JSON.stringify({ types: ['Drama'], shows: [] }));
   write(root, 'profiles/hiddenwork/profile.json', JSON.stringify({ siteName: 'Hidden Work', domain: 'https://hidden.test' }));
   for (const g of grids) write(root, `catalog/shows/${g.slug}.json`, JSON.stringify(g, null, 2));
