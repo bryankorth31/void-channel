@@ -58,7 +58,7 @@ function page(opts) {
     go: async (slug) => { log.go.push(slug); state.view = 'show'; state.show = SHOWS.find((s) => s.slug === slug); }, play: (se, e) => log.play.push([se, e]),
     fetch: async () => ({ json: async () => opts.tvJson }),
     history: { replaceState: (x, y, url) => log.replaced.push(url) }, window: { scrollTo: () => { log.scrolled++; } },
-    document: { title: '', querySelector: (sel) => (sel === '.guide' ? (opts.noGuide ? null : guide) : sel === '.osd' ? osd : null) },
+    document: { title: '', body: opts.home ? { dataset: { view: 'home' } } : undefined, querySelector: (sel) => (sel === '.guide' ? (opts.noGuide ? null : guide) : sel === '.osd' ? osd : null) },
     $: (id) => (id === 'vph' && !opts.noHost ? host : null), BASE: '/',
   };
   ctx = vm.createContext(sandbox);
@@ -356,4 +356,22 @@ test('Self-pruning: a channel that lost its morning pool plays at 7 am, and a da
   q.h.TV = [v];
   await q.h.tvPlay(v); await settle();
   assert.equal(q.log.loads.length, 0); assert.ok(q.log.idle <= 2, 'cards started ' + q.log.idle + ' times'); assert.ok(q.h.TVC_NOW, 'the cards are up');
+});
+
+test('Home page Live TV (B, 25 Oct 2026): the player starts muted, channel changes stay on the home page (no address change, no render, the same player)', async () => {
+  const p = page({ home: true, noGuide: true });
+  await p.h.tvPlay(p.TV[0]); await settle();
+  const first = p.getPlayer();
+  assert.equal(first.v.muted, true, 'muted until a tap: browsers allow sound only after one');
+  for (let i = 0; i < 3; i++) { p.h.surf(1); await settle(); }
+  assert.equal(p.log.render, 0);
+  assert.deepEqual(p.log.replaced, [], 'the address stays the home page');
+  assert.equal(p.getPlayer(), first);
+  assert.equal(p.log.mk.length, 1);
+  assert.equal(p.state.chan, 'four');
+});
+
+test('Live TV page: the player is not muted there', async () => {
+  const p = await playing();
+  assert.notEqual(p.getPlayer().v.muted, true);
 });

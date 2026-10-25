@@ -434,6 +434,13 @@ html{-webkit-tap-highlight-color:transparent}
 .tv .swirl .wm .v{color:var(--brand-pink)}.tv .swirl .wm .n{color:var(--brand-blue)}
 @keyframes tvgrow{0%{transform:translate(-50%,-50%) scale(0) rotate(-8deg);opacity:0}8%{opacity:1}30%{transform:translate(-50%,-50%) scale(1.25) rotate(0);opacity:1}36%,78%{transform:translate(-50%,-50%) scale(1.12) rotate(0);opacity:1}92%,100%{transform:translate(-50%,-50%) scale(0) rotate(8deg);opacity:0}}
 .tv .swirl .on{top:78%}
+.home-tv{display:block;margin:0 0 6px}.home-tv .tv{padding:0 20px 4px}.home-tv .loading{min-height:200px}
+.home-tv .hv{position:relative}.home-tv .snd{position:absolute;left:14px;top:14px;z-index:6;display:flex;align-items:center;gap:7px;background:var(--gold);color:#07080c;border:0;border-radius:999px;padding:9px 16px;font:inherit;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 0 18px rgba(242,169,59,.45)}
+.home-tv .hl{color:var(--dim);font-size:13px;margin:8px 2px 0}.home-tv .hl a{color:var(--acc);cursor:pointer}
+.onnow{display:flex;gap:12px;overflow-x:auto;padding:4px 20px 12px;scrollbar-width:none}
+.ontile{flex:0 0 210px;background:var(--panel);border:0;border-radius:8px;overflow:hidden;color:var(--fg);text-align:left;padding:0;cursor:pointer;font:inherit;box-shadow:inset 0 -3px 0 var(--c,transparent)}
+.ontile img,.ontile .p{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--panel2)}.ontile b{display:block;padding:7px 10px 0;font-size:14px}.ontile small{display:block;padding:2px 10px 10px;color:var(--dim);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:700px){.home-tv .tv{padding:0 10px 4px}.home-tv .snd{left:50%;top:50%;transform:translate(-50%,-50%);font-size:18px;padding:14px 24px}.onnow{padding:4px 12px 12px}.ontile{flex-basis:170px}}
 @media (prefers-reduced-motion:reduce){.tv .swirl img,.tv .swirl .wm{animation:none}.tv .swirl .wm{transform:translate(-50%,-50%) scale(1.12);opacity:1}}
 .hist .row{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}.hist .row span{flex:1;cursor:pointer}.hist small{color:var(--dim)}.hist .x{background:none;border:0;color:var(--dim);cursor:pointer;font-size:14px}
 .bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px;align-items:center;position:relative;z-index:6}
@@ -552,9 +559,9 @@ meSync();
 const hidden=(s)=>ME.likes[s.slug]===-1;
 const isAdult=(s)=>!!(s&&(s.adult||s.type==='Late Night'||(s.tags||[]).includes('Late Night')));
 const gated=(s)=>isAdult(s)&&!ME.adult;
-function adultGate(then){const then0=then;then=()=>{state.heroPool=null;state.heroI=0;then0()};const old=$('gate');if(old)old.remove();const g=document.createElement('div');g.id='gate';g.innerHTML='<div class="gatebox"><img src="'+BASE+'assets/brand/ui/doors/latenight.png" alt=""><b>Late Night</b><p>The after-dark shelf: HBO and Showtime documentary series, Cinemax, the Playboy years. Adults only. By entering you confirm you are 18 or older.</p><div class="acts"><button class="btn gold" id="gate-yes">I am 18 or older, enter</button><button class="btn ghost" id="gate-no">Not now</button></div></div>';document.body.appendChild(g);
+function adultGate(then){const then0=then;then=()=>{then0()};const old=$('gate');if(old)old.remove();const g=document.createElement('div');g.id='gate';g.innerHTML='<div class="gatebox"><img src="'+BASE+'assets/brand/ui/doors/latenight.png" alt=""><b>Late Night</b><p>The after-dark shelf: HBO and Showtime documentary series, Cinemax, the Playboy years. Adults only. By entering you confirm you are 18 or older.</p><div class="acts"><button class="btn gold" id="gate-yes">I am 18 or older, enter</button><button class="btn ghost" id="gate-no">Not now</button></div></div>';document.body.appendChild(g);
  $('gate-yes').onclick=()=>{ME.adult=Date.now();saveMe();g.remove();then&&then()};$('gate-no').onclick=()=>{if(!$('main').firstChild||(state.show&&gated(state.show))){state.show=null;go('',true)}g.remove();if(state.show&&gated(state.show))go('')};g.onclick=(e)=>{if(e.target===g)$('gate-no').click()}}
-function leaveAdult(){state.heroPool=null;state.heroI=0;ME.adult=0;saveMe();state.type=state.type==='Late Night'?'':state.type;go('')}
+function leaveAdult(){ME.adult=0;saveMe();state.type=state.type==='Late Night'?'':state.type;go('')}
 const VIS=()=>SHOWS.filter(s=>!hidden(s)&&!gated(s));
 const histShows=()=>Object.entries(ME.history).sort((a,b)=>(b[1].at||0)-(a[1].at||0)).map(([sl])=>BY_SLUG[sl]).filter(s=>s&&!gated(s));
 const listShows=()=>Object.entries(ME.list).sort((a,b)=>b[1]-a[1]).map(([sl])=>BY_SLUG[sl]).filter(s=>s&&!gated(s));
@@ -655,31 +662,31 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   const sig=[state.type,state.tag,state.genre,state.network,state.decade,state.q,state.sort].join('|');if(sig!==state.gridSig){state.gridSig=sig;state.gridN=0}const N=state.gridN||60;
   h+='<div class="grid">'+list.slice(0,N).map(s=>card(s,'grid')).join('')+'</div>'+(list.length>N?'<p class="moreline"><button class="btn" onclick="state.gridN='+(N+60)+';render()">Show '+Math.min(60,list.length-N)+' more of '+list.length+'</button></p>':'');
  } else {
-  // 1. the featured wall: one show at a time, varied and endless, with its description and a way in
-  h+='<section class="hero-home"><div class="bg slides"><img class="s a" alt=""><img class="s b" alt=""></div><div class="shade"></div><button class="harrow l" onclick="heroStep(-1)" aria-label="previous"><i class="ico chevron-left"></i></button><button class="harrow r" onclick="heroStep(1)" aria-label="next"><i class="ico chevron-right"></i></button><div class="copy" id="herocopy"></div><span class="hcount" id="herocount"></span></section>';
-  h+='<div class="support'+(state.supportOpen?' open':'')+'"><img class="cross" src="'+BASE+'assets/brand/cash-cross.png" alt=""><div class="sp"><b>${BRAND} is free and stays free.</b> <span class="l2">Donations fund the real-world work of CASH.</span><div class="more">The shows belong to the Internet Archive; what we add is a better way to find and watch them. That is CASH\\'s work: finding ways for people to have good things that fit a busy life and a budget stretched to the max. No set amount, never required. If that is work worth supporting, give back and be part of it. <a onclick="go(\\'cash\\')">Our work in the community →</a> · <a href="https://cashvalues.org" target="_blank" rel="noopener">cashvalues.org ↗</a></div></div><span class="acts"><a class="btn donate" href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a><a class="btn" href="'+DONATE_MONTHLY+'" target="_blank" rel="noopener">↻ Give monthly</a><button class="btn ghost sm" onclick="state.supportOpen=!state.supportOpen;render()">'+(state.supportOpen?'Less':'More')+'</button></span></div>';
-  h+='<div id="promohome"></div>';
+  // 1. Live TV first (B, 25 Oct 2026: the home page opens on a channel already playing, nothing in the way; the wall of 158 featured shows is gone)
+  h+='<section class="home-tv" id="htv"></section><div id="onnow">'+onNowHtml()+'</div>';
   // 2. yours
   const cont=histShows().slice(0,30);if(cont.length)h+=shelf('Continue watching',cont,'continue');
   const mine=listShows();if(mine.length)h+=shelf('My List',mine,'list');
-  // 3. genres and filters
+  // 3. the first rows: well-known kinds, right under the TV; the rest of the rows follow further down
+  const done=new Set();const put=(kind,name)=>{const key=kind+':'+name;if(done.has(key))return;done.add(key);const rows=list.filter(s=>kind==='tag'?(s.tags||[]).includes(name):s.type===name);const art=rows.filter(s=>s.poster);if(art.length)h+=shelf(name,art,key,rows.length)};
+  for(const t of ['90s Sitcoms','Animated','Adult Swim','Documentary & Geographic'])put('type',t);
+  // 4. the donation box, below the first rows
+  h+='<div class="support'+(state.supportOpen?' open':'')+'"><img class="cross" src="'+BASE+'assets/brand/cash-cross.png" alt=""><div class="sp"><b>${BRAND} is free and stays free.</b> <span class="l2">Donations fund the real-world work of CASH.</span><div class="more">The shows belong to the Internet Archive; what we add is a better way to find and watch them. That is CASH\\'s work: finding ways for people to have good things that fit a busy life and a budget stretched to the max. No set amount, never required. If that is work worth supporting, give back and be part of it. <a onclick="go(\\'cash\\')">Our work in the community →</a> · <a href="https://cashvalues.org" target="_blank" rel="noopener">cashvalues.org ↗</a></div></div><span class="acts"><a class="btn donate" href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a><a class="btn" href="'+DONATE_MONTHLY+'" target="_blank" rel="noopener">↻ Give monthly</a><button class="btn ghost sm" onclick="state.supportOpen=!state.supportOpen;render()">'+(state.supportOpen?'Less':'More')+'</button></span></div>';
+  h+='<div id="promohome"></div>';
+  // 5. genres and filters
   h+='<h2>Find something<small>pick a genre, a network, a row or a collection</small></h2>'+bar;
-  // 4. the rows, in all their splendor
+  // 6. the rows, in all their splendor
   const recent=VIS().filter(s=>s.poster).sort((a,b)=>(b.added||'').localeCompare(a.added||'')).slice(0,30);
   h+=shelf('Recently added',recent,'recent');
   const top=VIS().filter(s=>s.rating&&s.poster).sort((a,b)=>b.rating-a.rating||b.eps-a.eps).slice(0,30);
   h+=shelf('Top rated',top,'top');
-  const done=new Set();const put=(kind,name)=>{const key=kind+':'+name;if(done.has(key))return;done.add(key);const rows=list.filter(s=>kind==='tag'?(s.tags||[]).includes(name):s.type===name);const art=rows.filter(s=>s.poster);if(art.length)h+=shelf(name,art,key,rows.length)};
   for(const [kind,name] of HOME_ORDER)put(kind,name);
   for(const [tag] of counts('tags'))put('tag',tag);
   for(const t of TYPES)put('type',t);
   if(!ME.adult&&SHOWS.some(isAdult))h+='<section class="doorcard"><img src="'+BASE+'assets/brand/ui/doors/latenight.png" alt=""><div><b>Late Night</b><p>The after-dark shelf. Adults only, behind its own door.</p></div><button class="btn gold" onclick="adultGate(()=>{state.type=\\'Late Night\\';render();window.scrollTo(0,0)})">Enter 18+</button></section>';
   else if(ME.adult)h+='<p class="leave">Late Night is open on this browser. <span onclick="leaveAdult()">Close the door</span></p>';
  }
- const oldHero=(!any&&state.heroTimer)?document.querySelector('.hero-home'):null;killPlayer();$('main').innerHTML=h;if(!any){const nh=document.querySelector('.hero-home');if(oldHero&&nh)nh.replaceWith(oldHero);else heroStart()}}
-// The featured pool: the best-rated, the cult favourites (long runs that never got the ratings), and
-// a few from every row and collection, shuffled with the day as the seed so it reads differently
-// tomorrow but the same for everyone today.
+ const oldTv=!any?document.querySelector('.home-tv.htv-on'):null;if(!oldTv)killPlayer();$('main').innerHTML=h;if(!any){const nt=$('htv');if(oldTv&&nt)nt.replaceWith(oldTv);else homeTvStart()}}
 const SKIP_GENRES=new Set(['Kids','TV Movie','News']);
 const SORTS=[['eps','Most episodes'],['rating','Top rated'],['year','Newest'],['old','Oldest'],['added','Recently added'],['az','A to Z']];
 function menuToggle(k,ev){if(ev)ev.stopPropagation();state.menu=state.menu===k?null:k;render()}
@@ -700,26 +707,6 @@ function finder(){const series=VIS().filter(t=>!t.slug.startsWith('movie-'));con
  const pills=(key,list)=>'<span class="pills">'+list.map(([v,c])=>'<span class="chip'+(state[key]===v?' on':'')+'" onclick="state.'+key+'=\\''+esc(v)+'\\';render();window.scrollTo(0,0)">'+esc(v)+(c?'<small>'+c+'</small>':'')+'</span>').join('')+'</span>';
  const genres=tally('genres').filter(([g])=>!SKIP_GENRES.has(g)).slice(0,14);const nets=tally('network').filter(([,c])=>c>=4).slice(0,16);const decs=[['1950s'],['1960s'],['1970s'],['1980s'],['1990s'],['2000s'],['2010s'],['2020s']].map(([d])=>[d,series.filter(t=>decade(t.year)===d).length]).filter(x=>x[1]);
  return '<div class="finder"><div class="frow"><span class="lbl">Genre</span>'+pills('genre',genres)+'</div><div class="frow"><span class="lbl">Network</span>'+pills('network',nets)+'</div><div class="frow"><span class="lbl">Decade</span>'+pills('decade',decs)+'</div></div>'}
-function heroPool(){if(state.heroPool)return state.heroPool;const ok=SHOWS.filter(t=>t.backdrop&&t.overview&&!t.slug.startsWith('movie-')&&!hidden(t)&&!gated(t)&&t.eps>=6&&t.type!=='Classic TV'&&!(parseInt(t.year,10)<1980));
- // no oldies in the showcase (Bryan, 19 Oct 2026): the Classic TV row and shows that started before 1980 stay out of all three decks; they keep their own rows
- // three decks: the well-known (rated and deep), the cult (deep but under-rated), the shelves (two from every row and collection); dealt popular-first, then interleaved
- const QUIET=new Set(['World TV','Anime','Reality & Talk','Late Night','Internet Comedy','Classic TV']);const main=ok.filter(t=>!QUIET.has(t.type));
- const byR=main.filter(t=>t.rating>=7&&t.eps>=10).sort((a,b)=>b.rating-a.rating||b.eps-a.eps);const popular=byR.slice(0,80);const pop=new Set(popular);
- const cult=main.filter(t=>t.eps>=20&&!pop.has(t)).sort((a,b)=>b.eps-a.eps).slice(0,50);const cul=new Set(cult);
- const groups={};for(const t of ok){(groups[t.type]=groups[t.type]||[]).push(t);for(const g of t.tags||[])(groups['#'+g]=groups['#'+g]||[]).push(t)}
- const shelf=[];for(const arr of Object.values(groups))for(const t of arr.sort((a,b)=>(b.rating||0)-(a.rating||0)).slice(0,2))if(!pop.has(t)&&!cul.has(t)&&!shelf.includes(t))shelf.push(t);
- let seed=Math.floor(Date.now()/864e5)*7919+13;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280};const shuf=(a)=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
- const P=shuf(popular.slice()),C=shuf(cult.slice()),S=shuf(shelf);const arr=[];
- // pattern per six: popular, popular, cult, popular, shelf, cult — the known faces carry it, the finds keep it alive
- const pattern=[P,P,C,P,S,C];let k=0;while(P.length||C.length||S.length){const d=pattern[k%6];const t=(d.length?d:(P.length?P:(C.length?C:S))).shift();if(t)arr.push(t);k++}
- state.heroPool=arr;if(state.heroI==null)state.heroI=0;return arr}
-function heroStart(manual){if(state.heroTimer){clearInterval(state.heroTimer);state.heroTimer=null}const pool=heroPool();if(!pool.length)return;heroRender(!manual);if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;state.heroTimer=setInterval(()=>{if(!document.getElementById('herocopy')){clearInterval(state.heroTimer);state.heroTimer=null;return}state.heroI=(state.heroI+1)%pool.length;heroRender(false)},9000)}
-function heroStep(d){const pool=heroPool();if(!pool.length)return;state.heroI=(state.heroI+d+pool.length)%pool.length;heroStart(true)}
-function heroRender(first){const pool=heroPool();const t=pool[state.heroI];const hb=x=>innerWidth<=700?x.backdrop.replace('/w1280/','/w780/'):x.backdrop;const copy=$('herocopy');if(!t||!copy)return;const a=document.querySelector('.hero-home .s.a'),b=document.querySelector('.hero-home .s.b');
- const front=a.classList.contains('on')?a:(b.classList.contains('on')?b:null);const back=front===a?b:a;
- if(first&&!front){a.src=hb(t);a.classList.add('on')}else{back.src=hb(t);back.onload=()=>{back.classList.add('on');if(front)front.classList.remove('on')}}
- const kick=(t.tags&&t.tags[0])||t.type;const ov=t.overview.length>260?t.overview.slice(0,260).replace(/\\s+\\S*$/,'')+'…':t.overview;
- copy.style.opacity=0;if(!first)blip(document.querySelector('.hero-home'));setTimeout(()=>{copy.innerHTML='<p class="tag">${PROFILE.tagline}</p><small class="kicker">'+esc(kick)+(t.network?' · '+esc(t.network):'')+(t.year?' · '+t.year:'')+'</small><h1>'+esc(t.show)+'</h1><p class="ov">'+esc(ov)+'</p><div class="meta">'+[(t.genres||[]).slice(0,3).join(' · '),t.rating?'★ '+t.rating:'',t.eps+' episode'+(t.eps===1?'':'s')].filter(Boolean).join('  ·  ')+'</div><div class="acts"><button class="btn gold" onclick="watch(\\''+t.slug+'\\')"><i class="ico play"></i>Play</button><button class="btn ghost" onclick="go(\\''+t.slug+'\\')">About this show</button><button class="btn ghost" onclick="go(\\'tv\\')"><i class="ico tv"></i>Live TV</button></div>';copy.style.opacity=1;const c=$('herocount');if(c)c.textContent=(state.heroI+1)+' / '+pool.length},first?0:220)}
 async function watch(slug){await go(slug);const s=state.show;if(s&&s.slug===slug&&s.seasons){const r=resume(s);play(r.se,r.e)}}
 let VP=null,TVCUR=null;
 // Bumping the load token first makes a load() that is still waiting for the Archive lookup give up when it wakes, so a viewer
@@ -834,10 +821,10 @@ const clock=(ms)=>new Date(ms).toLocaleTimeString([],{hour:'numeric',minute:'2-d
 // Change channel on the player that is already on the page: same player, same video, same fullscreen, no render(). The page
 // pieces tvPage draws around it (guide, title, the bar under the video) are updated in place; what plays and when is tvPlay's, as always.
 // False when there is no player on the Live TV page to switch (not turned on yet, other page): tune then falls back to render().
-function tuneHere(id){const host=$('vph'),g=document.querySelector('.guide');if(state.view!=='tv'||!TV||!VP||!host||!g||!host.contains(VP.root))return false;
+function tuneHere(id){const host=$('vph'),g=document.querySelector('.guide'),home=viewNow()==='home';if(!tvLive()||!TV||!VP||!host||(!home&&!g)||!host.contains(VP.root))return false;
  const chans=TV.filter(c=>!c.adult||ME.adult),cur=chans.find(c=>c.id===id);if(!cur)return false;const now=chanNow(cur);if(!now)return false;const s=SHOWS[now.a.s];
- gdTune(cur.id);document.title=cur.name+' · '+SITE;osd(cur,now.a,s,null);if(VP.flashChannel)VP.flashChannel(cur.name);tvPlay(cur);return true}
-function tune(id){track('tune',{slug:id});state.chan=id;state.tvOn=true;history.replaceState(null,'',urlFor('tv/'+id));if(!tuneHere(id))render();window.scrollTo(0,0)}
+ if(!home){gdTune(cur.id);document.title=cur.name+' · '+SITE}osd(cur,now.a,s,null);if(VP.flashChannel)VP.flashChannel(cur.name);tvPlay(cur);return true}
+function tune(id){track('tune',{slug:id});state.chan=id;state.tvOn=true;keepChan(id);const home=viewNow()==='home';if(!home)history.replaceState(null,'',urlFor('tv/'+id));if(!tuneHere(id)){if(home){HTV.forced=true;homeTvStart()}else render()}window.scrollTo(0,0)}
 function surf(dir){if(!TV)return;const list=TV.filter(c=>!c.adult||ME.adult);if(!list.length)return;const i=list.findIndex(c=>c.id===state.chan);tune(list[(i+dir+list.length)%list.length].id)}
 function osd(c,a,s,ep){const el=document.querySelector('.osd');if(!el||!s)return;const left=(a.en-Date.now())/1000,nx=TVG.nextAiring(c,TVLIB,a),ns=nx&&SHOWS[nx.s];
  el.innerHTML='<b>'+esc(c.name)+'</b><span>'+esc(s.show)+' · '+code(a)+(ep?' · '+esc(ep.name):'')+'</span><span class="g">'+(left>0?mmss(left)+' left · ':'')+'next: '+(nx?clock(nx.st)+' '+esc(ns?ns.show:''):'')+'</span><span class="acts"><button class="btn chbtn" onclick="surf(-1)" aria-label="Previous channel"><i class="ico chevron-left"></i>CH</button><button class="btn chbtn" onclick="surf(1)" aria-label="Next channel">CH<i class="ico chevron-right"></i></button><button class="btn" onclick="go(\\''+s.slug+'\\')">Open show</button></span>'}
@@ -856,7 +843,7 @@ function tvAt(c,t){const n=chanNow(c,t);if(!n)return null;const a=n.a,end=a.st+a
 // Another episode of the same show for an airing whose own episode is dead or missing: one long enough to be playing at off and short
 // enough to end inside the airing, that has not failed in the last hour. Null when the show has none.
 function tvSwap(c,a,s,off){const lim=(a.en-a.st)/6e4;for(const se of s.seasons||[])for(const e of se.episodes)if(!(se.season===a.se&&e.n===a.n)&&e.min&&e.min*60>off+60&&e.min<=lim&&!tvDead(c,{s:a.s,se:se.season,n:e.n}))return{se:se.season,ep:e};return null}
-function tvMk(host){return mkPlayer(host,{volumeKeys:false,onNext:()=>tvNext(),onPrev:()=>surf(-1),channelButtons:{onNext:()=>surf(1),onPrev:()=>surf(-1)},onEnded:()=>{const T0=TVCUR;if(!T0||!T0.x||T0.x.k==='card')return;tvMark(T0.c,T0.a,T0.x.k==='ep'?'ep':T0.x.u);tvPlay(T0.c,true)},onEvent:(e,p)=>{vpEvent(e,p);if(e.type==='started')state.tvFails=0;if(e.type==='failed')tvFailed(p)}})}
+function tvMk(host){return homeMute(mkPlayer(host,{volumeKeys:false,onNext:()=>tvNext(),onPrev:()=>surf(-1),channelButtons:{onNext:()=>surf(1),onPrev:()=>surf(-1)},onEnded:()=>{const T0=TVCUR;if(!T0||!T0.x||T0.x.k==='card')return;tvMark(T0.c,T0.a,T0.x.k==='ep'?'ep':T0.x.u);tvPlay(T0.c,true)},onEvent:(e,p)=>{vpEvent(e,p);if(e.type==='started')state.tvFails=0;if(e.type==='failed')tvFailed(p)}}))}
 // A file that fails: remembered for an hour, and after 1.5 s the channel plays whatever the clock says now (the same show's other
 // episode, the break, the cards). Never stops: the cards keep the channel alive while nothing will play.
 function tvFailed(p){const T0=TVCUR;if(!T0||!T0.cur)return;state.tvFails=(state.tvFails||0)+1;TV_DEAD[tvKey(T0.c,T0.cur)]=Date.now();if(T0.x.k!=='ep')tvMark(T0.c,T0.a,T0.x.u);
@@ -871,10 +858,10 @@ async function tvPlay(c,fromEnd,tries){const host=$('vph');if(!host)return;const
  if(x.k==='card'||tries>24){tvCards(c,x.k==='card'?x:{k:'card',a:x.a,until:Math.min(x.a.en,Date.now()+6e4)},token);return}
  tvCardsOff();
  const a=x.a,u=x.k==='ep'?'ep':x.u,piece=x.k==='ep'?a:x.it,s=SHOWS[piece.s];
- const skip=()=>{tvMark(c,a,u);if(token===TV_TOKEN&&state.view==='tv')tvPlay(c,fromEnd,tries+1)};
+ const skip=()=>{tvMark(c,a,u);if(token===TV_TOKEN&&tvLive())tvPlay(c,fromEnd,tries+1)};
  if(!s)return skip();
  try{await ensure(s)}catch(e){if(token===TV_TOKEN)skip();return}
- if(token!==TV_TOKEN||state.view!=='tv')return;
+ if(token!==TV_TOKEN||!tvLive())return;
  let off=x.off;if(x.k==='ep'&&fromEnd&&off<180)off=0;
  let se=(s.seasons||[]).find(z=>z.season===piece.se),ep=se&&se.episodes.find(z=>z.n===piece.n);
  if(x.k==='ep'&&(!ep||tvDead(c,a))){const w=tvSwap(c,a,s,off);se=w&&s.seasons.find(z=>z.season===w.se);ep=w&&w.ep}
@@ -910,7 +897,7 @@ function tvCardsOff(){if(TVC_TIMER){clearInterval(TVC_TIMER);TVC_TIMER=0}TVC_NOW
 function tvCards(c,x,token){const host=$('vph');if(!host)return;tvCardsOff();TVCUR={c,a:x.a,x};
  if(!VP||!host.contains(VP.root))VP=tvMk(host);if(!VP)return;if(VP.idle)VP.idle();osd(c,x.a,SHOWS[x.a.s],null);
  let el=null,shown=-1;
- const tick=()=>{if(token!==TV_TOKEN||state.view!=='tv'){if(token===TV_TOKEN)tvCardsOff();else clearInterval(iv);return}
+ const tick=()=>{if(token!==TV_TOKEN||!tvLive()){if(token===TV_TOKEN)tvCardsOff();else clearInterval(iv);return}
   const t=Date.now();if(t>=x.until){tvCardsOff();tvPlay(c,true);return}
   const d=tvCard(c,x.a,x.until,t);TVC_NOW=d;
   if(!el&&VP.root&&VP.root.querySelector&&document.createElement){el=document.createElement('div');el.setAttribute('role','status');VP.root.insertBefore(el,VP.root.querySelector('.vpx-chname')||VP.root.querySelector('.vpx-card'))}
@@ -999,12 +986,37 @@ function gdPick(i){GD.ci=i;GD.card=null;const el=$('gdCard');if(el){el.hidden=tr
 function gdWatchList(){const c=GD.list[GD.ci];if(c)tune(c.id)}
 function gdTune(id){GD.cur=id;const i=GD.list.findIndex(c=>c.id===id);if(i<0)return;GD.ci=i;if(GD.mode==='list'){const b=$('gdBody');if(b)b.innerHTML=gdListHtml();return}GD.fo={ci:i,t:Date.now()};const S=GD.s,z=GD.z;if(S){const top=i*z.row,Ht=Math.max(z.row,(S.clientHeight||500)-z.head);if(top<S.scrollTop||top+z.row>S.scrollTop+Ht)S.scrollTop=Math.max(0,top-z.row)}gdDraw()}
 function gdTick(){if(!$('gdBody')||state.view!=='tv'){clearInterval(GD.timer);GD.timer=0;return}if(GD.mode==='grid')gdDraw();else if(!GD.card)gdBuild(false)}
+// LIVE TV ON THE HOME PAGE (B, 25 Oct 2026: the home page opens on a channel already playing). The same player and schedule as /tv,
+// started muted (browsers allow sound only after a tap) on the channel this browser watched last, else The Void; never an 18+ channel.
+// Data saver or reduced motion shows the still swirl and Turn on instead. browse() keeps the section across redraws (it swaps it back).
+const HTV={forced:false};
+const viewNow=()=>(document.body&&document.body.dataset&&document.body.dataset.view)||(state.view==='tv'?'tv':'');const tvLive=()=>{const v=viewNow();return v==='tv'||v==='home'};
+const lastChan=()=>{try{return localStorage.getItem('voidtv:chan')||''}catch(_){return ''}};
+const keepChan=(id)=>{try{localStorage.setItem('voidtv:chan',id)}catch(_){}};
+const swirlHtml=(on)=>'<div class="swirl"><img src="'+BASE+'assets/brand/screen/swirl-gy'+(innerWidth>700?'':'-m')+'.webp" alt="" aria-hidden="true"><div class="wm" aria-hidden="true"><span class="v">void</span><span class="n">tv.net</span></div><button class="on" onclick="'+on+'"><i class="ico play"></i>Turn on</button></div>';
+function onNowHtml(){if(!TV)return '';const now=Date.now();const tiles=TV.filter(c=>!c.adult).slice(0,40).map(c=>{const n=chanNow(c,now),s=n&&SHOWS[n.a.s];if(!s)return '';const art=s.backdrop||s.poster;return '<button class="ontile" onclick="tune(\\''+c.id+'\\')" style="--c:'+(CGM[chanCg(c)]||CGM.other||{}).c+'">'+(art?'<img loading="lazy" src="'+esc(art)+'" alt="">':'<span class="p"></span>')+'<b>'+esc(c.name)+'</b><small>'+esc(s.show)+'</small></button>'}).join('');return tiles?'<h2>On now<small>tap a channel to watch it</small></h2><div class="onnow">'+tiles+'</div>':''}
+async function homeTvStart(){const el=$('htv');if(!el)return;
+ if(!TV){el.innerHTML='<div class="loading"><span class="signal"></span><span>Searching the Void for a signal…</span></div>';try{await ensureTV()}catch(_){el.innerHTML='';return}}
+ if(viewNow()!=='home'||$('htv')!==el)return;
+ const chans=TV.filter(c=>!c.adult);const cur=chans.find(c=>c.id===lastChan())||chans.find(c=>c.id==='void')||chans[0];if(!cur){el.innerHTML='';return}
+ state.chan=cur.id;const on=$('onnow');if(on&&!on.innerHTML)on.innerHTML=onNowHtml();
+ const still=!HTV.forced&&((navigator.connection&&navigator.connection.saveData)||matchMedia('(prefers-reduced-motion: reduce)').matches);
+ killPlayer();el.className='home-tv htv-on';
+ el.innerHTML='<div class="tv"><div class="screen">'+(still?swirlHtml('HTV.forced=true;homeTvStart()'):'<div class="hv"><div class="vpx-host" id="vph"></div>'+(HTV.forced?'':'<button class="snd" onclick="homeSound()">Tap for sound</button>')+'</div>')+'<div class="osd"></div></div><p class="hl">Live TV, the same for everyone, always on. <a onclick="go(\\'tv\\')">Full guide</a></p></div>';
+ swipeSurf(el.querySelector('.screen'));const now=chanNow(cur);if(now)osd(cur,now.a,SHOWS[now.a.s],null);
+ if(!still){state.tvOn=true;track('act',{slug:cur.id,x:HTV.forced?'home-tv-on':'home-tv'});tvPlay(cur)}}
+// The home player starts muted; the first tap on Tap for sound (or the player's own volume) turns the sound on and the button goes.
+function homeMute(p){if(!p||!p.v||viewNow()!=='home'||HTV.forced)return p;p.v.muted=true;if(p.v.addEventListener)p.v.addEventListener('volumechange',()=>{if(!p.v.muted){HTV.forced=true;const b=document.querySelector('.home-tv .snd');if(b)b.remove()}});return p}
+function homeSound(){HTV.forced=true;if(VP&&VP.v){VP.v.muted=false;if(!VP.v.volume)VP.v.volume=.6;const r=VP.v.play&&VP.v.play();if(r&&r.catch)r.catch(()=>{})}const b=document.querySelector('.home-tv .snd');if(b)b.remove();track('act',{slug:state.chan,x:'home-sound'})}
+// A sideways swipe on the picture changes channel (phones); a short tap still reaches the player.
+function swipeSurf(el){if(!el||el._sw)return;el._sw=1;let x0=0,y0=0,t0=0;el.addEventListener('touchstart',(e)=>{const t=e.changedTouches[0];x0=t.clientX;y0=t.clientY;t0=Date.now()},{passive:true});
+ el.addEventListener('touchend',(e)=>{const t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;if(Date.now()-t0<700&&Math.abs(dx)>60&&Math.abs(dx)>2*Math.abs(dy))surf(dx<0?1:-1)},{passive:true})}
 async function tvPage(){const main=$('main');if(!TV){killPlayer();main.innerHTML='<div class="loading"><span class="signal"></span><span>Searching the Void for a signal…</span></div>';try{await ensureTV()}catch(_){killPlayer();main.innerHTML='<div class="loading">The channels did not load.</div>';return}if(state.view!=='tv')return}
  const chans=TV.filter(c=>!c.adult||ME.adult);const cur=chans.find(c=>c.id===state.chan)||chans[0];if(!cur){killPlayer();main.innerHTML='<div class="loading">No channels are on the air right now.</div>';return}state.chan=cur.id;const now=chanNow(cur);const s=SHOWS[now.a.s];
- let h='<div class="tv"><div class="pagehead"><img class="door" src="'+BASE+'assets/brand/ui/doors/live.png" alt=""><div><h1>Live TV</h1><div class="g">'+chans.length+' channels, always on, the same for everyone</div></div></div><div class="screen">'+(state.tvOn?'<div class="vpx-host" id="vph"></div>':'<div class="swirl"><img src="'+BASE+'assets/brand/screen/swirl-gy'+(innerWidth>700?'':'-m')+'.webp" alt="" aria-hidden="true"><div class="wm" aria-hidden="true"><span class="v">void</span><span class="n">tv.net</span></div><button class="on" onclick="state.tvOn=true;render()"><i class="ico play"></i>Turn on</button></div>')+'<div class="osd"></div></div>';
+ let h='<div class="tv"><div class="pagehead"><img class="door" src="'+BASE+'assets/brand/ui/doors/live.png" alt=""><div><h1>Live TV</h1><div class="g">'+chans.length+' channels, always on, the same for everyone</div></div></div><div class="screen">'+(state.tvOn?'<div class="vpx-host" id="vph"></div>':swirlHtml('state.tvOn=true;render()'))+'<div class="osd"></div></div>';
  h+='<p class="hint">Always on, same for everyone: the clock decides what is playing. ↑ ↓ to surf. G jumps to the guide: arrows move, Enter opens a show. Nothing here is recorded in Mine unless you open the show.</p>';
  h+='<div class="guide">'+gdShell(cur)+'</div></div>';
- killPlayer();main.innerHTML=h;gdInit(cur.id);document.title=cur.name+' · '+SITE;osd(cur,now.a,s,null);if(state.tvOn)tvPlay(cur)}
+ killPlayer();main.innerHTML=h;swipeSurf(document.querySelector('.tv .screen'));keepChan(cur.id);gdInit(cur.id);document.title=cur.name+' · '+SITE;osd(cur,now.a,s,null);if(state.tvOn)tvPlay(cur)}
 function cashPage(){killPlayer();$('main').innerHTML='<div class="about"><button class="back" onclick="go(\\'\\')"><i class="ico back"></i> Browse</button>'
  +'<div class="pagehead" style="padding-left:0"><img class="door" src="'+BASE+'assets/brand/cash-cross.png" alt="" style="object-fit:contain;padding:10px"><div><h1>CASH</h1><div class="g">the Church of American Strength &amp; Hope · a 501(c)(3)</div></div></div>'
  +'<h2>What CASH does</h2><p>CASH works on ways for people to have good things that fit a busy life and a budget stretched to the max. Some of that work is in person, in the community. Some of it is projects like this one: ${BRAND} is free, stays free, carries no ads and asks for no account, and it exists because the work of building it was worth doing.</p>'
