@@ -141,8 +141,18 @@ function liveCountsSync(url, spawn) {
     const run = spawn || require('child_process').spawnSync;
     const r = run(process.execPath, ['-e', "fetch(process.argv[1],{signal:AbortSignal.timeout(10000)}).then((r)=>r.ok?r.text():'').then((t)=>process.stdout.write(t),()=>{})", url], { encoding: 'utf8', timeout: 15000, windowsHide: true });
     const c = countsFromVersion(r && r.stdout);
-    return c ? { ...c, source: url } : null;
+    return c ? { ...c, at: parseVersion(r.stdout).at, source: url } : null;
   } catch (e) { return null; }
+}
+// The counts a publish measures a shrink against (B, 25 Oct 2026). stored: the last publish's record ({ shows, episodes, at }); live: what
+// voidtv.net's version.txt reports, with the time that build went out (liveCountsSync). A gate pushed as code (the movie gate, the guess gate)
+// shrinks the site on purpose without a publish, so the record went stale and the next publish would have been refused. When the live build
+// went out after the record, its counts are what visitors have, so they are the baseline. No live counts, or an older live build: the record.
+function shrinkBaseline(stored, live) {
+  const ok = live && Number.isFinite(live.shows) && Number.isFinite(live.episodes);
+  const lt = ok ? Date.parse(live.at) : NaN, st = stored ? Date.parse(stored.at) : NaN;
+  if (ok && (!stored || (Number.isFinite(lt) && (!Number.isFinite(st) || lt > st)))) return { shows: live.shows, episodes: live.episodes, at: live.at, source: live.source || 'the live version.txt' };
+  return stored;
 }
 // Show grids that exist but do not parse. assemble() drops such a show without a word.
 function unreadableGrids(showsDir) {
@@ -262,6 +272,6 @@ async function liveLights({ base, versionTextBody, doFetch, remote, nowMs }) {
 module.exports = {
   LIMITS, SECURITY_HEADERS, CSP,
   gateMode, gateDecision, isGated, routesFor, headersFile, missingSecurityHeaders, versionText, parseVersion,
-  checkOutput, shrinkVerdict, readLastCounts, countsFromVersion, liveCountsSync, unreadableGrids,
+  checkOutput, shrinkVerdict, shrinkBaseline, readLastCounts, countsFromVersion, liveCountsSync, unreadableGrids,
   filesLight, gateLight, wwwLight, headersLight, liveVersionLight, shrinkLight, backupLight, liveLights,
 };

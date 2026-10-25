@@ -303,7 +303,10 @@ function main() {
     if (!changed.includes(rel(lineupFile))) changed.push(rel(lineupFile));
   }
   const shows = data.shows.length, eps = data.shows.reduce((n, s) => n + s.eps, 0);
-  const before = lastPublished();
+  // The baseline: the last publish, unless voidtv.net serves a build that went out after it (scripts/lib/siteguards.js shrinkBaseline; a
+  // gate pushed as code shrinks the site on purpose without a publish). PUBLISH_LIVE_URL='' turns the live read off (the tests use it).
+  const SG = require('./lib/siteguards'), LIVE = process.env.PUBLISH_LIVE_URL != null ? process.env.PUBLISH_LIVE_URL : String(PROFILE.domain || '').replace(/\/$/, '') + '/version.txt';
+  const before = SG.shrinkBaseline(lastPublished(), SG.liveCountsSync(LIVE));
   if (before && !ALLOW_SHRINK) {
     const fell = (a, b) => a > 0 && (a - b) / a > 0.1;
     if (fell(before.shows, shows) || fell(before.episodes, eps)) return refuse(`shrink: shows ${before.shows} -> ${shows}, episodes ${before.episodes} -> ${eps}, more than 10% down (run with --allow-shrink if this is meant)`);

@@ -6,7 +6,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { spawnSync, execFileSync } = require('child_process');
+const { spawn, spawnSync, execFileSync } = require('child_process');
 
 const PUBLISH = path.join(__dirname, '..', 'scripts', 'publish.js');
 const TMP = fs.mkdtempSync(path.join(os.tmpdir(), 'publish-test-'));
@@ -63,7 +63,7 @@ function lineup(work) {
 }
 
 function publish(work, args = [], env = {}) {
-  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30,30,30', PUBLISH_PUSH_TIMEOUT_MS: '30000', VOID_TV_NOW: TV_NOW, ...env };
+  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30,30,30', PUBLISH_PUSH_TIMEOUT_MS: '30000', VOID_TV_NOW: TV_NOW, PUBLISH_LIVE_URL: '', ...env };
   delete e.VOID_PROFILE;
   const r = spawnSync(process.execPath, [PUBLISH, '--root', work, ...args], { encoding: 'utf8', env: e });
   return { status: r.status, out: (r.stdout || '') + (r.stderr || '') };
@@ -314,12 +314,12 @@ test('works the way this PC is set up: core.autocrlf=true and CRLF files in the 
 test('no flags: the scheduled run, started from inside its own tree, finds the same paths without --root', () => {
   const c = fresh();
   const root = path.join(__dirname, '..');
-  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
+  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
   git(c.work, 'add', 'scripts', 'player');
   git(c.work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (the tooling for this test)'); // a Catalog commit so nothing is "other"
   git(c.work, 'push', '-q', 'origin', 'master');
   putShow(c.work, 10);
-  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30', PUBLISH_PUSH_TIMEOUT_MS: '30000' };
+  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30', PUBLISH_PUSH_TIMEOUT_MS: '30000', PUBLISH_LIVE_URL: '' };
   delete e.VOID_PROFILE;
   const r = spawnSync(process.execPath, [path.join(c.work, 'scripts', 'publish.js')], { cwd: TMP, encoding: 'utf8', env: e });
   assert.strictEqual(r.status, 0, r.stdout + r.stderr);
@@ -332,12 +332,12 @@ test('no flags: the scheduled run, started from inside its own tree, finds the s
 const STUB_APP = "const fs = require('fs');\nconst real = require('./app-real');\nmodule.exports = { assemble() { const d = real.assemble(); if (process.env.TEST_DRIFT_FILE) fs.writeFileSync(process.env.TEST_DRIFT_FILE, process.env.TEST_DRIFT_TEXT); return d; } };\n";
 function copyTools(work, stub) {
   const root = path.join(__dirname, '..');
-  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'player/tools/rank-sources.js']) write(work, f, fs.readFileSync(path.join(root, f), 'utf8'));
+  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js']) write(work, f, fs.readFileSync(path.join(root, f), 'utf8'));
   const app = fs.readFileSync(path.join(root, 'scripts/lib/app.js'), 'utf8');
   if (stub) { write(work, 'scripts/lib/app-real.js', app); write(work, 'scripts/lib/app.js', STUB_APP); } else write(work, 'scripts/lib/app.js', app);
 }
 function runCopy(work, args = [], env = {}) {
-  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30,30,30', PUBLISH_PUSH_TIMEOUT_MS: '30000', ...env };
+  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30,30,30', PUBLISH_PUSH_TIMEOUT_MS: '30000', PUBLISH_LIVE_URL: '', ...env };
   delete e.VOID_PROFILE;
   const r = spawnSync(process.execPath, [path.join(work, 'scripts', 'publish.js'), ...args], { cwd: TMP, encoding: 'utf8', env: e });
   return { status: r.status, out: (r.stdout || '') + (r.stderr || '') };
@@ -561,4 +561,36 @@ test('Live TV lineup: a publish with nothing else new still stores a week that i
   const again = publish(c.work);                          // stored: the next run with nothing new is quiet again
   assert.strictEqual(again.status, 0, again.out);
   assert.match(outcome(c.work), /nothing new$/);
+});
+
+// A stand-in for the live site's version.txt, in its own process (publish runs synchronously and asks for it from a child process).
+function fakeLive(body) {
+  return new Promise((resolve, reject) => {
+    const code = "const s=require('http').createServer((q,r)=>r.end(process.argv[1]));s.listen(0,'127.0.0.1',()=>console.log(s.address().port))";
+    const child = spawn(process.execPath, ['-e', code, body], { stdio: ['ignore', 'pipe', 'ignore'] });
+    child.stdout.once('data', (d) => resolve({ url: 'http://127.0.0.1:' + String(d).trim() + '/version.txt', stop: () => child.kill() }));
+    child.once('error', reject);
+  });
+}
+
+test('shrink: a gate pushed as code (the live site already serves fewer shows, built after the last publish) is not a shrink; an older live build does not count', async () => {
+  const c = fresh(), state = (at) => write(c.work, 'catalog/cache/publish-state.json', JSON.stringify({ shows: 100, episodes: 500, at, commit: 'abc' }));
+  state('2026-10-25T07:00:00Z');                        // the record from before the gates: 100 shows
+  putShow(c.work, 10);                                   // a real catalog change: 11 shows now, 10 of them live
+  const newer = await fakeLive('abc 2026-10-25T22:00:00Z\ngate=off files=1 largest=1 shows=10 episodes=50\n');
+  try {
+    const r = publish(c.work, [], { PUBLISH_LIVE_URL: newer.url });
+    assert.strictEqual(r.status, 0, r.out);
+    assert.match(outcome(c.work), /pushed /);
+  } finally { newer.stop(); }
+  state('2026-10-25T23:00:00Z');                        // a record newer than the live build: the record is the baseline again
+  putShow(c.work, 11);
+  const older = await fakeLive('abc 2026-10-25T22:00:00Z\ngate=off files=1 largest=1 shows=10 episodes=50\n');
+  try {
+    const r = publish(c.work, [], { PUBLISH_LIVE_URL: older.url });
+    assert.strictEqual(r.status, 1, r.out);
+    assert.match(outcome(c.work), /refused: shrink: shows 100 -> 12/);
+  } finally { older.stop(); }
+  const r = publish(c.work);                             // no live site to ask: the record decides, as before
+  assert.strictEqual(r.status, 1, r.out);
 });

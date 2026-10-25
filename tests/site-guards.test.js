@@ -121,7 +121,7 @@ test('last counts on a Cloudflare build come from the live version.txt; every ki
   assert.equal(G.countsFromVersion(''), null);
   const url = 'https://voidtv.net/version.txt';
   const spawn = (stdout) => (cmd, args, opts) => { assert.equal(args[args.length - 1], url); assert.ok(opts.timeout <= 20000, 'a time limit'); return { stdout }; };
-  assert.deepEqual(G.liveCountsSync(url, spawn('abc t\ngate=off files=2 largest=1 shows=100 episodes=900\n')), { shows: 100, episodes: 900, source: url });
+  assert.deepEqual(G.liveCountsSync(url, spawn('abc t\ngate=off files=2 largest=1 shows=100 episodes=900\n')), { shows: 100, episodes: 900, at: 't', source: url }); // at: when that build went out (shrinkBaseline)
   assert.equal(G.liveCountsSync(url, spawn('')), null);                              // fetch failed or answered an error
   assert.equal(G.liveCountsSync(url, spawn('<html>error</html>')), null);
   assert.equal(G.liveCountsSync(url, () => { throw new Error('no node'); }), null);
@@ -332,4 +332,15 @@ test('no em dash in the files this batch wrote', () => {
     const text = fs.readFileSync(path.join(__dirname, '..', f), 'utf8');
     assert.ok(!text.includes(dash), f + ' has an em dash');
   }
+});
+
+test('shrinkBaseline: a live build newer than the last publish is the baseline (a gate pushed as code); an older one, or none, leaves the record', () => {
+  const rec = { shows: 6066, episodes: 74459, at: '2026-10-25T07:44:10Z' };
+  const live = (at) => ({ shows: 4036, episodes: 68698, at, source: 'https://voidtv.net/version.txt' });
+  assert.deepEqual(G.shrinkBaseline(rec, live('2026-10-25T22:11:16Z')), { shows: 4036, episodes: 68698, at: '2026-10-25T22:11:16Z', source: 'https://voidtv.net/version.txt' });
+  assert.equal(G.shrinkBaseline(rec, live('2026-10-25T06:00:00Z')), rec, 'an older live build');
+  assert.equal(G.shrinkBaseline(rec, live('')), rec, 'a live build with no time');
+  assert.equal(G.shrinkBaseline(rec, null), rec, 'no live counts');
+  assert.equal(G.shrinkBaseline(null, null), null);
+  assert.equal(G.shrinkBaseline(null, live('2026-10-25T22:11:16Z')).shows, 4036, 'no record yet: what is live');
 });
