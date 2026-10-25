@@ -548,3 +548,17 @@ test('Live TV lineup: a frozen week is left alone by a catalog change; removing 
   assert.strictEqual(Object.keys(JSON.parse(fs.readFileSync(file, 'utf8')).weeks).length, 2);
   assert.strictEqual(git(c.work, 'status', '--porcelain', '--', 'catalog'), '');
 });
+
+test('Live TV lineup: a publish with nothing else new still stores a week that is not frozen yet, and pushes it', () => {
+  const c = fresh(), file = path.join(c.work, 'catalog', 'tv-lineup.json');
+  fs.rmSync(file);                                        // the state the site was in: no stored lineup at all
+  git(c.work, 'add', '-A'); git(c.work, 'commit', '-q', '-m', 'Catalog: no lineup yet'); git(c.work, 'push', '-q', 'origin', 'master');
+  const r = publish(c.work);
+  assert.strictEqual(r.status, 0, r.out);
+  assert.match(outcome(c.work), /pushed /);
+  assert.ok(git(c.work, 'show', '--name-only', '--format=', 'HEAD').split('\n').includes('catalog/tv-lineup.json'));
+  assert.strictEqual(Object.keys(JSON.parse(fs.readFileSync(file, 'utf8')).weeks).length, 2);
+  const again = publish(c.work);                          // stored: the next run with nothing new is quiet again
+  assert.strictEqual(again.status, 0, again.out);
+  assert.match(outcome(c.work), /nothing new$/);
+});

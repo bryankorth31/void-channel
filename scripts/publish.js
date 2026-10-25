@@ -269,6 +269,14 @@ function main() {
   try { ahead = getAhead(); } catch (e) { log('FAILED: cannot compare with origin/master: ' + why(e)); return 1; }
   const waiting = ahead.some((c) => c.own); // own commits from an earlier run whose push did not go through
 
+  // A Live TV week that is not frozen yet (the file is new, or no catalog change has gone out since that week began) is stored now, even
+  // when nothing else is new, so the lineup never waits on the next hunt to freeze (B, 25 Oct 2026). Reading the file is cheap; the site
+  // is only built for it when a week is missing. The lineup step after the build below keeps what this wrote.
+  const lineupFile = path.join(PROFILE.catalogDir, 'tv-lineup.json');
+  { const TW = require('./lib/tvweek'), L = TW.read(lineupFile), w = TW.weeksAt(+process.env.VOID_TV_NOW || Date.now());
+    const missing = !L || !L.weeks || !L.weeks[w.lo] || (w.hi > w.lo && !L.weeks[w.lo + 1]);
+    if (missing && DRY) log(`would store the Live TV lineup in ${rel(lineupFile)}: a week is not frozen yet`);
+    else if (missing) TW.write(lineupFile, require('./lib/app').assemble().tvLineup.store); }
   try { git(['add', '--', ...SPEC]); } catch (e) { unstage(); log('FAILED: ' + why(e)); return 1; }
   const left = handWrittenDocs();
   if (left) log(`left alone: ${left} hand-written doc${left === 1 ? '' : 's'} under ${DOCS}/ (changed or new, not in the publish list, so not committed)`);
@@ -289,7 +297,6 @@ function main() {
   // The Live TV lineup this build settles (B, 25 Oct 2026: new shows join Live TV once a week): this week's plan stays frozen in
   // catalog/tv-lineup.json, next week's follows the catalog until its Monday (scripts/lib/tvweek.js). Written and staged here, so it
   // goes out with this commit and is scanned with the rest. A run with nothing new leaves it be: the stored weeks still hold. --dry writes nothing.
-  const lineupFile = path.join(PROFILE.catalogDir, 'tv-lineup.json');
   if (DRY) log(`would write ${rel(lineupFile)} if Live TV's lineup changed (this week from ${data.tvLineup.monday}${data.tvLineup.curFrozen ? ', frozen' : ', not frozen yet'})`);
   else if (require('./lib/tvweek').write(lineupFile, data.tvLineup.store)) {
     try { git(['add', '--', rel(lineupFile)]); } catch (e) { return refuse(`${rel(lineupFile)} could not be staged (${why(e)})`); }
