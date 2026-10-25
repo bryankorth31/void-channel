@@ -1,0 +1,89 @@
+{
+  "show": "Obi-Wan Kenobi",
+  "slug": "obi-wan-kenobi",
+  "type": "Streaming Era",
+  "network": "Disney+",
+  "matchedAt": "2026-10-25T01:19:54.440Z",
+  "addedAt": "2026-10-25T01:19:54.440Z",
+  "tvmaze": {
+    "id": 52260,
+    "name": "Obi-Wan Kenobi",
+    "runtime": 45,
+    "premiered": "2022-05-27",
+    "network": "Disney+"
+  },
+  "coverage": {
+    "total": 6,
+    "live": 0,
+    "review": 1,
+    "missing": 5,
+    "pct": 17
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Part I",
+          "airdate": "2022-05-27",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Part II",
+          "airdate": "2022-05-27",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Part II\" (0.95)",
+            "item": "rabr-s-05-e-002b-obi-wan-kenobi-part-ii",
+            "itemTitle": "RABR S 05 E 002b Obi Wan Kenobi Part II",
+            "file": "RABR S05E002b - Obi-Wan Kenobi - Part II.mp4",
+            "name": "RABR S05E002b - Obi-Wan Kenobi - Part II",
+            "url": "https://archive.org/download/rabr-s-05-e-002b-obi-wan-kenobi-part-ii/RABR%20S05E002b%20-%20Obi-Wan%20Kenobi%20-%20Part%20II.mp4",
+            "seconds": 3101,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 5966
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Part III",
+          "airdate": "2022-06-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Part IV",
+          "airdate": "2022-06-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Part V",
+          "airdate": "2022-06-15",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Part VI",
+          "airdate": "2022-06-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
