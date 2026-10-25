@@ -126,6 +126,21 @@ function movieShips(m, OV) {
   return m.state === 'LIVE' || movieApproved(m, OV);
 }
 
+// THE COLOR CODE (B, 25 Oct 2026: shows, channels and guide blocks color coded, easy to understand). catalog/colors.json names the
+// groups and their colors. A show takes its shelf's group; a show on a mixed shelf (British and Beyond, World TV and the like) takes
+// the first group in genreOrder whose genres it has; a TV movie or special is movies; anything behind the 18+ door is late; else other.
+const COLORS_FALLBACK = { groups: [], genreOrder: [], other: { key: 'other', name: 'Other', color: '#8a8fa3' } };
+function colorOf(s, C) {
+  if (!s) return C.other.key;
+  const late = C.groups.find((g) => g.adult);
+  if (late && (s.adult || s.type === 'Late Night' || (s.tags || []).includes('Late Night'))) return late.key;
+  const byType = C.groups.find((g) => g.types.includes(s.type));
+  if (byType) return byType.key;
+  const gs = s.genres || [];
+  for (const k of C.genreOrder) { const g = C.groups.find((x) => x.key === k); if (g && g.genres.some((x) => gs.includes(x))) return g.key; }
+  return C.other.key;
+}
+
 // Sequence guesses (B, 25 Oct 2026: "a wrong episode is worse than a missing one"). scripts/match.js places the Nth unnamed file of a
 // disc rip as episode N ("sequence guess: file 3 of 38 in ..."), and most of the ones that can be checked are wrong (79% of those whose
 // file name carries its own number disagree). Such an episode does not ship, on show pages or Live TV. When a file that matched by
@@ -229,16 +244,19 @@ function assemble() {
   // B, 21 Oct 2026: a show or TV movie B marks 18+ in his edits layer (catalog/overrides.json, adult: true; HQ keeps the field) goes
   // behind the door with the Late Night shows: gated On Demand, in the index as adult, off every open channel, never a filler.
   for (const s of shows) if (OV[s.slug] && OV[s.slug].adult) s.adult = true;
+  const COLORS = readJson(path.join(PROFILE.catalogDir, 'colors.json'), COLORS_FALLBACK);
+  for (const s of shows) s.cg = colorOf(s, COLORS);
+  const colors = COLORS.groups.concat([COLORS.other]).map((g) => ({ k: g.key, n: g.name, c: g.color, a: g.adult ? 1 : undefined }));
   // Live TV, one lineup a week (B, 25 Oct 2026): this week's plan from catalog/tv-lineup.json once stored, next week's from today's
   // catalog until its Monday begins (scripts/lib/tvweek.js). tvLineup carries what the publish writes back and the doctor shows.
   const TW = require('./tvweek');
   const tvLineup = TW.lineup(buildTv(shows, types), TW.read(path.join(PROFILE.catalogDir, 'tv-lineup.json')), +process.env.VOID_TV_NOW || Date.now()); // VOID_TV_NOW: tests pin the clock
   const tv = tvLineup.tv;
-  return { shows, people, links, types, bios, channels: tv.channels, tv, tvLineup, homeOrder };
+  return { shows, people, links, types, bios, channels: tv.channels, tv, tvLineup, homeOrder, colors };
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
-const indexEntry = (s) => ({ show: s.show, slug: s.slug, type: s.type, people: (s.cast || []).slice(0, 8).map((c) => c.name).join(', ') || undefined, adult: (s.type === 'Late Night' || (s.tags || []).includes('Late Night') || s.adult) ? 1 : undefined, network: s.network, year: s.year, runtime: s.runtime, tags: s.tags, poster: s.poster, backdrop: s.backdrop, overview: s.overview && s.overview.length > 380 ? s.overview.slice(0, 380).replace(/\s+\S*$/, '') + '…' : s.overview, genres: s.genres, rating: s.rating, matchedAt: s.matchedAt && s.matchedAt.slice(0, 10), added: ((s.addedAt || s.matchedAt) || '').slice(0, 10) || undefined, eps: s.eps, seasonCount: s.seasons.length });
+const indexEntry = (s) => ({ show: s.show, slug: s.slug, type: s.type, people: (s.cast || []).slice(0, 8).map((c) => c.name).join(', ') || undefined, adult: (s.type === 'Late Night' || (s.tags || []).includes('Late Night') || s.adult) ? 1 : undefined, network: s.network, year: s.year, runtime: s.runtime, tags: s.tags, poster: s.poster, backdrop: s.backdrop, overview: s.overview && s.overview.length > 380 ? s.overview.slice(0, 380).replace(/\s+\S*$/, '') + '…' : s.overview, genres: s.genres, rating: s.rating, matchedAt: s.matchedAt && s.matchedAt.slice(0, 10), added: ((s.addedAt || s.matchedAt) || '').slice(0, 10) || undefined, eps: s.eps, seasonCount: s.seasons.length, cg: s.cg });
 const showFile = (s, data) => {
   const links = (data && data.links && data.links[s.slug]) || {};
   const ids = new Set([...s.cast, ...s.crew].map((c) => c.id));
@@ -295,7 +313,12 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 .gd-cc{position:absolute;left:0;right:0;height:var(--row);padding:7px 10px;border-bottom:1px solid var(--line);box-sizing:border-box;overflow:hidden;cursor:pointer;background:var(--panel)}.gd-cc b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.gd-cc small{display:block;color:var(--dim);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.gd-cc:hover{background:var(--panel2)}.gd-cc.cur{background:var(--panel2);box-shadow:inset 4px 0 0 var(--acc)}.gd-cc.cur b{color:var(--acc)}
 .gd-rows{position:relative;flex:none;background-image:linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:calc(var(--ppm) * 30px) 100%}
 .gd-row{position:absolute;left:0;right:0;border-bottom:1px solid var(--line)}
-.gb{position:absolute;top:3px;bottom:4px;padding:5px 8px;overflow:hidden;background:var(--panel2);border:1px solid #2a3150;border-radius:6px;box-sizing:border-box;cursor:pointer}.gb b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.gb small{display:block;color:var(--dim);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.gb:hover{border-color:var(--acc)}.gb.gpast{opacity:.45}.gb.gnow{border-color:var(--acc);background:#13263a}.gb.ghit{border-color:var(--gold);background:#2a2412}.gd:focus .gb.gfoc{outline:3px solid #fff;outline-offset:-3px;z-index:2}
+.gb{position:absolute;top:3px;bottom:4px;padding:5px 8px;overflow:hidden;background:var(--panel2);border:1px solid #2a3150;border-radius:6px;box-sizing:border-box;cursor:pointer}
+.gb{box-shadow:inset 4px 0 0 var(--c,transparent);background:color-mix(in srgb,var(--c,#161926) 14%,var(--panel2))}
+.gb.gdim,.gd-lr.gdim{opacity:.15}
+.gd-lr{box-shadow:inset 4px 0 0 var(--c,transparent)}
+.cgd{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px;flex:none}
+.card .t{box-shadow:inset 0 3px 0 var(--c,transparent)}.gb b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.gb small{display:block;color:var(--dim);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.gb:hover{border-color:var(--acc)}.gb.gpast{opacity:.45}.gb.gnow{border-color:var(--acc);background:#13263a}.gb.ghit{border-color:var(--gold);background:#2a2412}.gd:focus .gb.gfoc{outline:3px solid #fff;outline-offset:-3px;z-index:2}
 .gd-now{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:#ff4d4d;z-index:2;pointer-events:none}
 .gd-note{margin:0;padding:8px 12px;font-size:12px}.gd-empty{padding:18px;color:var(--dim)}
 .gd-lh{display:flex;gap:8px;padding:10px 12px}.gd-lh select{flex:1;min-width:0;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px}
@@ -592,7 +615,7 @@ function sel(key,label,opts){return '<select onchange="state.'+key+'=this.value;
 function meta(s){return [s.network,s.year,s.genres.join(' · '),s.rating?'★ '+s.rating:'',s.eps+' episode'+(s.eps===1?'':'s'),s.runtime?s.runtime+' min':''].filter(Boolean).join('  ·  ')}
 function hue(str){let h=0;for(const c of String(str))h=(h*31+c.charCodeAt(0))%360;return h}
 function genPoster(s){const words=s.show.replace(/^(the|a|an) /i,'').split(/\\s+/);const ini=words.slice(0,2).map(w=>w[0]||'').join('').toUpperCase();return '<div class="p gen" style="--h:'+hue(s.network||s.show)+'"><b>'+esc(ini)+'</b><span>'+esc(s.show)+'</span><small>'+esc([s.network,s.year].filter(Boolean).join(' · '))+'</small></div>'}
-function card(s,ctx){const total=s.eps;const open=state.open===s.slug;return '<div class="card'+(open?' open':'')+'" data-slug="'+s.slug+'" tabindex="0" onclick="go(\\''+s.slug+'\\')" onkeydown="if(event.key===\\'Enter\\')go(\\''+s.slug+'\\')">'
+function card(s,ctx){const total=s.eps;const open=state.open===s.slug;return '<div class="card'+(open?' open':'')+'" style="--c:'+cgc(s)+'" data-slug="'+s.slug+'" tabindex="0" onclick="go(\\''+s.slug+'\\')" onkeydown="if(event.key===\\'Enter\\')go(\\''+s.slug+'\\')">'
  +'<button class="more" title="Details" onclick="event.stopPropagation();toggle(\\''+s.slug+'\\',\\''+ctx+'\\')">'+(open?'<i class="ico arrow-up sm"></i>':'<i class="ico chevron-down sm"></i>')+'</button>'
  +(s.poster?'<div class="p"><img loading="lazy" src="'+s.poster+'" alt=""></div>':genPoster(s))+'<div class="t"><b>'+esc(s.show)+'</b><small>'+esc(s.network||'')+(s.year?' · '+s.year:'')+' · '+total+' ep'+(total===1?'':'s')+(s.rating?' · ★ '+s.rating:'')+'</small></div>'
  +(ctx==='grid'?'<div class="indetail"><p>'+esc(s.overview||'No description yet.')+'</p><p class="g">'+esc(meta(s))+'</p></div>':'')+'</div>'}
@@ -894,6 +917,14 @@ async function tvNow(){const T0=TVCUR;if(!T0)return;const nx=TVG.nextAiring(T0.c
 // THE GUIDE: a TV guide grid for the whole schedule. Channels down the left, time across the top, one block per airing as wide as it is long, a line for the clock, a week of time, filters, a card for each block. Everything comes from the same TVG calls as playback (chanNow, airingsBetween), so the guide and what plays cannot disagree. Only the rows and the stretch of time in view are in the page. Under 700 px it is one channel at a time as a list.
 const GD={f:{kind:'all',q:'',now:false},cur:null,s:null,list:[],t0:0,t1:0,fo:null,card:null,mode:'grid',ci:0,day:0,win:null,z:null,timer:0,low:null,raf:0};
 const GD_KINDS=[['all','All'],['row','Rows and genres'],['collection','Collections'],['network','Networks'],['movies','Movies']];
+// The color code (B, 25 Oct 2026; CG from catalog/colors.json): each show's kind as a color on guide blocks, channels and cards; a channel takes
+// the kind most of its shows are; the legend over the guide shows only one kind at a time (tap it again for all).
+const CGM={};for(const g of CG)CGM[g.k]=g;
+const cgc=(s)=>(CGM[s&&s.cg]||CGM.other||{c:'#8a8fa3'}).c;
+function chanCg(c){if(c._cg)return c._cg;const n={};for(const k in c.p||{})for(const i of c.p[k]){const s=SHOWS[i];if(s&&s.cg)n[s.cg]=(n[s.cg]||0)+1}let best='other',m=0;for(const k in n)if(n[k]>m){m=n[k];best=k}return c._cg=best}
+function gdLegendHtml(){return CG.filter(g=>!g.a||ME.adult).map(g=>'<button class="gd-b'+(GD.f.cg===g.k?' sel':'')+'" data-g="'+g.k+'" aria-pressed="'+(GD.f.cg===g.k)+'" onclick="gdCg(this.dataset.g)"><i class="cgd" style="background:'+g.c+'"></i>'+esc(g.n)+'</button>').join('')}
+function gdCg(k){GD.f.cg=GD.f.cg===k?null:k;gdBuild(false)}
+const gdDim=(s)=>!!GD.f.cg&&!!s&&s.cg!==GD.f.cg;
 const gdSize=()=>innerWidth>=1900?{ch:240,row:84,head:64,ppm:7}:innerWidth>=1100?{ch:176,row:60,head:48,ppm:5}:{ch:136,row:56,head:44,ppm:4};
 const gdName=(i)=>{if(!GD.low)GD.low=SHOWS.map(s=>String(s.show).toLowerCase());return GD.low[i]||''};
 const gdDay=(ms)=>new Date(ms).toLocaleDateString([],{weekday:'short',month:'short',day:'numeric'});
@@ -901,23 +932,23 @@ const gdWt=(S,z)=>Math.max(200,(S.clientWidth||900)-z.ch);
 function gdChans(){return TVG.filterChannels(TV,GD.f,{adult:!!ME.adult,count:SHOWS.length,name:gdName,lib:TVLIB,at:Date.now()})}
 function gdKindsHtml(){return GD_KINDS.map(k=>'<button class="gd-b'+(GD.f.kind===k[0]?' sel':'')+'" data-k="'+k[0]+'" onclick="gdKind(this.dataset.k)">'+k[1]+'</button>').join('')}
 function gdJumpsHtml(){const now=Date.now();let h='<button class="gd-b" onclick="gdJumpTo(0)">Now</button><button class="gd-b" onclick="gdJumpTo(1)">Tonight 8 pm</button><button class="gd-b" onclick="gdJumpTo(2)">Tomorrow</button>';for(let d=0;d<8;d++)h+='<button class="gd-b day'+(GD.mode==='list'&&GD.day===d?' sel':'')+'" data-d="'+d+'" onclick="gdJumpTo(10+(+this.dataset.d))">'+(d===0?'Today':esc(gdDay(TVG.localAt(now,d,1200))))+'</button>';return h}
-function gdTools(){return '<div class="gd-tools"><div class="gd-r" id="gdKinds">'+gdKindsHtml()+'</div><div class="gd-r"><input id="gdQ" type="search" placeholder="Find a channel or a show" aria-label="Find a channel or a show" value="'+esc(GD.f.q)+'" oninput="gdQuery(this.value)"><button class="gd-b'+(GD.f.now?' sel':'')+'" id="gdNow" onclick="gdOnNow()">On now</button></div><div class="gd-r" id="gdJumps">'+gdJumpsHtml()+'</div></div>'}
+function gdTools(){return '<div class="gd-tools"><div class="gd-r" id="gdKinds">'+gdKindsHtml()+'</div><div class="gd-r gd-lg" id="gdLegend" role="group" aria-label="Kinds of show: tap one to show only that kind">'+gdLegendHtml()+'</div><div class="gd-r"><input id="gdQ" type="search" placeholder="Find a channel or a show" aria-label="Find a channel or a show" value="'+esc(GD.f.q)+'" oninput="gdQuery(this.value)"><button class="gd-b'+(GD.f.now?' sel':'')+'" id="gdNow" onclick="gdOnNow()">On now</button></div><div class="gd-r" id="gdJumps">'+gdJumpsHtml()+'</div></div>'}
 function gdShell(cur){GD.cur=cur.id;return '<div class="gd" id="gd" tabindex="0" role="application" aria-label="TV guide. Arrow keys move, Enter opens a show, Escape closes it." onkeydown="gdKey(event)">'+gdTools()+'<div class="gd-card" id="gdCard" hidden></div><div id="gdBody"></div><p class="gd-note g">Times are your local time. What is in a block is what plays on that channel at that time.</p></div>'}
 function gdInit(id){GD.s=null;GD.low=null;GD.cur=id;const now=Date.now();GD.t0=TVG.localAt(now,0,0);GD.t1=TVG.localAt(now,8,0);GD.card=null;gdBuild(true);if(GD.timer)clearInterval(GD.timer);GD.timer=setInterval(gdTick,30000)}
 function gdBuild(first){const body=$('gdBody');if(!body)return;GD.z=gdSize();GD.mode=innerWidth<700?'list':'grid';GD.list=gdChans();const L=GD.list,z=GD.z,now=Date.now();let ci=L.findIndex(c=>c.id===GD.cur);if(ci<0)ci=Math.min(GD.ci||0,Math.max(0,L.length-1));GD.ci=ci;GD.fo=L.length?{ci,t:Math.max(GD.t0,Math.min(GD.t1-1,now))}:null;
  const kx=GD.s&&!first?GD.s.scrollLeft:null,ky=GD.s&&!first?GD.s.scrollTop:null;GD.s=null;GD.win=null;
- const jk=$('gdKinds');if(jk)jk.innerHTML=gdKindsHtml();const jj=$('gdJumps');if(jj)jj.innerHTML=gdJumpsHtml();const nb=$('gdNow');if(nb)nb.className='gd-b'+(GD.f.now?' sel':'');
+ const jk=$('gdKinds');if(jk)jk.innerHTML=gdKindsHtml();const jl=$('gdLegend');if(jl)jl.innerHTML=gdLegendHtml();const jj=$('gdJumps');if(jj)jj.innerHTML=gdJumpsHtml();const nb=$('gdNow');if(nb)nb.className='gd-b'+(GD.f.now?' sel':'');
  if(!L.length){body.innerHTML='<p class="gd-empty">No channel matches that. Clear the filters to see them all.</p>';return}
  if(GD.mode==='list'){body.innerHTML=gdListHtml();return}
  const W=Math.round(TVG.xOf(GD.t1,GD.t0,z.ppm)),H=L.length*z.row;
  body.innerHTML='<div class="gd-scroll" id="gdS" onscroll="gdScroll()" style="--chw:'+z.ch+'px;--row:'+z.row+'px;--head:'+z.head+'px;--ppm:'+z.ppm+';max-height:'+(z.head+z.row*8)+'px"><div class="gd-head" style="width:'+(z.ch+W)+'px"><div class="gd-corner" id="gdCorner"></div><div class="gd-ruler" id="gdRuler" style="width:'+W+'px"></div></div><div class="gd-main" style="width:'+(z.ch+W)+'px;height:'+H+'px"><div class="gd-chans" id="gdChans" style="height:'+H+'px"></div><div class="gd-rows" id="gdRows" onclick="gdClick(event)" style="width:'+W+'px;height:'+H+'px"></div></div></div>';
  const S=GD.s=$('gdS');if(S){S.scrollLeft=kx!=null?kx:Math.max(0,TVG.xOf(now,GD.t0,z.ppm)-gdWt(S,z)*0.15);S.scrollTop=ky!=null?ky:Math.max(0,(ci-1)*z.row)}
  gdDraw()}
-function gdChanCell(c,i,now){const n=TVG.chanNow(c,TVLIB,now),s=n&&SHOWS[n.a.s];return '<div class="gd-cc'+(c.id===GD.cur?' cur':'')+'" style="top:'+(i*GD.z.row)+'px" data-c="'+i+'" onclick="gdWatchRow(this)"><b>'+esc(c.name)+'</b><small>'+esc(s?s.show:'')+'</small></div>'}
+function gdChanCell(c,i,now){const n=TVG.chanNow(c,TVLIB,now),s=n&&SHOWS[n.a.s];return '<div class="gd-cc'+(c.id===GD.cur?' cur':'')+'" style="top:'+(i*GD.z.row)+'px" data-c="'+i+'" onclick="gdWatchRow(this)"><b><i class="cgd" style="background:'+(CGM[chanCg(c)]||CGM.other||{}).c+'"></i>'+esc(c.name)+'</b><small>'+esc(s?s.show:'')+'</small></div>'}
 // One box per block: a show's episodes packed into one half hour of TVG's 30-minute grid share it, from g0 to g1.
 const gdG=(a)=>[a.g0!=null?a.g0:a.st,a.g1!=null?a.g1:a.en];
 const gdEps=(c,a)=>{const g=gdG(a),n=TVG.airingsBetween(c,TVLIB,g[0],g[1]).length;return code(a)+(n>1?' · '+n+' episodes':'')};
-function gdBlocks(c,ci,tA,tB,now){const z=GD.z,fo=GD.fo;let h='',drawn=-1;for(const a of TVG.airingsBetween(c,TVLIB,tA,tB)){const s=SHOWS[a.s],g=gdG(a);if(!s||g[0]===drawn)continue;drawn=g[0];const b=TVG.blockBox(a,GD.t0,z.ppm),on=g[0]<=now&&now<g[1],foc=fo&&fo.ci===ci&&fo.t>=g[0]&&fo.t<g[1];h+='<div class="gb'+(g[1]<=now?' gpast':'')+(on?' gnow':'')+(TVG.blockHit(a,GD.f.q,gdName)?' ghit':'')+(foc?' gfoc':'')+'" style="left:'+b.left+'px;width:'+b.width+'px" data-c="'+ci+'" data-t="'+g[0]+'" title="'+esc(s.show+' · '+gdEps(c,a)+' · '+clock(g[0])+' to '+clock(g[1]))+'"><b>'+esc(s.show)+'</b><small>'+code(a)+' · '+clock(g[0])+'</small></div>'}return h}
+function gdBlocks(c,ci,tA,tB,now){const z=GD.z,fo=GD.fo;let h='',drawn=-1;for(const a of TVG.airingsBetween(c,TVLIB,tA,tB)){const s=SHOWS[a.s],g=gdG(a);if(!s||g[0]===drawn)continue;drawn=g[0];const b=TVG.blockBox(a,GD.t0,z.ppm),on=g[0]<=now&&now<g[1],foc=fo&&fo.ci===ci&&fo.t>=g[0]&&fo.t<g[1];h+='<div class="gb'+(g[1]<=now?' gpast':'')+(on?' gnow':'')+(TVG.blockHit(a,GD.f.q,gdName)?' ghit':'')+(foc?' gfoc':'')+(gdDim(s)?' gdim':'')+'" style="left:'+b.left+'px;width:'+b.width+'px;--c:'+cgc(s)+'" data-c="'+ci+'" data-t="'+g[0]+'" title="'+esc(s.show+' · '+gdEps(c,a)+' · '+clock(g[0])+' to '+clock(g[1]))+'"><b>'+esc(s.show)+'</b><small>'+code(a)+' · '+clock(g[0])+'</small></div>'}return h}
 function gdTicks(tA,tB){const z=GD.z;return TVG.halfHours(tA,tB).map(k=>{const lab=k.mid?'<b>'+esc(gdDay(k.t))+'</b>':k.m===0?new Date(k.t).toLocaleTimeString([],{hour:'numeric'}):':30';return '<div class="gd-tk'+(k.mid?' mid':k.m===0?' hr':'')+'" style="left:'+Math.round(TVG.xOf(k.t,GD.t0,z.ppm))+'px">'+lab+'</div>'}).join('')}
 function gdDraw(){const S=GD.s;if(!S||GD.mode!=='grid')return;const z=GD.z,L=GD.list,now=Date.now(),Wt=gdWt(S,z),x0=S.scrollLeft,y0=S.scrollTop;
  const tA=Math.max(GD.t0,TVG.tOf(x0-Wt,GD.t0,z.ppm)),tB=Math.min(GD.t1,TVG.tOf(x0+2*Wt,GD.t0,z.ppm)),r=TVG.rowSpan(y0,Math.max(z.row*2,(S.clientHeight||500)-z.head),z.row,L.length,3);
@@ -952,7 +983,7 @@ function gdQuery(v){GD.f.q=v;gdBuild(false)}
 function gdOnNow(){GD.f.now=!GD.f.now;gdBuild(false);if(GD.f.now)gdJumpTo(0)}
 function gdListHtml(){const L=GD.list,now=Date.now();GD.ci=Math.max(0,Math.min(GD.ci,L.length-1));const c=L[GD.ci],d0=GD.day===0?now:TVG.localAt(now,GD.day,0);
  let h='<div class="gd-lh"><select aria-label="Channel" onchange="gdPick(+this.value)">'+L.map((x,i)=>'<option value="'+i+'"'+(i===GD.ci?' selected':'')+'>'+esc(x.name)+'</option>').join('')+'</select><button class="btn" onclick="gdWatchList()">Watch</button></div><div class="gd-ll">';
- let drawn=-1;for(const a of TVG.airingsBetween(c,TVLIB,d0,TVG.localAt(now,GD.day+1,0))){const s=SHOWS[a.s],g=gdG(a);if(!s||g[0]===drawn)continue;drawn=g[0];const on=g[0]<=now&&now<g[1];h+='<div class="gd-lr'+(g[1]<=now?' gpast':'')+(on?' gnow':'')+(TVG.blockHit(a,GD.f.q,gdName)?' ghit':'')+'" data-c="'+GD.ci+'" data-t="'+g[0]+'" onclick="gdOpen(+this.dataset.c,+this.dataset.t)"><span class="gt">'+clock(g[0])+'</span><span><b>'+esc(s.show)+'</b><small>'+gdEps(c,a)+' · '+Math.round((g[1]-g[0])/60000)+' min'+(on?' · on now':'')+'</small></span></div>'}
+ let drawn=-1;for(const a of TVG.airingsBetween(c,TVLIB,d0,TVG.localAt(now,GD.day+1,0))){const s=SHOWS[a.s],g=gdG(a);if(!s||g[0]===drawn)continue;drawn=g[0];const on=g[0]<=now&&now<g[1];h+='<div class="gd-lr'+(g[1]<=now?' gpast':'')+(on?' gnow':'')+(TVG.blockHit(a,GD.f.q,gdName)?' ghit':'')+(gdDim(s)?' gdim':'')+'" style="--c:'+cgc(s)+'" data-c="'+GD.ci+'" data-t="'+g[0]+'" onclick="gdOpen(+this.dataset.c,+this.dataset.t)"><span class="gt">'+clock(g[0])+'</span><span><b>'+esc(s.show)+'</b><small>'+gdEps(c,a)+' · '+Math.round((g[1]-g[0])/60000)+' min'+(on?' · on now':'')+'</small></span></div>'}
  return h+'</div>'}
 function gdPick(i){GD.ci=i;GD.card=null;const el=$('gdCard');if(el){el.hidden=true;el.innerHTML=''}const b=$('gdBody');if(b)b.innerHTML=gdListHtml()}
 function gdWatchList(){const c=GD.list[GD.ci];if(c)tune(c.id)}
@@ -1065,12 +1096,12 @@ go(slugFromUrl(),true);
 `;
 
 function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) {
-  const { shows, people, links, types, bios = {}, tv = { channels: [], rt: [], lib: [] }, homeOrder = [] } = data;
+  const { shows, people, links, types, bios = {}, tv = { channels: [], rt: [], lib: [] }, homeOrder = [], colors = [] } = data;
   // Split mode keeps the browse index in one shared, cacheable file (data/index.js) so the hundreds
   // of per-show share pages stay tiny; embed mode inlines everything for the single-file preview.
   const inline = mode === 'embed'
-    ? `const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let TV=null;let TVLIB=null;const TVJ=${JSON.stringify(tv)};let GRAPH_LOADED=true;`
-    : `const PEOPLE={};const LINKS={};const BIO={};let TV=null;let TVLIB=null;let GRAPH_LOADED=false;`;
+    ? `const CG=${JSON.stringify(colors)};const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let TV=null;let TVLIB=null;const TVJ=${JSON.stringify(tv)};let GRAPH_LOADED=true;`
+    : `const CG=${JSON.stringify(colors)};const PEOPLE={};const LINKS={};const BIO={};let TV=null;let TVLIB=null;let GRAPH_LOADED=false;`;
   const indexScript = `<script src="${base}assets/player/voidplayer.js?v=${PLAYER_V}"></script>` + (mode === 'embed' ? '' : `<script src="${base}data/index.js"></script>`);
   const hx = (v) => String(v == null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const title = hx(meta.title ? `${meta.title} · ${SITE_NAME}` : SITE_NAME);
@@ -1101,4 +1132,4 @@ ${JS}
 </script></body></html>`;
 }
 
-module.exports = { assemble, page, indexEntry, showFile, channelLists, SITE_NAME, BRAND, movieShips, movieApproved, epNoGuess };
+module.exports = { assemble, page, indexEntry, showFile, channelLists, SITE_NAME, BRAND, movieShips, movieApproved, epNoGuess, colorOf };

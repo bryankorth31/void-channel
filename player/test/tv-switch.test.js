@@ -52,7 +52,7 @@ function page(opts) {
   const state = Object.assign({ view: 'tv', chan: 'one', tvOn: true, tvFails: 0 }, opts.state);
   const unref = (f) => (fn, ms) => { const t = f(fn, ms); if (t && t.unref) t.unref(); return t; }; // the cards' timers must not keep the test run alive
   const sandbox = {
-    setTimeout, setInterval: unref(setInterval), clearInterval, clearTimeout, state, SHOWS, ME: { adult: false }, SITE: 'voidtv.net', Date: FDate, Math, Map, WeakMap, Object, Array, mkPlayer, vpEvent() {}, filesFor: () => [{ url: 'u' }], esc: (s) => String(s == null ? '' : s),
+    setTimeout, setInterval: unref(setInterval), clearInterval, clearTimeout, state, SHOWS, CG: [], ME: { adult: false }, SITE: 'voidtv.net', Date: FDate, Math, Map, WeakMap, Object, Array, mkPlayer, vpEvent() {}, filesFor: () => [{ url: 'u' }], esc: (s) => String(s == null ? '' : s),
     ensure: async (s) => { if (opts.missing && s.slug === opts.missing) throw new Error('the show file is gone (404)'); },
     track: (k, d) => log.tracked.push([k, d && d.slug]), urlFor: (s) => '/' + s, render: () => { log.render++; },
     go: async (slug) => { log.go.push(slug); state.view = 'show'; state.show = SHOWS.find((s) => s.slug === slug); }, play: (se, e) => log.play.push([se, e]),

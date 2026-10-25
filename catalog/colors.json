@@ -1,0 +1,15 @@
+{
+  "_readme": "The color code (B, 25 Oct 2026): one color per kind of show, on guide blocks, channels and show cards, with a legend in the guide. groups: in the order the legend shows them. types: the shelves whose shows take that color. genres: a show on a mixed shelf (British and Beyond, World TV, Classic TV, Streaming Era) takes the first group in genreOrder whose genres it has. adult: shown in the legend only behind the 18+ door. A show with no match is other. Change a color, a name or a shelf here; the next build uses it (scripts/lib/app.js colorOf; node --test tests/colors.test.js checks the file).",
+  "groups": [
+    { "key": "comedy", "name": "Comedy", "color": "#ffd23f", "types": ["90s Sitcoms", "2000s and Later Sitcoms", "Sketch and Comedy", "Internet Comedy"], "genres": ["Comedy", "Family"] },
+    { "key": "drama", "name": "Drama", "color": "#ff6b6b", "types": ["Drama"], "genres": ["Crime", "Mystery", "Drama", "Soap", "Western", "War & Politics", "Action & Adventure"] },
+    { "key": "animation", "name": "Animation", "color": "#ff9f1c", "types": ["Animated", "Anime", "Adult Swim"], "genres": ["Animation", "Kids"] },
+    { "key": "scifi", "name": "Sci-fi and horror", "color": "#b78cff", "types": ["Sci-Fi, Fantasy and Horror"], "genres": ["Sci-Fi & Fantasy"] },
+    { "key": "doc", "name": "Documentary", "color": "#4ade80", "types": ["Documentary & Geographic"], "genres": ["Documentary", "History", "News"] },
+    { "key": "reality", "name": "Reality and talk", "color": "#2dd4bf", "types": ["Reality & Talk", "MTV"], "genres": ["Reality", "Talk"] },
+    { "key": "movies", "name": "Movies and specials", "color": "#5aa9ff", "types": ["TV Movies", "Specials"], "genres": [] },
+    { "key": "late", "name": "Late night", "color": "#ff4fc8", "types": ["Late Night"], "genres": [], "adult": true }
+  ],
+  "genreOrder": ["animation", "doc", "reality", "scifi", "comedy", "drama"],
+  "other": { "key": "other", "name": "Other", "color": "#8a8fa3" }
+}

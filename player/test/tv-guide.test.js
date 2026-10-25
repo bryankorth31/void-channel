@@ -13,6 +13,8 @@ const T = require('../../scripts/lib/tvgrid');
 const APP = fs.readFileSync(path.join(__dirname, '..', '..', 'scripts', 'lib', 'app.js'), 'utf8').replace(/\r\n/g, '\n');
 const a0 = APP.indexOf('const TVG='), b0 = APP.indexOf('async function tvPage(){');
 assert.ok(a0 > 0 && b0 > a0);
+// The color code's groups, as catalog/colors.json hands them to the page (CG).
+const COLORS = [{ k: 'comedy', n: 'Comedy', c: '#ffd23f' }, { k: 'drama', n: 'Drama', c: '#ff6b6b' }, { k: 'other', n: 'Other', c: '#8a8fa3' }];
 const TV_TEXT = APP.slice(a0, b0).split('\\\\').join('\\').replace('$' + '{TVGRID_SRC}', T.source);
 
 const CLOCK = { t: Date.UTC(2026, 9, 19, 12, 7, 30) }; // Monday 19 Oct 2026, 7:07:30 am in Chicago
@@ -38,7 +40,7 @@ function world() {
     mkc('void', 'The Void', 'all', rng(0, 40)), mkc('row-sitcoms', 'Sitcoms', 'row', rng(0, 8)), mkc('row-drama', 'Drama', 'row', rng(8, 12)), mkc('tag-cartoons', 'Cartoons', 'collection', rng(12, 20)),
     mkc('net-pbs', 'PBS', 'network', rng(20, 24)), mkc('movies', 'TV Movies and Specials', 'row', rng(40, 48)), mkc('row-late-night', 'Late Night', 'row', rng(36, 40), true),
   ];
-  const SHOWS = assembled.map((s, i) => ({ slug: s.slug, show: names[i], overview: 'About ' + names[i] + '.', eps: infos[i].eps, seasons: s.seasons.map((se) => ({ season: se.season, episodes: se.episodes.map((e) => ({ n: e.n, name: names[i] + ' s' + se.season + 'e' + e.n, min: e.min, item: 'x', p: 'f.mp4' })) })) }));
+  const SHOWS = assembled.map((s, i) => ({ slug: s.slug, cg: i % 2 ? 'comedy' : 'drama', show: names[i], overview: 'About ' + names[i] + '.', eps: infos[i].eps, seasons: s.seasons.map((se) => ({ season: se.season, episodes: se.episodes.map((e) => ({ n: e.n, name: names[i] + ' s' + se.season + 'e' + e.n, min: e.min, item: 'x', p: 'f.mp4' })) })) }));
   return { TV, SHOWS, lib };
 }
 
@@ -56,13 +58,13 @@ function page(opts) {
   const W = world();
   const log = { render: 0, mk: [], loads: [], replaced: [], tracked: [], scrolled: 0, prevented: 0, stopped: 0 };
   const reg = { els: {}, focused: null, make(id) { return (this.els[id] = new El(id, this)); } };
-  for (const id of ['gdBody', 'gdKinds', 'gdJumps', 'gdNow', 'gdCard', 'gd']) reg.make(id);
+  for (const id of ['gdBody', 'gdKinds', 'gdLegend', 'gdJumps', 'gdNow', 'gdCard', 'gd']) reg.make(id);
   let player = null;
   const host = { contains: (el) => !!player && el === player.root };
   const mkPlayer = (h, o) => { const p = { root: { id: 'r' }, v: {}, o, load(ep, lo) { log.loads.push({ id: ep.id, startAt: lo.startAt }); }, flashChannel() {} }; log.mk.push(o); player = p; return p; };
   const state = { view: 'tv', chan: 'void', tvOn: true, tvFails: 0 };
   const sandbox = {
-    setTimeout, setInterval: () => 1, clearInterval() {}, requestAnimationFrame: (f) => f(), state, SHOWS: W.SHOWS, ME: { adult: 0 }, SITE: 'voidtv.net', Date: FDate, Math, Map, WeakMap, Object, Array, JSON, String, mkPlayer, vpEvent() {},
+    setTimeout, setInterval: () => 1, clearInterval() {}, requestAnimationFrame: (f) => f(), state, SHOWS: W.SHOWS, CG: COLORS, ME: { adult: 0 }, SITE: 'voidtv.net', Date: FDate, Math, Map, WeakMap, Object, Array, JSON, String, mkPlayer, vpEvent() {},
     filesFor: () => [{ url: 'u' }], esc: (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])),
     ensure: async () => {}, track: (k, d) => log.tracked.push([k, d && d.slug]), urlFor: (s) => '/' + s, render: () => { log.render++; },
     history: { replaceState: (x, y, u) => log.replaced.push(u) }, window: { scrollTo: () => { log.scrolled++; } }, innerWidth: opts.width || 1200,
@@ -85,7 +87,7 @@ function guided(opts) {
   p.h.gdInit(cur.id);
   return p;
 }
-const blocks = (html) => [...html.matchAll(/<div class="gb([^"]*)" style="left:([-\d.]+)px;width:([-\d.]+)px" data-c="(\d+)" data-t="(\d+)"/g)].map((m) => ({ cls: m[1].trim().split(/\s+/).filter(Boolean), left: +m[2], width: +m[3], ci: +m[4], t: +m[5] }));
+const blocks = (html) => [...html.matchAll(/<div class="gb([^"]*)" style="left:([-\d.]+)px;width:([-\d.]+)px(?:;--c:#[0-9a-f]{6})?" data-c="(\d+)" data-t="(\d+)"/g)].map((m) => ({ cls: m[1].trim().split(/\s+/).filter(Boolean), left: +m[2], width: +m[3], ci: +m[4], t: +m[5] }));
 const key = (k) => { const e = { key: k, target: { matches: () => false }, prevented: false, stopped: false }; e.preventDefault = () => { e.prevented = true; }; e.stopPropagation = () => { e.stopped = true; }; return e; };
 
 test('guide: what the blocks say is what playback says: for every channel in view the block on the clock is the airing chanNow returns, and its box holds the clock', () => {
@@ -297,7 +299,7 @@ test('guide: tuning a channel from the guide marks it in place: the grid is not 
   assert.equal(p.log.render, 0); assert.equal(p.log.mk.length, mk, 'same player');
   assert.equal(GD.s, S, 'same grid element');
   assert.equal(GD.cur, 'row-drama');
-  assert.ok(/gd-cc cur"[^>]*data-c="\d+"[^>]*><b>Drama<\/b>/.test(p.reg.els.gdChans.innerHTML), 'the channel cell is marked: ' + p.reg.els.gdChans.innerHTML.slice(0, 200));
+  assert.ok(/gd-cc cur"[^>]*data-c="\d+"[^>]*><b>(?:<i class="cgd"[^>]*><\/i>)?Drama<\/b>/.test(p.reg.els.gdChans.innerHTML), 'the channel cell is marked: ' + p.reg.els.gdChans.innerHTML.slice(0, 200));
   assert.equal((p.reg.els.gdChans.innerHTML.match(/gd-cc cur/g) || []).length, 1);
   assert.equal(GD.fo.ci, GD.list.findIndex((c) => c.id === 'row-drama'));
   assert.equal(p.log.loads[p.log.loads.length - 1].id.split('/')[0], 'row-drama');
@@ -310,7 +312,7 @@ test('guide on a phone: one channel at a time as a list, the day chips and the c
   const html = p.reg.els.gdBody.innerHTML;
   assert.ok(!html.includes('id="gdS"'), 'no grid on a phone');
   assert.ok(html.includes('<select') && html.includes('The Void'));
-  const rows = [...html.matchAll(/class="gd-lr([^"]*)" data-c="(\d+)" data-t="(\d+)"/g)].map((m) => ({ cls: m[1], ci: +m[2], t: +m[3] }));
+  const rows = [...html.matchAll(/class="gd-lr([^"]*)"(?: style="--c:#[0-9a-f]{6}")? data-c="(\d+)" data-t="(\d+)"/g)].map((m) => ({ cls: m[1], ci: +m[2], t: +m[3] }));
   assert.ok(rows.length > 20, 'a day of airings: ' + rows.length);
   const n = h.chanNow(GD.list[GD.ci], CLOCK.t);
   assert.equal(rows[0].t, n.a.st, 'the first row is what is on now'); assert.ok(rows[0].cls.includes('gnow'));
@@ -343,4 +345,19 @@ test('tvgrid guide maths on their own: halfHours, rowSpan, chanGroup, focusMove 
   assert.equal(G.chanGroup({ id: 'x', kind: 'network' }), 'network'); assert.equal(G.chanGroup({ id: 'void', kind: 'all' }), 'all');
   assert.equal(G.localAt(Date.UTC(2026, 9, 19, 12, 0), 1, 480), Date.UTC(2026, 9, 20, 14, 0), 'tomorrow 8 am local');
   assert.deepEqual(G.focusMove({ ci: 0, t: 5 }, 'x', [{}], {}, 0, 10, 0), { ci: 0, t: 5 }, 'an unknown key changes nothing');
+});
+
+test('guide: each block wears the color of its kind, the legend lists the kinds, and tapping one dims every other kind until it is tapped again', () => {
+  const p = guided(), rows = () => p.reg.els.gdRows.innerHTML;
+  const marks = (html) => [...html.matchAll(/class="gb([^"]*)" style="[^"]*--c:(#[0-9a-f]{6})/g)].map((m) => ({ dim: m[1].includes('gdim'), c: m[2] }));
+  const all = marks(rows());
+  assert.ok(all.some((b) => b.c === '#ffd23f') && all.some((b) => b.c === '#ff6b6b'), 'both colors drawn');
+  assert.ok(all.every((b) => !b.dim), 'nothing dimmed at first');
+  assert.match(p.reg.els.gdLegend.innerHTML, /Comedy/);
+  p.sandbox.gdCg('comedy');
+  const one = marks(rows());
+  assert.ok(one.length > 0 && one.every((b) => b.dim === (b.c !== '#ffd23f')), 'only comedy stays lit');
+  assert.match(p.reg.els.gdLegend.innerHTML, /data-g="comedy" aria-pressed="true"/);
+  p.sandbox.gdCg('comedy');
+  assert.ok(marks(rows()).every((b) => !b.dim), 'tapped again: all lit');
 });
