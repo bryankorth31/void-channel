@@ -78,6 +78,32 @@ updates HQ without reinstalling.
    searches (with no-result searches surfaced as hunt leads); errors and unplayable files; referrers;
    date range; CSV export.
 
+## Hidden: what the site keeps off, sorted by hand
+
+B, 25 Oct 2026: "I'd like the ability to in the future sort these and assign these episodes names. I want all of the hidden things able
+to be worked." The **Hidden** tab lists the two kinds of things voidtv.net keeps off the site (a wrong episode is worse than a missing one):
+
+- **Guessed episodes**: files the matcher placed by position, the Nth file of a disc rip taken as episode N (`epNoGuess` in
+  `scripts/lib/app.js` hides them). One row per show, most guesses first; opening one shows only its guesses, with the preview player.
+  Per file: **Place** on the right season and episode, **Accept** where it is, **Reject**, or **Name** (the episode name the site shows).
+  Each choice re-matches that show, as every decision on a show page does.
+- **Unsure TV movies**: REVIEW films (`movieShips` hides them). **Approve**, **Un-approve**, **Not this film**; no re-match.
+
+What each button writes in `catalog/overrides.json` (the file key is `<Archive item>|<file name>` as the grid prints them):
+
+| Button | Entry | Read by |
+|---|---|---|
+| Place | `"<slug>": { "placeFiles": { "<item>\|<name>": "2x5" } }` | scripts/match.js: the file takes that episode, LIVE, ahead of any other file; a slot not on the guide places nothing |
+| Name | `"<slug>": { "fileTitles": { "<item>\|<name>": "The Title" } }` | scripts/match.js: the episode playing that file shows the name; the guide's name stays as `guideName` |
+| Accept / Reject | `acceptFiles` / `rejectFiles` (as on the show page) | scripts/match.js |
+| Approve / Un-approve | `"movie-<id>": { "approved": true }` / entry removed | movieShips in scripts/lib/app.js |
+| Not this film | `"movie-<id>": { "rejected": true }` | HQ only (the movie was hidden already); it leaves the to-do list |
+
+The lists come from `scripts/lib/hidden.js` (`GET /api/hidden/episodes`, `GET /api/hidden/movies`); the two keyed lists are written with
+`POST /api/override/<slug>` and `{ "map": { "placeFiles": { "<key>": "2x5" } } }` (null removes an entry; a placement must be season x
+episode, a title one line). The runbook rows `episodes:guess-hidden` and `movies:review-hidden` give the same steps by hand.
+Tests: `node --test tests/hidden-work.test.js`.
+
 ## Events the site sends
 
 `view` (page, slug) · `play` (slug, season x episode, file) · `tick` every 60 s while playing (position,

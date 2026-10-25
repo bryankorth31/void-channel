@@ -284,11 +284,30 @@ function matchShow(entry, drops) {
 
 // HQ and linkcheck key a file by the item and the name the grid shows, which is the masked one; the raw name is tried too.
 const fileKeys = (itemId, name) => [itemId + '|' + name, itemId + '|' + noEmail(name)];
+// B's placements from HQ (catalog/overrides.json, placeFiles: { "<item>|<name>": "2x5" }; B, 25 Oct 2026: "I want all of the hidden things able to be worked").
+// He watched the file and says which season and episode it is. Returns { season, number }, or null when the file has no placement.
+const PLACED = /^placed in HQ/;
+function placeOf(place, itemId, name) {
+  if (!place) return null;
+  for (const k of fileKeys(itemId, name)) { const m = /^(\d{1,3})x(\d{1,5})$/.exec(String(place[k] || '').trim()); if (m) return { season: +m[1], number: +m[2] }; }
+  return null;
+}
+// B's episode names from HQ (catalog/overrides.json, fileTitles: { "<item>|<name>": "The Title" }): the episode that plays that file takes the name he typed,
+// for a show with no real episode guide (self-listed names come from the file names) or a wrong name. The guide's own name stays as guideName.
+function applyTitles(g, titles) {
+  if (!g || !g.seasons || !titles || !Object.keys(titles).length) return g;
+  for (const se of g.seasons) for (const e of se.episodes) {
+    if (!e.file) continue;
+    const k = fileKeys(e.file.item, e.file.name).find((x) => typeof titles[x] === 'string' && titles[x].trim());
+    if (k) { e.guideName = e.name; e.name = titles[k].trim().slice(0, 200); }
+  }
+  return g;
+}
 
 // The decision for one show, with no disk access of its own: its grid, or { noTvmaze: true } when there is nothing to list.
 // ctx: ov (this show's overrides), readDead, firstAdded, and tags (a Map the caller may pass in to see why each file was placed or turned away).
 // Every grid leaves through noEmail: the episode names, titles and file names it copies from TVmaze and from Archive items are masked.
-function gridFor(entry, cand, tv, ctx = {}) { return noEmail(decideGrid(entry, cand, tv, ctx)); }
+function gridFor(entry, cand, tv, ctx = {}) { return noEmail(applyTitles(decideGrid(entry, cand, tv, ctx), (ctx.ov || {}).fileTitles)); }
 function decideGrid(entry, cand, tv, ctx) {
   const show = entry.name;
   const ov = ctx.ov || {};
@@ -299,7 +318,7 @@ function decideGrid(entry, cand, tv, ctx) {
   const rejected = new Set([...(ov.rejectFiles || []), ...Object.keys(DEAD)]); // B's rejections in HQ, and the files linkcheck retired
   // The self-list paths (no TVmaze list, and the fallback) read the raw item files, not the strict pass's options, so a rejected or dead file is taken out of their candidates here.
   const withoutRejected = (c) => rejected.size ? { ...c, items: c.items.map((it) => ({ ...it, files: it.files.filter((f) => !fileKeys(it.id, f.name).some((k) => rejected.has(k))) })).filter((it) => it.files.length) } : c;
-  if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, withoutRejected(cand), aliases); return sg || { show, type: entry.type, network: entry.network, noTvmaze: true }; }
+  if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, withoutRejected(cand), aliases, [], ov.placeFiles); return sg || { show, type: entry.type, network: entry.network, noTvmaze: true }; }
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const core = norm(show).replace(/^the /, '');
   const nets = typeof tv.network === 'string' && norm(tv.network) ? [norm(tv.network)] : []; // the show's own network, for the title test
@@ -401,6 +420,21 @@ function decideGrid(entry, cand, tv, ctx) {
       });
     }
   }
+  // B's placements (placeFiles) come last and beat everything: the file leaves whatever slot the judges or the sequence guess gave it and takes the
+  // episode he chose, at full confidence. It is read from the raw candidates, so a file the judges turned away can still be placed. A rejected or dead
+  // file stays out (the episode loop below drops it); a slot that is not on the guide places nothing and the file stays where the judges put it.
+  const place = ov.placeFiles || {};
+  if (Object.keys(place).length) {
+    const onGuide = (o) => { const to = placeOf(place, o.item, o.name); return !!to && byKey.has(to.season + 'x' + to.number); };
+    for (const list of assignments.values()) for (let i = list.length - 1; i >= 0; i--) if (onGuide(list[i])) list.splice(i, 1);
+    for (const item of cand.items) for (const f of item.files) {
+      const to = placeOf(place, item.id, f.name);
+      const ep = to && byKey.get(to.season + 'x' + to.number);
+      if (!ep) continue;
+      const risk = codecRisk(f.name, f.format, f.playable);
+      push(ep, { conf: 1, why: `placed in HQ as ${to.season}x${to.number}`, item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: f.playable, codecRisk: risk || undefined, langRisk: (langRisk(f.name) || langRisk(item.title)) || undefined, sizeMB: f.sizeMB });
+    }
+  }
 
   const seasons = [];
   let live = 0, review = 0;
@@ -412,8 +446,9 @@ function decideGrid(entry, cand, tv, ctx) {
       const fkeys = (p) => fileKeys(p.item, p.name);
       const accepted = new Set(ov.acceptFiles || []);
       let opts = (assignments.get(`${e.season}x${e.number}`) || []).filter((o) => !fkeys(o).some((k) => rejected.has(k))).sort((a, b) => (b.playable - a.playable) || b.conf - a.conf || b.sizeMB - a.sizeMB);
-      const acc = opts.find((o) => fkeys(o).some((k) => accepted.has(k)));
-      if (acc) { acc.conf = 1; acc.why = 'accepted in HQ | ' + acc.why; opts = [acc, ...opts.filter((o) => o !== acc)]; }
+      const plc = opts.find((o) => PLACED.test(o.why)); // a file B placed on this episode wins over one he only accepted
+      const acc = plc || opts.find((o) => fkeys(o).some((k) => accepted.has(k)));
+      if (acc) { if (acc !== plc) { acc.conf = 1; acc.why = 'accepted in HQ | ' + acc.why; } opts = [acc, ...opts.filter((o) => o !== acc)]; }
       const pick = opts[0] || null;
       const state = !pick ? 'MISSING' : (pick.conf >= LIVE && (pick.playable || acc === pick)) ? 'LIVE' : 'REVIEW';
       if (pick && !pick.playable) pick.why += ` | not browser-playable: ${pick.codecRisk}`;
@@ -432,7 +467,7 @@ function decideGrid(entry, cand, tv, ctx) {
   // (B, 25 Oct: SpongeBob's guessed "episode 1" was Disc 13 of a season 5 DVD, and a visitor gave up on it).
   if (!ov.guideOnly && placed * 6 < pool && pool >= 20 && dateRejected < pool / 2) {
     const whyNot = (f, item) => rejectionTag({ other: namesOtherShow(f.name, show, aliases) || (!namesShow(f.name) && namesOtherShow(item.title || '', show, aliases)), react: REACT.test(tagText(f.name)) || REACT.test(tagText(item.title || '')), foreign: langRisk(f.name) || langRisk(item.title), notNamed: !namesShow(f.name) && !(namesShow(item.title || '') || idNamesShow(item.id)) });
-    const sg = selfGrid(entry, fallbackCand(withoutRejected(cand), tags, { tv, namesTitle: (t) => namesTitle(t, [core, ...aliases], nets), cores: [core, ...aliases], whyNot }), aliases, nets);
+    const sg = selfGrid(entry, fallbackCand(withoutRejected(cand), tags, { tv, namesTitle: (t) => namesTitle(t, [core, ...aliases], nets), cores: [core, ...aliases], whyNot }), aliases, nets, ov.placeFiles);
     const sgPlaced = sg ? sg.seasons.reduce((n, se) => n + se.episodes.length, 0) : 0;
     if (sgPlaced >= Math.max(20, placed * 3)) { sg.tvmazeWeak = { id: tv.id, name: tv.name, placed }; keepLive(sg, seasons); return sg; }
   }
@@ -456,14 +491,15 @@ function keepLive(sg, seasons) {
     const k = live.get(s.season + 'x' + e.number);
     if (k && e.file && e.file.url === k.url) { e.state = 'LIVE'; e.file.conf = k.conf; e.file.why = k.why + ' | kept LIVE inside the self-list'; kept++; }
   }
-  if (kept) sg.coverage = { ...sg.coverage, live: kept, review: sg.coverage.total - kept };
+  if (kept) { const l = sg.seasons.reduce((n, s) => n + s.episodes.filter((e) => e.state === 'LIVE').length, 0); sg.coverage = { ...sg.coverage, live: l, review: sg.coverage.total - l }; } // B's placements are LIVE too
   return kept;
 }
 
 // No TVmaze entry (web series, one-off documentaries, local shows): list the show from its own files.
 // Only uploads that NAME the show count; S/E in filenames sets the order, the rest follow in name
-// order as season 1. Everything is REVIEW: honest about where the order came from.
-function selfGrid(entry, cand, aliases, nets = []) {
+// order as season 1. Everything is REVIEW: honest about where the order came from, except a file B placed in HQ (place: the show's
+// placeFiles), which takes the season and episode he chose, wins that slot and is LIVE.
+function selfGrid(entry, cand, aliases, nets = [], place = null) {
   const show = entry.name;
   const core = norm(show).replace(/^the /, '').replace(/\(.*?\)/g, '').trim();
   if (core.length < 5 && core.split(' ').length < 2 && !aliases.length) return null; // 'Bu', 'Oz': too short a name to trust inside other titles
@@ -495,22 +531,26 @@ function selfGrid(entry, cand, aliases, nets = []) {
   for (const { item, vids } of kept) {
     for (const f of vids) {
       const risk = codecRisk(f.name, f.format, f.playable);
-      files.push({ item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: f.playable, codecRisk: risk || undefined, sizeMB: f.sizeMB, ep: f.ep, conf: 0.6, why: 'self-listed: no TVmaze entry; order from the files' });
+      const to = placeOf(place, item.id, f.name);
+      files.push({ item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: f.playable, codecRisk: risk || undefined, sizeMB: f.sizeMB, ep: to ? { season: to.season, episode: to.number } : f.ep,
+        conf: to ? 1 : 0.6, why: to ? `placed in HQ as ${to.season}x${to.number} | self-listed: no TVmaze entry` : 'self-listed: no TVmaze entry; order from the files' });
     }
   }
   if (files.length < 2) return null;
   const bySE = new Map(); const loose = [];
-  for (const f of files) { if (f.ep && f.ep.episode) { const k = (f.ep.season || 1) + 'x' + f.ep.episode; const cur = bySE.get(k); if (!cur || (f.playable && !cur.playable) || (f.playable === cur.playable && (f.sizeMB || 0) > (cur.sizeMB || 0))) bySE.set(k, f); } else loose.push(f); }
+  const better = (f, cur) => PLACED.test(f.why) !== PLACED.test(cur.why) ? PLACED.test(f.why) : (f.playable && !cur.playable) || (f.playable === cur.playable && (f.sizeMB || 0) > (cur.sizeMB || 0));
+  for (const f of files) { if (f.ep && f.ep.episode) { const k = (f.ep.season || 1) + 'x' + f.ep.episode; const cur = bySE.get(k); if (!cur || better(f, cur)) bySE.set(k, f); } else loose.push(f); }
   const seasons = {};
-  for (const [k, f] of bySE) { const [se, ep] = k.split('x').map(Number); const nm = titlePart(f.name, showWords); (seasons[se] = seasons[se] || []).push({ number: ep, name: nm && /[a-z]{3,}/.test(nm) ? nm : ('Episode ' + ep), state: 'REVIEW', file: f, alternates: [] }); }
+  for (const [k, f] of bySE) { const [se, ep] = k.split('x').map(Number); const nm = titlePart(f.name, showWords); (seasons[se] = seasons[se] || []).push({ number: ep, name: nm && /[a-z]{3,}/.test(nm) ? nm : ('Episode ' + ep), state: PLACED.test(f.why) ? 'LIVE' : 'REVIEW', file: f, alternates: [] }); }
   loose.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
   const seen = new Set(); let next = (seasons[1] || []).reduce((m, e) => Math.max(m, e.number), 0);
   for (const f of loose) { const key = variantKey(f.name); if (seen.has(key)) continue; seen.add(key); next++; const nm = titlePart(f.name, showWords); (seasons[1] = seasons[1] || []).push({ number: next, name: nm && /[a-z]{3,}/.test(nm) ? nm : ('Episode ' + next), state: 'REVIEW', file: f, alternates: [] }); }
   const list = Object.keys(seasons).map(Number).sort((a, b) => a - b).map((se) => ({ season: se, episodes: seasons[se].sort((a, b) => a.number - b.number) }));
   const total = list.reduce((m, se) => m + se.episodes.length, 0);
+  const placedLive = list.reduce((m, se) => m + se.episodes.filter((e) => e.state === 'LIVE').length, 0);
   const out = { show, slug: slug(show), type: entry.type, network: entry.network, matchedAt: new Date().toISOString(), selfListed: true,
     tvmaze: { id: null, name: show, runtime: null, premiered: null, network: entry.network },
-    coverage: { total, live: 0, review: total, missing: 0, pct: 100 }, seasons: list };
+    coverage: { total, live: placedLive, review: total - placedLive, missing: 0, pct: 100 }, seasons: list };
   return noEmail(out);
 }
 
@@ -582,4 +622,4 @@ function main() {
 }
 if (require.main === module) main();
 module.exports = { norm, tagText, slug, noEmail, namesTitle, titleNaming, closesName, REACT, QUALITY_RE, OTHER_SHOWS, BUILTIN_ALIASES, makeOtherShows, forOtherShow, otherShowCores, namesOtherShow, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,
-  fallbackCand, gridFor, selfGrid, matchShow, fileDate, placedIn, droppedBy, mergeDropped, droppedLines, saveDropped, keepLive };
+  fallbackCand, gridFor, selfGrid, placeOf, applyTitles, matchShow, fileDate, placedIn, droppedBy, mergeDropped, droppedLines, saveDropped, keepLive };

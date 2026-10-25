@@ -10,6 +10,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { spawn, execSync, execFile, execFileSync } = require('child_process');
 const cfa = require('./lib/cfa');
+const hidden = require('./lib/hidden'); // the Hidden tab: guessed episodes and REVIEW TV movies the site keeps off
 // One more named query for /api/analytics/<name>: the "Wrong film reports" list on the Reports page (viewers ticking "Not the right
 // film" on a TV movie marked "Unconfirmed match"; the page sends type report with q wrongfilm, x = Archive item, a space, file name).
 // Day buckets, added up by the page, so it uses only what the other queries in lib/cfa.js already use. Read-only; it hides nothing.
@@ -239,6 +240,8 @@ function stopListedProcess(pid, started, read = processInfo) {
 }
 
 // ---- overrides --------------------------------------------------------------------------------
+// The keyed lists B fills from HQ, with what a value may be: a placement is season x episode ("2x5"), a title is any text on one line.
+const MAPS = { placeFiles: /^\d{1,3}x\d{1,5}$/, fileTitles: /^[^\r\n]+$/ };
 function patchOverride(slug, body) {
   const OV = readJson(FILES.overrides, {});
   const ov = OV[slug] || {};
@@ -249,6 +252,18 @@ function patchOverride(slug, body) {
   }
   for (const [k, vals] of Object.entries(body.push || {})) { const cur = new Set(Array.isArray(ov[k]) ? ov[k] : []); for (const v of [].concat(vals)) cur.add(v); ov[k] = [...cur]; }
   for (const [k, vals] of Object.entries(body.pull || {})) { if (!ov[k]) continue; const rm = new Set([].concat(vals)); ov[k] = ov[k].filter((v) => !rm.has(v)); if (!ov[k].length) delete ov[k]; }
+  // map: one entry of a keyed list, { placeFiles: { "<item>|<name>": "2x5" } } or { fileTitles: { "<item>|<name>": "The Title" } }; null or "" removes the entry.
+  for (const [k, entries] of Object.entries(body.map || {})) {
+    if (!MAPS[k]) throw new Error('unknown list ' + k);
+    const cur = ov[k] && typeof ov[k] === 'object' && !Array.isArray(ov[k]) ? ov[k] : {};
+    for (const [fk, v] of Object.entries(entries || {})) {
+      if (v === null || v === '') { delete cur[fk]; continue; }
+      const val = String(v).trim().slice(0, 200);
+      if (!MAPS[k].test(val)) throw new Error(k + ': not allowed: ' + val.slice(0, 40));
+      cur[fk] = val;
+    }
+    if (Object.keys(cur).length) ov[k] = cur; else delete ov[k];
+  }
   if (Object.keys(ov).length) OV[slug] = ov; else delete OV[slug];
   writeJson(FILES.overrides, OV);
   return ov;
@@ -356,6 +371,8 @@ const server = http.createServer(async (req, res) => {
       return send(res, 200, { entry, grid, overrides: readJson(FILES.overrides, {})[slug] || {}, art: readJson(FILES.art, {})[slug] || null, candidates: cand ? { items: (cand.items || []).length, files: (cand.items || []).reduce((n, it) => n + (it.files || []).length, 0), at: cand.at || cand.huntedAt || null } : null });
     }
     if (p.startsWith('/api/override/') && req.method === 'POST') { const slug = decodeURIComponent(p.slice(14)); if (!SLUG_OK.test(slug)) return send(res, 400, { error: 'bad slug' }); const b = await body(req); const ov = patchOverride(slug, b); let job = null; if (b.rematch !== false) job = startJob('match', ['--slug', slug]); return send(res, 200, { overrides: ov, job }); }
+    if (p === '/api/hidden/episodes') return send(res, 200, { rows: hidden.guessedShows({ grids: grids().values(), overrides: readJson(FILES.overrides, {}) }) });
+    if (p === '/api/hidden/movies') return send(res, 200, { rows: hidden.reviewMovies({ moviesDir: path.join(PROFILE.catalogDir, 'movies'), overrides: readJson(FILES.overrides, {}) }) });
     if (p === '/api/list' && req.method === 'POST') return send(res, 200, patchList(await body(req)));
     if (p === '/api/lookup') return send(res, 200, await lookup(url.searchParams.get('q') || ''));
     if (p === '/api/qr' && req.method === 'GET') return send(res, 200, { codes: readJson(FILES.qr, {}), base: PROFILE.domain + '/q/' });
