@@ -160,7 +160,12 @@ test('Live TV: the style sheet makes the channel buttons compact and hides the e
   const css = fs.readFileSync(path.join(__dirname, '..', 'src', 'player.css'), 'utf8').replace(/\r\n/g, '\n');
   const block = /@container \(max-width:720px\)\{([^}]*\}[^}]*)\}/.exec(css);
   assert.ok(block, 'a container rule up to 720 px');
-  assert.ok(/\.vpx-row button\.vpx-ch\{min-width:52px;height:48px;padding:0 8px;margin-left:2px;font-size:14px\}/.test(block[1]), 'the compact buttons, still bigger than the other controls (40 to 44 px)');
+  assert.ok(/\.vpx-row button\.vpx-ch\{min-width:54px;height:52px;padding:0 6px;margin-left:2px;font-size:15px\}/.test(block[1]), 'the compact buttons, still bigger than the other controls (40 to 44 px)');
+  // Bryan, 25 Oct 2026: bright, solid pink and bigger on phones. Measured in a browser from 280 to 1000 px: the fullscreen button always fits,
+  // thanks to the two narrower rules below (the smallest phones drop the mute button; 540 to 600 px is where the speed control joins the row).
+  assert.ok(/@container \(max-width:359px\)\{\.vpx-tv \.vpx-row \[data-a=mute\]\{display:none\}/.test(css), 'the smallest phones drop the mute button');
+  assert.ok(/@container \(min-width:540px\) and \(max-width:600px\)\{\.vpx-row button\.vpx-ch\{min-width:50px;padding:0 4px\}\}/.test(css), 'the band where the speed control joins the row');
+  assert.ok(/\.vpx-row button\.vpx-ch\{[^}]*background:#ff4fc8;/.test(css), 'solid brand pink');
   assert.ok(/\.vpx-tv \.vpx-time\{display:none/.test(block[1]), 'the elapsed time gives way');
   assert.ok(/@supports not \(container-type:inline-size\)\{@media \(max-width:760px\)\{[^}]*\}[^}]*\.vpx-tv \.vpx-time\{display:none\}/.test(css), 'the fallback for browsers without container queries covers the same widths');
   assert.ok(!/max-width:420px\)\{\.vpx-tv/.test(css), 'the old 420 px rule is gone');

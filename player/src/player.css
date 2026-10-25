@@ -136,18 +136,19 @@
 @media (prefers-reduced-motion:reduce){.vpx-bar,.vpx-flash{transition:none}.vpx-sig path{animation:none;opacity:.85}.vpx-card.static::before{animation:none}.vpx-card.upnext .vpx-k,.vpx-card.upnext .vpx-t{animation:none}}
 
 /* Live TV: two big channel buttons in the control row (player.js, only when the host passes channelButtons) and the channel-name flash.
-   Brand pink #ff4fc8 at 60% opacity; the row's own rules stay as they are. The selectors carry button.vpx-ch so they beat .vpx-row button:hover. */
-.vpx-row button.vpx-ch{min-width:68px;height:52px;padding:0 14px;gap:2px;margin-left:6px;border-radius:12px;background:rgba(255,79,200,.6);color:#fff;font-weight:800;font-size:16px;letter-spacing:.05em}
-.vpx-row button.vpx-ch:hover{background:rgba(255,79,200,.8)}
+   Solid brand pink #ff4fc8 with a glow (Bryan, 25 Oct: "prominent and bright pink... noticeable", most of all on phones); the row's own rules stay as they are. The selectors carry button.vpx-ch so they beat .vpx-row button:hover. */
+.vpx-row button.vpx-ch{min-width:72px;height:54px;padding:0 14px;gap:2px;margin-left:6px;border-radius:12px;background:#ff4fc8;color:#fff;font-weight:900;font-size:17px;letter-spacing:.05em;box-shadow:0 0 0 2px rgba(255,255,255,.18) inset,0 0 18px rgba(255,79,200,.75);text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.vpx-row button.vpx-ch:hover{background:#ff6fd6;box-shadow:0 0 0 2px rgba(255,255,255,.3) inset,0 0 24px rgba(255,79,200,.95)}
+.vpx-row button.vpx-ch:active{transform:scale(.96)}
 .vpx-row button.vpx-ch svg{width:24px;height:24px}
 .vpx-chname{position:absolute;top:14px;right:14px;max-width:calc(100% - 28px);padding:8px 16px;border-radius:999px;background:rgba(7,8,12,.72);border:2px solid rgba(255,79,200,.6);font-weight:800;font-size:20px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:none;opacity:0;visibility:hidden;transition:opacity .25s,visibility 0s .25s}
 .vpx-chname.vpx-on{opacity:1;visibility:visible;transition:opacity .15s}
 @container (max-width:560px){
-  .vpx-row button.vpx-ch{min-width:52px;height:48px;padding:0 8px;margin-left:2px;font-size:14px}
+  .vpx-row button.vpx-ch{min-width:54px;height:52px;padding:0 6px;margin-left:2px;font-size:15px}
   .vpx-chname{top:8px;right:8px;max-width:calc(100% - 16px);padding:6px 12px;font-size:16px}
 }
 @supports not (container-type:inline-size){@media (max-width:760px){
-  .vpx-row button.vpx-ch{min-width:52px;height:48px;padding:0 8px;margin-left:2px;font-size:14px}
+  .vpx-row button.vpx-ch{min-width:54px;height:52px;padding:0 6px;margin-left:2px;font-size:15px}
   .vpx-tv .vpx-time{display:none}
 }}
 @media (min-width:1600px) and (hover:none),(min-width:1900px){.vpx-row button.vpx-ch{min-width:84px;height:64px;font-size:20px}.vpx-chname{font-size:28px;padding:10px 22px}}
@@ -155,6 +156,12 @@
 /* Live TV players up to 720 px wide: the compact channel buttons, and the elapsed time gives way, so the fullscreen button always fits the row
    (the two big buttons and the time did not fit between 430 and 470 px and between 561 and 700 px, and the row ran past the player's edge). Last in the file so it also beats the 10-foot sizes above in a narrow player. */
 @container (max-width:720px){
-  .vpx-row button.vpx-ch{min-width:52px;height:48px;padding:0 8px;margin-left:2px;font-size:14px}
+  .vpx-row button.vpx-ch{min-width:54px;height:52px;padding:0 6px;margin-left:2px;font-size:15px}
   .vpx-tv .vpx-time{display:none}
 }
+
+/* The smallest phones (players under 360 px, e.g. a 360 px Android phone): the channel buttons keep their size and the mute button gives
+   way, since a phone has volume keys; the fullscreen button still fits (measured from 300 to 760 px, Bryan 25 Oct). */
+@container (max-width:359px){.vpx-tv .vpx-row [data-a=mute]{display:none}.vpx-row button.vpx-ch{min-width:52px;padding:0 6px;margin-left:2px}}
+/* 540 to 600 px is where the speed control joins the row; the channel buttons narrow a little there so the fullscreen button still fits. */
+@container (min-width:540px) and (max-width:600px){.vpx-row button.vpx-ch{min-width:50px;padding:0 4px}}
