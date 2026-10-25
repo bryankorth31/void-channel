@@ -339,6 +339,26 @@ const mediaType = (h) => String(h || '').split(';')[0].trim().toLowerCase();
 const TOKEN = crypto.randomBytes(32).toString('hex');
 const tokenOk = (given) => { const a = Buffer.from(String(given || '')), b = Buffer.from(TOKEN); return a.length === b.length && crypto.timingSafeEqual(a, b); };
 
+// The listening trial's suggestions, joined to the show's grid so each row carries the file key B's placement uses ("<item>|<name>").
+function listenRows() {
+  const dir = path.join(PROFILE.catalogDir, 'cache', 'listen');
+  if (!fs.existsSync(dir)) return { shows: [] };
+  const ov = readJson(FILES.overrides, {}), dismissed = readJson(path.join(dir, 'dismissed.json'), {}), g = grids();
+  const shows = [];
+  for (const f of fs.readdirSync(dir).filter((x) => /^[a-z0-9-]+\.json$/.test(x) && !/^(tvmaze|tmdb)-/.test(x) && x !== 'dismissed.json')) {
+    const slug = f.slice(0, -5), rows = readJson(path.join(dir, f), []), grid = g.get(slug);
+    if (!Array.isArray(rows) || !grid) continue;
+    const byUrl = new Map();
+    for (const se of grid.seasons || []) for (const e of se.episodes || []) for (const x of [e.file, ...(e.alternates || [])]) if (x && x.url) byUrl.set(x.url, x);
+    const placed = (ov[slug] && ov[slug].placeFiles) || {};
+    shows.push({ slug, show: grid.show, rows: rows.map((r) => {
+      const x = byUrl.get(r.url), key = x ? x.item + '|' + x.name : null, m = /^S(\d+)E(\d+)\s*(.*)$/.exec(r.pick || '');
+      return { file: r.file, url: r.url, key, guessedAs: r.guessed_as, pick: r.pick, place: m ? m[1] + 'x' + m[2] : null, title: m ? m[3] : '', confidence: r.confidence, reason: r.reason, transcript: String(r.transcript || '').slice(0, 600), kept: !!r.kept, placedAs: key ? placed[key] || null : null, dismissed: !!dismissed[r.url] };
+    }) });
+  }
+  return { shows };
+}
+
 const server = http.createServer(async (req, res) => {
   // Local only, and only HQ's own page: a web page in the owner's browser, or one served from another local port,
   // must not be able to drive HQ (publish, taskkill, overrides). Order matters: host, origin, media type, token.
@@ -371,6 +391,10 @@ const server = http.createServer(async (req, res) => {
       return send(res, 200, { entry, grid, overrides: readJson(FILES.overrides, {})[slug] || {}, art: readJson(FILES.art, {})[slug] || null, candidates: cand ? { items: (cand.items || []).length, files: (cand.items || []).reduce((n, it) => n + (it.files || []).length, 0), at: cand.at || cand.huntedAt || null } : null });
     }
     if (p.startsWith('/api/override/') && req.method === 'POST') { const slug = decodeURIComponent(p.slice(14)); if (!SLUG_OK.test(slug)) return send(res, 400, { error: 'bad slug' }); const b = await body(req); const ov = patchOverride(slug, b); let job = null; if (b.rematch !== false) job = startJob('match', ['--slug', slug]); return send(res, 200, { overrides: ov, job }); }
+    // Listening suggestions (scripts/listen-trial.py, catalog/cache/listen/<slug>.json; B, 25 Oct 2026): which hidden disc file is which
+    // episode, heard from its dialogue. Read here; B's yes places the file through /api/override (placeFiles), his no is kept below.
+    if (p === '/api/listen') return send(res, 200, listenRows());
+    if (p === '/api/listen/dismiss' && req.method === 'POST') { const b = await body(req); const f = path.join(PROFILE.catalogDir, 'cache', 'listen', 'dismissed.json'); const d = readJson(f, {}); if (typeof b.url === 'string' && b.url.length < 600) { if (b.undo) delete d[b.url]; else d[b.url] = new Date().toISOString(); fs.writeFileSync(f, JSON.stringify(d, null, 1)); } return send(res, 200, { ok: true }); }
     if (p === '/api/hidden/episodes') return send(res, 200, { rows: hidden.guessedShows({ grids: grids().values(), overrides: readJson(FILES.overrides, {}) }) });
     if (p === '/api/hidden/movies') return send(res, 200, { rows: hidden.reviewMovies({ moviesDir: path.join(PROFILE.catalogDir, 'movies'), overrides: readJson(FILES.overrides, {}) }) });
     if (p === '/api/list' && req.method === 'POST') return send(res, 200, patchList(await body(req)));
