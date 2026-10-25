@@ -52,7 +52,7 @@ function page(opts) {
   const state = Object.assign({ view: 'tv', chan: 'one', tvOn: true, tvFails: 0 }, opts.state);
   const unref = (f) => (fn, ms) => { const t = f(fn, ms); if (t && t.unref) t.unref(); return t; }; // the cards' timers must not keep the test run alive
   const sandbox = {
-    setTimeout, setInterval: unref(setInterval), clearInterval, clearTimeout, state, SHOWS, CG: [], ME: { adult: false }, SITE: 'voidtv.net', Date: FDate, Math, Map, WeakMap, Object, Array, mkPlayer, vpEvent() {}, filesFor: () => [{ url: 'u' }], esc: (s) => String(s == null ? '' : s),
+    setTimeout, setInterval: unref(setInterval), clearInterval, clearTimeout, state, SHOWS, CG: [], SPOTS: opts.spots, ME: { adult: false }, SITE: 'voidtv.net', Date: FDate, Math, Map, WeakMap, Object, Array, mkPlayer, vpEvent() {}, filesFor: () => [{ url: 'u' }], esc: (s) => String(s == null ? '' : s),
     ensure: async (s) => { if (opts.missing && s.slug === opts.missing) throw new Error('the show file is gone (404)'); },
     track: (k, d) => log.tracked.push([k, d && d.slug]), urlFor: (s) => '/' + s, render: () => { log.render++; },
     go: async (slug) => { log.go.push(slug); state.view = 'show'; state.show = SHOWS.find((s) => s.slug === slug); }, play: (se, e) => log.play.push([se, e]),
@@ -240,9 +240,9 @@ test('Full hold: tuning in during a break lands on the cards with the right coun
 
 test('The holding cards: 36 lines in 4 looks; the next card never repeats the line or the look; every card names the next show and its time; everyone sees the same card', () => {
   const p = page(); const c = p.TV[0], a0 = p.h.chanNow(c).a, nx = p.h.TVG.nextAiring(c, p.TVLIB, a0);
-  assert.equal(p.h.TVC_LINES.length, 36); assert.equal(p.h.TVC_LOOKS.length, 4); assert.equal(p.h.TVC_MS, 9000);
+  assert.equal(p.h.TVC_LINES.length, 36, '36: the line steps by 7, which reaches every line only while the count shares no factor with 7'); assert.equal(p.h.TVC_LOOKS.length, 4); assert.equal(p.h.TVC_MS, 9000);
   assert.ok(p.h.TVC_LINES.every((l) => !l.includes('—')), 'no em dashes');
-  assert.ok(p.h.TVC_LINES.some((l) => /donation goes to CASH/.test(l)), 'the one donation card');
+  assert.ok(!p.h.TVC_LINES.some((l) => /donat/i.test(l)), 'no donation line in the rotation: the donation spot (once an hour, with its button) replaced it');
   const other = page(), until = nx.st, seen = new Set();
   let prev = null;
   for (let t = a0.st + 22 * 60000; t < until; t += 1000) {
@@ -374,4 +374,44 @@ test('Home page Live TV (B, 25 Oct 2026): the player starts muted, channel chang
 test('Live TV page: the player is not muted there', async () => {
   const p = await playing();
   assert.notEqual(p.getPlayer().v.muted, true);
+});
+
+// ---- the spots in the breaks (B, 25 Oct 2026; step 4) -----------------------------------------------------------------------------------
+const SPOTS = { donate: { line: 'No ads sold, ever. voidtv.net runs on donations. $5 when you can.', credit: 'Every donation goes to CASH (cashvalues.org).', button: 'Donate' }, tips: ['A tip'], know: ['Good to know'], trivia: ['A trivia line'] };
+// Every card of each break on channel c for a day, by its place in the stretch (0 is the first card).
+function breaks(p, c) {
+  const G = p.h.TVG, lib = p.TVLIB, out = [];
+  for (const a of G.airingsBetween(c, lib, CLOCK.t, CLOCK.t + 864e5)) {
+    const br = G.breakOf(c, lib, a); if (!br) continue;
+    const s0 = br.fill.length ? br.fill[br.fill.length - 1].en : br.at, K0 = Math.floor((a.en - s0) / 9000);
+    const cards = []; for (let k = K0; k >= 0; k--) cards.push(p.h.tvCard(c, a, a.en, a.en - (k + 0.5) * 9000));
+    out.push({ a, s0, K0, cards });
+  }
+  return out;
+}
+test('Spots: the donation spot holds cards 2 and 3 of the first break of each clock hour, at most once an hour per channel; card 5 is a trivia, tip or good-to-know spot; never two spots in a row', () => {
+  const p = page({ spots: SPOTS }), c = p.TV[0], B = breaks(p, c);
+  const withDonate = B.filter((b) => b.cards.some((d) => d.spot && d.spot.kind === 'donate'));
+  assert.ok(withDonate.length > 0, 'the donation spot airs');
+  for (const b of withDonate) {
+    assert.deepEqual(b.cards.map((d, i) => (d.spot && d.spot.kind === 'donate' ? i : -1)).filter((i) => i >= 0), [1, 2]);
+    assert.equal(b.cards[1].spot.id, b.cards[2].spot.id, 'one spot over two card slots');
+  }
+  const hours = withDonate.map((b) => { const h = new Date(b.s0); h.setMinutes(0, 0, 0); return +h; });
+  assert.equal(new Set(hours).size, hours.length, 'at most one donation spot an hour on a channel');
+  for (const b of B) {
+    if (b.K0 >= 6) { const f = b.cards[4].spot; assert.ok(f && f.kind === 'fact' && /^(Did you know\?|Tip|Good to know)$/.test(f.kick) && f.text, 'card 5 is a fact spot'); }
+    for (let i = 1; i < b.cards.length; i++) { const x = b.cards[i - 1].spot, y = b.cards[i].spot; assert.ok(!(x && y && x.id !== y.id), 'never two spots in a row'); }
+  }
+});
+test('Spots: everyone on a channel sees the same spot at the same moment, and a kids channel gets none', () => {
+  const p = page({ spots: SPOTS }), q = page({ spots: SPOTS }), c = p.TV[0];
+  const B = breaks(p, c), Q = breaks(q, q.TV[0]);
+  assert.deepEqual(JSON.parse(JSON.stringify(Q.map((b) => b.cards))), JSON.parse(JSON.stringify(B.map((b) => b.cards))));
+  const kids = breaks(p, Object.assign({}, c, { kc: 1 }));
+  assert.ok(kids.length > 0 && kids.every((b) => b.cards.every((d) => !d.spot)), 'no spots on a kids channel');
+});
+test('Spots: without catalog/spots.json the cards are as before (no spots)', () => {
+  const p = page(), B = breaks(p, p.TV[0]);
+  assert.ok(B.every((b) => b.cards.every((d) => !d.spot)));
 });

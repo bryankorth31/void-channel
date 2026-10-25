@@ -247,12 +247,15 @@ function assemble() {
   const COLORS = readJson(path.join(PROFILE.catalogDir, 'colors.json'), COLORS_FALLBACK);
   for (const s of shows) s.cg = colorOf(s, COLORS);
   const colors = COLORS.groups.concat([COLORS.other]).map((g) => ({ k: g.key, n: g.name, c: g.color, a: g.adult ? 1 : undefined }));
+  // The spots in Live TV's breaks (B, 25 Oct 2026): their words, edited by hand in catalog/spots.json. No file: no spots, the cards as before.
+  const SP = readJson(path.join(PROFILE.catalogDir, 'spots.json'), null);
+  const spots = SP ? { donate: SP.donate || null, tips: SP.tips || [], know: SP.know || [], trivia: SP.trivia || [] } : null;
   // Live TV, one lineup a week (B, 25 Oct 2026): this week's plan from catalog/tv-lineup.json once stored, next week's from today's
   // catalog until its Monday begins (scripts/lib/tvweek.js). tvLineup carries what the publish writes back and the doctor shows.
   const TW = require('./tvweek');
   const tvLineup = TW.lineup(buildTv(shows, types), TW.read(path.join(PROFILE.catalogDir, 'tv-lineup.json')), +process.env.VOID_TV_NOW || Date.now()); // VOID_TV_NOW: tests pin the clock
   const tv = tvLineup.tv;
-  return { shows, people, links, types, bios, channels: tv.channels, tv, tvLineup, homeOrder, colors };
+  return { shows, people, links, types, bios, channels: tv.channels, tv, tvLineup, homeOrder, colors, spots };
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
@@ -296,6 +299,14 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 .osd{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;padding:10px 12px;background:var(--panel);font-size:14px;min-height:44px}.osd b{color:var(--acc)}.osd .g{color:var(--dim)}.osd .acts{margin-left:auto;display:flex;gap:6px}
 /* Live TV holding cards (tvCards): the break between shows. Slow fades and slides only, no flashing; sizes follow the player (cqi), with vw for older browsers. */
 .tvc{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:5%;overflow:hidden;text-align:center;color:var(--fg);background:radial-gradient(ellipse at 50% 38%,#151b2c 0%,var(--bg) 72%)}.tvc-card{max-width:860px;animation:tvcIn .9s ease-out both}.tvc-line{font-size:clamp(18px,3vw,44px);font-size:clamp(18px,4.6cqi,48px);font-weight:800;line-height:1.15;letter-spacing:-.01em}.tvc-long .tvc-line{font-size:clamp(15px,2vw,30px);font-size:clamp(15px,3cqi,32px);font-weight:700}.tvc-next{margin-top:16px;display:flex;flex-wrap:wrap;justify-content:center;gap:0 .4em;font-size:clamp(14px,1.5vw,22px);font-size:clamp(14px,2.4cqi,24px);color:var(--dim)}.tvc-next b{color:var(--gold)}.tvc-cd{margin-top:6px;font-size:clamp(13px,1.2vw,18px);font-size:clamp(13px,1.8cqi,20px);color:var(--dim)}.tvc-cd b{color:var(--fg);font-variant-numeric:tabular-nums}.tvc-now{margin-top:18px;background:rgba(7,8,12,.6)}.tvc-bar .tvc-card{text-align:left;border-left:6px solid var(--gold);padding-left:24px;animation-name:tvcSlide}.tvc-bar .tvc-next{justify-content:flex-start}.tvc-split{background:linear-gradient(115deg,var(--panel) 0 50%,#101a30 50% 100%)}.tvc-split .tvc-line{color:var(--brand-blue)}.tvc-glow .tvc-line{color:#fff;text-shadow:0 0 22px rgba(255,79,200,.55),0 0 46px rgba(95,227,255,.35);animation:tvcBreathe 6s ease-in-out infinite}@keyframes tvcIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@keyframes tvcSlide{from{opacity:0;transform:translateX(-36px)}to{opacity:1;transform:none}}@keyframes tvcBreathe{0%,100%{opacity:.86}50%{opacity:1}}@media (prefers-reduced-motion:reduce){.tvc-card,.tvc-glow .tvc-line{animation:none}}
+.tvc-spot{background:radial-gradient(ellipse at 50% 40%,#1a0f2a 0,#07080c 75%)}
+.tvc-spot .tvc-card{animation:tvcIn .9s ease-out both}
+.tvc-wm{font-family:Unbounded,system-ui,sans-serif;font-weight:800;font-size:clamp(22px,4cqi,46px);margin-bottom:10px;paint-order:stroke fill;-webkit-text-stroke:.06em #07080c}.tvc-wm .v{color:var(--brand-pink)}.tvc-wm .n{color:var(--brand-blue)}
+.tvc-donate .tvc-line{color:#fff}.tvc-credit{margin-top:8px;color:var(--dim);font-size:clamp(13px,1.9cqi,20px)}
+.tvc .tvc-give{display:inline-flex;align-items:center;margin-top:16px;font-size:18px;padding:11px 30px;font-weight:700}
+.tvc-kick{display:inline-block;margin-bottom:12px;padding:3px 12px;border-radius:999px;background:rgba(95,227,255,.14);color:var(--brand-blue);font-size:clamp(12px,1.8cqi,18px);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.tvc-fact .tvc-line{font-size:clamp(17px,3.6cqi,38px)}
+.tvc-vid{width:100%;max-width:none}.tvc-vid video{width:100%;max-height:72%;aspect-ratio:16/9;object-fit:contain;display:block;margin:0 auto;border-radius:8px;background:#000}
 .guide{margin-top:12px;border:1px solid var(--line);border-radius:10px;overflow:hidden}.ch{display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:10px;padding:9px 12px;border-bottom:1px solid var(--line);cursor:pointer;font-size:14px}.ch:last-child{border-bottom:0}.ch:hover,.ch.on{background:var(--panel2)}.ch.on .cn{color:var(--acc)}.ch small{display:block;color:var(--dim);font-size:11px}
 @media(max-width:600px){.ch{grid-template-columns:1fr;gap:2px}.osd .acts{margin-left:0;width:100%}}
 .gd{--ppm:5;outline:none}.gd:focus{box-shadow:inset 0 0 0 2px var(--acc)}
@@ -883,15 +894,43 @@ const TVC_LINES=["Go grab a snack. {show} is on next.","Stretch your legs. {show
  "Lights down. {show} starts at {time}.","Plenty of time for a sandwich.","Back in a moment with {show}.","Still here? Good. {show} is coming up.",
  "Feet up. {show} is on at {time}.","We'll keep your seat warm.","Fresh snacks for a fresh episode: {show}.","Stick around. {show} is next on {channel}.",
  "This is the Void. {show} is on next.","Take five. {show} starts at {time}.","Coming right up: {show}.","Grab the good chair before someone else does.",
- "Free to watch, no account, no ads sold. {show} is next.","Tell a friend what's on: {show} at {time}.","Snack run? You've got time.",
- "If you found this service helpful, please think of donating to keep it running. Every donation goes to CASH (cashvalues.org): voidtv.net/cash"];
+ "Free to watch, no account, no ads sold. {show} is next.","Tell a friend what's on: {show} at {time}.","Snack run? You've got time.","Pull up a chair. {show} starts at {time}."];
 const tvHash=(s)=>{let h=7;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h};
 const tvLeft=(sec)=>{sec=Math.max(0,Math.ceil(sec));return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0')};
+// THE SPOTS (B, 25 Oct 2026; step 4 of PLAN-voidtv-home-and-spots; the words are in catalog/spots.json). Inside a break the cards are counted
+// from the start of the stretch: cards 2 and 3 are the donation spot (only in the channel's first break of each clock hour), card 5 a
+// trivia, tip or good-to-know spot, cards 8 to 11 a video spot once promos are live (HQ > Promos, Go live), and every third other card a
+// fact about the show coming up, from the catalog. Never on kids channels or kids mornings, never two spots in a row, and everyone on a
+// channel sees the same spot at the same moment, because the clock decides.
+const TVS_FIRST={},TVS_SEEN={};
+const tvKids=(c,a)=>!!(c&&(c.kc||(a&&a.k==='m'&&c.km)));
+function tvStretchStart(c,a,until){const br=TVG.breakOf(c,TVLIB,a);const s0=br?(br.fill.length?br.fill[br.fill.length-1].en:br.at):until;return Math.min(s0,until)}
+function tvFirstOfHour(c,s0){const key=c.id+':'+s0;if(key in TVS_FIRST)return TVS_FIRST[key];const h=new Date(s0);h.setMinutes(0,0,0);const h0=+h;let first=true;
+ for(const x of TVG.airingsBetween(c,TVLIB,h0,s0)){if(x.en>s0)continue;const s=tvStretchStart(c,x,x.en);if(s>=h0&&s<s0&&x.en-s>=TVC_MS){first=false;break}}return TVS_FIRST[key]=first}
+function tvFact(ns,seed){if(!ns)return '';const y=ns.year,net=ns.network,ppl=String(ns.people||'').split(', ').filter(Boolean),movie=String(ns.slug||'').startsWith('movie-');const out=[];
+ if(y)out.push(ns.show+(movie?' is a TV movie from ':' first aired in ')+y+(net&&!movie?' on '+net:'')+'.');
+ if(!movie&&ns.seasonCount&&ns.eps)out.push(ns.show+': '+ns.seasonCount+' season'+(ns.seasonCount===1?'':'s')+' and '+ns.eps+' episodes here, all free.');
+ if(ppl.length>=2)out.push(ns.show+' stars '+ppl[0]+' and '+ppl[1]+'.');return out.length?out[seed%out.length]:''}
+// The spot a card shows, if any (d is the card tvCard made; seed and ns are its own).
+function tvSpot(c,a,until,t,d,seed,ns){const S=typeof SPOTS!=='undefined'?SPOTS:null;if(!S)return d;
+ const s0=tvStretchStart(c,a,until),K0=Math.max(0,Math.floor((until-s0)/TVC_MS)),i=K0-d.k,kids=tvKids(c,a);
+ if(!kids&&S.donate&&K0>=3&&(i===1||i===2)&&tvFirstOfHour(c,s0)){d.spot={kind:'donate',id:'d'+s0};return d}
+ if(!kids&&i===4&&K0>=6){const pool=[].concat((S.trivia||[]).map(x=>['Did you know?',x]),(S.tips||[]).map(x=>['Tip',x]),(S.know||[]).map(x=>['Good to know',x]));
+  if(pool.length){const p=pool[(seed+Math.floor(s0/36e5))%pool.length];d.spot={kind:'fact',id:'f'+s0,kick:p[0],text:p[1]};return d}}
+ if(!kids&&K0>=12&&i>=7&&i<=10){const v=typeof promoBreakSpot==='function'?promoBreakSpot(seed):null;if(v){d.spot={kind:'video',id:'v'+s0,src:v.src,poster:v.poster,off:Math.max(0,(t-(until-(K0-6)*TVC_MS))/1000)};return d}}
+ if(i>2&&i%3===2){const f=tvFact(ns,seed+i);if(f)d.line=f}
+ return d}
+function tvCardHtml(d){const nx='<div class="tvc-next"><span>Up next</span><b>'+esc(d.show)+'</b>'+(d.at?'<span>at '+esc(d.at)+'</span>':'')+'</div><div class="tvc-cd">starts in <b class="tvc-left">'+tvLeft(d.left)+'</b></div>',sp=d.spot;
+ if(!sp)return '<div class="tvc-card"><div class="tvc-line">'+esc(d.line)+'</div>'+nx+'<button type="button" class="btn tvc-now" onclick="tvNow()">Watch it now</button></div>';
+ if(sp.kind==='donate'){const D=SPOTS.donate;return '<div class="tvc-card"><div class="tvc-wm"><span class="v">void</span><span class="n">tv.net</span></div><div class="tvc-line">'+esc(D.line)+'</div><div class="tvc-credit">'+esc(D.credit||'')+'</div><a class="btn gold tvc-give" href="'+DONATE+'" target="_blank" rel="noopener" onclick="track(\\'act\\',{slug:state.chan,x:\\'spot-donate-tap\\'})">'+esc(D.button||'Donate')+'</a>'+nx+'</div>'}
+ if(sp.kind==='fact')return '<div class="tvc-card"><div class="tvc-kick">'+esc(sp.kick)+'</div><div class="tvc-line">'+esc(sp.text)+'</div>'+nx+'</div>';
+ return '<div class="tvc-card tvc-vid"><video muted playsinline autoplay preload="auto" src="'+esc(sp.src)+'"'+(sp.poster?' poster="'+esc(sp.poster)+'"':'')+' onloadedmetadata="this.currentTime=Math.min('+sp.off.toFixed(1)+',Math.max(0,this.duration-0.5))"></video>'+nx+'</div>'}
+function tvSpotShown(c,sp){if(TVS_SEEN[sp.id+c.id])return;TVS_SEEN[sp.id+c.id]=1;track('act',{slug:c.id,x:'spot-'+sp.kind})}
 // The card on channel c at instant t, in a run of cards that ends at until: k counts the cards left to the end (0 is the last one).
 function tvCard(c,a,until,t){const nx=TVG.nextAiring(c,TVLIB,a),ns=nx&&SHOWS[nx.s],k=Math.max(0,Math.floor((until-t)/TVC_MS)),seed=tvHash(c.id+':'+until);
  const show=ns?ns.show:'the next show',at=nx?clock(nx.st):'';
  const line=TVC_LINES[(seed+k*7)%TVC_LINES.length].split('{show}').join(show).split('{time}').join(at||'soon').split('{channel}').join(c.name);
- return{k,line,look:TVC_LOOKS[(seed+k)%TVC_LOOKS.length],show,at,left:nx?Math.max(0,(nx.st-t)/1000):0}}
+ return tvSpot(c,a,until,t,{k,line,look:TVC_LOOKS[(seed+k)%TVC_LOOKS.length],show,at,left:nx?Math.max(0,(nx.st-t)/1000):0},seed,ns)}
 let TVC_TIMER=0,TVC_NOW=null;
 function tvCardsOff(){if(TVC_TIMER){clearInterval(TVC_TIMER);TVC_TIMER=0}TVC_NOW=null;const el=document.querySelector('.tvc');if(el&&el.remove)el.remove()}
 function tvCards(c,x,token){const host=$('vph');if(!host)return;tvCardsOff();TVCUR={c,a:x.a,x};
@@ -902,7 +941,7 @@ function tvCards(c,x,token){const host=$('vph');if(!host)return;tvCardsOff();TVC
   const d=tvCard(c,x.a,x.until,t);TVC_NOW=d;
   if(!el&&VP.root&&VP.root.querySelector&&document.createElement){el=document.createElement('div');el.setAttribute('role','status');VP.root.insertBefore(el,VP.root.querySelector('.vpx-chname')||VP.root.querySelector('.vpx-card'))}
   if(!el)return;
-  if(d.k!==shown){shown=d.k;el.className='tvc tvc-'+d.look+(d.line.length>90?' tvc-long':'');el.innerHTML='<div class="tvc-card"><div class="tvc-line">'+esc(d.line)+'</div><div class="tvc-next"><span>Up next</span><b>'+esc(d.show)+'</b>'+(d.at?'<span>at '+esc(d.at)+'</span>':'')+'</div><div class="tvc-cd">starts in <b class="tvc-left">'+tvLeft(d.left)+'</b></div><button type="button" class="btn tvc-now" onclick="tvNow()">Watch it now</button></div>'}
+  const key=d.spot?d.spot.id:'k'+d.k;if(key!==shown){shown=key;el.className='tvc '+(d.spot?'tvc-spot tvc-'+d.spot.kind:'tvc-'+d.look+(d.line.length>90?' tvc-long':''));el.innerHTML=tvCardHtml(d);if(d.spot)tvSpotShown(c,d.spot)}
   else{const l=el.querySelector('.tvc-left');if(l)l.textContent=tvLeft(d.left)}};
  const iv=setInterval(tick,250);TVC_TIMER=iv;tick()}
 // Next during a break (B, 21 Oct 2026): the coming show plays now, On Demand, in the normal show player; Live TV's schedule is the same
@@ -1027,6 +1066,9 @@ let PROMOS=null,PROMOS_P=null;const SHAPE_NAME={wide:'16:9',square:'1:1',feed:'4
 function promosLoad(){if(!PROMOS_P)PROMOS_P=fetch(BASE+'assets/brand/promos/promos.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null).then(j=>{PROMOS=j&&j.items?j:{items:{},slots:{}};return PROMOS});return PROMOS_P}
 function promoUrl(f){return BASE+'assets/brand/promos/'+encodeURIComponent(f)}
 function promoPick(it,want){const sh=(it&&it.shapes)||{};if(want&&sh[want])return Object.assign({k:want},sh[want]);const order=innerHeight>innerWidth*1.1?['feed','tall','square','wide']:['wide','square','feed','tall'];for(const k of order)if(sh[k])return Object.assign({k},sh[k]);return null}
+// A video spot for Live TV's breaks (step 4): one of the promos live on the /promos page, in the wide shape; none until promos go live.
+function promoBreakSpot(seed){const P=typeof PROMOS!=='undefined'&&PROMOS;const ids=P&&P.slots&&Array.isArray(P.slots.promos)?P.slots.promos.filter(b=>P.items[b]):[];if(!ids.length)return null;
+ const id=ids[seed%ids.length],x=promoPick(P.items[id],'wide');return x&&x.src?{id,src:promoUrl(x.src),poster:x.poster?promoUrl(x.poster):''}:null}
 function promoBox(x,vh){return 'aspect-ratio:'+x.w+'/'+x.h+';max-width:min(100%,calc('+vh+'vh * '+x.w+' / '+x.h+'))'}
 function promoFill(){if(!$('promohome'))return;promosLoad().then(P=>{const el=$('promohome');const b=P.slots&&P.slots.home,it=b&&P.items[b],x=promoPick(it);if(!el)return;if(!x){el.innerHTML='';return}el.innerHTML='<section class="promo-home"><button class="ph" style="'+promoBox(x,60)+'" onclick="promoPlay(this)" data-src="'+esc(promoUrl(x.src))+'" aria-label="Play: '+esc(it.title||'voidtv.net')+'"><img src="'+esc(promoUrl(x.poster))+'" alt="" loading="lazy"><span class="pp"><i class="ico play"></i></span></button><a class="phmore" onclick="go(\\'promos\\')">More to watch and share →</a></section>'})}
 function promoPlay(b){const v=document.createElement('video');v.src=b.dataset.src;v.controls=true;v.autoplay=true;v.playsInline=true;v.setAttribute('playsinline','');v.setAttribute('style',b.getAttribute('style'));b.replaceWith(v);v.play().catch(()=>{})}
@@ -1118,12 +1160,12 @@ go(slugFromUrl(),true);
 `;
 
 function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) {
-  const { shows, people, links, types, bios = {}, tv = { channels: [], rt: [], lib: [] }, homeOrder = [], colors = [] } = data;
+  const { shows, people, links, types, bios = {}, tv = { channels: [], rt: [], lib: [] }, homeOrder = [], colors = [], spots = null } = data;
   // Split mode keeps the browse index in one shared, cacheable file (data/index.js) so the hundreds
   // of per-show share pages stay tiny; embed mode inlines everything for the single-file preview.
   const inline = mode === 'embed'
-    ? `const CG=${JSON.stringify(colors)};const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let TV=null;let TVLIB=null;const TVJ=${JSON.stringify(tv)};let GRAPH_LOADED=true;`
-    : `const CG=${JSON.stringify(colors)};const PEOPLE={};const LINKS={};const BIO={};let TV=null;let TVLIB=null;let GRAPH_LOADED=false;`;
+    ? `const CG=${JSON.stringify(colors)};const SPOTS=${JSON.stringify(spots)};const SHOWS=${JSON.stringify(shows)};const PEOPLE=${JSON.stringify(people)};const LINKS=${JSON.stringify(links)};const BIO=${JSON.stringify(bios)};let TV=null;let TVLIB=null;const TVJ=${JSON.stringify(tv)};let GRAPH_LOADED=true;`
+    : `const CG=${JSON.stringify(colors)};const SPOTS=${JSON.stringify(spots)};const PEOPLE={};const LINKS={};const BIO={};let TV=null;let TVLIB=null;let GRAPH_LOADED=false;`;
   const indexScript = `<script src="${base}assets/player/voidplayer.js?v=${PLAYER_V}"></script>` + (mode === 'embed' ? '' : `<script src="${base}data/index.js"></script>`);
   const hx = (v) => String(v == null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const title = hx(meta.title ? `${meta.title} · ${SITE_NAME}` : SITE_NAME);
