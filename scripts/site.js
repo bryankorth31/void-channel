@@ -128,6 +128,9 @@ if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand
 if (fs.existsSync(path.join(brandSrc, 'favicon.ico'))) fs.copyFileSync(path.join(brandSrc, 'favicon.ico'), path.join(OUT, 'favicon.ico'));
 // Caching plus the security headers for static files (the same set functions/_middleware.js puts on every Function answer).
 fs.writeFileSync(path.join(OUT, '_headers'), guards.headersFile());
+// The smallest service worker that lets browsers offer Install app (Bryan, 25 Oct 2026). It caches nothing: pages and data always come
+// from the network, and a page load with no connection gets a one-line offline page instead of the browser's error.
+fs.writeFileSync(path.join(OUT, 'sw.js'), "self.addEventListener('install',()=>self.skipWaiting());\nself.addEventListener('activate',(e)=>e.waitUntil(self.clients.claim()));\nself.addEventListener('fetch',(e)=>{if(e.request.mode!=='navigate')return;e.respondWith(fetch(e.request).catch(()=>new Response('<!doctype html><meta name=viewport content=\"width=device-width\"><body style=\"background:#07080c;color:#eee;font-family:sans-serif;padding:24px\"><h1>voidtv.net</h1><p>You are offline. Connect and reload.</p>',{headers:{'content-type':'text/html; charset=utf-8'}})))});\n");
 fs.writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\nDisallow: /data/\n');
 // Which paths run through Pages Functions, chosen by the same switch as the gate itself. Gate on: everything but the brand assets.
 // Gate off: only the analytics intake and the QR redirects, so pages and data files are plain static files and do not use the
