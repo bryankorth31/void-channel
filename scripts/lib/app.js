@@ -116,7 +116,7 @@ function buildTv(shows, types) {
 // looked at it and approved it: catalog/overrides.json, key "movie-<tmdbId>", "approved": true (R-007: by hand, no AI).
 // A REVIEW movie is the matcher's guess and often another work under the film's title, so it stays hidden until a person says yes.
 // A movie with no playable file never ships, approved or not. The hard excludes (C-SPAN, hearings, news; R-005) are the last
-// gate and beat an approval. TV show episodes do not use this: a REVIEW episode still ships.
+// gate and beat an approval. TV show episodes do not use this: a REVIEW episode still ships, unless it is a sequence guess (epNoGuess).
 let hardExcludeFn; // loaded on the first movie, so the small copies of the build the tests make (they hold no movies) need not carry hardexclude.js
 const movieApproved = (m, OV) => { const o = OV && OV['movie-' + m.tmdbId]; return !!o && o.approved === true; };
 function movieShips(m, OV) {
@@ -124,6 +124,20 @@ function movieShips(m, OV) {
   hardExcludeFn = hardExcludeFn || require('./hardexclude').hardExclude;
   if (hardExcludeFn({ title: m.file.itemTitle, stem: m.file.stem, item: m.file.item, collection: m.file.collection }, m.title)) return false;
   return m.state === 'LIVE' || movieApproved(m, OV);
+}
+
+// Sequence guesses (B, 25 Oct 2026: "a wrong episode is worse than a missing one"). scripts/match.js places the Nth unnamed file of a
+// disc rip as episode N ("sequence guess: file 3 of 38 in ..."), and most of the ones that can be checked are wrong (79% of those whose
+// file name carries its own number disagree). Such an episode does not ship, on show pages or Live TV. When a file that matched by
+// title or number waits among its alternates, that file plays instead, as REVIEW (it lost to the guess, so it was never sure).
+// A guess B accepted in HQ ("accepted in HQ | sequence guess", conf 1) is no longer a guess and ships. Returns the episode as it ships, or null.
+const SEQ_GUESS = /^sequence guess/;
+const isGuess = (f) => !!f && SEQ_GUESS.test(f.why || '');
+function epNoGuess(e) {
+  if (!e || !isGuess(e.file)) return e;
+  const alts = (e.alternates || []).filter((a) => a && !isGuess(a));
+  const alt = alts.find((a) => a.playable && !a.langRisk);
+  return alt ? { ...e, state: 'REVIEW', file: alt, alternates: alts.filter((a) => a !== alt) } : null;
 }
 
 function assemble() {
@@ -148,8 +162,8 @@ function assemble() {
       return {
         show: s.show, slug: s.slug, type: s.type, network: s.network, year: (s.tvmaze.premiered || a.year || '').slice(0, 4), runtime: s.tvmaze.runtime, tags: entry.tags || [],
         poster: a.poster || null, backdrop: a.backdrop || null, overview: a.overview || '', genres: a.genres || [], rating: a.rating || null, country: a.country || null, matchedAt: s.matchedAt, addedAt: s.addedAt,
-        seasons: s.seasons.map((se) => ({ season: se.season, episodes: se.episodes.filter((e) => e.file && e.file.playable && !e.file.langRisk).map((e) => epOut(e)) })).filter((se) => se.episodes.length),
-        vault: s.seasons.flatMap((se) => se.episodes.filter((e) => e.file && !e.file.playable && !e.file.langRisk).map((e) => ({ season: se.season, n: e.number, name: e.name, url: e.file.url, min: Math.round(e.file.seconds / 60), risk: (e.file.codecRisk || 'format').replace(/^(video|audio|container) /, '').replace(/[()]/g, '') }))),
+        seasons: s.seasons.map((se) => ({ season: se.season, episodes: se.episodes.map(epNoGuess).filter((e) => e && e.file && e.file.playable && !e.file.langRisk).map((e) => epOut(e)) })).filter((se) => se.episodes.length),
+        vault: s.seasons.flatMap((se) => se.episodes.map(epNoGuess).filter((e) => e && e.file && !e.file.playable && !e.file.langRisk).map((e) => ({ season: se.season, n: e.number, name: e.name, url: e.file.url, min: Math.round(e.file.seconds / 60), risk: (e.file.codecRisk || 'format').replace(/^(video|audio|container) /, '').replace(/[()]/g, '') }))),
         cast: p ? p.cast.slice(0, 14).map((c) => ({ id: c.id, name: c.name, photo: c.photo, as: c.character, eps: c.episodes })) : [],
         crew: p ? p.crew.slice(0, 6).map((c) => ({ id: c.id, name: c.name, photo: c.photo, as: c.jobs.join(', ') })) : [],
         credits: p && p.episodes ? p.episodes : {},
@@ -1075,4 +1089,4 @@ ${JS}
 </script></body></html>`;
 }
 
-module.exports = { assemble, page, indexEntry, showFile, channelLists, SITE_NAME, BRAND, movieShips, movieApproved };
+module.exports = { assemble, page, indexEntry, showFile, channelLists, SITE_NAME, BRAND, movieShips, movieApproved, epNoGuess };

@@ -176,6 +176,9 @@ async function main() {
   // 5c2. the gate on the TV-movie rows: how many REVIEW movies the site keeps hidden, how many approved ones it shows (information, always green; scripts/lib/matchcheck.js moviesGate)
   try { const g = require('./lib/matchcheck').moviesGate({ moviesDir: path.join(PROFILE.catalogDir, 'movies'), overridesFile: path.join(PROFILE.catalogDir, 'overrides.json') }); add('movies:review-hidden', g.level, g.detail, g.fix); }
   catch (e) { add('movies:review-hidden', 'yellow', 'could not count the movie gate: ' + String(e.message).slice(0, 80)); }
+  // 5c3. the gate on sequence guesses: episodes placed as "file N of a disc rip is episode N" stay off the site (information, always green; scripts/lib/matchcheck.js guessesGate)
+  try { const g = require('./lib/matchcheck').guessesGate({ showsDir: path.join(PROFILE.catalogDir, 'shows'), overridesFile: path.join(PROFILE.catalogDir, 'overrides.json') }); add('episodes:guess-hidden', g.level, g.detail); }
+  catch (e) { add('episodes:guess-hidden', 'yellow', 'could not count the guess gate: ' + String(e.message).slice(0, 80)); }
   let built = null; // the counts assemble() gives, for the shrink light
   try {
     const { assemble } = require('./lib/app');

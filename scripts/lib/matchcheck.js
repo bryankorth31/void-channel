@@ -222,4 +222,43 @@ function moviesGate(opts = {}) {
   return { ...out, level: 'green', detail: parts.join('; ') };
 }
 
-module.exports = { matcherCheck, seTitleCheck, sameDayCheck, matcherLight, moviesCheck, moviesLights, moviesGate };
+// The gate on sequence guesses (epNoGuess in scripts/lib/app.js; B, 25 Oct 2026): an episode whose file was placed as "the Nth file of a disc rip
+// is episode N" does not ship, unless a file that matched by title or number waits among its alternates (that one plays). This counts what the gate
+// does with that same function, so the doctor and the build cannot disagree. Information, always green. Reads only, no network. Hidden shows are left out.
+//   hidden     episodes the site would have shown that it now keeps off    switched   episodes that play a real match from the alternates instead
+//   shows      shows with at least one hidden episode                       emptied    shows that leave the site because every episode was a guess
+//   accepted   guesses B accepted in HQ, which ship                          vault      guessed files that do not play in a browser, off the vault list too
+//   const { level, detail, hidden, switched, shows, emptied, accepted, vault } = require('./lib/matchcheck').guessesGate({ showsDir, overridesFile });
+function guessesGate(opts = {}) {
+  const { epNoGuess } = require('./app');
+  const dir = opts.showsDir || path.join(PROFILE.catalogDir, 'shows');
+  let OV = opts.overrides;
+  if (!OV) { try { OV = JSON.parse(fs.readFileSync(opts.overridesFile || path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')); } catch (e) { OV = {}; } }
+  const out = { scanned: 0, hidden: 0, switched: 0, shows: 0, emptied: 0, accepted: 0, vault: 0, emptiedNames: [] };
+  const plays = (e) => e && e.file && e.file.playable && !e.file.langRisk;
+  for (const f of GRID_FILES(dir)) {
+    let s;
+    try { s = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')); } catch (e) { continue; }
+    if (!s || !s.seasons || (OV[s.slug] && OV[s.slug].hidden)) continue;
+    out.scanned++;
+    let before = 0, after = 0, hid = 0;
+    for (const se of s.seasons) for (const e of se.episodes || []) {
+      const n = epNoGuess(e);
+      if (plays(e)) before++;
+      if (plays(n)) after++;
+      if (e.file && /^accepted in HQ \| sequence guess/.test(e.file.why || '') && plays(e)) out.accepted++;
+      if (n === e) continue;
+      if (plays(e)) { if (plays(n)) out.switched++; else hid++; }
+      else if (e.file && !e.file.langRisk && !n) out.vault++;
+    }
+    out.hidden += hid;
+    if (hid) out.shows++;
+    if (before && !after) { out.emptied++; if (out.emptiedNames.length < 3) out.emptiedNames.push(s.show); }
+  }
+  const detail = `${out.hidden} guessed episode${out.hidden === 1 ? '' : 's'} kept off the site in ${out.shows} show${out.shows === 1 ? '' : 's'}; ${out.switched} play a title or number match instead; `
+    + `${out.emptied} show${out.emptied === 1 ? '' : 's'} left with no episode${out.emptiedNames.length ? ' (' + out.emptiedNames.join(', ') + (out.emptied > 3 ? ', ...' : '') + ')' : ''}; `
+    + `${out.accepted} guess${out.accepted === 1 ? '' : 'es'} accepted in HQ ship; ${out.vault} unplayable guess${out.vault === 1 ? '' : 'es'} off the vault list`;
+  return { ...out, level: 'green', detail };
+}
+
+module.exports = { matcherCheck, seTitleCheck, sameDayCheck, matcherLight, moviesCheck, moviesLights, moviesGate, guessesGate };
