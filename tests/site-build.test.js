@@ -37,7 +37,7 @@ function tree({ shows = 12, profile = 'tiny' } = {}) {
   return root;
 }
 function build(root, { env = {}, args = ['--base', 'https://voidtv.net'], profile = 'tiny' } = {}) {
-  const e = { ...process.env, CF_PAGES_COMMIT_SHA: 'f'.repeat(40) }; delete e.SITE_PASSWORD; delete e.GATE; delete e.SITE_ALLOW_SHRINK; delete e.CF_PAGES; delete e.VOID_PROFILE;
+  const e = { ...process.env, CF_PAGES_COMMIT_SHA: 'f'.repeat(40) }; delete e.SITE_PASSWORD; delete e.GATE; delete e.SITE_ALLOW_SHRINK; delete e.SITE_ALLOW_BROKEN_TV; delete e.CF_PAGES; delete e.VOID_PROFILE;
   if (profile !== 'voidtv') e.VOID_PROFILE = profile;
   const r = spawnSync(process.execPath, [path.join(root, 'scripts', 'site.js'), ...args], { cwd: TMP, encoding: 'utf8', env: { ...e, ...env } });
   return { status: r.status, out: (r.stdout || '') + (r.stderr || '') };
@@ -240,3 +240,63 @@ test('a file over 24 MiB is refused and the output is removed so nothing half-bu
   assert.equal(build(root).status, 0, 'under the line it builds');
   assert.match(read(root, 'site/version.txt'), /largest=24117248 shows=12 episodes=60 largestFile=assets\/brand\/big\.bin/);
 });
+
+// ---- the Live TV refusal (B, 25 Oct 2026; step 2 of PLAN-voidtv-home-and-spots) ----------------------------------------------------------
+// The build runs the doctor's tv:schedule check (tvgrid.js checkTv) on each of the next 7 days. Red refuses, yellow warns, SITE_ALLOW_BROKEN_TV=1
+// lets one build through. Each broken case is made in the throwaway copy only: app.js names a show the build does not have, or checkTv is told
+// to answer red or yellow from a given day on.
+const edit = (root, rel, from, to) => { const t = read(root, rel); assert.ok(t.includes(from), 'the text this test breaks is no longer in ' + rel + ': ' + from); write(root, rel, t.replace(from, () => to)); };
+const SL_LINE = 'const sl = shows.map((s, i) => (used.has(i) ? s.slug : 0));';
+const CHECK_HEAD = 'function checkTv(tv, slugs, at) {';
+const missingShow = (root) => edit(root, 'scripts/lib/app.js', SL_LINE, SL_LINE + " { const k = sl.findIndex(Boolean); if (k >= 0) sl[k] = 'not-in-the-build'; }");
+const checkSays = (root, level, fromDay) => edit(root, 'scripts/lib/tvgrid.js', CHECK_HEAD, CHECK_HEAD + ` if (at >= Date.now() + ${fromDay} * 86400000 - 60000) return { level: '${level}', detail: 'test ${level}', fix: 'test fix.' };`);
+
+test('Live TV: a sound schedule builds and says the week checks out', () => {
+  const r = build(tree());
+  assert.equal(r.status, 0, r.out);
+  assert.match(r.out, /Live TV: the next 7 days check out/);
+});
+
+test('Live TV: a plan that names a show the build does not have is refused today, nothing deployable is left, and the override lets one build through', () => {
+  const root = tree();
+  missingShow(root);
+  const r = build(root);
+  assert.equal(r.status, 1, r.out);
+  assert.match(r.out, /LIVE TV SCHEDULE BROKEN today: 1 shows the TV plan names are not in the build; 0 channels would be left with no shows; refusing to build, the old site stays up/);
+  assert.match(r.out, /SITE_ALLOW_BROKEN_TV = 1/);
+  assert.ok(!fs.existsSync(path.join(root, 'site', 'index.html')), 'nothing deployable is left behind');
+  const ok = build(root, { env: { SITE_ALLOW_BROKEN_TV: '1' } });
+  assert.equal(ok.status, 0, ok.out);
+  assert.match(ok.out, /WARNING: LIVE TV SCHEDULE BROKEN today: .*SITE_ALLOW_BROKEN_TV=1 is set, so the build goes on/);
+});
+
+test('Live TV: a break later in the week is caught, and its day is named', () => {
+  const root = tree();
+  checkSays(root, 'red', 3);
+  const r = build(root);
+  assert.equal(r.status, 1, r.out);
+  assert.match(r.out, /LIVE TV SCHEDULE BROKEN 3 days from now: test red/);
+});
+
+test('Live TV: yellow (many holding cards) only warns', () => {
+  const root = tree();
+  checkSays(root, 'yellow', 0);
+  const r = build(root);
+  assert.equal(r.status, 0, r.out);
+  assert.match(r.out, /Live TV: the next 7 days check out \(note: test yellow\)/);
+});
+
+// The deliberate-bug check: the guard is weakened in the copy's site.js; the broken cases above must then build, which shows those tests would notice.
+for (const [name, from, to, breakIt] of [
+  ['the refusal is gone', "  if (red) {\n", "  if (false) {\n", missingShow],
+  ['only today is checked', 'for (let d = 0; d < 7 && !red; d++)', 'for (let d = 0; d < 1 && !red; d++)', (root) => checkSays(root, 'red', 3)],
+]) {
+  test('deliberate bug: ' + name + ' lets a broken schedule through', () => {
+    const root = tree();
+    breakIt(root);
+    const site = read(root, 'scripts/site.js').replace(/\r\n/g, '\n');
+    assert.ok(site.includes(from), 'the text this test breaks is no longer in scripts/site.js: ' + from);
+    write(root, 'scripts/site.js', site.replace(from, () => to));
+    assert.equal(build(root).status, 0);
+  });
+}

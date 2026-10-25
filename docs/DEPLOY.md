@@ -156,6 +156,7 @@ All paths start at dash.cloudflare.com. None of these changes what a visitor see
    - `GATE_KEY` (a Secret is fine: only the running gate reads it).
    - `NODE_VERSION` = `24`.
    - No `SITE_ALLOW_SHRINK` (it is set for one deliberate shrink and deleted again).
+   - No `SITE_ALLOW_BROKEN_TV` (it lets one build through a broken Live TV schedule and is deleted again).
    - Settings > Builds: build command exactly `node scripts/site.js --base https://voidtv.net`, output directory `site`.
    - The newest production deployment's build log (Deployments > View details > Build log) has a line starting `GATE:` that reads `GATE: on`.
 

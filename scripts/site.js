@@ -12,7 +12,7 @@
 // The one switch is two plain-text variables on the Pages project, because the build cannot see an encrypted Secret:
 // SITE_PASSWORD (or GATE = on) = gate on; GATE = off with no password = open; neither on a Cloudflare build of VOIDtv = refused.
 // See docs/DEPLOY.md, "The one switch". The build refuses to ship under 100 shows, a catalog more than 10 percent smaller than the
-// last publish, 19,500 files (Pages allows 20,000) or a file over 24 MiB.
+// last publish, a Live TV schedule that breaks in the next 7 days, 19,500 files (Pages allows 20,000) or a file over 24 MiB.
 // Usage: node scripts/site.js [--base https://voidtv.net]
 const fs = require('fs');
 const readJsonSafe = (p) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return null; } };
@@ -60,6 +60,19 @@ const EPISODES = data.shows.reduce((n, s) => n + (s.eps || 0), 0);
   const unreadable = guards.unreadableGrids(path.join(PROFILE.catalogDir, 'shows'));
   if (unreadable.length) console.warn('WARNING: ' + unreadable.length + ' show grid file' + (unreadable.length === 1 ? '' : 's') + ' did not parse and ' + (unreadable.length === 1 ? 'is' : 'are') + ' missing from the site: ' + unreadable.slice(0, 5).join(', ') + (unreadable.length > 5 ? ' and ' + (unreadable.length - 5) + ' more' : '') + '. Re-match them from HQ.'); }
 
+// Live TV (B, 25 Oct 2026; step 2 of PLAN-voidtv-home-and-spots). The same check as the doctor's tv:schedule light (scripts/lib/tvgrid.js checkTv),
+// run on each of the next 7 days, because the lineup rotates weekly. A red day (airings off the 30-minute grid, overlapping or running past their
+// time, a show the plan names that the build does not have, or a channel left empty) refuses the build: the old site stays up. Yellow (a channel
+// with many holding cards) only warns. SITE_ALLOW_BROKEN_TV=1 lets one build through when the cause is known; delete it after, like SITE_ALLOW_SHRINK.
+{ const TVG = require('./lib/tvgrid'), slugs = data.shows.map((s) => s.slug), now = Date.now();
+  let red = null, yellow = null;
+  for (let d = 0; d < 7 && !red; d++) { const r = TVG.checkTv(data.tv, slugs, now + d * 86400000); if (r.level === 'red') red = { day: d, ...r }; else if (r.level === 'yellow' && !yellow) yellow = r; }
+  if (red) {
+    const when = red.day ? red.day + ' day' + (red.day === 1 ? '' : 's') + ' from now' : 'today';
+    if (process.env.SITE_ALLOW_BROKEN_TV === '1') console.warn('WARNING: LIVE TV SCHEDULE BROKEN ' + when + ': ' + red.detail + '; SITE_ALLOW_BROKEN_TV=1 is set, so the build goes on');
+    else { console.error('LIVE TV SCHEDULE BROKEN ' + when + ': ' + red.detail + '; refusing to build, the old site stays up. ' + red.fix + ' If the cause is known and the site must go out anyway, set SITE_ALLOW_BROKEN_TV=1 for one build (on Cloudflare: the plain Text variable SITE_ALLOW_BROKEN_TV = 1 in the Production list, deleted after that deploy).'); process.exit(1); }
+  } else console.log('Live TV: the next 7 days check out' + (yellow ? ' (note: ' + yellow.detail + ')' : ''));
+}
 for (const s of data.shows) fs.writeFileSync(path.join(OUT, 'data', 'shows', s.slug + '.json'), JSON.stringify(showFile(s, data)));
 fs.writeFileSync(path.join(OUT, 'data', 'index.js'), 'const SHOWS=' + JSON.stringify(data.shows.map(indexEntry)) + ';');
 // People and show links, split for phones (B, 25 Oct 2026): the one graph.json had grown to 21 MB, near Cloudflare's 25 MiB

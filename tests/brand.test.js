@@ -245,7 +245,7 @@ test('a built site: manifest, share cards, show pages and the password page say 
         file: { name: `e${k}`, file: `e${k}.mp4`, item: `item-${i}`, url: `https://archive.org/download/item-${i}/e${k}.mp4`, format: 'h.264', playable: true, seconds: 1800, sizeMB: 90, conf: 0.9 } })) }],
     }));
     const env = { ...process.env, CF_PAGES_COMMIT_SHA: 'f'.repeat(40) };
-    for (const k of ['SITE_PASSWORD', 'GATE', 'SITE_ALLOW_SHRINK', 'CF_PAGES', 'VOID_PROFILE']) delete env[k];
+    for (const k of ['SITE_PASSWORD', 'GATE', 'SITE_ALLOW_SHRINK', 'SITE_ALLOW_BROKEN_TV', 'CF_PAGES', 'VOID_PROFILE']) delete env[k];
     const r = spawnSync(process.execPath, [path.join(root, 'scripts', 'site.js'), '--base', 'https://voidtv.net'], { cwd: TMP, encoding: 'utf8', env });
     assert.equal(r.status, 0, (r.stdout || '') + (r.stderr || ''));
     const out = (rel) => fs.readFileSync(path.join(root, 'site', rel), 'utf8');
