@@ -1,7 +1,8 @@
 // THE SITE: builds the deployable static site into site/ for Cloudflare Pages (or any static host).
 //   site/index.html                 the app shell with the browse index inline
 //   site/data/shows/<slug>.json     seasons, episodes, cast, crew; fetched when a show opens
-//   site/data/graph.json            people and show-to-show links; fetched once
+//   site/data/pp/<n>.json            people in 256 pieces; a person's page loads one
+//   site/data/links.json            which shows connect, for Six Degrees
 //   site/show/<slug>/index.html     the same shell with that show's title, poster and description
 //                                   in the page head, so a shared link renders a real card
 //   site/_redirects                 comments only (Pages rejects an absolute-address rule; www is handled elsewhere, see docs/DEPLOY.md)
@@ -61,7 +62,16 @@ const EPISODES = data.shows.reduce((n, s) => n + (s.eps || 0), 0);
 
 for (const s of data.shows) fs.writeFileSync(path.join(OUT, 'data', 'shows', s.slug + '.json'), JSON.stringify(showFile(s, data)));
 fs.writeFileSync(path.join(OUT, 'data', 'index.js'), 'const SHOWS=' + JSON.stringify(data.shows.map(indexEntry)) + ';');
-fs.writeFileSync(path.join(OUT, 'data', 'graph.json'), JSON.stringify({ people: data.people, links: data.links }));
+// People and show links, split for phones (B, 25 Oct 2026): the one graph.json had grown to 21 MB, near Cloudflare's 25 MiB
+// cap, and a person's page on a phone fetched all of it. Now data/pp/<id % 256>.json holds the people (about 40 KB each;
+// a person's page loads one) and data/links.json holds only which shows connect, for Six Degrees (about 1.4 MB). Who links
+// two shows comes from each show's own file, which already carries its links.
+{ const PP = 256, shards = Array.from({ length: PP }, () => ({}));
+  for (const [id, p] of Object.entries(data.people)) if (/^\d+$/.test(id)) shards[Number(id) % PP][id] = p;
+  fs.mkdirSync(path.join(OUT, 'data', 'pp'), { recursive: true });
+  shards.forEach((sh, i) => fs.writeFileSync(path.join(OUT, 'data', 'pp', i + '.json'), JSON.stringify(sh)));
+  const ls = Object.keys(data.links), li = new Map(ls.map((x, i) => [x, i]));
+  fs.writeFileSync(path.join(OUT, 'data', 'links.json'), JSON.stringify({ s: ls, a: ls.map((x) => Object.keys(data.links[x]).map((y) => li.get(y)).filter((n) => n !== undefined)) })); }
 const TV_JSON = JSON.stringify(data.tv);
 fs.writeFileSync(path.join(OUT, 'data', 'tv.json'), TV_JSON);
 console.log(`data/tv.json: ${Buffer.byteLength(TV_JSON).toLocaleString('en-US')} bytes (the old list of every episode on every channel was about 2 MB)`);
