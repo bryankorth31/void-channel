@@ -1,0 +1,69 @@
+{
+  "show": "Red Rose",
+  "slug": "red-rose",
+  "type": "British and Beyond",
+  "network": "BBC Three",
+  "matchedAt": "2026-10-25T05:07:07.670Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Red Rose",
+    "runtime": null,
+    "premiered": null,
+    "network": "BBC Three"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "red-rose_202512",
+            "itemTitle": "Red Rose + Red Rose 2 (Nollywood)",
+            "file": "red rose.mp4",
+            "name": "red rose",
+            "url": "https://archive.org/download/red-rose_202512/red%20rose.mp4",
+            "seconds": 3163,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 239,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "red-rose_202512",
+            "itemTitle": "Red Rose + Red Rose 2 (Nollywood)",
+            "file": "red rose 2.mp4",
+            "name": "red rose 2",
+            "url": "https://archive.org/download/red-rose_202512/red%20rose%202.mp4",
+            "seconds": 3158,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 205,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

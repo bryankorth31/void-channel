@@ -1,0 +1,69 @@
+{
+  "show": "Tom and Jerry Special Shorts",
+  "slug": "tom-and-jerry-special-shorts",
+  "type": "Streaming Era",
+  "network": "HBO Max",
+  "matchedAt": "2026-10-25T04:57:39.887Z",
+  "addedAt": "2026-10-25T04:57:39.887Z",
+  "tvmaze": {
+    "id": 53694,
+    "name": "Tom and Jerry Special Shorts",
+    "runtime": 5,
+    "premiered": "2021-02-20",
+    "network": "HBO Max"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 2,
+    "review": 0,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "On a Roll",
+          "airdate": "2021-02-20",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "PeerTube-54d46221-0b1a-43f0-ae0f-5d4422745f0e",
+            "itemTitle": "Tom and Jerry Special Shorts",
+            "file": "Ep01 - On a Roll.mp4",
+            "name": "Ep01 - On a Roll",
+            "url": "https://archive.org/download/PeerTube-54d46221-0b1a-43f0-ae0f-5d4422745f0e/Ep01%20-%20On%20a%20Roll.mp4",
+            "seconds": 274,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 78
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The House That Cat Built",
+          "airdate": "2021-02-20",
+          "state": "LIVE",
+          "file": {
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
+            "item": "PeerTube-54d46221-0b1a-43f0-ae0f-5d4422745f0e",
+            "itemTitle": "Tom and Jerry Special Shorts",
+            "file": "Ep02 - The House That Cat Built.mp4",
+            "name": "Ep02 - The House That Cat Built",
+            "url": "https://archive.org/download/PeerTube-54d46221-0b1a-43f0-ae0f-5d4422745f0e/Ep02%20-%20The%20House%20That%20Cat%20Built.mp4",
+            "seconds": 314,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 80
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}
