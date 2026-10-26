@@ -427,6 +427,12 @@ test('kids networks by name are kids channels (Nickelodeon, Disney Channel); Dis
   assert.ok(!chan(grownUp(), { id: 'row-n', name: 'Nickelodeon', kind: 'row' }).ch.kc, 'only a network channel goes by its name');
 });
 
+test('a small channel is not a kids channel because of one show tagged Kids (audit A25-030, CollegeHumor)', () => {
+  const tagged = () => mk({ genres: ['Action & Adventure', 'Sci-Fi & Fantasy', 'Kids'] });
+  assert.ok(!chan([mk({ genres: ['Comedy'] }), tagged()], { id: 'net-ch', name: 'CollegeHumor', kind: 'network' }).ch.kc, 'one of two');
+  assert.equal(chan([mk({ genres: ['Comedy'] }), tagged(), tagged(), tagged()], { id: 'net-k', name: 'Kids Net', kind: 'network' }).ch.kc, 1, 'three of four still is');
+});
+
 test('gap specials: the page runs the same plan (the inlined source agrees with the module)', () => {
   const vm = require('node:vm');
   const inl = vm.runInNewContext(T.source, { Date, Math, Map, WeakMap, Object, Array });

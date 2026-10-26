@@ -663,7 +663,8 @@ function planChannel(meta, recs, rt) {
   // For the gap specials: km = this channel's mornings are kids shows, kc = most of the channel is kids shows (kids specials only).
   const kidsN = series.filter((r) => r.kids).length;
   if (!allMovies && kidsN >= 3) ch.km = 1;
-  if (series.length && kidsN / series.length >= 0.5) ch.kc = 1;
+  // At least 3 kids shows, as for km: one show tagged Kids made the two-show CollegeHumor channel a kids channel (audit A25-030).
+  if (kidsN >= 3 && kidsN / series.length >= 0.5) ch.kc = 1;
   if (meta.kind === 'network' && KIDS_NETWORK.test(meta.name)) ch.kc = 1; // by name, whatever their shows' genres say (audit P3A-02)
   // How many airings each daypart holds on a weekday: the step the weekly (or daily) rotation takes through the pool.
   const REF_BD = 20299;
@@ -679,7 +680,7 @@ function planChannel(meta, recs, rt) {
 // The kids networks (B, 26 Oct: Nickelodeon and Disney are kids channels): kids specials only, and no spots. Disney+ is not one:
 // most of its shows here are Marvel, Star Wars and grown-up dramas.
 const KIDS_NETWORK = /^(?:nickelodeon|nick jr\.?|nicktoons|disney channel|disney junior|disney xd|cartoon network|boomerang|pbs kids)$/i;
-const KIDS_STUDIO =/animation|cartoon|nickelodeon|disney|pixar|dreamworks|hanna-barbera|rankin|mendelson|magic light|pbs kids|sesame|jim henson|nick jr|aardman/i;
+const KIDS_STUDIO = /animation|cartoon|nickelodeon|disney|pixar|dreamworks|hanna-barbera|rankin|mendelson|magic light|pbs kids|sesame|jim henson|nick jr|aardman/i;
 const KIDS_TITLE = /charlie brown|peanuts|snoopy|scooby|mickey|minnie|goofy|donald duck|elmo|sesame|muppet|curious george|arthur.s|arthur christmas|chipmunk|alvin|garfield|grinch|rudolph|frosty|winnie the pooh|pooh|shrek|madagascar|kung fu panda|toy story|monsters, inc|gruffalo|room on the broom|stick man|zog|paddington|peppa|bluey|spongebob|looney|bugs bunny|tom and jerry|smurf|care bears|my little pony|club penguin|yogi|boo boo|flintstone|jetsons|powerpuff|billy and mandy|dexter.s laboratory|olaf|frozen fever|wallace|gromit|shaun the sheep|barney|teletubbies|dora|veggietales/i;
 function specialFlags(s) {
   const name = String(s.show || ''), net = String(s.network || '');
