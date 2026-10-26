@@ -1,0 +1,125 @@
+{
+  "show": "Dug Days",
+  "slug": "dug-days",
+  "type": "Animated",
+  "network": "Disney+",
+  "matchedAt": "2026-10-26T16:02:05.520Z",
+  "addedAt": "2026-10-26T16:02:05.520Z",
+  "tvmaze": {
+    "id": 52360,
+    "name": "Dug Days",
+    "runtime": 10,
+    "premiered": "2021-09-01",
+    "network": "Disney+"
+  },
+  "coverage": {
+    "total": 6,
+    "live": 0,
+    "review": 4,
+    "missing": 2,
+    "pct": 67
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Squirrel!",
+          "airdate": "2021-09-01",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dug-days-episode-1",
+            "itemTitle": "Dug Days",
+            "file": "Dug Days Episode 1.mp4",
+            "name": "Dug Days Episode 1",
+            "url": "https://archive.org/download/dug-days-episode-1/Dug%20Days%20Episode%201.mp4",
+            "seconds": 563,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 223
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Puppies",
+          "airdate": "2021-09-01",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dug-days-episode-1",
+            "itemTitle": "Dug Days",
+            "file": "Dug Days Episode 2.mp4",
+            "name": "Dug Days Episode 2",
+            "url": "https://archive.org/download/dug-days-episode-1/Dug%20Days%20Episode%202.mp4",
+            "seconds": 555,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 214
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Flowers",
+          "airdate": "2021-09-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Smell",
+          "airdate": "2021-09-01",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dug-days-episode-1",
+            "itemTitle": "Dug Days",
+            "file": "Dug Days Episode 4.mp4",
+            "name": "Dug Days Episode 4",
+            "url": "https://archive.org/download/dug-days-episode-1/Dug%20Days%20Episode%204.mp4",
+            "seconds": 433,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 162
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Science",
+          "airdate": "2021-09-01",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "dug-days-episode-1",
+            "itemTitle": "Dug Days",
+            "file": "Dug Days Episode 5.mp4",
+            "name": "Dug Days Episode 5",
+            "url": "https://archive.org/download/dug-days-episode-1/Dug%20Days%20Episode%205.mp4",
+            "seconds": 500,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 183
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Carl's Date",
+          "airdate": "2023-06-16",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

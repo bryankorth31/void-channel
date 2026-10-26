@@ -1,0 +1,108 @@
+{
+  "show": "The Scarlet Pimpernel",
+  "slug": "the-scarlet-pimpernel",
+  "type": "British and Beyond",
+  "network": "BBC One",
+  "matchedAt": "2026-10-26T16:00:49.240Z",
+  "addedAt": "2026-10-26T16:00:49.240Z",
+  "tvmaze": {
+    "id": 27305,
+    "name": "The Scarlet Pimpernel",
+    "runtime": 90,
+    "premiered": "1999-01-24",
+    "network": "BBC One"
+  },
+  "coverage": {
+    "total": 6,
+    "live": 0,
+    "review": 1,
+    "missing": 5,
+    "pct": 17
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "The Scarlet Pimpernel",
+          "airdate": "1999-01-24",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Scarlet Pimpernel\" (0.86)",
+            "item": "ReturnoftheScarletPimpernel",
+            "itemTitle": "Return of the Scarlet Pimpernel",
+            "file": "ReturnoftheScarletPimpernel.mp4",
+            "name": "ReturnoftheScarletPimpernel",
+            "url": "https://archive.org/download/ReturnoftheScarletPimpernel/ReturnoftheScarletPimpernel.mp4",
+            "seconds": 4586,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 477
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"The Scarlet Pimpernel\" (0.77)",
+              "item": "ReturnoftheScarletPimpernel",
+              "itemTitle": "Return of the Scarlet Pimpernel",
+              "file": "ReturnoftheScarletPimpernel_512kb.mp4",
+              "name": "ReturnoftheScarletPimpernel_512kb",
+              "url": "https://archive.org/download/ReturnoftheScarletPimpernel/ReturnoftheScarletPimpernel_512kb.mp4",
+              "seconds": 4586,
+              "format": "512Kb MPEG4",
+              "playable": true,
+              "sizeMB": 333
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Valentine Gautier",
+          "airdate": "1999-01-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "A King's Ransom",
+          "airdate": "1999-02-07",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Ennui",
+          "airdate": "2000-10-18",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Friends and Enemies",
+          "airdate": "2000-10-25",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "A Good Name",
+          "airdate": "2000-11-01",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

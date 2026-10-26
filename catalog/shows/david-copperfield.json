@@ -1,0 +1,97 @@
+{
+  "show": "David Copperfield",
+  "slug": "david-copperfield",
+  "type": "British and Beyond",
+  "network": "BBC One",
+  "matchedAt": "2026-10-26T16:01:18.754Z",
+  "addedAt": "2026-10-26T16:01:18.754Z",
+  "tvmaze": {
+    "id": 23352,
+    "name": "David Copperfield",
+    "runtime": 90,
+    "premiered": "1999-12-25",
+    "network": "BBC One"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 2,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Part 1",
+          "airdate": "1999-12-25",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Part 1\" (1.00)",
+            "item": "david-copperfield-1999-part-1",
+            "itemTitle": "David Copperfield (1999) (2 part period drama)",
+            "file": "David Copperfield (1999) (Part 1).m4v",
+            "name": "David Copperfield (1999) (Part 1)",
+            "url": "https://archive.org/download/david-copperfield-1999-part-1/David%20Copperfield%20(1999)%20(Part%201).m4v",
+            "seconds": 5218,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 731
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Part 1\" (1.00)",
+              "item": "david-copperfield-part-1",
+              "itemTitle": "David Copperfield (1999)",
+              "file": "David_Copperfield-Part1.mp4",
+              "name": "David_Copperfield-Part1",
+              "url": "https://archive.org/download/david-copperfield-part-1/David_Copperfield-Part1.mp4",
+              "seconds": 5222,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 329
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Part 2",
+          "airdate": "1999-12-26",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Part 2\" (1.00)",
+            "item": "david-copperfield-1999-part-1",
+            "itemTitle": "David Copperfield (1999) (2 part period drama)",
+            "file": "David Copperfield (1999) (Part 2).m4v",
+            "name": "David Copperfield (1999) (Part 2)",
+            "url": "https://archive.org/download/david-copperfield-1999-part-1/David%20Copperfield%20(1999)%20(Part%202).m4v",
+            "seconds": 5585,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 901
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Part 2\" (1.00)",
+              "item": "david-copperfield-part-1",
+              "itemTitle": "David Copperfield (1999)",
+              "file": "David_Copperfield-Part2.mp4",
+              "name": "David_Copperfield-Part2",
+              "url": "https://archive.org/download/david-copperfield-part-1/David_Copperfield-Part2.mp4",
+              "seconds": 5581,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 351
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

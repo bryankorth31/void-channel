@@ -1,0 +1,89 @@
+{
+  "show": "Don't Hug Me I'm Scared",
+  "slug": "dont-hug-me-im-scared",
+  "type": "Animated",
+  "network": "Channel 4",
+  "matchedAt": "2026-10-26T16:02:13.898Z",
+  "addedAt": "2026-10-26T16:02:13.898Z",
+  "tvmaze": {
+    "id": 14084,
+    "name": "Don't Hug Me I'm Scared",
+    "runtime": 5,
+    "premiered": "2011-07-29",
+    "network": "YouTube"
+  },
+  "coverage": {
+    "total": 6,
+    "live": 0,
+    "review": 1,
+    "missing": 5,
+    "pct": 17
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Creativity",
+          "airdate": "2011-07-29",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Time",
+          "airdate": "2014-01-08",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Love",
+          "airdate": "2014-10-31",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Love\" (0.95)",
+            "item": "youtube_9c_hrer_mcq_1280x720_h264_202403",
+            "itemTitle": "Don't Hug Me I'm Scared (webseries) | full series + special features",
+            "file": "a-DHMIS-3 \"Love\"",
+            "name": "a-DHMIS-3 \"Love\"",
+            "url": "https://archive.org/download/youtube_9c_hrer_mcq_1280x720_h264_202403/a-DHMIS-3%20%22Love%22",
+            "seconds": 368,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 81
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Technology",
+          "airdate": "2015-03-31",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Health",
+          "airdate": "2015-10-14",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Dreams",
+          "airdate": "2016-06-19",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

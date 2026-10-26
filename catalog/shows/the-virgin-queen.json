@@ -1,0 +1,73 @@
+{
+  "show": "The Virgin Queen",
+  "slug": "the-virgin-queen",
+  "type": "British and Beyond",
+  "network": "BBC One",
+  "matchedAt": "2026-10-26T16:01:12.243Z",
+  "addedAt": "2026-10-26T16:01:12.243Z",
+  "tvmaze": {
+    "id": 9453,
+    "name": "The Virgin Queen",
+    "runtime": 60,
+    "premiered": "2006-01-22",
+    "network": "BBC One"
+  },
+  "coverage": {
+    "total": 4,
+    "live": 0,
+    "review": 1,
+    "missing": 3,
+    "pct": 25
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "airdate": "2006-01-22",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "airdate": "2006-01-29",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.7,
+            "why": "absolute episode number",
+            "item": "this-changed-everything-2016",
+            "itemTitle": "The English Reformation/Civil Wars",
+            "file": "Elizabeth 1-   The Virgin Queen (Episode 2).mp4",
+            "name": "Elizabeth 1-   The Virgin Queen (Episode 2)",
+            "url": "https://archive.org/download/this-changed-everything-2016/Elizabeth%201-%20%20%20The%20Virgin%20Queen%20(Episode%202).mp4",
+            "seconds": 2975,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 161
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Episode 3",
+          "airdate": "2006-02-05",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Episode 4",
+          "airdate": "2006-02-12",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "show": "Zootopia+",
+  "slug": "zootopia",
+  "type": "Animated",
+  "network": "Disney+",
+  "matchedAt": "2026-10-26T16:02:05.465Z",
+  "addedAt": "2026-10-26T16:02:05.465Z",
+  "tvmaze": {
+    "id": 52355,
+    "name": "Zootopia+",
+    "runtime": 11,
+    "premiered": "2022-11-09",
+    "network": "Disney+"
+  },
+  "coverage": {
+    "total": 6,
+    "live": 2,
+    "review": 0,
+    "missing": 4,
+    "pct": 33
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Hopp on Board",
+          "airdate": "2022-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "The Real Rodents of Little Rodentia",
+          "airdate": "2022-11-09",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "zootopia_202303",
+            "itemTitle": "Zootopia+ All 6 Episodes",
+            "file": "Zootopia+ Episode 2 – The Real Rodents of Little Rodentia",
+            "name": "Zootopia+ Episode 2 – The Real Rodents of Little Rodentia",
+            "url": "https://archive.org/download/zootopia_202303/Zootopia%2B%20Episode%202%20%E2%80%93%20The%20Real%20Rodents%20of%20Little%20Rodentia",
+            "seconds": 480,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 46
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Duke the Musical",
+          "airdate": "2022-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "The Godfather of the Bride",
+          "airdate": "2022-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "So You Think You Can Prance",
+          "airdate": "2022-11-09",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Dinner Rush",
+          "airdate": "2022-11-09",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "absolute episode number + title match",
+            "item": "zootopia_202303",
+            "itemTitle": "Zootopia+ All 6 Episodes",
+            "file": "Zootopia+ Episode 6 – Dinner Rush",
+            "name": "Zootopia+ Episode 6 – Dinner Rush",
+            "url": "https://archive.org/download/zootopia_202303/Zootopia%2B%20Episode%206%20%E2%80%93%20Dinner%20Rush",
+            "seconds": 538,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 35
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

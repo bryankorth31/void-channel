@@ -1,0 +1,131 @@
+{
+  "show": "Zen",
+  "slug": "zen",
+  "type": "British and Beyond",
+  "network": "BBC One",
+  "matchedAt": "2026-10-26T16:01:30.320Z",
+  "addedAt": "2026-10-26T16:01:30.320Z",
+  "tvmaze": {
+    "id": 4528,
+    "name": "Zen",
+    "runtime": 90,
+    "premiered": "2011-01-02",
+    "network": "BBC One"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 3,
+    "review": 0,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Vendetta",
+          "airdate": "2011-01-02",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "zen-2011",
+            "itemTitle": "Zen (2011)",
+            "file": "Zen 1x01 Vendetta.mp4",
+            "name": "Zen 1x01 Vendetta",
+            "url": "https://archive.org/download/zen-2011/Zen%201x01%20Vendetta.mp4",
+            "seconds": 5409,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 345
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Vendetta\" (0.95)",
+              "item": "zen-2011-hd",
+              "itemTitle": "Zen (HD)",
+              "file": "Zen (HD) E1 - Vendetta.mp4",
+              "name": "Zen (HD) E1 - Vendetta",
+              "url": "https://archive.org/download/zen-2011-hd/Zen%20(HD)%20E1%20-%20Vendetta.mp4",
+              "seconds": 5318,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1003
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Cabal",
+          "airdate": "2011-01-09",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "zen-2011",
+            "itemTitle": "Zen (2011)",
+            "file": "Zen 1x02 Cabal.mp4",
+            "name": "Zen 1x02 Cabal",
+            "url": "https://archive.org/download/zen-2011/Zen%201x02%20Cabal.mp4",
+            "seconds": 5426,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 347
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Cabal\" (0.95)",
+              "item": "zen-2011-hd",
+              "itemTitle": "Zen (HD)",
+              "file": "Zen (HD) E2 - Cabal.mp4",
+              "name": "Zen (HD) E2 - Cabal",
+              "url": "https://archive.org/download/zen-2011-hd/Zen%20(HD)%20E2%20-%20Cabal.mp4",
+              "seconds": 5336,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1013
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "name": "Ratking",
+          "airdate": "2011-01-16",
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "zen-2011",
+            "itemTitle": "Zen (2011)",
+            "file": "Zen 1x03 Ratking.mp4",
+            "name": "Zen 1x03 Ratking",
+            "url": "https://archive.org/download/zen-2011/Zen%201x03%20Ratking.mp4",
+            "seconds": 5425,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 346
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Ratking\" (0.95)",
+              "item": "zen-2011-hd",
+              "itemTitle": "Zen (HD)",
+              "file": "Zen (HD) E3 - Ratking.mp4",
+              "name": "Zen (HD) E3 - Ratking",
+              "url": "https://archive.org/download/zen-2011-hd/Zen%20(HD)%20E3%20-%20Ratking.mp4",
+              "seconds": 5333,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1013
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

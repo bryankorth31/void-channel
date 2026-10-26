@@ -1,0 +1,81 @@
+{
+  "show": "LEGO Pixar: BrickToons",
+  "slug": "lego-pixar-bricktoons",
+  "type": "Animated",
+  "network": "Disney+",
+  "matchedAt": "2026-10-26T16:02:19.209Z",
+  "addedAt": "2026-10-26T16:02:19.209Z",
+  "tvmaze": {
+    "id": 79093,
+    "name": "LEGO Pixar: Bricktoons",
+    "runtime": 9,
+    "premiered": "2024-09-04",
+    "network": "Disney+"
+  },
+  "coverage": {
+    "total": 5,
+    "live": 0,
+    "review": 1,
+    "missing": 4,
+    "pct": 20
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Trust Yer Ol’ Pal, Mater",
+          "airdate": "2024-09-04",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.8,
+            "why": "title ~ \"Trust Yer Ol’ Pal, Mater\" (0.95)",
+            "item": "lego-pixar-brick-toons-cars-trust-yer-ol-pal-mater-episode-disney-junior",
+            "itemTitle": "Cars: Trust Yer Ol' Pal Mater(LEGO PIXAR Bricktoons)",
+            "file": "LEGO Pixar BrickToons Cars   Trust Yer Ol' Pal, Mater   Episode   @Disney Junior.mp4",
+            "name": "LEGO Pixar BrickToons Cars   Trust Yer Ol' Pal, Mater   Episode   @Disney Junior",
+            "url": "https://archive.org/download/lego-pixar-brick-toons-cars-trust-yer-ol-pal-mater-episode-disney-junior/LEGO%20Pixar%20BrickToons%20Cars%20%20%20Trust%20Yer%20Ol'%20Pal%2C%20Mater%20%20%20Episode%20%20%20%40Disney%20Junior.mp4",
+            "seconds": 437,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 40
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Patience Is a Bear",
+          "airdate": "2024-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Pizza Night",
+          "airdate": "2024-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "Field Trip",
+          "airdate": "2024-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "Family Bands Together",
+          "airdate": "2024-09-04",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

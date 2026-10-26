@@ -3,19 +3,19 @@
   "slug": "animal-x",
   "type": "Documentary & Geographic",
   "network": "Discovery",
-  "matchedAt": "2026-10-19T04:12:53.261Z",
-  "addedAt": "2026-10-17T11:10:36.046Z",
+  "matchedAt": "2026-10-26T16:01:16.646Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 23156,
-    "name": "I Survived an Animal Attack",
-    "runtime": 60,
-    "premiered": "2016-11-23",
-    "network": "Animal Planet"
+    "id": null,
+    "name": "Animal X",
+    "runtime": null,
+    "premiered": null,
+    "network": "Discovery"
   },
   "coverage": {
-    "total": 6,
+    "total": 36,
     "live": 0,
-    "review": 6,
+    "review": 36,
     "missing": 0,
     "pct": 100
   },
@@ -25,12 +25,617 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Episode 1",
-          "airdate": "2016-11-23",
+          "name": "chupacabra magic cows black dogs",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 10 in \"Animal X (Complete Series)\"",
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E01 Chupacabra, Magic Cows, Black Dogs.mp4",
+            "name": "Animal X S01 E01 Chupacabra, Magic Cows, Black Dogs",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E01%20Chupacabra%2C%20Magic%20Cows%2C%20Black%20Dogs.mp4",
+            "seconds": 1436,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 146,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "killer crocs fizo howick falls monster",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E02 Killer Crocs, Fizo, Howick Falls Monster.mp4",
+            "name": "Animal X S01 E02 Killer Crocs, Fizo, Howick Falls Monster",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E02%20Killer%20Crocs%2C%20Fizo%2C%20Howick%20Falls%20Monster.mp4",
+            "seconds": 1437,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 96,
+            "ep": {
+              "season": 1,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "rainbow serpent lake monster killer wolves",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E03 Rainbow Serpent, Lake Monster, Killer Wolves.mp4",
+            "name": "Animal X S01 E03 Rainbow Serpent, Lake Monster, Killer Wolves",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E03%20Rainbow%20Serpent%2C%20Lake%20Monster%2C%20Killer%20Wolves.mp4",
+            "seconds": 1434,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 144,
+            "ep": {
+              "season": 1,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "cattle mutilations croc horror black cat of killakee",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E04 Cattle Mutilations, Croc Horror, Black Cat of Killakee.mp4",
+            "name": "Animal X S01 E04 Cattle Mutilations, Croc Horror, Black Cat of Killakee",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E04%20Cattle%20Mutilations%2C%20Croc%20Horror%2C%20Black%20Cat%20of%20Killakee.mp4",
+            "seconds": 1446,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 357,
+            "ep": {
+              "season": 1,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "dangerous dingos flesh eating fish bigfoot",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E05 Dangerous Dingos, Flesh Eating Fish, Bigfoot.mp4",
+            "name": "Animal X S01 E05 Dangerous Dingos, Flesh Eating Fish, Bigfoot",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E05%20Dangerous%20Dingos%2C%20Flesh%20Eating%20Fish%2C%20Bigfoot.mp4",
+            "seconds": 1447,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 164,
+            "ep": {
+              "season": 1,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "komodo ghostly lion lake monsters",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E06 Komodo, Ghostly Lion, Lake Monsters.mp4",
+            "name": "Animal X S01 E06 Komodo, Ghostly Lion, Lake Monsters",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E06%20Komodo%2C%20Ghostly%20Lion%2C%20Lake%20Monsters.mp4",
+            "seconds": 1445,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 155,
+            "ep": {
+              "season": 1,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "cat cult alien animals killer bees",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E07 Cat Cult, Alien Animals, Killer Bees.mp4",
+            "name": "Animal X S01 E07 Cat Cult, Alien Animals, Killer Bees",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E07%20Cat%20Cult%2C%20Alien%20Animals%2C%20Killer%20Bees.mp4",
+            "seconds": 1449,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 146,
+            "ep": {
+              "season": 1,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "salaawa dolphin therapy jersey devil",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E08 Salaawa, Dolphin Therapy, Jersey Devil.mp4",
+            "name": "Animal X S01 E08 Salaawa, Dolphin Therapy, Jersey Devil",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E08%20Salaawa%2C%20Dolphin%20Therapy%2C%20Jersey%20Devil.mp4",
+            "seconds": 1447,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 152,
+            "ep": {
+              "season": 1,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "goatman phar lap psychic animals 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E09 Goatman, Phar Lap, Psychic Animals 1.mp4",
+            "name": "Animal X S01 E09 Goatman, Phar Lap, Psychic Animals 1",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E09%20Goatman%2C%20Phar%20Lap%2C%20Psychic%20Animals%201.mp4",
+            "seconds": 1444,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 144,
+            "ep": {
+              "season": 1,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "alien big cats giant squid psychic animals 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E10 Alien Big Cats, Giant Squid, Psychic Animals 2.mp4",
+            "name": "Animal X S01 E10 Alien Big Cats, Giant Squid, Psychic Animals 2",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E10%20Alien%20Big%20Cats%2C%20Giant%20Squid%2C%20Psychic%20Animals%202.mp4",
+            "seconds": 1459,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 152,
+            "ep": {
+              "season": 1,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "yeti hypnotising dog thylacine",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E11 Yeti, Hypnotising Dog, Thylacine.mp4",
+            "name": "Animal X S01 E11 Yeti, Hypnotising Dog, Thylacine",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E11%20Yeti%2C%20Hypnotising%20Dog%2C%20Thylacine.mp4",
+            "seconds": 1454,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 148,
+            "ep": {
+              "season": 1,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "mad elephants biblical lions yowie",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E12 Mad Elephants, Biblical Lions, Yowie.mp4",
+            "name": "Animal X S01 E12 Mad Elephants, Biblical Lions, Yowie",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E12%20Mad%20Elephants%2C%20Biblical%20Lions%2C%20Yowie.mp4",
+            "seconds": 1440,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 159,
+            "ep": {
+              "season": 1,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "cadborosaurus red heifer alien big cats",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S01 E13 Cadborosaurus, Red Heifer, Alien Big Cats.mp4",
+            "name": "Animal X S01 E13 Cadborosaurus, Red Heifer, Alien Big Cats",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S01%20E13%20Cadborosaurus%2C%20Red%20Heifer%2C%20Alien%20Big%20Cats.mp4",
+            "seconds": 1439,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 145,
+            "ep": {
+              "season": 1,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "chupacabra essex panther pet detectives",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E01 Chupacabra, Essex Panther, Pet Detectives.mp4",
+            "name": "Animal X S02 E01 Chupacabra, Essex Panther, Pet Detectives",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E01%20Chupacabra%2C%20Essex%20Panther%2C%20Pet%20Detectives.mp4",
+            "seconds": 1369,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": {
+              "season": 2,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "marsupial lion thunderbirds animals sealed in stone",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E02 Marsupial Lion, Thunderbirds, Animals Sealed in Stone.mp4",
+            "name": "Animal X S02 E02 Marsupial Lion, Thunderbirds, Animals Sealed in Stone",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E02%20Marsupial%20Lion%2C%20Thunderbirds%2C%20Animals%20Sealed%20in%20Stone.mp4",
+            "seconds": 1350,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": {
+              "season": 2,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "megalodon pets that save plagues",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E03 Megalodon, Pets That Save, Animal Plagues.mp4",
+            "name": "Animal X S02 E03 Megalodon, Pets That Save, Animal Plagues",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E03%20Megalodon%2C%20Pets%20That%20Save%2C%20Animal%20Plagues.mp4",
+            "seconds": 1345,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 144,
+            "ep": {
+              "season": 2,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 4,
+          "name": "bigfoot special",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E04 Bigfoot Special.mp4",
+            "name": "Animal X S02 E04 Bigfoot Special",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E04%20Bigfoot%20Special.mp4",
+            "seconds": 1340,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 144,
+            "ep": {
+              "season": 2,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 5,
+          "name": "new england sea serpent global bigfoot beaching whales",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E05 New England Sea Serpent, Global Bigfoot, Beaching Whales.mp4",
+            "name": "Animal X S02 E05 New England Sea Serpent, Global Bigfoot, Beaching Whales",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E05%20New%20England%20Sea%20Serpent%2C%20Global%20Bigfoot%2C%20Beaching%20Whales.mp4",
+            "seconds": 1414,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 335,
+            "ep": {
+              "season": 2,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "skunk ape emotions frog and fish falls",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E06 Skunk Ape, Animal Emotions, Frog and Fish Falls.mp4",
+            "name": "Animal X S02 E06 Skunk Ape, Animal Emotions, Frog and Fish Falls",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E06%20Skunk%20Ape%2C%20Animal%20Emotions%2C%20Frog%20and%20Fish%20Falls.mp4",
+            "seconds": 1346,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 146,
+            "ep": {
+              "season": 2,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "incredible journeys thylacine moose or monster",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E07 Incredible Journeys, Thylacine, Moose or Monster.mp4",
+            "name": "Animal X S02 E07 Incredible Journeys, Thylacine, Moose or Monster",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E07%20Incredible%20Journeys%2C%20Thylacine%2C%20Moose%20or%20Monster.mp4",
+            "seconds": 1340,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 141,
+            "ep": {
+              "season": 2,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "carnivorous herbivores giant monitors memories",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E08 Carnivorous Herbivores, Giant Monitors, Animal Memories.mp4",
+            "name": "Animal X S02 E08 Carnivorous Herbivores, Giant Monitors, Animal Memories",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E08%20Carnivorous%20Herbivores%2C%20Giant%20Monitors%2C%20Animal%20Memories.mp4",
+            "seconds": 1341,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 138,
+            "ep": {
+              "season": 2,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "heroes yowie telepathic parrot",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E09 Animal Heroes, Yowie, Telepathic Parrot.mp4",
+            "name": "Animal X S02 E09 Animal Heroes, Yowie, Telepathic Parrot",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E09%20Animal%20Heroes%2C%20Yowie%2C%20Telepathic%20Parrot.mp4",
+            "seconds": 1355,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 342,
+            "ep": {
+              "season": 2,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "englands sea monster singing whales gremlins",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E10 England's Sea Monster, Singing Whales, Gremlins.mp4",
+            "name": "Animal X S02 E10 England's Sea Monster, Singing Whales, Gremlins",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E10%20England's%20Sea%20Monster%2C%20Singing%20Whales%2C%20Gremlins.mp4",
+            "seconds": 1346,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 330,
+            "ep": {
+              "season": 2,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 11,
+          "name": "moa superstitions drain dwellers",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E11 Moa, Animal Superstitions, Drain Dwellers.mp4",
+            "name": "Animal X S02 E11 Moa, Animal Superstitions, Drain Dwellers",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E11%20Moa%2C%20Animal%20Superstitions%2C%20Drain%20Dwellers.mp4",
+            "seconds": 1340,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 123,
+            "ep": {
+              "season": 2,
+              "episode": 11
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "minnesota iceman psychic pets golden frogs",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E12 Minnesota Iceman, Psychic Pets, Golden Frogs.mp4",
+            "name": "Animal X S02 E12 Minnesota Iceman, Psychic Pets, Golden Frogs",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E12%20Minnesota%20Iceman%2C%20Psychic%20Pets%2C%20Golden%20Frogs.mp4",
+            "seconds": 1330,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 164,
+            "ep": {
+              "season": 2,
+              "episode": 12
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "giant squid phantoms and kamikaze sex",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S02 E13 Giant Squid, Animal Phantoms & Kamikaze Sex.mp4",
+            "name": "Animal X S02 E13 Giant Squid, Animal Phantoms & Kamikaze Sex",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S02%20E13%20Giant%20Squid%2C%20Animal%20Phantoms%20%26%20Kamikaze%20Sex.mp4",
+            "seconds": 1414,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 321,
+            "ep": {
+              "season": 2,
+              "episode": 13
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "ghostly creatures",
+          "state": "REVIEW",
+          "file": {
             "item": "animal-x-complete-series",
             "itemTitle": "Animal X (Complete Series)",
             "file": "Animal X S03 E01 Ghostly Creatures.mp4",
@@ -39,18 +644,21 @@
             "seconds": 2883,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 657
+            "sizeMB": 657,
+            "ep": {
+              "season": 3,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Episode 2",
-          "airdate": "2016-11-30",
+          "name": "monster or murderer beast of gevudan",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 10 in \"Animal X (Complete Series)\"",
             "item": "animal-x-complete-series",
             "itemTitle": "Animal X (Complete Series)",
             "file": "Animal X S03 E02 Monster or Murderer? (Beast of Gevudan).mp4",
@@ -59,18 +667,21 @@
             "seconds": 2885,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 609
+            "sizeMB": 609,
+            "ep": {
+              "season": 3,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Episode 3",
-          "airdate": "2016-12-07",
+          "name": "mystery of the thylacine",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 10 in \"Animal X (Complete Series)\"",
             "item": "animal-x-complete-series",
             "itemTitle": "Animal X (Complete Series)",
             "file": "Animal X S03 E03 Mystery of the Thylacine.mp4",
@@ -79,18 +690,21 @@
             "seconds": 2891,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 637
+            "sizeMB": 637,
+            "ep": {
+              "season": 3,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Episode 4",
-          "airdate": "2016-12-14",
+          "name": "texas bigfoot",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 10 in \"Animal X (Complete Series)\"",
             "item": "animal-x-complete-series",
             "itemTitle": "Animal X (Complete Series)",
             "file": "Animal X S03 E04 Texas Bigfoot.mp4",
@@ -99,18 +713,21 @@
             "seconds": 2882,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 691
+            "sizeMB": 691,
+            "ep": {
+              "season": 3,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Episode 5",
-          "airdate": "2016-12-21",
+          "name": "winged creatures",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 10 in \"Animal X (Complete Series)\"",
             "item": "animal-x-complete-series",
             "itemTitle": "Animal X (Complete Series)",
             "file": "Animal X S03 E05 Winged Creatures.mp4",
@@ -119,18 +736,21 @@
             "seconds": 2911,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 517
+            "sizeMB": 517,
+            "ep": {
+              "season": 3,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Episode 6",
-          "airdate": "2016-12-28",
+          "name": "monsters of the deep",
           "state": "REVIEW",
           "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 6 of 10 in \"Animal X (Complete Series)\"",
             "item": "animal-x-complete-series",
             "itemTitle": "Animal X (Complete Series)",
             "file": "Animal X S03 E06 Monsters of the Deep.mp4",
@@ -139,7 +759,105 @@
             "seconds": 2883,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 649
+            "sizeMB": 649,
+            "ep": {
+              "season": 3,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 7,
+          "name": "reptilian creatures",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S03 E07 Reptilian Creatures.mp4",
+            "name": "Animal X S03 E07 Reptilian Creatures",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S03%20E07%20Reptilian%20Creatures.mp4",
+            "seconds": 2889,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 487,
+            "ep": {
+              "season": 3,
+              "episode": 7
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 8,
+          "name": "chupacabra",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S03 E08 Chupacabra.mp4",
+            "name": "Animal X S03 E08 Chupacabra",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S03%20E08%20Chupacabra.mp4",
+            "seconds": 2881,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 539,
+            "ep": {
+              "season": 3,
+              "episode": 8
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 9,
+          "name": "alien big cats",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S03 E09 Alien Big Cats.mp4",
+            "name": "Animal X S03 E09 Alien Big Cats",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S03%20E09%20Alien%20Big%20Cats.mp4",
+            "seconds": 2885,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 613,
+            "ep": {
+              "season": 3,
+              "episode": 9
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "powers",
+          "state": "REVIEW",
+          "file": {
+            "item": "animal-x-complete-series",
+            "itemTitle": "Animal X (Complete Series)",
+            "file": "Animal X S03 E10 Animal Powers.mp4",
+            "name": "Animal X S03 E10 Animal Powers",
+            "url": "https://archive.org/download/animal-x-complete-series/Animal%20X%20S03%20E10%20Animal%20Powers.mp4",
+            "seconds": 2881,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 462,
+            "ep": {
+              "season": 3,
+              "episode": 10
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
           "alternates": []
         }

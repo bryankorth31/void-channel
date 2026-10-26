@@ -1,0 +1,52 @@
+{
+  "show": "Pulling Moves",
+  "slug": "pulling-moves",
+  "type": "British and Beyond",
+  "network": "BBC Three",
+  "matchedAt": "2026-10-26T16:01:30.214Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "Pulling Moves",
+    "runtime": null,
+    "premiered": null,
+    "network": "BBC Three"
+  },
+  "coverage": {
+    "total": 1,
+    "live": 0,
+    "review": 1,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "pulling.moves.1x01.claimitis_scale_2x_alq-122",
+            "itemTitle": "Pulling Moves S01E01 - Upscaled 480p -> 720p",
+            "file": "pulling.moves.1x01.claimitis_scale_2x_alq-12(2).ia.mp4",
+            "name": "pulling.moves.1x01",
+            "url": "https://archive.org/download/pulling.moves.1x01.claimitis_scale_2x_alq-122/pulling.moves.1x01.claimitis_scale_2x_alq-12(2).ia.mp4",
+            "seconds": 1672,
+            "format": "h.264 IA",
+            "playable": true,
+            "sizeMB": 930,
+            "ep": {
+              "season": 1,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

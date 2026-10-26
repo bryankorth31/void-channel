@@ -3,20 +3,21 @@
   "slug": "a-history-of-britain",
   "type": "Documentary & Geographic",
   "network": "BBC Two",
-  "matchedAt": "2026-10-17T10:56:58.376Z",
+  "matchedAt": "2026-10-26T16:01:15.718Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 19112,
-    "name": "A History of Ancient Britain",
-    "runtime": 60,
-    "premiered": "2011-02-09",
+    "id": null,
+    "name": "A History of Britain",
+    "runtime": null,
+    "premiered": null,
     "network": "BBC Two"
   },
   "coverage": {
-    "total": 8,
+    "total": 1,
     "live": 0,
-    "review": 0,
-    "missing": 8,
-    "pct": 0
+    "review": 1,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,71 +25,22 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Age of Ice",
-          "airdate": "2011-02-09",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Age of Ancestors",
-          "airdate": "2011-02-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Age of Cosmology",
-          "airdate": "2011-02-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Age of Bronze",
-          "airdate": "2011-03-02",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        }
-      ]
-    },
-    {
-      "season": 2,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Celtic Britain: Age of Iron",
-          "airdate": "2011-04-07",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 2,
-          "name": "Celtic Britain: Age of Warriors",
-          "airdate": "2011-04-14",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Celtic Britain: Age of Invasion",
-          "airdate": "2011-04-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 4,
-          "name": "Celtic Britain: Age of Romans",
-          "airdate": "2011-04-26",
-          "state": "MISSING",
-          "file": null,
+          "name": "ahistoryofbritain pt1 beginnings",
+          "state": "REVIEW",
+          "file": {
+            "item": "AHistoryOfBritain-Part1-Beginnings",
+            "itemTitle": "A History of Britain - Part 1 - Beginnings",
+            "file": "AHistoryOfBritain-Pt1-Beginnings.ogv",
+            "name": "AHistoryOfBritain-Pt1-Beginnings",
+            "url": "https://archive.org/download/AHistoryOfBritain-Part1-Beginnings/AHistoryOfBritain-Pt1-Beginnings.ogv",
+            "seconds": 3540,
+            "format": "Ogg Video",
+            "playable": true,
+            "sizeMB": 273,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]

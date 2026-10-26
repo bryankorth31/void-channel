@@ -1,0 +1,57 @@
+{
+  "show": "Thunder and Lightning",
+  "slug": "thunder-and-lightning",
+  "type": "Animated",
+  "network": "Cartoon Network",
+  "matchedAt": "2026-10-26T16:02:05.182Z",
+  "addedAt": "2026-10-26T16:02:05.182Z",
+  "tvmaze": {
+    "id": 47877,
+    "name": "Thunder and Lightning",
+    "runtime": 5,
+    "premiered": "2013-01-05",
+    "network": "Cartoon Network"
+  },
+  "coverage": {
+    "total": 2,
+    "live": 0,
+    "review": 1,
+    "missing": 1,
+    "pct": 50
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Clothes Make the Hero",
+          "airdate": "2013-01-05",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.6,
+            "why": "absolute episode number",
+            "item": "cbeebies-zingzillas-s03-episode-1-thunder-and-lightning",
+            "itemTitle": "CBeebies | ZingZillas S03 Episode 1 (Thunder And Lightning)",
+            "file": "CBBC | ZingZillas - S03 Episode 1 (Thunder and Lightning).mp4",
+            "name": "CBBC | ZingZillas - S03 Episode 1 (Thunder and Lightning)",
+            "url": "https://archive.org/download/cbeebies-zingzillas-s03-episode-1-thunder-and-lightning/CBBC%20%7C%20ZingZillas%20-%20S03%20Episode%201%20(Thunder%20and%20Lightning).mp4",
+            "seconds": 669,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 1004
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Lightning Under the Weather",
+          "airdate": "2013-02-02",
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

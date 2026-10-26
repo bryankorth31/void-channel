@@ -3,7 +3,7 @@
   "slug": "thanks",
   "type": "90s Sitcoms",
   "network": "CBS",
-  "matchedAt": "2026-10-23T04:41:49.940Z",
+  "matchedAt": "2026-10-26T16:00:57.587Z",
   "addedAt": "2026-10-23T04:41:49.940Z",
   "tvmaze": {
     "id": 24871,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 6,
     "live": 0,
-    "review": 1,
-    "missing": 5,
-    "pct": 17
+    "review": 0,
+    "missing": 6,
+    "pct": 0
   },
   "seasons": [
     {
@@ -67,35 +67,9 @@
           "number": 6,
           "name": "Thanksgiving",
           "airdate": "1999-09-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Thanksgiving\" (0.81)",
-            "item": "CATC_Thanksgiving_Dinner",
-            "itemTitle": "Thanksgiving Dinner",
-            "file": "ThanksgivingDinner.mp4",
-            "name": "ThanksgivingDinner",
-            "url": "https://archive.org/download/CATC_Thanksgiving_Dinner/ThanksgivingDinner.mp4",
-            "seconds": 1487,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 146
-          },
-          "alternates": [
-            {
-              "conf": 0.6,
-              "why": "title ~ \"Thanksgiving\" (0.69)",
-              "item": "CATC_Thanksgiving_Dinner",
-              "itemTitle": "Thanksgiving Dinner",
-              "file": "ThanksgivingDinner_512kb.mp4",
-              "name": "ThanksgivingDinner_512kb",
-              "url": "https://archive.org/download/CATC_Thanksgiving_Dinner/ThanksgivingDinner_512kb.mp4",
-              "seconds": 1487,
-              "format": "512Kb MPEG4",
-              "playable": true,
-              "sizeMB": 108
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         }
       ]
     }

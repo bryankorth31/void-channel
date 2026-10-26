@@ -3,7 +3,7 @@
   "slug": "9-1-1",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-19T04:11:02.116Z",
+  "matchedAt": "2026-10-26T15:59:34.705Z",
   "addedAt": "2026-10-16T07:56:57.587Z",
   "tvmaze": {
     "id": 28152,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 146,
-    "live": 1,
-    "review": 1,
-    "missing": 144,
-    "pct": 1
+    "live": 0,
+    "review": 0,
+    "missing": 146,
+    "pct": 0
   },
   "seasons": [
     {
@@ -1115,48 +1115,9 @@
           "number": 8,
           "name": "War",
           "airdate": "2026-01-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.75,
-            "why": "title ~ \"War\" (0.95)",
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "9_11 War Games.mp4",
-            "name": "9_11 War Games",
-            "url": "https://archive.org/download/09112001/9_11%20War%20Games.mp4",
-            "seconds": 3395,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 278
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"War\" (0.95)",
-              "item": "09112001",
-              "itemTitle": "09/11/2001 Analysis Collection",
-              "file": "The War on Islam_ 9_11 Revisited, Uncovered and Exposed.mp4",
-              "name": "The War on Islam_ 9_11 Revisited, Uncovered and Exposed",
-              "url": "https://archive.org/download/09112001/The%20War%20on%20Islam_%209_11%20Revisited%2C%20Uncovered%20and%20Exposed.mp4",
-              "seconds": 6693,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 864
-            },
-            {
-              "conf": 0.65,
-              "why": "title ~ \"War\" (0.95)",
-              "item": "09112001",
-              "itemTitle": "09/11/2001 Analysis Collection",
-              "file": "making_sense_of_the_war_on_terror_christopher_bollyn.mp4",
-              "name": "making_sense_of_the_war_on_terror_christopher_bollyn",
-              "url": "https://archive.org/download/09112001/making_sense_of_the_war_on_terror_christopher_bollyn.mp4",
-              "seconds": 8604,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 391
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 9,
@@ -1178,35 +1139,9 @@
           "number": 11,
           "name": "Going Once, Going Twice",
           "airdate": "2026-02-26",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "09112001",
-            "itemTitle": "09/11/2001 Analysis Collection",
-            "file": "Dr. Judy Wood Andrew Johnson on the 911 Cover Up .mp4",
-            "name": "Dr. Judy Wood Andrew Johnson on the 911 Cover Up ",
-            "url": "https://archive.org/download/09112001/Dr.%20Judy%20Wood%20Andrew%20Johnson%20on%20the%20911%20Cover%20Up%20.mp4",
-            "seconds": 4590,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 89
-          },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "09112001",
-              "itemTitle": "09/11/2001 Analysis Collection",
-              "file": "911 - The Greatest Lie Ever Sold by Anthony Hilder [2005].mp4",
-              "name": "911 - The Greatest Lie Ever Sold by Anthony Hilder [2005]",
-              "url": "https://archive.org/download/09112001/911%20-%20The%20Greatest%20Lie%20Ever%20Sold%20by%20Anthony%20Hilder%20%5B2005%5D.mp4",
-              "seconds": 7569,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 328
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 12,

@@ -3,20 +3,21 @@
   "slug": "building-big",
   "type": "Documentary & Geographic",
   "network": "PBS",
-  "matchedAt": "2026-10-17T11:29:21.053Z",
+  "matchedAt": "2026-10-26T16:01:19.562Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 16757,
-    "name": "Building Off the Grid: Big Sky Ranch",
-    "runtime": 30,
-    "premiered": "2016-05-05",
-    "network": "Magnolia Network"
+    "id": null,
+    "name": "Building Big",
+    "runtime": null,
+    "premiered": null,
+    "network": "PBS"
   },
   "coverage": {
-    "total": 6,
+    "total": 5,
     "live": 0,
-    "review": 0,
-    "missing": 6,
-    "pct": 0
+    "review": 5,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -24,50 +25,102 @@
       "episodes": [
         {
           "number": 1,
-          "name": "The Build Begins",
-          "airdate": "2016-05-05",
-          "state": "MISSING",
-          "file": null,
+          "name": "e1 bridges",
+          "state": "REVIEW",
+          "file": {
+            "item": "BuildingBigDVD",
+            "itemTitle": "Building Big DVDs",
+            "file": "E1 - Bridges.mp4",
+            "name": "E1 - Bridges",
+            "url": "https://archive.org/download/BuildingBigDVD/E1%20-%20Bridges.mp4",
+            "seconds": 3968,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 402,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "The Race Against Winter",
-          "airdate": "2016-05-05",
-          "state": "MISSING",
-          "file": null,
+          "name": "e2 domes",
+          "state": "REVIEW",
+          "file": {
+            "item": "BuildingBigDVD",
+            "itemTitle": "Building Big DVDs",
+            "file": "E2 - Domes.mp4",
+            "name": "E2 - Domes",
+            "url": "https://archive.org/download/BuildingBigDVD/E2%20-%20Domes.mp4",
+            "seconds": 3959,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 398,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "The Bison Come Home",
-          "airdate": "2016-05-12",
-          "state": "MISSING",
-          "file": null,
+          "name": "e3 skyscrapers",
+          "state": "REVIEW",
+          "file": {
+            "item": "BuildingBigDVD",
+            "itemTitle": "Building Big DVDs",
+            "file": "E3 - Skyscrapers.mp4",
+            "name": "E3 - Skyscrapers",
+            "url": "https://archive.org/download/BuildingBigDVD/E3%20-%20Skyscrapers.mp4",
+            "seconds": 3889,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 392,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Montana Time",
-          "airdate": "2016-05-12",
-          "state": "MISSING",
-          "file": null,
+          "name": "e4 dams",
+          "state": "REVIEW",
+          "file": {
+            "item": "BuildingBigDVD",
+            "itemTitle": "Building Big DVDs",
+            "file": "E4 - Dams.mp4",
+            "name": "E4 - Dams",
+            "url": "https://archive.org/download/BuildingBigDVD/E4%20-%20Dams.mp4",
+            "seconds": 3838,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 386,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Teamwork Makes the Dream Work",
-          "airdate": "2016-05-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
-        },
-        {
-          "number": 6,
-          "name": "Dreams Become Reality",
-          "airdate": "2016-05-19",
-          "state": "MISSING",
-          "file": null,
+          "name": "e5 tunnels",
+          "state": "REVIEW",
+          "file": {
+            "item": "BuildingBigDVD",
+            "itemTitle": "Building Big DVDs",
+            "file": "E5 - Tunnels.mp4",
+            "name": "E5 - Tunnels",
+            "url": "https://archive.org/download/BuildingBigDVD/E5%20-%20Tunnels.mp4",
+            "seconds": 4039,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 406,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]

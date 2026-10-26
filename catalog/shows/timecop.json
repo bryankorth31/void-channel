@@ -3,7 +3,7 @@
   "slug": "timecop",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-24T18:31:36.422Z",
+  "matchedAt": "2026-10-26T16:01:12.322Z",
   "addedAt": "2026-10-24T18:31:36.422Z",
   "tvmaze": {
     "id": 7849,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 9,
-    "live": 9,
-    "review": 0,
+    "live": 7,
+    "review": 2,
     "missing": 0,
     "pct": 100
   },
@@ -41,21 +41,7 @@
             "playable": true,
             "sizeMB": 126
           },
-          "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "time-cop_202608",
-              "itemTitle": "Time Cop (1997)",
-              "file": "Time Cop S1 E01 - A Rip-In Time.mp4",
-              "name": "Time Cop S1 E01 - A Rip-In Time",
-              "url": "https://archive.org/download/time-cop_202608/Time%20Cop%20S1%20E01%20-%20A%20Rip-In%20Time.mp4",
-              "seconds": 2586,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 109
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -75,21 +61,7 @@
             "playable": true,
             "sizeMB": 129
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "time-cop_202608",
-              "itemTitle": "Time Cop (1997)",
-              "file": "Time Cop S1 E02 - The Heist.mp4",
-              "name": "Time Cop S1 E02 - The Heist",
-              "url": "https://archive.org/download/time-cop_202608/Time%20Cop%20S1%20E02%20-%20The%20Heist.mp4",
-              "seconds": 2589,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 116
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -109,29 +81,15 @@
             "playable": true,
             "sizeMB": 127
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "time-cop_202608",
-              "itemTitle": "Time Cop (1997)",
-              "file": "Time Cop S1 E03 - Stalker.mp4",
-              "name": "Time Cop S1 E03 - Stalker",
-              "url": "https://archive.org/download/time-cop_202608/Time%20Cop%20S1%20E03%20-%20Stalker.mp4",
-              "seconds": 2587,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 101
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Public Enemy",
           "airdate": "1997-10-13",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.65,
             "why": "S/E in filename + title match",
             "item": "time-cop_202608",
             "itemTitle": "Time Cop (1997)",
@@ -149,9 +107,9 @@
           "number": 5,
           "name": "Rocket Science",
           "airdate": "1997-10-20",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.65,
             "why": "S/E in filename + title match",
             "item": "time-cop_202608",
             "itemTitle": "Time Cop (1997)",
@@ -185,7 +143,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.65,
               "why": "S/E in filename + title match",
               "item": "time-cop_202608",
               "itemTitle": "Time Cop (1997)",
@@ -219,7 +177,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.65,
               "why": "S/E in filename + title match",
               "item": "time-cop_202608",
               "itemTitle": "Time Cop (1997)",
@@ -251,21 +209,7 @@
             "playable": true,
             "sizeMB": 123
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "time-cop_202608",
-              "itemTitle": "Time Cop (1997)",
-              "file": "Time Cop S1 E08 - D-O-A.mp4",
-              "name": "Time Cop S1 E08 - D-O-A",
-              "url": "https://archive.org/download/time-cop_202608/Time%20Cop%20S1%20E08%20-%20D-O-A.mp4",
-              "seconds": 2587,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 99
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -287,7 +231,7 @@
           },
           "alternates": [
             {
-              "conf": 1,
+              "conf": 0.65,
               "why": "S/E in filename + title match",
               "item": "time-cop_202608",
               "itemTitle": "Time Cop (1997)",

@@ -1,0 +1,89 @@
+{
+  "show": "The Big Bang",
+  "slug": "the-big-bang",
+  "type": "British and Beyond",
+  "network": "ITV",
+  "matchedAt": "2026-10-26T16:01:19.944Z",
+  "selfListed": true,
+  "tvmaze": {
+    "id": null,
+    "name": "The Big Bang",
+    "runtime": null,
+    "premiered": null,
+    "network": "ITV"
+  },
+  "coverage": {
+    "total": 3,
+    "live": 0,
+    "review": 3,
+    "missing": 0,
+    "pct": 100
+  },
+  "seasons": [
+    {
+      "season": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "name": "Episode 1",
+          "state": "REVIEW",
+          "file": {
+            "item": "bigbangvideos",
+            "itemTitle": "Big Bang Videos",
+            "file": "Big Bang 2701231.mp4",
+            "name": "Big Bang 2701231",
+            "url": "https://archive.org/download/bigbangvideos/Big%20Bang%202701231.mp4",
+            "seconds": 95,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 26,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 2,
+          "name": "Episode 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "bigbangvideos",
+            "itemTitle": "Big Bang Videos",
+            "file": "Big Bang 2701232.mp4",
+            "name": "Big Bang 2701232",
+            "url": "https://archive.org/download/bigbangvideos/Big%20Bang%202701232.mp4",
+            "seconds": 91,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 25,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 3,
+          "name": "Episode 3",
+          "state": "REVIEW",
+          "file": {
+            "item": "bigbangvideos",
+            "itemTitle": "Big Bang Videos",
+            "file": "Big Bang 2701235.mp4",
+            "name": "Big Bang 2701235",
+            "url": "https://archive.org/download/bigbangvideos/Big%20Bang%202701235.mp4",
+            "seconds": 102,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 28,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        }
+      ]
+    }
+  ]
+}

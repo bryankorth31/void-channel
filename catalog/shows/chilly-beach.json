@@ -3,7 +3,7 @@
   "slug": "chilly-beach",
   "type": "Animated",
   "network": "CBC",
-  "matchedAt": "2026-10-22T09:06:04.613Z",
+  "matchedAt": "2026-10-26T16:00:48.165Z",
   "addedAt": "2026-10-22T09:06:04.613Z",
   "tvmaze": {
     "id": 27189,
@@ -387,7 +387,7 @@
           "airdate": "2003-11-05",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
+            "conf": 0.85,
             "why": "S/E in filename",
             "item": "Chilly-Beach-The-Complete-Series",
             "itemTitle": "Chilly Beach - The Complete Series",
@@ -448,19 +448,6 @@
           },
           "alternates": [
             {
-              "conf": 0.6,
-              "why": "title ~ \"The Chilly Beachcombers\" (0.77)",
-              "item": "Chilly-Beach-The-Complete-Series",
-              "itemTitle": "Chilly Beach - The Complete Series",
-              "file": "1x10 The Chilly Beachcombers.mp4",
-              "name": "1x10 The Chilly Beachcombers",
-              "url": "https://archive.org/download/Chilly-Beach-The-Complete-Series/1x10%20The%20Chilly%20Beachcombers.mp4",
-              "seconds": 1341,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 80
-            },
-            {
               "conf": 0.55,
               "why": "sequence guess: file 11 of 12 in \"Chilly Beach - The Complete Series\"",
               "item": "Chilly-Beach-The-Complete-Series",
@@ -472,6 +459,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 92
+            },
+            {
+              "conf": 0.55,
+              "why": "title ~ \"The Chilly Beachcombers\" (0.77)",
+              "item": "Chilly-Beach-The-Complete-Series",
+              "itemTitle": "Chilly Beach - The Complete Series",
+              "file": "1x10 The Chilly Beachcombers.mp4",
+              "name": "1x10 The Chilly Beachcombers",
+              "url": "https://archive.org/download/Chilly-Beach-The-Complete-Series/1x10%20The%20Chilly%20Beachcombers.mp4",
+              "seconds": 1341,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 80
             }
           ]
         },
