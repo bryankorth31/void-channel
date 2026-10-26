@@ -57,12 +57,17 @@ function readJson(p, fallback) { try { return JSON.parse(fs.readFileSync(p, 'utf
 const slugify = (s) => String(s).toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 // Which shows sit on which channel (the list and the ids are unchanged since the first Live TV). Returns the lists in
 // channel order, with the place of each show in the FULL list the page indexes.
-function channelLists(shows, types, off) {
+// Shelves that are their own channel for shows not in English (B, 25 Oct 2026, "own chan").
+const OWN_LANGUAGE_ROWS = new Set(['Anime', 'World TV']);
+function channelLists(shows, types, off, foreign) {
   const isAdultShow = (s) => s.type === 'Late Night' || (s.tags || []).includes('Late Night') || !!s.adult;
   const idx = new Map(shows.map((s, i) => [s.slug, i])); // against the FULL list the page indexes; filtering first put every item after an adult show off by one
   // Shows B keeps off Live TV (catalog/live-tv-off.json) leave the mixed channels (The Void, rows, collections, movies,
   // Late Night) but stay on their own network's channel, so no network channel empties out (B, 20 Oct). They stay on demand.
-  const on = (s) => !(off && off.has(s.slug));
+  const kept = (s) => !(off && off.has(s.slug));
+  // A show not in English (foreign: its slug, from the show list's language) also leaves the mixed channels, and stays on its
+  // network's channel and the Anime and World TV rows (B, 25 Oct: Die Harald Schmidt Show, all German, was airing on The Void).
+  const on = (s) => kept(s) && !(foreign && foreign.has(s.slug));
   const adultList = shows.filter((s) => isAdultShow(s) && !s.slug.startsWith('movie-') && on(s));
   shows = shows.filter((s) => !isAdultShow(s)); // every other channel stays clean; Late Night is its own door
   const allSeries = shows.filter((s) => !s.slug.startsWith('movie-'));
@@ -75,7 +80,7 @@ function channelLists(shows, types, off) {
     lists.push({ id, name, kind, list, adult: adult || undefined });
   };
   make('void', 'The Void', 'all', series);
-  for (const t of types) make('row-' + slugify(t), t, 'row', series.filter((s) => s.type === t));
+  for (const t of types) make('row-' + slugify(t), t, 'row', (OWN_LANGUAGE_ROWS.has(t) ? allSeries.filter(kept) : series).filter((s) => s.type === t));
   const tags = {}; for (const s of series) for (const t of s.tags || []) (tags[t] = tags[t] || []).push(s);
   for (const [t, list] of Object.entries(tags)) make('tag-' + slugify(t), t, 'collection', list);
   const nets = {}; for (const s of allSeries) if (s.network) (nets[s.network] = nets[s.network] || []).push(s);
@@ -86,16 +91,17 @@ function channelLists(shows, types, off) {
 }
 // The schedule plan (scripts/lib/tvgrid.js): per channel the pools of shows for each daypart, plus one shared library of typical
 // minutes and episode runs. This is what data/tv.json carries.
-function buildTv(shows, types) {
+function buildTv(shows, types, foreign) {
   const OFF = readJson(path.join(PROFILE.catalogDir, 'live-tv-off.json'), { shows: {} });
   const offSet = new Set(Object.keys(OFF.shows || {}));
-  const { lists, idx } = channelLists(shows, types, offSet);
+  const { lists, idx } = channelLists(shows, types, offSet, foreign);
   const lib = TVGRID.buildLib(shows);
   // The filler library for the gaps before each daypart (B, 20 Oct): B's originals (catalog/fillers.json, written by HQ) first,
   // then TV specials of 60 minutes or less. One list; a show that is both counts as an original.
   const ORIG = TVGRID.buildOriginals(shows, readJson(path.join(PROFILE.catalogDir, 'fillers.json'), { originals: {} }));
   const mine = new Set(ORIG.items.map((e) => e[0]));
-  const sp = ORIG.items.concat(TVGRID.buildSpecials(shows, lib.infos, offSet).filter((e) => !mine.has(e[0])));
+  const spOff = foreign ? new Set([...offSet, ...foreign]) : offSet; // nor do shows not in English fill the gaps
+  const sp = ORIG.items.concat(TVGRID.buildSpecials(shows, lib.infos, spOff).filter((e) => !mine.has(e[0])));
   const used = new Set(sp.map((e) => e[0]));
   const channels = lists.map((L) => {
     const recs = L.list.map((s) => { const i = idx.get(s.slug); used.add(i); return Object.assign({ i, sl: s.slug }, lib.infos[i]); });
@@ -253,7 +259,9 @@ function assemble() {
   // Live TV, one lineup a week (B, 25 Oct 2026): this week's plan from catalog/tv-lineup.json once stored, next week's from today's
   // catalog until its Monday begins (scripts/lib/tvweek.js). tvLineup carries what the publish writes back and the doctor shows.
   const TW = require('./tvweek');
-  const tvLineup = TW.lineup(buildTv(shows, types), TW.read(path.join(PROFILE.catalogDir, 'tv-lineup.json')), +process.env.VOID_TV_NOW || Date.now()); // VOID_TV_NOW: tests pin the clock
+  const lang = Object.fromEntries(LIST.shows.map((s) => [s.name, s.language]));
+  const foreign = new Set(shows.filter((s) => lang[s.show] && lang[s.show] !== 'en').map((s) => s.slug));
+  const tvLineup = TW.lineup(buildTv(shows, types, foreign),TW.read(path.join(PROFILE.catalogDir, 'tv-lineup.json')), +process.env.VOID_TV_NOW || Date.now()); // VOID_TV_NOW: tests pin the clock
   const tv = tvLineup.tv;
   return { shows, people, links, types, bios, channels: tv.channels, tv, tvLineup, homeOrder, colors, spots };
 }
