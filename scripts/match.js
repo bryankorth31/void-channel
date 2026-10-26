@@ -13,6 +13,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
 const { writeIfChanged } = require('./lib/writeIfChanged');
+const { nearNameGuard } = require('./lib/tvmazeguard'); // the one TVmaze name decision, shared with hunt.js and retvmaze.js
 const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const CAND_DIR = path.join(PROFILE.catalogDir, 'candidates');
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
@@ -318,12 +319,20 @@ function decideGrid(entry, cand, tv, ctx) {
   const rejected = new Set([...(ov.rejectFiles || []), ...Object.keys(DEAD)]); // B's rejections in HQ, and the files linkcheck retired
   // The self-list paths (no TVmaze list, and the fallback) read the raw item files, not the strict pass's options, so a rejected or dead file is taken out of their candidates here.
   const withoutRejected = (c) => rejected.size ? { ...c, items: c.items.map((it) => ({ ...it, files: it.files.filter((f) => !fileKeys(it.id, f.name).some((k) => rejected.has(k))) })).filter((it) => it.files.length) } : c;
+  // A guide cached before the TVmaze name guard existed can belong to another show (I Love the '70s on I Love the '90s, audit P3B-03). The guard
+  // (scripts/lib/tvmazeguard.js) is the one decision hunt.js uses to take a guide; it now also decides whether a cached one is used. An id B pinned in HQ stands.
+  if (tv && !ov.tvmazeId && tv.name && !nearNameGuard(entry, tv).ok) tv = null;
   if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, withoutRejected(cand), aliases, [], ov.placeFiles); return sg || { show, type: entry.type, network: entry.network, noTvmaze: true }; }
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const core = norm(show).replace(/^the /, '');
   const nets = typeof tv.network === 'string' && norm(tv.network) ? [norm(tv.network)] : []; // the show's own network, for the title test
-  const namesShow = (txt) => { const t = norm(txt); return t.includes(core) || aliases.some((a) => t.includes(a)); };
-  const idNamesShow = (id) => { const t = norm(id).replace(/ /g, ''); return t.includes(core.replace(/ /g, '')) || aliases.some((a) => t.includes(a.replace(/ /g, ''))); };
+  // A text names the show only when the name stands in it as whole words (audit P3B-01: a plain substring test let "lottery winners" name ER and
+  // "Tales from the Cryptkeeper" name Tales from the Crypt). An identifier is free text with its separators often dropped ("beavisandbutthead"),
+  // so it may also carry the name squeezed together, but only a name of two or more words and six or more letters: "911" in an id is not 9-1-1.
+  const cores = [core, ...aliases].filter(Boolean);
+  const namesShow = (txt) => { const t = ' ' + norm(txt) + ' '; return cores.some((c) => t.includes(' ' + c + ' ') || (c.length >= 4 && t.includes(' ' + c + 's '))); }; // "Doug's Chubby Buddy" (norm drops the apostrophe) names Doug
+  const squeezable = cores.map((c) => c.replace(/ /g, '')).filter((c, i) => cores[i].includes(' ') && c.length >= 6);
+  const idNamesShow = (id) => namesShow(id) || squeezable.some((c) => norm(id).replace(/ /g, '').includes(c));
   const byKey = new Map(tv.episodes.map((e) => [`${e.season}x${e.number}`, e]));
   const byDate = new Map(tv.episodes.filter((e) => e.airdate).map((e) => [e.airdate, e]));
   const firstYear = tv.premiered ? +tv.premiered.slice(0, 4) : 0;
@@ -334,7 +343,7 @@ function decideGrid(entry, cand, tv, ctx) {
   const push = (ep, entry) => { const key = `${ep.season}x${ep.number}`; const list = assignments.get(key) || []; assignments.set(key, list); list.push(entry); };
   for (const item of cand.items) {
     const itemText = `${item.title || ''} ${item.description || ''} ${item.id}`;
-    const itemNamesMe = norm(itemText).includes(core) || norm(item.id).includes(core.replace(/ /g, ''));
+    const itemNamesMe = namesShow(itemText) || idNamesShow(item.id);
     const itemNamesOther = namesOtherShow(item.title || '', show, aliases);
     const itemTitled = namesShow(item.title || '') || idNamesShow(item.id); // the upload itself says it is this show
     const itemLonger = titleNaming(item.title || '', [core, ...aliases], nets) === 'longer'; // its title runs on into a longer title ("Naruto Shippuden"): an episode name that merely looks alike proves nothing, unless the file's own name also names the show
@@ -380,7 +389,7 @@ function decideGrid(entry, cand, tv, ctx) {
       }
       for (const c of candidates) {
         let conf = c.base;
-        if (f.nameHit) conf += 0.15; else if (itemNamesMe) conf += 0.1;
+        if (f.nameHit && namesShow(f.name)) conf += 0.15; else if (itemNamesMe) conf += 0.1; // the hunter's nameHit is a substring test of its own, so it is checked again as whole words
         conf += f.band === 'episode' ? 0.15 : 0.05;
         if (!namesShow(f.name) && !itemTitled) { conf -= 0.5; pen.notNamed = true; } // only the description mentioned us: a spin-off, a same-cast show, a dump
         // Reaction and review channels upload "S01E01 - Title - Group Reaction": the right name, the wrong video (B caught Sunny and FMA, 2026-10-14).
@@ -388,7 +397,7 @@ function decideGrid(entry, cand, tv, ctx) {
         // An episode title that happens to be another show's name ("Blind Date", "Succession") is not a foreign file when the file also names our show.
         const fileOther = fileNamesOther && !(namesShow(f.name) && otherShowCores(f.name, show, aliases).every((core) => forOtherShow(c.ep.name).includes(' ' + core + ' ')));
         if (fileOther) { conf -= 0.6; pen.other = true; } else if (itemNamesOther && !namesShow(f.name)) { conf -= 0.4; pen.other = true; } // "Star Trek" in the file is not "Star Trek: Enterprise"
-        else if (!norm(f.name).includes(core) && !norm(item.title || '').includes(core) && bestSim < 0.3 && /[a-z]{4,}/.test(fp)) { conf -= 0.45; pen.notNamed = true; } // foreign title: words that are neither the show nor an episode
+        else if (!namesShow(f.name) && !namesShow(item.title || '') && bestSim < 0.3 && /[a-z]{4,}/.test(fp)) { conf -= 0.45; pen.notNamed = true; } // foreign title: words that are neither the show nor an episode
         const foreign = !!(langRisk(f.name) || langRisk(item.title));
         if (foreign) conf -= 0.35; // REVIEW, never LIVE, and the site hides it (a French dub is not the show)
         if (!f.playable) conf -= 0.1;
@@ -505,15 +514,23 @@ function selfGrid(entry, cand, aliases, nets = [], place = null) {
   if (core.length < 5 && core.split(' ').length < 2 && !aliases.length) return null; // 'Bu', 'Oz': too short a name to trust inside other titles
   const cores = [core, ...aliases];
   const names = (t) => namesTitle(t, cores, nets); // whole words, and the name must close (see namesTitle)
+  // A bracket that holds nothing but the show's name is a label on someone else's upload, not the upload's name: "Stefan Molyneux archive (Greatest
+  // hits)" is not the show Greatest Hits (audit P3B-02: 161 episodes of a political archive). A bracket that says more still counts ("Inside & Outside
+  // the Box (The Complete Tom Green Show)" is the Tom Green DVD set), and a bracket after the name still ends it ("The Young Doctors (1976) Australian
+  // Soap Opera" names The Young Doctors).
+  const BRACKET = /[(\[{]([^)\]}]*)[)\]}]/g;
+  const bareName = (inner) => { const n = norm(inner).replace(/^the /, ''); return cores.includes(n); };
+  const titleNames = (t) => names(String(t || '').replace(BRACKET, (m, inner) => (bareName(inner) ? ' | ' : m)));
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const items = cand.items.map((item) => {
     const t = norm(item.title || ''), idn = norm(item.id).replace(/ /g, '');
     // What an upload is comes from its TITLE. An Archive identifier is free text the uploader chose ("parkers-puzzle-cooking-kids-27-and-exercise"),
     // so it counts only when at least half of the video file names also name the show.
-    const starts = names(item.title || '') && (t.startsWith(core) || t.startsWith('the ' + core));
+    const starts = titleNames(item.title) && (t.startsWith(core) || t.startsWith('the ' + core));
     const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name) && !isJunkFile(f.name, cores));
     const idHit = idn.includes(core.replace(/ /g, '')) || aliases.some((a) => idn.includes(a.replace(/ /g, '')));
-    const named = names(item.title || '') || (idHit && vids.length > 0 && vids.filter((f) => names(f.name)).length / vids.length >= 0.5);
+    const labelHit = !titleNames(item.title) && names(item.title || ''); // the name is only a bracket label ("Dragonspit playlist [internet historian]"): the files must back it, as for an identifier
+    const named = titleNames(item.title) || ((idHit || labelHit) && vids.length > 0 && vids.filter((f) => names(f.name)).length / vids.length >= 0.5);
     const distinct = new Set(vids.map((f) => variantKey(f.name))).size; // format variants count once
     const med = vids.length ? vids.map((f) => f.seconds).sort((a, b) => a - b)[vids.length >> 1] : 0;
     const net = norm(entry.network || '').replace(/ /g, '');
