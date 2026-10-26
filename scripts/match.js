@@ -14,6 +14,8 @@ const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
 const { writeIfChanged } = require('./lib/writeIfChanged');
 const { nearNameGuard } = require('./lib/tvmazeguard'); // the one TVmaze name decision, shared with hunt.js and retvmaze.js
+const { seriesExclude, HATE, flat: flatEx } = require('./lib/hardexclude');
+const hateIn = (name) => HATE.test(flatEx(name)); // hate and extremist words in a file name // hate, extremist, news, politics and government material (audit batch C2)
 const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const CAND_DIR = path.join(PROFILE.catalogDir, 'candidates');
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
@@ -322,15 +324,19 @@ function decideGrid(entry, cand, tv, ctx) {
   // A guide cached before the TVmaze name guard existed can belong to another show (I Love the '70s on I Love the '90s, audit P3B-03). The guard
   // (scripts/lib/tvmazeguard.js) is the one decision hunt.js uses to take a guide; it now also decides whether a cached one is used. An id B pinned in HQ stands.
   if (tv && !ov.tvmazeId && tv.name && !nearNameGuard(entry, tv).ok) tv = null;
-  if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, withoutRejected(cand), aliases, [], ov.placeFiles); return sg || { show, type: entry.type, network: entry.network, noTvmaze: true }; }
+  if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, withoutRejected(cand), aliases, [], ov.placeFiles, ov.acceptFiles); return sg || { show, type: entry.type, network: entry.network, noTvmaze: true }; }
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const core = norm(show).replace(/^the /, '');
   const nets = typeof tv.network === 'string' && norm(tv.network) ? [norm(tv.network)] : []; // the show's own network, for the title test
   // A text names the show only when the name stands in it as whole words (audit P3B-01: a plain substring test let "lottery winners" name ER and
   // "Tales from the Cryptkeeper" name Tales from the Crypt). An identifier is free text with its separators often dropped ("beavisandbutthead"),
   // so it may also carry the name squeezed together, but only a name of two or more words and six or more letters: "911" in an id is not 9-1-1.
-  const cores = [core, ...aliases].filter(Boolean);
-  const namesShow = (txt) => { const t = ' ' + norm(txt) + ' '; return cores.some((c) => t.includes(' ' + c + ' ') || (c.length >= 4 && t.includes(' ' + c + 's '))); }; // "Doug's Chubby Buddy" (norm drops the apostrophe) names Doug
+  // A list name with a YEAR in brackets ("The Twilight Zone (1985)") is named by its words outside the brackets too. A region in brackets is part
+  // of the name: "Shameless (UK)" is not the American Shameless, and taking the bracket off let a French copy of the American series win 47 UK
+  // episodes in the batch C2 dry run. A show whose uploads never say its region gets an alias in HQ (Wilfred (AU): "Wilfred (2007)").
+  const coreBase = norm(show.replace(/\s*\((?:19|20)\d\d\)\s*/g, ' ')).replace(/^the /, '');
+  const cores = [...new Set([core, coreBase, ...aliases])].filter(Boolean);
+  const namesShow =(txt) => { const t = ' ' + norm(txt) + ' '; return cores.some((c) => t.includes(' ' + c + ' ') || (c.length >= 4 && t.includes(' ' + c + 's '))); }; // "Doug's Chubby Buddy" (norm drops the apostrophe) names Doug
   const squeezable = cores.map((c) => c.replace(/ /g, '')).filter((c, i) => cores[i].includes(' ') && c.length >= 6);
   const idNamesShow = (id) => namesShow(id) || squeezable.some((c) => norm(id).replace(/ /g, '').includes(c));
   const byKey = new Map(tv.episodes.map((e) => [`${e.season}x${e.number}`, e]));
@@ -340,6 +346,11 @@ function decideGrid(entry, cand, tv, ctx) {
   const ordered = [...tv.episodes].sort((a, b) => (a.airdate || '').localeCompare(b.airdate || '') || a.season - b.season || a.number - b.number);
 
   const assignments = new Map(); // key -> [{conf, file, item, reasons}]
+  // Hard excludes for series (audit batch C2, B 26 Oct): hate and extremist material, a government collection, or news, politics and government
+  // words in the upload title or the file name. The show's own name and the guide's episode names are set aside first, so "The Election" (an
+  // episode) passes and "Election Night Coverage" does not. A file B accepted or placed in HQ is his call and is not judged here.
+  const exOwn = { show: [show, ...aliases], episodes: tv.episodes.map((e) => e.name).filter(Boolean) };
+  const isAccepted = (item, f) => [item.id + '|' + f.name, item.id + '|' + noEmail(f.name)].some((k) => (ov.acceptFiles || []).includes(k));
   const push = (ep, entry) => { const key = `${ep.season}x${ep.number}`; const list = assignments.get(key) || []; assignments.set(key, list); list.push(entry); };
   for (const item of cand.items) {
     const itemText = `${item.title || ''} ${item.description || ''} ${item.id}`;
@@ -348,7 +359,13 @@ function decideGrid(entry, cand, tv, ctx) {
     const itemTitled = namesShow(item.title || '') || idNamesShow(item.id); // the upload itself says it is this show
     const itemLonger = titleNaming(item.title || '', [core, ...aliases], nets) === 'longer'; // its title runs on into a longer title ("Naruto Shippuden"): an episode name that merely looks alike proves nothing, unless the file's own name also names the show
     const unmatched = []; // episode-band files this item could not place by number or title
+    const itemEx = seriesExclude({ title: item.title, item: item.id, collection: item.collection }, exOwn);
     for (const f of item.files) {
+      // A file whose own name, or whose upload's title, names the show is an episode of it, whatever its title says ("The Masked Lunatic That
+      // Hijacked American News" is a Mystery Files episode, "World Nightly News 2026" a Mind of Mencia sketch): its name is tested for hate words
+      // only. The upload title itself is always tested.
+      const stemEx = hateIn(f.name) || (!namesShow(f.name) && !itemTitled && seriesExclude({ stem: f.name }, exOwn));
+      if ((itemEx || stemEx) && !isAccepted(item, f)) { tags.set(f, 'excluded'); continue; } // the fallback reuses only placed and no-match files, so it stays out there too
       // Files hunted before the show had a TVmaze runtime carry generic bands (half-hour, hour); re-band them now that we know the runtime.
       if (!tv.runtime && (f.band === 'half-hour' || f.band === 'hour' || f.band === 'short')) f.band = 'episode';
       if (tv.runtime && f.seconds && !(f.band === 'episode' || f.band === 'double')) { const m = f.seconds / 60, rt = tv.runtime; f.band = m < 4 ? 'clip' : (m >= rt * 0.7 && m <= rt * 1.35) ? 'episode' : (m >= rt * 1.7 && m <= rt * 2.5) ? 'double' : m > rt * 4 ? 'block' : 'odd'; }
@@ -391,7 +408,7 @@ function decideGrid(entry, cand, tv, ctx) {
         let conf = c.base;
         if (f.nameHit && namesShow(f.name)) conf += 0.15; else if (itemNamesMe) conf += 0.1; // the hunter's nameHit is a substring test of its own, so it is checked again as whole words
         conf += f.band === 'episode' ? 0.15 : 0.05;
-        if (!namesShow(f.name) && !itemTitled) { conf -= 0.5; pen.notNamed = true; } // only the description mentioned us: a spin-off, a same-cast show, a dump
+        if (!namesShow(f.name) && !itemTitled) { pen.notNamed = true; if (!isAccepted(item, f)) continue; } // only the description mentioned us (a spin-off, a same-cast show, a dump): never a match (audit M4), unless B accepted it
         // Reaction and review channels upload "S01E01 - Title - Group Reaction": the right name, the wrong video (B caught Sunny and FMA, 2026-10-14).
         if (REACT.test(f.name) || REACT.test(item.title || '')) conf -= 0.7;
         // An episode title that happens to be another show's name ("Blind Date", "Succession") is not a foreign file when the file also names our show.
@@ -402,6 +419,7 @@ function decideGrid(entry, cand, tv, ctx) {
         if (foreign) conf -= 0.35; // REVIEW, never LIVE, and the site hides it (a French dub is not the show)
         if (!f.playable) conf -= 0.1;
         conf = Math.max(0, Math.min(1, conf));
+        if (foreign) conf = Math.min(conf, LIVE - 0.01); // a dub is REVIEW at most, never LIVE, however well it is named (audit M5: 0.85 had made 379 LIVE)
         if (process.env.MATCH_DEBUG) console.log(`  [debug] ${f.name.slice(0, 60)} -> ${c.ep.season}x${c.ep.number} conf ${conf.toFixed(2)} (${c.why}; band ${f.band}; names ${namesShow(f.name)}/${itemTitled}; other ${fileNamesOther}/${itemNamesOther})`);
         if (conf < REVIEW && ![item.id + '|' + f.name, item.id + '|' + noEmail(f.name)].some((k) => (ov.acceptFiles || []).includes(k))) continue; // an accepted file is kept whatever the judges say
         const risk = codecRisk(f.name, f.format, f.playable);
@@ -454,7 +472,7 @@ function decideGrid(entry, cand, tv, ctx) {
       // episode outright at full confidence (he watched it play), even when the codec judge was unsure.
       const fkeys = (p) => fileKeys(p.item, p.name);
       const accepted = new Set(ov.acceptFiles || []);
-      let opts = (assignments.get(`${e.season}x${e.number}`) || []).filter((o) => !fkeys(o).some((k) => rejected.has(k))).sort((a, b) => (b.playable - a.playable) || b.conf - a.conf || b.sizeMB - a.sizeMB);
+      let opts = (assignments.get(`${e.season}x${e.number}`) || []).filter((o) => !fkeys(o).some((k) => rejected.has(k))).sort((a, b) => (b.playable - a.playable) || (!!a.langRisk - !!b.langRisk) || b.conf - a.conf || b.sizeMB - a.sizeMB); // an English copy before a dub: the site hides a dub, so a dub first left the episode empty (audit M5)
       const plc = opts.find((o) => PLACED.test(o.why)); // a file B placed on this episode wins over one he only accepted
       const acc = plc || opts.find((o) => fkeys(o).some((k) => accepted.has(k)));
       if (acc) { if (acc !== plc) { acc.conf = 1; acc.why = 'accepted in HQ | ' + acc.why; } opts = [acc, ...opts.filter((o) => o !== acc)]; }
@@ -476,7 +494,7 @@ function decideGrid(entry, cand, tv, ctx) {
   // (B, 25 Oct: SpongeBob's guessed "episode 1" was Disc 13 of a season 5 DVD, and a visitor gave up on it).
   if (!ov.guideOnly && placed * 6 < pool && pool >= 20 && dateRejected < pool / 2) {
     const whyNot = (f, item) => rejectionTag({ other: namesOtherShow(f.name, show, aliases) || (!namesShow(f.name) && namesOtherShow(item.title || '', show, aliases)), react: REACT.test(tagText(f.name)) || REACT.test(tagText(item.title || '')), foreign: langRisk(f.name) || langRisk(item.title), notNamed: !namesShow(f.name) && !(namesShow(item.title || '') || idNamesShow(item.id)) });
-    const sg = selfGrid(entry, fallbackCand(withoutRejected(cand), tags, { tv, namesTitle: (t) => namesTitle(t, [core, ...aliases], nets), cores: [core, ...aliases], whyNot }), aliases, nets, ov.placeFiles);
+    const sg = selfGrid(entry, fallbackCand(withoutRejected(cand), tags, { tv, namesTitle: (t) => namesTitle(t, [core, ...aliases], nets), cores: [core, ...aliases], whyNot }), aliases, nets, ov.placeFiles, ov.acceptFiles);
     const sgPlaced = sg ? sg.seasons.reduce((n, se) => n + se.episodes.length, 0) : 0;
     if (sgPlaced >= Math.max(20, placed * 3)) { sg.tvmazeWeak = { id: tv.id, name: tv.name, placed }; keepLive(sg, seasons); return sg; }
   }
@@ -508,12 +526,18 @@ function keepLive(sg, seasons) {
 // Only uploads that NAME the show count; S/E in filenames sets the order, the rest follow in name
 // order as season 1. Everything is REVIEW: honest about where the order came from, except a file B placed in HQ (place: the show's
 // placeFiles), which takes the season and episode he chose, wins that slot and is LIVE.
-function selfGrid(entry, cand, aliases, nets = [], place = null) {
+function selfGrid(entry, cand, aliases, nets = [], place = null, accept = null) {
   const show = entry.name;
   const core = norm(show).replace(/^the /, '').replace(/\(.*?\)/g, '').trim();
   if (core.length < 5 && core.split(' ').length < 2 && !aliases.length) return null; // 'Bu', 'Oz': too short a name to trust inside other titles
   const cores = [core, ...aliases];
   const names = (t) => namesTitle(t, cores, nets); // whole words, and the name must close (see namesTitle)
+  // B's accepts from HQ (acceptFiles): an accepted file is kept whatever the filters below say, and it is LIVE (audit M12: the self-list ignored them).
+  const acceptSet = new Set(accept || []);
+  const accepted = (item, f) => fileKeys(item.id, f.name).some((k) => acceptSet.has(k));
+  // Hard excludes (audit batch C2): hate and extremist material, a government collection, or news words in the upload title; a file's own name is
+  // tested for hate words only, since a self-listed show has no guide to tell an episode called "Bad News" from a newscast.
+  const excluded = (item) => !!seriesExclude({ title: item.title, item: item.id, collection: item.collection }, { show: [show, ...aliases] });
   // A bracket that holds nothing but the show's name is a label on someone else's upload, not the upload's name: "Stefan Molyneux archive (Greatest
   // hits)" is not the show Greatest Hits (audit P3B-02: 161 episodes of a political archive). A bracket that says more still counts ("Inside & Outside
   // the Box (The Complete Tom Green Show)" is the Tom Green DVD set), and a bracket after the name still ends it ("The Young Doctors (1976) Australian
@@ -527,7 +551,7 @@ function selfGrid(entry, cand, aliases, nets = [], place = null) {
     // What an upload is comes from its TITLE. An Archive identifier is free text the uploader chose ("parkers-puzzle-cooking-kids-27-and-exercise"),
     // so it counts only when at least half of the video file names also name the show.
     const starts = titleNames(item.title) && (t.startsWith(core) || t.startsWith('the ' + core));
-    const vids = item.files.filter((f) => f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name) && !isJunkFile(f.name, cores));
+    const vids = item.files.filter((f) => accepted(item, f) || (f.seconds >= 90 && f.seconds <= 3 * 3600 && !langRisk(f.name) && !isJunkFile(f.name, cores) && !hateIn(f.name)));
     const idHit = idn.includes(core.replace(/ /g, '')) || aliases.some((a) => idn.includes(a.replace(/ /g, '')));
     const labelHit = !titleNames(item.title) && names(item.title || ''); // the name is only a bracket label ("Dragonspit playlist [internet historian]"): the files must back it, as for an identifier
     const named = titleNames(item.title) || ((idHit || labelHit) && vids.length > 0 && vids.filter((f) => names(f.name)).length / vids.length >= 0.5);
@@ -535,8 +559,9 @@ function selfGrid(entry, cand, aliases, nets = [], place = null) {
     const med = vids.length ? vids.map((f) => f.seconds).sort((a, b) => a - b)[vids.length >> 1] : 0;
     const net = norm(entry.network || '').replace(/ /g, '');
     const mentionsNet = !!net && net.length > 2 && (norm((item.title || '') + ' ' + item.id + ' ' + (Array.isArray(item.collection) ? item.collection.join(' ') : item.collection || '')).replace(/ /g, '').includes(net));
-    return { item, starts, named, vids, distinct, med, mentionsNet };
-  }).filter((x) => x.named && !langRisk(x.item.title) && !/[぀-ヿ㐀-鿿가-힯Ѐ-ӿ؀-ۿ]/.test(x.item.title || '') && !isJunkItem((x.item.title || '') + ' ' + x.item.id, cores) && (x.starts || x.distinct >= 5)); // strict: the upload is titled as the show, or it is plainly a season of it
+    const hasAccepted = item.files.some((f) => accepted(item, f));
+    return { item, starts, named, vids, distinct, med, mentionsNet, hasAccepted };
+  }).filter((x) => x.hasAccepted || x.named && !excluded(x.item) && !langRisk(x.item.title) && !/[぀-ヿ㐀-鿿가-힯Ѐ-ӿ؀-ۿ]/.test(x.item.title || '') && !isJunkItem((x.item.title || '') + ' ' + x.item.id, cores) && (x.starts || x.distinct >= 5)); // strict: the upload is titled as the show, or it is plainly a season of it
   if (!items.length) return null;
   // when some uploads name the network (channel101-yacht-rock), the ones that do not are someone else's Yacht Rock
   const netItems = items.filter((x) => x.mentionsNet); if (netItems.length) items.splice(0, items.length, ...netItems);
@@ -548,20 +573,21 @@ function selfGrid(entry, cand, aliases, nets = [], place = null) {
   for (const { item, vids } of kept) {
     for (const f of vids) {
       const risk = codecRisk(f.name, f.format, f.playable);
-      const to = placeOf(place, item.id, f.name);
+      const to = placeOf(place, item.id, f.name), acc = !to && accepted(item, f);
       files.push({ item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: f.playable, codecRisk: risk || undefined, sizeMB: f.sizeMB, ep: to ? { season: to.season, episode: to.number } : f.ep,
-        conf: to ? 1 : 0.6, why: to ? `placed in HQ as ${to.season}x${to.number} | self-listed: no TVmaze entry` : 'self-listed: no TVmaze entry; order from the files' });
+        conf: to || acc ? 1 : 0.6, why: to ? `placed in HQ as ${to.season}x${to.number} | self-listed: no TVmaze entry` : acc ? 'accepted in HQ | self-listed: no TVmaze entry' : 'self-listed: no TVmaze entry; order from the files' });
     }
   }
   if (files.length < 2) return null;
   const bySE = new Map(); const loose = [];
-  const better = (f, cur) => PLACED.test(f.why) !== PLACED.test(cur.why) ? PLACED.test(f.why) : (f.playable && !cur.playable) || (f.playable === cur.playable && (f.sizeMB || 0) > (cur.sizeMB || 0));
+  const HQ = /^(?:placed|accepted) in HQ/; // B's own choices: LIVE, and they win their slot
+  const better = (f, cur) => HQ.test(f.why) !== HQ.test(cur.why) ? HQ.test(f.why) : (f.playable && !cur.playable) || (f.playable === cur.playable && (f.sizeMB || 0) > (cur.sizeMB || 0));
   for (const f of files) { if (f.ep && f.ep.episode) { const k = (f.ep.season || 1) + 'x' + f.ep.episode; const cur = bySE.get(k); if (!cur || better(f, cur)) bySE.set(k, f); } else loose.push(f); }
   const seasons = {};
-  for (const [k, f] of bySE) { const [se, ep] = k.split('x').map(Number); const nm = titlePart(f.name, showWords); (seasons[se] = seasons[se] || []).push({ number: ep, name: nm && /[a-z]{3,}/.test(nm) ? nm : ('Episode ' + ep), state: PLACED.test(f.why) ? 'LIVE' : 'REVIEW', file: f, alternates: [] }); }
+  for (const [k, f] of bySE) { const [se, ep] = k.split('x').map(Number); const nm = titlePart(f.name, showWords); (seasons[se] = seasons[se] || []).push({ number: ep, name: nm && /[a-z]{3,}/.test(nm) ? nm : ('Episode ' + ep), state: HQ.test(f.why) ? 'LIVE' : 'REVIEW', file: f, alternates: [] }); }
   loose.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
   const seen = new Set(); let next = (seasons[1] || []).reduce((m, e) => Math.max(m, e.number), 0);
-  for (const f of loose) { const key = variantKey(f.name); if (seen.has(key)) continue; seen.add(key); next++; const nm = titlePart(f.name, showWords); (seasons[1] = seasons[1] || []).push({ number: next, name: nm && /[a-z]{3,}/.test(nm) ? nm : ('Episode ' + next), state: 'REVIEW', file: f, alternates: [] }); }
+  for (const f of loose) { const key = variantKey(f.name); if (seen.has(key)) continue; seen.add(key); next++; const nm = titlePart(f.name, showWords); (seasons[1] = seasons[1] || []).push({ number: next, name: nm && /[a-z]{3,}/.test(nm) ? nm : ('Episode ' + next), state: HQ.test(f.why) ? 'LIVE' : 'REVIEW', file: f, alternates: [] }); }
   const list = Object.keys(seasons).map(Number).sort((a, b) => a - b).map((se) => ({ season: se, episodes: seasons[se].sort((a, b) => a.number - b.number) }));
   const total = list.reduce((m, se) => m + se.episodes.length, 0);
   const placedLive = list.reduce((m, se) => m + se.episodes.filter((e) => e.state === 'LIVE').length, 0);
