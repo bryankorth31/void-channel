@@ -3,7 +3,7 @@
   "slug": "tales-from-the-crypt",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "HBO",
-  "matchedAt": "2026-10-19T04:10:54.895Z",
+  "matchedAt": "2026-10-26T04:19:58.521Z",
   "addedAt": "2026-10-15T12:07:49.905Z",
   "tvmaze": {
     "id": 453,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 93,
-    "live": 41,
-    "review": 50,
-    "missing": 2,
-    "pct": 98
+    "live": 17,
+    "review": 72,
+    "missing": 4,
+    "pct": 96
   },
   "seasons": [
     {
@@ -31,30 +31,17 @@
           "file": {
             "conf": 0.85,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S01E01 - While the Cat's Away.mp4",
-            "name": "S01E01 - While the Cat's Away",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S01E01%20-%20While%20the%20Cat's%20Away.mp4",
-            "seconds": 1375,
+            "item": "crypt-s-01-e-03-dig-that-cat...-he-s-real-gone",
+            "itemTitle": "Tales From the Crypt Season 1",
+            "file": "Crypt - S01E01..mp4",
+            "name": "Crypt - S01E01.",
+            "url": "https://archive.org/download/crypt-s-01-e-03-dig-that-cat...-he-s-real-gone/Crypt%20-%20S01E01..mp4",
+            "seconds": 1580,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 216
+            "sizeMB": 158
           },
           "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "crypt-s-01-e-03-dig-that-cat...-he-s-real-gone",
-              "itemTitle": "Tales From the Crypt Season 1",
-              "file": "Crypt - S01E01..mp4",
-              "name": "Crypt - S01E01.",
-              "url": "https://archive.org/download/crypt-s-01-e-03-dig-that-cat...-he-s-real-gone/Crypt%20-%20S01E01..mp4",
-              "seconds": 1580,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 158
-            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 1 of 6 in \"Tales From the Crypt Season 1\"",
@@ -398,36 +385,22 @@
           "number": 1,
           "name": "Dead Right",
           "airdate": "1990-04-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S02E01 - Game Over.mp4",
-            "name": "S02E01 - Game Over",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S02E01%20-%20Game%20Over.mp4",
-            "seconds": 1374,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s02e01) - La Prophétie.mp4",
+            "name": "Les Contes De La Crypte (s02e01) - La Prophétie",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e01)%20-%20La%20Proph%C3%A9tie.mp4",
+            "seconds": 1608,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 215
+            "langRisk": true,
+            "sizeMB": 157
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s02e01) - La Prophétie.mp4",
-              "name": "Les Contes De La Crypte (s02e01) - La Prophétie",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e01)%20-%20La%20Proph%C3%A9tie.mp4",
-              "seconds": 1608,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 157
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -454,90 +427,51 @@
           "number": 3,
           "name": "Cutting Cards",
           "airdate": "1990-04-21",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S02E03 - The Avenging Phantom  Myth Conceptions.mp4",
-            "name": "S02E03 - The Avenging Phantom  Myth Conceptions",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S02E03%20-%20The%20Avenging%20Phantom%20%20Myth%20Conceptions.mp4",
-            "seconds": 1374,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 216
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "'Til Death",
           "airdate": "1990-04-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S02E04 - The Weeping Woman.mp4",
-            "name": "S02E04 - The Weeping Woman",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S02E04%20-%20The%20Weeping%20Woman.mp4",
-            "seconds": 1374,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s02e04) - Jusqu'à Ce Que Mort S'en Suive.mp4",
+            "name": "Les Contes De La Crypte (s02e04) - Jusqu'à Ce Que Mort S'en Suive",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e04)%20-%20Jusqu'%C3%A0%20Ce%20Que%20Mort%20S'en%20Suive.mp4",
+            "seconds": 1479,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 226
+            "langRisk": true,
+            "sizeMB": 196
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s02e04) - Jusqu'à Ce Que Mort S'en Suive.mp4",
-              "name": "Les Contes De La Crypte (s02e04) - Jusqu'à Ce Que Mort S'en Suive",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e04)%20-%20Jusqu'%C3%A0%20Ce%20Que%20Mort%20S'en%20Suive.mp4",
-              "seconds": 1479,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 196
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
           "name": "Three's a Crowd",
           "airdate": "1990-05-01",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S02E05 - All the Gory Details!.mp4",
-            "name": "S02E05 - All the Gory Details!",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S02E05%20-%20All%20the%20Gory%20Details!.mp4",
-            "seconds": 1374,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s02e05) - À L'Amour à La Mort.mp4",
+            "name": "Les Contes De La Crypte (s02e05) - À L'Amour à La Mort",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e05)%20-%20%C3%80%20L'Amour%20%C3%A0%20La%20Mort.mp4",
+            "seconds": 1602,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 216
+            "langRisk": true,
+            "sizeMB": 212
           },
           "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s02e05) - À L'Amour à La Mort.mp4",
-              "name": "Les Contes De La Crypte (s02e05) - À L'Amour à La Mort",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e05)%20-%20%C3%80%20L'Amour%20%C3%A0%20La%20Mort.mp4",
-              "seconds": 1602,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 212
-            },
             {
               "conf": 0.5,
               "why": "S/E in filename",
@@ -558,56 +492,30 @@
           "number": 6,
           "name": "The Thing from the Grave",
           "airdate": "1990-05-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S02E06 - Dead Men Don't Jump!.mp4",
-            "name": "S02E06 - Dead Men Don't Jump!",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S02E06%20-%20Dead%20Men%20Don't%20Jump!.mp4",
-            "seconds": 1374,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 215
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 7,
           "name": "The Sacrifice",
           "airdate": "1990-05-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S02E07 - The Haunted Mine.mp4",
-            "name": "S02E07 - The Haunted Mine",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S02E07%20-%20The%20Haunted%20Mine.mp4",
-            "seconds": 1374,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s02e07) - Le Sacrifice.mp4",
+            "name": "Les Contes De La Crypte (s02e07) - Le Sacrifice",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e07)%20-%20Le%20Sacrifice.mp4",
+            "seconds": 1573,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 217
+            "langRisk": true,
+            "sizeMB": 248
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s02e07) - Le Sacrifice.mp4",
-              "name": "Les Contes De La Crypte (s02e07) - Le Sacrifice",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e07)%20-%20Le%20Sacrifice.mp4",
-              "seconds": 1573,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 248
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -634,176 +542,106 @@
           "number": 9,
           "name": "Four-Sided Triangle",
           "airdate": "1990-05-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S02E09 - The Brothers Gruff.mp4",
-            "name": "S02E09 - The Brothers Gruff",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S02E09%20-%20The%20Brothers%20Gruff.mp4",
-            "seconds": 1374,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s02e09) - Le Triangle À Quatre Cotés.mp4",
+            "name": "Les Contes De La Crypte (s02e09) - Le Triangle À Quatre Cotés",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e09)%20-%20Le%20Triangle%20%C3%80%20Quatre%20Cot%C3%A9s.mp4",
+            "seconds": 1676,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 215
+            "langRisk": true,
+            "sizeMB": 190
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s02e09) - Le Triangle À Quatre Cotés.mp4",
-              "name": "Les Contes De La Crypte (s02e09) - Le Triangle À Quatre Cotés",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e09)%20-%20Le%20Triangle%20%C3%80%20Quatre%20Cot%C3%A9s.mp4",
-              "seconds": 1676,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 190
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
           "name": "The Ventriloquist's Dummy",
           "airdate": "1990-06-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S02E10 - Uncle Harry's Horrible House of Horrors.mp4",
-            "name": "S02E10 - Uncle Harry's Horrible House of Horrors",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S02E10%20-%20Uncle%20Harry's%20Horrible%20House%20of%20Horrors.mp4",
-            "seconds": 1374,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s02e10) - Le Pantin Ventriloque.mp4",
+            "name": "Les Contes De La Crypte (s02e10) - Le Pantin Ventriloque",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e10)%20-%20Le%20Pantin%20Ventriloque.mp4",
+            "seconds": 1353,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 216
+            "langRisk": true,
+            "sizeMB": 157
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s02e10) - Le Pantin Ventriloque.mp4",
-              "name": "Les Contes De La Crypte (s02e10) - Le Pantin Ventriloque",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e10)%20-%20Le%20Pantin%20Ventriloque.mp4",
-              "seconds": 1353,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 157
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
           "name": "Judy, You're Not Yourself Today",
           "airdate": "1990-06-12",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S02E11 - Hunted.mp4",
-            "name": "S02E11 - Hunted",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S02E11%20-%20Hunted.mp4",
-            "seconds": 1374,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s02e11) - Transformation.mp4",
+            "name": "Les Contes De La Crypte (s02e11) - Transformation",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e11)%20-%20Transformation.mp4",
+            "seconds": 1605,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214
+            "langRisk": true,
+            "sizeMB": 222
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s02e11) - Transformation.mp4",
-              "name": "Les Contes De La Crypte (s02e11) - Transformation",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e11)%20-%20Transformation.mp4",
-              "seconds": 1605,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 222
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 12,
           "name": "Fitting Punishment",
           "airdate": "1990-06-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S02E12 - Chuck (And Melvin) and the Beanstalker.mp4",
-            "name": "S02E12 - Chuck (And Melvin) and the Beanstalker",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S02E12%20-%20Chuck%20(And%20Melvin)%20and%20the%20Beanstalker.mp4",
-            "seconds": 1374,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s02e12) - Les Pieds Du Cadavre.mp4",
+            "name": "Les Contes De La Crypte (s02e12) - Les Pieds Du Cadavre",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e12)%20-%20Les%20Pieds%20Du%20Cadavre.mp4",
+            "seconds": 1506,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 214
+            "langRisk": true,
+            "sizeMB": 242
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s02e12) - Les Pieds Du Cadavre.mp4",
-              "name": "Les Contes De La Crypte (s02e12) - Les Pieds Du Cadavre",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e12)%20-%20Les%20Pieds%20Du%20Cadavre.mp4",
-              "seconds": 1506,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 242
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
           "name": "Korman's Kalamity",
           "airdate": "1990-06-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S02E13 - Transylvania Express.mp4",
-            "name": "S02E13 - Transylvania Express",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S02E13%20-%20Transylvania%20Express.mp4",
-            "seconds": 1372,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s02e13) - Ma Femme Est Monstrueuse.mp4",
+            "name": "Les Contes De La Crypte (s02e13) - Ma Femme Est Monstrueuse",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e13)%20-%20Ma%20Femme%20Est%20Monstrueuse.mp4",
+            "seconds": 1627,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 213
+            "langRisk": true,
+            "sizeMB": 194
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s02e13) - Ma Femme Est Monstrueuse.mp4",
-              "name": "Les Contes De La Crypte (s02e13) - Ma Femme Est Monstrueuse",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s02e13)%20-%20Ma%20Femme%20Est%20Monstrueuse.mp4",
-              "seconds": 1627,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 194
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 14,
@@ -906,456 +744,274 @@
           "number": 1,
           "name": "Loved to Death",
           "airdate": "1991-06-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E01 - Sharon Sharalike.mp4",
-            "name": "S03E01 - Sharon Sharalike",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E01%20-%20Sharon%20Sharalike.mp4",
-            "seconds": 1331,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e01) - Le Piège.mp4",
+            "name": "Les Contes De La Crypte (s03e01) - Le Piège",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e01)%20-%20Le%20Pi%C3%A8ge.mp4",
+            "seconds": 1644,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 212
+            "langRisk": true,
+            "sizeMB": 235
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e01) - Le Piège.mp4",
-              "name": "Les Contes De La Crypte (s03e01) - Le Piège",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e01)%20-%20Le%20Pi%C3%A8ge.mp4",
-              "seconds": 1644,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 235
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
           "name": "Carrion Death",
           "airdate": "1991-06-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E02 - Too Cool for School.mp4",
-            "name": "S03E02 - Too Cool for School",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E02%20-%20Too%20Cool%20for%20School.mp4",
-            "seconds": 1330,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e02) - Un Amour Eternel.mp4",
+            "name": "Les Contes De La Crypte (s03e02) - Un Amour Eternel",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e02)%20-%20Un%20Amour%20Eternel.mp4",
+            "seconds": 1648,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 209
+            "langRisk": true,
+            "sizeMB": 225
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e02) - Un Amour Eternel.mp4",
-              "name": "Les Contes De La Crypte (s03e02) - Un Amour Eternel",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e02)%20-%20Un%20Amour%20Eternel.mp4",
-              "seconds": 1648,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 225
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
           "name": "The Trap",
           "airdate": "1991-06-15",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E03 - Monster's Ate My Homework.mp4",
-            "name": "S03E03 - Monster's Ate My Homework",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E03%20-%20Monster's%20Ate%20My%20Homework.mp4",
-            "seconds": 1331,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e03) - Le Canyon De La Mort.mp4",
+            "name": "Les Contes De La Crypte (s03e03) - Le Canyon De La Mort",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e03)%20-%20Le%20Canyon%20De%20La%20Mort.mp4",
+            "seconds": 1571,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 209
+            "langRisk": true,
+            "sizeMB": 215
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e03) - Le Canyon De La Mort.mp4",
-              "name": "Les Contes De La Crypte (s03e03) - Le Canyon De La Mort",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e03)%20-%20Le%20Canyon%20De%20La%20Mort.mp4",
-              "seconds": 1571,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 215
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Abra Cadaver",
           "airdate": "1991-06-19",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E04 - Waste Not, Haunt Not.mp4",
-            "name": "S03E04 - Waste Not, Haunt Not",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E04%20-%20Waste%20Not%2C%20Haunt%20Not.mp4",
-            "seconds": 1331,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e04) - Abra Cadavra.mp4",
+            "name": "Les Contes De La Crypte (s03e04) - Abra Cadavra",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e04)%20-%20Abra%20Cadavra.mp4",
+            "seconds": 1721,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 207
+            "langRisk": true,
+            "sizeMB": 235
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e04) - Abra Cadavra.mp4",
-              "name": "Les Contes De La Crypte (s03e04) - Abra Cadavra",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e04)%20-%20Abra%20Cadavra.mp4",
-              "seconds": 1721,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 235
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
           "name": "Top Billing",
           "airdate": "1991-06-26",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E05 - Trouble in Store.mp4",
-            "name": "S03E05 - Trouble in Store",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E05%20-%20Trouble%20in%20Store.mp4",
-            "seconds": 1331,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e05) - Tête d'Affiche.mp4",
+            "name": "Les Contes De La Crypte (s03e05) - Tête d'Affiche",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e05)%20-%20T%C3%AAte%20d'Affiche.mp4",
+            "seconds": 1620,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 209
+            "langRisk": true,
+            "sizeMB": 231
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e05) - Tête d'Affiche.mp4",
-              "name": "Les Contes De La Crypte (s03e05) - Tête d'Affiche",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e05)%20-%20T%C3%AAte%20d'Affiche.mp4",
-              "seconds": 1620,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 231
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
           "name": "Dead Wait",
           "airdate": "1991-07-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E06 - All Booked Up.mp4",
-            "name": "S03E06 - All Booked Up",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E06%20-%20All%20Booked%20Up.mp4",
-            "seconds": 1328,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e06) - La Perle Noire.mp4",
+            "name": "Les Contes De La Crypte (s03e06) - La Perle Noire",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e06)%20-%20La%20Perle%20Noire.mp4",
+            "seconds": 1718,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 209
+            "langRisk": true,
+            "sizeMB": 235
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e06) - La Perle Noire.mp4",
-              "name": "Les Contes De La Crypte (s03e06) - La Perle Noire",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e06)%20-%20La%20Perle%20Noire.mp4",
-              "seconds": 1718,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 235
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
           "name": "The Reluctant Vampire",
           "airdate": "1991-07-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E07 - So Very Attractive.mp4",
-            "name": "S03E07 - So Very Attractive",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E07%20-%20So%20Very%20Attractive.mp4",
-            "seconds": 1331,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e07) - Un Vampire Récalcitrant.mp4",
+            "name": "Les Contes De La Crypte (s03e07) - Un Vampire Récalcitrant",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e07)%20-%20Un%20Vampire%20R%C3%A9calcitrant.mp4",
+            "seconds": 1713,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 209
+            "langRisk": true,
+            "sizeMB": 235
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e07) - Un Vampire Récalcitrant.mp4",
-              "name": "Les Contes De La Crypte (s03e07) - Un Vampire Récalcitrant",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e07)%20-%20Un%20Vampire%20R%C3%A9calcitrant.mp4",
-              "seconds": 1713,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 235
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
           "name": "Easel Kill Ya",
           "airdate": "1991-07-17",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E08 - Drawn and Quartered.mp4",
-            "name": "S03E08 - Drawn and Quartered",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E08%20-%20Drawn%20and%20Quartered.mp4",
-            "seconds": 1328,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e08) - La Peinture Au Sang.mp4",
+            "name": "Les Contes De La Crypte (s03e08) - La Peinture Au Sang",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e08)%20-%20La%20Peinture%20Au%20Sang.mp4",
+            "seconds": 1616,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 208
+            "langRisk": true,
+            "sizeMB": 221
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e08) - La Peinture Au Sang.mp4",
-              "name": "Les Contes De La Crypte (s03e08) - La Peinture Au Sang",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e08)%20-%20La%20Peinture%20Au%20Sang.mp4",
-              "seconds": 1616,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 221
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
           "name": "Undertaking Palor",
           "airdate": "1991-07-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E09 - Imaginary Friend.mp4",
-            "name": "S03E09 - Imaginary Friend",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E09%20-%20Imaginary%20Friend.mp4",
-            "seconds": 1331,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e09) - Des Pompes Très Funèbres.mp4",
+            "name": "Les Contes De La Crypte (s03e09) - Des Pompes Très Funèbres",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e09)%20-%20Des%20Pompes%20Tr%C3%A8s%20Fun%C3%A8bres.mp4",
+            "seconds": 1514,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 210
+            "langRisk": true,
+            "sizeMB": 225
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e09) - Des Pompes Très Funèbres.mp4",
-              "name": "Les Contes De La Crypte (s03e09) - Des Pompes Très Funèbres",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e09)%20-%20Des%20Pompes%20Tr%C3%A8s%20Fun%C3%A8bres.mp4",
-              "seconds": 1514,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 225
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 10,
           "name": "Mournin' Mess",
           "airdate": "1991-07-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E10 - Town Gathering.mp4",
-            "name": "S03E10 - Town Gathering",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E10%20-%20Town%20Gathering.mp4",
-            "seconds": 1331,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e10) - En Faire Son Deuil.mp4",
+            "name": "Les Contes De La Crypte (s03e10) - En Faire Son Deuil",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e10)%20-%20En%20Faire%20Son%20Deuil.mp4",
+            "seconds": 1568,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 209
+            "langRisk": true,
+            "sizeMB": 224
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e10) - En Faire Son Deuil.mp4",
-              "name": "Les Contes De La Crypte (s03e10) - En Faire Son Deuil",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e10)%20-%20En%20Faire%20Son%20Deuil.mp4",
-              "seconds": 1568,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 224
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 11,
           "name": "Split Second",
           "airdate": "1991-08-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E11 - It's for You.mp4",
-            "name": "S03E11 - It's for You",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E11%20-%20It's%20for%20You.mp4",
-            "seconds": 1331,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e11) - Le Sacre De La Tronçonneuse.mp4",
+            "name": "Les Contes De La Crypte (s03e11) - Le Sacre De La Tronçonneuse",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e11)%20-%20Le%20Sacre%20De%20La%20Tron%C3%A7onneuse.mp4",
+            "seconds": 1619,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 207
+            "langRisk": true,
+            "sizeMB": 194
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e11) - Le Sacre De La Tronçonneuse.mp4",
-              "name": "Les Contes De La Crypte (s03e11) - Le Sacre De La Tronçonneuse",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e11)%20-%20Le%20Sacre%20De%20La%20Tron%C3%A7onneuse.mp4",
-              "seconds": 1619,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 194
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 12,
           "name": "Deadline",
           "airdate": "1991-08-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E12 - Unpopular Mechanics.mp4",
-            "name": "S03E12 - Unpopular Mechanics",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E12%20-%20Unpopular%20Mechanics.mp4",
-            "seconds": 1331,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e12) - Dernière Limite.mp4",
+            "name": "Les Contes De La Crypte (s03e12) - Dernière Limite",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e12)%20-%20Derni%C3%A8re%20Limite.mp4",
+            "seconds": 1594,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 213
+            "langRisk": true,
+            "sizeMB": 190
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e12) - Dernière Limite.mp4",
-              "name": "Les Contes De La Crypte (s03e12) - Dernière Limite",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e12)%20-%20Derni%C3%A8re%20Limite.mp4",
-              "seconds": 1594,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 190
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 13,
           "name": "Spoiled",
           "airdate": "1991-08-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.5,
             "why": "S/E in filename",
-            "item": "s-01-e-06-the-works...-in-wax",
-            "itemTitle": "Tales from the Cryptkeeper",
-            "file": "S03E13 - Competitive Spirit.mp4",
-            "name": "S03E13 - Competitive Spirit",
-            "url": "https://archive.org/download/s-01-e-06-the-works...-in-wax/S03E13%20-%20Competitive%20Spirit.mp4",
-            "seconds": 1331,
+            "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
+            "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
+            "file": "Les Contes De La Crypte (s03e13) - A En Perdre La Tête.mp4",
+            "name": "Les Contes De La Crypte (s03e13) - A En Perdre La Tête",
+            "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e13)%20-%20A%20En%20Perdre%20La%20T%C3%AAte.mp4",
+            "seconds": 1652,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 208
+            "langRisk": true,
+            "sizeMB": 226
           },
-          "alternates": [
-            {
-              "conf": 0.5,
-              "why": "S/E in filename",
-              "item": "les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21",
-              "itemTitle": "Les Contes de la Crypte V.F. ☆ Tales from the Crypt V.O. ☆ 1989-96",
-              "file": "Les Contes De La Crypte (s03e13) - A En Perdre La Tête.mp4",
-              "name": "Les Contes De La Crypte (s03e13) - A En Perdre La Tête",
-              "url": "https://archive.org/download/les-contes-de-la-crypte-v.f.-tales-from-the-crypt-v.o.-1989-96-2019-21/Les%20Contes%20De%20La%20Crypte%20(s03e13)%20-%20A%20En%20Perdre%20La%20T%C3%AAte.mp4",
-              "seconds": 1652,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 226
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 14,
