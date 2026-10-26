@@ -19,6 +19,10 @@ const DEFAULTS = {
   minSources: 2, // fewer outside sources than this and the show drops: barely known, nobody rates it
   minEpisodes: 4, // a stub drops: fewer episodes here than this, and under half the show (Seinfeld had 1 of 180; a whole 3-part documentary stays)
   bayesVotes: 50, // TMDB votes it takes for a show's own average to count as much as the catalog's mean
+  // Documentary and factual shows stay for the kind of show they are (B, 26 Oct: TLC, Discovery, History, PBS "have value even if
+  // there only is like a few of them"): fame, ratings and a few episodes do not drop them; only playing poorly here does.
+  factualTypes: ['Documentary & Geographic'],
+  factualNetworks: ['PBS', 'Discovery', 'TLC', 'History', 'National Geographic', 'Animal Planet', 'Smithsonian Channel', 'Travel Channel', 'Science Channel', 'Food Network'],
 };
 
 const num = (x) => (typeof x === 'number' && isFinite(x) ? x : null);
@@ -100,10 +104,13 @@ function score(shows, settings, calls, now) {
     const sc = { entertainment: rnd(e), love: rnd(l), impact: rnd(im), quality: q, blend: rnd(blend) };
     // Two calls only (B, 26 Oct: 'either keep or go'): a show stays on Live TV unless it plays poorly here, is barely known,
     // or its blend is below the line.
+    const factual = S.factualTypes.indexOf(x.type) >= 0 || S.factualNetworks.indexOf(x.network) >= 0;
+    // Factual: its files alone decide (how much of the guide is here does not count against it).
+    const qf = factual ? quality(Object.assign({}, f, { coverage: null })) : null;
     const few = f.siteEps != null && f.siteEps < S.minEpisodes && (f.coverage == null || f.coverage < 0.5);
-    const auto = few || (q != null && q < S.qualityFloor) || f.sources < S.minSources || blend == null || blend < S.goBelow ? 'go' : 'keep';
+    const auto = factual ? (qf != null && qf < S.qualityFloor ? 'go' : 'keep') : few || (q != null && q < S.qualityFloor) || f.sources < S.minSources || blend == null || blend < S.goBelow ? 'go' : 'keep';
     const mine = calls && calls[x.slug] && /^(keep|go)$/.test(calls[x.slug].call) ? calls[x.slug].call : null;
-    return { slug: x.slug, scores: sc, facts: f, auto, call: mine || auto, byB: !!mine, reason: reason(sc, f, S, auto) };
+    return { slug: x.slug, scores: sc, facts: f, auto, call: mine || auto, byB: !!mine, reason: factual ? (auto === 'go' ? 'Plays poorly here' : 'Documentary or factual: stays for the kind of show it is') : reason(sc, f, S, auto), factual };
   });
 }
 const rnd = (x) => (x == null ? null : Math.round(x));

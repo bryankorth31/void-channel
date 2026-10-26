@@ -82,6 +82,17 @@ test('settings move the line: a higher Go line drops more', () => {
   assert.ok(n({ goBelow: 70 }) > n({}));
 });
 
+test('documentary and factual shows stay for their kind: few episodes, barely known or poorly rated do not drop them (B, 26 Oct)', () => {
+  const doc = (slug, over) => Object.assign({ slug, type: 'Documentary & Geographic', files: Object.assign({}, goodFiles, { siteEps: 1, coverage: 0.02 }) }, over || {});
+  const shows = field().concat([doc('one-ep'), doc('unknown', { tmdb: { missing: true } }), mk('weak', 0, { type: 'Documentary & Geographic' }),
+    mk('pbs', 0, { network: 'PBS' }), doc('broken', { files: { siteEps: 10, coverage: 1, playable: 0, mbMin: 1, slotFill: 0.3 } })]);
+  const r = by(R.score(shows, {}, {}, NOW));
+  for (const k of ['one-ep', 'unknown', 'weak', 'pbs']) { assert.equal(r[k].call, 'keep', k); assert.match(r[k].reason, /kind of show/); }
+  assert.equal(r.broken.call, 'go', 'one that plays poorly here still drops');
+  assert.equal(r.s0.call, 'go', 'a weak sitcom still drops');
+  assert.equal(by(R.score(shows, { factualTypes: [], factualNetworks: [] }, {}, NOW))['one-ep'].call, 'go', 'the kinds are a setting');
+});
+
 test('file facts: coverage of the guide, files that play, picture and slot fill', () => {
   const grid = { seasons: [{ number: 1, episodes: [
     { file: { playable: true, sizeMB: 220, seconds: 1320 } }, { file: { playable: false, sizeMB: 100, seconds: 1320 } }, {}, {}] }] };

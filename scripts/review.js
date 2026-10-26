@@ -86,7 +86,8 @@ async function main() {
   const settings = readJson(path.join(CAT, 'review-settings.json'), {}), calls = readJson(path.join(CAT, 'review-calls.json'), {});
   const input = [...shows.keys()].map((slug) => {
     const grid = readJson(path.join(CAT, 'shows', slug + '.json'), null);
-    return { slug, tmdb: tm[slug], tvmaze: tv[slug], wiki: wd[slug], views: vw[slug], ours: own[slug], files: R.fileFacts(shows.get(slug).site, grid) };
+    const site = shows.get(slug).site;
+    return { slug, type: site.type || '', network: site.network || '', tmdb: tm[slug], tvmaze: tv[slug], wiki: wd[slug], views: vw[slug], ours: own[slug], files: R.fileFacts(shows.get(slug).site, grid) };
   });
   const scored = R.score(input, settings, calls);
   const rows = scored.map((r) => {
