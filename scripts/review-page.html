@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live TV drops</title>
+<style>
+:root { --bg: #0d0e14; --panel: #161823; --line: #262938; --ink: #e9eaf0; --dim: #9094a8; --pink: #ff3d9a; --blue: #3db8ff; --gold: #f2c14e; --keep: #3ecf8e; --go: #ff5c6c; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: 12px 16px 10px; z-index: 2; }
+h1 { margin: 0; font-size: 20px; } h1 .v { color: var(--pink); } h1 .n { color: var(--blue); }
+.dim { color: var(--dim); } .small { font-size: 13px; }
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+input[type=search] { background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 7px 9px; font: inherit; flex: 1 1 200px; min-width: 0; }
+button { background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 7px 11px; font: inherit; cursor: pointer; }
+button.on { border-color: var(--ink); }
+button.gold { background: var(--gold); color: #111; border-color: var(--gold); font-weight: 600; }
+main { padding: 4px 16px 60px; }
+h2 { font-size: 15px; margin: 20px 0 4px; color: var(--gold); }
+.row { display: flex; gap: 12px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.row .t { flex: 1; min-width: 0; }
+.row a { color: var(--ink); text-decoration: none; font-weight: 600; } .row a:hover { text-decoration: underline; }
+.row .why { color: var(--dim); font-size: 13px; }
+.row.saved a { color: var(--keep); } .row.cut a { color: var(--go); }
+.row button { white-space: nowrap; }
+.row button.keep.on { background: var(--keep); color: #111; border-color: var(--keep); }
+.row button.go.on { background: var(--go); color: #111; border-color: var(--go); }
+.toast { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #111; padding: 8px 14px; border-radius: 8px; display: none; z-index: 3; }
+footer { color: var(--dim); font-size: 12px; padding: 16px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Live TV drops on <span class="v">voidtv</span><span class="n">.net</span></h1>
+  <div class="small" id="sum"></div>
+  <div class="bar">
+    <button id="t-go" class="on">Coming off</button>
+    <button id="t-keep">Staying</button>
+    <input type="search" id="q" placeholder="Find a show">
+    <button class="gold" id="copy">Copy my changes</button>
+  </div>
+</header>
+<main id="list"></main>
+<footer>Shows that come off Live TV stay on demand on their own pages. The picks come from ratings and votes (TMDB, TVmaze), how known a show is (Wikipedia, Wikidata), how long it ran, and how well its files play here. This product uses the TMDB API but is not endorsed or certified by TMDB.</footer>
+<div class="toast" id="toast"></div>
+<script>
+/*DATA*/
+const KEY = 'show-review-calls';
+let mine = {};
+try { mine = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { mine = {}; }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) {} };
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const S = REVIEW.shows;
+let tab = 'go';
+const callOf = (r) => mine[r.slug] || r.auto;
+function draw() {
+  const q = $('q').value.trim().toLowerCase();
+  const off = S.filter((r) => callOf(r) === 'go').length, saved = Object.keys(mine).filter((k) => mine[k] === 'keep').length, cut = Object.keys(mine).filter((k) => mine[k] === 'go').length;
+  $('sum').textContent = off + ' of ' + S.length + ' series come off Live TV; ' + (S.length - off) + ' stay.' + (saved || cut ? ' You saved ' + saved + ' and cut ' + cut + '.' : ' Tap Keep it on any you want to save.');
+  // In Coming off: what the rules drop, plus any B cut; in Staying: the rest. B's changes stay in the list they started in, marked.
+  const rows = S.filter((r) => (tab === 'go' ? r.auto === 'go' || mine[r.slug] === 'go' : r.auto === 'keep' && mine[r.slug] !== 'go') && (!q || r.show.toLowerCase().includes(q)));
+  const groups = {};
+  for (const r of rows) (groups[r.type || 'Other'] = groups[r.type || 'Other'] || []).push(r);
+  const order = Object.keys(groups).sort((a, b) => groups[b].length - groups[a].length);
+  $('list').innerHTML = order.map((g) => '<h2>' + esc(g) + ' <span class="dim">' + groups[g].length + '</span></h2>' + groups[g].sort((a, b) => a.show.localeCompare(b.show)).map((r) => {
+    const c = callOf(r), cls = mine[r.slug] === 'keep' ? 'saved' : mine[r.slug] === 'go' ? 'cut' : '';
+    const btn = tab === 'go' ? '<button class="keep' + (c === 'keep' ? ' on' : '') + '" data-c="keep">' + (c === 'keep' ? 'Kept' : 'Keep it') + '</button>' : '<button class="go' + (c === 'go' ? ' on' : '') + '" data-c="go">' + (c === 'go' ? 'Cut' : 'Cut it') + '</button>';
+    return '<div class="row ' + cls + '" data-s="' + esc(r.slug) + '"><div class="t"><a href="https://voidtv.net/show/' + esc(r.slug) + '" target="_blank" rel="noopener">' + esc(r.show) + '</a> <span class="dim small">' + esc([r.year, r.network].filter(Boolean).join(' · ')) + '</span><div class="why">' + esc(r.reason) + '</div></div>' + btn + '</div>';
+  }).join('')).join('') || '<p class="dim">Nothing here.</p>';
+}
+$('t-go').addEventListener('click', () => { tab = 'go'; $('t-go').classList.add('on'); $('t-keep').classList.remove('on'); draw(); });
+$('t-keep').addEventListener('click', () => { tab = 'keep'; $('t-keep').classList.add('on'); $('t-go').classList.remove('on'); draw(); });
+$('q').addEventListener('input', draw);
+$('list').addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-c]'); if (!b) return;
+  const s = b.closest('.row').dataset.s, c = b.dataset.c, r = S.find((x) => x.slug === s);
+  if (mine[s] === c) delete mine[s]; else if (r && r.auto === c) delete mine[s]; else mine[s] = c;
+  save(); draw();
+});
+function toast(t) { const el = $('toast'); el.textContent = t; el.style.display = 'block'; setTimeout(() => { el.style.display = 'none'; }, 2400); }
+$('copy').addEventListener('click', async () => {
+  const keys = Object.keys(mine);
+  const name = Object.fromEntries(S.map((r) => [r.slug, r.show]));
+  const part = (c, t) => { const l = keys.filter((k) => mine[k] === c); return l.length ? t + ' ' + l.length + ':\n' + l.map((k) => (name[k] || k) + ' (' + k + ')').join('\n') : ''; };
+  const text = 'Live TV drops: go ahead' + (keys.length ? ', with my changes.\n\n' + [part('keep', 'KEEP'), part('go', 'ALSO CUT')].filter(Boolean).join('\n\n') : ', no changes.');
+  try { await navigator.clipboard.writeText(text); toast('Copied. Paste it to Claude.'); } catch (e) { prompt('Copy this:', text); }
+});
+draw();
+</script>
+</body>
+</html>

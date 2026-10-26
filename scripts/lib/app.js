@@ -59,7 +59,7 @@ const slugify = (s) => String(s).toLowerCase().replace(/&/g, 'and').replace(/[^a
 // channel order, with the place of each show in the FULL list the page indexes.
 // Shelves that are their own channel for shows not in English (B, 25 Oct 2026, "own chan").
 const OWN_LANGUAGE_ROWS = new Set(['Anime', 'World TV']);
-function channelLists(shows, types, off, foreign) {
+function channelLists(shows, types, off, foreign, offAll) {
   const isAdultShow = (s) => s.type === 'Late Night' || (s.tags || []).includes('Late Night') || !!s.adult;
   const idx = new Map(shows.map((s, i) => [s.slug, i])); // against the FULL list the page indexes; filtering first put every item after an adult show off by one
   // Shows B keeps off Live TV (catalog/live-tv-off.json) leave the mixed channels (The Void, rows, collections, movies,
@@ -68,6 +68,8 @@ function channelLists(shows, types, off, foreign) {
   // A show not in English (foreign: its slug, from the show list's language) also leaves the mixed channels, and stays on its
   // network's channel and the Anime and World TV rows (B, 25 Oct: Die Harald Schmidt Show, all German, was airing on The Void).
   const on = (s) => kept(s) && !(foreign && foreign.has(s.slug));
+  // A show marked off everywhere (offAll: B's Go in the show review, 26 Oct) leaves its network's channel too.
+  const onNet = (s) => !(offAll && offAll.has(s.slug));
   const adultList = shows.filter((s) => isAdultShow(s) && !s.slug.startsWith('movie-') && on(s));
   shows = shows.filter((s) => !isAdultShow(s)); // every other channel stays clean; Late Night is its own door
   const allSeries = shows.filter((s) => !s.slug.startsWith('movie-'));
@@ -83,7 +85,7 @@ function channelLists(shows, types, off, foreign) {
   for (const t of types) make('row-' + slugify(t), t, 'row', (OWN_LANGUAGE_ROWS.has(t) ? allSeries.filter(kept) : series).filter((s) => s.type === t));
   const tags = {}; for (const s of series) for (const t of s.tags || []) (tags[t] = tags[t] || []).push(s);
   for (const [t, list] of Object.entries(tags)) make('tag-' + slugify(t), t, 'collection', list);
-  const nets = {}; for (const s of allSeries) if (s.network) (nets[s.network] = nets[s.network] || []).push(s);
+  const nets = {}; for (const s of allSeries) if (s.network && onNet(s)) (nets[s.network] = nets[s.network] || []).push(s);
   for (const [n, list] of Object.entries(nets).sort((a, b) => b[1].length - a[1].length)) if (list.length >= 2) make('net-' + slugify(n), n, 'network', list);
   if (movies.length) make('movies', 'TV Movies and Specials', 'row', movies);
   if (adultList.length) make('row-late-night', 'Late Night', 'row', adultList, true);
@@ -94,7 +96,8 @@ function channelLists(shows, types, off, foreign) {
 function buildTv(shows, types, foreign) {
   const OFF = readJson(path.join(PROFILE.catalogDir, 'live-tv-off.json'), { shows: {} });
   const offSet = new Set(Object.keys(OFF.shows || {}));
-  const { lists, idx } = channelLists(shows, types, offSet, foreign);
+  const offAll = new Set(Object.keys(OFF.shows || {}).filter((k) => OFF.shows[k] && OFF.shows[k].everywhere));
+  const { lists, idx } = channelLists(shows, types, offSet, foreign, offAll);
   const lib = TVGRID.buildLib(shows);
   // The filler library for the gaps before each daypart (B, 20 Oct): B's originals (catalog/fillers.json, written by HQ) first,
   // then TV specials of 60 minutes or less. One list; a show that is both counts as an original.

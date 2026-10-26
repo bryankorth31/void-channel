@@ -30,6 +30,15 @@ test('the places the page indexes do not move when shows are kept off', () => {
   assert.deepEqual([...a], [...b]);
 });
 
+test('a show marked off everywhere (B\'s Go in the show review) leaves its network channel too; the others stay', () => {
+  const ch = byId(channelLists(SHOWS, ['Comedy'], OFF, null, new Set(['off-1'])));
+  assert.deepEqual(ch['net-net-a'], ['keep-1', 'keep-2']);
+  assert.deepEqual(ch['net-net-b'], ['off-2', 'off-3']);
+  for (const id of ['void', 'row-comedy', 'tag-sketch']) assert.ok(!ch[id].includes('off-1'));
+  // A network left with one show has no channel (the review names such channels before anything is published).
+  assert.ok(!byId(channelLists(SHOWS, ['Comedy'], OFF, null, new Set(['off-2'])))['net-net-b']);
+});
+
 test('with no list, every channel is as before', () => {
   assert.deepEqual(byId(channelLists(SHOWS, ['Comedy'])), byId(channelLists(SHOWS, ['Comedy'], new Set())));
 });
