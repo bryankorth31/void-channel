@@ -1,6 +1,6 @@
 # Scout — media we are not looking for yet
 
-2026-10-25T07:31 · 0 Archive calls · 2112 leads from 4 sweeps + 25 trusted uploaders · 59 opened
+2026-10-26T07:32 · 0 Archive calls · 2112 leads from 4 sweeps + 25 trusted uploaders · 59 opened
 
 A lead is a group of Archive uploads whose titles read like a series we do not list. "Ep-shaped" counts files of 18–70 minutes in the best upload. Confirmed = TVmaze knows the show. Add a name to scripts/show-list.json (row suggested) and the hunt takes it from there.
 
@@ -15,11 +15,11 @@ A lead is a group of Archive uploads whose titles read like a series we do not l
 | Dirty Pair | 1985 | Animation ·  | Bandai Channel | Classic TV | 20 | 2/2 | 12-the-little-dictator-let-sleeping-top-secrets-lie |
 | Desire | 2006 | Scripted · Drama | MyNetworkTV | Drama | 14 | 2/2 | 20250930_Desire-S01E06-mp4 |
 | Chef's Table | 2015 | Documentary · Food | Netflix | Documentary & Geographic | 12 | 2/2 | Chefs_Table_Season_3_11 |
-| Only You | 2005 | Scripted · Drama, Romance | SBS | World TV | 11 | 2/2 | 20250930_Only-You-S01E01-mp4 |
+| Only you | 2025 | Scripted · Romance | Channel 3 | World TV | 11 | 2/2 | 20250930_Only-You-S01E01-mp4 |
 | Secret Lover | 2025 | Scripted · Comedy, Romance | GTV | World TV | 10 | 2/2 | 20250930_Secret-Lover-S01E01-mp4 |
 | My bias is Showing! | 2025 | Scripted · Comedy, Romance | Heavenly | World TV | 10 | 2/2 | 20250930_My-Bias-Is-Showing-S01E01-mp4 |
 | I'm the Most Beautiful Count | 2025 | Scripted · Romance, History | One31 | World TV | 9 | 2/2 | 20250930_Im-the-Most-Beautiful-Count-S01E09-mp4 |
-| Live in Love | 2024 | Scripted · Drama, Romance | GMM25 | World TV | 8 | 2/2 | 20250930_Inn-Love-S01E03-mp4 |
+| Love, Inc. | 2005 | Scripted · Comedy | UPN | 2000s and Later Sitcoms | 8 | 2/2 | 20250930_Inn-Love-S01E03-mp4 |
 | Rearrange | 2025 | Scripted · Comedy, Music, Romance | Channel 3 | World TV | 8 | 2/2 | 20250930_Rearrange-S01E05-mp4 |
 | Make it Right 2026 | 2026 | Scripted ·  | Viu | World TV | 27 | 1/1 | 20251001_Make-it-RIght-S01E01-mp4 |
 | Manner of Death | 2020 | Scripted · Drama, Crime, Romance | WeTV | World TV | 14 | 1/1 | 20251001_Manner-of-Death-S01E01-mp4 |
@@ -77,6 +77,6 @@ A lead is a group of Archive uploads whose titles read like a series we do not l
 
 TVmaze types among confirmed leads: Scripted 14 · Animation 3 · Documentary 3 · Reality 1
 
-Genres: Romance 11 · Drama 7 · Comedy 5 · Crime 2 · Children 2 · Family 1 · Thriller 1 · Mystery 1 · Food 1 · Medical 1 · History 1 · Music 1 · Adventure 1
+Genres: Romance 10 · Comedy 6 · Drama 5 · Crime 2 · Children 2 · Family 1 · Thriller 1 · Mystery 1 · Food 1 · Medical 1 · History 1 · Music 1 · Adventure 1
 
 Archive subjects the leads carry (what uploaders call this stuff): community media 1058 · youtube 1050 · peg 1043 · public access tv 594 · public access 309 · maine 285 · california 284 · oregon 273 · county 268 · detective 260 · government access tv 259 · closed 259 · ashland 259 · valley 259 · weather 259 · sign 259 · astrology 258 · chico 258 · siskyou 258 · medford 258 · marnebass 258 · citizen television 258 · fair 258 · sacramento 258 · daily 258 · conan 258 · portland 258 · case 258 · jay 258 · forecast 258 · detective conan 258 · tonight 258 · ran 258 · brien 258 · douglas 258 · conan tv series 258 · kozmickev 257 · cmntv 226 · tv series 222 · kevin durkin 202
