@@ -454,9 +454,9 @@ html{-webkit-tap-highlight-color:transparent}
 @keyframes tvgrow{0%{transform:translate(-50%,-50%) scale(0) rotate(-8deg);opacity:0}8%{opacity:1}30%{transform:translate(-50%,-50%) scale(1.25) rotate(0);opacity:1}36%,78%{transform:translate(-50%,-50%) scale(1.12) rotate(0);opacity:1}92%,100%{transform:translate(-50%,-50%) scale(0) rotate(8deg);opacity:0}}
 .tv .swirl .on{top:78%}
 .tv .swirl::before,.tv .swirl::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:1}.tv .swirl::before{backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);mask-image:radial-gradient(ellipse at center,transparent 38%,#000 82%);-webkit-mask-image:radial-gradient(ellipse at center,transparent 38%,#000 82%)}.tv .swirl::after{background:radial-gradient(ellipse at center,transparent 42%,rgba(0,0,0,.5) 72%,rgba(0,0,0,.9) 100%)}.tv .swirl .wm{z-index:2}.tv .swirl .on{z-index:3}
-.tv .swirl.swirl-ov{position:absolute;inset:0;width:auto;aspect-ratio:auto;max-height:none;z-index:4;pointer-events:none;transition:opacity .7s ease}.tv .swirl.swirl-ov.gone{opacity:0}.tv .swirl.swirl-ov.flash:not(.gone){transition:none}.tv .swirl.flash img{animation-duration:6s}
+.tv .swirl.swirl-ov{position:absolute;inset:0;width:auto;aspect-ratio:auto;max-height:none;z-index:4;pointer-events:none;transition:opacity .25s ease}.tv .swirl.swirl-ov.gone{opacity:0}.tv .swirl.swirl-ov.flash:not(.gone){transition:none}.tv .swirl.flash img{animation-duration:6s}
 .home-tv{display:block;margin:0 0 6px}.home-tv .tv{padding:0 20px 4px}.home-tv .loading{min-height:200px}
-.home-tv .hv{position:relative}.home-tv .snd{position:absolute;left:14px;top:14px;z-index:6;display:flex;align-items:center;gap:7px;background:var(--gold);color:#07080c;border:0;border-radius:999px;padding:9px 16px;font:inherit;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 0 18px rgba(242,169,59,.45)}
+.tv .hv{position:relative}.home-tv .snd{position:absolute;left:14px;top:14px;z-index:6;display:flex;align-items:center;gap:7px;background:var(--gold);color:#07080c;border:0;border-radius:999px;padding:9px 16px;font:inherit;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 0 18px rgba(242,169,59,.45)}
 .home-tv .hl{color:var(--dim);font-size:13px;margin:8px 2px 0}.home-tv .hl a{color:var(--acc);cursor:pointer}
 .onnow{display:flex;gap:12px;overflow-x:auto;padding:4px 20px 12px;scrollbar-width:none}
 .ontile{flex:0 0 210px;background:var(--panel);border:0;border-radius:8px;overflow:hidden;color:var(--fg);text-align:left;padding:0;cursor:pointer;font:inherit;box-shadow:inset 0 -3px 0 var(--c,transparent)}
@@ -707,7 +707,7 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   if(!ME.adult&&SHOWS.some(isAdult))h+='<section class="doorcard"><img src="'+BASE+'assets/brand/ui/doors/latenight.png" alt=""><div><b>Late Night</b><p>The after-dark shelf. Adults only, behind its own door.</p></div><button class="btn gold" onclick="adultGate(()=>{state.type=\\'Late Night\\';render();window.scrollTo(0,0)})">Enter 18+</button></section>';
   else if(ME.adult)h+='<p class="leave">Late Night is open on this browser. <span onclick="leaveAdult()">Close the door</span></p>';
  }
- const oldTv=!any?document.querySelector('.home-tv.htv-on'):null;if(!oldTv)killPlayer();$('main').innerHTML=h;if(!any){const nt=$('htv');if(oldTv&&nt)nt.replaceWith(oldTv);else homeTvStart()}}
+ const oldTv=!any?document.querySelector('.home-tv.htv-on'):null;if(!oldTv)killPlayer();$('main').innerHTML=h;if(!any){const nt=$('htv');if(oldTv&&nt)nt.replaceWith(oldTv);else{HTV.introDone=false;homeTvStart()}}}
 const SKIP_GENRES=new Set(['Kids','TV Movie','News']);
 const SORTS=[['eps','Most episodes'],['rating','Top rated'],['year','Newest'],['old','Oldest'],['added','Recently added'],['az','A to Z']];
 function menuToggle(k,ev){if(ev)ev.stopPropagation();state.menu=state.menu===k?null:k;render()}
@@ -846,7 +846,11 @@ function tuneHere(id){const host=$('vph'),g=document.querySelector('.guide'),hom
  const chans=TV.filter(c=>!c.adult||ME.adult),cur=chans.find(c=>c.id===id);if(!cur)return false;const now=chanNow(cur);if(!now)return false;const s=SHOWS[now.a.s];
  if(!home){gdTune(cur.id);document.title=cur.name+' · '+SITE}osd(cur,now.a,s,null);tvSwirlFlash();if(VP.flashChannel)VP.flashChannel(cur.name);tvPlay(cur);return true}
 function tune(id){track('tune',{slug:id});state.chan=id;state.tvOn=true;keepChan(id);const home=viewNow()==='home';if(!home)history.replaceState(null,'',urlFor('tv/'+id));if(!tuneHere(id)){if(home){HTV.forced=true;homeTvStart()}else render()}window.scrollTo(0,0)}
-function surf(dir){if(!TV)return;const list=TV.filter(c=>!c.adult||ME.adult);if(!list.length)return;const i=list.findIndex(c=>c.id===state.chan);tune(list[(i+dir+list.length)%list.length].id)}
+// Flipping channels lands on a picture (B, 26 Oct 2026: four channels in a row waiting on cards is not good to flip through): CH and swipe
+// skip a channel that is on its holding cards right now; a short filler or special playing in a break counts as a picture. With every
+// channel on cards, it moves one. Picking a channel directly (the guide, On now) still shows it as it is.
+function surf(dir){if(!TV)return;const list=TV.filter(c=>!c.adult||ME.adult);if(!list.length)return;const i=list.findIndex(c=>c.id===state.chan),n=list.length,now=Date.now();
+ let pick=list[(i+dir+n)%n];for(let s=1;s<n;s++){const c=list[(i+dir*s+n*s)%n];const x=tvAt(c,now);if(!x||x.k!=='card'){pick=c;break}}tune(pick.id)}
 function osd(c,a,s,ep){const el=document.querySelector('.osd');if(!el||!s)return;const left=(a.en-Date.now())/1000,nx=TVG.nextAiring(c,TVLIB,a),ns=nx&&SHOWS[nx.s];
  el.innerHTML='<b>'+esc(c.name)+'</b><span>'+esc(s.show)+' · '+code(a)+(ep?' · '+esc(ep.name):'')+'</span><span class="g">'+(left>0?mmss(left)+' left · ':'')+'next: '+(nx?clock(nx.st)+' '+esc(ns?ns.show:''):'')+'</span><span class="acts"><button class="btn chbtn" onclick="surf(-1)" aria-label="Previous channel"><i class="ico chevron-left"></i>CH</button><button class="btn chbtn" onclick="surf(1)" aria-label="Next channel">CH<i class="ico chevron-right"></i></button><button class="btn" onclick="go(\\''+s.slug+'\\')">Open show</button></span>'}
 // FULL HOLD (B, 21 Oct 2026): Live TV never starts anything before its time. What plays at an instant comes from the schedule alone
@@ -1044,13 +1048,23 @@ const viewNow=()=>(document.body&&document.body.dataset&&document.body.dataset.v
 const lastChan=()=>{try{return localStorage.getItem('voidtv:chan')||''}catch(_){return ''}};
 const keepChan=(id)=>{try{localStorage.setItem('voidtv:chan',id)}catch(_){}};
 const swirlHtml=(on)=>'<div class="swirl"><img src="'+BASE+'assets/brand/screen/swirl-gy'+(innerWidth>700?'':'-m')+'.webp" alt="" aria-hidden="true"><div class="wm" aria-hidden="true"><span class="v">void</span><span class="n">tv.net</span></div><button class="on" onclick="'+on+'"><i class="ico play"></i>Turn on</button></div>';
-// The swirl as an overlay (B, 25 Oct 2026: where did the swirl screen go?): the home player opens on it for about 4 seconds while the
-// channel loads, and every channel change flashes it for about a second, under the channel's name (one element per player, reused, so the picture is ready). Reduced motion: neither.
+// The swirl as an overlay (B, 25 Oct 2026: where did the swirl screen go?): the home player and /tv open on it while the
+// channel loads, and every channel change shows it under the channel's name until the new picture plays (one element per player, reused, so the picture is ready). Reduced motion: neither.
 const swirlSrc=()=>BASE+'assets/brand/screen/swirl-gy'+(innerWidth>700?'':'-m')+'.webp';
+const introHtml=()=>'<div class="swirl swirl-ov intro" aria-hidden="true"><img src="'+swirlSrc()+'" alt=""><div class="wm"><span class="v">void</span><span class="n">tv.net</span></div></div>';
+// The swirl covers loading only (B, 26 Oct 2026: it was to be used during loads, not as additional time): it goes the moment the new
+// picture plays (a different file from src0, when one was playing before) or a break card shows; a stall still clears it after max ms.
+// The video's own playing and timeupdate events end it at once; a light check covers the moment before the player exists (the intro).
+function swirlUntilReady(ov,src0,max,done){if(!ov)return;const t0=Date.now();clearInterval(ov._w);let v=null;
+ const end=()=>{clearInterval(ov._w);if(v){v.removeEventListener('playing',check);v.removeEventListener('timeupdate',check)}ov.classList.add('gone');if(done)setTimeout(done,300)};
+ function check(){if(!v&&VP&&VP.v&&VP.v.addEventListener){v=VP.v;v.addEventListener('playing',check);v.addEventListener('timeupdate',check)}
+  const ready=!!v&&!v.paused&&v.currentTime>0&&(!src0||v.currentSrc!==src0);if(ready||document.querySelector('.tvc')||Date.now()-t0>max||!document.body.contains(ov))end()}
+ ov._w=setInterval(check,100)}
+function introOut(box){const ov=box&&box.querySelector('.swirl-ov.intro');if(ov)swirlUntilReady(ov,'',8000,()=>ov.remove())}
 const stillWanted=()=>typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 function tvSwirlFlash(){const root=VP&&VP.root;if(stillWanted()||!root||typeof root.insertBefore!=='function'||typeof document.createElement!=='function')return;let el=root.querySelector('.swirl-ov.flash');
  if(!el){el=document.createElement('div');el.className='swirl swirl-ov flash gone';el.setAttribute('aria-hidden','true');el.innerHTML='<img src="'+swirlSrc()+'" alt="">';root.insertBefore(el,root.querySelector('.vpx-chname'))}
- clearTimeout(el._t);el.classList.remove('gone');el._t=setTimeout(()=>el.classList.add('gone'),700)}
+ el.classList.remove('gone');swirlUntilReady(el,VP.v&&VP.v.currentSrc||'',6000)}
 function onNowHtml(){if(!TV)return '';const now=Date.now();const tiles=TV.filter(c=>!c.adult).slice(0,40).map(c=>{const n=chanNow(c,now),s=n&&SHOWS[n.a.s];if(!s)return '';const art=s.backdrop||s.poster;return '<button class="ontile" onclick="tune(\\''+c.id+'\\')" style="--c:'+(CGM[chanCg(c)]||CGM.other||{}).c+'">'+(art?'<img loading="lazy" src="'+esc(art)+'" alt="">':'<span class="p"></span>')+'<b>'+esc(c.name)+'</b><small>'+esc(s.show)+'</small></button>'}).join('');return tiles?'<h2>On now<small>tap a channel to watch it</small></h2><div class="onnow">'+tiles+'</div>':''}
 async function homeTvStart(){const el=$('htv');if(!el)return;
  if(!TV){el.innerHTML='<div class="loading"><span class="signal"></span><span>Searching the Void for a signal…</span></div>';try{await ensureTV()}catch(_){el.innerHTML='';return}}
@@ -1059,8 +1073,8 @@ async function homeTvStart(){const el=$('htv');if(!el)return;
  state.chan=cur.id;const on=$('onnow');if(on&&!on.innerHTML)on.innerHTML=onNowHtml();
  const still=!HTV.forced&&((navigator.connection&&navigator.connection.saveData)||matchMedia('(prefers-reduced-motion: reduce)').matches);
  killPlayer();el.className='home-tv htv-on';
- el.innerHTML='<div class="tv"><div class="screen">'+(still?swirlHtml('HTV.forced=true;homeTvStart()'):'<div class="hv"><div class="vpx-host" id="vph"></div>'+(HTV.introDone||stillWanted()?'':'<div class="swirl swirl-ov intro" aria-hidden="true"><img src="'+swirlSrc()+'" alt=""><div class="wm"><span class="v">void</span><span class="n">tv.net</span></div></div>')+(HTV.forced?'':'<button class="snd" onclick="homeSound()">Tap for sound</button>')+'</div>')+'<div class="osd"></div></div><p class="hl">Live TV, the same for everyone, always on. <a onclick="go(\\'tv\\')">Full guide</a></p></div>';
- swipeSurf(el.querySelector('.screen'));const ov=el.querySelector('.swirl-ov.intro');if(ov){HTV.introDone=true;setTimeout(()=>ov.classList.add('gone'),4200);setTimeout(()=>ov.remove(),5200)}const now=chanNow(cur);if(now)osd(cur,now.a,SHOWS[now.a.s],null);
+ el.innerHTML='<div class="tv"><div class="screen">'+(still?swirlHtml('HTV.forced=true;homeTvStart()'):'<div class="hv"><div class="vpx-host" id="vph"></div>'+(HTV.introDone||stillWanted()?'':introHtml())+(HTV.forced?'':'<button class="snd" onclick="homeSound()">Tap for sound</button>')+'</div>')+'<div class="osd"></div></div><p class="hl">Live TV, the same for everyone, always on. <a onclick="go(\\'tv\\')">Full guide</a></p></div>';
+ swipeSurf(el.querySelector('.screen'));if(el.querySelector('.swirl-ov.intro')){HTV.introDone=true;introOut(el)}const now=chanNow(cur);if(now)osd(cur,now.a,SHOWS[now.a.s],null);
  if(!still){state.tvOn=true;track('act',{slug:cur.id,x:HTV.forced?'home-tv-on':'home-tv'});tvPlay(cur)}}
 // The home player starts muted; the first tap on Tap for sound (or the player's own volume) turns the sound on and the button goes.
 function homeMute(p){if(!p||!p.v||viewNow()!=='home'||HTV.forced)return p;p.v.muted=true;if(p.v.addEventListener)p.v.addEventListener('volumechange',()=>{if(!p.v.muted){HTV.forced=true;const b=document.querySelector('.home-tv .snd');if(b)b.remove()}});return p}
@@ -1070,10 +1084,10 @@ function swipeSurf(el){if(!el||el._sw)return;el._sw=1;let x0=0,y0=0,t0=0;el.addE
  el.addEventListener('touchend',(e)=>{const t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;if(Date.now()-t0<700&&Math.abs(dx)>60&&Math.abs(dx)>2*Math.abs(dy))surf(dx<0?1:-1)},{passive:true})}
 async function tvPage(){const main=$('main');if(!TV){killPlayer();main.innerHTML='<div class="loading"><span class="signal"></span><span>Searching the Void for a signal…</span></div>';try{await ensureTV()}catch(_){killPlayer();main.innerHTML='<div class="loading">The channels did not load.</div>';return}if(state.view!=='tv')return}
  const chans=TV.filter(c=>!c.adult||ME.adult);const cur=chans.find(c=>c.id===state.chan)||chans[0];if(!cur){killPlayer();main.innerHTML='<div class="loading">No channels are on the air right now.</div>';return}state.chan=cur.id;const now=chanNow(cur);const s=SHOWS[now.a.s];
- let h='<div class="tv"><div class="pagehead"><img class="door" src="'+BASE+'assets/brand/ui/doors/live.png" alt=""><div><h1>Live TV</h1><div class="g">'+chans.length+' channels, always on, the same for everyone</div></div></div><div class="screen">'+(state.tvOn?'<div class="vpx-host" id="vph"></div>':swirlHtml('state.tvOn=true;render()'))+'<div class="osd"></div></div>';
+ let h='<div class="tv"><div class="pagehead"><img class="door" src="'+BASE+'assets/brand/ui/doors/live.png" alt=""><div><h1>Live TV</h1><div class="g">'+chans.length+' channels, always on, the same for everyone</div></div></div><div class="screen">'+(state.tvOn?'<div class="hv"><div class="vpx-host" id="vph"></div>'+(stillWanted()?'':introHtml())+'</div>':swirlHtml('state.tvOn=true;render()'))+'<div class="osd"></div></div>';
  h+='<p class="hint">Always on, same for everyone: the clock decides what is playing. ↑ ↓ to surf. G jumps to the guide: arrows move, Enter opens a show. Nothing here is recorded in Mine unless you open the show.</p>';
  h+='<div class="guide">'+gdShell(cur)+'</div></div>';
- killPlayer();main.innerHTML=h;swipeSurf(document.querySelector('.tv .screen'));keepChan(cur.id);gdInit(cur.id);document.title=cur.name+' · '+SITE;osd(cur,now.a,s,null);if(state.tvOn)tvPlay(cur)}
+ killPlayer();main.innerHTML=h;introOut(main);swipeSurf(document.querySelector('.tv .screen'));keepChan(cur.id);gdInit(cur.id);document.title=cur.name+' · '+SITE;osd(cur,now.a,s,null);if(state.tvOn)tvPlay(cur)}
 function cashPage(){killPlayer();$('main').innerHTML='<div class="about"><button class="back" onclick="go(\\'\\')"><i class="ico back"></i> Browse</button>'
  +'<div class="pagehead" style="padding-left:0"><img class="door" src="'+BASE+'assets/brand/cash-cross.png" alt="" style="object-fit:contain;padding:10px"><div><h1>CASH</h1><div class="g">the Church of American Strength &amp; Hope · a 501(c)(3)</div></div></div>'
  +'<h2>What CASH does</h2><p>CASH works on ways for people to have good things that fit a busy life and a budget stretched to the max. Some of that work is in person, in the community. Some of it is projects like this one: ${BRAND} is free, stays free, carries no ads and asks for no account, and it exists because the work of building it was worth doing.</p>'

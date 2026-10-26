@@ -431,3 +431,22 @@ test('Spots: without catalog/spots.json the cards are as before (no spots)', () 
   const p = page(), B = breaks(p, p.TV[0]);
   assert.ok(B.every((b) => b.cards.every((d) => !d.spot)));
 });
+
+test('Flipping (B, 26 Oct 2026): CH skips a channel that is on its holding cards and lands on one with a picture; picking it directly still shows it; with every channel on cards CH moves one', async () => {
+  // Channel two is made to sit on its cards (a stand-in, the way other tests here adjust the page text); the others play.
+  const text = TV_TEXT.replace('function tvAt(c,t){', "function tvAt(c,t){if(c.id==='two'){const n0=chanNow(c,t);return n0?{k:'card',a:n0.a,until:t+60000}:null}");
+  assert.notEqual(text, TV_TEXT, 'the text this test adjusts is still in app.js');
+  const p = page({ text }), base = Date.UTC(2026, 9, 19, 12, 7, 30);
+  let t = base; for (let m = 0; m < 1440; m += 5) { const x = p.h.tvAt(p.TV[0], base + m * 60000); if (x && x.k === 'ep') { t = base + m * 60000; break; } }
+  CLOCK.t = t; p.state.chan = 'one';
+  p.h.surf(1); await settle();
+  assert.equal(p.state.chan, 'three', 'two (on cards) was skipped');
+  p.h.surf(-1); await settle();
+  assert.equal(p.state.chan, 'one', 'and skipped going back too');
+  p.h.tune('two'); await settle();
+  assert.equal(p.state.chan, 'two', 'tuned directly, it plays as it is');
+  const q = page(); let tc = null; for (let m = 0; m < 1440 && !tc; m += 5) { const x = q.h.tvAt(q.TV[0], base + m * 60000); if (x && x.k === 'card') tc = base + m * 60000; }
+  assert.ok(tc, 'a moment when every channel is on cards');
+  CLOCK.t = tc; q.state.chan = 'one'; q.h.surf(1); await settle();
+  assert.equal(q.state.chan, 'two', 'every channel on cards: CH still moves one');
+});
