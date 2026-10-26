@@ -454,7 +454,7 @@ html{-webkit-tap-highlight-color:transparent}
 @keyframes tvgrow{0%{transform:translate(-50%,-50%) scale(0) rotate(-8deg);opacity:0}8%{opacity:1}30%{transform:translate(-50%,-50%) scale(1.25) rotate(0);opacity:1}36%,78%{transform:translate(-50%,-50%) scale(1.12) rotate(0);opacity:1}92%,100%{transform:translate(-50%,-50%) scale(0) rotate(8deg);opacity:0}}
 .tv .swirl .on{top:78%}
 .tv .swirl::before,.tv .swirl::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:1}.tv .swirl::before{backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);mask-image:radial-gradient(ellipse at center,transparent 38%,#000 82%);-webkit-mask-image:radial-gradient(ellipse at center,transparent 38%,#000 82%)}.tv .swirl::after{background:radial-gradient(ellipse at center,transparent 42%,rgba(0,0,0,.5) 72%,rgba(0,0,0,.9) 100%)}.tv .swirl .wm{z-index:2}.tv .swirl .on{z-index:3}
-.tv .swirl.swirl-ov{position:absolute;inset:0;width:auto;aspect-ratio:auto;max-height:none;z-index:4;pointer-events:none;transition:opacity .25s ease}.tv .swirl.swirl-ov.gone{opacity:0}.tv .swirl.swirl-ov.flash:not(.gone){transition:none}.tv .swirl.flash img{animation-duration:6s}
+.tv .swirl.swirl-ov{position:absolute;inset:0;width:auto;aspect-ratio:auto;max-height:none;z-index:4;pointer-events:none;transition:opacity .25s ease}.tv .swirl.swirl-ov.gone{opacity:0}.tv .hv:has(.swirl-ov.intro:not(.gone)) .vpx-status,.vpx:has(.swirl-ov.flash:not(.gone)) .vpx-status{display:none!important}.tv .swirl.swirl-ov.flash:not(.gone){transition:none}.tv .swirl.flash img{animation-duration:6s}
 .home-tv{display:block;margin:0 0 6px}.home-tv .tv{padding:0 20px 4px}.home-tv .loading{min-height:200px}
 .tv .hv{position:relative}.home-tv .snd{position:absolute;left:14px;top:14px;z-index:6;display:flex;align-items:center;gap:7px;background:var(--gold);color:#07080c;border:0;border-radius:999px;padding:9px 16px;font:inherit;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 0 18px rgba(242,169,59,.45)}
 .home-tv .hl{color:var(--dim);font-size:13px;margin:8px 2px 0}.home-tv .hl a{color:var(--acc);cursor:pointer}
@@ -1054,17 +1054,21 @@ const swirlSrc=()=>BASE+'assets/brand/screen/swirl-gy'+(innerWidth>700?'':'-m')+
 const introHtml=()=>'<div class="swirl swirl-ov intro" aria-hidden="true"><img src="'+swirlSrc()+'" alt=""><div class="wm"><span class="v">void</span><span class="n">tv.net</span></div></div>';
 // The swirl covers loading only (B, 26 Oct 2026: it was to be used during loads, not as additional time): it goes the moment the new
 // picture plays (a different file from src0, when one was playing before) or a break card shows; a stall still clears it after max ms.
-// The video's own playing and timeupdate events end it at once; a light check covers the moment before the player exists (the intro).
-function swirlUntilReady(ov,src0,max,done){if(!ov)return;const t0=Date.now();clearInterval(ov._w);let v=null;
- const end=()=>{clearInterval(ov._w);if(v){v.removeEventListener('playing',check);v.removeEventListener('timeupdate',check)}ov.classList.add('gone');if(done)setTimeout(done,300)};
- function check(){if(!v&&VP&&VP.v&&VP.v.addEventListener){v=VP.v;v.addEventListener('playing',check);v.addEventListener('timeupdate',check)}
-  const ready=!!v&&!v.paused&&v.currentTime>0&&(!src0||v.currentSrc!==src0);if(ready||document.querySelector('.tvc')||Date.now()-t0>max||!document.body.contains(ov))end()}
- ov._w=setInterval(check,100)}
-function introOut(box){const ov=box&&box.querySelector('.swirl-ov.intro');if(ov)swirlUntilReady(ov,'',8000,()=>ov.remove())}
+// It ends the moment frames really move (the video's playing event, or its position advancing; not just a seek to the schedule's point)
+// and tells the player so, which drops its searching-signal arcs at once (B, 26 Oct 2026: one tuning moment, not two). Its 15 s limit is the player's own slow-start point (core START_MS), where the player takes over.
+function swirlUntilReady(ov,src0,max,done){if(!ov)return;const t0=Date.now();clearInterval(ov._w);ov._lt=null;ov._src=undefined;let v=null,played=false;
+ const onPlay=()=>{played=true;check()};
+ const end=()=>{clearInterval(ov._w);if(v){v.removeEventListener('playing',onPlay);v.removeEventListener('timeupdate',check)}ov.classList.add('gone');if(done)setTimeout(done,300)};
+ const hook=()=>{if(!v&&VP&&VP.v&&VP.v.addEventListener){v=VP.v;v.addEventListener('playing',onPlay);v.addEventListener('timeupdate',check)}};
+ function check(){hook();if(ov._src!==(v&&v.currentSrc)){ov._src=v&&v.currentSrc;ov._lt=null}
+  if(v&&!played&&!v.paused&&!v.seeking&&v.readyState>=3&&ov._lt!=null&&v.currentTime>ov._lt&&(!src0||v.currentSrc!==src0))played=true;if(v)ov._lt=v.currentTime;
+  const ready=played&&!!v&&!v.paused&&(!src0||v.currentSrc!==src0);if(ready&&VP&&VP.root){VP._started=true;VP.root.classList.remove('vpx-wait')}if(ready||document.querySelector('.tvc')||Date.now()-t0>max||!document.body.contains(ov))end()}
+ hook();ov._w=setInterval(check,100)}
+function introOut(box){const ov=box&&box.querySelector('.swirl-ov.intro');if(ov)swirlUntilReady(ov,'',15000,()=>ov.remove())}
 const stillWanted=()=>typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 function tvSwirlFlash(){const root=VP&&VP.root;if(stillWanted()||!root||typeof root.insertBefore!=='function'||typeof document.createElement!=='function')return;let el=root.querySelector('.swirl-ov.flash');
  if(!el){el=document.createElement('div');el.className='swirl swirl-ov flash gone';el.setAttribute('aria-hidden','true');el.innerHTML='<img src="'+swirlSrc()+'" alt="">';root.insertBefore(el,root.querySelector('.vpx-chname'))}
- el.classList.remove('gone');swirlUntilReady(el,VP.v&&VP.v.currentSrc||'',6000)}
+ el.classList.remove('gone');swirlUntilReady(el,VP.v&&VP.v.currentSrc||'',15000)}
 function onNowHtml(){if(!TV)return '';const now=Date.now();const tiles=TV.filter(c=>!c.adult).slice(0,40).map(c=>{const n=chanNow(c,now),s=n&&SHOWS[n.a.s];if(!s)return '';const art=s.backdrop||s.poster;return '<button class="ontile" onclick="tune(\\''+c.id+'\\')" style="--c:'+(CGM[chanCg(c)]||CGM.other||{}).c+'">'+(art?'<img loading="lazy" src="'+esc(art)+'" alt="">':'<span class="p"></span>')+'<b>'+esc(c.name)+'</b><small>'+esc(s.show)+'</small></button>'}).join('');return tiles?'<h2>On now<small>tap a channel to watch it</small></h2><div class="onnow">'+tiles+'</div>':''}
 async function homeTvStart(){const el=$('htv');if(!el)return;
  if(!TV){el.innerHTML='<div class="loading"><span class="signal"></span><span>Searching the Void for a signal…</span></div>';try{await ensureTV()}catch(_){el.innerHTML='';return}}

@@ -90,6 +90,7 @@
       opts = opts || {};
       this._emitSummary(); // a reused player: the episode being replaced gets its end-of-play figures first, with its own frame counts
       this.ep = ep;
+      this._started = false; this._lastT = null; // frames have not moved yet for this episode (see _sample: the loading look ends when they do)
       this._fail = null;
       this._playedCtx = this._ctx || null; // whatever the host hung on _ctx for this episode, kept for its summary
       this._teardown(); // stop the previous episode now, not after the server lookup
@@ -476,7 +477,11 @@
         bufEnd: this._bufEnd(), duration: v.duration, networkState: v.networkState, // the buffer watch (SP-021)
       });
       const st = this.core.state;
-      this.root.classList.toggle('vpx-wait', st === 'buffering' || st === 'loading' || st === 'recovering');
+      if (!this._started && !v.paused && !v.seeking && v.readyState >= 3 && this._lastT != null && v.currentTime > this._lastT) this._started = true; // the picture is advancing
+      this._lastT = v.currentTime;
+      // The loading look (the searching-signal arcs) ends the moment frames move ('started'), not when the core's 2.5 s settle
+      // has passed: with a picture already playing, the arcs only got in the way (B, 26 Oct 2026: one tuning moment, not two).
+      this.root.classList.toggle('vpx-wait', st === 'buffering' || (st === 'loading' && !this._started) || st === 'recovering');
       this.root.classList.toggle('vpx-recovering', st === 'recovering');
       if (st === 'playing' && this._statusUntil && now() > this._statusUntil) this._status('');
     }
@@ -498,6 +503,7 @@
       this.events.push(e); if (this.events.length > 200) this.events.shift();
       if (e.type === 'state' && e.to === 'recovering') this._status('Reconnecting…');
       if (e.type === 'switch') this._status('Switching to a backup copy…');
+      if (e.type === 'started') this._started = true;
       if (e.type === 'recovered' || (e.type === 'state' && e.to === 'playing')) this._statusUntil = now() + 1200;
       if (this.o.onEvent) { try { this.o.onEvent(e, this); } catch (x) { /* host bug must not break playback */ } }
     }

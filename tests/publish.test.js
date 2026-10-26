@@ -319,7 +319,7 @@ test('no flags: the scheduled run, started from inside its own tree, finds the s
   git(c.work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (the tooling for this test)'); // a Catalog commit so nothing is "other"
   git(c.work, 'push', '-q', 'origin', 'master');
   putShow(c.work, 10);
-  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30', PUBLISH_PUSH_TIMEOUT_MS: '30000', PUBLISH_LIVE_URL: '' };
+  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30', PUBLISH_PUSH_TIMEOUT_MS: '30000', PUBLISH_LIVE_URL: '', VOID_TV_NOW: TV_NOW };
   delete e.VOID_PROFILE;
   const r = spawnSync(process.execPath, [path.join(c.work, 'scripts', 'publish.js')], { cwd: TMP, encoding: 'utf8', env: e });
   assert.strictEqual(r.status, 0, r.stdout + r.stderr);
@@ -337,7 +337,7 @@ function copyTools(work, stub) {
   if (stub) { write(work, 'scripts/lib/app-real.js', app); write(work, 'scripts/lib/app.js', STUB_APP); } else write(work, 'scripts/lib/app.js', app);
 }
 function runCopy(work, args = [], env = {}) {
-  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30,30,30', PUBLISH_PUSH_TIMEOUT_MS: '30000', PUBLISH_LIVE_URL: '', ...env };
+  const e = { ...process.env, PUBLISH_BACKOFF_MS: '30,30,30', PUBLISH_PUSH_TIMEOUT_MS: '30000', PUBLISH_LIVE_URL: '', VOID_TV_NOW: TV_NOW, ...env };
   delete e.VOID_PROFILE;
   const r = spawnSync(process.execPath, [path.join(work, 'scripts', 'publish.js'), ...args], { cwd: TMP, encoding: 'utf8', env: e });
   return { status: r.status, out: (r.stdout || '') + (r.stderr || '') };
