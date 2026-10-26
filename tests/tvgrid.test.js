@@ -427,10 +427,14 @@ test('kids networks by name are kids channels (Nickelodeon, Disney Channel); Dis
   assert.ok(!chan(grownUp(), { id: 'row-n', name: 'Nickelodeon', kind: 'row' }).ch.kc, 'only a network channel goes by its name');
 });
 
-test('a small channel is not a kids channel because of one show tagged Kids (audit A25-030, CollegeHumor)', () => {
-  const tagged = () => mk({ genres: ['Action & Adventure', 'Sci-Fi & Fantasy', 'Kids'] });
-  assert.ok(!chan([mk({ genres: ['Comedy'] }), tagged()], { id: 'net-ch', name: 'CollegeHumor', kind: 'network' }).ch.kc, 'one of two');
-  assert.equal(chan([mk({ genres: ['Comedy'] }), tagged(), tagged(), tagged()], { id: 'net-k', name: 'Kids Net', kind: 'network' }).ch.kc, 1, 'three of four still is');
+test('a kids channel only by name, never by how many of its shows are tagged kids (B, 26 Oct; audit A25-030, A25-031)', () => {
+  const tagged = () => mk({ genres: ['Animation', 'Action & Adventure', 'Sci-Fi & Fantasy'] });
+  const all = () => Array.from({ length: 10 }, tagged);
+  assert.ok(!chan([mk({ genres: ['Comedy'] }), mk({ genres: ['Kids'] })], { id: 'net-ch', name: 'CollegeHumor', kind: 'network' }).ch.kc, 'CollegeHumor');
+  assert.ok(!chan(all(), { id: 'row-anime', name: 'Anime', kind: 'row' }).ch.kc, 'the Anime row');
+  assert.ok(!chan(all(), { id: 'net-jp', name: 'JP', kind: 'network' }).ch.kc, 'JP');
+  assert.ok(!chan(all(), { id: 'net-cn', name: 'CN', kind: 'network' }).ch.kc, 'CN is China, not Cartoon Network');
+  assert.equal(chan(all(), { id: 'net-jp', name: 'JP', kind: 'network' }).ch.km, 1, 'kids mornings are unchanged');
 });
 
 test('gap specials: the page runs the same plan (the inlined source agrees with the module)', () => {
