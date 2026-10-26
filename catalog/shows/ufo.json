@@ -3,7 +3,7 @@
   "slug": "ufo",
   "type": "Classic TV",
   "network": "ITV",
-  "matchedAt": "2026-10-19T04:12:31.795Z",
+  "matchedAt": "2026-10-26T19:01:48.069Z",
   "addedAt": "2026-10-15T12:09:04.404Z",
   "tvmaze": {
     "id": 5919,
@@ -420,6 +420,19 @@
           "alternates": [
             {
               "conf": 0.55,
+              "why": "sequence guess: file 9 of 13 in \"Project UFO - Complete Series 1978\"",
+              "item": "project-ufo-complete-series-1978",
+              "itemTitle": "Project UFO - Complete Series 1978",
+              "file": "Project UFO S02E09 - The I-Man Incident.mp4",
+              "name": "Project UFO S02E09 - The I-Man Incident",
+              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E09%20-%20The%20I-Man%20Incident.mp4",
+              "seconds": 2904,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 276
+            },
+            {
+              "conf": 0.55,
               "why": "S/E in filename",
               "item": "project-ufo-complete-series-1978",
               "itemTitle": "Project UFO - Complete Series 1978",
@@ -431,19 +444,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 277
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 9 of 13 in \"Project UFO - Complete Series 1978\"",
-              "item": "project-ufo-complete-series-1978",
-              "itemTitle": "Project UFO - Complete Series 1978",
-              "file": "Project UFO S02E09 - The I-Man Incident.mp4",
-              "name": "Project UFO S02E09 - The I-Man Incident",
-              "url": "https://archive.org/download/project-ufo-complete-series-1978/Project%20UFO%20S02E09%20-%20The%20I-Man%20Incident.mp4",
-              "seconds": 2904,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 276
             }
           ]
         },

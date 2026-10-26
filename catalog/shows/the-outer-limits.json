@@ -3,7 +3,7 @@
   "slug": "the-outer-limits",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Showtime",
-  "matchedAt": "2026-10-19T04:10:55.571Z",
+  "matchedAt": "2026-10-26T19:00:35.892Z",
   "addedAt": "2026-10-15T12:07:50.660Z",
   "tvmaze": {
     "id": 2289,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 154,
-    "live": 149,
-    "review": 5,
+    "live": 147,
+    "review": 7,
     "missing": 0,
     "pct": 100
   },
@@ -4025,6 +4025,19 @@
             },
             {
               "conf": 0.8,
+              "why": "title ~ \"Josh\" (0.95)",
+              "item": "the-outer-limits-1-7-tv-series",
+              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+              "file": "The Outer Limits - 4x004 - Josh.mp4",
+              "name": "The Outer Limits - 4x004 - Josh",
+              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%204x004%20-%20Josh.mp4",
+              "seconds": 2557,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 245
+            },
+            {
+              "conf": 0.8,
               "why": "S/E in filename + title match",
               "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
               "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
@@ -4036,19 +4049,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 335
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Josh\" (0.95)",
-              "item": "the-outer-limits-1-7-tv-series",
-              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-              "file": "The Outer Limits - 4x004 - Josh.mp4",
-              "name": "The Outer Limits - 4x004 - Josh",
-              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%204x004%20-%20Josh.mp4",
-              "seconds": 2557,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 245
             }
           ]
         },
@@ -4481,20 +4481,6 @@
           },
           "alternates": [
             {
-              "conf": 0.85,
-              "why": "S/E in filename + title match",
-              "item": "serie-outer-limits-1995-2001-by-artblood",
-              "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
-              "file": "Serie - Outer Limits - 1995-2001 - S04E15 - Mary 25 - by ARTBLOOD.mp4",
-              "name": "Serie - Outer Limits - 1995-2001 - S04E15 - Mary 25 - by ARTBLOOD",
-              "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S04E15%20-%20Mary%2025%20-%20by%20ARTBLOOD.mp4",
-              "seconds": 2530,
-              "format": "h.264",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 257
-            },
-            {
               "conf": 0.8,
               "why": "title ~ \"Mary 25\" (0.95)",
               "item": "the-outer-limits-1-7-tv-series",
@@ -4506,6 +4492,20 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 247
+            },
+            {
+              "conf": 0.84,
+              "why": "S/E in filename + title match",
+              "item": "serie-outer-limits-1995-2001-by-artblood",
+              "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
+              "file": "Serie - Outer Limits - 1995-2001 - S04E15 - Mary 25 - by ARTBLOOD.mp4",
+              "name": "Serie - Outer Limits - 1995-2001 - S04E15 - Mary 25 - by ARTBLOOD",
+              "url": "https://archive.org/download/serie-outer-limits-1995-2001-by-artblood/Serie%20-%20Outer%20Limits%20-%201995-2001%20-%20S04E15%20-%20Mary%2025%20-%20by%20ARTBLOOD.mp4",
+              "seconds": 2530,
+              "format": "h.264",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 257
             },
             {
               "conf": 0.5,
@@ -4589,9 +4589,9 @@
           "number": 17,
           "name": "Lithia",
           "airdate": "1998-07-03",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.84,
             "why": "S/E in filename + title match",
             "item": "serie-outer-limits-1995-2001-by-artblood",
             "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
@@ -4642,6 +4642,19 @@
           "alternates": [
             {
               "conf": 0.8,
+              "why": "title ~ \"Monster\" (0.95)",
+              "item": "the-outer-limits-1-7-tv-series",
+              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
+              "file": "The Outer Limits - 4x014 - Monster.mp4",
+              "name": "The Outer Limits - 4x014 - Monster",
+              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%204x014%20-%20Monster.mp4",
+              "seconds": 2575,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 247
+            },
+            {
+              "conf": 0.8,
               "why": "S/E in filename + title match",
               "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
               "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
@@ -4653,19 +4666,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 338
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Monster\" (0.95)",
-              "item": "the-outer-limits-1-7-tv-series",
-              "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
-              "file": "The Outer Limits - 4x014 - Monster.mp4",
-              "name": "The Outer Limits - 4x014 - Monster",
-              "url": "https://archive.org/download/the-outer-limits-1-7-tv-series/The%20Outer%20Limits%20-%204x014%20-%20Monster.mp4",
-              "seconds": 2575,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 247
             },
             {
               "conf": 0.55,
@@ -5033,9 +5033,9 @@
           "number": 25,
           "name": "Black Box",
           "airdate": "1998-12-11",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
+            "conf": 0.84,
             "why": "S/E in filename + title match",
             "item": "serie-outer-limits-1995-2001-by-artblood",
             "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
@@ -5300,7 +5300,7 @@
               "sizeMB": 274
             },
             {
-              "conf": 0.85,
+              "conf": 0.84,
               "why": "S/E in filename + title match",
               "item": "serie-outer-limits-1995-2001-by-artblood",
               "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
@@ -5671,7 +5671,7 @@
               "sizeMB": 274
             },
             {
-              "conf": 0.85,
+              "conf": 0.84,
               "why": "S/E in filename + title match",
               "item": "serie-outer-limits-1995-2001-by-artblood",
               "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
@@ -5720,7 +5720,7 @@
           },
           "alternates": [
             {
-              "conf": 0.85,
+              "conf": 0.84,
               "why": "S/E in filename + title match",
               "item": "serie-outer-limits-1995-2001-by-artblood",
               "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",
@@ -5995,20 +5995,6 @@
           "alternates": [
             {
               "conf": 0.8,
-              "why": "S/E in filename + title match",
-              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
-              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
-              "file": "Au-Delà Du Réel, L'Aventure Continue - 5x17 - Les Heritiers (The Inheritors - Part 2).mp4",
-              "name": "Au-Delà Du Réel, L'Aventure Continue - 5x17 - Les Heritiers (The Inheritors - Part 2)",
-              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%205x17%20-%20Les%20Heritiers%20(The%20Inheritors%20-%20Part%202).mp4",
-              "seconds": 2955,
-              "format": "MPEG4",
-              "playable": true,
-              "langRisk": true,
-              "sizeMB": 402
-            },
-            {
-              "conf": 0.8,
               "why": "title ~ \"The Inheritors\" (0.95)",
               "item": "the-outer-limits-1-7-tv-series",
               "itemTitle": "The Outer Limits 1x 01 02 The Sandkings",
@@ -6032,6 +6018,20 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 126
+            },
+            {
+              "conf": 0.8,
+              "why": "S/E in filename + title match",
+              "item": "au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002",
+              "itemTitle": "Au-Delà du Réel, L'Aventure Continue (The Outer Limits) ☆ V.F. ☆ 1995-2002",
+              "file": "Au-Delà Du Réel, L'Aventure Continue - 5x17 - Les Heritiers (The Inheritors - Part 2).mp4",
+              "name": "Au-Delà Du Réel, L'Aventure Continue - 5x17 - Les Heritiers (The Inheritors - Part 2)",
+              "url": "https://archive.org/download/au-dela-du-reel-laventure-continue-the-outer-limits-v.f.-1995-2002/Au-Del%C3%A0%20Du%20R%C3%A9el%2C%20L'Aventure%20Continue%20-%205x17%20-%20Les%20Heritiers%20(The%20Inheritors%20-%20Part%202).mp4",
+              "seconds": 2955,
+              "format": "MPEG4",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 402
             }
           ]
         },
@@ -7680,7 +7680,7 @@
               "sizeMB": 105
             },
             {
-              "conf": 0.85,
+              "conf": 0.84,
               "why": "S/E in filename + title match",
               "item": "serie-outer-limits-1995-2001-by-artblood",
               "itemTitle": "Serie - Outer Limits - 1995 - 2001 - german - by ARTBLOOD",

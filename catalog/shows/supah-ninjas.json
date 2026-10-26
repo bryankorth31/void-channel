@@ -3,7 +3,7 @@
   "slug": "supah-ninjas",
   "type": "Animated",
   "network": "Nickelodeon",
-  "matchedAt": "2026-10-22T10:38:38.527Z",
+  "matchedAt": "2026-10-26T19:02:43.557Z",
   "addedAt": "2026-10-22T10:38:38.527Z",
   "tvmaze": {
     "id": 7036,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 39,
     "live": 0,
-    "review": 1,
-    "missing": 38,
-    "pct": 3
+    "review": 0,
+    "missing": 39,
+    "pct": 0
   },
   "seasons": [
     {
@@ -139,20 +139,8 @@
           "number": 15,
           "name": "Snakeskin",
           "airdate": "2011-10-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.5,
-            "why": "airdate in filename",
-            "item": "s-03-e-16-episode-309-nick-talent-2011-10-10",
-            "itemTitle": "BrainSurge (S3E09)",
-            "file": "S03E16 - Episode 309 (Nick Talent; 2011-10-10).mp4",
-            "name": "S03E16 - Episode 309 (Nick Talent; 2011-10-10)",
-            "url": "https://archive.org/download/s-03-e-16-episode-309-nick-talent-2011-10-10/S03E16%20-%20Episode%20309%20(Nick%20Talent%3B%202011-10-10).mp4",
-            "seconds": 1874,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 449
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

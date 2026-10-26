@@ -3,7 +3,7 @@
   "slug": "timecop",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-26T16:01:12.322Z",
+  "matchedAt": "2026-10-26T19:02:24.522Z",
   "addedAt": "2026-10-24T18:31:36.422Z",
   "tvmaze": {
     "id": 7849,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 9,
     "live": 7,
-    "review": 2,
-    "missing": 0,
-    "pct": 100
+    "review": 0,
+    "missing": 2,
+    "pct": 78
   },
   "seasons": [
     {
@@ -87,40 +87,16 @@
           "number": 4,
           "name": "Public Enemy",
           "airdate": "1997-10-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "S/E in filename + title match",
-            "item": "time-cop_202608",
-            "itemTitle": "Time Cop (1997)",
-            "file": "Time Cop S1 E04 - Public-Enemy.mp4",
-            "name": "Time Cop S1 E04 - Public-Enemy",
-            "url": "https://archive.org/download/time-cop_202608/Time%20Cop%20S1%20E04%20-%20Public-Enemy.mp4",
-            "seconds": 2589,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 108
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Rocket Science",
           "airdate": "1997-10-20",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "S/E in filename + title match",
-            "item": "time-cop_202608",
-            "itemTitle": "Time Cop (1997)",
-            "file": "Time Cop S1 E05 - Rocket Science.mp4",
-            "name": "Time Cop S1 E05 - Rocket Science",
-            "url": "https://archive.org/download/time-cop_202608/Time%20Cop%20S1%20E05%20-%20Rocket%20Science.mp4",
-            "seconds": 2618,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 116
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -141,21 +117,7 @@
             "playable": true,
             "sizeMB": 128
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "S/E in filename + title match",
-              "item": "time-cop_202608",
-              "itemTitle": "Time Cop (1997)",
-              "file": "Time Cop S1 E06 - Alternate-World.mp4",
-              "name": "Time Cop S1 E06 - Alternate-World",
-              "url": "https://archive.org/download/time-cop_202608/Time%20Cop%20S1%20E06%20-%20Alternate-World.mp4",
-              "seconds": 2587,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 101
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -175,21 +137,7 @@
             "playable": true,
             "sizeMB": 126
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "S/E in filename + title match",
-              "item": "time-cop_202608",
-              "itemTitle": "Time Cop (1997)",
-              "file": "Time Cop S1 E07 - Lost Voyage.mp4",
-              "name": "Time Cop S1 E07 - Lost Voyage",
-              "url": "https://archive.org/download/time-cop_202608/Time%20Cop%20S1%20E07%20-%20Lost%20Voyage.mp4",
-              "seconds": 2588,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 111
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,
@@ -229,21 +177,7 @@
             "playable": true,
             "sizeMB": 124
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "S/E in filename + title match",
-              "item": "time-cop_202608",
-              "itemTitle": "Time Cop (1997)",
-              "file": "Time Cop S1 E09 - The Future Jack The Future.mp4",
-              "name": "Time Cop S1 E09 - The Future Jack The Future",
-              "url": "https://archive.org/download/time-cop_202608/Time%20Cop%20S1%20E09%20-%20The%20Future%20Jack%20The%20Future.mp4",
-              "seconds": 2588,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 100
-            }
-          ]
+          "alternates": []
         }
       ]
     }

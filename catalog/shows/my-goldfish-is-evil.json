@@ -3,7 +3,7 @@
   "slug": "my-goldfish-is-evil",
   "type": "Animated",
   "network": "CBC",
-  "matchedAt": "2026-10-22T09:50:32.901Z",
+  "matchedAt": "2026-10-26T19:02:17.611Z",
   "addedAt": "2026-10-22T09:50:32.901Z",
   "tvmaze": {
     "id": 22028,
@@ -135,31 +135,31 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "S/E in filename",
-            "item": "MyGoldfishIsEvilFrenchDub",
-            "itemTitle": "My Goldfish is Evil! (Mon Poisson Rouge !) [French dub]",
-            "file": "My Goldfish is Evil (Mon Poisson Rouge) [French]/Mon Poisson Rouge ! S01E04 - Centre Spatial y'a comme une arête.mp4",
-            "name": "My Goldfish is Evil (Mon Poisson Rouge) [French]/Mon Poisson Rouge ! S01E04 - Centre Spatial y'a comme une arête",
-            "url": "https://archive.org/download/MyGoldfishIsEvilFrenchDub/My%20Goldfish%20is%20Evil%20(Mon%20Poisson%20Rouge)%20%5BFrench%5D%2FMon%20Poisson%20Rouge%20!%20S01E04%20-%20Centre%20Spatial%20y'a%20comme%20une%20ar%C3%AAte.mp4",
-            "seconds": 1437,
-            "format": "MPEG4",
+            "why": "title ~ \"Space Command, We Have a Goldfish\" (0.76)",
+            "item": "my-goldfish-is-evil-full-series",
+            "itemTitle": "My Goldfish Is Evil! - Full Series",
+            "file": "S01_E04 - Space Command, We Have a Goldfish!-quicktime.mp4",
+            "name": "S01_E04 - Space Command, We Have a Goldfish!-quicktime",
+            "url": "https://archive.org/download/my-goldfish-is-evil-full-series/S01_E04%20-%20Space%20Command%2C%20We%20Have%20a%20Goldfish!-quicktime.mp4",
+            "seconds": 1447,
+            "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 339
+            "sizeMB": 138
           },
           "alternates": [
             {
               "conf": 0.55,
-              "why": "title ~ \"Space Command, We Have a Goldfish\" (0.76)",
-              "item": "my-goldfish-is-evil-full-series",
-              "itemTitle": "My Goldfish Is Evil! - Full Series",
-              "file": "S01_E04 - Space Command, We Have a Goldfish!-quicktime.mp4",
-              "name": "S01_E04 - Space Command, We Have a Goldfish!-quicktime",
-              "url": "https://archive.org/download/my-goldfish-is-evil-full-series/S01_E04%20-%20Space%20Command%2C%20We%20Have%20a%20Goldfish!-quicktime.mp4",
-              "seconds": 1447,
-              "format": "h.264",
+              "why": "S/E in filename",
+              "item": "MyGoldfishIsEvilFrenchDub",
+              "itemTitle": "My Goldfish is Evil! (Mon Poisson Rouge !) [French dub]",
+              "file": "My Goldfish is Evil (Mon Poisson Rouge) [French]/Mon Poisson Rouge ! S01E04 - Centre Spatial y'a comme une arête.mp4",
+              "name": "My Goldfish is Evil (Mon Poisson Rouge) [French]/Mon Poisson Rouge ! S01E04 - Centre Spatial y'a comme une arête",
+              "url": "https://archive.org/download/MyGoldfishIsEvilFrenchDub/My%20Goldfish%20is%20Evil%20(Mon%20Poisson%20Rouge)%20%5BFrench%5D%2FMon%20Poisson%20Rouge%20!%20S01E04%20-%20Centre%20Spatial%20y'a%20comme%20une%20ar%C3%AAte.mp4",
+              "seconds": 1437,
+              "format": "MPEG4",
               "playable": true,
-              "sizeMB": 138
+              "langRisk": true,
+              "sizeMB": 339
             }
           ]
         },

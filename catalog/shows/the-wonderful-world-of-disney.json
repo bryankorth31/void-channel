@@ -3,7 +3,7 @@
   "slug": "the-wonderful-world-of-disney",
   "type": "Animated",
   "network": "ABC",
-  "matchedAt": "2026-10-22T10:28:21.946Z",
+  "matchedAt": "2026-10-26T19:02:35.147Z",
   "addedAt": "2026-10-22T10:28:21.946Z",
   "tvmaze": {
     "id": 22918,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 941,
-    "live": 25,
-    "review": 104,
-    "missing": 812,
-    "pct": 14
+    "live": 154,
+    "review": 63,
+    "missing": 724,
+    "pct": 23
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "The Disneyland Story",
           "airdate": "1954-10-27",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -41,7 +41,47 @@
             "playable": true,
             "sizeMB": 101
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Disneyland Story\" (0.95)",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "1954-1958 Disneyland/Disneyland - S01E04 - The Donald Duck Story (November 17, 1954).mp4",
+              "name": "1954-1958 Disneyland/Disneyland - S01E04 - The Donald Duck Story (November 17, 1954)",
+              "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S01E04%20-%20The%20Donald%20Duck%20Story%20(November%2017%2C%201954).mp4",
+              "seconds": 2922,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 960
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Disneyland Story\" (0.95)",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "1954-1958 Disneyland/Disneyland - S02E06 - The Story of the Silly Symphony (October 19, 1955).mp4",
+              "name": "1954-1958 Disneyland/Disneyland - S02E06 - The Story of the Silly Symphony (October 19, 1955)",
+              "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S02E06%20-%20The%20Story%20of%20the%20Silly%20Symphony%20(October%2019%2C%201955).mp4",
+              "seconds": 3011,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 803
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Disneyland Story\" (0.95)",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "1954-1958 Disneyland/Disneyland - S02E12 - The Goofy Success Story (December 7, 1955).mp4",
+              "name": "1954-1958 Disneyland/Disneyland - S02E12 - The Goofy Success Story (December 7, 1955)",
+              "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S02E12%20-%20The%20Goofy%20Success%20Story%20(December%207%2C%201955).mp4",
+              "seconds": 2895,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 415
+            }
+          ]
         },
         {
           "number": 2,
@@ -63,8 +103,20 @@
           "number": 4,
           "name": "The Donald Duck Story",
           "airdate": "1954-11-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1954-1958 Disneyland/Disneyland - S01E04 - The Donald Duck Story (November 17, 1954).mp4",
+            "name": "1954-1958 Disneyland/Disneyland - S01E04 - The Donald Duck Story (November 17, 1954)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S01E04%20-%20The%20Donald%20Duck%20Story%20(November%2017%2C%201954).mp4",
+            "seconds": 2922,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 960
+          },
           "alternates": []
         },
         {
@@ -79,8 +131,20 @@
           "number": 6,
           "name": "A Story of Dogs",
           "airdate": "1954-12-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1954-1958 Disneyland/Disneyland - S01E06 - A Story of Dogs (December 1, 1954).mp4",
+            "name": "1954-1958 Disneyland/Disneyland - S01E06 - A Story of Dogs (December 1, 1954)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S01E06%20-%20A%20Story%20of%20Dogs%20(December%201%2C%201954).mp4",
+            "seconds": 2713,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 196
+          },
           "alternates": []
         },
         {
@@ -95,9 +159,9 @@
           "number": 8,
           "name": "Davy Crockett- Indian Fighter",
           "airdate": "1954-12-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -147,9 +211,9 @@
           "number": 13,
           "name": "Monsters of the Deep",
           "airdate": "1955-01-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -167,9 +231,9 @@
           "number": 14,
           "name": "Davy Crockett Goes to Congress",
           "airdate": "1955-01-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -211,9 +275,9 @@
           "number": 18,
           "name": "Davy Crockett at the Alamo",
           "airdate": "1955-02-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -231,9 +295,9 @@
           "number": 19,
           "name": "From Aesop to Hans Christian Andersen",
           "airdate": "1955-03-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -251,9 +315,9 @@
           "number": 20,
           "name": "Man in Space",
           "airdate": "1955-03-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -271,9 +335,9 @@
           "number": 21,
           "name": "The Pre-Opening Report from Disneyland",
           "airdate": "1955-07-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -291,9 +355,9 @@
           "number": 22,
           "name": "Dateline Disneyland",
           "airdate": "1955-07-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -316,8 +380,20 @@
           "number": 1,
           "name": "MOVIE: Dumbo",
           "airdate": "1955-09-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1954-1958 Disneyland/Disneyland - S02E01 - Dumbo (September 14, 1955).mp4",
+            "name": "1954-1958 Disneyland/Disneyland - S02E01 - Dumbo (September 14, 1955)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S02E01%20-%20Dumbo%20(September%2014%2C%201955).mp4",
+            "seconds": 3497,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 183
+          },
           "alternates": []
         },
         {
@@ -332,9 +408,9 @@
           "number": 3,
           "name": "Jiminy Cricket Presents Bongo",
           "airdate": "1955-09-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -368,16 +444,40 @@
           "number": 6,
           "name": "The Story of the Silly Symphony",
           "airdate": "1955-10-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1954-1958 Disneyland/Disneyland - S02E06 - The Story of the Silly Symphony (October 19, 1955).mp4",
+            "name": "1954-1958 Disneyland/Disneyland - S02E06 - The Story of the Silly Symphony (October 19, 1955)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S02E06%20-%20The%20Story%20of%20the%20Silly%20Symphony%20(October%2019%2C%201955).mp4",
+            "seconds": 3011,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 803
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "The Legend of Sleepy Hollow",
           "airdate": "1955-10-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1954-1958 Disneyland/Disneyland - S02E07 - The Legend of Sleepy Hollow (October 26, 1955).mp4",
+            "name": "1954-1958 Disneyland/Disneyland - S02E07 - The Legend of Sleepy Hollow (October 26, 1955)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S02E07%20-%20The%20Legend%20of%20Sleepy%20Hollow%20(October%2026%2C%201955).mp4",
+            "seconds": 2832,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 136
+          },
           "alternates": []
         },
         {
@@ -400,9 +500,9 @@
           "number": 10,
           "name": "Davy Crockett's Keelboat Race",
           "airdate": "1955-11-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -420,25 +520,49 @@
           "number": 11,
           "name": "The Story of the Animated Drawing",
           "airdate": "1955-11-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1954-1958 Disneyland/Disneyland - S02E11 - The Story of the Animated Drawing (November 30, 1955).mp4",
+            "name": "1954-1958 Disneyland/Disneyland - S02E11 - The Story of the Animated Drawing (November 30, 1955)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S02E11%20-%20The%20Story%20of%20the%20Animated%20Drawing%20(November%2030%2C%201955).mp4",
+            "seconds": 3111,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 163
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "The Goofy Success Story",
           "airdate": "1955-12-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1954-1958 Disneyland/Disneyland - S02E12 - The Goofy Success Story (December 7, 1955).mp4",
+            "name": "1954-1958 Disneyland/Disneyland - S02E12 - The Goofy Success Story (December 7, 1955)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S02E12%20-%20The%20Goofy%20Success%20Story%20(December%207%2C%201955).mp4",
+            "seconds": 2895,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 415
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Davy Crockett and the River Pirates",
           "airdate": "1955-12-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -456,9 +580,9 @@
           "number": 14,
           "name": "Man and the Moon",
           "airdate": "1955-12-28",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -492,9 +616,9 @@
           "number": 17,
           "name": "A Tribute to Joel Chandler Harris",
           "airdate": "1956-01-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -512,8 +636,20 @@
           "number": 18,
           "name": "A Day in the Life of Donald Duck",
           "airdate": "1956-02-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1954-1958 Disneyland/Disneyland - S02E18 - A Day in the Life of Donald Duck (February 1, 1956).mp4",
+            "name": "1954-1958 Disneyland/Disneyland - S02E18 - A Day in the Life of Donald Duck (February 1, 1956)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S02E18%20-%20A%20Day%20in%20the%20Life%20of%20Donald%20Duck%20(February%201%2C%201956).mp4",
+            "seconds": 2949,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 145
+          },
           "alternates": []
         },
         {
@@ -528,9 +664,9 @@
           "number": 20,
           "name": "Our Unsung Villains",
           "airdate": "1956-02-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -580,9 +716,9 @@
           "number": 25,
           "name": "Where Do the Stories Come From?",
           "airdate": "1956-04-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -600,8 +736,20 @@
           "number": 26,
           "name": "Behind the Scenes with Fess Parker",
           "airdate": "1956-05-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1954-1958 Disneyland/Disneyland - S02E26 - Behind the Scenes with Fess Parker (May 30, 1956).mp4",
+            "name": "1954-1958 Disneyland/Disneyland - S02E26 - Behind the Scenes with Fess Parker (May 30, 1956)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S02E26%20-%20Behind%20the%20Scenes%20with%20Fess%20Parker%20(May%2030%2C%201956).mp4",
+            "seconds": 2977,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 233
+          },
           "alternates": []
         }
       ]
@@ -621,9 +769,9 @@
           "number": 2,
           "name": "The Great Cat Family",
           "airdate": "1956-09-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -641,9 +789,9 @@
           "number": 3,
           "name": "Searching for Nature's Mysteries",
           "airdate": "1956-09-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -693,33 +841,33 @@
           "number": 8,
           "name": "The Plausible Impossible",
           "airdate": "1956-10-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.7,
-            "why": "title ~ \"The Plausible Impossible\" (0.95)",
-            "item": "wonderful-world-of-disney-the-the-plausible-impossible-and-the-rangers-guide-to-nature-1986-vhs",
-            "itemTitle": "The Wonderful World of Disney: The Plausible Impossible/The Ranger's Guide to Nature (1986) VHS",
-            "file": "Wonderful World of Disney, The - The Plausible Impossible and The Ranger's Guide to Nature (1986 VHS).mp4",
-            "name": "Wonderful World of Disney, The - The Plausible Impossible and The Ranger's Guide to Nature (1986 VHS)",
-            "url": "https://archive.org/download/wonderful-world-of-disney-the-the-plausible-impossible-and-the-rangers-guide-to-nature-1986-vhs/Wonderful%20World%20of%20Disney%2C%20The%20-%20The%20Plausible%20Impossible%20and%20The%20Ranger's%20Guide%20to%20Nature%20(1986%20VHS).mp4",
-            "seconds": 6541,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1954-1958 Disneyland/Disneyland - S03E08 - The Plausible Impossible (October 31, 1956).mp4",
+            "name": "1954-1958 Disneyland/Disneyland - S03E08 - The Plausible Impossible (October 31, 1956)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S03E08%20-%20The%20Plausible%20Impossible%20(October%2031%2C%201956).mp4",
+            "seconds": 3071,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 6483
+            "sizeMB": 161
           },
           "alternates": [
             {
-              "conf": 0.65,
-              "why": "S/E in filename + title match",
-              "item": "disney-anthology-television-series",
-              "itemTitle": "Disney anthology television series",
-              "file": "1954-1958 Disneyland/Disneyland - S03E08 - The Plausible Impossible (October 31, 1956).mp4",
-              "name": "1954-1958 Disneyland/Disneyland - S03E08 - The Plausible Impossible (October 31, 1956)",
-              "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S03E08%20-%20The%20Plausible%20Impossible%20(October%2031%2C%201956).mp4",
-              "seconds": 3071,
+              "conf": 0.7,
+              "why": "title ~ \"The Plausible Impossible\" (0.95)",
+              "item": "wonderful-world-of-disney-the-the-plausible-impossible-and-the-rangers-guide-to-nature-1986-vhs",
+              "itemTitle": "The Wonderful World of Disney: The Plausible Impossible/The Ranger's Guide to Nature (1986) VHS",
+              "file": "Wonderful World of Disney, The - The Plausible Impossible and The Ranger's Guide to Nature (1986 VHS).mp4",
+              "name": "Wonderful World of Disney, The - The Plausible Impossible and The Ranger's Guide to Nature (1986 VHS)",
+              "url": "https://archive.org/download/wonderful-world-of-disney-the-the-plausible-impossible-and-the-rangers-guide-to-nature-1986-vhs/Wonderful%20World%20of%20Disney%2C%20The%20-%20The%20Plausible%20Impossible%20and%20The%20Ranger's%20Guide%20to%20Nature%20(1986%20VHS).mp4",
+              "seconds": 6541,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 161
+              "sizeMB": 6483
             }
           ]
         },
@@ -743,9 +891,9 @@
           "number": 11,
           "name": "At Home with Donald Duck",
           "airdate": "1956-11-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -779,9 +927,9 @@
           "number": 14,
           "name": "Our Friend, the Atom",
           "airdate": "1957-01-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -799,9 +947,9 @@
           "number": 15,
           "name": "All About Magic",
           "airdate": "1957-01-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -819,9 +967,9 @@
           "number": 16,
           "name": "Tricks of Our Trade",
           "airdate": "1957-02-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -855,8 +1003,20 @@
           "number": 19,
           "name": "The Adventure Story",
           "airdate": "1957-03-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1954-1958 Disneyland/Disneyland - S03E19 - The Adventure Story (March 20, 1957).mp4",
+            "name": "1954-1958 Disneyland/Disneyland - S03E19 - The Adventure Story (March 20, 1957)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FDisneyland%20-%20S03E19%20-%20The%20Adventure%20Story%20(March%2020%2C%201957).mp4",
+            "seconds": 3155,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 305
+          },
           "alternates": []
         },
         {
@@ -887,9 +1047,9 @@
           "number": 23,
           "name": "More About the Silly Symphonies",
           "airdate": "1957-04-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -923,9 +1083,9 @@
           "number": 26,
           "name": "Antarctica- Operation Deep Freeze",
           "airdate": "1957-06-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -948,9 +1108,9 @@
           "number": 1,
           "name": "The Fourth Anniversary Show",
           "airdate": "1957-09-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -976,9 +1136,9 @@
           "number": 3,
           "name": "Adventure in Wildwood Heart",
           "airdate": "1957-09-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -996,9 +1156,9 @@
           "number": 4,
           "name": "Andy's Initiation",
           "airdate": "1957-10-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -1016,9 +1176,9 @@
           "number": 5,
           "name": "Andy's First Chore",
           "airdate": "1957-10-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.5,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -1036,9 +1196,9 @@
           "number": 6,
           "name": "Andy's Love Affair",
           "airdate": "1957-10-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -1080,9 +1240,9 @@
           "number": 10,
           "name": "The Best Doggoned Dog in the World",
           "airdate": "1957-11-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.5,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -1108,9 +1268,9 @@
           "number": 12,
           "name": "Mars and Beyond",
           "airdate": "1957-12-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -1176,9 +1336,9 @@
           "number": 19,
           "name": "The Land of Enemies",
           "airdate": "1958-02-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -1196,9 +1356,9 @@
           "number": 20,
           "name": "White Man's Medicine",
           "airdate": "1958-03-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -1216,9 +1376,9 @@
           "number": 21,
           "name": "The Big Council",
           "airdate": "1958-03-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -1236,9 +1396,9 @@
           "number": 22,
           "name": "Magic and Music",
           "airdate": "1958-03-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -1256,9 +1416,9 @@
           "number": 23,
           "name": "An Adventure in the Magic Kingdom",
           "airdate": "1958-04-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -1284,9 +1444,9 @@
           "number": 25,
           "name": "An Adventure in Art",
           "airdate": "1958-04-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -1304,9 +1464,9 @@
           "number": 26,
           "name": "Magic Highway, U.S.A.",
           "airdate": "1958-05-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -1320,7 +1480,7 @@
           },
           "alternates": [
             {
-              "conf": 0.65,
+              "conf": 1,
               "why": "S/E in filename + title match",
               "item": "disney-anthology-television-series",
               "itemTitle": "Disney anthology television series",
@@ -1343,41 +1503,129 @@
           "number": 1,
           "name": "The Nine Lives of Elfego Baca",
           "airdate": "1958-10-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1954-1958 Disneyland/Walt Disney Presents - S05E01 - Elfego Baca The Nine Lives of Elfego Baca (October 3, 1958).mp4",
+            "name": "1954-1958 Disneyland/Walt Disney Presents - S05E01 - Elfego Baca The Nine Lives of Elfego Baca (October 3, 1958)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1954-1958%20Disneyland%2FWalt%20Disney%20Presents%20-%20S05E01%20-%20Elfego%20Baca%20The%20Nine%20Lives%20of%20Elfego%20Baca%20(October%203%2C%201958).mp4",
+            "seconds": 3050,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 298
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "The Pigeon That Worked a Miracle",
           "airdate": "1958-10-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E02 - The Pigeon That Worked a Miracle (October 10, 1958).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E02 - The Pigeon That Worked a Miracle (October 10, 1958)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S05E02%20-%20The%20Pigeon%20That%20Worked%20a%20Miracle%20(October%2010%2C%201958).mp4",
+            "seconds": 2921,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 499
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Four Down and Five Lives to Go",
           "airdate": "1958-10-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E03 - Elfego Baca Four Down and Five Lives to Go (October 17, 1958).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E03 - Elfego Baca Four Down and Five Lives to Go (October 17, 1958)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S05E03%20-%20Elfego%20Baca%20Four%20Down%20and%20Five%20Lives%20to%20Go%20(October%2017%2C%201958).mp4",
+            "seconds": 3144,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 307
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S05E03 - Elfego Baca Four Down and Five Lives to Go (October 17, 1958).mp4",
+              "name": "Walt Disney Presents - S05E03 - Elfego Baca Four Down and Five Lives to Go (October 17, 1958)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S05E03%20-%20Elfego%20Baca%20Four%20Down%20and%20Five%20Lives%20to%20Go%20(October%2017%2C%201958).mp4",
+              "seconds": 3144,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 307
+            }
+          ]
         },
         {
           "number": 4,
           "name": "Rusty and the Falcon",
           "airdate": "1958-10-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E04 - Rusty and the Falcon (October 24, 1958).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E04 - Rusty and the Falcon (October 24, 1958)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S05E04%20-%20Rusty%20and%20the%20Falcon%20(October%2024%2C%201958).mp4",
+            "seconds": 2704,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 856
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Texas John Slaughter",
           "airdate": "1958-10-31",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E05 - Texas John Slaughter (October 31, 1958).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E05 - Texas John Slaughter (October 31, 1958)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S05E05%20-%20Texas%20John%20Slaughter%20(October%2031%2C%201958).mp4",
+            "seconds": 2916,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 171
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E05 - Tales of Texas John Slaughter (October 31, 1958).mp4",
+              "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E05 - Tales of Texas John Slaughter (October 31, 1958)",
+              "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S05E05%20-%20Tales%20of%20Texas%20John%20Slaughter%20(October%2031%2C%201958).mp4",
+              "seconds": 2898,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 115
+            }
+          ]
         },
         {
           "number": 6,
@@ -1407,9 +1655,35 @@
           "number": 9,
           "name": "Lawman or Gunman",
           "airdate": "1958-11-28",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E09 - Elfego Baca Lawman or Gunman (November 28, 1958).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E09 - Elfego Baca Lawman or Gunman (November 28, 1958)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S05E09%20-%20Elfego%20Baca%20Lawman%20or%20Gunman%20(November%2028%2C%201958).mp4",
+            "seconds": 2916,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 129
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S05E09 - Elfego Baca Lawman or Gunman (November 28, 1958).ia.mp4",
+              "name": "Walt Disney Presents - S05E09 - Elfego Baca Lawman or Gunman (November 28, 1958)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S05E09%20-%20Elfego%20Baca%20Lawman%20or%20Gunman%20(November%2028%2C%201958).ia.mp4",
+              "seconds": 2916,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 129
+            }
+          ]
         },
         {
           "number": 10,
@@ -1423,9 +1697,35 @@
           "number": 11,
           "name": "Law and Order, Incorporated",
           "airdate": "1958-12-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E11 - Elfego Baca Law and Order, Incorporated (December 12, 1958).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E11 - Elfego Baca Law and Order, Incorporated (December 12, 1958)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S05E11%20-%20Elfego%20Baca%20Law%20and%20Order%2C%20Incorporated%20(December%2012%2C%201958).mp4",
+            "seconds": 2911,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 134
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S05E11 - Elfego Baca Law and Order, Incorporated (December 12, 1958).ia.mp4",
+              "name": "Walt Disney Presents - S05E11 - Elfego Baca Law and Order, Incorporated (December 12, 1958)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S05E11%20-%20Elfego%20Baca%20Law%20and%20Order%2C%20Incorporated%20(December%2012%2C%201958).ia.mp4",
+              "seconds": 2911,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 134
+            }
+          ]
         },
         {
           "number": 12,
@@ -1489,17 +1789,55 @@
           "number": 16,
           "name": "The Peter Tchaikovsky Story",
           "airdate": "1959-01-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E16 - The Peter Tchaikovsky Story (January 30, 1959).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E16 - The Peter Tchaikovsky Story (January 30, 1959)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S05E16%20-%20The%20Peter%20Tchaikovsky%20Story%20(January%2030%2C%201959).mp4",
+            "seconds": 2966,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 421
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "Elfego Baca, Attorney at Law",
           "airdate": "1959-02-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E17 - Elfego Baca, Attorney at Law (February 6, 1959).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E17 - Elfego Baca, Attorney at Law (February 6, 1959)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S05E17%20-%20Elfego%20Baca%2C%20Attorney%20at%20Law%20(February%206%2C%201959).mp4",
+            "seconds": 3141,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 306
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S05E17 - Elfego Baca, Attorney at Law (February 6, 1959).mp4",
+              "name": "Walt Disney Presents - S05E17 - Elfego Baca, Attorney at Law (February 6, 1959)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S05E17%20-%20Elfego%20Baca%2C%20Attorney%20at%20Law%20(February%206%2C%201959).mp4",
+              "seconds": 3141,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 306
+            }
+          ]
         },
         {
           "number": 18,
@@ -1513,9 +1851,35 @@
           "number": 19,
           "name": "The Griswold Murder",
           "airdate": "1959-02-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E19 - Elfego Baca The Griswold Murder (February 20, 1959).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E19 - Elfego Baca The Griswold Murder (February 20, 1959)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S05E19%20-%20Elfego%20Baca%20The%20Griswold%20Murder%20(February%2020%2C%201959).mp4",
+            "seconds": 2918,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 141
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S05E19 - Elfego Baca The Griswold Murder (February 20, 1959).ia.mp4",
+              "name": "Walt Disney Presents - S05E19 - Elfego Baca The Griswold Murder (February 20, 1959)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S05E19%20-%20Elfego%20Baca%20The%20Griswold%20Murder%20(February%2020%2C%201959).ia.mp4",
+              "seconds": 2918,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 141
+            }
+          ]
         },
         {
           "number": 20,
@@ -1553,8 +1917,20 @@
           "number": 24,
           "name": "Toot, Whistle, Plunk and Boom",
           "airdate": "1959-03-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E24 - Toot, Whistle, Plunk and Boom (March 27, 1959).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E24 - Toot, Whistle, Plunk and Boom (March 27, 1959)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S05E24%20-%20Toot%2C%20Whistle%2C%20Plunk%20and%20Boom%20(March%2027%2C%201959).mp4",
+            "seconds": 2930,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 511
+          },
           "alternates": []
         },
         {
@@ -1569,8 +1945,20 @@
           "number": 26,
           "name": "I Captured the King of the Leprechauns",
           "airdate": "1959-05-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E26 - I Captured the King of the Leprechauns (May 29, 1959).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S05E26 - I Captured the King of the Leprechauns (May 29, 1959)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S05E26%20-%20I%20Captured%20the%20King%20of%20the%20Leprechauns%20(May%2029%2C%201959).mp4",
+            "seconds": 2931,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 405
+          },
           "alternates": []
         }
       ]
@@ -1582,16 +1970,40 @@
           "number": 1,
           "name": "Moochie of the Little League (1)",
           "airdate": "1959-10-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E01 - Moochie of The Little League (Part 1) A Diamond is a Boy's Best Friend (October 2, 1959).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E01 - Moochie of The Little League (Part 1) A Diamond is a Boy's Best Friend (October 2, 1959)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S06E01%20-%20Moochie%20of%20The%20Little%20League%20(Part%201)%20A%20Diamond%20is%20a%20Boy's%20Best%20Friend%20(October%202%2C%201959).mp4",
+            "seconds": 2845,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 263
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "Moochie of the Little League (2)",
           "airdate": "1959-10-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E02 - Moochie of The Little League (Part 2) Wrong Way Moochie (October 9, 1959).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E02 - Moochie of The Little League (Part 2) Wrong Way Moochie (October 9, 1959)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S06E02%20-%20Moochie%20of%20The%20Little%20League%20(Part%202)%20Wrong%20Way%20Moochie%20(October%209%2C%201959).mp4",
+            "seconds": 2859,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 212
+          },
           "alternates": []
         },
         {
@@ -1606,17 +2018,69 @@
           "number": 4,
           "name": "The Birth of the Swamp Fox",
           "airdate": "1959-10-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E04 - Swamp Fox The Birth of the Swamp Fox (October 23, 1959).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E04 - Swamp Fox The Birth of the Swamp Fox (October 23, 1959)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S06E04%20-%20Swamp%20Fox%20The%20Birth%20of%20the%20Swamp%20Fox%20(October%2023%2C%201959).mp4",
+            "seconds": 3055,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 297
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S06E04 - Swamp Fox The Birth of the Swamp Fox (October 23, 1959).mp4",
+              "name": "Walt Disney Presents - S06E04 - Swamp Fox The Birth of the Swamp Fox (October 23, 1959)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S06E04%20-%20Swamp%20Fox%20The%20Birth%20of%20the%20Swamp%20Fox%20(October%2023%2C%201959).mp4",
+              "seconds": 3055,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 297
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Brother Against Brother",
           "airdate": "1959-10-30",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E05 - Swamp Fox Brother Against Brother (October 30, 1959).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E05 - Swamp Fox Brother Against Brother (October 30, 1959)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S06E05%20-%20Swamp%20Fox%20Brother%20Against%20Brother%20(October%2030%2C%201959).mp4",
+            "seconds": 3144,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 306
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S06E05 - Swamp Fox Brother Against Brother (October 30, 1959).mp4",
+              "name": "Walt Disney Presents - S06E05 - Swamp Fox Brother Against Brother (October 30, 1959)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S06E05%20-%20Swamp%20Fox%20Brother%20Against%20Brother%20(October%2030%2C%201959).mp4",
+              "seconds": 3144,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 306
+            }
+          ]
         },
         {
           "number": 6,
@@ -1630,17 +2094,69 @@
           "number": 7,
           "name": "Move Along, Mustangers",
           "airdate": "1959-11-13",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E07 - Elfego Baca Move Along, Mustangers (November 13, 1959).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E07 - Elfego Baca Move Along, Mustangers (November 13, 1959)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S06E07%20-%20Elfego%20Baca%20Move%20Along%2C%20Mustangers%20(November%2013%2C%201959).mp4",
+            "seconds": 2919,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 146
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S06E07 - Elfego Baca Move Along, Mustangers (November 13, 1959).ia.mp4",
+              "name": "Walt Disney Presents - S06E07 - Elfego Baca Move Along, Mustangers (November 13, 1959)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S06E07%20-%20Elfego%20Baca%20Move%20Along%2C%20Mustangers%20(November%2013%2C%201959).ia.mp4",
+              "seconds": 2919,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 8,
           "name": "Mustang Man, Mustang Maid",
           "airdate": "1959-11-20",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E08 - Elfego Baca Mustang Man, Mustang Maid (November 20, 1959).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E08 - Elfego Baca Mustang Man, Mustang Maid (November 20, 1959)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S06E08%20-%20Elfego%20Baca%20Mustang%20Man%2C%20Mustang%20Maid%20(November%2020%2C%201959).mp4",
+            "seconds": 2916,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 161
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S06E08 - Elfego Baca Mustang Man, Mustang Maid (November 20, 1959).ia.mp4",
+              "name": "Walt Disney Presents - S06E08 - Elfego Baca Mustang Man, Mustang Maid (November 20, 1959)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S06E08%20-%20Elfego%20Baca%20Mustang%20Man%2C%20Mustang%20Maid%20(November%2020%2C%201959).ia.mp4",
+              "seconds": 2916,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 161
+            }
+          ]
         },
         {
           "number": 9,
@@ -1678,32 +2194,94 @@
           "number": 13,
           "name": "The Swamp Fox: Tory Vengeance",
           "airdate": "1960-01-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E13 - Swamp Fox Tory Vengeance (January 1, 1960).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E13 - Swamp Fox Tory Vengeance (January 1, 1960)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S06E13%20-%20Swamp%20Fox%20Tory%20Vengeance%20(January%201%2C%201960).mp4",
+            "seconds": 3142,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 305
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S06E13 - Swamp Fox Tory Vengeance (January 1, 1960).mp4",
+              "name": "Walt Disney Presents - S06E13 - Swamp Fox Tory Vengeance (January 1, 1960)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S06E13%20-%20Swamp%20Fox%20Tory%20Vengeance%20(January%201%2C%201960).mp4",
+              "seconds": 3142,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 305
+            }
+          ]
         },
         {
           "number": 14,
           "name": "Day of Reckoning",
           "airdate": "1960-01-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E14 - Swamp Fox Day of Reckoning (January 8, 1960).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E14 - Swamp Fox Day of Reckoning (January 8, 1960)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S06E14%20-%20Swamp%20Fox%20Day%20of%20Reckoning%20(January%208%2C%201960).mp4",
+            "seconds": 2889,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 40
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Redcoat Strategy",
           "airdate": "1960-01-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E15 - Swamp Fox Redcoat Strategy (January 15, 1960).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E15 - Swamp Fox Redcoat Strategy (January 15, 1960)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S06E15%20-%20Swamp%20Fox%20Redcoat%20Strategy%20(January%2015%2C%201960).mp4",
+            "seconds": 2891,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 40
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "A Case of Treason",
           "airdate": "1960-01-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E16 - Swamp Fox A Case of Treason (January 22, 1960).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E16 - Swamp Fox A Case of Treason (January 22, 1960)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S06E16%20-%20Swamp%20Fox%20A%20Case%20of%20Treason%20(January%2022%2C%201960).mp4",
+            "seconds": 2743,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 38
+          },
           "alternates": []
         },
         {
@@ -1766,17 +2344,69 @@
           "number": 24,
           "name": "Friendly Enemies at Law",
           "airdate": "1960-03-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E24 - Elfego Baca Friendly Enemies at Law (March 18, 1960).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E24 - Elfego Baca Friendly Enemies at Law (March 18, 1960)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S06E24%20-%20Elfego%20Baca%20Friendly%20Enemies%20at%20Law%20(March%2018%2C%201960).mp4",
+            "seconds": 2919,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 146
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S06E24 - Elfego Baca Friendly Enemies at Law (March 18, 1960).ia.mp4",
+              "name": "Walt Disney Presents - S06E24 - Elfego Baca Friendly Enemies at Law (March 18, 1960)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S06E24%20-%20Elfego%20Baca%20Friendly%20Enemies%20at%20Law%20(March%2018%2C%201960).ia.mp4",
+              "seconds": 2919,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 146
+            }
+          ]
         },
         {
           "number": 25,
           "name": "Gus Tomlin is Dead",
           "airdate": "1960-03-25",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E25 - Elfego Baca Gus Tomlin is Dead (March 25, 1960).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S06E25 - Elfego Baca Gus Tomlin is Dead (March 25, 1960)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S06E25%20-%20Elfego%20Baca%20Gus%20Tomlin%20is%20Dead%20(March%2025%2C%201960).mp4",
+            "seconds": 2911,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 145
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S06E25 - Elfego Baca Gus Tomlin is Dead (March 25, 1960).ia.mp4",
+              "name": "Walt Disney Presents - S06E25 - Elfego Baca Gus Tomlin is Dead (March 25, 1960)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S06E25%20-%20Elfego%20Baca%20Gus%20Tomlin%20is%20Dead%20(March%2025%2C%201960).ia.mp4",
+              "seconds": 2911,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 26,
@@ -1803,16 +2433,40 @@
           "number": 2,
           "name": "El Bandido",
           "airdate": "1960-10-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E02 - Zorro El Bandido (October 30, 1960).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E02 - Zorro El Bandido (October 30, 1960)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E02%20-%20Zorro%20El%20Bandido%20(October%2030%2C%201960).mp4",
+            "seconds": 3080,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 335
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Adios El Cuchillo",
           "airdate": "1960-11-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E03 - Zorro Adios El Cuchillo (November 6, 1960).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E03 - Zorro Adios El Cuchillo (November 6, 1960)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E03%20-%20Zorro%20Adios%20El%20Cuchillo%20(November%206%2C%201960).mp4",
+            "seconds": 2943,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 324
+          },
           "alternates": []
         },
         {
@@ -1827,32 +2481,80 @@
           "number": 5,
           "name": "Moochie of Pop Warner Football (1)",
           "airdate": "1960-11-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E05 - Moochie of Pop Warner Football (Part 1) Pee Wees Versus City Hall (November 20, 1960) .mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E05 - Moochie of Pop Warner Football (Part 1) Pee Wees Versus City Hall (November 20, 1960) ",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E05%20-%20Moochie%20of%20Pop%20Warner%20Football%20(Part%201)%20Pee%20Wees%20Versus%20City%20Hall%20(November%2020%2C%201960)%20.mp4",
+            "seconds": 2904,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 344
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Moochie of Pop Warner Football (2)",
           "airdate": "1960-11-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E06 - Moochie of Pop Warner Football (Part 2) From Ticonderoga to Disneyland (November 27, 1960) .mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E06 - Moochie of Pop Warner Football (Part 2) From Ticonderoga to Disneyland (November 27, 1960) ",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E06%20-%20Moochie%20of%20Pop%20Warner%20Football%20(Part%202)%20From%20Ticonderoga%20to%20Disneyland%20(November%2027%2C%201960)%20.mp4",
+            "seconds": 2901,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 290
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "The Warrior's Path",
           "airdate": "1960-12-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E07 - Daniel Boone The Warrior's Path (December 4, 1960).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E07 - Daniel Boone The Warrior's Path (December 4, 1960)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E07%20-%20Daniel%20Boone%20The%20Warrior's%20Path%20(December%204%2C%201960).mp4",
+            "seconds": 2917,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 488
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "And Chase the Buffalo",
           "airdate": "1960-12-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E08 - Daniel Boone And Chase the Buffalo (December 11, 1960).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E08 - Daniel Boone And Chase the Buffalo (December 11, 1960)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E08%20-%20Daniel%20Boone%20And%20Chase%20the%20Buffalo%20(December%2011%2C%201960).mp4",
+            "seconds": 2899,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 501
+          },
           "alternates": []
         },
         {
@@ -1867,25 +2569,89 @@
           "number": 10,
           "name": "The Postponed Wedding",
           "airdate": "1961-01-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E10 - Zorro The Postponed Wedding (January 1, 1961).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E10 - Zorro The Postponed Wedding (January 1, 1961)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E10%20-%20Zorro%20The%20Postponed%20Wedding%20(January%201%2C%201961).mp4",
+            "seconds": 2943,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 320
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "A Woman's Courage",
           "airdate": "1961-01-08",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E11 - Swamp Fox A Woman's Courage (January 8, 1961).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E11 - Swamp Fox A Woman's Courage (January 8, 1961)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E11%20-%20Swamp%20Fox%20A%20Woman's%20Courage%20(January%208%2C%201961).mp4",
+            "seconds": 2903,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 153
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S07E11 - Swamp Fox A Woman's Courage (January 8, 1961).ia.mp4",
+              "name": "Walt Disney Presents - S07E11 - Swamp Fox A Woman's Courage (January 8, 1961)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S07E11%20-%20Swamp%20Fox%20A%20Woman's%20Courage%20(January%208%2C%201961).ia.mp4",
+              "seconds": 2903,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 153
+            }
+          ]
         },
         {
           "number": 12,
           "name": "Horses for Greene",
           "airdate": "1961-01-15",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E12 - Swamp Fox Horses for Greene (January 15, 1961).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E12 - Swamp Fox Horses for Greene (January 15, 1961)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E12%20-%20Swamp%20Fox%20Horses%20for%20Greene%20(January%2015%2C%201961).mp4",
+            "seconds": 2897,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 145
+          },
+          "alternates": [
+            {
+              "conf": 0.55,
+              "why": "S/E in filename + title match",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "Walt Disney Presents - S07E12 - Swamp Fox Horses for Greene (January 15, 1961).ia.mp4",
+              "name": "Walt Disney Presents - S07E12 - Swamp Fox Horses for Greene (January 15, 1961)",
+              "url": "https://archive.org/download/disney-anthology-television-series/Walt%20Disney%20Presents%20-%20S07E12%20-%20Swamp%20Fox%20Horses%20for%20Greene%20(January%2015%2C%201961).ia.mp4",
+              "seconds": 2897,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 145
+            }
+          ]
         },
         {
           "number": 13,
@@ -1931,24 +2697,60 @@
           "number": 18,
           "name": "The Coyote's Lament",
           "airdate": "1961-03-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E18 - The Coyote's Lament (March 5, 1961).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E18 - The Coyote's Lament (March 5, 1961)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E18%20-%20The%20Coyote's%20Lament%20(March%205%2C%201961).mp4",
+            "seconds": 2945,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 302
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "The Wilderness Road",
           "airdate": "1961-03-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E19 - Daniel Boone The Wilderness Road (March 12, 1961).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E19 - Daniel Boone The Wilderness Road (March 12, 1961)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E19%20-%20Daniel%20Boone%20The%20Wilderness%20Road%20(March%2012%2C%201961).mp4",
+            "seconds": 2897,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 443
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "The Promised Land",
           "airdate": "1961-03-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E20 - Daniel Boone The Promised Land (March 19, 1961).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E20 - Daniel Boone The Promised Land (March 19, 1961)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E20%20-%20Daniel%20Boone%20The%20Promised%20Land%20(March%2019%2C%201961).mp4",
+            "seconds": 2895,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 442
+          },
           "alternates": []
         },
         {
@@ -1963,8 +2765,20 @@
           "number": 22,
           "name": "Auld Acquaintance",
           "airdate": "1961-04-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E22 - Zorro Auld Acquaintance (April 2, 1961).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E22 - Zorro Auld Acquaintance (April 2, 1961)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E22%20-%20Zorro%20Auld%20Acquaintance%20(April%202%2C%201961).mp4",
+            "seconds": 2871,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 260
+          },
           "alternates": []
         },
         {
@@ -1995,8 +2809,20 @@
           "number": 26,
           "name": "Flash, the Teenage Otter",
           "airdate": "1961-04-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E26 - Flash the Teenage Otter (April 30, 1961).mp4",
+            "name": "1958-1961 - Walt Disney Presents/Walt Disney Presents - S07E26 - Flash the Teenage Otter (April 30, 1961)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1958-1961%20-%20Walt%20Disney%20Presents%2FWalt%20Disney%20Presents%20-%20S07E26%20-%20Flash%20the%20Teenage%20Otter%20(April%2030%2C%201961).mp4",
+            "seconds": 2808,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 477
+          },
           "alternates": []
         },
         {
@@ -2056,9 +2882,9 @@
           "number": 1,
           "name": "An Adventure in Color/Mathmagic Land",
           "airdate": "1961-09-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.5,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2100,9 +2926,9 @@
           "number": 5,
           "name": "The Hunting Instinct",
           "airdate": "1961-10-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2120,9 +2946,9 @@
           "number": 6,
           "name": "Inside Donald Duck",
           "airdate": "1961-11-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2164,9 +2990,9 @@
           "number": 10,
           "name": "A Fire Called Jeremiah",
           "airdate": "1961-12-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2184,9 +3010,9 @@
           "number": 11,
           "name": "Kids is Kids",
           "airdate": "1961-12-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2204,9 +3030,9 @@
           "number": 12,
           "name": "Backstage Party",
           "airdate": "1961-12-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2256,9 +3082,9 @@
           "number": 17,
           "name": "Fantasy on Skis",
           "airdate": "1962-02-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2292,9 +3118,9 @@
           "number": 20,
           "name": "Carnival Time",
           "airdate": "1962-03-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2352,9 +3178,9 @@
           "number": 26,
           "name": "Disneyland After Dark",
           "airdate": "1962-04-15",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2377,9 +3203,9 @@
           "number": 1,
           "name": "The Golden Horseshoe Revue",
           "airdate": "1962-09-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2485,9 +3311,9 @@
           "number": 13,
           "name": "Holiday Time at Disneyland",
           "airdate": "1962-12-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2513,8 +3339,20 @@
           "number": 15,
           "name": "Little Dog Lost",
           "airdate": "1963-01-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S09E15 - Little Dog Lost (January 13, 1963).mp4",
+            "name": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S09E15 - Little Dog Lost (January 13, 1963)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1961-1969%20-%20Walt%20Disney's%20Wonderful%20World%20of%20Color%2FWalt%20Disney's%20Wonderful%20World%20of%20Color%20-%20S09E15%20-%20Little%20Dog%20Lost%20(January%2013%2C%201963).mp4",
+            "seconds": 2996,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 372
+          },
           "alternates": []
         },
         {
@@ -2545,9 +3383,9 @@
           "number": 19,
           "name": "Inside Outer Space",
           "airdate": "1963-02-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2589,9 +3427,9 @@
           "number": 23,
           "name": "The Horse with the Flying Tail",
           "airdate": "1963-03-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2646,9 +3484,9 @@
           "number": 3,
           "name": "Fly With Von Drake",
           "airdate": "1963-10-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2666,9 +3504,9 @@
           "number": 4,
           "name": "The Wahoo Bobcat",
           "airdate": "1963-10-20",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2758,9 +3596,9 @@
           "number": 14,
           "name": "Mediterranean Cruise",
           "airdate": "1964-01-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2778,9 +3616,9 @@
           "number": 15,
           "name": "Bristle Face (1)",
           "airdate": "1964-01-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2798,9 +3636,9 @@
           "number": 16,
           "name": "Bristle Face (2)",
           "airdate": "1964-02-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2818,9 +3656,9 @@
           "number": 17,
           "name": "The Scarecrow of Romney Marsh (1)",
           "airdate": "1964-02-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2838,9 +3676,9 @@
           "number": 18,
           "name": "The Scarecrow of Romney Marsh (2)",
           "airdate": "1964-02-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2858,9 +3696,9 @@
           "number": 19,
           "name": "The Scarecrow of Romney Marsh (3)",
           "airdate": "1964-02-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2902,9 +3740,9 @@
           "number": 23,
           "name": "In Shape with Von Drake",
           "airdate": "1964-03-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -2946,9 +3784,9 @@
           "number": 27,
           "name": "Disneyland Goes to the World's Fair",
           "airdate": "1964-05-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3003,8 +3841,20 @@
           "number": 5,
           "name": "The Tenderfoot (1)",
           "airdate": "1964-10-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E05-E07 - The Tenderfoot (October 18, 1964).mp4",
+            "name": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E05-E07 - The Tenderfoot (October 18, 1964)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1961-1969%20-%20Walt%20Disney's%20Wonderful%20World%20of%20Color%2FWalt%20Disney's%20Wonderful%20World%20of%20Color%20-%20S11E05-E07%20-%20The%20Tenderfoot%20(October%2018%2C%201964).mp4",
+            "seconds": 7123,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 2154
+          },
           "alternates": []
         },
         {
@@ -3075,9 +3925,9 @@
           "number": 14,
           "name": "Disneyland 10th Anniversary",
           "airdate": "1965-01-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3095,9 +3945,9 @@
           "number": 15,
           "name": "Ida, the Offbeat Eagle",
           "airdate": "1965-01-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3115,24 +3965,60 @@
           "number": 16,
           "name": "Gallagher (1)",
           "airdate": "1965-01-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E16 - Gallegher (Part 1) (January 24, 1965).mp4",
+            "name": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E16 - Gallegher (Part 1) (January 24, 1965)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1961-1969%20-%20Walt%20Disney's%20Wonderful%20World%20of%20Color%2FWalt%20Disney's%20Wonderful%20World%20of%20Color%20-%20S11E16%20-%20Gallegher%20(Part%201)%20(January%2024%2C%201965).mp4",
+            "seconds": 2863,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 139
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "Gallegher (2)",
           "airdate": "1965-01-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E17 - Gallegher (Part 2) (January 31, 1965).mp4",
+            "name": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E17 - Gallegher (Part 2) (January 31, 1965)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1961-1969%20-%20Walt%20Disney's%20Wonderful%20World%20of%20Color%2FWalt%20Disney's%20Wonderful%20World%20of%20Color%20-%20S11E17%20-%20Gallegher%20(Part%202)%20(January%2031%2C%201965).mp4",
+            "seconds": 3000,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 239
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "Gallegher (3)",
           "airdate": "1965-02-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E18 - Gallegher (Part 3) (February 7, 1965).mp4",
+            "name": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E18 - Gallegher (Part 3) (February 7, 1965)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1961-1969%20-%20Walt%20Disney's%20Wonderful%20World%20of%20Color%2FWalt%20Disney's%20Wonderful%20World%20of%20Color%20-%20S11E18%20-%20Gallegher%20(Part%203)%20(February%207%2C%201965).mp4",
+            "seconds": 2889,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 140
+          },
           "alternates": []
         },
         {
@@ -3163,24 +4049,60 @@
           "number": 22,
           "name": "Kilroy I",
           "airdate": "1965-03-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E22 - Kilroy (Part 1) (March 14, 1965).mp4",
+            "name": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E22 - Kilroy (Part 1) (March 14, 1965)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1961-1969%20-%20Walt%20Disney's%20Wonderful%20World%20of%20Color%2FWalt%20Disney's%20Wonderful%20World%20of%20Color%20-%20S11E22%20-%20Kilroy%20(Part%201)%20(March%2014%2C%201965).mp4",
+            "seconds": 2948,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 511
+          },
           "alternates": []
         },
         {
           "number": 23,
           "name": "Kilroy II",
           "airdate": "1965-03-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E23 - Kilroy (Part 2) (March 21, 1965).mp4",
+            "name": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E23 - Kilroy (Part 2) (March 21, 1965)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1961-1969%20-%20Walt%20Disney's%20Wonderful%20World%20of%20Color%2FWalt%20Disney's%20Wonderful%20World%20of%20Color%20-%20S11E23%20-%20Kilroy%20(Part%202)%20(March%2021%2C%201965).mp4",
+            "seconds": 2933,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 507
+          },
           "alternates": []
         },
         {
           "number": 24,
           "name": "Kilroy III",
           "airdate": "1965-03-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E24 - Kilroy (Part 3) (March 28, 1965).mp4",
+            "name": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S11E24 - Kilroy (Part 3) (March 28, 1965)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1961-1969%20-%20Walt%20Disney's%20Wonderful%20World%20of%20Color%2FWalt%20Disney's%20Wonderful%20World%20of%20Color%20-%20S11E24%20-%20Kilroy%20(Part%203)%20(March%2028%2C%201965).mp4",
+            "seconds": 2944,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 508
+          },
           "alternates": []
         },
         {
@@ -3208,9 +4130,9 @@
           "number": 2,
           "name": "A Case of Murder",
           "airdate": "1965-09-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3228,9 +4150,9 @@
           "number": 3,
           "name": "The Big Swindle",
           "airdate": "1965-10-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3248,9 +4170,9 @@
           "number": 4,
           "name": "The Daily Press vs. City Hall",
           "airdate": "1965-10-10",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3262,7 +4184,21 @@
             "playable": true,
             "sizeMB": 228
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.85,
+              "why": "S/E in filename",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S12E04 - The Daily Press VS. City Hall (October 10, 1965).ia.mp4",
+              "name": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S12E04 - The Daily Press VS",
+              "url": "https://archive.org/download/disney-anthology-television-series/1961-1969%20-%20Walt%20Disney's%20Wonderful%20World%20of%20Color%2FWalt%20Disney's%20Wonderful%20World%20of%20Color%20-%20S12E04%20-%20The%20Daily%20Press%20VS.%20City%20Hall%20(October%2010%2C%201965).ia.mp4",
+              "seconds": 2818,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 228
+            }
+          ]
         },
         {
           "number": 5,
@@ -3356,9 +4292,9 @@
           "number": 16,
           "name": "Music for Everybody",
           "airdate": "1966-01-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3493,9 +4429,9 @@
           "number": 7,
           "name": "Showdown with the Sundown Kid",
           "airdate": "1966-10-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3513,9 +4449,9 @@
           "number": 8,
           "name": "Crusading Reporter",
           "airdate": "1966-10-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3533,9 +4469,9 @@
           "number": 9,
           "name": "A Ranger's Guide to Nature",
           "airdate": "1966-11-13",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3585,9 +4521,9 @@
           "number": 14,
           "name": "Disneyland Around the Seasons",
           "airdate": "1966-12-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3629,9 +4565,9 @@
           "number": 18,
           "name": "Tragedy on the Trail",
           "airdate": "1967-01-29",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3649,9 +4585,9 @@
           "number": 19,
           "name": "Trial by Terror",
           "airdate": "1967-02-05",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3709,9 +4645,9 @@
           "number": 25,
           "name": "Salute to Alaska, A",
           "airdate": "1967-04-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3838,9 +4774,9 @@
           "number": 14,
           "name": "Way Down Cellar (1)",
           "airdate": "1968-01-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3858,9 +4794,9 @@
           "number": 15,
           "name": "Way Down Cellar (2)",
           "airdate": "1968-01-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3878,9 +4814,9 @@
           "number": 16,
           "name": "Disneyland: From the Pirates of the Caribbean to the World of Tomorrow",
           "airdate": "1968-01-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.5,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3914,8 +4850,20 @@
           "number": 19,
           "name": "My Family is a Menagerie",
           "airdate": "1968-02-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S14E19 - My Family Is a Menagerie (February 11, 1968).mp4",
+            "name": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S14E19 - My Family Is a Menagerie (February 11, 1968)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1961-1969%20-%20Walt%20Disney's%20Wonderful%20World%20of%20Color%2FWalt%20Disney's%20Wonderful%20World%20of%20Color%20-%20S14E19%20-%20My%20Family%20Is%20a%20Menagerie%20(February%2011%2C%201968).mp4",
+            "seconds": 2840,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 245
+          },
           "alternates": []
         },
         {
@@ -3946,9 +4894,9 @@
           "number": 23,
           "name": "The Ranger of Brownstone",
           "airdate": "1968-03-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3966,9 +4914,9 @@
           "number": 24,
           "name": "The Mystery of Edward Simms (1)",
           "airdate": "1968-03-31",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -3986,9 +4934,9 @@
           "number": 25,
           "name": "The Mystery of Edward Simms (2)",
           "airdate": "1968-04-07",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -4051,9 +4999,9 @@
           "number": 4,
           "name": "Pacifically Peeking",
           "airdate": "1968-10-06",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -4095,9 +5043,9 @@
           "number": 8,
           "name": "The Treasure of San Bosco Reef (1)",
           "airdate": "1968-11-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -4109,14 +5057,40 @@
             "playable": true,
             "sizeMB": 418
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Treasure of San Bosco Reef (1)\" (0.95)",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S15E09 - The Treasure of San Bosco Reef (Part 2) (December 1, 1968).mp4",
+              "name": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S15E09 - The Treasure of San Bosco Reef (Part 2) (December 1, 1968)",
+              "url": "https://archive.org/download/disney-anthology-television-series/1961-1969%20-%20Walt%20Disney's%20Wonderful%20World%20of%20Color%2FWalt%20Disney's%20Wonderful%20World%20of%20Color%20-%20S15E09%20-%20The%20Treasure%20of%20San%20Bosco%20Reef%20(Part%202)%20(December%201%2C%201968).mp4",
+              "seconds": 2902,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 411
+            }
+          ]
         },
         {
           "number": 9,
           "name": "The Treasure of San Bosco Reef (2)",
           "airdate": "1968-12-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S15E09 - The Treasure of San Bosco Reef (Part 2) (December 1, 1968).mp4",
+            "name": "1961-1969 - Walt Disney's Wonderful World of Color/Walt Disney's Wonderful World of Color - S15E09 - The Treasure of San Bosco Reef (Part 2) (December 1, 1968)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1961-1969%20-%20Walt%20Disney's%20Wonderful%20World%20of%20Color%2FWalt%20Disney's%20Wonderful%20World%20of%20Color%20-%20S15E09%20-%20The%20Treasure%20of%20San%20Bosco%20Reef%20(Part%202)%20(December%201%2C%201968).mp4",
+            "seconds": 2902,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 411
+          },
           "alternates": []
         },
         {
@@ -4179,9 +5153,9 @@
           "number": 17,
           "name": "The Secret of Boyne Castle (1)",
           "airdate": "1969-02-09",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -4199,9 +5173,9 @@
           "number": 18,
           "name": "The Secret of Boyne Castle (2)",
           "airdate": "1969-02-16",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -4219,9 +5193,9 @@
           "number": 19,
           "name": "The Secret of Boyne Castle (3)",
           "airdate": "1969-02-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -6359,9 +7333,9 @@
           "number": 1,
           "name": "Disneyland's 25th Anniversary Show",
           "airdate": "1980-09-14",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.5,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -6395,9 +7369,9 @@
           "number": 4,
           "name": "The Mouseketeer Reunion",
           "airdate": "1980-11-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -6540,8 +7514,20 @@
           "number": 10,
           "name": "The Cherokee Trail",
           "airdate": "1981-11-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1981-1986 - Walt Disney/Walt Disney - S28E10 - The Cherokee Trail (November 28, 1981).mp4",
+            "name": "1981-1986 - Walt Disney/Walt Disney - S28E10 - The Cherokee Trail (November 28, 1981)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1981-1986%20-%20Walt%20Disney%2FWalt%20Disney%20-%20S28E10%20-%20The%20Cherokee%20Trail%20(November%2028%2C%201981).mp4",
+            "seconds": 2579,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 179
+          },
           "alternates": []
         },
         {
@@ -6612,8 +7598,20 @@
           "number": 19,
           "name": "Beyond Witch Mountain",
           "airdate": "1982-02-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1981-1986 - Walt Disney/Walt Disney - S28E19 - Beyond Witch Mountain (February 21, 1982).mp4",
+            "name": "1981-1986 - Walt Disney/Walt Disney - S28E19 - Beyond Witch Mountain (February 21, 1982)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1981-1986%20-%20Walt%20Disney%2FWalt%20Disney%20-%20S28E19%20-%20Beyond%20Witch%20Mountain%20(February%2021%2C%201982).mp4",
+            "seconds": 2885,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 127
+          },
           "alternates": []
         },
         {
@@ -6636,8 +7634,20 @@
           "number": 22,
           "name": "The Adventures of Pollyanna",
           "airdate": "1982-04-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1981-1986 - Walt Disney/Walt Disney - S28E22 - The Adventures of Pollyanna (April 10, 1982).mp4",
+            "name": "1981-1986 - Walt Disney/Walt Disney - S28E22 - The Adventures of Pollyanna (April 10, 1982)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1981-1986%20-%20Walt%20Disney%2FWalt%20Disney%20-%20S28E22%20-%20The%20Adventures%20of%20Pollyanna%20(April%2010%2C%201982).mp4",
+            "seconds": 2891,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 425
+          },
           "alternates": []
         },
         {
@@ -6697,16 +7707,40 @@
           "number": 5,
           "name": "EPCOT Center: The Opening Celebration",
           "airdate": "1982-10-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1981-1986 - Walt Disney/Walt Disney - S29E05 - EPCOT Center The Opening Celebration (October 23, 1982).mp4",
+            "name": "1981-1986 - Walt Disney/Walt Disney - S29E05 - EPCOT Center The Opening Celebration (October 23, 1982)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1981-1986%20-%20Walt%20Disney%2FWalt%20Disney%20-%20S29E05%20-%20EPCOT%20Center%20The%20Opening%20Celebration%20(October%2023%2C%201982).mp4",
+            "seconds": 2983,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 235
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Disney's Halloween Treat",
           "airdate": "1982-10-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1981-1986 - Walt Disney/Walt Disney - S29E06 - Disney's Halloween Treat (October 30, 1982).mp4",
+            "name": "1981-1986 - Walt Disney/Walt Disney - S29E06 - Disney's Halloween Treat (October 30, 1982)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1981-1986%20-%20Walt%20Disney%2FWalt%20Disney%20-%20S29E06%20-%20Disney's%20Halloween%20Treat%20(October%2030%2C%201982).mp4",
+            "seconds": 2956,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 819
+          },
           "alternates": []
         },
         {
@@ -6838,8 +7872,20 @@
           "number": 4,
           "name": "2 1/2 Dads",
           "airdate": "1986-02-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S30E04 - 2-½ Dads (February 16, 1986).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S30E04 - 2-½ Dads (February 16, 1986)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S30E04%20-%202-%C2%BD%20Dads%20(February%2016%2C%201986).mp4",
+            "seconds": 2841,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 273
+          },
           "alternates": []
         },
         {
@@ -6862,8 +7908,20 @@
           "number": 7,
           "name": "The Richest Cat in the World",
           "airdate": "1986-03-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S30E07 - The Richest Cat in the World (March 9, 1986).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S30E07 - The Richest Cat in the World (March 9, 1986)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S30E07%20-%20The%20Richest%20Cat%20in%20the%20World%20(March%209%2C%201986).mp4",
+            "seconds": 7532,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 353
+          },
           "alternates": []
         },
         {
@@ -6894,8 +7952,20 @@
           "number": 11,
           "name": "Mr. Boogedy",
           "airdate": "1986-04-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S30E11 - Mr. Boogedy (April 20, 1986).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S30E11 - Mr. Boogedy (April 20, 1986)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S30E11%20-%20Mr.%20Boogedy%20(April%2020%2C%201986).mp4",
+            "seconds": 3423,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 234
+          },
           "alternates": []
         },
         {
@@ -6918,16 +7988,40 @@
           "number": 14,
           "name": "The Deacon Street Deer",
           "airdate": "1986-05-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"The Deacon Street Deer\" (0.95)",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S30E15 - Fuzz Bucket - The Deacon Street Deer (May 18, 1986).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S30E15 - Fuzz Bucket - The Deacon Street Deer (May 18, 1986)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S30E15%20-%20Fuzz%20Bucket%20-%20The%20Deacon%20Street%20Deer%20(May%2018%2C%201986).mp4",
+            "seconds": 2868,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 114
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Fuzzbucket",
           "airdate": "1986-05-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S30E15 - Fuzz Bucket - The Deacon Street Deer (May 18, 1986).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S30E15 - Fuzz Bucket - The Deacon Street Deer (May 18, 1986)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S30E15%20-%20Fuzz%20Bucket%20-%20The%20Deacon%20Street%20Deer%20(May%2018%2C%201986).mp4",
+            "seconds": 2868,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 114
+          },
           "alternates": []
         },
         {
@@ -6942,8 +8036,20 @@
           "number": 17,
           "name": "My Town",
           "airdate": "1986-05-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S30E17 - My Town (May 25, 1986).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S30E17 - My Town (May 25, 1986)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S30E17%20-%20My%20Town%20(May%2025%2C%201986).mp4",
+            "seconds": 2671,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 456
+          },
           "alternates": []
         },
         {
@@ -6963,9 +8069,9 @@
           "number": 1,
           "name": "Pete's Dragon",
           "airdate": "1986-09-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -7007,9 +8113,9 @@
           "number": 5,
           "name": "Ask Max",
           "airdate": "1986-11-02",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -7091,9 +8197,9 @@
           "number": 14,
           "name": "Great Moments in Disney Animation",
           "airdate": "1987-01-18",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.5,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -7111,9 +8217,9 @@
           "number": 15,
           "name": "Double Switch",
           "airdate": "1987-01-25",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -7235,9 +8341,9 @@
           "number": 29,
           "name": "Disney's Fluppy Dogs",
           "airdate": "1987-08-30",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.5,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -7300,8 +8406,20 @@
           "number": 6,
           "name": "Student Exchange (1)",
           "airdate": "1987-11-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E06 - A Muppet Family Christmas (December 16, 1987).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E06 - A Muppet Family Christmas (December 16, 1987)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S32E06%20-%20A%20Muppet%20Family%20Christmas%20(December%2016%2C%201987).mp4",
+            "seconds": 3349,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 325
+          },
           "alternates": []
         },
         {
@@ -7332,16 +8450,40 @@
           "number": 10,
           "name": "Flight of the Navigator (1)",
           "airdate": "1988-01-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Flight of the Navigator (1)\" (0.95)",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E13 - Flight of the Navigator (Part 1) (January 3, 1988).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E13 - Flight of the Navigator (Part 1) (January 3, 1988)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S32E13%20-%20Flight%20of%20the%20Navigator%20(Part%201)%20(January%203%2C%201988).mp4",
+            "seconds": 3348,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 579
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Flight of the Navigator (2)",
           "airdate": "1988-01-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Flight of the Navigator (2)\" (0.95)",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E14 - Flight of the Navigator (Part 2) (January 10, 1988).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E14 - Flight of the Navigator (Part 2) (January 10, 1988)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S32E14%20-%20Flight%20of%20the%20Navigator%20(Part%202)%20(January%2010%2C%201988).mp4",
+            "seconds": 3305,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 574
+          },
           "alternates": []
         },
         {
@@ -7356,16 +8498,40 @@
           "number": 13,
           "name": "Earth*Star Voyager (2)",
           "airdate": "1988-01-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E13 - Flight of the Navigator (Part 1) (January 3, 1988).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E13 - Flight of the Navigator (Part 1) (January 3, 1988)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S32E13%20-%20Flight%20of%20the%20Navigator%20(Part%201)%20(January%203%2C%201988).mp4",
+            "seconds": 3348,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 579
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "Rock and Roll Mom",
           "airdate": "1988-02-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E14 - Flight of the Navigator (Part 2) (January 10, 1988).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E14 - Flight of the Navigator (Part 2) (January 10, 1988)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S32E14%20-%20Flight%20of%20the%20Navigator%20(Part%202)%20(January%2010%2C%201988).mp4",
+            "seconds": 3305,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 574
+          },
           "alternates": []
         },
         {
@@ -7404,24 +8570,60 @@
           "number": 19,
           "name": "Captain EO Backstage",
           "airdate": "1988-05-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "title ~ \"Captain EO Backstage\" (0.63)",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S31E00 - Disney's Captain EO Grand Opening (September 20, 1986).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S31E00 - Disney's Captain EO Grand Opening (September 20, 1986)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S31E00%20-%20Disney's%20Captain%20EO%20Grand%20Opening%20(September%2020%2C%201986).mp4",
+            "seconds": 2865,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 224
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "Justin Case",
           "airdate": "1988-05-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Justin Case\" (0.95)",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E21 - Justin Case (May 15, 1988).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E21 - Justin Case (May 15, 1988)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S32E21%20-%20Justin%20Case%20(May%2015%2C%201988).mp4",
+            "seconds": 4257,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 600
+          },
           "alternates": []
         },
         {
           "number": 21,
           "name": "Meet the Munceys",
           "airdate": "1988-05-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E21 - Justin Case (May 15, 1988).mp4",
+            "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E21 - Justin Case (May 15, 1988)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S32E21%20-%20Justin%20Case%20(May%2015%2C%201988).mp4",
+            "seconds": 4257,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 600
+          },
           "alternates": []
         }
       ]
@@ -7433,8 +8635,20 @@
           "number": 1,
           "name": "The Magical World of Disney",
           "airdate": "1988-10-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E01 - The Magical World of Disney (October 9, 1988).mp4",
+            "name": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E01 - The Magical World of Disney (October 9, 1988)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1988-1997%20-%20The%20Magical%20World%20of%20Disney%2FThe%20Magical%20World%20of%20Disney%20-%20S33E01%20-%20The%20Magical%20World%20of%20Disney%20(October%209%2C%201988).mp4",
+            "seconds": 3244,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 160
+          },
           "alternates": []
         },
         {
@@ -7449,16 +8663,40 @@
           "number": 3,
           "name": "Mickey's 60th Birthday",
           "airdate": "1988-11-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Mickey's 60th Birthday\" (0.95)",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E04 - Mickey's 60th Birthday (November 13, 1988).mp4",
+            "name": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E04 - Mickey's 60th Birthday (November 13, 1988)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1988-1997%20-%20The%20Magical%20World%20of%20Disney%2FThe%20Magical%20World%20of%20Disney%20-%20S33E04%20-%20Mickey's%2060th%20Birthday%20(November%2013%2C%201988).mp4",
+            "seconds": 2873,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 138
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Davy Crockett: Rainbow in the Thunder",
           "airdate": "1988-11-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E04 - Mickey's 60th Birthday (November 13, 1988).mp4",
+            "name": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E04 - Mickey's 60th Birthday (November 13, 1988)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1988-1997%20-%20The%20Magical%20World%20of%20Disney%2FThe%20Magical%20World%20of%20Disney%20-%20S33E04%20-%20Mickey's%2060th%20Birthday%20(November%2013%2C%201988).mp4",
+            "seconds": 2873,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 138
+          },
           "alternates": []
         },
         {
@@ -7497,16 +8735,40 @@
           "number": 9,
           "name": "Disney's Golden Anniversary of Snow White and the Seven Dwarfs",
           "airdate": "1988-12-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Disney's Golden Anniversary of Snow White and the Seven Dwarfs\" (0.95)",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E10 - Disney's Golden Anniversary of Snow White and the Seven Dwarfs (December 25, 1988).mp4",
+            "name": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E10 - Disney's Golden Anniversary of Snow White and the Seven Dwarfs (December 25, 1988)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1988-1997%20-%20The%20Magical%20World%20of%20Disney%2FThe%20Magical%20World%20of%20Disney%20-%20S33E10%20-%20Disney's%20Golden%20Anniversary%20of%20Snow%20White%20and%20the%20Seven%20Dwarfs%20(December%2025%2C%201988).mp4",
+            "seconds": 2748,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 205
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "An All-New Adventure of Disney's Sport Goofy",
           "airdate": "1989-01-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E10 - Disney's Golden Anniversary of Snow White and the Seven Dwarfs (December 25, 1988).mp4",
+            "name": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E10 - Disney's Golden Anniversary of Snow White and the Seven Dwarfs (December 25, 1988)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1988-1997%20-%20The%20Magical%20World%20of%20Disney%2FThe%20Magical%20World%20of%20Disney%20-%20S33E10%20-%20Disney's%20Golden%20Anniversary%20of%20Snow%20White%20and%20the%20Seven%20Dwarfs%20(December%2025%2C%201988).mp4",
+            "seconds": 2748,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 205
+          },
           "alternates": []
         },
         {
@@ -7521,16 +8783,40 @@
           "number": 12,
           "name": "Wild Jack (#1)",
           "airdate": "1989-01-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Wild Jack (#1)\" (0.95)",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E13 - Wild Jack (Part 1) (January 15, 1989).mp4",
+            "name": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E13 - Wild Jack (Part 1) (January 15, 1989)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1988-1997%20-%20The%20Magical%20World%20of%20Disney%2FThe%20Magical%20World%20of%20Disney%20-%20S33E13%20-%20Wild%20Jack%20(Part%201)%20(January%2015%2C%201989).mp4",
+            "seconds": 2698,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 379
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Winnie the Pooh & A Day for Eeyore",
           "airdate": "1989-01-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E13 - Wild Jack (Part 1) (January 15, 1989).mp4",
+            "name": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E13 - Wild Jack (Part 1) (January 15, 1989)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1988-1997%20-%20The%20Magical%20World%20of%20Disney%2FThe%20Magical%20World%20of%20Disney%20-%20S33E13%20-%20Wild%20Jack%20(Part%201)%20(January%2015%2C%201989).mp4",
+            "seconds": 2698,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 379
+          },
           "alternates": []
         },
         {
@@ -7657,8 +8943,20 @@
           "number": 29,
           "name": "Disney's Magic in the Magic Kingdom",
           "airdate": "1989-07-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.75,
+            "why": "title ~ \"Disney's Magic in the Magic Kingdom\" (0.95)",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E30 - Disney's Magic in the Magic Kingdom (July 23, 1989).mp4",
+            "name": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S33E30 - Disney's Magic in the Magic Kingdom (July 23, 1989)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1988-1997%20-%20The%20Magical%20World%20of%20Disney%2FThe%20Magical%20World%20of%20Disney%20-%20S33E30%20-%20Disney's%20Magic%20in%20the%20Magic%20Kingdom%20(July%2023%2C%201989).mp4",
+            "seconds": 3325,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 371
+          },
           "alternates": []
         }
       ]
@@ -7750,9 +9048,9 @@
           "number": 11,
           "name": "A Muppet Family Christmas",
           "airdate": "1989-12-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -7764,7 +9062,21 @@
             "playable": true,
             "sizeMB": 280
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"A Muppet Family Christmas\" (0.95)",
+              "item": "disney-anthology-television-series",
+              "itemTitle": "Disney anthology television series",
+              "file": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E06 - A Muppet Family Christmas (December 16, 1987).mp4",
+              "name": "1986-1988 - The Disney Sunday Movie/The Disney Sunday Movie - S32E06 - A Muppet Family Christmas (December 16, 1987)",
+              "url": "https://archive.org/download/disney-anthology-television-series/1986-1988%20-%20The%20Disney%20Sunday%20Movie%2FThe%20Disney%20Sunday%20Movie%20-%20S32E06%20-%20A%20Muppet%20Family%20Christmas%20(December%2016%2C%201987).mp4",
+              "seconds": 3349,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 325
+            }
+          ]
         },
         {
           "number": 12,
@@ -7794,9 +9106,9 @@
           "number": 15,
           "name": "Disneyland's 35th Anniversary Celebration",
           "airdate": "1990-02-04",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -7931,9 +9243,9 @@
           "number": 4,
           "name": "The Muppets Celebrate Jim Henson",
           "airdate": "1990-11-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -7999,9 +9311,9 @@
           "number": 11,
           "name": "Tag Team",
           "airdate": "1991-01-26",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -8051,8 +9363,20 @@
           "number": 16,
           "name": "The Best Of Disney: 50 Years Of Magic",
           "airdate": "1991-05-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S35E16 - The Best Of Disney 50 year of Magic (May 20, 1991).mp4",
+            "name": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S35E16 - The Best Of Disney 50 year of Magic (May 20, 1991)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1988-1997%20-%20The%20Magical%20World%20of%20Disney%2FThe%20Magical%20World%20of%20Disney%20-%20S35E16%20-%20The%20Best%20Of%20Disney%2050%20year%20of%20Magic%20(May%2020%2C%201991).mp4",
+            "seconds": 6806,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 817
+          },
           "alternates": []
         },
         {
@@ -8128,9 +9452,9 @@
           "number": 3,
           "name": "Who Framed Roger Rabbit",
           "airdate": "1991-11-12",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.55,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -8209,9 +9533,9 @@
           "number": 1,
           "name": "Disney Christmas Fantasy on Ice",
           "airdate": "1992-12-19",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.5,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -8245,9 +9569,9 @@
           "number": 4,
           "name": "The Best of Disney Music: A Legacy in Song",
           "airdate": "1993-05-21",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.5,
+            "conf": 1,
             "why": "S/E in filename + title match",
             "item": "disney-anthology-television-series",
             "itemTitle": "Disney anthology television series",
@@ -8395,8 +9719,20 @@
           "number": 10,
           "name": "The Wonderful World of Disney: Forty Years of Adventure",
           "airdate": "1995-03-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.85,
+            "why": "S/E in filename",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S39E10 - Forty Years Of Adventure (March 4, 1995).mp4",
+            "name": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S39E10 - Forty Years Of Adventure (March 4, 1995)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1988-1997%20-%20The%20Magical%20World%20of%20Disney%2FThe%20Magical%20World%20of%20Disney%20-%20S39E10%20-%20Forty%20Years%20Of%20Adventure%20(March%204%2C%201995).mp4",
+            "seconds": 2631,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 174
+          },
           "alternates": []
         },
         {
@@ -8525,8 +9861,20 @@
           "number": 3,
           "name": "Beauty and the Beast: A Concert on Ice",
           "airdate": "1996-12-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "S/E in filename + title match",
+            "item": "disney-anthology-television-series",
+            "itemTitle": "Disney anthology television series",
+            "file": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S41E03 - Beauty and the Beast A Concert on Ice (December 8, 1996).mp4",
+            "name": "1988-1997 - The Magical World of Disney/The Magical World of Disney - S41E03 - Beauty and the Beast A Concert on Ice (December 8, 1996)",
+            "url": "https://archive.org/download/disney-anthology-television-series/1988-1997%20-%20The%20Magical%20World%20of%20Disney%2FThe%20Magical%20World%20of%20Disney%20-%20S41E03%20-%20Beauty%20and%20the%20Beast%20A%20Concert%20on%20Ice%20(December%208%2C%201996).mp4",
+            "seconds": 2703,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 375
+          },
           "alternates": []
         },
         {

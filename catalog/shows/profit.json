@@ -3,7 +3,7 @@
   "slug": "profit",
   "type": "2000s and Later Sitcoms",
   "network": "FOX",
-  "matchedAt": "2026-10-22T23:36:12.701Z",
+  "matchedAt": "2026-10-26T19:02:01.113Z",
   "addedAt": "2026-10-22T23:36:12.701Z",
   "tvmaze": {
     "id": 10990,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 9,
-    "live": 8,
-    "review": 0,
+    "live": 7,
+    "review": 1,
     "missing": 1,
     "pct": 89
   },
@@ -159,7 +159,21 @@
           },
           "alternates": [
             {
-              "conf": 0.85,
+              "conf": 0.8,
+              "why": "title ~ \"Healing\" (0.95)",
+              "item": "profit1996",
+              "itemTitle": "Profit (1996)",
+              "file": "Profit.s01e04.Healing.DVDRip.xvid-DIMENSION.mp4",
+              "name": "Profit.s01e04.Healing.DVDRip.xvid-DIMENSION",
+              "url": "https://archive.org/download/profit1996/Profit.s01e04.Healing.DVDRip.xvid-DIMENSION.mp4",
+              "seconds": 2666,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (xvid)",
+              "sizeMB": 265
+            },
+            {
+              "conf": 0.84,
               "why": "S/E in filename + title match",
               "item": "profit.-1996.-s-01-french",
               "itemTitle": "Profit 1996 Saison 01 FRENCH",
@@ -173,7 +187,7 @@
               "sizeMB": 322
             },
             {
-              "conf": 0.85,
+              "conf": 0.84,
               "why": "S/E in filename + title match",
               "item": "profit.-1996.-s-01-french",
               "itemTitle": "Profit 1996 Saison 01 FRENCH",
@@ -185,20 +199,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 322
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Healing\" (0.95)",
-              "item": "profit1996",
-              "itemTitle": "Profit (1996)",
-              "file": "Profit.s01e04.Healing.DVDRip.xvid-DIMENSION.mp4",
-              "name": "Profit.s01e04.Healing.DVDRip.xvid-DIMENSION",
-              "url": "https://archive.org/download/profit1996/Profit.s01e04.Healing.DVDRip.xvid-DIMENSION.mp4",
-              "seconds": 2666,
-              "format": "h.264",
-              "playable": true,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 265
             }
           ]
         },
@@ -223,7 +223,21 @@
           },
           "alternates": [
             {
-              "conf": 0.85,
+              "conf": 0.8,
+              "why": "title ~ \"Cupid\" (0.95)",
+              "item": "profit1996",
+              "itemTitle": "Profit (1996)",
+              "file": "Profit.s01e05.Cupid.DVDRip.xvid-DIMENSION.mp4",
+              "name": "Profit.s01e05.Cupid.DVDRip.xvid-DIMENSION",
+              "url": "https://archive.org/download/profit1996/Profit.s01e05.Cupid.DVDRip.xvid-DIMENSION.mp4",
+              "seconds": 2664,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (xvid)",
+              "sizeMB": 264
+            },
+            {
+              "conf": 0.84,
               "why": "S/E in filename + title match",
               "item": "profit.-1996.-s-01-french",
               "itemTitle": "Profit 1996 Saison 01 FRENCH",
@@ -237,7 +251,7 @@
               "sizeMB": 299
             },
             {
-              "conf": 0.85,
+              "conf": 0.84,
               "why": "S/E in filename + title match",
               "item": "profit.-1996.-s-01-french",
               "itemTitle": "Profit 1996 Saison 01 FRENCH",
@@ -249,20 +263,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 299
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Cupid\" (0.95)",
-              "item": "profit1996",
-              "itemTitle": "Profit (1996)",
-              "file": "Profit.s01e05.Cupid.DVDRip.xvid-DIMENSION.mp4",
-              "name": "Profit.s01e05.Cupid.DVDRip.xvid-DIMENSION",
-              "url": "https://archive.org/download/profit1996/Profit.s01e05.Cupid.DVDRip.xvid-DIMENSION.mp4",
-              "seconds": 2664,
-              "format": "h.264",
-              "playable": true,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 264
             }
           ]
         },
@@ -351,7 +351,21 @@
           },
           "alternates": [
             {
-              "conf": 0.85,
+              "conf": 0.8,
+              "why": "title ~ \"Security\" (0.95)",
+              "item": "profit1996",
+              "itemTitle": "Profit (1996)",
+              "file": "Profit.s01e07.Security.DVDRip.xvid-DIMENSION.mp4",
+              "name": "Profit.s01e07.Security.DVDRip.xvid-DIMENSION",
+              "url": "https://archive.org/download/profit1996/Profit.s01e07.Security.DVDRip.xvid-DIMENSION.mp4",
+              "seconds": 2671,
+              "format": "h.264",
+              "playable": true,
+              "codecRisk": "video (xvid)",
+              "sizeMB": 264
+            },
+            {
+              "conf": 0.84,
               "why": "S/E in filename + title match",
               "item": "profit.-1996.-s-01-french",
               "itemTitle": "Profit 1996 Saison 01 FRENCH",
@@ -365,7 +379,7 @@
               "sizeMB": 273
             },
             {
-              "conf": 0.85,
+              "conf": 0.84,
               "why": "S/E in filename + title match",
               "item": "profit.-1996.-s-01-french",
               "itemTitle": "Profit 1996 Saison 01 FRENCH",
@@ -377,20 +391,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 273
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Security\" (0.95)",
-              "item": "profit1996",
-              "itemTitle": "Profit (1996)",
-              "file": "Profit.s01e07.Security.DVDRip.xvid-DIMENSION.mp4",
-              "name": "Profit.s01e07.Security.DVDRip.xvid-DIMENSION",
-              "url": "https://archive.org/download/profit1996/Profit.s01e07.Security.DVDRip.xvid-DIMENSION.mp4",
-              "seconds": 2671,
-              "format": "h.264",
-              "playable": true,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 264
             }
           ]
         },
@@ -398,24 +398,38 @@
           "number": 9,
           "name": "Forgiveness",
           "airdate": "",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.85,
-            "why": "S/E in filename + title match",
-            "item": "profit.-1996.-s-01-french",
-            "itemTitle": "Profit 1996 Saison 01 FRENCH",
-            "file": "Profit.1996.S01E09.FINAL.FRENCH.Forgiveness.DVDRIP.H264.AAC.JAJA.ia.mp4",
-            "name": "Profit.1996.S01E09.FINAL.FRENCH.Forgiveness.DVDRIP.H264.AAC",
-            "url": "https://archive.org/download/profit.-1996.-s-01-french/Profit.1996.S01E09.FINAL.FRENCH.Forgiveness.DVDRIP.H264.AAC.JAJA.ia.mp4",
-            "seconds": 2557,
-            "format": "h.264 IA",
+            "conf": 0.8,
+            "why": "title ~ \"Forgiveness\" (0.95)",
+            "item": "profit1996",
+            "itemTitle": "Profit (1996)",
+            "file": "Profit.s01e08.Forgiveness.DVDRip.xvid-DIMENSION.mp4",
+            "name": "Profit.s01e08.Forgiveness.DVDRip.xvid-DIMENSION",
+            "url": "https://archive.org/download/profit1996/Profit.s01e08.Forgiveness.DVDRip.xvid-DIMENSION.mp4",
+            "seconds": 2670,
+            "format": "h.264",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 289
+            "codecRisk": "video (xvid)",
+            "sizeMB": 264
           },
           "alternates": [
             {
-              "conf": 0.85,
+              "conf": 0.84,
+              "why": "S/E in filename + title match",
+              "item": "profit.-1996.-s-01-french",
+              "itemTitle": "Profit 1996 Saison 01 FRENCH",
+              "file": "Profit.1996.S01E09.FINAL.FRENCH.Forgiveness.DVDRIP.H264.AAC.JAJA.ia.mp4",
+              "name": "Profit.1996.S01E09.FINAL.FRENCH.Forgiveness.DVDRIP.H264.AAC",
+              "url": "https://archive.org/download/profit.-1996.-s-01-french/Profit.1996.S01E09.FINAL.FRENCH.Forgiveness.DVDRIP.H264.AAC.JAJA.ia.mp4",
+              "seconds": 2557,
+              "format": "h.264 IA",
+              "playable": true,
+              "langRisk": true,
+              "sizeMB": 289
+            },
+            {
+              "conf": 0.84,
               "why": "S/E in filename + title match",
               "item": "profit.-1996.-s-01-french",
               "itemTitle": "Profit 1996 Saison 01 FRENCH",
@@ -427,20 +441,6 @@
               "playable": true,
               "langRisk": true,
               "sizeMB": 289
-            },
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Forgiveness\" (0.95)",
-              "item": "profit1996",
-              "itemTitle": "Profit (1996)",
-              "file": "Profit.s01e08.Forgiveness.DVDRip.xvid-DIMENSION.mp4",
-              "name": "Profit.s01e08.Forgiveness.DVDRip.xvid-DIMENSION",
-              "url": "https://archive.org/download/profit1996/Profit.s01e08.Forgiveness.DVDRip.xvid-DIMENSION.mp4",
-              "seconds": 2670,
-              "format": "h.264",
-              "playable": true,
-              "codecRisk": "video (xvid)",
-              "sizeMB": 264
             }
           ]
         }

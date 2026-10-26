@@ -3,7 +3,7 @@
   "slug": "avatar-the-last-airbender",
   "type": "Animated",
   "network": "Nickelodeon",
-  "matchedAt": "2026-10-16T07:56:27.230Z",
+  "matchedAt": "2026-10-26T19:00:21.705Z",
   "addedAt": "2026-10-15T12:07:41.794Z",
   "tvmaze": {
     "id": 38753,
@@ -29,32 +29,32 @@
           "airdate": "2024-02-22",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number + title match",
-            "item": "avatar-the-last-airbender-tagalog-dubbed-s-01-ep-1-aang",
-            "itemTitle": "Avatar, The Last Airbender (2024) Tagalog Dubbed Episode 01",
-            "file": "Avatar- The Last Airbender -Tagalog Dubbed- S01 EP1 - Aang.mp4",
-            "name": "Avatar- The Last Airbender -Tagalog Dubbed- S01 EP1 - Aang",
-            "url": "https://archive.org/download/avatar-the-last-airbender-tagalog-dubbed-s-01-ep-1-aang/Avatar-%20The%20Last%20Airbender%20-Tagalog%20Dubbed-%20S01%20EP1%20-%20Aang.mp4",
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 15 in \"Avatar:The Last Airbender\"",
+            "item": "avatar-the-last-airbender-netflix",
+            "itemTitle": "Avatar:The Last Airbender",
+            "file": "Avatar_The_Last_Airbender_1080P_S01_E01.mp4",
+            "name": "Avatar_The_Last_Airbender_1080P_S01_E01",
+            "url": "https://archive.org/download/avatar-the-last-airbender-netflix/Avatar_The_Last_Airbender_1080P_S01_E01.mp4",
             "seconds": 3831,
             "format": "MPEG4",
             "playable": true,
-            "langRisk": true,
-            "sizeMB": 212
+            "sizeMB": 649
           },
           "alternates": [
             {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 15 in \"Avatar:The Last Airbender\"",
-              "item": "avatar-the-last-airbender-netflix",
-              "itemTitle": "Avatar:The Last Airbender",
-              "file": "Avatar_The_Last_Airbender_1080P_S01_E01.mp4",
-              "name": "Avatar_The_Last_Airbender_1080P_S01_E01",
-              "url": "https://archive.org/download/avatar-the-last-airbender-netflix/Avatar_The_Last_Airbender_1080P_S01_E01.mp4",
+              "conf": 0.65,
+              "why": "absolute episode number + title match",
+              "item": "avatar-the-last-airbender-tagalog-dubbed-s-01-ep-1-aang",
+              "itemTitle": "Avatar, The Last Airbender (2024) Tagalog Dubbed Episode 01",
+              "file": "Avatar- The Last Airbender -Tagalog Dubbed- S01 EP1 - Aang.mp4",
+              "name": "Avatar- The Last Airbender -Tagalog Dubbed- S01 EP1 - Aang",
+              "url": "https://archive.org/download/avatar-the-last-airbender-tagalog-dubbed-s-01-ep-1-aang/Avatar-%20The%20Last%20Airbender%20-Tagalog%20Dubbed-%20S01%20EP1%20-%20Aang.mp4",
               "seconds": 3831,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 649
+              "langRisk": true,
+              "sizeMB": 212
             }
           ]
         },

@@ -3,7 +3,7 @@
   "slug": "the-simpsons",
   "type": "Animated",
   "network": "FOX",
-  "matchedAt": "2026-10-19T04:10:33.075Z",
+  "matchedAt": "2026-10-26T19:00:19.084Z",
   "addedAt": "2026-10-16T07:56:22.848Z",
   "tvmaze": {
     "id": 83,
@@ -15,8 +15,8 @@
   "coverage": {
     "total": 806,
     "live": 0,
-    "review": 3,
-    "missing": 803,
+    "review": 1,
+    "missing": 805,
     "pct": 0
   },
   "seasons": [
@@ -469,20 +469,8 @@
           "number": 20,
           "name": "Colonel Homer",
           "airdate": "1992-03-26",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Colonel Homer\" (0.95)",
-            "item": "TheSimpsonsPartialTVStuffMid90s",
-            "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
-            "file": "The Simpsons- Colonel Homer (most).mp4",
-            "name": "The Simpsons- Colonel Homer (most)",
-            "url": "https://archive.org/download/TheSimpsonsPartialTVStuffMid90s/The%20Simpsons-%20Colonel%20Homer%20(most).mp4",
-            "seconds": 1406,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1191
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -622,20 +610,8 @@
           "number": 13,
           "name": "Selma's Choice",
           "airdate": "1993-01-21",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Selma's Choice\" (0.95)",
-            "item": "TheSimpsonsPartialTVStuffMid90s",
-            "itemTitle": "Blank VHS Tape: The Simpsons, Partial TV Episodes & Local 10pm News (1995-1997)",
-            "file": "The Simpsons- Selma's Choice (most).mp4",
-            "name": "The Simpsons- Selma's Choice (most)",
-            "url": "https://archive.org/download/TheSimpsonsPartialTVStuffMid90s/The%20Simpsons-%20Selma's%20Choice%20(most).mp4",
-            "seconds": 1465,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 723
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

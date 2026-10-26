@@ -3,7 +3,7 @@
   "slug": "jag",
   "type": "Drama",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:47.574Z",
+  "matchedAt": "2026-10-26T19:00:34.056Z",
   "addedAt": "2026-10-15T12:29:19.769Z",
   "tvmaze": {
     "id": 581,
@@ -15,8 +15,8 @@
   "coverage": {
     "total": 227,
     "live": 0,
-    "review": 1,
-    "missing": 226,
+    "review": 0,
+    "missing": 227,
     "pct": 0
   },
   "seasons": [
@@ -517,20 +517,8 @@
           "number": 24,
           "name": "To Russia with Love (1)",
           "airdate": "1998-05-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"To Russia with Love (1)\" (0.95)",
-            "item": "youngstownblanktape3",
-            "itemTitle": "Blank VHS Tape: The Bridges Of Madison County, News Clips, Other Goodies (1998)",
-            "file": "JAG- To Russia with Love (Part 1 of 2).mp4",
-            "name": "JAG- To Russia with Love (Part 1 of 2)",
-            "url": "https://archive.org/download/youngstownblanktape3/JAG-%20To%20Russia%20with%20Love%20(Part%201%20of%202).mp4",
-            "seconds": 3596,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1252
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         }
       ]

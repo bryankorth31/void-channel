@@ -3,7 +3,7 @@
   "slug": "the-bible",
   "type": "Streaming Era",
   "network": "History",
-  "matchedAt": "2026-10-19T04:11:09.701Z",
+  "matchedAt": "2026-10-26T19:00:44.503Z",
   "addedAt": "2026-10-15T12:07:57.719Z",
   "tvmaze": {
     "id": 1721,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 10,
     "live": 0,
-    "review": 6,
-    "missing": 4,
-    "pct": 60
+    "review": 0,
+    "missing": 10,
+    "pct": 0
   },
   "seasons": [
     {
@@ -27,120 +27,48 @@
           "number": 1,
           "name": "In the Beginning",
           "airdate": "2013-03-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 6 in \"King James Version - English Dramatized \"",
-            "item": "01-genesis_20240808",
-            "itemTitle": "King James Version - English Dramatized Audio Bible - By: Faith Comes By Hearing - 65 Books",
-            "file": "15 - Ezra.mp4",
-            "name": "15 - Ezra",
-            "url": "https://archive.org/download/01-genesis_20240808/15%20-%20Ezra.mp4",
-            "seconds": 2879,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 66
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Exodus",
           "airdate": "2013-03-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 6 in \"King James Version - English Dramatized \"",
-            "item": "01-genesis_20240808",
-            "itemTitle": "King James Version - English Dramatized Audio Bible - By: Faith Comes By Hearing - 65 Books",
-            "file": "16 - Nehemiah.mp4",
-            "name": "16 - Nehemiah",
-            "url": "https://archive.org/download/01-genesis_20240808/16%20-%20Nehemiah.mp4",
-            "seconds": 3886,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 92
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Homeland",
           "airdate": "2013-03-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 6 in \"King James Version - English Dramatized \"",
-            "item": "01-genesis_20240808",
-            "itemTitle": "King James Version - English Dramatized Audio Bible - By: Faith Comes By Hearing - 65 Books",
-            "file": "26 - Daniel.mp4",
-            "name": "26 - Daniel",
-            "url": "https://archive.org/download/01-genesis_20240808/26%20-%20Daniel.mp4",
-            "seconds": 4738,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 103
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Kingdom",
           "airdate": "2013-03-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 6 in \"King James Version - English Dramatized \"",
-            "item": "01-genesis_20240808",
-            "itemTitle": "King James Version - English Dramatized Audio Bible - By: Faith Comes By Hearing - 65 Books",
-            "file": "44 - Romans.mp4",
-            "name": "44 - Romans",
-            "url": "https://archive.org/download/01-genesis_20240808/44%20-%20Romans.mp4",
-            "seconds": 3982,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 94
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Survival",
           "airdate": "2013-03-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 6 in \"King James Version - English Dramatized \"",
-            "item": "01-genesis_20240808",
-            "itemTitle": "King James Version - English Dramatized Audio Bible - By: Faith Comes By Hearing - 65 Books",
-            "file": "45 - 1 Corinthians.mp4",
-            "name": "45 - 1 Corinthians",
-            "url": "https://archive.org/download/01-genesis_20240808/45%20-%201%20Corinthians.mp4",
-            "seconds": 3866,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 83
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "Hope",
           "airdate": "2013-03-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 6 of 6 in \"King James Version - English Dramatized \"",
-            "item": "01-genesis_20240808",
-            "itemTitle": "King James Version - English Dramatized Audio Bible - By: Faith Comes By Hearing - 65 Books",
-            "file": "57 - Hebrews.mp4",
-            "name": "57 - Hebrews",
-            "url": "https://archive.org/download/01-genesis_20240808/57%20-%20Hebrews.mp4",
-            "seconds": 2713,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 65
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

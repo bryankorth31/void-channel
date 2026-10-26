@@ -3,7 +3,7 @@
   "slug": "rawhide",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-19T04:12:20.206Z",
+  "matchedAt": "2026-10-26T19:01:37.804Z",
   "addedAt": "2026-10-15T12:08:52.439Z",
   "tvmaze": {
     "id": 3488,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 218,
     "live": 0,
-    "review": 5,
-    "missing": 213,
-    "pct": 2
+    "review": 2,
+    "missing": 216,
+    "pct": 1
   },
   "seasons": [
     {
@@ -27,20 +27,8 @@
           "number": 1,
           "name": "Incident of the Tumbleweed",
           "airdate": "1959-01-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "S/E in filename + title match",
-            "item": "s-01-e-11-incident-of-the-coyote-weed_202312",
-            "itemTitle": "S 01 E 11 Incident Of The Coyote Weed",
-            "file": "S01E01 Incident Of The Tumbleweed.mp4",
-            "name": "S01E01 Incident Of The Tumbleweed",
-            "url": "https://archive.org/download/s-01-e-11-incident-of-the-coyote-weed_202312/S01E01%20Incident%20Of%20The%20Tumbleweed.mp4",
-            "seconds": 3082,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 460
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -55,40 +43,16 @@
           "number": 3,
           "name": "Incident with an Executioner",
           "airdate": "1959-01-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "S/E in filename + title match",
-            "item": "s-01-e-11-incident-of-the-coyote-weed_202312",
-            "itemTitle": "S 01 E 11 Incident Of The Coyote Weed",
-            "file": "S01E03 Incident With An Executioner.mp4",
-            "name": "S01E03 Incident With An Executioner",
-            "url": "https://archive.org/download/s-01-e-11-incident-of-the-coyote-weed_202312/S01E03%20Incident%20With%20An%20Executioner.mp4",
-            "seconds": 3049,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 381
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 4,
           "name": "Incident of the Widowed Dove",
           "airdate": "1959-01-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "S/E in filename + title match",
-            "item": "s-01-e-11-incident-of-the-coyote-weed_202312",
-            "itemTitle": "S 01 E 11 Incident Of The Coyote Weed",
-            "file": "S01E04 Incident Of The Widowed Dove.mp4",
-            "name": "S01E04 Incident Of The Widowed Dove",
-            "url": "https://archive.org/download/s-01-e-11-incident-of-the-coyote-weed_202312/S01E04%20Incident%20Of%20The%20Widowed%20Dove.mp4",
-            "seconds": 3059,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 431
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
