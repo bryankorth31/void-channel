@@ -323,6 +323,7 @@
 
       this._on(v, 'play', () => { this._icons(); this._armFrames(); }); // a video that ended is fed again when it is played again
       this._on(v, 'playing', () => this._armFrames());
+      this._on(v, 'seeked', () => { this._lastT = v.currentTime; }); // a finished seek is a jump, not frames moving (the loading look waits for real playback)
       // The page going off screen, hidden or into picture-in-picture, and back: no frame callbacks then is not throttling (the core is told when it happens)
       this._on(document, 'visibilitychange', () => this.core.event('away', now()));
       this._on(v, 'enterpictureinpicture', () => this.core.event('away', now()));
