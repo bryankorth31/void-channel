@@ -51,6 +51,8 @@ test('a loved show with under 4 episodes here drops off Live TV (Seinfeld had 1)
   assert.equal(r.s10.call, 'go');
   assert.match(r.s10.reason, /^Only 1 episode here/);
   assert.equal(by(R.score(shows, { minEpisodes: 1 }, {}, NOW)).s10.call, 'keep', 'the line is a setting');
+  shows[10] = mk('s10', 1, { files: Object.assign({}, goodFiles, { siteEps: 3, coverage: 1 }) });
+  assert.equal(by(R.score(shows, {}, {}, NOW)).s10.call, 'keep', 'a whole three-part series stays');
 });
 
 test('barely known: fewer than two outside sources drops off Live TV', () => {

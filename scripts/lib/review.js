@@ -14,10 +14,10 @@
 const DEFAULTS = {
   weights: { entertainment: 30, love: 30, impact: 15, quality: 25 },
   loveOwnViewers: 0.5, // how much our own viewers count inside Love, against 1 for each outside source (raise it as the audience grows)
-  goBelow: 35, // a blend below this drops off Live TV (B, 26 Oct: Live TV is a healthy selection of the better shows)
+  goBelow: 40, // a blend below this drops off Live TV (B, 26 Oct: Live TV is a healthy selection of the better shows)
   qualityFloor: 20, // Quality below this drops whatever the rest says: it does not play well here
   minSources: 2, // fewer outside sources than this and the show drops: barely known, nobody rates it
-  minEpisodes: 4, // fewer episodes here than this and it drops: Live TV would repeat the same one or two (Seinfeld had 1)
+  minEpisodes: 4, // a stub drops: fewer episodes here than this, and under half the show (Seinfeld had 1 of 180; a whole 3-part documentary stays)
   bayesVotes: 50, // TMDB votes it takes for a show's own average to count as much as the catalog's mean
 };
 
@@ -100,7 +100,7 @@ function score(shows, settings, calls, now) {
     const sc = { entertainment: rnd(e), love: rnd(l), impact: rnd(im), quality: q, blend: rnd(blend) };
     // Two calls only (B, 26 Oct: 'either keep or go'): a show stays on Live TV unless it plays poorly here, is barely known,
     // or its blend is below the line.
-    const few = f.siteEps != null && f.siteEps < S.minEpisodes;
+    const few = f.siteEps != null && f.siteEps < S.minEpisodes && (f.coverage == null || f.coverage < 0.5);
     const auto = few || (q != null && q < S.qualityFloor) || f.sources < S.minSources || blend == null || blend < S.goBelow ? 'go' : 'keep';
     const mine = calls && calls[x.slug] && /^(keep|go)$/.test(calls[x.slug].call) ? calls[x.slug].call : null;
     return { slug: x.slug, scores: sc, facts: f, auto, call: mine || auto, byB: !!mine, reason: reason(sc, f, S, auto) };
@@ -111,7 +111,7 @@ const rnd = (x) => (x == null ? null : Math.round(x));
 // One line on why: the strongest and the weakest of the four, in plain words, plus a fact that explains a low Quality.
 const WORDS = { entertainment: ['well rated', 'poorly rated'], love: ['widely loved', 'little known'], impact: ['a big mark left', 'a small mark left'], quality: ['plays well here', 'plays poorly here'] };
 function reason(sc, f, S, auto) {
-  if (f.siteEps != null && f.siteEps < S.minEpisodes) return 'Only ' + f.siteEps + ' episode' + (f.siteEps === 1 ? '' : 's') + ' here: Live TV would repeat ' + (f.siteEps === 1 ? 'it' : 'them');
+  if (f.siteEps != null && f.siteEps < S.minEpisodes && (f.coverage == null || f.coverage < 0.5)) return 'Only ' + f.siteEps + ' episode' + (f.siteEps === 1 ? '' : 's') + ' here: Live TV would repeat ' + (f.siteEps === 1 ? 'it' : 'them');
   if (f.sources < S.minSources) return 'Barely known: hardly rated or written about anywhere';
   const have = Object.keys(WORDS).filter((k) => sc[k] != null);
   if (!have.length) return 'No scores yet';
