@@ -411,6 +411,22 @@ test('Spots: everyone on a channel sees the same spot at the same moment, and a 
   const kids = breaks(p, Object.assign({}, c, { kc: 1 }));
   assert.ok(kids.length > 0 && kids.every((b) => b.cards.every((d) => !d.spot)), 'no spots on a kids channel');
 });
+// The page's promo helpers (they sit after the Live TV functions in app.js), run with a promos.json the test makes.
+const PROMO_TEXT = (() => { const s = APP.indexOf('function promoUrl('), e = APP.indexOf('\n', APP.indexOf('const id=ids[seed%ids.length]')); assert.ok(s > 0 && e > s, 'the promo helpers are where this test expects them'); return APP.slice(s, e); })();
+const withPromos = (items, order) => TV_TEXT + '\nlet PROMOS=' + JSON.stringify({ items, slots: { promos: order } }) + ';\n' + PROMO_TEXT;
+const promo = (dur) => ({ title: 'P', shapes: { wide: { src: 'p' + dur + '.mp4', poster: 'p.jpg', w: 1920, h: 1080, dur } } });
+test('Spots: a video spot holds only as many cards as the promo runs, one promo for the whole spot; a promo too long for its cards never plays (audit P3A-03)', () => {
+  const p = page({ spots: SPOTS, text: withPromos({ long: promo(60), short: promo(20), none: { title: 'N', shapes: { wide: { src: 'n.mp4' } } } }, ['long', 'none', 'short']) });
+  const B = breaks(p, p.TV[0]).filter((b) => b.K0 >= 12);
+  assert.ok(B.length > 0, 'long breaks to test');
+  for (const b of B) {
+    const at = b.cards.map((d, i) => (d.spot && d.spot.kind === 'video' ? i : -1)).filter((i) => i >= 0);
+    assert.deepEqual(at, [7, 8, 9], 'a 20 second promo takes three 9 second cards, from card 8');
+    for (const i of at) assert.equal(b.cards[i].spot.src, '/assets/brand/promos/p20.mp4', 'only the promo that fits, and the same one on every card');
+  }
+  const q = page({ spots: SPOTS, text: withPromos({ long: promo(60) }, ['long']) });
+  assert.ok(breaks(q, q.TV[0]).every((b) => b.cards.every((d) => !(d.spot && d.spot.kind === 'video'))), 'a 60 second promo is never cut into a 36 second spot');
+});
 test('Spots: without catalog/spots.json the cards are as before (no spots)', () => {
   const p = page(), B = breaks(p, p.TV[0]);
   assert.ok(B.every((b) => b.cards.every((d) => !d.spot)));

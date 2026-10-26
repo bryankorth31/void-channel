@@ -94,7 +94,8 @@ function tvgridFactory() {
   // one of B's originals (from catalog/fillers.json, added in HQ; a channel takes only the originals listed in its ch.fo),
   // no tier is a TV special. Flags: k kids, r after dark only (the late night and overnight dayparts, 11 pm to 6 am),
   // h t x v e a holiday, aired only in season. Order: B's originals, then the channel's own network's specials, then a
-  // holiday special in season, then any special. Kids mornings and kids channels take kids items only; Late Night takes no
+  // holiday special in season, then any special. Kids mornings and kids channels take kids items only, and kids items air
+  // nowhere else; Late Night takes no
   // specials (only originals listed for it); an item airs once a day per channel.
   // mode 'insert': an item that fits inside the gap (room = the gap). mode 'swap': an item to take the place of the
   // daypart's last show, filling its slot plus the gap (room = both, minDu = the show's length). len(s): the minutes of
@@ -103,13 +104,14 @@ function tvgridFactory() {
   function pickFill(ch, lib, bd, k, di, room, minDu, cnt, mode, len, gs) {
     const sp = lib.sp;
     if (!sp || !sp.length) return -1;
-    const kidsOnly = ch.kc || (k === 'm' && ch.km);
+    const kidsOnly = !!(ch.kc || (k === 'm' && ch.km));
     const net = ch.spn || [], mine = ch.fo || [];
     const ok = (e) => {
       const f = e[1] || '';
       if (cnt[e[0]]) return false;
       if (e[2] === 0 ? mine.indexOf(e[0]) < 0 : ch.adult) return false;
-      if (kidsOnly && f.indexOf('k') < 0) return false;
+      // Kids items only there, and only there (B, 20 Oct; audit P3A-01).
+      if (kidsOnly !== (f.indexOf('k') >= 0)) return false;
       if (f.indexOf('r') >= 0 && k !== 'l' && k !== 'o') return false;
       for (const c of 'htxve') if (f.indexOf(c) >= 0 && !inSeason(c, bd)) return false;
       return true;
@@ -662,6 +664,7 @@ function planChannel(meta, recs, rt) {
   const kidsN = series.filter((r) => r.kids).length;
   if (!allMovies && kidsN >= 3) ch.km = 1;
   if (series.length && kidsN / series.length >= 0.5) ch.kc = 1;
+  if (meta.kind === 'network' && KIDS_NETWORK.test(meta.name)) ch.kc = 1; // by name, whatever their shows' genres say (audit P3A-02)
   // How many airings each daypart holds on a weekday: the step the weekly (or daily) rotation takes through the pool.
   const REF_BD = 20299;
   const probe = Object.assign({}, ch, { sn: {} });
@@ -673,7 +676,10 @@ function planChannel(meta, recs, rt) {
 
 // TV specials that can fill a gap (B, 20 Oct): 60 minutes or less. The catalog has no genres for them, so kids comes from the
 // studio or a known kids title, and the holiday from the title. Returns '' (any audience, any time of year) or flags.
-const KIDS_STUDIO = /animation|cartoon|nickelodeon|disney|pixar|dreamworks|hanna-barbera|rankin|mendelson|magic light|pbs kids|sesame|jim henson|nick jr|aardman/i;
+// The kids networks (B, 26 Oct: Nickelodeon and Disney are kids channels): kids specials only, and no spots. Disney+ is not one:
+// most of its shows here are Marvel, Star Wars and grown-up dramas.
+const KIDS_NETWORK = /^(?:nickelodeon|nick jr\.?|nicktoons|disney channel|disney junior|disney xd|cartoon network|boomerang|pbs kids)$/i;
+const KIDS_STUDIO =/animation|cartoon|nickelodeon|disney|pixar|dreamworks|hanna-barbera|rankin|mendelson|magic light|pbs kids|sesame|jim henson|nick jr|aardman/i;
 const KIDS_TITLE = /charlie brown|peanuts|snoopy|scooby|mickey|minnie|goofy|donald duck|elmo|sesame|muppet|curious george|arthur.s|arthur christmas|chipmunk|alvin|garfield|grinch|rudolph|frosty|winnie the pooh|pooh|shrek|madagascar|kung fu panda|toy story|monsters, inc|gruffalo|room on the broom|stick man|zog|paddington|peppa|bluey|spongebob|looney|bugs bunny|tom and jerry|smurf|care bears|my little pony|club penguin|yogi|boo boo|flintstone|jetsons|powerpuff|billy and mandy|dexter.s laboratory|olaf|frozen fever|wallace|gromit|shaun the sheep|barney|teletubbies|dora|veggietales/i;
 function specialFlags(s) {
   const name = String(s.show || ''), net = String(s.network || '');

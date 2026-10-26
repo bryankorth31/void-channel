@@ -927,7 +927,8 @@ function tvSpot(c,a,until,t,d,seed,ns){const S=typeof SPOTS!=='undefined'?SPOTS:
  if(!kids&&S.donate&&K0>=3&&(i===1||i===2)&&tvFirstOfHour(c,s0)){d.spot={kind:'donate',id:'d'+s0};return d}
  if(!kids&&i===4&&K0>=6){const pool=[].concat((S.trivia||[]).map(x=>['Did you know?',x]),(S.tips||[]).map(x=>['Tip',x]),(S.know||[]).map(x=>['Good to know',x]));
   if(pool.length){const p=pool[(seed+Math.floor(s0/36e5))%pool.length];d.spot={kind:'fact',id:'f'+s0,kick:p[0],text:p[1]};return d}}
- if(!kids&&K0>=12&&i>=7&&i<=10){const v=typeof promoBreakSpot==='function'?promoBreakSpot(seed):null;if(v){d.spot={kind:'video',id:'v'+s0,src:v.src,poster:v.poster,off:Math.max(0,(t-(until-(K0-6)*TVC_MS))/1000)};return d}}
+ // A video spot holds as many cards as the promo runs (cards 8 to 11 at most, 36 s), one promo for the whole break (audit P3A-03).
+ if(!kids&&K0>=12&&i>=7&&i<=10){const v=typeof promoBreakSpot==='function'?promoBreakSpot(Math.floor(s0/TVC_MS),4*TVC_MS/1000):null;if(v&&i<7+Math.ceil(v.dur*1000/TVC_MS)){d.spot={kind:'video',id:'v'+s0,src:v.src,poster:v.poster,off:Math.max(0,(t-(until-(K0-6)*TVC_MS))/1000)};return d}}
  if(i>2&&i%3===2){const f=tvFact(ns,seed+i);if(f)d.line=f}
  return d}
 function tvCardHtml(d){const nx='<div class="tvc-next"><span>Up next</span><b>'+esc(d.show)+'</b>'+(d.at?'<span>at '+esc(d.at)+'</span>':'')+'</div><div class="tvc-cd">starts in <b class="tvc-left">'+tvLeft(d.left)+'</b></div>',sp=d.spot;
@@ -1084,8 +1085,10 @@ function promosLoad(){if(!PROMOS_P)PROMOS_P=fetch(BASE+'assets/brand/promos/prom
 function promoUrl(f){return BASE+'assets/brand/promos/'+encodeURIComponent(f)}
 function promoPick(it,want){const sh=(it&&it.shapes)||{};if(want&&sh[want])return Object.assign({k:want},sh[want]);const order=innerHeight>innerWidth*1.1?['feed','tall','square','wide']:['wide','square','feed','tall'];for(const k of order)if(sh[k])return Object.assign({k},sh[k]);return null}
 // A video spot for Live TV's breaks (step 4): one of the promos live on the /promos page, in the wide shape; none until promos go live.
-function promoBreakSpot(seed){const P=typeof PROMOS!=='undefined'&&PROMOS;const ids=P&&P.slots&&Array.isArray(P.slots.promos)?P.slots.promos.filter(b=>P.items[b]):[];if(!ids.length)return null;
- const id=ids[seed%ids.length],x=promoPick(P.items[id],'wide');return x&&x.src?{id,src:promoUrl(x.src),poster:x.poster?promoUrl(x.poster):''}:null}
+// Only one whose wide copy has a known length of at most max seconds (audit P3A-03).
+function promoBreakSpot(seed,max){const P=typeof PROMOS!=='undefined'&&PROMOS;const fits=b=>{const x=P.items[b]&&promoPick(P.items[b],'wide');return !!(x&&x.src&&x.dur>0&&x.dur<=max)};
+ const ids=P&&P.slots&&Array.isArray(P.slots.promos)?P.slots.promos.filter(fits):[];if(!ids.length)return null;
+ const id=ids[seed%ids.length],x=promoPick(P.items[id],'wide');return {id,src:promoUrl(x.src),poster:x.poster?promoUrl(x.poster):'',dur:x.dur}}
 function promoBox(x,vh){return 'aspect-ratio:'+x.w+'/'+x.h+';max-width:min(100%,calc('+vh+'vh * '+x.w+' / '+x.h+'))'}
 function promoFill(){if(!$('promohome'))return;promosLoad().then(P=>{const el=$('promohome');const b=P.slots&&P.slots.home,it=b&&P.items[b],x=promoPick(it);if(!el)return;if(!x){el.innerHTML='';return}el.innerHTML='<section class="promo-home"><button class="ph" style="'+promoBox(x,60)+'" onclick="promoPlay(this)" data-src="'+esc(promoUrl(x.src))+'" aria-label="Play: '+esc(it.title||'voidtv.net')+'"><img src="'+esc(promoUrl(x.poster))+'" alt="" loading="lazy"><span class="pp"><i class="ico play"></i></span></button><a class="phmore" onclick="go(\\'promos\\')">More to watch and share →</a></section>'})}
 function promoPlay(b){const v=document.createElement('video');v.src=b.dataset.src;v.controls=true;v.autoplay=true;v.playsInline=true;v.setAttribute('playsinline','');v.setAttribute('style',b.getAttribute('style'));b.replaceWith(v);v.play().catch(()=>{})}

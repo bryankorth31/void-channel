@@ -405,6 +405,28 @@ test('gap specials: holidays only in season, kids channels take kids specials on
   for (let d = 1; d <= 20; d++) { const s = spIn(G.planDay(ch, lib, bdOn(2026, 12, d))); assert.equal(new Set(s).size, s.length, 'no special twice in a day'); }
 });
 
+test('kids specials air only on kids channels and kids mornings, never on a grown-up channel (B, 20 Oct; audit P3A-01)', () => {
+  const G = sched(), { lib, ch } = spFixture();
+  const morn = Object.assign({}, ch, { id: 'sp-km', km: 1 });
+  let grown = 0;
+  for (let d = 1; d <= 30; d++) for (const [m, mo] of [[10, 0], [12, 0]]) {
+    const bd = bdOn(2026, m, d);
+    for (const a of G.planDay(ch, lib, bd)) if (a.sp) { assert.ok(a.s !== 3 && a.s !== 5, 'grown-up channel airs kids special ' + a.s + ' in ' + a.k); grown++; }
+    for (const { br } of breaks(G, ch, lib, bd)) for (const x of br.fill) assert.ok(x.s !== 3 && x.s !== 5, 'grown-up break carries kids special ' + x.s);
+    for (const a of G.planDay(morn, lib, bd)) if (a.sp && a.k !== 'm') assert.ok(a.s !== 3 && a.s !== 5, 'kids special ' + a.s + ' outside the kids morning, in ' + a.k);
+  }
+  assert.ok(grown > 0, 'grown-up specials still air');
+  const orig = origFixture();
+  for (let d = 1; d <= 20; d++) for (const { br } of breaks(G, orig.ch, orig.lib, bdOn(2026, 7, d))) assert.ok(!br.fill.some((x) => x.s === 4), 'a kids original stays off a grown-up channel');
+});
+
+test('kids networks by name are kids channels (Nickelodeon, Disney Channel); Disney+ is not (audit P3A-02)', () => {
+  const grownUp = () => Array.from({ length: 10 }, () => mk({ genres: ['Comedy'] }));
+  for (const name of ['Nickelodeon', 'Disney Channel', 'Nick Jr.', 'Disney Junior', 'Cartoon Network']) assert.equal(chan(grownUp(), { id: 'net-x', name, kind: 'network' }).ch.kc, 1, name);
+  assert.ok(!chan(grownUp(), { id: 'net-d', name: 'Disney+', kind: 'network' }).ch.kc, 'Disney+');
+  assert.ok(!chan(grownUp(), { id: 'row-n', name: 'Nickelodeon', kind: 'row' }).ch.kc, 'only a network channel goes by its name');
+});
+
 test('gap specials: the page runs the same plan (the inlined source agrees with the module)', () => {
   const vm = require('node:vm');
   const inl = vm.runInNewContext(T.source, { Date, Math, Map, WeakMap, Object, Array });
