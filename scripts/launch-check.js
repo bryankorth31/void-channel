@@ -34,6 +34,10 @@ const HEALTH_MAX_MIN = 30; // a doctor result older than this says nothing about
 const BACKUP_WARN_DAYS = 3, BACKUP_NOGO_DAYS = 7;
 const PUBLISH_QUIET_H = 6; // the doctor's own limit for "no publish run lately"
 const SOAK_TARGET_MS = 3000, SOAK_MIN_MS = 2 * 3600e3; // docs/TOMORROW.md: "a 2-hour lab soak shows no pause over 3 s"
+const SOAK_AV_GAP_MS = 400; // the player's own line for "the picture is behind the sound" (player/src/core.js, A-022); a soak that drifted is not a pass
+// B opened the site on 19 Oct 2026 at 13:19 EDT (gate off, his call: audit DECISIONS G1). From then on an open site is the decided state, so a
+// failing row is reported as work to do, never as a reason to close the site again (audit 25 Oct, A25-002).
+const OPENED_MS = Date.parse('2026-10-19T17:19:00Z');
 const CLOSED = ['fixed', 'refuted']; // a finding in any other status is still open (open, verified and so on)
 const BLOCKING = ['critical', 'high'];
 const ALLOWED_HOSTS = ['voidtv.net', 'api.cloudflare.com', 'js.sentry-cdn.com'];
@@ -232,6 +236,8 @@ function rowSoak(s, nowMs) {
   const when = Number.isFinite(Date.parse(d.at)) ? ` (${ago(nowMs - Date.parse(d.at))} ago)` : '';
   const len = Number.isFinite(dur) ? `${Math.round(dur / 60000)} min soak` : 'a soak of unknown length';
   if (longest > SOAK_TARGET_MS) return r(WARN, `${len}${when}: longest pause ${(longest / 1000).toFixed(1)} s, over the ${SOAK_TARGET_MS / 1000} s target`, { fix: 'See player/DESIGN.md, "The buffer watch" (BUFFER_STALL_MS). This row is advisory and never blocks.' });
+  const gap = Number(d.maxAvGapMs), lags = Number(d.avlags); // audio drift (A25-026): the lab records it, so the soak must say it
+  if ((Number.isFinite(gap) && gap > SOAK_AV_GAP_MS) || (Number.isFinite(lags) && lags > 0)) return r(WARN, `${len}${when}: longest pause ${(longest / 1000).toFixed(1)} s, but the sound drifted: ${Number.isFinite(lags) ? lags : 0} lag event${lags === 1 ? '' : 's'}, largest gap ${Number.isFinite(gap) ? gap : '?'} ms (line ${SOAK_AV_GAP_MS} ms)`, { fix: 'See player/DESIGN.md, A-022 (the picture behind the sound). This row is advisory and never blocks.' });
   if (!Number.isFinite(dur) || dur < SOAK_MIN_MS) return r(WARN, `${len}${when}: longest pause ${(longest / 1000).toFixed(1)} s, but the plan asks for 2 hours`, { fix: 'Run the soak for 2 hours. This row is advisory and never blocks.' });
   return r(GO, `${len}${when}: longest pause ${(longest / 1000).toFixed(1)} s, within the ${SOAK_TARGET_MS / 1000} s target`);
 }
@@ -240,7 +246,7 @@ function rowSoak(s, nowMs) {
 // The rule is the doctor's own (G.gateLight in scripts/lib/siteguards.js): gate=on must answer 401 on /, gate=off must answer 200 on /
 // and 200 on /api/e (a 401 there means a password the build could not see is still guarding the intake). A mismatch is a NO-GO.
 // site is { rootStatus, apiStatus } from HEAD / and, for gate=off, GET /api/e; a status that could not be read is null.
-function rowGate(live, site, others) {
+function rowGate(live, site, others, nowMs) {
   const r = (status, text, extra) => mk(7, 'Gate', status, text, extra);
   if (!live || live.error) return r(WARN, 'not checked: version.txt could not be read (row 3 says why)');
   const v = G.parseVersion(live.text);
@@ -253,6 +259,7 @@ function rowGate(live, site, others) {
   if (light.level === 'yellow') return r(WARN, light.msg, { fix: light.fix });
   if (v.gate === 'on') { const row = r(GO, 'gate=on and the front page answers 401, the password page: the site is private, as it must be until you open it'); row.detail = [needs]; return row; }
   const bad = others.filter((x) => x.status === NOGO);
+  if (bad.length && Number.isFinite(nowMs) && nowMs >= OPENED_MS) return r(WARN, `gate=off: the site is open, as decided on 19 Oct 2026 (front page ${site.rootStatus}, /api/e ${site.apiStatus}); ${bad.length === 1 ? 'row' : 'rows'} ${bad.map((x) => x.n).join(', ')} ${bad.length === 1 ? 'needs' : 'need'} work, and the site stays open while it is done`, { fix: 'Fix the rows named, then run this again. Closing the site is not the answer after opening day; if you ever must (an emergency), docs/DEPLOY.md, "Rollback and closing the site again", has the steps.' });
   if (bad.length) return r(NOGO, `gate=off: the site is OPEN (front page ${site.rootStatus}, /api/e ${site.apiStatus}) while ${bad.length === 1 ? 'row' : 'rows'} ${bad.map((x) => x.n).join(', ')} ${bad.length === 1 ? 'is' : 'are'} NO-GO. The site must not be open on a failing check`, { fix: 'Close it now: add SITE_PASSWORD (type Text) and delete GATE (or set it to on), then retry the deployment. docs/DEPLOY.md, "Rollback and closing the site again". Then fix the NO-GO rows.' });
   return r(GO, `gate=off: the site is OPEN (front page ${site.rootStatus}, /api/e ${site.apiStatus}), and no required row is NO-GO`);
 }
@@ -264,7 +271,7 @@ function evaluate(inputs) {
     rowAnalytics(i.analytics), rowSentry(i.sentry),
   ];
   const later = [rowPublish(i.publish, nowMs), rowBackup(i.backup, nowMs), rowSoak(i.soak, nowMs)];
-  const gate = rowGate(i.live, i.site, [...rows, ...later.filter((x) => x.n <= 9)]);
+  const gate = rowGate(i.live, i.site, [...rows, ...later.filter((x) => x.n <= 9)], nowMs);
   const all = [...rows, gate, ...later].sort((a, b) => a.n - b.n);
   const blocking = all.filter((x) => x.status === NOGO).map((x) => x.n);
   const warns = all.filter((x) => x.status === WARN).map((x) => x.n);

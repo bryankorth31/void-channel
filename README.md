@@ -6,7 +6,7 @@ VOIDtv treats the Internet Archive's 44M+ video library the way YouTube treats i
 
 - **Live site:** [voidtv.net](https://voidtv.net)
 - **API:** [api.voidtv.net](https://api.voidtv.net/health)
-- **Source:** [github.com/b-conscious/void-channel](https://github.com/b-conscious/void-channel)
+- **Source:** [github.com/bryankorth31/void-channel](https://github.com/bryankorth31/void-channel)
 
 ---
 
@@ -679,7 +679,7 @@ Each generation defines:
 | **Supabase** | PostgreSQL + Auth | Free | sawuxdquewomjrgtmgtb.supabase.co |
 | **Upstash Redis** | L2 cache (REST API) | Free | daring-lamprey-145377.upstash.io |
 | **Cloudflare** | DNS, CDN, SSL | Free | Registrar for voidtv.net |
-| **GitHub** | Source control | Free | github.com/b-conscious/void-channel |
+| **GitHub** | Source control | Free | github.com/bryankorth31/void-channel |
 | **Square** | Donations | -- | square.link/u/dJioBmlW |
 
 ### Environment Variables

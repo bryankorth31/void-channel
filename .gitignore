@@ -6,7 +6,7 @@ web-build/
 .DS_Store
 backend/hearts.json
 backend/data/
-# Runtime caches/state — written by the running backend, never source. Must stay out of
+# Runtime caches/state, written by the running backend, never source. Must stay out of
 # git AND out of the lockfile baseline (they mutate every request).
 backend/codec-cache.json
 backend/wiki-cache.json
@@ -56,3 +56,6 @@ brand-kit/**/*.jpg
 # motion kit: every generated piece folder and the renders are rebuilt from the sources; shared/ is source
 motion/pack/*/
 !motion/pack/shared/
+
+# audit drafts: findings, ledgers and plans that quote B stay on this PC (publish.js pushes docs/, so they never go under docs/)
+audit/

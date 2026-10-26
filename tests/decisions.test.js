@@ -171,15 +171,15 @@ test.todo('M17: viewers see no "review" label on episodes (drift: REVIEW episode
   assert.doesNotMatch(SCRIPT, /<span class="rv">review<\/span>/);
 });
 
-test.todo('M18: the Heard by listening tab has its HQ steps in docs/HQ.md and docs/RUNBOOK.md (drift: neither names it)', () => {
+test('M18: the Heard by listening tab has its HQ steps in docs/HQ.md and docs/RUNBOOK.md', () => {
   assert.match(read('docs/HQ.md'), /Heard by listening/);
   assert.match(read('docs/RUNBOOK.md'), /Heard by listening/);
 });
 
-test.todo('P11: every doctor light has a row in docs/RUNBOOK.md, so B can act on it by hand (drift: four have none)', () => {
+test('P11: every doctor light has a row in docs/RUNBOOK.md, so B can act on it by hand', () => {
   const doctor = read('scripts/doctor.js'), book = read('docs/RUNBOOK.md');
   const ids = new Set([...doctor.matchAll(/add\('([a-z][a-z:-]*)'/g)].map((m) => m[1]));
-  const missing = [...ids].filter((id) => !book.includes('| ' + id + ' |'));
+  const missing = [...ids].filter((id) => !book.includes('| ' + id + (id.endsWith(':') ? '' : ' |'))); // an id ending in a colon is a family (task:), one row for all of them
   assert.deepEqual(missing, []);
 });
 
@@ -205,6 +205,11 @@ test('M24: rights metadata never gates a show: the gates read no license or righ
   }
 });
 
-test.todo('G6: every old local server listens on this PC only (drift: backend/server.js and spine/spine.js listen on every interface)', () => {
-  for (const f of ['backend/server.js', 'spine/spine.js']) assert.match(read(f), /\.listen\(PORT, '127\.0\.0\.1'/, f);
+test('G6: the June servers are retired (B, 26 Oct), and every server left in scripts/ listens on this PC only', () => {
+  for (const f of ['backend/server.js', 'spine/spine.js', 'start-void.cmd', 'start-prod.js']) assert.ok(!fs.existsSync(path.join(REPO, f)), f + ' is gone');
+  const walk = (d) => fs.readdirSync(d).flatMap((f) => { const p = path.join(d, f); return fs.statSync(p).isDirectory() ? walk(p) : /\.js$/.test(f) ? [p] : []; });
+  for (const p of walk(path.join(REPO, 'scripts'))) {
+    const s = fs.readFileSync(p, 'utf8');
+    for (const m of s.matchAll(/\.listen\(([^)]*)\)/g)) assert.match(m[1], /127\.0\.0\.1|HOST\b|'localhost'/, path.relative(REPO, p) + ': ' + m[0]);
+  }
 });

@@ -104,6 +104,22 @@ The lists come from `scripts/lib/hidden.js` (`GET /api/hidden/episodes`, `GET /a
 episode, a title one line). The runbook rows `episodes:guess-hidden` and `movies:review-hidden` give the same steps by hand.
 Tests: `node --test tests/hidden-work.test.js`.
 
+### Heard by listening (the third Hidden tab)
+
+B, 25 Oct 2026: "yes" to an approval page for the listening trial. `scripts/listen-trial.py <show-slug>` listens to about two minutes of each file
+the guess gate hides and names the episode from what is said (a local model; the transcript and its reasons go to `catalog/cache/listen/<slug>.json`,
+never to the site). The tab lists each suggestion with **Watch** (the preview player), **Yes, place it** and **Not right**. Nothing reaches the site
+until a person presses Yes.
+
+| Button | What it does | Read by |
+|---|---|---|
+| Yes, place it | `POST /api/override/<slug>` with `{ "map": { "placeFiles": { "<item>|<name>": "2x5" } }, "pull": { "rejectFiles": ["<item>|<name>"] }, "rematch": true }`: the file takes that episode (an earlier Reject of the same file is cleared) and the show is re-matched; it plays after the next publish | scripts/match.js |
+| Not right | `POST /api/listen/dismiss` with `{ "url": "<file url>" }`: the suggestion leaves the list (`catalog/cache/listen/dismissed.json`, not in git); `{ "url": "...", "undo": true }` brings it back | HQ only |
+
+By hand, no AI: run `C:/Users/bryan/hardware-lab/Scripts/python.exe -I scripts/listen-trial.py <show-slug>` to get suggestions for a show; to place one
+without HQ, add the placeFiles entry to `catalog/overrides.json` as in the table above and run `node scripts/match.js --slug <show-slug>`. The list
+comes from `GET /api/listen`.
+
 ## Events the site sends
 
 `view` (page, slug) · `play` (slug, season x episode, file) · `tick` every 60 s while playing (position,

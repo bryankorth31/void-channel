@@ -807,3 +807,31 @@ test('no em dash in the files this piece wrote, and the opening-day section name
   assert.ok(!/\(not yet checked on screen[;:,]/.test(doc), 'the tag is written one way everywhere');
   assert.match(doc, /a HEAD on `https:\/\/voidtv\.net\/` and, for `gate=off`, a GET on `\/api\/e`/);
 });
+
+// After opening day (B, 19 Oct 2026: gate off, his call) a failing row is work to do, never a reason to close the site (audit 25 Oct, A25-002).
+test('row 7 gate after opening day: a failing row is reported as work, and the site stays open', () => {
+  // the same made-up world six hours later (past 13:19 EDT on 19 Oct), with a doctor result from a few minutes before
+  const after = Date.parse('2026-10-19T18:00:00Z');
+  const later = (patch) => ({ ...openSite(patch), nowMs: after, health: { data: { at: iso(after - 5 * MIN), level: 'green', checks: [{ id: 'publish', level: 'green', msg: 'ok' }] } } });
+  const rb = LC.evaluate(later({ sentry: { error: 'no answer' } }));
+  assert.equal(row(rb, 7).status, 'WARN');
+  assert.match(row(rb, 7).text, /open, as decided on 19 Oct 2026/);
+  assert.match(row(rb, 7).text, /row 6 needs work/);
+  assert.doesNotMatch(row(rb, 7).fix, /Close it now/);
+  assert.deepEqual(rb.blocking, [6], 'row 6 alone blocks; row 7 no longer piles on');
+  // before opening day the old rule stands (the test above): the site must not be open on a failing check
+  assertBlocks(LC.evaluate({ ...openSite({ sentry: { error: 'no answer' } }), nowMs: NOW }), 7);
+  // open and all well, after opening day: GO as before
+  assert.equal(row(LC.evaluate(later()), 7).status, 'GO');
+});
+
+// The soak must say when the sound drifted, not only when the picture paused (audit 25 Oct, A25-026; the lab records avlags and maxAvGapMs).
+test('row 10 soak: audio drift is a WARN even when no pause is over the target', () => {
+  const drifted = { ...good(), soak: { data: { at: iso(NOW - DAY), durationMs: 2.5 * HOUR, longestPauseMs: 1200, avlags: 3, maxAvGapMs: 900 } } };
+  const r = row(LC.evaluate(drifted), 10);
+  assert.equal(r.status, 'WARN');
+  assert.match(r.text, /the sound drifted: 3 lag events, largest gap 900 ms/);
+  const steady = { ...good(), soak: { data: { at: iso(NOW - DAY), durationMs: 2.5 * HOUR, longestPauseMs: 1200, avlags: 0, maxAvGapMs: 120 } } };
+  assert.equal(row(LC.evaluate(steady), 10).status, 'GO');
+  assert.equal(LC.evaluate(drifted).code, 0, 'advisory: it never blocks');
+});

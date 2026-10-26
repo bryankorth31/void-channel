@@ -103,7 +103,7 @@ by **Church of American Strength & Hope** (501c3), donation-supported. React Nat
 - **Project root:** `C:\Users\bryan\Downloads\void-channel-extracted\void-channel`
 - **Backend** (`backend/`, Express): deploys to **Render** → `https://api.voidtv.net`
 - **Frontend** (`mobile/`, Expo web): deploys to **Vercel** → `voidtv.net` (308-redirects to `www.voidtv.net`)
-- **GitHub:** `github.com/b-conscious/void-channel`, branch **`master`**. **Push to master = auto-deploy** (Vercel + Render).
+- **GitHub:** `github.com/bryankorth31/void-channel`, branch **`master`**. **Push to master = auto-deploy** (Vercel + Render).
 - **Dev:** backend `cd backend && node server.js` (port 3001); web `cd mobile && npx expo start --web` (port 8081).
 - **Verify a build compiles** before pushing: `curl -s "http://localhost:8081/index.bundle?platform=web&dev=true" | head -c 40` → should start `var __BUNDLE_START_TIME__`. (The **Claude Preview tool is unreliable** with this RN-Web app — DPR quirk renders ~577px logical regardless of viewport, can't show desktop layout >900px, and hangs on external navigation. Verify via Metro bundle + curl + the live site instead.)
 
