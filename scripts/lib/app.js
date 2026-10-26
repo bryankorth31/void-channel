@@ -927,8 +927,8 @@ function tvSpot(c,a,until,t,d,seed,ns){const S=typeof SPOTS!=='undefined'?SPOTS:
  if(!kids&&S.donate&&K0>=3&&(i===1||i===2)&&tvFirstOfHour(c,s0)){d.spot={kind:'donate',id:'d'+s0};return d}
  if(!kids&&i===4&&K0>=6){const pool=[].concat((S.trivia||[]).map(x=>['Did you know?',x]),(S.tips||[]).map(x=>['Tip',x]),(S.know||[]).map(x=>['Good to know',x]));
   if(pool.length){const p=pool[(seed+Math.floor(s0/36e5))%pool.length];d.spot={kind:'fact',id:'f'+s0,kick:p[0],text:p[1]};return d}}
- // A video spot holds as many cards as the promo runs (cards 8 to 11 at most, 36 s), one promo for the whole break (audit P3A-03).
- if(!kids&&K0>=12&&i>=7&&i<=10){const v=typeof promoBreakSpot==='function'?promoBreakSpot(Math.floor(s0/TVC_MS),4*TVC_MS/1000):null;if(v&&i<7+Math.ceil(v.dur*1000/TVC_MS)){d.spot={kind:'video',id:'v'+s0,src:v.src,poster:v.poster,off:Math.max(0,(t-(until-(K0-6)*TVC_MS))/1000)};return d}}
+ // A video spot starts at card 8 and holds as many cards as the promo runs (to card 11 at most, 36 s; audit P3A-03).
+ if(!kids&&K0>=12&&i>=7&&i<=10){const v=typeof promoBreakSpot==='function'?promoBreakSpot(seed,4*TVC_MS/1000):null;if(v&&i<7+Math.ceil(v.dur*1000/TVC_MS)){d.spot={kind:'video',id:'v'+s0,src:v.src,poster:v.poster,off:Math.max(0,(t-(until-(K0-6)*TVC_MS))/1000)};return d}}
  if(i>2&&i%3===2){const f=tvFact(ns,seed+i);if(f)d.line=f}
  return d}
 function tvCardHtml(d){const nx='<div class="tvc-next"><span>Up next</span><b>'+esc(d.show)+'</b>'+(d.at?'<span>at '+esc(d.at)+'</span>':'')+'</div><div class="tvc-cd">starts in <b class="tvc-left">'+tvLeft(d.left)+'</b></div>',sp=d.spot;
