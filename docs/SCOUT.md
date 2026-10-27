@@ -1,6 +1,6 @@
 # Scout — media we are not looking for yet
 
-2026-10-26T07:32 · 0 Archive calls · 2112 leads from 4 sweeps + 25 trusted uploaders · 59 opened
+2026-10-27T07:36 · 0 Archive calls · 2112 leads from 4 sweeps + 25 trusted uploaders · 59 opened
 
 A lead is a group of Archive uploads whose titles read like a series we do not list. "Ep-shaped" counts files of 18–70 minutes in the best upload. Confirmed = TVmaze knows the show. Add a name to scripts/show-list.json (row suggested) and the hunt takes it from there.
 
