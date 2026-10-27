@@ -8,7 +8,7 @@ on:
 
 jobs:
   tests:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest   # HQ and its tests use PowerShell; the repo runs on Windows
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
