@@ -1,5 +1,5 @@
-# CI: the two checks that would have caught every breakage this stack has had.
-# 1) The web bundle must compile. 2) Spine + backend JS must parse and fixtures must map.
+# CI: two checks on every push to master and every pull request.
+# 1) The repo's own tests and the player's tests pass. 2) The web bundle must compile.
 name: ci
 on:
   push:
@@ -7,22 +7,16 @@ on:
   pull_request:
 
 jobs:
-  syntax-and-fixtures:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 20 }
-      - name: Syntax check backend + spine
-        run: |
-          for f in backend/*.js spine/*.js; do node --check "$f"; done
-      - name: Install backend deps (spine reuses archive.js which needs node-fetch)
-        run: cd backend && npm ci --omit=dev || npm install --omit=dev
-      - name: Install spine deps
-        run: cd spine && npm install --omit=dev
-      - name: "Fixture run (network access to archive.org)"
-        run: cd spine && node test-fixtures.js
-        continue-on-error: true   # Archive flakiness must not block deploys; the log is the signal
+        with: { node-version: 24 }   # node --test takes a glob from 22 on; 24 is what this PC runs
+      - name: Repo tests
+        run: node --test "tests/*.test.js"
+      - name: Player tests (no browser, no network)
+        run: node --test "player/test/*.test.js"
 
   web-bundle:
     runs-on: ubuntu-latest
