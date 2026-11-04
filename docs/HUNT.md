@@ -1,6 +1,6 @@
 # The Hunt
 
-Wide-net results, 12745 shows: 3523 FOUND, 3795 TRACES, 5427 NOT FOUND.
+Wide-net results, 12745 shows: 3524 FOUND, 3794 TRACES, 5427 NOT FOUND.
 
 Mentions = Archive items naming the show in any field. Episode-shaped = video files whose runtime fits the show's TVmaze runtime. Named = those whose filename also carries the show name. FOUND = 8+ episode-shaped files.
 
@@ -436,7 +436,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Aqua Teen Hunger Force | Adult Swim | 338 | 12 | 141 | 139 | aqua-teen-hunger-force-2000-s-01e-01-rabbot (138) |
 | FOUND | Baby Blues | Adult Swim | 513 | 12 | 32 | 17 | theOldAmericanBarnDance1953 (12) |
 | FOUND | Beef House | Adult Swim | 783 | 8 | 87 | 0 | ajs-broadcast-stash (83) |
-| FOUND | Black Jesus | Adult Swim | 2000 | 8 | 16 | 1 | adult-swim-celebrity-poker-tournament-royale (11) |
+| FOUND | Black Jesus | Adult Swim | 49 | 9 | 16 | 1 | adult-swim-celebrity-poker-tournament-royale (11) |
 | FOUND | Cartoon Planet | Adult Swim | 668 | 42 | 19 | 16 | cartoon-planet-episode-1 (1) |
 | FOUND | China, IL | Adult Swim | 2000 | 16 | 37 | 0 | s-03-e-10-magical-pet-china-il-the-musical (19) |
 | FOUND | Delocated | Adult Swim | 24 | 23 | 21 | 15 | delocated (7) |
@@ -658,7 +658,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Max Steel | Animated | 437 | 8 | 54 | 53 | max-steel-2013-s-01 (26) |
 | FOUND | Me, Eloise | Animated | 58 | 8 | 29 | 7 | me-eloise-2006 (13) |
 | FOUND | Megas XLR | Animated | 59 | 8 | 107 | 80 | MegasXLRFullShow (26) |
-| FOUND | Men in Black: The Series | Animated | 1699 | 8 | 260 | 255 | men-in-black-the-series_202308 (156) |
+| FOUND | Men in Black: The Series | Animated | 14 | 9 | 260 | 255 | men-in-black-the-series_202308 (156) |
 | FOUND | Metal Men | Animated | 1357 | 8 | 19 | 0 | secret-galaxy-it-came-from-the-1990s-playlist (19) |
 | FOUND | Mighty Max | Animated | 164 | 8 | 116 | 94 | mighty-max-s-1-e-02 (40) |
 | FOUND | Mike Judge Presents: Tales from the Tour Bus | Animated | 2 | 2 | 23 | 8 | 01-mike-judge-presents-tales-from-the-tour-bus-johnny-paycheck (15) |
@@ -847,8 +847,8 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Attack on Titan | Anime | 1309 | 8 | 31 | 31 | attack-on-titan-wings-of-freedom_202307 (19) |
 | FOUND | Baki Hanma | Anime | 19 | 8 | 217 | 3 | natural-hypertrophy (80) |
 | FOUND | Beyond the Boundary | Anime | 224 | 8 | 44 | 12 | RoguelikeCelebration2023 (28) |
-| FOUND | Black Clover | Anime | 493 | 8 | 32 | 2 | my-disc_20260601 (30) |
-| FOUND | BLACK TORCH | Anime | 203 | 8 | 23 | 21 | bt-dub (12) |
+| FOUND | Black Clover | Anime | 493 | 48 | 222 | 102 | black-clover-tv-dub-episode-55-04 (51) |
+| FOUND | BLACK TORCH | Anime | 203 | 10 | 47 | 21 | TouYorKakwKimi (24) |
 | FOUND | BLEND-S | Anime | 705 | 8 | 53 | 0 | ddcb-r-2-circulation-original-song-beat (33) |
 | FOUND | Blood+ | Anime | 2028 | 8 | 9 | 5 | Bonanza-BloodOnTheLand (2) |
 | FOUND | Blue Box | Anime | 2000 | 8 | 83 | 2 | fifthhopevideo (77) |
@@ -1014,8 +1014,8 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Between The Sheets | British and Beyond | 430 | 8 | 10 | 10 | critical-role-between-the-sheets (5) |
 | FOUND | Beyond Reality | British and Beyond | 2000 | 8 | 46 | 0 | Beyond-Reality-Series (45) |
 | FOUND | Big Train | British and Beyond | 2000 | 8 | 13 | 1 | Big-Train (12) |
-| FOUND | Black Books | British and Beyond | 2000 | 8 | 47 | 47 | blackbooks (25) |
-| FOUND | Black Mirror | British and Beyond | 2000 | 8 | 57 | 28 | black-mirror-br (27) |
+| FOUND | Black Books | British and Beyond | 126 | 17 | 54 | 47 | blackbooks (25) |
+| FOUND | Black Mirror | British and Beyond | 172 | 48 | 68 | 28 | black-mirror-br (27) |
 | FOUND | Blankety Blank | British and Beyond | 34 | 8 | 225 | 225 | blankety-blank-les-s-01-e-01 (124) |
 | FOUND | Bleak House | British and Beyond | 104 | 8 | 19 | 5 | TheBleakOldShopOfStuff_201905 (10) |
 | FOUND | Blue Heaven | British and Beyond | 627 | 8 | 10 | 0 | vsauce_leanbacks (10) |
@@ -1199,7 +1199,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Oliver Twist | British and Beyond | 240 | 8 | 15 | 14 | r-tt-s-01-e-03-e-1.3 (12) |
 | FOUND | On the Edge | British and Beyond | 2000 | 8 | 11 | 1 | 2-3-n-7-za-4-y-5zzo (10) |
 | FOUND | One Foot in the Grave | British and Beyond | 142 | 8 | 129 | 82 | onefootinthegrave_202207 (47) |
-| FOUND | Orphan Black | British and Beyond | 148 | 8 | 59 | 8 | orphan-black (51) |
+| FOUND | Orphan Black | British and Beyond | 148 | 27 | 89 | 11 | orphan-black (51) |
 | FOUND | Our Friends in the North | British and Beyond | 1336 | 7 | 40 | 36 | our-friends-in-the-north-1996-episode-1 (9) |
 | FOUND | Our Hero | British and Beyond | 2000 | 8 | 35 | 0 | our-hero-complete-series-2000-2002 (26) |
 | FOUND | Out of the Blue | British and Beyond | 2000 | 8 | 8 | 0 | JeffLynneHydePark2014 (6) |
@@ -1401,7 +1401,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Batman | Classic TV | 2496 | 8 | 61 | 60 | the-batman_202409 (30) |
 | FOUND | Battlestar Galactica (1978) | Classic TV | 25 | 7 | 54 | 1 | battlestar-galactica_202510 (19) |
 | FOUND | Benson | Classic TV | 950 | 8 | 424 | 360 | benson-complete-series-1979-1986 (181) |
-| FOUND | Blackadder | Classic TV | 103 | 8 | 65 | 52 | blackadder-remastered (46) |
+| FOUND | Blackadder | Classic TV | 103 | 47 | 82 | 56 | blackadder-remastered (46) |
 | FOUND | Blake's 7 | Classic TV | 34 | 8 | 23 | 23 | blakes-7-3x-01-aftermath (13) |
 | FOUND | Body Language | Classic TV | 2000 | 8 | 50 | 2 | rumble_-_the_body_language_guy_2022 (22) |
 | FOUND | Bonanza | Classic TV | 486 | 8 | 16 | 16 | Bonanza_-_The_Trail_Gang (2) |
@@ -2170,7 +2170,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Bibleman | Drama | 36 | 8 | 17 | 9 | bibleman-genesis-3-forall-vol-1 (6) |
 | FOUND | Billions | Drama | 715 | 32 | 12 | 1 | arredondo-02-01-25-what-is-surrender-what-you-do-onto-others-you-do-onto-me-bil (1) |
 | FOUND | Black Narcissus | Drama | 23 | 8 | 21 | 3 | filmography-powell-pressburger (18) |
-| FOUND | Black Sails | Drama | 118 | 8 | 15 | 15 | black-sails-s-02-e-02-blu-ray-720p-english-aac-5.1-x-264-esub-mkv-cinemas (10) |
+| FOUND | Black Sails | Drama | 118 | 19 | 15 | 15 | black-sails-s-02-e-02-blu-ray-720p-english-aac-5.1-x-264-esub-mkv-cinemas (10) |
 | FOUND | Blind Justice | Drama | 498 | 8 | 133 | 0 | BitChute-channel-sJFDQtjzuuwx (133) |
 | FOUND | Blonde | Drama | 735 | 8 | 9 | 0 | dvd-transfer-13 (4) |
 | FOUND | Blood & Treasure | Drama | 263 | 8 | 10 | 5 | VariousClassicFilmNoir-CrimeDramaMysteryComedyRomance (3) |
@@ -2904,7 +2904,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Bionic Woman | Sci-Fi, Fantasy and Horror | 77 | 16 | 60 | 4 | s-1-e-9_202602 (52) |
 | FOUND | Birds of Prey | Sci-Fi, Fantasy and Horror | 437 | 16 | 9 | 3 | birds-of-prey-dc-tv-series-2002 (4) |
 | FOUND | Bitten | Sci-Fi, Fantasy and Horror | 124 | 7 | 10 | 0 | wolf-lake-2001-and-other-wolfy-sht (10) |
-| FOUND | Black Scorpion | Sci-Fi, Fantasy and Horror | 166 | 16 | 24 | 23 | black-scorpion-complete-series-1995 (22) |
+| FOUND | Black Scorpion | Sci-Fi, Fantasy and Horror | 166 | 53 | 28 | 26 | black-scorpion-complete-series-1995 (22) |
 | FOUND | Blood Drive | Sci-Fi, Fantasy and Horror | 504 | 16 | 23 | 22 | blood-drive-2017 (12) |
 | FOUND | Bone Chillers | Sci-Fi, Fantasy and Horror | 3 | 2 | 26 | 13 | bone-chillers-complete-series (13) |
 | FOUND | Brimstone | Sci-Fi, Fantasy and Horror | 92 | 16 | 32 | 27 | brimstone-1998_202210 (15) |
@@ -3087,7 +3087,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Time After Time | Sci-Fi, Fantasy and Horror | 1610 | 12 | 8 | 0 | the-war-on-democracy (7) |
 | FOUND | Timeless | Sci-Fi, Fantasy and Horror | 512 | 16 | 32 | 31 | timeless-complete-series (30) |
 | FOUND | Tin Man | Sci-Fi, Fantasy and Horror | 834 | 16 | 121 | 13 | random-miniseries-vol-1 (35) |
-| FOUND | Total Blackout | Sci-Fi, Fantasy and Horror | 114 | 16 | 8 | 0 | 6.-anywhere-at-the-end-of-the-charger-remastered-stage-6 (5) |
+| FOUND | Total Blackout | Sci-Fi, Fantasy and Horror | 114 | 22 | 9 | 0 | 6.-anywhere-at-the-end-of-the-charger-remastered-stage-6 (5) |
 | FOUND | Touch | Sci-Fi, Fantasy and Horror | 2027 | 16 | 16 | 0 | Pwnageshow-The-Almost-Complete-Collection (11) |
 | FOUND | Tower Prep | Sci-Fi, Fantasy and Horror | 64 | 16 | 38 | 38 | tower-prep-complete (13) |
 | FOUND | Tru Calling | Sci-Fi, Fantasy and Horror | 22 | 11 | 67 | 64 | tru-calling-2003-480p-dvd-x265-panda (26) |
@@ -3143,11 +3143,12 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Anna Pigeon | Streaming Era | 16 | 3 | 9 | 9 | anna-pigeon-s-1-e-1-track-the-cat (9) |
 | FOUND | Arcane | Streaming Era | 466 | 8 | 38 | 27 | arcane-season-1-60fps (9) |
 | FOUND | Bates Motel | Streaming Era | 52 | 8 | 84 | 0 | bates-motel-2013-2017-complete-series (84) |
-| FOUND | Beauty in Black | Streaming Era | 1579 | 8 | 23 | 22 | beauty-in-black-s-01-e-07 (15) |
+| FOUND | Beauty in Black | Streaming Era | 29 | 9 | 23 | 22 | beauty-in-black-s-01-e-07 (15) |
 | FOUND | Before | Streaming Era | 2322 | 8 | 86 | 1 | amazing-stories-1985-1987-complete-series (43) |
 | FOUND | Behind Her Eyes | Streaming Era | 783 | 8 | 12 | 0 | a-venom-mob-festival-chang-cheh-and-john-woo (12) |
 | FOUND | Big Shot | Streaming Era | 2000 | 8 | 372 | 0 | disney-anthology-television-series (364) |
 | FOUND | Black Rabbit | Streaming Era | 553 | 8 | 12 | 0 | asmr-stream (9) |
+| FOUND | black-ish | Streaming Era | 181 | 40 | 12 | 2 | KGO_20220420_043100_black-ish_A_Celebration_--_An_ABC_News_Special (1) |
 | FOUND | Bloodline | Streaming Era | 180 | 8 | 41 | 1 | weea-boots (41) |
 | FOUND | BLUE EYE SAMURAI | Streaming Era | 20 | 7 | 12 | 4 | samurai-capa (8) |
 | FOUND | BoJack Horseman | Streaming Era | 100 | 8 | 154 | 114 | readme_20250925 (79) |
@@ -3253,7 +3254,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | One Day | Streaming Era | 2000 | 8 | 29 | 1 | 2-captain-underpants-and-the-dreadful-debacle-of-dj-drowsy-drawers (23) |
 | FOUND | ONE PIECE | Streaming Era | 2000 | 8 | 10 | 8 | BASTIKWANG (8) |
 | FOUND | Onyx Equinox | Streaming Era | 5 | 5 | 24 | 24 | onyx-equinox_202605 (12) |
-| FOUND | Orange Is the New Black | Streaming Era | 862 | 8 | 87 | 87 | orange-is-the-new-black-complete-series (87) |
+| FOUND | Orange Is the New Black | Streaming Era | 862 | 48 | 87 | 87 | orange-is-the-new-black-complete-series (87) |
 | FOUND | Oswald | Streaming Era | 912 | 8 | 29 | 3 | s-01-e-11_20250626 (26) |
 | FOUND | Over the Garden Wall | Streaming Era | 406 | 8 | 22 | 20 | over-the-garden-wall-1080p-and-extras (20) |
 | FOUND | Pacific Rim: The Black | Streaming Era | 23 | 2 | 14 | 14 | pacific-rim-the-black-episodios-completos-en-espanol (14) |
@@ -3308,7 +3309,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | The Ave | Streaming Era | 2058 | 8 | 19 | 1 | some-mothers-3 (7) |
 | FOUND | The Beast in Me | Streaming Era | 2000 | 8 | 175 | 0 | movies-zipped (173) |
 | FOUND | The Bible | Streaming Era | 3851 | 8 | 35 | 3 | 01-genesis_20240808 (16) |
-| FOUND | The Blacklist | Streaming Era | 303 | 8 | 20 | 19 | blacklist-s-2-e-1 (19) |
+| FOUND | The Blacklist | Streaming Era | 303 | 22 | 22 | 19 | blacklist-s-2-e-1 (19) |
 | FOUND | The Calling | Streaming Era | 2032 | 8 | 35 | 0 | ted-tv-series-complete-series-2024-2026 (16) |
 | FOUND | The Chi | Streaming Era | 2104 | 8 | 26 | 2 | filmography-john-woo-asian (22) |
 | FOUND | The Dangerous Book for Boys | Streaming Era | 90 | 1 | 10 | 0 | happy-eternity-the-visual-album (10) |
@@ -3574,7 +3575,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | TRACES | Better With You | 2000s and Later Sitcoms | 2000 | 6 | 1 | 0 | 00004_20260813_0847 (1) |
 | TRACES | Big Lake | 2000s and Later Sitcoms | 2000 | 8 | 1 | 0 | mix-tape-6 (1) |
 | TRACES | Black Monday | 2000s and Later Sitcoms | 2000 | 8 | 4 | 0 | COM_20190118_070000_The_Daily_Show (1) |
-| TRACES | Black Tie Affair | 2000s and Later Sitcoms | 23 | 8 | 5 | 0 | capture-a-2418 (1) |
+| TRACES | Black Tie Affair | 2000s and Later Sitcoms | 23 | 9 | 6 | 0 | capture-a-2418 (1) |
 | TRACES | Bless This Mess | 2000s and Later Sitcoms | 48 | 8 | 4 | 1 | KGO_20190919_063500_Jimmy_Kimmel_Live (1) |
 | TRACES | Blind Faith | 2000s and Later Sitcoms | 569 | 8 | 3 | 3 | blind-faith-1990-pt-1 (2) |
 | TRACES | Blunt Talk | 2000s and Later Sitcoms | 204 | 8 | 2 | 0 | WABC_20150826_033500_Jimmy_Kimmel_Live (1) |
@@ -4496,7 +4497,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | TRACES | Raised by Wolves | British and Beyond | 113 | 8 | 2 | 2 | e-117-raised-by-wolves-season-2 (1) |
 | TRACES | Ransom | British and Beyond | 275 | 7 | 1 | 0 | capture-a-4311 (1) |
 | TRACES | Rebecca | British and Beyond | 2019 | 8 | 5 | 0 | the-chase-uk-s7-e96 (1) |
-| TRACES | Red or Black? | British and Beyond | 2000 | 6 | 1 | 1 | red-or-black-tutto-o-niente-22-febbraio-2013 (1) |
+| TRACES | Red or Black? | British and Beyond | 7 | 6 | 1 | 1 | red-or-black-tutto-o-niente-22-febbraio-2013 (1) |
 | TRACES | Red Rose | British and Beyond | 1481 | 8 | 4 | 2 | red-rose_202512 (2) |
 | TRACES | Reggie Yates' Extreme South Africa | British and Beyond | 1 | 1 | 1 | 0 | youtube-2iz3LIsnDmM (1) |
 | TRACES | Requiem | British and Beyond | 971 | 8 | 1 | 1 | against-the-law-s-01-e-06-requiem-in-b-flat (1) |
@@ -5693,7 +5694,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | TRACES | Birdland | Drama | 39 | 6 | 4 | 2 | birdland-1.2 (2) |
 | TRACES | Black Box | Drama | 2000 | 8 | 6 | 0 | blackbox-TV-show (6) |
 | TRACES | Black Fox | Drama | 2000 | 8 | 2 | 2 | black-fox (1) |
-| TRACES | Black. White. | Drama | 2000 | 8 | 2 | 0 | 20201018NSPRM (1) |
+| TRACES | Black. White. | Drama | 2058 | 25 | 3 | 1 | 20201018NSPRM (1) |
 | TRACES | Blindspotting | Drama | 11 | 8 | 3 | 0 | 3DPrintedGunsQAnonConspiracyVICENewsTonightFullEpisodeHBO (1) |
 | TRACES | Blood & Oil | Drama | 730 | 8 | 4 | 0 | solomons-temple-705 (1) |
 | TRACES | BMF | Drama | 36 | 1 | 1 | 0 | youtube-QBTp12ydkuw (1) |
@@ -6775,7 +6776,6 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | TRACES | Betas | Streaming Era | 78 | 1 | 1 | 0 | the-angry-german-kid-show-by-santiago-reveco-lepe (1) |
 | TRACES | Big Dogs | Streaming Era | 1487 | 8 | 2 | 0 | youtube-eUI9PwT3eMM (1) |
 | TRACES | Big Girls Don't Cry | Streaming Era | 129 | 8 | 1 | 0 | 2025-03-26-mtv-collection-68 (1) |
-| TRACES | black-ish | Streaming Era | 181 | 8 | 1 | 1 | KGO_20220420_043100_black-ish_A_Celebration_--_An_ABC_News_Special (1) |
 | TRACES | Blue | Streaming Era | 2072 | 8 | 3 | 1 | cartoon-female-image-gallery-2-turanga-leela-and-amy-wong-futurama (1) |
 | TRACES | Bosch | Streaming Era | 528 | 8 | 1 | 1 | hieronymus-bosch-the-garden-of-earthly-delights-full-length-great-art-explained- (1) |
 | TRACES | Boston Blue | Streaming Era | 1247 | 6 | 3 | 1 | KNTV_20260502_063400_The_Tonight_Show_Starring_Jimmy_Fallon (1) |
