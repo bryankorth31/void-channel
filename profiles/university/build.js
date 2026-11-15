@@ -58,17 +58,39 @@ function crystal(c, u) {
     + '</div>';
 }
 
+// The scene: an everyday analogy acted out, then relabelled as the idea (scene.js; Bryan, 15 Nov 2026: pictures and
+// one-to-one analogies, not flat text). The map line under it says the one-to-one plainly.
+function scene(u) {
+  const s = u.scene; if (!s) return '';
+  const map = (s.map || []).map(([a, b]) => '<span><i>' + esc(a) + '</i> = <b>' + esc(b) + '</b></span>').join('');
+  return '<div class="sc" data-scene="' + esc(JSON.stringify(s)) + '">'
+    + '<div class="sc-top"><span class="sc-like">Like ' + esc(s.analogy.charAt(0).toLowerCase() + s.analogy.slice(1)) + '</span></div>'
+    + '<div class="sc-stage"></div>'
+    + '<div class="sc-say" aria-live="polite"></div>'
+    + '<div class="sc-ctrl"><button type="button" class="sc-back" aria-label="Step back">&#9664;</button>'
+    + '<button type="button" class="sc-play">Play</button>'
+    + '<button type="button" class="sc-next" aria-label="Step forward">&#9654;</button><div class="sc-dots"></div></div>'
+    + (map ? '<div class="sc-map">' + map + '</div>' : '')
+    + '</div>';
+}
+
+// Bryan, 15 Nov 2026: "less words". A unit shows its picture, its main piece and its crystal; the rest is one tap away.
 function unit(u, voices, c) {
   const who = (u.voices || []).map((k) => voices[k]).filter(Boolean)
     .map((v) => '<li><b>' + esc(v.name) + '</b>, ' + esc(v.what.toLowerCase()) + '. ' + esc(v.did) + '</li>').join('');
   return '<section class="unit" id="u' + u.n + '">'
-    + '<div class="uh"><span class="n">' + u.n + '</span><div><h2>' + esc(u.title) + '</h2><div class="out">You will be able to: ' + esc(u.outcome) + '</div></div></div>'
+    + '<div class="uh"><span class="n">' + u.n + '</span><div><h2>' + esc(u.title) + '</h2></div></div>'
+    + scene(u)
+    + '<div class="pieces">' + piece(u.main, true) + '</div>'
+    + crystal(c, u)
+    + '<details class="more"><summary>More: why it matters, what else to watch, read and do, who teaches it</summary>'
+    + '<div class="out">You will be able to: ' + esc(u.outcome) + '</div>'
     + '<div class="seed"><h3>Why it matters</h3><p>' + esc(u.why) + '</p></div>'
     + '<div class="seed reach"><h3>How this reaches you</h3><p>' + esc(u.reachesYou) + '</p></div>'
-    + '<div class="pieces">' + piece(u.main, true) + (u.companions || []).map((c) => piece(c, false)).join('') + '</div>'
-    + crystal(c, u)
+    + ((u.companions || []).length ? '<div class="pieces">' + u.companions.map((c) => piece(c, false)).join('') + '</div>' : '')
     + '<div class="row2"><div class="do"><h3>Do this week</h3><p>' + esc(u.do) + '</p></div>'
     + '<div class="who"><h3>Who teaches this unit</h3><ul>' + who + '</ul></div></div>'
+    + '</details>'
     + '</section>';
 }
 
@@ -147,22 +169,39 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .cx-after{margin-top:14px}.cx-after p{margin:2px 0 8px;font-size:15px;color:#cfd2dc}
 .cx-after textarea{width:100%;background:var(--panel2);color:var(--fg);border:1px solid #2c3550;border-radius:10px;padding:10px;font:inherit}
 .cx-after small{color:var(--dim)}
+.sc{background:#090b12;border:1px solid var(--line);border-radius:12px;padding:14px 18px 16px;margin:0 0 18px}
+.sc-like{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--pink);font-weight:700}
+.sc-stage{margin-top:8px;border-radius:10px;background:radial-gradient(ellipse at center,#0e1a24 0%,#07090f 75%);aspect-ratio:800/360;overflow:hidden}
+.sc-stage svg{display:block;width:100%;height:100%;font-family:system-ui,Segoe UI,Roboto,sans-serif}
+.sc-say{min-height:40px;margin:12px 2px 6px;font-family:Unbounded,system-ui,sans-serif;font-size:22px;font-weight:500;text-align:center}
+.sc-ctrl{display:flex;align-items:center;justify-content:center;gap:10px}
+.sc-ctrl button{font:inherit;font-size:15px;background:var(--panel2);color:var(--fg);border:1px solid #2c3550;border-radius:10px;padding:8px 16px;cursor:pointer;min-width:44px;min-height:40px}
+.sc-ctrl button:hover{border-color:var(--acc)}.sc-play{min-width:120px}
+.sc-dots{display:flex;gap:6px;margin-left:10px}
+.sc-dots button{min-width:0;min-height:0;width:14px;height:14px;padding:0;border-radius:50%;background:#1d2130}
+.sc-dots button.on{background:var(--acc);border-color:var(--acc)}
+.sc-map{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:12px;font-size:15px;color:var(--dim);opacity:.35;transition:opacity .8s}
+.sc.done .sc-map{opacity:1}.sc-map i{font-style:normal;color:#cfd2dc}.sc-map b{color:var(--acc)}
+details.more{margin-top:6px;border-top:1px solid var(--line);padding-top:10px}
+details.more summary{cursor:pointer;color:var(--dim);font-size:15px;padding:6px 0}
+details.more summary:hover{color:var(--fg)}
 @media (max-width:1000px){.wrap{grid-template-columns:1fr}nav{position:static}nav{display:flex;flex-wrap:wrap;gap:4px}nav h4{width:100%}.row2{grid-template-columns:1fr}.hero ol{columns:1}}
 </style></head><body>
 <header><span class="logo">VOID <i>University</i></span><span class="tag">learn from people who did it</span><span class="draft">Draft for Bryan: nothing here is public</span></header>
 <div class="wrap"><nav><h4>Units</h4>${toc}</nav><main>
 <div class="hero"><div class="dom">${esc(c.domain)} · a course we wrote</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>
-<h3 style="margin-top:16px">By the end you will be able to</h3><ol>${c.outcomes.map((o) => '<li>' + esc(o) + '</li>').join('')}</ol></div>
+<details class="more"><summary>By the end you will be able to...</summary><ol>${c.outcomes.map((o) => '<li>' + esc(o) + '</li>').join('')}</ol></details></div>
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
 </main></div>
 <footer>Free, no account. Everything plays from the Internet Archive; each piece names its source and licence.<br>
 If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="${DONATE}" target="_blank" rel="noopener">Donate to CASH</a></footer>
-<script src="crystal.js"></script>
+<script src="crystal.js"></script><script src="scene.js"></script>
 </body></html>`;
 }
 
 fs.mkdirSync(OUT, { recursive: true });
 fs.copyFileSync(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
+fs.copyFileSync(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
 const courses = fs.readdirSync(path.join(DIR, 'courses')).filter((f) => f.endsWith('.json'));
 for (const f of courses) {
   const c = JSON.parse(fs.readFileSync(path.join(DIR, 'courses', f), 'utf8'));

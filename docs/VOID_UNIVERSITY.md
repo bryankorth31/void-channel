@@ -635,3 +635,18 @@ learned "when they can say it another way".
   anneals them out. Fits 1920 wide and the Tab S8 both ways with no sideways scroll.
 - Next, from his own words, not built: crystallized truths become partials for higher truths ("Everything scales"),
   so the six unit crystals could become the partials of one course crystal.
+
+### 15 Nov 2026: pictures, analogies, and the mind's mechanisms (B, after seeing the first page)
+
+- "it needs to be less words people are not taught that anymore it needs to be more diagram picture animated thing
+  that shows the process ... motion graphics could be used in these areas instead of flat text".
+- "we need to use analogies one to ones that people can recognize from other areas of life that's what needs to be
+  used throughout university". "Analogies teach well because it allows people to understand bigger things based on
+  how the things in their life are."
+- "how the mind works ... sunk cost fallacies cognitive dissonance et cetera ... people don't know the sunken cost
+  fallacy ... fear of missing out ... people don't know how these affect things. These mechanisms are so vital for so
+  much."
+- So: one scene engine (`scene.js`, like `crystal.js`) acts out an everyday one-to-one analogy for each idea, then
+  turns the analogy's labels into the idea's labels. Each unit carries a `scene` block. Long text folds away.
+- The mind's mechanisms (sunk cost, cognitive dissonance, fear of missing out and the rest) become their own set:
+  each one a name, an everyday analogy, a moving scene, and how it costs you. Same engine, same schema.

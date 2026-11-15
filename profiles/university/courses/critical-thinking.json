@@ -86,6 +86,208 @@
           }
         ],
         "aha": "Every partial here is a test someone ran, or refused to run."
+      },
+      "scene": {
+        "analogy": "A bill and its receipt",
+        "map": [
+          [
+            "the bill",
+            "the claim"
+          ],
+          [
+            "the receipt",
+            "the evidence"
+          ],
+          [
+            "no receipt",
+            "don't buy it yet"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "you",
+            "type": "card",
+            "x": 40,
+            "y": 135,
+            "w": 150,
+            "h": 90,
+            "label": "You",
+            "color": "blue"
+          },
+          {
+            "id": "bill",
+            "type": "card",
+            "x": 840,
+            "y": 50,
+            "w": 250,
+            "h": 100,
+            "label": "The bill",
+            "sub": "You owe $80",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "slot",
+            "type": "slot",
+            "x": 840,
+            "y": 210,
+            "w": 250,
+            "h": 100,
+            "label": "Receipt?",
+            "color": "dim",
+            "o": 0
+          },
+          {
+            "id": "rec",
+            "type": "card",
+            "x": 840,
+            "y": 210,
+            "w": 250,
+            "h": 100,
+            "label": "The receipt",
+            "sub": "Groceries, 12 Nov, $80",
+            "color": "green",
+            "o": 0
+          },
+          {
+            "id": "link",
+            "type": "arrow",
+            "x": 200,
+            "y": 180,
+            "x2": 285,
+            "y2": 180,
+            "color": "blue",
+            "o": 0,
+            "draw": 0
+          },
+          {
+            "id": "stamp",
+            "type": "stamp",
+            "x": 600,
+            "y": 135,
+            "w": 110,
+            "label": "WAIT",
+            "color": "gold",
+            "o": 0,
+            "s": 0.4
+          }
+        ],
+        "beats": [
+          {
+            "say": "Someone hands you a bill.",
+            "dur": 2.2,
+            "set": {
+              "bill": {
+                "x": 300,
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "You ask for the receipt.",
+            "dur": 2,
+            "set": {
+              "slot": {
+                "x": 300,
+                "o": 1
+              },
+              "link": {
+                "o": 1,
+                "draw": 1
+              }
+            }
+          },
+          {
+            "say": "No receipt shows up.",
+            "dur": 2,
+            "set": {
+              "slot": {
+                "shake": true,
+                "color": "gold"
+              }
+            }
+          },
+          {
+            "say": "So you don't pay. Not yet.",
+            "dur": 2,
+            "set": {
+              "stamp": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "Then the receipt arrives.",
+            "dur": 2.4,
+            "set": {
+              "stamp": {
+                "o": 0,
+                "s": 0.4
+              },
+              "rec": {
+                "x": 300,
+                "o": 1
+              },
+              "slot": {
+                "o": 0
+              }
+            }
+          },
+          {
+            "say": "It matches. Now you pay.",
+            "dur": 2,
+            "set": {
+              "stamp": {
+                "o": 1,
+                "s": 1,
+                "label": "PAY",
+                "color": "green"
+              },
+              "link": {
+                "color": "green"
+              }
+            }
+          },
+          {
+            "say": "Every claim works the same way.",
+            "dur": 3.2,
+            "set": {
+              "bill": {
+                "label": "The claim",
+                "sub": "\"This pill burns fat\""
+              },
+              "rec": {
+                "label": "The evidence",
+                "sub": "the study, the numbers"
+              },
+              "stamp": {
+                "label": "TRUST"
+              }
+            }
+          },
+          {
+            "say": "No evidence? Don't buy it yet.",
+            "dur": 2.8,
+            "set": {
+              "rec": {
+                "o": 0
+              },
+              "slot": {
+                "o": 1,
+                "label": "Evidence?",
+                "shake": true
+              },
+              "stamp": {
+                "label": "WAIT",
+                "color": "gold"
+              },
+              "link": {
+                "color": "gold"
+              }
+            }
+          }
+        ]
       }
     },
     {
