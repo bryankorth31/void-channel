@@ -76,9 +76,12 @@
         key = key || 'label';
         const pairs = A[key] !== B[key] && A[key] != null
           ? [[A[key], 1 - Math.min(1, p * 2)], [B[key], Math.max(0, p * 2 - 1)]] : [[B[key], 1]];
-        pairs.forEach(([t, op]) => {
+        // Each word keeps its own size while it fades: the old one its old size, the new one its new size.
+        const base = { label: { card: 22, slot: 22, text: 22, stamp: 18 }[type] || 22, sub: 15 }[key];
+        pairs.forEach(([t, op], k) => {
           if (!t || op <= 0) return;
-          const n = el('text', { x: x, y: y, 'text-anchor': 'middle', 'dominant-baseline': 'middle', 'font-size': size,
+          const own = key === 'sub' ? size : ((pairs.length === 2 && k === 0 ? A.size : B.size) || base);
+          const n = el('text', { x: x, y: y, 'text-anchor': 'middle', 'dominant-baseline': 'middle', 'font-size': own,
             'font-weight': weight, fill: fill, opacity: op }, g);
           n.textContent = t;
         });

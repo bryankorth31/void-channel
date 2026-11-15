@@ -7,7 +7,9 @@
   "draftedBy": "Claude, 15 Nov 2026, from Bryan's words the same day: \"sunk cost fallacies cognitive dissonance et cetera ... people don't know how these affect things. These mechanisms are so vital for so much.\" The draft list is docs/MIND-MECHANISMS-draft.md. Every line here waits for Bryan to keep, change or strike.",
   "why": "Your mind runs on shortcuts. Most of the time they help. Some of them cost you money, time and years, and the people selling to you know them better than you do.",
   "outcomes": [
-    "Spot the sunk cost trap, and choose by what is ahead instead of what is already spent."
+    "Spot the sunk cost trap, and choose by what is ahead instead of what is already spent.",
+    "Notice when you are changing the story to stop a clash, instead of changing what you do.",
+    "Feel the pull of \"only today\" and \"everyone is going\", and still take the time to choose."
   ],
   "units": [
     {
@@ -17,35 +19,729 @@
       "why": "Money, time and effort you already spent are gone whichever way you choose. Letting them pick for you means paying again for something already lost.",
       "reachesYou": "The car you keep fixing, the job you stay in because of the years you put in, the course you finish though it stopped helping, the plate you clean though you are full.",
       "do": "Pick one thing you keep doing mostly because of what you already put in. Ask: if I were starting fresh today, with nothing spent, would I choose this? Write the answer down.",
-      "voices": ["thaler", "arkes"],
+      "voices": [
+        "thaler",
+        "arkes"
+      ],
       "scene": {
         "analogy": "Staying through a bad movie because you paid",
-        "map": [["the ticket", "what you already spent"], ["staying to \"not waste it\"", "paying again for what is gone"], ["the exit", "the choice still open"]],
+        "map": [
+          [
+            "the ticket",
+            "what you already spent"
+          ],
+          [
+            "staying to \"not waste it\"",
+            "paying again for what is gone"
+          ],
+          [
+            "the exit",
+            "the choice still open"
+          ]
+        ],
         "actors": [
-          { "id": "tk", "type": "card", "x": 30, "y": 30, "w": 200, "h": 96, "label": "Ticket", "sub": "$15, already paid", "color": "gold", "o": 0 },
-          { "id": "film", "type": "card", "x": 270, "y": 30, "w": 300, "h": 140, "label": "The movie", "sub": "", "color": "dim", "o": 0 },
-          { "id": "think", "type": "text", "x": 400, "y": 205, "label": "\"I paid for it, so I'll stay.\"", "color": "pink", "size": 22, "o": 0 },
-          { "id": "you", "type": "stamp", "x": 120, "y": 240, "w": 76, "label": "YOU", "color": "blue", "size": 15 },
-          { "id": "time", "type": "card", "x": 270, "y": 240, "w": 170, "h": 90, "label": "0:30", "sub": "of your night", "color": "dim", "o": 0 },
-          { "id": "exit", "type": "card", "x": 620, "y": 200, "w": 150, "h": 130, "label": "Exit", "color": "green", "o": 0 },
-          { "id": "go", "type": "arrow", "x": 200, "y": 300, "x2": 612, "y2": 300, "color": "green", "o": 0, "draw": 0 },
-          { "id": "st", "type": "stamp", "x": 640, "y": 20, "w": 120, "label": "SUNK", "color": "gold", "o": 0, "s": 0.4, "size": 18 }
+          {
+            "id": "tk",
+            "type": "card",
+            "x": 30,
+            "y": 30,
+            "w": 200,
+            "h": 96,
+            "label": "Ticket",
+            "sub": "$15, already paid",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "film",
+            "type": "card",
+            "x": 270,
+            "y": 30,
+            "w": 300,
+            "h": 140,
+            "label": "The movie",
+            "sub": "",
+            "color": "dim",
+            "o": 0
+          },
+          {
+            "id": "think",
+            "type": "text",
+            "x": 400,
+            "y": 205,
+            "label": "\"I paid for it, so I'll stay.\"",
+            "color": "pink",
+            "size": 22,
+            "o": 0
+          },
+          {
+            "id": "you",
+            "type": "stamp",
+            "x": 120,
+            "y": 240,
+            "w": 76,
+            "label": "YOU",
+            "color": "blue",
+            "size": 15
+          },
+          {
+            "id": "time",
+            "type": "card",
+            "x": 270,
+            "y": 240,
+            "w": 170,
+            "h": 90,
+            "label": "0:30",
+            "sub": "of your night",
+            "color": "dim",
+            "o": 0
+          },
+          {
+            "id": "exit",
+            "type": "card",
+            "x": 620,
+            "y": 200,
+            "w": 150,
+            "h": 130,
+            "label": "Exit",
+            "color": "green",
+            "o": 0
+          },
+          {
+            "id": "go",
+            "type": "arrow",
+            "x": 200,
+            "y": 300,
+            "x2": 612,
+            "y2": 300,
+            "color": "green",
+            "o": 0,
+            "draw": 0
+          },
+          {
+            "id": "st",
+            "type": "stamp",
+            "x": 640,
+            "y": 20,
+            "w": 120,
+            "label": "SUNK",
+            "color": "gold",
+            "o": 0,
+            "s": 0.4,
+            "size": 18
+          }
         ],
         "beats": [
-          { "say": "You pay $15 for a movie.", "dur": 2, "set": { "tk": { "o": 1 } } },
-          { "say": "Thirty minutes in, it is bad.", "dur": 2.2, "set": { "film": { "o": 1, "sub": "boring... still boring", "color": "gold", "shake": true }, "time": { "o": 1 } } },
-          { "say": "\"I paid, so I'll stay.\"", "dur": 2.4, "set": { "think": { "o": 1 } } },
-          { "say": "Two more hours gone.", "dur": 2.4, "set": { "time": { "label": "2:30", "color": "gold", "shake": true }, "tk": { "sub": "gone either way" }, "st": { "o": 1, "s": 1 } } },
-          { "say": "The $15 was gone either way.", "dur": 2.4, "set": { "think": { "o": 0 }, "tk": { "shake": true }, "exit": { "o": 1 } } },
-          { "say": "The only real choice: what comes next.", "dur": 2.4, "set": { "go": { "o": 1, "draw": 1 }, "time": { "label": "0:30", "color": "dim" } } },
-          { "say": "Jobs, cars, deals: same trap.", "dur": 3.4, "set": { "tk": { "label": "Already spent", "sub": "money, years, pride", "size": 20 }, "film": { "label": "The bad deal", "sub": "the job, the car, the plan" }, "time": { "label": "More of you", "sub": "time, money, life", "size": 20 }, "exit": { "label": "Walk away", "size": 20 } } },
-          { "say": "Spent is spent. Choose what's ahead.", "dur": 2.8, "set": { "st": { "label": "LOOK AHEAD", "color": "green", "size": 15 }, "you": { "x": 525, "y": 227 }, "go": { "o": 0 } } }
+          {
+            "say": "You pay $15 for a movie.",
+            "dur": 2,
+            "set": {
+              "tk": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Thirty minutes in, it is bad.",
+            "dur": 2.2,
+            "set": {
+              "film": {
+                "o": 1,
+                "sub": "boring... still boring",
+                "color": "gold",
+                "shake": true
+              },
+              "time": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "\"I paid, so I'll stay.\"",
+            "dur": 2.4,
+            "set": {
+              "think": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Two more hours gone.",
+            "dur": 2.4,
+            "set": {
+              "time": {
+                "label": "2:30",
+                "color": "gold",
+                "shake": true
+              },
+              "tk": {
+                "sub": "gone either way"
+              },
+              "st": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "The $15 was gone either way.",
+            "dur": 2.4,
+            "set": {
+              "think": {
+                "o": 0
+              },
+              "tk": {
+                "shake": true
+              },
+              "exit": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "The only real choice: what comes next.",
+            "dur": 2.4,
+            "set": {
+              "go": {
+                "o": 1,
+                "draw": 1
+              },
+              "time": {
+                "label": "0:30",
+                "color": "dim"
+              }
+            }
+          },
+          {
+            "say": "Jobs, cars, deals: same trap.",
+            "dur": 3.4,
+            "set": {
+              "tk": {
+                "label": "Already spent",
+                "sub": "money, years, pride",
+                "size": 20
+              },
+              "film": {
+                "label": "The bad deal",
+                "sub": "the job, the car, the plan"
+              },
+              "time": {
+                "label": "More of you",
+                "sub": "time, money, life",
+                "size": 20
+              },
+              "exit": {
+                "label": "Walk away",
+                "size": 20
+              }
+            }
+          },
+          {
+            "say": "Spent is spent. Choose what's ahead.",
+            "dur": 2.8,
+            "set": {
+              "st": {
+                "label": "LOOK AHEAD",
+                "color": "green",
+                "size": 15
+              },
+              "you": {
+                "x": 525,
+                "y": 227
+              },
+              "go": {
+                "o": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "title": "Cognitive dissonance",
+      "outcome": "Notice when you are changing the story to stop a clash, instead of changing what you do.",
+      "why": "When two of your thoughts clash, like \"I chose well\" and \"this is not working\", it feels bad. The fastest way to stop the feeling is to change the story. The fact stays where it was.",
+      "reachesYou": "Defending a car, a candidate, a partner or a plan long after it stopped working, because admitting it would mean you chose wrong.",
+      "do": "Find one thing you defend a little too hard. Say out loud: \"I chose that, and it is not working.\" Notice the sting, and notice that nothing bad happened.",
+      "voices": [
+        "festinger",
+        "aronson"
+      ],
+      "scene": {
+        "analogy": "New shoes that pinch, called comfy",
+        "map": [
+          [
+            "the price you paid",
+            "your choice"
+          ],
+          [
+            "the pinch",
+            "the fact that it is not working"
+          ],
+          [
+            "\"they're comfy\"",
+            "the story that stops the clash"
+          ],
+          [
+            "taking them back",
+            "changing the choice"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "shoe",
+            "type": "card",
+            "x": 30,
+            "y": 30,
+            "w": 220,
+            "h": 100,
+            "label": "New shoes",
+            "sub": "$120, no returns",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "pain",
+            "type": "card",
+            "x": 300,
+            "y": 30,
+            "w": 220,
+            "h": 100,
+            "label": "Ouch",
+            "sub": "they pinch",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "clash",
+            "type": "stamp",
+            "x": 600,
+            "y": 20,
+            "w": 130,
+            "label": "CLASH",
+            "color": "pink",
+            "o": 0,
+            "s": 0.4,
+            "size": 18
+          },
+          {
+            "id": "say",
+            "type": "text",
+            "x": 400,
+            "y": 182,
+            "label": "\"They're actually really comfy.\"",
+            "color": "pink",
+            "size": 24,
+            "o": 0
+          },
+          {
+            "id": "you",
+            "type": "stamp",
+            "x": 60,
+            "y": 235,
+            "w": 76,
+            "label": "YOU",
+            "color": "blue",
+            "size": 15
+          },
+          {
+            "id": "fix",
+            "type": "card",
+            "x": 540,
+            "y": 230,
+            "w": 230,
+            "h": 100,
+            "label": "Take them back",
+            "sub": "or admit the mistake",
+            "color": "green",
+            "o": 0,
+            "size": 20
+          },
+          {
+            "id": "to",
+            "type": "arrow",
+            "x": 470,
+            "y": 136,
+            "x2": 600,
+            "y2": 224,
+            "color": "green",
+            "o": 0,
+            "draw": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "You spend $120 on shoes.",
+            "dur": 2,
+            "set": {
+              "shoe": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "They hurt. Every step.",
+            "dur": 2.2,
+            "set": {
+              "pain": {
+                "o": 1,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "\"I chose well\" clashes with \"ouch\".",
+            "dur": 2.6,
+            "set": {
+              "shoe": {
+                "sub": "I chose well"
+              },
+              "clash": {
+                "o": 1,
+                "s": 1,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "So you change the story, not the shoes.",
+            "dur": 2.6,
+            "set": {
+              "say": {
+                "o": 1
+              },
+              "pain": {
+                "o": 0.35
+              },
+              "clash": {
+                "o": 0.35
+              }
+            }
+          },
+          {
+            "say": "The pinch is still there.",
+            "dur": 2.2,
+            "set": {
+              "pain": {
+                "o": 1,
+                "shake": true
+              },
+              "clash": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Beliefs work the same way.",
+            "dur": 3.4,
+            "set": {
+              "shoe": {
+                "label": "Your choice",
+                "sub": "a plan, a vote, a buy"
+              },
+              "pain": {
+                "label": "The fact",
+                "sub": "it is not working"
+              },
+              "say": {
+                "label": "\"It's fine. They're all lying.\""
+              },
+              "clash": {
+                "label": "DISSONANCE",
+                "size": 14
+              }
+            }
+          },
+          {
+            "say": "Fix the shoe, not the story.",
+            "dur": 2.8,
+            "set": {
+              "say": {
+                "o": 0
+              },
+              "fix": {
+                "o": 1,
+                "label": "Change course",
+                "sub": "say \"I got it wrong\""
+              },
+              "to": {
+                "o": 1,
+                "draw": 1
+              },
+              "clash": {
+                "label": "FIX IT",
+                "color": "green",
+                "size": 18
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "title": "Fear of missing out",
+      "outcome": "Feel the pull of \"only today\" and \"everyone is going\", and still take the time to choose.",
+      "why": "A closing door makes anything look more valuable. Sellers and apps close doors on purpose, so you decide before you think.",
+      "reachesYou": "\"Sale ends tonight\", \"only 2 left\", countdown timers, the group chat everyone is in, scrolling at 2 AM so you don't miss a post.",
+      "do": "Next time something says \"only today\", wait one day. Write down whether you still want it, and whether the deal really ended.",
+      "voices": [
+        "cialdini",
+        "przybylski"
+      ],
+      "scene": {
+        "analogy": "Jumping into a closing elevator",
+        "map": [
+          [
+            "the closing door",
+            "\"only today\", \"2 left\""
+          ],
+          [
+            "the jump",
+            "deciding before thinking"
+          ],
+          [
+            "going the wrong way",
+            "buying what you did not need"
+          ],
+          [
+            "the next elevator",
+            "the deal that always comes back"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "cab",
+            "type": "card",
+            "x": 250,
+            "y": 50,
+            "w": 300,
+            "h": 220,
+            "label": "",
+            "color": "dim"
+          },
+          {
+            "id": "dl",
+            "type": "card",
+            "x": 100,
+            "y": 50,
+            "w": 150,
+            "h": 220,
+            "label": "",
+            "color": "blue",
+            "size": 18
+          },
+          {
+            "id": "dr",
+            "type": "card",
+            "x": 550,
+            "y": 50,
+            "w": 150,
+            "h": 220,
+            "label": "",
+            "color": "blue",
+            "size": 18
+          },
+          {
+            "id": "up",
+            "type": "stamp",
+            "x": 660,
+            "y": 6,
+            "w": 110,
+            "label": "UP",
+            "color": "blue",
+            "o": 0,
+            "s": 0.4,
+            "size": 18
+          },
+          {
+            "id": "yell",
+            "type": "text",
+            "x": 400,
+            "y": 312,
+            "label": "\"Hold the door!\"",
+            "color": "pink",
+            "size": 22,
+            "o": 0
+          },
+          {
+            "id": "you",
+            "type": "stamp",
+            "x": 20,
+            "y": 135,
+            "w": 76,
+            "label": "YOU",
+            "color": "blue",
+            "size": 15
+          },
+          {
+            "id": "need",
+            "type": "text",
+            "x": 110,
+            "y": 30,
+            "label": "You need: DOWN",
+            "color": "dim",
+            "size": 17
+          }
+        ],
+        "beats": [
+          {
+            "say": "The elevator doors start to close.",
+            "dur": 2.2,
+            "set": {
+              "dl": {
+                "x": 175
+              },
+              "dr": {
+                "x": 475
+              }
+            }
+          },
+          {
+            "say": "Everyone rushes. You jump in.",
+            "dur": 2.2,
+            "set": {
+              "you": {
+                "x": 362,
+                "y": 192
+              },
+              "yell": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Doors shut. It goes up.",
+            "dur": 2.2,
+            "set": {
+              "dl": {
+                "x": 250
+              },
+              "dr": {
+                "x": 400
+              },
+              "up": {
+                "o": 1,
+                "s": 1
+              },
+              "yell": {
+                "o": 0
+              }
+            }
+          },
+          {
+            "say": "You needed down.",
+            "dur": 2.2,
+            "set": {
+              "you": {
+                "shake": true,
+                "color": "gold"
+              },
+              "up": {
+                "color": "gold",
+                "shake": true
+              },
+              "need": {
+                "color": "gold"
+              }
+            }
+          },
+          {
+            "say": "Sales and feeds work the same way.",
+            "dur": 3.4,
+            "set": {
+              "dl": {
+                "label": "Only today!",
+                "color": "pink"
+              },
+              "dr": {
+                "label": "2 left!",
+                "color": "pink"
+              },
+              "yell": {
+                "o": 1,
+                "label": "\"Buy now! Everyone is!\""
+              },
+              "up": {
+                "label": "NOT NEEDED",
+                "size": 13
+              },
+              "need": {
+                "label": "You need: what you need"
+              }
+            }
+          },
+          {
+            "say": "Another elevator always comes.",
+            "dur": 2.8,
+            "set": {
+              "dl": {
+                "x": 100,
+                "label": "",
+                "color": "blue"
+              },
+              "dr": {
+                "x": 550,
+                "label": "",
+                "color": "blue"
+              },
+              "you": {
+                "x": 20,
+                "y": 135,
+                "color": "blue"
+              },
+              "yell": {
+                "o": 0
+              },
+              "up": {
+                "label": "WAIT",
+                "color": "green",
+                "size": 18
+              },
+              "need": {
+                "color": "green"
+              },
+              "cab": {
+                "label": "Next one",
+                "color": "green"
+              }
+            }
+          }
         ]
       }
     }
   ],
   "voices": {
-    "thaler": { "name": "Richard Thaler", "what": "Economist", "did": "Described the sunk cost trap in everyday spending in 1980 and won the 2017 Nobel prize for showing how people really decide." },
-    "arkes": { "name": "Hal Arkes", "what": "Psychologist", "did": "With Catherine Blumer in 1985, showed that theatergoers who paid full price for season tickets went to more plays than those given a discount: the money already spent pulled them back." }
+    "thaler": {
+      "name": "Richard Thaler",
+      "what": "Economist",
+      "did": "Described the sunk cost trap in everyday spending in 1980 and won the 2017 Nobel prize for showing how people really decide."
+    },
+    "arkes": {
+      "name": "Hal Arkes",
+      "what": "Psychologist",
+      "did": "With Catherine Blumer in 1985, showed that theatergoers who paid full price for season tickets went to more plays than those given a discount: the money already spent pulled them back."
+    },
+    "festinger": {
+      "name": "Leon Festinger",
+      "what": "Psychologist",
+      "did": "Named cognitive dissonance in 1957, after studying a group whose prophecy of the end of the world failed and who then believed more strongly, not less."
+    },
+    "aronson": {
+      "name": "Elliot Aronson",
+      "what": "Psychologist",
+      "did": "Showed in 1959 that people who went through a harsh initiation to join a dull group rated the group more highly: the cost made them defend the choice."
+    },
+    "cialdini": {
+      "name": "Robert Cialdini",
+      "what": "Psychologist",
+      "did": "Trained as a salesman undercover to study persuasion, and named scarcity, \"only a few left\", as one of its main levers in Influence (1984)."
+    },
+    "przybylski": {
+      "name": "Andrew Przybylski",
+      "what": "Psychologist",
+      "did": "Built the first scale to measure fear of missing out in 2013 and found it ties to heavier social media use and lower mood."
+    }
   }
 }
