@@ -12,7 +12,10 @@
     "Feel the pull of \"only today\" and \"everyone is going\", and still take the time to choose.",
     "Look for what would prove you wrong, not only for what agrees with you.",
     "Notice when the first number you heard is setting the price, and set your own first.",
-    "Weigh a possible loss and an equal gain on the same scale."
+    "Weigh a possible loss and an equal gain on the same scale.",
+    "Tell how often something happens from how easy it is to picture.",
+    "Tell \"many people chose it\" apart from \"it is good\".",
+    "Ask whether you would choose what you have if you were choosing today."
   ],
   "units": [
     {
@@ -1324,6 +1327,613 @@
           }
         ]
       }
+    },
+    {
+      "n": 7,
+      "title": "Availability",
+      "outcome": "Tell how often something happens from how easy it is to picture.",
+      "why": "Your mind judges how likely something is by how fast an example comes to mind. Loud, rare, scary things come to mind fast. Quiet, common dangers do not.",
+      "reachesYou": "Fearing planes but not cars, buying lottery tickets after a winner is on the news, worrying about strangers while the real risks sit at home: the stairs, the pool, the car.",
+      "do": "Pick one thing you worry about. Look up how many people it actually hurts in a year, then look up one ordinary thing you do daily. Compare the two numbers.",
+      "voices": [
+        "tversky",
+        "slovic"
+      ],
+      "scene": {
+        "analogy": "Afraid of sharks, not the drive to the beach",
+        "map": [
+          [
+            "the shark on the news",
+            "the danger that is easy to picture"
+          ],
+          [
+            "the drive there",
+            "the danger nobody talks about"
+          ],
+          [
+            "the numbers",
+            "how often it really happens"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "sh",
+            "type": "card",
+            "x": 30,
+            "y": 30,
+            "w": 230,
+            "h": 100,
+            "label": "Shark",
+            "sub": "on the news all week",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "cr",
+            "type": "card",
+            "x": 30,
+            "y": 200,
+            "w": 230,
+            "h": 100,
+            "label": "The drive there",
+            "sub": "never on the news",
+            "color": "dim",
+            "o": 0
+          },
+          {
+            "id": "sf",
+            "type": "card",
+            "x": 290,
+            "y": 40,
+            "w": 60,
+            "h": 80,
+            "label": "",
+            "color": "pink",
+            "o": 0,
+            "size": 18
+          },
+          {
+            "id": "cf",
+            "type": "card",
+            "x": 290,
+            "y": 210,
+            "w": 60,
+            "h": 80,
+            "label": "",
+            "color": "dim",
+            "o": 0,
+            "size": 18
+          },
+          {
+            "id": "sn",
+            "type": "text",
+            "x": 680,
+            "y": 80,
+            "label": "about 1 death a year",
+            "color": "fg",
+            "size": 17,
+            "o": 0
+          },
+          {
+            "id": "cn",
+            "type": "text",
+            "x": 680,
+            "y": 250,
+            "label": "about 40,000 a year",
+            "color": "gold",
+            "size": 17,
+            "o": 0
+          },
+          {
+            "id": "note",
+            "type": "text",
+            "x": 680,
+            "y": 165,
+            "label": "United States",
+            "color": "dim",
+            "size": 14,
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "A shark attack is on the news. All week.",
+            "dur": 2.4,
+            "set": {
+              "sh": {
+                "o": 1,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "You are scared to swim.",
+            "dur": 2.2,
+            "set": {
+              "sf": {
+                "o": 1,
+                "w": 290,
+                "label": "scared"
+              }
+            }
+          },
+          {
+            "say": "You drive there without a thought.",
+            "dur": 2.2,
+            "set": {
+              "cr": {
+                "o": 1
+              },
+              "cf": {
+                "o": 1,
+                "label": ""
+              }
+            }
+          },
+          {
+            "say": "The drive is the real danger.",
+            "dur": 2.8,
+            "set": {
+              "sn": {
+                "o": 1
+              },
+              "cn": {
+                "o": 1
+              },
+              "note": {
+                "o": 1
+              },
+              "cr": {
+                "color": "gold",
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "Easy to picture feels likely.",
+            "dur": 3.4,
+            "set": {
+              "sh": {
+                "label": "Easy to picture",
+                "sub": "loud, rare, on the news",
+                "size": 20
+              },
+              "cr": {
+                "label": "Hard to picture",
+                "sub": "quiet, everyday",
+                "size": 20
+              },
+              "sf": {
+                "label": "worry"
+              }
+            }
+          },
+          {
+            "say": "Check the numbers, not the noise.",
+            "dur": 2.8,
+            "set": {
+              "sf": {
+                "w": 60,
+                "label": "",
+                "color": "dim"
+              },
+              "cf": {
+                "w": 290,
+                "label": "real risk",
+                "color": "gold"
+              },
+              "sh": {
+                "color": "dim"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "n": 8,
+      "title": "Bandwagon",
+      "outcome": "Tell \"many people chose it\" apart from \"it is good\".",
+      "why": "A crowd is a quick signal, and sometimes a good one. But a line can form just because there was already a line. Then nobody in it actually checked.",
+      "reachesYou": "The stock everyone is buying at the top, the viral product, the opinion your whole group switched to in a week, five-star counts bought in bulk.",
+      "do": "Next time you are drawn to something because it is popular, find one reason to want it that would still be true if nobody else wanted it.",
+      "voices": [
+        "asch",
+        "shiller"
+      ],
+      "scene": {
+        "analogy": "Picking the restaurant with the line",
+        "map": [
+          [
+            "the line",
+            "how many people chose it"
+          ],
+          [
+            "joining it",
+            "choosing because others did"
+          ],
+          [
+            "the empty place",
+            "the option nobody checked"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "A",
+            "type": "card",
+            "x": 40,
+            "y": 30,
+            "w": 300,
+            "h": 130,
+            "label": "Place A",
+            "color": "dim",
+            "o": 0
+          },
+          {
+            "id": "B",
+            "type": "card",
+            "x": 460,
+            "y": 30,
+            "w": 300,
+            "h": 130,
+            "label": "Place B",
+            "color": "dim",
+            "o": 0
+          },
+          {
+            "id": "p0",
+            "type": "stamp",
+            "x": 380,
+            "y": 300,
+            "w": 34,
+            "label": "",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "p1",
+            "type": "stamp",
+            "x": 388,
+            "y": 300,
+            "w": 34,
+            "label": "",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "p2",
+            "type": "stamp",
+            "x": 396,
+            "y": 300,
+            "w": 34,
+            "label": "",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "p3",
+            "type": "stamp",
+            "x": 404,
+            "y": 300,
+            "w": 34,
+            "label": "",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "you",
+            "type": "stamp",
+            "x": 520,
+            "y": 250,
+            "w": 72,
+            "label": "YOU",
+            "color": "blue",
+            "size": 14
+          },
+          {
+            "id": "go",
+            "type": "arrow",
+            "x": 520,
+            "y": 260,
+            "x2": 560,
+            "y2": 170,
+            "color": "green",
+            "o": 0,
+            "draw": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "Two places on one street.",
+            "dur": 2,
+            "set": {
+              "A": {
+                "o": 1
+              },
+              "B": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "One person goes into A.",
+            "dur": 2,
+            "set": {
+              "p0": {
+                "o": 1,
+                "x": 70,
+                "y": 190
+              }
+            }
+          },
+          {
+            "say": "Others see the line, and follow.",
+            "dur": 2.4,
+            "set": {
+              "p1": {
+                "o": 1,
+                "x": 120,
+                "y": 190
+              },
+              "p2": {
+                "o": 1,
+                "x": 170,
+                "y": 190
+              },
+              "p3": {
+                "o": 1,
+                "x": 220,
+                "y": 190
+              },
+              "A": {
+                "sub": "line out the door",
+                "color": "pink"
+              }
+            }
+          },
+          {
+            "say": "You join. It must be good.",
+            "dur": 2.2,
+            "set": {
+              "you": {
+                "x": 268,
+                "y": 180
+              }
+            }
+          },
+          {
+            "say": "B was better. Nobody tried it.",
+            "dur": 2.6,
+            "set": {
+              "B": {
+                "sub": "better food, no line",
+                "color": "green",
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "Fads, stocks, opinions: same line.",
+            "dur": 3.4,
+            "set": {
+              "A": {
+                "label": "The crowd's pick",
+                "sub": "busy because it is busy"
+              },
+              "B": {
+                "label": "Nobody checked",
+                "sub": "maybe better"
+              }
+            }
+          },
+          {
+            "say": "A line is not a review.",
+            "dur": 2.8,
+            "set": {
+              "you": {
+                "x": 560,
+                "y": 220
+              },
+              "go": {
+                "o": 1,
+                "draw": 1,
+                "x": 600,
+                "y": 222,
+                "x2": 610,
+                "y2": 166
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "n": 9,
+      "title": "Status quo bias",
+      "outcome": "Ask whether you would choose what you have if you were choosing today.",
+      "why": "Whatever you already have feels safe, even when it costs more. Changing takes a small effort now; staying costs a little every month, quietly, forever.",
+      "reachesYou": "Phone and internet plans, insurance, bank fees, the subscription you forgot, the default settings on every app, the retirement plan you never set up.",
+      "do": "Pick one bill you have paid the same way for over a year. Spend ten minutes looking at what else is out there. Make the call if it is better.",
+      "voices": [
+        "samuelson",
+        "madrian"
+      ],
+      "scene": {
+        "analogy": "Never changing your phone plan",
+        "map": [
+          [
+            "the old plan",
+            "the default you already have"
+          ],
+          [
+            "one phone call",
+            "the small effort to change"
+          ],
+          [
+            "the extra $40 a month",
+            "the price of staying put"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "old",
+            "type": "card",
+            "x": 40,
+            "y": 50,
+            "w": 270,
+            "h": 120,
+            "label": "Your plan",
+            "sub": "$80 a month, since 2015",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "new",
+            "type": "card",
+            "x": 490,
+            "y": 50,
+            "w": 270,
+            "h": 120,
+            "label": "New plan",
+            "sub": "$40, same phone",
+            "color": "green",
+            "o": 0
+          },
+          {
+            "id": "meh",
+            "type": "text",
+            "x": 400,
+            "y": 215,
+            "label": "\"Eh, maybe later.\"",
+            "color": "pink",
+            "size": 24,
+            "o": 0
+          },
+          {
+            "id": "cost",
+            "type": "card",
+            "x": 40,
+            "y": 250,
+            "w": 270,
+            "h": 90,
+            "label": "$40 a month",
+            "sub": "for staying",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "go",
+            "type": "arrow",
+            "x": 316,
+            "y": 110,
+            "x2": 482,
+            "y2": 110,
+            "color": "green",
+            "o": 0,
+            "draw": 0
+          },
+          {
+            "id": "st",
+            "type": "stamp",
+            "x": 560,
+            "y": 220,
+            "w": 120,
+            "label": "CALL",
+            "color": "green",
+            "o": 0,
+            "s": 0.4,
+            "size": 20
+          }
+        ],
+        "beats": [
+          {
+            "say": "Same phone plan for years.",
+            "dur": 2,
+            "set": {
+              "old": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "A plan for half the price shows up.",
+            "dur": 2.2,
+            "set": {
+              "new": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Switching takes one phone call.",
+            "dur": 2.4,
+            "set": {
+              "meh": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Every month you stay, you pay $40 more.",
+            "dur": 2.8,
+            "set": {
+              "cost": {
+                "o": 1,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "It adds up quietly.",
+            "dur": 2.4,
+            "set": {
+              "cost": {
+                "label": "$480 a year",
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "Banks, insurance, habits: same default.",
+            "dur": 3.4,
+            "set": {
+              "old": {
+                "label": "The default",
+                "sub": "what you already have"
+              },
+              "new": {
+                "label": "A better option",
+                "sub": "one call away"
+              },
+              "meh": {
+                "label": "\"It's fine how it is.\""
+              },
+              "cost": {
+                "label": "Cost of staying",
+                "sub": "small, forever",
+                "size": 20
+              }
+            }
+          },
+          {
+            "say": "Would you pick it today?",
+            "dur": 2.8,
+            "set": {
+              "go": {
+                "o": 1,
+                "draw": 1
+              },
+              "st": {
+                "o": 1,
+                "s": 1
+              },
+              "meh": {
+                "o": 0
+              }
+            }
+          }
+        ]
+      }
     }
   ],
   "voices": {
@@ -1375,12 +1985,37 @@
     "tversky": {
       "name": "Amos Tversky",
       "what": "Psychologist",
-      "did": "With Daniel Kahneman, built prospect theory (1979), which measured that losses weigh about twice as much as equal gains."
+      "did": "With Daniel Kahneman, described the availability shortcut (1973) and built prospect theory (1979), which measured that losses weigh about twice as much as equal gains."
     },
     "northcraft": {
       "name": "Gregory Northcraft and Margaret Neale",
       "what": "Management researchers",
       "did": "In 1987 showed that real estate agents valued the same house higher or lower depending on the asking price they were shown, while saying the price had not swayed them."
+    },
+    "slovic": {
+      "name": "Paul Slovic",
+      "what": "Psychologist",
+      "did": "Spent decades measuring how people judge risk, and showed that dread and vivid images, not the numbers, drive what we fear."
+    },
+    "asch": {
+      "name": "Solomon Asch",
+      "what": "Psychologist",
+      "did": "In the 1950s had people match line lengths beside actors giving a wrong answer. About a third of the time, people went along with the group against their own eyes."
+    },
+    "shiller": {
+      "name": "Robert Shiller",
+      "what": "Economist",
+      "did": "Warned of the dot-com and housing bubbles before they burst by showing how prices feed on the crowd's own excitement, and won the 2013 Nobel prize in economics."
+    },
+    "samuelson": {
+      "name": "William Samuelson and Richard Zeckhauser",
+      "what": "Economists",
+      "did": "Named status quo bias in 1988, showing in experiments and real choices of health plans that people stick with whatever option is already theirs."
+    },
+    "madrian": {
+      "name": "Brigitte Madrian",
+      "what": "Economist",
+      "did": "With Dennis Shea (2001), showed that when one company made retirement savings the default, joining went from about a third of new workers to most of them."
     }
   }
 }
