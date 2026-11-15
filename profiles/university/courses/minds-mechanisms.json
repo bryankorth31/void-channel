@@ -18,7 +18,10 @@
     "Ask whether you would choose what you have if you were choosing today.",
     "Say a fact the other way round before you decide on it.",
     "Take a gift without letting it decide what you buy or agree to.",
-    "Trust what someone has shown, not what they wear or what they are called."
+    "Trust what someone has shown, not what they wear or what they are called.",
+    "Want a thing for what it is, not for how few seem to be left.",
+    "Remember what you really expected before you knew how it ended.",
+    "Notice when being new at something is making you feel sure of it."
   ],
   "units": [
     {
@@ -2491,6 +2494,553 @@
           }
         ]
       }
+    },
+    {
+      "n": 13,
+      "title": "Scarcity",
+      "outcome": "Want a thing for what it is, not for how few seem to be left.",
+      "why": "Things that seem rare feel more valuable, even when they are exactly the same. A seller can make anything seem rare with one line of text.",
+      "reachesYou": "\"Only 2 left in stock\", \"3 people are looking at this\", limited drops, last seats at this price, the countdown on a checkout page.",
+      "do": "Next time a page says \"only a few left\", screenshot it and check again tomorrow. Note whether the number really changed.",
+      "voices": [
+        "worchel",
+        "cialdini"
+      ],
+      "scene": {
+        "analogy": "\"Only 2 left in stock\"",
+        "map": [
+          [
+            "the stock counter",
+            "a number the seller sets"
+          ],
+          [
+            "wanting it more",
+            "value from rarity, not from the thing"
+          ],
+          [
+            "the warehouse",
+            "how many there really are"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "shelf",
+            "type": "card",
+            "x": 40,
+            "y": 40,
+            "w": 320,
+            "h": 140,
+            "label": "The hat",
+            "sub": "10 in stock",
+            "color": "dim",
+            "o": 0
+          },
+          {
+            "id": "tag",
+            "type": "text",
+            "x": 610,
+            "y": 60,
+            "label": "\"Only 2 left!\"",
+            "color": "pink",
+            "size": 26,
+            "o": 0
+          },
+          {
+            "id": "want",
+            "type": "card",
+            "x": 400,
+            "y": 110,
+            "w": 60,
+            "h": 70,
+            "label": "",
+            "color": "pink",
+            "o": 0,
+            "size": 18
+          },
+          {
+            "id": "st",
+            "type": "stamp",
+            "x": 140,
+            "y": 210,
+            "w": 120,
+            "label": "BOUGHT",
+            "color": "pink",
+            "o": 0,
+            "s": 0.4,
+            "size": 17
+          },
+          {
+            "id": "wh",
+            "type": "card",
+            "x": 400,
+            "y": 230,
+            "w": 360,
+            "h": 100,
+            "label": "The warehouse",
+            "sub": "5,000 more",
+            "color": "green",
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "A hat. 10 in stock. You shrug.",
+            "dur": 2.2,
+            "set": {
+              "shelf": {
+                "o": 1
+              },
+              "want": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Same hat: \"Only 2 left!\"",
+            "dur": 2.2,
+            "set": {
+              "shelf": {
+                "sub": "2 in stock",
+                "color": "gold"
+              },
+              "tag": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Suddenly you want it more.",
+            "dur": 2.4,
+            "set": {
+              "want": {
+                "w": 360,
+                "label": "want it",
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "You buy it. Right now.",
+            "dur": 2,
+            "set": {
+              "st": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "The warehouse has 5,000.",
+            "dur": 2.6,
+            "set": {
+              "wh": {
+                "o": 1,
+                "shake": true
+              },
+              "st": {
+                "label": "FAKE RUSH",
+                "color": "gold",
+                "size": 15
+              }
+            }
+          },
+          {
+            "say": "Limited drops, last seats: same counter.",
+            "dur": 3.4,
+            "set": {
+              "shelf": {
+                "label": "The counter",
+                "sub": "set by the seller"
+              },
+              "tag": {
+                "label": "\"Limited edition!\""
+              },
+              "want": {
+                "label": "the pull"
+              },
+              "wh": {
+                "label": "What is really there",
+                "sub": "plenty"
+              }
+            }
+          },
+          {
+            "say": "Rare is not the same as good.",
+            "dur": 2.8,
+            "set": {
+              "want": {
+                "w": 60,
+                "label": "",
+                "color": "dim"
+              },
+              "st": {
+                "label": "SAME HAT",
+                "color": "green",
+                "size": 16
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "n": 14,
+      "title": "Hindsight bias",
+      "outcome": "Remember what you really expected before you knew how it ended.",
+      "why": "Once you know how something turned out, your memory quietly rewrites what you expected, so the past looks obvious. Then the future looks easier to call than it is.",
+      "reachesYou": "\"I knew that stock would crash\", \"I always said they would break up\", blaming someone for missing what only looks obvious now, betting big on the next call.",
+      "do": "Before the next game, election or big decision, write down what you expect and how sure you are. Read it after the result.",
+      "voices": [
+        "fischhoff",
+        "kahneman"
+      ],
+      "scene": {
+        "analogy": "\"I knew it!\" after the game",
+        "map": [
+          [
+            "before the game",
+            "what you really expected"
+          ],
+          [
+            "\"I knew it!\"",
+            "memory rewritten by the result"
+          ],
+          [
+            "the next big bet",
+            "overconfidence about the future"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "pre",
+            "type": "card",
+            "x": 40,
+            "y": 40,
+            "w": 320,
+            "h": 120,
+            "label": "Before the game",
+            "sub": "\"Could go either way.\"",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "post",
+            "type": "card",
+            "x": 440,
+            "y": 40,
+            "w": 320,
+            "h": 120,
+            "label": "After the game",
+            "sub": "\"I knew it all along!\"",
+            "color": "pink",
+            "o": 0
+          },
+          {
+            "id": "score",
+            "type": "stamp",
+            "x": 330,
+            "y": 190,
+            "w": 140,
+            "label": "24-21",
+            "color": "fg",
+            "o": 0,
+            "s": 0.4,
+            "size": 26
+          },
+          {
+            "id": "bet",
+            "type": "card",
+            "x": 520,
+            "y": 230,
+            "w": 240,
+            "h": 100,
+            "label": "Next bet",
+            "sub": "$200, \"I just know\"",
+            "color": "gold",
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "Before the game: \"Could go either way.\"",
+            "dur": 2.4,
+            "set": {
+              "pre": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Your team wins, 24 to 21.",
+            "dur": 2,
+            "set": {
+              "score": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "\"I knew it all along!\"",
+            "dur": 2.2,
+            "set": {
+              "post": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Your memory rewrites what you said.",
+            "dur": 2.8,
+            "set": {
+              "pre": {
+                "sub": "\"I knew they would win.\"",
+                "color": "pink",
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "So you bet big next time.",
+            "dur": 2.2,
+            "set": {
+              "bet": {
+                "o": 1,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "Markets, elections, blame: same rewrite.",
+            "dur": 3.4,
+            "set": {
+              "pre": {
+                "label": "What you expected"
+              },
+              "post": {
+                "label": "What you say now"
+              },
+              "score": {
+                "label": "RESULT",
+                "size": 20
+              },
+              "bet": {
+                "label": "Overconfidence",
+                "sub": "bets, plans, blame"
+              }
+            }
+          },
+          {
+            "say": "Write it down before you know.",
+            "dur": 2.8,
+            "set": {
+              "pre": {
+                "sub": "\"Could go either way.\"",
+                "color": "green"
+              },
+              "bet": {
+                "color": "dim"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "n": 15,
+      "title": "Dunning-Kruger: knowing a little",
+      "outcome": "Notice when being new at something is making you feel sure of it.",
+      "why": "When you are new at something, you cannot yet see what you are missing, so it feels easy. As skill grows, so does the view of what is left to learn. Researchers argue about how big this effect is, but the pattern shows up often.",
+      "reachesYou": "The new driver who speeds, the person who read one article and argues with doctors, the first-week trader, the new boss who changes everything on day one.",
+      "do": "Pick one thing you feel sure about but learned recently. Find someone with years in it and ask them what beginners usually get wrong.",
+      "voices": [
+        "dunning",
+        "svenson"
+      ],
+      "scene": {
+        "analogy": "The new driver who thinks they drive great",
+        "map": [
+          [
+            "the new driver",
+            "anyone new at something"
+          ],
+          [
+            "feeling great",
+            "not yet seeing what you are missing"
+          ],
+          [
+            "the old hand, less sure",
+            "skill that shows how much is left"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "when",
+            "type": "text",
+            "x": 400,
+            "y": 32,
+            "label": "Week 1 of driving",
+            "color": "dim",
+            "size": 20,
+            "o": 0
+          },
+          {
+            "id": "lk",
+            "type": "text",
+            "x": 140,
+            "y": 120,
+            "label": "Skill",
+            "color": "blue",
+            "size": 20,
+            "o": 0
+          },
+          {
+            "id": "lc",
+            "type": "text",
+            "x": 140,
+            "y": 225,
+            "label": "How sure",
+            "color": "pink",
+            "size": 20,
+            "o": 0
+          },
+          {
+            "id": "sk",
+            "type": "card",
+            "x": 240,
+            "y": 85,
+            "w": 60,
+            "h": 70,
+            "label": "",
+            "color": "blue",
+            "o": 0,
+            "size": 18
+          },
+          {
+            "id": "cf",
+            "type": "card",
+            "x": 240,
+            "y": 190,
+            "w": 60,
+            "h": 70,
+            "label": "",
+            "color": "pink",
+            "o": 0,
+            "size": 18
+          },
+          {
+            "id": "q",
+            "type": "text",
+            "x": 400,
+            "y": 315,
+            "label": "\"I'm a great driver.\"",
+            "color": "pink",
+            "size": 24,
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "Week one behind the wheel.",
+            "dur": 2,
+            "set": {
+              "when": {
+                "o": 1
+              },
+              "lk": {
+                "o": 1
+              },
+              "lc": {
+                "o": 1
+              },
+              "sk": {
+                "o": 1
+              },
+              "cf": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "A little skill feels like a lot.",
+            "dur": 2.6,
+            "set": {
+              "cf": {
+                "w": 500,
+                "shake": true,
+                "label": "very sure"
+              }
+            }
+          },
+          {
+            "say": "\"I'm a great driver.\"",
+            "dur": 2.2,
+            "set": {
+              "q": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Five years later: more skill, less sure.",
+            "dur": 3,
+            "set": {
+              "when": {
+                "label": "Year 5 of driving"
+              },
+              "sk": {
+                "w": 420,
+                "label": "much better"
+              },
+              "cf": {
+                "w": 260,
+                "label": "careful",
+                "color": "green"
+              },
+              "q": {
+                "label": "\"Still learning.\"",
+                "color": "green"
+              }
+            }
+          },
+          {
+            "say": "Anything new works the same way.",
+            "dur": 3.4,
+            "set": {
+              "when": {
+                "label": "Any new skill"
+              },
+              "sk": {
+                "w": 60,
+                "label": ""
+              },
+              "cf": {
+                "w": 500,
+                "label": "very sure",
+                "color": "pink"
+              },
+              "q": {
+                "label": "\"How hard can it be?\"",
+                "color": "pink"
+              }
+            }
+          },
+          {
+            "say": "Feeling sure is not the same as being good.",
+            "dur": 3,
+            "set": {
+              "cf": {
+                "shake": true,
+                "color": "gold"
+              },
+              "q": {
+                "label": "\"What am I missing?\"",
+                "color": "green"
+              }
+            }
+          }
+        ]
+      }
     }
   ],
   "voices": {
@@ -2593,6 +3143,26 @@
       "name": "Charles Hofling",
       "what": "Psychiatrist",
       "did": "In 1966 had an unknown \"doctor\" phone hospital nurses to give twice the maximum dose of a drug. 21 of 22 nurses were stopped on the way to give it."
+    },
+    "worchel": {
+      "name": "Stephen Worchel",
+      "what": "Psychologist",
+      "did": "In 1975 offered people the same cookie from a jar of ten or a jar of two. The cookie from the nearly empty jar was rated more desirable."
+    },
+    "fischhoff": {
+      "name": "Baruch Fischhoff",
+      "what": "Psychologist",
+      "did": "In 1975 showed that people told how a historical event turned out believed they would have predicted it, and could not undo the knowledge when asked to."
+    },
+    "dunning": {
+      "name": "David Dunning and Justin Kruger",
+      "what": "Psychologists",
+      "did": "In 1999 found that people who scored lowest on tests of logic and grammar rated themselves well above average: the skill to do it is the skill to judge it."
+    },
+    "svenson": {
+      "name": "Ola Svenson",
+      "what": "Psychologist",
+      "did": "In 1981 asked drivers to rate their own skill. Most American drivers in the study put themselves in the safest, most skilled half."
     }
   }
 }
