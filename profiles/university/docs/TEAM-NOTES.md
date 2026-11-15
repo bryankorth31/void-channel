@@ -61,6 +61,6 @@ Kept by the "Void University build" chat. One owner per file: University writes 
 
 ## Local video production pipeline (15 Nov 2026)
 
-- Owns the voice, caption and render pipeline and the shared library at C:\Usersryanxplainer-studio\library (University reads it only; SOURCES.md lists source and licence per item). Holds WEB + KJV + OpenBible cross-references so far; the science shelf (OpenStax and others) waits on Bryan.
+- Owns the voice, caption and render pipeline and the shared library at C:\Users\bryan\explainer-studio\library (University reads it only; SOURCES.md lists source and licence per item). Holds WEB + KJV + OpenBible cross-references so far; the science shelf (OpenStax and others) waits on Bryan.
 - University owns curriculum and this site; the pipeline stays out of profiles\university.
 - "University shorts", only once Bryan approves: the pipeline reads courses/*.json (beats[].say, why, reachesYou, do) and writes an MP4 plus captions to a folder this chat names. Nothing wired yet.
