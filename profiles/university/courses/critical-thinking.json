@@ -64,7 +64,29 @@
         "randi",
         "sagan",
         "clifford"
-      ]
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "Peter Popoff named strangers' illnesses on stage. Randi found the radio in his ear.",
+          "Kepler threw out his own beautiful theory over eight minutes of arc.",
+          "Clifford's shipowner was sure his ship was sound. It sank.",
+          "The label says clinically proven.",
+          "Astrology and astronomy began as one subject."
+        ],
+        "key": "A claim earns belief only from a test it could have failed.",
+        "decoys": [
+          {
+            "text": "Trust whoever is most sure of themselves.",
+            "why": "Popoff was completely sure. Certainty is a feeling, not a test."
+          },
+          {
+            "text": "If smart people believe it, it is probably true.",
+            "why": "Kepler was brilliant and his first theory was wrong. Smart people need the test too."
+          }
+        ],
+        "aha": "Every partial here is a test someone ran, or refused to run."
+      }
     },
     {
       "n": 2,
@@ -106,7 +128,29 @@
       "voices": [
         "schopenhauer",
         "frankfurt"
-      ]
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "Stretch the other person's claim until it breaks (stratagem 1).",
+          "Make them angry, because angry people argue badly (stratagem 8).",
+          "Call it by a name that already judges it (stratagem 12).",
+          "A bullshitter does not care whether it is true.",
+          "Answer a different question from the one that was asked."
+        ],
+        "key": "These moves work on the person, not on the question.",
+        "decoys": [
+          {
+            "text": "Whoever wins the argument was right.",
+            "why": "Schopenhauer wrote the tricks down because the winner is so often wrong."
+          },
+          {
+            "text": "Only liars use these tricks.",
+            "why": "Frankfurt's point is that most of it comes from not caring, and anyone does it when cornered."
+          }
+        ],
+        "aha": "Once you see the move is aimed at the person, it stops working on you."
+      }
     },
     {
       "n": 3,
@@ -172,7 +216,29 @@
         "rosling",
         "huff",
         "clifford"
-      ]
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "Most educated people think the world is poorer and sicker than it is.",
+          "One washing machine gave Rosling's mother hours back every week.",
+          "\"Cuts your risk in half\" can mean 2 in a million down to 1 in a million.",
+          "An average can hide that most people are below it.",
+          "Clifford: we may believe past what we have seen only by assuming the unseen is like the seen."
+        ],
+        "key": "A number means nothing until you know: of what, compared with what, and who counted.",
+        "decoys": [
+          {
+            "text": "Numbers don't lie.",
+            "why": "A number can't lie, but whoever chose which number to show you can."
+          },
+          {
+            "text": "A bigger number means a bigger problem.",
+            "why": "200 percent of a tiny thing is still tiny. Compared with what?"
+          }
+        ],
+        "aha": "Every number above changed meaning the moment you asked what it was compared with."
+      }
     },
     {
       "n": 4,
@@ -207,7 +273,29 @@
       "voices": [
         "postman",
         "mackay"
-      ]
+      ],
+      "crystal": {
+        "speed": 0.85,
+        "partials": [
+          "Mackay tells of a single tulip bulb traded for a house.",
+          "Everyone's neighbour was getting rich, so it felt safe.",
+          "Postman: we now get more information than we can use or judge.",
+          "A feed shows you whatever keeps you watching.",
+          "When the price turned, everyone sold at once."
+        ],
+        "key": "When everyone around you is sure all at once, slow down and check.",
+        "decoys": [
+          {
+            "text": "If a story feels true, it probably is.",
+            "why": "The tulip buyers felt it too. A story feels true because it is well told."
+          },
+          {
+            "text": "Ignore every story.",
+            "why": "Stories are how people remember anything. The skill is noticing when one is doing your thinking."
+          }
+        ],
+        "aha": "A crowd that sets all at once traps its errors inside, the same as a crystal grown too fast."
+      }
     },
     {
       "n": 5,
@@ -246,7 +334,29 @@
       "voices": [
         "bronowski",
         "mill"
-      ]
+      ],
+      "crystal": {
+        "speed": 0.55,
+        "partials": [
+          "Bronowski at Auschwitz: this is what people do when they are certain, with no test in reality.",
+          "Mill: whoever knows only their own side of a case knows little even of that.",
+          "Smiths heat steel and cool it slowly to make it stronger.",
+          "Scientists publish so other people can prove them wrong.",
+          "Saying \"I was wrong\" costs a moment. Staying wrong costs years."
+        ],
+        "key": "Being wrong is the step before being right. Fixing it in the open is strength.",
+        "decoys": [
+          {
+            "text": "Never back down. It shows weakness.",
+            "why": "That is how a flaw stays inside the crystal for good."
+          },
+          {
+            "text": "Agree with whoever argued last.",
+            "why": "Changing your mind needs a reason, not just pressure. That is giving way, not annealing."
+          }
+        ],
+        "aha": "Heat is not failure. Annealing is how a crystal, or a mind, comes out stronger."
+      }
     },
     {
       "n": 6,
@@ -290,7 +400,29 @@
       "voices": [
         "feynman",
         "adler"
-      ]
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "Feynman's father: knowing a bird's name in every language tells you nothing about the bird.",
+          "Feynman would not explain magnets with an easy answer that wasn't true.",
+          "Every summary is someone's choice of what to leave out.",
+          "Your lease is shorter and plainer than you think.",
+          "Adler: reading well is active. You ask the book questions."
+        ],
+        "key": "Go to the source and build the understanding yourself. Then it is yours.",
+        "decoys": [
+          {
+            "text": "A good summary is as good as the original.",
+            "why": "A summary is someone else's crystal, crushed to powder. You can't grow from powder."
+          },
+          {
+            "text": "Hard texts are only for experts.",
+            "why": "Feynman's life says otherwise: an expert is someone who kept asking."
+          }
+        ],
+        "aha": "Nobody handed you this one. You set it yourself, so you own it."
+      }
     }
   ],
   "voices": {
@@ -359,5 +491,6 @@
       "what": "Philosopher and teacher",
       "did": "Ran the Great Books programme and taught reading as a skill."
     }
-  }
+  },
+  "crystalSource": "Bryan, Mind Atlas (Nov 2025 to Mar 2026): partials, a nucleation point found by the learner, the aha, a wrong sixth piece breaks the structure, not a quiz, learned when you can say it another way. Built 15 Nov 2026."
 }

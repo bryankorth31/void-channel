@@ -37,7 +37,28 @@ function piece(p, main) {
     + '</div>';
 }
 
-function unit(u, voices) {
+// The crystal: Bryan's nucleation learning (crystal.js has his words and the growth rules). The order of the three
+// pieces is shuffled per unit, the same way on every build, so the right one is not always first.
+function crystal(c, u) {
+  const x = u.crystal; if (!x) return '';
+  const opts = [{ text: x.key, key: 1 }, ...x.decoys.map((d) => ({ text: d.text, why: d.why }))];
+  const rot = u.n % opts.length; const order = opts.slice(rot).concat(opts.slice(0, rot));
+  const chip = (t) => '<div class="cx-chip">' + esc(t) + '</div>';
+  const cfg = { id: c.slug + '-' + u.n, speed: x.speed, aha: x.aha };
+  return '<div class="cx" data-cfg="' + esc(JSON.stringify(cfg)) + '">'
+    + '<h3>Make it set</h3><p class="cx-lead">Five partials from this unit are floating in a supercooled liquid. Everything is here, and nothing has set. One more piece is the nucleation point. Pick it and watch what happens. There is no score.</p>'
+    + '<div class="cx-stage"><canvas></canvas>'
+    + '<div class="cx-col l">' + [0, 2, 4].map((i) => chip(x.partials[i])).join('') + '</div>'
+    + '<div class="cx-col r">' + [1, 3].map((i) => chip(x.partials[i])).join('') + '</div></div>'
+    + '<div class="cx-status" aria-live="polite"></div>'
+    + '<div class="cx-choices">' + order.map((o) => '<button type="button"' + (o.key ? ' data-key="1"' : ' data-why="' + esc(o.why) + '"') + '>' + esc(o.text) + '</button>').join('') + '</div>'
+    + '<div class="cx-ctrl"><label>Cooling <span>slow</span><input class="cx-speed" type="range" min="0" max="1" step="0.05"><span>fast</span></label>'
+    + '<button type="button" class="cx-heat" disabled>Heat it (anneal)</button><button type="button" class="cx-reset">Start over</button></div>'
+    + '<div class="cx-after" hidden><h3>Now say it another way</h3><p>You have learned it when you can say it in your own words. Write it the way you would tell a friend.</p><textarea class="cx-say" rows="3" placeholder="In my own words..."></textarea><small>This stays on this device. Nobody grades it.</small></div>'
+    + '</div>';
+}
+
+function unit(u, voices, c) {
   const who = (u.voices || []).map((k) => voices[k]).filter(Boolean)
     .map((v) => '<li><b>' + esc(v.name) + '</b>, ' + esc(v.what.toLowerCase()) + '. ' + esc(v.did) + '</li>').join('');
   return '<section class="unit" id="u' + u.n + '">'
@@ -45,6 +66,7 @@ function unit(u, voices) {
     + '<div class="seed"><h3>Why it matters</h3><p>' + esc(u.why) + '</p></div>'
     + '<div class="seed reach"><h3>How this reaches you</h3><p>' + esc(u.reachesYou) + '</p></div>'
     + '<div class="pieces">' + piece(u.main, true) + (u.companions || []).map((c) => piece(c, false)).join('') + '</div>'
+    + crystal(c, u)
     + '<div class="row2"><div class="do"><h3>Do this week</h3><p>' + esc(u.do) + '</p></div>'
     + '<div class="who"><h3>Who teaches this unit</h3><ul>' + who + '</ul></div></div>'
     + '</section>';
@@ -100,20 +122,47 @@ audio{width:100%;margin-top:6px}
 .do{background:#101a14;border:1px solid #1d3326;border-radius:12px;padding:14px 16px}
 .who ul{margin:6px 0 0;padding-left:18px;font-size:14px;color:#cfd2dc}.who li{margin-bottom:4px}
 footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);font-size:14px}
+.cx{background:#090b12;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 18px}
+.cx-lead{margin:2px 0 12px;color:#cfd2dc;font-size:15px;max-width:900px}
+.cx-stage{position:relative;height:360px;border-radius:10px;overflow:hidden;background:radial-gradient(ellipse at center,#0e1a24 0%,#07090f 70%)}
+.cx-stage canvas{position:absolute;inset:0;width:100%;height:100%}
+.cx-col{position:absolute;top:0;bottom:0;width:min(240px,26%);display:flex;flex-direction:column;justify-content:space-around;padding:10px;pointer-events:none}
+.cx-col.l{left:0}.cx-col.r{right:0}
+.cx-chip{background:rgba(22,25,38,.85);border:1px dashed #2c3550;border-radius:10px;padding:8px 10px;font-size:13px;line-height:1.35;color:#aab0c2;transition:all .6s ease;animation:drift 6s ease-in-out infinite alternate}
+.cx-chip:nth-child(2){animation-delay:-2s}.cx-chip:nth-child(3){animation-delay:-4s}
+@keyframes drift{from{transform:translate(0,-4px)}to{transform:translate(0,4px)}}
+.cx-chip.set{animation:none;border-style:solid;border-color:rgba(95,212,255,.6);color:var(--fg);box-shadow:0 0 18px rgba(95,212,255,.18)}
+.cx-chip.bad{animation:none;border-color:rgba(242,169,59,.6)}
+.cx-status{min-height:24px;margin:10px 2px 8px;font-size:15px;color:var(--acc)}
+.cx.broken .cx-status{color:var(--gold)}
+.cx-choices{display:flex;flex-wrap:wrap;gap:8px}
+.cx-choices button,.cx-ctrl button{font:inherit;font-size:15px;background:var(--panel2);color:var(--fg);border:1px solid #2c3550;border-radius:10px;padding:10px 14px;cursor:pointer;text-align:left;max-width:440px}
+.cx-choices button:hover:not(:disabled){border-color:var(--acc)}
+.cx-choices button:disabled{opacity:.45;cursor:default}
+.cx-choices button.picked{opacity:1;border-color:var(--acc);color:var(--acc)}
+.cx-choices button.wrongpick{opacity:1;border-color:var(--gold);color:var(--gold)}
+.cx-ctrl{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:12px;color:var(--dim);font-size:14px}
+.cx-ctrl label{display:flex;align-items:center;gap:8px}.cx-ctrl input{width:160px;accent-color:var(--acc)}
+.cx-ctrl button{padding:8px 12px;font-size:14px}.cx-ctrl button:disabled{opacity:.4;cursor:default}
+.cx-after{margin-top:14px}.cx-after p{margin:2px 0 8px;font-size:15px;color:#cfd2dc}
+.cx-after textarea{width:100%;background:var(--panel2);color:var(--fg);border:1px solid #2c3550;border-radius:10px;padding:10px;font:inherit}
+.cx-after small{color:var(--dim)}
 @media (max-width:1000px){.wrap{grid-template-columns:1fr}nav{position:static}nav{display:flex;flex-wrap:wrap;gap:4px}nav h4{width:100%}.row2{grid-template-columns:1fr}.hero ol{columns:1}}
 </style></head><body>
 <header><span class="logo">VOID <i>University</i></span><span class="tag">learn from people who did it</span><span class="draft">Draft for Bryan: nothing here is public</span></header>
 <div class="wrap"><nav><h4>Units</h4>${toc}</nav><main>
 <div class="hero"><div class="dom">${esc(c.domain)} · a course we wrote</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>
 <h3 style="margin-top:16px">By the end you will be able to</h3><ol>${c.outcomes.map((o) => '<li>' + esc(o) + '</li>').join('')}</ol></div>
-${c.units.map((u) => unit(u, c.voices)).join('\n')}
+${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
 </main></div>
 <footer>Free, no account. Everything plays from the Internet Archive; each piece names its source and licence.<br>
 If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="${DONATE}" target="_blank" rel="noopener">Donate to CASH</a></footer>
+<script src="crystal.js"></script>
 </body></html>`;
 }
 
 fs.mkdirSync(OUT, { recursive: true });
+fs.copyFileSync(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
 const courses = fs.readdirSync(path.join(DIR, 'courses')).filter((f) => f.endsWith('.json'));
 for (const f of courses) {
   const c = JSON.parse(fs.readFileSync(path.join(DIR, 'courses', f), 'utf8'));

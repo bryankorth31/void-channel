@@ -614,3 +614,24 @@ B, 15 Nov 2026, picked the first slice: "Yes, that one" (the Critical thinking c
   Archive holds it as `ThePleasureOfFindingThingsOut_201809` (file named NOVA.S10E02). The matcher missed it.
 - **Not yet:** the name and domain, who it is for first, reviewers, the local model, putting courses into the
   voidtv.net rows and player. All words are drafts in Claude's hand for B to keep, change or strike.
+
+### 15 Nov 2026: the crystal (Make it set)
+
+B asked for a crystal as a simple visualizer for critical thinking, built from how he described nucleation, the aha
+and learning in the Mind Atlas (E:\mind-atlas-data\mechanisms\index.json: 39 nucleation, 26 aha and 34 crystal
+quotes, Nov 2025 to Mar 2026). His rules, kept: give the partials and let the person find the nucleation point
+("that's where they get the aha moment"); not a quiz ("quizzes skip the aha"); a supercooled liquid that sets all
+at once when the right piece goes in; a wrong sixth piece breaks the structure, and the learner sees it fail;
+learned "when they can say it another way".
+- `profiles/university/crystal.js`, one engine for every unit; each unit's `crystal` in the course file holds five
+  partials from its own pieces, the key piece, two tempting wrong pieces with why each breaks it, a cooling speed
+  and the aha line.
+- Real rules, simplified: molecules join where they have the most solid neighbours (flat hexagonal faces); fast
+  cooling traps impurities; a wrong core grows two misaligned grains that crack where they meet; annealing lets the
+  bigger grain absorb the smaller and pushes impurities out; a wrong core cannot be annealed, it melts back.
+- After it sets: "Now say it another way", a box that stays on the device and is never graded.
+- Checked 15 Nov by stepping frames: right piece sets in about 60 frames (one second); wrong piece cracks (70 cells
+  on the break) and heat melts it back with the choices open again; unit 4's fast cooling traps 75 flaws and heat
+  anneals them out. Fits 1920 wide and the Tab S8 both ways with no sideways scroll.
+- Next, from his own words, not built: crystallized truths become partials for higher truths ("Everything scales"),
+  so the six unit crystals could become the partials of one course crystal.
