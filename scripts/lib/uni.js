@@ -18,6 +18,10 @@ const COURSES = path.join(UNI, 'courses');
 const LIST = path.join(UNI, 'list.json');
 const CHECK = path.join(SRC, 'check.json');
 const FORBIDDEN = /openstax|radiopaedia/i; // Bryan, 15 Nov 2026: "Re-source from papers"
+// Terms that forbid AI use or ingestion (MIT OCW, read 15 Nov 2026, allows it with credit, so a bare mention is not enough).
+const AI_WORD = /\bA\.?I\b|[Aa]rtificial [Ii]ntelligence|[Ll]anguage [Mm]odels?|[Ii]ngest/;
+const AI_NO = new RegExp('\\b([Nn]ot|[Nn]o|[Pp]rohibit\\w*|[Ff]orbid\\w*|without (written )?permission)\\b[^.]{0,80}(' + AI_WORD.source + ')');
+const AI_NO2 = new RegExp('(' + AI_WORD.source + ')[^.]{0,60}(prohibited|forbidden|not (be )?(permitted|allowed))');
 const DASH = /\u2014|\u2013/; // no em or en dashes anywhere (Bryan's rule)
 
 const slugify = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -185,7 +189,7 @@ async function check(log = () => {}) {
       if (ids.has(s.id)) problems.push({ where, what: 'id used twice' }); ids.add(s.id);
       if (!s.licence) problems.push({ where, what: 'no licence' });
       if (!s.licenceSeen) problems.push({ where, what: 'licence not shown where it was seen' });
-      if (/ai|ingest|language model/i.test(s.terms || '')) problems.push({ where, what: 'terms mention AI: link only (' + String(s.terms).slice(0, 60) + ')', level: 'note' });
+      if (!/^no terms/i.test(s.terms || '') && (AI_NO.test(s.terms || '') || AI_NO2.test(s.terms || ''))) problems.push({ where, what: 'terms may forbid AI use, read them (link only until checked): ' + String(s.terms).slice(0, 90) });
       walkText(where, s);
       for (const k of ['url', 'text', 'courseworkUrl']) if (/^https?:\/\//.test(s[k] || '')) urls.set(s[k], where);
       if (s.video && s.video.archive) urls.set('https://archive.org/metadata/' + s.video.archive + '/metadata/identifier', where + ' (Archive item)');
@@ -201,7 +205,8 @@ async function check(log = () => {}) {
   const one = async ([url, where]) => {
     try {
       const r = await fetch(url, { method: 'GET', redirect: 'follow', headers: { 'user-agent': 'VoidUniversity-linkcheck/1.0' }, signal: AbortSignal.timeout(20000) });
-      if (r.status >= 400) problems.push({ where, what: 'link answers ' + r.status + ': ' + url });
+      if ([403, 429, 503].includes(r.status)) problems.push({ where, what: 'the site refused the checker (' + r.status + '); open it by hand: ' + url, level: 'note' });
+      else if (r.status >= 400) problems.push({ where, what: 'link answers ' + r.status + ': ' + url });
       if (/\/metadata\//.test(url) && r.ok) { const j = await r.json().catch(() => null); if (!j || !j.result) problems.push({ where, what: 'Archive item not found: ' + url }); }
       try { await r.body?.cancel(); } catch (e) { /* already read */ }
     } catch (e) { problems.push({ where, what: 'link did not answer (' + String(e.name || e.message) + '): ' + url }); }

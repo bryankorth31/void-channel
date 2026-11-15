@@ -1,0 +1,309 @@
+{
+  "area": "Work and trades",
+  "checked": "2026-11-15",
+  "courses": [
+    {
+      "name": "Your rights at work and staying safe",
+      "why": "Workers who know a few rules can stay safe, report a hazard and not be punished for it.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "osha-worker-rights",
+      "uses": [
+        "mit-15-676",
+        "hine-railway-letters"
+      ],
+      "units": [
+        "The right to a safe job",
+        "Safety training and protective gear",
+        "Machines and chemicals: what the employer must do",
+        "How to file a confidential complaint",
+        "Retaliation and the 30-day deadline",
+        "Injuries and records",
+        "Bosses, pay and unions: how we got here"
+      ]
+    },
+    {
+      "name": "How the trades build things",
+      "why": "Even people who never swing a hammer decide on repairs, contractors and what to fix themselves.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "griffith-carpentry",
+      "uses": [
+        "foster-carpentry-woodwork",
+        "cyclopediaofarch03amer",
+        "rose-machine-shop",
+        "practicalblacksm00rich"
+      ],
+      "units": [
+        "Tools and what each one does",
+        "Wood, metal and why they behave as they do",
+        "Joints and fastening",
+        "Framing a wall and a roof",
+        "Heat and the forge",
+        "Measure twice: layout",
+        "Old advice that is now unsafe"
+      ]
+    },
+    {
+      "name": "Read a drawing and plan a job",
+      "why": "Quotes, plans and parts lists make sense once you can read a blueprint.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "US_Navy_Training_Course_-_Blueprint_Reading_and_Sketching",
+      "uses": [
+        "cyclopediaofarch03amer",
+        "foster-carpentry-woodwork"
+      ],
+      "units": [
+        "Lines and symbols",
+        "Views of an object",
+        "Dimensions and scale",
+        "Reading a floor plan",
+        "A parts list",
+        "Sketch it yourself"
+      ]
+    },
+    {
+      "name": "Work with people: the first job and the next one",
+      "why": "Getting along with a boss and a crew decides most careers.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "spine": "hine-railway-letters",
+      "uses": [
+        "buhlig-business-english-work",
+        "mit-15-676"
+      ],
+      "units": [
+        "Show up and finish",
+        "Owning a mistake",
+        "Learning from the old hand",
+        "Writing the short message",
+        "Dealing with a hard boss",
+        "Asking for a raise",
+        "Leaving well"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "osha-worker-rights",
+      "kind": "guide",
+      "title": "Worker rights and protections (OSHA)",
+      "by": "US Department of Labor, Occupational Safety and Health Administration",
+      "url": "https://www.osha.gov/workers",
+      "licence": "US government work",
+      "licenceSeen": "The OSHA page itself shows no copyright line; the Department of Labor copyright page (dol.gov/general/aboutdol/copyright) says government-created material is 'generally part of the public domain' and may be used without permission.",
+      "terms": "No terms on the page about AI or automated use found; page footer links to Disclaimers and Important Website Notices that were not read.",
+      "text": "https://www.osha.gov/workers",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Tells any worker they can ask for safety training, refuse truly dangerous work, report hazards, and not be punished for it.",
+      "notes": "Covers rights to a safe workplace, training in a language you understand, safe machinery, protective equipment, injury records, confidential complaints and the 30-day whistleblower deadline. DOL seals and logos are not free to use. Check dates and phone numbers when building."
+    },
+    {
+      "id": "mit-15-676",
+      "kind": "open-course",
+      "title": "Work, Employment, and Industrial Relations Theory (15.676, Spring 2008)",
+      "by": "Prof. Thomas Kochan, MIT Sloan",
+      "year": 2008,
+      "url": "https://ocw.mit.edu/courses/15-676-work-employment-and-industrial-relations-theory-spring-2008/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "OCW course page footer links the Creative Commons licence; OCW Terms page states CC BY-NC-SA 4.0",
+      "terms": "OCW Terms page: content may be used to train and improve AI models with attribution, non-commercial use only, and derived models must carry CC BY-NC-SA 4.0 or a compatible licence.",
+      "coursework": [
+        "syllabus",
+        "lecture notes",
+        "written assignments"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/15-676-work-employment-and-industrial-relations-theory-spring-2008/",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains why bosses and workers want different things and how unions, laws and pay systems grew from that.",
+      "notes": "GRADUATE course; rebuild at an everyday level. OCW lists Lecture Notes and Written Assignments, no videos. Skip the theory jargon."
+    },
+    {
+      "id": "griffith-carpentry",
+      "kind": "book",
+      "title": "Carpentry",
+      "by": "Ira Samuel Griffith",
+      "year": 1916,
+      "url": "https://www.gutenberg.org/ebooks/70226",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/70226",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults"
+      ],
+      "needIt": "Explains tools, joints, framing and how a house goes together, so a person can talk to a contractor and do simple repairs.",
+      "notes": "First published 1916 (per Gutenberg page). Old tools and lumber sizes; no mention of modern safety gear; old finishes may be lead based. Flag for current safety guidance (OSHA, eye and hearing protection)."
+    },
+    {
+      "id": "foster-carpentry-woodwork",
+      "kind": "book",
+      "title": "Carpentry and Woodwork",
+      "by": "Edwin W. Foster",
+      "url": "https://www.gutenberg.org/ebooks/43574",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/43574",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults"
+      ],
+      "needIt": "Step by step woodworking for beginners and school shops.",
+      "notes": "Old safety practice; add dust, guard and eye protection notes. Lumber grades and fasteners have changed."
+    },
+    {
+      "id": "rose-machine-shop",
+      "kind": "book",
+      "title": "Modern Machine-Shop Practice, Volumes I and II",
+      "by": "Joshua Rose",
+      "url": "https://www.gutenberg.org/ebooks/39225",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/39225",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Shows how metal parts were turned, drilled and fitted, which explains where every machine part comes from.",
+      "notes": "Very large, 19th century. Use only a few chapters. No modern guarding, coolant or lead and hazard knowledge; flag all shop practice as unsafe to copy without current training."
+    },
+    {
+      "id": "cyclopediaofarch03amer",
+      "kind": "book",
+      "title": "Cyclopedia of architecture, carpentry, and building: a general reference work",
+      "by": "American School of Correspondence",
+      "url": "https://archive.org/details/cyclopediaofarch03amer",
+      "licence": "Public domain (US, by age)",
+      "licenceSeen": "Archive page shows date 1907 and no rights statement (only a Terms of Service link); public domain by age.",
+      "terms": "",
+      "text": "https://archive.org/details/cyclopediaofarch03amer",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A trade school course in book form: framing, roofs, stairs, plumbing and heating basics.",
+      "notes": "Volume 3 of a set. Includes old wiring, plumbing and heating (lead pipe, gas lighting, early electric), which are unsafe by today's code. Flag against current codes.",
+      "year": 1907
+    },
+    {
+      "id": "practicalblacksm00rich",
+      "kind": "book",
+      "title": "Practical blacksmithing",
+      "by": "M. T. Richardson (compiler)",
+      "url": "https://archive.org/details/practicalblacksm00rich",
+      "licence": "Public domain (US, by age)",
+      "licenceSeen": "Archive page: 'Possible copyright status: The Library of Congress is unaware of any copyright restrictions for this item.'",
+      "terms": "",
+      "text": "https://archive.org/details/practicalblacksm00rich",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Shows forge work, heat and metal, the craft behind every tool, hinge and hook.",
+      "notes": "Coal forge and old fuel and fire practice; add current fire, eye and ventilation safety. Four volumes exist on Archive; this id is one clean copy.",
+      "year": 1888
+    },
+    {
+      "id": "US_Navy_Training_Course_-_Blueprint_Reading_and_Sketching",
+      "kind": "book",
+      "title": "US Navy Training Course: Blueprint Reading and Sketching",
+      "by": "US Navy (author not named on page)",
+      "url": "https://archive.org/details/US_Navy_Training_Course_-_Blueprint_Reading_and_Sketching",
+      "licence": "Not stated on page (appears to be a US Navy training manual)",
+      "licenceSeen": "Archive page shows no copyright or licence statement; date and author not named. US Navy training course by nature, but that is not stated on the page.",
+      "terms": "",
+      "text": "https://archive.org/details/US_Navy_Training_Course_-_Blueprint_Reading_and_Sketching",
+      "old": false,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Teaches how to read drawings, which every trade, repair job and home project needs.",
+      "notes": "LINK ONLY until the licence is confirmed on the document's own title page. Uploaded 2016 by a private uploader; confirm original NAVPERS or NAVEDTRA number."
+    },
+    {
+      "id": "BasicElectricity10086",
+      "kind": "book",
+      "title": "Basic Electricity, NAVPERS 10086",
+      "by": "US Bureau of Naval Personnel",
+      "url": "https://archive.org/details/BasicElectricity10086",
+      "licence": "Public Domain Mark 1.0 (US government work)",
+      "licenceSeen": "Archive page shows 'Public Domain Mark 1.0'.",
+      "terms": "",
+      "text": "https://archive.org/details/BasicElectricity10086",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains electricity the way a Navy trainee learned it: circuits, wire, tools and safe work.",
+      "notes": "1956 text: wire colors, insulation, and voltage rules are out of date; old materials may be hazardous. Flag all wiring advice against the current National Electrical Code and let electricians do house wiring.",
+      "year": 1956
+    },
+    {
+      "id": "hine-railway-letters",
+      "kind": "book",
+      "title": "Letters from an Old Railway Official to His Son, a Division Superintendent",
+      "by": "Charles De Lano Hine",
+      "url": "https://www.gutenberg.org/ebooks/44853",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/44853",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Warm, practical advice on managing people, owning mistakes and running a crew, from a long-career boss.",
+      "notes": "Early 1900s railroad world and sexist language; rewrite to current workplaces and keep the principles."
+    },
+    {
+      "id": "buhlig-business-english-work",
+      "kind": "book",
+      "title": "Business English: A Practice Book",
+      "by": "Rose Buhlig",
+      "url": "https://www.gutenberg.org/ebooks/38046",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/38046",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Drills for the writing a job needs: notes, messages and short letters.",
+      "notes": "Dated business forms (telegrams, carbon copies); replace with email."
+    }
+  ]
+}

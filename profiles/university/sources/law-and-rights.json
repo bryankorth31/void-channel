@@ -1,0 +1,328 @@
+{
+  "area": "Law and rights",
+  "checked": "2026-11-15",
+  "courses": [
+    {
+      "name": "Know your rights, plainly",
+      "why": "People meet police, landlords, schools and bosses without knowing what the rules let them do.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "us-bill-of-rights",
+      "uses": [
+        "us-constitution",
+        "uscourts-educational-resources",
+        "archives-founding-docs",
+        "corwin-john-marshall",
+        "mit-21h-224"
+      ],
+      "units": [
+        "What a right is and who it binds",
+        "Speech: what you can and cannot say",
+        "Searches and stops: the Fourth Amendment",
+        "Staying silent and having a lawyer",
+        "Fair trials and juries",
+        "Equal treatment",
+        "When rights change: how courts decide"
+      ]
+    },
+    {
+      "name": "How courts and laws really work",
+      "why": "Most adults will be in a court as a juror, a renter, a parent or a person with a dispute at least once.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "spine": "mit-21a-219",
+      "uses": [
+        "garner-government",
+        "uscourts-educational-resources",
+        "oyc-plsc-118"
+      ],
+      "units": [
+        "What law is for",
+        "City, state, federal: who handles what",
+        "From problem to lawsuit",
+        "Contracts and fine print",
+        "Jury duty explained",
+        "Why law feels unfair to some people",
+        "Small claims and everyday remedies"
+      ]
+    },
+    {
+      "name": "Who runs this country: the Constitution and checks and balances",
+      "why": "Understanding the structure makes news about power, vetoes and courts make sense.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "us-constitution",
+      "uses": [
+        "federalist-papers",
+        "garner-government",
+        "corwin-john-marshall",
+        "archives-founding-docs"
+      ],
+      "units": [
+        "Why they built it this way",
+        "Congress, the president and courts",
+        "States versus the nation",
+        "Making a law",
+        "Amendments and how to change the rules",
+        "Federalist 10 and 51 in plain words",
+        "The Court that checks itself"
+      ]
+    },
+    {
+      "name": "Law and the air, water and food around you",
+      "why": "Environmental rules decide what is in your drinking water, your food and your neighborhood.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "spine": "oyc-evst-255",
+      "uses": [
+        "mit-21a-219"
+      ],
+      "units": [
+        "How a law about pollution gets made",
+        "Who enforces it",
+        "Water and air",
+        "Pesticides and food rules",
+        "Warning labels",
+        "How citizens can push for change"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "us-constitution",
+      "kind": "book",
+      "title": "The United States Constitution",
+      "by": "United States",
+      "url": "https://www.gutenberg.org/ebooks/5",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/5",
+      "old": false,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The rulebook for every government office that touches your life, in the actual words.",
+      "notes": "Gutenberg copy; for the current official text and amendments also check the National Archives or Congress. Old spelling and the original unamended parts (counting rules, slavery clauses, since changed) need a flag."
+    },
+    {
+      "id": "us-bill-of-rights",
+      "kind": "book",
+      "title": "The United States Bill of Rights",
+      "by": "United States",
+      "url": "https://www.gutenberg.org/ebooks/2",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/2",
+      "old": false,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The ten amendments about speech, searches, silence, trials and guns, which come up in every news story.",
+      "notes": "Gutenberg copy. Interpretation changes by court case; link to current court explanations on top of the text."
+    },
+    {
+      "id": "federalist-papers",
+      "kind": "book",
+      "title": "The Federalist Papers",
+      "by": "Alexander Hamilton, James Madison, John Jay",
+      "year": 1788,
+      "url": "https://www.gutenberg.org/ebooks/1404",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/1404",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains why the government is built in checks and balances, so adults can judge claims about power.",
+      "notes": "Long and written in 1787 and 1788 English; the rewrite should cover about ten key essays (1, 10, 39, 51, 78 and a few more), not the whole set."
+    },
+    {
+      "id": "garner-government",
+      "kind": "book",
+      "title": "Government in the United States, National, State and Local",
+      "by": "James Wilford Garner",
+      "url": "https://www.gutenberg.org/ebooks/38014",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/38014",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults"
+      ],
+      "needIt": "A clear tour of how city, state and national government fit together and who to call for what.",
+      "notes": "Early 1900s textbook. Government structures changed (for example, how senators are chosen, voting rights, agencies). Flag everything and check current facts against usa.gov."
+    },
+    {
+      "id": "corwin-john-marshall",
+      "kind": "book",
+      "title": "John Marshall and the Constitution, a Chronicle of the Supreme Court",
+      "by": "Edward Samuel Corwin",
+      "year": 1918,
+      "url": "https://www.gutenberg.org/ebooks/3291",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/3291",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The story of how the Supreme Court gave itself the power to strike down laws, told as a narrative.",
+      "notes": "Gutenberg page gives first publication 1918. Covers only the early Court. Pair with modern cases."
+    },
+    {
+      "id": "oyc-evst-255",
+      "kind": "open-course",
+      "title": "Environmental Politics and Law (EVST 255)",
+      "by": "John Wargo, Yale",
+      "url": "https://oyc.yale.edu/environmental-studies/evst-255",
+      "licence": "CC BY-NC-SA 3.0 (third-party content excluded)",
+      "licenceSeen": "Open Yale Courses Terms of Use page and the course page: 'licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 license'",
+      "terms": "Non-commercial only (Terms section 5). Third-party content is not covered unless a lecture's Credits section says so. Terms say nothing about AI or ingestion; check Yale's Office of General Counsel before any commercial use.",
+      "video": {
+        "archive": "oyc_Environmental_Politics_and_Law",
+        "files": 24
+      },
+      "coursework": [
+        "syllabus",
+        "24 lecture sessions",
+        "take-home midterm and final described",
+        "section assignments"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/environmental-studies/evst-255",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains how laws about air, water, pesticides and food are made and enforced, which decides what is in the places people live and eat.",
+      "notes": "Archive item has 24 lecture audio files (mp3, ogg), not video. Readings are commercial books, link only. Recorded 2010, so recent rules are missing."
+    },
+    {
+      "id": "oyc-plsc-118",
+      "kind": "open-course",
+      "title": "The Moral Foundations of Politics (PLSC 118)",
+      "by": "Yale (Open Yale Courses)",
+      "url": "https://oyc.yale.edu/political-science/plsc-118",
+      "licence": "CC BY-NC-SA 3.0 (third-party content excluded)",
+      "licenceSeen": "Open Yale Courses Terms of Use page and the course page: 'licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 license'",
+      "terms": "Non-commercial only (Terms section 5). Third-party content is not covered unless a lecture's Credits section says so. Terms say nothing about AI or ingestion; check Yale's Office of General Counsel before any commercial use.",
+      "video": {
+        "archive": "oyc_The_Moral_Foundations_of_Politics",
+        "files": 25
+      },
+      "coursework": [
+        "lecture sessions (25 audio files on the Archive)"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/political-science/plsc-118",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Gives language for judging why governments deserve obedience, which helps anyone who votes or argues about fairness.",
+      "notes": "The Yale course page itself returned 403 to the automated reader; I stopped there and did not retry. The licence is the Open Yale Courses Terms page (read on another course page), and the 25 sessions come from the Archive file list only. Syllabus and coursework NOT verified. Archive item holds audio only. A human should open the page in a browser before the builder trusts it."
+    },
+    {
+      "id": "mit-21a-219",
+      "kind": "open-course",
+      "title": "Law and Society (21A.219, Spring 2003)",
+      "by": "Prof. Susan S. Silbey, MIT",
+      "year": 2003,
+      "url": "https://ocw.mit.edu/courses/21a-219-law-and-society-spring-2003/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "OCW course page footer links the Creative Commons licence; OCW Terms page states CC BY-NC-SA 4.0",
+      "terms": "OCW Terms page: content may be used to train and improve AI models with attribution, non-commercial use only, and derived models must carry CC BY-NC-SA 4.0 or a compatible licence.",
+      "coursework": [
+        "syllabus",
+        "lecture notes",
+        "written assignments"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/21a-219-law-and-society-spring-2003/",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Shows what law does in everyday life: why people use it, avoid it, or feel it is unfair, so people understand what happens before they sign, sue or serve on a jury.",
+      "notes": "Undergraduate. OCW lists Lecture Notes and Written Assignments, no videos. 2003 course; cases and statutes are dated."
+    },
+    {
+      "id": "mit-21h-224",
+      "kind": "open-course",
+      "title": "Law and Society in US History (21H.224, Spring 2003)",
+      "by": "Prof. Christopher Capozzola, MIT",
+      "year": 2003,
+      "url": "https://ocw.mit.edu/courses/21h-224-law-and-society-in-us-history-spring-2003/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "OCW course page footer links the Creative Commons licence; OCW Terms page states CC BY-NC-SA 4.0",
+      "terms": "OCW Terms page: content may be used to train and improve AI models with attribution, non-commercial use only, and derived models must carry CC BY-NC-SA 4.0 or a compatible licence.",
+      "coursework": [
+        "syllabus",
+        "calendar",
+        "written assignments"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/21h-224-law-and-society-in-us-history-spring-2003/",
+      "levels": [
+        "high school",
+        "young adults"
+      ],
+      "needIt": "Walks through how the Constitution has been argued over since 1787, so a person sees why rights change.",
+      "notes": "Undergraduate. OCW lists Written Assignments only; no lecture videos or notes. Weaker as a spine, good as a reading map."
+    },
+    {
+      "id": "uscourts-educational-resources",
+      "kind": "guide",
+      "title": "Educational Resources (Federal Judiciary)",
+      "by": "Administrative Office of the U.S. Courts",
+      "url": "https://www.uscourts.gov/about-federal-courts/educational-resources",
+      "licence": "Not stated on the page",
+      "licenceSeen": "No copyright or reuse statement on the page; it names the Administrative Office of the U.S. Courts and links to a Privacy and Security Policy.",
+      "terms": "",
+      "levels": [
+        "high school",
+        "young adults"
+      ],
+      "needIt": "Judges explain the First, Fourth, Fifth and Sixth Amendments, jury service and landmark cases in activities made for students.",
+      "notes": "LINK ONLY until reuse terms are read on the court site's policy page. Do not copy text or media."
+    },
+    {
+      "id": "archives-founding-docs",
+      "kind": "guide",
+      "title": "Founding Documents (Charters of Freedom)",
+      "by": "US National Archives",
+      "url": "https://www.archives.gov/founding-docs",
+      "licence": "Not stated on the page",
+      "licenceSeen": "No copyright or reuse statement on the page. The documents themselves (1776 to 1791) are public domain by age.",
+      "terms": "",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Shows the Declaration of Independence, Constitution and Bill of Rights as the real documents, with images.",
+      "notes": "Use as a link target for the real scans. Do not copy the Archives' own page text or reproductions until reuse terms are read."
+    }
+  ]
+}

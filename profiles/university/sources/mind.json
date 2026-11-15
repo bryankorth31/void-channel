@@ -1,0 +1,322 @@
+{
+  "area": "Mind",
+  "checked": "2026-11-15",
+  "notes": "Blocked on this check: consumerfinance.gov (CFPB), cdc.gov, ready.gov, foodsafety.gov and fsis.usda.gov returned 403 to automated reads, so nothing was taken from them. consumer.ftc.gov and ftc.gov returned 404. Not worked round; a person can open them in a browser and add links later. Yale PSYC 123 is the Food course (Brownell), not Psychology of Everyday Life; it is filed under Food. MIT 9.00SC lists an 'Open Textbook' resource whose licence was not read; do not use it unless checked (OpenStax is forbidden by name).",
+  "courses": [
+    {
+      "name": "How your mind works",
+      "why": "Memory, attention, choices and feelings run every day of a person's life, and knowing the rules lets them fool themselves less.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-psyc110",
+      "uses": [
+        "mit-900sc-intro-psychology",
+        "james-briefer-course",
+        "james-principles-vol1",
+        "nimh-stress"
+      ],
+      "units": [
+        "What psychology is and is not",
+        "The brain and the body",
+        "How we see and sense",
+        "Learning and habit",
+        "Memory and why it fails",
+        "Language and thought",
+        "Reason, bias and bad decisions",
+        "Emotion and stress",
+        "Other people: groups, conformity and persuasion",
+        "Growing up and changing",
+        "When the mind struggles"
+      ]
+    },
+    {
+      "name": "Old psychology, still true",
+      "why": "William James described habit, attention and the stream of thought in plain prose that still beats most modern advice.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "spine": "james-principles-vol1",
+      "uses": [
+        "james-principles-vol2",
+        "james-briefer-course",
+        "james-talks-to-teachers",
+        "yale-psyc110"
+      ],
+      "units": [
+        "The stream of thought",
+        "Habit: the great flywheel",
+        "Attention and interest",
+        "The self and its many parts",
+        "Emotion: do we cry because we are sad",
+        "Will and effort",
+        "What James got wrong"
+      ]
+    },
+    {
+      "name": "Crowds, calm and character",
+      "why": "People follow crowds, panic and persuasion; ancient and old books give tools for keeping a clear head.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "epictetus-enchiridion",
+      "uses": [
+        "marcus-meditations",
+        "le-bon-the-crowd",
+        "nimh-stress",
+        "james-talks-to-teachers"
+      ],
+      "units": [
+        "What is up to you and what is not",
+        "Why crowds think differently",
+        "Anger, fear and the pause",
+        "Habits of a steady mind",
+        "Persuasion and how to spot it",
+        "Stress today: what current science says"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "yale-psyc110",
+      "kind": "open-course",
+      "title": "Introduction to Psychology",
+      "by": "Paul Bloom",
+      "year": 2007,
+      "url": "https://oyc.yale.edu/introduction-psychology/psyc-110",
+      "licence": "CC BY-NC-SA 3.0 US",
+      "licenceSeen": "Course page footer and oyc.yale.edu/terms section 4 'Course License' (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 3.0 US: non-commercial only. OYC terms count advertising, paid services, or required email sign-up on the reusing site as commercial use, so check that before use. Credit the professor, Yale and oyc.yale.edu. Third-party content in lecture Credits is not covered. No clause about AI or language models found on the terms page.",
+      "video": {
+        "archive": "psychologypaulbloom",
+        "files": 40
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "lecture video (YouTube embed on each lecture page)",
+        "lecture chapters and overviews",
+        "lecture handouts (pdf, e.g. class01.pdf)"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/introduction-psychology/psyc-110",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A full tour of the mind that makes sense of memory, bias, emotion and other people, for any reader.",
+      "notes": "20 lectures plus 2 guest lectures, Spring 2007. Archive item psychologypaulbloom holds 40 mp4 files (about 20 lectures in two encodings) and shows no licence field; the licence is read on oyc.yale.edu. Archive item oyc_Introduction_to_Psychology is the audio set (20 mp3). Some findings (for example priming studies) have not held up; flag them."
+    },
+    {
+      "id": "mit-900sc-intro-psychology",
+      "kind": "open-course",
+      "title": "Introduction to Psychology (9.00SC)",
+      "by": "John D. E. Gabrieli",
+      "year": 2011,
+      "url": "https://ocw.mit.edu/courses/9-00sc-introduction-to-psychology-fall-2011/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "Course page footer 'Creative Commons License' link and ocw.mit.edu/terms, which states CC BY-NC-SA 4.0 (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 4.0. The MIT terms page has a 'Permitted Use of AI Training' section: allowed with attribution, non-commercial use only and ShareAlike. Third-party items inside a course may carry other terms.",
+      "coursework": [
+        "syllabus",
+        "lecture videos",
+        "lecture notes",
+        "exams and solutions",
+        "check-yourself questions",
+        "instructor insights"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/9-00sc-introduction-to-psychology-fall-2011/",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A second full course with video, notes and self-check questions, useful for quiz material.",
+      "notes": "Course page also lists an 'Open Textbook' resource; its licence was not read here, skip it unless checked. Third-party readings are not covered by the course licence."
+    },
+    {
+      "id": "mit-914-brain-structure",
+      "kind": "open-course",
+      "title": "Brain Structure and Its Origins (9.14)",
+      "by": "Gerald E. Schneider",
+      "year": 2014,
+      "url": "https://ocw.mit.edu/courses/9-14-brain-structure-and-its-origins-spring-2014/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "Course page footer 'Creative Commons License' link and ocw.mit.edu/terms, which states CC BY-NC-SA 4.0 (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 4.0. The MIT terms page has a 'Permitted Use of AI Training' section: allowed with attribution, non-commercial use only and ShareAlike. Third-party items inside a course may carry other terms.",
+      "coursework": [
+        "syllabus",
+        "lecture audio",
+        "lecture notes",
+        "problem sets",
+        "exams and solutions"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/9-14-brain-structure-and-its-origins-spring-2014/",
+      "levels": [
+        "young adults"
+      ],
+      "needIt": "Explains how the brain is built and how it grew over time.",
+      "notes": "Technical; use only a few lectures for everyday readers."
+    },
+    {
+      "id": "james-principles-vol1",
+      "kind": "book",
+      "title": "The Principles of Psychology, Volume 1 (of 2)",
+      "by": "William James",
+      "year": 1890,
+      "url": "https://www.gutenberg.org/ebooks/57628",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/57628",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The founding text of American psychology, in warm readable prose; the chapters on habit and attention are still used.",
+      "notes": "Old science: brain claims and some experiments are outdated. Long; use chosen chapters."
+    },
+    {
+      "id": "james-principles-vol2",
+      "kind": "book",
+      "title": "The Principles of Psychology, Volume 2 (of 2)",
+      "by": "William James",
+      "year": 1890,
+      "url": "https://www.gutenberg.org/ebooks/57634",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/57634",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Covers emotion, will, instinct and the self.",
+      "notes": "Old science; the same cautions as volume 1."
+    },
+    {
+      "id": "james-briefer-course",
+      "kind": "book",
+      "title": "Psychology: Briefer Course",
+      "by": "William James",
+      "year": 1892,
+      "url": "https://www.gutenberg.org/ebooks/55262",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/55262",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "James's own short version, the best single book for beginners.",
+      "notes": "Old science, but a good first read. Check year on the ebook page."
+    },
+    {
+      "id": "james-talks-to-teachers",
+      "kind": "book",
+      "title": "Talks to Teachers on Psychology; and to Students on Some of Life's Ideals",
+      "by": "William James",
+      "year": 1899,
+      "url": "https://www.gutenberg.org/ebooks/16287",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/16287",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Short, plain talks on attention, habit and how people learn and live.",
+      "notes": "Some education advice is dated."
+    },
+    {
+      "id": "le-bon-the-crowd",
+      "kind": "book",
+      "title": "The Crowd: A Study of the Popular Mind",
+      "by": "Gustave Le Bon",
+      "year": 1895,
+      "url": "https://www.gutenberg.org/ebooks/445",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/445",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The classic on how people behave in groups and mobs.",
+      "notes": "Contains racial and class prejudices of its time; teach as history and flag them. Some claims are not supported by modern research."
+    },
+    {
+      "id": "epictetus-enchiridion",
+      "kind": "book",
+      "title": "The Enchiridion",
+      "by": "Epictetus",
+      "year": 125,
+      "url": "https://www.gutenberg.org/ebooks/45109",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/45109",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A very short handbook for keeping a steady mind, the base of much modern talk therapy.",
+      "notes": "Ancient text in translation; year is approximate. Check which translator the Gutenberg text uses."
+    },
+    {
+      "id": "marcus-meditations",
+      "kind": "book",
+      "title": "Meditations",
+      "by": "Marcus Aurelius",
+      "year": 170,
+      "url": "https://www.gutenberg.org/ebooks/2680",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/2680",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A ruler's private notes on staying calm and fair under pressure.",
+      "notes": "Ancient text in translation; year is approximate."
+    },
+    {
+      "id": "nimh-stress",
+      "kind": "guide",
+      "title": "I'm So Stressed Out! Fact Sheet",
+      "by": "National Institute of Mental Health (NIH)",
+      "url": "https://www.nimh.nih.gov/health/publications/stress",
+      "licence": "Public domain (US government work)",
+      "licenceSeen": "Page 'Reprints' note: 'The information in this publication is in the public domain and may be reused or copied without permission' (read 2026-11-15)",
+      "terms": "Images may not be reused or copied. Cite NIMH as the source.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A plain, current fact sheet on stress, anxiety and when to get help, to place beside the old books.",
+      "notes": "Text only; do not reuse the images.",
+      "year": 2020
+    }
+  ]
+}

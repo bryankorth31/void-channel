@@ -1,0 +1,338 @@
+{
+  "area": "Body",
+  "checked": "2026-11-15",
+  "notes": "Blocked on this check: consumerfinance.gov (CFPB), cdc.gov, ready.gov, foodsafety.gov and fsis.usda.gov returned 403 to automated reads, so nothing was taken from them. consumer.ftc.gov and ftc.gov returned 404. Not worked round; a person can open them in a browser and add links later. medlineplus.gov and nhlbi.nih.gov opened. All old medicine in the old books (bleeding, patent tonics, cures, dosing, tobacco and alcohol advice, first aid) is outdated and some is dangerous; every old health line must be flagged against a current NIH, MedlinePlus or Red Cross source. No health disclaimer screens per house rule; cite sources on the cards instead.",
+  "courses": [
+    {
+      "name": "How your body works",
+      "why": "A person who knows what the heart, lungs, gut and muscles do can make sense of a doctor, a symptom or a diet.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "gray-anatomy-1918",
+      "uses": [
+        "gray-anatomy-1924",
+        "kellogg-first-book-physiology",
+        "farnsworth-house-we-live-in",
+        "cutter-anatomy-physiology-hygiene",
+        "mit-hst542j-physiology",
+        "medlineplus"
+      ],
+      "units": [
+        "The map of the body",
+        "Bones, joints and muscles",
+        "Heart and blood",
+        "Lungs and breath",
+        "Food to fuel: the gut",
+        "Skin and the body's defences",
+        "Nerves and the brain at work",
+        "Kidneys, water and balance"
+      ]
+    },
+    {
+      "name": "Health, germs and the body's history",
+      "why": "Epidemics, vaccines and medical technology shape every family's health choices.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-hist234-epidemics",
+      "uses": [
+        "yale-beng100-biomedical",
+        "medlineplus"
+      ],
+      "units": [
+        "How plagues spread",
+        "Cholera, sanitation and clean water",
+        "Tuberculosis and the poor",
+        "Vaccines and how they work",
+        "Modern epidemics",
+        "Medical engineering: the tools inside a hospital",
+        "How to judge a health claim"
+      ]
+    },
+    {
+      "name": "First aid and old home medicine",
+      "why": "Knowing what to do in the first minutes of an accident can save a life, and knowing what old remedies were wrong prevents harm.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "redcross-first-aid-1918",
+      "uses": [
+        "mary-frances-first-aid",
+        "walters-physiology-hygiene",
+        "medlineplus"
+      ],
+      "units": [
+        "Bleeding and wounds",
+        "Burns",
+        "Breaks and sprains",
+        "Choking, drowning and breathing",
+        "Poisoning",
+        "Heat, cold and weather",
+        "Old remedies that are now known to be wrong"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "gray-anatomy-1918",
+      "kind": "book",
+      "title": "Anatomy of the human body",
+      "by": "Henry Gray (20th edition, ed. Warren H. Lewis)",
+      "year": 1918,
+      "url": "https://archive.org/details/101532328.nlm.nih.gov",
+      "licence": "Public domain (US publication before 1931); not given as a licence field on the item",
+      "licenceSeen": "Internet Archive item page shows no licence field; public domain rests on the publication date (before 1931). Builder must confirm on the item page before use.",
+      "terms": "",
+      "text": "https://archive.org/details/101532328.nlm.nih.gov",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The standard anatomy atlas, with drawings; the base for a plain map of the body.",
+      "notes": "NLM scan of the 1918 edition, so US public domain by age. The book was written for surgeons; anatomy facts stand, but disease and treatment passages are outdated. Not 'Gray's Anatomy' the TV show."
+    },
+    {
+      "id": "gray-anatomy-1924",
+      "kind": "book",
+      "title": "Anatomy of the human body (1924 printing)",
+      "by": "Henry Gray; Warren H. Lewis",
+      "year": 1924,
+      "url": "https://archive.org/details/graysanatomy1924",
+      "licence": "Public Domain Mark 1.0",
+      "licenceSeen": "Archive item metadata licence URL is creativecommons.org/publicdomain/mark/1.0/ (read 2026-11-15)",
+      "terms": "",
+      "text": "https://archive.org/details/graysanatomy1924",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A second scan of the same classic for cross-checking figures and text.",
+      "notes": "Item has 1424 page images. Same outdated treatment passages apply."
+    },
+    {
+      "id": "cutter-anatomy-physiology-hygiene",
+      "kind": "book",
+      "title": "A Treatise on Anatomy, Physiology, and Hygiene (Revised Edition)",
+      "by": "Calvin Cutter",
+      "year": 1847,
+      "url": "https://www.gutenberg.org/ebooks/30541",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/30541",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A nineteenth century school text that links how the body works to daily habits.",
+      "notes": "Old hygiene claims; some are wrong. Check year on the ebook page."
+    },
+    {
+      "id": "walters-physiology-hygiene",
+      "kind": "book",
+      "title": "Physiology and Hygiene for Secondary Schools",
+      "by": "Francis M. Walters",
+      "year": 1909,
+      "url": "https://www.gutenberg.org/ebooks/18779",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/18779",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A high school body text with chapters on food, air, exercise and first aid.",
+      "notes": "Check year on the ebook page. Includes outdated drug and alcohol teaching."
+    },
+    {
+      "id": "kellogg-first-book-physiology",
+      "kind": "book",
+      "title": "First Book in Physiology and Hygiene",
+      "by": "John Harvey Kellogg",
+      "year": 1888,
+      "url": "https://www.gutenberg.org/ebooks/17367",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/17367",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Short, plain lessons on the body for beginners.",
+      "notes": "Kellogg's diet and sexuality teachings are strongly outdated; flag them. Check year on the ebook page."
+    },
+    {
+      "id": "farnsworth-house-we-live-in",
+      "kind": "book",
+      "title": "The House We Live In; or, The Making of the Body",
+      "by": "Vesta J. Farnsworth",
+      "year": 1896,
+      "url": "https://www.gutenberg.org/ebooks/65968",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/65968",
+      "old": true,
+      "levels": [
+        "high school",
+        "everyday"
+      ],
+      "needIt": "Explains the body as a house, an analogy that fits our scene style.",
+      "notes": "Check year on the ebook page. Old moral teaching on stimulants is dated."
+    },
+    {
+      "id": "mary-frances-first-aid",
+      "kind": "book",
+      "title": "The Mary Frances First Aid Book",
+      "by": "Jane Eayre Fryer",
+      "year": 1916,
+      "url": "https://www.gutenberg.org/ebooks/54216",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/54216",
+      "old": true,
+      "levels": [
+        "high school",
+        "everyday"
+      ],
+      "needIt": "A children's story that teaches first aid steps.",
+      "notes": "Home remedies listed are outdated; flag against current Red Cross guidance. Check year on the ebook page."
+    },
+    {
+      "id": "redcross-first-aid-1918",
+      "kind": "book",
+      "title": "American Red Cross text-book on first aid and relief columns",
+      "by": "Charles Lynch, American Red Cross",
+      "year": 1918,
+      "url": "https://archive.org/details/29730590R.nlm.nih.gov",
+      "licence": "Public domain (US publication before 1931); not given as a licence field on the item",
+      "licenceSeen": "Internet Archive item page shows no licence field; public domain rests on the publication date (before 1931). Builder must confirm on the item page before use.",
+      "terms": "",
+      "text": "https://archive.org/details/29730590R.nlm.nih.gov",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The original Red Cross first aid course, a base for a first aid course with modern checks.",
+      "notes": "Many treatments (tourniquets, whisky, heat) are outdated or unsafe. Use for structure and history; every step must be checked against a current Red Cross or MedlinePlus source."
+    },
+    {
+      "id": "yale-hist234-epidemics",
+      "kind": "open-course",
+      "title": "Epidemics in Western Society Since 1600",
+      "by": "Frank M. Snowden",
+      "year": 2010,
+      "url": "https://oyc.yale.edu/history/hist-234",
+      "licence": "CC BY-NC-SA 3.0 US",
+      "licenceSeen": "Course page footer and oyc.yale.edu/terms section 4 'Course License' (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 3.0 US: non-commercial only. OYC terms count advertising, paid services, or required email sign-up on the reusing site as commercial use, so check that before use. Credit the professor, Yale and oyc.yale.edu. Third-party content in lecture Credits is not covered. No clause about AI or language models found on the terms page.",
+      "video": {
+        "archive": "oyc_Epidemics_in_Western_Society_Since_1600",
+        "files": 26
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "lecture video (YouTube embed on each lecture page)",
+        "lecture chapters and overviews"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/history/hist-234",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains how disease, public health and fear have shaped societies, useful for every health debate.",
+      "notes": "26 lectures; Archive item has 26 audio files and no video. Video is the YouTube embed on OYC lecture pages."
+    },
+    {
+      "id": "yale-beng100-biomedical",
+      "kind": "open-course",
+      "title": "Frontiers of Biomedical Engineering",
+      "by": "W. Mark Saltzman",
+      "year": 2008,
+      "url": "https://oyc.yale.edu/biomedical-engineering/beng-100",
+      "licence": "CC BY-NC-SA 3.0 US",
+      "licenceSeen": "Course page footer and oyc.yale.edu/terms section 4 'Course License' (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 3.0 US: non-commercial only. OYC terms count advertising, paid services, or required email sign-up on the reusing site as commercial use, so check that before use. Credit the professor, Yale and oyc.yale.edu. Third-party content in lecture Credits is not covered. No clause about AI or language models found on the terms page.",
+      "video": {
+        "archive": "oyc_Frontiers_of_Biomedical_Engineering",
+        "files": 25
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "lecture video (YouTube embed on each lecture page)",
+        "lecture chapters and overviews"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/biomedical-engineering/beng-100",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Shows how drugs, imaging, implants and tissue engineering work, so a person understands modern medical choices.",
+      "notes": "25 lectures recorded Spring 2008. Archive item is audio only. Some technology is dated."
+    },
+    {
+      "id": "mit-hst542j-physiology",
+      "kind": "open-course",
+      "title": "Quantitative Physiology: Organ Transport Systems (HST.542J)",
+      "by": "Jose Venegas and Roger Mark",
+      "year": 2004,
+      "url": "https://ocw.mit.edu/courses/hst-542j-quantitative-physiology-organ-transport-systems-spring-2004/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "Course page footer 'Creative Commons License' link and ocw.mit.edu/terms, which states CC BY-NC-SA 4.0 (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 4.0. The MIT terms page has a 'Permitted Use of AI Training' section: allowed with attribution, non-commercial use only and ShareAlike. Third-party items inside a course may carry other terms.",
+      "coursework": [
+        "syllabus",
+        "problem sets and solutions",
+        "exams and solutions",
+        "lecture notes"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/hst-542j-quantitative-physiology-organ-transport-systems-spring-2004/",
+      "levels": [
+        "young adults"
+      ],
+      "needIt": "Explains heart, lungs and kidneys as flow systems.",
+      "notes": "Mathematical and no lecture video; use for ideas and diagrams, not as the spine."
+    },
+    {
+      "id": "medlineplus",
+      "kind": "guide",
+      "title": "MedlinePlus health topics",
+      "by": "U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/about/using/usingcontent/",
+      "licence": "US government work; some pages licensed third-party content",
+      "licenceSeen": "MedlinePlus 'Linking to and Using Content' page: works produced by the federal government are not copyrighted and may be reproduced; some content is copyrighted and licensed (read 2026-11-15)",
+      "terms": "Only NLM or NIH written pages are free to reuse; skip pages marked with a third-party source.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The best current plain-language health reference to set beside any old medical text.",
+      "notes": "Check the page footer for the source of each topic before copying."
+    }
+  ]
+}

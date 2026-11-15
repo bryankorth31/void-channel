@@ -1,0 +1,279 @@
+{
+  "area": "Home",
+  "checked": "2026-11-15",
+  "notes": "Blocked on this check: consumerfinance.gov (CFPB), cdc.gov, ready.gov, foodsafety.gov and fsis.usda.gov returned 403 to automated reads, so nothing was taken from them. consumer.ftc.gov and ftc.gov returned 404. Not worked round; a person can open them in a browser and add links later. No open university course on household management exists in the sets checked (Open Yale Courses has none; MIT OpenCourseWare has building-science courses only), so the home area leans on public-domain books. Old books give wiring, gas, lead paint, asbestos, coal-stove and chemical advice that is dangerous today; flag every such line against a current EPA, CPSC or energy.gov source.",
+  "courses": [
+    {
+      "name": "Running a home",
+      "why": "Most people are never taught to keep a home clean, stocked, repaired and on budget; this is the missing manual.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "beeton-household-management",
+      "uses": [
+        "beecher-treatise-domestic-economy",
+        "english-housekeeper",
+        "kitchiner-cooks-oracle",
+        "frugal-housewife-ref"
+      ],
+      "units": [
+        "Planning a household",
+        "Cleaning and order",
+        "Stocking the pantry and cooking for a week",
+        "Laundry and clothes care",
+        "Hiring, renting and living with others",
+        "Keeping accounts",
+        "Guests, manners and shared space"
+      ]
+    },
+    {
+      "name": "How your house works",
+      "why": "Knowing how heat, water, air and structure behave helps a person fix small things, cut bills and avoid costly landlord or contractor traps.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "mit-4401-building-technology",
+      "uses": [
+        "keene-mechanics-household",
+        "spons-household-manual",
+        "epa-mold-guide",
+        "vaughan-healthy-homes"
+      ],
+      "units": [
+        "Heat flow: why houses are cold or hot",
+        "Air and ventilation",
+        "Water: where it goes and how it gets in",
+        "Light and sound",
+        "Structure and what holds a house up",
+        "Small repairs anyone can do",
+        "Damp, mould and air quality",
+        "When to call a professional"
+      ]
+    },
+    {
+      "name": "The healthy home",
+      "why": "Damp, dust, bad air and clutter make people sick; old and new sources both teach how a home protects health.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "spine": "vaughan-healthy-homes",
+      "uses": [
+        "epa-mold-guide",
+        "keene-mechanics-household",
+        "mit-4401-building-technology"
+      ],
+      "units": [
+        "What an unhealthy house looks like",
+        "Damp and mould",
+        "Clean air and ventilation",
+        "Water you can trust",
+        "Keeping pests out",
+        "Old advice that is now unsafe"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "mit-4401-building-technology",
+      "kind": "open-course",
+      "title": "Introduction to Building Technology (4.401)",
+      "by": "Marilyne Andersen",
+      "year": 2006,
+      "url": "https://ocw.mit.edu/courses/4-401-introduction-to-building-technology-spring-2006/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "Course page footer 'Creative Commons License' link and ocw.mit.edu/terms, which states CC BY-NC-SA 4.0 (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 4.0. The MIT terms page has a 'Permitted Use of AI Training' section: allowed with attribution, non-commercial use only and ShareAlike. Third-party items inside a course may carry other terms.",
+      "coursework": [
+        "syllabus",
+        "calendar",
+        "lecture notes",
+        "problem sets",
+        "exams",
+        "image gallery"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/4-401-introduction-to-building-technology-spring-2006/",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains heat, air, light, sound and structure in buildings, so a person understands why a home is comfortable or costly.",
+      "notes": "Lecture notes and images only; no lecture video seen on the course page. Some images are third-party; check credits."
+    },
+    {
+      "id": "beeton-household-management",
+      "kind": "book",
+      "title": "The Book of Household Management",
+      "by": "Mrs. Isabella Beeton",
+      "year": 1861,
+      "url": "https://www.gutenberg.org/ebooks/10136",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/10136",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A huge, orderly manual of running a home: money, staff, cooking, health and manners.",
+      "notes": "Victorian British and class-bound (servants). Medical and chemical advice is out of date and unsafe in places. Use the structure and the logic, rewrite the content."
+    },
+    {
+      "id": "beecher-treatise-domestic-economy",
+      "kind": "book",
+      "title": "A Treatise on Domestic Economy",
+      "by": "Catharine Esther Beecher",
+      "year": 1841,
+      "url": "https://www.gutenberg.org/ebooks/21829",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/21829",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "An early American school text on health, space, ventilation, heating and housework as a system.",
+      "notes": "Old science. Heating, lighting and medicine sections are unsafe today; flag them."
+    },
+    {
+      "id": "english-housekeeper",
+      "kind": "book",
+      "title": "The English Housekeeper: Or, Manual of Domestic Management",
+      "by": "Anne Cobbett",
+      "year": 1842,
+      "url": "https://www.gutenberg.org/ebooks/55314",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/55314",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Plain, practical household instruction from the age of coal fires and candles.",
+      "notes": "Check year on the ebook page. British; old cleaning chemicals are hazardous."
+    },
+    {
+      "id": "kitchiner-cooks-oracle",
+      "kind": "book",
+      "title": "The Cook's Oracle; and Housekeeper's Manual",
+      "by": "William Kitchiner",
+      "year": 1822,
+      "url": "https://www.gutenberg.org/ebooks/28681",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/28681",
+      "old": true,
+      "levels": [
+        "young adults"
+      ],
+      "needIt": "Early scientific method applied to the kitchen: measure, test, record.",
+      "notes": "Old British terms; food safety advice is unreliable."
+    },
+    {
+      "id": "keene-mechanics-household",
+      "kind": "book",
+      "title": "Mechanics of the Household",
+      "by": "E. S. Keene",
+      "year": 1918,
+      "url": "https://www.gutenberg.org/ebooks/50846",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/50846",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A school text on how the home's heating, lighting, water and tools work.",
+      "notes": "Covers gas, coal and early electric wiring of 1918; none of its wiring, gas or chemical advice is safe to follow now. Check year on the ebook page."
+    },
+    {
+      "id": "spons-household-manual",
+      "kind": "book",
+      "title": "Spons' Household Manual",
+      "by": "E. and F. N. Spon",
+      "year": 1887,
+      "url": "https://www.gutenberg.org/ebooks/57630",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/57630",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A giant reference of repairs, materials, cleaning and household recipes.",
+      "notes": "Contains lead paints, arsenic dyes and other poisons used casually; flag every chemical. Check year on the ebook page."
+    },
+    {
+      "id": "vaughan-healthy-homes",
+      "kind": "book",
+      "title": "Healthy homes",
+      "by": "Victor C. Vaughan",
+      "year": 1885,
+      "url": "https://archive.org/details/101504652.nlm.nih.gov",
+      "licence": "Public domain (US publication before 1931); not given as a licence field on the item",
+      "licenceSeen": "Internet Archive item page shows no licence field; public domain rests on the publication date (before 1931). Builder must confirm on the item page before use.",
+      "terms": "",
+      "text": "https://archive.org/details/101504652.nlm.nih.gov",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "An 1885 public health tract on why housing, air and water decide health.",
+      "notes": "Scanned from the National Library of Medicine. Old germ theory era; use as a history seed beside current EPA and CDC pages."
+    },
+    {
+      "id": "frugal-housewife-ref",
+      "kind": "book",
+      "title": "The American Frugal Housewife",
+      "by": "Lydia Maria Child",
+      "year": 1829,
+      "url": "https://www.gutenberg.org/ebooks/13493",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/13493",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Ways to make a home run on little money.",
+      "notes": "Also used in Money. Medical and food tips are unsafe."
+    },
+    {
+      "id": "epa-mold-guide",
+      "kind": "guide",
+      "title": "A Brief Guide to Mold, Moisture and Your Home",
+      "by": "U.S. Environmental Protection Agency",
+      "url": "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home",
+      "licence": "US government work (EPA); reuse to be confirmed on the page",
+      "licenceSeen": "EPA 'Disclaimers' page, read 2026-11-15, says EPA data is public domain under 17 U.S.C. 105; the guide page itself carried no separate reuse statement",
+      "terms": "Cite EPA as the source; images may be third party.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The current plain guide to stopping damp and mould, which hits renters and owners alike.",
+      "notes": "Use as the current-fact check for the old damp and air advice."
+    }
+  ]
+}

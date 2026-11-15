@@ -1,0 +1,359 @@
+{
+  "area": "Money",
+  "checked": "2026-11-15",
+  "notes": "Blocked on this check: consumerfinance.gov (CFPB), cdc.gov, ready.gov, foodsafety.gov and fsis.usda.gov returned 403 to automated reads, so nothing was taken from them. consumer.ftc.gov and ftc.gov returned 404. Not worked round; a person can open them in a browser and add links later. investor.gov opened but no reuse statement was found on the page read, so it is listed link only.",
+  "courses": [
+    {
+      "name": "Your money, plainly",
+      "why": "Everyone earns, spends, saves and borrows, and most people are never taught how risk, interest and markets actually work.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-econ252-2011",
+      "uses": [
+        "mit-15401",
+        "brandeis-other-peoples-money",
+        "franklin-way-to-wealth",
+        "smiles-thrift",
+        "frugal-housewife",
+        "investor-gov"
+      ],
+      "units": [
+        "What money is and what it is for",
+        "Saving, interest and the long game",
+        "Debt: borrowing without being swallowed",
+        "Risk and insurance: paying so the bad day is survivable",
+        "Stocks, bonds and funds in plain words",
+        "Why smart people still make money mistakes",
+        "Banks, runs and bubbles: how the system breaks",
+        "Scams, fees and who is selling to you"
+      ]
+    },
+    {
+      "name": "Old thrift, new rules",
+      "why": "Old thrift books teach habits (waste nothing, count small costs) that still beat most modern money advice.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "smiles-thrift",
+      "uses": [
+        "franklin-way-to-wealth",
+        "frugal-housewife",
+        "adventures-in-thrift"
+      ],
+      "units": [
+        "Why small spending leaks sink people",
+        "Franklin: the habits behind wealth",
+        "The frugal home: making things last",
+        "Thrift as freedom, not stinginess",
+        "What changed since then and what did not"
+      ]
+    },
+    {
+      "name": "How the money world works and fails",
+      "why": "Crashes, bailouts and big banks shape jobs and homes, and a citizen should understand them to vote and decide.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-econ251",
+      "uses": [
+        "yale-plsc270",
+        "brandeis-other-peoples-money",
+        "bagehot-lombard-street",
+        "yale-econ252-2008"
+      ],
+      "units": [
+        "Collateral and why leverage is dangerous",
+        "Who lends to whom",
+        "Capitalism: what it does well",
+        "Crisis: why it keeps happening",
+        "Reform: rules that worked and did not",
+        "Other people's money: the old warnings"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "yale-econ252-2011",
+      "kind": "open-course",
+      "title": "Financial Markets (2011)",
+      "by": "Robert J. Shiller",
+      "year": 2011,
+      "url": "https://oyc.yale.edu/economics/econ-252",
+      "licence": "CC BY-NC-SA 3.0 US",
+      "licenceSeen": "Course page footer and oyc.yale.edu/terms section 4 'Course License' (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 3.0 US: non-commercial only. OYC terms count advertising, paid services, or required email sign-up on the reusing site as commercial use, so check that before use. Credit the professor, Yale and oyc.yale.edu. Third-party content in lecture Credits is not covered. No clause about AI or language models found on the terms page.",
+      "video": {
+        "archive": "oyc_Financial_Markets_2011",
+        "files": 23
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "lecture video (YouTube embed on each lecture page)",
+        "lecture chapters and overviews"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/economics/econ-252",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Shows how risk, insurance, banks and markets work, so a person can judge their own savings, debts and insurance.",
+      "notes": "23 lectures. Internet Archive item oyc_Financial_Markets_2011 is audio only (23 mp3); full video is the YouTube embed on each OYC lecture page. Books named in the syllabus are not under the course licence; Brandeis and Bagehot are public domain and listed here."
+    },
+    {
+      "id": "yale-econ252-2008",
+      "kind": "open-course",
+      "title": "Financial Markets (2008)",
+      "by": "Robert J. Shiller",
+      "year": 2008,
+      "url": "https://oyc.yale.edu/economics/econ-252-08",
+      "licence": "CC BY-NC-SA 3.0 US",
+      "licenceSeen": "Course page footer and oyc.yale.edu/terms section 4 'Course License' (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 3.0 US: non-commercial only. OYC terms count advertising, paid services, or required email sign-up on the reusing site as commercial use, so check that before use. Credit the professor, Yale and oyc.yale.edu. Third-party content in lecture Credits is not covered. No clause about AI or language models found on the terms page.",
+      "video": {
+        "archive": "OpenYaleCourseFinancialMarketsWithProfessorRobertShiller",
+        "files": 26
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "lecture video (YouTube embed on each lecture page)",
+        "lecture chapters and overviews"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/economics/econ-252-08",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Same course taught in the crisis year, so it shows how a bubble and a crash look from the inside.",
+      "notes": "26 lectures. Archive item OpenYaleCourseFinancialMarketsWithProfessorRobertShiller holds 26 mp4, 26 ogv and 26 mov files, so full video is on the Archive. The Archive item shows no licence field; the CC licence is read on oyc.yale.edu. A second set of per-lecture Archive items (Econ2522008fall...) is a third-party upload; skip it."
+    },
+    {
+      "id": "yale-econ251",
+      "kind": "open-course",
+      "title": "Financial Theory",
+      "by": "John Geanakoplos",
+      "year": 2009,
+      "url": "https://oyc.yale.edu/economics/econ-251",
+      "licence": "CC BY-NC-SA 3.0 US",
+      "licenceSeen": "Course page footer and oyc.yale.edu/terms section 4 'Course License' (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 3.0 US: non-commercial only. OYC terms count advertising, paid services, or required email sign-up on the reusing site as commercial use, so check that before use. Credit the professor, Yale and oyc.yale.edu. Third-party content in lecture Credits is not covered. No clause about AI or language models found on the terms page.",
+      "video": {
+        "archive": "oyc_Financial_Theory",
+        "files": 26
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "lecture video (YouTube embed on each lecture page)",
+        "lecture chapters and overviews"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/economics/econ-251",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains collateral, leverage and why lending booms end in crashes.",
+      "notes": "26 lectures; Archive item oyc_Financial_Theory is audio only. More mathematical than ECON 252, so use selected lectures for everyday readers."
+    },
+    {
+      "id": "yale-plsc270",
+      "kind": "open-course",
+      "title": "Capitalism: Success, Crisis, and Reform",
+      "by": "Douglas W. Rae",
+      "year": 2009,
+      "url": "https://oyc.yale.edu/political-science/plsc-270",
+      "licence": "CC BY-NC-SA 3.0 US",
+      "licenceSeen": "Course page footer and oyc.yale.edu/terms section 4 'Course License' (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 3.0 US: non-commercial only. OYC terms count advertising, paid services, or required email sign-up on the reusing site as commercial use, so check that before use. Credit the professor, Yale and oyc.yale.edu. Third-party content in lecture Credits is not covered. No clause about AI or language models found on the terms page.",
+      "video": {
+        "archive": "oyc_Capitalism_Success__Crisis_and_Reform",
+        "files": 23
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "lecture video (YouTube embed on each lecture page)",
+        "lecture chapters and overviews"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/political-science/plsc-270",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Helps a person judge what markets do well and badly before voting or choosing a career.",
+      "notes": "The course page lists 24 lectures; the Archive item has 23 audio files and no video."
+    },
+    {
+      "id": "mit-15401",
+      "kind": "open-course",
+      "title": "Finance Theory I (15.401)",
+      "by": "Andrew Lo",
+      "year": 2008,
+      "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "Course page footer 'Creative Commons License' link and ocw.mit.edu/terms, which states CC BY-NC-SA 4.0 (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 4.0. The MIT terms page has a 'Permitted Use of AI Training' section: allowed with attribution, non-commercial use only and ShareAlike. Third-party items inside a course may carry other terms.",
+      "coursework": [
+        "syllabus",
+        "calendar",
+        "readings",
+        "recitations",
+        "problem sets and solutions",
+        "exams and solutions",
+        "lecture notes",
+        "lecture videos and slides"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Full lecture video and problem sets on present value, bonds, stocks, risk and portfolios, which is the maths behind every loan and retirement account.",
+      "notes": "Graduate level. Use as a back-up spine and for worked examples, not as the plain-language spine. Video is hosted by MIT (not checked on the Archive)."
+    },
+    {
+      "id": "brandeis-other-peoples-money",
+      "kind": "book",
+      "title": "Other People's Money, and How the Bankers Use It",
+      "by": "Louis D. Brandeis",
+      "year": 1914,
+      "url": "https://www.gutenberg.org/ebooks/57819",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/57819",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A clear old warning on how other people's money gets used, still readable as a guide to conflicts of interest.",
+      "notes": "Old language; its numbers and trusts are 1914 history, not current law."
+    },
+    {
+      "id": "bagehot-lombard-street",
+      "kind": "book",
+      "title": "Lombard Street: A Description of the Money Market",
+      "by": "Walter Bagehot",
+      "year": 1873,
+      "url": "https://www.gutenberg.org/ebooks/4359",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/4359",
+      "old": true,
+      "levels": [
+        "young adults"
+      ],
+      "needIt": "The classic account of bank panics and why central banks lend in a crisis.",
+      "notes": "Victorian English and British; long. Use extracts only."
+    },
+    {
+      "id": "franklin-way-to-wealth",
+      "kind": "book",
+      "title": "Franklin's Way to Wealth; or, \"Poor Richard Improved\"",
+      "by": "Benjamin Franklin",
+      "year": 1758,
+      "url": "https://www.gutenberg.org/ebooks/43855",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/43855",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Short, famous and still useful: small habits decide whether money grows or leaks.",
+      "notes": "Very short. Some sayings are quaint; flag debt advice against modern credit."
+    },
+    {
+      "id": "smiles-thrift",
+      "kind": "book",
+      "title": "Thrift",
+      "by": "Samuel Smiles",
+      "year": 1875,
+      "url": "https://www.gutenberg.org/ebooks/14418",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/14418",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Argues that saving is about independence and gives many everyday cases.",
+      "notes": "Victorian tone; some claims about the poor are dated and need a modern frame."
+    },
+    {
+      "id": "frugal-housewife",
+      "kind": "book",
+      "title": "The American Frugal Housewife",
+      "by": "Lydia Maria Child",
+      "year": 1829,
+      "url": "https://www.gutenberg.org/ebooks/13493",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/13493",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Hundreds of small ways to waste less food, cloth and money.",
+      "notes": "Mixes good thrift with unsafe or wrong food and health tips; flag any medical or food-safety line against a current government source."
+    },
+    {
+      "id": "adventures-in-thrift",
+      "kind": "book",
+      "title": "Adventures in Thrift",
+      "by": "Anna Steese Richardson",
+      "year": 1912,
+      "url": "https://www.gutenberg.org/ebooks/62530",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/62530",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Short true stories of ordinary people getting out of money trouble.",
+      "notes": "Check the year on the ebook page before citing; prices are early twentieth century."
+    },
+    {
+      "id": "investor-gov",
+      "kind": "guide",
+      "title": "Investor.gov: investor education from the SEC",
+      "by": "U.S. Securities and Exchange Commission",
+      "url": "https://www.investor.gov/",
+      "licence": "Not confirmed",
+      "licenceSeen": "Home page read 2026-11-15; no reuse statement found on the page",
+      "terms": "Link only until a reuse statement is read on the site.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Plain guidance on fees, fraud and how to check a seller before investing.",
+      "notes": "Link only. Not confirmed as a government work on the page read."
+    }
+  ]
+}

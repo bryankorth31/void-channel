@@ -1,0 +1,372 @@
+{
+  "area": "Food",
+  "checked": "2026-11-15",
+  "notes": "Blocked on this check: consumerfinance.gov (CFPB), cdc.gov, ready.gov, foodsafety.gov and fsis.usda.gov returned 403 to automated reads, so nothing was taken from them. consumer.ftc.gov and ftc.gov returned 404. Not worked round; a person can open them in a browser and add links later. The National Center for Home Food Preservation (nchfp.uga.edu) opened, but its footer says all rights reserved (University of Georgia), so it is link only. Everything on old canning, preserving and 'wholesome food' in the old books is unsafe by today's rules; always check against a current USDA source before teaching it.",
+  "courses": [
+    {
+      "name": "Why we eat what we eat",
+      "why": "Everyone eats three times a day and is a target of food marketing; knowing the biology, habits and politics helps a person choose and shop with open eyes.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-psyc123",
+      "uses": [
+        "mit-21a155-food-culture-politics",
+        "mit-21hs01-food-american-history",
+        "accum-adulterations",
+        "dietary-guidelines"
+      ],
+      "units": [
+        "What counts as food, and who decides",
+        "Hunger, taste and the body's hard wiring",
+        "Comfort, friends and eating as ritual",
+        "The modern food environment and why it nudges us",
+        "Marketing to children",
+        "Cheap food, poverty and who can afford what",
+        "Labels, claims and what to ignore",
+        "Farming, organic and engineered food: the argument in plain words"
+      ]
+    },
+    {
+      "name": "Kitchen science",
+      "why": "Knowing why bread rises and meat browns turns recipes from magic into skills a person can fix and invent with.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "mit-es287-kitchen-chemistry",
+      "uses": [
+        "corson-domestic-economy-cookery",
+        "farmer-boston-cook-book",
+        "accum-culinary-chemistry"
+      ],
+      "units": [
+        "Heat: what cooking actually does",
+        "Water, salt and sugar",
+        "Eggs and emulsions",
+        "Why dough rises",
+        "Fats and frying",
+        "Fermenting: yeast, pickles, cheese",
+        "Old kitchen books versus modern science"
+      ]
+    },
+    {
+      "name": "The old kitchen",
+      "why": "Old cookbooks teach cooking from scratch, using leftovers and cheap parts, which is exactly what a tight budget needs.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "farmer-boston-cook-book",
+      "uses": [
+        "harland-complete-cook-book",
+        "beecher-domestic-receipt-book",
+        "usda-fb203-canned-fruit",
+        "corson-domestic-economy-cookery"
+      ],
+      "units": [
+        "How a 1896 cooking school taught",
+        "Measuring and basic methods",
+        "Soups, stews and cheap cuts",
+        "Bread and baking",
+        "Using leftovers",
+        "Preserving then and now: what is unsafe today"
+      ]
+    },
+    {
+      "name": "Is your food safe and honest",
+      "why": "From 1820 to today, people have been cheated by what is sold as food; spotting it protects health and money.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "spine": "accum-adulterations",
+      "uses": [
+        "yale-psyc123",
+        "usda-fb203-canned-fruit",
+        "dietary-guidelines"
+      ],
+      "units": [
+        "Food fraud in 1820",
+        "How the law grew from scandals",
+        "Safe storage and handling today",
+        "Reading a label",
+        "Home preserving: what changed"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "yale-psyc123",
+      "kind": "open-course",
+      "title": "The Psychology, Biology and Politics of Food",
+      "by": "Kelly D. Brownell",
+      "year": 2008,
+      "url": "https://oyc.yale.edu/psychology/psyc-123",
+      "licence": "CC BY-NC-SA 3.0 US",
+      "licenceSeen": "Course page footer and oyc.yale.edu/terms section 4 'Course License' (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 3.0 US: non-commercial only. OYC terms count advertising, paid services, or required email sign-up on the reusing site as commercial use, so check that before use. Credit the professor, Yale and oyc.yale.edu. Third-party content in lecture Credits is not covered. No clause about AI or language models found on the terms page.",
+      "video": {
+        "archive": "oyc_The_Psychology__Biology_and_Politics_of_Food",
+        "files": 23
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "lecture video (YouTube embed on each lecture page)",
+        "lecture chapters and overviews"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/psychology/psyc-123",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains why people eat what they eat and how food companies, biology and policy shape it, which helps with every grocery and restaurant choice.",
+      "notes": "23 lectures recorded Fall 2008. Archive item is audio only (23 mp3); full video is the YouTube embed on each OYC lecture page. Texts named in the syllabus (Food Fight, In Defense of Food) are not under the course licence. Some food policy facts are from 2008 and need updating."
+    },
+    {
+      "id": "mit-es287-kitchen-chemistry",
+      "kind": "open-course",
+      "title": "Kitchen Chemistry (ES.287)",
+      "by": "Patricia Christie",
+      "year": 2009,
+      "url": "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "Course page footer 'Creative Commons License' link and ocw.mit.edu/terms, which states CC BY-NC-SA 4.0 (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 4.0. The MIT terms page has a 'Permitted Use of AI Training' section: allowed with attribution, non-commercial use only and ShareAlike. Third-party items inside a course may carry other terms.",
+      "coursework": [
+        "syllabus",
+        "readings",
+        "written assignments"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Gives the science behind everyday cooking, with an edible experiment each week.",
+      "notes": "No lecture video; a syllabus, readings and assignments only. Good seed for our own analogy scenes and quizzes."
+    },
+    {
+      "id": "mit-21a155-food-culture-politics",
+      "kind": "open-course",
+      "title": "Food, Culture & Politics (21A.155)",
+      "by": "Heather Paxson",
+      "year": 2019,
+      "url": "https://ocw.mit.edu/courses/21a-155-food-culture-politics-fall-2019/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "Course page footer 'Creative Commons License' link and ocw.mit.edu/terms, which states CC BY-NC-SA 4.0 (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 4.0. The MIT terms page has a 'Permitted Use of AI Training' section: allowed with attribution, non-commercial use only and ShareAlike. Third-party items inside a course may carry other terms.",
+      "coursework": [
+        "syllabus",
+        "calendar",
+        "readings",
+        "written assignments with examples"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/21a-155-food-culture-politics-fall-2019/",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Shows how culture, class and politics shape what ends up on a plate.",
+      "notes": "No lecture video. Readings are third-party; check each reading's own licence before reuse."
+    },
+    {
+      "id": "mit-21hs01-food-american-history",
+      "kind": "open-course",
+      "title": "Food in American History (21H.S01)",
+      "by": "Anya Zilberstein",
+      "year": 2014,
+      "url": "https://ocw.mit.edu/courses/21h-s01-food-in-american-history-fall-2014/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "Course page footer 'Creative Commons License' link and ocw.mit.edu/terms, which states CC BY-NC-SA 4.0 (read 2026-11-15)",
+      "terms": "CC BY-NC-SA 4.0. The MIT terms page has a 'Permitted Use of AI Training' section: allowed with attribution, non-commercial use only and ShareAlike. Third-party items inside a course may carry other terms.",
+      "coursework": [
+        "syllabus",
+        "readings",
+        "written assignments with examples"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/21h-s01-food-in-american-history-fall-2014/",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains how nutrition science, diets and food habits changed over time, so a person can tell fad from fact.",
+      "notes": "No lecture video. Readings are third-party; check each reading's own licence."
+    },
+    {
+      "id": "farmer-boston-cook-book",
+      "kind": "book",
+      "title": "The Boston Cooking-School Cook Book",
+      "by": "Fannie Merritt Farmer",
+      "year": 1896,
+      "url": "https://www.gutenberg.org/ebooks/65061",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/65061",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The classic from-scratch American cookbook; teaches measuring, method and cheap cooking.",
+      "notes": "Old language and pounds-and-cups habits. Any canning, preserving and 'keeps for weeks' advice is unsafe by today's USDA rules. Archive scans of the same book exist (originalbostonco0000fann, cu31924087257873) but Gutenberg has the clean text."
+    },
+    {
+      "id": "corson-domestic-economy-cookery",
+      "kind": "book",
+      "title": "A Course of Lectures on the Principles of Domestic Economy and Cookery",
+      "by": "Juliet Corson",
+      "year": 1878,
+      "url": "https://www.gutenberg.org/ebooks/35567",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/35567",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Lectures on feeding a family well on very little money.",
+      "notes": "Old costs and some old nutrition claims; flag against current nutrition guidance."
+    },
+    {
+      "id": "beecher-domestic-receipt-book",
+      "kind": "book",
+      "title": "Miss Beecher's Domestic Receipt Book",
+      "by": "Catharine Esther Beecher",
+      "year": 1846,
+      "url": "https://www.gutenberg.org/ebooks/54965",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/54965",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Practical recipes and household methods of a working home.",
+      "notes": "Includes old home remedies and preserving methods that are unsafe today."
+    },
+    {
+      "id": "harland-complete-cook-book",
+      "kind": "book",
+      "title": "Marion Harland's Complete Cook Book",
+      "by": "Marion Harland",
+      "year": 1903,
+      "url": "https://www.gutenberg.org/ebooks/64459",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/64459",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A huge, plain collection of everyday recipes and kitchen manners.",
+      "notes": "Old canning and preserving times are unsafe; check against current USDA guidance."
+    },
+    {
+      "id": "accum-adulterations",
+      "kind": "book",
+      "title": "A Treatise on Adulterations of Food, and Culinary Poisons",
+      "by": "Friedrich Christian Accum",
+      "year": 1820,
+      "url": "https://www.gutenberg.org/ebooks/19031",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/19031",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The book that exposed food cheating (lead in sweets, alum in bread); a way to teach why food laws exist.",
+      "notes": "Early chemistry; some tests are obsolete. A history lens, not a modern testing guide."
+    },
+    {
+      "id": "accum-culinary-chemistry",
+      "kind": "book",
+      "title": "Culinary Chemistry",
+      "by": "Friedrich Christian Accum",
+      "year": 1821,
+      "url": "https://www.gutenberg.org/ebooks/60163",
+      "licence": "Public domain in the USA",
+      "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
+      "terms": "Project Gutenberg licence covers its trademark and boilerplate only; strip the PG header and footer.",
+      "text": "https://www.gutenberg.org/ebooks/60163",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "An early chemistry of cooking and preserving food.",
+      "notes": "Old chemistry terms; flag preserving methods against current USDA guidance."
+    },
+    {
+      "id": "usda-fb203-canned-fruit",
+      "kind": "book",
+      "title": "Canned Fruit, Preserves, and Jellies (Farmers' Bulletin 203)",
+      "by": "Maria Parloa, USDA",
+      "year": 1917,
+      "url": "https://archive.org/details/Canned_Fruit_Preserves_And_Jellies_USDA_Farmers_Bulletin_203",
+      "licence": "Public domain",
+      "licenceSeen": "Archive item page shows 'Usage: Public Domain' and the item metadata has a public domain licence URL and 'Public Domain' rights (read 2026-11-15)",
+      "terms": "",
+      "text": "https://archive.org/details/Canned_Fruit_Preserves_And_Jellies_USDA_Farmers_Bulletin_203",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Shows how home canning was taught and, set beside current rules, why old canning is dangerous.",
+      "notes": "UNSAFE as written: 1917 processing times, open-kettle and paraffin-seal methods are not safe by today's USDA rules. Teach only as history against the current USDA guide. A 2015 USDA Complete Guide to Home Canning is on the Archive (usda-complete-guide-to-home-canning-2015-revision) but its item page states no licence, so confirm before use."
+    },
+    {
+      "id": "dietary-guidelines",
+      "kind": "guide",
+      "title": "Dietary Guidelines for Americans",
+      "by": "U.S. Departments of Agriculture and Health and Human Services",
+      "url": "https://www.dietaryguidelines.gov/",
+      "licence": "Not confirmed",
+      "licenceSeen": "Home page read 2026-11-15; no reuse statement found on the page read",
+      "terms": "Link only until a reuse statement is read on the site.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The current official plain advice on what to eat, to set old books beside.",
+      "notes": "Link only. Check the current edition and its copyright note."
+    },
+    {
+      "id": "nchfp-home-canning",
+      "kind": "guide",
+      "title": "National Center for Home Food Preservation: Canning",
+      "by": "University of Georgia (USDA-supported)",
+      "url": "https://nchfp.uga.edu/how/can",
+      "licence": "All rights reserved (University of Georgia)",
+      "licenceSeen": "Page footer: 'Copyright 2026 National Center for Home Food Preservation, All rights reserved', hosted by the University of Georgia (read 2026-11-15)",
+      "terms": "Link only. All rights reserved; do not copy text.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The current safe-canning times to hold against any old recipe.",
+      "notes": "Link only; cite as the current source in our flags."
+    }
+  ]
+}

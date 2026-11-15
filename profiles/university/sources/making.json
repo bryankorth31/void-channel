@@ -1,0 +1,363 @@
+{
+  "area": "Making",
+  "checked": "2026-11-15",
+  "courses": [
+    {
+      "name": "Make it from wood",
+      "why": "Making a shelf, a box or a bench is a skill that saves money and builds confidence.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "wheeler-woodworking",
+      "uses": [
+        "zerbe-carpentry-boys",
+        "williams-things-to-make",
+        "mit-2-007"
+      ],
+      "units": [
+        "Safe shop habits",
+        "Measuring and marking",
+        "Cutting and planing",
+        "Joints",
+        "Glue and fasteners",
+        "Finishing",
+        "Build a small box",
+        "Fix what went wrong"
+      ]
+    },
+    {
+      "name": "Draw it before you make it",
+      "why": "A quick drawing prevents costly mistakes in any project or repair.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "mechanicaldrawin02leed",
+      "uses": [
+        "shopsketchingac00windgoog",
+        "mit-2-007"
+      ],
+      "units": [
+        "Lines and what they mean",
+        "Front, top and side views",
+        "Dimensions",
+        "Freehand sketches",
+        "From idea to a plan",
+        "Check it with a mock-up"
+      ]
+    },
+    {
+      "name": "Sew, mend and make clothes",
+      "why": "Mending and altering clothes saves money and extends life of what you own.",
+      "levels": [
+        "young adults",
+        "everyday",
+        "high school"
+      ],
+      "spine": "homedressmakersg00blac",
+      "uses": [
+        "stephens-needlework",
+        "hughes-dress-design"
+      ],
+      "units": [
+        "Tools and thread",
+        "Measuring a person",
+        "Hand stitches",
+        "Fixing a hem and a button",
+        "Cutting from a pattern",
+        "Knitting and crochet basics",
+        "Altering something you already own"
+      ]
+    },
+    {
+      "name": "Books and journals by hand",
+      "why": "A hand-bound notebook or a repaired favorite book is a lasting gift.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "bean-bookbinding-beginners",
+      "uses": [
+        "cockerell-bookbinding"
+      ],
+      "units": [
+        "Paper, grain and folding",
+        "Sewing the signatures",
+        "The cover",
+        "Gluing safely",
+        "Repair a loose book",
+        "Make a notebook"
+      ]
+    },
+    {
+      "name": "Design, build, test",
+      "why": "Every making project goes through the same loop; knowing it helps people stop guessing.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "mit-2-007",
+      "uses": [
+        "mit-mas-863",
+        "williams-things-to-make"
+      ],
+      "units": [
+        "Pick a problem",
+        "Sketch many ideas",
+        "Choose materials",
+        "Build a quick model",
+        "Test and break it",
+        "Fix and improve",
+        "Show what you made"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "mit-2-007",
+      "kind": "open-course",
+      "title": "Design and Manufacturing I (2.007, Spring 2009)",
+      "by": "Prof. Daniel Frey and Prof. David Gossard, MIT",
+      "year": 2009,
+      "url": "https://ocw.mit.edu/courses/2-007-design-and-manufacturing-i-spring-2009/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "OCW course page footer links the Creative Commons licence; OCW Terms page states CC BY-NC-SA 4.0",
+      "terms": "OCW Terms page: content may be used to train and improve AI models with attribution, non-commercial use only, and derived models must carry CC BY-NC-SA 4.0 or a compatible licence.",
+      "coursework": [
+        "syllabus",
+        "lecture notes",
+        "assignments",
+        "problem sets and solutions",
+        "exams and solutions",
+        "projects with examples",
+        "competition videos"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/2-007-design-and-manufacturing-i-spring-2009/",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Shows the whole path from an idea to a working thing: sketching, picking materials, building, testing and fixing.",
+      "notes": "Undergraduate; students build a robot. OCW lists competition videos but no lecture videos. Needs plain-level rebuild."
+    },
+    {
+      "id": "mit-mas-863",
+      "kind": "open-course",
+      "title": "How to Make (Almost) Anything (MAS.863, Fall 2002)",
+      "by": "Prof. Isaac Chuang and Prof. Neil Gershenfeld, MIT",
+      "year": 2002,
+      "url": "https://ocw.mit.edu/courses/mas-863-how-to-make-almost-anything-fall-2002/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "OCW course page footer links the Creative Commons licence; OCW Terms page states CC BY-NC-SA 4.0",
+      "terms": "OCW Terms page: content may be used to train and improve AI models with attribution, non-commercial use only, and derived models must carry CC BY-NC-SA 4.0 or a compatible licence.",
+      "coursework": [
+        "syllabus",
+        "calendar",
+        "lecture notes",
+        "assignments",
+        "related resources"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/mas-863-how-to-make-almost-anything-fall-2002/",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Shows how digital tools like laser cutters, 3D printers and circuit boards let one person make nearly anything.",
+      "notes": "GRADUATE course; no videos on OCW. Fall 2002 tools are dated; the current MIT class is by permission and is not on OCW (search result only, not verified here)."
+    },
+    {
+      "id": "wheeler-woodworking",
+      "kind": "book",
+      "title": "Wood-working for Beginners: A Manual for Amateurs",
+      "by": "Charles G. Wheeler",
+      "url": "https://www.gutenberg.org/ebooks/43604",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/43604",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults"
+      ],
+      "needIt": "Starter projects with tools, measuring and joints, a base for any wood project.",
+      "notes": "Old safety practice (no guards, dust masks or eye protection). Add current notes."
+    },
+    {
+      "id": "zerbe-carpentry-boys",
+      "kind": "book",
+      "title": "Carpentry for Boys",
+      "by": "James Slough Zerbe",
+      "url": "https://www.gutenberg.org/ebooks/20763",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/20763",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults"
+      ],
+      "needIt": "Beginner builds like a workbench, with steps in plain talk.",
+      "notes": "Title and tone are dated and gendered; rewrite for everyone. Old finishes may be lead based; modern safety needed."
+    },
+    {
+      "id": "williams-things-to-make",
+      "kind": "book",
+      "title": "Things To Make",
+      "by": "Archibald Williams",
+      "url": "https://www.gutenberg.org/ebooks/14664",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/14664",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults"
+      ],
+      "needIt": "Dozens of small projects from toys to electrical gadgets.",
+      "notes": "Some projects use dangerous mains voltage or old chemicals; keep only low risk ones and flag the rest."
+    },
+    {
+      "id": "cockerell-bookbinding",
+      "kind": "book",
+      "title": "Bookbinding, and the Care of Books",
+      "by": "Douglas Cockerell",
+      "url": "https://www.gutenberg.org/ebooks/26672",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/26672",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Teaches how a book is sewn and bound, which helps with repairing, journals and gifts.",
+      "notes": "Some tools (lying press, tools for gilding) are rare; list low cost substitutes."
+    },
+    {
+      "id": "bean-bookbinding-beginners",
+      "kind": "book",
+      "title": "Bookbinding for Beginners",
+      "by": "Florence O. Bean and John C. Brodhead",
+      "year": 1918,
+      "url": "https://www.gutenberg.org/ebooks/68844",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/68844",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A first project path: folded sheets, a simple cover, a small notebook.",
+      "notes": "First published 1918 per the Gutenberg page. Old glues and cutting tools need modern safety notes."
+    },
+    {
+      "id": "stephens-needlework",
+      "kind": "book",
+      "title": "The ladies' complete guide to crochet, fancy knitting, and needlework",
+      "by": "Ann S. Stephens",
+      "year": 1854,
+      "url": "https://www.gutenberg.org/ebooks/73303",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/73303",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Patterns and stitch instructions for knitting, crochet and mending that are still used.",
+      "notes": "First published 1854 per the Gutenberg page. Pattern language is old shorthand; modern patterns differ. Fibers and dyes of the day may be unsafe."
+    },
+    {
+      "id": "hughes-dress-design",
+      "kind": "book",
+      "title": "Dress design: an account of costume for artists & dressmakers",
+      "by": "Talbot Hughes",
+      "url": "https://www.gutenberg.org/ebooks/34903",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/34903",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains how clothing is shaped and drawn, helpful for altering and making clothes.",
+      "notes": "Costume history is Western and dated. Focus on pattern and fit."
+    },
+    {
+      "id": "homedressmakersg00blac",
+      "kind": "book",
+      "title": "The home dressmakers' guide",
+      "by": "Mrs. Judith Blackburn",
+      "url": "https://archive.org/details/homedressmakersg00blac",
+      "licence": "Public domain (US, by age)",
+      "licenceSeen": "Archive page: 'The Library of Congress is unaware of any copyright restrictions for this item.'",
+      "terms": "",
+      "text": "https://archive.org/details/homedressmakersg00blac",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Teaches measuring, cutting and sewing a garment at home, a skill that saves money.",
+      "notes": "Patterns are 1919 fashions; teach the method, not the styles.",
+      "year": 1919
+    },
+    {
+      "id": "mechanicaldrawin02leed",
+      "kind": "book",
+      "title": "Mechanical drawing for industrial and high schools",
+      "by": "Charles Carley Leeds",
+      "url": "https://archive.org/details/mechanicaldrawin02leed",
+      "licence": "Public domain (US, by age)",
+      "licenceSeen": "Archive page: 'The Library of Congress is unaware of any copyright restrictions for this item.'",
+      "terms": "",
+      "text": "https://archive.org/details/mechanicaldrawin02leed",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Teaches how to draw an object so someone else can build it, the first step of any make.",
+      "notes": "Pencil, T-square and ink drawing; modern drawing is on a screen. Keep the lines, views and dimension rules.",
+      "year": 1915
+    },
+    {
+      "id": "shopsketchingac00windgoog",
+      "kind": "book",
+      "title": "Shop sketching, a course of problems for mechanical drawing students",
+      "by": "Ralph Flagg Windoes",
+      "url": "https://archive.org/details/shopsketchingac00windgoog",
+      "licence": "Public domain (US, by age)",
+      "licenceSeen": "Archive metadata field 'possible-copyright-status: NOT_IN_COPYRIGHT' (the item's details page was not opened).",
+      "terms": "",
+      "text": "https://archive.org/details/shopsketchingac00windgoog",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults"
+      ],
+      "needIt": "Quick freehand sketches for planning a part or a repair.",
+      "notes": "Details page not opened; confirm the status on the page before building.",
+      "year": 1919
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "area": "Machines",
+  "checked": "2026-11-15",
+  "courses": [
+    {
+      "name": "How machines work",
+      "why": "Every tool, bike and appliance is built from six simple parts; seeing them lets a person fix, buy and choose better.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "mit-2-000",
+      "uses": [
+        "navy-basic-machines-1971",
+        "williams-how-it-works",
+        "keene-mechanics-household",
+        "oyc-phys-200"
+      ],
+      "units": [
+        "Levers",
+        "Wheels, axles and pulleys",
+        "Gears and belts",
+        "Screws and ramps",
+        "Springs and cams",
+        "Why things break",
+        "Take apart something old"
+      ]
+    },
+    {
+      "name": "The engine in your life",
+      "why": "Car, mower and generator engines cost real money; knowing how they run helps with buying and repair choices.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "runciman-gas-oil-engines",
+      "uses": [
+        "whitman-motor-car",
+        "gasenginehandbo01robegoog",
+        "oyc-phys-200"
+      ],
+      "units": [
+        "Fire pushes a piston",
+        "Four strokes",
+        "Fuel and air",
+        "Spark and timing",
+        "Cooling and oil",
+        "Cars today versus a century ago",
+        "What to ask a mechanic"
+      ]
+    },
+    {
+      "name": "Electricity at home, safely",
+      "why": "Electricity is in every home and a few ideas keep people safe and save money.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "BasicElectricity10086",
+      "uses": [
+        "bottone-electric-bells",
+        "keene-mechanics-household"
+      ],
+      "units": [
+        "Current, voltage and a battery",
+        "A circuit you can build safely",
+        "Switches and bells",
+        "Magnets and motors",
+        "Why wires get hot",
+        "Fuses and breakers",
+        "When to call an electrician"
+      ]
+    },
+    {
+      "name": "Physics you can see in everyday motion",
+      "why": "Brakes, ramps, swings and sports all follow a few rules about force and motion.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "mit-8-01-1999",
+      "uses": [
+        "oyc-phys-200",
+        "mit-8-01sc"
+      ],
+      "units": [
+        "Measuring and units",
+        "Speed and change in speed",
+        "Forces and Newton's laws",
+        "Falling and throwing",
+        "Energy and work",
+        "Circles and curves",
+        "Springs and swings",
+        "Fluids and pressure"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "oyc-phys-200",
+      "kind": "open-course",
+      "title": "Fundamentals of Physics I (PHYS 200)",
+      "by": "R. Shankar, Yale",
+      "url": "https://oyc.yale.edu/physics/phys-200",
+      "licence": "CC BY-NC-SA 3.0 (third-party content excluded)",
+      "licenceSeen": "Open Yale Courses Terms of Use page and the course page: 'licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 license'",
+      "terms": "Non-commercial only (Terms section 5). Third-party content is not covered unless a lecture's Credits section says so. Terms say nothing about AI or ingestion; check Yale's Office of General Counsel before any commercial use.",
+      "video": {
+        "archive": "OpenYaleFundamentalsOfPhysicsWithProfessorRamamurtiShankar",
+        "files": 24
+      },
+      "coursework": [
+        "syllabus",
+        "24 video lectures (mp4, ogv, mov on the Archive)",
+        "weekly homework with posted solutions",
+        "midterm and final exams"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/physics/phys-200",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains why things move the way they do, the base for every machine, car and tool.",
+      "notes": "The Archive item says 'Yale University 2010. Some rights reserved', CC BY-NC-SA 3.0 US, with third-party credits excepted. Page for the course lists lectures 1 to 18 and 20 to 24 (lecture 19 not listed). It says solutions are posted but does not link the problem sets, so confirm what is downloadable. Calculus-based; rebuild at plain level. A second Archive item, oyc_Fundamentals_of_Physics_I, has audio only (24 mp3)."
+    },
+    {
+      "id": "mit-8-01-1999",
+      "kind": "open-course",
+      "title": "MIT 8.01 Physics I: Classical Mechanics (Fall 1999)",
+      "by": "Walter Lewin, MIT OpenCourseWare",
+      "year": 1999,
+      "url": "https://archive.org/details/MIT8.01F99",
+      "licence": "CC BY-NC-SA 3.0 US",
+      "licenceSeen": "Archive item page: 'Creative Commons Attribution-Noncommercial-Share Alike 3.0 United States'.",
+      "terms": "Non-commercial and share-alike under CC BY-NC-SA 3.0 US; nothing about AI on the Archive page. The current OCW Terms page allows AI use with attribution for non-commercial use.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Famous demonstration lectures on force, motion, springs and fluids that make physics visible.",
+      "notes": "35 lectures plus an introduction and a bonus video. The OCW 1999 page was not opened; archive metadata shows 71 mp4 files (two renditions), licence also in item metadata. Terms of OCW (non-commercial, attribution) apply. Pair with the 8.01SC coursework.",
+      "video": {
+        "archive": "MIT8.01F99",
+        "files": 71
+      },
+      "coursework": [
+        "lecture videos (35)",
+        "course introduction"
+      ],
+      "courseworkUrl": "https://archive.org/details/MIT8.01F99"
+    },
+    {
+      "id": "mit-8-01sc",
+      "kind": "open-course",
+      "title": "Classical Mechanics (8.01SC, Fall 2016)",
+      "by": "Prof. Deepto Chakrabarty, Dr. Peter Dourmashkin and others, MIT",
+      "year": 2016,
+      "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "OCW course page footer links the Creative Commons licence; OCW Terms page states CC BY-NC-SA 4.0",
+      "terms": "OCW Terms page: content may be used to train and improve AI models with attribution, non-commercial use only, and derived models must carry CC BY-NC-SA 4.0 or a compatible licence.",
+      "coursework": [
+        "lecture videos",
+        "problem sets"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Self-paced physics with problem sets so a learner can check their own understanding.",
+      "notes": "OCW lists Lecture Videos and Problem Sets; videos are on OCW and are not downloaded here. Undergraduate; rebuild at plain level."
+    },
+    {
+      "id": "mit-2-000",
+      "kind": "open-course",
+      "title": "How and Why Machines Work (2.000, Spring 2002)",
+      "by": "Prof. Joseph Smith and Prof. Martin Culpepper, MIT",
+      "year": 2002,
+      "url": "https://ocw.mit.edu/courses/2-000-how-and-why-machines-work-spring-2002/",
+      "licence": "CC BY-NC-SA 4.0",
+      "licenceSeen": "OCW course page footer links the Creative Commons licence; OCW Terms page states CC BY-NC-SA 4.0",
+      "terms": "OCW Terms page: content may be used to train and improve AI models with attribution, non-commercial use only, and derived models must carry CC BY-NC-SA 4.0 or a compatible licence.",
+      "coursework": [
+        "lecture notes",
+        "written assignments"
+      ],
+      "courseworkUrl": "https://ocw.mit.edu/courses/2-000-how-and-why-machines-work-spring-2002/",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Takes machines apart in the mind and in the hand: sketches, mechanisms, why each part is shaped as it is.",
+      "notes": "Undergraduate, hands-on. OCW lists Lecture Notes and Written Assignments, no videos or exams. The exact fit for a plain-language machines course."
+    },
+    {
+      "id": "navy-basic-machines-1971",
+      "kind": "book",
+      "title": "Basic machines and how they work",
+      "by": "US Bureau of Naval Personnel (Dover reprint of the 1965 edition)",
+      "year": 1971,
+      "url": "https://archive.org/details/basicmachineshow00unit",
+      "licence": "US government work (not stated on page)",
+      "licenceSeen": "Archive page shows no copyright or licence statement, only a Terms of Service link. Author on the page is the US Bureau of Naval Personnel; US federal authorship is the basis.",
+      "terms": "",
+      "text": "https://archive.org/details/basicmachineshow00unit",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Teaches levers, pulleys, gears, screws and wheels with simple pictures, the parts inside every machine.",
+      "notes": "The Dover reprint adds a publisher; Dover's own cover or layout may be separately claimed. Prefer the original Navy text. Related Archive items: micro_IA41153602_0959 (1965 Navy course, ERIC), navedtra-14037-basic-machines-1994 (a 1994 NAVEDTRA with no licence text on its page)."
+    },
+    {
+      "id": "williams-how-it-works",
+      "kind": "book",
+      "title": "How it Works",
+      "by": "Archibald Williams",
+      "url": "https://www.gutenberg.org/ebooks/28553",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/28553",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A friendly early 1900s tour of how bridges, engines, clocks and telephones work.",
+      "notes": "Out of date on technology (telegraph, early autos, steam). Facts must be checked."
+    },
+    {
+      "id": "runciman-gas-oil-engines",
+      "kind": "book",
+      "title": "Gas and Oil Engines, Simply Explained",
+      "by": "Walter C. Runciman",
+      "year": 1905,
+      "url": "https://www.gutenberg.org/ebooks/27286",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/27286",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains the four-stroke engine and carburetor in everyday words, useful for anyone with a car, mower or generator.",
+      "notes": "Published 1905 per the Gutenberg page. Early engine designs and fuels (including leaded gasoline). Flag."
+    },
+    {
+      "id": "whitman-motor-car",
+      "kind": "book",
+      "title": "Motor-car principles; the gasoline automobile",
+      "by": "Roger B. Whitman",
+      "year": 1907,
+      "url": "https://www.gutenberg.org/ebooks/70194",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/70194",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Shows what is under the hood of a car: ignition, cooling, transmission, brakes.",
+      "notes": "Published 1907 per the Gutenberg page. No fuel injection, computers or emissions. Safety and repair steps are unsafe by today's standards (brakes, fuel, jacks)."
+    },
+    {
+      "id": "gasenginehandbo01robegoog",
+      "kind": "book",
+      "title": "The gas-engine handbook. A manual of useful information for the designer and engineer",
+      "by": "Edmund Willson Roberts",
+      "url": "https://archive.org/details/gasenginehandbo01robegoog",
+      "licence": "Public domain (US, by age)",
+      "licenceSeen": "Archive page 'Possible copyright status: NOT_IN_COPYRIGHT', region US.",
+      "terms": "",
+      "text": "https://archive.org/details/gasenginehandbo01robegoog",
+      "old": true,
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Reference tables and designs for early engines; shows how power plants were sized.",
+      "notes": "Dense, for engineers. Use only for diagrams and history.",
+      "year": 1900
+    },
+    {
+      "id": "keene-mechanics-household",
+      "kind": "book",
+      "title": "Mechanics of the Household",
+      "by": "E. S. Keene",
+      "url": "https://www.gutenberg.org/ebooks/50846",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/50846",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains the machines in a house: pumps, heating, plumbing, simple electrical equipment.",
+      "notes": "Early 1900s; heating, plumbing and wiring advice is unsafe and out of code (lead pipe, gas lights). Flag each against current codes."
+    },
+    {
+      "id": "bottone-electric-bells",
+      "kind": "book",
+      "title": "Electric Bells and All About Them: A Practical Book for Practical Men",
+      "by": "S. R. Bottone",
+      "url": "https://www.gutenberg.org/ebooks/39053",
+      "licence": "Public domain (USA)",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright line reads 'Public domain in the USA.'",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/39053",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults"
+      ],
+      "needIt": "A hands-on introduction to circuits: a battery, wire, a bell and a push button.",
+      "notes": "Old batteries (zinc and acid) and mains advice; do not suggest connecting to house power. Safe version uses a 9 volt battery."
+    },
+    {
+      "id": "BasicElectricity10086",
+      "kind": "book",
+      "title": "Basic Electricity, NAVPERS 10086",
+      "by": "US Bureau of Naval Personnel",
+      "url": "https://archive.org/details/BasicElectricity10086",
+      "licence": "Public Domain Mark 1.0 (US government work)",
+      "licenceSeen": "Archive page shows 'Public Domain Mark 1.0'.",
+      "terms": "",
+      "text": "https://archive.org/details/BasicElectricity10086",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Explains circuits, magnets, motors and meters at a trainee's pace.",
+      "notes": "1956 manual; large file (669 MB listed). Voltages, wire colors and materials are dated. Flag against the current electrical code.",
+      "year": 1956
+    }
+  ]
+}

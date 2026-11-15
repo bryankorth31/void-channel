@@ -89,3 +89,5 @@ so ask first.
 - Links to the mind's mechanisms where a unit uses one.
 - Audience levels, so the "Who is it for?" filter works.
 - The CASH donation line in the footer (the build adds it).
+- No ads, sponsor listings, fees or email sign-up anywhere on the University: Open Yale's terms count any of those as
+  commercial use of their courses (see sources/FORMAT.md).

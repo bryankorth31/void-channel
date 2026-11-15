@@ -55,6 +55,11 @@ Bryan, 15 Nov 2026: "it's not just we show videos we create curriculum from what
   automated readers. If that happens, stop on that site and note it; never work round it.
 - **Licence read on the page.** Never from memory. If a page says the material may not be used for AI or ingested
   by language models, write that in `terms`, and the source is link only.
+- **Noncommercial sources bind the whole site.** Open Yale's terms (read 15 Nov 2026 at oyc.yale.edu/terms) count it as
+  commercial use if the site "accepts advertising of any kind", charges for services, or "collects email addresses for
+  any purpose". So Void University carries no ads, no sponsor listings, no paid anything, and no email sign-up while it
+  uses Yale (or other NC) material. The CASH donation line is voluntary and not named in those terms. Credit the teacher
+  and the university, link the course page, and link the licence (the build does this from `source`).
 - **`old: true`** marks outdated but useful text in old English that we rewrite into plain modern English (the
   old-knowledge shelf). Facts that are now wrong or unsafe (old medicine, old wiring, old food canning times) go in
   `notes` so the builder flags them against a current government source.
