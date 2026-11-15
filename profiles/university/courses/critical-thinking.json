@@ -48,7 +48,11 @@
           "title": "Cosmos, episode 3: Harmony of the Worlds",
           "by": "Carl Sagan",
           "year": 1980,
-          "voidtv": { "slug": "cosmos-a-personal-voyage", "season": 1, "episode": 3 },
+          "voidtv": {
+            "slug": "cosmos-a-personal-voyage",
+            "season": 1,
+            "episode": 3
+          },
           "item": "cosmos-a-personal-voyage-australian-1984-TV-broadcast",
           "file": "Cosmos - A Personal Voyage - ep 3 - Harmony of the Worlds (ABC Australia 1984 Broadcast).mp4",
           "licence": "Already on voidtv.net.",
@@ -56,7 +60,11 @@
         }
       ],
       "do": "Pick one claim you heard this week. Write the claim on one line and its evidence on the next. If the second line is empty, that is your answer.",
-      "voices": ["randi", "sagan", "clifford"]
+      "voices": [
+        "randi",
+        "sagan",
+        "clifford"
+      ]
     },
     {
       "n": 2,
@@ -89,13 +97,16 @@
           "title": "On Bullshit",
           "by": "Harry Frankfurt (1986)",
           "item": "on-bullshit-by-harry-frankfurt",
-          "licence": "In copyright. An Archive upload, not the publisher's.",
-          "hold": "Waits for Bryan: the plan says public-domain or openly licensed texts only. Keep it as a pointer to the library, or strike it.",
-          "note": "A short essay with an exact distinction: a liar cares about the truth enough to hide it; a bullshitter does not care either way."
+          "licence": "In copyright: we point you to a library copy rather than an upload.",
+          "note": "A short essay with an exact distinction: a liar cares about the truth enough to hide it; a bullshitter does not care either way.",
+          "pointer": true
         }
       ],
       "do": "Watch any panel show or comment thread for ten minutes and name three of Schopenhauer's stratagems by number when you catch them.",
-      "voices": ["schopenhauer", "frankfurt"]
+      "voices": [
+        "schopenhauer",
+        "frankfurt"
+      ]
     },
     {
       "n": 3,
@@ -152,12 +163,16 @@
           "title": "How to Lie with Statistics",
           "by": "Darrell Huff (1954)",
           "item": "HowToLieWithStatistics_201608",
-          "licence": "In copyright. An Archive upload, not the publisher's.",
-          "hold": "Waits for Bryan: the most-read statistics book ever written, but not public domain. Keep it as a pointer to the library, or strike it."
+          "licence": "In copyright: we point you to a library copy rather than an upload.",
+          "pointer": true
         }
       ],
       "do": "Find one percentage in today's news. Ask three questions of it: a percent of what, compared with what, and who counted.",
-      "voices": ["rosling", "huff", "clifford"]
+      "voices": [
+        "rosling",
+        "huff",
+        "clifford"
+      ]
     },
     {
       "n": 4,
@@ -189,7 +204,10 @@
         }
       ],
       "do": "Think of one thing \"everybody knows\" in your circle. Write down where you first heard it and whether you ever saw it for yourself.",
-      "voices": ["postman", "mackay"]
+      "voices": [
+        "postman",
+        "mackay"
+      ]
     },
     {
       "n": 5,
@@ -202,7 +220,11 @@
         "title": "The Ascent of Man, episode 11: Knowledge or Certainty",
         "by": "Jacob Bronowski (BBC, 1973)",
         "year": 1973,
-        "voidtv": { "slug": "the-ascent-of-man", "season": 1, "episode": 11 },
+        "voidtv": {
+          "slug": "the-ascent-of-man",
+          "season": 1,
+          "episode": 11
+        },
         "item": "the-ascent-of-man-ep11",
         "file": "11. Knowledge or Certainty.mp4",
         "licence": "On voidtv.net (its file is still in REVIEW there).",
@@ -221,7 +243,10 @@
         }
       ],
       "do": "Pick one opinion you hold firmly. Write the strongest case against it you can, as if you believed it. Show it to someone who does believe it and ask if you got it right.",
-      "voices": ["bronowski", "mill"]
+      "voices": [
+        "bronowski",
+        "mill"
+      ]
     },
     {
       "n": 6,
@@ -257,27 +282,82 @@
           "title": "How to Read a Book",
           "by": "Mortimer Adler (1940)",
           "item": "howtoreadabook1940edition",
-          "licence": "Copyright status of the 1940 edition not yet checked.",
-          "hold": "Waits for a check: if the 1940 copyright was not renewed it is public domain and can stay; otherwise a pointer to the library, or strike it."
+          "licence": "In copyright: we point you to a library copy rather than an upload.",
+          "pointer": true
         }
       ],
       "do": "Pick a short hard text you have only heard about: your lease, a founding document, a law in the news. Read it yourself first, then one summary, and write down where they differ.",
-      "voices": ["feynman", "adler"]
+      "voices": [
+        "feynman",
+        "adler"
+      ]
     }
   ],
   "voices": {
-    "randi": { "name": "James Randi", "what": "Stage magician and investigator", "did": "Exposed faith healer Peter Popoff and spoon bender Uri Geller with demonstrations, not arguments." },
-    "sagan": { "name": "Carl Sagan", "what": "Astronomer", "did": "Worked on the Viking and Voyager missions; wrote the baloney detection kit." },
-    "clifford": { "name": "W. K. Clifford", "what": "Mathematician", "did": "A geometer whose 1877 essay on belief is still argued over." },
-    "schopenhauer": { "name": "Arthur Schopenhauer", "what": "Philosopher", "did": "Catalogued the tricks of dishonest argument so people could see them coming." },
-    "frankfurt": { "name": "Harry Frankfurt", "what": "Philosopher", "did": "Gave the exact difference between lying and not caring about the truth." },
-    "rosling": { "name": "Hans Rosling", "what": "Physician and statistician", "did": "Practised medicine in Mozambique, then built Gapminder to show the world as the numbers say it is." },
-    "huff": { "name": "Darrell Huff", "what": "Journalist", "did": "Wrote the most-read book on how statistics mislead." },
-    "postman": { "name": "Neil Postman", "what": "Teacher and media critic", "did": "Forty years in the classroom; saw what television would do to public argument." },
-    "mackay": { "name": "Charles Mackay", "what": "Journalist", "did": "Chronicled the bubbles and manias of three centuries in 1841." },
-    "bronowski": { "name": "Jacob Bronowski", "what": "Mathematician and historian of science", "did": "A working scientist who made The Ascent of Man." },
-    "mill": { "name": "John Stuart Mill", "what": "Philosopher and economist", "did": "Wrote the case for free thought and discussion that is still quoted in courts." },
-    "feynman": { "name": "Richard Feynman", "what": "Physicist", "did": "Nobel prize; found the cause of the Challenger disaster with a glass of ice water." },
-    "adler": { "name": "Mortimer Adler", "what": "Philosopher and teacher", "did": "Ran the Great Books programme and taught reading as a skill." }
+    "randi": {
+      "name": "James Randi",
+      "what": "Stage magician and investigator",
+      "did": "Exposed faith healer Peter Popoff and spoon bender Uri Geller with demonstrations, not arguments."
+    },
+    "sagan": {
+      "name": "Carl Sagan",
+      "what": "Astronomer",
+      "did": "Worked on the Viking and Voyager missions; wrote the baloney detection kit."
+    },
+    "clifford": {
+      "name": "W. K. Clifford",
+      "what": "Mathematician",
+      "did": "A geometer whose 1877 essay on belief is still argued over."
+    },
+    "schopenhauer": {
+      "name": "Arthur Schopenhauer",
+      "what": "Philosopher",
+      "did": "Catalogued the tricks of dishonest argument so people could see them coming."
+    },
+    "frankfurt": {
+      "name": "Harry Frankfurt",
+      "what": "Philosopher",
+      "did": "Gave the exact difference between lying and not caring about the truth."
+    },
+    "rosling": {
+      "name": "Hans Rosling",
+      "what": "Physician and statistician",
+      "did": "Practised medicine in Mozambique, then built Gapminder to show the world as the numbers say it is."
+    },
+    "huff": {
+      "name": "Darrell Huff",
+      "what": "Journalist",
+      "did": "Wrote the most-read book on how statistics mislead."
+    },
+    "postman": {
+      "name": "Neil Postman",
+      "what": "Teacher and media critic",
+      "did": "Forty years in the classroom; saw what television would do to public argument."
+    },
+    "mackay": {
+      "name": "Charles Mackay",
+      "what": "Journalist",
+      "did": "Chronicled the bubbles and manias of three centuries in 1841."
+    },
+    "bronowski": {
+      "name": "Jacob Bronowski",
+      "what": "Mathematician and historian of science",
+      "did": "A working scientist who made The Ascent of Man."
+    },
+    "mill": {
+      "name": "John Stuart Mill",
+      "what": "Philosopher and economist",
+      "did": "Wrote the case for free thought and discussion that is still quoted in courts."
+    },
+    "feynman": {
+      "name": "Richard Feynman",
+      "what": "Physicist",
+      "did": "Nobel prize; found the cause of the Challenger disaster with a glass of ice water."
+    },
+    "adler": {
+      "name": "Mortimer Adler",
+      "what": "Philosopher and teacher",
+      "did": "Ran the Great Books programme and taught reading as a skill."
+    }
   }
 }

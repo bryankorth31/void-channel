@@ -608,8 +608,8 @@ B, 15 Nov 2026, picked the first slice: "Yes, that one" (the Critical thinking c
   Rosling TED talks. Broadcast uploads on the same footing as voidtv.net's shows: NOVA (Randi 1993, Feynman 1983),
   Postman on The Open Mind, Fun to Imagine, Don't Panic. Two tie into voidtv.net: Cosmos ep 3 and The Ascent of
   Man ep 11 (still REVIEW there).
-- **On hold for B (3):** On Bullshit and How to Lie with Statistics are in copyright (Archive uploads, not the
-  publishers'); How to Read a Book (1940) needs a renewal check. Each shows greyed with its reason.
+- **Books in copyright (3), kept as library pointers (B, 15 Nov 2026: "keep the books"):** On Bullshit and How to Lie with Statistics are in copyright (Archive uploads, not the
+  publishers'); How to Read a Book (1940) is treated the same until a renewal check. Each has a "Find it at a library" button (WorldCat search); we never link the upload.
 - **Found in passing:** voidtv.net's NOVA grid has S10E02 "The Pleasure of Finding Things Out" MISSING, and the
   Archive holds it as `ThePleasureOfFindingThingsOut_201809` (file named NOVA.S10E02). The matcher missed it.
 - **Not yet:** the name and domain, who it is for first, reviewers, the local model, putting courses into the

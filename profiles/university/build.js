@@ -12,7 +12,9 @@ const DONATE = 'https://square.link/u/dJioBmlW'; // CASH, one setting for this p
 const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const fileUrl = (p) => p.item && p.file ? 'https://archive.org/download/' + encodeURIComponent(p.item) + '/' + encodeURIComponent(p.file) : null;
 const pageUrl = (p) => p.item ? 'https://archive.org/details/' + encodeURIComponent(p.item) : null;
-const mins = (s) => s ? Math.round(s / 60) + ' min' : '';
+// In-copyright books (Bryan, 15 Nov 2026: "keep the books"): we send people to a library copy, never an upload.
+const libraryUrl = (p) => 'https://search.worldcat.org/search?q=' + encodeURIComponent(p.title + ' ' + String(p.by || '').replace(/\s*\(.*\)\s*$/, ''));
+const mins =(s) => s ? Math.round(s / 60) + ' min' : '';
 const ROLE = { watch: 'Watch', listen: 'Listen', read: 'Read', do: 'Do' };
 
 function piece(p, main) {
@@ -22,6 +24,7 @@ function piece(p, main) {
   let media = '';
   if (!held && url && p.role === 'watch') media = '<video controls preload="none" src="' + esc(url) + '"></video>';
   else if (!held && url && p.role === 'listen') media = '<audio controls preload="none" src="' + esc(url) + '"></audio>';
+  else if (!held && p.pointer) media = '<a class="btn" href="' + esc(libraryUrl(p)) + '" target="_blank" rel="noopener">Find it at a library</a>';
   else if (!held && p.role === 'read' && pageUrl(p)) media = '<a class="btn" href="' + esc(pageUrl(p)) + '" target="_blank" rel="noopener">Open the book</a>';
   return '<div class="piece ' + (main ? 'main' : 'comp') + (held ? ' held' : '') + '">'
     + '<div class="ph"><span class="role r-' + esc(p.role) + '">' + esc(ROLE[p.role] || p.role) + '</span>'
@@ -30,7 +33,7 @@ function piece(p, main) {
     + (p.note ? '<p>' + esc(p.note) + '</p>' : '')
     + (held ? '<div class="hold">On hold: ' + esc(p.hold) + '</div>' : '')
     + media
-    + '<div class="lic">' + esc(p.licence || '') + (pageUrl(p) ? ' <a href="' + esc(pageUrl(p)) + '" target="_blank" rel="noopener">Source</a>' : '') + '</div>'
+    + '<div class="lic">' + esc(p.licence || '') + (pageUrl(p) && !p.pointer ?' <a href="' + esc(pageUrl(p)) + '" target="_blank" rel="noopener">Source</a>' : '') + '</div>'
     + '</div>';
 }
 
