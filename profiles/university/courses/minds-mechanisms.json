@@ -3411,6 +3411,82 @@
             }
           }
         ]
+      },
+      "lab": {
+        "bench": "lever",
+        "title": "The lever",
+        "ask": "Sit down at the machine and pull. Stay as long as it feels worth it, then walk away. Then try a machine that pays a different way, and compare what your own hand did.",
+        "go": "Sit down at it",
+        "triesNote": "tall is a coin, short is nothing, the line is where it stopped paying",
+        "knobs": [
+          {
+            "id": "pay",
+            "label": "If the machine pays",
+            "options": [
+              {
+                "v": "every",
+                "label": "Every pull"
+              },
+              {
+                "v": "third",
+                "label": "Every third pull"
+              },
+              {
+                "v": "random",
+                "label": "At random"
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "if": "every pull pays, and one day it stops,",
+            "then": "the first empty pull tells you. Nothing was ever empty before, so you know it is over and walking away is easy.",
+            "when": {
+              "knob": {
+                "pay": "every"
+              }
+            }
+          },
+          {
+            "if": "every third pull pays, and one day it stops,",
+            "then": "you had learned the beat. When the third pull comes up empty the beat is broken, and you can tell.",
+            "when": {
+              "knob": {
+                "pay": "third"
+              }
+            }
+          },
+          {
+            "if": "it pays at random, and one day it stops,",
+            "then": "an empty pull tells you nothing. Empty pulls were normal all along, so \"it is over\" looks exactly like \"almost\". Look how far past the line this try goes. This is the machine that keeps a hand pulling.",
+            "when": {
+              "knob": {
+                "pay": "random"
+              }
+            }
+          }
+        ],
+        "map": [
+          [
+            "the lever",
+            "the swipe, the refresh, the check"
+          ],
+          [
+            "a coin",
+            "a like, a message, a new post"
+          ],
+          [
+            "an empty pull",
+            "nothing new"
+          ],
+          [
+            "paying at random",
+            "never knowing if the next one is the one"
+          ]
+        ],
+        "meet": "Where you meet this: pull to refresh. A feed that is only sometimes good. A game with a prize box. Someone who texts back only sometimes. None of them pay every time. A cheap reward that comes at random takes over a signal that was built for finding real things.",
+        "draftedBy": "Claude, 15 Nov 2026: a draft for Bryan to keep, change or strike."
       }
     },
     {

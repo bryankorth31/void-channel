@@ -130,7 +130,10 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .lab-seg button:hover{border-color:var(--gold)}.lab-seg button.on{border-color:var(--gold);color:var(--ink);background:var(--gold);font-weight:600}
 .lab.running .lab-seg button{opacity:.5;cursor:default}
 .lab-go{font:inherit;font-size:18px;font-weight:600;min-height:52px;background:var(--gold);color:var(--ink);border:0;border-radius:10px;padding:10px 22px;cursor:pointer;align-self:start}
-.lab-go:disabled{opacity:.45;cursor:default}
+.lab-go:disabled{opacity:.45;cursor:default}.lab.hands .lab-go{display:none}.lab.hands .lab-stage{cursor:pointer;touch-action:manipulation}
+.lab-acts{display:flex;flex-wrap:wrap;gap:10px}.lab-acts:empty{display:none}
+.lab-act{font:inherit;font-size:17px;min-height:52px;background:var(--panel2);color:var(--fg);border:1px solid #2c3550;border-radius:10px;padding:10px 20px;cursor:pointer}
+.lab-act:hover{border-color:var(--gold)}.lab-act.main{background:var(--gold);color:var(--ink);border-color:var(--gold);font-weight:600}
 .lab-say{font-family:Fraunces,Georgia,serif;font-size:20px;line-height:1.35;min-height:54px}
 .lab-h{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600;margin:16px 0 8px}
 .lab-strip{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px}

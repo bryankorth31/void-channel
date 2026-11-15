@@ -9,6 +9,9 @@
 // A bench is a small file (lab-pegboard.js is the first) that registers itself here with:
 //   make(planck, knobs, seed) -> a run with step(), done, speed;  result(run) -> { bars, mid, say };
 //   run(planck, knobs, seed) -> the result at once (tests, hidden pages);  draw(ctx, W, H, run, knobs).
+// A hands-on bench (lab-lever.js) also gives its run: actions [{ id, label }] and act(id), so the learner's own hand
+// drives it; say (a line that changes while it runs); and play(run, opts) to script it for checks. Its result may
+// carry counts: false (this try does not find a rule) and tag (a few words for the try's caption).
 // The unit's "lab" block in the course file names the bench and supplies the words, the knobs and the rules:
 //   { bench, title, ask, go, knobs: [{ id, label, options: [{ v, label }] }],
 //     rules: [{ if, then, when: { knob: { id: value }, times } }], map: [[thing, idea]], meet }
@@ -37,6 +40,8 @@
       row.appendChild(seg); side.appendChild(row);
     });
     const go = el('button', 'lab-go', cfg.go || 'Run it'); go.type = 'button'; side.appendChild(go);
+    const acts = el('div', 'lab-acts'); side.appendChild(acts);
+    canvas.addEventListener('pointerdown', () => { if (live && live.actions) live.act(live.actions[0].id); });
     const say = el('div', 'lab-say'); say.setAttribute('aria-live', 'polite'); say.textContent = 'Set it up, then run it and see.'; side.appendChild(say);
 
     function size() {
@@ -48,22 +53,22 @@
     const label = (kn) => cfg.knobs.map((k) => (k.options.find((o) => o.v === kn[k.id]) || {}).label).join(' · ');
     function thumb(r) {
       const c = el('canvas'); c.width = 132; c.height = 60; const x = c.getContext('2d'), n = r.bars.length, top = Math.max.apply(null, r.bars) || 1, bw = 132 / n;
-      x.fillStyle = 'rgba(212,176,106,.55)'; x.fillRect(r.mid * bw + bw / 2 - 0.5, 0, 1, 60);
       x.fillStyle = '#efe9dc'; r.bars.forEach((v, i) => { const h = Math.max(v ? 2 : 0, v / top * 54); x.fillRect(i * bw + 1, 60 - h, bw - 2, h); });
+      x.fillStyle = '#d4b06a'; x.fillRect(r.mid * bw + bw / 2 - 1, 0, 2, 60); // the bench's marker line, drawn over the bars so it always shows
       return c;
     }
     function renderTries() {
       triesEl.textContent = '';
       if (!tries.length) return;
-      triesEl.appendChild(el('span', 'lab-h', 'Your tries, side by side'));
+      triesEl.appendChild(el('span', 'lab-h', 'Your tries, side by side' + (cfg.triesNote ? ': ' + cfg.triesNote : '')));
       const strip = el('div', 'lab-strip');
-      tries.forEach((t, i) => { const f = el('figure'); f.appendChild(thumb(t.r)); f.appendChild(el('figcaption', null, (i + 1) + '. ' + label(t.knobs))); strip.appendChild(f); });
+      tries.forEach((t, i) => { const f = el('figure'); f.appendChild(thumb(t.r)); f.appendChild(el('figcaption', null, (i + 1) + '. ' + label(t.knobs) + (t.r.tag ? ' · ' + t.r.tag : ''))); strip.appendChild(f); });
       triesEl.appendChild(strip); strip.scrollLeft = strip.scrollWidth;
     }
     // A rule is found once you have made its IF happen the number of times it asks for.
     function met(rule) {
       const w = rule.when || {}, want = w.knob || {};
-      return tries.filter((t) => Object.keys(want).every((id) => t.knobs[id] === want[id])).length >= (w.times || 1);
+      return tries.filter((t) => t.r.counts !== false && Object.keys(want).every((id) => t.knobs[id] === want[id])).length >= (w.times || 1);
     }
     function renderRules(fresh) {
       rulesEl.textContent = '';
@@ -88,17 +93,22 @@
       if (!live) return;
       for (let i = 0; i < live.speed && !live.done; i++) live.step();
       paint();
-      if (live.done) { const r = bench.result(live); last = live; live = null; go.disabled = false; root.classList.remove('running'); finish(r); paint(); return; }
+      if (live.say != null && say.textContent !== live.say) say.textContent = live.say;
+      if (live.done) { const r = bench.result(live); last = live; live = null; go.disabled = false; root.classList.remove('running', 'hands'); acts.textContent = ''; finish(r); paint(); return; }
       raf = requestAnimationFrame(frame);
     }
     go.onclick = () => {
       if (live) return;
       live = bench.make(planck, knobs, ++seed); go.disabled = true; root.classList.add('running'); say.textContent = 'Watch...';
+      if (live.actions) {
+        root.classList.add('hands');
+        live.actions.forEach((a, i) => { const b = el('button', i ? 'lab-act' : 'lab-act main', a.label); b.type = 'button'; b.onclick = () => { if (live) live.act(a.id); }; acts.appendChild(b); });
+      }
       raf = requestAnimationFrame(frame);
     };
     // For checks and hidden pages: set knobs and get the result at once, with no animation.
     root._lab = {
-      runNow(set) { cancelAnimationFrame(raf); live = null; go.disabled = false; root.classList.remove('running'); Object.assign(knobs, set || {}); const s = bench.make(planck, knobs, ++seed); while (!s.done) s.step(); last = s; const r = bench.result(s); finish(r); paint(); return r; },
+      runNow(set, opts) { cancelAnimationFrame(raf); live = null; go.disabled = false; root.classList.remove('running', 'hands'); acts.textContent = ''; Object.assign(knobs, set || {}); const s = bench.make(planck, knobs, ++seed); if (bench.play) bench.play(s, opts); while (!s.done) s.step(); last = s; const r = bench.result(s); finish(r); paint(); return r; },
       state: () => ({ knobs: Object.assign({}, knobs), tries: tries.length, found: found.slice() }),
     };
     window.addEventListener('resize', size); size(); renderRules(-1);

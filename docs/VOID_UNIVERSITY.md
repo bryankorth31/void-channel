@@ -686,3 +686,19 @@ B: "void TV University needs to be interactive teaching analogous teaching If Th
 - **Checks:** `node profiles/university/test-lab.js` (same seed same pile, level hill on the middle, tilted hill moved, ten changes run to run). In the page: all four rules found through the test hook `root._lab.runNow({ n, tilt })`, no console errors, no sideways scroll at 1920 wide and at 821 wide (Tab S8 upright).
 - `serve.js` takes a PORT setting now, so two chats can preview at once.
 - Preview only, not deployed.
+
+### 15 Nov 2026: second lab (The lever), hands-on benches, and what the Mind Atlas says about teaching
+
+B: "Yes, next lab", then: "please look at my mind Atlas to gain an understanding".
+- **The lever**, on Variable reward (The mind's mechanisms, unit 17). The learner pulls a lever with their own hand; sometimes a coin drops into a tray (Planck). After 9 or 12 pulls the machine stops paying and never says so. The bench measures the learner's own behaviour: how many more pulls before they walk away. Three machines: pays every pull, every third pull, at random. Three rules to find. Each try is a strip (tall is a coin, short is nothing, the gold line is where it stopped paying), so the three machines sit side by side.
+- **Engine:** a bench can now be hands-on. Its run offers `actions` and `act(id)` (buttons, and a tap on the stage does the first action), a `say` line that changes while it runs, and `play(run, opts)` to script it for checks. A result may carry `counts: false` (leaving while it still pays finds no rule) and `tag` (words for the try's caption). A lab block may carry `triesNote`. build.js copies every `lab*.js` bench.
+- **Checks:** `node profiles/university/test-lab.js` now also checks the lever (each machine pays as it says, the last paying pull is a win, nothing pays past the line, same seed same run, leaving early does not count, the run ends itself after 40 empty pulls). In the page: three rules found through `root._lab.runNow({ pay }, { extra })`, the two buttons appear, no console errors, no sideways scroll at 1920 wide.
+- **From the Mind Atlas** (E:\mind-atlas-data\mechanisms: FAMILIES.md and index.json), the lines that now steer the labs:
+  - "I absorb the source code of how a field actually works, not the applications built on top of it." A lab shows the mechanism itself.
+  - Mismatch is experience (family F06): the gap between what you predicted and what happened is what gets felt and stored. The lever works this way already. Next for the engine: the learner commits to a guess before a run, then sees the gap.
+  - "my analogies ... are absolute it's the same mechanism. It's not just like a partial." An analogy is only used when it is the same mechanism, part for part. He rejects loose pattern-matching ("over pattern matching with analogy ... use socratic method more").
+  - Schools "compress data for others to use as a tool versus teaching the ideas and allowing incorrect thinking". Labs let the learner be wrong and see it.
+  - "a dominoes or ifttt of the worlds levers and then i could track downstream". Labs should grow toward chains: one lever, then what it sets off downstream.
+  - Use, disuse and hijack (F32): "cheap rewards hijack signals built for real needs". The lever's closing line says this.
+  - Depth levels (F18): "I want the ability to have this based on depth as well but I want the full knowledge available".
+- Preview only, not deployed.
