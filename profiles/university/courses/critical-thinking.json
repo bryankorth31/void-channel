@@ -352,6 +352,185 @@
           }
         ],
         "aha": "Once you see the move is aimed at the person, it stops working on you."
+      },
+      "scene": {
+        "analogy": "The cup-and-ball street game",
+        "map": [
+          [
+            "the fast talk",
+            "the loud part of the argument"
+          ],
+          [
+            "the quiet swap",
+            "your point changed into a weaker one"
+          ],
+          [
+            "the empty cup",
+            "the straw man they knock down"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "a",
+            "type": "card",
+            "x": 120,
+            "y": 130,
+            "w": 140,
+            "h": 100,
+            "label": "Cup",
+            "color": "dim"
+          },
+          {
+            "id": "b",
+            "type": "card",
+            "x": 330,
+            "y": 130,
+            "w": 140,
+            "h": 100,
+            "label": "Cup",
+            "color": "blue"
+          },
+          {
+            "id": "c",
+            "type": "card",
+            "x": 540,
+            "y": 130,
+            "w": 140,
+            "h": 100,
+            "label": "Cup",
+            "color": "dim"
+          },
+          {
+            "id": "ball",
+            "type": "stamp",
+            "x": 380,
+            "y": 262,
+            "w": 40,
+            "label": "",
+            "color": "gold"
+          },
+          {
+            "id": "talk",
+            "type": "text",
+            "x": 400,
+            "y": 55,
+            "label": "",
+            "color": "pink",
+            "size": 24,
+            "o": 0
+          },
+          {
+            "id": "stamp",
+            "type": "stamp",
+            "x": 668,
+            "y": 8,
+            "w": 118,
+            "label": "FOOLED",
+            "color": "gold",
+            "o": 0,
+            "s": 0.4
+          }
+        ],
+        "beats": [
+          {
+            "say": "The ball goes under the middle cup.",
+            "dur": 2.2,
+            "set": {
+              "ball": {
+                "y": 180,
+                "o": 0
+              }
+            }
+          },
+          {
+            "say": "The dealer talks fast.",
+            "dur": 2.2,
+            "set": {
+              "talk": {
+                "o": 1,
+                "label": "\"Watch my hand! Watch my hand!\""
+              },
+              "a": {
+                "shake": true
+              },
+              "c": {
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "While you listen, the cups swap.",
+            "dur": 2,
+            "set": {
+              "b": {
+                "x": 540
+              },
+              "c": {
+                "x": 330
+              }
+            }
+          },
+          {
+            "say": "You point to the middle. Empty.",
+            "dur": 2.2,
+            "set": {
+              "c": {
+                "color": "gold",
+                "shake": true
+              },
+              "stamp": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "Arguments cheat the same way.",
+            "dur": 3.2,
+            "set": {
+              "talk": {
+                "label": "\"So you want people to starve?\""
+              },
+              "b": {
+                "label": "What you said",
+                "size": 16
+              },
+              "c": {
+                "label": "Their version",
+                "size": 16
+              },
+              "a": {
+                "label": "",
+                "o": 0.3
+              },
+              "stamp": {
+                "label": "STRAW MAN",
+                "size": 16
+              }
+            }
+          },
+          {
+            "say": "Watch the claim, not the talk.",
+            "dur": 2.6,
+            "set": {
+              "talk": {
+                "o": 0
+              },
+              "b": {
+                "color": "green"
+              },
+              "ball": {
+                "x": 590,
+                "y": 262,
+                "o": 1
+              },
+              "stamp": {
+                "label": "FOUND IT",
+                "color": "green"
+              }
+            }
+          }
+        ]
       }
     },
     {
@@ -440,6 +619,180 @@
           }
         ],
         "aha": "Every number above changed meaning the moment you asked what it was compared with."
+      },
+      "scene": {
+        "analogy": "A sale price after the price went up",
+        "map": [
+          [
+            "the big % off",
+            "the headline number"
+          ],
+          [
+            "$60 before the raise",
+            "the base it leaves out"
+          ],
+          [
+            "what you pay",
+            "what really changed"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "t1",
+            "type": "card",
+            "x": 40,
+            "y": 60,
+            "w": 190,
+            "h": 110,
+            "label": "$60",
+            "sub": "the usual price",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "t2",
+            "type": "card",
+            "x": 300,
+            "y": 60,
+            "w": 190,
+            "h": 110,
+            "label": "$90",
+            "sub": "next week",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "r1",
+            "type": "arrow",
+            "x": 236,
+            "y": 115,
+            "x2": 294,
+            "y2": 115,
+            "color": "gold",
+            "o": 0,
+            "draw": 0
+          },
+          {
+            "id": "big",
+            "type": "stamp",
+            "x": 580,
+            "y": 20,
+            "w": 170,
+            "label": "33% OFF!",
+            "color": "pink",
+            "o": 0,
+            "s": 0.3,
+            "size": 26
+          },
+          {
+            "id": "t3",
+            "type": "card",
+            "x": 300,
+            "y": 230,
+            "w": 190,
+            "h": 100,
+            "label": "$60",
+            "sub": "sale price",
+            "color": "pink",
+            "o": 0
+          },
+          {
+            "id": "r2",
+            "type": "arrow",
+            "x": 296,
+            "y": 280,
+            "x2": 140,
+            "y2": 176,
+            "color": "dim",
+            "o": 0,
+            "draw": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "A shirt costs $60.",
+            "dur": 2,
+            "set": {
+              "t1": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Next week it is $90.",
+            "dur": 2,
+            "set": {
+              "t2": {
+                "o": 1
+              },
+              "r1": {
+                "o": 1,
+                "draw": 1
+              }
+            }
+          },
+          {
+            "say": "Then: 33% OFF!",
+            "dur": 2.2,
+            "set": {
+              "big": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "You pay $60. Same as always.",
+            "dur": 2.6,
+            "set": {
+              "t3": {
+                "o": 1
+              },
+              "r2": {
+                "o": 1,
+                "draw": 1,
+                "color": "gold"
+              },
+              "t1": {
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "Every big number works this way.",
+            "dur": 3.2,
+            "set": {
+              "big": {
+                "label": "HEADLINE",
+                "size": 22
+              },
+              "t2": {
+                "sub": "the base they chose"
+              },
+              "t1": {
+                "sub": "the base they left out"
+              },
+              "t3": {
+                "sub": "what really changed"
+              }
+            }
+          },
+          {
+            "say": "Always ask: compared to what?",
+            "dur": 2.6,
+            "set": {
+              "t1": {
+                "color": "green"
+              },
+              "big": {
+                "color": "gold"
+              },
+              "r2": {
+                "color": "green"
+              }
+            }
+          }
+        ]
       }
     },
     {
@@ -497,6 +850,237 @@
           }
         ],
         "aha": "A crowd that sets all at once traps its errors inside, the same as a crystal grown too fast."
+      },
+      "scene": {
+        "analogy": "A movie trailer",
+        "map": [
+          [
+            "the whole film",
+            "all the facts"
+          ],
+          [
+            "the two clips picked",
+            "the facts that fit the story"
+          ],
+          [
+            "the trailer",
+            "the story you are sold"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "s0",
+            "type": "card",
+            "x": 30,
+            "y": 40,
+            "w": 132,
+            "h": 80,
+            "label": "Slow",
+            "color": "dim",
+            "size": 18,
+            "o": 0
+          },
+          {
+            "id": "s1",
+            "type": "card",
+            "x": 182,
+            "y": 40,
+            "w": 132,
+            "h": 80,
+            "label": "Funny bit",
+            "color": "dim",
+            "size": 18,
+            "o": 0
+          },
+          {
+            "id": "s2",
+            "type": "card",
+            "x": 334,
+            "y": 40,
+            "w": 132,
+            "h": 80,
+            "label": "Slow",
+            "color": "dim",
+            "size": 18,
+            "o": 0
+          },
+          {
+            "id": "s3",
+            "type": "card",
+            "x": 486,
+            "y": 40,
+            "w": 132,
+            "h": 80,
+            "label": "Explosion",
+            "color": "dim",
+            "size": 18,
+            "o": 0
+          },
+          {
+            "id": "s4",
+            "type": "card",
+            "x": 638,
+            "y": 40,
+            "w": 132,
+            "h": 80,
+            "label": "Sad ending",
+            "color": "dim",
+            "size": 18,
+            "o": 0
+          },
+          {
+            "id": "tl",
+            "type": "text",
+            "x": 400,
+            "y": 338,
+            "label": "The trailer",
+            "color": "pink",
+            "size": 18,
+            "o": 0
+          },
+          {
+            "id": "st",
+            "type": "stamp",
+            "x": 640,
+            "y": 200,
+            "w": 130,
+            "label": "MUST SEE!",
+            "color": "pink",
+            "o": 0,
+            "s": 0.4,
+            "size": 17
+          }
+        ],
+        "beats": [
+          {
+            "say": "The whole film: five scenes.",
+            "dur": 2.4,
+            "set": {
+              "s0": {
+                "o": 1
+              },
+              "s1": {
+                "o": 1
+              },
+              "s2": {
+                "o": 1
+              },
+              "s3": {
+                "o": 1
+              },
+              "s4": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "The trailer picks two.",
+            "dur": 2.4,
+            "set": {
+              "s1": {
+                "x": 250,
+                "y": 220,
+                "color": "pink"
+              },
+              "s3": {
+                "x": 420,
+                "y": 220,
+                "color": "pink"
+              },
+              "s0": {
+                "o": 0.3
+              },
+              "s2": {
+                "o": 0.3
+              },
+              "s4": {
+                "o": 0.3
+              },
+              "tl": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Looks like a fun action movie.",
+            "dur": 2,
+            "set": {
+              "st": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "The film is mostly slow, and sad.",
+            "dur": 2.4,
+            "set": {
+              "s0": {
+                "o": 1,
+                "shake": true
+              },
+              "s2": {
+                "o": 1,
+                "shake": true
+              },
+              "s4": {
+                "o": 1,
+                "shake": true,
+                "color": "gold"
+              },
+              "st": {
+                "label": "FOOLED",
+                "color": "gold"
+              }
+            }
+          },
+          {
+            "say": "News and ads cut trailers too.",
+            "dur": 3.2,
+            "set": {
+              "s0": {
+                "label": "Left out"
+              },
+              "s2": {
+                "label": "Left out"
+              },
+              "s4": {
+                "label": "Left out"
+              },
+              "s1": {
+                "label": "Fact A"
+              },
+              "s3": {
+                "label": "Fact C"
+              },
+              "tl": {
+                "label": "The story"
+              },
+              "st": {
+                "label": "THE SPIN",
+                "color": "pink"
+              }
+            }
+          },
+          {
+            "say": "Ask: what got left out?",
+            "dur": 2.6,
+            "set": {
+              "s0": {
+                "color": "green"
+              },
+              "s2": {
+                "color": "green"
+              },
+              "s4": {
+                "color": "green"
+              },
+              "st": {
+                "o": 0
+              }
+            }
+          }
+        ]
       }
     },
     {
@@ -558,6 +1142,203 @@
           }
         ],
         "aha": "Heat is not failure. Annealing is how a crystal, or a mind, comes out stronger."
+      },
+      "scene": {
+        "analogy": "Your GPS saying \"recalculating\"",
+        "map": [
+          [
+            "the route",
+            "your belief"
+          ],
+          [
+            "the closed road",
+            "new evidence"
+          ],
+          [
+            "\"recalculating\"",
+            "changing your mind"
+          ],
+          [
+            "home",
+            "the truth"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "car",
+            "type": "stamp",
+            "x": 40,
+            "y": 150,
+            "w": 64,
+            "label": "YOU",
+            "color": "blue",
+            "size": 14
+          },
+          {
+            "id": "r1",
+            "type": "arrow",
+            "x": 110,
+            "y": 182,
+            "x2": 630,
+            "y2": 182,
+            "color": "blue",
+            "o": 0,
+            "draw": 0
+          },
+          {
+            "id": "old",
+            "type": "text",
+            "x": 280,
+            "y": 160,
+            "label": "Your route",
+            "color": "blue",
+            "size": 16,
+            "o": 0
+          },
+          {
+            "id": "home",
+            "type": "card",
+            "x": 640,
+            "y": 140,
+            "w": 140,
+            "h": 84,
+            "label": "Home",
+            "color": "green"
+          },
+          {
+            "id": "blk",
+            "type": "card",
+            "x": 420,
+            "y": 140,
+            "w": 120,
+            "h": 84,
+            "label": "Closed",
+            "color": "gold",
+            "o": 0,
+            "s": 0.5,
+            "size": 20
+          },
+          {
+            "id": "re",
+            "type": "text",
+            "x": 400,
+            "y": 60,
+            "label": "\"Recalculating...\"",
+            "color": "pink",
+            "size": 26,
+            "o": 0
+          },
+          {
+            "id": "r2",
+            "type": "arrow",
+            "x": 110,
+            "y": 290,
+            "x2": 700,
+            "y2": 236,
+            "color": "green",
+            "o": 0,
+            "draw": 0
+          },
+          {
+            "id": "st",
+            "type": "stamp",
+            "x": 30,
+            "y": 20,
+            "w": 110,
+            "label": "NO SHAME",
+            "color": "green",
+            "o": 0,
+            "s": 0.4,
+            "size": 15
+          }
+        ],
+        "beats": [
+          {
+            "say": "Your GPS plans a route home.",
+            "dur": 2.2,
+            "set": {
+              "r1": {
+                "o": 1,
+                "draw": 1
+              },
+              "old": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "The road ahead is closed.",
+            "dur": 2,
+            "set": {
+              "blk": {
+                "o": 1,
+                "s": 1,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "\"Recalculating.\" Nobody blushes.",
+            "dur": 2.2,
+            "set": {
+              "re": {
+                "o": 1
+              },
+              "r1": {
+                "color": "dim"
+              },
+              "old": {
+                "color": "dim"
+              }
+            }
+          },
+          {
+            "say": "New road. Same home.",
+            "dur": 2.4,
+            "set": {
+              "r2": {
+                "o": 1,
+                "draw": 1
+              },
+              "car": {
+                "y": 258
+              }
+            }
+          },
+          {
+            "say": "Your mind can work the same way.",
+            "dur": 3.2,
+            "set": {
+              "old": {
+                "label": "Your old belief"
+              },
+              "blk": {
+                "label": "New evidence",
+                "size": 17
+              },
+              "re": {
+                "label": "\"I was wrong. Updating.\""
+              },
+              "home": {
+                "label": "The truth"
+              }
+            }
+          },
+          {
+            "say": "Updating is the smart part.",
+            "dur": 2.6,
+            "set": {
+              "st": {
+                "o": 1,
+                "s": 1
+              },
+              "car": {
+                "x": 560,
+                "y": 258
+              }
+            }
+          }
+        ]
       }
     },
     {
@@ -624,6 +1405,203 @@
           }
         ],
         "aha": "Nobody handed you this one. You set it yourself, so you own it."
+      },
+      "scene": {
+        "analogy": "A rumor at work, traced back",
+        "map": [
+          [
+            "each retelling",
+            "a report about the text"
+          ],
+          [
+            "who was there",
+            "the source itself"
+          ],
+          [
+            "asking \"who told you?\"",
+            "reading it yourself"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "you",
+            "type": "card",
+            "x": 630,
+            "y": 130,
+            "w": 160,
+            "h": 100,
+            "label": "You",
+            "color": "blue"
+          },
+          {
+            "id": "c3",
+            "type": "card",
+            "x": 430,
+            "y": 130,
+            "w": 160,
+            "h": 100,
+            "label": "Cousin",
+            "sub": "\"He got fired!\"",
+            "color": "gold",
+            "o": 0,
+            "size": 20
+          },
+          {
+            "id": "c2",
+            "type": "card",
+            "x": 230,
+            "y": 130,
+            "w": 160,
+            "h": 100,
+            "label": "Coworker",
+            "sub": "\"I heard he left\"",
+            "color": "gold",
+            "o": 0,
+            "size": 20
+          },
+          {
+            "id": "c1",
+            "type": "card",
+            "x": 30,
+            "y": 130,
+            "w": 160,
+            "h": 100,
+            "label": "Who was there",
+            "sub": "\"He quit.\"",
+            "color": "green",
+            "o": 0,
+            "size": 18
+          },
+          {
+            "id": "a3",
+            "type": "arrow",
+            "x": 626,
+            "y": 180,
+            "x2": 594,
+            "y2": 180,
+            "color": "gold",
+            "o": 0,
+            "draw": 0
+          },
+          {
+            "id": "a2",
+            "type": "arrow",
+            "x": 426,
+            "y": 180,
+            "x2": 394,
+            "y2": 180,
+            "color": "gold",
+            "o": 0,
+            "draw": 0
+          },
+          {
+            "id": "a1",
+            "type": "arrow",
+            "x": 226,
+            "y": 180,
+            "x2": 194,
+            "y2": 180,
+            "color": "gold",
+            "o": 0,
+            "draw": 0
+          },
+          {
+            "id": "dir",
+            "type": "arrow",
+            "x": 700,
+            "y": 240,
+            "x2": 120,
+            "y2": 300,
+            "color": "green",
+            "o": 0,
+            "draw": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "You hear a story.",
+            "dur": 2,
+            "set": {
+              "c3": {
+                "o": 1
+              },
+              "a3": {
+                "o": 1,
+                "draw": 1
+              }
+            }
+          },
+          {
+            "say": "Ask: who told them?",
+            "dur": 2.2,
+            "set": {
+              "c2": {
+                "o": 1
+              },
+              "a2": {
+                "o": 1,
+                "draw": 1
+              }
+            }
+          },
+          {
+            "say": "And who told them?",
+            "dur": 2.2,
+            "set": {
+              "c1": {
+                "o": 1
+              },
+              "a1": {
+                "o": 1,
+                "draw": 1
+              }
+            }
+          },
+          {
+            "say": "At the start: he quit. Nobody fired him.",
+            "dur": 2.6,
+            "set": {
+              "c3": {
+                "shake": true
+              },
+              "c1": {
+                "s": 1.08
+              }
+            }
+          },
+          {
+            "say": "Reading works the same way.",
+            "dur": 3.2,
+            "set": {
+              "c3": {
+                "label": "The summary",
+                "sub": "\"It says X!\""
+              },
+              "c2": {
+                "label": "The review",
+                "sub": "\"It argues...\""
+              },
+              "c1": {
+                "label": "The text",
+                "sub": "what it says",
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "Go to the source yourself.",
+            "dur": 2.6,
+            "set": {
+              "dir": {
+                "o": 1,
+                "draw": 1
+              },
+              "c1": {
+                "shake": true
+              }
+            }
+          }
+        ]
       }
     }
   ],
