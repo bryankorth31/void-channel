@@ -82,7 +82,7 @@ function scene(u) {
 // The lab: something to put your hands on (lab.js; Bryan, 15 Nov 2026: "interactive teaching, analogous teaching,
 // If This Then That labs"). Knobs are the IF, the bench answers, and each rule's THEN shows only once you made it happen.
 function lab(u) {
-  const l = u.lab; if (!l) return '';
+  const l = u.lab; if (!l || (LIVE && !l.live)) return ''; // a lab ships only once it is marked live
   const map = (l.map || []).map(([a, z]) => '<span><i>' + esc(a) + '</i> = <b>' + esc(z) + '</b></span>').join('');
   const cfg = { bench: l.bench, go: l.go, knobs: l.knobs, rules: l.rules, meet: l.meet, triesNote: l.triesNote, guess: l.guess };
   return '<div class="lab" data-lab="' + esc(JSON.stringify(cfg)) + '">'
@@ -456,9 +456,13 @@ fs.copyFileSync(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
 fs.copyFileSync(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
 for (const f of fs.readdirSync(DIR).filter((f) => /^lab(-[a-z]+)?\.js$/.test(f))) fs.copyFileSync(path.join(DIR, f), path.join(OUT, f));
 for (const f of ['planck.min.js', 'planck-LICENSE.txt']) fs.copyFileSync(path.join(DIR, 'vendor', f), path.join(OUT, f));
+const LIVE_SLUGS = new Set((JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8')).courses || []).filter((c) => c.live).map((c) => c.slug));
 const courses = fs.readdirSync(path.join(DIR, 'courses')).filter((f) => f.endsWith('.json'));
 const loaded = courses.map((f) => JSON.parse(fs.readFileSync(path.join(DIR, 'courses', f), 'utf8')))
-  .sort((a, b) => (a.slug === 'critical-thinking' ? -1 : b.slug === 'critical-thinking' ? 1 : 0));
+  .sort((a, b) => (a.slug === 'critical-thinking' ? -1 : b.slug === 'critical-thinking' ? 1 : 0))
+  // A course shows once it has a unit (a scaffold is only a plan). The public copy (--site) carries only the courses
+  // Bryan marked live in list.json, so a draft another chat is working on never ships with someone else's deploy.
+  .filter((c) => c.units.length && (!LIVE || LIVE_SLUGS.has(c.slug)));
 MECH = loaded.find((c) => c.shelf === 'supplement') || null;
 for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });
 fs.mkdirSync(path.join(OUT, 'img'), { recursive: true });

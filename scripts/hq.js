@@ -29,6 +29,7 @@ function nodeBin() {
 // HQ's own state (the jobs list, job logs, probe lines) lives here. HQ_STATE_DIR points it at another folder; the tests use a
 // temporary one so that running them never touches catalog/cache.
 const CACHE = process.env.HQ_STATE_DIR ? path.resolve(process.env.HQ_STATE_DIR) : path.join(PROFILE.catalogDir, 'cache');
+const uni = require('./lib/uni'); // the University tab: Void University's sources, courses and the recipe (profiles/university)
 const promos = require('./lib/promos'); // the Motion and Promos tabs: motion editor, site placements, share copies
 promos.init({ nodeBin, cache: CACHE });
 const FILES = {
@@ -149,7 +150,7 @@ function nodeProcesses() {
 const JOBS_FILE = path.join(CACHE, 'hq-jobs.json');
 const JOBS = (() => { try { return JSON.parse(fs.readFileSync(JOBS_FILE, 'utf8')).slice(0, 60); } catch (e) { return []; } })(); // survive an HQ restart
 const saveJobs = () => { try { fs.mkdirSync(CACHE, { recursive: true }); fs.writeFileSync(JOBS_FILE, JSON.stringify(JOBS.slice(0, 60))); } catch (e) { /* best effort */ } };
-const SCRIPTS = new Set(['hunt', 'hunt-movies', 'match', 'art', 'people', 'db', 'publish', 'scout', 'networks', 'site', 'nightly', 'candidates', 'tvmovies', 'show-probe', 'doctor', 'linkcheck', 'retvmaze']);
+const SCRIPTS = new Set(['hunt', 'hunt-movies', 'match', 'art', 'people', 'db', 'publish', 'scout', 'networks', 'site', 'nightly', 'candidates', 'tvmovies', 'show-probe', 'doctor', 'linkcheck', 'retvmaze', 'uni']);
 const alive = (pid) => { try { process.kill(pid, 0); return true; } catch (e) { return false; } };
 // A process number is not an identity: Windows hands a finished program's number to the next program that starts.
 // So HQ keeps when each job's process was created (job.pstart) and, before it stops anything, reads the live process
@@ -417,6 +418,12 @@ const server = http.createServer(async (req, res) => {
       return send(res, 200, { lines: tail(path.join(CACHE, 'probe.jsonl'), 50).split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l); } catch (e) { return null; } }).filter(Boolean) });
     }
     // ---- motion and promos (scripts/lib/promos.js) ----
+    if (p === '/api/uni') { const c = readJson(path.join(uni.SRC, 'check.json'), { problems: [] }); return send(res, 200, { ...uni.overview(), check: c.problems.slice(0, 300) }); }
+    if (p === '/api/uni/sources') { const a = uni.slugify(url.searchParams.get('area') || ''); return send(res, 200, readJson(path.join(uni.SRC, a + '.json'), { sources: [], courses: [] })); }
+    if (p === '/api/uni/brief') return send(res, 200, { text: uni.brief(url.searchParams.get('slug') || '', url.searchParams.get('n') || '') });
+    if (p === '/api/uni/rewrite') return send(res, 200, { text: uni.rewriteBrief(url.searchParams.get('area') || '', url.searchParams.get('id') || '') });
+    if (p === '/api/uni/scaffold' && req.method === 'POST') { const b = await body(req); return send(res, 200, uni.scaffold(String(b.area || ''), String(b.name || ''))); }
+    if (p === '/api/uni/live' && req.method === 'POST') { const b = await body(req); return send(res, 200, uni.setLive(String(b.slug || ''), !!b.live)); }
     if (p === '/api/motion') return send(res, 200, await promos.motionStatus());
     if (p === '/api/motion/start' && req.method === 'POST') { const b = await body(req); return send(res, 200, await promos.motionStart({ restart: !!b.restart })); }
     if (p === '/api/promos') return send(res, 200, { ...promos.overview(), motion: await promos.motionStatus() });

@@ -120,6 +120,16 @@ By hand, no AI: run `C:/Users/bryan/hardware-lab/Scripts/python.exe -I scripts/l
 without HQ, add the placeFiles entry to `catalog/overrides.json` as in the table above and run `node scripts/match.js --slug <show-slug>`. The list
 comes from `GET /api/listen`.
 
+## University: Void University's courses (15 Nov 2026)
+
+Bryan: "build the system that we will use to put these together in the future as HQ". The University tab shows, for
+each of the 15 areas, what was found (open courses, old books, government guides, with licences), the courses proposed
+and started, and what each unit still needs. Buttons: Check sources, Build preview, Open preview, Build public copy;
+in an area: Scaffold (a proposed course becomes a course file), Copy brief (the whole prompt for a Claude chat to write
+one unit), Rewrite brief (an old book into plain English), and Live (only live courses go in the public copy).
+By hand: `node scripts/uni.js status`, `check`, `scaffold`, `brief`, `rewrite`, `build [--site]`. The full recipe, with the
+deploy line, is profiles/university/docs/COURSE-RECIPE.md.
+
 ## Events the site sends
 
 `view` (page, slug) · `play` (slug, season x episode, file) · `tick` every 60 s while playing (position,

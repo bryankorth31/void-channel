@@ -59,3 +59,6 @@ motion/pack/*/
 
 # audit drafts: findings, ledgers and plans that quote B stay on this PC (publish.js pushes docs/, so they never go under docs/)
 audit/
+
+# Void University link check output (scripts/uni.js check)
+profiles/university/sources/check.json
