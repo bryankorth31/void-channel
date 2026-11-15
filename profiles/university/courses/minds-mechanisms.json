@@ -21,7 +21,10 @@
     "Trust what someone has shown, not what they wear or what they are called.",
     "Want a thing for what it is, not for how few seem to be left.",
     "Remember what you really expected before you knew how it ended.",
-    "Notice when being new at something is making you feel sure of it."
+    "Notice when being new at something is making you feel sure of it.",
+    "Plan from how long things really took before, not from how they should go.",
+    "Spot what keeps you pulling a lever that only pays now and then.",
+    "Judge each part of a person or product on its own, not by one bright feature."
   ],
   "units": [
     {
@@ -3041,6 +3044,568 @@
           }
         ]
       }
+    },
+    {
+      "n": 16,
+      "title": "Planning fallacy",
+      "outcome": "Plan from how long things really took before, not from how they should go.",
+      "why": "When you plan, you picture the job going right. You do not picture the missing tape, the wrong part, the second coat. So almost every plan comes out too short and too cheap.",
+      "reachesYou": "The repair that takes all weekend, the budget that runs out in week three, the move, the wedding, the road project that is years late and millions over.",
+      "do": "Before your next project, find a time you did something like it. Use how long that really took as your estimate, then add a little.",
+      "voices": [
+        "buehler",
+        "flyvbjerg"
+      ],
+      "scene": {
+        "analogy": "\"Painting the room? An hour.\"",
+        "map": [
+          [
+            "\"an hour\"",
+            "the plan with nothing going wrong"
+          ],
+          [
+            "the tape, the color, the second coat",
+            "the surprises every job has"
+          ],
+          [
+            "all day",
+            "what it really takes"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "plan",
+            "type": "card",
+            "x": 40,
+            "y": 40,
+            "w": 320,
+            "h": 110,
+            "label": "The plan",
+            "sub": "\"Paint the room: 1 hour\"",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "s1",
+            "type": "text",
+            "x": 600,
+            "y": 50,
+            "label": "No tape. To the store.",
+            "color": "gold",
+            "size": 19,
+            "o": 0
+          },
+          {
+            "id": "s2",
+            "type": "text",
+            "x": 600,
+            "y": 95,
+            "label": "Wrong color. Back again.",
+            "color": "gold",
+            "size": 19,
+            "o": 0
+          },
+          {
+            "id": "s3",
+            "type": "text",
+            "x": 600,
+            "y": 140,
+            "label": "It needs a second coat.",
+            "color": "gold",
+            "size": 19,
+            "o": 0
+          },
+          {
+            "id": "bar",
+            "type": "card",
+            "x": 40,
+            "y": 210,
+            "w": 90,
+            "h": 80,
+            "label": "1 hr",
+            "color": "blue",
+            "o": 0,
+            "size": 20
+          }
+        ],
+        "beats": [
+          {
+            "say": "\"Painting the room? An hour.\"",
+            "dur": 2.2,
+            "set": {
+              "plan": {
+                "o": 1
+              },
+              "bar": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "No tape. Run to the store.",
+            "dur": 2.2,
+            "set": {
+              "s1": {
+                "o": 1
+              },
+              "bar": {
+                "w": 260,
+                "label": "2 hours"
+              }
+            }
+          },
+          {
+            "say": "Wrong color. Back again.",
+            "dur": 2.2,
+            "set": {
+              "s2": {
+                "o": 1
+              },
+              "bar": {
+                "w": 450,
+                "label": "4 hours"
+              }
+            }
+          },
+          {
+            "say": "It needs a second coat.",
+            "dur": 2.4,
+            "set": {
+              "s3": {
+                "o": 1
+              },
+              "bar": {
+                "w": 720,
+                "label": "all day",
+                "color": "gold",
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "Projects, budgets, roads: same plan.",
+            "dur": 3.4,
+            "set": {
+              "plan": {
+                "sub": "best case, nothing goes wrong"
+              },
+              "s1": {
+                "label": "Surprise 1"
+              },
+              "s2": {
+                "label": "Surprise 2"
+              },
+              "s3": {
+                "label": "Surprise 3"
+              },
+              "bar": {
+                "label": "what it really takes"
+              }
+            }
+          },
+          {
+            "say": "Plan from how long it took last time.",
+            "dur": 3,
+            "set": {
+              "plan": {
+                "sub": "\"Last time: all day.\"",
+                "color": "green"
+              },
+              "bar": {
+                "color": "green"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "n": 17,
+      "title": "Variable reward",
+      "outcome": "Spot what keeps you pulling a lever that only pays now and then.",
+      "why": "A reward that comes every time gets boring. A reward that comes at random keeps you pulling, because the next one might be the one. Slot machines are built on this, and so are many apps.",
+      "reachesYou": "Pull-to-refresh, the feed you scroll past midnight, checking for likes, loot boxes in games, scratch-off tickets, refreshing your email.",
+      "do": "Turn off the notifications for one app for a week. Notice how often your hand reaches for it anyway.",
+      "voices": [
+        "skinner",
+        "schull"
+      ],
+      "scene": {
+        "analogy": "A slot machine, and the pull-to-refresh on your phone",
+        "map": [
+          [
+            "the lever",
+            "refresh, scroll, check"
+          ],
+          [
+            "the random win",
+            "a like, a message, a new post"
+          ],
+          [
+            "not knowing when",
+            "what keeps you pulling"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "slot",
+            "type": "card",
+            "x": 40,
+            "y": 40,
+            "w": 320,
+            "h": 150,
+            "label": "Slot machine",
+            "sub": "pull the lever",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "phone",
+            "type": "card",
+            "x": 440,
+            "y": 40,
+            "w": 320,
+            "h": 150,
+            "label": "Your phone",
+            "sub": "pull to refresh",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "n",
+            "type": "text",
+            "x": 200,
+            "y": 225,
+            "label": "pulls: 1",
+            "color": "dim",
+            "size": 20,
+            "o": 0
+          },
+          {
+            "id": "st",
+            "type": "stamp",
+            "x": 330,
+            "y": 205,
+            "w": 140,
+            "label": "WIN!",
+            "color": "pink",
+            "o": 0,
+            "s": 0.4,
+            "size": 22
+          }
+        ],
+        "beats": [
+          {
+            "say": "Pull the lever. Nothing.",
+            "dur": 2,
+            "set": {
+              "slot": {
+                "o": 1,
+                "sub": "nothing"
+              },
+              "n": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Pull again. Nothing.",
+            "dur": 2,
+            "set": {
+              "slot": {
+                "sub": "nothing again",
+                "shake": true
+              },
+              "n": {
+                "label": "pulls: 2"
+              }
+            }
+          },
+          {
+            "say": "Pull again. You win!",
+            "dur": 2.2,
+            "set": {
+              "slot": {
+                "sub": "WIN! $5",
+                "color": "green"
+              },
+              "st": {
+                "o": 1,
+                "s": 1
+              },
+              "n": {
+                "label": "pulls: 3"
+              }
+            }
+          },
+          {
+            "say": "Not knowing when it pays is the hook.",
+            "dur": 2.8,
+            "set": {
+              "slot": {
+                "sub": "pull... pull... pull...",
+                "color": "gold"
+              },
+              "st": {
+                "o": 0,
+                "s": 0.4
+              },
+              "n": {
+                "label": "pulls: 300",
+                "color": "gold"
+              }
+            }
+          },
+          {
+            "say": "Your phone works the same way.",
+            "dur": 2.8,
+            "set": {
+              "phone": {
+                "o": 1,
+                "sub": "nothing... nothing... 3 likes!",
+                "shake": true
+              },
+              "n": {
+                "x": 600,
+                "label": "refreshes: 300"
+              }
+            }
+          },
+          {
+            "say": "Feeds and games are built on this.",
+            "dur": 3.4,
+            "set": {
+              "slot": {
+                "label": "The lever",
+                "sub": "refresh, scroll, check"
+              },
+              "phone": {
+                "label": "The payout",
+                "sub": "a like, a message, a post"
+              },
+              "st": {
+                "o": 1,
+                "s": 1,
+                "label": "HOOKED",
+                "color": "gold",
+                "size": 18
+              }
+            }
+          },
+          {
+            "say": "Unhook it: turn the alerts off.",
+            "dur": 2.8,
+            "set": {
+              "phone": {
+                "sub": "notifications off",
+                "color": "green"
+              },
+              "st": {
+                "label": "UNHOOKED",
+                "color": "green",
+                "size": 15
+              },
+              "n": {
+                "o": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "n": 18,
+      "title": "Halo effect",
+      "outcome": "Judge each part of a person or product on its own, not by one bright feature.",
+      "why": "One good trait, like looks, fame or a confident voice, glows over everything else. You end up trusting someone's honesty, skill or price because of their smile.",
+      "reachesYou": "Celebrity ads, attractive people getting lighter sentences and better jobs, a slick website you trust with your card, a brand you like making a product you never checked.",
+      "do": "Next time you like someone or something right away, list three things you are assuming about it. Check one.",
+      "voices": [
+        "thorndike",
+        "nisbett"
+      ],
+      "scene": {
+        "analogy": "Trusting the friendly, good-looking salesperson",
+        "map": [
+          [
+            "the smile and the suit",
+            "one bright trait"
+          ],
+          [
+            "\"honest? knows cars?\"",
+            "everything else you assume"
+          ],
+          [
+            "checking each one",
+            "judging the parts on their own"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "glow",
+            "type": "stamp",
+            "x": 120,
+            "y": 18,
+            "w": 120,
+            "label": "",
+            "color": "gold",
+            "o": 0,
+            "s": 0.4
+          },
+          {
+            "id": "sp",
+            "type": "card",
+            "x": 40,
+            "y": 150,
+            "w": 280,
+            "h": 130,
+            "label": "Salesperson",
+            "sub": "great smile, sharp suit",
+            "color": "pink",
+            "o": 0
+          },
+          {
+            "id": "q1",
+            "type": "card",
+            "x": 420,
+            "y": 30,
+            "w": 340,
+            "h": 76,
+            "label": "Honest?",
+            "color": "dim",
+            "o": 0,
+            "size": 20
+          },
+          {
+            "id": "q2",
+            "type": "card",
+            "x": 420,
+            "y": 130,
+            "w": 340,
+            "h": 76,
+            "label": "Knows cars?",
+            "color": "dim",
+            "o": 0,
+            "size": 20
+          },
+          {
+            "id": "q3",
+            "type": "card",
+            "x": 420,
+            "y": 230,
+            "w": 340,
+            "h": 76,
+            "label": "Fair price?",
+            "color": "dim",
+            "o": 0,
+            "size": 20
+          }
+        ],
+        "beats": [
+          {
+            "say": "A friendly, good-looking salesperson.",
+            "dur": 2.2,
+            "set": {
+              "sp": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "One good trait starts to glow.",
+            "dur": 2.2,
+            "set": {
+              "glow": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "Honest? Seems so. Knows cars? Seems so.",
+            "dur": 2.8,
+            "set": {
+              "q1": {
+                "o": 1,
+                "sub": "seems so",
+                "color": "gold"
+              },
+              "q2": {
+                "o": 1,
+                "sub": "seems so",
+                "color": "gold"
+              },
+              "q3": {
+                "o": 1,
+                "sub": "seems so",
+                "color": "gold"
+              }
+            }
+          },
+          {
+            "say": "You never checked any of it.",
+            "dur": 2.4,
+            "set": {
+              "q1": {
+                "sub": "never checked",
+                "shake": true
+              },
+              "q2": {
+                "sub": "never checked",
+                "shake": true
+              },
+              "q3": {
+                "sub": "never checked",
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "Brands, stars, leaders: same glow.",
+            "dur": 3.4,
+            "set": {
+              "sp": {
+                "label": "One bright trait",
+                "sub": "looks, fame, a logo"
+              },
+              "q1": {
+                "label": "Is it true?",
+                "sub": "assumed"
+              },
+              "q2": {
+                "label": "Is it good?",
+                "sub": "assumed"
+              },
+              "q3": {
+                "label": "Is it fair?",
+                "sub": "assumed"
+              }
+            }
+          },
+          {
+            "say": "Check each one on its own.",
+            "dur": 3,
+            "set": {
+              "glow": {
+                "o": 0,
+                "s": 0.4
+              },
+              "q1": {
+                "sub": "checked",
+                "color": "green"
+              },
+              "q2": {
+                "sub": "checked",
+                "color": "green"
+              },
+              "q3": {
+                "sub": "checked",
+                "color": "green"
+              }
+            }
+          }
+        ]
+      }
     }
   ],
   "voices": {
@@ -3163,6 +3728,36 @@
       "name": "Ola Svenson",
       "what": "Psychologist",
       "did": "In 1981 asked drivers to rate their own skill. Most American drivers in the study put themselves in the safest, most skilled half."
+    },
+    "buehler": {
+      "name": "Roger Buehler",
+      "what": "Psychologist",
+      "did": "In 1994, with Dale Griffin and Michael Ross, asked students when they would finish their theses. They guessed about 34 days; it took about 56."
+    },
+    "flyvbjerg": {
+      "name": "Bent Flyvbjerg",
+      "what": "Planning scholar",
+      "did": "Studied thousands of big building projects and found that about nine in ten run over budget, over time, or both."
+    },
+    "skinner": {
+      "name": "B. F. Skinner",
+      "what": "Psychologist",
+      "did": "Showed with animals that rewards given at random keep behavior going far longer than rewards given every time."
+    },
+    "schull": {
+      "name": "Natasha Dow Schüll",
+      "what": "Anthropologist",
+      "did": "Spent years in Las Vegas studying how slot machines are designed to keep people playing, in Addiction by Design (2012)."
+    },
+    "thorndike": {
+      "name": "Edward Thorndike",
+      "what": "Psychologist",
+      "did": "Named the halo effect in 1920, after finding that army officers who rated a soldier well on looks also rated him well on intelligence and loyalty."
+    },
+    "nisbett": {
+      "name": "Richard Nisbett and Timothy Wilson",
+      "what": "Psychologists",
+      "did": "In 1977 showed students the same lecturer acting warm or cold. Warm, his looks and accent were rated appealing; cold, irritating. The students denied his manner swayed them."
     }
   }
 }

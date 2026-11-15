@@ -3,6 +3,7 @@
 Bryan, 15 Nov 2026: "sunk cost fallacies, cognitive dissonance et cetera ... people don't know how these affect
 things. These mechanisms are so vital for so much." Each one gets an everyday one-to-one analogy, a moving scene
 (scene.js) and one line on how it costs you. Every line here is a draft for Bryan to keep, swap or strike.
+All 18 are built (15 Nov 2026) as units of courses/minds-mechanisms.json; the analogies there are the current ones.
 
 | Mechanism | Everyday analogy | The one-to-one | How it costs you |
 |---|---|---|---|
