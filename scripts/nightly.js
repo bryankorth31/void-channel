@@ -6,6 +6,7 @@
 //   4. people.js --episodes --bios cast, episode credits, bios, the graph
 //   5. db.js                       the SQLite mirror
 //   6. publish.js                  commit + push -> Cloudflare rebuilds
+//   then doctor.js (the lights) and alert.js (tells Bryan when a light needs him; docs/RUNBOOK.md, alert)
 // Each step gets a time limit; a failing step is logged and the pass continues, because a stale
 // poster is not a reason to skip the publish. Log: catalog/cache/nightly.log
 const path = require('path');
@@ -51,4 +52,5 @@ step('linkcheck', ['scripts/linkcheck.js', '--sample', '150'], 15); // link rot:
 step('db', ['scripts/db.js'], 20);
 step('publish', ['scripts/publish.js'], 20);
 step('doctor', ['scripts/doctor.js'], 10); // the lights HQ shows; red exits 1 and is logged here
+step('alert', ['scripts/alert.js'], 2); // tells Bryan when a light needs him (scripts/lib/alertmsg.js); quiet nights send nothing
 log('==== nightly done');

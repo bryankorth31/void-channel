@@ -118,6 +118,19 @@ async function main() {
   else if (failed.length) add('nightly', 'yellow', failed.length + ' step(s) failed last night: ' + failed.map((l) => l.replace(/^\S+\s+/, '').slice(0, 60)).join(' | '), 'HQ > Jobs > nightly.log has the step output.');
   else add('nightly', 'green', 'last pass ' + Math.round(hours(lastDone.slice(0, 24))) + ' h ago, all steps ok');
 
+  // 2b. did the work get done? A step with nothing to do several nights running, one error back every night, a library that stopped
+  //     growing (B, 15 Nov 2026; scripts/lib/worklight.js, tests/work-lights.test.js). Reads the last 400 KB of nightly.log (about 30 nights).
+  try {
+    const W = require('./lib/worklight');
+    let text = '';
+    try { const p = path.join(CACHE, 'nightly.log'), st = fs.statSync(p), fd = fs.openSync(p, 'r'), len = Math.min(st.size, 400 * 1024), buf = Buffer.alloc(len); fs.readSync(fd, buf, 0, len, st.size - len); fs.closeSync(fd); text = buf.toString('utf8'); } catch (e) { /* no log yet */ }
+    const runs = W.parseNights(text);
+    for (const l of [W.idleLight(runs), W.repeatLight(runs)]) add(l.id, l.level, l.msg, l.fix);
+    let rows = [];
+    try { rows = gitOut(['log', '--since=90 days ago', '--format=%ct%x09%s', '--grep=^Catalog: ', 'master']).split('\n').filter(Boolean).map((l) => { const i = l.indexOf('\t'); return { at: +l.slice(0, i) * 1000, subject: l.slice(i + 1) }; }); } catch (e) { /* no git here */ }
+    const g = W.growthLight(rows, Date.now()); add(g.id, g.level, g.msg, g.fix);
+  } catch (e) { add('work:idle', 'yellow', 'could not read the work lights: ' + String(e.message).slice(0, 80), 'Restore scripts/lib/worklight.js from git: git checkout -- scripts/lib/worklight.js'); }
+
   // 3. scheduled tasks
   for (const name of taskNames()) {
     try {
