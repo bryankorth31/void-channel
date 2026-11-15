@@ -131,6 +131,9 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .lab.running .lab-seg button{opacity:.5;cursor:default}
 .lab-go{font:inherit;font-size:18px;font-weight:600;min-height:52px;background:var(--gold);color:var(--ink);border:0;border-radius:10px;padding:10px 22px;cursor:pointer;align-self:start}
 .lab-go:disabled{opacity:.45;cursor:default}.lab.hands .lab-go{display:none}.lab.hands .lab-stage{cursor:pointer;touch-action:manipulation}
+.lab-guess{display:flex;flex-direction:column;gap:8px;padding:10px 14px;border-left:3px solid var(--pink);background:#141c2e;border-radius:0 8px 8px 0;font-size:16px}
+.lab-guess.made{border-color:#5a6480;color:var(--dim)}.lab.running .lab-guess{opacity:.55}
+.lab-guess .lab-seg button.on{background:var(--pink);border-color:var(--pink)}
 .lab-acts{display:flex;flex-wrap:wrap;gap:10px}.lab-acts:empty{display:none}
 .lab-act{font:inherit;font-size:17px;min-height:52px;background:var(--panel2);color:var(--fg);border:1px solid #2c3550;border-radius:10px;padding:10px 20px;cursor:pointer}
 .lab-act:hover{border-color:var(--gold)}.lab-act.main{background:var(--gold);color:var(--ink);border-color:var(--gold);font-weight:600}

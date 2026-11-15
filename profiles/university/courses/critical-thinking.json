@@ -902,7 +902,11 @@
           ]
         ],
         "meet": "Where you meet this: a product rated 5 stars by 9 buyers. A poll of people who chose to answer. \"Works for 4 out of 5\", of how many? Ask how many were counted, and how they were picked.",
-        "draftedBy": "Claude, 15 Nov 2026: a draft for Bryan to keep, change or strike."
+        "draftedBy": "Claude, 15 Nov 2026: a draft for Bryan to keep, change or strike.",
+        "guess": {
+          "ask": "First, your guess. Tap the bin where you think the tallest pile will land."
+        },
+        "triesNote": "the gold line is the middle, the pink mark is your guess"
       },
       "mechanisms": [
         5,

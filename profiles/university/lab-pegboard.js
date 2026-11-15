@@ -49,7 +49,7 @@
   function run(pl, knobs, seed) { const s = make(pl, knobs, seed); while (!s.done) s.step(); return result(s); }
 
   // Draw the board. The canvas is turned by the tilt, so down on the screen is always down.
-  function draw(ctx, W, H, s, knobs) {
+  function draw(ctx, W, H, s, knobs, guess) {
     const sc = Math.min(W / 14.6, H / 15.6), th = ((knobs && knobs.tilt) || 0) * Math.PI / 180;
     ctx.clearRect(0, 0, W, H);
     ctx.save(); ctx.translate(W / 2, H / 2); ctx.rotate(th); ctx.scale(sc, -sc); ctx.translate(-WID / 2, -7.1);
@@ -58,6 +58,11 @@
     ctx.beginPath(); for (let x = -0.5; x <= WID + 0.5; x += 1) { if (x < -0.4 || x > WID + 0.4) continue; ctx.moveTo(x, 0); ctx.lineTo(x, LINE); } ctx.stroke();
     ctx.strokeStyle = 'rgba(212,176,106,.5)'; ctx.setLineDash([0.18, 0.18]); ctx.beginPath(); ctx.moveTo(MID, 0); ctx.lineTo(MID, 14.2); ctx.stroke(); ctx.setLineDash([]);
     ctx.fillStyle = '#d4b06a'; for (const [x, y] of PEGS) { ctx.beginPath(); ctx.arc(x, y, PEG, 0, 6.2832); ctx.fill(); }
+    if (guess != null) { // the learner's guess: a marked bin with a small flag over it
+      ctx.fillStyle = 'rgba(224,138,143,.16)'; ctx.fillRect(guess - 0.5, 0, 1, LINE);
+      ctx.strokeStyle = '#e08a8f'; ctx.lineWidth = 0.07; ctx.strokeRect(guess - 0.5, 0, 1, LINE);
+      ctx.fillStyle = '#e08a8f'; ctx.beginPath(); ctx.moveTo(guess - 0.3, LINE + 0.55); ctx.lineTo(guess + 0.3, LINE + 0.55); ctx.lineTo(guess, LINE + 0.1); ctx.closePath(); ctx.fill();
+    }
     ctx.fillStyle = '#d4b06a'; ctx.beginPath(); ctx.moveTo(MID - 0.9, 14.2); ctx.lineTo(MID - 0.3, 13.2); ctx.lineTo(MID + 0.3, 13.2); ctx.lineTo(MID + 0.9, 14.2); ctx.closePath(); ctx.globalAlpha = 0.35; ctx.fill(); ctx.globalAlpha = 1;
     if (s) {
       const top = Math.max.apply(null, s.bins), unit = Math.min(0.4, (LINE - 0.25) / Math.max(1, top));
@@ -71,7 +76,17 @@
     ctx.restore();
   }
 
-  const bench = { make, result, run, draw, STEP, BINS, MID };
+  // Guess first: a tap on the board picks the bin under it (the tap is turned back by the tilt, the way the board is drawn).
+  const guess = {
+    pick(px, py, W, H, knobs) {
+      const sc = Math.min(W / 14.6, H / 15.6), th = ((knobs && knobs.tilt) || 0) * Math.PI / 180, dx = px - W / 2, dy = py - H / 2;
+      const bx = (dx * Math.cos(th) + dy * Math.sin(th)) / sc + WID / 2;
+      return bx < -0.7 || bx > WID + 0.7 ? null : Math.max(0, Math.min(BINS - 1, Math.round(bx)));
+    },
+    gap(g, r) { const d = Math.abs(r.peak - g); return d === 0 ? 'That is the bin you guessed.' : 'You guessed ' + d + (d === 1 ? ' bin' : ' bins') + ' away from it.'; },
+    bar(g) { return g; },
+  };
+  const bench = { make, result, run, draw, guess, STEP, BINS, MID };
   if (typeof module !== 'undefined' && module.exports) module.exports = bench;
   if (root && root.VULab) root.VULab.bench('pegboard', bench);
 })(typeof window !== 'undefined' ? window : null);

@@ -3417,7 +3417,7 @@
         "title": "The lever",
         "ask": "Sit down at the machine and pull. Stay as long as it feels worth it, then walk away. Then try a machine that pays a different way, and compare what your own hand did.",
         "go": "Sit down at it",
-        "triesNote": "tall is a coin, short is nothing, the line is where it stopped paying",
+        "triesNote": "tall is a coin, short is nothing, the gold line is where it stopped paying, the pink mark is where you guessed you would stop",
         "knobs": [
           {
             "id": "pay",
@@ -3486,7 +3486,10 @@
           ]
         ],
         "meet": "Where you meet this: pull to refresh. A feed that is only sometimes good. A game with a prize box. Someone who texts back only sometimes. None of them pay every time. A cheap reward that comes at random takes over a signal that was built for finding real things.",
-        "draftedBy": "Claude, 15 Nov 2026: a draft for Bryan to keep, change or strike."
+        "draftedBy": "Claude, 15 Nov 2026: a draft for Bryan to keep, change or strike.",
+        "guess": {
+          "ask": "First, your guess. Once this machine stops paying, how many more times will your hand pull?"
+        }
       }
     },
     {

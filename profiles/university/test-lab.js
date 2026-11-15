@@ -44,4 +44,18 @@ assert.ok(lv.bars.slice(lv.paid).every((b) => b < 1), 'nothing pays past the lin
 assert.strictEqual(lever.run(pl, { pay: 'every' }, 1, { extra: 0 }).counts, false, 'leaving while it still pays does not find a rule');
 assert.strictEqual(lever.run(pl, { pay: 'every' }, 1, { extra: 99 }).extra, 40, 'the machine ends the run after 40 empty pulls');
 console.log('lever     :', lv.say);
+
+// Guess first: a tap picks the bin under it, level or tilted, and the gap is said as a plain fact.
+const W = 560, H = 560, sc = Math.min(W / 14.6, H / 15.6);
+for (const tilt of [0, 8]) for (const bin of [0, 3, 6, 9, 12]) {
+  const th = tilt * Math.PI / 180, x = (bin - 6) * sc, y = -(1.5 - 7.1) * sc; // a point low in that bin, in board space
+  const px = W / 2 + x * Math.cos(th) - y * Math.sin(th), py = H / 2 + x * Math.sin(th) + y * Math.cos(th);
+  assert.strictEqual(peg.guess.pick(px, py, W, H, { tilt }), bin, 'tap picks bin ' + bin + ' at tilt ' + tilt);
+}
+assert.strictEqual(peg.guess.pick(2, 280, W, H, { tilt: 0 }), null, 'a tap off the board picks nothing');
+assert.strictEqual(peg.guess.gap(6, { peak: 6 }), 'That is the bin you guessed.');
+assert.strictEqual(peg.guess.gap(6, { peak: 4 }), 'You guessed 2 bins away from it.');
+assert.strictEqual(lever.guess.gap(2, lv), 'You guessed 1 or 2. Your hand did 7.');
+assert.strictEqual(lever.guess.bar(5, lv), lv.paid + 4.5);
+assert.strictEqual(lever.guess.gap(2, { counts: false }), '', 'no gap is claimed for a try that left early');
 console.log('lab checks passed');

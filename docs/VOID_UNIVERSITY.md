@@ -702,3 +702,13 @@ B: "Yes, next lab", then: "please look at my mind Atlas to gain an understanding
   - Use, disuse and hijack (F32): "cheap rewards hijack signals built for real needs". The lever's closing line says this.
   - Depth levels (F18): "I want the ability to have this based on depth as well but I want the full knowledge available".
 - Preview only, not deployed.
+
+### 15 Nov 2026: guess first, then see the gap
+
+B: "Yes, guess first", and while it was being built: "A big part of learning is prediction and then interacting".
+- **Engine:** when a lab block has `guess: { ask }` and its bench has a `guess` part, the learner must commit to a guess before every run (the run button stays off until they do; changing a knob clears the guess). After the run the lab states the gap as a plain fact, never right or wrong, and the try's small picture carries a pink mark at the guess. Bench side: `pick(x, y, W, H, knobs)` for a tap on the stage, or `options(knobs)` for choices; `gap(guess, result)`; `bar(guess, result)`.
+- **The chance machine:** tap the bin where you think the tallest pile will land (the tap is turned back by the tilt). "You guessed 2 bins away from it."
+- **The lever:** say how many more times your hand will pull once it stops paying (1 or 2, 3 to 5, 6 to 10, more than 10). "You guessed 1 or 2. Your hand did 8." A try that left early claims no gap.
+- **Checks:** test-lab.js covers the tap-to-bin maths level and tilted, the gap sentences and the lever mark. In the page: the run button is off until a guess is made, a tap on the board picks a bin, the chips pick a range, no console errors, no sideways scroll at 1920 wide.
+- **Asked by B the same hour, not built:** a place in the University for his boundary, predict, action, aware framework (BPAA in the Mind Atlas, June 2026) and for Michael Levin's work. Proposal given to him in chat; waits on his go.
+- Preview only, not deployed.

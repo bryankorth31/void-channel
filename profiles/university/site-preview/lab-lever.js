@@ -93,7 +93,14 @@
     ctx.restore();
   }
 
-  const bench = { make, play, result, run, draw, plan, rng, STEP };
+  // Guess first: how many more pulls will your own hand make once it stops paying? The value is the top of the range.
+  const OPTS = [{ v: 2, label: '1 or 2' }, { v: 5, label: '3 to 5' }, { v: 10, label: '6 to 10' }, { v: 99, label: 'More than 10' }];
+  const guess = {
+    options() { return OPTS; },
+    gap(g, r) { if (!r.counts) return ''; const o = OPTS.find((x) => x.v === g); return 'You guessed ' + (o ? o.label.toLowerCase() : g) + '. Your hand did ' + r.extra + '.'; },
+    bar(g, r) { return g >= 99 ? null : r.paid - 0.5 + g; },
+  };
+  const bench = { make, play, result, run, draw, plan, rng, guess, STEP };
   if (typeof module !== 'undefined' && module.exports) module.exports = bench;
   if (root && root.VULab) root.VULab.bench('lever', bench);
 })(typeof window !== 'undefined' ? window : null);
