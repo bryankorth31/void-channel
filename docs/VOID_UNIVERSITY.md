@@ -661,3 +661,7 @@ B: "university.voidTv.net is a good use of this". The address is university.void
 ### 15 Nov 2026: live
 
 B: "Yes, deploy it". Void University is live at https://university.voidtv.net as the Worker void-university (CASH account, custom domain). Build the public copy with node profiles/university/build.js --site (no draft badge), then from Bryan's terminal: npx.cmd --yes wrangler@4.151.0 deploy --config profiles/university/wrangler.jsonc. Pages ask for /name.html and get a redirect to /name (Workers assets default).
+
+### 15 Nov 2026: the university look, photos and channels
+
+B: "pexel or other places should be looked at to populate the images and cards. also find channels ... its currently not correct for university". Look: navy and parchment, brass, Fraunces serif, a crest; photos on every card. Photos: 35 CC0 from StockSnap and rawpixel, found through Openverse (no key needed), each recorded in profiles/university/img/images.json and listed on credits.html. Pexels needs a free API key Bryan would make himself (it would go in the env file); not used yet. Channels (course "channels"): Veritasium, Crash Course Psychology, Kurzgesagt (Critical thinking); Robb Willer's Berkeley Social Psychology (Sociology 150A) and Crash Course Psychology (mind's mechanisms). Licences as each Archive item states; Kahneman's book uploads are in copyright and are not used.

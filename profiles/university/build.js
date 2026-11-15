@@ -95,7 +95,7 @@ function unit(u, voices, c) {
   const who = (u.voices || []).map((k) => voices[k]).filter(Boolean)
     .map((v) => '<li><b>' + esc(v.name) + '</b>, ' + esc(v.what.toLowerCase()) + '. ' + esc(v.did) + '</li>').join('');
   return '<section class="unit" id="u' + u.n + '">'
-    + '<div class="uh"><span class="n">' + u.n + '</span><div><h2>' + esc(u.title) + '</h2></div></div>'
+    + '<div class="uh"><span class="n">' + u.n + '</span><div><h2>' + esc(u.title) + '</h2></div>' + (c.shelf === 'supplement' && img('m' + u.n) ? '<img class="uimg" loading="lazy" src="' + img('m' + u.n) + '" alt="">' : '') + '</div>'
     + scene(u)
     + links(u, c)
     + (u.main ? '<div class="pieces">' + piece(u.main, true) + '</div>' : '')
@@ -116,19 +116,12 @@ function page(c, all) {
   const toc = c.units.map((u) => '<a href="#u' + u.n + '"><span>' + u.n + '</span>' + esc(u.title) + '</a>').join('');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(c.name)} · Void University</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+${FONTS}
 <style>
-:root{--bg:#07080c;--panel:#0f1118;--panel2:#161926;--line:#1d2130;--fg:#e8e8ee;--dim:#8a8fa3;--acc:#5fd4ff;--gold:#f2a93b;--pink:#ff4fc8}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,Segoe UI,Roboto,sans-serif}
-a{color:var(--acc)}
-header{display:flex;align-items:baseline;gap:16px;padding:18px 32px;border-bottom:1px solid var(--line)}
-header .logo{font-family:Unbounded,system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.02em}
-header .logo i{font-style:normal;color:var(--acc)}header .tag{color:var(--dim);font-size:14px}
-.courses{display:flex;gap:6px;margin-left:24px;flex-wrap:wrap}
-.courses a,.courses b{font-size:14px;padding:4px 12px;border-radius:999px;text-decoration:none;border:1px solid var(--line)}
-.courses a{color:var(--dim)}.courses a:hover{color:var(--fg);border-color:var(--acc)}.courses b{color:var(--acc);border-color:rgba(95,212,255,.45);font-weight:600}
-.draft{margin-left:auto;font-size:13px;color:var(--gold);border:1px solid #4a3a1e;padding:4px 10px;border-radius:999px}
+${BASE}
+${CARDCSS}
+.chans{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 28px}.chans .chan{width:280px}
+.uimg{width:132px;height:84px;object-fit:cover;border-radius:6px;margin-left:auto;border:1px solid var(--line)}
 .wrap{display:grid;grid-template-columns:260px 1fr;gap:32px;max-width:1500px;margin:0 auto;padding:28px 32px}
 nav{position:sticky;top:20px;align-self:start}
 nav h4{margin:0 0 10px;color:var(--dim);font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
@@ -136,12 +129,12 @@ nav a{display:flex;gap:10px;padding:8px 10px;border-radius:8px;color:var(--fg);t
 nav a:hover{background:var(--panel2)}nav a span{color:var(--acc);font-weight:600;width:16px}
 .hero{background:linear-gradient(135deg,#0f1a22,#120f1c);border:1px solid var(--line);border-radius:16px;padding:28px 32px;margin-bottom:28px}
 .hero .dom{color:var(--acc);font-size:13px;text-transform:uppercase;letter-spacing:.1em}
-.hero h1{font-family:Unbounded,system-ui,sans-serif;font-size:36px;margin:6px 0 12px}
+.hero h1{font-family:Fraunces,Georgia,serif;font-size:36px;margin:6px 0 12px}
 .hero p{max-width:820px;color:#cfd2dc;font-size:17px}
 .hero ol{columns:2;column-gap:32px;max-width:900px;padding-left:20px;color:#cfd2dc}
 .unit{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px 28px;margin-bottom:24px;scroll-margin-top:20px}
 .uh{display:flex;gap:16px;align-items:center;margin-bottom:16px}
-.uh .n{font-family:Unbounded,system-ui,sans-serif;font-size:28px;color:var(--acc);width:44px;text-align:center}
+.uh .n{font-family:Fraunces,Georgia,serif;font-size:28px;color:var(--acc);width:44px;text-align:center}
 .uh h2{margin:0;font-size:24px}.out{color:var(--dim);font-size:14px}
 .seed{border-left:3px solid var(--gold);padding:2px 16px;margin:10px 0}.seed.reach{border-color:var(--pink)}
 h3{margin:0 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600}
@@ -165,7 +158,7 @@ audio{width:100%;margin-top:6px}
 .do{background:#101a14;border:1px solid #1d3326;border-radius:12px;padding:14px 16px}
 .who ul{margin:6px 0 0;padding-left:18px;font-size:14px;color:#cfd2dc}.who li{margin-bottom:4px}
 footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);font-size:14px}
-.cx{background:#090b12;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 18px}
+.cx{background:#0a101c;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 18px}
 .cx-lead{margin:2px 0 12px;color:#cfd2dc;font-size:15px;max-width:900px}
 .cx-stage{position:relative;height:360px;border-radius:10px;overflow:hidden;background:radial-gradient(ellipse at center,#0e1a24 0%,#07090f 70%)}
 .cx-stage canvas{position:absolute;inset:0;width:100%;height:100%}
@@ -190,11 +183,11 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .cx-after{margin-top:14px}.cx-after p{margin:2px 0 8px;font-size:15px;color:#cfd2dc}
 .cx-after textarea{width:100%;background:var(--panel2);color:var(--fg);border:1px solid #2c3550;border-radius:10px;padding:10px;font:inherit}
 .cx-after small{color:var(--dim)}
-.sc{background:#090b12;border:1px solid var(--line);border-radius:12px;padding:14px 18px 16px;margin:0 0 18px}
+.sc{background:#0a101c;border:1px solid var(--line);border-radius:12px;padding:14px 18px 16px;margin:0 0 18px}
 .sc-like{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--pink);font-weight:700}
 .sc-stage{margin-top:8px;border-radius:10px;background:radial-gradient(ellipse at center,#0e1a24 0%,#07090f 75%);aspect-ratio:800/360;overflow:hidden}
 .sc-stage svg{display:block;width:100%;height:100%;font-family:system-ui,Segoe UI,Roboto,sans-serif}
-.sc-say{min-height:40px;margin:12px 2px 6px;font-family:Unbounded,system-ui,sans-serif;font-size:22px;font-weight:500;text-align:center}
+.sc-say{min-height:40px;margin:12px 2px 6px;font-family:Fraunces,Georgia,serif;font-size:22px;font-weight:500;text-align:center}
 .sc-ctrl{display:flex;align-items:center;justify-content:center;gap:10px}
 .sc-ctrl button{font:inherit;font-size:15px;background:var(--panel2);color:var(--fg);border:1px solid #2c3550;border-radius:10px;padding:8px 16px;cursor:pointer;min-width:44px;min-height:40px}
 .sc-ctrl button:hover{border-color:var(--acc)}.sc-play{min-width:120px}
@@ -212,73 +205,114 @@ details.more summary{cursor:pointer;color:var(--dim);font-size:15px;padding:6px 
 details.more summary:hover{color:var(--fg)}
 @media (max-width:1000px){.wrap{grid-template-columns:1fr}nav{position:static}nav{display:flex;flex-wrap:wrap;gap:4px}nav h4{width:100%}.row2{grid-template-columns:1fr}.hero ol{columns:1}}
 </style></head><body>
-<header><span class="logo">VOID <i>University</i></span><span class="tag">learn from people who did it</span><span class="courses">${others}</span>${DRAFT}</header>
+${top(c.slug, all)}
 <div class="wrap"><nav><h4>Units</h4>${toc}</nav><main>
-<div class="hero"><div class="dom">${esc(c.domain)} · a course we wrote</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>
+<div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug)});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)} · a course we wrote</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>
 <details class="more"><summary>By the end you will be able to...</summary><ol>${c.outcomes.map((o) => '<li>' + esc(o) + '</li>').join('')}</ol></details></div>
+${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this course</h3><div class="chans">' + c.channels.map(chan).join('') + '</div>' : ''}
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
 </main></div>
-<footer>Free, no account. Everything plays from the Internet Archive; each piece names its source and licence.<br>
-If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="${DONATE}" target="_blank" rel="noopener">Donate to CASH</a></footer>
+${FOOT()}
 <script src="crystal.js"></script><script src="scene.js"></script>
 </body></html>`;
 }
 
 // The front page (Bryan, 15 Nov 2026): rows by area like voidtv.net, each whole course one card; the mind's
-// mechanisms as a row of small cards any course can use; every area in a grid below, filled or still to come.
-const HUE = { Money: 140, Food: 30, Home: 200, Body: 350, Mind: 195, Words: 45, 'Law and rights': 260, 'Work and trades': 20, Machines: 210, Making: 300, Land: 110, 'Civics and history': 0, 'Faith and philosophy': 280, Family: 330, Emergencies: 10 };
+// mechanisms as a row of small cards any course can use; the found channels beside the courses they go with; every
+// area in a grid below. The look is a university's (Bryan: "its currently not correct for university"): navy and
+// parchment, brass, a serif face, photographs on every card. Photos are CC0, each recorded in img/images.json.
+const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">';
+const CARDCSS = `.card{flex:0 0 auto;display:flex;flex-direction:column;border-radius:8px;overflow:hidden;background:var(--panel);border:1px solid var(--line);text-decoration:none;color:var(--fg);transition:transform .18s ease,border-color .18s ease}
+.card:hover,.card:focus-visible{transform:translateY(-3px);border-color:var(--gold);outline:none}
+.card .ph{background:#0a101c;overflow:hidden}.card .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}.card:hover .ph img{transform:scale(1.04)}
+.card .t{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px}
+.card small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.card b{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.2}
+.card span{color:#cfd3dc;font-size:14px;line-height:1.45}
+.course{width:340px}.course .ph{aspect-ratio:16/10}.course b{font-size:24px}
+.mini{width:220px}.mini .ph{aspect-ratio:4/3}.mini b{font-size:18px}.mini span{font-size:13px}
+.chan{width:300px}.chan .ph{aspect-ratio:16/9}.chan b{font-size:19px}.chan span{font-size:13px}`;
+const BASE = `:root{--bg:#0b1220;--panel:#111a2c;--panel2:#17223a;--line:#24304a;--fg:#efe9dc;--dim:#9aa3b5;--acc:#d4b06a;--gold:#d4b06a;--pink:#e08a8f;--ink:#0b1220}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,sans-serif}a{color:var(--acc)}
+.serif{font-family:Fraunces,Georgia,serif}
+header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:14px 32px;border-bottom:1px solid var(--line);background:#0a101c}
+.crest{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg)}
+.crest svg{width:34px;height:34px;flex:none}
+.crest span{white-space:nowrap}.crest b{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.14em;text-transform:uppercase}
+.crest small{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-top:1px}
+.nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.nav a,.nav b{font-size:14px;padding:6px 12px;border-radius:6px;text-decoration:none;color:var(--dim)}
+.nav a:hover{color:var(--fg);background:var(--panel2)}.nav b{color:var(--gold);font-weight:600}
+.draft{font-size:12px;color:var(--gold);border:1px solid #5a4a24;padding:3px 9px;border-radius:999px}
+footer{max-width:1400px;margin:0 auto;padding:30px 32px 44px;color:var(--dim);font-size:14px;border-top:1px solid var(--line)}
+footer a{color:var(--gold)}`;
+const CREST = '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 L36 8 V20 C36 30 28 36 20 38 C12 36 4 30 4 20 V8 Z" fill="#132038" stroke="#d4b06a" stroke-width="1.6"/><path d="M11 15 h18 M11 20 h18 M11 25 h12" stroke="#d4b06a" stroke-width="1.6" stroke-linecap="round"/><circle cx="27" cy="26" r="3" fill="none" stroke="#efe9dc" stroke-width="1.4"/></svg>';
+function top(current, all) {
+  const links = '<a href="index.html"' + (current === 'home' ? ' aria-current="page"' : '') + '>Home</a>' + all.map((o) => o.slug === current ? '<b>' + esc(o.name) + '</b>' : '<a href="' + esc(o.slug) + '.html">' + esc(o.name) + '</a>').join('');
+  return '<header class="top"><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + DRAFT + '</header>';
+}
+const IMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'img', 'images.json'), 'utf8')); } catch (e) { return {}; } })();
+const img = (name) => IMG[name] ? IMG[name].file : '';
+const FOOT = () => `<footer>Free, no account. Lessons play from the Internet Archive; each piece names its source and licence. Photos are public domain (CC0); <a href="credits.html">who took them</a>.<br>
+If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="${DONATE}" target="_blank" rel="noopener">Donate to CASH</a></footer>`;
+function chan(x) {
+  return '<a class="card chan" href="' + esc(x.url) + '" target="_blank" rel="noopener"><div class="ph"><img loading="lazy" src="' + esc(x.thumb) + '" alt=""></div><div class="t"><small>Channel · ' + esc(x.count) + '</small><b>' + esc(x.name) + '</b><span>' + esc(x.what) + '</span></div></a>';
+}
 function home(all, list) {
   const full = all.filter((c) => c.shelf !== 'supplement');
   const sup = all.filter((c) => c.shelf === 'supplement');
-  const card = (c) => '<a class="card course" href="' + esc(c.slug) + '.html" style="--h:' + (HUE[c.domain] || 195) + '"><div class="p"><small>' + esc(c.domain) + '</small><b>' + esc(c.name) + '</b><span>' + c.units.length + ' units</span></div>'
-    + '<div class="t">' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</div></a>';
-  const mini = (c, u) => '<a class="card mini" href="' + esc(c.slug) + '.html#u' + u.n + '"><div class="p"><b>' + esc(u.title) + '</b><span>' + esc(u.scene ? u.scene.analogy : '') + '</span></div></a>';
-  const row = (title, note, cards) => '<section class="row"><h2>' + esc(title) + (note ? ' <small>' + esc(note) + '</small>' : '') + '</h2><div class="rowwrap"><button class="arrow l" aria-label="Back">&#8249;</button><div class="track">' + cards + '</div><button class="arrow r" aria-label="More">&#8250;</button></div></section>';
+  const card = (c) => '<a class="card course" href="' + esc(c.slug) + '.html"><div class="ph"><img src="' + img('c-' + c.slug) + '" alt=""></div><div class="t"><small>' + esc(c.domain) + ' · ' + c.units.length + ' units</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
+  const mini = (c, u) => '<a class="card mini" href="' + esc(c.slug) + '.html#u' + u.n + '"><div class="ph"><img loading="lazy" src="' + img('m' + u.n) + '" alt=""></div><div class="t"><b>' + esc(u.title) + '</b><span>' + esc(u.scene ? u.scene.analogy : '') + '</span></div></a>';
+  const row = (title, note, cards) => '<section class="row"><h2><span>' + esc(title) + '</span>' + (note ? '<small>' + esc(note) + '</small>' : '') + '</h2><div class="rowwrap"><button class="arrow l" aria-label="Back">&#8249;</button><div class="track">' + cards + '</div><button class="arrow r" aria-label="More">&#8250;</button></div></section>';
+  const seen = new Set();
+  const chans = (cs) => cs.flatMap((c) => c.channels || []).filter((x) => !seen.has(x.url) && seen.add(x.url));
   const rows = list.types.map((t) => {
     const cs = full.filter((c) => c.domain === t);
     if (!cs.length) return '';
-    const s = row(t, cs.length + (cs.length === 1 ? ' course' : ' courses'), cs.map(card).join(''));
-    const extra = t === 'Mind' ? sup.map((c) => row(c.name, 'short pieces any course can use', c.units.map((u) => mini(c, u)).join(''))).join('') : '';
-    return s + extra;
+    const ss = t === 'Mind' ? sup : [];
+    const ch = chans(cs.concat(ss));
+    return row(t, cs.length + (cs.length === 1 ? ' course' : ' courses'), cs.map(card).join(''))
+      + ss.map((c) => row(c.name, 'short pieces any course can use', c.units.map((u) => mini(c, u)).join(''))).join('')
+      + (ch.length ? row('Channels for ' + t, 'whole series on the Internet Archive that go with these courses', ch.map(chan).join('')) : '');
   }).join('');
   const tiles = list.types.map((t) => {
     const n = all.filter((c) => c.domain === t).length;
-    return '<div class="area' + (n ? ' has' : '') + '" style="--h:' + (HUE[t] || 195) + '"><b>' + esc(t) + '</b><small>' + (n ? n + (n === 1 ? ' course' : ' courses') : 'coming') + '</small></div>';
+    return '<div class="area' + (n ? ' has' : '') + '"><img loading="lazy" src="' + img('a-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""><div><b>' + esc(t) + '</b><small>' + (n ? n + (n === 1 ? ' course' : ' courses') : 'coming') + '</small></div></div>';
   }).join('');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Void University</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+${FONTS}
 <style>
-:root{--bg:#07080c;--panel:#0f1118;--panel2:#161926;--line:#1d2130;--fg:#e8e8ee;--dim:#8a8fa3;--acc:#5fd4ff;--gold:#f2a93b;--pink:#ff4fc8}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,Segoe UI,Roboto,sans-serif}a{color:var(--acc)}
-header{display:flex;align-items:baseline;gap:16px;padding:18px 32px;border-bottom:1px solid var(--line)}
-header .logo{font-family:Unbounded,system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.02em}header .logo i{font-style:normal;color:var(--acc)}header .tag{color:var(--dim);font-size:14px}
-.draft{margin-left:auto;font-size:13px;color:var(--gold);border:1px solid #4a3a1e;padding:4px 10px;border-radius:999px}
-.hero{max-width:1500px;margin:0 auto;padding:36px 32px 10px}.hero h1{font-family:Unbounded,system-ui,sans-serif;font-size:34px;margin:0 0 8px}.hero p{margin:0;color:#cfd2dc;font-size:18px;max-width:760px}
-main{max-width:1500px;margin:0 auto;padding:0 12px 20px}
-h2{margin:26px 20px 10px;font-size:18px;font-family:Unbounded,system-ui,sans-serif;font-weight:500;display:flex;align-items:baseline;gap:10px}h2 small{color:var(--dim);font-weight:400;font-size:13px;font-family:system-ui,Segoe UI,Roboto,sans-serif}
+${BASE}
+.hero{position:relative;min-height:340px;display:flex;align-items:flex-end;border-bottom:1px solid var(--line);overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.75) brightness(.55)}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,32,.15) 0%,rgba(11,18,32,.65) 60%,var(--bg) 100%)}
+.hero div{position:relative;z-index:1;max-width:1400px;width:100%;margin:0 auto;padding:40px 32px 34px}
+.hero .kick{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:48px;line-height:1.08;margin:10px 0 12px;max-width:820px}
+.hero p{margin:0;color:#e4ddcc;font-size:19px;max-width:680px}
+main{max-width:1400px;margin:0 auto;padding:6px 12px 28px}
+h2{margin:34px 20px 12px;display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+h2 span{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:24px}h2 small{color:var(--dim);font-size:14px;font-weight:400}
 .rowwrap{position:relative;padding:0 20px}
-.track{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;padding:6px 4px 12px;scrollbar-width:none;scroll-behavior:smooth}.track::-webkit-scrollbar{display:none}
-.card{position:relative;flex:0 0 auto;border-radius:10px;overflow:hidden;background:var(--panel);outline:2px solid transparent;text-decoration:none;color:var(--fg);transition:transform .18s ease}.card:hover,.card:focus-visible{outline-color:var(--acc);transform:translateY(-3px)}
-.card .p{display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:16px;background:linear-gradient(160deg,hsl(var(--h,195) 45% 26%),#0b0d14 75%)}
-.course{width:300px}.course .p{aspect-ratio:4/3}.course .p small{color:#cfd2dc;font-size:12px;text-transform:uppercase;letter-spacing:.1em}.course .p b{font-family:Unbounded,system-ui,sans-serif;font-size:24px;line-height:1.15}.course .p span{color:var(--acc);font-size:14px}
-.course .t{padding:10px 14px 14px;color:#cfd2dc;font-size:14px;line-height:1.4}
-.mini{width:190px}.mini .p{aspect-ratio:1/1;background:linear-gradient(160deg,#2a1530,#0b0d14 75%)}.mini .p b{font-size:17px;line-height:1.2}.mini .p span{color:#cfd2dc;font-size:13px;line-height:1.3}
-.mini:hover,.mini:focus-visible{outline-color:var(--pink)}
-.arrow{position:absolute;top:50%;transform:translateY(-60%);width:44px;height:44px;border-radius:50%;border:2px solid var(--acc);background:rgba(7,8,12,.92);color:var(--acc);font-size:30px;line-height:38px;padding:0;cursor:pointer;z-index:2;box-shadow:0 2px 12px rgba(0,0,0,.6)}
-.arrow.l{left:-2px}.arrow.r{right:-2px}.arrow:hover{background:var(--acc);color:#07080c}.arrow[hidden]{display:none}
+.track{display:flex;gap:18px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;padding:6px 4px 14px;scrollbar-width:none;scroll-behavior:smooth}.track::-webkit-scrollbar{display:none}
+${CARDCSS}
+.arrow{position:absolute;top:42%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:rgba(11,18,32,.92);color:var(--gold);font-size:28px;line-height:40px;padding:0;cursor:pointer;z-index:2;box-shadow:0 2px 12px rgba(0,0,0,.6)}
+.arrow.l{left:-2px}.arrow.r{right:-2px}.arrow:hover{background:var(--gold);color:var(--ink)}.arrow[hidden]{display:none}
 @media(hover:none){.arrow{display:none}}
-.areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;padding:0 20px}
-.area{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--panel);opacity:.55}.area.has{opacity:1;background:linear-gradient(160deg,hsl(var(--h) 40% 18%),var(--panel) 80%);border-color:hsl(var(--h) 50% 35%)}
-.area b{display:block;font-size:16px}.area small{color:var(--dim);font-size:13px}
-footer{max-width:1500px;margin:0 auto;padding:30px 32px 40px;color:var(--dim);font-size:14px}
+.areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;padding:0 20px}
+.area{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line)}
+.area img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.45)}
+.area.has img{filter:saturate(.85) brightness(.6)}.area.has{border-color:var(--gold)}
+.area div{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;background:linear-gradient(0deg,rgba(11,18,32,.92),rgba(11,18,32,0))}
+.area b{display:block;font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:600}.area small{color:var(--dim);font-size:13px}.area.has small{color:var(--gold)}
+@media(max-width:900px){.hero h1{font-size:36px}.course{width:290px}}
 </style></head><body>
-<header><span class="logo">VOID <i>University</i></span><span class="tag">learn from people who did it</span>${DRAFT}</header>
-<div class="hero"><h1>Big ideas, shown with everyday things.</h1><p>Free, no account. Pick a course, or a short piece on how the mind works.</p></div>
+${top('home', all)}
+<div class="hero"><img src="${img('a-mind')}" alt=""><div><div class="kick">Free courses · no account</div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way.</p></div></div>
 <main>${rows}
-<h2>Every area <small>more courses are on the way</small></h2><div class="areas">${tiles}</div></main>
-<footer>Free, no account. Everything plays from the Internet Archive; each piece names its source and licence.<br>
-If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="${DONATE}" target="_blank" rel="noopener">Donate to CASH</a></footer>
+<h2><span>Every area</span><small>more courses are on the way</small></h2><div class="areas">${tiles}</div></main>
+${FOOT()}
 <script>
 document.querySelectorAll('.rowwrap').forEach(function (w) {
   var t = w.querySelector('.track'), l = w.querySelector('.arrow.l'), r = w.querySelector('.arrow.r');
@@ -289,6 +323,12 @@ document.querySelectorAll('.rowwrap').forEach(function (w) {
 </script>
 </body></html>`;
 }
+function credits(all) {
+  const rows = Object.keys(IMG).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Photo credits · Void University</title>${FONTS}<style>${BASE}
+main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:Fraunces,Georgia,serif}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}</style></head><body>
+${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table></main>${FOOT()}</body></html>`;
+}
 
 fs.mkdirSync(OUT, { recursive: true });
 fs.copyFileSync(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
@@ -298,6 +338,9 @@ const loaded = courses.map((f) => JSON.parse(fs.readFileSync(path.join(DIR, 'cou
   .sort((a, b) => (a.slug === 'critical-thinking' ? -1 : b.slug === 'critical-thinking' ? 1 : 0));
 MECH = loaded.find((c) => c.shelf === 'supplement') || null;
 for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });
+fs.mkdirSync(path.join(OUT, 'img'), { recursive: true });
+for (const k of Object.keys(IMG)) fs.copyFileSync(path.join(DIR, IMG[k].file), path.join(OUT, IMG[k].file));
+fs.writeFileSync(path.join(OUT, 'credits.html'), credits(loaded));
 fs.writeFileSync(path.join(OUT, 'index.html'), home(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
 for (const c of loaded) {
   const html = page(c, loaded);
