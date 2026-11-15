@@ -653,3 +653,7 @@ learned "when they can say it another way".
 - Built the same day: every Critical thinking unit has a scene, and a second course, The mind's mechanisms
   (`courses/minds-mechanisms.json`), has all 18 mechanisms, each with an analogy scene, why, how it reaches you, a
   thing to do, and the researchers who showed it. No videos or crystals on that course yet.
+
+### 15 Nov 2026: the domain
+
+B: "university.voidTv.net is a good use of this". The address is university.voidtv.net (decision 1 settled). Not deployed yet.

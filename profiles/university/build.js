@@ -75,12 +75,25 @@ function scene(u) {
 }
 
 // Bryan, 15 Nov 2026: "less words". A unit shows its picture, its main piece and its crystal; the rest is one tap away.
+// The mind's mechanisms are a supplement shelf (Bryan, 15 Nov 2026: "the smaller ones like the FOMO ... are
+// supplemental that go for anything"). Any unit lists the mechanisms it leans on; the mechanism shows where it is used.
+let MECH = null; const USED = {};
+function links(u, c) {
+  if (c.shelf === 'supplement') {
+    const used = USED[u.n] || [];
+    return used.length ? '<div class="uses"><span>Used in</span>' + used.map((x) => '<a href="' + esc(x.slug) + '.html#u' + x.n + '">' + esc(x.course) + ': ' + esc(x.title) + '</a>').join('') + '</div>' : '';
+  }
+  const ms = (u.mechanisms || []).map((n) => MECH && MECH.units.find((m) => m.n === n)).filter(Boolean);
+  return ms.length ? '<div class="uses"><span>The mind at work</span>' + ms.map((m) => '<a href="' + esc(MECH.slug) + '.html#u' + m.n + '">' + esc(m.title) + '</a>').join('') + '</div>' : '';
+}
+
 function unit(u, voices, c) {
   const who = (u.voices || []).map((k) => voices[k]).filter(Boolean)
     .map((v) => '<li><b>' + esc(v.name) + '</b>, ' + esc(v.what.toLowerCase()) + '. ' + esc(v.did) + '</li>').join('');
   return '<section class="unit" id="u' + u.n + '">'
     + '<div class="uh"><span class="n">' + u.n + '</span><div><h2>' + esc(u.title) + '</h2></div></div>'
     + scene(u)
+    + links(u, c)
     + (u.main ? '<div class="pieces">' + piece(u.main, true) + '</div>' : '')
     + crystal(c, u)
     + '<details class="more"><summary>More: why it matters, what else to watch, read and do, who teaches it</summary>'
@@ -95,7 +108,7 @@ function unit(u, voices, c) {
 }
 
 function page(c, all) {
-  const others = all.map((o) => o.slug === c.slug ? '<b>' + esc(o.name) + '</b>' : '<a href="' + esc(o.slug) + '.html">' + esc(o.name) + '</a>').join('');
+  const others = '<a href="index.html">Home</a>' + all.map((o) => o.slug === c.slug ? '<b>' + esc(o.name) + '</b>' : '<a href="' + esc(o.slug) + '.html">' + esc(o.name) + '</a>').join('');
   const toc = c.units.map((u) => '<a href="#u' + u.n + '"><span>' + u.n + '</span>' + esc(u.title) + '</a>').join('');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(c.name)} · Void University</title>
@@ -186,6 +199,10 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .sc-dots button.on{background:var(--acc);border-color:var(--acc)}
 .sc-map{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:12px;font-size:15px;color:var(--dim);opacity:.35;transition:opacity .8s}
 .sc.done .sc-map{opacity:1}.sc-map i{font-style:normal;color:#cfd2dc}.sc-map b{color:var(--acc)}
+.uses{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 14px}
+.uses span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600;margin-right:4px}
+.uses a{font-size:14px;padding:4px 12px;border-radius:999px;text-decoration:none;color:var(--pink);border:1px solid rgba(255,79,200,.35);background:#1a0f19}
+.uses a:hover{border-color:var(--pink)}
 details.more{margin-top:6px;border-top:1px solid var(--line);padding-top:10px}
 details.more summary{cursor:pointer;color:var(--dim);font-size:15px;padding:6px 0}
 details.more summary:hover{color:var(--fg)}
@@ -203,16 +220,84 @@ If you found this service helpful, please think of donating to keep it running a
 </body></html>`;
 }
 
+// The front page (Bryan, 15 Nov 2026): rows by area like voidtv.net, each whole course one card; the mind's
+// mechanisms as a row of small cards any course can use; every area in a grid below, filled or still to come.
+const HUE = { Money: 140, Food: 30, Home: 200, Body: 350, Mind: 195, Words: 45, 'Law and rights': 260, 'Work and trades': 20, Machines: 210, Making: 300, Land: 110, 'Civics and history': 0, 'Faith and philosophy': 280, Family: 330, Emergencies: 10 };
+function home(all, list) {
+  const full = all.filter((c) => c.shelf !== 'supplement');
+  const sup = all.filter((c) => c.shelf === 'supplement');
+  const card = (c) => '<a class="card course" href="' + esc(c.slug) + '.html" style="--h:' + (HUE[c.domain] || 195) + '"><div class="p"><small>' + esc(c.domain) + '</small><b>' + esc(c.name) + '</b><span>' + c.units.length + ' units</span></div>'
+    + '<div class="t">' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</div></a>';
+  const mini = (c, u) => '<a class="card mini" href="' + esc(c.slug) + '.html#u' + u.n + '"><div class="p"><b>' + esc(u.title) + '</b><span>' + esc(u.scene ? u.scene.analogy : '') + '</span></div></a>';
+  const row = (title, note, cards) => '<section class="row"><h2>' + esc(title) + (note ? ' <small>' + esc(note) + '</small>' : '') + '</h2><div class="rowwrap"><button class="arrow l" aria-label="Back">&#8249;</button><div class="track">' + cards + '</div><button class="arrow r" aria-label="More">&#8250;</button></div></section>';
+  const rows = list.types.map((t) => {
+    const cs = full.filter((c) => c.domain === t);
+    if (!cs.length) return '';
+    const s = row(t, cs.length + (cs.length === 1 ? ' course' : ' courses'), cs.map(card).join(''));
+    const extra = t === 'Mind' ? sup.map((c) => row(c.name, 'short pieces any course can use', c.units.map((u) => mini(c, u)).join(''))).join('') : '';
+    return s + extra;
+  }).join('');
+  const tiles = list.types.map((t) => {
+    const n = all.filter((c) => c.domain === t).length;
+    return '<div class="area' + (n ? ' has' : '') + '" style="--h:' + (HUE[t] || 195) + '"><b>' + esc(t) + '</b><small>' + (n ? n + (n === 1 ? ' course' : ' courses') : 'coming') + '</small></div>';
+  }).join('');
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Void University</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07080c;--panel:#0f1118;--panel2:#161926;--line:#1d2130;--fg:#e8e8ee;--dim:#8a8fa3;--acc:#5fd4ff;--gold:#f2a93b;--pink:#ff4fc8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,Segoe UI,Roboto,sans-serif}a{color:var(--acc)}
+header{display:flex;align-items:baseline;gap:16px;padding:18px 32px;border-bottom:1px solid var(--line)}
+header .logo{font-family:Unbounded,system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.02em}header .logo i{font-style:normal;color:var(--acc)}header .tag{color:var(--dim);font-size:14px}
+.draft{margin-left:auto;font-size:13px;color:var(--gold);border:1px solid #4a3a1e;padding:4px 10px;border-radius:999px}
+.hero{max-width:1500px;margin:0 auto;padding:36px 32px 10px}.hero h1{font-family:Unbounded,system-ui,sans-serif;font-size:34px;margin:0 0 8px}.hero p{margin:0;color:#cfd2dc;font-size:18px;max-width:760px}
+main{max-width:1500px;margin:0 auto;padding:0 12px 20px}
+h2{margin:26px 20px 10px;font-size:18px;font-family:Unbounded,system-ui,sans-serif;font-weight:500;display:flex;align-items:baseline;gap:10px}h2 small{color:var(--dim);font-weight:400;font-size:13px;font-family:system-ui,Segoe UI,Roboto,sans-serif}
+.rowwrap{position:relative;padding:0 20px}
+.track{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;padding:6px 4px 12px;scrollbar-width:none;scroll-behavior:smooth}.track::-webkit-scrollbar{display:none}
+.card{position:relative;flex:0 0 auto;border-radius:10px;overflow:hidden;background:var(--panel);outline:2px solid transparent;text-decoration:none;color:var(--fg);transition:transform .18s ease}.card:hover,.card:focus-visible{outline-color:var(--acc);transform:translateY(-3px)}
+.card .p{display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:16px;background:linear-gradient(160deg,hsl(var(--h,195) 45% 26%),#0b0d14 75%)}
+.course{width:300px}.course .p{aspect-ratio:4/3}.course .p small{color:#cfd2dc;font-size:12px;text-transform:uppercase;letter-spacing:.1em}.course .p b{font-family:Unbounded,system-ui,sans-serif;font-size:24px;line-height:1.15}.course .p span{color:var(--acc);font-size:14px}
+.course .t{padding:10px 14px 14px;color:#cfd2dc;font-size:14px;line-height:1.4}
+.mini{width:190px}.mini .p{aspect-ratio:1/1;background:linear-gradient(160deg,#2a1530,#0b0d14 75%)}.mini .p b{font-size:17px;line-height:1.2}.mini .p span{color:#cfd2dc;font-size:13px;line-height:1.3}
+.mini:hover,.mini:focus-visible{outline-color:var(--pink)}
+.arrow{position:absolute;top:50%;transform:translateY(-60%);width:44px;height:44px;border-radius:50%;border:2px solid var(--acc);background:rgba(7,8,12,.92);color:var(--acc);font-size:30px;line-height:38px;padding:0;cursor:pointer;z-index:2;box-shadow:0 2px 12px rgba(0,0,0,.6)}
+.arrow.l{left:-2px}.arrow.r{right:-2px}.arrow:hover{background:var(--acc);color:#07080c}.arrow[hidden]{display:none}
+@media(hover:none){.arrow{display:none}}
+.areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;padding:0 20px}
+.area{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--panel);opacity:.55}.area.has{opacity:1;background:linear-gradient(160deg,hsl(var(--h) 40% 18%),var(--panel) 80%);border-color:hsl(var(--h) 50% 35%)}
+.area b{display:block;font-size:16px}.area small{color:var(--dim);font-size:13px}
+footer{max-width:1500px;margin:0 auto;padding:30px 32px 40px;color:var(--dim);font-size:14px}
+</style></head><body>
+<header><span class="logo">VOID <i>University</i></span><span class="tag">learn from people who did it</span><span class="draft">Draft for Bryan: nothing here is public</span></header>
+<div class="hero"><h1>Big ideas, shown with everyday things.</h1><p>Free, no account. Pick a course, or a short piece on how the mind works.</p></div>
+<main>${rows}
+<h2>Every area <small>more courses are on the way</small></h2><div class="areas">${tiles}</div></main>
+<footer>Free, no account. Everything plays from the Internet Archive; each piece names its source and licence.<br>
+If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="${DONATE}" target="_blank" rel="noopener">Donate to CASH</a></footer>
+<script>
+document.querySelectorAll('.rowwrap').forEach(function (w) {
+  var t = w.querySelector('.track'), l = w.querySelector('.arrow.l'), r = w.querySelector('.arrow.r');
+  function upd() { l.hidden = t.scrollLeft < 4; r.hidden = t.scrollLeft + t.clientWidth >= t.scrollWidth - 4; }
+  l.onclick = function () { t.scrollLeft -= t.clientWidth * 0.8; }; r.onclick = function () { t.scrollLeft += t.clientWidth * 0.8; };
+  t.addEventListener('scroll', upd); window.addEventListener('resize', upd); upd();
+});
+</script>
+</body></html>`;
+}
+
 fs.mkdirSync(OUT, { recursive: true });
 fs.copyFileSync(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
 fs.copyFileSync(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
 const courses = fs.readdirSync(path.join(DIR, 'courses')).filter((f) => f.endsWith('.json'));
 const loaded = courses.map((f) => JSON.parse(fs.readFileSync(path.join(DIR, 'courses', f), 'utf8')))
   .sort((a, b) => (a.slug === 'critical-thinking' ? -1 : b.slug === 'critical-thinking' ? 1 : 0));
+MECH = loaded.find((c) => c.shelf === 'supplement') || null;
+for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });
+fs.writeFileSync(path.join(OUT, 'index.html'), home(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
 for (const c of loaded) {
   const html = page(c, loaded);
   fs.writeFileSync(path.join(OUT, c.slug + '.html'), html);
-  if (courses.length === 1 || c.slug === 'critical-thinking') fs.writeFileSync(path.join(OUT, 'index.html'), html);
   const n = c.units.reduce((a, u) => a + (u.main ? 1 : 0) + (u.companions || []).length, 0);
   const held = c.units.reduce((a, u) => a + [u.main, ...(u.companions || [])].filter((p) => p && p.hold).length, 0);
   console.log(c.slug + ': ' + c.units.length + ' units, ' + n + ' pieces (' + held + ' on hold) -> ' + path.relative(process.cwd(), path.join(OUT, c.slug + '.html')));

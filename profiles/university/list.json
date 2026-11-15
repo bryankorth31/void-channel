@@ -1,6 +1,20 @@
 {
   "types": [
-    "Mind"
+    "Money",
+    "Food",
+    "Home",
+    "Body",
+    "Mind",
+    "Words",
+    "Law and rights",
+    "Work and trades",
+    "Machines",
+    "Making",
+    "Land",
+    "Civics and history",
+    "Faith and philosophy",
+    "Family",
+    "Emergencies"
   ],
   "courses": [
     {
@@ -15,7 +29,9 @@
       "name": "The mind's mechanisms",
       "type": "Mind",
       "kind": "authored",
-      "status": "draft"
+      "status": "draft",
+      "shelf": "supplement"
     }
-  ]
+  ],
+  "_types": "The 15 areas are the front page rows (Bryan, 15 Nov 2026: \"I like those rows\"). A row shows each whole course as one card. A course with \"shelf\": \"supplement\" (the mind's mechanisms) shows its units as small cards instead, and any unit anywhere can point to them with \"mechanisms\": [unit numbers]."
 }
