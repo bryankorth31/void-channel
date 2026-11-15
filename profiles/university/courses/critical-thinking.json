@@ -1,0 +1,283 @@
+{
+  "slug": "critical-thinking",
+  "name": "Critical thinking",
+  "domain": "Mind",
+  "kind": "authored",
+  "status": "draft",
+  "draftedBy": "Claude, 15 Nov 2026, from Bryan's entry 1 in docs/VOID_UNIVERSITY.md (13 Oct 2026). Every line here waits for Bryan to keep, change or strike.",
+  "why": "Most of what reaches you every day is somebody's claim: an ad, a post, a doctor's pamphlet, a boss, a news story, a relative at dinner. Nobody can check everything, so the skill is knowing which claims to trust, which to test, and how. People who never learn it spend their money, their votes and their health on other people's say-so.",
+  "outcomes": [
+    "Tell a claim from its evidence.",
+    "Spot the standard ways an argument cheats.",
+    "Know what a number can and cannot say.",
+    "Notice when a story is doing the thinking for you.",
+    "Change your mind in public without shame.",
+    "Read a hard text without an intermediary telling you what it means."
+  ],
+  "units": [
+    {
+      "n": 1,
+      "title": "A claim is not its evidence",
+      "outcome": "Tell a claim from its evidence.",
+      "why": "Before you can weigh anything, you have to see that \"this works\" and \"here is how we know\" are two different things. Most people hear the first and assume the second.",
+      "reachesYou": "Supplements, miracle cleaners, \"studies show\", the phone call that says your car warranty is expiring. Each one is a claim asking for your money before it shows its evidence.",
+      "main": {
+        "role": "watch",
+        "title": "Secrets of the Psychics",
+        "by": "NOVA, with James Randi",
+        "year": 1993,
+        "item": "SecretsofthePsychics",
+        "file": "NOVA.S20E12.Secrets.of.the.Psychics.1993.VHSRip.AAC2.0.x264-rattera.mp4",
+        "seconds": 3413,
+        "licence": "No licence stated; an Archive upload of the broadcast, the same footing as VoidTV's shows.",
+        "note": "A stage magician tests faith healers, spoon benders and astrologers by setting up fair tests, not by arguing. Watch how each test is built."
+      },
+      "companions": [
+        {
+          "role": "listen",
+          "title": "The Ethics of Belief, part 1: The Duty of Inquiry",
+          "by": "W. K. Clifford (1877), read for LibriVox",
+          "item": "ethicsofbelief_1204_librivox",
+          "file": "ethicsofbelief_01_clifford.mp3",
+          "seconds": 1236,
+          "licence": "Public domain (LibriVox).",
+          "note": "The shipowner who believed his ship was sound. A short, sharp argument that believing without evidence is a wrong done to other people."
+        },
+        {
+          "role": "watch",
+          "title": "Cosmos, episode 3: Harmony of the Worlds",
+          "by": "Carl Sagan",
+          "year": 1980,
+          "voidtv": { "slug": "cosmos-a-personal-voyage", "season": 1, "episode": 3 },
+          "item": "cosmos-a-personal-voyage-australian-1984-TV-broadcast",
+          "file": "Cosmos - A Personal Voyage - ep 3 - Harmony of the Worlds (ABC Australia 1984 Broadcast).mp4",
+          "licence": "Already on voidtv.net.",
+          "note": "Astrology and astronomy started as one thing. Sagan shows the moment they split: Kepler threw away his own beautiful theory because eight minutes of arc did not fit the data."
+        }
+      ],
+      "do": "Pick one claim you heard this week. Write the claim on one line and its evidence on the next. If the second line is empty, that is your answer.",
+      "voices": ["randi", "sagan", "clifford"]
+    },
+    {
+      "n": 2,
+      "title": "How an argument cheats",
+      "outcome": "Spot the standard ways an argument cheats.",
+      "why": "The tricks are old and there are not many of them. Once you can name them, they stop working on you, and you stop using them by accident.",
+      "reachesYou": "Sales pitches, arguments at work, comment threads, family fights, political ads. The same few moves show up in all of them.",
+      "main": {
+        "role": "listen",
+        "title": "The Art of Controversy: Stratagems 1 to 10",
+        "by": "Arthur Schopenhauer (written about 1831), read for LibriVox",
+        "item": "controversy_1011_librivox",
+        "file": "controversy_03_schopenhauer.mp3",
+        "seconds": 959,
+        "licence": "Public domain (LibriVox).",
+        "note": "Schopenhauer wrote down, plainly and a little cynically, the tricks people use to win an argument when they are wrong. Stratagems 11 to 38 follow in the next parts."
+      },
+      "companions": [
+        {
+          "role": "listen",
+          "title": "The Art of Controversy: Stratagems 11 to 20",
+          "by": "Arthur Schopenhauer, read for LibriVox",
+          "item": "controversy_1011_librivox",
+          "file": "controversy_04_schopenhauer.mp3",
+          "seconds": 570,
+          "licence": "Public domain (LibriVox)."
+        },
+        {
+          "role": "read",
+          "title": "On Bullshit",
+          "by": "Harry Frankfurt (1986)",
+          "item": "on-bullshit-by-harry-frankfurt",
+          "licence": "In copyright. An Archive upload, not the publisher's.",
+          "hold": "Waits for Bryan: the plan says public-domain or openly licensed texts only. Keep it as a pointer to the library, or strike it.",
+          "note": "A short essay with an exact distinction: a liar cares about the truth enough to hide it; a bullshitter does not care either way."
+        }
+      ],
+      "do": "Watch any panel show or comment thread for ten minutes and name three of Schopenhauer's stratagems by number when you catch them.",
+      "voices": ["schopenhauer", "frankfurt"]
+    },
+    {
+      "n": 3,
+      "title": "What a number can and cannot say",
+      "outcome": "Know what a number can and cannot say.",
+      "why": "Numbers sound like the end of an argument. They are usually the start of one: who counted, what they counted, and compared with what.",
+      "reachesYou": "Interest rates, \"cuts your risk by half\", crime up 200 percent, a raise that is smaller than prices went up. Your money and your health decisions come wrapped in numbers.",
+      "main": {
+        "role": "watch",
+        "title": "The best stats you've ever seen",
+        "by": "Hans Rosling (TED, 2006)",
+        "year": 2006,
+        "item": "HansRosling_2006",
+        "file": "HansRosling_2006.mp4",
+        "seconds": 1193,
+        "licence": "CC BY-NC-ND 3.0 (TED). Credit TED and Hans Rosling; no edits.",
+        "note": "A doctor who worked in Mozambique shows that what most educated people believe about the world is decades out of date, and how one chart fixes it."
+      },
+      "companions": [
+        {
+          "role": "watch",
+          "title": "The magic washing machine",
+          "by": "Hans Rosling (TED, 2010)",
+          "year": 2010,
+          "item": "HansRosling_2010W",
+          "file": "HansRosling_2010W.mp4",
+          "seconds": 556,
+          "licence": "CC BY-NC-ND 3.0 (TED).",
+          "note": "Nine minutes on what one machine did for his mother, and what energy numbers mean in a real home."
+        },
+        {
+          "role": "watch",
+          "title": "Don't Panic: The Truth About Population",
+          "by": "Hans Rosling (BBC, 2013)",
+          "year": 2013,
+          "item": "vimeo-79878808",
+          "file": "DON_T_PANIC_Hans_Rosling_showing_the_facts_about_population-79878808.mp4",
+          "seconds": 3530,
+          "licence": "No licence stated; an Archive mirror of the broadcast.",
+          "note": "The hour-long version, for when the talk hooks you."
+        },
+        {
+          "role": "listen",
+          "title": "The Ethics of Belief, part 3: The Limits of Inference",
+          "by": "W. K. Clifford (1877), read for LibriVox",
+          "item": "ethicsofbelief_1204_librivox",
+          "file": "ethicsofbelief_03_clifford.mp3",
+          "seconds": 695,
+          "licence": "Public domain (LibriVox).",
+          "note": "When are we allowed to believe beyond what we have seen?"
+        },
+        {
+          "role": "read",
+          "title": "How to Lie with Statistics",
+          "by": "Darrell Huff (1954)",
+          "item": "HowToLieWithStatistics_201608",
+          "licence": "In copyright. An Archive upload, not the publisher's.",
+          "hold": "Waits for Bryan: the most-read statistics book ever written, but not public domain. Keep it as a pointer to the library, or strike it."
+        }
+      ],
+      "do": "Find one percentage in today's news. Ask three questions of it: a percent of what, compared with what, and who counted.",
+      "voices": ["rosling", "huff", "clifford"]
+    },
+    {
+      "n": 4,
+      "title": "When the story does the thinking",
+      "outcome": "Notice when a story is doing the thinking for you.",
+      "why": "A good story feels true because it is well told, not because it is true. Whole countries have bet everything on a story everybody around them believed.",
+      "reachesYou": "Every bubble works like this: tulips in 1637, houses in 2007, whatever is next. So do feeds that keep you angry. If everyone around you is sure, that is the moment to check.",
+      "main": {
+        "role": "watch",
+        "title": "Informing Ourselves to Death",
+        "by": "Neil Postman on The Open Mind (1990)",
+        "year": 1990,
+        "item": "openmind_ep1095",
+        "file": "openmind_ep1095_512kb.mp4",
+        "seconds": 1712,
+        "licence": "No licence stated; an Archive upload of the broadcast.",
+        "note": "A teacher of forty years on what happens to thinking when information arrives faster than anyone can judge it. Said in 1990."
+      },
+      "companions": [
+        {
+          "role": "listen",
+          "title": "The Tulipomania",
+          "by": "Charles Mackay, Extraordinary Popular Delusions (1841), read for LibriVox",
+          "item": "memoirs_popular_delusions_0810_librivox",
+          "file": "memoirspopulardelusions_07_mackay.mp3",
+          "seconds": 1272,
+          "licence": "Public domain (LibriVox).",
+          "note": "How a whole country came to trade houses for flower bulbs, told by a writer who saw the same thing happen again in his own time."
+        }
+      ],
+      "do": "Think of one thing \"everybody knows\" in your circle. Write down where you first heard it and whether you ever saw it for yourself.",
+      "voices": ["postman", "mackay"]
+    },
+    {
+      "n": 5,
+      "title": "Changing your mind without shame",
+      "outcome": "Change your mind in public without shame.",
+      "why": "Being wrong is normal. Staying wrong to save face is what does the damage. The people we most admire for thinking clearly are the ones who said \"I was wrong\" out loud.",
+      "reachesYou": "At work, at home, in a family argument that has run for years. The person who can say \"I hadn't thought of that\" ends up trusted.",
+      "main": {
+        "role": "watch",
+        "title": "The Ascent of Man, episode 11: Knowledge or Certainty",
+        "by": "Jacob Bronowski (BBC, 1973)",
+        "year": 1973,
+        "voidtv": { "slug": "the-ascent-of-man", "season": 1, "episode": 11 },
+        "item": "the-ascent-of-man-ep11",
+        "file": "11. Knowledge or Certainty.mp4",
+        "licence": "On voidtv.net (its file is still in REVIEW there).",
+        "note": "A mathematician stands at Auschwitz and says what happens when people believe they have absolute knowledge. The most quoted ending in television science."
+      },
+      "companions": [
+        {
+          "role": "listen",
+          "title": "On Liberty, chapter 2 (first half): Of the Liberty of Thought and Discussion",
+          "by": "John Stuart Mill (1859), read for LibriVox",
+          "item": "on_liberty_librivox",
+          "file": "on_liberty_2a_mill.mp3",
+          "seconds": 3152,
+          "licence": "Public domain (LibriVox).",
+          "note": "Why even a wrong opinion should be heard: the person who only knows their own side of a case knows little even of that."
+        }
+      ],
+      "do": "Pick one opinion you hold firmly. Write the strongest case against it you can, as if you believed it. Show it to someone who does believe it and ask if you got it right.",
+      "voices": ["bronowski", "mill"]
+    },
+    {
+      "n": 6,
+      "title": "Find out for yourself",
+      "outcome": "Read a hard text without an intermediary telling you what it means.",
+      "why": "Knowing the name of a thing is not knowing the thing. Every summary is someone's choice of what to leave out, so the habit worth having is going to the source.",
+      "reachesYou": "Your lease, your insurance policy, a law people are fighting about, a study a headline is quoting. The original is usually shorter and plainer than people assume.",
+      "main": {
+        "role": "watch",
+        "title": "The Pleasure of Finding Things Out",
+        "by": "Richard Feynman (NOVA, 1983)",
+        "year": 1983,
+        "item": "ThePleasureOfFindingThingsOut_201809",
+        "file": "NOVA.S10E02.The.Pleasure.of.Finding.Things.Out.1983.VHSRip.AAC2.0.x264-astro.mp4",
+        "seconds": 3374,
+        "licence": "No licence stated; an Archive upload of the broadcast, the same footing as VoidTV's shows.",
+        "note": "A Nobel physicist on his father, the bird whose name tells you nothing about the bird, and why he would rather not know than be told."
+      },
+      "companions": [
+        {
+          "role": "watch",
+          "title": "Fun to Imagine",
+          "by": "Richard Feynman (BBC, 1983)",
+          "year": 1983,
+          "item": "FunToImagine",
+          "file": "Richard P Feynman - FUN TO IMAGINE (full).mp4",
+          "seconds": 4129,
+          "licence": "No licence stated; an Archive upload of the broadcast.",
+          "note": "Ask him why magnets push each other apart and watch him refuse to give you an easy answer that isn't true."
+        },
+        {
+          "role": "read",
+          "title": "How to Read a Book",
+          "by": "Mortimer Adler (1940)",
+          "item": "howtoreadabook1940edition",
+          "licence": "Copyright status of the 1940 edition not yet checked.",
+          "hold": "Waits for a check: if the 1940 copyright was not renewed it is public domain and can stay; otherwise a pointer to the library, or strike it."
+        }
+      ],
+      "do": "Pick a short hard text you have only heard about: your lease, a founding document, a law in the news. Read it yourself first, then one summary, and write down where they differ.",
+      "voices": ["feynman", "adler"]
+    }
+  ],
+  "voices": {
+    "randi": { "name": "James Randi", "what": "Stage magician and investigator", "did": "Exposed faith healer Peter Popoff and spoon bender Uri Geller with demonstrations, not arguments." },
+    "sagan": { "name": "Carl Sagan", "what": "Astronomer", "did": "Worked on the Viking and Voyager missions; wrote the baloney detection kit." },
+    "clifford": { "name": "W. K. Clifford", "what": "Mathematician", "did": "A geometer whose 1877 essay on belief is still argued over." },
+    "schopenhauer": { "name": "Arthur Schopenhauer", "what": "Philosopher", "did": "Catalogued the tricks of dishonest argument so people could see them coming." },
+    "frankfurt": { "name": "Harry Frankfurt", "what": "Philosopher", "did": "Gave the exact difference between lying and not caring about the truth." },
+    "rosling": { "name": "Hans Rosling", "what": "Physician and statistician", "did": "Practised medicine in Mozambique, then built Gapminder to show the world as the numbers say it is." },
+    "huff": { "name": "Darrell Huff", "what": "Journalist", "did": "Wrote the most-read book on how statistics mislead." },
+    "postman": { "name": "Neil Postman", "what": "Teacher and media critic", "did": "Forty years in the classroom; saw what television would do to public argument." },
+    "mackay": { "name": "Charles Mackay", "what": "Journalist", "did": "Chronicled the bubbles and manias of three centuries in 1841." },
+    "bronowski": { "name": "Jacob Bronowski", "what": "Mathematician and historian of science", "did": "A working scientist who made The Ascent of Man." },
+    "mill": { "name": "John Stuart Mill", "what": "Philosopher and economist", "did": "Wrote the case for free thought and discussion that is still quoted in courts." },
+    "feynman": { "name": "Richard Feynman", "what": "Physicist", "did": "Nobel prize; found the cause of the Challenger disaster with a glass of ice water." },
+    "adler": { "name": "Mortimer Adler", "what": "Philosopher and teacher", "did": "Ran the Great Books programme and taught reading as a skill." }
+  }
+}

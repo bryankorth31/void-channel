@@ -593,3 +593,24 @@ VoidTV to live first (TV world, nightly job, domain swap). Then: READ mode (the 
 started) because it is both a University piece and its own thing; then the course hunt against the
 Berkeley/OCW/Yale bodies; then the subject graph. Sync code arrives in between so progress follows
 you from phone to TV.
+
+## 15 Nov 2026: first slice built (Critical thinking)
+
+B, 15 Nov 2026, picked the first slice: "Yes, that one" (the Critical thinking course, end to end).
+- **Where:** `profiles/university/` (a profile like kids). `courses/critical-thinking.json` is the course: six units,
+  one per outcome of B's entry 1. Each unit has a why-it-matters seed, a "how this reaches you" line (B's rule from
+  15 Nov: knowing what the world does is not enough, it has to say how it affects you), one main piece,
+  companions (watch, listen, read), one thing to do this week, and the voices with what they did.
+- **Build and open:** `node profiles/university/build.js`, then `node profiles/university/serve.js` and open
+  http://127.0.0.1:8783/. Everything plays from the Archive; nothing is downloaded.
+- **Material:** 18 pieces from 13 voices. 15 play (checked 15 Nov: every link answered and a video and an audio
+  loaded in the page). Public domain: the LibriVox readings (Clifford, Schopenhauer, Mackay, Mill). CC BY-NC-ND: the
+  Rosling TED talks. Broadcast uploads on the same footing as voidtv.net's shows: NOVA (Randi 1993, Feynman 1983),
+  Postman on The Open Mind, Fun to Imagine, Don't Panic. Two tie into voidtv.net: Cosmos ep 3 and The Ascent of
+  Man ep 11 (still REVIEW there).
+- **On hold for B (3):** On Bullshit and How to Lie with Statistics are in copyright (Archive uploads, not the
+  publishers'); How to Read a Book (1940) needs a renewal check. Each shows greyed with its reason.
+- **Found in passing:** voidtv.net's NOVA grid has S10E02 "The Pleasure of Finding Things Out" MISSING, and the
+  Archive holds it as `ThePleasureOfFindingThingsOut_201809` (file named NOVA.S10E02). The matcher missed it.
+- **Not yet:** the name and domain, who it is for first, reviewers, the local model, putting courses into the
+  voidtv.net rows and player. All words are drafts in Claude's hand for B to keep, change or strike.
