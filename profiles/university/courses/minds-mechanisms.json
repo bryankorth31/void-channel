@@ -15,7 +15,10 @@
     "Weigh a possible loss and an equal gain on the same scale.",
     "Tell how often something happens from how easy it is to picture.",
     "Tell \"many people chose it\" apart from \"it is good\".",
-    "Ask whether you would choose what you have if you were choosing today."
+    "Ask whether you would choose what you have if you were choosing today.",
+    "Say a fact the other way round before you decide on it.",
+    "Take a gift without letting it decide what you buy or agree to.",
+    "Trust what someone has shown, not what they wear or what they are called."
   ],
   "units": [
     {
@@ -1934,6 +1937,560 @@
           }
         ]
       }
+    },
+    {
+      "n": 10,
+      "title": "Framing",
+      "outcome": "Say a fact the other way round before you decide on it.",
+      "why": "The same fact can be wrapped as a gain or a loss, a \"free\" or a \"fee\", and your choice follows the wrapper. Whoever writes the label picks the wrapper.",
+      "reachesYou": "\"90% fat free\", \"only $1 a day\", \"95% success rate\", \"a 5% chance of failure\", \"tax relief\", \"death tax\": the same numbers or the same law, sold or scared by the words.",
+      "do": "Find one label, ad or headline this week and rewrite it the other way round (\"90% fat free\" to \"10% fat\"). Notice whether it still sells.",
+      "voices": [
+        "tversky",
+        "mcneil"
+      ],
+      "scene": {
+        "analogy": "\"90% fat free\" next to \"10% fat\"",
+        "map": [
+          [
+            "the label on the cup",
+            "the wording"
+          ],
+          [
+            "the yogurt inside",
+            "the fact"
+          ],
+          [
+            "flipping the label",
+            "saying it the other way round"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "A",
+            "type": "card",
+            "x": 40,
+            "y": 40,
+            "w": 300,
+            "h": 130,
+            "label": "Yogurt A",
+            "sub": "90% fat free!",
+            "color": "green",
+            "o": 0
+          },
+          {
+            "id": "B",
+            "type": "card",
+            "x": 460,
+            "y": 40,
+            "w": 300,
+            "h": 130,
+            "label": "Yogurt B",
+            "sub": "10% fat",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "eq",
+            "type": "text",
+            "x": 400,
+            "y": 105,
+            "label": "=",
+            "color": "fg",
+            "size": 44,
+            "o": 0
+          },
+          {
+            "id": "you",
+            "type": "stamp",
+            "x": 362,
+            "y": 250,
+            "w": 76,
+            "label": "YOU",
+            "color": "blue",
+            "size": 15
+          },
+          {
+            "id": "pick",
+            "type": "arrow",
+            "x": 360,
+            "y": 270,
+            "x2": 230,
+            "y2": 178,
+            "color": "pink",
+            "o": 0,
+            "draw": 0
+          },
+          {
+            "id": "st",
+            "type": "stamp",
+            "x": 560,
+            "y": 210,
+            "w": 130,
+            "label": "HEALTHY!",
+            "color": "pink",
+            "o": 0,
+            "s": 0.4,
+            "size": 17
+          }
+        ],
+        "beats": [
+          {
+            "say": "Two yogurts on the shelf.",
+            "dur": 2,
+            "set": {
+              "A": {
+                "o": 1
+              },
+              "B": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "You grab A. It sounds healthier.",
+            "dur": 2.4,
+            "set": {
+              "pick": {
+                "o": 1,
+                "draw": 1
+              },
+              "st": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "Same yogurt. Same fat.",
+            "dur": 2.6,
+            "set": {
+              "eq": {
+                "o": 1
+              },
+              "A": {
+                "label": "Same yogurt"
+              },
+              "B": {
+                "label": "Same yogurt"
+              },
+              "st": {
+                "label": "SAME",
+                "color": "gold",
+                "size": 20
+              }
+            }
+          },
+          {
+            "say": "Doctors fall for it too.",
+            "dur": 3.4,
+            "set": {
+              "A": {
+                "label": "Surgery",
+                "sub": "\"90% survive\""
+              },
+              "B": {
+                "label": "Surgery",
+                "sub": "\"10% die\""
+              },
+              "st": {
+                "label": "FRAMED",
+                "size": 18
+              }
+            }
+          },
+          {
+            "say": "Flip the label before you choose.",
+            "dur": 3,
+            "set": {
+              "A": {
+                "sub": "= 10% die",
+                "color": "blue"
+              },
+              "B": {
+                "sub": "= 90% survive",
+                "color": "blue"
+              },
+              "st": {
+                "label": "FLIP IT",
+                "color": "green",
+                "size": 18
+              },
+              "pick": {
+                "o": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "n": 11,
+      "title": "Reciprocity",
+      "outcome": "Take a gift without letting it decide what you buy or agree to.",
+      "why": "When someone gives you something, you feel you owe them. That feeling holds families and friendships together, and sellers use it on purpose with gifts that cost them little.",
+      "reachesYou": "Free samples, free trials, the free pen and calendar from a charity before the ask, the \"free\" dinner at a timeshare talk, the favor before the favor.",
+      "do": "Next time you get something free from someone selling, say thank you and decide as if you had not got it. Notice the pull while you do.",
+      "voices": [
+        "regan",
+        "cialdini"
+      ],
+      "scene": {
+        "analogy": "The free sample at the cheese counter",
+        "map": [
+          [
+            "the free sample",
+            "a small favor"
+          ],
+          [
+            "the urge to buy",
+            "the debt you feel"
+          ],
+          [
+            "the $24 cheese",
+            "the big ask behind it"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "smp",
+            "type": "card",
+            "x": 40,
+            "y": 40,
+            "w": 240,
+            "h": 100,
+            "label": "Free sample",
+            "sub": "one tiny cheese cube",
+            "color": "green",
+            "o": 0
+          },
+          {
+            "id": "clk",
+            "type": "stamp",
+            "x": 330,
+            "y": 40,
+            "w": 90,
+            "label": "CLERK",
+            "color": "pink",
+            "o": 0,
+            "size": 15
+          },
+          {
+            "id": "you",
+            "type": "stamp",
+            "x": 60,
+            "y": 240,
+            "w": 76,
+            "label": "YOU",
+            "color": "blue",
+            "size": 15
+          },
+          {
+            "id": "feel",
+            "type": "text",
+            "x": 470,
+            "y": 172,
+            "label": "\"I should buy something...\"",
+            "color": "pink",
+            "size": 21,
+            "o": 0
+          },
+          {
+            "id": "big",
+            "type": "card",
+            "x": 460,
+            "y": 220,
+            "w": 300,
+            "h": 100,
+            "label": "$24 of cheese",
+            "sub": "you did not want",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "buy",
+            "type": "arrow",
+            "x": 144,
+            "y": 272,
+            "x2": 452,
+            "y2": 272,
+            "color": "gold",
+            "o": 0,
+            "draw": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "A smiling clerk hands you a free sample.",
+            "dur": 2.4,
+            "set": {
+              "smp": {
+                "o": 1
+              },
+              "clk": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "You eat it. It was free.",
+            "dur": 2,
+            "set": {
+              "smp": {
+                "o": 0.45,
+                "sub": "eaten"
+              }
+            }
+          },
+          {
+            "say": "Now you feel you owe them.",
+            "dur": 2.4,
+            "set": {
+              "feel": {
+                "o": 1
+              },
+              "you": {
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "You buy $24 of cheese you did not need.",
+            "dur": 2.6,
+            "set": {
+              "big": {
+                "o": 1
+              },
+              "buy": {
+                "o": 1,
+                "draw": 1
+              }
+            }
+          },
+          {
+            "say": "Small gift, big ask: the same move.",
+            "dur": 3.4,
+            "set": {
+              "smp": {
+                "o": 1,
+                "label": "Small favor",
+                "sub": "free trial, a pen, a dinner"
+              },
+              "clk": {
+                "label": "SELLER",
+                "size": 14
+              },
+              "big": {
+                "label": "The big ask",
+                "sub": "worth far more to them"
+              },
+              "feel": {
+                "label": "\"After all they did for me...\""
+              }
+            }
+          },
+          {
+            "say": "Say thanks, and decide fresh.",
+            "dur": 2.8,
+            "set": {
+              "feel": {
+                "label": "\"Thanks! No.\"",
+                "color": "green"
+              },
+              "buy": {
+                "o": 0
+              },
+              "big": {
+                "color": "dim"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "n": 12,
+      "title": "Authority",
+      "outcome": "Trust what someone has shown, not what they wear or what they are called.",
+      "why": "Following real experts saves time. But the signs of expertise, a coat, a title, a confident voice, are easy to wear, and people obey the signs even when the order is wrong.",
+      "reachesYou": "Actors in white coats in ads, \"doctor recommended\", the caller who says they are from your bank or the IRS, a confident guest on TV speaking outside their field.",
+      "do": "Next time someone is introduced as an expert, look up one thing they actually did in that field. If you cannot find one, treat the claim like anyone else's.",
+      "voices": [
+        "milgram",
+        "hofling"
+      ],
+      "scene": {
+        "analogy": "The actor in a lab coat in an ad",
+        "map": [
+          [
+            "the lab coat",
+            "a title, uniform or tone"
+          ],
+          [
+            "the pill",
+            "the claim"
+          ],
+          [
+            "what they did",
+            "the evidence to ask for"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "coat",
+            "type": "card",
+            "x": 40,
+            "y": 40,
+            "w": 250,
+            "h": 130,
+            "label": "Lab coat",
+            "sub": "stethoscope, kind smile",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "ad",
+            "type": "text",
+            "x": 560,
+            "y": 50,
+            "label": "\"Doctors trust this pill.\"",
+            "color": "pink",
+            "size": 22,
+            "o": 0
+          },
+          {
+            "id": "pill",
+            "type": "card",
+            "x": 460,
+            "y": 90,
+            "w": 300,
+            "h": 100,
+            "label": "Miracle pill",
+            "sub": "$59.99",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "you",
+            "type": "stamp",
+            "x": 120,
+            "y": 245,
+            "w": 76,
+            "label": "YOU",
+            "color": "blue",
+            "size": 15
+          },
+          {
+            "id": "buy",
+            "type": "arrow",
+            "x": 204,
+            "y": 270,
+            "x2": 520,
+            "y2": 198,
+            "color": "gold",
+            "o": 0,
+            "draw": 0
+          },
+          {
+            "id": "st",
+            "type": "stamp",
+            "x": 600,
+            "y": 225,
+            "w": 120,
+            "label": "TRUSTED",
+            "color": "pink",
+            "o": 0,
+            "s": 0.4,
+            "size": 16
+          }
+        ],
+        "beats": [
+          {
+            "say": "Someone in a lab coat, in an ad.",
+            "dur": 2.2,
+            "set": {
+              "coat": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "\"Doctors trust this pill.\"",
+            "dur": 2.2,
+            "set": {
+              "ad": {
+                "o": 1
+              },
+              "pill": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "You trust the coat. You buy.",
+            "dur": 2.4,
+            "set": {
+              "buy": {
+                "o": 1,
+                "draw": 1
+              },
+              "st": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "An actor. The coat is a costume.",
+            "dur": 2.6,
+            "set": {
+              "coat": {
+                "label": "Actor",
+                "sub": "paid to wear the coat",
+                "color": "gold",
+                "shake": true
+              },
+              "st": {
+                "label": "COSTUME",
+                "color": "gold"
+              }
+            }
+          },
+          {
+            "say": "Titles and uniforms work the same way.",
+            "dur": 3.4,
+            "set": {
+              "coat": {
+                "label": "The costume",
+                "sub": "title, uniform, tone"
+              },
+              "pill": {
+                "label": "The claim",
+                "sub": "still needs evidence"
+              },
+              "ad": {
+                "label": "\"Experts say...\""
+              }
+            }
+          },
+          {
+            "say": "Ask what they did, not what they wear.",
+            "dur": 2.8,
+            "set": {
+              "st": {
+                "label": "SHOW ME",
+                "color": "green"
+              },
+              "buy": {
+                "o": 0
+              },
+              "pill": {
+                "color": "dim"
+              }
+            }
+          }
+        ]
+      }
     }
   ],
   "voices": {
@@ -1985,7 +2542,7 @@
     "tversky": {
       "name": "Amos Tversky",
       "what": "Psychologist",
-      "did": "With Daniel Kahneman, described the availability shortcut (1973) and built prospect theory (1979), which measured that losses weigh about twice as much as equal gains."
+      "did": "With Daniel Kahneman, described the availability shortcut (1973), showed how framing flips choices (1981) and built prospect theory (1979), which measured that losses weigh about twice as much as equal gains."
     },
     "northcraft": {
       "name": "Gregory Northcraft and Margaret Neale",
@@ -2016,6 +2573,26 @@
       "name": "Brigitte Madrian",
       "what": "Economist",
       "did": "With Dennis Shea (2001), showed that when one company made retirement savings the default, joining went from about a third of new workers to most of them."
+    },
+    "mcneil": {
+      "name": "Barbara McNeil",
+      "what": "Physician and researcher",
+      "did": "In 1982 showed that doctors and patients chose surgery far more often when its risks were given as the chance of surviving than as the chance of dying, with the same numbers."
+    },
+    "regan": {
+      "name": "Dennis Regan",
+      "what": "Psychologist",
+      "did": "In 1971 had a stranger give people a free soda, then ask them to buy raffle tickets. They bought about twice as many as people given nothing, liked or not."
+    },
+    "milgram": {
+      "name": "Stanley Milgram",
+      "what": "Psychologist",
+      "did": "In 1963 showed that about two in three ordinary people kept giving what they believed were dangerous shocks when a calm man in a lab coat told them to go on."
+    },
+    "hofling": {
+      "name": "Charles Hofling",
+      "what": "Psychiatrist",
+      "did": "In 1966 had an unknown \"doctor\" phone hospital nurses to give twice the maximum dose of a drug. 21 of 22 nurses were stopped on the way to give it."
     }
   }
 }
