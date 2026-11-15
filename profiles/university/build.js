@@ -6,7 +6,11 @@ const fs = require('fs');
 const path = require('path');
 
 const DIR = __dirname;
-const OUT = path.join(DIR, 'site-preview');
+// --site builds the public copy for university.voidtv.net (Bryan, 15 Nov 2026: "Yes, deploy it") into site/,
+// without the draft badge; with no flag it builds the local preview.
+const LIVE = process.argv.includes('--site');
+const OUT = path.join(DIR, LIVE ? 'site' : 'site-preview');
+const DRAFT = LIVE ? '' : '<span class="draft">Draft for Bryan: nothing here is public</span>';
 const DONATE = 'https://square.link/u/dJioBmlW'; // CASH, one setting for this profile
 
 const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -208,7 +212,7 @@ details.more summary{cursor:pointer;color:var(--dim);font-size:15px;padding:6px 
 details.more summary:hover{color:var(--fg)}
 @media (max-width:1000px){.wrap{grid-template-columns:1fr}nav{position:static}nav{display:flex;flex-wrap:wrap;gap:4px}nav h4{width:100%}.row2{grid-template-columns:1fr}.hero ol{columns:1}}
 </style></head><body>
-<header><span class="logo">VOID <i>University</i></span><span class="tag">learn from people who did it</span><span class="courses">${others}</span><span class="draft">Draft for Bryan: nothing here is public</span></header>
+<header><span class="logo">VOID <i>University</i></span><span class="tag">learn from people who did it</span><span class="courses">${others}</span>${DRAFT}</header>
 <div class="wrap"><nav><h4>Units</h4>${toc}</nav><main>
 <div class="hero"><div class="dom">${esc(c.domain)} · a course we wrote</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>
 <details class="more"><summary>By the end you will be able to...</summary><ol>${c.outcomes.map((o) => '<li>' + esc(o) + '</li>').join('')}</ol></details></div>
@@ -269,7 +273,7 @@ h2{margin:26px 20px 10px;font-size:18px;font-family:Unbounded,system-ui,sans-ser
 .area b{display:block;font-size:16px}.area small{color:var(--dim);font-size:13px}
 footer{max-width:1500px;margin:0 auto;padding:30px 32px 40px;color:var(--dim);font-size:14px}
 </style></head><body>
-<header><span class="logo">VOID <i>University</i></span><span class="tag">learn from people who did it</span><span class="draft">Draft for Bryan: nothing here is public</span></header>
+<header><span class="logo">VOID <i>University</i></span><span class="tag">learn from people who did it</span>${DRAFT}</header>
 <div class="hero"><h1>Big ideas, shown with everyday things.</h1><p>Free, no account. Pick a course, or a short piece on how the mind works.</p></div>
 <main>${rows}
 <h2>Every area <small>more courses are on the way</small></h2><div class="areas">${tiles}</div></main>

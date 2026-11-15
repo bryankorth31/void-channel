@@ -657,3 +657,7 @@ learned "when they can say it another way".
 ### 15 Nov 2026: the domain
 
 B: "university.voidTv.net is a good use of this". The address is university.voidtv.net (decision 1 settled). Not deployed yet.
+
+### 15 Nov 2026: live
+
+B: "Yes, deploy it". Void University is live at https://university.voidtv.net as the Worker void-university (CASH account, custom domain). Build the public copy with node profiles/university/build.js --site (no draft badge), then from Bryan's terminal: npx.cmd --yes wrangler@4.151.0 deploy --config profiles/university/wrangler.jsonc. Pages ask for /name.html and get a redirect to /name (Workers assets default).

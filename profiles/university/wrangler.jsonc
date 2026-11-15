@@ -1,0 +1,11 @@
+// Void University at university.voidtv.net (Bryan, 15 Nov 2026: "Yes, deploy it").
+// A Worker that only serves the built files in ./site (build them with: node profiles/university/build.js --site).
+// It lives in the CASH Cloudflare account, which holds the voidtv.net zone. Run wrangler from Bryan's own terminal
+// (Claude's shell only sees the personal account): npx.cmd --yes wrangler@4.151.0 deploy, from this folder.
+{
+  "name": "void-university",
+  "account_id": "4548472a99b9105065b715b3848a4a12",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "./site", "not_found_handling": "404-page" },
+  "routes": [{ "pattern": "university.voidtv.net", "custom_domain": true }]
+}
