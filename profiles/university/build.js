@@ -90,6 +90,7 @@ function lab(u) {
     + '<div class="lab-body"><div class="lab-stage"><canvas></canvas></div><div class="lab-side"></div></div>'
     + '<div class="lab-tries"></div><div class="lab-rules"></div>'
     + (map ? '<div class="lab-map">' + map + '</div>' : '')
+    + (l.credit ? '<p class="lab-credit">' + esc(l.credit) + '</p>' : '')
     + '</div>';
 }
 
@@ -279,6 +280,7 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .lab-rules li.fresh{animation:labfound 1.6s ease}
 @keyframes labfound{0%{box-shadow:0 0 0 0 rgba(212,176,106,.9);transform:scale(1.015)}100%{box-shadow:0 0 0 18px rgba(212,176,106,0);transform:none}}
 .lab-meet{margin:12px 0 0;padding:12px 16px;border-left:3px solid var(--pink);background:#141c2e;border-radius:0 8px 8px 0;font-size:16px}
+.lab-credit{margin:12px 0 0;font-size:13px;color:var(--dim)}
 .lab-map{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:14px;font-size:15px;color:var(--dim)}.lab-map i{font-style:normal;color:#cfd2dc}.lab-map b{color:var(--acc)}
 @media (max-width:900px){.lab-body{grid-template-columns:1fr}.lab-stage{max-height:70vh}}
 .uses{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 14px}
@@ -292,7 +294,7 @@ details.more summary:hover{color:var(--fg)}
 </style></head><body>
 ${top(c.slug, all)}
 <div class="wrap"><nav><h4>Units</h4>${toc}</nav><main>
-<div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug)});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)} · ${c.kind === 'found' ? 'built from a free course' : 'a course we wrote'}</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>${c.source ? '<p class="src">From <a href="' + esc(c.source.url) + '" target="_blank" rel="noopener">' + esc(c.source.title) + '</a>, ' + esc(c.source.by) + '. ' + esc(c.source.licence) + '.' + (c.planned ? ' ' + c.units.length + ' of ' + c.planned + ' lectures ready so far.' : '') + '</p>' : ''}<p class="lv">${LEVELS(c)}</p>
+<div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)} · ${c.kind === 'found' ? 'built from a free course' : 'a course we wrote'}</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>${c.source ? '<p class="src">From <a href="' + esc(c.source.url) + '" target="_blank" rel="noopener">' + esc(c.source.title) + '</a>, ' + esc(c.source.by) + '. ' + esc(c.source.licence) + '.' + (c.planned ? ' ' + c.units.length + ' of ' + c.planned + ' lectures ready so far.' : '') + '</p>' : ''}<p class="lv">${LEVELS(c)}</p>
 <details class="more"><summary>By the end you will be able to...</summary><ol>${c.outcomes.map((o) => '<li>' + esc(o) + '</li>').join('')}</ol></details></div>
 ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this course</h3><div class="chans">' + c.channels.map(chan).join('') + '</div>' : ''}
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
@@ -368,7 +370,7 @@ function chan(x) {
 function home(all, list) {
   const full = all.filter((c) => c.shelf !== 'supplement');
   const sup = all.filter((c) => c.shelf === 'supplement');
-  const card = (c) => '<a class="card course" data-lv="' + esc((c.levels || []).join('|')) + '" href="' + esc(c.slug) + '.html"><div class="ph"><img src="' + (img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))) + '" alt=""></div><div class="t"><small>' + esc(c.domain) + ' · ' + (c.planned ? c.units.length + ' of ' + c.planned + ' units' : c.units.length + ' units') + '</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
+  const card = (c) => '<a class="card course" data-lv="' + esc((c.levels || []).join('|')) + '" href="' + esc(c.slug) + '.html"><div class="ph"><img src="' + (img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))) + '" alt=""></div><div class="t"><small>' + esc(c.domain) + ' · ' + (c.planned ? c.units.length + ' of ' + c.planned + ' units' : c.units.length + (c.units.length === 1 ? ' unit' : ' units')) + '</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
   const mini = (c, u) => '<a class="card mini" href="' + esc(c.slug) + '.html#u' + u.n + '"><div class="ph"><img loading="lazy" src="' + img('m' + u.n) + '" alt=""></div><div class="t"><b>' + esc(u.title) + '</b><span>' + esc(u.scene ? u.scene.analogy : '') + '</span></div></a>';
   const row = (title, note, cards) => '<section class="row"><h2><span>' + esc(title) + '</span>' + (note ? '<small>' + esc(note) + '</small>' : '') + '</h2><div class="rowwrap"><button class="arrow l" aria-label="Back">&#8249;</button><div class="track">' + cards + '</div><button class="arrow r" aria-label="More">&#8250;</button></div></section>';
   const seen = new Set();

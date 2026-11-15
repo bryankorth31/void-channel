@@ -1,0 +1,158 @@
+{
+  "slug": "boundary",
+  "name": "How a self holds together",
+  "domain": "Mind",
+  "kind": "authored",
+  "status": "draft",
+  "draftedBy": "Claude, 15 Nov 2026, from Bryan's boundary, predict, act, aware framework in the Mind Atlas. The name, every line and the model's rules are a draft for Bryan to keep, change or strike.",
+  "levels": [
+    "young adults",
+    "everyday"
+  ],
+  "why": "A self is not a thing you have. It is an edge you keep up: between you and everything else, paid for with energy, and kept useful by guessing what comes next. See how that edge works and a lot of ordinary life makes sense, from a good week to a week when the world shrinks to the next hour.",
+  "outcomes": [
+    "See a self as an edge that has to be paid for.",
+    "Say why what you can sense and plan for grows and shrinks with what you have to spend.",
+    "Tell a world that is short from a world that is unsteady, and what each one costs."
+  ],
+  "units": [
+    {
+      "n": 1,
+      "title": "An edge that has to be paid for",
+      "outcome": "See a self as an edge that costs energy to hold, and say what makes it grow or pull in.",
+      "needIt": "How far ahead you can see and plan is not fixed. It grows and shrinks with what you have to spend, and with how well your guesses about the world hold up.",
+      "why": "Every living thing, from one cell to a person to a town, keeps an inside apart from an outside. Keeping that edge up takes energy. What the edge lets it do is sense what is coming, guess where it will land, and meet it. When the guesses hold, more comes in than the edge costs, and it can afford to reach further. When they fail, or there is too little to go round, the edge pulls in.",
+      "reachesYou": "A week with enough sleep and enough money, you can think about next year. A week with neither, you can only deal with what is in front of you. That is not a flaw in you. It is the edge being paid for with less.",
+      "lab": {
+        "bench": "boundary",
+        "title": "The edge",
+        "ask": "This is one small self. The dashed ring is how far out it can sense. Gold is food, pink is harm, and it has one gate to meet them with. Choose its world, guess what its edge will do, then watch.",
+        "go": "Let it live",
+        "credit": "A model of Bryan Korth's boundary, predict, act, aware loop. The reach is drawn after Michael Levin's idea of a cognitive light cone. It is a model to think with.",
+        "guess": {
+          "ask": "First, your guess. In this world, what will its reach do?"
+        },
+        "triesNote": "each strip is its reach over the whole run, all on one scale",
+        "knobs": [
+          {
+            "id": "give",
+            "label": "If the world gives",
+            "options": [
+              {
+                "v": "plenty",
+                "label": "Plenty"
+              },
+              {
+                "v": "little",
+                "label": "Little"
+              }
+            ]
+          },
+          {
+            "id": "world",
+            "label": "and the world is",
+            "options": [
+              {
+                "v": "steady",
+                "label": "Steady"
+              },
+              {
+                "v": "surprise",
+                "label": "Full of surprises"
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "if": "the world gives plenty and stays steady,",
+            "then": "its predictions land, more comes in than the edge costs, and its reach grows. A wider reach senses things sooner, which makes the next catch easier.",
+            "when": {
+              "knob": {
+                "give": "plenty",
+                "world": "steady"
+              }
+            }
+          },
+          {
+            "if": "the world gives little,",
+            "then": "it cannot pay for a wide edge, so it pulls in. A smaller reach senses things later, with less time to turn, so it loses more of the little there is.",
+            "when": {
+              "knob": {
+                "give": "little",
+                "world": "steady"
+              }
+            }
+          },
+          {
+            "if": "the world gives plenty but is full of surprises,",
+            "then": "things swerve after it has predicted them. Each white flash is a prediction caught out, and each one is paid for. Put this strip beside your steady one: the same plenty buys a smaller reach.",
+            "when": {
+              "knob": {
+                "give": "plenty",
+                "world": "surprise"
+              }
+            }
+          },
+          {
+            "if": "the world gives little and is full of surprises,",
+            "then": "it pulls in toward its body. Close in there is almost no time to predict, so what arrives is simply met or missed.",
+            "when": {
+              "knob": {
+                "give": "little",
+                "world": "surprise"
+              }
+            }
+          }
+        ],
+        "map": [
+          [
+            "the dashed ring",
+            "your boundary: how far out you can sense and care"
+          ],
+          [
+            "a dashed line",
+            "a prediction"
+          ],
+          [
+            "a white flash",
+            "the gap between your prediction and what happened"
+          ],
+          [
+            "the gate",
+            "an action: you can meet one thing at a time"
+          ],
+          [
+            "the gold inside",
+            "the energy that pays for all of it"
+          ]
+        ],
+        "meet": "Where you meet this: a week with enough sleep and money, when you can plan months ahead. A week with neither, when only the next hour is real. A job or a home where the rules keep changing, which wears you out even when nothing is short.",
+        "draftedBy": "Claude, 15 Nov 2026: a draft for Bryan to keep, change or strike."
+      },
+      "do": "Notice one day this week when your world felt small and only the next hour mattered. Ask what was short that day: sleep, money, time, or a world that kept changing on you.",
+      "voices": [
+        "korth",
+        "levin",
+        "friston"
+      ]
+    }
+  ],
+  "voices": {
+    "korth": {
+      "name": "Bryan Korth",
+      "what": "Builder of this model",
+      "did": "Worked out the boundary, predict, act, aware loop over years of his own notes, and built Void University."
+    },
+    "levin": {
+      "name": "Michael Levin",
+      "what": "Biologist at Tufts University",
+      "did": "Showed that groups of cells use electrical signals to agree on what body to build and rebuild, and gave the name cognitive light cone to how far in space and time a living thing can pursue a goal."
+    },
+    "friston": {
+      "name": "Karl Friston",
+      "what": "Neuroscientist at University College London",
+      "did": "Proposed the free energy principle: that living things stay alive by keeping the gap between what they predict and what they sense small."
+    }
+  }
+}

@@ -76,9 +76,9 @@
 
     const label = (kn) => cfg.knobs.map((k) => (k.options.find((o) => o.v === kn[k.id]) || {}).label).join(' · ');
     function thumb(r) {
-      const c = el('canvas'); c.width = 132; c.height = 60; const x = c.getContext('2d'), n = r.bars.length, top = Math.max.apply(null, r.bars) || 1, bw = 132 / n;
+      const c = el('canvas'); c.width = 132; c.height = 60; const x = c.getContext('2d'), n = r.bars.length, top = r.barTop || Math.max.apply(null, r.bars) || 1, bw = 132 / n;
       x.fillStyle = '#efe9dc'; r.bars.forEach((v, i) => { const h = Math.max(v ? 2 : 0, v / top * 54); x.fillRect(i * bw + 1, 60 - h, bw - 2, h); });
-      x.fillStyle = '#d4b06a'; x.fillRect(r.mid * bw + bw / 2 - 1, 0, 2, 60); // the bench's marker line, drawn over the bars so it always shows
+      if (r.mid != null) { x.fillStyle = '#d4b06a'; x.fillRect(r.mid * bw + bw / 2 - 1, 0, 2, 60); } // the bench's marker line, drawn over the bars so it always shows
       if (r.guessBar != null) { const gx = r.guessBar * bw + bw / 2; x.fillStyle = '#e08a8f'; x.beginPath(); x.moveTo(gx - 6, 0); x.lineTo(gx + 6, 0); x.lineTo(gx, 10); x.closePath(); x.fill(); } // the learner's guess
       return c;
     }

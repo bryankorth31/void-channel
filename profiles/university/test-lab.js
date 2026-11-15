@@ -58,4 +58,22 @@ assert.strictEqual(peg.guess.gap(6, { peak: 4 }), 'You guessed 2 bins away from 
 assert.strictEqual(lever.guess.gap(2, lv), 'You guessed 1 or 2. Your hand did 7.');
 assert.strictEqual(lever.guess.bar(5, lv), lv.paid + 4.5);
 assert.strictEqual(lever.guess.gap(2, { counts: false }), '', 'no gap is claimed for a try that left early');
+
+// The boundary: same seed same run, and the four worlds behave the way the lab's rules say, seed after seed.
+const bd = require('./lab-boundary.js');
+assert.deepStrictEqual(bd.run(pl, { give: 'plenty', world: 'surprise' }, 2).bars, bd.run(pl, { give: 'plenty', world: 'surprise' }, 2).bars, 'boundary: same seed, same run');
+assert.strictEqual(bd.hitAngle(5, 0, -1, 0), 0, 'a thing coming straight in from the right touches at angle 0');
+assert.strictEqual(bd.hitAngle(5, 3, -1, 0), null, 'a thing passing wide touches nothing');
+const ends = {};
+for (let seed = 1; seed <= 12; seed++) {
+  const ps = bd.run(pl, { give: 'plenty', world: 'steady' }, seed), px = bd.run(pl, { give: 'plenty', world: 'surprise' }, seed);
+  const ls = bd.run(pl, { give: 'little', world: 'steady' }, seed), lx = bd.run(pl, { give: 'little', world: 'surprise' }, seed);
+  assert.strictEqual(ps.trend, 'grow', 'plenty and steady: the reach grows (seed ' + seed + ', end ' + ps.end + ')');
+  assert.strictEqual(ls.trend, 'shrink', 'little: the reach pulls in (seed ' + seed + ', end ' + ls.end + ')');
+  assert.strictEqual(lx.trend, 'shrink', 'little and surprises: the reach pulls in (seed ' + seed + ', end ' + lx.end + ')');
+  assert.ok(px.end < ps.end - 0.5, 'surprises: the same plenty buys a smaller reach (seed ' + seed + ': ' + px.end + ' against ' + ps.end + ')');
+  assert.ok(px.gaps > ps.gaps + 5, 'surprises catch its predictions out far more often');
+  assert.strictEqual(ps.bars.length, 24);
+}
+console.log('boundary  :', bd.run(pl, { give: 'plenty', world: 'steady' }, 1).say);
 console.log('lab checks passed');
