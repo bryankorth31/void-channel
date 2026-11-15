@@ -1,0 +1,51 @@
+{
+  "slug": "minds-mechanisms",
+  "name": "The mind's mechanisms",
+  "domain": "Mind",
+  "kind": "authored",
+  "status": "draft",
+  "draftedBy": "Claude, 15 Nov 2026, from Bryan's words the same day: \"sunk cost fallacies cognitive dissonance et cetera ... people don't know how these affect things. These mechanisms are so vital for so much.\" The draft list is docs/MIND-MECHANISMS-draft.md. Every line here waits for Bryan to keep, change or strike.",
+  "why": "Your mind runs on shortcuts. Most of the time they help. Some of them cost you money, time and years, and the people selling to you know them better than you do.",
+  "outcomes": [
+    "Spot the sunk cost trap, and choose by what is ahead instead of what is already spent."
+  ],
+  "units": [
+    {
+      "n": 1,
+      "title": "Sunk cost",
+      "outcome": "Spot the sunk cost trap, and choose by what is ahead instead of what is already spent.",
+      "why": "Money, time and effort you already spent are gone whichever way you choose. Letting them pick for you means paying again for something already lost.",
+      "reachesYou": "The car you keep fixing, the job you stay in because of the years you put in, the course you finish though it stopped helping, the plate you clean though you are full.",
+      "do": "Pick one thing you keep doing mostly because of what you already put in. Ask: if I were starting fresh today, with nothing spent, would I choose this? Write the answer down.",
+      "voices": ["thaler", "arkes"],
+      "scene": {
+        "analogy": "Staying through a bad movie because you paid",
+        "map": [["the ticket", "what you already spent"], ["staying to \"not waste it\"", "paying again for what is gone"], ["the exit", "the choice still open"]],
+        "actors": [
+          { "id": "tk", "type": "card", "x": 30, "y": 30, "w": 200, "h": 96, "label": "Ticket", "sub": "$15, already paid", "color": "gold", "o": 0 },
+          { "id": "film", "type": "card", "x": 270, "y": 30, "w": 300, "h": 140, "label": "The movie", "sub": "", "color": "dim", "o": 0 },
+          { "id": "think", "type": "text", "x": 400, "y": 205, "label": "\"I paid for it, so I'll stay.\"", "color": "pink", "size": 22, "o": 0 },
+          { "id": "you", "type": "stamp", "x": 120, "y": 240, "w": 76, "label": "YOU", "color": "blue", "size": 15 },
+          { "id": "time", "type": "card", "x": 270, "y": 240, "w": 170, "h": 90, "label": "0:30", "sub": "of your night", "color": "dim", "o": 0 },
+          { "id": "exit", "type": "card", "x": 620, "y": 200, "w": 150, "h": 130, "label": "Exit", "color": "green", "o": 0 },
+          { "id": "go", "type": "arrow", "x": 200, "y": 300, "x2": 612, "y2": 300, "color": "green", "o": 0, "draw": 0 },
+          { "id": "st", "type": "stamp", "x": 640, "y": 20, "w": 120, "label": "SUNK", "color": "gold", "o": 0, "s": 0.4, "size": 18 }
+        ],
+        "beats": [
+          { "say": "You pay $15 for a movie.", "dur": 2, "set": { "tk": { "o": 1 } } },
+          { "say": "Thirty minutes in, it is bad.", "dur": 2.2, "set": { "film": { "o": 1, "sub": "boring... still boring", "color": "gold", "shake": true }, "time": { "o": 1 } } },
+          { "say": "\"I paid, so I'll stay.\"", "dur": 2.4, "set": { "think": { "o": 1 } } },
+          { "say": "Two more hours gone.", "dur": 2.4, "set": { "time": { "label": "2:30", "color": "gold", "shake": true }, "tk": { "sub": "gone either way" }, "st": { "o": 1, "s": 1 } } },
+          { "say": "The $15 was gone either way.", "dur": 2.4, "set": { "think": { "o": 0 }, "tk": { "shake": true }, "exit": { "o": 1 } } },
+          { "say": "The only real choice: what comes next.", "dur": 2.4, "set": { "go": { "o": 1, "draw": 1 }, "time": { "label": "0:30", "color": "dim" } } },
+          { "say": "Jobs, cars, deals: same trap.", "dur": 3.4, "set": { "tk": { "label": "Already spent", "sub": "money, years, pride", "size": 20 }, "film": { "label": "The bad deal", "sub": "the job, the car, the plan" }, "time": { "label": "More of you", "sub": "time, money, life", "size": 20 }, "exit": { "label": "Walk away", "size": 20 } } },
+          { "say": "Spent is spent. Choose what's ahead.", "dur": 2.8, "set": { "st": { "label": "LOOK AHEAD", "color": "green", "size": 15 }, "you": { "x": 525, "y": 227 }, "go": { "o": 0 } } }
+        ]
+      }
+    }
+  ],
+  "voices": {
+    "thaler": { "name": "Richard Thaler", "what": "Economist", "did": "Described the sunk cost trap in everyday spending in 1980 and won the 2017 Nobel prize for showing how people really decide." },
+    "arkes": { "name": "Hal Arkes", "what": "Psychologist", "did": "With Catherine Blumer in 1985, showed that theatergoers who paid full price for season tickets went to more plays than those given a discount: the money already spent pulled them back." }
+  }
+}

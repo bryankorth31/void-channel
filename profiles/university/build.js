@@ -81,7 +81,7 @@ function unit(u, voices, c) {
   return '<section class="unit" id="u' + u.n + '">'
     + '<div class="uh"><span class="n">' + u.n + '</span><div><h2>' + esc(u.title) + '</h2></div></div>'
     + scene(u)
-    + '<div class="pieces">' + piece(u.main, true) + '</div>'
+    + (u.main ? '<div class="pieces">' + piece(u.main, true) + '</div>' : '')
     + crystal(c, u)
     + '<details class="more"><summary>More: why it matters, what else to watch, read and do, who teaches it</summary>'
     + '<div class="out">You will be able to: ' + esc(u.outcome) + '</div>'
@@ -94,7 +94,8 @@ function unit(u, voices, c) {
     + '</section>';
 }
 
-function page(c) {
+function page(c, all) {
+  const others = all.map((o) => o.slug === c.slug ? '<b>' + esc(o.name) + '</b>' : '<a href="' + esc(o.slug) + '.html">' + esc(o.name) + '</a>').join('');
   const toc = c.units.map((u) => '<a href="#u' + u.n + '"><span>' + u.n + '</span>' + esc(u.title) + '</a>').join('');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(c.name)} · Void University</title>
@@ -107,6 +108,9 @@ a{color:var(--acc)}
 header{display:flex;align-items:baseline;gap:16px;padding:18px 32px;border-bottom:1px solid var(--line)}
 header .logo{font-family:Unbounded,system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.02em}
 header .logo i{font-style:normal;color:var(--acc)}header .tag{color:var(--dim);font-size:14px}
+.courses{display:flex;gap:6px;margin-left:24px;flex-wrap:wrap}
+.courses a,.courses b{font-size:14px;padding:4px 12px;border-radius:999px;text-decoration:none;border:1px solid var(--line)}
+.courses a{color:var(--dim)}.courses a:hover{color:var(--fg);border-color:var(--acc)}.courses b{color:var(--acc);border-color:rgba(95,212,255,.45);font-weight:600}
 .draft{margin-left:auto;font-size:13px;color:var(--gold);border:1px solid #4a3a1e;padding:4px 10px;border-radius:999px}
 .wrap{display:grid;grid-template-columns:260px 1fr;gap:32px;max-width:1500px;margin:0 auto;padding:28px 32px}
 nav{position:sticky;top:20px;align-self:start}
@@ -187,7 +191,7 @@ details.more summary{cursor:pointer;color:var(--dim);font-size:15px;padding:6px 
 details.more summary:hover{color:var(--fg)}
 @media (max-width:1000px){.wrap{grid-template-columns:1fr}nav{position:static}nav{display:flex;flex-wrap:wrap;gap:4px}nav h4{width:100%}.row2{grid-template-columns:1fr}.hero ol{columns:1}}
 </style></head><body>
-<header><span class="logo">VOID <i>University</i></span><span class="tag">learn from people who did it</span><span class="draft">Draft for Bryan: nothing here is public</span></header>
+<header><span class="logo">VOID <i>University</i></span><span class="tag">learn from people who did it</span><span class="courses">${others}</span><span class="draft">Draft for Bryan: nothing here is public</span></header>
 <div class="wrap"><nav><h4>Units</h4>${toc}</nav><main>
 <div class="hero"><div class="dom">${esc(c.domain)} · a course we wrote</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>
 <details class="more"><summary>By the end you will be able to...</summary><ol>${c.outcomes.map((o) => '<li>' + esc(o) + '</li>').join('')}</ol></details></div>
@@ -203,12 +207,13 @@ fs.mkdirSync(OUT, { recursive: true });
 fs.copyFileSync(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
 fs.copyFileSync(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
 const courses = fs.readdirSync(path.join(DIR, 'courses')).filter((f) => f.endsWith('.json'));
-for (const f of courses) {
-  const c = JSON.parse(fs.readFileSync(path.join(DIR, 'courses', f), 'utf8'));
-  const html = page(c);
+const loaded = courses.map((f) => JSON.parse(fs.readFileSync(path.join(DIR, 'courses', f), 'utf8')))
+  .sort((a, b) => (a.slug === 'critical-thinking' ? -1 : b.slug === 'critical-thinking' ? 1 : 0));
+for (const c of loaded) {
+  const html = page(c, loaded);
   fs.writeFileSync(path.join(OUT, c.slug + '.html'), html);
   if (courses.length === 1 || c.slug === 'critical-thinking') fs.writeFileSync(path.join(OUT, 'index.html'), html);
-  const n = c.units.reduce((a, u) => a + 1 + (u.companions || []).length, 0);
-  const held = c.units.reduce((a, u) => a + [u.main, ...(u.companions || [])].filter((p) => p.hold).length, 0);
+  const n = c.units.reduce((a, u) => a + (u.main ? 1 : 0) + (u.companions || []).length, 0);
+  const held = c.units.reduce((a, u) => a + [u.main, ...(u.companions || [])].filter((p) => p && p.hold).length, 0);
   console.log(c.slug + ': ' + c.units.length + ' units, ' + n + ' pieces (' + held + ' on hold) -> ' + path.relative(process.cwd(), path.join(OUT, c.slug + '.html')));
 }

@@ -1,6 +1,21 @@
 {
-  "types": ["Mind"],
+  "types": [
+    "Mind"
+  ],
   "courses": [
-    { "slug": "critical-thinking", "name": "Critical thinking", "type": "Mind", "kind": "authored", "status": "draft" }
+    {
+      "slug": "critical-thinking",
+      "name": "Critical thinking",
+      "type": "Mind",
+      "kind": "authored",
+      "status": "draft"
+    },
+    {
+      "slug": "minds-mechanisms",
+      "name": "The mind's mechanisms",
+      "type": "Mind",
+      "kind": "authored",
+      "status": "draft"
+    }
   ]
 }
