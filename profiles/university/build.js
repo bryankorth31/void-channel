@@ -79,6 +79,20 @@ function scene(u) {
     + '</div>';
 }
 
+// The lab: something to put your hands on (lab.js; Bryan, 15 Nov 2026: "interactive teaching, analogous teaching,
+// If This Then That labs"). Knobs are the IF, the bench answers, and each rule's THEN shows only once you made it happen.
+function lab(u) {
+  const l = u.lab; if (!l) return '';
+  const map = (l.map || []).map(([a, z]) => '<span><i>' + esc(a) + '</i> = <b>' + esc(z) + '</b></span>').join('');
+  const cfg = { bench: l.bench, go: l.go, knobs: l.knobs, rules: l.rules, meet: l.meet };
+  return '<div class="lab" data-lab="' + esc(JSON.stringify(cfg)) + '">'
+    + '<div class="lab-top"><span class="lab-kick">Lab · if this, then that</span><b>' + esc(l.title) + '</b><p>' + esc(l.ask) + '</p></div>'
+    + '<div class="lab-body"><div class="lab-stage"><canvas></canvas></div><div class="lab-side"></div></div>'
+    + '<div class="lab-tries"></div><div class="lab-rules"></div>'
+    + (map ? '<div class="lab-map">' + map + '</div>' : '')
+    + '</div>';
+}
+
 // Bryan, 15 Nov 2026: "less words". A unit shows its picture, its main piece and its crystal; the rest is one tap away.
 // The mind's mechanisms are a supplement shelf (Bryan, 15 Nov 2026: "the smaller ones like the FOMO ... are
 // supplemental that go for anything"). Any unit lists the mechanisms it leans on; the mechanism shows where it is used.
@@ -116,6 +130,7 @@ function unit(u, voices, c) {
     + '<p class="need"><b>Why you need this:</b> ' + esc(needIt(u)) + '</p>'
     + scene(u)
     + links(u, c)
+    + lab(u)
     + (u.main ? '<div class="pieces">' + piece(u.main, true) + '</div>' : '')
     + chapters(u)
     + quiz(u)
@@ -230,6 +245,36 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .sc-dots button.on{background:var(--acc);border-color:var(--acc)}
 .sc-map{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:12px;font-size:15px;color:var(--dim);opacity:.35;transition:opacity .8s}
 .sc.done .sc-map{opacity:1}.sc-map i{font-style:normal;color:#cfd2dc}.sc-map b{color:var(--acc)}
+.lab{background:#0a101c;border:1px solid rgba(212,176,106,.45);border-radius:12px;padding:16px 18px 18px;margin:0 0 18px}
+.lab-kick{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:700}
+.lab-top b{display:block;font-family:Fraunces,Georgia,serif;font-size:24px;font-weight:600;margin:2px 0}
+.lab-top p{margin:0 0 12px;color:#cfd2dc;font-size:16px;max-width:820px}
+.lab-body{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,1fr);gap:18px;align-items:start}
+.lab-stage{border-radius:10px;background:radial-gradient(ellipse at center,#0e1a24 0%,#07090f 75%);aspect-ratio:1/1;max-height:560px;overflow:hidden}
+.lab-stage canvas{display:block;width:100%;height:100%}
+.lab-side{display:flex;flex-direction:column;gap:14px}
+.lab-knob>span{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600;margin-bottom:6px}
+.lab-seg{display:flex;flex-wrap:wrap;gap:8px}
+.lab-seg button{font:inherit;font-size:16px;min-height:44px;min-width:64px;background:var(--panel2);color:var(--fg);border:1px solid #2c3550;border-radius:10px;padding:8px 16px;cursor:pointer}
+.lab-seg button:hover{border-color:var(--gold)}.lab-seg button.on{border-color:var(--gold);color:var(--ink);background:var(--gold);font-weight:600}
+.lab.running .lab-seg button{opacity:.5;cursor:default}
+.lab-go{font:inherit;font-size:18px;font-weight:600;min-height:52px;background:var(--gold);color:var(--ink);border:0;border-radius:10px;padding:10px 22px;cursor:pointer;align-self:start}
+.lab-go:disabled{opacity:.45;cursor:default}
+.lab-say{font-family:Fraunces,Georgia,serif;font-size:20px;line-height:1.35;min-height:54px}
+.lab-h{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600;margin:16px 0 8px}
+.lab-strip{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px}
+.lab-strip figure{margin:0;flex:none;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 8px 6px}
+.lab-strip canvas{display:block;width:132px;height:60px}.lab-strip figcaption{font-size:12px;color:var(--dim);margin-top:4px;text-align:center}
+.lab-rules ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.lab-rules li{padding:10px 14px;border-radius:10px;border:1px dashed #2c3550;font-size:16px;color:#aab0c2}
+.lab-rules li b{color:var(--gold);font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.08em}
+.lab-rules li i{color:var(--dim)}
+.lab-rules li.found{border-style:solid;border-color:rgba(212,176,106,.6);color:var(--fg);background:#141c2e}
+.lab-rules li.fresh{animation:labfound 1.6s ease}
+@keyframes labfound{0%{box-shadow:0 0 0 0 rgba(212,176,106,.9);transform:scale(1.015)}100%{box-shadow:0 0 0 18px rgba(212,176,106,0);transform:none}}
+.lab-meet{margin:12px 0 0;padding:12px 16px;border-left:3px solid var(--pink);background:#141c2e;border-radius:0 8px 8px 0;font-size:16px}
+.lab-map{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:14px;font-size:15px;color:var(--dim)}.lab-map i{font-style:normal;color:#cfd2dc}.lab-map b{color:var(--acc)}
+@media (max-width:900px){.lab-body{grid-template-columns:1fr}.lab-stage{max-height:70vh}}
 .uses{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 14px}
 .uses span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600;margin-right:4px}
 .uses a{font-size:14px;padding:4px 12px;border-radius:999px;text-decoration:none;color:var(--pink);border:1px solid rgba(255,79,200,.35);background:#1a0f19}
@@ -247,7 +292,7 @@ ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this cou
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
 </main></div>
 ${FOOT()}
-<script src="crystal.js"></script><script src="scene.js"></script>
+<script src="crystal.js"></script><script src="scene.js"></script>${c.units.some((u) => u.lab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter((u) => u.lab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}
 <script>
 function seek(el, t) {
   var v = el.closest('.unit').querySelector('video'); if (!v) return;
@@ -395,12 +440,14 @@ function credits(all) {
   const rows = Object.keys(IMG).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Photo credits · Void University</title>${FONTS}<style>${BASE}
 main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:Fraunces,Georgia,serif}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}</style></head><body>
-${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table></main>${FOOT()}</body></html>`;
+${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table><h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p></main>${FOOT()}</body></html>`;
 }
 
 fs.mkdirSync(OUT, { recursive: true });
 fs.copyFileSync(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
 fs.copyFileSync(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
+for (const f of ['lab.js', 'lab-pegboard.js']) fs.copyFileSync(path.join(DIR, f), path.join(OUT, f));
+for (const f of ['planck.min.js', 'planck-LICENSE.txt']) fs.copyFileSync(path.join(DIR, 'vendor', f), path.join(OUT, f));
 const courses = fs.readdirSync(path.join(DIR, 'courses')).filter((f) => f.endsWith('.json'));
 const loaded = courses.map((f) => JSON.parse(fs.readFileSync(path.join(DIR, 'courses', f), 'utf8')))
   .sort((a, b) => (a.slug === 'critical-thinking' ? -1 : b.slug === 'critical-thinking' ? 1 : 0));

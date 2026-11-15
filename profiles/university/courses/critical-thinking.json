@@ -801,6 +801,109 @@
           }
         ]
       },
+      "lab": {
+        "bench": "pegboard",
+        "title": "The chance machine",
+        "ask": "Every ball is one thing counted. Every peg is a bit of chance that nudges it. Change how many you count and how the board sits, and watch what the pile can and cannot tell you.",
+        "go": "Drop them",
+        "knobs": [
+          {
+            "id": "n",
+            "label": "If I count",
+            "options": [
+              {
+                "v": 10,
+                "label": "10"
+              },
+              {
+                "v": 50,
+                "label": "50"
+              },
+              {
+                "v": 500,
+                "label": "500"
+              }
+            ]
+          },
+          {
+            "id": "tilt",
+            "label": "and the board is",
+            "options": [
+              {
+                "v": 0,
+                "label": "Level"
+              },
+              {
+                "v": 8,
+                "label": "Tilted"
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "if": "you count only 10 on a level board, and then count 10 again,",
+            "then": "the pile changes shape every time. A small count can say almost anything.",
+            "when": {
+              "knob": {
+                "n": 10,
+                "tilt": 0
+              },
+              "times": 2
+            }
+          },
+          {
+            "if": "you count 500 on a level board,",
+            "then": "a hill appears with its top on the middle. Do it again and you get the same hill. Counting many is what makes a number steady.",
+            "when": {
+              "knob": {
+                "n": 500,
+                "tilt": 0
+              }
+            }
+          },
+          {
+            "if": "you tilt the board and count 500,",
+            "then": "the whole hill moves over, smooth and sure of itself. Counting more did not fix it. A crooked way of counting stays crooked at any size.",
+            "when": {
+              "knob": {
+                "n": 500,
+                "tilt": 8
+              }
+            }
+          },
+          {
+            "if": "you tilt the board and count only 10,",
+            "then": "it looks like any other small pile. Look at your level tries: they were lopsided too. A small count cannot even show you the board is crooked.",
+            "when": {
+              "knob": {
+                "n": 10,
+                "tilt": 8
+              }
+            }
+          }
+        ],
+        "map": [
+          [
+            "a ball",
+            "one person asked, one thing counted"
+          ],
+          [
+            "a peg",
+            "a bit of chance"
+          ],
+          [
+            "the pile",
+            "the number in the headline"
+          ],
+          [
+            "the tilt",
+            "a crooked way of counting"
+          ]
+        ],
+        "meet": "Where you meet this: a product rated 5 stars by 9 buyers. A poll of people who chose to answer. \"Works for 4 out of 5\", of how many? Ask how many were counted, and how they were picked.",
+        "draftedBy": "Claude, 15 Nov 2026: a draft for Bryan to keep, change or strike."
+      },
       "mechanisms": [
         5,
         10

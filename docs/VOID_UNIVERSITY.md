@@ -675,3 +675,14 @@ B, same day: "there's a whole bunch of other things that can be learned that are
 ### 15 Nov 2026: three audiences, and "why do I need to know it"
 
 B: "things that are appropriate for high school students and things that are appropriate for young adults and things that are appropriate for adults that aren't going to get a job in these fields but useful bits of these informations of these topics for everyday life ... so many times I'm told by people it's cool but why do I need to know it ... learning about the world and learning about yourself and learning about other people and how they think and how things work is informative to every area of their life in decision making". So: every course and unit is tagged for high school, young adults and everyday adults; every unit answers "why you need this" up front, before anything else.
+
+### 15 Nov 2026: labs (If This Then That)
+
+B: "void TV University needs to be interactive teaching analogous teaching If This Then That labs digital advantage in in every teaching area that we can supply from the stuff that we have". He also asked for the physics games from Void TV Kids to come into the University.
+- **One lab engine** (`profiles/university/lab.js`), the same way crystal.js and scene.js are one engine each. A unit carries a `lab` block: `bench`, `title`, `ask`, `go`, `knobs` (the IF: what the learner changes), `rules` (each an `if`, a `then` and a `when` that says which knob settings, how many times, count as having made it happen), `map` (the one-to-one analogy) and `meet` (where you meet this in life).
+- **How it teaches:** nothing is told first. Each rule shows its IF as a partial; its THEN appears only after the learner made it happen. Every run is kept as a small picture, side by side, so they compare their own tries. No score. Change one thing, run it again.
+- **Benches** are small files that register with the engine (`lab-<name>.js`). First bench: `pegboard` (balls through pegs into bins). Movement is Planck.js 1.5.1 (MIT), University's own copy in `profiles/university/vendor/`, the same library the kids make-it game uses; fixed steps and a seeded start, so the same run gives the same pile. Credited on credits.html.
+- **First lab:** The chance machine, Critical thinking unit 3. Knobs: count 10, 50 or 500; board level or tilted. Four rules to find: ten says almost anything; 500 makes a steady hill; a tilted board moves the whole hill and counting more does not fix it; ten cannot even show the tilt. Words are a draft in Claude's hand.
+- **Checks:** `node profiles/university/test-lab.js` (same seed same pile, level hill on the middle, tilted hill moved, ten changes run to run). In the page: all four rules found through the test hook `root._lab.runNow({ n, tilt })`, no console errors, no sideways scroll at 1920 wide and at 821 wide (Tab S8 upright).
+- `serve.js` takes a PORT setting now, so two chats can preview at once.
+- Preview only, not deployed.
