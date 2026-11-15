@@ -29,6 +29,7 @@ function piece(p, main) {
   if (!held && url && p.role === 'watch') media = '<video controls preload="none" src="' + esc(url) + '"></video>';
   else if (!held && url && p.role === 'listen') media = '<audio controls preload="none" src="' + esc(url) + '"></audio>';
   else if (!held && p.pointer) media = '<a class="btn" href="' + esc(libraryUrl(p)) + '" target="_blank" rel="noopener">Find it at a library</a>';
+  else if (!held && p.role === 'read' && p.url) media = '<a class="btn" href="' + esc(p.url) + '" target="_blank" rel="noopener">Open it</a>';
   else if (!held && p.role === 'read' && pageUrl(p)) media = '<a class="btn" href="' + esc(pageUrl(p)) + '" target="_blank" rel="noopener">Open the book</a>';
   return '<div class="piece ' + (main ? 'main' : 'comp') + (held ? ' held' : '') + '">'
     + '<div class="ph"><span class="role r-' + esc(p.role) + '">' + esc(ROLE[p.role] || p.role) + '</span>'
@@ -91,14 +92,33 @@ function links(u, c) {
   return ms.length ? '<div class="uses"><span>The mind at work</span>' + ms.map((m) => '<a href="' + esc(MECH.slug) + '.html#u' + m.n + '">' + esc(m.title) + '</a>').join('') + '</div>' : '';
 }
 
+// Bryan, 15 Nov 2026: "people ... it's cool but why do I need to know it". Every unit answers that first.
+const needIt = (u) => u.needIt || String(u.why || '').split('. ')[0].replace(/\.$/, '') + '.';
+const clock = (t) => Math.floor(t / 60) + ':' + String(Math.floor(t % 60)).padStart(2, '0');
+function chapters(u) {
+  if (!(u.chapters || []).length) return '';
+  return '<div class="chap"><span>Watch it in pieces</span>' + u.chapters.map((x) => '<button data-t="' + x.t + '"><i>' + clock(x.t) + '</i>' + esc(x.title) + '</button>').join('') + '</div>';
+}
+// Our own quiz, written from the lecture; every answer quotes the line it comes from (checked word for word).
+function quiz(u) {
+  if (!(u.quiz || []).length) return '';
+  return '<div class="quiz"><h3>Check yourself</h3>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
+    + q.choices.map((ch, j) => '<button data-j="' + j + '">' + esc(ch) + '</button>').join('') + '</div>'
+    + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"<button class="qt" data-t="' + q.t + '">From the lecture, at ' + clock(q.t) + '</button></blockquote></div></div>').join('')
+    + '<div class="qs" hidden></div></div>';
+}
+
 function unit(u, voices, c) {
   const who = (u.voices || []).map((k) => voices[k]).filter(Boolean)
     .map((v) => '<li><b>' + esc(v.name) + '</b>, ' + esc(v.what.toLowerCase()) + '. ' + esc(v.did) + '</li>').join('');
   return '<section class="unit" id="u' + u.n + '">'
     + '<div class="uh"><span class="n">' + u.n + '</span><div><h2>' + esc(u.title) + '</h2></div>' + (c.shelf === 'supplement' && img('m' + u.n) ? '<img class="uimg" loading="lazy" src="' + img('m' + u.n) + '" alt="">' : '') + '</div>'
+    + '<p class="need"><b>Why you need this:</b> ' + esc(needIt(u)) + '</p>'
     + scene(u)
     + links(u, c)
     + (u.main ? '<div class="pieces">' + piece(u.main, true) + '</div>' : '')
+    + chapters(u)
+    + quiz(u)
     + crystal(c, u)
     + '<details class="more"><summary>More: why it matters, what else to watch, read and do, who teaches it</summary>'
     + '<div class="out">You will be able to: ' + esc(u.outcome) + '</div>'
@@ -120,6 +140,20 @@ ${FONTS}
 <style>
 ${BASE}
 ${CARDCSS}
+.need{margin:0 0 14px;padding:12px 16px;border-left:3px solid var(--gold);background:#141c2e;border-radius:0 8px 8px 0;font-size:16px;color:#e4ddcc}.need b{color:var(--gold)}
+.hero .src{font-size:14px;color:var(--dim)}.hero .src a{color:var(--gold)}
+.lv{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 0}.lv span{font-size:12px;letter-spacing:.06em;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:#cfd3dc}
+.chap{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-6px 0 18px}.chap>span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600;margin-right:4px}
+.chap button,.qc button,.qt{font:inherit;font-size:14px;background:var(--panel2);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;text-align:left}
+.chap button:hover,.qc button:hover:not(:disabled),.qt:hover{border-color:var(--gold)}.chap i{font-style:normal;color:var(--gold);margin-right:8px}
+.quiz{background:#0e1626;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 18px}
+.qq{padding:10px 0;border-top:1px solid var(--line)}.qq:first-of-type{border-top:0}.qq>p{margin:0 0 8px;font-size:16px}
+.qc{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
+.qc button:disabled{cursor:default;opacity:.55}.qc button.right{opacity:1;border-color:#5fe39a;color:#5fe39a}.qc button.wrong{opacity:1;border-color:#e08a8f;color:#e08a8f}
+.qa{margin-top:10px;font-size:15px;color:#cfd3dc}.qa p{margin:0 0 6px}.qr{font-weight:600}.qr.ok{color:#5fe39a}.qr.no{color:#e08a8f}
+.qa blockquote{margin:6px 0 0;padding:8px 12px;border-left:3px solid var(--line);font-family:Fraunces,Georgia,serif;color:#e4ddcc}
+.qt{display:block;margin-top:8px;font-family:Inter,system-ui,sans-serif;font-size:13px;padding:5px 10px;color:var(--gold)}
+.qs{margin-top:12px;padding:10px 14px;border-radius:8px;background:#132038;color:var(--gold)}
 .chans{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 28px}.chans .chan{width:280px}
 .uimg{width:132px;height:84px;object-fit:cover;border-radius:6px;margin-left:auto;border:1px solid var(--line)}
 .wrap{display:grid;grid-template-columns:260px 1fr;gap:32px;max-width:1500px;margin:0 auto;padding:28px 32px}
@@ -207,13 +241,33 @@ details.more summary:hover{color:var(--fg)}
 </style></head><body>
 ${top(c.slug, all)}
 <div class="wrap"><nav><h4>Units</h4>${toc}</nav><main>
-<div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug)});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)} · a course we wrote</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>
+<div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug)});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)} · ${c.kind === 'found' ? 'built from a free course' : 'a course we wrote'}</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>${c.source ? '<p class="src">From <a href="' + esc(c.source.url) + '" target="_blank" rel="noopener">' + esc(c.source.title) + '</a>, ' + esc(c.source.by) + '. ' + esc(c.source.licence) + '.' + (c.planned ? ' ' + c.units.length + ' of ' + c.planned + ' lectures ready so far.' : '') + '</p>' : ''}<p class="lv">${LEVELS(c)}</p>
 <details class="more"><summary>By the end you will be able to...</summary><ol>${c.outcomes.map((o) => '<li>' + esc(o) + '</li>').join('')}</ol></details></div>
 ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this course</h3><div class="chans">' + c.channels.map(chan).join('') + '</div>' : ''}
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
 </main></div>
 ${FOOT()}
 <script src="crystal.js"></script><script src="scene.js"></script>
+<script>
+function seek(el, t) {
+  var v = el.closest('.unit').querySelector('video'); if (!v) return;
+  v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  var go = function () { v.currentTime = t; v.play(); };
+  if (v.readyState < 1) { v.preload = 'metadata'; v.addEventListener('loadedmetadata', go, { once: true }); v.load(); } else go();
+}
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.chap button, .qt'); if (b) { seek(b, +b.dataset.t); return; }
+  var c = e.target.closest('.qc button'); if (!c) return;
+  var q = c.closest('.qq'); if (q.classList.contains('done')) return;
+  var a = +q.dataset.a, j = +c.dataset.j; q.classList.add('done');
+  q.querySelectorAll('.qc button').forEach(function (x) { var k = +x.dataset.j; if (k === a) x.classList.add('right'); else if (k === j) x.classList.add('wrong'); x.disabled = true; });
+  q.querySelector('.qr').textContent = j === a ? 'Right.' : 'Not quite.';
+  q.querySelector('.qr').className = 'qr ' + (j === a ? 'ok' : 'no');
+  q.querySelector('.qa').hidden = false;
+  var z = q.closest('.quiz'), all = z.querySelectorAll('.qq'), done = z.querySelectorAll('.qq.done');
+  if (all.length === done.length) { var r = z.querySelectorAll('.qc .right:not(:disabled), .qq.done').length; var n = 0; all.forEach(function (x) { if (x.querySelector('.qr.ok')) n++; }); var sEl = z.querySelector('.qs'); sEl.textContent = 'You got ' + n + ' of ' + all.length + '. Missed one? The quote under it shows where the lecture says it.'; sEl.hidden = false; }
+});
+</script>
 </body></html>`;
 }
 
@@ -253,6 +307,8 @@ function top(current, all) {
 }
 const IMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'img', 'images.json'), 'utf8')); } catch (e) { return {}; } })();
 const img = (name) => IMG[name] ? IMG[name].file : '';
+const LEVELNAME = { 'high school': 'High school', 'young adults': 'Young adults', everyday: 'Everyday life' };
+const LEVELS = (c) => (c.levels || []).map((l) => '<span>' + esc(LEVELNAME[l] || l) + '</span>').join('');
 const FOOT = () => `<footer>Free, no account. Lessons play from the Internet Archive; each piece names its source and licence. Photos are public domain (CC0); <a href="credits.html">who took them</a>.<br>
 If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="${DONATE}" target="_blank" rel="noopener">Donate to CASH</a></footer>`;
 function chan(x) {
@@ -261,7 +317,7 @@ function chan(x) {
 function home(all, list) {
   const full = all.filter((c) => c.shelf !== 'supplement');
   const sup = all.filter((c) => c.shelf === 'supplement');
-  const card = (c) => '<a class="card course" href="' + esc(c.slug) + '.html"><div class="ph"><img src="' + img('c-' + c.slug) + '" alt=""></div><div class="t"><small>' + esc(c.domain) + ' · ' + c.units.length + ' units</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
+  const card = (c) => '<a class="card course" data-lv="' + esc((c.levels || []).join('|')) + '" href="' + esc(c.slug) + '.html"><div class="ph"><img src="' + (img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))) + '" alt=""></div><div class="t"><small>' + esc(c.domain) + ' · ' + (c.planned ? c.units.length + ' of ' + c.planned + ' units' : c.units.length + ' units') + '</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
   const mini = (c, u) => '<a class="card mini" href="' + esc(c.slug) + '.html#u' + u.n + '"><div class="ph"><img loading="lazy" src="' + img('m' + u.n) + '" alt=""></div><div class="t"><b>' + esc(u.title) + '</b><span>' + esc(u.scene ? u.scene.analogy : '') + '</span></div></a>';
   const row = (title, note, cards) => '<section class="row"><h2><span>' + esc(title) + '</span>' + (note ? '<small>' + esc(note) + '</small>' : '') + '</h2><div class="rowwrap"><button class="arrow l" aria-label="Back">&#8249;</button><div class="track">' + cards + '</div><button class="arrow r" aria-label="More">&#8250;</button></div></section>';
   const seen = new Set();
@@ -300,6 +356,10 @@ ${CARDCSS}
 .arrow{position:absolute;top:42%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:rgba(11,18,32,.92);color:var(--gold);font-size:28px;line-height:40px;padding:0;cursor:pointer;z-index:2;box-shadow:0 2px 12px rgba(0,0,0,.6)}
 .arrow.l{left:-2px}.arrow.r{right:-2px}.arrow:hover{background:var(--gold);color:var(--ink)}.arrow[hidden]{display:none}
 @media(hover:none){.arrow{display:none}}
+.who{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:26px 20px 0}.who>span{font-family:Fraunces,Georgia,serif;font-size:18px;margin-right:6px}
+.who button{font:inherit;font-size:14px;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}.who button.on{border-color:var(--gold);color:var(--gold)}
+.who small{flex-basis:100%;color:var(--dim);font-size:13px}
+.course.off{display:none}
 .areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;padding:0 20px}
 .area{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line)}
 .area img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.45)}
@@ -310,10 +370,18 @@ ${CARDCSS}
 </style></head><body>
 ${top('home', all)}
 <div class="hero"><img src="${img('a-mind')}" alt=""><div><div class="kick">Free courses · no account</div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way.</p></div></div>
-<main>${rows}
+<main><div class="who"><span>Who is it for?</span><button class="on" data-lv="">Everyone</button><button data-lv="high school">High school</button><button data-lv="young adults">Young adults</button><button data-lv="everyday">Everyday life</button><small>Everyday life: not for a job in the field, just useful for living, deciding and understanding people.</small></div>
+${rows}
 <h2><span>Every area</span><small>more courses are on the way</small></h2><div class="areas">${tiles}</div></main>
 ${FOOT()}
 <script>
+document.querySelectorAll('.who button').forEach(function (b) {
+  b.onclick = function () {
+    document.querySelectorAll('.who button').forEach(function (x) { x.classList.toggle('on', x === b); });
+    var lv = b.dataset.lv;
+    document.querySelectorAll('.card.course').forEach(function (c) { c.classList.toggle('off', !!lv && (c.dataset.lv || '').split('|').indexOf(lv) < 0); });
+  };
+});
 document.querySelectorAll('.rowwrap').forEach(function (w) {
   var t = w.querySelector('.track'), l = w.querySelector('.arrow.l'), r = w.querySelector('.arrow.r');
   function upd() { l.hidden = t.scrollLeft < 4; r.hidden = t.scrollLeft + t.clientWidth >= t.scrollWidth - 4; }
