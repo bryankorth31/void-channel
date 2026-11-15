@@ -9,7 +9,10 @@
   "outcomes": [
     "Spot the sunk cost trap, and choose by what is ahead instead of what is already spent.",
     "Notice when you are changing the story to stop a clash, instead of changing what you do.",
-    "Feel the pull of \"only today\" and \"everyone is going\", and still take the time to choose."
+    "Feel the pull of \"only today\" and \"everyone is going\", and still take the time to choose.",
+    "Look for what would prove you wrong, not only for what agrees with you.",
+    "Notice when the first number you heard is setting the price, and set your own first.",
+    "Weigh a possible loss and an equal gain on the same scale."
   ],
   "units": [
     {
@@ -710,6 +713,617 @@
           }
         ]
       }
+    },
+    {
+      "n": 4,
+      "title": "Confirmation bias",
+      "outcome": "Look for what would prove you wrong, not only for what agrees with you.",
+      "why": "Once you believe something, you look where it will be confirmed and skip where it might not. Each look feels like proof. It is the same room, searched again.",
+      "reachesYou": "The feed that only shows what you already like, the friend you ask because you know their answer, the reviews you read only after you bought it.",
+      "do": "Pick one thing you are sure of. Find the best case against it, written by someone who knows the subject. Read it to the end before you answer it.",
+      "voices": [
+        "wason",
+        "nickerson"
+      ],
+      "scene": {
+        "analogy": "Searching for your keys only where you hope they are",
+        "map": [
+          [
+            "the kitchen",
+            "what already agrees with you"
+          ],
+          [
+            "searching it again",
+            "reading more of the same"
+          ],
+          [
+            "the coat you never check",
+            "the evidence you skip"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "kit",
+            "type": "card",
+            "x": 30,
+            "y": 40,
+            "w": 190,
+            "h": 110,
+            "label": "Kitchen",
+            "color": "dim",
+            "o": 0,
+            "size": 20
+          },
+          {
+            "id": "liv",
+            "type": "card",
+            "x": 240,
+            "y": 40,
+            "w": 190,
+            "h": 110,
+            "label": "Living room",
+            "color": "dim",
+            "o": 0,
+            "size": 20
+          },
+          {
+            "id": "car",
+            "type": "card",
+            "x": 30,
+            "y": 200,
+            "w": 190,
+            "h": 110,
+            "label": "Car",
+            "color": "dim",
+            "o": 0,
+            "size": 20
+          },
+          {
+            "id": "coat",
+            "type": "card",
+            "x": 240,
+            "y": 200,
+            "w": 190,
+            "h": 110,
+            "label": "Coat pocket",
+            "color": "dim",
+            "o": 0,
+            "size": 20
+          },
+          {
+            "id": "keys",
+            "type": "stamp",
+            "x": 442,
+            "y": 232,
+            "w": 48,
+            "label": "KEYS",
+            "color": "gold",
+            "o": 0,
+            "s": 0.4,
+            "size": 11
+          },
+          {
+            "id": "you",
+            "type": "stamp",
+            "x": 620,
+            "y": 200,
+            "w": 76,
+            "label": "YOU",
+            "color": "blue",
+            "size": 15
+          },
+          {
+            "id": "think",
+            "type": "text",
+            "x": 620,
+            "y": 120,
+            "label": "\"They're in the kitchen.\"",
+            "color": "pink",
+            "size": 20,
+            "o": 0
+          },
+          {
+            "id": "look",
+            "type": "arrow",
+            "x": 612,
+            "y": 236,
+            "x2": 496,
+            "y2": 254,
+            "color": "green",
+            "o": 0,
+            "draw": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "You lost your keys.",
+            "dur": 2,
+            "set": {
+              "kit": {
+                "o": 1
+              },
+              "liv": {
+                "o": 1
+              },
+              "car": {
+                "o": 1
+              },
+              "coat": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "You are sure: the kitchen.",
+            "dur": 2.2,
+            "set": {
+              "think": {
+                "o": 1
+              },
+              "kit": {
+                "color": "blue"
+              }
+            }
+          },
+          {
+            "say": "You search it. Again. And again.",
+            "dur": 2.6,
+            "set": {
+              "kit": {
+                "shake": true,
+                "sub": "searched 3 times"
+              }
+            }
+          },
+          {
+            "say": "They were in your coat all along.",
+            "dur": 2.4,
+            "set": {
+              "keys": {
+                "o": 1,
+                "s": 1
+              },
+              "coat": {
+                "color": "gold",
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "Beliefs work the same way.",
+            "dur": 3.4,
+            "set": {
+              "kit": {
+                "label": "What agrees",
+                "sub": "read 3 times"
+              },
+              "liv": {
+                "label": "Other views",
+                "o": 0.5
+              },
+              "car": {
+                "label": "Other views",
+                "o": 0.5
+              },
+              "coat": {
+                "label": "What disagrees",
+                "sub": "never checked",
+                "size": 18
+              },
+              "keys": {
+                "label": "FACT",
+                "size": 12
+              },
+              "think": {
+                "label": "\"See? I was right.\""
+              }
+            }
+          },
+          {
+            "say": "Look where you hope it isn't.",
+            "dur": 2.8,
+            "set": {
+              "coat": {
+                "color": "green"
+              },
+              "keys": {
+                "color": "green"
+              },
+              "look": {
+                "o": 1,
+                "draw": 1
+              },
+              "think": {
+                "o": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "title": "Anchoring",
+      "outcome": "Notice when the first number you heard is setting the price, and set your own first.",
+      "why": "The first number you hear becomes the ruler you measure everything after it with, even when that number was made up. Sellers say theirs first for a reason.",
+      "reachesYou": "Car stickers, \"was $90\", the first offer in a raise talk, a hospital bill you negotiate down, a home's asking price.",
+      "do": "Before your next big purchase or pay talk, write down what you think it is worth, from your own research, before you hear their number.",
+      "voices": [
+        "kahneman",
+        "northcraft"
+      ],
+      "scene": {
+        "analogy": "Haggling down from the sticker on a car",
+        "map": [
+          [
+            "the sticker",
+            "the first number you hear"
+          ],
+          [
+            "your \"great deal\"",
+            "a price measured against it"
+          ],
+          [
+            "what it is worth",
+            "the number to start from"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "stk",
+            "type": "card",
+            "x": 30,
+            "y": 40,
+            "w": 230,
+            "h": 104,
+            "label": "$30,000",
+            "sub": "the sticker",
+            "color": "gold",
+            "o": 0,
+            "size": 26
+          },
+          {
+            "id": "go",
+            "type": "arrow",
+            "x": 268,
+            "y": 92,
+            "x2": 512,
+            "y2": 92,
+            "color": "gold",
+            "o": 0,
+            "draw": 0
+          },
+          {
+            "id": "sales",
+            "type": "text",
+            "x": 390,
+            "y": 60,
+            "label": "\"Best I can do!\"",
+            "color": "pink",
+            "size": 20,
+            "o": 0
+          },
+          {
+            "id": "deal",
+            "type": "card",
+            "x": 520,
+            "y": 40,
+            "w": 250,
+            "h": 104,
+            "label": "$27,000",
+            "sub": "your great deal",
+            "color": "pink",
+            "o": 0,
+            "size": 26
+          },
+          {
+            "id": "worth",
+            "type": "card",
+            "x": 30,
+            "y": 220,
+            "w": 230,
+            "h": 104,
+            "label": "$22,000",
+            "sub": "what it is worth",
+            "color": "dim",
+            "o": 0,
+            "size": 26
+          },
+          {
+            "id": "st",
+            "type": "stamp",
+            "x": 560,
+            "y": 190,
+            "w": 140,
+            "label": "DEAL!",
+            "color": "pink",
+            "o": 0,
+            "s": 0.4,
+            "size": 20
+          }
+        ],
+        "beats": [
+          {
+            "say": "The sticker says $30,000.",
+            "dur": 2,
+            "set": {
+              "stk": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "You haggle hard.",
+            "dur": 2.2,
+            "set": {
+              "go": {
+                "o": 1,
+                "draw": 1
+              },
+              "sales": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "You get $27,000. A win!",
+            "dur": 2.2,
+            "set": {
+              "deal": {
+                "o": 1
+              },
+              "st": {
+                "o": 1,
+                "s": 1
+              },
+              "sales": {
+                "o": 0
+              }
+            }
+          },
+          {
+            "say": "It is worth $22,000.",
+            "dur": 2.4,
+            "set": {
+              "worth": {
+                "o": 1,
+                "color": "blue",
+                "shake": true
+              },
+              "st": {
+                "label": "ANCHORED",
+                "color": "gold",
+                "size": 17
+              }
+            }
+          },
+          {
+            "say": "The first number pulls every number after it.",
+            "dur": 3.4,
+            "set": {
+              "stk": {
+                "sub": "the anchor: their first number"
+              },
+              "deal": {
+                "sub": "cheap only next to it"
+              },
+              "worth": {
+                "sub": "the real value"
+              }
+            }
+          },
+          {
+            "say": "Say your number first.",
+            "dur": 2.8,
+            "set": {
+              "worth": {
+                "color": "green",
+                "sub": "your number, said first"
+              },
+              "st": {
+                "label": "YOURS",
+                "color": "green",
+                "size": 20
+              },
+              "go": {
+                "color": "dim"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "n": 6,
+      "title": "Loss aversion",
+      "outcome": "Weigh a possible loss and an equal gain on the same scale.",
+      "why": "Losing something hurts about twice as much as gaining the same thing feels good. So people pass up good chances to avoid small risks, and hold on to bad ones to avoid admitting a loss.",
+      "reachesYou": "Staying in a job you have outgrown, keeping a stock that keeps falling, buying the extended warranty, \"free trial\" offers that count on you hating to lose what you already have.",
+      "do": "Think of one change you keep putting off. Write the best thing that could come of it and the worst. Read them as the same size. Which is bigger now?",
+      "voices": [
+        "kahneman",
+        "tversky"
+      ],
+      "scene": {
+        "analogy": "Finding $20, then losing $20",
+        "map": [
+          [
+            "finding $20",
+            "a possible gain"
+          ],
+          [
+            "losing $20",
+            "a possible loss"
+          ],
+          [
+            "the bigger bar",
+            "how much more a loss weighs"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "find",
+            "type": "card",
+            "x": 40,
+            "y": 30,
+            "w": 300,
+            "h": 96,
+            "label": "Find $20",
+            "sub": "nice",
+            "color": "green",
+            "o": 0,
+            "size": 24
+          },
+          {
+            "id": "lose",
+            "type": "card",
+            "x": 460,
+            "y": 30,
+            "w": 300,
+            "h": 96,
+            "label": "Lose $20",
+            "sub": "ruins your day",
+            "color": "gold",
+            "o": 0,
+            "size": 24
+          },
+          {
+            "id": "fb",
+            "type": "card",
+            "x": 140,
+            "y": 150,
+            "w": 100,
+            "h": 60,
+            "label": "joy",
+            "color": "green",
+            "o": 0,
+            "size": 18
+          },
+          {
+            "id": "lb",
+            "type": "card",
+            "x": 560,
+            "y": 150,
+            "w": 100,
+            "h": 60,
+            "label": "pain",
+            "color": "gold",
+            "o": 0,
+            "size": 18
+          },
+          {
+            "id": "st",
+            "type": "stamp",
+            "x": 340,
+            "y": 160,
+            "w": 120,
+            "label": "2x",
+            "color": "pink",
+            "o": 0,
+            "s": 0.4,
+            "size": 30
+          },
+          {
+            "id": "say",
+            "type": "text",
+            "x": 400,
+            "y": 330,
+            "label": "\"What if I lose?\"",
+            "color": "pink",
+            "size": 22,
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "You find $20 on the street.",
+            "dur": 2,
+            "set": {
+              "find": {
+                "o": 1
+              },
+              "fb": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Another day, you lose $20.",
+            "dur": 2,
+            "set": {
+              "lose": {
+                "o": 1
+              },
+              "lb": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Same money. The loss hurts about twice as much.",
+            "dur": 2.8,
+            "set": {
+              "lb": {
+                "h": 150,
+                "shake": true
+              },
+              "st": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "So you dodge risks you should take.",
+            "dur": 2.4,
+            "set": {
+              "say": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Jobs, moves, money: the same scale.",
+            "dur": 3.4,
+            "set": {
+              "find": {
+                "label": "A good chance",
+                "sub": "new job, better deal",
+                "size": 22
+              },
+              "lose": {
+                "label": "A small risk",
+                "sub": "it might not work",
+                "size": 22
+              },
+              "say": {
+                "label": "\"Better not.\""
+              }
+            }
+          },
+          {
+            "say": "Weigh them the same size.",
+            "dur": 2.8,
+            "set": {
+              "lb": {
+                "h": 60,
+                "color": "blue"
+              },
+              "fb": {
+                "color": "blue"
+              },
+              "st": {
+                "label": "EVEN",
+                "color": "green",
+                "size": 22
+              },
+              "say": {
+                "o": 0
+              }
+            }
+          }
+        ]
+      }
     }
   ],
   "voices": {
@@ -742,6 +1356,31 @@
       "name": "Andrew Przybylski",
       "what": "Psychologist",
       "did": "Built the first scale to measure fear of missing out in 2013 and found it ties to heavier social media use and lower mood."
+    },
+    "wason": {
+      "name": "Peter Wason",
+      "what": "Psychologist",
+      "did": "In 1960 asked people to find the rule behind the numbers 2, 4, 6. Most only tested numbers that fit their first guess, and never tried one that could prove it wrong."
+    },
+    "nickerson": {
+      "name": "Raymond Nickerson",
+      "what": "Psychologist",
+      "did": "Gathered the evidence for confirmation bias across science, law and medicine in one review (1998) that is still the standard account."
+    },
+    "kahneman": {
+      "name": "Daniel Kahneman",
+      "what": "Psychologist",
+      "did": "With Amos Tversky, mapped how judgment fails in predictable ways, from anchoring to loss aversion, and won the 2002 Nobel prize in economics for it."
+    },
+    "tversky": {
+      "name": "Amos Tversky",
+      "what": "Psychologist",
+      "did": "With Daniel Kahneman, built prospect theory (1979), which measured that losses weigh about twice as much as equal gains."
+    },
+    "northcraft": {
+      "name": "Gregory Northcraft and Margaret Neale",
+      "what": "Management researchers",
+      "did": "In 1987 showed that real estate agents valued the same house higher or lower depending on the asking price they were shown, while saying the price had not swayed them."
     }
   }
 }
