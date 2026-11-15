@@ -58,3 +58,9 @@ Kept by the "Void University build" chat. One owner per file: University writes 
   physics.js, mode-drag.js, injury.js, injuries.json, looks.js, mode-voice.js, mouth.js), deploy/ and the Wrangler
   config. SOURCES.md and DECISIONS.md go through the lead. No donation text inside Body Atlas (D25); a University
   card around it is University's call.
+
+## Local video production pipeline (15 Nov 2026)
+
+- Owns the voice, caption and render pipeline and the shared library at C:\Usersryanxplainer-studio\library (University reads it only; SOURCES.md lists source and licence per item). Holds WEB + KJV + OpenBible cross-references so far; the science shelf (OpenStax and others) waits on Bryan.
+- University owns curriculum and this site; the pipeline stays out of profiles\university.
+- "University shorts", only once Bryan approves: the pipeline reads courses/*.json (beats[].say, why, reachesYou, do) and writes an MP4 plus captions to a folder this chat names. Nothing wired yet.
