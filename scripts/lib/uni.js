@@ -137,7 +137,7 @@ UNIT ${t.n}: ${t.title}
 AUDIENCES: ${(c.levels || []).join(', ')}. Bryan, 15 Nov 2026: people say "it's cool but why do I need to know it". Every unit answers that first, in one plain sentence (needIt), for someone who will never work in the field.
 
 SOURCES for this course (licences were read on their pages; keep their credit and licence):
-${sources.map((s) => '- ' + s.id + ': ' + s.title + ', ' + s.by + '. ' + s.licence + '. ' + (s.url || '') + (s.text ? ' Text: ' + s.text : '') + (s.video && s.video.archive ? ' Video: archive.org/details/' + s.video.archive : '') + (s.courseworkUrl ? ' Coursework: ' + s.courseworkUrl : '') + (s.notes ? ' Notes: ' + s.notes : '')).join('\n') || '- (none listed: find them first under the rules in sources/FORMAT.md)'}
+${sources.map((s) => '- ' + s.id + ': ' + s.title + ', ' + s.by + '. ' + s.licence + '. ' + (s.url || '') + (s.text ? ' Text: ' + s.text : '') + (s.video && s.video.archive ? ' Video (' + s.video.files + ' lectures): archive.org/details/' + s.video.archive : '') + (s.audio && s.audio.archive ? ' Audio only on the Archive (' + s.audio.files + ' lectures; the filmed lectures are on the course page): archive.org/details/' + s.audio.archive : '') + (s.courseworkUrl ? ' Coursework: ' + s.courseworkUrl : '') + (s.notes ? ' Notes: ' + s.notes : '')).join('\n') || '- (none listed: find them first under the rules in sources/FORMAT.md)'}
 
 STEPS:
 1. Read profiles/university/sources/FORMAT.md (the source rules) and docs/COURSE-RECIPE.md (the recipe).
@@ -203,7 +203,7 @@ async function check(log = () => {}) {
         else if (PRIVATE.test(s[k])) problems.push({ where, what: k + ' points at this PC or the home network: ' + s[k] });
         else urls.set(s[k], where);
       }
-      if (s.video && s.video.archive) urls.set('https://archive.org/metadata/' + s.video.archive + '/metadata/identifier', where + ' (Archive item)');
+      for (const m of [s.video, s.audio]) if (m && m.archive) urls.set('https://archive.org/metadata/' + m.archive + '/metadata/identifier', where + ' (Archive item)');
     }
     for (const c of f.courses || []) { if (c.spine && !ids.has(c.spine)) problems.push({ where: slugify(area) + '.json course ' + c.name, what: 'spine ' + c.spine + ' is not in the sources' }); walkText(slugify(area) + '.json course ' + c.name, c); }
   }
@@ -231,4 +231,37 @@ async function check(log = () => {}) {
   return out;
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, unitNeeds, slugify, UNI, SRC };
+// Recount what an Archive item really holds. The audit (16 Nov 2026) found 22 sources whose finder counted every file
+// in an item as a lecture video, and Open Yale items that are sound only filed as video. A lecture is one original
+// file: video if mp4, ogv, webm or mov (one per name, however many formats), audio if mp3. The result replaces the
+// source's `video` or `audio` block, so the count comes from the Archive, never from a finder.
+async function media(log = () => {}) {
+  const changes = [];
+  for (const area of list().types || []) {
+    const file = areaFile(area);
+    const f = readJson(file, null);
+    if (!f) continue;
+    let dirty = false;
+    for (const s of f.sources || []) {
+      const block = s.video || s.audio;
+      if (!block || !block.archive) continue;
+      let j = null;
+      try { j = await fetch('https://archive.org/metadata/' + encodeURIComponent(block.archive), { signal: AbortSignal.timeout(30000) }).then((r) => r.json()); } catch (e) { /* counted as unreadable below */ }
+      if (!j || !j.files) { changes.push({ where: slugify(area) + '.json ' + s.id, what: 'Archive item could not be read: ' + block.archive }); continue; }
+      const names = (re) => new Set(j.files.filter((x) => x.source === 'original' && re.test(x.name) && !/\.ia\.mp4$/i.test(x.name)).map((x) => x.name.replace(/\.[^.]+$/, '')));
+      const vids = names(/\.(mp4|ogv|webm|mov|m4v)$/i).size, mp3 = names(/\.mp3$/i).size;
+      const now = vids ? { video: { archive: block.archive, files: vids } } : mp3 ? { audio: { archive: block.archive, files: mp3 } } : null;
+      const before = JSON.stringify({ video: s.video, audio: s.audio });
+      delete s.video; delete s.audio;
+      if (now) Object.assign(s, now);
+      else s.notes = (s.notes ? s.notes + ' ' : '') + 'The Archive item ' + block.archive + ' holds no video or mp3 lecture files.';
+      if (JSON.stringify({ video: s.video, audio: s.audio }) !== before) { dirty = true; changes.push({ where: slugify(area) + '.json ' + s.id, what: before + ' -> ' + JSON.stringify(now) }); }
+      log(s.id + ': ' + (vids ? vids + ' video' : mp3 ? mp3 + ' audio' : 'none'));
+      await new Promise((r) => setTimeout(r, 300)); // polite to the Archive
+    }
+    if (dirty) writeJson(file, f);
+  }
+  return changes;
+}
+
+module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, unitNeeds, slugify, UNI, SRC };

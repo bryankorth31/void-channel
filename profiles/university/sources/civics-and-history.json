@@ -86,15 +86,10 @@
       "licence": "CC BY-NC-SA 3.0",
       "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
       "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
-      "video": {
-        "archive": "OpenYaleCourse-Hist116TheAmericanRevolution",
-        "files": 455
-      },
       "coursework": [
         "syllabus",
         "lecture transcripts",
-        "lecture audio (mp3)",
-        "exam pages linked on the course page"
+        "lecture audio (mp3)"
       ],
       "courseworkUrl": "https://oyc.yale.edu/history/hist-116",
       "levels": [
@@ -103,7 +98,11 @@
         "everyday"
       ],
       "needIt": "How a country is born from arguments, mistakes and fear, which helps you read today's politics.",
-      "notes": "25 lectures. The Archive item has MPEG4 video, mp3 and ogg for each (25 of each); transcripts on each lecture page. A second Archive item oyc_The_American_Revolution is audio only (173 files)."
+      "notes": "25 lectures. The Archive item has MPEG4 video, mp3 and ogg for each (25 of each); transcripts on each lecture page. A second Archive item oyc_The_American_Revolution is audio only (173 files). Audit 16 Nov 2026: the course page lists lectures and describes exams in its grading text, but links no exam pages.",
+      "video": {
+        "archive": "OpenYaleCourse-Hist116TheAmericanRevolution",
+        "files": 25
+      }
     },
     {
       "id": "yale-hist-119",
@@ -115,10 +114,6 @@
       "licence": "CC BY-NC-SA 3.0",
       "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
       "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
-      "video": {
-        "archive": "oyc_The_Civil_War_and_Reconstruction_Era",
-        "files": 194
-      },
       "coursework": [
         "syllabus",
         "lecture transcripts",
@@ -132,22 +127,22 @@
         "everyday"
       ],
       "needIt": "Slavery, war and Reconstruction explain race and politics in the country today.",
-      "notes": "27 lecture pages; Archive copy is audio only. A separate Archive item hist119_06_013108 (93 files) holds one lecture and states CC BY-NC-SA in its licence field. Video on the OYC page. Exam and assignments linked."
+      "notes": "27 lecture pages; Archive copy is audio only. A separate Archive item hist119_06_013108 (93 files) holds one lecture and states CC BY-NC-SA in its licence field. Video on the OYC page. Exam and assignments linked.",
+      "audio": {
+        "archive": "oyc_The_Civil_War_and_Reconstruction_Era",
+        "files": 27
+      }
     },
     {
       "id": "yale-plsc-114",
       "kind": "open-course",
       "title": "Introduction to Political Philosophy (PLSC 114)",
-      "by": "Yale professor, name on course page",
+      "by": "Steven B. Smith, Yale",
       "year": 2006,
       "url": "https://oyc.yale.edu/political-science/plsc-114",
       "licence": "CC BY-NC-SA 3.0",
       "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
       "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
-      "video": {
-        "archive": "OpenYaleCourseIntroductionToPoliticalPhilosophy",
-        "files": 388
-      },
       "coursework": [
         "syllabus",
         "lecture transcripts",
@@ -161,7 +156,11 @@
         "everyday"
       ],
       "needIt": "What makes a government fair, and why people obey or refuse: useful every election.",
-      "notes": "24 lectures. The Archive item has video (24 each of h.264, QuickTime, Ogg Video). A second audio item oyc_Introduction_to_Political_Philosophy has 173 files. Readings are mainly old public-domain texts."
+      "notes": "24 lectures. The Archive item has video (24 each of h.264, QuickTime, Ogg Video). A second audio item oyc_Introduction_to_Political_Philosophy has 173 files. Readings are mainly old public-domain texts.",
+      "video": {
+        "archive": "OpenYaleCourseIntroductionToPoliticalPhilosophy",
+        "files": 24
+      }
     },
     {
       "id": "yale-afam-162",
@@ -173,10 +172,6 @@
       "licence": "CC BY-NC-SA 3.0",
       "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
       "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
-      "video": {
-        "archive": "oyc_African_American_History",
-        "files": 182
-      },
       "coursework": [
         "syllabus",
         "lecture transcripts",
@@ -189,7 +184,11 @@
         "everyday"
       ],
       "needIt": "The long road from emancipation to today, told plainly, helps neighbors understand each other.",
-      "notes": "25 lectures; Archive copy is audio only. Video on the OYC page. Good paired with Blight."
+      "notes": "25 lectures; Archive copy is audio only. Video on the OYC page. Good paired with Blight.",
+      "audio": {
+        "archive": "oyc_African_American_History",
+        "files": 25
+      }
     },
     {
       "id": "gutenberg-declaration-1",

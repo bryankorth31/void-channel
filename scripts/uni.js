@@ -5,6 +5,7 @@
 //   node scripts/uni.js scaffold <area> <course>  make courses/<slug>.json from a proposed course
 //   node scripts/uni.js brief <slug> <unit>       print the whole prompt for a Claude chat to build that unit
 //   node scripts/uni.js rewrite <area> <source>   print the whole prompt to rewrite an old book into plain English
+//   node scripts/uni.js media                     recount each Archive item's real video or audio lectures (writes the sources)
 //   node scripts/uni.js build                     build the preview (profiles/university/site-preview)
 //   node scripts/uni.js build --site              build the public copy (only courses marked live in list.json)
 'use strict';
@@ -34,6 +35,10 @@ const [cmd, ...args] = process.argv.slice(2);
     console.log(uni.brief(args[0], args[1]));
   } else if (cmd === 'rewrite') {
     console.log(uni.rewriteBrief(args[0], args[1]));
+  } else if (cmd === 'media') {
+    const ch = await uni.media((m) => console.log(m));
+    console.log('\n' + ch.length + ' sources changed');
+    for (const x of ch) console.log('- ' + x.where + ': ' + x.what);
   } else if (cmd === 'build') {
     execFileSync(process.execPath, [path.join(uni.UNI, 'build.js'), ...args.filter((a) => a === '--site')], { stdio: 'inherit' });
   } else {

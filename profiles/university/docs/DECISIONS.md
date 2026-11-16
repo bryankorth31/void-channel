@@ -19,6 +19,16 @@ His words are short phrases only, quoted from his chat messages and the plan doc
 
 Not drift, but worth knowing: labs, the boundary course and the guess-first change exist in the preview only (not marked live, by design). Several decided things are NOT BUILT YET (rows 33 to 37, 41, 42, 44).
 
+## Fixed in the audit (16 Nov 2026)
+
+- 12 Fewer words: the quiz folds shut ('Check yourself, 5 questions'), so a Human nature unit shows its picture first.
+- 22 The Every area tile counts courses the same way its row does.
+- 29 Human nature has two channels (Open Yale PHIL 176 and PLSC 114, filmed lectures on the Archive).
+- 31 Why you need this is written for all 24 Critical thinking and mechanism units.
+- 38 Human nature units have their crystals; the recipe and the HQ unit check now require a crystal on every full-course unit.
+- 47 docs/VOID_UNIVERSITY.md: 153 old dashes replaced; tests/uni.test.js keeps courses, sources and pages dash-free.
+- 3 The live site is behind: waits on Bryan's go to deploy (the public copy in site/ is ready and tested).
+
 ## The register
 
 | # | Date | Decision in plain words | His words | Where it lives | Status | Evidence |

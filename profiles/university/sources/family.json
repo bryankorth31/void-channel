@@ -175,9 +175,9 @@
       "kind": "book",
       "title": "Etiquette in society, in business, in politics and at home",
       "by": "Emily Post",
-      "year": 1922,
+      "year": 1923,
       "url": "https://archive.org/details/etiquetteinsoci00postgoog",
-      "licence": "Public domain by age (published before 1931); not stated on the page, confirm on a second source",
+      "licence": "Public domain (the Archive item says not in copyright)",
       "licenceSeen": "Archive item page shows only the publication date, no licence field (so not read as stated)",
       "terms": "",
       "text": "https://archive.org/details/etiquetteinsoci00postgoog",
@@ -187,7 +187,7 @@
         "everyday"
       ],
       "needIt": "Manners as a way of making other people comfortable; useful for weddings, funerals, jobs and neighbors.",
-      "notes": "Many rules are dated; teach the principle (consideration), not the 1922 rules. Licence not stated on the item page, confirm on a second source. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "notes": "Many rules are dated; teach the principle (consideration), not the 1922 rules. Licence not stated on the item page, confirm on a second source. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use. Audit 16 Nov 2026: this is the fifth edition, January 1923 (first edition July 1922).",
       "old": true
     },
     {
@@ -234,16 +234,12 @@
       "id": "yale-psyc-110-unconfirmed",
       "kind": "open-course",
       "title": "Introduction to Psychology (Open Yale Courses)",
-      "by": "Yale professor, name not read",
-      "year": null,
+      "by": "Paul Bloom, Yale",
+      "year": 2007,
       "url": "https://archive.org/details/oyc_Introduction_to_Psychology",
-      "licence": "Not confirmed",
-      "licenceSeen": "The OYC course page was not read for its licence (a first guessed address returned 404); the Archive item shows no licence field",
+      "licence": "CC BY-NC-SA 3.0",
+      "licenceSeen": "Open Yale PSYC 110 course page footer (read in the audit, 16 Nov 2026)",
       "terms": "Link only until the licence is read on the course page",
-      "video": {
-        "archive": "oyc_Introduction_to_Psychology",
-        "files": 143
-      },
       "coursework": [
         "not confirmed"
       ],
@@ -254,7 +250,11 @@
         "everyday"
       ],
       "needIt": "Why people, and children, think, feel and act as they do.",
-      "notes": "NOT VERIFIED: do not build from this until its OYC course page is read for the licence. Audio only on the Archive (20 media files)."
+      "notes": "NOT VERIFIED: do not build from this until its OYC course page is read for the licence. Audio only on the Archive (20 media files).",
+      "audio": {
+        "archive": "oyc_Introduction_to_Psychology",
+        "files": 20
+      }
     }
   ]
 }

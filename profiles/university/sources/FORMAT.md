@@ -32,7 +32,8 @@ Bryan, 15 Nov 2026: "it's not just we show videos we create curriculum from what
       "licence": "Public domain | CC BY 4.0 | CC BY-NC-SA 3.0 | US government work | ...",
       "licenceSeen": "Where on the page the licence is stated, in a few words",
       "terms": "Anything in the terms about AI, ingestion or reuse; empty if none found",
-      "video": { "archive": "archive.org item id, if the lectures or film are there", "files": 26 },
+      "video": { "archive": "archive.org item id, if the filmed lectures are there", "files": 26 },
+      "audio": { "archive": "archive.org item id, when the Archive has the lectures as sound only (most Open Yale items)", "files": 26 },
       "coursework": ["syllabus", "reading guides", "problem sets", "exams", "slides", "transcripts"],
       "courseworkUrl": "Where the coursework is",
       "text": "Direct link to the full text (Archive item, Gutenberg ebook number) for books and guides",
@@ -60,6 +61,7 @@ Bryan, 15 Nov 2026: "it's not just we show videos we create curriculum from what
   any purpose". So Void University carries no ads, no sponsor listings, no paid anything, and no email sign-up while it
   uses Yale (or other NC) material. The CASH donation line is voluntary and not named in those terms. Credit the teacher
   and the university, link the course page, and link the licence (the build does this from `source`).
+- **Lecture counts come from the Archive, not by hand.** After a gather, run `node scripts/uni.js media`: it counts one lecture per original video file (or mp3 when there is no video) and writes `video` or `audio`. Finders once counted every file in an item (455 for 25 lectures).
 - **`old: true`** marks outdated but useful text in old English that we rewrite into plain modern English (the
   old-knowledge shelf). Facts that are now wrong or unsafe (old medicine, old wiring, old food canning times) go in
   `notes` so the builder flags them against a current government source.

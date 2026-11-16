@@ -39,6 +39,13 @@ test('the public copy carries only live courses, and no lab unless a lab is live
   }
 });
 
+test('lecture counts look like lectures, not every file in an item (run node scripts/uni.js media after a gather)', () => {
+  for (const f of fs.readdirSync(uni.SRC).filter((f) => f.endsWith('.json') && f !== 'check.json')) for (const s of JSON.parse(fs.readFileSync(path.join(uni.SRC, f), 'utf8')).sources || []) {
+    assert.ok(!(s.video && s.audio), f + ' ' + s.id + ' has both video and audio');
+    for (const m of [s.video, s.audio]) if (m) assert.ok(Number.isInteger(m.files) && m.files > 0 && m.files <= 120, f + ' ' + s.id + ' counts ' + m.files + ' lectures');
+  }
+});
+
 test('no em or en dash in any course, source list or built page', () => {
   const files = [...fs.readdirSync(path.join(uni.UNI, 'courses')).map((f) => path.join(uni.UNI, 'courses', f)),
     ...fs.readdirSync(uni.SRC).filter((f) => f.endsWith('.json') && f !== 'check.json').map((f) => path.join(uni.SRC, f)),

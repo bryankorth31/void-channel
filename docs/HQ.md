@@ -127,7 +127,7 @@ each of the 15 areas, what was found (open courses, old books, government guides
 and started, and what each unit still needs. Buttons: Check sources, Build preview, Open preview, Build public copy;
 in an area: Scaffold (a proposed course becomes a course file), Copy brief (the whole prompt for a Claude chat to write
 one unit), Rewrite brief (an old book into plain English), and Live (only live courses go in the public copy).
-By hand: `node scripts/uni.js status`, `check`, `scaffold`, `brief`, `rewrite`, `build [--site]`. The full recipe, with the
+By hand: `node scripts/uni.js status`, `check`, `scaffold`, `brief`, `rewrite`, `media` (recount the Archive lectures), `build [--site]`. The full recipe, with the
 deploy line, is profiles/university/docs/COURSE-RECIPE.md.
 
 ## Events the site sends

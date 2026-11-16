@@ -115,7 +115,8 @@
         "everyday"
       ],
       "needIt": "The rulebook for every government office that touches your life, in the actual words.",
-      "notes": "Gutenberg copy; for the current official text and amendments also check the National Archives or Congress. Old spelling and the original unamended parts (counting rules, slavery clauses, since changed) need a flag."
+      "notes": "Gutenberg copy; for the current official text and amendments also check the National Archives or Congress. Old spelling and the original unamended parts (counting rules, slavery clauses, since changed) need a flag.",
+      "year": 1787
     },
     {
       "id": "us-bill-of-rights",
@@ -134,7 +135,8 @@
         "everyday"
       ],
       "needIt": "The ten amendments about speech, searches, silence, trials and guns, which come up in every news story.",
-      "notes": "Gutenberg copy. Interpretation changes by court case; link to current court explanations on top of the text."
+      "notes": "Gutenberg copy. Interpretation changes by court case; link to current court explanations on top of the text.",
+      "year": 1791
     },
     {
       "id": "federalist-papers",
@@ -171,7 +173,7 @@
         "young adults"
       ],
       "needIt": "A clear tour of how city, state and national government fit together and who to call for what.",
-      "notes": "Early 1900s textbook. Government structures changed (for example, how senators are chosen, voting rights, agencies). Flag everything and check current facts against usa.gov."
+      "notes": "Early 1900s textbook. Government structures changed (for example, how senators are chosen, voting rights, agencies). Flag everything and check current facts against usa.gov. Audit 16 Nov 2026: the year is not on the page; read it from the title page before use."
     },
     {
       "id": "corwin-john-marshall",
@@ -198,13 +200,9 @@
       "title": "Environmental Politics and Law (EVST 255)",
       "by": "John Wargo, Yale",
       "url": "https://oyc.yale.edu/environmental-studies/evst-255",
-      "licence": "CC BY-NC-SA 3.0 (third-party content excluded)",
+      "licence": "CC BY-NC-SA 3.0 US",
       "licenceSeen": "Open Yale Courses Terms of Use page and the course page: 'licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 license'",
       "terms": "Non-commercial only (Terms section 5). Third-party content is not covered unless a lecture's Credits section says so. Terms say nothing about AI or ingestion; check Yale's Office of General Counsel before any commercial use.",
-      "video": {
-        "archive": "oyc_Environmental_Politics_and_Law",
-        "files": 24
-      },
       "coursework": [
         "syllabus",
         "24 lecture sessions",
@@ -218,7 +216,12 @@
         "everyday"
       ],
       "needIt": "Explains how laws about air, water, pesticides and food are made and enforced, which decides what is in the places people live and eat.",
-      "notes": "Archive item has 24 lecture audio files (mp3, ogg), not video. Readings are commercial books, link only. Recorded 2010, so recent rules are missing."
+      "notes": "Archive item has 24 lecture audio files (mp3, ogg), not video. Readings are commercial books, link only. Recorded 2010, so recent rules are missing. Audit 16 Nov 2026: the Archive item is sound only (24 mp3); the filmed lectures play on the Open Yale course page.",
+      "audio": {
+        "archive": "oyc_Environmental_Politics_and_Law",
+        "files": 24
+      },
+      "year": 2010
     },
     {
       "id": "oyc-plsc-118",
@@ -229,10 +232,6 @@
       "licence": "CC BY-NC-SA 3.0 (third-party content excluded)",
       "licenceSeen": "Open Yale Courses Terms of Use page and the course page: 'licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 license'",
       "terms": "Non-commercial only (Terms section 5). Third-party content is not covered unless a lecture's Credits section says so. Terms say nothing about AI or ingestion; check Yale's Office of General Counsel before any commercial use.",
-      "video": {
-        "archive": "oyc_The_Moral_Foundations_of_Politics",
-        "files": 25
-      },
       "coursework": [
         "lecture sessions (25 audio files on the Archive)"
       ],
@@ -242,7 +241,11 @@
         "everyday"
       ],
       "needIt": "Gives language for judging why governments deserve obedience, which helps anyone who votes or argues about fairness.",
-      "notes": "The Yale course page itself returned 403 to the automated reader; I stopped there and did not retry. The licence is the Open Yale Courses Terms page (read on another course page), and the 25 sessions come from the Archive file list only. Syllabus and coursework NOT verified. Archive item holds audio only. A human should open the page in a browser before the builder trusts it."
+      "notes": "The Yale course page itself returned 403 to the automated reader; I stopped there and did not retry. The licence is the Open Yale Courses Terms page (read on another course page), and the 25 sessions come from the Archive file list only. Syllabus and coursework NOT verified. Archive item holds audio only. A human should open the page in a browser before the builder trusts it. Audit 16 Nov 2026: the Archive item is sound only (25 mp3); the filmed lectures play on the Open Yale course page.",
+      "audio": {
+        "archive": "oyc_The_Moral_Foundations_of_Politics",
+        "files": 25
+      }
     },
     {
       "id": "mit-21a-219",

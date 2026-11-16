@@ -61,10 +61,10 @@
         "young adults",
         "everyday"
       ],
-      "spine": "vaughan-healthy-homes",
+      "spine": "keene-mechanics-household",
       "uses": [
+        "vaughan-healthy-homes",
         "epa-mold-guide",
-        "keene-mechanics-household",
         "mit-4401-building-technology"
       ],
       "units": [
@@ -130,7 +130,7 @@
       "kind": "book",
       "title": "A Treatise on Domestic Economy",
       "by": "Catharine Esther Beecher",
-      "year": 1841,
+      "year": 1845,
       "url": "https://www.gutenberg.org/ebooks/21829",
       "licence": "Public domain in the USA",
       "licenceSeen": "Project Gutenberg ebook page, 'Copyright Status: Public domain in the USA' (read 2026-11-15)",
@@ -142,7 +142,7 @@
         "everyday"
       ],
       "needIt": "An early American school text on health, space, ventilation, heating and housework as a system.",
-      "notes": "Old science. Heating, lighting and medicine sections are unsafe today; flag them."
+      "notes": "Old science. Heating, lighting and medicine sections are unsafe today; flag them. Audit 16 Nov 2026: the Gutenberg text is the revised 1845 Harper edition."
     },
     {
       "id": "english-housekeeper",
@@ -221,7 +221,7 @@
     },
     {
       "id": "vaughan-healthy-homes",
-      "kind": "book",
+      "kind": "guide",
       "title": "Healthy homes",
       "by": "Victor C. Vaughan",
       "year": 1885,
@@ -236,7 +236,7 @@
         "everyday"
       ],
       "needIt": "An 1885 public health tract on why housing, air and water decide health.",
-      "notes": "Scanned from the National Library of Medicine. Old germ theory era; use as a history seed beside current EPA and CDC pages."
+      "notes": "Scanned from the National Library of Medicine. Old germ theory era; use as a history seed beside current EPA and CDC pages. Audit 16 Nov 2026: a 10-page reprint (Michigan State Board of Health, 1885), not a book."
     },
     {
       "id": "frugal-housewife-ref",
@@ -266,7 +266,7 @@
       "url": "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home",
       "licence": "US government work (EPA); reuse to be confirmed on the page",
       "licenceSeen": "EPA 'Disclaimers' page, read 2026-11-15, says EPA data is public domain under 17 U.S.C. 105; the guide page itself carried no separate reuse statement",
-      "terms": "Cite EPA as the source; images may be third party.",
+      "terms": "No reuse statement on the guide page (the EPA public-domain line found is about geospatial data): link only.",
       "levels": [
         "high school",
         "young adults",

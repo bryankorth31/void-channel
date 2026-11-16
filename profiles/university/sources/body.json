@@ -246,10 +246,6 @@
       "licence": "CC BY-NC-SA 3.0 US",
       "licenceSeen": "Course page footer and oyc.yale.edu/terms section 4 'Course License' (read 2026-11-15)",
       "terms": "CC BY-NC-SA 3.0 US: non-commercial only. OYC terms count advertising, paid services, or required email sign-up on the reusing site as commercial use, so check that before use. Credit the professor, Yale and oyc.yale.edu. Third-party content in lecture Credits is not covered. No clause about AI or language models found on the terms page.",
-      "video": {
-        "archive": "oyc_Epidemics_in_Western_Society_Since_1600",
-        "files": 26
-      },
       "coursework": [
         "syllabus",
         "lecture transcripts",
@@ -263,7 +259,11 @@
         "everyday"
       ],
       "needIt": "Explains how disease, public health and fear have shaped societies, useful for every health debate.",
-      "notes": "26 lectures; Archive item has 26 audio files and no video. Video is the YouTube embed on OYC lecture pages."
+      "notes": "26 lectures; Archive item has 26 audio files and no video. Video is the YouTube embed on OYC lecture pages. Audit 16 Nov 2026: the Archive item is sound only (26 mp3); the filmed lectures play on the Open Yale course page.",
+      "audio": {
+        "archive": "oyc_Epidemics_in_Western_Society_Since_1600",
+        "files": 26
+      }
     },
     {
       "id": "yale-beng100-biomedical",
@@ -275,10 +275,6 @@
       "licence": "CC BY-NC-SA 3.0 US",
       "licenceSeen": "Course page footer and oyc.yale.edu/terms section 4 'Course License' (read 2026-11-15)",
       "terms": "CC BY-NC-SA 3.0 US: non-commercial only. OYC terms count advertising, paid services, or required email sign-up on the reusing site as commercial use, so check that before use. Credit the professor, Yale and oyc.yale.edu. Third-party content in lecture Credits is not covered. No clause about AI or language models found on the terms page.",
-      "video": {
-        "archive": "oyc_Frontiers_of_Biomedical_Engineering",
-        "files": 25
-      },
       "coursework": [
         "syllabus",
         "lecture transcripts",
@@ -292,7 +288,11 @@
         "everyday"
       ],
       "needIt": "Shows how drugs, imaging, implants and tissue engineering work, so a person understands modern medical choices.",
-      "notes": "25 lectures recorded Spring 2008. Archive item is audio only. Some technology is dated."
+      "notes": "25 lectures recorded Spring 2008. Archive item is audio only. Some technology is dated. Audit 16 Nov 2026: the Archive item is sound only (25 mp3); the filmed lectures play on the Open Yale course page.",
+      "audio": {
+        "archive": "oyc_Frontiers_of_Biomedical_Engineering",
+        "files": 25
+      }
     },
     {
       "id": "mit-hst542j-physiology",
@@ -306,9 +306,12 @@
       "terms": "CC BY-NC-SA 4.0. The MIT terms page has a 'Permitted Use of AI Training' section: allowed with attribution, non-commercial use only and ShareAlike. Third-party items inside a course may carry other terms.",
       "coursework": [
         "syllabus",
-        "problem sets and solutions",
-        "exams and solutions",
-        "lecture notes"
+        "calendar",
+        "readings",
+        "problem sets",
+        "problem set solutions",
+        "exams",
+        "exam solutions"
       ],
       "courseworkUrl": "https://ocw.mit.edu/courses/hst-542j-quantitative-physiology-organ-transport-systems-spring-2004/",
       "levels": [

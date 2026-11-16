@@ -109,10 +109,6 @@
       "licence": "CC BY-NC-SA 3.0 (third-party content excluded)",
       "licenceSeen": "Open Yale Courses Terms of Use page and the course page: 'licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 license'",
       "terms": "Non-commercial only (Terms section 5). Third-party content is not covered unless a lecture's Credits section says so. Terms say nothing about AI or ingestion; check Yale's Office of General Counsel before any commercial use.",
-      "video": {
-        "archive": "OpenYaleFundamentalsOfPhysicsWithProfessorRamamurtiShankar",
-        "files": 24
-      },
       "coursework": [
         "syllabus",
         "24 video lectures (mp4, ogv, mov on the Archive)",
@@ -126,7 +122,12 @@
         "everyday"
       ],
       "needIt": "Explains why things move the way they do, the base for every machine, car and tool.",
-      "notes": "The Archive item says 'Yale University 2010. Some rights reserved', CC BY-NC-SA 3.0 US, with third-party credits excepted. Page for the course lists lectures 1 to 18 and 20 to 24 (lecture 19 not listed). It says solutions are posted but does not link the problem sets, so confirm what is downloadable. Calculus-based; rebuild at plain level. A second Archive item, oyc_Fundamentals_of_Physics_I, has audio only (24 mp3)."
+      "notes": "The Archive item says 'Yale University 2010. Some rights reserved', CC BY-NC-SA 3.0 US, with third-party credits excepted. Page for the course lists lectures 1 to 18 and 20 to 24 (lecture 19 not listed). It says solutions are posted but does not link the problem sets, so confirm what is downloadable. Calculus-based; rebuild at plain level. A second Archive item, oyc_Fundamentals_of_Physics_I, has audio only (24 mp3). Audit 16 Nov 2026: the course page lists 23 lectures (no 19); the Archive has 24 videos.",
+      "video": {
+        "archive": "OpenYaleFundamentalsOfPhysicsWithProfessorRamamurtiShankar",
+        "files": 24
+      },
+      "year": 2006
     },
     {
       "id": "mit-8-01-1999",
@@ -145,15 +146,15 @@
       ],
       "needIt": "Famous demonstration lectures on force, motion, springs and fluids that make physics visible.",
       "notes": "35 lectures plus an introduction and a bonus video. The OCW 1999 page was not opened; archive metadata shows 71 mp4 files (two renditions), licence also in item metadata. Terms of OCW (non-commercial, attribution) apply. Pair with the 8.01SC coursework.",
-      "video": {
-        "archive": "MIT8.01F99",
-        "files": 71
-      },
       "coursework": [
         "lecture videos (35)",
         "course introduction"
       ],
-      "courseworkUrl": "https://archive.org/details/MIT8.01F99"
+      "courseworkUrl": "https://archive.org/details/MIT8.01F99",
+      "video": {
+        "archive": "MIT8.01F99",
+        "files": 37
+      }
     },
     {
       "id": "mit-8-01sc",
@@ -219,7 +220,7 @@
         "everyday"
       ],
       "needIt": "Teaches levers, pulleys, gears, screws and wheels with simple pictures, the parts inside every machine.",
-      "notes": "The Dover reprint adds a publisher; Dover's own cover or layout may be separately claimed. Prefer the original Navy text. Related Archive items: micro_IA41153602_0959 (1965 Navy course, ERIC), navedtra-14037-basic-machines-1994 (a 1994 NAVEDTRA with no licence text on its page)."
+      "notes": "The Dover reprint adds a publisher; Dover's own cover or layout may be separately claimed. Prefer the original Navy text. Related Archive items: micro_IA41153602_0959 (1965 Navy course, ERIC), navedtra-14037-basic-machines-1994 (a 1994 NAVEDTRA with no licence text on its page). Audit 16 Nov 2026: this item is the 1971 Dover reprint; its licence is inferred from the Navy original. Prefer an original Navy scan when building."
     },
     {
       "id": "williams-how-it-works",

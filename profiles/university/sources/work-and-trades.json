@@ -58,8 +58,9 @@
         "young adults",
         "everyday"
       ],
-      "spine": "US_Navy_Training_Course_-_Blueprint_Reading_and_Sketching",
+      "spine": "mechanicaldrawin02leed",
       "uses": [
+        "US_Navy_Training_Course_-_Blueprint_Reading_and_Sketching",
         "cyclopediaofarch03amer",
         "foster-carpentry-woodwork"
       ],
@@ -208,7 +209,7 @@
         "everyday"
       ],
       "needIt": "A trade school course in book form: framing, roofs, stairs, plumbing and heating basics.",
-      "notes": "Volume 3 of a set. Includes old wiring, plumbing and heating (lead pipe, gas lighting, early electric), which are unsafe by today's code. Flag against current codes.",
+      "notes": "Volume 3 of a set. Includes old wiring, plumbing and heating (lead pipe, gas lighting, early electric), which are unsafe by today's code. Flag against current codes. Audit 16 Nov 2026: the item names no volume (the id suggests 3, its description cites Vol. 2); confirm on the item page before building. American Technical Society, Chicago, 1907.",
       "year": 1907
     },
     {
@@ -247,7 +248,7 @@
         "everyday"
       ],
       "needIt": "Teaches how to read drawings, which every trade, repair job and home project needs.",
-      "notes": "LINK ONLY until the licence is confirmed on the document's own title page. Uploaded 2016 by a private uploader; confirm original NAVPERS or NAVEDTRA number."
+      "notes": "LINK ONLY until the licence is confirmed on the document's own title page. Uploaded 2016 by a private uploader; confirm original NAVPERS or NAVEDTRA number. Audit 16 Nov 2026: no date, author or rights on the item, and a private uploader: link only, not a spine."
     },
     {
       "id": "BasicElectricity10086",
@@ -304,6 +305,26 @@
       ],
       "needIt": "Drills for the writing a job needs: notes, messages and short letters.",
       "notes": "Dated business forms (telegrams, carbon copies); replace with email."
+    },
+    {
+      "id": "mechanicaldrawin02leed",
+      "kind": "book",
+      "title": "Mechanical drawing for industrial and high schools",
+      "by": "Charles Carley Leeds",
+      "url": "https://archive.org/details/mechanicaldrawin02leed",
+      "licence": "Public domain (US, by age)",
+      "licenceSeen": "Archive page: 'The Library of Congress is unaware of any copyright restrictions for this item.'",
+      "terms": "",
+      "text": "https://archive.org/details/mechanicaldrawin02leed",
+      "old": true,
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Teaches how to draw an object so someone else can build it, the first step of any make.",
+      "notes": "Pencil, T-square and ink drawing; modern drawing is on a screen. Keep the lines, views and dimension rules.",
+      "year": 1915
     }
   ]
 }

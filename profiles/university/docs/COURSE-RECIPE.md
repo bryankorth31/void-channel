@@ -20,6 +20,8 @@ rules are in `sources/FORMAT.md`:
 Licences are read on the page. OpenStax and Radiopaedia are forbidden. A site that blocks, charges or shows a robot
 check is left alone.
 
+**Count the lectures:** `node scripts/uni.js media` reads each Archive item and writes how many video (or sound-only) lectures it really holds. Finders get this wrong; never trust a hand count.
+
 **Check it:** HQ > University > **Check sources**, or `node scripts/uni.js check`. It confirms that every link answers,
 every source names its licence and where it was seen, nothing forbidden is used, there are no dashes, and every quiz
 answer is one of its choices and quotes its source. The result is in the same tab (and `sources/check.json`).
