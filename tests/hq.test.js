@@ -147,6 +147,22 @@ test('HQ\'s page cannot be framed by another site: X-Frame-Options SAMEORIGIN an
   assert.equal((await call(port, 'GET', '/api/jobs')).headers['x-frame-options'], undefined);
 });
 
+test('HQ has three areas behind a switcher; University and Kids are not Void TV tabs (docs/PLAN-hq-areas.md, H1)', async () => {
+  const page = (await call(port, 'GET', '/')).text;
+  assert.ok(page.includes('<nav id="areas"'), 'the area switcher is in the header');
+  const src = page.match(/const AREAS=(\[.*?\]);\r?\n/);
+  assert.ok(src, 'AREAS is defined');
+  const areas = Function('return ' + src[1])();
+  assert.deepEqual(areas.map((a) => a.n), ['Void TV', 'Kids', 'University']);
+  const keys = (k) => areas.find((a) => a.k === k).tabs.map((t) => t[0]);
+  assert.ok(!keys('tv').includes('university'), 'University left the Void TV tabs');
+  assert.deepEqual(keys('uni'), ['university', 'uni-courses', 'uni-areas', 'uni-check', 'uni-help']);
+  for (const k of [...keys('uni'), ...keys('kids')]) assert.ok(page.includes("'" + k + "'"), k + ' has a page');
+  // every University button has its by-hand line (hq-manual-mode)
+  for (const b of ['Check sources', 'Build preview', 'Build public copy', 'Deploy', 'Scaffold', 'Copy brief', 'Rewrite brief', 'Listen', 'Set times', 'Live']) assert.ok(page.includes("['" + b + "','"), b + ' is in University help');
+  assert.ok(page.includes('id="tvbtns"'), 'Publish now sits in the Void TV-only group');
+});
+
 test('the token is new each start: it is 64 hex characters and not a fixed string', () => {
   assert.match(token, /^[0-9a-f]{64}$/);
   assert.notEqual(token, '0'.repeat(64));

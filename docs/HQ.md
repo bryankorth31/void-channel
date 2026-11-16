@@ -130,6 +130,16 @@ one unit), Rewrite brief (an old book into plain English), and Live (only live c
 By hand: `node scripts/uni.js status`, `check`, `scaffold`, `brief`, `rewrite`, `media` (recount the Archive lectures), `build [--site]`. The full recipe, with the
 deploy line, is profiles/university/docs/COURSE-RECIPE.md.
 
+## Areas: Void TV, Kids, University (15 Nov 2026)
+
+Bryan, 15 Nov 2026: "Yes, as recommended" (plan and build order: docs/PLAN-hq-areas.md). A switcher next to HQ in the header
+picks the area; each has its own tabs. **Void TV**: the tabs above, plus Publish now and the player lab, which show only
+there. **University**: Overview (the buttons, counts and recipe), Courses (every course started, with Listen, Set times
+and Live), Areas (an area's sources, proposed courses and briefs), Source check, and Help (each button's by-hand
+command). **Kids**: for now one page with the by-hand steps (HQ-KIDS.cmd, REVIEW.html and approve.js, TEST-DEPLOY-KIDS.md);
+its own tabs are built on the kids branch and come with the kids merge. Old links still work (#shows, #university/<area>).
+Test: tests/hq.test.js, "HQ has three areas".
+
 ## Events the site sends
 
 `view` (page, slug) · `play` (slug, season x episode, file) · `tick` every 60 s while playing (position,
