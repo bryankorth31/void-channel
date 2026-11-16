@@ -82,7 +82,8 @@ function scene(u) {
 // The lab: something to put your hands on (lab.js; Bryan, 15 Nov 2026: "interactive teaching, analogous teaching,
 // If This Then That labs"). Knobs are the IF, the bench answers, and each rule's THEN shows only once you made it happen.
 function lab(u) {
-  const l = u.lab; if (!l || (LIVE && !l.live)) return ''; // a lab ships only once it is marked live
+  if (!shipsLab(u)) return ''; // the public copy carries a lab only once it is marked live
+  const l = u.lab;
   const map = (l.map || []).map(([a, z]) => '<span><i>' + esc(a) + '</i> = <b>' + esc(z) + '</b></span>').join('');
   const cfg = { bench: l.bench, go: l.go, knobs: l.knobs, rules: l.rules, meet: l.meet, triesNote: l.triesNote, guess: l.guess };
   return '<div class="lab" data-lab="' + esc(JSON.stringify(cfg)) + '">'
@@ -117,10 +118,10 @@ function chapters(u) {
 // Our own quiz, written from the lecture; every answer quotes the line it comes from (checked word for word).
 function quiz(u) {
   if (!(u.quiz || []).length) return '';
-  return '<div class="quiz"><h3>Check yourself</h3>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
+  return '<details class="quiz"><summary><h3>Check yourself</h3><span>' + u.quiz.length + ' questions, each answer quotes the lecture</span></summary>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
     + q.choices.map((ch, j) => '<button data-j="' + j + '">' + esc(ch) + '</button>').join('') + '</div>'
     + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"<button class="qt" data-t="' + q.t + '">From the lecture, at ' + clock(q.t) + '</button></blockquote></div></div>').join('')
-    + '<div class="qs" hidden></div></div>';
+    + '<div class="qs" hidden></div></details>';
 }
 
 function unit(u, voices, c) {
@@ -162,6 +163,7 @@ ${CARDCSS}
 .chap{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-6px 0 18px}.chap>span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600;margin-right:4px}
 .chap button,.qc button,.qt{font:inherit;font-size:14px;background:var(--panel2);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;text-align:left}
 .chap button:hover,.qc button:hover:not(:disabled),.qt:hover{border-color:var(--gold)}.chap i{font-style:normal;color:var(--gold);margin-right:8px}
+.quiz>summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}.quiz>summary::-webkit-details-marker{display:none}.quiz>summary h3{margin:0}.quiz>summary span{font-size:14px;color:var(--dim)}.quiz>summary::after{content:'Open';margin-left:auto;font-size:13px;color:var(--gold)}.quiz[open]>summary::after{content:'Close'}.quiz[open]>summary{margin-bottom:8px}
 .quiz{background:#0e1626;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 18px}
 .qq{padding:10px 0;border-top:1px solid var(--line)}.qq:first-of-type{border-top:0}.qq>p{margin:0 0 8px;font-size:16px}
 .qc{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
@@ -300,7 +302,7 @@ ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this cou
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
 </main></div>
 ${FOOT()}
-<script src="crystal.js"></script><script src="scene.js"></script>${c.units.some((u) => u.lab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter((u) => u.lab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}
+<script src="crystal.js"></script><script src="scene.js"></script>${c.units.some(shipsLab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter(shipsLab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}
 <script>
 function seek(el, t) {
   var v = el.closest('.unit').querySelector('video'); if (!v) return;
@@ -388,7 +390,7 @@ function home(all, list) {
       + (ch.length ? row('Channels for ' + t, 'whole series on the Internet Archive that go with these courses', ch.map(chan).join('')) : '');
   }).join('');
   const tiles = list.types.map((t) => {
-    const n = all.filter((c) => c.domain === t).length;
+    const n = full.filter((c) => c.domain === t).length; // same count as the row: the mechanisms shelf is not a course
     return '<div class="area' + (n ? ' has' : '') + '"><img loading="lazy" src="' + img('a-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""><div><b>' + esc(t) + '</b><small>' + (n ? n + (n === 1 ? ' course' : ' courses') : 'coming') + '</small></div></div>';
   }).join('');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -451,14 +453,16 @@ function credits(all) {
   const rows = Object.keys(IMG).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Photo credits · Void University</title>${FONTS}<style>${BASE}
 main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:Fraunces,Georgia,serif}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}</style></head><body>
-${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table><h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p></main>${FOOT()}</body></html>`;
+${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
 
+// Start from an empty folder: a page left from an earlier build (a course since taken off Live) would otherwise deploy.
+fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 fs.copyFileSync(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
 fs.copyFileSync(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
-for (const f of fs.readdirSync(DIR).filter((f) => /^lab(-[a-z]+)?\.js$/.test(f))) fs.copyFileSync(path.join(DIR, f), path.join(OUT, f));
-for (const f of ['planck.min.js', 'planck-LICENSE.txt']) fs.copyFileSync(path.join(DIR, 'vendor', f), path.join(OUT, f));
+// A lab is on a page when the unit has one; the public copy carries only labs marked live.
+const shipsLab = (u) => !!(u.lab && (!LIVE || u.lab.live));
 const LIVE_SLUGS = new Set((JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8')).courses || []).filter((c) => c.live).map((c) => c.slug));
 const courses = fs.readdirSync(path.join(DIR, 'courses')).filter((f) => f.endsWith('.json'));
 const loaded = courses.map((f) => JSON.parse(fs.readFileSync(path.join(DIR, 'courses', f), 'utf8')))
@@ -466,6 +470,11 @@ const loaded = courses.map((f) => JSON.parse(fs.readFileSync(path.join(DIR, 'cou
   // A course shows once it has a unit (a scaffold is only a plan). The public copy (--site) carries only the courses
   // Bryan marked live in list.json, so a draft another chat is working on never ships with someone else's deploy.
   .filter((c) => c.units.length && (!LIVE || LIVE_SLUGS.has(c.slug)));
+// The lab engine and its physics library go in the public copy only when a live course has a live lab.
+if (loaded.some((c) => c.units.some(shipsLab))) {
+  for (const f of fs.readdirSync(DIR).filter((f) => /^lab(-[a-z]+)?\.js$/.test(f))) fs.copyFileSync(path.join(DIR, f), path.join(OUT, f));
+  for (const f of ['planck.min.js', 'planck-LICENSE.txt']) fs.copyFileSync(path.join(DIR, 'vendor', f), path.join(OUT, f));
+}
 MECH = loaded.find((c) => c.shelf === 'supplement') || null;
 for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });
 fs.mkdirSync(path.join(OUT, 'img'), { recursive: true });

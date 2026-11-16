@@ -1,4 +1,4 @@
-# Void University — the learning side of the Void
+# Void University: the learning side of the Void
 
 B, 2026-10-13: "I credit YouTube university as a huge part of my life and understanding. Also IRC,
 and I archived to read books and such over my life. I would like to discuss the search and if there
@@ -11,7 +11,7 @@ other directions").
 ## The idea in one line
 
 The same machine that turns the Archive's scattered TV uploads into ordered, playable shows can turn
-its scattered lectures, books, recordings and software into ordered, followable **courses** — and
+its scattered lectures, books, recordings and software into ordered, followable **courses**, and
 the X-Ray connections layer is what ties the media types together: a lecture links to the book it
 assigns, the book to the documentary on the same subject, the documentary to the lecturer's other
 courses, the course to the software you can run in the browser to try the idea.
@@ -23,15 +23,15 @@ collections with real metadata, so this hunt is **collection-scoped queries**, f
 lighter on the Archive.
 
 **Video lectures**
-- **UC Berkeley webcasts** — about 20,000 course lectures Berkeley deleted from YouTube in 2017;
+- **UC Berkeley webcasts**: about 20,000 course lectures Berkeley deleted from YouTube in 2017;
   preserved on the Archive as whole semesters. The single richest body.
-- **MIT OpenCourseWare** and **Yale Open Courses** — CC BY-NC-SA, with structured course catalogs
+- **MIT OpenCourseWare** and **Yale Open Courses**: CC BY-NC-SA, with structured course catalogs
   (course → lecture list) to match against, exactly the way TVmaze gives us show → episode list.
 - **Khan Academy** (CC), **Stanford / Harvard / CMU** open lectures where mirrored.
-- **Computer Chronicles** and **Net Café** — the Archive's own collections; the history of the
+- **Computer Chronicles** and **Net Café**: the Archive's own collections; the history of the
   machines we're using.
-- **The Great Courses** uploads — "whatever the Archive has."
-- **YouTube university, mirrored** — youtube-* Archive items of 3Blue1Brown, Computerphile,
+- **The Great Courses** uploads: "whatever the Archive has."
+- **YouTube university, mirrored**: youtube-* Archive items of 3Blue1Brown, Computerphile,
   Numberphile, Crash Course, Veritasium, Kurzgesagt, CGP Grey, Periodic Videos, Sixty Symbols,
   Kahn-style channels. Same ruling as Internet Comedy: for this row the mirrors ARE the content.
 - **Documentaries already in VoidTV** (Documentary & Geographic, History, Nature & Science) are
@@ -39,8 +39,8 @@ lighter on the Archive.
 
 **Books and reading**
 - **Open Library** (the Archive's own lending library) and the Archive's texts collection.
-- **Project Gutenberg** and **Standard Ebooks** — public domain, clean EPUBs.
-- **LibriVox** — public-domain audiobooks, hosted on the Archive, read by volunteers.
+- **Project Gutenberg** and **Standard Ebooks**: public domain, clean EPUBs.
+- **LibriVox**: public-domain audiobooks, hosted on the Archive, read by volunteers.
 - **Wikisource / Wikibooks / Wikiversity**, **OpenStax** textbooks (CC BY), **Saylor Academy**.
 - This is the READ mode B has prior work on (books and comics reader). Same shell as the player.
 
@@ -61,7 +61,7 @@ lighter on the Archive.
 1. **Course list** instead of show list: `scripts/course-list.json` seeded from OCW/Yale/Berkeley
    catalogs (subject, course code, lecturer, year, lecture titles).
 2. **Hunt** by collection and identifier (`collection:ucberkeley-webcast`, `creator:"MIT OpenCourseWare"`),
-   match lectures to the catalog's lecture list by number and title, pick the playable file — the
+   match lectures to the catalog's lecture list by number and title, pick the playable file, the
    match.js judges work unchanged: runtime band (50/80 min lectures), sequence fallback, playability.
 3. **Readings**: the catalog's assigned texts → Open Library / Gutenberg lookups by title+author →
    a reader link beside each lecture.
@@ -74,7 +74,7 @@ lighter on the Archive.
 6. **Site**: a University door off the home page; course page = syllabus (lectures in order, same
    player, resume, Mine, notes), readings, "what else teaches this," lecturer page.
 7. **Mine** extends naturally: progress through a syllabus, notes per lecture, a transcript of what
-   you've completed — exportable, synced later by the same code.
+   you've completed, exportable, synced later by the same code.
 
 ## What makes it different from a playlist site
 
@@ -88,7 +88,7 @@ lighter on the Archive.
 ## Courses we author ourselves: curriculum first, then the voices (B, 2026-10-13)
 
 B: "Build a course of our own from known areas for things needed and useful to learn, and once we
-build this list and course, from the inverse — people who've shown ability and speak on this — and
+build this list and course, from the inverse, people who've shown ability and speak on this, and
 then build that into Void University courses, in addition to the courses we build from the material
 at hand from the Archive in various media formats."
 
@@ -101,29 +101,29 @@ So there are two kinds of course, and they meet in the same graph:
 | Teachers are | whoever the institution hired | the **voices**: people who have shown ability and speak on it, chosen by us |
 | Media | mostly lecture video | whatever teaches it best: a talk, a chapter, a documentary, a radio interview, a program to run |
 
-### Step 1 — the curriculum: what is needed and useful
+### Step 1: the curriculum: what is needed and useful
 
 A spine of domains → competencies → outcomes, written in B's voice (the editorial record; see
 `voice:b` primacy). Not "Intro to Economics" but "keep a household solvent." The test for every
 entry: would a busy person on a stretched budget be better off a month after learning it? Starter
 domains to react to (B edits; nothing here is final):
 
-- **Money** — budget, debt, credit, taxes, insurance, how banks and markets actually work
-- **Food** — cook from staples, feed a family cheaply, preserve, nutrition without fads
-- **Home** — fix what breaks (plumbing, electrical basics, drywall), tools, energy, renting and owning
-- **Body** — sleep, strength, first aid, reading a lab result, navigating a hospital
-- **Mind** — how to think (logic, probability, fallacies), how to learn, attention, consciousness
+- **Money**: budget, debt, credit, taxes, insurance, how banks and markets actually work
+- **Food**: cook from staples, feed a family cheaply, preserve, nutrition without fads
+- **Home**: fix what breaks (plumbing, electrical basics, drywall), tools, energy, renting and owning
+- **Body**: sleep, strength, first aid, reading a lab result, navigating a hospital
+- **Mind**: how to think (logic, probability, fallacies), how to learn, attention, consciousness
   (Jaynes belongs here)
-- **Words** — write plainly, speak in a room, argue fairly, read hard books
-- **Law and rights** — contracts, tenancy, police encounters, small claims, what a 501(c)(3) is
-- **Work and trades** — how a trade is learned, running a one-person business, negotiating pay
-- **Machines** — how computers, networks and the internet work; a first program; keeping your data
-- **Making** — drawing, music, woodworking, electronics, photography, film
-- **Land** — growing food, soil, water, weather, animals
-- **Civics and history** — how government works, how we got here, the big arguments
-- **Faith and philosophy** — the traditions, what they claim, how to read them
-- **Family** — raising children, caring for parents, marriage, grief
-- **Emergencies** — fire, flood, power out, bleeding, lost, car broken down
+- **Words**: write plainly, speak in a room, argue fairly, read hard books
+- **Law and rights**: contracts, tenancy, police encounters, small claims, what a 501(c)(3) is
+- **Work and trades**: how a trade is learned, running a one-person business, negotiating pay
+- **Machines**: how computers, networks and the internet work; a first program; keeping your data
+- **Making**: drawing, music, woodworking, electronics, photography, film
+- **Land**: growing food, soil, water, weather, animals
+- **Civics and history**: how government works, how we got here, the big arguments
+- **Faith and philosophy**: the traditions, what they claim, how to read them
+- **Family**: raising children, caring for parents, marriage, grief
+- **Emergencies**: fire, flood, power out, bleeding, lost, car broken down
 
 #### B's first two entries (2026-10-13), and a rule that comes with them
 
@@ -131,7 +131,7 @@ domains to react to (B edits; nothing here is final):
    argument cheats; know what a number can and cannot say; notice when a story is doing the
    thinking for you; change your mind in public without shame; read a hard text without an
    intermediary telling you what it means.
-2. **Data — without the predetermined silos as the walls.** Outcomes: find the primary source
+2. **Data: without the predetermined silos as the walls.** Outcomes: find the primary source
    (the dataset, the filing, the paper, the transcript) instead of the report about it; read a
    table, a chart, a rate, a base rate; know how a statistic is manufactured and by whom; cross a
    discipline's border when the answer lives on the other side; tell measurement from
@@ -162,21 +162,21 @@ domains to react to (B edits; nothing here is final):
 to come from"): the material for an authored course is not fenced by where it came from. A
 university lecture, a 1970s public-television hour, a trade's apprenticeship film, a radio
 interview, a hobbyist's demonstration, a court transcript and a chapter read aloud all qualify on
-the same test — does it teach the outcome, and is the person demonstrated. The institution is one
+the same test, does it teach the outcome, and is the person demonstrated. The institution is one
 source among many, not the wall. This applies to Step 2 as well: a demonstrated amateur beats an
 undemonstrated credential.
 
-### Step 2 — the inverse: who has shown ability and speaks on it
+### Step 2: the inverse: who has shown ability and speaks on it
 
 For each competency, find the **voices**: not the most famous, the most *demonstrated*. The
 standard is evidence of doing, then evidence of teaching clearly, then open material:
 
-1. **Did it** — built, fixed, ran, healed, grew, won, survived the thing (Wikidata occupations,
+1. **Did it**: built, fixed, ran, healed, grew, won, survived the thing (Wikidata occupations,
    awards and notable works; trade bodies; court records for lawyers; competition results).
-2. **Teaches it well** — talks, lectures, books, interviews where people learned (the Open Syllabus
-   Project — the most-assigned readings across millions of real syllabi — is a known body for the
+2. **Teaches it well**: talks, lectures, books, interviews where people learned (the Open Syllabus
+   Project, the most-assigned readings across millions of real syllabi, is a known body for the
    book side; conference archives for talks; LibriVox/Open Library for texts).
-3. **Material is open** — on the Archive, mirrored, public domain, or CC.
+3. **Material is open**: on the Archive, mirrored, public domain, or CC.
 
 Each voice becomes a person node in the same graph as the TV people, with `evidence` (why they
 qualify) and `teaches` (which competencies). Two or three voices per unit from different angles
@@ -189,109 +189,109 @@ Evidence in brackets: D = did it, T = teaches it well, O = open material exists 
 public domain). All angles mixed on purpose: scientists, a magician, a schoolteacher, a doctor.
 
 *Critical thinking*
-- Richard Feynman — physicist [D: Nobel, Challenger inquiry; T: "Cargo Cult Science", Messenger
+- Richard Feynman: physicist [D: Nobel, Challenger inquiry; T: "Cargo Cult Science", Messenger
   Lectures; O: lectures and interviews on the Archive]
-- Carl Sagan — astronomer [D: Voyager, Viking; T: the "baloney detection kit", Cosmos; O: Cosmos,
+- Carl Sagan: astronomer [D: Voyager, Viking; T: the "baloney detection kit", Cosmos; O: Cosmos,
   talks]
-- Neil Postman — media critic and teacher [D: 40 years teaching; T: "Bullshit and the Art of
+- Neil Postman: media critic and teacher [D: 40 years teaching; T: "Bullshit and the Art of
   Crap-Detection" (1969 talk), Amusing Ourselves to Death; O: talks and readings on the Archive]
-- James Randi — stage magician and investigator [D: exposed Geller, Popoff, faith healers with
+- James Randi: stage magician and investigator [D: exposed Geller, Popoff, faith healers with
   demonstrations, not arguments; T: lectures, the Million Dollar Challenge; O: Archive]
-- Bertrand Russell — philosopher [D: Principia, a life of public argument; T: the 1959 BBC
+- Bertrand Russell: philosopher [D: Principia, a life of public argument; T: the 1959 BBC
   interviews, "ten commandments" of thinking; O: public domain and Archive]
-- Daniel Kahneman — psychologist [D: Nobel for showing how judgment fails; T: Thinking, Fast and
+- Daniel Kahneman: psychologist [D: Nobel for showing how judgment fails; T: Thinking, Fast and
   Slow, lectures; O: talks mirrored]
-- John Taylor Gatto — schoolteacher [D: 30 years in NYC classrooms, NY State Teacher of the Year,
-  then quit in public; T: "The Underground History of American Education", talks; O: Archive] —
+- John Taylor Gatto: schoolteacher [D: 30 years in NYC classrooms, NY State Teacher of the Year,
+  then quit in public; T: "The Underground History of American Education", talks; O: Archive], 
   the critic angle on where thinking gets trained out of people
-- Harry Frankfurt — philosopher [T: "On Bullshit"; O: readings] — short, exact, the vocabulary
-- Julian Jaynes — psychologist [T: The Origin of Consciousness in the Breakdown of the Bicameral
-  Mind, the 1980s lectures; O: Archive] — B's own reading of consciousness; the Mind domain's door
+- Harry Frankfurt: philosopher [T: "On Bullshit"; O: readings], short, exact, the vocabulary
+- Julian Jaynes: psychologist [T: The Origin of Consciousness in the Breakdown of the Bicameral
+  Mind, the 1980s lectures; O: Archive], B's own reading of consciousness; the Mind domain's door
 
 *Data without silos*
-- Hans Rosling — physician and statistician [D: practiced medicine in Mozambique, built Gapminder;
+- Hans Rosling: physician and statistician [D: practiced medicine in Mozambique, built Gapminder;
   T: the bubble-chart talks that made a billion people read a trend; O: talks mirrored]
-- Edward Tufte — statistician [D: the Challenger analysis; T: The Visual Display of Quantitative
+- Edward Tufte: statistician [D: the Challenger analysis; T: The Visual Display of Quantitative
   Information, the one-day course; O: lectures mirrored]
-- Darrell Huff — journalist [T: How to Lie with Statistics (1954), the most-read statistics book
+- Darrell Huff: journalist [T: How to Lie with Statistics (1954), the most-read statistics book
   ever written; O: Archive]
-- W. Edwards Deming — statistician [D: rebuilt Japanese industry's quality from data; T: the
+- W. Edwards Deming: statistician [D: rebuilt Japanese industry's quality from data; T: the
   four-day seminars, Out of the Crisis; O: 1980 NBC "If Japan Can, Why Can't We?" and seminars on
   the Archive]
-- John Ioannidis — physician [D/T: "Why Most Published Research Findings Are False"; O: lectures]
-- Ben Goldacre — physician [D: ran AllTrials; T: Bad Science, "Battling Bad Science"; O: talks]
-- Nassim Taleb — trader turned scholar [D: made and kept money on tail risk; T: Fooled by
-  Randomness, lectures; O: lectures mirrored] — the practitioner angle: skin in the game
-- Tim Harford — economist and broadcaster [T: More or Less (BBC), How to Make the World Add Up; O:
-  episodes mirrored] — how a number gets into the news
-- Claude Shannon — engineer [D: information theory itself; T: lectures; O: Archive] — what data is
-- Cathy O'Neil — mathematician and former quant [D: built the models; T: Weapons of Math
-  Destruction; O: talks] — the critic angle on data used as a wall
+- John Ioannidis: physician [D/T: "Why Most Published Research Findings Are False"; O: lectures]
+- Ben Goldacre: physician [D: ran AllTrials; T: Bad Science, "Battling Bad Science"; O: talks]
+- Nassim Taleb: trader turned scholar [D: made and kept money on tail risk; T: Fooled by
+  Randomness, lectures; O: lectures mirrored], the practitioner angle: skin in the game
+- Tim Harford: economist and broadcaster [T: More or Less (BBC), How to Make the World Add Up; O:
+  episodes mirrored], how a number gets into the news
+- Claude Shannon: engineer [D: information theory itself; T: lectures; O: Archive], what data is
+- Cathy O'Neil: mathematician and former quant [D: built the models; T: Weapons of Math
+  Destruction; O: talks], the critic angle on data used as a wall
 
 *IFTTT and the mechanisms*
-- Tim Hunkin — engineer and cartoonist [D: builds working machines for a living; T: The Secret
-  Life of Machines (Channel 4, 1988–93), which he released freely himself; O: Archive, by the
-  maker's own wish] — the anchor: a toaster, a fax, a washing machine, taken apart on camera
-- James Burke — science historian [T: Connections (BBC 1978), The Day the Universe Changed; O:
-  Archive] — mechanisms of change across centuries; one trigger, ten consequences
-- Donella Meadows — systems scientist [D: Limits to Growth; T: Thinking in Systems, "Leverage
-  Points"; O: lectures on the Archive] — stocks, flows, feedback, delay: the grammar of mechanisms
-- Buckminster Fuller — inventor [D: the dome, the Dymaxion work; T: "Everything I Know" (42 hours,
-  1975); O: Archive, released by his estate] — the long-form voice
-- Richard Hamming — mathematician [D: Bell Labs, error-correcting codes; T: "You and Your
+- Tim Hunkin: engineer and cartoonist [D: builds working machines for a living; T: The Secret
+  Life of Machines (Channel 4, 1988 to 93), which he released freely himself; O: Archive, by the
+  maker's own wish], the anchor: a toaster, a fax, a washing machine, taken apart on camera
+- James Burke: science historian [T: Connections (BBC 1978), The Day the Universe Changed; O:
+  Archive], mechanisms of change across centuries; one trigger, ten consequences
+- Donella Meadows: systems scientist [D: Limits to Growth; T: Thinking in Systems, "Leverage
+  Points"; O: lectures on the Archive], stocks, flows, feedback, delay: the grammar of mechanisms
+- Buckminster Fuller: inventor [D: the dome, the Dymaxion work; T: "Everything I Know" (42 hours,
+  1975); O: Archive, released by his estate], the long-form voice
+- Richard Hamming: mathematician [D: Bell Labs, error-correcting codes; T: "You and Your
   Research", The Art of Doing Science and Engineering lectures; O: Archive]
-- Norbert Wiener — mathematician [D: founded cybernetics; T: The Human Use of Human Beings; O:
-  readings] — feedback as the idea behind the idea
-- Seymour Papert — mathematician and educator [D: LOGO, the Turtle; T: Mindstorms; O: talks and
-  the LOGO software itself, runnable in the browser] — learn a mechanism by building one
-- Charlie Munger — investor [D: the record; T: the "Psychology of Human Misjudgment" talk, the
-  mental-models speeches; O: mirrored talks] — incentives as the master mechanism
-- Bill Hammack ("engineerguy") — chemical engineer [D: practising engineer; T: the engineerguy
-  films; O: he publishes them freely] — a modern Hunkin
-- Adam Savage — maker [D: builds; T: MythBusters method, Tested; O: episodes/talks mirrored]
-- Don Norman — cognitive scientist [T: The Design of Everyday Things; O: talks] — why the door
+- Norbert Wiener: mathematician [D: founded cybernetics; T: The Human Use of Human Beings; O:
+  readings], feedback as the idea behind the idea
+- Seymour Papert: mathematician and educator [D: LOGO, the Turtle; T: Mindstorms; O: talks and
+  the LOGO software itself, runnable in the browser], learn a mechanism by building one
+- Charlie Munger: investor [D: the record; T: the "Psychology of Human Misjudgment" talk, the
+  mental-models speeches; O: mirrored talks], incentives as the master mechanism
+- Bill Hammack ("engineerguy"): chemical engineer [D: practising engineer; T: the engineerguy
+  films; O: he publishes them freely], a modern Hunkin
+- Adam Savage: maker [D: builds; T: MythBusters method, Tested; O: episodes/talks mirrored]
+- Don Norman: cognitive scientist [T: The Design of Everyday Things; O: talks], why the door
   says push: mechanisms designed for or against you
-- Ivan Illich — priest and critic [T: Tools for Conviviality, Deschooling Society; O: Archive] and
-  Jacques Ellul — sociologist [T: The Technological Society; O: readings] — the critic angle: when
+- Ivan Illich: priest and critic [T: Tools for Conviviality, Deschooling Society; O: Archive] and
+  Jacques Ellul, sociologist [T: The Technological Society; O: readings], the critic angle: when
   the mechanism owns the user
-- B. F. Skinner — psychologist [D: the operant chamber; T: the lectures; O: Archive] — the
+- B. F. Skinner: psychologist [D: the operant chamber; T: the lectures; O: Archive], the
   reinforcement schedule, which is what every feed runs; paired with Tristan Harris [D: ex-Google
   design ethicist; T: the attention-economy talks; O: mirrored] for the present tense
 - Practice layer, not voices: IFTTT, Apple Shortcuts, Android Tasker, a spreadsheet, a first
-  shell script — and the Archive's emulated machines for taking old software apart
+  shell script, and the Archive's emulated machines for taking old software apart
 
 *The whys, and nucleation learning*
-- Jacob Bronowski — mathematician and historian of science [D: a working scientist; T: The Ascent
-  of Man (BBC 1973), Science and Human Values; O: Archive] — the anchor: knowledge as a personal
+- Jacob Bronowski: mathematician and historian of science [D: a working scientist; T: The Ascent
+  of Man (BBC 1973), Science and Human Values; O: Archive], the anchor: knowledge as a personal
   act, the why before the what
-- Richard Feynman — [T: the 1983 BBC "Fun to Imagine" interviews, above all the "why do magnets
+- Richard Feynman: [T: the 1983 BBC "Fun to Imagine" interviews, above all the "why do magnets
   repel" answer, which is this entry in seven minutes; O: Archive]
-- Alfred North Whitehead — philosopher [T: "The Aims of Education" (1929): the rhythm of romance,
-  precision, generalisation — nucleation described a century early; O: public domain]
-- Seymour Papert — [T: the gears story that opens Mindstorms: a child's seed crystal; O: Archive]
-- Arthur Koestler — writer [T: The Act of Creation: bisociation, the idea forming where two
-  domains touch; O: readings] — why learning different matters, stated as a mechanism
-- Douglas Hofstadter — cognitive scientist [D: Gödel, Escher, Bach; T: "Analogy as the Core of
+- Alfred North Whitehead: philosopher [T: "The Aims of Education" (1929): the rhythm of romance,
+  precision, generalisation, nucleation described a century early; O: public domain]
+- Seymour Papert: [T: the gears story that opens Mindstorms: a child's seed crystal; O: Archive]
+- Arthur Koestler: writer [T: The Act of Creation: bisociation, the idea forming where two
+  domains touch; O: readings], why learning different matters, stated as a mechanism
+- Douglas Hofstadter: cognitive scientist [D: Gödel, Escher, Bach; T: "Analogy as the Core of
   Cognition" lecture; O: mirrored]
-- Mortimer Adler — philosopher and teacher [D: the Great Books program, the Paideia schools; T:
-  How to Read a Book, the 1950s–80s television teaching; O: Archive]
-- John Holt — schoolteacher [D: a classroom career, then the unschooling movement; T: How Children
-  Fail / How Children Learn; O: readings and interviews] — what kills the seed
-- Maria Montessori — physician [D: the method, built from observation; T: The Montessori Method;
-  O: public domain] — prepared environments as nucleation sites
-- Michael Polanyi — chemist and philosopher [D: physical chemistry; T: Personal Knowledge, The
-  Tacit Dimension; O: readings] — "we know more than we can tell": the seed is not always words
-- Barbara Oakley — engineer [D: the most-taken online course ever, Learning How to Learn; T: the
-  course, A Mind for Numbers; O: talks mirrored] — the practice angle: focused and diffuse modes
-- Viktor Frankl — psychiatrist [D: survived the camps and treated others; T: Man's Search for
-  Meaning, the 1972 lecture; O: Archive] — the why that outlasts the what
-- Julian Jaynes — [see entry 1] — the largest seed B ever planted, by his own account
+- Mortimer Adler: philosopher and teacher [D: the Great Books program, the Paideia schools; T:
+  How to Read a Book, the 1950s, 80s television teaching; O: Archive]
+- John Holt: schoolteacher [D: a classroom career, then the unschooling movement; T: How Children
+  Fail / How Children Learn; O: readings and interviews], what kills the seed
+- Maria Montessori: physician [D: the method, built from observation; T: The Montessori Method;
+  O: public domain], prepared environments as nucleation sites
+- Michael Polanyi: chemist and philosopher [D: physical chemistry; T: Personal Knowledge, The
+  Tacit Dimension; O: readings], "we know more than we can tell": the seed is not always words
+- Barbara Oakley: engineer [D: the most-taken online course ever, Learning How to Learn; T: the
+  course, A Mind for Numbers; O: talks mirrored], the practice angle: focused and diffuse modes
+- Viktor Frankl: psychiatrist [D: survived the camps and treated others; T: Man's Search for
+  Meaning, the 1972 lecture; O: Archive], the why that outlasts the what
+- Julian Jaynes: [see entry 1], the largest seed B ever planted, by his own account
 - Found piece to open the course with: Saul Bass, "Why Man Creates" (1968, 25 minutes; O: Archive)
 
 Deliberately not here: pundits, politicians, anyone whose evidence is an audience rather than a
 result. The hard exclude (politics/government/news) holds in Void University too.
 
-### Step 3 — assemble the course
+### Step 3: assemble the course
 
 A course = ordered units. A unit = one primary piece (a talk, a lecture, a chapter read aloud) +
 a reading + a documentary or episode from VoidTV if one fits + a practice ("do this tonight") +
@@ -301,10 +301,10 @@ completion live in Mine.
 
 ### Files
 
-- `curriculum/curriculum.json` — domains → competencies → outcomes, B's voice.
-- `curriculum/voices.json` — person → { teaches: [competency], evidence, sources } (TMDB id if a
+- `curriculum/curriculum.json`: domains → competencies → outcomes, B's voice.
+- `curriculum/voices.json`: person → { teaches: [competency], evidence, sources } (TMDB id if a
   TV person, Wikidata id otherwise).
-- `catalog/courses/<slug>.json` — compiled courses (found and authored alike), same shape as a show
+- `catalog/courses/<slug>.json`: compiled courses (found and authored alike), same shape as a show
   grid: units instead of seasons, pieces instead of episodes.
 
 ### Why the graph is the point
@@ -352,7 +352,7 @@ summarise a lecture so you can skip it, or talk to a visitor who did not press t
 
 ## Void School: the homeschool toolkit (B, 2026-10-13)
 
-B: "Could we build this using our full library to be homeschool tools — the entire class, videos to
+B: "Could we build this using our full library to be homeschool tools, the entire class, videos to
 go with, tests and study material and articles in all forms? I see this as no more than continuing
 to apply the same way to all the rest, assigning criteria and filtering cross-connections with a
 simple model."
@@ -360,15 +360,15 @@ simple model."
 Yes. It is the same machine with a different list, plus one generated layer. What changes, honestly:
 
 **Same machine**
-- *List*: a scope and sequence instead of a show list — strands (reading, writing, math, science,
+- *List*: a scope and sequence instead of a show list: strands (reading, writing, math, science,
   history/civics, arts, practical life) × levels, each lesson with an outcome. Not invented from
-  scratch: whole K–12 curricula already exist under open licences and give us the spine and the
-  order — Core Knowledge (K–8, CC BY-NC-SA), EngageNY / Eureka (K–12 math and ELA, CC BY-NC-SA), Illustrative Mathematics (CC BY), CK-12 (CC BY-NC), OpenStax high-school
+  scratch: whole K, 12 curricula already exist under open licences and give us the spine and the
+  order, Core Knowledge (K, 8, CC BY-NC-SA), EngageNY / Eureka (K, 12 math and ELA, CC BY-NC-SA), Illustrative Mathematics (CC BY), CK-12 (CC BY-NC), OpenStax high-school
   texts (CC BY), Khan Academy, Siyavula, Wikisource/Gutenberg for the readings. These are known
   bodies; we match to them like TVmaze.
 - *Hunt*: the lesson's video from the library (Bronowski, Burke, Sagan, Feynman, the Documentary
   and Nature & Science rows, Computer Chronicles, the found courses), judged by the same criteria
-  — right outcome, demonstrated voice, playable — plus **level** and **suitability** (see the door
+ , right outcome, demonstrated voice, playable, plus **level** and **suitability** (see the door
   below).
 - *Match*: article = Simple English Wikipedia or Wikipedia section + a public-domain primary source;
   reading = the open textbook chapter or a Gutenberg text; practice = the open curriculum's own
@@ -379,21 +379,21 @@ Yes. It is the same machine with a different list, plus one generated layer. Wha
 **Standards matter; grading and accrediting are not ours. (B, 2026-10-13: "I see standards and
 that stuff as important. I won't be grading or accrediting. We will show what we have and what and
 how it fits the standards of xyz.")** So: every lesson is mapped to the published standards it
-serves (Common Core, NGSS, the C3 framework for social studies, and state codes — all public), and
+serves (Common Core, NGSS, the C3 framework for social studies, and state codes, all public), and
 Void School shows a family *what we have and how it fits*: pick your state or framework, see which
 standards our lessons cover, with which pieces, and where the gaps are. What we do not do is score
-a child, issue grades, or claim accreditation. What a family keeps is what Mine already keeps —
-what we watched, what we read, where we stopped — alongside the standards those lessons served, so
+a child, issue grades, or claim accreditation. What a family keeps is what Mine already keeps, 
+what we watched, what we read, where we stopped, alongside the standards those lessons served, so
 a parent can show their own record against their own state's list if they choose to.
 
 **The generated layer (the "simple model", builder side, static output)**
 For each lesson the model writes the wrap the library cannot supply: a why-it-matters paragraph
-in plain words (entry 4 made mandatory — the seed goes in first); the standards the lesson serves,
+in plain words (entry 4 made mandatory, the seed goes in first); the standards the lesson serves,
 with the exact code and the sentence of the standard it meets, checked against the material rather
 than asserted; three questions worth talking about at the table afterwards, open ones; study
-material — the words a child will meet for the first time, a one-page summary, practice items where
+material, the words a child will meet for the first time, a one-page summary, practice items where
 the open curriculum has them (never scored by us); one thing to make, try, visit or look for this
-week; and a note to the parent — what to listen for, what children usually get tangled in, where
+week; and a note to the parent, what to listen for, what children usually get tangled in, where
 the piece is wrong or dated and what to say about that. Grounded on the actual material (transcript + reading), never on
 the model's memory. B reviews by sampling; a flag on any lesson sends it back. Cost: pennies a
 lesson.
@@ -402,8 +402,8 @@ lesson.
 standard for a Void School lesson is higher than for a VoidTV row, and the throughput lower:
 - every piece watched by a person before it is assigned (B, or someone he trusts), not just
   judged by the hunter;
-- the voice test applied strictly (did it, teaches it well) and a third test added — *is this the
-  best thing we hold for a child meeting the idea for the first time?* — so one superb Bronowski
+- the voice test applied strictly (did it, teaches it well) and a third test added: *is this the
+  best thing we hold for a child meeting the idea for the first time?*, so one superb Bronowski
   hour beats five adequate ones;
 - the whole lesson readable by a parent in two minutes before pressing play, standards included;
 - a standards view that is honest: coverage shown as it is, gaps shown as gaps, never a lesson
@@ -414,7 +414,7 @@ standard for a Void School lesson is higher than for a VoidTV row, and the throu
   before the second begins.
 
 **What the library cannot do, said plainly**
-- *Hands-on*: labs, music practice, sport, making — we can show and suggest, not supervise. The
+- *Hands-on*: labs, music practice, sport, making: we can show and suggest, not supervise. The
   parent is the teacher; we are the shelf, the planner and the person who already watched it all.
 - *Socialisation*: the study hall, later, optional.
 
@@ -427,9 +427,9 @@ child) live in the same Mine blob; the sync code moves the household together.
 **The School front page: rows, like TV (B, 2026-10-13: "in the same way we present the rows
 that side-scroll with the TV content, present the homeschool media in genre or grade rows, and in
 them the media we have that qualifies").** Same shelf component, same cards, same arrows, same
-▾ details, same filters bar — no new UI, a different list.
+▾ details, same filters bar, no new UI, a different list.
 
-- **Rows by grade band** first: Early Years (K–2), Grades 3–5, Middle (6–8), High (9–12). A piece
+- **Rows by grade band** first: Early Years (K, 2), Grades 3 to 5, Middle (6 to 8), High (9 to 12). A piece
   can sit in more than one band (Bronowski's "The Ascent of Man" is Middle and High).
 - **Rows by subject** below: Reading & Literature, Writing & Speaking, Math, Science, Nature &
   Earth, History & Civics, Geography & World, Arts & Music, Machines & Making, Practical Life,
@@ -437,10 +437,10 @@ them the media we have that qualifies").** Same shelf component, same cards, sam
 - **A card is a bundle, not a single file** (B, 2026-10-13: "a card would not just be one type of
   media; it would be the main media in that category, but also connecting and corresponding media
   that goes with it, in a drop-down"). The face of the card is the **main piece** for that subject
-  and level — one episode, one lecture, one documentary hour — with its poster or still, title,
+  and level, one episode, one lecture, one documentary hour, with its poster or still, title,
   level, and small marks showing what travels with it (watch · read · listen · do). The ▾ opens
   the bundle: first the wrap (why it matters, the standards with codes, the talk-about questions,
-  the parent note), then the **companions**, each with its own button — *Read* (the book chapter,
+  the parent note), then the **companions**, each with its own button, *Read* (the book chapter,
   the article, the primary source), *Listen* (the radio hour, the audiobook chapter), *Watch also*
   (the second documentary, the TV episode that shows it, from the library behind suitability),
   *Do* (the program to run, the practice, the thing to build), *Who* (the voices, to their person
@@ -454,8 +454,8 @@ them the media we have that qualifies").** Same shelf component, same cards, sam
   queued), all from Mine.
 - **What qualifies** for a row: passed suitability; level and subject assigned by the model and
   confirmed by a person; the voice test; and the "best thing we hold for a first meeting" test for
-  anything placed in a K–2 or 3–5 row. A piece without a why-it-matters paragraph is not shown.
-- **Data**: `catalog/school/pieces.json` — one record per bundle: main (show + season + episode,
+  anything placed in a K, 2 or 3 to 5 row. A piece without a why-it-matters paragraph is not shown.
+- **Data**: `catalog/school/pieces.json`: one record per bundle: main (show + season + episode,
   course lecture, or book id), companions [{role: read | listen | watch | do, source, title,
   minutes, why-this-one}], voices [person ids], grades, subjects, standards [{framework, code,
   text}], why, questions, words, practice, parentNote, partOf, reviewedBy, reviewedAt. The site builder turns it into rows exactly
@@ -469,8 +469,8 @@ one. A parent switches a child's profile (or a single bundle) into *guided mode*
 - **The main piece plays through.** The scrub bar cannot jump ahead of the furthest point
   actually watched (rewinding is always allowed); playback speed is capped at 1×; the piece counts
   as watched when the end is reached, with a small margin for credits.
-- **Every companion must be opened** — and, for a reading or a listen, kept open for a minimum
-  time scaled to its length — before the bundle's **Next** lights up. The ▾ shows the checklist:
+- **Every companion must be opened**: and, for a reading or a listen, kept open for a minimum
+  time scaled to its length, before the bundle's **Next** lights up. The ▾ shows the checklist:
   watch ✓, read ◻, listen ◻, do ◻. "Do" is marked by the child or parent, since nobody can see the
   kitchen table.
 - **Next** goes to the next bundle in the week the aid or the parent planned. Outside guided mode,
@@ -485,7 +485,7 @@ knows developer tools can defeat it in a minute; so can a reload if we are carel
 is written to Mine every few seconds. That is the right strength for a home: it holds the honest
 child to the lesson and asks nothing of the parent's trust it cannot earn. If a stronger lock is
 ever wanted, it needs accounts and a server, and we will say so rather than pretend. (B,
-2026-10-13: "for this part we will get some space; until then this will be fine" — so the
+2026-10-13: "for this part we will get some space; until then this will be fine", so the
 page-kept promise now, a small server-side check when School has its own hosting.)
 
 Same mode, optional, for Void University's authored courses (a learner can switch it on for
@@ -497,13 +497,13 @@ above, grown up and given a classroom. *Semi*-automated is the design: the paren
 runs the day, the parent sees everything. What it does, in the order a lesson happens:
 
 1. **Plans the week** from the rows: given a child's band, the subjects the parent chose and what
-   was finished last week, it lays out a sequence that respects nucleation — the why, the story,
-   the mechanism, the practice — and the parent approves or drags it around.
+   was finished last week, it lays out a sequence that respects nucleation, the why, the story,
+   the mechanism, the practice, and the parent approves or drags it around.
 2. **Introduces each piece** before play, in the child's register: the why-it-matters, the two
    words to listen for, what to notice. Thirty seconds, then the piece plays untouched.
 3. **Talks afterwards**: asks the talk-about questions, listens to the answer (typed, later
-   spoken), follows up once or twice, and if the child is stuck, explains using the piece itself —
-   "go back to the part where Bronowski is standing in the ..." with the timestamp — never from its
+   spoken), follows up once or twice, and if the child is stuck, explains using the piece itself, 
+   "go back to the part where Bronowski is standing in the ..." with the timestamp, never from its
    own memory.
 4. **Hands over the practice** and, at the end of the day, writes the parent a short note: what
    was watched, what the child said, where they lit up, where they got tangled, what to talk about
@@ -513,7 +513,7 @@ Rules that do not bend: grounded only in the lesson's transcript, readings and w
 scores or rankings of the child; nothing a child types leaves the household except to the model
 call itself, and the parent can read every exchange; a child-safe system prompt that refuses to
 go off-material; per-household monthly budget with a plain "the aid is resting until next month"
-when it is spent; always optional — every lesson works with the aid switched off, because the
+when it is spent; always optional, every lesson works with the aid switched off, because the
 parent is the teacher and the aid is the aide. Built on the same Worker as the companion,
 claude-haiku-5-5 behind it; needs transcripts (Whisper pass) first. Position in the order:
 after the School rows exist and one strand is done with care.

@@ -24,6 +24,8 @@ const AI_NO = new RegExp('\\b([Nn]ot|[Nn]o|[Pp]rohibit\\w*|[Ff]orbid\\w*|without
 const AI_NO2 = new RegExp('(' + AI_WORD.source + ')[^.]{0,60}(prohibited|forbidden|not (be )?(permitted|allowed))');
 const DASH = /\u2014|\u2013/; // no em or en dashes anywhere (Bryan's rule)
 
+const SLUG_OK = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+const PRIVATE = /^https?:\/\/(localhost|127\.|10\.|192\.168\.|169\.254\.|172\.(1[6-9]|2\d|3[01])\.|\[)/i; // the check never calls this PC or the home network
 const slugify = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const readJson = (f, d) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { return d; } };
 const writeJson = (f, v) => fs.writeFileSync(f, JSON.stringify(v, null, 2) + '\n');
@@ -41,6 +43,7 @@ function unitNeeds(u, c = {}) {
   if (!u.scene && !u.lab) need.push('scene');
   if (!u.main && c.shelf !== 'supplement') need.push('main piece');
   if (c.kind === 'found' && !(u.quiz || []).length) need.push('quiz');
+  if (c.shelf !== 'supplement' && !u.crystal) need.push('crystal');
   return need;
 }
 
@@ -120,6 +123,7 @@ function setLive(slug, live) {
 
 // The one step that needs a Claude chat, written out whole so it can be pasted as it is (Bryan: whole prompts, not kits).
 function brief(slug, n) {
+  if (!SLUG_OK.test(String(slug))) throw new Error('Not a course slug: ' + String(slug).slice(0, 40));
   const c = readJson(courseFile(slug), null);
   if (!c) throw new Error('No course ' + slug);
   const t = (c.todo || []).find((x) => x.n === +n) || c.units.find((x) => x.n === +n);
@@ -143,9 +147,10 @@ ${JSON.stringify(example ? { n: example.n, title: example.title, needIt: example
    - needIt: one plain sentence on how this helps a person decide or live better.
    - scene: an everyday analogy acted out with scene.js stamps (pictures first, Bryan 15 Nov). Check that no shapes or words overlap at 1316 and 821 wide.
    - main: the lecture video (Archive file) or the reading, with its licence. chapters: the times where the lecture changes topic.
+   - crystal: the "Make it set" block (crystal.js; see a unit of courses/critical-thinking.json for the shape): five partials from the unit's own pieces, the key, two decoys each with why it is wrong, and the aha line.
    - quiz: about five questions. Each answer quotes the exact line of the source it comes from, with the time or page. Check every quote word for word against the transcript or text you saved.
    - Old books (old: true) are rewritten into plain modern English beside the original line. Anything now wrong or unsafe gets a plain warning and the current US government source.
-4. Run: node profiles/university/build.js, then look at the unit in the preview (launch.json "void-university", port 8783) at 1920, 1316 and 821 wide: no sideways scroll, no broken images, no console errors.
+4. Run: node profiles/university/build.js, then look at the unit in the preview (node profiles/university/serve.js, then http://127.0.0.1:8783) at 1920, 1316 and 821 wide: no sideways scroll, no broken images, no console errors.
 5. Run: node scripts/uni.js check, and fix anything it lists for this course.
 6. Commit as Bryan Korth with no Co-Authored-By line. Do not push and do not deploy; Bryan says when a course goes live.
 RULES: plain language, no em dashes anywhere, OpenStax and Radiopaedia are forbidden, never get round a site that blocks or charges, use they/them for people.`;
@@ -192,11 +197,18 @@ async function check(log = () => {}) {
       // sentence by sentence, skipping the finder's own "No clause about AI found" lines
       if (String(s.terms || '').split(/(?<=\.)\s+/).some((t) => !/^no\b|\bfound\b/i.test(t) && (AI_NO.test(t) || AI_NO2.test(t)))) problems.push({ where, what: 'terms may forbid AI use, read them (link only until checked): ' + String(s.terms).slice(0, 90) });
       walkText(where, s);
-      for (const k of ['url', 'text', 'courseworkUrl']) if (/^https?:\/\//.test(s[k] || '')) urls.set(s[k], where);
+      for (const k of ['url', 'text', 'courseworkUrl']) {
+        if (!s[k]) continue;
+        if (!/^https?:\/\//.test(s[k])) problems.push({ where, what: k + ' is not a web link: ' + String(s[k]).slice(0, 60) });
+        else if (PRIVATE.test(s[k])) problems.push({ where, what: k + ' points at this PC or the home network: ' + s[k] });
+        else urls.set(s[k], where);
+      }
       if (s.video && s.video.archive) urls.set('https://archive.org/metadata/' + s.video.archive + '/metadata/identifier', where + ' (Archive item)');
     }
     for (const c of f.courses || []) { if (c.spine && !ids.has(c.spine)) problems.push({ where: slugify(area) + '.json course ' + c.name, what: 'spine ' + c.spine + ' is not in the sources' }); walkText(slugify(area) + '.json course ' + c.name, c); }
   }
+  for (const c of builtCourses()) for (const u of [...c.units, ...(c.todo || [])]) if (!Number.isInteger(u.n)) problems.push({ where: c.slug, what: 'a unit number is not a whole number: ' + String(u.n).slice(0, 20) });
+  for (const c of builtCourses()) walkText(c.slug + '.json', c);
   for (const c of builtCourses()) for (const u of c.units) for (const [i, q] of (u.quiz || []).entries()) {
     if (!(q.a >= 0 && q.a < (q.choices || []).length)) problems.push({ where: c.slug + ' unit ' + u.n + ' quiz ' + (i + 1), what: 'the answer is not one of the choices' });
     if (!q.quote) problems.push({ where: c.slug + ' unit ' + u.n + ' quiz ' + (i + 1), what: 'no quote from the source' });

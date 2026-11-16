@@ -360,6 +360,28 @@
             }
           }
         ]
+      },
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "Glaucon asked: if a ring made you invisible, would you still be good?",
+          "Given a coin to split the tasks fairly, most of Batson's subjects kept the good task anyway.",
+          "The same people still rated themselves as moral.",
+          "Facing a mirror and flipping the coin, people split the tasks exactly as chance would.",
+          "\"Best two out of three,\" said only after losing the flip."
+        ],
+        "key": "People want to seem fair more than to be fair, and being watched, even by yourself, closes the gap.",
+        "decoys": [
+          {
+            "text": "People are just selfish, and nothing changes that.",
+            "why": "With a mirror facing them, people split the tasks as fairly as chance. Something small changed it."
+          },
+          {
+            "text": "Using a fair process makes the result fair.",
+            "why": "Batson's subjects had a coin and still kept the good task. A process only works if you keep its result."
+          }
+        ],
+        "aha": "Every partial is the gap between looking fair and being fair, and what happens when someone, even you, is watching."
       }
     },
     {
@@ -697,6 +719,28 @@
             }
           }
         ]
+      },
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "Asked a month ahead, almost everyone waits two extra days for $6 over $5.",
+          "Asked today, one in five grabs the $5.",
+          "Odysseus had himself tied to the mast before he sailed past the sirens.",
+          "Mischel's children sat in front of one marshmallow now, or two if they waited.",
+          "The alarm clock set across the room the night before."
+        ],
+        "key": "A small reward up close looks bigger than it is, so decide ahead of time and set things up so the choice you want still wins.",
+        "decoys": [
+          {
+            "text": "Weak will is a flaw of character: you have it or you do not.",
+            "why": "The same people chose $6 a month ahead and $5 today. The distance changed the choice, not the person."
+          },
+          {
+            "text": "Just try harder in the moment.",
+            "why": "The moment is when the small reward looks biggest. Odysseus did not trust himself at the sirens; he planned before."
+          }
+        ],
+        "aha": "Every partial is the same curve: far away you choose well, up close the small thing looms, and only a move made in advance holds."
       }
     }
   ],
@@ -736,5 +780,25 @@
       "what": "Philosopher",
       "did": "Argued that principles bind us like Odysseus's ropes: one act stands for the whole class, so we stop deciding case by case."
     }
-  }
+  },
+  "channels": [
+    {
+      "name": "Philosophy of Death (Yale PHIL 176)",
+      "by": "Shelly Kagan, Open Yale Courses",
+      "what": "26 filmed lectures on what death is and how knowing we die should shape how we live.",
+      "url": "https://archive.org/details/OpenYaleCoursePhilosophyOfDeath",
+      "count": "26 videos",
+      "licence": "CC BY-NC-SA 3.0 (Open Yale Courses)",
+      "thumb": "https://archive.org/services/img/OpenYaleCoursePhilosophyOfDeath"
+    },
+    {
+      "name": "Introduction to Political Philosophy (Yale PLSC 114)",
+      "by": "Steven B. Smith, Open Yale Courses",
+      "what": "24 filmed lectures on how people have argued we should live together, from Plato to Tocqueville.",
+      "url": "https://archive.org/details/OpenYaleCourseIntroductionToPoliticalPhilosophy",
+      "count": "24 videos",
+      "licence": "CC BY-NC-SA 3.0 (Open Yale Courses)",
+      "thumb": "https://archive.org/services/img/OpenYaleCourseIntroductionToPoliticalPhilosophy"
+    }
+  ]
 }

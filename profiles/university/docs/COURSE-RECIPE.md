@@ -52,7 +52,7 @@ warnings where old advice is now unsafe.
 A unit is finished when it has:
 - "why you need this", written for the unit;
 - a scene or a lab;
-- a main piece (except on the small supplement cards);
+- a main piece and a crystal ("Make it set"), except on the small supplement cards;
 - for a course built from a found source, a quiz.
 
 HQ shows what each unit still needs.
