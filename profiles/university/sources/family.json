@@ -1,0 +1,260 @@
+{
+  "area": "Family",
+  "checked": "2026-11-15",
+  "notes": "No site blocked. No open university child development course with a stated licence was verified in this pass: an Open Yale Courses psychology page guess returned 404, so it is listed as not confirmed. Family rests on government and old books; a modern licensed child development course (for example from MIT OpenCourseWare, not checked) should be found later. Gutendex timed out; Gutenberg id verified on its ebook page.",
+  "courses": [
+    {
+      "name": "The first year of a baby, then and now",
+      "why": "New parents get a flood of advice; seeing how it changed helps them choose current guidance.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "spine": "childrens-bureau-infant-care-1921",
+      "uses": [
+        "childrens-bureau-prenatal-care-1914",
+        "holt-care-feeding-children-1922"
+      ],
+      "units": [
+        "What parents were told in 1921",
+        "What was wrong and why it changed",
+        "Sleep and safety today",
+        "Feeding: milk, solids, allergies",
+        "When to call a doctor",
+        "Looking after yourself too"
+      ]
+    },
+    {
+      "name": "Running a home calmly",
+      "why": "Money, cooking, cleaning and caring for the sick fall on every household.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "gutenberg-beeton-household-10136",
+      "uses": [
+        "red-cross-home-hygiene-1922",
+        "usda-farm-house-plans-1934"
+      ],
+      "units": [
+        "A budget in one page",
+        "Planning meals",
+        "A clean kitchen",
+        "Caring for someone sick at home",
+        "The home as a safe place",
+        "What old home advice got wrong"
+      ]
+    },
+    {
+      "name": "Manners that make people comfortable",
+      "why": "Good manners help at jobs, funerals, weddings and with neighbors.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "post-etiquette-1922",
+      "uses": [
+        "montessori-method-1912"
+      ],
+      "units": [
+        "Why manners exist",
+        "Meeting people",
+        "At the table",
+        "Writing a thank-you note",
+        "Weddings and funerals",
+        "Work manners",
+        "Teaching manners to children"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "childrens-bureau-infant-care-1921",
+      "kind": "book",
+      "title": "Infant care (Children's Bureau Publication, 1921 edition)",
+      "by": "Mrs. Max West, US Children's Bureau",
+      "year": 1921,
+      "url": "https://archive.org/details/infantcare00westrich",
+      "licence": "US government work",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: NOT_IN_COPYRIGHT; item sits in the Archive's US Government Documents collection",
+      "terms": "",
+      "text": "https://archive.org/details/infantcare00westrich",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The plain-spoken government booklet that taught a generation of parents; shows what changed and what did not.",
+      "notes": "OUTDATED and in places UNSAFE: old sleep positions, letting babies cry, fixed-clock feeding, early solids, old remedies. Flag every medical, sleep and feeding point against current CDC and American Academy of Pediatrics guidance. Other editions: infantcare00unit (1929), infantcarewithal00unit (1940).",
+      "old": true
+    },
+    {
+      "id": "childrens-bureau-prenatal-care-1914",
+      "kind": "book",
+      "title": "Prenatal care (Children's Bureau)",
+      "by": "Mrs. Max West, US Children's Bureau",
+      "year": 1914,
+      "url": "https://archive.org/details/prenatalcare00unitrich",
+      "licence": "US government work",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: NOT_IN_COPYRIGHT",
+      "terms": "",
+      "text": "https://archive.org/details/prenatalcare00unitrich",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "What expectant parents were taught a century ago, to compare with today.",
+      "notes": "OUTDATED medicine: diet, drugs, weight and delivery advice are all dated. Teach as history, with a current source for anything health related.",
+      "old": true
+    },
+    {
+      "id": "holt-care-feeding-children-1922",
+      "kind": "book",
+      "title": "The care and feeding of children: a catechism for the use of mothers and children's nurses",
+      "by": "L. Emmett Holt",
+      "year": 1922,
+      "url": "https://archive.org/details/childfeedcare00holtrich",
+      "licence": "Public domain",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: NOT_IN_COPYRIGHT",
+      "terms": "",
+      "text": "https://archive.org/details/childfeedcare00holtrich",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A famous old question-and-answer book, showing how childcare advice itself changes.",
+      "notes": "OUTDATED and unsafe on feeding, illness and schedules. Teach as history only; flag against current CDC and AAP guidance. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "montessori-method-1912",
+      "kind": "book",
+      "title": "The Montessori method: scientific pedagogy as applied to child education in the children's houses",
+      "by": "Maria Montessori",
+      "year": 1912,
+      "url": "https://archive.org/details/cu31924032538500",
+      "licence": "Public domain (stated on the LibriVox edition; the scan states nothing, confirm)",
+      "licenceSeen": "Archive item page shows only the 1912 date, no licence field; the LibriVox audio edition shows the Public Domain Mark in its licence field",
+      "terms": "",
+      "text": "https://archive.org/details/cu31924032538500",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Ideas about letting children learn through hands-on choice, still used in homes and schools.",
+      "notes": "This 1912 scan shows no licence field; a LibriVox audio edition (montessori_method_0906_librivox) shows Public Domain Mark. Old language and period views on children need framing. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-beeton-household-10136",
+      "kind": "book",
+      "title": "The Book of Household Management",
+      "by": "Mrs. Isabella Beeton",
+      "year": 1861,
+      "url": "https://www.gutenberg.org/ebooks/10136",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/10136",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A Victorian guide to running a home: budgeting, food, health, manners.",
+      "notes": "Victorian British; much is class and servants. Medical and food-safety chapters are unsafe. Use budgeting and cooking logic, flag the rest.",
+      "old": true
+    },
+    {
+      "id": "post-etiquette-1922",
+      "kind": "book",
+      "title": "Etiquette in society, in business, in politics and at home",
+      "by": "Emily Post",
+      "year": 1922,
+      "url": "https://archive.org/details/etiquetteinsoci00postgoog",
+      "licence": "Public domain by age (published before 1931); not stated on the page, confirm on a second source",
+      "licenceSeen": "Archive item page shows only the publication date, no licence field (so not read as stated)",
+      "terms": "",
+      "text": "https://archive.org/details/etiquetteinsoci00postgoog",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Manners as a way of making other people comfortable; useful for weddings, funerals, jobs and neighbors.",
+      "notes": "Many rules are dated; teach the principle (consideration), not the 1922 rules. Licence not stated on the item page, confirm on a second source. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "red-cross-home-hygiene-1922",
+      "kind": "book",
+      "title": "American Red Cross text-book on home hygiene and care of the sick",
+      "by": "Jane A. Delano, American Red Cross",
+      "year": 1922,
+      "url": "https://archive.org/details/ARCTextBook1922",
+      "licence": "Public domain (Public Domain Mark 1.0)",
+      "licenceSeen": "Archive item page, License field: Public Domain Mark 1.0 (creativecommons.org/publicdomain/mark/1.0)",
+      "terms": "",
+      "text": "https://archive.org/details/ARCTextBook1922",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "How to care for a sick person at home, keep a clean house and avoid spreading illness.",
+      "notes": "OUTDATED medicine (fever, diet, isolation, bed rest). Flag against current CDC advice; useful on the routine of caring for someone. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "usda-farm-house-plans-1934",
+      "kind": "book",
+      "title": "Farm house plans, Farmers' Bulletin no. 1738",
+      "by": "US Department of Agriculture",
+      "year": 1934,
+      "url": "https://archive.org/details/USDepartmentofAgricultureFarmhouseplans0001",
+      "licence": "US government work",
+      "licenceSeen": "Archive item page, License field: Public Domain Mark 1.0 (creativecommons.org/publicdomain/mark/1.0)",
+      "terms": "",
+      "text": "https://archive.org/details/USDepartmentofAgricultureFarmhouseplans0001",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A look at how a family home was planned around work, light and health.",
+      "notes": "Wiring, heating and plumbing in these plans are unsafe by today's code. History only.",
+      "old": true
+    },
+    {
+      "id": "yale-psyc-110-unconfirmed",
+      "kind": "open-course",
+      "title": "Introduction to Psychology (Open Yale Courses)",
+      "by": "Yale professor, name not read",
+      "year": null,
+      "url": "https://archive.org/details/oyc_Introduction_to_Psychology",
+      "licence": "Not confirmed",
+      "licenceSeen": "The OYC course page was not read for its licence (a first guessed address returned 404); the Archive item shows no licence field",
+      "terms": "Link only until the licence is read on the course page",
+      "video": {
+        "archive": "oyc_Introduction_to_Psychology",
+        "files": 143
+      },
+      "coursework": [
+        "not confirmed"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/introduction-psychology/psyc-110",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Why people, and children, think, feel and act as they do.",
+      "notes": "NOT VERIFIED: do not build from this until its OYC course page is read for the licence. Audio only on the Archive (20 media files)."
+    }
+  ]
+}

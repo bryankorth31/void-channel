@@ -189,7 +189,8 @@ async function check(log = () => {}) {
       if (ids.has(s.id)) problems.push({ where, what: 'id used twice' }); ids.add(s.id);
       if (!s.licence) problems.push({ where, what: 'no licence' });
       if (!s.licenceSeen) problems.push({ where, what: 'licence not shown where it was seen' });
-      if (!/^no terms/i.test(s.terms || '') && (AI_NO.test(s.terms || '') || AI_NO2.test(s.terms || ''))) problems.push({ where, what: 'terms may forbid AI use, read them (link only until checked): ' + String(s.terms).slice(0, 90) });
+      // sentence by sentence, skipping the finder's own "No clause about AI found" lines
+      if (String(s.terms || '').split(/(?<=\.)\s+/).some((t) => !/^no\b|\bfound\b/i.test(t) && (AI_NO.test(t) || AI_NO2.test(t)))) problems.push({ where, what: 'terms may forbid AI use, read them (link only until checked): ' + String(s.terms).slice(0, 90) });
       walkText(where, s);
       for (const k of ['url', 'text', 'courseworkUrl']) if (/^https?:\/\//.test(s[k] || '')) urls.set(s[k], where);
       if (s.video && s.video.archive) urls.set('https://archive.org/metadata/' + s.video.archive + '/metadata/identifier', where + ' (Archive item)');

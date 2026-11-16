@@ -1,0 +1,350 @@
+{
+  "area": "Faith and philosophy",
+  "checked": "2026-11-15",
+  "notes": "No site blocked. The brief named RLST 145 as New Testament and RLST 152 as Hebrew Bible, but the site pages show the reverse (145 Old Testament, 152 New Testament); corrected here. Gutendex timed out; ids verified on Gutenberg ebook pages.",
+  "courses": [
+    {
+      "name": "The Bible, read as history and literature",
+      "why": "Whether or not you believe it, the Bible shapes laws, holidays and the people you meet.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-rlst-145",
+      "uses": [
+        "yale-rlst-152",
+        "gutenberg-kjv-bible-10"
+      ],
+      "units": [
+        "Where the stories came from",
+        "Creation and flood stories in their world",
+        "Abraham to Moses",
+        "Law and what it was for",
+        "Kings and prophets",
+        "Exile and return",
+        "How the New Testament was written",
+        "Reading carefully with no side taken"
+      ]
+    },
+    {
+      "name": "Facing death and loss",
+      "why": "Everyone will face it; thinking clearly helps you live and grieve better.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-phil-176",
+      "uses": [
+        "gutenberg-marcus-aurelius-2680",
+        "gutenberg-epictetus-enchiridion-45109"
+      ],
+      "units": [
+        "Why death scares us",
+        "What a person is",
+        "Is death bad for the one who dies",
+        "Would living forever be good",
+        "How to face what you cannot change",
+        "Grief and caring for others",
+        "Living with the time we have"
+      ]
+    },
+    {
+      "name": "Ancient advice for a calm life",
+      "why": "Roman and Greek teachers still give short, free advice on temper, worry and duty.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "gutenberg-marcus-aurelius-2680",
+      "uses": [
+        "gutenberg-epictetus-enchiridion-45109",
+        "gutenberg-epictetus-discourses-10661",
+        "gutenberg-plato-apology-1656",
+        "gutenberg-aristotle-ethics-8438",
+        "gutenberg-confucius-analects-3330",
+        "gutenberg-plato-republic-1497",
+        "gutenberg-james-pragmatism-5116"
+      ],
+      "units": [
+        "What you control and what you do not",
+        "Morning thoughts of an emperor",
+        "Anger and patience",
+        "Standing by your values: Socrates",
+        "Habits make character",
+        "Respect and family in the Analects",
+        "Does believing it make a difference",
+        "A short plan for a hard week"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "yale-rlst-145",
+      "kind": "open-course",
+      "title": "Introduction to the Old Testament (Hebrew Bible) (RLST 145)",
+      "by": "Yale professor, name on course page",
+      "year": 2006,
+      "url": "https://oyc.yale.edu/religious-studies/rlst-145",
+      "licence": "CC BY-NC-SA 3.0",
+      "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
+      "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
+      "video": {
+        "archive": "oyc_Introduction_to_the_Old_Testament_Hebrew_Bible",
+        "files": 173
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "exam pages",
+        "assignments"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/religious-studies/rlst-145",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The most-read book in the world, read as literature and history, helps you understand people of faith and the culture around you.",
+      "notes": "24 lectures; Archive copy is audio only; video on the OYC page. Exams linked. Note: the brief listed RLST 152 as Hebrew Bible, but on the site RLST 145 is the Hebrew Bible and RLST 152 is the New Testament."
+    },
+    {
+      "id": "yale-rlst-152",
+      "kind": "open-course",
+      "title": "Introduction to the New Testament History and Literature (RLST 152)",
+      "by": "Yale professor emeritus, name on course page",
+      "year": 2009,
+      "url": "https://oyc.yale.edu/religious-studies/rlst-152",
+      "licence": "CC BY-NC-SA 3.0",
+      "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
+      "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
+      "video": {
+        "archive": "oyc_Introduction_to_the_New_Testament_History_and_Literature",
+        "files": 188
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "assignments"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/religious-studies/rlst-152",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Understand where the Christian texts came from and how they were written, whatever your own faith.",
+      "notes": "26 lecture pages; Archive copy is audio only; video on the OYC page. A historical, not devotional, approach: say so up front."
+    },
+    {
+      "id": "yale-phil-176",
+      "kind": "open-course",
+      "title": "Death (PHIL 176)",
+      "by": "Professor Shelly Kagan",
+      "year": 2007,
+      "url": "https://oyc.yale.edu/philosophy/phil-176",
+      "licence": "CC BY-NC-SA 3.0",
+      "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
+      "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
+      "video": {
+        "archive": "OpenYaleCoursePhilosophyOfDeath",
+        "files": 395
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "exam page"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/philosophy/phil-176",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Everyone loses someone and faces their own end; clear thinking about it brings calm and better choices.",
+      "notes": "26 lectures. The Archive item has video (26 each of h.264, QuickTime, Ogg Video). Also oyc_Death (audio, 187 files) and kagan-shelly-death (17 files, Public Domain Mark). Do NOT use death-with-shelly-kagan (226 files): its uploader is not the university. Heavy topic, handle with care."
+    },
+    {
+      "id": "gutenberg-marcus-aurelius-2680",
+      "kind": "book",
+      "title": "Meditations",
+      "by": "Marcus Aurelius",
+      "year": 180,
+      "url": "https://www.gutenberg.org/ebooks/2680",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/2680",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Short daily notes on keeping calm and doing your duty, written by a Roman emperor to himself.",
+      "notes": "Old-fashioned English translation; rewrite plainly. Short sayings make ideal scenes.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-epictetus-enchiridion-45109",
+      "kind": "book",
+      "title": "The Enchiridion",
+      "by": "Epictetus",
+      "year": 125,
+      "url": "https://www.gutenberg.org/ebooks/45109",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/45109",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A small handbook for what you can control and what you cannot.",
+      "notes": "Very short and quotable. Old translation language.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-epictetus-discourses-10661",
+      "kind": "book",
+      "title": "A Selection from the Discourses of Epictetus with the Encheiridion",
+      "by": "Epictetus",
+      "year": 125,
+      "url": "https://www.gutenberg.org/ebooks/10661",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/10661",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The longer teaching behind the handbook, in a teacher's plain voice.",
+      "notes": "A selection only; older translation.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-plato-republic-1497",
+      "kind": "book",
+      "title": "The Republic",
+      "by": "Plato",
+      "year": -375,
+      "url": "https://www.gutenberg.org/ebooks/1497",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/1497",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A conversation on justice, a good life and who should lead.",
+      "notes": "Long; use the cave and the ring of Gyges for scenes. Old translation.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-plato-apology-1656",
+      "kind": "book",
+      "title": "Apology",
+      "by": "Plato",
+      "year": -399,
+      "url": "https://www.gutenberg.org/ebooks/1656",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/1656",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Socrates on trial refuses to stop questioning, a model of standing by your values.",
+      "notes": "Short; ideal single-lesson text.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-aristotle-ethics-8438",
+      "kind": "book",
+      "title": "The Ethics of Aristotle",
+      "by": "Aristotle",
+      "year": -340,
+      "url": "https://www.gutenberg.org/ebooks/8438",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/8438",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "How habits shape character and what a good life is made of.",
+      "notes": "Old translation; rewrite in everyday words.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-confucius-analects-3330",
+      "kind": "book",
+      "title": "The Analects of Confucius (from the Chinese Classics)",
+      "by": "Confucius",
+      "year": -479,
+      "url": "https://www.gutenberg.org/ebooks/3330",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/3330",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Short sayings on family, respect and learning from another great tradition.",
+      "notes": "A 19th century translation; use short sayings.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-kjv-bible-10",
+      "kind": "book",
+      "title": "The King James Version of the Bible",
+      "by": "Various",
+      "year": 1611,
+      "url": "https://www.gutenberg.org/ebooks/10",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/10",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The source text behind much English speech, law and art.",
+      "notes": "Old English; a text reference only, do not present it as one reading of faith. Pair with the Yale courses for context.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-james-pragmatism-5116",
+      "kind": "book",
+      "title": "Pragmatism: A New Name for Some Old Ways of Thinking",
+      "by": "William James",
+      "year": 1907,
+      "url": "https://www.gutenberg.org/ebooks/5116",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/5116",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A practical test for ideas: what difference does believing this make?",
+      "notes": "Lectures in plain 1907 English, still readable.",
+      "old": true
+    }
+  ]
+}

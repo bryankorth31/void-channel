@@ -1,0 +1,326 @@
+{
+  "area": "Emergencies",
+  "checked": "2026-11-15",
+  "notes": "BLOCKED: fema.gov returned 403 (access denied) and ready.gov/cert returned 403; stopped on those sites, no retry or workaround. ready.gov/about-us/website-policies was 404. FEMA is listed link-only. No CERT guide was found on the Archive. Archive government manuals carry the area. Gutendex was not used.",
+  "courses": [
+    {
+      "name": "Be ready at home",
+      "why": "A flood, storm or power cut hits ordinary households; a small plan prevents panic.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "civil-defense-personal-family-survival-1966",
+      "uses": [
+        "civil-defense-home-protection-exercises-1953",
+        "civil-defense-survival-atomic-attack-1951",
+        "fema-ready-gov",
+        "army-fm-21-76-1957"
+      ],
+      "units": [
+        "What can go wrong where you live",
+        "A household plan on one page",
+        "Water, food and light for three days",
+        "Staying warm and cool",
+        "Leaving in a hurry",
+        "Helping neighbors",
+        "How advice from the 1950s compares with today's"
+      ]
+    },
+    {
+      "name": "Staying alive outdoors",
+      "why": "If a hike or a drive goes wrong, a few basics decide the night.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "army-fm-21-76-1957",
+      "uses": [
+        "army-fm-21-76-survival-manual",
+        "boy-scouts-handbook-1911",
+        "seton-boy-scouts-woodcraft-1910"
+      ],
+      "units": [
+        "The order of things: calm, shelter, water, signal",
+        "Making a shelter",
+        "Fire without waste",
+        "Water you can trust",
+        "Being found",
+        "Cold and heat",
+        "What not to do"
+      ]
+    },
+    {
+      "name": "First aid then and now",
+      "why": "Knowing what old books got wrong teaches you to trust current guidance.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "red-cross-first-aid-1917",
+      "uses": [
+        "red-cross-home-hygiene-1922",
+        "fema-ready-gov"
+      ],
+      "units": [
+        "The first minutes after an injury",
+        "Bleeding and burns: old and new",
+        "Breaking a bone",
+        "Choking and breathing",
+        "Caring for the sick at home",
+        "Why guidance changes"
+      ]
+    },
+    {
+      "name": "When disease sweeps a place",
+      "why": "Epidemics show how communities cope, fail and learn.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-hist-234",
+      "uses": [
+        "red-cross-home-hygiene-1922"
+      ],
+      "units": [
+        "The plague and the first quarantines",
+        "Cholera and clean water",
+        "Tuberculosis and the poor",
+        "The 1918 flu",
+        "What fear does to people",
+        "What public health is for"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "yale-hist-234",
+      "kind": "open-course",
+      "title": "Epidemics in Western Society Since 1600 (HIST 234)",
+      "by": "Professor Frank Snowden",
+      "year": null,
+      "url": "https://oyc.yale.edu/history/hist-234",
+      "licence": "CC BY-NC-SA 3.0",
+      "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
+      "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
+      "video": {
+        "archive": "oyc_Epidemics_in_Western_Society_Since_1600",
+        "files": 187
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/history/hist-234",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Understand how disease emergencies unfold and why public health rules exist.",
+      "notes": "26 lectures; audio only on the Archive; video on the OYC page. Plague, cholera, TB, influenza, AIDS: how societies handled emergencies. Year not read from the page."
+    },
+    {
+      "id": "army-fm-21-76-1957",
+      "kind": "book",
+      "title": "FM 21-76 Survival (1957)",
+      "by": "US Department of the Army",
+      "year": 1957,
+      "url": "https://archive.org/details/FM21-76Survival1957",
+      "licence": "US government work",
+      "licenceSeen": "Archive item page, License field: Public Domain Mark 1.0; a US Army manual is a federal work",
+      "terms": "",
+      "text": "https://archive.org/details/FM21-76Survival1957",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A soldier's plain guide to staying alive: shelter, water, food, signals, fire.",
+      "notes": "Old edition; some plant, animal and first aid advice is dated. Flag against the later edition (milmanual-mcrp-3-02f-fm-21-76-survival) and current first aid courses. Never teach edible plant identification from text alone.",
+      "old": true
+    },
+    {
+      "id": "army-fm-21-76-survival-manual",
+      "kind": "book",
+      "title": "FM 21-76 Survival Manual (later edition, community upload)",
+      "by": "US Army",
+      "year": null,
+      "url": "https://archive.org/details/Fm21-76SurvivalManual",
+      "licence": "US government work",
+      "licenceSeen": "Archive item page, License field: Public Domain (creativecommons.org/licenses/publicdomain); a US Army manual",
+      "terms": "",
+      "text": "https://archive.org/details/Fm21-76SurvivalManual",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The better-known modern survival manual.",
+      "notes": "Uploader is a community collection; year not stated. Other copies: FM2176USARMYSURVIVALMANUAL, milmanual-mcrp-3-02f-fm-21-76-survival. Check which edition before quoting."
+    },
+    {
+      "id": "red-cross-first-aid-1917",
+      "kind": "book",
+      "title": "American Red Cross abridged textbook on first aid",
+      "by": "Charles Lynch, American Red Cross",
+      "year": 1917,
+      "url": "https://archive.org/details/americanredcross00lync",
+      "licence": "Public domain",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: NOT_IN_COPYRIGHT",
+      "terms": "",
+      "text": "https://archive.org/details/americanredcross00lync",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The basics of helping an injured person before help comes.",
+      "notes": "OUTDATED medicine: tourniquet use, burns, shock and artificial breathing are not current. Teach history only, with current Red Cross and AHA guidance for anything a person would do. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "red-cross-home-hygiene-1922",
+      "kind": "book",
+      "title": "American Red Cross text-book on home hygiene and care of the sick (1922)",
+      "by": "Jane A. Delano, American Red Cross",
+      "year": 1922,
+      "url": "https://archive.org/details/ARCTextBook1922",
+      "licence": "Public domain (Public Domain Mark 1.0)",
+      "licenceSeen": "Archive item page, License field: Public Domain Mark 1.0 (creativecommons.org/publicdomain/mark/1.0)",
+      "terms": "",
+      "text": "https://archive.org/details/ARCTextBook1922",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Care of the sick at home during an outbreak or storm.",
+      "notes": "Outdated medicine; flag. Same item is in the Family list. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "boy-scouts-handbook-1911",
+      "kind": "book",
+      "title": "Boy Scouts of America: the official handbook for boys",
+      "by": "Boy Scouts of America",
+      "year": 1911,
+      "url": "https://www.gutenberg.org/ebooks/29558",
+      "licence": "Public domain by age (published before 1931); not stated on the page, confirm on a second source",
+      "licenceSeen": "Archive item page shows only the publication date, no licence field (so not read as stated)",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/29558",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Preparedness, first aid and woodcraft as taught to young people.",
+      "notes": "Old first aid and period tone; use as history. Licence not stated on the item page, confirm. Link corrected 15 Nov 2026: the finder wrote an Archive id that does not exist; this is the Gutenberg copy (public domain in the USA, read on the page).",
+      "old": true
+    },
+    {
+      "id": "seton-boy-scouts-woodcraft-1910",
+      "kind": "book",
+      "title": "Boy scouts of America: a handbook of woodcraft, scouting and life-craft",
+      "by": "Ernest Thompson Seton",
+      "year": 1910,
+      "url": "https://archive.org/details/boyscoutsofameri00seto",
+      "licence": "Public domain",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: NOT_IN_COPYRIGHT",
+      "terms": "",
+      "text": "https://archive.org/details/boyscoutsofameri00seto",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Early scouting skills for living outdoors and helping others.",
+      "notes": "Old first aid and wildlife advice; period tone. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "civil-defense-survival-atomic-attack-1951",
+      "kind": "film",
+      "title": "Survival Under Atomic Attack",
+      "by": "US Office of Civil Defense",
+      "year": 1951,
+      "url": "https://archive.org/details/Survival1951",
+      "licence": "US government work",
+      "licenceSeen": "Archive item page, License field: Public Domain (creativecommons.org/licenses/publicdomain); a federal work",
+      "terms": "",
+      "text": "https://archive.org/details/Survival1951",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A Cold War booklet and film showing how a government taught people to survive a bomb; a lesson in how advice ages.",
+      "notes": "Much of the science and advice is oversimplified or wrong by today's knowledge. History of preparedness, never current instruction.",
+      "old": true
+    },
+    {
+      "id": "civil-defense-home-protection-exercises-1953",
+      "kind": "book",
+      "title": "Home protection exercises",
+      "by": "US Office of Civil Defense",
+      "year": 1953,
+      "url": "https://archive.org/details/home-protection-exercises",
+      "licence": "US government work",
+      "licenceSeen": "Archive item page, License field: Public Domain Mark 1.0",
+      "terms": "",
+      "text": "https://archive.org/details/home-protection-exercises",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A 1950s household drill book: what to do and who does what.",
+      "notes": "Atomic-era advice is dated; the habit of a household plan is not.",
+      "old": true
+    },
+    {
+      "id": "civil-defense-personal-family-survival-1966",
+      "kind": "book",
+      "title": "Personal and Family Survival (Civil Defense adult education course, SM 3-11-A)",
+      "by": "Office of Civil Defense, US Department of Defense",
+      "year": 1966,
+      "url": "https://archive.org/details/personal_and_family_survival_sm_3_11_a_1966",
+      "licence": "US government work",
+      "licenceSeen": "Archive item page, License field: Public Domain Mark 1.0",
+      "terms": "",
+      "text": "https://archive.org/details/personal_and_family_survival_sm_3_11_a_1966",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A full adult course on family emergency preparation: shelter, water, food, first aid.",
+      "notes": "Fallout-focused and 1966; use the structure and flag the rest. Compare with current ready.gov guidance.",
+      "old": true
+    },
+    {
+      "id": "fema-ready-gov",
+      "kind": "guide",
+      "title": "Ready.gov and FEMA Independent Study courses",
+      "by": "FEMA, US Department of Homeland Security",
+      "year": null,
+      "url": "https://www.ready.gov/",
+      "licence": "Not confirmed (US government work assumed, not read)",
+      "licenceSeen": "NOT READ: fema.gov pages returned 403 (blocked) and ready.gov/cert returned 403; the ready.gov and training.fema.gov home pages loaded but state no licence text. Stopped on those sites",
+      "terms": "Licence and any AI terms could not be read; treat as link only",
+      "text": "",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Current, official steps for floods, fires, quakes, storms and CERT teams.",
+      "notes": "LINK ONLY. fema.gov blocked automated reading (403 access denied); stopped there and did not work round it. A person must read FEMA's terms before any text is reused. Use as the current source to check the old books against.",
+      "old": false
+    }
+  ]
+}

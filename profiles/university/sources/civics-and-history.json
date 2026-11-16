@@ -1,0 +1,352 @@
+{
+  "area": "Civics and history",
+  "checked": "2026-11-15",
+  "notes": "No site blocked. A guessed Open Yale Courses page (plsc-118) returned 403 and was dropped, not retried. The archives.gov founding documents page loaded but its licence statement was not read, so archives.gov is not listed; use the Gutenberg texts and individual loc.gov item rights lines. Gutendex timed out; ids were verified on Gutenberg ebook pages.",
+  "courses": [
+    {
+      "name": "How the country began",
+      "why": "Knowing how the Revolution worked, and what it promised, helps you judge what leaders say today.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-hist-116",
+      "uses": [
+        "gutenberg-declaration-1",
+        "gutenberg-common-sense-147",
+        "gutenberg-franklin-autobiography-148",
+        "gutenberg-federalist-1404"
+      ],
+      "units": [
+        "Why the colonies were angry",
+        "Words that lit the fuse",
+        "A war nobody was sure to win",
+        "Who the Revolution left out",
+        "Building a government on paper",
+        "Arguing over the Constitution",
+        "What the founders still teach us"
+      ]
+    },
+    {
+      "name": "A country divided and rebuilt",
+      "why": "The Civil War and what followed shape voting, race and the states today.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-hist-119",
+      "uses": [
+        "yale-afam-162"
+      ],
+      "units": [
+        "Why North and South drifted apart",
+        "Slavery and the money behind it",
+        "Secession and the first shots",
+        "The war at home and at the front",
+        "Freedom arrives",
+        "Reconstruction: what was tried",
+        "Why it was undone",
+        "What it means now"
+      ]
+    },
+    {
+      "name": "What makes a government fair",
+      "why": "Voting, taxes and rights all rest on ideas about fairness you can understand and test.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-plsc-114",
+      "uses": [
+        "gutenberg-utopia-2130",
+        "gutenberg-tocqueville-democracy-815",
+        "loc-copyright-statement"
+      ],
+      "units": [
+        "Why have a government at all",
+        "Rulers and the ruled",
+        "Does might make right",
+        "Equality and freedom",
+        "The majority and the individual",
+        "Obeying and refusing",
+        "Clubs, towns and everyday democracy"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "yale-hist-116",
+      "kind": "open-course",
+      "title": "The American Revolution (HIST 116)",
+      "by": "Professor Joanne Freeman",
+      "year": 2010,
+      "url": "https://oyc.yale.edu/history/hist-116",
+      "licence": "CC BY-NC-SA 3.0",
+      "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
+      "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
+      "video": {
+        "archive": "OpenYaleCourse-Hist116TheAmericanRevolution",
+        "files": 455
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "exam pages linked on the course page"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/history/hist-116",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "How a country is born from arguments, mistakes and fear, which helps you read today's politics.",
+      "notes": "25 lectures. The Archive item has MPEG4 video, mp3 and ogg for each (25 of each); transcripts on each lecture page. A second Archive item oyc_The_American_Revolution is audio only (173 files)."
+    },
+    {
+      "id": "yale-hist-119",
+      "kind": "open-course",
+      "title": "The Civil War and Reconstruction Era, 1845-1877 (HIST 119)",
+      "by": "Professor David Blight",
+      "year": 2008,
+      "url": "https://oyc.yale.edu/history/hist-119",
+      "licence": "CC BY-NC-SA 3.0",
+      "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
+      "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
+      "video": {
+        "archive": "oyc_The_Civil_War_and_Reconstruction_Era",
+        "files": 194
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "exam and assignments"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/history/hist-119",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Slavery, war and Reconstruction explain race and politics in the country today.",
+      "notes": "27 lecture pages; Archive copy is audio only. A separate Archive item hist119_06_013108 (93 files) holds one lecture and states CC BY-NC-SA in its licence field. Video on the OYC page. Exam and assignments linked."
+    },
+    {
+      "id": "yale-plsc-114",
+      "kind": "open-course",
+      "title": "Introduction to Political Philosophy (PLSC 114)",
+      "by": "Yale professor, name on course page",
+      "year": 2006,
+      "url": "https://oyc.yale.edu/political-science/plsc-114",
+      "licence": "CC BY-NC-SA 3.0",
+      "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
+      "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
+      "video": {
+        "archive": "OpenYaleCourseIntroductionToPoliticalPhilosophy",
+        "files": 388
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "reading list"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/political-science/plsc-114",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "What makes a government fair, and why people obey or refuse: useful every election.",
+      "notes": "24 lectures. The Archive item has video (24 each of h.264, QuickTime, Ogg Video). A second audio item oyc_Introduction_to_Political_Philosophy has 173 files. Readings are mainly old public-domain texts."
+    },
+    {
+      "id": "yale-afam-162",
+      "kind": "open-course",
+      "title": "African American History: From Emancipation to the Present (AFAM 162)",
+      "by": "Professor Jonathan Holloway",
+      "year": 2010,
+      "url": "https://oyc.yale.edu/african-american-studies/afam-162",
+      "licence": "CC BY-NC-SA 3.0",
+      "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
+      "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
+      "video": {
+        "archive": "oyc_African_American_History",
+        "files": 182
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/african-american-studies/afam-162",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The long road from emancipation to today, told plainly, helps neighbors understand each other.",
+      "notes": "25 lectures; Archive copy is audio only. Video on the OYC page. Good paired with Blight."
+    },
+    {
+      "id": "gutenberg-declaration-1",
+      "kind": "book",
+      "title": "The Declaration of Independence of the United States of America",
+      "by": "Thomas Jefferson",
+      "year": 1776,
+      "url": "https://www.gutenberg.org/ebooks/1",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/1",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The founding promise of the country, short enough to read in five minutes.",
+      "notes": "Short primary text, a good opener. Note what it left out about who counted.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-federalist-1404",
+      "kind": "book",
+      "title": "The Federalist Papers",
+      "by": "Alexander Hamilton, John Jay and James Madison",
+      "year": 1788,
+      "url": "https://www.gutenberg.org/ebooks/1404",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/1404",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Why the Constitution was built the way it was: separate powers, factions, checks.",
+      "notes": "Long and dense; use 3 or 4 key essays and rewrite in plain English.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-common-sense-147",
+      "kind": "book",
+      "title": "Common Sense",
+      "by": "Thomas Paine",
+      "year": 1776,
+      "url": "https://www.gutenberg.org/ebooks/147",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/147",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A short pamphlet that moved ordinary people; shows how plain words change history.",
+      "notes": "Short and punchy. A good first reading.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-franklin-autobiography-148",
+      "kind": "book",
+      "title": "The Autobiography of Benjamin Franklin",
+      "by": "Benjamin Franklin",
+      "year": 1791,
+      "url": "https://www.gutenberg.org/ebooks/148",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/148",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A self-made citizen's habits of thrift, learning and public service.",
+      "notes": "Use the self-improvement chapters. Some period attitudes on religion and race need framing.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-tocqueville-democracy-815",
+      "kind": "book",
+      "title": "Democracy in America, Volume 1",
+      "by": "Alexis de Tocqueville",
+      "year": 1835,
+      "url": "https://www.gutenberg.org/ebooks/815",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/815",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A foreign visitor's sharp read of American habits: clubs, equality, majority pressure.",
+      "notes": "Long and old-fashioned; short extracts only. Has period views on race and Native people that a builder must frame.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-utopia-2130",
+      "kind": "book",
+      "title": "Utopia",
+      "by": "Thomas More",
+      "year": 1516,
+      "url": "https://www.gutenberg.org/ebooks/2130",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/2130",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A thought experiment on how a society could be run differently.",
+      "notes": "Satirical; best as a discussion starter for older students.",
+      "old": true
+    },
+    {
+      "id": "paine-common-sense-1920",
+      "kind": "book",
+      "title": "Common sense (1920 print edition)",
+      "by": "Thomas Paine",
+      "year": 1920,
+      "url": "https://archive.org/details/commonsense00painrich",
+      "licence": "Public domain",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: NOT_IN_COPYRIGHT",
+      "terms": "",
+      "text": "https://archive.org/details/commonsense00painrich",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A second text copy of Common Sense for comparison.",
+      "notes": "Duplicate of the Gutenberg text; use only if that text has errors. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "loc-copyright-statement",
+      "kind": "guide",
+      "title": "Library of Congress: Understanding Copyright (using items from loc.gov)",
+      "by": "Library of Congress",
+      "year": null,
+      "url": "https://www.loc.gov/legal/security-copyright-and-privacy/understanding-copyright/",
+      "licence": "US government work",
+      "licenceSeen": "The page states works produced by federal employees in the course of their employment are generally in the public domain in the US; items on loc.gov may carry their own rights notices",
+      "terms": "",
+      "text": "https://www.loc.gov/",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Where to find scans of founding letters, maps and documents, with the rules for reusing them.",
+      "notes": "A licence page, not a text. Each primary document on loc.gov must be checked on its own item page for its Rights and Access line before use."
+    }
+  ]
+}

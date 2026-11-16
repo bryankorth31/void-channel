@@ -1,0 +1,418 @@
+{
+  "area": "Land",
+  "checked": "2026-11-15",
+  "notes": "No site blocked. The USDA NRCS soil health page did not connect (no response), so no NRCS guide is listed; add a current NRCS or extension source before release. Gutendex API timed out repeatedly, so Gutenberg ids were checked one by one on gutenberg.org ebook pages; the Gutenberg search page was not used (it asks not to be scraped).",
+  "courses": [
+    {
+      "name": "Your ground, plainly",
+      "why": "Everyone lives on and eats from land; knowing soil, water and trees helps you garden, buy a house and vote on land use.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "lyon-soils-management-1915",
+      "uses": [
+        "bailey-vegetable-gardening-1912",
+        "abc-vegetable-gardening-1916",
+        "kruhm-home-veg-gardening-1918",
+        "usda-soils-and-men-1938",
+        "usda-soil-erosion-menace-1928",
+        "usda-home-canning-1923"
+      ],
+      "units": [
+        "What soil really is",
+        "Why bare ground washes away",
+        "Reading your own dirt",
+        "Water: where it goes and where it gets stuck",
+        "Feeding the soil without poisoning it",
+        "Planning a small food garden",
+        "Trees in a yard and a neighborhood",
+        "When old advice is unsafe"
+      ]
+    },
+    {
+      "name": "How living places work",
+      "why": "Understanding how plants, animals and people share a place explains weeds, pests, fires and floods.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-eeb-122",
+      "uses": [
+        "usda-trees-yearbook-1949"
+      ],
+      "units": [
+        "Everything eats and is eaten",
+        "Why species crowd or share",
+        "Predators and the balance of a place",
+        "How a forest grows back",
+        "Pests, pollinators and your yard",
+        "What a change in one part does to the rest"
+      ]
+    },
+    {
+      "name": "Public land and your say",
+      "why": "Parks, forests, water and air are public things you can use and defend.",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "spine": "yale-evst-255",
+      "uses": [
+        "usda-national-forest-manual-1911",
+        "gutenberg-thoreau-walden",
+        "de-crevecoeur-letters-farmer-1904"
+      ],
+      "units": [
+        "Who owns the land and water",
+        "How the law protects a river",
+        "Using a national forest",
+        "Pollution and who pays",
+        "How to speak up at a local hearing",
+        "A person alone on land: Thoreau"
+      ]
+    },
+    {
+      "name": "Out in the woods",
+      "why": "Knowing how to be comfortable and safe outdoors is a life skill and a joy.",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "spine": "kephart-camping-woodcraft-1921",
+      "uses": [
+        "gutenberg-sears-woodcraft-camping"
+      ],
+      "units": [
+        "What to carry and why",
+        "A dry place to sleep",
+        "Fire, safely",
+        "Water you can drink",
+        "Finding your way",
+        "Food in camp",
+        "Leaving no trace",
+        "What the old books got wrong"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "yale-eeb-122",
+      "kind": "open-course",
+      "title": "Principles of Evolution, Ecology and Behavior (EEB 122)",
+      "by": "Yale professor, name on course page",
+      "year": 2009,
+      "url": "https://oyc.yale.edu/ecology-and-evolutionary-biology/eeb-122",
+      "licence": "CC BY-NC-SA 3.0",
+      "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
+      "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
+      "video": {
+        "archive": "oyc_Principles_of_Evolution__Ecology_and_Behavior",
+        "files": 257
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)",
+        "exam 1 and exam 2 pages"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/ecology-and-evolutionary-biology/eeb-122",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "How living things share a place, and why farms, forests and yards behave the way they do.",
+      "notes": "36 lectures, the longest on the list. Archive copy is audio only (mp3 and ogg); video is on the Open Yale Courses page. Two exams linked. Heavy on genetics early; use the ecology and behavior half for Land."
+    },
+    {
+      "id": "yale-evst-255",
+      "kind": "open-course",
+      "title": "Environmental Politics and Law (EVST 255)",
+      "by": "Professor John Wargo",
+      "year": null,
+      "url": "https://oyc.yale.edu/environmental-studies/evst-255",
+      "licence": "CC BY-NC-SA 3.0",
+      "licenceSeen": "Open Yale Courses course page footer and Terms of Use section 4 (Course License): Creative Commons Attribution-Noncommercial-Share Alike 3.0; third party content named in a lecture credits section is not covered",
+      "terms": "Non-commercial use only: no selling, profit or promoting a profit-based enterprise from the materials or works derived from them; attribution and share-alike required. The Terms page says nothing about AI or language models (searched for it). Void University is free, so non-commercial fits; keep the attribution line on every derived scene.",
+      "video": {
+        "archive": "oyc_Environmental_Politics_and_Law",
+        "files": 173
+      },
+      "coursework": [
+        "syllabus",
+        "lecture transcripts",
+        "lecture audio (mp3)"
+      ],
+      "courseworkUrl": "https://oyc.yale.edu/environmental-studies/evst-255",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Who decides what happens to the land and water around you, and how a citizen can use the law.",
+      "notes": "24 lectures; audio only on the Archive. Year not read from the page. Mixes science and US law: good for who owns, protects and pollutes land and water."
+    },
+    {
+      "id": "bailey-vegetable-gardening-1912",
+      "kind": "book",
+      "title": "The principles of vegetable-gardening",
+      "by": "L. H. Bailey",
+      "year": 1912,
+      "url": "https://archive.org/details/principlesofveg00bail",
+      "licence": "Public domain by age (published before 1931); not stated on the page, confirm on a second source",
+      "licenceSeen": "Archive item page shows only the publication date, no licence field (so not read as stated)",
+      "terms": "",
+      "text": "https://archive.org/details/principlesofveg00bail",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Plain, still sound rules for growing food in a yard: soil, seed, spacing, season.",
+      "notes": "Old pesticide advice (arsenicals, Paris green) is unsafe: flag against current extension guidance. Frost dates are Northeast; replace with the modern hardiness zone idea. Licence not stated on the item page, confirm on a second source. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "abc-vegetable-gardening-1916",
+      "kind": "book",
+      "title": "A-B-C of vegetable gardening",
+      "by": "Eben Eugene Rexford",
+      "year": 1916,
+      "url": "https://archive.org/details/abcofvegetablega00rexf",
+      "licence": "Public domain",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: Library of Congress is unaware of any copyright restrictions",
+      "terms": "",
+      "text": "https://archive.org/details/abcofvegetablega00rexf",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A simple small-garden manual a beginner can follow in one season.",
+      "notes": "Old chemical sprays and fertiliser names are outdated; modern soil testing replaces guesswork. Flag unsafe pesticides. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "kruhm-home-veg-gardening-1918",
+      "kind": "book",
+      "title": "Home vegetable gardening from A to Z, with special reference to Pacific Coast conditions",
+      "by": "Adolph Kruhm",
+      "year": 1918,
+      "url": "https://archive.org/details/Homevegetablega00Kruh",
+      "licence": "Public domain",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: Public domain, the Library considers this work no longer under copyright protection",
+      "terms": "",
+      "text": "https://archive.org/details/Homevegetablega00Kruh",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A west coast kitchen-garden plan month by month.",
+      "notes": "Climate notes are Pacific coast only. Flag old insect and weed poisons. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "lyon-soils-management-1915",
+      "kind": "book",
+      "title": "Soils, their properties and management",
+      "by": "T. L. Lyon and E. O. Fippin",
+      "year": 1915,
+      "url": "https://archive.org/details/soilstheirproper00lyonrich",
+      "licence": "Public domain",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: NOT_IN_COPYRIGHT",
+      "terms": "",
+      "text": "https://archive.org/details/soilstheirproper00lyonrich",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Teaches what soil actually is, so a person can read their own dirt.",
+      "notes": "College text, dense: rewrite into plain scenes (soil as a pantry, a sponge, a bank). Lime and fertiliser rates are old; send readers to a current state soil test lab. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "usda-soils-and-men-1938",
+      "kind": "book",
+      "title": "Soils and Men: Yearbook of Agriculture 1938",
+      "by": "US Department of Agriculture",
+      "year": 1938,
+      "url": "https://archive.org/details/yoa1938",
+      "licence": "US government work",
+      "licenceSeen": "Archive item metadata field rights: the contributing institution (USDA National Agricultural Library) believes the item is not under copyright; federal work",
+      "terms": "",
+      "text": "https://archive.org/details/yoa1938",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The big picture of how soil, farming and a country's health are tied together.",
+      "notes": "Large book, skim by chapter. Dust Bowl era shapes the tone. Chemical and farm-policy chapters are dated.",
+      "old": true
+    },
+    {
+      "id": "usda-trees-yearbook-1949",
+      "kind": "book",
+      "title": "Trees: The Yearbook of Agriculture, 1949",
+      "by": "US Department of Agriculture",
+      "year": 1949,
+      "url": "https://archive.org/details/treesyearbookofa00unitrich",
+      "licence": "US government work",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: NOT_IN_COPYRIGHT (a US government work)",
+      "terms": "",
+      "text": "https://archive.org/details/treesyearbookofa00unitrich",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Planting, caring for and living with trees, from yard to forest.",
+      "notes": "Species names and pest treatments are dated; flag old pesticide advice. Rich plain chapters on tree care.",
+      "old": true
+    },
+    {
+      "id": "usda-soil-erosion-menace-1928",
+      "kind": "book",
+      "title": "Soil erosion a national menace (USDA Circular 33)",
+      "by": "Hugh H. Bennett and W. R. Chapline, US Department of Agriculture",
+      "year": 1928,
+      "url": "https://archive.org/details/soilerosionnatio33benn",
+      "licence": "US government work",
+      "licenceSeen": "Archive item metadata field rights: the contributing institution (USDA National Agricultural Library) believes the item is not under copyright; federal work",
+      "terms": "",
+      "text": "https://archive.org/details/soilerosionnatio33benn",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A short, clear case for why bare ground washes away and what a person can do about it.",
+      "notes": "Short and strong, a good first reading for a land unit. Farm figures are 1920s.",
+      "old": true
+    },
+    {
+      "id": "usda-national-forest-manual-1911",
+      "kind": "book",
+      "title": "The national forest manual",
+      "by": "US Forest Service",
+      "year": 1911,
+      "url": "https://archive.org/details/nationalforestma00unituoft",
+      "licence": "Public domain",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: NOT_IN_COPYRIGHT (a US government work)",
+      "terms": "",
+      "text": "https://archive.org/details/nationalforestma00unituoft",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "What public forests are for and how a person may use them.",
+      "notes": "A 1911 rules manual; rules have changed, send readers to current Forest Service pages. Best as history of public land. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-sears-woodcraft-camping",
+      "kind": "book",
+      "title": "Woodcraft and Camping",
+      "by": "George Washington Sears (Nessmuk)",
+      "year": 1920,
+      "url": "https://www.gutenberg.org/ebooks/34607",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/34607",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Light-weight camping, shelter and living comfortably in the woods.",
+      "notes": "Gear and cooking advice are old. Warn on fire and water safety against current guides.",
+      "old": true
+    },
+    {
+      "id": "kephart-camping-woodcraft-1921",
+      "kind": "book",
+      "title": "Camping and woodcraft: a handbook for vacation campers and for travelers in the wilderness",
+      "by": "Horace Kephart",
+      "year": 1921,
+      "url": "https://archive.org/details/campingwoodcraft00kephrich",
+      "licence": "Public domain",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: NOT_IN_COPYRIGHT",
+      "terms": "",
+      "text": "https://archive.org/details/campingwoodcraft00kephrich",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The classic practical guide to knowing land well enough to be comfortable in it.",
+      "notes": "Water purification, first aid and snake advice are old; flag against CDC and Park Service guidance. Old but readable language. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "gutenberg-thoreau-walden",
+      "kind": "book",
+      "title": "Walden, and On The Duty Of Civil Disobedience",
+      "by": "Henry David Thoreau",
+      "year": 1854,
+      "url": "https://www.gutenberg.org/ebooks/205",
+      "licence": "Public domain",
+      "licenceSeen": "Project Gutenberg ebook page, Copyright Status line: Public domain in the USA",
+      "terms": "",
+      "text": "https://www.gutenberg.org/ebooks/205",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "A person's own experiment in living lightly on a patch of land, and when to say no.",
+      "notes": "Philosophical and long: excerpt only. Pairs with Civics.",
+      "old": true
+    },
+    {
+      "id": "de-crevecoeur-letters-farmer-1904",
+      "kind": "book",
+      "title": "Letters from an American farmer",
+      "by": "J. Hector St. John de Crevecoeur",
+      "year": 1904,
+      "url": "https://archive.org/details/lettersfromameri00stjo",
+      "licence": "Public domain",
+      "licenceSeen": "Archive item metadata field possible-copyright-status: NOT_IN_COPYRIGHT",
+      "terms": "",
+      "text": "https://archive.org/details/lettersfromameri00stjo",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "An eighteenth century farmer describes the land, neighbors and a changing country.",
+      "notes": "Written 1782; has period views on slavery and Native people that a builder must frame honestly. Use for voice and land history. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    },
+    {
+      "id": "usda-home-canning-1923",
+      "kind": "book",
+      "title": "Home canning of fruits and vegetables (Farmers' Bulletin)",
+      "by": "US Department of Agriculture",
+      "year": 1923,
+      "url": "https://archive.org/details/CAT31294357",
+      "licence": "Public domain",
+      "licenceSeen": "Archive item metadata field rights: the contributing institution (USDA National Agricultural Library) believes the item is not under copyright; federal work",
+      "terms": "",
+      "text": "https://archive.org/details/CAT31294357",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Shows how food was kept at home, and why method matters.",
+      "notes": "UNSAFE as instructions: open-kettle and some low-acid methods are not safe (botulism risk). Teach only as history and send readers to the current USDA Complete Guide to Home Canning. Archive id corrected 15 Nov 2026 from the Archive's own search: the finder wrote an id that does not exist. Read the licence on this item before use.",
+      "old": true
+    }
+  ]
+}
