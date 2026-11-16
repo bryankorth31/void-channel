@@ -266,13 +266,16 @@ function transcript(item, file) {
   if (!CACHE_T.has(p)) {
     const j = readJson(p, null);
     const words = [];
-    for (const sg of j.segments) for (const w of sg.words) words.push({ w: norm(w[0]), raw: w[0], t: w[1] });
-    CACHE_T.set(p, { ...j, words: words.filter((x) => x.w) });
+    for (const sg of j.segments) for (const w of sg.words) for (const part of tokens(w[0])) words.push({ w: part, raw: w[0], t: w[1] });
+    CACHE_T.set(p, { ...j, words });
   }
   return CACHE_T.get(p);
 }
-const norm = (w) => String(w).toLowerCase().replace(/[^a-z0-9]/g, '');
-const tokens = (text) => String(text).split(/\s+/).map(norm).filter(Boolean);
+// The printed transcript and Whisper write the same speech differently ("price-to-earnings ... fifteen" against "price to
+// earnings ... 15"), so both sides split hyphens and read number words as digits before they are compared.
+const NUM = { zero: '0', one: '1', two: '2', three: '3', four: '4', five: '5', six: '6', seven: '7', eight: '8', nine: '9', ten: '10', eleven: '11', twelve: '12', thirteen: '13', fourteen: '14', fifteen: '15', sixteen: '16', seventeen: '17', eighteen: '18', nineteen: '19', twenty: '20', thirty: '30', forty: '40', fifty: '50', sixty: '60', seventy: '70', eighty: '80', ninety: '90', hundred: '100' };
+const norm = (w) => { const x = String(w).toLowerCase().replace(/[^a-z0-9]/g, ''); return NUM[x] || x; };
+const tokens = (text) => String(text).split(/[\s\-‐-―]+/).map(norm).filter(Boolean);
 // The second at which a quote begins: the window of the transcript that shares most words with the quote's first
 // dozen words, in order of position. Whisper and the printed transcript differ a little, so it scores, not matches.
 function locate(item, file, quote) {
