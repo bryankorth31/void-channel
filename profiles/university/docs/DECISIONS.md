@@ -27,7 +27,7 @@ Not drift, but worth knowing: labs, the boundary course and the guess-first chan
 - 31 Why you need this is written for all 24 Critical thinking and mechanism units.
 - 38 Human nature units have their crystals; the recipe and the HQ unit check now require a crystal on every full-course unit.
 - 47 docs/VOID_UNIVERSITY.md: 153 old dashes replaced; tests/uni.test.js keeps courses, sources and pages dash-free.
-- 3 The live site is behind: waits on Bryan's go to deploy (the public copy in site/ is ready and tested).
+- 3 Deployed 16 Nov 2026 on Bryan's "Yes, deploy it" (Worker version 1f6032da): the live Human nature hero photo, quiz fold, crystals and channels, and the Why you need this lines on all units, checked on the live pages.
 
 ## The register
 
