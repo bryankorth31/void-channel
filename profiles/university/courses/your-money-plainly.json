@@ -1,0 +1,2487 @@
+{
+  "slug": "your-money-plainly",
+  "name": "Your money, plainly",
+  "domain": "Money",
+  "kind": "found",
+  "status": "draft",
+  "levels": [
+    "high school",
+    "young adults",
+    "everyday"
+  ],
+  "planned": 8,
+  "source": {
+    "id": "yale-econ252-2008",
+    "title": "Financial Markets (ECON 252, 2008)",
+    "by": "Robert J. Shiller, Yale University, spring 2008",
+    "url": "https://oyc.yale.edu/economics/econ-252-08",
+    "licence": "CC BY-NC-SA 3.0 US"
+  },
+  "uses": [
+    "yale-econ252-2011",
+    "mit-15401",
+    "brandeis-other-peoples-money",
+    "franklin-way-to-wealth",
+    "smiles-thrift",
+    "frugal-housewife",
+    "investor-gov"
+  ],
+  "draftedBy": "Claude, from Yale's lectures and transcripts, for Bryan to keep, change or strike",
+  "why": "Everyone earns, spends, saves and borrows, and most people are never taught how risk, interest and markets really work. Yale's Robert Shiller taught this course in 2008, in the middle of the crash; we add everyday pictures and quizzes.",
+  "outcomes": [
+    "See finance as a tool for sharing risk, like an engine: strong, useful, and dangerous to people who do not understand it.",
+    "Read an interest rate as the price of time, and take inflation off it to see what you really gain or pay.",
+    "Judge a loan by the payment in its hardest year, not its easiest, and know how home loans got safer and then riskier again.",
+    "Explain why insurance works only with many people in the pool, and spot moral hazard, selection bias and the \"I can't afford it\" trap.",
+    "Read a share as a slice of a company: count the slices, look at the earnings, and know what leverage does to your money.",
+    "Name the four mind traps Shiller shows in money choices: overconfidence, loss aversion, the pull of certainty, and regret, and spot them in yourself.",
+    "Explain how a bank lends out most of what it holds, why a rumor can start a run, and what keeps your deposits safe.",
+    "Spot the weak spots sellers use, read the \"label\" every public investment must carry, and know what is insured and what is not."
+  ],
+  "units": [
+    {
+      "n": 1,
+      "title": "What money is for: sharing the bad day",
+      "needIt": "Paychecks, rent, loans and insurance all run on this one idea; once you see it, you can tell a tool that shares your risk from one that just takes your money.",
+      "outcome": "See finance as a tool for sharing risk, like an engine: strong, useful, and dangerous to people who do not understand it.",
+      "why": "Robert Shiller opens his Yale course by saying finance is not just for bankers: almost everything people do runs through it. Its oldest job is spreading a bad day over many people so no one family is ruined. Like any new machine, it fails at first and hurts the people who understand it least.",
+      "reachesYou": "Your paycheck and its deductions, car and health insurance, a mortgage or a car loan, a phone plan, a retirement account, the bank that holds your savings.",
+      "do": "Write down three things in your life that share risk with other people (insurance, a pension, a family member who would help). Next to each, write who else is in the pool.",
+      "scene": {
+        "analogy": "Five neighbors and a shared jar",
+        "map": [
+          [
+            "the shared jar",
+            "finance and insurance"
+          ],
+          [
+            "$20 a month",
+            "the price of sharing risk"
+          ],
+          [
+            "spread, not gone",
+            "risk spread over many people"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "h1",
+            "type": "stamp",
+            "x": 40,
+            "y": 20,
+            "w": 100,
+            "label": "Home",
+            "color": "blue",
+            "o": 0,
+            "size": 16
+          },
+          {
+            "id": "h2",
+            "type": "stamp",
+            "x": 190,
+            "y": 20,
+            "w": 100,
+            "label": "Home",
+            "color": "blue",
+            "o": 0,
+            "size": 16
+          },
+          {
+            "id": "h3",
+            "type": "stamp",
+            "x": 340,
+            "y": 20,
+            "w": 100,
+            "label": "Home",
+            "color": "blue",
+            "o": 0,
+            "size": 16
+          },
+          {
+            "id": "h4",
+            "type": "stamp",
+            "x": 490,
+            "y": 20,
+            "w": 100,
+            "label": "Home",
+            "color": "blue",
+            "o": 0,
+            "size": 16
+          },
+          {
+            "id": "h5",
+            "type": "stamp",
+            "x": 640,
+            "y": 20,
+            "w": 100,
+            "label": "Home",
+            "color": "blue",
+            "o": 0,
+            "size": 16
+          },
+          {
+            "id": "jar",
+            "type": "card",
+            "x": 280,
+            "y": 160,
+            "w": 240,
+            "h": 84,
+            "label": "The jar",
+            "sub": "empty",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "res",
+            "type": "card",
+            "x": 40,
+            "y": 270,
+            "w": 720,
+            "h": 70,
+            "label": "Spread, not gone",
+            "sub": "the fire still cost $100; five homes each carried $20 of it",
+            "color": "green",
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "Five neighbors. Any one house could burn this year.",
+            "dur": 2.6,
+            "set": {
+              "h1": {
+                "o": 1
+              },
+              "h2": {
+                "o": 1
+              },
+              "h3": {
+                "o": 1
+              },
+              "h4": {
+                "o": 1
+              },
+              "h5": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Each puts $20 in a shared jar.",
+            "dur": 2.4,
+            "set": {
+              "jar": {
+                "o": 1,
+                "sub": "$100"
+              }
+            }
+          },
+          {
+            "say": "One house burns.",
+            "dur": 2.2,
+            "set": {
+              "h3": {
+                "label": "FIRE",
+                "color": "pink",
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "The jar pays to rebuild. No family is ruined.",
+            "dur": 2.8,
+            "set": {
+              "jar": {
+                "label": "Pays out",
+                "sub": "$100 to rebuild",
+                "color": "green"
+              },
+              "h3": {
+                "label": "Rebuilt",
+                "color": "green"
+              }
+            }
+          },
+          {
+            "say": "The loss did not vanish. It was shared.",
+            "dur": 3.2,
+            "set": {
+              "res": {
+                "o": 1
+              }
+            }
+          }
+        ]
+      },
+      "main": {
+        "role": "watch",
+        "title": "Lecture 1: Finance and Insurance as Powerful Forces in Our Economy and Society",
+        "by": "Robert J. Shiller, Yale",
+        "item": "OpenYaleCourseFinancialMarketsWithProfessorRobertShiller",
+        "file": "econ252_01_011408.mp4",
+        "seconds": 4444,
+        "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+        "note": "A full Yale lecture, filmed in January 2008 as the housing crash began. Use the chapters to watch it in pieces."
+      },
+      "chapters": [
+        {
+          "t": 0,
+          "title": "Finance touches everyone, even a poet",
+          "words": "This is Economics 252, Financial Markets"
+        },
+        {
+          "t": 684,
+          "title": "The course books (skip if you like)",
+          "words": "Let me start by talking about the textbook"
+        },
+        {
+          "t": 1445,
+          "title": "Finance is a technology, and the subprime crash",
+          "words": "Another thing that I will be talking about is less important"
+        },
+        {
+          "t": 1879,
+          "title": "Is it wrong to study money?",
+          "words": "I want to say something about morality"
+        },
+        {
+          "t": 2804,
+          "title": "The map: risk, insurance, debt, stocks, banks",
+          "words": "I think in the remaining time I will just go through an outline"
+        }
+      ],
+      "companions": [
+        {
+          "role": "read",
+          "title": "The Way to Wealth (Poor Richard Improved)",
+          "by": "Benjamin Franklin, 1758",
+          "url": "https://www.gutenberg.org/ebooks/43855",
+          "licence": "Public domain, Project Gutenberg"
+        },
+        {
+          "role": "read",
+          "title": "The full lecture page and transcript",
+          "by": "Open Yale Courses",
+          "url": "https://oyc.yale.edu/economics/econ-252-08/lecture-1",
+          "licence": "CC BY-NC-SA 3.0, Open Yale Courses"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Who does Shiller say finance touches?",
+          "choices": [
+            "Only people who work on Wall Street",
+            "Almost anyone, even a poet",
+            "Only people with savings",
+            "Only economists"
+          ],
+          "a": 1,
+          "why": "Even a poet ends up talking money with a publisher. Rent, pay, loans and insurance reach everyone.",
+          "quote": "Just about any human endeavor involves finance.",
+          "t": 0
+        },
+        {
+          "q": "When a risk is spread over many people, what happens to it?",
+          "choices": [
+            "It disappears",
+            "It is still there, but each person carries a smaller share",
+            "The bank takes all of it",
+            "It gets bigger"
+          ],
+          "a": 1,
+          "why": "The fire still costs what it costs. Sharing makes the hit on any one family small enough to survive.",
+          "quote": "The idea is that if you spread risks they don't disappear, they're still there, but they're spread out over many people and the impact on any one person is reduced.",
+          "t": 2804
+        },
+        {
+          "q": "What does Shiller compare a financial instrument to?",
+          "choices": [
+            "A lottery ticket",
+            "A piece of paper",
+            "An engineering device",
+            "A promise between friends"
+          ],
+          "a": 2,
+          "why": "Like an engine, it has many parts that must work together, and new designs often fail before people learn to build them right.",
+          "quote": "A financial instrument is like an engineering device.",
+          "t": 1445
+        },
+        {
+          "q": "What is a \"subprime\" borrower?",
+          "choices": [
+            "Someone with a poor credit history who might not repay",
+            "A bank that lends to the government",
+            "Someone who pays cash",
+            "A borrower with the best interest rate"
+          ],
+          "a": 0,
+          "why": "In 2008 these loans were failing in record numbers, and the crash spread from them through the whole system.",
+          "quote": "is somebody who has a poor credit history or some other indication that would suggest that they might not be able to repay the mortgage",
+          "t": 1445
+        },
+        {
+          "q": "What danger comes with bringing more people into finance?",
+          "choices": [
+            "Prices always fall",
+            "Banks run out of money",
+            "Newcomers may understand less and be easier to exploit",
+            "There is no danger"
+          ],
+          "a": 2,
+          "why": "Shiller wants finance open to everyone, and warns that the people new to it are the easiest to take advantage of. That is why this course exists.",
+          "quote": "less capable and more vulnerable to exploitation",
+          "t": 2804
+        }
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "A family that loses a parent is hit hard; across many families, it is a loss that can be shared.",
+          "A poet still ends up talking money with a publisher.",
+          "The first engines and the first nuclear reactors did not work well at first.",
+          "Subprime loans brought in buyers who had never had a mortgage, and many could not repay.",
+          "Five homes, one jar, one fire, and no family ruined."
+        ],
+        "key": "Finance is a tool for sharing risk: strong and useful, and dangerous to the people who understand it least.",
+        "decoys": [
+          {
+            "text": "Finance is only for rich people and Wall Street.",
+            "why": "Shiller says even a poet ends up in it, and the 2008 crash began with ordinary home buyers."
+          },
+          {
+            "text": "Spreading a risk makes it disappear.",
+            "why": "The fire still cost $100. Sharing only shrinks each person's part of it."
+          }
+        ],
+        "aha": "Every partial is the same tool at work: a load shared by many, and people hurt when the tool is new or not understood."
+      },
+      "voices": [
+        "shiller",
+        "franklin"
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Interest: the price of time",
+      "needIt": "Every savings account, car loan and credit card puts a price on time; subtracting inflation tells you whether your savings are growing or quietly shrinking.",
+      "outcome": "Read an interest rate as the price of time, and take inflation off it to see what you really gain or pay.",
+      "why": "Interest is what you pay to have money sooner, or earn for waiting. A Treasury bill pays no interest at all: you buy $100 for $99.58 and wait. And a rate only tells half the story; if prices rise as fast as your interest, you are no richer.",
+      "reachesYou": "Your savings account rate, a car loan, a credit card, student loans, a raise at work compared with what groceries cost.",
+      "do": "Look up your savings account rate and this year's inflation rate. Subtract the second from the first. If the answer is below zero, your savings are shrinking in what they can buy.",
+      "mechanisms": [
+        9
+      ],
+      "scene": {
+        "analogy": "Saving $100 while groceries go up",
+        "map": [
+          [
+            "$100 now, $103 next year",
+            "interest: the price of time"
+          ],
+          [
+            "groceries cost $103 too",
+            "inflation"
+          ],
+          [
+            "the same basket either way",
+            "a real interest rate of zero"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "jar",
+            "type": "card",
+            "x": 40,
+            "y": 40,
+            "w": 300,
+            "h": 92,
+            "label": "Your savings",
+            "sub": "$100",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "yr",
+            "type": "stamp",
+            "x": 355,
+            "y": 45,
+            "w": 90,
+            "label": "1 YEAR",
+            "color": "fg",
+            "o": 0,
+            "s": 0.4,
+            "size": 15
+          },
+          {
+            "id": "bas",
+            "type": "card",
+            "x": 460,
+            "y": 40,
+            "w": 300,
+            "h": 92,
+            "label": "A week of groceries",
+            "sub": "$100",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "res",
+            "type": "card",
+            "x": 40,
+            "y": 240,
+            "w": 720,
+            "h": 84,
+            "label": "Real gain = interest minus inflation",
+            "sub": "3% minus 3% = nothing",
+            "color": "green",
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "You save $100. A week of groceries costs $100.",
+            "dur": 2.6,
+            "set": {
+              "jar": {
+                "o": 1
+              },
+              "bas": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "The bank pays you 3% a year to wait.",
+            "dur": 2.4,
+            "set": {
+              "jar": {
+                "sub": "$100, earning 3%"
+              }
+            }
+          },
+          {
+            "say": "A year later: $103.",
+            "dur": 2.2,
+            "set": {
+              "yr": {
+                "o": 1,
+                "s": 1
+              },
+              "jar": {
+                "sub": "$103",
+                "color": "green"
+              }
+            }
+          },
+          {
+            "say": "But groceries rose 3% too.",
+            "dur": 2.4,
+            "set": {
+              "bas": {
+                "sub": "$103",
+                "color": "pink",
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "You buy the same basket as before. You waited for nothing.",
+            "dur": 3.4,
+            "set": {
+              "res": {
+                "o": 1
+              }
+            }
+          }
+        ]
+      },
+      "main": {
+        "role": "watch",
+        "title": "Lecture 10: Debt Markets: Term Structure",
+        "by": "Robert J. Shiller, Yale",
+        "item": "OpenYaleCourseFinancialMarketsWithProfessorRobertShiller",
+        "file": "econ252_10_021508.mp4",
+        "seconds": 4245,
+        "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+        "note": "A full Yale lecture, February 2008. The middle part (forward rates) is technical; the chapters let you skip it."
+      },
+      "chapters": [
+        {
+          "t": 0,
+          "title": "A word on the Yale endowment guest",
+          "words": "Before I begin, I just wanted to say"
+        },
+        {
+          "t": 265,
+          "title": "Treasury bills: $99.58 today for $100 later",
+          "words": "We're talking today about interest rates and bonds"
+        },
+        {
+          "t": 1152,
+          "title": "Dealers and the bid-ask spread",
+          "words": "there's another thing I want to say about Treasury bills"
+        },
+        {
+          "t": 1757,
+          "title": "Bonds and their coupons",
+          "words": "you understand now about discount bonds?"
+        },
+        {
+          "t": 2378,
+          "title": "Why short and long loans cost different amounts",
+          "words": "I want to talk about the term structure of interest rates"
+        },
+        {
+          "t": 3154,
+          "title": "Forward rates (technical, skip if you like)",
+          "words": "I want to talk about a couple of other basic concepts in economics of interest rates"
+        },
+        {
+          "t": 3969,
+          "title": "Inflation and the real interest rate",
+          "words": "The last thing I want to talk about is just"
+        }
+      ],
+      "companions": [
+        {
+          "role": "read",
+          "title": "Thrift",
+          "by": "Samuel Smiles, 1875",
+          "url": "https://www.gutenberg.org/ebooks/14418",
+          "licence": "Public domain, Project Gutenberg"
+        },
+        {
+          "role": "read",
+          "title": "The full lecture page and transcript",
+          "by": "Open Yale Courses",
+          "url": "https://oyc.yale.edu/economics/econ-252-08/lecture-10",
+          "licence": "CC BY-NC-SA 3.0, Open Yale Courses"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does Shiller say the line of interest rates (from short loans to long ones) shows?",
+          "choices": [
+            "How rich the government is",
+            "The price of time",
+            "How many bonds were sold",
+            "The stock market"
+          ],
+          "a": 1,
+          "why": "An interest rate is what it costs to have money now instead of later. Longer waits can cost more or less, and that line shows it.",
+          "quote": "it shows the price of time at various maturities",
+          "t": 2378
+        },
+        {
+          "q": "How does a Treasury bill pay you?",
+          "choices": [
+            "It pays interest every month",
+            "It does not pay interest; you buy it for less than it pays back",
+            "It pays a share of company profits",
+            "It pays in gold"
+          ],
+          "a": 1,
+          "why": "You pay about $99.58 today and get $100 back later. The gap is your interest.",
+          "quote": "a discount bond does not pay interest; it's sold at a discount.",
+          "t": 265
+        },
+        {
+          "q": "Old bonds framed on a wall still have every coupon attached. What does that mean?",
+          "choices": [
+            "The owner forgot to cash them",
+            "They are worth more that way",
+            "The company went bankrupt and never paid",
+            "They were never sold"
+          ],
+          "a": 2,
+          "why": "Each coupon was cut off and cashed when a payment came due. Coupons still attached mean the payments stopped.",
+          "quote": "It means the company went bankrupt and never paid; otherwise, the coupons would have been clipped.",
+          "t": 1757
+        },
+        {
+          "q": "Interest is about 3% and prices are rising about 3%. What is the real interest rate?",
+          "choices": [
+            "About 6%",
+            "About 3%",
+            "Close to zero",
+            "It cannot be known"
+          ],
+          "a": 2,
+          "why": "Real interest is the rate minus inflation. Your money grows, but so do prices, so it buys the same as before.",
+          "quote": "Right now, we have a Federal Funds Rate of about 3% and an inflation rate of around 3%, so right now the real interest rate is close to 0.",
+          "t": 3969
+        },
+        {
+          "q": "Who sets the market's interest rates?",
+          "choices": [
+            "The President",
+            "One big bank",
+            "No one person: the market of borrowers and lenders",
+            "The newspapers"
+          ],
+          "a": 2,
+          "why": "Rates come out of millions of people borrowing and lending. Dealers and even the government's auctions have to follow the market.",
+          "quote": "nobody really knows where these interest rates come from because no one person sets them.",
+          "t": 2378
+        }
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "A $100 Treasury bill sells for $99.58; the 42 cents is your interest.",
+          "Framed old bonds with every coupon still attached: the company never paid.",
+          "In 2003 borrowing for three months cost about 1% a year; for seven years it cost much more.",
+          "Rates near 3% and inflation near 3%: the real rate is close to zero.",
+          "Massachusetts once tied a war bond to the price of beef, wool, leather and corn."
+        ],
+        "key": "Interest is the price of time, and only what is left after inflation makes you richer.",
+        "decoys": [
+          {
+            "text": "A higher interest rate always means you are getting richer.",
+            "why": "If prices rise as fast as your interest, your money buys the same basket as before."
+          },
+          {
+            "text": "The government decides what interest rates are.",
+            "why": "Shiller says no one person sets them; the market of borrowers and lenders does."
+          }
+        ],
+        "aha": "Every partial puts a price on waiting, and asks what the money will buy when the wait is over."
+      },
+      "voices": [
+        "shiller",
+        "fisher",
+        "smiles"
+      ]
+    },
+    {
+      "n": 3,
+      "title": "Debt: borrowing without being swallowed",
+      "needIt": "A mortgage, a car loan or a low \"intro\" payment can be the biggest money decision you make; knowing how payments, balloons and resets work keeps a loan from swallowing what it bought.",
+      "outcome": "Judge a loan by the payment in its hardest year, not its easiest, and know how home loans got safer and then riskier again.",
+      "why": "A mortgage borrows against your home. In the 1920s loans lasted five years and then the whole amount came due; after 1929, families who could not refinance lost their homes in huge numbers. Safer loans paid off month by month came in, and then, before 2008, low teaser rates that jumped after two years.",
+      "reachesYou": "A mortgage or rent, a car loan, store credit, \"buy now, pay later\", a credit card with a 0% first year, student loans.",
+      "do": "For one loan or offer you have, find the payment after any intro or teaser period ends. Write it next to what you can really spare each month.",
+      "mechanisms": [
+        3,
+        8
+      ],
+      "scene": {
+        "analogy": "A gym with a cheap first two months",
+        "map": [
+          [
+            "$10 for the first months",
+            "the teaser rate"
+          ],
+          [
+            "the jump to $60",
+            "the reset"
+          ],
+          [
+            "can you pay $60?",
+            "the question to ask before you sign"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "gym",
+            "type": "card",
+            "x": 40,
+            "y": 30,
+            "w": 340,
+            "h": 92,
+            "label": "Gym, first 2 months",
+            "sub": "$10 a month",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "bud",
+            "type": "card",
+            "x": 420,
+            "y": 30,
+            "w": 340,
+            "h": 92,
+            "label": "What you can spare",
+            "sub": "$30 a month",
+            "color": "green",
+            "o": 0
+          },
+          {
+            "id": "mo",
+            "type": "stamp",
+            "x": 340,
+            "y": 145,
+            "w": 120,
+            "label": "MONTH 3",
+            "color": "pink",
+            "o": 0,
+            "s": 0.4,
+            "size": 16
+          },
+          {
+            "id": "res",
+            "type": "card",
+            "x": 40,
+            "y": 280,
+            "w": 720,
+            "h": 70,
+            "label": "Ask the full price, not the teaser",
+            "sub": "the payment after the reset is the one you must afford",
+            "color": "blue",
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "The offer: just $10 a month to start.",
+            "dur": 2.4,
+            "set": {
+              "gym": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "You can spare $30 a month. Easy.",
+            "dur": 2.4,
+            "set": {
+              "bud": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Month 3: the price resets to $60.",
+            "dur": 2.6,
+            "set": {
+              "mo": {
+                "o": 1,
+                "s": 1
+              },
+              "gym": {
+                "label": "Gym, from month 3",
+                "sub": "$60 a month",
+                "color": "pink",
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "Now it costs more than you have.",
+            "dur": 2.4,
+            "set": {
+              "bud": {
+                "sub": "$30 is not enough",
+                "color": "pink"
+              }
+            }
+          },
+          {
+            "say": "The real price was always $60.",
+            "dur": 3.2,
+            "set": {
+              "res": {
+                "o": 1
+              }
+            }
+          }
+        ]
+      },
+      "main": {
+        "role": "watch",
+        "title": "Lecture 12: Real Estate Finance and Its Vulnerability to Crisis",
+        "by": "Robert J. Shiller, Yale",
+        "item": "OpenYaleCourseFinancialMarketsWithProfessorRobertShiller",
+        "file": "econ252_12_022508.mp4",
+        "seconds": 4049,
+        "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+        "note": "A full Yale lecture, February 2008, as home prices were falling. The chapters let you go straight to mortgages and the boom."
+      },
+      "chapters": [
+        {
+          "t": 0,
+          "title": "A home: most families' biggest asset",
+          "words": "I want to start out by talking about real estate as an asset class"
+        },
+        {
+          "t": 137,
+          "title": "How businesses own buildings (skip if you like)",
+          "words": "the kind of institution that you probably know relatively little about"
+        },
+        {
+          "t": 1054,
+          "title": "Mortgages: from five-year balloons to thirty years",
+          "words": "Next topic, I want to talk about mortgages"
+        },
+        {
+          "t": 1806,
+          "title": "How a mortgage payment is figured",
+          "words": "I wanted to say a little bit about the math of mortgages"
+        },
+        {
+          "t": 2510,
+          "title": "The boom: Los Angeles and Milwaukee",
+          "words": "I want to talk about the current boom"
+        },
+        {
+          "t": 3457,
+          "title": "Booms around the world",
+          "words": "I put this chart out to just show the international aspect of home prices"
+        }
+      ],
+      "companions": [
+        {
+          "role": "read",
+          "title": "The full lecture page and transcript",
+          "by": "Open Yale Courses",
+          "url": "https://oyc.yale.edu/economics/econ-252-08/lecture-12",
+          "licence": "CC BY-NC-SA 3.0, Open Yale Courses"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is a mortgage?",
+          "choices": [
+            "A savings account for a house",
+            "A loan with the property as collateral",
+            "A tax on homes",
+            "A rental contract"
+          ],
+          "a": 1,
+          "why": "If you stop paying, the lender can take the property. That is why lenders will lend for a home at all.",
+          "quote": "Mortgages are debts secured by property as collateral.",
+          "t": 1054
+        },
+        {
+          "q": "In the 1920s, a mortgage lasted about five years, and then the whole loan came due. What happened after 1929?",
+          "choices": [
+            "Everyone paid early",
+            "Families who could not refinance lost their homes in huge numbers",
+            "Banks forgave the loans",
+            "Nothing changed"
+          ],
+          "a": 1,
+          "why": "Jobs and home values fell, banks would not refinance, and the big final payment could not be met.",
+          "quote": "They would lose the house. That happened in huge numbers in the 1930s.",
+          "t": 1054
+        },
+        {
+          "q": "What changed when mortgages became \"self-amortizing\" in 1933?",
+          "choices": [
+            "The rate went up every year",
+            "Each payment paid some of the loan too, so nothing big was left at the end",
+            "The loan never had to be paid",
+            "Only the interest was paid"
+          ],
+          "a": 1,
+          "why": "Paying a little of the loan every month means no giant payment waiting at the end.",
+          "quote": "So, when the mortgage ends, you're just clear and free; you don't have to pay anything",
+          "t": 1054
+        },
+        {
+          "q": "What is a \"two and twenty-eight\" loan?",
+          "choices": [
+            "A loan at 2% for 28 years",
+            "A low teaser rate for two years, then a higher rate",
+            "Two loans on one house",
+            "A loan paid in 28 days"
+          ],
+          "a": 1,
+          "why": "Many people who took these did not understand that the payment would jump after two years, and some could not afford the new one.",
+          "quote": "A typical ARM is two and twenty-eight, which means that it has a low teaser rate for two years",
+          "t": 1054
+        },
+        {
+          "q": "Early in a 30-year mortgage, where does most of each payment go?",
+          "choices": [
+            "To paying off the house",
+            "To interest",
+            "To taxes",
+            "To insurance"
+          ],
+          "a": 1,
+          "why": "The balance falls slowly at first. Selling after a few years can leave you owing almost what you borrowed.",
+          "quote": "When you first buy a house most of your payment is going to interest.",
+          "t": 1806
+        },
+        {
+          "q": "In 1988, how many Los Angeles home buyers worried they would be priced out forever unless they bought now?",
+          "choices": [
+            "About 10%",
+            "About 27%",
+            "About 80%",
+            "Nobody"
+          ],
+          "a": 2,
+          "why": "Fear of missing out pushed prices up. In steady Milwaukee only 27% felt it.",
+          "quote": "We had 80% agreement with that in Los Angeles; so people were really worried.",
+          "t": 2510
+        }
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "A 1920s mortgage: five years of interest, then the whole $5,000 due at once.",
+          "After 1929, families who could not refinance lost their homes in huge numbers.",
+          "A two and twenty-eight loan: a low teaser rate for two years, then it resets higher.",
+          "Early in a 30-year mortgage, most of each payment goes to interest.",
+          "In 1988, 80% of Los Angeles buyers feared being priced out forever."
+        ],
+        "key": "A loan is safe only if you can pay it in its hardest year, not its easiest one.",
+        "decoys": [
+          {
+            "text": "Home prices always go up, so a big loan is safe.",
+            "why": "Prices fell after 1929 and again after 2006. Shiller's hundred years of prices show booms are rare and they end."
+          },
+          {
+            "text": "If the first payment is affordable, the loan is affordable.",
+            "why": "A teaser rate resets after two years. The payment that matters is the one after the reset."
+          }
+        ],
+        "aha": "Every partial is a loan judged by its easy start, and a family caught by its hard end."
+      },
+      "voices": [
+        "shiller"
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Insurance: paying so the bad day is survivable",
+      "needIt": "Car, health, renter's and life insurance are some of the biggest bills you choose; knowing what pooling can and cannot do helps you buy the cover that saves you in a bad year and skip what only costs you.",
+      "outcome": "Explain why insurance works only with many people in the pool, and spot moral hazard, selection bias and the \"I can't afford it\" trap.",
+      "why": "No one can say whether one house will burn this year, but across thousands of houses the share is steady, and that steadiness is what lets an insurer promise to pay. The idea is old: a letter from 1609 proposed that every home pay 1% a year into a fire fund. Insurance moves money from your good years into your bad ones.",
+      "reachesYou": "Car insurance (the biggest kind people buy), health insurance, renter's or homeowner's insurance, term or whole life insurance, the \"protection plan\" offered at the store checkout.",
+      "do": "List every insurance you pay for and what each one covers. Then name your one bad day that would hurt most (a crash, an illness, a fire, a lost job) and check which policy, if any, carries it.",
+      "mechanisms": [
+        6
+      ],
+      "scene": {
+        "analogy": "One student, or a whole school",
+        "map": [
+          [
+            "one student",
+            "one person insured"
+          ],
+          [
+            "the school's daily count",
+            "the insurer's claims each year"
+          ],
+          [
+            "about 50, almost every day",
+            "many policies make losses predictable"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "one",
+            "type": "card",
+            "x": 40,
+            "y": 30,
+            "w": 330,
+            "h": 92,
+            "label": "One student",
+            "sub": "sick tomorrow? no idea",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "sch",
+            "type": "card",
+            "x": 430,
+            "y": 30,
+            "w": 330,
+            "h": 92,
+            "label": "A school of 1,000",
+            "sub": "how many out?",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "days",
+            "type": "text",
+            "x": 400,
+            "y": 170,
+            "label": "",
+            "color": "fg",
+            "size": 18,
+            "o": 0
+          },
+          {
+            "id": "res",
+            "type": "card",
+            "x": 40,
+            "y": 250,
+            "w": 720,
+            "h": 84,
+            "label": "A big pool is steady",
+            "sub": "that steadiness is what lets an insurer promise to pay",
+            "color": "green",
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "Will one student be sick tomorrow? No one can say.",
+            "dur": 2.8,
+            "set": {
+              "one": {
+                "o": 1,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "A school of 1,000? About 50 out, almost every day.",
+            "dur": 2.8,
+            "set": {
+              "sch": {
+                "o": 1,
+                "sub": "about 50 a day"
+              }
+            }
+          },
+          {
+            "say": "Monday 48. Tuesday 52. Wednesday 50.",
+            "dur": 2.6,
+            "set": {
+              "days": {
+                "o": 1,
+                "label": "48 . 52 . 50 . 49 . 51"
+              }
+            }
+          },
+          {
+            "say": "Many uncertain people make one steady number.",
+            "dur": 2.6,
+            "set": {
+              "sch": {
+                "color": "green"
+              }
+            }
+          },
+          {
+            "say": "That is the whole trick of insurance.",
+            "dur": 3.2,
+            "set": {
+              "res": {
+                "o": 1
+              }
+            }
+          }
+        ]
+      },
+      "main": {
+        "role": "watch",
+        "title": "Lecture 5: Insurance: The Archetypal Risk Management Institution",
+        "by": "Robert J. Shiller, Yale",
+        "item": "OpenYaleCourseFinancialMarketsWithProfessorRobertShiller",
+        "file": "econ252_05_013008.mp4",
+        "seconds": 4511,
+        "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+        "note": "A full Yale lecture, January 2008. Insurance starts at the third chapter."
+      },
+      "chapters": [
+        {
+          "t": 0,
+          "title": "Finishing last time: stocks and taxes",
+          "words": "I wanted to talk today about insurance, which is"
+        },
+        {
+          "t": 612,
+          "title": "Mutual funds: picking winners or spreading risk?",
+          "words": "The thing that comes to my mind is that"
+        },
+        {
+          "t": 1183,
+          "title": "Why insurance works: the big pool",
+          "words": "Anyway, I want then to move on to the"
+        },
+        {
+          "t": 2094,
+          "title": "Kinds of insurers: car, home, life",
+          "words": "Insurance relies on this theory of risk pooling but"
+        },
+        {
+          "t": 2632,
+          "title": "How insurance got people to buy it",
+          "words": "These insurance contracts have come across gradually through time"
+        },
+        {
+          "t": 3366,
+          "title": "Who checks the insurers",
+          "words": "I want to talk about government regulation of insurance"
+        },
+        {
+          "t": 3914,
+          "title": "When insurers fail together: 2008",
+          "words": "I want to conclude with problems, which may sound"
+        }
+      ],
+      "companions": [
+        {
+          "role": "read",
+          "title": "The full lecture page and transcript",
+          "by": "Open Yale Courses",
+          "url": "https://oyc.yale.edu/economics/econ-252-08/lecture-5",
+          "licence": "CC BY-NC-SA 3.0, Open Yale Courses"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does risk pooling mean?",
+          "choices": [
+            "Each person saves alone",
+            "Many people with separate risks share one pool, so the whole pool is safer",
+            "The insurer bets against you",
+            "Everyone pays the same no matter what"
+          ],
+          "a": 1,
+          "why": "Any one person's bad luck is spread over everyone in the pool.",
+          "quote": "Risk pooling means they put a lot of people with independent or low-correlated risk into a pool and reduce the risk for the whole pool.",
+          "t": 1183
+        },
+        {
+          "q": "Why does an insurer need a lot of customers?",
+          "choices": [
+            "To make ads cheaper",
+            "With many policies, the share that pays out is steady and predictable",
+            "The law says so",
+            "It does not"
+          ],
+          "a": 1,
+          "why": "With 100 policies the payouts could swing a lot; with 10,000 they barely move.",
+          "quote": "You have to be a big company to do it",
+          "t": 1183
+        },
+        {
+          "q": "What is the classic \"moral hazard\"?",
+          "choices": [
+            "An insurer lying about prices",
+            "Someone burning down their own insured house to collect",
+            "A bank failing",
+            "Forgetting to pay a bill"
+          ],
+          "a": 1,
+          "why": "Being insured can change what people do. Policies are written to guard against it.",
+          "quote": "The classic moral hazard problem is the problem that you give fire insurance on a house and someone burns down the house in order to collect the insurance.",
+          "t": 1183
+        },
+        {
+          "q": "What is \"selection bias\" for an insurer?",
+          "choices": [
+            "Picking the cheapest office",
+            "The people most eager to buy insurance tend to be the riskiest",
+            "Choosing customers by name",
+            "Selling only to young people"
+          ],
+          "a": 1,
+          "why": "Sick people want life insurance most. That is why insurers ask questions before they sell.",
+          "quote": "if you offer insurance policies you will tend to attract people who are higher risk.",
+          "t": 1183
+        },
+        {
+          "q": "Poor farmers in Africa told an insurer \"I can't afford crop insurance.\" What does Shiller say insurance is really for?",
+          "choices": [
+            "Only rich farmers",
+            "Moving money from good years into bad years so you make it through all of them",
+            "Making the insurer rich",
+            "Replacing savings"
+          ],
+          "a": 1,
+          "why": "The good year is exactly when you can pay for the bad one.",
+          "quote": "The whole idea of insurance is that you take from your good years and you move it into your bad years so that you make it through all your years.",
+          "t": 2632
+        },
+        {
+          "q": "What is \"term\" life insurance?",
+          "choices": [
+            "A policy that builds savings",
+            "You pay each year for that year's cover, and it builds no cash value",
+            "Insurance for a set of cars",
+            "A loan against your life"
+          ],
+          "a": 1,
+          "why": "Term is the simplest, and usually the cheapest, way to protect a family while children are young.",
+          "quote": "This is insurance that you pay each year for insurance in that year and it does not build a cash value.",
+          "t": 3366
+        }
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "In 1609 someone proposed that every home pay 1% of its value each year into a fire fund.",
+          "With 100 policies, 15% or 25% might pay out; with a million, almost exactly 20%.",
+          "A farmer in a good year says \"I can't afford insurance.\"",
+          "Fire insurance tempts a few owners to burn their own house.",
+          "The sickest people line up first to buy life insurance."
+        ],
+        "key": "Insurance carries your bad day by pooling many people, and works only when the pool is big and its people are honest about their risks.",
+        "decoys": [
+          {
+            "text": "Insurance is a waste if nothing bad happens to you.",
+            "why": "You paid to make the bad year survivable. A year with no claim is the good year paying for the bad one."
+          },
+          {
+            "text": "A small insurer is as safe as a big one.",
+            "why": "Shiller shows a small pool can swing from 15% to 25% in payouts. Steadiness needs many policies."
+          }
+        ],
+        "aha": "Every partial is about the pool: how big it is, who joins it, and how people act once they are in it."
+      },
+      "voices": [
+        "shiller"
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Stocks: owning a slice of a business",
+      "needIt": "Retirement plans, phone apps and coworkers all push stocks; knowing a share is a slice of a business, worth what that business earns, keeps you from paying for hype.",
+      "outcome": "Read a share as a slice of a company: count the slices, look at the earnings, and know what leverage does to your money.",
+      "why": "A share is a slice of a business. One thousand shares mean nothing until you know how many there are in all. A split changes the number of slices, not your slice. Investors have usually paid about fifteen years of earnings for a share; when they paid far more, in 1929 and 2000, prices fell back.",
+      "reachesYou": "A 401(k) or other retirement plan, index funds, stock-trading apps, shares from an employer, a coworker's \"can't miss\" tip.",
+      "do": "Pick one company you know. Look up its share price and its earnings per share, and divide the price by the earnings. A number far above 15 means buyers are paying for a lot of hoped-for future.",
+      "mechanisms": [
+        8
+      ],
+      "scene": {
+        "analogy": "Your slices of a pizza",
+        "map": [
+          [
+            "the whole pizza",
+            "the company"
+          ],
+          [
+            "your slices out of all the slices",
+            "your share of the company"
+          ],
+          [
+            "cutting every slice in half",
+            "a stock split: nothing changes"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "pz",
+            "type": "stamp",
+            "x": 60,
+            "y": 40,
+            "w": 190,
+            "label": "8 slices",
+            "color": "gold",
+            "o": 0,
+            "size": 20
+          },
+          {
+            "id": "you",
+            "type": "card",
+            "x": 310,
+            "y": 60,
+            "w": 450,
+            "h": 100,
+            "label": "Your slices",
+            "sub": "2 of 8: one quarter",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "res",
+            "type": "card",
+            "x": 40,
+            "y": 262,
+            "w": 720,
+            "h": 76,
+            "label": "What you own = your slices divided by all slices",
+            "sub": "not the number of slices you hold",
+            "color": "green",
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "One pizza, eight slices. You have two: a quarter of it.",
+            "dur": 2.8,
+            "set": {
+              "pz": {
+                "o": 1
+              },
+              "you": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Cut every slice in half. Now you have four!",
+            "dur": 2.6,
+            "set": {
+              "pz": {
+                "label": "16 slices",
+                "shake": true
+              },
+              "you": {
+                "sub": "4 of 16: still one quarter"
+              }
+            }
+          },
+          {
+            "say": "Same pizza. Same quarter. That is a stock split.",
+            "dur": 2.6,
+            "set": {
+              "you": {
+                "color": "green"
+              }
+            }
+          },
+          {
+            "say": "Now the boss gets 4 new slices out of thin air.",
+            "dur": 2.8,
+            "set": {
+              "pz": {
+                "label": "20 slices",
+                "color": "pink",
+                "shake": true
+              },
+              "you": {
+                "sub": "4 of 20: less than a quarter",
+                "color": "pink"
+              }
+            }
+          },
+          {
+            "say": "You did nothing, and your slice shrank. That is dilution.",
+            "dur": 3.4,
+            "set": {
+              "res": {
+                "o": 1
+              }
+            }
+          }
+        ]
+      },
+      "main": {
+        "role": "watch",
+        "title": "Lecture 11: Stocks",
+        "by": "Robert J. Shiller, Yale",
+        "item": "OpenYaleCourseFinancialMarketsWithProfessorRobertShiller",
+        "file": "econ252_11_022008.mp4",
+        "seconds": 4454,
+        "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+        "note": "A full Yale lecture, February 2008. The second and third chapters are the plain basics."
+      },
+      "chapters": [
+        {
+          "t": 0,
+          "title": "A word about a guest speaker",
+          "words": "I believe that we still have on, for Friday,"
+        },
+        {
+          "t": 264,
+          "title": "What a share is",
+          "words": "I want to talk about the stock market today"
+        },
+        {
+          "t": 842,
+          "title": "Splits, dilution and dividends",
+          "words": "Companies routinely do what are called \"splits.\" They may"
+        },
+        {
+          "t": 1886,
+          "title": "Earnings, dividends and what a share is worth",
+          "words": "Now ultimately, the purpose of investing in a share"
+        },
+        {
+          "t": 2558,
+          "title": "Buybacks (technical)",
+          "words": "Now the other thing is, there are other ways"
+        },
+        {
+          "t": 3433,
+          "title": "Borrowing and leverage",
+          "words": "The other thing that I want to say about"
+        },
+        {
+          "t": 4078,
+          "title": "How boards decide dividends",
+          "words": "The last thing, I just wanted to say"
+        }
+      ],
+      "companions": [
+        {
+          "role": "read",
+          "title": "The full lecture page and transcript",
+          "by": "Open Yale Courses",
+          "url": "https://oyc.yale.edu/economics/econ-252-08/lecture-11",
+          "licence": "CC BY-NC-SA 3.0, Open Yale Courses"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You own 1,000 shares of a company. How much of the company do you own?",
+          "choices": [
+            "A thousandth of it",
+            "You cannot tell until you know how many shares there are in all",
+            "All of it",
+            "Exactly 1%"
+          ],
+          "a": 1,
+          "why": "If there are 1,000 shares in all, you own the company. If there are ten million, you own one ten-thousandth.",
+          "quote": "It doesn't mean anything until you know how many shares are outstanding",
+          "t": 264
+        },
+        {
+          "q": "Your company does a two-for-one split and you now have twice as many shares. How much richer are you?",
+          "choices": [
+            "Twice as rich",
+            "Not at all: everyone got the same split",
+            "A little richer",
+            "Poorer"
+          ],
+          "a": 1,
+          "why": "Every shareholder's shares doubled, and so did the total. Your slice is the same size.",
+          "quote": "Don't be too jubilant because when they do a split they do it to every single shareholder.",
+          "t": 842
+        },
+        {
+          "q": "What is dilution?",
+          "choices": [
+            "When the company changes shares for some people and not others, shrinking everyone else's slice",
+            "When a stock price falls",
+            "When a company pays a dividend",
+            "When you sell shares"
+          ],
+          "a": 0,
+          "why": "New shares given to a CEO, for example, make every other holder's slice a little smaller.",
+          "quote": "Dilution occurs when the company changes the number of shares asymmetrically",
+          "t": 842
+        },
+        {
+          "q": "Over the long run, about how many years of earnings have people usually paid for a share?",
+          "choices": [
+            "About 2",
+            "About 15",
+            "About 100",
+            "There is no pattern"
+          ],
+          "a": 1,
+          "why": "When the ratio shot far above that, to 35 in 1929 and about 46 in 2000, prices later fell hard.",
+          "quote": "So, typically the ratio of price-to-earnings has been about fifteen. That means that people will pay up front for about fifteen years' earnings.",
+          "t": 1886
+        },
+        {
+          "q": "You buy a $300,000 house with $30,000 down, and prices fall 10%. What happened to your $30,000?",
+          "choices": [
+            "It lost 10%",
+            "It is completely gone",
+            "It doubled",
+            "Nothing"
+          ],
+          "a": 1,
+          "why": "Borrowing magnifies both gains and losses. A small fall can wipe out a small down payment.",
+          "quote": "Your $30,000 down payment is completely wiped out because you were leveraged.",
+          "t": 3433
+        },
+        {
+          "q": "A broker says \"buy today, before the stock goes ex-dividend, or you'll miss the dividend!\" Is that good advice?",
+          "choices": [
+            "Yes, always buy before",
+            "No: the price drops by the dividend, so it does not matter when you buy",
+            "Yes, dividends are free money",
+            "Only on Fridays"
+          ],
+          "a": 1,
+          "why": "Brokers are told not to \"sell dividends\" like this, because it misleads buyers.",
+          "quote": "That's misleading because it really doesn't matter when you buy the stock",
+          "t": 842
+        }
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "Own 1,000 shares: is that the whole company or a ten-thousandth? It depends on the total.",
+          "A two-for-one split: twice the shares, the same slice.",
+          "New shares handed to a CEO shrink everyone else's slice.",
+          "People usually pay about 15 years of earnings for a share; in 1929 it was 35, in 2000 about 46.",
+          "A house bought with 10% down falls 10%: the down payment is gone."
+        ],
+        "key": "A share is a slice of a business: what it is worth depends on the whole business and how many slices there are, not on its price tag.",
+        "decoys": [
+          {
+            "text": "More shares always means you own more.",
+            "why": "After a split everyone has more shares and the same slice."
+          },
+          {
+            "text": "A stock is worth whatever its price is heading toward.",
+            "why": "People pay for earnings and dividends. When prices ran far above earnings, in 1929 and 2000, they fell back."
+          }
+        ],
+        "aha": "Every partial asks the same two things: how big is your slice, and how big is the pie it comes from?"
+      },
+      "voices": [
+        "shiller"
+      ]
+    },
+    {
+      "n": 6,
+      "title": "Why smart people still make money mistakes",
+      "needIt": "Every money mistake starts in your own head; knowing the usual ones (too sure, afraid of small losses, dreading regret) lets you catch yourself before you act.",
+      "outcome": "Name the four mind traps Shiller shows in money choices: overconfidence, loss aversion, the pull of certainty, and regret, and spot them in yourself.",
+      "why": "Shiller asked his Yale students for ranges they were 90% sure of; only about a quarter were right. Yale's most brilliant economist of the 1920s was sure the market had reached a \"permanently high plateau\" and lost his house in 1929. People refuse good bets because a small loss feels bigger than a larger gain.",
+      "reachesYou": "Holding a losing investment so you do not have to admit the loss, selling a winner too early, a \"sure thing\" tip, a lottery ticket, treating a tax refund as free money, betting apps.",
+      "do": "Before your next money decision over $100, write down how sure you are, and what you would do if you were starting fresh. Look at it again in a month.",
+      "mechanisms": [
+        6,
+        15,
+        14
+      ],
+      "scene": {
+        "analogy": "A coin flip a friend offers at lunch",
+        "map": [
+          [
+            "the $100 you might pay",
+            "a loss"
+          ],
+          [
+            "the $200 you might win",
+            "a gain"
+          ],
+          [
+            "saying no to a good flip",
+            "loss aversion"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "win",
+            "type": "card",
+            "x": 40,
+            "y": 30,
+            "w": 260,
+            "h": 92,
+            "label": "Heads",
+            "sub": "you win $200",
+            "color": "green",
+            "o": 0
+          },
+          {
+            "id": "coin",
+            "type": "stamp",
+            "x": 350,
+            "y": 30,
+            "w": 100,
+            "label": "FLIP?",
+            "color": "gold",
+            "o": 0,
+            "s": 0.4,
+            "size": 16
+          },
+          {
+            "id": "lose",
+            "type": "card",
+            "x": 500,
+            "y": 30,
+            "w": 260,
+            "h": 92,
+            "label": "Tails",
+            "sub": "you pay $100",
+            "color": "pink",
+            "o": 0
+          },
+          {
+            "id": "avg",
+            "type": "text",
+            "x": 400,
+            "y": 175,
+            "label": "",
+            "color": "fg",
+            "size": 18,
+            "o": 0
+          },
+          {
+            "id": "res",
+            "type": "card",
+            "x": 40,
+            "y": 250,
+            "w": 720,
+            "h": 84,
+            "label": "Losses loom larger",
+            "sub": "so we pass up good chances, and hold on to bad ones",
+            "color": "blue",
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "A friend offers a flip: heads you win $200, tails you pay $100.",
+            "dur": 3,
+            "set": {
+              "win": {
+                "o": 1
+              },
+              "coin": {
+                "o": 1,
+                "s": 1
+              },
+              "lose": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "On average, you come out $50 ahead every flip.",
+            "dur": 2.6,
+            "set": {
+              "avg": {
+                "o": 1,
+                "label": "average: +$50 a flip"
+              }
+            }
+          },
+          {
+            "say": "Most people still say no.",
+            "dur": 2.4,
+            "set": {
+              "coin": {
+                "label": "NO",
+                "color": "pink",
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "Losing $100 feels worse than winning $200 feels good.",
+            "dur": 3,
+            "set": {
+              "lose": {
+                "sub": "feels like losing much more",
+                "shake": true
+              },
+              "win": {
+                "color": "dim"
+              }
+            }
+          },
+          {
+            "say": "It is not caution. It is how every mind weighs losses.",
+            "dur": 3.2,
+            "set": {
+              "res": {
+                "o": 1
+              }
+            }
+          }
+        ]
+      },
+      "main": {
+        "role": "watch",
+        "title": "Lecture 7: Behavioral Finance: The Role of Psychology",
+        "by": "Robert J. Shiller, Yale",
+        "item": "OpenYaleCourseFinancialMarketsWithProfessorRobertShiller",
+        "file": "econ252_07_020408.mp4",
+        "seconds": 3909,
+        "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+        "note": "A full Yale lecture, February 2008. Try the overconfidence test in the third chapter yourself."
+      },
+      "chapters": [
+        {
+          "t": 0,
+          "title": "What behavioral finance is",
+          "words": "Today's lecture is about behavioral finance and this is"
+        },
+        {
+          "t": 541,
+          "title": "Why the market swings more than it should",
+          "words": "Anyway, we can play this game for a while"
+        },
+        {
+          "t": 1198,
+          "title": "Overconfidence: a test you can take",
+          "words": "I want to talk about over-confidence and I thought"
+        },
+        {
+          "t": 2309,
+          "title": "Why we fear losses: the coin flip at lunch",
+          "words": "Anyway, I want to talk more precisely about how"
+        },
+        {
+          "t": 3530,
+          "title": "Regret, mental money jars, and skirt lengths",
+          "words": "There's something related to it that psychologists talk about,"
+        }
+      ],
+      "companions": [
+        {
+          "role": "read",
+          "title": "The full lecture page and transcript",
+          "by": "Open Yale Courses",
+          "url": "https://oyc.yale.edu/economics/econ-252-08/lecture-7",
+          "licence": "CC BY-NC-SA 3.0, Open Yale Courses"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Yale students gave ranges they were 90% sure held the right answer. How often were they right about the Statue of Liberty's weight?",
+          "choices": [
+            "About 90% of the time",
+            "About 20 to 25% of the time",
+            "Every time",
+            "Never"
+          ],
+          "a": 1,
+          "why": "People are sure far more often than they are right, and smart people are no exception.",
+          "quote": "It should have been 90% who were right.",
+          "t": 1198
+        },
+        {
+          "q": "Irving Fisher, Yale's star economist, called the 1929 stock market a \"permanently high plateau.\" What happened to him?",
+          "choices": [
+            "He got rich",
+            "He lost everything in the crash, even his house",
+            "He retired early",
+            "He was proven right"
+          ],
+          "a": 1,
+          "why": "He had borrowed against his home. Yale bought the house and rented it back to him.",
+          "quote": "He had a beautiful mansion; he was a wealthy man for a while, but he lost everything in the stock market crash.",
+          "t": 1198
+        },
+        {
+          "q": "Why do people turn down a coin flip that pays $200 on heads and costs $100 on tails?",
+          "choices": [
+            "They cannot do the math",
+            "A loss feels much bigger than an equal or larger gain",
+            "Coins are unfair",
+            "They are always right to"
+          ],
+          "a": 1,
+          "why": "Kahneman and Tversky called it the kink in how we value money: right where we stand, losses weigh more.",
+          "quote": "What it means is that I value losses much more than I value gains from wherever I am.",
+          "t": 2309
+        },
+        {
+          "q": "Most people take $3,000 for sure over an 80% chance at $4,000, yet pick the bigger prize when both chances are small. Why?",
+          "choices": [
+            "Bigger numbers confuse them",
+            "People like certainty, and blur the middle probabilities together",
+            "They want to lose",
+            "It is the best choice both times"
+          ],
+          "a": 1,
+          "why": "In the mind there are three chances: can't happen, might happen, certain. Certain gets far more weight than it should.",
+          "quote": "I think people like certainty and ambiguity is difficult for them to adjust to.",
+          "t": 2309
+        },
+        {
+          "q": "Why do many investors sell a stock right after it goes up?",
+          "choices": [
+            "To pay taxes",
+            "To avoid the regret they would feel if it fell again",
+            "Because the rules say so",
+            "Because it will always fall"
+          ],
+          "a": 1,
+          "why": "Fear of regret, not a calculation, drives the sale.",
+          "quote": "when the stock market goes up they try to sell it and lock in the gain because they are worried that if it goes down again they will regret not having sold it",
+          "t": 3530
+        },
+        {
+          "q": "What are \"mental compartments\"?",
+          "choices": [
+            "Bank accounts",
+            "Keeping money in separate jars in your head and valuing it differently in each",
+            "A kind of investment fund",
+            "Locked savings"
+          ],
+          "a": 1,
+          "why": "Casino winnings or a refund can feel like play money, even though a dollar is a dollar.",
+          "quote": "People put things in mental compartments, all different compartments in your mind, and you have separate values for things depending on which compartment they're in.",
+          "t": 3530
+        }
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "Students 90% sure of their ranges were right about a quarter of the time.",
+          "Yale's star economist called the 1929 market a permanently high plateau, and lost his house.",
+          "Heads you win $200, tails you pay $100: most people say no.",
+          "$3,000 for sure beats an 80% chance at $4,000 for most people.",
+          "Investors sell a stock that rose so they will not regret it if it falls."
+        ],
+        "key": "Smart people's money mistakes come from how every mind works: too sure of itself, afraid of small losses, and dreading regret.",
+        "decoys": [
+          {
+            "text": "Only careless or uneducated people make these mistakes.",
+            "why": "Irving Fisher was Yale's most brilliant professor and lost everything in 1929."
+          },
+          {
+            "text": "Turning down a flip you would win on average is just being careful.",
+            "why": "It pays $50 a flip on average. Saying no comes from how we feel losses, not from the numbers."
+          }
+        ],
+        "aha": "Every partial is a mind weighing money with feelings: certainty, fear of loss, pride and regret."
+      },
+      "voices": [
+        "shiller",
+        "fisher",
+        "kahneman"
+      ]
+    },
+    {
+      "n": 7,
+      "title": "Banks, runs and bubbles: how the system breaks",
+      "needIt": "Your paycheck, savings and card all sit in a bank; knowing how banks fail, and what deposit insurance covers, tells you where your money is safe and why a rumor can empty a bank.",
+      "outcome": "Explain how a bank lends out most of what it holds, why a rumor can start a run, and what keeps your deposits safe.",
+      "why": "Banking began when goldsmiths lent out gold that customers had left in their safes, keeping only a fraction on hand. That works on normal days. When a rumor makes everyone ask at once, no bank has it all. In 2007 savers lined up outside Britain's Northern Rock, the first British bank run since 1866.",
+      "reachesYou": "Your checking and savings accounts, a credit union, deposit insurance, money apps that hold your cash but are not banks, the ratings on investments.",
+      "do": "Check whether your bank or money app is covered by federal deposit insurance (FDIC for banks, NCUA for credit unions) and whether your balance is under the insured limit.",
+      "mechanisms": [
+        8
+      ],
+      "scene": {
+        "analogy": "A classroom savings jar",
+        "map": [
+          [
+            "the teacher holding the money",
+            "the bank"
+          ],
+          [
+            "the $90 lent to the store",
+            "loans"
+          ],
+          [
+            "all ten asking at once",
+            "a bank run"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "kids",
+            "type": "card",
+            "x": 40,
+            "y": 30,
+            "w": 220,
+            "h": 92,
+            "label": "Ten kids",
+            "sub": "leave $10 each",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "tch",
+            "type": "card",
+            "x": 290,
+            "y": 30,
+            "w": 220,
+            "h": 92,
+            "label": "The teacher",
+            "sub": "holds $100",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "sto",
+            "type": "card",
+            "x": 540,
+            "y": 30,
+            "w": 220,
+            "h": 92,
+            "label": "School store",
+            "sub": "borrows $90",
+            "color": "green",
+            "o": 0
+          },
+          {
+            "id": "rum",
+            "type": "text",
+            "x": 400,
+            "y": 175,
+            "label": "\"The store is broke! Give it back, now!\"",
+            "color": "pink",
+            "size": 18,
+            "o": 0
+          },
+          {
+            "id": "res",
+            "type": "card",
+            "x": 40,
+            "y": 250,
+            "w": 720,
+            "h": 84,
+            "label": "Banks lend long and borrow short",
+            "sub": "safe on normal days; one panic can break them; deposit insurance stops the panic",
+            "color": "blue",
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "Ten kids each leave $10 with the teacher.",
+            "dur": 2.6,
+            "set": {
+              "kids": {
+                "o": 1
+              },
+              "tch": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Most days only one kid asks for money back.",
+            "dur": 2.4,
+            "set": {
+              "tch": {
+                "sub": "needs about $10 a day"
+              }
+            }
+          },
+          {
+            "say": "So the teacher lends $90 to the school store.",
+            "dur": 2.6,
+            "set": {
+              "sto": {
+                "o": 1
+              },
+              "tch": {
+                "sub": "$10 left on hand"
+              }
+            }
+          },
+          {
+            "say": "A rumor: the store is broke. All ten want their money now.",
+            "dur": 3,
+            "set": {
+              "rum": {
+                "o": 1
+              },
+              "kids": {
+                "color": "pink",
+                "shake": true,
+                "sub": "want $100 now"
+              }
+            }
+          },
+          {
+            "say": "Only $10 is there. That is a bank run.",
+            "dur": 2.8,
+            "set": {
+              "tch": {
+                "color": "pink",
+                "shake": true,
+                "sub": "$10 for ten kids"
+              }
+            }
+          },
+          {
+            "say": "Banks keep only a part of your money on hand.",
+            "dur": 3.2,
+            "set": {
+              "res": {
+                "o": 1
+              }
+            }
+          }
+        ]
+      },
+      "main": {
+        "role": "watch",
+        "title": "Lecture 13: Banking: Successes and Failures",
+        "by": "Robert J. Shiller, Yale",
+        "item": "OpenYaleCourseFinancialMarketsWithProfessorRobertShiller",
+        "file": "econ252_13_030308.mp4",
+        "seconds": 4295,
+        "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+        "note": "A full Yale lecture, March 2008, days before the investment bank Bear Stearns collapsed."
+      },
+      "chapters": [
+        {
+          "t": 0,
+          "title": "A word about guest speaker Andrew Redleaf",
+          "words": "Before I begin, I want to say something about"
+        },
+        {
+          "t": 666,
+          "title": "Where banks came from: the goldsmith",
+          "words": "Today I want to talk about banking and this"
+        },
+        {
+          "t": 1529,
+          "title": "Why banks exist",
+          "words": "I want to clarify just what it is that"
+        },
+        {
+          "t": 2235,
+          "title": "Rating agencies: report cards for loans",
+          "words": "banking is bigger in developing countries"
+        },
+        {
+          "t": 2648,
+          "title": "Why banks break: runs and the rules against them",
+          "words": "I mentioned fractional reserves; the fact that banks hold"
+        },
+        {
+          "t": 3497,
+          "title": "2008: the crisis spreads around the world",
+          "words": "Now finally, I want to talk about the current"
+        }
+      ],
+      "companions": [
+        {
+          "role": "read",
+          "title": "Other People's Money, and How the Bankers Use It",
+          "by": "Louis D. Brandeis, 1914",
+          "url": "https://www.gutenberg.org/ebooks/57819",
+          "licence": "Public domain, Project Gutenberg"
+        },
+        {
+          "role": "read",
+          "title": "The full lecture page and transcript",
+          "by": "Open Yale Courses",
+          "url": "https://oyc.yale.edu/economics/econ-252-08/lecture-13",
+          "licence": "CC BY-NC-SA 3.0, Open Yale Courses"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "In Shiller's story of how banking began, what did the goldsmith do?",
+          "choices": [
+            "Melted down the gold",
+            "Lent out some of the gold customers left in his safe, to earn interest",
+            "Gave the gold away",
+            "Kept every coin locked up"
+          ],
+          "a": 1,
+          "why": "Customers did not care which coins came back, so the goldsmith kept a fraction on hand and lent the rest.",
+          "quote": "Why I don't lend some of it out and I can earn interest on the loan and make money.",
+          "t": 666
+        },
+        {
+          "q": "How does a bank make its money?",
+          "choices": [
+            "Fees only",
+            "It charges more interest on loans than it pays on deposits",
+            "The government pays it",
+            "It prints money"
+          ],
+          "a": 1,
+          "why": "The gap between the two rates is the bank's profit.",
+          "quote": "it charges a higher interest on the loan than they pay on the deposit. The difference is their profit; that's how they make money.",
+          "t": 666
+        },
+        {
+          "q": "What does it mean that banks \"lend long and borrow short\"?",
+          "choices": [
+            "They lend to tall people",
+            "They make long loans with money depositors can take back any day",
+            "They only lend for a week",
+            "They never borrow"
+          ],
+          "a": 1,
+          "why": "That is the useful part, and also the weak spot: if every depositor asks at once, the money is out on long loans.",
+          "quote": "Liquidity is that banks lend long and borrow short",
+          "t": 1529
+        },
+        {
+          "q": "Why are banks regulated, according to Shiller?",
+          "choices": [
+            "To make them smaller",
+            "Because one bank that cannot pay can start a panic that brings down the whole system",
+            "To raise taxes",
+            "They are not regulated"
+          ],
+          "a": 1,
+          "why": "Runs have happened so often in history that governments now require banks to hold reserves and capital.",
+          "quote": "if one bank gets in trouble and can't pay out on its deposits, then that can bring the whole system down because it can cause a panic among investors",
+          "t": 2648
+        },
+        {
+          "q": "Northern Rock's depositors were insured, yet they lined up to pull their money out in 2007. Why?",
+          "choices": [
+            "They did not know about the insurance",
+            "Only the first £3,000 was fully covered",
+            "The bank was closing anyway",
+            "They wanted cash for a holiday"
+          ],
+          "a": 1,
+          "why": "Details of deposit insurance matter. Britain fixed the limit after the run.",
+          "quote": "yes but only up to £3,000",
+          "t": 3497
+        },
+        {
+          "q": "What changed at the big rating agencies after John Moody died?",
+          "choices": [
+            "They stopped rating",
+            "They started taking fees from the companies they rate",
+            "They became government offices",
+            "They only rated banks"
+          ],
+          "a": 1,
+          "why": "Like a teacher paid by the students for grades, it invites bias. They gave AAA ratings to some subprime securities.",
+          "quote": "they started accepting fees from the people they rate; some people think that you shouldn't do that.",
+          "t": 2235
+        }
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "A goldsmith saw gold sitting in his safe and lent some of it out.",
+          "A bank pays less on deposits than it charges on loans; the gap is its profit.",
+          "In 2007 people lined up outside Northern Rock: the first British bank run since 1866.",
+          "Insurance covered only the first £3,000 in full, so savers ran anyway.",
+          "Rating agencies, paid by the companies they graded, gave AAA to subprime securities."
+        ],
+        "key": "A bank works because not everyone wants their money back at once; when trust breaks, a run can sink it, so rules and deposit insurance keep the trust.",
+        "decoys": [
+          {
+            "text": "A bank keeps all your money in its vault.",
+            "why": "Like the goldsmith, it keeps a fraction on hand and lends the rest out."
+          },
+          {
+            "text": "Only badly run banks have runs.",
+            "why": "A rumor alone can start one. No bank can pay every depositor on the same day."
+          }
+        ],
+        "aha": "Every partial is about trust: money lent out on the promise that not everyone will come back for it at once."
+      },
+      "voices": [
+        "shiller",
+        "brandeis"
+      ]
+    },
+    {
+      "n": 8,
+      "title": "Scams, fees and who is selling to you",
+      "needIt": "Someone will pitch you a money promise nearly every week; knowing the tricks, and which protections are real, keeps your savings away from scams and fees.",
+      "outcome": "Spot the weak spots sellers use, read the \"label\" every public investment must carry, and know what is insured and what is not.",
+      "why": "Shiller says the history of finance is a history of people being exploited, because sellers know the mind's weak spots: wishful thinking, anchoring on a number, gambling, and the illusion of control. The rules that make markets work came after scandals: disclosure (\"sunshine is the best disinfectant\"), the SEC in 1934, and surveillance that catches insider trading.",
+      "reachesYou": "Gold coin and \"can't lose\" ads, a broker or app that wants you to trade often, a tip from a friend of a friend, fees inside funds, \"guaranteed\" returns, deposit and brokerage insurance.",
+      "do": "For one investment or offer in front of you, find out three things: who gets paid when you buy, what it costs you each year in fees, and where its official filing or label is. If you cannot find all three, walk away.",
+      "mechanisms": [
+        5,
+        12
+      ],
+      "scene": {
+        "analogy": "Two boxes on a store shelf",
+        "map": [
+          [
+            "the bright promise on the front",
+            "the sales pitch"
+          ],
+          [
+            "the ingredients label on the back",
+            "the required disclosure"
+          ],
+          [
+            "reading the label first",
+            "checking the filings before you buy"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "a",
+            "type": "card",
+            "x": 40,
+            "y": 30,
+            "w": 330,
+            "h": 100,
+            "label": "\"Doubles every ten years!\"",
+            "sub": "shiny box",
+            "color": "gold",
+            "o": 0
+          },
+          {
+            "id": "b",
+            "type": "card",
+            "x": 430,
+            "y": 30,
+            "w": 330,
+            "h": 100,
+            "label": "Plain box",
+            "sub": "full label on the back",
+            "color": "blue",
+            "o": 0
+          },
+          {
+            "id": "law",
+            "type": "text",
+            "x": 400,
+            "y": 180,
+            "label": "Since 1934: public investments must show their label",
+            "color": "fg",
+            "size": 17,
+            "o": 0
+          },
+          {
+            "id": "res",
+            "type": "card",
+            "x": 40,
+            "y": 250,
+            "w": 720,
+            "h": 84,
+            "label": "\"Sunshine is the best disinfectant\"",
+            "sub": "a seller who will not show the label is the warning",
+            "color": "green",
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "Two boxes on a shelf. One shouts a promise.",
+            "dur": 2.6,
+            "set": {
+              "a": {
+                "o": 1,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "The other has a label: what is inside, and the risks.",
+            "dur": 2.6,
+            "set": {
+              "b": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "Turn the shiny box over: nothing printed on the back.",
+            "dur": 2.8,
+            "set": {
+              "a": {
+                "sub": "no ingredients, no risks",
+                "color": "pink"
+              }
+            }
+          },
+          {
+            "say": "For investments, the label is the law.",
+            "dur": 2.6,
+            "set": {
+              "law": {
+                "o": 1
+              },
+              "b": {
+                "color": "green"
+              }
+            }
+          },
+          {
+            "say": "Read the label. Ask who gets paid.",
+            "dur": 3.2,
+            "set": {
+              "res": {
+                "o": 1
+              }
+            }
+          }
+        ]
+      },
+      "main": {
+        "role": "watch",
+        "title": "Lecture 8: Human Foibles, Fraud, Manipulation, and Regulation",
+        "by": "Robert J. Shiller, Yale",
+        "item": "OpenYaleCourseFinancialMarketsWithProfessorRobertShiller",
+        "file": "econ252_08_020608.mp4",
+        "seconds": 4314,
+        "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+        "note": "A full Yale lecture, February 2008. The second chapter names the mind's weak spots that sellers use."
+      },
+      "chapters": [
+        {
+          "t": 0,
+          "title": "About the Yale endowment",
+          "words": "Next Wednesday we're having David Swensen lecture to us."
+        },
+        {
+          "t": 204,
+          "title": "The mind's weak spots that sellers use",
+          "words": "Meanwhile, I want to talk today about regulation."
+        },
+        {
+          "t": 1354,
+          "title": "Why finance needs rules",
+          "words": "I want to talk about regulation. The problem with"
+        },
+        {
+          "t": 1671,
+          "title": "Sunshine: disclosure and the SEC",
+          "words": "I want to start out with the origins of"
+        },
+        {
+          "t": 2358,
+          "title": "Private deals and hedge funds",
+          "words": "Now, if you are a private company, you are"
+        },
+        {
+          "t": 2954,
+          "title": "How insider trading gets caught",
+          "words": "Market surveillance is a process that stock exchanges and"
+        },
+        {
+          "t": 3585,
+          "title": "Hidden debts, and what is insured and what is not",
+          "words": "What the SEC has to worry about is something"
+        },
+        {
+          "t": 4238,
+          "title": "Why the rules are never finished",
+          "words": "You might say that our regulation hasn't gone far"
+        }
+      ],
+      "companions": [
+        {
+          "role": "read",
+          "title": "Other People's Money, and How the Bankers Use It",
+          "by": "Louis D. Brandeis, 1914",
+          "url": "https://www.gutenberg.org/ebooks/57819",
+          "licence": "Public domain, Project Gutenberg"
+        },
+        {
+          "role": "read",
+          "title": "The full lecture page and transcript",
+          "by": "Open Yale Courses",
+          "url": "https://oyc.yale.edu/economics/econ-252-08/lecture-8",
+          "licence": "CC BY-NC-SA 3.0, Open Yale Courses"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why does finance need rules, according to Shiller?",
+          "choices": [
+            "Because markets are too slow",
+            "Because people who understand the mind can exploit its weaknesses",
+            "Because banks asked for them",
+            "It does not"
+          ],
+          "a": 1,
+          "why": "Wishful thinking, anchoring and gambling urges are well known, and some sellers use them on purpose.",
+          "quote": "People who know human psychology know that they can exploit human weaknesses.",
+          "t": 1354
+        },
+        {
+          "q": "What did the realtors' ads say in 2008, just as prices were falling?",
+          "choices": [
+            "Prices may fall",
+            "Home prices double every ten years",
+            "Rent instead of buying",
+            "Wait for a better time"
+          ],
+          "a": 1,
+          "why": "Written as a fact, by the people who earn from selling homes. That is overselling.",
+          "quote": "home prices double every ten years",
+          "t": 1354
+        },
+        {
+          "q": "A broker calls every week with a new trade idea. What is the danger?",
+          "choices": [
+            "None, more trades mean more profit",
+            "The fees on all that trading eat your profits",
+            "Trades are always illegal",
+            "You will get too rich"
+          ],
+          "a": 1,
+          "why": "It is called churning: the broker is paid per trade, so the calls help the broker, not you.",
+          "quote": "if you keep trading too much, then you cannot possibly make money. The trading commissions will eat up all of your profits",
+          "t": 1354
+        },
+        {
+          "q": "Louis Brandeis compared investment disclosure to what?",
+          "choices": [
+            "A weather report",
+            "A food label, summed up in \"Sunshine is the best disinfectant\"",
+            "A lottery ticket",
+            "A secret code"
+          ],
+          "a": 1,
+          "why": "Just as food must list what is inside, a public investment must show its facts to everyone equally.",
+          "quote": "Sunshine is the best disinfectant.",
+          "t": 1671
+        },
+        {
+          "q": "Twenty-five people bought shares on a tip that started with a secretary at IBM. What happened to them?",
+          "choices": [
+            "They got rich",
+            "They were all tracked down, because trading on inside information is illegal",
+            "Nothing",
+            "Only the secretary got in trouble"
+          ],
+          "a": 1,
+          "why": "Exchanges watch for unusual trading before big news, and trace it back.",
+          "quote": "Those people are all in trouble because it's illegal to trade on insider information and they tracked them all down.",
+          "t": 2954
+        },
+        {
+          "q": "Is there an agency that pays you back if a stock falls or a broker lies to you?",
+          "choices": [
+            "Yes, the FDIC",
+            "Yes, the SEC",
+            "No, there is no such organization",
+            "Yes, but only for stocks"
+          ],
+          "a": 2,
+          "why": "Deposit insurance protects bank deposits, and brokerage insurance only replaces shares if the broker itself fails. Neither covers losses or bad advice.",
+          "quote": "Only 16% of investors knew that there is no such company.",
+          "t": 3585
+        }
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "A wheel of fortune spun from 0 to 100, and people's guesses landed near its number.",
+          "Realtors' ads said home prices double every ten years, as prices were falling.",
+          "A broker calls with a new trade every week; the commissions eat the profits.",
+          "Since 1934, public companies must file their facts where anyone can read them.",
+          "A secretary's tip spread to 25 buyers, and every one was tracked down."
+        ],
+        "key": "Sellers know the mind's weak spots; your protection is the label, the rules that catch cheats, and asking who gets paid when you buy.",
+        "decoys": [
+          {
+            "text": "If it is advertised, regulators must have checked it.",
+            "why": "Ads for gold coins and doubling home prices run freely. Reading the filings is your job."
+          },
+          {
+            "text": "Some agency will repay you if an investment goes bad or you are tricked.",
+            "why": "No such organization exists. Only 16% of investors knew that."
+          }
+        ],
+        "aha": "Every partial is a seller using a weak spot, or a rule built to shine light on it."
+      },
+      "voices": [
+        "shiller",
+        "brandeis"
+      ]
+    }
+  ],
+  "voices": {
+    "shiller": {
+      "name": "Robert J. Shiller",
+      "what": "Economist, Yale; Nobel prize in economics, 2013",
+      "did": "Taught this course at Yale in spring 2008, as the housing crash began, and gave it away free through Open Yale Courses."
+    },
+    "franklin": {
+      "name": "Benjamin Franklin",
+      "what": "Printer, writer, founder of the United States",
+      "did": "Wrote the Poor Richard sayings on thrift; The Way to Wealth (1758) gathers them into one talk."
+    },
+    "fisher": {
+      "name": "Irving Fisher",
+      "what": "Economist, Yale (1867 to 1947)",
+      "did": "Explained interest as the price people pay to move income between now and later; Shiller draws his diagram in this lecture."
+    },
+    "smiles": {
+      "name": "Samuel Smiles",
+      "what": "Scottish writer (1812 to 1904)",
+      "did": "Wrote Thrift (1875), a book of everyday cases on saving as the road to independence."
+    },
+    "kahneman": {
+      "name": "Daniel Kahneman and Amos Tversky",
+      "what": "Psychologists",
+      "did": "Showed in 1979 that people feel losses far more than equal gains and blur probabilities into \"can't happen, might happen, certain\" (prospect theory)."
+    },
+    "brandeis": {
+      "name": "Louis D. Brandeis",
+      "what": "Lawyer, later a US Supreme Court justice (1856 to 1941)",
+      "did": "Wrote Other People's Money (1914) on how bankers used depositors' money for their own deals."
+    }
+  },
+  "todo": []
+}

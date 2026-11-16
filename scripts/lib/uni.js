@@ -134,20 +134,21 @@ function brief(slug, n) {
 
 COURSE: ${c.name} (courses/${slug}.json), area ${c.domain}. Why the course: ${c.why}
 UNIT ${t.n}: ${t.title}
-AUDIENCES: ${(c.levels || []).join(', ')}. Bryan, 15 Nov 2026: people say "it's cool but why do I need to know it". Every unit answers that first, in one plain sentence (needIt), for someone who will never work in the field.
+${t.lecture ? "LECTURE: " + t.lecture.title + " (Archive item " + t.lecture.item + ", file " + t.lecture.file + "; transcript and chapter times on " + (t.lecture.page || "the course page") + ")\n" : ""}AUDIENCES: ${(c.levels || []).join(', ')}. Bryan, 15 Nov 2026: people say "it's cool but why do I need to know it". Every unit answers that first, in one plain sentence (needIt), for someone who will never work in the field.
 
 SOURCES for this course (licences were read on their pages; keep their credit and licence):
 ${sources.map((s) => '- ' + s.id + ': ' + s.title + ', ' + s.by + '. ' + s.licence + '. ' + (s.url || '') + (s.text ? ' Text: ' + s.text : '') + (s.video && s.video.archive ? ' Video (' + s.video.files + ' lectures): archive.org/details/' + s.video.archive : '') + (s.audio && s.audio.archive ? ' Audio only on the Archive (' + s.audio.files + ' lectures; the filmed lectures are on the course page): archive.org/details/' + s.audio.archive : '') + (s.courseworkUrl ? ' Coursework: ' + s.courseworkUrl : '') + (s.notes ? ' Notes: ' + s.notes : '')).join('\n') || '- (none listed: find them first under the rules in sources/FORMAT.md)'}
 
 STEPS:
 1. Read profiles/university/sources/FORMAT.md (the source rules) and docs/COURSE-RECIPE.md (the recipe).
-2. Read the source material for this unit: the lecture transcript if it is a lecture, or the chapter if it is a book. Save what you read to your scratchpad, not the repo.
+2. If the unit plays a lecture, run: node scripts/uni.js listen ${slug} (Whisper gives every word its own time in the Archive file; skip if already heard). Read the source material for this unit: the lecture transcript if it is a lecture, or the chapter if it is a book. Save what you read to your scratchpad, not the repo.
 3. Write the unit into courses/${slug}.json: move it from "todo" into "units", keeping n and the title, in the same shape as this finished unit from Human nature:
 ${JSON.stringify(example ? { n: example.n, title: example.title, needIt: example.needIt, why: example.why, outcome: example.outcome, main: example.main, chapters: (example.chapters || []).slice(0, 2), quiz: (example.quiz || []).slice(0, 1), scene: example.scene ? { analogy: example.scene.analogy, '...': 'see scene.js and courses/human-nature.json for the full scene' } : undefined } : {}, null, 1)}
    - needIt: one plain sentence on how this helps a person decide or live better.
    - scene: an everyday analogy acted out with scene.js stamps (pictures first, Bryan 15 Nov). Check that no shapes or words overlap at 1316 and 821 wide.
    - main: the lecture video (Archive file) or the reading, with its licence. chapters: the times where the lecture changes topic.
    - crystal: the "Make it set" block (crystal.js; see a unit of courses/critical-thinking.json for the shape): five partials from the unit's own pieces, the key, two decoys each with why it is wrong, and the aha line.
+   - Times: every quiz "t" and chapter "t" comes from node scripts/uni.js find ${slug} ${t.n} "<the quoted words>", never from the printed transcript's chapter marks; give each chapter a "words" field (its first few spoken words) so the check can confirm it.
    - quiz: about five questions. Each answer quotes the exact line of the source it comes from, with the time or page. Check every quote word for word against the transcript or text you saved.
    - Old books (old: true) are rewritten into plain modern English beside the original line. Anything now wrong or unsafe gets a plain warning and the current US government source.
 4. Run: node profiles/university/build.js, then look at the unit in the preview (node profiles/university/serve.js, then http://127.0.0.1:8783) at 1920, 1316 and 821 wide: no sideways scroll, no broken images, no console errors.
@@ -213,6 +214,15 @@ async function check(log = () => {}) {
     if (!(q.a >= 0 && q.a < (q.choices || []).length)) problems.push({ where: c.slug + ' unit ' + u.n + ' quiz ' + (i + 1), what: 'the answer is not one of the choices' });
     if (!q.quote) problems.push({ where: c.slug + ' unit ' + u.n + ' quiz ' + (i + 1), what: 'no quote from the source' });
   }
+  // Times: where a lecture has been listened to (Whisper), every quiz quote and chapter must sit within 20 seconds of
+  // where the words are really said in that video file.
+  for (const c of builtCourses()) for (const u of c.units) {
+    const m = u.main || {};
+    if (!m.item || !m.file || !transcript(m.item, m.file)) continue;
+    const at = (where, text, t) => { const hit = locate(m.item, m.file, text); if (!hit) problems.push({ where, what: 'the words were not found in the lecture: ' + String(text).slice(0, 60), level: 'note' }); else if (Math.abs(hit.t - t) > 20) problems.push({ where, what: 'set at ' + t + ' s, but said at ' + Math.round(hit.t) + ' s (node scripts/uni.js find)' }); };
+    for (const [i, q] of (u.quiz || []).entries()) at(c.slug + ' unit ' + u.n + ' quiz ' + (i + 1), q.quote, q.t);
+    for (const ch of u.chapters || []) if (ch.words) at(c.slug + ' unit ' + u.n + ' chapter ' + ch.title, ch.words, ch.t);
+  }
   let n = 0;
   const all = [...urls.entries()];
   const one = async ([url, where]) => {
@@ -229,6 +239,115 @@ async function check(log = () => {}) {
   const out = { at: new Date().toISOString(), links: all.length, problems };
   writeJson(CHECK, out);
   return out;
+}
+
+// Listening (Bryan, 16 Nov 2026: "the whisper pipeline ... to allow time stamped location and using direct connections
+// to other found material"). Whisper hears each lecture straight from its Archive file (sound streamed into memory,
+// only text kept) and gives every word its own time in that file. So a quiz answer or chapter jumps to the second the
+// words are said, and a phrase can be searched across every lecture we have heard.
+const LISTEN = path.join(UNI, 'listen');
+// The listener is the Kids pipeline's scripts/listen-episodes.py: master's copy once it lands there, the kids worktree's until then.
+const LISTENER = [path.join(ROOT, 'scripts', 'listen-episodes.py'), path.join(ROOT, '..', 'void-kids', 'scripts', 'listen-episodes.py')].find((p) => fs.existsSync(p));
+const PYTHON = 'C:\\Users\\bryan\\hardware-lab\\Scripts\\python.exe';
+let HEARD = null;
+function heard() { // item|file -> transcript file
+  if (HEARD) return HEARD;
+  HEARD = new Map();
+  if (fs.existsSync(LISTEN)) for (const f of fs.readdirSync(LISTEN).filter((f) => f.endsWith('.json') && !/\.list\.json$|^_run/.test(f))) {
+    const j = readJson(path.join(LISTEN, f), null);
+    if (j && j.item && j.file && j.segments) HEARD.set(j.item + '|' + j.file, path.join(LISTEN, f));
+  }
+  return HEARD;
+}
+const CACHE_T = new Map();
+function transcript(item, file) {
+  const p = heard().get(item + '|' + file);
+  if (!p) return null;
+  if (!CACHE_T.has(p)) {
+    const j = readJson(p, null);
+    const words = [];
+    for (const sg of j.segments) for (const w of sg.words) words.push({ w: norm(w[0]), raw: w[0], t: w[1] });
+    CACHE_T.set(p, { ...j, words: words.filter((x) => x.w) });
+  }
+  return CACHE_T.get(p);
+}
+const norm = (w) => String(w).toLowerCase().replace(/[^a-z0-9]/g, '');
+const tokens = (text) => String(text).split(/\s+/).map(norm).filter(Boolean);
+// The second at which a quote begins: the window of the transcript that shares most words with the quote's first
+// dozen words, in order of position. Whisper and the printed transcript differ a little, so it scores, not matches.
+function locate(item, file, quote) {
+  const tr = transcript(item, file);
+  if (!tr) return null;
+  const q = tokens(quote).slice(0, 12);
+  if (q.length < 3) return null;
+  let best = { score: 0, i: -1 };
+  const W = tr.words;
+  for (let i = 0; i + q.length <= W.length; i++) {
+    if (W[i].w !== q[0] && W[i].w !== q[1] && W[i + 1].w !== q[1]) continue;
+    let sc = 0;
+    for (let k = 0, j = i; k < q.length && j < W.length && j < i + q.length + 4; k++) { const f = W.slice(j, j + 3).findIndex((x) => x.w === q[k]); if (f >= 0) { sc++; j += f + 1; } }
+    if (sc > best.score) best = { score: sc, i };
+  }
+  if (best.score < Math.ceil(q.length * 0.6)) return null;
+  return { t: W[best.i].t, score: best.score / q.length, said: W.slice(best.i, best.i + 16).map((x) => x.raw).join(' ') };
+}
+// A phrase across every lecture heard: the direct link from one found thing to the moment another one says it.
+function search(phrase, limit = 40) {
+  const q = tokens(phrase);
+  const out = [];
+  if (!q.length) return out;
+  for (const [key] of heard()) {
+    const [item, file] = key.split('|');
+    const tr = transcript(item, file);
+    const W = tr.words;
+    for (let i = 0; i + q.length <= W.length && out.length < limit; i++) {
+      if (q.every((x, k) => W[i + k].w === x)) out.push({ item, file, title: tr.title, t: W[i].t, context: W.slice(Math.max(0, i - 8), i + q.length + 12).map((x) => x.raw).join(' ') });
+    }
+  }
+  return out;
+}
+// Set every quiz and chapter time in a course from where the words are really said (Whisper's times in the very file
+// the page plays). A quote or chapter not found is left as it was and reported, so a person can look.
+function retime(slug) {
+  if (!SLUG_OK.test(String(slug))) throw new Error('Not a course slug: ' + String(slug).slice(0, 40));
+  const c = readJson(courseFile(slug), null);
+  if (!c) throw new Error('No course ' + slug);
+  const out = { set: 0, same: 0, missing: [], unheard: [] };
+  for (const u of c.units) {
+    const m = u.main || {};
+    if (!m.item || !m.file) continue;
+    if (!transcript(m.item, m.file)) { out.unheard.push(u.n); continue; }
+    const fix = (obj, text, label) => {
+      const hit = locate(m.item, m.file, text);
+      if (!hit) { out.missing.push('unit ' + u.n + ' ' + label); return; }
+      const t = Math.max(0, Math.floor(hit.t) - 1); // a second early, so the words are not clipped
+      if (Math.abs(t - obj.t) <= 2) out.same++; else { obj.t = t; out.set++; }
+    };
+    for (const [i, q] of (u.quiz || []).entries()) fix(q, q.quote, 'quiz ' + (i + 1));
+    for (const ch of u.chapters || []) if (ch.words) fix(ch, ch.words, 'chapter ' + ch.title);
+  }
+  writeJson(courseFile(slug), c);
+  return out;
+}
+
+// Listen to every lecture a course plays that has not been heard yet.
+function listen(slug, run = true) {
+  if (!SLUG_OK.test(String(slug))) throw new Error('Not a course slug: ' + String(slug).slice(0, 40));
+  const c = readJson(courseFile(slug), null);
+  if (!c) throw new Error('No course ' + slug);
+  const want = [];
+  for (const u of [...c.units, ...(c.todo || [])]) {
+    const m = u.main || u.lecture;
+    if (m && m.item && m.file && /\.(mp4|ogv|webm|mp3)$/i.test(m.file) && !heard().has(m.item + '|' + m.file)) want.push({ slug, season: 1, number: u.n, title: m.title || u.title, item: m.item, name: m.file, url: 'https://archive.org/download/' + encodeURIComponent(m.item) + '/' + encodeURIComponent(m.file) });
+  }
+  if (!want.length || !run) return { queued: want.length };
+  if (!LISTENER) throw new Error('The listener (listen-episodes.py) is not on this PC.');
+  fs.mkdirSync(LISTEN, { recursive: true });
+  const listFile = path.join(LISTEN, slug + '.list.json');
+  writeJson(listFile, want);
+  require('child_process').execFileSync(PYTHON, ['-I', LISTENER, listFile, LISTEN], { stdio: 'inherit' });
+  HEARD = null;
+  return { queued: want.length };
 }
 
 // Recount what an Archive item really holds. The audit (16 Nov 2026) found 22 sources whose finder counted every file
@@ -264,4 +383,4 @@ async function media(log = () => {}) {
   return changes;
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, unitNeeds, slugify, UNI, SRC };
+module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, listen, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC };

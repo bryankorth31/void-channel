@@ -5,6 +5,10 @@
 //   node scripts/uni.js scaffold <area> <course>  make courses/<slug>.json from a proposed course
 //   node scripts/uni.js brief <slug> <unit>       print the whole prompt for a Claude chat to build that unit
 //   node scripts/uni.js rewrite <area> <source>   print the whole prompt to rewrite an old book into plain English
+//   node scripts/uni.js listen <slug>             Whisper hears every lecture the course plays (a time for every word)
+//   node scripts/uni.js times <slug>              set every quiz and chapter time from where the words are said (after listen)
+//   node scripts/uni.js find <slug> <unit> <quote> the second in that unit's lecture where the quote is said
+//   node scripts/uni.js search <phrase>           a phrase across every lecture heard so far, with times
 //   node scripts/uni.js media                     recount each Archive item's real video or audio lectures (writes the sources)
 //   node scripts/uni.js build                     build the preview (profiles/university/site-preview)
 //   node scripts/uni.js build --site              build the public copy (only courses marked live in list.json)
@@ -35,6 +39,20 @@ const [cmd, ...args] = process.argv.slice(2);
     console.log(uni.brief(args[0], args[1]));
   } else if (cmd === 'rewrite') {
     console.log(uni.rewriteBrief(args[0], args[1]));
+  } else if (cmd === 'listen') {
+    const r = uni.listen(args[0]);
+    console.log(r.queued ? 'Listened to ' + r.queued + ' lectures.' : 'Every lecture in this course has been heard.');
+  } else if (cmd === 'times') {
+    const r = uni.retime(args[0]);
+    console.log(r.set + ' times set from the lecture, ' + r.same + ' already right' + (r.unheard.length ? '; units not heard yet: ' + r.unheard.join(', ') : '') + (r.missing.length ? '\nNot found (look by hand): ' + r.missing.join('; ') : ''));
+  } else if (cmd === 'find') {
+    const c = JSON.parse(require('fs').readFileSync(path.join(uni.UNI, 'courses', args[0] + '.json'), 'utf8'));
+    const u = [...c.units, ...(c.todo || [])].find((x) => x.n === +args[1]); const m = u && (u.main || u.lecture);
+    if (!m) throw new Error('No unit ' + args[1] + ' with a lecture');
+    const hit = uni.locate(m.item, m.file, args.slice(2).join(' '));
+    console.log(hit ? Math.round(hit.t) + ' s (' + Math.floor(hit.t / 60) + ':' + String(Math.floor(hit.t % 60)).padStart(2, '0') + '), match ' + Math.round(hit.score * 100) + '%: ' + hit.said : 'Not found in the lecture.');
+  } else if (cmd === 'search') {
+    for (const h of uni.search(args.join(' '))) console.log(h.title + ' @ ' + Math.round(h.t) + ' s: ...' + h.context + '...');
   } else if (cmd === 'media') {
     const ch = await uni.media((m) => console.log(m));
     console.log('\n' + ch.length + ' sources changed');

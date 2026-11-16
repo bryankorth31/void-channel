@@ -59,6 +59,16 @@ A unit is finished when it has:
 
 HQ shows what each unit still needs.
 
+## 3b. Listen and set the times
+
+Bryan, 16 Nov 2026: "the whisper pipeline ... to allow time stamped location and using direct connections to other found
+material". HQ > University > a course > **Listen**, or `node scripts/uni.js listen <slug>`: Whisper hears every lecture
+the course plays, straight from the Archive (sound streamed into memory, only text kept in profiles/university/listen/),
+with a time for every word. Then **Set times** (`node scripts/uni.js times <slug>`) moves every quiz answer and chapter
+to the second its words are said in that very file. `node scripts/uni.js find <slug> <unit> <words>` finds one quote;
+`node scripts/uni.js search <words>` finds a phrase across every lecture heard so far, the link from one found thing to
+another. The check flags any time more than 20 seconds from its words.
+
 ## 4. Look
 
 HQ > University > **Build preview**, then **Open preview** (port 8783; start it with

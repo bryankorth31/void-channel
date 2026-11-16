@@ -62,3 +62,6 @@ audit/
 
 # Void University link check output (scripts/uni.js check)
 profiles/university/sources/check.json
+
+# Whisper transcripts of University lectures (scripts/uni.js listen); large, rebuilt on demand
+profiles/university/listen/
