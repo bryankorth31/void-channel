@@ -57,6 +57,7 @@ lights need nothing. The steps below are for the days you have time to make the 
 2. Reports: any Wrong file? reports or playback errors from viewers. Open the show, preview, Reject or Accept. The same page lists Wrong film reports (viewers who ticked "Not the right film" on a TV movie marked "Unconfirmed match"): open the film on voidtv.net and its Archive item side by side. That list is read only and hides nothing.
 3. Shows > "review only": watch a minute of a file the judges were unsure about, Accept.
 4. Analytics > Searches: zero-result searches are things people want; Add shows.
+5. A show plays with no sound (B, 16 Nov 2026: Dragon Tales): its copies carry Dolby or DTS sound that browsers cannot play. On the show's page press **Check sound**: HQ reads the start of each file (nothing is downloaded) and switches each silent copy to the Archive's own copy of the same file (`<name>.ia.mp4`, AAC sound), then re-matches the show; Publish now sends it. By hand: `node scripts/sound-check.js --slug <show> --match` (kids: set `VOID_PROFILE=kids` first). Whole catalog: Jobs > Check sound, every show (hours; it remembers what it heard, so it can be stopped and run again). The switches live in `catalog/sound-files.json`; delete a line there and re-match to undo one. Tests: `node --test tests/sound.test.js`.
 
 ## Weekly
 

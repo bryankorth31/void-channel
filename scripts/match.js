@@ -12,6 +12,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
+const sound = require('./lib/sound');
 const { writeIfChanged } = require('./lib/writeIfChanged');
 const { nearNameGuard } = require('./lib/tvmazeguard'); // the one TVmaze name decision, shared with hunt.js and retvmaze.js
 const { seriesExclude, HATE, flat: flatEx } = require('./lib/hardexclude');
@@ -150,6 +151,9 @@ const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json'))
 // Re-read per show: HQ rewrites the file while long matches run, and a decision made mid-run should count.
 const DEAD_FILE = path.join(PROFILE.catalogDir, 'dead-files.json');
 function readDead() { try { return JSON.parse(fs.readFileSync(DEAD_FILE, 'utf8')); } catch (e) { return {}; } } // linkcheck.js retires files the Archive no longer serves
+// Originals whose sound a browser cannot play, and the Archive's own copy to play instead (scripts/sound-check.js, scripts/lib/sound.js).
+const SOUND_FILE = path.join(PROFILE.catalogDir, 'sound-files.json');
+function readSound() { try { return JSON.parse(fs.readFileSync(SOUND_FILE, 'utf8')); } catch (e) { return {}; } }
 function readOverrides() { try { return JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')); } catch (e) { return OVERRIDES; } }
 // ---- Does an upload title NAME the show? ----
 // A plain substring test said "Parker's Puzzle" names The Parkers, "Monster Jam" names Monster, "Naruto Shippuden" names Naruto and "The Body Language Guy"
@@ -273,7 +277,7 @@ function matchShow(entry, drops) {
   const cf = path.join(CAND_DIR, slug(show) + '.json');
   if (!fs.existsSync(cf)) return null;
   const cand = JSON.parse(fs.readFileSync(cf, 'utf8'));
-  const r = gridFor(entry, cand, loadTv(show), { ov: readOverrides()[slug(show)] || {}, readDead, firstAdded });
+  const r = gridFor(entry, cand, loadTv(show), { ov: readOverrides()[slug(show)] || {}, readDead, readSound, firstAdded });
   const outFile = path.join(OUT_DIR, slug(show) + '.json');
   if (drops && (r.noTvmaze || r.coverage.live + r.coverage.review === 0)) { // the only two ways a run can take a grid away; read the grid that is on disk now, before it goes
     let old = null; try { old = JSON.parse(fs.readFileSync(outFile, 'utf8')); } catch (_) { /* none */ }
@@ -316,6 +320,9 @@ function decideGrid(entry, cand, tv, ctx) {
   const ov = ctx.ov || {};
   const tags = ctx.tags || new Map();
   if (ov.excludeItems) cand.items = cand.items.filter((it) => !ov.excludeItems.includes(it.id));
+  // A copy that would play with no sound (Dolby, DTS) plays the Archive's own .ia.mp4 copy instead: same episode, same name (B, 16 Nov 2026: Dragon Tales).
+  const SOUND = (ctx.readSound || (() => ({})))();
+  if (Object.keys(SOUND).length) cand = { ...cand, items: cand.items.map((it) => ({ ...it, files: it.files.map((f) => sound.playable(it.id, f, SOUND)) })) };
   const aliases = [...(ov.aliases || []), ...(BUILTIN_ALIASES[slug(show)] || [])].map(norm).filter(Boolean);
   const DEAD = (ctx.readDead || (() => ({})))();
   const rejected = new Set([...(ov.rejectFiles || []), ...Object.keys(DEAD)]); // B's rejections in HQ, and the files linkcheck retired

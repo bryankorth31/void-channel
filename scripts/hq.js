@@ -150,7 +150,7 @@ function nodeProcesses() {
 const JOBS_FILE = path.join(CACHE, 'hq-jobs.json');
 const JOBS = (() => { try { return JSON.parse(fs.readFileSync(JOBS_FILE, 'utf8')).slice(0, 60); } catch (e) { return []; } })(); // survive an HQ restart
 const saveJobs = () => { try { fs.mkdirSync(CACHE, { recursive: true }); fs.writeFileSync(JOBS_FILE, JSON.stringify(JOBS.slice(0, 60))); } catch (e) { /* best effort */ } };
-const SCRIPTS = new Set(['hunt', 'hunt-movies', 'match', 'art', 'people', 'db', 'publish', 'scout', 'networks', 'site', 'nightly', 'candidates', 'tvmovies', 'show-probe', 'doctor', 'linkcheck', 'retvmaze', 'uni']);
+const SCRIPTS = new Set(['hunt', 'hunt-movies', 'match', 'art', 'people', 'db', 'publish', 'scout', 'networks', 'site', 'nightly', 'candidates', 'tvmovies', 'show-probe', 'doctor', 'linkcheck', 'retvmaze', 'uni', 'sound-check']);
 const alive = (pid) => { try { process.kill(pid, 0); return true; } catch (e) { return false; } };
 // A process number is not an identity: Windows hands a finished program's number to the next program that starts.
 // So HQ keeps when each job's process was created (job.pstart) and, before it stops anything, reads the live process
