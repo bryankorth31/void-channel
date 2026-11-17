@@ -1,169 +1,92 @@
-# Network sweeps — 11689 series on 49 networks (TMDB, 1990+, no kids); 509 not on the list yet
+# Network sweeps — 11694 series on 49 networks (TMDB, 1990+, no kids); 494 not on the list yet
 
-Swept 2026-11-16T08:46. Run `node scripts/networks.js --add` to add them all, or copy names into show-list.json.
+Swept 2026-11-17T08:35. Run `node scripts/networks.js --add` to add them all, or copy names into show-list.json.
 
 ## Genres among the missing (candidate categories)
 
 - Documentary: 137
-- Comedy: 128
-- Drama: 127
-- Reality: 104
+- Drama: 123
+- Comedy: 123
+- Reality: 93
 - Crime: 47
-- Mystery: 37
-- Action & Adventure: 28
-- Family: 26
-- Sci-Fi & Fantasy: 22
+- Mystery: 33
+- Action & Adventure: 26
+- Family: 24
 - Animation: 21
-- Talk: 15
+- Sci-Fi & Fantasy: 20
+- Talk: 16
 - War & Politics: 10
 - Soap: 4
 - Western: 2
-
-## Prime Video — 72 missing
-
-| Show | Year | Row | Genres | Votes |
-|---|---|---|---|---|
-| LOL: Last One Laughing Germany | 2021 | Reality & Talk | Reality, Comedy | 90 |
-| Prisma | 2022 | World TV | Drama | 81 |
-| Zombieland | 2013 | Streaming Era | Comedy, Action & Adventure, Sci-Fi & Fantasy | 71 |
-| Watchmen: Motion Comic | 2008 | Animated | Animation, Drama, Sci-Fi & Fantasy, Mystery | 61 |
-| Permanent Roommates | 2014 | World TV | Comedy | 52 |
-| The End of Love | 2022 | World TV | Drama, Comedy | 47 |
-| Bang Bang Baby | 2022 | World TV | Drama, Crime | 46 |
-| Dahaad | 2023 | World TV | Crime, Mystery, Drama | 38 |
-| 3 Caminos | 2021 | World TV | Drama, Action & Adventure | 28 |
-| Menem: The President Show | 2025 | World TV | Drama | 24 |
-| Dhootha | 2023 | World TV | Mystery, Crime, Drama | 22 |
-| All or Nothing | 2016 | Documentary & Geographic | Documentary, Reality | 21 |
-| ImMATURE | 2019 | World TV | Comedy, Drama | 21 |
-| Fading Gigolo | 2023 | World TV | Comedy | 21 |
-| Induk Gajah | 2023 | World TV | Comedy | 18 |
-| The Traitors - Italy | 2025 | Reality & Talk | Reality | 17 |
-| LOL: Australia | 2020 | Reality & Talk | Reality, Comedy | 12 |
-| The Black Dagger Brotherhood | 2025 | Streaming Era | Sci-Fi & Fantasy, Drama, Action & Adventure | 12 |
-| Cocaine Quarterback: Signal-Caller for the Cartel | 2025 | Documentary & Geographic | Documentary, Crime | 12 |
-| Celebrity Hunted - France - Manhunt | 2021 | Reality & Talk | Action & Adventure, Reality | 10 |
-| Happy Marriage!? | 2016 | World TV | Comedy | 9 |
-| LOL: Last One Laughing Netherlands | 2023 | Reality & Talk | Reality, Comedy | 9 |
-| Tokyo Alice | 2017 | World TV | Comedy, Drama | 8 |
-| Linlang | 2023 | World TV | Mystery, Drama | 8 |
-| The Alibi | 2025 | World TV | Drama, Mystery, Crime | 8 |
-| LOL: Chi ride è fuori - Halloween Special | 2026 | World TV | Comedy | 8 |
-| Back to the Rafters | 2021 | Streaming Era | Comedy, Drama | 7 |
-| GAME OF SPY | 2022 | World TV | Action & Adventure | 7 |
-| Faceless Love | 2023 | World TV | Drama | 7 |
-| Comedy Class by Éric & Ramzy | 2024 | Reality & Talk | Comedy, Reality | 7 |
-| Love Island France | 2020 | Reality & Talk | Reality | 6 |
-| Suga | 2025 | World TV | Drama, Crime | 6 |
-| SOR | 2026 | World TV | Drama | 6 |
-| The Threads of Fear | 2026 | World TV | Mystery | 5 |
-| LOL: Last One Laughing Halloween UK | 2026 | Reality & Talk | Comedy, Reality | 5 |
-| Fukuyadou Honpo: Kyoto Love Story | 2016 | World TV | Comedy, Family | 4 |
-| Dear You | 2025 | World TV | Comedy, Soap | 4 |
-| Devils' Crest | 2026 | Animated | Action & Adventure, Sci-Fi & Fantasy, Animation | 4 |
-| Businessmen vs. Aliens | 2016 | World TV | Comedy, Drama, Sci-Fi & Fantasy | 3 |
-| Tokyo Love Story | 2020 | World TV | Drama | 3 |
-| Drag Den | 2022 | Reality & Talk | Reality | 3 |
-| De Tatta's: The Series | 2024 | Streaming Era | Comedy | 3 |
-| Last One Laughing: Sweden - Halloween Special | 2025 | Reality & Talk | Reality, Comedy | 3 |
-| MrBeast: Extreme Survival! | 2026 | Reality & Talk | Reality | 3 |
-| MrBeast: Insane Competitions! | 2026 | Reality & Talk | Reality | 3 |
-| MrBeast: Inspiring Stories! | 2026 | Reality & Talk | Reality | 3 |
-| Sutura | 2024 | World TV | Drama | 2 |
-| LOL: Last One Laughing Norway | 2023 | Reality & Talk | Reality, Comedy | 2 |
-| MrBeast: Luxury Experiences! | 2026 | Reality & Talk | Reality | 2 |
-| MrBeast: Epic Adventures! | 2026 | Reality & Talk | Reality | 2 |
-| Yakuza Powered by Nihon Touitsu | 2026 | World TV | Action & Adventure, Crime, Drama | 2 |
-| The Pyramid Scheme | 2026 | World TV | Comedy, Drama | 2 |
-| Um Dia Qualquer | 2020 | World TV | Crime, Drama | 1 |
-| L.A. Macabre | 2014 | Streaming Era | Drama, Mystery | 1 |
-| Love Transit | 2023 | Reality & Talk | Reality | 1 |
-| Gloves Off | 2024 | Documentary & Geographic | Documentary | 1 |
-| LOL: Last One Laughing Philippines | 2024 | Reality & Talk | Reality, Comedy | 1 |
-| The Chosen in the Wild with Bear Grylls | 2026 | Reality & Talk | Reality, Action & Adventure | 1 |
-| EXAM | 2026 | World TV | Crime, Drama | 1 |
-| Warota! | 2026 | World TV | Comedy | 1 |
-| Wild Tripper!! | 2025 | Reality & Talk | Reality, Talk | 1 |
-| ROCK PAPER LANDMINE | 2026 | World TV | Drama | 1 |
-| Day Zero | 2011 | Streaming Era | Drama, Sci-Fi & Fantasy, War & Politics, Action & Adventure, Mystery | 0 |
-| Criminal | 2027 | Streaming Era | Crime, Drama | 0 |
-| Ninguém Como Tu | 2025 | World TV | Drama, Crime, Mystery | 0 |
-| Sivarapalli | 2025 | World TV | Comedy | 0 |
-| Carlitos & Henriqueta | 2025 | World TV | Comedy | 0 |
-| Isakapatnam | 2026 | World TV | Drama | 0 |
-| Ab Hoga Hisaab | 2026 | World TV | Crime, Drama | 0 |
-| Coração de Mãe | 2026 | World TV | Soap | 0 |
-| The Traitors (Telugu) | 2026 | Reality & Talk | Reality | 0 |
-| Chaar Yaar | 2026 | World TV | Drama | 0 |
 
 ## BBC Two — 70 missing
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
 | The Trap: What Happened to Our Dream of Freedom | 2007 | Documentary & Geographic | Documentary | 38 |
-| James May's Cars of the People | 2014 | Documentary & Geographic | Documentary | 27 |
 | House of Games | 2017 | Reality & Talk | Comedy, Talk | 25 |
 | Forensics: The Real CSI | 2019 | Documentary & Geographic | Documentary, Crime | 19 |
 | The Great Rift: Africa's Wild Heart | 2010 | Documentary & Geographic | Documentary, Family | 15 |
+| The Celts: Blood, Iron and Sacrifice | 2015 | Documentary & Geographic | Documentary | 13 |
 | The Big Family Cooking Showdown | 2017 | Reality & Talk | Reality | 13 |
 | Pompidou | 2015 | British and Beyond | Comedy | 12 |
-| Million Pound Menu | 2018 | Reality & Talk | Reality | 12 |
+| Cunk on Cinema | 2026 | Documentary & Geographic | Comedy, Documentary | 12 |
 | Pompeii: The New Dig | 2024 | Documentary & Geographic | Documentary | 11 |
 | Mammoth | 2024 | British and Beyond | Comedy | 10 |
 | Wartime Farm | 2012 | Documentary & Geographic | Reality, Documentary | 8 |
-| Cunk on Cinema | 2026 | Documentary & Geographic | Comedy, Documentary | 8 |
 | Oz and James's Big Wine Adventure | 2006 | Documentary & Geographic | Documentary | 7 |
 | Ice Age Giants | 2013 | Documentary & Geographic | Documentary | 7 |
-| Tudor Monastery Farm | 2013 | Documentary & Geographic | Documentary, Reality | 7 |
 | The Trump Show | 2020 | Documentary & Geographic | Documentary | 7 |
-| Paul Hollywood's Big Continental Road Trip | 2017 | Documentary & Geographic | Documentary | 6 |
+| Attenborough: 60 Years in the Wild | 2012 | Documentary & Geographic | Documentary | 6 |
+| Raiders of the Lost Past with Janina Ramirez | 2020 | Documentary & Geographic | Documentary | 6 |
 | Renaissance: The Blood and the Beauty | 2024 | Documentary & Geographic | Drama, Documentary, War & Politics | 6 |
+| AI Confidential with Hannah Fry | 2026 | Documentary & Geographic | Documentary | 6 |
 | Civilisations: Rise and Fall | 2025 | Documentary & Geographic | Documentary | 6 |
 | The Life and Times of Vivienne Vyle | 2007 | British and Beyond | Comedy | 5 |
 | Newman and Baddiel in Pieces | 1993 | British and Beyond | Comedy | 5 |
 | Roger & Val Have Just Got In | 2010 | British and Beyond | Comedy | 5 |
-| Billy Connolly: Made in Scotland | 2018 | Documentary & Geographic | Documentary | 5 |
+| Secrets of the Castle | 2014 | Documentary & Geographic | Documentary | 5 |
 | Great Coastal Railway Journeys | 2022 | Documentary & Geographic | Documentary | 5 |
 | The Restaurant | 2007 | Reality & Talk | Reality | 4 |
+| Lazarus and Dingwall | 1991 | British and Beyond | Comedy | 4 |
 | The Review Show | 2010 | British and Beyond |  | 4 |
 | Frank Skinner's Opinionated | 2010 | British and Beyond | Comedy | 4 |
+| Thailand: Earth's Tropical Paradise | 2017 | Documentary & Geographic | Documentary | 4 |
 | Uncanny | 2023 | Documentary & Geographic | Documentary | 4 |
 | Rise of the Rockstar Chef | 2026 | Documentary & Geographic | Documentary | 4 |
 | The Hairy Bikers' Cookbook | 2006 | Documentary & Geographic | Documentary | 3 |
 | The All New Alexei Sayle Show | 1994 | British and Beyond | Comedy | 3 |
+| Freezing | 2008 | British and Beyond | Comedy | 3 |
 | Edwardian Farm | 2010 | Documentary & Geographic | Documentary, Reality | 3 |
 | Tribes, Predators, and Me | 2016 | Documentary & Geographic | Documentary | 3 |
 | Animal Babies: First Year On Earth | 2019 | Documentary & Geographic | Documentary | 3 |
 | Secrets & Spies: A Nuclear Game | 2024 | Documentary & Geographic | Documentary, War & Politics | 3 |
 | QI XL | 2009 | Reality & Talk | Talk, Comedy | 3 |
 | Empty | 2008 | British and Beyond | Comedy | 2 |
+| Nuclear Secrets | 2007 | Documentary & Geographic | Documentary, Drama | 2 |
 | Lab Rats | 2008 | British and Beyond | Comedy | 2 |
 | Today's the Day | 1993 | British and Beyond |  | 2 |
 | Fast and Loose | 2011 | British and Beyond | Comedy | 2 |
-| Earth Story | 1998 | Documentary & Geographic | Documentary | 2 |
 | What a Load of Buzzcocks | 2013 | Reality & Talk | Comedy, Talk | 2 |
 | Special Forces - Ultimate Hell Week | 2015 | Reality & Talk | Reality | 2 |
 | Wild West: America's Great Frontier | 2016 | Documentary & Geographic | Documentary | 2 |
 | Trust Me, I'm a Doctor | 2013 | Documentary & Geographic | Documentary | 2 |
 | The Mind of Herbert Clunkerdunk | 2019 | British and Beyond | Comedy | 2 |
-| Thin Ice | 2006 | British and Beyond | Comedy | 1 |
+| Chess Masters: The Endgame | 2025 | Reality & Talk | Reality | 2 |
 | Great Britons | 2002 | Documentary & Geographic | Documentary | 1 |
 | Super League Show | 1999 | British and Beyond |  | 1 |
 | Megamaths | 1996 | British and Beyond | Family | 1 |
 | Myths | 2009 | British and Beyond | Drama | 1 |
 | I Love 1990s | 2001 | Documentary & Geographic | Documentary | 1 |
+| Battle of the Sexes - In the Animal World | 1999 | Documentary & Geographic | Documentary | 1 |
 | My Unique B&B | 2021 | Documentary & Geographic | Documentary | 1 |
 | David & Jay's Touring Toolshed | 2024 | Reality & Talk | Reality | 1 |
-| Clive Myrie's African Adventure | 2026 | Documentary & Geographic | Documentary | 1 |
 | Let Me Entertain You | 2006 | British and Beyond |  | 0 |
 | It's Not Easy Being Green | 2006 | Documentary & Geographic | Documentary | 0 |
 | The Underdog Show | 2008 | British and Beyond |  | 0 |
 | Rita Rudner | 1990 | British and Beyond | Comedy | 0 |
-| 32 Brinkburn Street | 2011 | British and Beyond | Drama | 0 |
-| Paul Hollywood's Bread | 2013 | Reality & Talk | Reality | 0 |
 | Bake Off Creme de la Creme | 2016 | Reality & Talk | Reality | 0 |
 | Politics Live | 2018 | British and Beyond |  | 0 |
-| World's Busiest Railway | 2015 | Documentary & Geographic | Documentary | 0 |
 | The Home That 2 Built | 2014 | Documentary & Geographic | Documentary | 0 |
 | Robot Wars Extreme | 2001 | Reality & Talk | Reality | 0 |
 | The Marriage of Figaro | 1994 | British and Beyond | Comedy | 0 |
@@ -171,116 +94,45 @@ Swept 2026-11-16T08:46. Run `node scripts/networks.js --add` to add them all, or
 | Mary Makes It Easy | 2023 | Reality & Talk | Reality | 0 |
 | Mary's Foolproof Dinners | 2024 | Documentary & Geographic | Documentary | 0 |
 
-## Netflix — 69 missing
+## Channel 4 — 69 missing
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
-| I Am Not Okay with This | 2020 | Streaming Era | Drama, Comedy, Sci-Fi & Fantasy | 2028 |
-| Who Killed Sara? | 2021 | World TV | Drama, Crime, Mystery | 1233 |
-| RESIDENT EVIL: Infinite Darkness | 2021 | Animated | Animation, Drama, Action & Adventure, Sci-Fi & Fantasy | 926 |
-| The Silent Sea | 2021 | World TV | Drama, Sci-Fi & Fantasy, Mystery | 753 |
-| Squid Game: The Challenge | 2023 | Reality & Talk | Reality | 655 |
-| Black Summer | 2019 | Streaming Era | Sci-Fi & Fantasy, Drama, Action & Adventure | 651 |
-| Move to Heaven | 2021 | World TV | Drama | 399 |
-| The Perfect Couple | 2024 | Streaming Era | Drama, Mystery, Crime | 369 |
-| Hollywood | 2020 | Streaming Era | Drama | 365 |
-| The 8 Show | 2024 | World TV | Mystery, Comedy, Drama | 359 |
-| Black Knight | 2023 | World TV | Drama, Action & Adventure, Sci-Fi & Fantasy | 325 |
-| The Mess You Leave Behind | 2020 | World TV | Drama, Mystery | 302 |
-| Criminal: UK | 2019 | Streaming Era | Crime, Drama | 266 |
-| Love & Anarchy | 2020 | World TV | Comedy, Drama | 266 |
-| Suburra: Blood on Rome | 2017 | World TV | Crime, Drama | 262 |
-| Agatha Christie's Seven Dials | 2026 | Streaming Era | Mystery, Crime, Drama | 249 |
-| The Brothers Sun | 2024 | Streaming Era | Drama, Action & Adventure, Crime, Comedy | 242 |
-| Echoes | 2022 | Streaming Era | Drama, Mystery | 216 |
-| Asterix & Obelix: The Big Fight | 2025 | Animated | Animation, Action & Adventure, Comedy, Sci-Fi & Fantasy, Family | 213 |
-| The New Legends of Monkey | 2018 | Streaming Era | Sci-Fi & Fantasy, Action & Adventure, Comedy, Drama | 210 |
-| A Killer Paradox | 2024 | World TV | Crime, Comedy, Mystery, Drama | 210 |
-| Twilight of the Gods | 2024 | Animated | Animation, Sci-Fi & Fantasy, Action & Adventure | 174 |
-| Medical Police | 2020 | Streaming Era | Comedy | 144 |
-| Daily Dose of Sunshine | 2023 | World TV | Drama | 141 |
-| Ethos | 2020 | World TV | Drama, Mystery | 140 |
-| Wet Hot American Summer: Ten Years Later | 2017 | Streaming Era | Comedy | 136 |
-| Surviving Summer | 2022 | Streaming Era | Drama | 129 |
-| Flaked | 2016 | Streaming Era | Drama, Comedy | 112 |
-| Spycraft | 2021 | Documentary & Geographic | Documentary, War & Politics | 109 |
-| Patriot Act with Hasan Minhaj | 2018 | Reality & Talk | Comedy, Talk | 69 |
-| Big Mistakes | 2026 | Streaming Era | Comedy, Crime | 67 |
-| Light the Night | 2021 | World TV | Drama, Mystery, Crime | 58 |
-| The Body | 2026 | Streaming Era | Mystery, Drama | 57 |
-| Fishbowl Wives | 2022 | World TV | Drama | 47 |
-| Spirit: Riding Free | 2017 | Animated | Animation, Action & Adventure, Family, Western | 45 |
-| My Brilliant Career | 2026 | Streaming Era | Drama, Family | 40 |
-| Akuma Kun | 2023 | Animated | Animation, Sci-Fi & Fantasy, Mystery, Crime | 39 |
-| Too Much | 2025 | Streaming Era | Comedy, Drama | 39 |
-| EastSiders | 2012 | Streaming Era | Drama, Comedy | 38 |
-| Perfect Match | 2023 | Reality & Talk | Reality | 38 |
-| Desperate Lies | 2024 | World TV | Drama | 32 |
-| Straight to Hell | 2026 | World TV | Drama | 30 |
-| The Witcher: A Look Inside the Episodes | 2020 | Documentary & Geographic | Documentary | 27 |
-| Tokyo Override | 2024 | Animated | Animation, Action & Adventure, Sci-Fi & Fantasy | 26 |
-| Hollywood Arts | 2026 | Streaming Era | Comedy, Drama, Family | 21 |
-| More than Blue: The Series | 2021 | World TV | Drama | 19 |
-| A Couple of Lies | 2026 | World TV | Drama, Mystery | 19 |
-| Bass X Machina | 2026 | Animated | Animation, Western, Sci-Fi & Fantasy | 18 |
-| Screwballs | 2025 | Reality & Talk | Reality, Comedy | 17 |
-| MeatEater | 2012 | Documentary & Geographic | Documentary | 15 |
-| Bloody Smart | 2026 | World TV | Mystery | 15 |
-| Balaraw: Blood Island | 2026 | World TV | Mystery, Drama | 14 |
-| Kyojo | 2020 | World TV | Drama | 13 |
-| Love Is Blind, Habibi | 2024 | Reality & Talk | Reality | 13 |
-| Anaesthesia | 2026 | World TV | Drama | 13 |
-| The Gift of Deceit | 2026 | World TV | Drama | 13 |
-| Under Siege | 2026 | World TV | Drama, Crime | 11 |
-| Money Trap | 2026 | World TV | Comedy, Crime, Action & Adventure | 10 |
-| Minimum Wage | 2026 | Streaming Era | Comedy | 10 |
-| The Fall of El Mayo | 2026 | Documentary & Geographic | Documentary | 10 |
-| Murder in Galicia | 2026 | World TV | Crime, Mystery, Drama | 9 |
-| Alicia's Law | 2026 | World TV | Drama | 9 |
-| Akka | 2026 | World TV | Drama, Crime | 7 |
-| ChiaroScuro | 2026 | World TV | Comedy, Crime | 7 |
-| Bros | 2024 | World TV | Comedy | 6 |
-| Miracles of the ER | 2026 | World TV | Drama | 3 |
-| The Rewatchables | 2015 | Reality & Talk | Talk | 3 |
-| Tantara | 2026 | World TV | Drama, War & Politics | 0 |
-| Behind the Bastards | 2018 | Reality & Talk | Talk | 0 |
-
-## Channel 4 — 67 missing
-
-| Show | Year | Row | Genres | Votes |
-|---|---|---|---|---|
+| Gordon's Great Escape | 2010 | Documentary & Geographic | Reality, Documentary | 21 |
 | Balls of Steel | 2005 | British and Beyond | Comedy | 11 |
 | 8 Days That Made Rome | 2017 | Documentary & Geographic | Documentary | 10 |
-| Miriam and Alan: Lost in Scotland | 2021 | Documentary & Geographic | Documentary | 8 |
+| Generation Porn | 2019 | Documentary & Geographic | Documentary | 9 |
 | George Clarke's Amazing Spaces | 2012 | Documentary & Geographic | Documentary | 6 |
 | Sean's Show | 1992 | British and Beyond | Comedy | 5 |
 | Rude Tube | 2008 | British and Beyond | Comedy | 5 |
 | Emergency | 2020 | Documentary & Geographic | Reality, Documentary | 5 |
-| One Night in… | 2021 | Documentary & Geographic | Comedy, Documentary, Reality | 5 |
 | Roman Empire by Train with Alice Roberts | 2026 | Documentary & Geographic | Documentary | 5 |
+| Vile Bodies | 1998 | Documentary & Geographic | Documentary | 4 |
 | Grand Designs: House of the Year | 2015 | Documentary & Geographic | Documentary | 4 |
-| Tom Allen’s Quizness | 2021 | British and Beyond |  | 4 |
 | Handmade: Britain's Best Woodworker | 2021 | Reality & Talk | Reality | 4 |
-| George Michael: Outed | 2023 | Documentary & Geographic | Documentary | 4 |
 | Make That Movie | 2026 | British and Beyond | Comedy | 4 |
 | You Are What You Eat | 2004 | Reality & Talk | Reality | 3 |
 | How to Look Good Naked | 2006 | Documentary & Geographic | Reality, Documentary | 3 |
 | Brave New World with Stephen Hawking | 2011 | Documentary & Geographic | Documentary | 3 |
-| Grayson's Art Club | 2020 | Documentary & Geographic | Documentary | 3 |
 | Sex Actually with Alice Levine | 2021 | Documentary & Geographic | Documentary | 3 |
 | Jon & Lucy's Odd Couples | 2023 | British and Beyond | Comedy | 3 |
-| Wonders of the World I Can't See | 2023 | Documentary & Geographic | Documentary, Reality | 3 |
 | Suez: 24 Hours That Broke the British Empire | 2026 | Documentary & Geographic | Documentary, War & Politics | 3 |
 | Shipwrecked | 2000 | British and Beyond |  | 2 |
 | Small Potatoes | 1999 | British and Beyond | Comedy | 2 |
 | Cast Offs | 2009 | British and Beyond | Comedy, Drama | 2 |
 | Without Walls | 1990 | Documentary & Geographic | Drama, Documentary | 2 |
+| Walking Through History | 2013 | Documentary & Geographic | Documentary | 2 |
 | The Rector's Wife | 1994 | British and Beyond | Drama | 2 |
 | The Bridge: Race to a Fortune | 2020 | Reality & Talk | Reality | 2 |
+| Fracture | 2021 | British and Beyond | Drama | 2 |
 | Steph's Packed Lunch | 2020 | Reality & Talk | Talk | 2 |
 | World's Most Secret Hotels | 2023 | Documentary & Geographic | Documentary | 2 |
+| Kirstie And Phil's Love It Or List It: Brilliant Builds | 2021 | Reality & Talk | Reality | 2 |
+| Our Welsh Chapel Dream | 2024 | Reality & Talk | Reality | 2 |
 | David Baddiel: Cat Man | 2026 | Documentary & Geographic | Documentary, Comedy | 2 |
 | Hunting Alice Bell | 2026 | British and Beyond | Drama, Mystery, Crime | 2 |
+| Don't Forget Your Toothbrush | 1994 | Reality & Talk | Reality | 1 |
+| Blunder | 2006 | British and Beyond | Comedy | 1 |
 | Convoy: War for the Atlantic | 2009 | Documentary & Geographic | Documentary, War & Politics | 1 |
 | The Hoarder Next Door | 2012 | Documentary & Geographic | Documentary | 1 |
 | Jamie's Quick & Easy Food | 2017 | Reality & Talk | Reality, Family | 1 |
@@ -291,33 +143,170 @@ Swept 2026-11-16T08:46. Run `node scripts/networks.js --add` to add them all, or
 | Aldi's Next Big Thing | 2022 | Documentary & Geographic | Documentary, Reality | 1 |
 | Renovation Nation UK | 2022 | Documentary & Geographic | Documentary, Reality | 1 |
 | Joe & Katherine's Bargain Holidays | 2024 | British and Beyond | Comedy | 1 |
-| Game of Wool: Britain's Best Knitter | 2025 | Reality & Talk | Reality | 1 |
-| Days That Shocked the World | 2026 | Documentary & Geographic | Documentary | 1 |
 | The Hunt: Prey vs Predator | 2026 | Reality & Talk | Reality | 1 |
 | The Space Race in Colour | 2026 | Documentary & Geographic | Documentary | 1 |
+| Family Pride | 1991 | British and Beyond | Soap | 0 |
 | Gordon Ramsay: Cookalong Live | 2008 | Reality & Talk | Reality | 0 |
 | Streetmate | 1998 | Reality & Talk | Reality | 0 |
 | Relocation, Relocation | 2003 | British and Beyond |  | 0 |
+| Jamie's Great Italian Escape | 2005 | British and Beyond |  | 0 |
+| Man on Earth | 2009 | Documentary & Geographic | Documentary | 0 |
 | One Born Every Minute | 2010 | Documentary & Geographic | Documentary, Reality | 0 |
 | Phil Spencer: Secret Agent | 2011 | Reality & Talk | Reality | 0 |
-| The Jump | 2014 | Reality & Talk | Reality | 0 |
 | The Secret World Of... | 2021 | Documentary & Geographic | Documentary | 0 |
 | Chateau DIY | 2021 | British and Beyond |  | 0 |
-| The Perfect Pitch | 2021 | Reality & Talk | Reality | 0 |
 | Don't Look Down for SU2C | 2023 | Reality & Talk | Reality | 0 |
-| A Place in the Sun: What Happened Next? | 2024 | Reality & Talk | Reality | 0 |
+| Three in a Bed | 2010 | British and Beyond |  | 0 |
 | The Wild Bunch | 1991 | World TV | Family | 0 |
 | Embarrassing Bodies: Live from the Clinic | 2011 | Reality & Talk | Reality | 0 |
-| Mission to Space with Francis Bourgeois | 2026 | Documentary & Geographic | Documentary | 0 |
 | 999: What Happened Next | 2026 | Documentary & Geographic | Crime, Documentary, Reality | 0 |
 | The Big Celebrity Detox | 2023 | Reality & Talk | Reality | 0 |
 | Train‑ing It with Joe Wilkinson | 2026 | Documentary & Geographic | Documentary, Reality, Comedy, Talk | 0 |
 | Grayson Perry Has Seen the Future | 2026 | Documentary & Geographic | Documentary | 0 |
 | Fifteen to One | 2014 | Reality & Talk | Reality | 0 |
+| Kevin McCloud's Classic Car Road Trips | 2026 | Documentary & Geographic | Documentary, Action & Adventure, Family | 0 |
 | Griff Across the Alps | 2026 | Documentary & Geographic | Documentary, Action & Adventure, Reality | 0 |
 | Stacey Dooley's Australia: Off the Beaten Track | 2026 | Documentary & Geographic | Documentary, Reality, Action & Adventure | 0 |
 
-## BBC One — 57 missing
+## Prime Video — 64 missing
+
+| Show | Year | Row | Genres | Votes |
+|---|---|---|---|---|
+| LOL: Last One Laughing Germany | 2021 | Reality & Talk | Reality, Comedy | 90 |
+| Prisma | 2022 | World TV | Drama | 81 |
+| Watchmen: Motion Comic | 2008 | Animated | Animation, Drama, Sci-Fi & Fantasy, Mystery | 61 |
+| Permanent Roommates | 2014 | World TV | Comedy | 52 |
+| The End of Love | 2022 | World TV | Drama, Comedy | 47 |
+| Dahaad | 2023 | World TV | Crime, Mystery, Drama | 38 |
+| German Crime Story: Gefesselt | 2023 | World TV | Crime | 32 |
+| Inés of My Soul | 2020 | World TV | Drama | 28 |
+| 3 Caminos | 2021 | World TV | Drama, Action & Adventure | 28 |
+| Menem: The President Show | 2025 | World TV | Drama | 24 |
+| All or Nothing | 2016 | Documentary & Geographic | Documentary, Reality | 21 |
+| ImMATURE | 2019 | World TV | Comedy, Drama | 21 |
+| Fading Gigolo | 2023 | World TV | Comedy | 21 |
+| Induk Gajah | 2023 | World TV | Comedy | 18 |
+| The Traitors - Italy | 2025 | Reality & Talk | Reality | 17 |
+| The Black Dagger Brotherhood | 2025 | Streaming Era | Sci-Fi & Fantasy, Drama, Action & Adventure | 12 |
+| Cocaine Quarterback: Signal-Caller for the Cartel | 2025 | Documentary & Geographic | Documentary, Crime | 12 |
+| Celebrity Hunted - France - Manhunt | 2021 | Reality & Talk | Action & Adventure, Reality | 10 |
+| LOL: Last One Laughing Netherlands | 2023 | Reality & Talk | Reality, Comedy | 9 |
+| Tokyo Alice | 2017 | World TV | Comedy, Drama | 8 |
+| Linlang | 2023 | World TV | Mystery, Drama | 8 |
+| The Alibi | 2025 | World TV | Drama, Mystery, Crime | 8 |
+| LOL: Chi ride è fuori - Halloween Special | 2026 | World TV | Comedy | 8 |
+| Back to the Rafters | 2021 | Streaming Era | Comedy, Drama | 7 |
+| GAME OF SPY | 2022 | World TV | Action & Adventure | 7 |
+| Comedy Class by Éric & Ramzy | 2024 | Reality & Talk | Comedy, Reality | 7 |
+| The Best of MrBeast | 2025 | Reality & Talk | Reality | 7 |
+| Love Island France | 2020 | Reality & Talk | Reality | 6 |
+| Suga | 2025 | World TV | Drama, Crime | 6 |
+| SOR | 2026 | World TV | Drama | 6 |
+| The Threads of Fear | 2026 | World TV | Mystery | 5 |
+| LOL: Last One Laughing Halloween UK | 2026 | Reality & Talk | Comedy, Reality | 5 |
+| Fukuyadou Honpo: Kyoto Love Story | 2016 | World TV | Comedy, Family | 4 |
+| Dear You | 2025 | World TV | Comedy, Soap | 4 |
+| Devils' Crest | 2026 | Animated | Action & Adventure, Sci-Fi & Fantasy, Animation | 4 |
+| Final Life | 2017 | World TV | Crime, Mystery, Drama | 3 |
+| Businessmen vs. Aliens | 2016 | World TV | Comedy, Drama, Sci-Fi & Fantasy | 3 |
+| Tokyo Love Story | 2020 | World TV | Drama | 3 |
+| Drag Den | 2022 | Reality & Talk | Reality | 3 |
+| Last One Laughing: Sweden - Halloween Special | 2025 | Reality & Talk | Reality, Comedy | 3 |
+| MrBeast: Extreme Survival! | 2026 | Reality & Talk | Reality | 3 |
+| MrBeast: Insane Competitions! | 2026 | Reality & Talk | Reality | 3 |
+| MrBeast: Inspiring Stories! | 2026 | Reality & Talk | Reality | 3 |
+| MrBeast: Luxury Experiences! | 2026 | Reality & Talk | Reality | 2 |
+| MrBeast: Epic Adventures! | 2026 | Reality & Talk | Reality | 2 |
+| The Pyramid Scheme | 2026 | World TV | Comedy, Drama | 2 |
+| ROCK PAPER LANDMINE | 2026 | World TV | Drama | 2 |
+| Um Dia Qualquer | 2020 | World TV | Crime, Drama | 1 |
+| L.A. Macabre | 2014 | Streaming Era | Drama, Mystery | 1 |
+| Love Transit | 2023 | Reality & Talk | Reality | 1 |
+| Gloves Off | 2024 | Documentary & Geographic | Documentary | 1 |
+| LOL: Last One Laughing Philippines | 2024 | Reality & Talk | Reality, Comedy | 1 |
+| Warota! | 2026 | World TV | Comedy | 1 |
+| Day Zero | 2011 | Streaming Era | Drama, Sci-Fi & Fantasy, War & Politics, Action & Adventure, Mystery | 0 |
+| My Undercover Chef | 2023 | World TV | Action & Adventure, Comedy, Drama | 0 |
+| Criminal | 2027 | Streaming Era | Crime, Drama | 0 |
+| Ninguém Como Tu | 2025 | World TV | Drama, Crime, Mystery | 0 |
+| Carlitos & Henriqueta | 2025 | World TV | Comedy | 0 |
+| MELANIA the Series | 2026 | Documentary & Geographic | Documentary, War & Politics | 0 |
+| Isakapatnam | 2026 | World TV | Drama | 0 |
+| Ab Hoga Hisaab | 2026 | World TV | Crime, Drama | 0 |
+| Coração de Mãe | 2026 | World TV | Soap | 0 |
+| The Traitors (Telugu) | 2026 | Reality & Talk | Reality | 0 |
+| Chaar Yaar | 2026 | World TV | Drama | 0 |
+
+## Netflix — 64 missing
+
+| Show | Year | Row | Genres | Votes |
+|---|---|---|---|---|
+| I Am Not Okay with This | 2020 | Streaming Era | Drama, Comedy, Sci-Fi & Fantasy | 2028 |
+| Daughter from Another Mother | 2021 | World TV | Comedy, Drama | 1262 |
+| RESIDENT EVIL: Infinite Darkness | 2021 | Animated | Animation, Drama, Action & Adventure, Sci-Fi & Fantasy | 926 |
+| Squid Game: The Challenge | 2023 | Reality & Talk | Reality | 655 |
+| Black Summer | 2019 | Streaming Era | Sci-Fi & Fantasy, Drama, Action & Adventure | 651 |
+| Sky Rojo | 2021 | World TV | Action & Adventure, Crime, Drama | 566 |
+| Move to Heaven | 2021 | World TV | Drama | 399 |
+| The Perfect Couple | 2024 | Streaming Era | Drama, Mystery, Crime | 370 |
+| Hollywood | 2020 | Streaming Era | Drama | 365 |
+| Black Knight | 2023 | World TV | Drama, Action & Adventure, Sci-Fi & Fantasy | 325 |
+| The Mess You Leave Behind | 2020 | World TV | Drama, Mystery | 302 |
+| Love & Anarchy | 2020 | World TV | Comedy, Drama | 266 |
+| Suburra: Blood on Rome | 2017 | World TV | Crime, Drama | 262 |
+| Agatha Christie's Seven Dials | 2026 | Streaming Era | Mystery, Crime, Drama | 249 |
+| The Brothers Sun | 2024 | Streaming Era | Drama, Action & Adventure, Crime, Comedy | 242 |
+| The New Legends of Monkey | 2018 | Streaming Era | Sci-Fi & Fantasy, Action & Adventure, Comedy, Drama | 210 |
+| A Killer Paradox | 2024 | World TV | Crime, Comedy, Mystery, Drama | 210 |
+| Twilight of the Gods | 2024 | Animated | Animation, Sci-Fi & Fantasy, Action & Adventure | 174 |
+| Ethos | 2020 | World TV | Drama, Mystery | 140 |
+| Flaked | 2016 | Streaming Era | Drama, Comedy | 112 |
+| Spycraft | 2021 | Documentary & Geographic | Documentary, War & Politics | 109 |
+| Michael Jackson: The Verdict | 2026 | Documentary & Geographic | Documentary | 82 |
+| Big Mistakes | 2026 | Streaming Era | Comedy, Crime | 67 |
+| The Body | 2026 | Streaming Era | Mystery, Drama | 65 |
+| Is It Cake? | 2022 | Reality & Talk | Reality | 64 |
+| Light the Night | 2021 | World TV | Drama, Mystery, Crime | 58 |
+| Survival of the Thickest | 2023 | Streaming Era | Comedy, Drama | 52 |
+| Fishbowl Wives | 2022 | World TV | Drama | 47 |
+| Spirit: Riding Free | 2017 | Animated | Animation, Action & Adventure, Family, Western | 45 |
+| Chicken Nugget | 2024 | World TV | Comedy, Mystery, Sci-Fi & Fantasy | 44 |
+| Akuma Kun | 2023 | Animated | Animation, Sci-Fi & Fantasy, Mystery, Crime | 40 |
+| My Brilliant Career | 2026 | Streaming Era | Drama, Family | 40 |
+| Perfect Match | 2023 | Reality & Talk | Reality | 38 |
+| Desperate Lies | 2024 | World TV | Drama | 32 |
+| Straight to Hell | 2026 | World TV | Drama | 30 |
+| Tokyo Override | 2024 | Animated | Animation, Action & Adventure, Sci-Fi & Fantasy | 26 |
+| Hollywood Arts | 2026 | Streaming Era | Comedy, Drama, Family | 21 |
+| More than Blue: The Series | 2021 | World TV | Drama | 19 |
+| A Couple of Lies | 2026 | World TV | Drama, Mystery | 19 |
+| Bass X Machina | 2026 | Animated | Animation, Western, Sci-Fi & Fantasy | 18 |
+| Screwballs | 2025 | Reality & Talk | Reality, Comedy | 17 |
+| Operation Safed Sagar: The Untold Story of the Kargil War | 2026 | World TV | Drama | 16 |
+| MeatEater | 2012 | Documentary & Geographic | Documentary | 15 |
+| Bloody Smart | 2026 | World TV | Mystery | 15 |
+| Anaesthesia | 2026 | World TV | Drama | 14 |
+| Balaraw: Blood Island | 2026 | World TV | Mystery, Drama | 14 |
+| Kyojo | 2020 | World TV | Drama | 13 |
+| Love Is Blind, Habibi | 2024 | Reality & Talk | Reality | 13 |
+| Murder in Galicia | 2026 | World TV | Crime, Mystery, Drama | 13 |
+| The Gift of Deceit | 2026 | World TV | Drama | 13 |
+| Under Siege | 2026 | World TV | Drama, Crime | 12 |
+| The Fall of El Mayo | 2026 | Documentary & Geographic | Documentary | 12 |
+| Minimum Wage | 2026 | Streaming Era | Comedy | 11 |
+| Alicia's Law | 2026 | World TV | Drama | 11 |
+| Money Trap | 2026 | World TV | Comedy, Crime, Action & Adventure | 10 |
+| Akka | 2026 | World TV | Drama, Crime | 7 |
+| ChiaroScuro | 2026 | World TV | Comedy, Crime | 7 |
+| Bros | 2024 | World TV | Comedy | 6 |
+| Miracles of the ER | 2026 | World TV | Drama | 5 |
+| The Rewatchables | 2015 | Reality & Talk | Talk | 3 |
+| Therapuss | 2024 | Reality & Talk | Talk | 2 |
+| Tantara | 2026 | World TV | Drama, War & Politics | 0 |
+| Behind the Bastards | 2018 | Reality & Talk | Talk | 0 |
+| Stars and Vows: Anele & Buzza | 2026 | Reality & Talk | Reality | 0 |
+
+## BBC One — 61 missing
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
@@ -326,45 +315,47 @@ Swept 2026-11-16T08:46. Run `node scripts/networks.js --add` to add them all, or
 | One of Us | 2016 | British and Beyond | Crime, Drama | 103 |
 | Birdsong | 2012 | British and Beyond | Drama, War & Politics | 85 |
 | The Green Planet | 2022 | Documentary & Geographic | Documentary | 74 |
-| Chloe | 2022 | British and Beyond | Mystery, Drama | 61 |
 | Peter Kay's Car Share | 2015 | British and Beyond | Comedy | 50 |
+| Three Girls | 2017 | British and Beyond | Drama, Crime | 50 |
 | Murder Is Easy | 2023 | British and Beyond | Mystery, Crime | 47 |
-| The Goes Wrong Show | 2019 | British and Beyond | Comedy | 44 |
-| To the Ends of the Earth | 2005 | British and Beyond | Drama | 35 |
+| The Goes Wrong Show | 2019 | British and Beyond | Comedy | 45 |
 | Us | 2020 | British and Beyond | Comedy, Drama | 33 |
-| Am I Being Unreasonable? | 2022 | British and Beyond | Comedy, Drama | 31 |
+| Am I Being Unreasonable? | 2022 | British and Beyond | Comedy, Drama | 32 |
 | Return to Paradise | 2024 | British and Beyond | Crime, Mystery, Drama | 31 |
 | Undercover | 2016 | British and Beyond | Drama | 27 |
-| Harry Enfield's Television Programme | 1990 | British and Beyond | Comedy | 19 |
-| Serengeti | 2019 | Documentary & Geographic | Documentary | 19 |
+| Asia | 2024 | Documentary & Geographic | Documentary | 23 |
+| Dark Money | 2019 | British and Beyond | Drama | 21 |
+| Dope Girls | 2025 | British and Beyond | Drama, Crime | 20 |
+| Reggie Perrin | 2009 | British and Beyond | Comedy | 19 |
 | Grace & Favour | 1992 | British and Beyond | Comedy | 18 |
-| Riot Women | 2025 | British and Beyond | Drama | 18 |
 | ShakespeaRe-Told | 2005 | British and Beyond | Drama | 15 |
 | Noah’s Island | 1997 | Animated | Animation | 12 |
-| Bonekickers | 2008 | British and Beyond | Drama | 11 |
+| Mint | 2026 | British and Beyond | Crime, Drama | 11 |
 | Tracey Ullman's Show | 2016 | British and Beyond | Comedy | 10 |
 | The Inspector Alleyn Mysteries | 1993 | British and Beyond | Mystery, Crime | 9 |
-| Gordon Ramsay's Future Food Stars | 2022 | Reality & Talk | Reality | 9 |
 | Celebrity Race Across the World | 2023 | Reality & Talk | Reality | 9 |
+| Common As Muck | 1994 | British and Beyond | Comedy, Drama | 8 |
 | Big Break | 1991 | British and Beyond | Comedy | 8 |
 | Wild West | 2002 | British and Beyond | Comedy | 7 |
 | Linda Green | 2001 | British and Beyond | Drama, Comedy | 7 |
 | Bang Goes the Theory | 2009 | Documentary & Geographic | Family, Documentary | 7 |
-| The Amazing Mrs Pritchard | 2006 | British and Beyond | Drama | 6 |
-| River City | 2002 | British and Beyond | Soap, Drama | 6 |
 | The Slammer | 2006 | British and Beyond |  | 6 |
 | Wanted Down Under | 2007 | British and Beyond |  | 6 |
 | In the Club | 2014 | British and Beyond | Drama | 6 |
+| Eyes Down | 2003 | British and Beyond | Comedy | 5 |
 | Martin Chuzzlewit | 1994 | British and Beyond | Drama | 5 |
-| Deadly Disasters | 2019 | Documentary & Geographic | Documentary | 5 |
 | Century Falls | 1993 | Sci-Fi, Fantasy and Horror | Sci-Fi & Fantasy, Mystery, Drama | 4 |
+| Big Cat Diary | 1996 | Documentary & Geographic | Documentary, Drama | 4 |
+| Love Hurts | 1992 | British and Beyond | Drama, Comedy | 4 |
 | The Real Marigold Hotel | 2016 | Documentary & Geographic | Documentary | 4 |
 | Sort Your Life Out | 2021 | Documentary & Geographic | Family, Reality, Documentary | 4 |
 | The Northumbria Mysteries | 2026 | British and Beyond | Mystery, Crime | 4 |
+| Castaway 2000 | 2000 | Documentary & Geographic | Documentary | 3 |
 | Honey | 2026 | British and Beyond | Comedy, Crime | 3 |
+| The Claudia Winkleman Show | 2026 | Reality & Talk | Talk | 3 |
 | Sorry, I've Got No Head | 2008 | British and Beyond | Comedy | 2 |
-| Two Thousand Acres of Sky | 2001 | British and Beyond | Drama | 2 |
 | Junior Masterchef | 1994 | Reality & Talk | Reality | 2 |
+| The Sins | 2000 | British and Beyond | Drama | 2 |
 | Blue Planet III | 2026 | Documentary & Geographic | Documentary | 2 |
 | Airport | 1996 | Documentary & Geographic | Documentary | 1 |
 | Just a Minute | 2012 | British and Beyond |  | 1 |
@@ -373,13 +364,15 @@ Swept 2026-11-16T08:46. Run `node scripts/networks.js --add` to add them all, or
 | The Travelling Auctioneers | 2022 | Documentary & Geographic | Documentary, Reality | 1 |
 | Country Tracks | 2009 | Documentary & Geographic | Documentary | 0 |
 | Helicopter Heroes | 2007 | Documentary & Geographic | Documentary | 0 |
+| Sunday Morning Live | 2010 | Reality & Talk | Reality, Talk | 0 |
 | Claimed and Shamed | 2012 | Documentary & Geographic | Documentary, Crime | 0 |
 | I Escaped to the Country | 2017 | British and Beyond |  | 0 |
 | The Great Sport Relief Bake Off | 2012 | Reality & Talk | Reality, Comedy | 0 |
+| Clean It, Fix It | 2021 | Reality & Talk | Reality | 0 |
 | Scam Interceptors | 2022 | Documentary & Geographic | Documentary, Crime | 0 |
 | Bill's Included | 2026 | British and Beyond | Comedy | 0 |
 
-## ITV — 47 missing
+## ITV — 44 missing
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
@@ -387,41 +380,38 @@ Swept 2026-11-16T08:46. Run `node scripts/networks.js --add` to add them all, or
 | Bad Move | 2017 | British and Beyond | Comedy, Family | 18 |
 | Kidnap and Ransom | 2011 | British and Beyond | Action & Adventure, Drama | 17 |
 | The Blame | 2026 | British and Beyond | Crime, Drama | 16 |
-| Bear Grylls: Mission Survive | 2015 | Reality & Talk | Action & Adventure, Reality | 10 |
 | The Assembly | 2025 | Reality & Talk | Talk | 7 |
 | Honest | 2008 | British and Beyond | Drama, Comedy | 6 |
 | In For a Penny | 2019 | British and Beyond | Family | 5 |
+| The Tide of Life | 1996 | British and Beyond | Drama | 5 |
 | Up the Garden Path | 1990 | British and Beyond | Comedy | 5 |
 | Captain Star | 1997 | Animated | Sci-Fi & Fantasy, Animation | 4 |
 | Victor & Hugo, Bunglers in Crime | 1991 | Animated | Animation, Comedy | 4 |
 | Kappatoo | 1990 | British and Beyond |  | 4 |
 | Dark Ages | 1999 | British and Beyond | Comedy | 4 |
-| He Kills Coppers | 2008 | British and Beyond | Drama | 4 |
-| Al Murray's Happy Hour | 2007 | British and Beyond | Comedy | 3 |
 | Bob Martin | 2000 | British and Beyond |  | 3 |
 | Arthur C. Clarke's Mysterious Universe | 1994 | Documentary & Geographic | Documentary | 3 |
 | The Wingless Bird | 1997 | British and Beyond | Drama | 3 |
+| Dangerous Lady | 1995 | British and Beyond | Drama | 3 |
 | Without Motive | 2000 | British and Beyond | Crime, Mystery, Drama | 3 |
 | M&S: Dress The Nation | 2024 | Reality & Talk | Reality | 3 |
 | Adultery | 2026 | British and Beyond | Drama | 3 |
 | Harry's Mad | 1993 | British and Beyond | Drama, Comedy | 2 |
-| Take Me | 2001 | British and Beyond | Drama | 2 |
 | The 10 Percenters | 1993 | British and Beyond | Comedy | 2 |
 | Orange Playlist | 2004 | British and Beyond |  | 2 |
 | Engie Benjy | 2002 | Animated | Animation | 2 |
+| Married for Life | 1996 | British and Beyond | Comedy | 2 |
 | Stanley and the Women | 1991 | British and Beyond | Drama | 2 |
-| Alan Carr’s Epic Gameshow | 2020 | Reality & Talk | Reality | 2 |
 | Sorry, I Didn't Know | 2020 | British and Beyond | Comedy | 2 |
 | Gary Barlow's Wine Tour | 2024 | Documentary & Geographic | Reality, Documentary | 2 |
 | Torn | 2007 | British and Beyond | Drama | 1 |
 | Bodyguards | 1997 | British and Beyond | Action & Adventure | 1 |
-| Ade in Britain | 2011 | Documentary & Geographic | Documentary | 1 |
+| Family | 2003 | British and Beyond | Crime, Drama | 1 |
 | Bear's Mission with... | 2017 | Reality & Talk | Reality | 1 |
 | Ninja Warrior UK | 2015 | Reality & Talk | Reality | 1 |
-| Wayne Dobson - A Kind of Magic | 1990 | British and Beyond | Family | 1 |
 | Riddiculous | 2022 | Reality & Talk | Reality | 1 |
 | Peston on Sunday | 2016 | British and Beyond |  | 1 |
-| Mamma Mia! I Have A Dream | 2023 | Reality & Talk | Reality | 1 |
+| Alan Titchmarsh's Gardening Club | 2024 | Documentary & Geographic | Documentary | 1 |
 | Nobody's Fool | 2026 | Reality & Talk | Family, Talk | 1 |
 | Fun Song Factory | 1998 | British and Beyond |  | 0 |
 | Long Lost Family: What Happened Next | 2014 | British and Beyond |  | 0 |
@@ -431,11 +421,10 @@ Swept 2026-11-16T08:46. Run `node scripts/networks.js --add` to add them all, or
 | Fletchers' Family Farm | 2023 | Reality & Talk | Reality | 0 |
 | Christmas Carols on ITV | 2012 | British and Beyond | Family | 0 |
 
-## PBS — 28 missing
+## PBS — 26 missing
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
-| Impossible Builds | 2018 | Documentary & Geographic | Documentary | 6 |
 | Life at the Waterhole | 2021 | Documentary & Geographic | Documentary | 3 |
 | Rare: Creatures of the Photo Ark | 2017 | Documentary & Geographic | Documentary | 2 |
 | Royal History's Biggest Fibs with Lucy Worsley | 2020 | Documentary & Geographic | Documentary | 2 |
@@ -445,15 +434,14 @@ Swept 2026-11-16T08:46. Run `node scripts/networks.js --add` to add them all, or
 | Jonathan Bird's Blue World | 2008 | Documentary & Geographic | Family, Documentary | 1 |
 | 9 Months That Made You | 2016 | Documentary & Geographic | Documentary | 1 |
 | Chicago Tours with Geoffrey Baer | 2001 | Documentary & Geographic | Documentary | 1 |
-| Australia's First 4 Billion Years | 2013 | Documentary & Geographic | Documentary | 1 |
+| GardenSMART | 2007 | Documentary & Geographic | Documentary | 1 |
 | Animal Attractions Television | 2006 | Documentary & Geographic | Family | 0 |
-| Real Wheels | 1993 | Documentary & Geographic |  | 0 |
 | Kimchi Chronicles | 2011 | Documentary & Geographic | Documentary | 0 |
 | Travel With Kids | 2011 | Documentary & Geographic | Family, Documentary, Reality | 0 |
 | Food Forward | 2012 | Documentary & Geographic | Documentary | 0 |
 | When Whales Walked: Journeys in Deep Time | 2019 | Documentary & Geographic | Documentary | 0 |
 | Steven Raichlen's Project Fire | 2018 | Reality & Talk | Reality | 0 |
-| America ReFramed | 2012 | Documentary & Geographic | Documentary | 0 |
+| Behind the Wings | 2019 | Documentary & Geographic | Documentary | 0 |
 | Ireland With Michael | 2021 | Documentary & Geographic | Documentary | 0 |
 | Inside Appalachia | 2016 | Documentary & Geographic |  | 0 |
 | Maria's Portuguese Table | 2022 | Documentary & Geographic |  | 0 |
@@ -464,7 +452,7 @@ Swept 2026-11-16T08:46. Run `node scripts/networks.js --add` to add them all, or
 | POV Shorts | 2018 | Documentary & Geographic | Documentary | 0 |
 | Reel South | 2016 | Documentary & Geographic | Documentary | 0 |
 
-## NBC — 16 missing
+## NBC — 14 missing
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
@@ -472,43 +460,39 @@ Swept 2026-11-16T08:46. Run `node scripts/networks.js --add` to add them all, or
 | Minute to Win It | 2010 | 2000s and Later Sitcoms | Family | 11 |
 | Dog Eat Dog | 2002 | Reality & Talk | Reality | 8 |
 | 3-2-1 Penguins! | 2000 | Animated | Animation | 4 |
-| Hot Wheels: Ultimate Challenge | 2023 | Reality & Talk | Reality | 4 |
 | The Restaurant | 2003 | Reality & Talk | Reality | 3 |
+| The Fifth Corner | 1992 | 2000s and Later Sitcoms | Mystery | 3 |
 | Tommy Lee Goes to College | 2005 | Reality & Talk | Reality | 2 |
 | The Singing Bee | 2007 | Reality & Talk | Reality | 2 |
-| For Love or Money | 2003 | Reality & Talk | Reality | 2 |
 | Everything's Relative | 1999 | 2000s and Later Sitcoms | Comedy | 1 |
 | Yo Teach...! | 2009 | 2000s and Later Sitcoms | Comedy | 1 |
-| On Brand with Jimmy Fallon | 2025 | Reality & Talk | Reality | 1 |
 | Skate | 2001 | 2000s and Later Sitcoms | Drama | 0 |
-| Come to Papa | 2004 | 2000s and Later Sitcoms | Comedy | 0 |
 | Today with Jenna & Friends | 2025 | 2000s and Later Sitcoms |  | 0 |
+| Woman on the Run: The Lawrencia Bembenek Story | 1993 | 2000s and Later Sitcoms | Drama | 0 |
 | Sunset P.I. | 2027 | 2000s and Later Sitcoms | Comedy | 0 |
 
-## ABC — 14 missing
+## ABC — 13 missing
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
 | Downward Dog | 2017 | Drama | Comedy, Drama | 20 |
 | Call Your Mother | 2021 | 2000s and Later Sitcoms | Comedy | 20 |
-| The Story of Diana | 2017 | Documentary & Geographic | Documentary | 19 |
-| Son of the Morning Star | 1991 | Drama | Drama, War & Politics | 12 |
 | The Beach Boys: An American Family | 2000 | Drama | Drama | 9 |
-| The Con | 2020 | Documentary & Geographic | Documentary | 6 |
 | Surviving Suburbia | 2009 | 2000s and Later Sitcoms | Comedy | 4 |
 | Julie | 1992 | 90s Sitcoms | Comedy | 3 |
-| The Parent Test | 2022 | Reality & Talk | Reality, Family | 3 |
 | The Golden Bachelor | 2023 | Reality & Talk | Reality | 3 |
 | Extreme Makeover | 2002 | Drama |  | 2 |
 | Trust Us with Your Life | 2012 | 2000s and Later Sitcoms | Comedy | 2 |
+| Oprah's Big Give | 2008 | Drama | Drama | 1 |
 | The Monroes | 1995 | Drama |  | 1 |
+| Regular Joe | 2003 | 2000s and Later Sitcoms | Comedy | 1 |
+| Dirty Talk: When Daytime Talk Shows Ruled TV | 2026 | Documentary & Geographic | Documentary | 1 |
 | Sea Rescue | 2012 | Drama |  | 0 |
 
-## CBS — 13 missing
+## CBS — 11 missing
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
-| The Case of: JonBenét Ramsey | 2016 | Documentary & Geographic | Crime, Documentary, Mystery | 22 |
 | Creature Comforts | 2007 | Animated | Animation, Comedy | 11 |
 | Buddy Games | 2023 | Reality & Talk | Reality | 5 |
 | The Real CSI: Miami | 2024 | Documentary & Geographic | Crime, Documentary | 4 |
@@ -517,10 +501,23 @@ Swept 2026-11-16T08:46. Run `node scripts/networks.js --add` to add them all, or
 | Frannie's Turn | 1992 | 90s Sitcoms | Comedy | 2 |
 | Star Trek: The Journey to the Silver Screen | 2016 | Documentary & Geographic | Documentary, Sci-Fi & Fantasy | 2 |
 | Armed & Famous | 2007 | Reality & Talk | Reality | 1 |
-| The Stones | 2004 | 2000s and Later Sitcoms | Comedy | 1 |
 | Matt Waters | 1996 | Drama | Drama | 1 |
 | Blaster's Universe | 1999 | British and Beyond |  | 1 |
 | Raid the Cage | 2023 | Reality & Talk | Reality | 1 |
+
+## FOX — 9 missing
+
+| Show | Year | Row | Genres | Votes |
+|---|---|---|---|---|
+| Q'Viva! The Chosen | 2012 | 2000s and Later Sitcoms |  | 3 |
+| Next Level Baker | 2025 | Reality & Talk | Reality | 2 |
+| My Big Fat Obnoxious Fiance | 2004 | 2000s and Later Sitcoms |  | 1 |
+| Anything for Love | 2003 | Reality & Talk | Reality | 1 |
+| Mobbed | 2011 | 2000s and Later Sitcoms |  | 1 |
+| iHeartRadio Music Awards | 2014 | 2000s and Later Sitcoms |  | 1 |
+| Xploration Earth 2050 | 2014 | Documentary & Geographic | Documentary | 1 |
+| The Masked Singer: After The Mask | 2020 | 2000s and Later Sitcoms |  | 0 |
+| Super Animals | 2023 | Documentary & Geographic | Documentary | 0 |
 
 ## Disney+ — 9 missing
 
@@ -536,25 +533,13 @@ Swept 2026-11-16T08:46. Run `node scripts/networks.js --add` to add them all, or
 | Lilas Dreams & Memories | 2026 | Documentary & Geographic | Documentary | 0 |
 | Disney Twisted-Wonderland: The Animation - Episode of Savanaclaw | 2026 | Animated | Animation, Action & Adventure, Sci-Fi & Fantasy | 0 |
 
-## FOX — 8 missing
-
-| Show | Year | Row | Genres | Votes |
-|---|---|---|---|---|
-| Q'Viva! The Chosen | 2012 | 2000s and Later Sitcoms |  | 3 |
-| Next Level Baker | 2025 | Reality & Talk | Reality | 2 |
-| My Big Fat Obnoxious Fiance | 2004 | 2000s and Later Sitcoms |  | 1 |
-| Mobbed | 2011 | 2000s and Later Sitcoms |  | 1 |
-| iHeartRadio Music Awards | 2014 | 2000s and Later Sitcoms |  | 1 |
-| LEGO Masters Jr. | 2025 | Reality & Talk | Family, Reality | 1 |
-| The Masked Singer: After The Mask | 2020 | 2000s and Later Sitcoms |  | 0 |
-| Super Animals | 2023 | Documentary & Geographic | Documentary | 0 |
-
-## Paramount+ — 6 missing
+## Paramount+ — 7 missing
 
 | Show | Year | Row | Genres | Votes |
 |---|---|---|---|---|
 | Tyler Perry's Ruthless | 2020 | Streaming Era | Drama | 27 |
 | Lil Kev | 2025 | Animated | Animation, Comedy | 7 |
+| Garfield | 2026 | Animated | Animation, Comedy, Family | 0 |
 | Frisco King | 2026 | Streaming Era | Crime, Drama, Comedy | 0 |
 | Who the Hell Is Hamish? | 2026 | Streaming Era | Drama | 0 |
 | He Said, She Said: Till Death Do Us Part | 2026 | Documentary & Geographic | Documentary | 0 |
