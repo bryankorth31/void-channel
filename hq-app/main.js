@@ -33,8 +33,10 @@ async function findRepo() {
   return r.filePaths[0];
 }
 
+// /api/health, not /api/overview: the overview can take 8 to 20 seconds while jobs run, and a slow answer read as
+// "dead" restarted the app every minute, flashing its window over whatever B was typing (17 Nov 2026).
 const ping = () => new Promise((ok) => {
-  const q = http.get({ host: '127.0.0.1', port: PORT, path: '/api/overview', timeout: 1500 }, (r) => { ok(r.statusCode === 200); r.resume(); });
+  const q = http.get({ host: '127.0.0.1', port: PORT, path: '/api/health', timeout: 10000 }, (r) => { ok(r.statusCode === 200); r.resume(); });
   q.on('error', () => ok(false)); q.on('timeout', () => { q.destroy(); ok(false); });
 });
 
@@ -88,6 +90,8 @@ async function openLabNow(url) {
 }
 function createWindow() {
   win = new BrowserWindow({
+    // Started --hidden (with Windows, or after a restart), the window is never shown, so it never takes the focus.
+    show: !process.argv.includes('--hidden'),
     width: 1440, height: 920, minWidth: 900, minHeight: 600, backgroundColor: '#07080c', title: 'voidtv.net HQ', icon: windowIcon(),
     autoHideMenuBar: true, webPreferences: { contextIsolation: true, sandbox: true },
   });
@@ -105,13 +109,16 @@ function createWindow() {
 // The server lives inside this process. If it stops answering (it died on 21 Oct while the app sat in the tray, so the
 // icon only brought back a window pointing at nothing), the app restarts itself: a fresh process starts the server
 // cleanly, which a second start in this one cannot promise. Checked on every open and once a minute.
-let relaunching = false, mainFailed = false;
+// The minute check restarts only after three misses in a row, so one slow moment never restarts it.
+let relaunching = false, mainFailed = false, misses = 0;
 async function ensureUp(show) {
   if (relaunching) return;
   if (await ping()) {
+    misses = 0;
     if (show) { if (mainFailed) load(win, `http://127.0.0.1:${PORT}/`); win.show(); win.focus(); }
     return;
   }
+  if (!show && ++misses < 3) return;
   relaunching = true;
   const visible = show || (win && win.isVisible());
   app.relaunch({ args: process.argv.slice(1).filter((a) => a !== '--hidden').concat(visible ? [] : ['--hidden']) });
