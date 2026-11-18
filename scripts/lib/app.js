@@ -546,6 +546,7 @@ video{width:100%;max-height:70vh;background:#000;border-radius:8px;outline:none}
 .conn .card{flex:0 0 140px}.conn .card .via{display:block;color:var(--acc);font-size:11px;margin-top:3px;line-height:1.2}
 .loading{padding:40px 20px;color:var(--dim)}
 footer{color:var(--fg);font-size:13px;padding:20px;border-top:1px solid var(--line);margin-top:20px}
+.enjoy{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:60;width:min(360px,calc(100vw - 32px));background:var(--panel,#11131a);border:1px solid var(--line);border-radius:14px;padding:14px 40px 14px 16px;box-shadow:0 10px 40px rgba(0,0,0,.5);display:flex;flex-wrap:wrap;gap:10px;align-items:center;transition:opacity .5s}.enjoy.out{opacity:0}.enjoy b{flex:1 1 auto}.enjoy p{margin:0;font-size:13px;line-height:1.45;color:var(--dim,#aab)}.enjoy-x{position:absolute;top:6px;right:8px;background:none;border:0;color:var(--dim,#aab);font-size:20px;cursor:pointer;padding:2px 6px}
 @media(max-width:860px){.player{grid-template-columns:1fr;grid-template-rows:none}.player>.vcol,.player>.eps,.player>.inep{grid-column:auto;grid-row:auto}.player>.inep{order:3;margin-top:4px}.eps{max-height:48vh}.hero .t b{font-size:19px}}
 `;
 
@@ -566,7 +567,7 @@ let ME_BASE=null,ME_RAW=null;
 ${ME_SRC}
 const ME_WROTE={};
 const ME=(()=>{let raw=null,m=null;try{raw=localStorage.getItem(ME_KEY);m=JSON.parse(raw||'null')}catch(_){}ME_RAW=raw;m=meClean(m);ME_BASE=meCopy(m);
- try{const keys=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('voidtv:')&&!['voidtv:me','voidtv:sid','voidtv:vol'].includes(k))keys.push(k)}for(const k of keys){const sl=k.slice(7);try{if(!m.history[sl]){const r=JSON.parse(localStorage.getItem(k)||'null');if(r&&r.se!=null)m.history[sl]={se:r.se,e:r.e,at:0,pos:0}}}catch(e){}localStorage.removeItem(k)}}catch(_){}
+ try{const keys=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('voidtv:')&&!['voidtv:me','voidtv:sid','voidtv:vol','voidtv:enjoy'].includes(k))keys.push(k)}for(const k of keys){const sl=k.slice(7);try{if(!m.history[sl]){const r=JSON.parse(localStorage.getItem(k)||'null');if(r&&r.se!=null)m.history[sl]={se:r.se,e:r.e,at:0,pos:0}}}catch(e){}localStorage.removeItem(k)}}catch(_){}
  return m})();
 function mePlaying(slug,se,e){const c=VP&&VP._cur;return !!(c&&c.slug===slug&&c.se===se&&c.e===e&&VP.v&&!VP.v.paused)}
 function meSync(){let raw=null;try{raw=localStorage.getItem(ME_KEY)}catch(_){return false}
@@ -784,10 +785,24 @@ function loadEp(p,s,se,ep,o){const epk=se.season+'x'+ep.n,v=p.v;
 function idleEp(p,s,se,ep,at){try{p.v.poster=s.backdrop||s.poster||''}catch(e){}
  p._ctx={slug:s.slug,ep:se.season+'x'+ep.n,item:ep.item||''};
  p.play=function(){loadEp(p,s,se,ep,{at,feel:true})}}
+// "Enjoying voidtv.net?" (B, 18 Nov 2026: "just are you enjoying Void TV"; one button, no "Not really": "if you're not enjoying it you're not on the site").
+// Asked after someone watched a while (10 minutes this visit, a paused show after that, or an episode played to its end), at most once a
+// month per device, and it fades if ignored. The footer link opens it any time. A tap sends one anonymous act event (x enjoy, the show
+// just watched); HQ > Analytics counts them. Never during playback, never on another profile (Kids has its own rules).
+let ENJOY_W=0;
+function enjoyDue(){try{return Date.now()-(+localStorage.getItem('voidtv:enjoy')||0)>30*864e5}catch(e){return false}}
+function enjoyMark(){try{localStorage.setItem('voidtv:enjoy',String(Date.now()))}catch(e){}}
+function enjoyAsk(slug,ended){if(!ENJOY_ON||(!ended&&ENJOY_W<10)||!enjoyDue()||document.getElementById('enjoy'))return;enjoyMark();enjoyCard(slug,true)}
+function enjoyCard(slug,fade){if(!ENJOY_ON)return;const old=document.getElementById('enjoy');if(old)old.remove();const d=document.createElement('div');d.id='enjoy';d.className='enjoy';d.setAttribute('role','dialog');d.setAttribute('aria-label','Enjoying voidtv.net?');
+ const x=document.createElement('button');x.className='enjoy-x';x.setAttribute('aria-label','Close');x.textContent='×';x.onclick=()=>d.remove();
+ const q=document.createElement('b');q.textContent='Enjoying voidtv.net?';const y=document.createElement('button');y.className='btn gold';y.textContent='Yes, I am';
+ y.onclick=()=>{clearTimeout(d._t);enjoyMark();track('act',{slug:slug||'',x:'enjoy'});flushEv();d.innerHTML='';d.appendChild(x);const t=document.createElement('b');t.textContent='Thanks, that means a lot.';const l=document.createElement('p');l.textContent='If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world.';const a=document.createElement('a');a.className='btn donate';a.href=DONATE;a.target='_blank';a.rel='noopener';a.textContent='♥ Donate to CASH';d.appendChild(t);d.appendChild(l);d.appendChild(a)};
+ d.appendChild(x);d.appendChild(q);d.appendChild(y);document.body.appendChild(d);if(fade)d._t=setTimeout(()=>{d.classList.add('out');setTimeout(()=>d.remove(),600)},25000)}
 function bindEpisodeEvents(p){const v=p.v;
  v.addEventListener('play',()=>{const c=p._cur;if(!c||v.dataset.tr)return;v.dataset.tr=1;v.dataset.lt=Date.now();track('play',{slug:c.slug,ep:c.epk,x:c.file})});
- v.addEventListener('timeupdate',()=>{const c=p._cur,now=Date.now();if(c&&v.dataset.tr&&now-(+v.dataset.lt||0)>=60000){v.dataset.lt=now;track('tick',{slug:c.slug,ep:c.epk,pos:v.currentTime,dur:v.duration||0,x:dropX(v)})}});
- v.addEventListener('ended',()=>{const c=p._cur;if(c)track('end',{slug:c.slug,ep:c.epk,pos:v.currentTime,dur:v.duration||0})});
+ v.addEventListener('timeupdate',()=>{const c=p._cur,now=Date.now();if(c&&v.dataset.tr&&now-(+v.dataset.lt||0)>=60000){v.dataset.lt=now;ENJOY_W++;track('tick',{slug:c.slug,ep:c.epk,pos:v.currentTime,dur:v.duration||0,x:dropX(v)})}});
+ v.addEventListener('pause',()=>{const c=p._cur;if(c&&!v.ended)enjoyAsk(c.slug,false)});
+ v.addEventListener('ended',()=>{const c=p._cur;if(c){track('end',{slug:c.slug,ep:c.epk,pos:v.currentTime,dur:v.duration||0});enjoyAsk(c.slug,true)}});
  v.addEventListener('play',()=>{const c=p._cur;if(!c||!state.show||state.show.slug!==c.slug||state.se!==c.se||state.e!==c.e)return;const r=ME.history[c.slug];if(!r||r.se!==c.se||r.e!==c.e)remember()});
  v.addEventListener('timeupdate',()=>{const c=p._cur;if(!c)return;const t=Date.now();if(t-(p._lastSave||0)>5000){p._lastSave=t;const r=ME.history[c.slug];if(r&&r.se===c.se&&r.e===c.e&&v.readyState>=2){r.pos=Math.floor(v.currentTime);r.at=t;saveMe()}}})}
 function canReuse(s){const h=$('vph');return !!(VP&&VP._slug===s.slug&&h&&VP.root&&h.contains(VP.root)&&document.querySelector('.show .player .vcol'))}
@@ -1226,10 +1241,10 @@ ${og}
 <style>${CSS}</style></head><body>
 <header><div class="logo" onclick="go('')"><img class="mark" src="${base}assets/brand/icon-192.png?v=2" alt="" onerror="this.remove()"><span class="name"><span class="v">voidtv</span><span class="n">.net</span></span></div><input id="q" placeholder="Search shows…" oninput="state.q=this.value;if(state.show||state.view)go('',true);else render()"><a class="mine-link" onclick="go('tv')" title="Live channels, always on"><i class="ico tv"></i><span class="long"> TV</span></a><a class="mine-link" onclick="go('me')" title="My List, likes and watch history"><i class="ico bookmark"></i><span class="long"> Mine</span></a><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to CASH (cashvalues.org)"><i class="ico heart sm"></i> Donate<span class="long"> to CASH</span></a><button class="inst" id="inst" hidden onclick="installApp()" title="Install voidtv.net as an app"><i class="ico arrow-down sm"></i><span class="long"> Install</span></button></header><div class="instbar" id="instbar" hidden><span><b>Get voidtv.net on your phone.</b> Free, no account.</span><button class="inst" onclick="installApp()"><i class="ico arrow-down sm"></i> Install</button><button class="instx" onclick="instClose()" aria-label="Close">×</button></div>
 <div class="atmos lo" aria-hidden="true"><div class="bgimg"><video class="bgvid" muted loop playsinline preload="none"></video></div><div class="void"><i></i></div><div class="dust"></div></div><main id="main"></main><div class="atmos hi" aria-hidden="true"><div class="grain"></div></div>
-<footer>${CREDIT}</footer>
+<footer>${PROFILE.name === 'voidtv' ? '<a href="#" class="enjoy-link" onclick="enjoyCard(\'\',false);return false">Enjoying it? Tap here</a> · ' : ''}${CREDIT}</footer>
 ${indexScript}
 <script>
-const SITE=${JSON.stringify(SITE_NAME)};const DONATE=${JSON.stringify(DONATE_URL)};const DONATE_MONTHLY=${JSON.stringify(DONATE_MONTHLY_URL)};const MODE=${JSON.stringify(mode)};const ROUTES=${JSON.stringify(routes)};const BASE=${JSON.stringify(base)};
+const SITE=${JSON.stringify(SITE_NAME)};const ENJOY_ON=${PROFILE.name === 'voidtv'};const DONATE=${JSON.stringify(DONATE_URL)};const DONATE_MONTHLY=${JSON.stringify(DONATE_MONTHLY_URL)};const MODE=${JSON.stringify(mode)};const ROUTES=${JSON.stringify(routes)};const BASE=${JSON.stringify(base)};
 const TYPES=${JSON.stringify(types)};
 const HOME_ORDER=${JSON.stringify(homeOrder)};
 ${inline}

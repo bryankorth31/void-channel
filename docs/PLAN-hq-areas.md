@@ -42,7 +42,36 @@ University
    No push or merge without Bryan's go.
 3. Build order:
    - H1. The switcher, and the University tab regrouped into its own area (no new features). DONE 15 Nov 2026,
-     not committed: scripts/hq/index.html, tests/hq.test.js, docs/HQ.md.
+     commit b28b7351c on master.
+   - H1b (Bryan, 18 Nov 2026, relayed by the Kids Play chat: "Void TV Kids also needs to have the analytics and all of the
+     rest of it that regular headquarters HQ does for Void TV"). The Kids area gets what Void TV HQ does, where it fits a
+     static Worker site, built on the kids branch:
+     - Analytics, read from the dataset voidtv_kids_events (same CASH account and token). COUNTS ONLY, by COPPA design:
+       each row is type, show, episode, 'kids'. No visitors, sessions, places, devices or search words exist, and none
+       are added without Bryan's go. Shown: plays and minutes per show and per episode by day, top shows, errors per
+       show and episode, reports, searches as a number. Live once the kids Worker is deployed (kids commit 7ccc94797).
+     - Health and live checks of kids.voidtv.net (it answers, the version, the newest build), deploy status, and the
+       follow-up list of broken episodes from error events and reports.
+     - The show list (H2 below) and Jobs for the kids catalog (hunt, match, sound check, build).
+     - Every check also by hand (hq-manual-mode): the command for each in Kids Help.
+   - DEADLINE (Bryan, 18 Nov 2026): Kids runs fully from HQ with no AI help by 28 Nov 2026 ("I don't want any need for
+     language model assistance for any of my projects"). Why: his 17 Nov REVIEW.html export (77 approvals, Today's
+     Special among them) sat unapplied because applying it needed a typed command. Schedule (proposed, waits on his go):
+     - K1, 19 Nov (DONE 18 Nov, not committed): Kids area in HQ, Shows tab: approve, deny, add; counts (approved, denied, waiting, approved with 0
+       playable episodes and the reason from strict-report.json).
+     - K2, 20 Nov: Hunt more (make-list, resolve-tmdb, fetch-tvmaze, kids-hunt per row, match) and Sound check, with
+       what was found shown plainly (the HUNT.md table).
+     - K3, 21 Nov: Build (show count, warning when it drops below what is live), Deploy (wrangler under Bryan's own
+       sign-in), then a live check of home, /village/, /play/ and the live show count against the build.
+     - K4, 22 to 23 Nov: Breaks and questions (approve-breaks, breaks-review, talk-review, approve-talk), voice clips
+       (how many lines have no clip, Make clips), and one Check button for every kids test.
+     - K5, 24 Nov: Analytics (counts only), health lights, the broken-episode list from errors and reports.
+     - 25 to 26 Nov: Bryan presses every button from a one-page checklist, by himself; fixes from what he finds.
+     - 27 Nov: spare day. 28 Nov: ready.
+   - Decided (Bryan, 18 Nov 2026, relayed by the top chat: "I agree with that recommendation ... Void TV should hold all of it
+     in just different tabs"): where the Kids area code lives: in master's HQ (the app he already runs), with every
+     kids job run inside C:\Users\bryan\void-kids, so it works by 28 Nov without merging kids into master. No kids site
+     code goes on master and voidtv.net is unchanged. This replaces decision 2 for HQ only.
    - H2. Kids Shows: approve, deny and add inside HQ, replacing the REVIEW.html export and approve.js round trip.
    - H3. Kids questions review: standouts, what is heard, draft questions, approve per show.
    - H4. Play and Learn and Void Village pages; Kids Test site page.

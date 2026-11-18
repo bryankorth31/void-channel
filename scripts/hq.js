@@ -14,6 +14,8 @@ const hidden = require('./lib/hidden'); // the Hidden tab: guessed episodes and 
 // One more named query for /api/analytics/<name>: the "Wrong film reports" list on the Reports page (viewers ticking "Not the right
 // film" on a TV movie marked "Unconfirmed match"; the page sends type report with q wrongfilm, x = Archive item, a space, file name).
 // Day buckets, added up by the page, so it uses only what the other queries in lib/cfa.js already use. Read-only; it hides nothing.
+// People enjoying it: taps on the site's "Enjoying voidtv.net? Yes, I am" (act events, x enjoy), by day and the show just watched.
+cfa.REPORTS.enjoy = (d) => `SELECT toStartOfInterval(timestamp, INTERVAL '1' DAY) AS day, blob2 AS slug, SUM(_sample_interval) AS n FROM voidtv_events WHERE timestamp > NOW() - INTERVAL '${Math.max(1, Math.min(90, +d || 7))}' DAY AND blob1 = 'act' AND blob14 = 'enjoy' GROUP BY day, slug ORDER BY day DESC LIMIT 3000`;
 cfa.REPORTS.wrongfilm = (d) => `SELECT blob2 AS slug, blob14 AS file, toStartOfInterval(timestamp, INTERVAL '1' DAY) AS day, SUM(_sample_interval) AS n FROM voidtv_events WHERE timestamp > NOW() - INTERVAL '${Math.max(1, Math.min(90, +d || 30))}' DAY AND blob1 = 'report' AND blob12 = 'wrongfilm' GROUP BY slug, file, day ORDER BY day DESC LIMIT 3000`;
 
 const ROOT = path.join(__dirname, '..');
@@ -29,6 +31,7 @@ function nodeBin() {
 // HQ's own state (the jobs list, job logs, probe lines) lives here. HQ_STATE_DIR points it at another folder; the tests use a
 // temporary one so that running them never touches catalog/cache.
 const CACHE = process.env.HQ_STATE_DIR ? path.resolve(process.env.HQ_STATE_DIR) : path.join(PROFILE.catalogDir, 'cache');
+const kidshq = require('./lib/kidshq'); // the Kids area: the kids show list (profiles/kids), approve / deny / add
 const uni = require('./lib/uni'); // the University tab: Void University's sources, courses and the recipe (profiles/university)
 const promos = require('./lib/promos'); // the Motion and Promos tabs: motion editor, site placements, share copies
 promos.init({ nodeBin, cache: CACHE });
@@ -418,6 +421,10 @@ const server = http.createServer(async (req, res) => {
       return send(res, 200, { lines: tail(path.join(CACHE, 'probe.jsonl'), 50).split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l); } catch (e) { return null; } }).filter(Boolean) });
     }
     // ---- motion and promos (scripts/lib/promos.js) ----
+    // ---- Kids area (scripts/lib/kidshq.js; docs/PLAN-hq-areas.md K1): the kids show list, approve / deny / add ----
+    if (p === '/api/kids/shows') return send(res, 200, kidshq.shows());
+    if (p === '/api/kids/decide' && req.method === 'POST') { const b = await body(req); return send(res, 200, kidshq.decide(String(b.name || ''), String(b.d || ''), b.note)); }
+    if (p === '/api/kids/add' && req.method === 'POST') { const b = await body(req); return send(res, 200, kidshq.add({ name: b.name, type: String(b.type || ''), year: b.year, network: b.network, tvmaze: b.tvmaze })); }
     if (p === '/api/uni') { const c = readJson(path.join(uni.SRC, 'check.json'), { problems: [] }); return send(res, 200, { ...uni.overview(), check: c.problems.slice(0, 300) }); }
     if (p === '/api/uni/sources') { const a = uni.slugify(url.searchParams.get('area') || ''); return send(res, 200, readJson(path.join(uni.SRC, a + '.json'), { sources: [], courses: [] })); }
     if (p === '/api/uni/brief') return send(res, 200, { text: uni.brief(url.searchParams.get('slug') || '', url.searchParams.get('n') || '') });

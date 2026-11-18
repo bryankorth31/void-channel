@@ -136,14 +136,28 @@ Bryan, 15 Nov 2026: "Yes, as recommended" (plan and build order: docs/PLAN-hq-ar
 picks the area; each has its own tabs. **Void TV**: the tabs above, plus Publish now and the player lab, which show only
 there. **University**: Overview (the buttons, counts and recipe), Courses (every course started, with Listen, Set times
 and Live), Areas (an area's sources, proposed courses and briefs), Source check, and Help (each button's by-hand
-command). **Kids**: for now one page with the by-hand steps (HQ-KIDS.cmd, REVIEW.html and approve.js, TEST-DEPLOY-KIDS.md);
-its own tabs are built on the kids branch and come with the kids merge. Old links still work (#shows, #university/<area>).
+command). **Kids** (Bryan, 18 Nov 2026: one HQ, "Void TV should hold all of it in just different tabs"; Kids runs fully from HQ with no AI
+help by 28 Nov): **Shows** (approve, deny, undo and add a show; counts of approved, playing, approved with no episodes yet
+and to decide; for an approved show with no episodes, why, from profiles/kids/catalog/strict-report.json; writes
+profiles/kids/list.json as approve.js does, with a dated backup list.before-hq-<date>.json before the first change of a
+day; code scripts/lib/kidshq.js, test tests/kidshq.test.js) and **Help** (each button by hand). Kids jobs run in
+C:Usersryanoid-kids. Next: Hunt more, Build and Deploy, breaks and voice, Analytics (docs/PLAN-hq-areas.md K2 to K5). Old links still work (#shows, #university/<area>).
 Test: tests/hq.test.js, "HQ has three areas".
+
+## People enjoying it (18 Nov 2026)
+
+Bryan: "just are you enjoying Void TV", one button ("if you're not enjoying it you're not on the site"). voidtv.net asks "Enjoying
+voidtv.net?" with one button, **Yes, I am**, after 10 minutes of watching in a visit (when the viewer pauses) or when an episode plays
+to its end; at most once in 30 days per device (localStorage voidtv:enjoy), and it fades after 25 s if ignored. The footer link
+"Enjoying it? Tap here" opens it any time. After the tap: thanks and the CASH donation line. A tap is one anonymous `act` event with
+`x enjoy` and the show just watched. HQ > Analytics shows "said they enjoy it" and "People enjoying it" by day and by show (report
+`enjoy` in scripts/hq.js). voidtv.net only: off on Kids and other profiles. Code: scripts/lib/app.js (enjoyAsk, enjoyCard); test:
+tests/enjoy.test.js.
 
 ## Events the site sends
 
 `view` (page, slug) · `play` (slug, season x episode, file) · `tick` every 60 s while playing (position,
-duration) · `search` (query, result count) · `tune` (channel) · `act` (like / list / hide) · `report`
+duration) · `search` (query, result count) · `tune` (channel) · `act` (like / list / hide; `x enjoy` is a tap on "Enjoying voidtv.net? Yes, I am", see below) · `report`
 (slug, episode, file) · `error` (slug, episode, file, code). Each point also carries country, region,
 city, device, browser, referrer host and the anonymous session id.
 
