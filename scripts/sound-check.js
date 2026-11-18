@@ -21,7 +21,22 @@ const SWAPS = path.join(CAT, 'sound-files.json');
 const HEARD = path.join(CACHE, 'sound-checked.json');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const readJson = (f, d) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { return d; } };
-const save = (f, o) => { const t = f + '.tmp'; fs.writeFileSync(t, JSON.stringify(o, null, 1) + '\n'); fs.renameSync(t, f); };
+// Windows can hold a file for a moment (git add from the scheduled publish, a virus scan, HQ reading it): the rename then
+// fails with EPERM or EBUSY. On 17 Nov that stopped the whole run before any show was re-matched. Try again for a while,
+// and if it still fails, say so and carry on: what was heard is saved on the next try.
+const busy = (e) => e && (e.code === 'EPERM' || e.code === 'EBUSY' || e.code === 'EACCES');
+const pause = (ms) => { const end = Date.now() + ms; while (Date.now() < end) { /* a short wait between tries */ } };
+function save(f, o) {
+  const t = f + '.tmp';
+  fs.writeFileSync(t, JSON.stringify(o, null, 1) + '\n');
+  for (let i = 0; ; i++) {
+    try { fs.renameSync(t, f); return true; } catch (e) {
+      if (!busy(e)) throw e;
+      if (i >= 20) { console.log(`Could not save ${path.basename(f)} (${e.code}, the file is held); trying again later.`); return false; }
+      pause(500);
+    }
+  }
+}
 
 async function meta(id) {
   const cf = path.join(CACHE, 'meta-' + id.replace(/[^a-z0-9._-]/gi, '_') + '.json');
@@ -65,6 +80,7 @@ async function main() {
       if (limit && asked >= limit) break;
       if (!f.item || !f.file || S.isTwin(f.file)) continue;
       const k = S.keyOf(f.item, f.file);
+      if (swaps[k]) touched.add(slug); // switched before but the grid still plays the silent original (a run stopped before its re-match): re-match it now
       if (heard[k]) continue;
       const m = await meta(f.item);
       const twin = S.twinOf(m, f.file);
