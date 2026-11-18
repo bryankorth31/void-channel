@@ -141,10 +141,14 @@ test('HQ\'s page cannot be framed by another site: X-Frame-Options SAMEORIGIN an
     const r = await call(port, 'GET', p);
     assert.equal(r.status, 200, p);
     assert.equal(r.headers['x-frame-options'], 'SAMEORIGIN', p);
-    assert.equal(r.headers['content-security-policy'], "frame-ancestors 'self'", p);
+    assert.equal(r.headers['content-security-policy'], "frame-ancestors 'self' http://127.0.0.1:8770", p); // HQ itself and the Studio Tools window only
   }
   // the header belongs to the page; it is not needed on JSON answers
   assert.equal((await call(port, 'GET', '/api/jobs')).headers['x-frame-options'], undefined);
+  // Studio Tools asks whether a job is running before it offers Stop; a plain read, no key
+  const busy = await call(port, 'GET', '/api/busy');
+  assert.equal(busy.status, 200);
+  assert.equal(typeof busy.json.queue, 'number');
 });
 
 test('HQ has three areas behind a switcher; University and Kids are not Void TV tabs (docs/PLAN-hq-areas.md, H1)', async () => {

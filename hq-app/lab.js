@@ -49,7 +49,9 @@ function handler(root) {
   let realRoot = null;
   try { realRoot = fs.realpathSync(root); } catch (e) { realRoot = path.resolve(root); }
   return (req, res) => {
-    const head = { 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' };
+    // The same frame lock as HQ's own page (scripts/hq.js): shown inside itself and the Studio Tools window on this PC
+    // (127.0.0.1:8770) only (Bryan, 18 Nov 2026). The lab window opens these pages as the window itself, so it is not affected.
+    const head = { 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'Content-Security-Policy': "frame-ancestors 'self' http://127.0.0.1:8770" };
     const done = (code, body, type, extra) => {
       try { res.writeHead(code, { ...head, 'Content-Type': type || 'text/plain; charset=utf-8', ...(extra || {}) }); res.end(req.method === 'HEAD' ? undefined : body); } catch (e) { try { res.destroy(); } catch (e2) { /* gone */ } }
     };

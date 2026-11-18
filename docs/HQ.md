@@ -49,7 +49,7 @@ updates HQ without reinstalling.
   `icon-512.png` at 64, 128 and 256 px; `icon.png` is that TV at 512 px. The windows and the tray use the .ico on
   Windows. If Windows still shows the old icon after installing, restart Explorer (its icon cache).
 - Installed at `%LOCALAPPDATA%\Programs\VOIDtv HQ\VOIDtv HQ.exe`; Start Menu entry "VOIDtv HQ".
-- Installer: `hq-app/dist/VOIDtv HQ Setup 1.1.0.exe` (not in git). Rebuild with
+- Installer: `hq-app/dist/VOIDtv HQ Setup 1.2.1.exe` (not in git). Rebuild with
   `cd hq-app && npm install && npm run dist`. Quit HQ from the tray before installing over it.
 - Only one copy runs at a time; launching it again just brings the window forward.
 - The plain `node scripts/hq.js` and `HQ.cmd` still work and serve the same page.

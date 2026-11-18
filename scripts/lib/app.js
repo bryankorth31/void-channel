@@ -785,7 +785,7 @@ function loadEp(p,s,se,ep,o){const epk=se.season+'x'+ep.n,v=p.v;
 function idleEp(p,s,se,ep,at){try{p.v.poster=s.backdrop||s.poster||''}catch(e){}
  p._ctx={slug:s.slug,ep:se.season+'x'+ep.n,item:ep.item||''};
  p.play=function(){loadEp(p,s,se,ep,{at,feel:true})}}
-// "Enjoying voidtv.net?" (B, 18 Nov 2026: "just are you enjoying Void TV"; one button, no "Not really": "if you're not enjoying it you're not on the site").
+// "Enjoying voidtv.net?" (B, 18 Nov 2026: "just are you enjoying" the site; one button, no "Not really": "if you're not enjoying it you're not on the site").
 // Asked after someone watched a while (10 minutes this visit, a paused show after that, or an episode played to its end), at most once a
 // month per device, and it fades if ignored. The footer link opens it any time. A tap sends one anonymous act event (x enjoy, the show
 // just watched); HQ > Analytics counts them. Never during playback, never on another profile (Kids has its own rules).

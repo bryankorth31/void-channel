@@ -45,6 +45,9 @@ test('the lab server answers the lab pages and refuses the rest', async () => {
     assert.match(page.headers['content-type'], /^text\/html/);
     assert.equal(page.headers['cache-control'], 'no-store');
     assert.match(page.body, /\.\.\/src\/player\.js/);
+    // framed by itself and the Studio Tools window only, like HQ's page
+    assert.equal(page.headers['content-security-policy'], "frame-ancestors 'self' http://127.0.0.1:8770");
+    assert.equal(page.headers['x-frame-options'], 'SAMEORIGIN');
 
     const js = await get(port, '/src/core.js');
     assert.equal(js.status, 200);

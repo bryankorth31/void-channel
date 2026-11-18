@@ -324,7 +324,11 @@ function homeOrder() {
 const MIME = { '.html': 'text/html; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.woff2': 'font/woff2', '.js': 'text/javascript', '.css': 'text/css' };
 // HQ's own page must not be framed by another site (an invisible frame over a "Publish" click). The page frames the motion editor,
 // not the other way round, so this does not affect it. Both the old header and its CSP form, for every browser.
-const NO_FRAMING = { 'x-frame-options': 'SAMEORIGIN', 'content-security-policy': "frame-ancestors 'self'" };
+// HQ's page may be shown inside HQ itself and inside one other page only: the Studio Tools window on this PC
+// (Bryan, 18 Nov 2026: "Yes, allow it"). Every other parent is refused. Chromium (WebView2, Chrome) follows
+// frame-ancestors and ignores X-Frame-Options when both are sent; SAMEORIGIN stays for older browsers.
+const STUDIO_TOOLS = 'http://127.0.0.1:8770';
+const NO_FRAMING = { 'x-frame-options': 'SAMEORIGIN', 'content-security-policy': "frame-ancestors 'self' " + STUDIO_TOOLS };
 const send = (res, code, body, type) => { res.writeHead(code, { 'content-type': type || 'application/json; charset=utf-8', 'cache-control': 'no-store', ...(/^text\/html/.test(type || '') ? NO_FRAMING : {}) }); res.end(type ? body : JSON.stringify(body)); };
 const body = (req) => new Promise((ok, no) => { let d = ''; req.on('data', (c) => { d += c; if (d.length > 2e6) no(new Error('too big')); }); req.on('end', () => { try { ok(d ? JSON.parse(d) : {}); } catch (e) { no(e); } }); });
 
@@ -381,6 +385,8 @@ const server = http.createServer(async (req, res) => {
     if (p === '/' || p === '/index.html') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html'), 'utf8').replace('__HQ_TOKEN__', TOKEN), MIME['.html']);
     if (p === '/api/ping' && req.method === 'POST') return send(res, 200, { ok: true }); // does nothing; the doctor and the tests use it to see whether the guards above let a call through
     if (p.startsWith('/brand/')) { const f = path.join(ROOT, 'assets', 'brand', p.slice(7)); if (!f.startsWith(path.join(ROOT, 'assets', 'brand')) || !fs.existsSync(f)) return send(res, 404, 'no', 'text/plain'); return send(res, 200, fs.readFileSync(f), MIME[path.extname(f)] || 'application/octet-stream'); }
+    // Whether a job is running, with no key: Studio Tools reads it before it offers Stop, so HQ is never stopped mid-job.
+    if (p === '/api/busy') return send(res, 200, { queue: jobList().filter((j) => j.running).length });
     if (p === '/api/overview') return send(res, 200, overview());
     if (p === '/api/health') return send(res, 200, readJson(path.join(CACHE, 'health.json'), { level: 'none', checks: [] }));
     if (p === '/api/tasks/recreate' && req.method === 'POST') { try { return send(res, 200, { made: createTasks(nodeBin().bin) }); } catch (e) { return send(res, 500, { error: (e.stderr ? e.stderr.toString() : e.message).slice(0, 200) }); } }
