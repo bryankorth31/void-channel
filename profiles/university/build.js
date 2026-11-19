@@ -124,6 +124,19 @@ function quiz(u) {
     + '<div class="qs" hidden></div></details>';
 }
 
+// The chapter a class unit is built on, read right here in plain English (the printed words stay one tap away on
+// the book's own page). Reading time is counted at 200 words a minute.
+function reader(u) {
+  if (!u.reading) return '';
+  const b = SHELFBOOKS.find((x) => x.source === u.reading.shelf);
+  const ch = b && b.chapters.find((x) => x.n === u.reading.chapter);
+  if (!ch) return '';
+  const words = ch.passages.reduce((a, x) => a + x.plain.split(' ').length, 0);
+  return '<details class="reader"><summary><h3>Read the chapter here</h3><span>about ' + Math.max(1, Math.round(words / 200)) + ' minutes, in plain English</span></summary>'
+    + ch.passages.map((x) => '<p>' + esc(x.plain) + '</p>' + (x.warnings || []).map((w) => '<p class="warn"><b>Do not follow this part as written.</b> ' + esc(w.text) + ' <a href="' + esc(w.url) + '" target="_blank" rel="noopener">' + esc(w.source) + '</a></p>').join('')).join('')
+    + '<p class="rd-more"><a href="' + esc(b.slug) + '.html#c' + ch.n + '">See the words as printed in ' + esc(String(b.year)) + ' beside this chapter</a></p></details>';
+}
+
 function unit(u, voices, c) {
   const who = (u.voices || []).map((k) => voices[k]).filter(Boolean)
     .map((v) => '<li><b>' + esc(v.name) + '</b>, ' + esc(v.what.toLowerCase()) + '. ' + esc(v.did) + '</li>').join('');
@@ -134,16 +147,18 @@ function unit(u, voices, c) {
     + links(u, c)
     + lab(u)
     + (u.main ? '<div class="pieces">' + piece(u.main, true) + '</div>' : '')
+    + reader(u)
     + chapters(u)
     + quiz(u)
     + crystal(c, u)
+    + '<div class="donebar"><button type="button" class="donebtn">Mark this unit done</button></div>'
     + '<details class="more"><summary>More: why it matters, what else to watch, read and do, who teaches it</summary>'
     + '<div class="out">You will be able to: ' + esc(u.outcome) + '</div>'
     + '<div class="seed"><h3>Why it matters</h3><p>' + esc(u.why) + '</p></div>'
     + '<div class="seed reach"><h3>How this reaches you</h3><p>' + esc(u.reachesYou) + '</p></div>'
     + ((u.companions || []).length ? '<div class="pieces">' + u.companions.map((c) => piece(c, false)).join('') + '</div>' : '')
     + '<div class="row2"><div class="do"><h3>Do this week</h3><p>' + esc(u.do) + '</p></div>'
-    + '<div class="who"><h3>Who teaches this unit</h3><ul>' + who + '</ul></div></div>'
+    + ((who || (c.source && c.source.by)) ? '<div class="who"><h3>Who teaches this unit</h3><ul>' + (who || '<li><b>' + esc(c.source.by) + '</b>, ' + esc(c.source.title) + '</li>') + '</ul></div>' : '') + '</div>'
     + '</details>'
     + '</section>';
 }
@@ -193,6 +208,12 @@ h3{margin:0 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;c
 .seed p,.do p{margin:0;font-size:16px}
 .pieces{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:18px 0}
 .piece{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.donebar{margin:14px 0 4px;display:flex;justify-content:flex-end}.donebtn{font:inherit;font-size:14px;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}.donebtn:hover{border-color:var(--gold)}
+.unit.isdone .donebtn{border-color:#3f7a57;color:#8fd6aa}.wrap nav a.isdone span::after{content:' \\2713';color:#8fd6aa}.donecount{font-size:13px;color:#8fd6aa;margin:10px 0 0;padding:0 10px}
+.reader{margin:12px 0;border:1px solid var(--line);border-radius:12px;background:var(--panel2);padding:4px 18px}
+.reader summary{cursor:pointer;display:flex;gap:14px;align-items:baseline;padding:10px 0;list-style:none}.reader summary::-webkit-details-marker{display:none}
+.reader summary h3{margin:0;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}.reader summary span{color:var(--dim);font-size:14px}
+.reader p{font-size:18px;line-height:1.65;max-width:760px;margin:0 0 16px}.reader .warn{font-size:15px;padding:10px 12px;border:1px solid #6b3a3d;background:#221316;border-radius:8px;color:#f0c9cb}.reader .warn a,.reader .rd-more a{color:var(--gold)}.reader .rd-more{font-size:14px}
 .piece.main{grid-column:1/-1;border-color:rgba(95,212,255,.45)}
 .piece.held{opacity:.6;border-style:dashed}
 .ph{display:flex;gap:8px;align-items:center}
@@ -295,9 +316,9 @@ details.more summary:hover{color:var(--fg)}
 @media (max-width:1000px){.wrap{grid-template-columns:1fr}nav{position:static}nav{display:flex;flex-wrap:wrap;gap:4px}nav h4{width:100%}.row2{grid-template-columns:1fr}.hero ol{columns:1}}
 </style></head><body>
 ${top(c.slug, all)}
-<div class="wrap"><nav><h4>Units</h4>${toc}</nav><main>
+<div class="wrap"><nav><h4>Units</h4>${toc}<p class="donecount"></p></nav><main>
 <div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)} · ${c.size === 'class' ? 'a class built from an old book' : c.kind === 'found' ? 'built from a free course' : 'a course we wrote'}</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>${c.source ? '<p class="src">From <a href="' + esc(c.source.url) + '" target="_blank" rel="noopener">' + esc(c.source.title) + '</a>, ' + esc(c.source.by) + '. ' + licence(c.source.licence) + '.' + (c.planned > c.units.length ? ' ' + c.units.length + ' of ' + c.planned + ' lectures ready so far.' : '') + '</p>' : ''}<p class="lv">${LEVELS(c)}</p>
-<details class="more"><summary>By the end you will be able to...</summary><ol>${c.outcomes.map((o) => '<li>' + esc(o) + '</li>').join('')}</ol></details></div>
+${(() => { const outs = (c.outcomes || []).length ? c.outcomes : c.units.map((u) => u.outcome).filter(Boolean); return outs.length ? '<details class="more"><summary>By the end you will be able to...</summary><ol>' + outs.map((o) => '<li>' + esc(o) + '</li>').join('') + '</ol></details>' : ''; })()}</div>
 ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this course</h3><div class="chans">' + c.channels.map(chan).join('') + '</div>' : ''}
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
 </main></div>
@@ -322,6 +343,26 @@ document.addEventListener('click', function (e) {
   var z = q.closest('.quiz'), all = z.querySelectorAll('.qq'), done = z.querySelectorAll('.qq.done');
   if (all.length === done.length) { var r = z.querySelectorAll('.qc .right:not(:disabled), .qq.done').length; var n = 0; all.forEach(function (x) { if (x.querySelector('.qr.ok')) n++; }); var sEl = z.querySelector('.qs'); sEl.textContent = 'You got ' + n + ' of ' + all.length + '. Missed one? The quote under it shows where the lecture says it.'; sEl.hidden = false; }
 });
+// Keeping your place: which units you marked done and the last unit you looked at, kept in this browser only.
+var VU = { get: function (k, d) { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } }, set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
+var SLUG = ${JSON.stringify(c.slug)}, CNAME = ${JSON.stringify(c.name)};
+function paintDone() {
+  var d = VU.get('vu:done', {})[SLUG] || [];
+  document.querySelectorAll('.unit').forEach(function (u) { var on = d.indexOf(+u.id.slice(1)) >= 0; u.classList.toggle('isdone', on); u.querySelector('.donebtn').textContent = on ? 'Done. Tap to undo' : 'Mark this unit done'; });
+  document.querySelectorAll('.wrap nav a').forEach(function (a) { a.classList.toggle('isdone', d.indexOf(+a.getAttribute('href').slice(2)) >= 0); });
+  document.querySelector('.donecount').textContent = d.length ? d.length + ' of ' + document.querySelectorAll('.unit').length + ' units done (kept in this browser only)' : '';
+}
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.donebtn'); if (!b) return;
+  var all = VU.get('vu:done', {}), d = all[SLUG] || [], n = +b.closest('.unit').id.slice(1), i = d.indexOf(n);
+  if (i >= 0) d.splice(i, 1); else d.push(n);
+  all[SLUG] = d; VU.set('vu:done', all); paintDone();
+});
+paintDone();
+if ('IntersectionObserver' in window) {
+  var seen = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) VU.set('vu:last', { slug: SLUG, name: CNAME, n: +x.target.id.slice(1), title: x.target.querySelector('h2').textContent }); }); }, { rootMargin: '-40% 0px -40% 0px' });
+  document.querySelectorAll('.unit').forEach(function (u) { seen.observe(u); });
+}
 </script>
 </body></html>`;
 }
@@ -450,7 +491,7 @@ function chan(x) {
 function home(all, list) {
   const full = all.filter((c) => c.shelf !== 'supplement');
   const sup = all.filter((c) => c.shelf === 'supplement');
-  const card = (c) => '<a class="card course" data-lv="' + esc((c.levels || []).join('|')) + '" href="' + esc(c.slug) + '.html"><div class="ph"><img src="' + (img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))) + '" alt=""></div><div class="t"><small>' + esc(c.domain) + ' · ' + (c.planned > c.units.length ? c.units.length + ' of ' + c.planned + ' units' : c.units.length + (c.units.length === 1 ? ' unit' : ' units')) + '</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
+  const card = (c) => '<a class="card course" data-slug="' + esc(c.slug) + '" data-units="' + c.units.length + '" data-lv="' + esc((c.levels || []).join('|')) + '" href="' + esc(c.slug) + '.html"><div class="ph"><img src="' + (img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))) + '" alt=""></div><div class="t"><small>' + esc(c.domain) + ' · ' + (c.planned > c.units.length ? c.units.length + ' of ' + c.planned + ' units' : c.units.length + (c.units.length === 1 ? ' unit' : ' units')) + '</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
   const mini = (c, u) => '<a class="card mini" href="' + esc(c.slug) + '.html#u' + u.n + '"><div class="ph"><img loading="lazy" src="' + img('m' + u.n) + '" alt=""></div><div class="t"><b>' + esc(u.title) + '</b><span>' + esc(u.scene ? u.scene.analogy : '') + '</span></div></a>';
   const row = (title, note, cards) => '<section class="row"><h2><span>' + esc(title) + '</span>' + (note ? '<small>' + esc(note) + '</small>' : '') + '</h2><div class="rowwrap"><button class="arrow l" aria-label="Back">&#8249;</button><div class="track">' + cards + '</div><button class="arrow r" aria-label="More">&#8250;</button></div></section>';
   const seen = new Set();
@@ -493,6 +534,12 @@ ${CARDCSS}
 .who{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:26px 20px 0}.who>span{font-family:Fraunces,Georgia,serif;font-size:18px;margin-right:6px}
 .who button{font:inherit;font-size:14px;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}.who button.on{border-color:var(--gold);color:var(--gold)}
 .who small{flex-basis:100%;color:var(--dim);font-size:13px}
+#find{font:inherit;font-size:15px;margin-left:auto;min-width:260px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--fg)}#find:focus{outline:none;border-color:var(--gold)}
+#found,#resume{margin:14px 20px 0;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+#found a{display:block;padding:6px 0;color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}#found a:last-child{border-bottom:0}#found a small{color:var(--acc);margin-right:10px}#found a:hover b{color:var(--gold)}#found p{margin:0;color:var(--dim)}
+#resume{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}#resume[hidden]{display:none}#resume span{color:var(--dim);font-size:14px}#resume a{color:var(--gold);font-family:Fraunces,Georgia,serif;font-size:18px;text-decoration:none}
+.card .prog{font-style:normal;font-size:12px;color:#8fd6aa}
+@media (max-width:1000px){#find{margin-left:0;flex-basis:100%}}
 .course.off{display:none}
 .areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;padding:0 20px}
 .area{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line)}
@@ -504,7 +551,8 @@ ${CARDCSS}
 </style></head><body>
 ${top('home', all)}
 <div class="hero"><img src="${img('a-mind')}" alt=""><div><div class="kick">Free courses · no account</div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way.</p></div></div>
-<main><div class="who"><span>Who is it for?</span><button class="on" data-lv="">Everyone</button><button data-lv="high school">High school</button><button data-lv="young adults">Young adults</button><button data-lv="everyday">Everyday life</button><small>Everyday life: not for a job in the field, just useful for living, deciding and understanding people.</small></div>
+<main><div class="who"><span>Who is it for?</span><button class="on" data-lv="">Everyone</button><button data-lv="high school">High school</button><button data-lv="young adults">Young adults</button><button data-lv="everyday">Everyday life</button><input type="search" id="find" placeholder="Find a course or a lesson" aria-label="Find a course or a lesson"><small>Everyday life: not for a job in the field, just useful for living, deciding and understanding people.</small></div>
+<div id="found" hidden></div><div id="resume" hidden></div>
 ${rows}
 ${shelfRow}
 <h2><span>Every area</span><small>more courses are on the way</small></h2><div class="areas">${tiles}</div></main>
@@ -526,6 +574,34 @@ document.querySelectorAll('.rowwrap').forEach(function (w) {
   l.onclick = function () { t.scrollLeft -= t.clientWidth * 0.8; }; r.onclick = function () { t.scrollLeft += t.clientWidth * 0.8; };
   t.addEventListener('scroll', upd); window.addEventListener('resize', upd); upd();
 });
+// Find a course or a lesson: every word typed must be in the course name, the lesson title or its "why you need this".
+var IDX = ${JSON.stringify(all.flatMap((c) => c.units.map((u) => [c.slug + '.html#u' + u.n, c.name, u.title, (u.needIt || '').toLowerCase()])).concat(SHELFBOOKS.flatMap((b) => b.chapters.map((x) => [b.slug + '.html#c' + x.n, b.title, x.title, (x.why || '').toLowerCase()])))).replace(/</g, '\\u003c')};
+var find = document.getElementById('find'), found = document.getElementById('found');
+function text(el, t) { el.textContent = t; return el; }
+find.addEventListener('input', function () {
+  var q = find.value.toLowerCase().split(/\\s+/).filter(Boolean);
+  found.innerHTML = '';
+  if (!q.length) { found.hidden = true; return; }
+  var hits = IDX.filter(function (r) { var hay = (r[1] + ' ' + r[2] + ' ' + r[3]).toLowerCase(); return q.every(function (w) { return hay.indexOf(w) >= 0; }); }).slice(0, 12);
+  hits.forEach(function (r) { var a = document.createElement('a'); a.href = r[0]; a.appendChild(text(document.createElement('small'), r[1])); a.appendChild(text(document.createElement('b'), r[2])); found.appendChild(a); });
+  if (!hits.length) found.appendChild(text(document.createElement('p'), 'Nothing here on that yet.'));
+  found.hidden = false;
+});
+// Your place, kept in this browser only: the unit you last looked at, and how many units of each course you marked done.
+(function () {
+  var get = function (k, d) { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } };
+  var last = get('vu:last', null), done = get('vu:done', {}), box = document.getElementById('resume');
+  if (last && document.querySelector('.card.course[data-slug="' + String(last.slug).replace(/[^a-z0-9-]/g, '') + '"]')) {
+    box.appendChild(text(document.createElement('span'), 'Pick up where you left off:'));
+    var a = document.createElement('a'); a.href = String(last.slug).replace(/[^a-z0-9-]/g, '') + '.html#u' + (+last.n || 1); text(a, last.name + ': ' + last.title); box.appendChild(a);
+    box.appendChild(text(document.createElement('span'), '(kept in this browser only)'));
+    box.hidden = false;
+  }
+  document.querySelectorAll('.card.course[data-slug]').forEach(function (c) {
+    var d = (done[c.dataset.slug] || []).length; if (!d) return;
+    var i = document.createElement('i'); i.className = 'prog'; i.textContent = d + ' of ' + c.dataset.units + ' done'; c.querySelector('.t').appendChild(i);
+  });
+})();
 </script>
 </body></html>`;
 }
