@@ -135,3 +135,5 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
     (kept per browser); `"look"` in profile.json sets the look the site is built with (classic until Bryan picks).
     Both new looks passed a contrast check on the front page, a course, a class, the mechanisms, a book and the
     credits at 1316 wide, and no sideways scroll at 1920, 1316 and 821.
+- 19 Nov 2026: Bryan picked the look: "Bright night". profile.json `"look": "bright"`; the preview and the public
+  copy are both built with it. The live site changes at his next deploy.
