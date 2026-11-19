@@ -1,0 +1,55 @@
+{
+  "id": "oregon-trail-1990",
+  "title": "The Oregon Trail",
+  "year": 1990,
+  "publisher": "MECC",
+  "system": "dos",
+  "core": "dosbox-pure",
+  "players": 1,
+  "archive": {
+    "item": "msdos_Oregon_Trail_The_1990",
+    "file": "Oregon_Trail_The_1990.zip",
+    "start": "oregont/OREGON.EXE"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "numbers": [
+      "Digit1",
+      "Digit2",
+      "Digit3",
+      "Digit4",
+      "Digit5",
+      "Digit6",
+      "Digit7",
+      "Digit8",
+      "Digit9"
+    ],
+    "keys": [
+      "Enter",
+      "Space",
+      "KeyY",
+      "KeyN",
+      "Escape"
+    ],
+    "dpad": true,
+    "keyboard": true
+  },
+  "gamepad": {
+    "A": "Enter",
+    "B": "Escape",
+    "X": "Space",
+    "Y": "@keyboard",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "LB": "Digit1",
+    "RB": "Digit2",
+    "LT": "Digit3",
+    "RT": "Digit4"
+  },
+  "help": "Pick from a list with its number, then Enter. Space goes on when the game asks you to press it. Type names and answers on the keyboard.",
+  "vars": {
+    "dosbox_pure_aspect_correction": "true"
+  }
+}
