@@ -1,0 +1,341 @@
+{
+  "slug": "human-nature",
+  "n": 13,
+  "title": "Deontology",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:15:07.866Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: ",
+    "round 1: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line"
+  ],
+  "unit": {
+    "n": 13,
+    "title": "Deontology",
+    "needIt": "This helps you understand that doing the right thing matters even when it is hard or produces no reward. It teaches you to act based on honest principles rather than just looking for the easiest result.",
+    "why": "Imagine you help a friend move houses. You do it because you believe in being a helpful person, not because you want them to owe you a favor later. Kant argues that your help is only truly 'good' because of your inner motive, not the move itself.",
+    "outcome": "Evaluate your own actions based on your underlying principles rather than just the final results.",
+    "reachesYou": "You see this when you choose to be honest at work even if it costs you a sale. You feel it when you help a stranger because it is the right thing to do, not for a reward.",
+    "do": "Identify one thing you do out of habit or self-interest this week and try to do it once purely because it is the right thing to do.",
+    "chapters": [
+      {
+        "t": 1,
+        "title": "Moving past utilitarianism",
+        "words": "OK. So what I want to do today is to finish up"
+      },
+      {
+        "t": 331,
+        "title": "The Jim case",
+        "words": "When Jim arrives, Pedro, the cowboy, tells him that if Jim"
+      },
+      {
+        "t": 828,
+        "title": "The deontologist view",
+        "words": "The deontologist or virtue ethicist says, not so fast. Don't jump"
+      },
+      {
+        "t": 1550,
+        "title": "Kant's good will",
+        "words": "nothing can be regarded as good without qualification except the good"
+      },
+      {
+        "t": 1982,
+        "title": "Duty and inclination",
+        "words": "We might do an act out of duty, we might do it"
+      },
+      {
+        "t": 2409,
+        "title": "The maxim of action",
+        "words": "a maxim, a subjective principle of volition, that is, a description of"
+      },
+      {
+        "t": 2737,
+        "title": "The categorical imperative",
+        "words": "Never act except in such a way that I can also will"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does Mill say is the heart of the utilitarian view?",
+        "choices": [
+          "The good will",
+          "The greatest happiness principle",
+          "The categorical imperative",
+          "The motive of the act"
+        ],
+        "a": 1,
+        "why": "Mill argues that actions are right in proportion as they promote happiness.",
+        "quote": "The first thing that he says is that he articulates what's known as the greatest happiness principle.",
+        "t": 54
+      },
+      {
+        "q": "According to Mill, what is irrelevant to an act's moral worth?",
+        "choices": [
+          "The motive",
+          "The outcome",
+          "The happiness produced",
+          "The distribution of happiness"
+        ],
+        "a": 0,
+        "why": "Mill states that the motive has nothing to do with the morality of the action.",
+        "quote": "He says, the motive has nothing to do with the morality of the action.",
+        "t": 124
+      },
+      {
+        "q": "In the Jim case, what did most people think Jim should do?",
+        "choices": [
+          "Shoot one to save nineteen",
+          "Refuse to shoot",
+          "Run away",
+          "Wait for the sheriff"
+        ],
+        "a": 0,
+        "why": "Most people in the lecture chose to shoot one person to save nineteen.",
+        "quote": "almost three-quarters of you, actually more than three-quarters of you, think that what the morally right thing for Jim to do in this case is to shoot one man, thereby liberating the other nineteen?",
+        "t": 404
+      },
+      {
+        "q": "What does Kant say about talents like intelligence or courage?",
+        "choices": [
+          "They are good in themselves",
+          "They are better than a good will",
+          "They are only good if part of a good will",
+          "They are not useful for morality"
+        ],
+        "a": 2,
+        "why": "Kant argues that these qualities only help you achieve goals but do not determine if those goals are good.",
+        "quote": "Each of the virtues that has traditionally been extolled as a virtue, says Kant, gains its value only in so far as the goodwill is part of it.",
+        "t": 1691
+      },
+      {
+        "q": "What is a 'good will' according to Kant?",
+        "choices": [
+          "A successful action",
+          "A lucky outcome",
+          "A good will in itself",
+          "A good result"
+        ],
+        "a": 2,
+        "why": "Kant believes a good will is good in itself, regardless of what it accomplishes.",
+        "quote": "Now, a goodwill, says Kant, is good not because of what it affects or accomplishes. It's good in itself.",
+        "t": 1706
+      },
+      {
+        "q": "What is the Kantian notion of 'duty'?",
+        "choices": [
+          "Doing what you like",
+          "Doing what is easy",
+          "Seeking happiness",
+          "Respect for the law"
+        ],
+        "a": 3,
+        "why": "Kant defines duty as the necessity of an action done out of respect for the law.",
+        "quote": "duty is the necessity of an action done out of the respect for the law.",
+        "t": 1905
+      },
+      {
+        "q": "How does Kant view an act done out of self-interest?",
+        "choices": [
+          "It has moral worth",
+          "It is a good will",
+          "It has no moral worth",
+          "It is a duty"
+        ],
+        "a": 2,
+        "why": "Kant believes that for an act to have moral worth, it must be done from duty, not for personal gain.",
+        "quote": "If you obey the law, but you do so only out of self-interest, your obedience, says Kant, has no moral worth.",
+        "t": 2014
+      }
+    ],
+    "scene": {
+      "analogy": "A student returning a lost wallet",
+      "map": [
+        [
+          "A student",
+          "The student"
+        ],
+        [
+          "A lost wallet",
+          "The wallet"
+        ],
+        [
+          "Honesty",
+          "Good will"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A student",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A lost wallet",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "HONESTY",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "RETURN",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "I did it because it was the right thing to do.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A student finds a wallet.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They decide to return it.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The owner gets it back.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Feels proud"
+            },
+            "right": {
+              "sub": "Owner happy"
+            }
+          }
+        },
+        {
+          "say": "They feel a sense of duty.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Moral worth comes from the motive, not the outcome.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "The student",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "The wallet",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "GOOD WILL",
+              "size": 14
+            },
+            "act": {
+              "label": "RETURN",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "The motive is what gives the act its value.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "The outcome of an act does not determine its moral worth.",
+        "A good will is good in itself.",
+        "Actions must be done from duty to have moral worth.",
+        "A maxim is the description of an act.",
+        "Duty is respect for the moral law."
+      ],
+      "key": "Moral worth comes from the intent and the principle behind an action, not the result.",
+      "decoys": [
+        {
+          "text": "A good act is one that makes the most people happy.",
+          "why": "This is utilitarianism, which Kant criticizes."
+        },
+        {
+          "text": "Doing something because you enjoy it is a moral act.",
+          "why": "Kant says acting from inclination, not duty, has no moral worth."
+        }
+      ],
+      "aha": "When you move from looking at what happened to why you did it, you find Kant's focus on the good will."
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 13: Deontology",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "13. Deontology.mp4",
+      "seconds": 2773,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  }
+}

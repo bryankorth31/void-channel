@@ -1,0 +1,320 @@
+{
+  "slug": "human-nature",
+  "n": 12,
+  "title": "Utilitarianism and its critiques",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:13:53.248Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 12,
+    "title": "Utilitarianism and its critiques",
+    "needIt": "This helps you decide if an action is right by looking at the total happiness it creates for everyone. It helps you weigh choices like whether a small personal sacrifice is worth a big gain for a group.",
+    "why": "A teacher shows how different people react to a choice between personal comfort and the happiness of others. Some people choose their own comfort, while others feel a moral duty to help the group. The lecture explores how these choices define our moral rules.",
+    "outcome": "Evaluate the morality of actions based on their consequences for the community.",
+    "reachesYou": "You see this when you decide if a small personal inconvenience is worth helping a friend. You also face it when thinking about how your daily habits might affect people far away.",
+    "do": "Think about one small thing you do every day that helps others. Ask yourself if you would still do it if it cost you a little bit of your own comfort.",
+    "chapters": [
+      {
+        "t": 111,
+        "title": "What is moral philosophy",
+        "words": "What is it that moral philosophy sets out to do? What is"
+      },
+      {
+        "t": 602,
+        "title": "The brute facts of life",
+        "words": "A third kind of justification, third kind of explanation of moral motivation, is"
+      },
+      {
+        "t": 969,
+        "title": "Utilitarianism explained",
+        "words": "So the kind of moral theory that we're going to discuss in"
+      },
+      {
+        "t": 1296,
+        "title": "Mill and consequences",
+        "words": "Mill contends that the right kind of framework for thinking about moral"
+      },
+      {
+        "t": 2342,
+        "title": "The Omelas story",
+        "words": "Now, as you know, the Omalas story tells the story of a"
+      },
+      {
+        "t": 2820,
+        "title": "Critiques of the theory",
+        "words": "And what we'll talk about next class in the context of"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the goal of moral philosophy?",
+        "choices": [
+          "To describe how people act",
+          "To justify moral principles",
+          "To study human biology",
+          "To predict future behavior"
+        ],
+        "a": 1,
+        "why": "The lecture states that moral philosophy is the systematic endeavor to understand and justify moral principles.",
+        "quote": "What moral philosophy is, is the systematic endeavor to understand moral concepts and to justify moral principles and theories.",
+        "t": 121
+      },
+      {
+        "q": "Does moral philosophy aim to tell us how people act?",
+        "choices": [
+          "No, it is normative",
+          "Yes, it is descriptive",
+          "Only in some cases",
+          "It only looks at biology"
+        ],
+        "a": 0,
+        "why": "The lecture clarifies that moral theory is a normative enterprise, meaning it looks at how people ought to act.",
+        "quote": "Philosophical moral theory doesn't aim to tell us how people act. It aims to tell us how people ought to act in order to wish to conform to the constraints that morality places on them.",
+        "t": 186
+      },
+      {
+        "q": "What is a self-interest account of morality?",
+        "choices": [
+          "Acting for the good of others",
+          "Acting for personal harmony or stability",
+          "Acting only for religious reasons",
+          "Acting without any motive"
+        ],
+        "a": 1,
+        "why": "The lecture explains that self-interest can mean harmony in the soul or stability in society.",
+        "quote": "So one category of answers that one might give to why it is that we would be moral, acting keeping with the constraints of morality, is a self-interest account.",
+        "t": 331
+      },
+      {
+        "q": "What is the core of utilitarianism?",
+        "choices": [
+          "Virtue of the actor",
+          "Rightness of the act",
+          "Consequences of the act",
+          "Divine mandate"
+        ],
+        "a": 2,
+        "why": "Utilitarianism is a form of consequentialism where the rightness of an act is determined by its results.",
+        "quote": "The degree of moral rightness of an act is determined by consequences.",
+        "t": 1314
+      },
+      {
+        "q": "What is the greatest happiness principle?",
+        "choices": [
+          "Maximize happiness for the individual",
+          "Follow the rules of the state",
+          "Maximize happiness for the many",
+          "Act with a virtuous character"
+        ],
+        "a": 2,
+        "why": "Mill defines actions as right if they promote happiness for all concerned.",
+        "quote": "Mill says famously, actions are right in proportion as they tend to promote happiness, wrong as they tend to promote the reverse of happiness.",
+        "t": 1449
+      },
+      {
+        "q": "What does Mill say about the motive of an action?",
+        "choices": [
+          "It determines the morality",
+          "It is the most important part",
+          "It tells us nothing about the morality",
+          "It only matters for religious acts"
+        ],
+        "a": 2,
+        "why": "Mill argues that the moral value of an act is independent of the reason why it was done.",
+        "quote": "The motivation with which an act is performed, says Mill, tells us nothing about the morality of the act.",
+        "t": 1502
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Moral philosophy is a normative enterprise.",
+        "Utilitarianism is a type of consequentialism.",
+        "Mill says motives do not change an act's morality.",
+        "The goal is to maximize happiness for all.",
+        "Actions are right if they promote happiness."
+      ],
+      "key": "Utilitarianism judges the morality of an act by the total happiness it produces for everyone.",
+      "decoys": [
+        {
+          "text": "Utilitarianism focuses on the character of the person acting.",
+          "why": "The lecture says utilitarianism looks at consequences, not the actor (which is virtue ethics)."
+        },
+        {
+          "text": "Mill believes motives are the most important part of morality.",
+          "why": "The lecture states Mill thinks the motive tells us nothing about the morality of the act."
+        }
+      ],
+      "aha": "By looking at the results instead of the person or the reason, utilitarianism provides a systematic way to measure the 'good' of any action."
+    },
+    "scene": {
+      "analogy": "Sharing a large pizza with a hungry group",
+      "map": [
+        [
+          "A hungry person",
+          "Your happiness"
+        ],
+        [
+          "A group of friends",
+          "Group happiness"
+        ],
+        [
+          "One pizza",
+          "A choice"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A hungry person",
+          "color": "blue",
+          "o": 0,
+          "size": 18
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A group of friends",
+          "color": "blue",
+          "o": 0,
+          "size": 18
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "ONE PIZZA",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "SHARING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "Everyone is fed and the mood is great.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A group of friends is hungry.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "One person has a pizza.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They share the pizza.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Full and happy"
+            },
+            "right": {
+              "sub": "Full and happy"
+            }
+          }
+        },
+        {
+          "say": "Everyone feels happy.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Utilitarianism seeks to maximize total happiness for everyone.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Your happiness",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Group happiness",
+              "size": 18,
+              "color": "green"
+            },
+            "thing": {
+              "label": "A CHOICE",
+              "size": 18
+            },
+            "act": {
+              "label": "SACRIFICE",
+              "size": 14,
+              "color": "pink"
+            },
+            "line": {
+              "label": "The goal is the most good for the most people.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 12: Utilitarianism and its critiques",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "12. Utilitarianism and its Critiques.mp4",
+      "seconds": 2839,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  }
+}
