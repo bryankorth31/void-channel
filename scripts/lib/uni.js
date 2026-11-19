@@ -178,7 +178,8 @@ RULES: plain language, no em dashes anywhere, never get round a site that blocks
 
 // Every link answers; every source names its licence and where it was seen; nothing forbidden; no dashes; every
 // built unit's quiz is whole. Writes sources/check.json, which HQ shows.
-async function check(log = () => {}) {
+// check(log, { links: false }) does everything but call the web (the self-test), and leaves check.json alone.
+async function check(log = () => {}, opt = {}) {
   const problems = [];
   const urls = new Map();
   const walkText = (where, v) => {
@@ -224,6 +225,7 @@ async function check(log = () => {}) {
     for (const ch of u.chapters || []) if (ch.words) at(c.slug + ' unit ' + u.n + ' chapter ' + ch.title, ch.words, ch.t);
   }
   let n = 0;
+  if (opt.links === false) return { at: new Date().toISOString(), links: 0, problems };
   const all = [...urls.entries()];
   const one = async ([url, where]) => {
     try {

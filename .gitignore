@@ -65,3 +65,6 @@ profiles/university/sources/check.json
 
 # Whisper transcripts of University lectures (scripts/uni.js listen); large, rebuilt on demand
 profiles/university/listen/
+
+# Void University preview build (node scripts/uni.js build); rebuilt on demand, like site/
+profiles/university/site-preview/

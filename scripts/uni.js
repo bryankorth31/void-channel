@@ -12,6 +12,7 @@
 //   node scripts/uni.js media                     recount each Archive item's real video or audio lectures (writes the sources)
 //   node scripts/uni.js build                     build the preview (profiles/university/site-preview)
 //   node scripts/uni.js build --site              build the public copy (only courses marked live in list.json)
+//   node scripts/uni.js selftest                  everything that can be checked on this PC alone: tests, lab physics, a preview build, the course checks
 'use strict';
 const path = require('path');
 const { execFileSync } = require('child_process');
@@ -57,6 +58,20 @@ const [cmd, ...args] = process.argv.slice(2);
     const ch = await uni.media((m) => console.log(m));
     console.log('\n' + ch.length + ' sources changed');
     for (const x of ch) console.log('- ' + x.where + ': ' + x.what);
+  } else if (cmd === 'selftest') {
+    // One command, no web and no AI: each part says pass or FAIL, and the exit code is 1 if any part failed.
+    const root = path.join(__dirname, '..');
+    const run = (file, more = []) => { try { execFileSync(process.execPath, [...more, file], { cwd: root, stdio: 'pipe' }); return ''; } catch (e) { return String(e.stdout || '') + String(e.stderr || e.message); } };
+    const parts = [
+      ['Tests (tests/uni.test.js)', () => run(path.join(root, 'tests', 'uni.test.js'), ['--test'])],
+      ['Lab physics (test-lab.js)', () => run(path.join(uni.UNI, 'test-lab.js'))],
+      ['Preview build (build.js)', () => run(path.join(uni.UNI, 'build.js'))],
+      ['Course checks without the web (licences, dashes, quiz quotes, times)', async () => (await uni.check(() => {}, { links: false })).problems.filter((x) => x.level !== 'note').map((x) => x.where + ': ' + x.what).join('\n')],
+    ];
+    let bad = 0;
+    for (const [name, fn] of parts) { const out = await fn(); if (out) bad++; console.log((out ? 'FAIL  ' : 'pass  ') + name + (out ? '\n' + out.trim().split('\n').slice(-25).join('\n') : '')); }
+    console.log(bad ? '\n' + bad + ' of ' + parts.length + ' parts failed.' : '\nAll ' + parts.length + ' parts pass. Links are checked by: node scripts/uni.js check');
+    if (bad) process.exitCode = 1;
   } else if (cmd === 'build') {
     execFileSync(process.execPath, [path.join(uni.UNI, 'build.js'), ...args.filter((a) => a === '--site')], { stdio: 'inherit' });
   } else {
