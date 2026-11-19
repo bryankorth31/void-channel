@@ -68,3 +68,6 @@ profiles/university/listen/
 
 # Void University preview build (node scripts/uni.js build); rebuilt on demand, like site/
 profiles/university/site-preview/
+
+# Scanned text of shelf books, fetched from the Archive (scripts/uni.js shelf plan); rebuilt on demand
+profiles/university/shelf/text/

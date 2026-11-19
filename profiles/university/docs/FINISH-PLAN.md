@@ -70,3 +70,21 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   the model's thinking on came back empty after 3 minutes a round; plain JSON with thinking off is what works.
   Human nature now lists its other 24 lectures as units to do, so Listen queues all 24 (about 7 hours of PC time).
   tests/uni.test.js 7 of 7. Step 6 (the HQ buttons) is written up for the HQ areas chat in the shared notes.
+- 19 Nov 2026: the stop line for this work is 92% on both weekly meters until the 22 Nov reset. Bryan's words as
+  relayed by the "Void University build" chat that day (this chat did not hear them itself): "no, raise the level.
+  i want this doine", then he chose 92%. Steps 7, 8 and 9 now, first courses in the empty areas after the reset.
+- 19 Nov 2026, step 7 done: the draft now carries its everyday scene. The local model gives only words (two sides,
+  the thing between them, what happens, how each ends up, one spoken line, and the idea's own name for each); the
+  program lays them out on fixed places (`sceneFrom` in scripts/lib/uni.js) and refuses a word too long for its
+  place. Seen in the preview at 1316 and 821 wide on Human nature lecture 1: nothing touches, no sideways scroll.
+  Every scene uses the one layout, and the model's analogies are plainer than the hand-made ones. A whole draft
+  shows in the preview inside its course, titled "Draft, not kept yet", and never in the public copy.
+  `node scripts/uni.js draft <slug> all` drafts every heard lecture still to do.
+- 19 Nov 2026, step 8 started: Whisper began on Human nature's other 24 lectures at 9:25 (Bryan: "Yes, listen now").
+  Lecture 1 was heard and drafted whole (7 questions, 5 chapters, crystal, scene). Human nature reads 26 of 26
+  only after Bryan has read and kept each draft; `keep` is his step.
+- 19 Nov 2026, step 9 done: the old-knowledge shelf. First book: A-B-C of vegetable gardening (Rexford, 1916,
+  public domain, Archive scan). `node scripts/uni.js shelf plan | write | live`; the printed side is cut from the
+  scan by the program, the plain side is the local model's, gated on length; warnings come from
+  shelf/warnings.json (one rule so far: old pest poisons, US EPA page opened 19 Nov). The book's page and the front
+  page row were checked at 1920, 1316 and 821 wide. Not live: Bryan reads it first.

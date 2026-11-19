@@ -6,7 +6,11 @@
 //   node scripts/uni.js brief <slug> <unit>       print the whole prompt for a Claude chat to build that unit
 //   node scripts/uni.js rewrite <area> <source>   print the whole prompt to rewrite an old book into plain English
 //   node scripts/uni.js draft <slug> <unit>       the local model (Ollama) drafts a unit from its heard lecture; only word for word quotes are kept
+//   node scripts/uni.js draft <slug> all          draft every unit still to do whose lecture has been heard
 //   node scripts/uni.js keep <slug> <unit>        move a whole draft from drafts/ into the course
+//   node scripts/uni.js shelf plan <area> <id>    an old book from the source list: fetch its Archive scan, find its chapters (writes shelf/<id>.json)
+//   node scripts/uni.js shelf write <id> <n|all>  the local model rewrites a chapter into plain English beside the original
+//   node scripts/uni.js shelf live <id> on|off    put a shelf book in, or take it out of, the public copy
 //   node scripts/uni.js listen <slug>           Whisper hears every lecture the course plays (a time for every word)
 //   node scripts/uni.js times <slug>              set every quiz and chapter time from where the words are said (after listen)
 //   node scripts/uni.js find <slug> <unit> <quote> the second in that unit's lecture where the quote is said
@@ -60,16 +64,46 @@ const [cmd, ...args] = process.argv.slice(2);
     const ch = await uni.media((m) => console.log(m));
     console.log('\n' + ch.length + ' sources changed');
     for (const x of ch) console.log('- ' + x.where + ': ' + x.what);
+  } else if (cmd === 'draft' && args[1] === 'all') {
+    // every unit still to do whose lecture has been heard and has no draft yet
+    const c = JSON.parse(require('fs').readFileSync(path.join(uni.UNI, 'courses', args[0] + '.json'), 'utf8'));
+    let made = 0, waiting = 0;
+    for (const t of c.todo || []) {
+      const m = t.lecture || t.main;
+      if (!m || !uni.transcript(m.item, m.file)) { waiting++; continue; }
+      if (require('fs').existsSync(path.join(uni.UNI, 'drafts', args[0] + '-' + t.n + '.json'))) continue;
+      const r = await uni.draft(args[0], t.n);
+      made++;
+      console.log('Unit ' + t.n + ', ' + t.title + ': ' + (r.ok ? 'whole (' + r.unit.quiz.length + ' questions, ' + r.unit.chapters.length + ' chapters)' : 'NOT whole, missing ' + r.missing.join(', ')));
+    }
+    console.log(made + ' drafted' + (waiting ? ', ' + waiting + ' not heard yet (node scripts/uni.js listen ' + args[0] + ')' : '') + '. They show in the preview marked as drafts: node scripts/uni.js build');
   } else if (cmd === 'draft') {
     const r = await uni.draft(args[0], args[1], (m) => console.log(m));
     console.log((r.ok ? 'Draft passed the gate: ' : 'Draft is NOT whole yet (' + r.missing.join(', ') + '): ') + r.file);
     console.log(r.unit.quiz.length + ' questions, each quote said word for word in the lecture; ' + r.unit.chapters.length + ' chapters; crystal ' + (r.unit.crystal ? 'yes' : 'no') + '.');
-    if (r.sceneIdea) console.log('Scene idea (the scene itself is still made by hand): ' + r.sceneIdea);
+    console.log(r.unit.scene ? 'Scene: ' + r.unit.scene.analogy : 'No scene yet.');
     for (const x of r.notes) console.log('- ' + x);
-    console.log(r.ok ? 'Read it, change any line, add the scene, then: node scripts/uni.js keep ' + r.slug + ' ' + r.n : 'Run the draft again, or write the missing parts into the file by hand.');
+    console.log(r.ok ? 'Read it, change any line, then: node scripts/uni.js keep ' + r.slug + ' ' + r.n : 'Run the draft again, or write the missing parts into the file by hand.');
   } else if (cmd === 'keep') {
     const r = uni.keepDraft(args[0], args[1]);
     console.log('Unit ' + r.n + ' is in courses/' + r.slug + '.json (' + r.units + ' units). Next: node scripts/uni.js times ' + r.slug + ', then build.');
+  } else if (cmd === 'shelf' && args[0] === 'plan') {
+    const r = await uni.shelfPlan(args[1], args[2], (m) => console.log(m));
+    console.log('Made ' + r.file + ' with ' + r.chapters.length + ' chapters:');
+    for (const c of r.chapters) console.log('  ' + c.n + '. ' + c.title + ' (' + c.passages + ' passages)');
+    console.log('Fix a heading or delete a chapter in that file if the scan got it wrong. Then: node scripts/uni.js shelf write ' + r.id + ' 1');
+  } else if (cmd === 'shelf' && args[0] === 'write') {
+    const book = uni.shelfBooks().find((b) => b.source === args[1]);
+    if (!book) throw new Error('No shelf book ' + args[1]);
+    const which = args[2] === 'all' ? book.chapters.map((c) => c.n) : [+args[2]];
+    for (const n of which) {
+      const r = await uni.shelfWrite(args[1], n, (m) => console.log('  ' + m));
+      console.log('Chapter ' + r.n + ', ' + r.title + ': ' + r.done + ' passages in plain English' + (r.left ? ', ' + r.left + ' left out (run it again to retry them)' : '') + (r.warned ? ', ' + r.warned + ' with a warning' : ''));
+    }
+    console.log('Look at it: node scripts/uni.js build, then the preview. When it reads right: node scripts/uni.js shelf live ' + args[1] + ' on');
+  } else if (cmd === 'shelf' && args[0] === 'live') {
+    const r = uni.setShelfLive(args[1], args[2] === 'on');
+    console.log(r.id + (r.live ? ' goes in the public copy at the next build --site.' : ' stays out of the public copy.'));
   } else if (cmd === 'selftest') {
     // One command, no web and no AI: each part says pass or FAIL, and the exit code is 1 if any part failed.
     const root = path.join(__dirname, '..');

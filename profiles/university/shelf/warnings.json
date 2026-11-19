@@ -1,0 +1,13 @@
+{
+  "_about": "Rules for the old-knowledge shelf, written by a person, never by a model. When a passage of an old book uses one of the words, the plain side shows the warning and its US government page. Add a rule only after opening the page. Checked by node scripts/uni.js check.",
+  "rules": [
+    {
+      "id": "old-pest-poisons",
+      "words": ["paris green", "london purple", "arsenate", "arsenic", "arsenical", "hellebore", "bordeaux", "kerosene emulsion", "tobacco tea", "tobacco dust", "tobacco water", "insecticide", "insecticides"],
+      "warning": "This passage names an old pest poison or spray. Some of these are banned now, and none should be mixed at home. Use only a product sold for home gardens today, and follow its label.",
+      "source": "US EPA: Pest control and pesticide safety for consumers",
+      "url": "https://www.epa.gov/safepestcontrol",
+      "seen": "2026-11-19"
+    }
+  ]
+}

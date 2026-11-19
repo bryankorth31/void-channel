@@ -81,3 +81,42 @@ test('a draft is not kept in a course while it still needs something', () => {
   assert.throws(() => uni.keepDraft('human-nature', 999), /No draft/);
   assert.throws(() => uni.keepDraft('../x', 1), /Not a course slug/);
 });
+
+// The scene from words (19 Nov 2026): the local model gives words, the code gives places that never touch.
+test('a scene is laid out from words, and a word too long for its place is refused, not squeezed in', () => {
+  const words = { analogy: 'Two kids and the last cookie', left: 'One kid', right: 'The other kid', thing: 'cookie', act: 'grab', leftEnd: 'eats it all', rightEnd: 'gets nothing', line: 'I only took what was mine.',
+    says: ['One cookie is left.', 'One kid grabs it.', 'The other kid gets nothing.', 'The grabber still feels fair.'],
+    idea: { left: 'Seeming fair', right: 'Being fair', thing: 'the prize', act: 'cheat', line: 'I acted morally.', say: 'People want to seem fair more than to be fair.' } };
+  const ok = uni.sceneFrom(words);
+  assert.ok(ok.scene && ok.scene.beats.length === 5 && ok.scene.actors.length === 5);
+  const box = (a) => (a.type === 'text' ? { x: 0, y: a.y - 20, w: 800, h: 40 } : { x: a.x, y: a.y, w: a.w, h: a.h || a.w });
+  const A = ok.scene.actors.map(box);
+  for (let i = 0; i < A.length; i++) for (let j = i + 1; j < A.length; j++) assert.ok(A[i].x + A[i].w <= A[j].x || A[j].x + A[j].w <= A[i].x || A[i].y + A[i].h <= A[j].y || A[j].y + A[j].h <= A[i].y, 'actors ' + i + ' and ' + j + ' do not touch');
+  for (const a of A) assert.ok(a.x >= 0 && a.y >= 0 && a.x + a.w <= 800 && a.y + a.h <= 360, 'every actor is inside the 800 by 360 stage');
+  const long = uni.sceneFrom({ ...words, thing: 'the very last chocolate cookie' });
+  assert.strictEqual(long.scene, null);
+  assert.ok(long.notes.some((n) => /thing is over 11 letters/.test(n)));
+  assert.strictEqual(uni.sceneFrom({ ...words, says: ['only one'] }).scene, null);
+});
+
+// The old-knowledge shelf (19 Nov 2026).
+test('shelf: chapters come from capital headings, without the running title or the contents page', () => {
+  const para = 'Dig the ground when it is dry enough to crumble in the hand and not before that day comes. ';
+  const text = ['MY OLD BOOK', 'CONTENTS', 'FIRST THINGS . . 1', 'SECOND THINGS . . 9', '', 'FIRST THINGS', para.repeat(12), 'MY OLD BOOK', '12', para.repeat(10), 'SECOND THINGS', para.repeat(15), 'SECOND THINGS', para.repeat(6)].join('\n');
+  const ch = uni.shelfChapters(text, 'My old book');
+  assert.deepStrictEqual(ch.map((c) => c.title), ['First things', 'Second things']);
+  assert.ok(ch[0].passages.length >= 2 && ch[0].passages.every((p) => p.old.split(' ').length >= 40), 'passages are whole sentences in readable pieces');
+  assert.ok(!ch[0].passages.some((p) => /MY OLD BOOK|\b12\b/.test(p.old)), 'running heads and page numbers are not in the text');
+});
+test('shelf: a rewrite that is empty, far shorter or far longer than the passage is left out', () => {
+  const old = 'word '.repeat(100).trim();
+  assert.strictEqual(uni.gatePlain(old, '').plain, null);
+  assert.strictEqual(uni.gatePlain(old, 'too short').plain, null);
+  assert.strictEqual(uni.gatePlain(old, 'w '.repeat(200)).plain, null);
+  assert.ok(uni.gatePlain(old, 'plain '.repeat(80)).plain);
+});
+test('shelf: the public copy carries a shelf book only when it is marked live', () => {
+  build('--site');
+  const liveIds = new Set((list().shelf || []).filter((x) => x.live).map((x) => x.id));
+  for (const f of fs.readdirSync(SITE).filter((x) => x.startsWith('shelf-'))) assert.ok(liveIds.has(f.slice(6, -5)), f + ' is public but not marked live');
+});

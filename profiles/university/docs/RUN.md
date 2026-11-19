@@ -66,13 +66,22 @@ On this PC, with no chat (the lecture must be heard first, step 4; Ollama must b
 node scripts\uni.js draft human-nature 3
 ```
 
-The local model (gemma4:12b on Ollama) reads what Whisper heard and writes Why you need this, the chapters, the quiz
-and the crystal. It takes a few minutes. The program then checks the model: a quiz answer or a chapter is kept only
-if its quoted words are said in the lecture word for word, and its time is taken from there. Everything dropped is
-listed. The draft lands in `profiles\university\drafts\human-nature-3.json`. Open it, read it, change any line.
+The local model (gemma4:12b on Ollama) reads what Whisper heard and writes Why you need this, the everyday scene,
+the chapters, the quiz and the crystal. It takes under a minute. The program then checks the model: a quiz answer or
+a chapter is kept only if its quoted words are said in the lecture word for word, and its time is taken from there.
+The scene is laid out by the program from the model's words, on places that never touch; a word too long for its
+place is refused. Everything dropped is listed. The draft lands in `profiles\university\drafts\human-nature-3.json`.
 
-The draft has no everyday scene yet (the picture at the top of a unit). It gives a one-line scene idea; the scene
-itself is added to the draft file by hand or by a chat (Copy brief). When nothing is missing:
+Every lecture heard so far, in one go:
+
+```
+node scripts\uni.js draft human-nature all
+```
+
+Build the preview (step 7) and the drafts show inside their course, titled "Draft, not kept yet". They are never
+in the public copy. Read each one there. To change a line, open the draft file and edit it; build again to see it.
+The model's scenes are plain and all use one layout (two sides, a thing between them); rewrite the words in the
+draft's `scene` block if the analogy is weak. When a draft reads right:
 
 ```
 node scripts\uni.js keep human-nature 3
@@ -141,6 +150,41 @@ npx.cmd --yes wrangler@4.151.0 deploy --config C:\Users\bryan\void-channel\profi
 4. Open https://university.voidtv.net and click into the course.
 
 To take a course off the site: untick Live, then steps 2 and 3 again.
+
+## 9. Old books in plain English (the shelf)
+
+An old public-domain how-to book from the source list, with plain modern English beside the printed words.
+
+1. Pick a book marked "old" in HQ > University > Areas (it must be on the Internet Archive) and plan it:
+
+```
+node scripts\uni.js shelf plan Land abc-vegetable-gardening-1916
+```
+
+It fetches the scan's text from the Archive and lists the chapters it found. A scan can get a heading wrong: fix
+the title or delete a chapter in `profiles\university\shelf\<id>.json`.
+
+2. Rewrite one chapter, or all of them (about 2 seconds a passage on this PC; a stopped run carries on where it was):
+
+```
+node scripts\uni.js shelf write abc-vegetable-gardening-1916 all
+```
+
+The printed side is cut from the scan by the program. The model writes only the plain side, and a rewrite that
+is empty, far shorter or far longer than its passage is left out and counted (run it again to retry those).
+
+3. Build the preview (step 7) and read it. The front page gets a row "Old books in plain English".
+
+4. Warnings. A passage that names something now known to be unsafe shows a red warning with a US government page.
+The rules are in `profiles\university\shelf\warnings.json` and are written by a person, never by the model: the
+words to look for, the warning, the page. Open the page yourself before adding a rule. After a change, run the
+write line again (it re-applies the rules without rewriting anything).
+
+5. When the book reads right, put it in the public copy, then step 8:
+
+```
+node scripts\uni.js shelf live abc-vegetable-gardening-1916 on
+```
 
 ## Rules that keep it legal
 

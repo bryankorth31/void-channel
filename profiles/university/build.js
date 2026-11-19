@@ -356,7 +356,60 @@ header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:
 footer{max-width:1400px;margin:0 auto;padding:30px 32px 44px;color:var(--dim);font-size:14px;border-top:1px solid var(--line)}
 footer a{color:var(--gold)}`;
 const CREST = '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 L36 8 V20 C36 30 28 36 20 38 C12 36 4 30 4 20 V8 Z" fill="#132038" stroke="#d4b06a" stroke-width="1.6"/><path d="M11 15 h18 M11 20 h18 M11 25 h12" stroke="#d4b06a" stroke-width="1.6" stroke-linecap="round"/><circle cx="27" cy="26" r="3" fill="none" stroke="#efe9dc" stroke-width="1.4"/></svg>';
+// The old-knowledge shelf (scripts/uni.js shelf): old public-domain how-to books, the plain modern English beside the
+// words as scanned. A book shows once a chapter is rewritten; the public copy carries only books marked live in
+// list.json ("shelf": [{ id, live }]).
+const SHELFBOOKS = (() => {
+  const dir = path.join(DIR, 'shelf');
+  if (!fs.existsSync(dir)) return [];
+  const live = new Set(((JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8')).shelf) || []).filter((x) => x.live).map((x) => x.id));
+  return fs.readdirSync(dir).filter((f) => f.endsWith('.json') && f !== 'warnings.json').map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))
+    .map((b) => ({ ...b, slug: 'shelf-' + b.source, name: b.title, chapters: b.chapters.map((c) => ({ ...c, passages: c.passages.filter((p) => p.plain) })).filter((c) => c.passages.length) }))
+    .filter((b) => b.chapters.length && (!LIVE || live.has(b.source)));
+})();
+function shelfPage(b, all) {
+  const toc = b.chapters.map((c) => '<a href="#c' + c.n + '"><span>' + c.n + '</span>' + esc(c.title) + '</a>').join('');
+  const chapters = b.chapters.map((c) => '<section class="chap" id="c' + c.n + '"><h2><span class="n">' + c.n + '</span>' + esc(c.title) + '</h2>' + (c.why ? '<p class="why">' + esc(c.why) + '</p>' : '')
+    + c.passages.map((p) => '<div class="pair"><div class="plain"><p>' + esc(p.plain) + '</p>'
+      + (p.warnings || []).map((w) => '<p class="warn"><b>Do not follow this part as written.</b> ' + esc(w.text) + ' <a href="' + esc(w.url) + '" target="_blank" rel="noopener">' + esc(w.source) + '</a></p>').join('')
+      + '</div><details class="old"><summary>As printed in ' + esc(String(b.year)) + '</summary><p>' + esc(p.old) + '</p></details></div>').join('') + '</section>').join('');
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(b.title)} · Void University</title>${FONTS}<style>${BASE}
+.swrap{display:grid;grid-template-columns:250px minmax(0,1fr);gap:34px;max-width:1500px;margin:0 auto;padding:26px 32px 60px}
+.swrap nav{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;display:flex;flex-direction:column;gap:2px}
+.swrap nav h4{margin:0 0 8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.swrap nav a{display:flex;gap:10px;padding:7px 10px;border-radius:6px;color:var(--fg);text-decoration:none;font-size:15px}
+.swrap nav a:hover{background:var(--panel)}.swrap nav a span{color:var(--acc);min-width:18px}
+.shero{padding:26px 30px;border:1px solid var(--line);border-radius:10px;background:var(--panel);margin-bottom:26px}
+.shero .dom{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+.shero h1{font-family:Fraunces,Georgia,serif;font-size:40px;margin:8px 0 6px;line-height:1.1}.shero p{margin:6px 0;color:#cfd2dc;font-size:17px;max-width:900px}.shero .src{font-size:14px;color:var(--dim)}.shero a{color:var(--acc)}
+.shero .both button{font:inherit;font-size:14px;margin-top:10px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}
+.chap{margin:0 0 34px}.chap h2{font-family:Fraunces,Georgia,serif;font-size:28px;margin:0 0 6px;display:flex;gap:12px;align-items:baseline}.chap h2 .n{color:var(--acc);font-size:20px}
+.chap .why{color:var(--dim);margin:0 0 14px;font-size:16px}
+.pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;padding:14px 0;border-top:1px solid var(--line);align-items:start}
+.pair .plain p{margin:0;font-size:18px;line-height:1.6}
+.pair .warn{margin-top:10px !important;font-size:15px !important;padding:10px 12px;border:1px solid #6b3a3d;background:#221316;border-radius:8px;color:#f0c9cb}.pair .warn a{color:var(--pink)}
+.pair .old summary{cursor:pointer;color:var(--dim);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.pair .old p{margin:8px 0 0;font-family:Georgia,serif;font-size:15px;line-height:1.55;color:#a9afbf}
+@media (max-width:1000px){.swrap{grid-template-columns:1fr;padding:18px 20px 50px}.swrap nav{position:static;flex-direction:row;flex-wrap:wrap;max-height:none}.swrap nav h4{width:100%}.pair{grid-template-columns:1fr;gap:8px}.shero h1{font-size:30px}}
+</style></head><body>
+${top(b.slug, all)}
+<div class="swrap"><nav><h4>Chapters</h4>${toc}</nav><main>
+<div class="shero"><div class="dom">${esc(b.area)} · an old book in plain English</div><h1>${esc(b.title)}</h1><p>${esc(b.needIt)}</p>
+<p class="src">By ${esc(b.by)}, ${esc(String(b.year))}. ${esc(b.licence)}. <a href="${esc(b.scan || b.url)}" target="_blank" rel="noopener">Read the scanned book on the Internet Archive</a>. The plain side is our rewrite: same facts and steps, today's words. The printed side is a machine's reading of the scan, so a few letters are wrong.</p>
+<div class="both"><button type="button" id="both">Show the printed words beside every passage</button></div></div>
+${chapters}
+</main></div>${FOOT()}
+<script>
+document.getElementById('both').onclick = function () {
+  var open = this.dataset.on !== '1'; this.dataset.on = open ? '1' : '';
+  document.querySelectorAll('details.old').forEach(function (d) { d.open = open; });
+  this.textContent = open ? 'Hide the printed words' : 'Show the printed words beside every passage';
+};
+</script>
+</body></html>`;
+}
 function top(current, all) {
+  all = all.concat(SHELFBOOKS); // shelf books sit in the header beside the courses
   const links = '<a href="index.html"' + (current === 'home' ? ' aria-current="page"' : '') + '>Home</a>' + all.map((o) => o.slug === current ? '<b>' + esc(o.name) + '</b>' : '<a href="' + esc(o.slug) + '.html">' + esc(o.name) + '</a>').join('');
   return '<header class="top"><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + DRAFT + '</header>';
 }
@@ -389,6 +442,7 @@ function home(all, list) {
       + ss.map((c) => row(c.name, 'short pieces any course can use', c.units.map((u) => mini(c, u)).join(''))).join('')
       + (ch.length ? row('Channels for ' + t, 'whole series on the Internet Archive that go with these courses', ch.map(chan).join('')) : '');
   }).join('');
+  const shelfRow = SHELFBOOKS.length ? row('Old books in plain English', 'useful old how-to, with the printed words beside it', SHELFBOOKS.map((b) => '<a class="card course" data-lv="' + esc((b.levels || []).join('|')) + '" href="' + esc(b.slug) + '.html"><div class="ph"><img src="' + img('a-' + String(b.area).toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""></div><div class="t"><small>' + esc(b.area) + ' · printed ' + esc(String(b.year)) + ' · ' + b.chapters.length + ' chapters</small><b>' + esc(b.title) + '</b><span>' + esc(b.needIt) + '</span></div></a>').join('')) : '';
   const tiles = list.types.map((t) => {
     const n = full.filter((c) => c.domain === t).length; // same count as the row: the mechanisms shelf is not a course
     return '<div class="area' + (n ? ' has' : '') + '"><img loading="lazy" src="' + img('a-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""><div><b>' + esc(t) + '</b><small>' + (n ? n + (n === 1 ? ' course' : ' courses') : 'coming') + '</small></div></div>';
@@ -430,6 +484,7 @@ ${top('home', all)}
 <div class="hero"><img src="${img('a-mind')}" alt=""><div><div class="kick">Free courses · no account</div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way.</p></div></div>
 <main><div class="who"><span>Who is it for?</span><button class="on" data-lv="">Everyone</button><button data-lv="high school">High school</button><button data-lv="young adults">Young adults</button><button data-lv="everyday">Everyday life</button><small>Everyday life: not for a job in the field, just useful for living, deciding and understanding people.</small></div>
 ${rows}
+${shelfRow}
 <h2><span>Every area</span><small>more courses are on the way</small></h2><div class="areas">${tiles}</div></main>
 ${FOOT()}
 <script>
@@ -468,7 +523,20 @@ fs.copyFileSync(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
 const shipsLab = (u) => !!(u.lab && (!LIVE || u.lab.live));
 const LIVE_SLUGS = new Set((JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8')).courses || []).filter((c) => c.live).map((c) => c.slug));
 const courses = fs.readdirSync(path.join(DIR, 'courses')).filter((f) => f.endsWith('.json'));
-const loaded = courses.map((f) => JSON.parse(fs.readFileSync(path.join(DIR, 'courses', f), 'utf8')))
+// The preview (never the public copy) also shows each whole local draft (scripts/uni.js draft) inside its course,
+// marked in its title, so a draft can be read and watched as a page before it is kept.
+const withDrafts = (c) => {
+  const dir = path.join(DIR, 'drafts');
+  if (LIVE || !fs.existsSync(dir)) return c;
+  for (const f of fs.readdirSync(dir).filter((x) => x.startsWith(c.slug + '-') && x.endsWith('.json'))) {
+    let d = null; try { d = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')); } catch (e) { continue; }
+    if (!d || !d.ok || !d.unit || c.units.some((u) => u.n === d.unit.n)) continue;
+    c.units.push({ ...d.unit, title: 'Draft, not kept yet: ' + d.unit.title });
+  }
+  c.units.sort((a, b) => a.n - b.n);
+  return c;
+};
+const loaded = courses.map((f) => withDrafts(JSON.parse(fs.readFileSync(path.join(DIR, 'courses', f), 'utf8'))))
   .sort((a, b) => (a.slug === 'critical-thinking' ? -1 : b.slug === 'critical-thinking' ? 1 : 0))
   // A course shows once it has a unit (a scaffold is only a plan). The public copy (--site) carries only the courses
   // Bryan marked live in list.json, so a draft another chat is working on never ships with someone else's deploy.
@@ -486,6 +554,10 @@ fs.mkdirSync(path.join(OUT, 'img'), { recursive: true });
 for (const k of Object.keys(IMG)) fs.copyFileSync(path.join(DIR, IMG[k].file), path.join(OUT, IMG[k].file));
 fs.writeFileSync(path.join(OUT, 'credits.html'), credits(loaded));
 fs.writeFileSync(path.join(OUT, 'index.html'), home(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
+for (const b of SHELFBOOKS) {
+  fs.writeFileSync(path.join(OUT, b.slug + '.html'), shelfPage(b, loaded));
+  console.log(b.slug + ': ' + b.chapters.length + ' chapters, ' + b.chapters.reduce((a, c) => a + c.passages.length, 0) + ' passages');
+}
 for (const c of loaded) {
   const html = page(c, loaded);
   fs.writeFileSync(path.join(OUT, c.slug + '.html'), html);
