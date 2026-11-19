@@ -3,7 +3,7 @@
   "slug": "frontier-house",
   "type": "Reality & Talk",
   "network": "PBS",
-  "matchedAt": "2026-10-23T07:33:59.860Z",
+  "matchedAt": "2026-11-19T07:42:00.532Z",
   "addedAt": "2026-10-23T07:33:59.860Z",
   "tvmaze": {
     "id": 25425,
@@ -30,31 +30,18 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.8,
-            "why": "title ~ \"The American Dream\" (0.95)",
+            "why": "title ~ \"The American Dream\" (1.00)",
             "item": "frontier-house",
             "itemTitle": "Frontier House",
-            "file": "Frontier.House.S01.E01.The.American.Dream.InternetArchive_1280x720_prob-3.mp4",
-            "name": "Frontier.House.S01.E01.The.American.Dream.InternetArchive_1280x720_prob-3",
-            "url": "https://archive.org/download/frontier-house/Frontier.House.S01.E01.The.American.Dream.InternetArchive_1280x720_prob-3.mp4",
+            "file": "Frontier.House.S01.E01.The.American.Dream.InternetArchive.ia.mp4",
+            "name": "Frontier.House.S01.E01.The.American.Dream",
+            "url": "https://archive.org/download/frontier-house/Frontier.House.S01.E01.The.American.Dream.InternetArchive.ia.mp4",
             "seconds": 3107,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 50412
+            "sizeMB": 443
           },
           "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"The American Dream\" (1.00)",
-              "item": "frontier-house",
-              "itemTitle": "Frontier House",
-              "file": "Frontier.House.S01.E01.The.American.Dream.InternetArchive.ia.mp4",
-              "name": "Frontier.House.S01.E01.The.American.Dream",
-              "url": "https://archive.org/download/frontier-house/Frontier.House.S01.E01.The.American.Dream.InternetArchive.ia.mp4",
-              "seconds": 3107,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 443
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"The American Dream\" (0.95)",
@@ -67,6 +54,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 443
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The American Dream\" (0.95)",
+              "item": "frontier-house",
+              "itemTitle": "Frontier House",
+              "file": "Frontier.House.S01.E01.The.American.Dream.InternetArchive_1280x720_prob-3.ia.mp4",
+              "name": "Frontier.House.S01.E01.The.American.Dream.InternetArchive_1280x720_prob-3",
+              "url": "https://archive.org/download/frontier-house/Frontier.House.S01.E01.The.American.Dream.InternetArchive_1280x720_prob-3.ia.mp4",
+              "seconds": 3107,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 313
             },
             {
               "conf": 0.55,
@@ -93,28 +93,15 @@
             "why": "title ~ \"Promised Land\" (0.95)",
             "item": "frontier-house",
             "itemTitle": "Frontier House",
-            "file": "Frontier.House.S01.E02.The.Promised.Land.InternetArchive_1280x720_prob-3.mp4",
-            "name": "Frontier.House.S01.E02.The.Promised.Land.InternetArchive_1280x720_prob-3",
-            "url": "https://archive.org/download/frontier-house/Frontier.House.S01.E02.The.Promised.Land.InternetArchive_1280x720_prob-3.mp4",
+            "file": "Frontier.House.S01.E02.The.Promised.Land.InternetArchive.ia.mp4",
+            "name": "Frontier.House.S01.E02.The.Promised.Land",
+            "url": "https://archive.org/download/frontier-house/Frontier.House.S01.E02.The.Promised.Land.InternetArchive.ia.mp4",
             "seconds": 3202,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 53744
+            "sizeMB": 456
           },
           "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Promised Land\" (0.95)",
-              "item": "frontier-house",
-              "itemTitle": "Frontier House",
-              "file": "Frontier.House.S01.E02.The.Promised.Land.InternetArchive.ia.mp4",
-              "name": "Frontier.House.S01.E02.The.Promised.Land",
-              "url": "https://archive.org/download/frontier-house/Frontier.House.S01.E02.The.Promised.Land.InternetArchive.ia.mp4",
-              "seconds": 3202,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 456
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"Promised Land\" (0.95)",
@@ -127,6 +114,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 456
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Promised Land\" (0.95)",
+              "item": "frontier-house",
+              "itemTitle": "Frontier House",
+              "file": "Frontier.House.S01.E02.The.Promised.Land.InternetArchive_1280x720_prob-3.ia.mp4",
+              "name": "Frontier.House.S01.E02.The.Promised.Land.InternetArchive_1280x720_prob-3",
+              "url": "https://archive.org/download/frontier-house/Frontier.House.S01.E02.The.Promised.Land.InternetArchive_1280x720_prob-3.ia.mp4",
+              "seconds": 3202,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 322
             },
             {
               "conf": 0.55,

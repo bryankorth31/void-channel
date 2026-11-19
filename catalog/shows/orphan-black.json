@@ -3,7 +3,7 @@
   "slug": "orphan-black",
   "type": "British and Beyond",
   "network": "Space",
-  "matchedAt": "2026-10-19T04:11:16.598Z",
+  "matchedAt": "2026-11-19T07:42:03.293Z",
   "addedAt": "2026-10-16T07:57:09.439Z",
   "tvmaze": {
     "id": 61,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 50,
-    "live": 8,
-    "review": 42,
+    "live": 10,
+    "review": 40,
     "missing": 0,
     "pct": 100
   },
@@ -54,6 +54,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1445
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 10 in \"orphan black 4 temp\"",
+              "item": "10_20260505",
+              "itemTitle": "orphan black 4 temp",
+              "file": "1.mp4",
+              "name": "1",
+              "url": "https://archive.org/download/10_20260505/1.mp4",
+              "seconds": 2631,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 203
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 1 of 10 in \"temp 3 orphan black\"",
+              "item": "10_20260423_20260423",
+              "itemTitle": "temp 3 orphan black",
+              "file": "1.mp4",
+              "name": "1",
+              "url": "https://archive.org/download/10_20260423_20260423/1.mp4",
+              "seconds": 2541,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 198
             }
           ]
         },
@@ -88,6 +114,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1399
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 10 in \"temp 3 orphan black\"",
+              "item": "10_20260423_20260423",
+              "itemTitle": "temp 3 orphan black",
+              "file": "2.mp4",
+              "name": "2",
+              "url": "https://archive.org/download/10_20260423_20260423/2.mp4",
+              "seconds": 2593,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 201
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 10 in \"orphan black 4 temp\"",
+              "item": "10_20260505",
+              "itemTitle": "orphan black 4 temp",
+              "file": "2.mp4",
+              "name": "2",
+              "url": "https://archive.org/download/10_20260505/2.mp4",
+              "seconds": 2575,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 201
             }
           ]
         },
@@ -101,13 +153,13 @@
             "why": "S/E in filename",
             "item": "orphan-black-s-01-",
             "itemTitle": "Orphan Black temp 1 ep 1 ao 6",
-            "file": "Orphan Black S01E03 - 720p - By-LuanHarper.mp4",
+            "file": "Orphan Black S01E03 - 720p - By-LuanHarper.ia.mp4",
             "name": "Orphan Black S01E03 - 720p - By-LuanHarper",
-            "url": "https://archive.org/download/orphan-black-s-01-/Orphan%20Black%20S01E03%20-%20720p%20-%20By-LuanHarper.mp4",
+            "url": "https://archive.org/download/orphan-black-s-01-/Orphan%20Black%20S01E03%20-%20720p%20-%20By-LuanHarper.ia.mp4",
             "seconds": 2604,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
-            "sizeMB": 417
+            "sizeMB": 322
           },
           "alternates": [
             {
@@ -122,6 +174,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1401
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 10 in \"temp 3 orphan black\"",
+              "item": "10_20260423_20260423",
+              "itemTitle": "temp 3 orphan black",
+              "file": "3.mp4",
+              "name": "3",
+              "url": "https://archive.org/download/10_20260423_20260423/3.mp4",
+              "seconds": 2567,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 201
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 3 of 10 in \"orphan black 4 temp\"",
+              "item": "10_20260505",
+              "itemTitle": "orphan black 4 temp",
+              "file": "3.mp4",
+              "name": "3",
+              "url": "https://archive.org/download/10_20260505/3.mp4",
+              "seconds": 2577,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 197
             }
           ]
         },
@@ -156,6 +234,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1397
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 10 in \"orphan black 4 temp\"",
+              "item": "10_20260505",
+              "itemTitle": "orphan black 4 temp",
+              "file": "4.mp4",
+              "name": "4",
+              "url": "https://archive.org/download/10_20260505/4.mp4",
+              "seconds": 2579,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 200
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 10 in \"temp 3 orphan black\"",
+              "item": "10_20260423_20260423",
+              "itemTitle": "temp 3 orphan black",
+              "file": "4.mp4",
+              "name": "4",
+              "url": "https://archive.org/download/10_20260423_20260423/4.mp4",
+              "seconds": 2565,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 199
             }
           ]
         },
@@ -190,6 +294,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1407
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 10 in \"orphan black 4 temp\"",
+              "item": "10_20260505",
+              "itemTitle": "orphan black 4 temp",
+              "file": "5.mp4",
+              "name": "5",
+              "url": "https://archive.org/download/10_20260505/5.mp4",
+              "seconds": 2591,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 202
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 5 of 10 in \"temp 3 orphan black\"",
+              "item": "10_20260423_20260423",
+              "itemTitle": "temp 3 orphan black",
+              "file": "5.mp4",
+              "name": "5",
+              "url": "https://archive.org/download/10_20260423_20260423/5.mp4",
+              "seconds": 2563,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 200
             }
           ]
         },
@@ -213,6 +343,19 @@
           },
           "alternates": [
             {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "orphan-black-s-01-e-06-720p-by-luan-harper",
+              "itemTitle": "Orphan Black S 01 E 06 720p By Luan Harper",
+              "file": "Orphan Black S01E06 - 720p - By-LuanHarper.mp4",
+              "name": "Orphan Black S01E06 - 720p - By-LuanHarper",
+              "url": "https://archive.org/download/orphan-black-s-01-e-06-720p-by-luan-harper/Orphan%20Black%20S01E06%20-%20720p%20-%20By-LuanHarper.mp4",
+              "seconds": 2671,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 205
+            },
+            {
               "conf": 0.75,
               "why": "title ~ \"Variations Under Domestication\" (0.96)",
               "item": "orphan-black",
@@ -224,6 +367,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1400
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 6 of 6 in \"orphan black 5 temp\"",
+              "item": "10_20260505_202605",
+              "itemTitle": "orphan black 5 temp",
+              "file": "10.mp4",
+              "name": "10",
+              "url": "https://archive.org/download/10_20260505_202605/10.mp4",
+              "seconds": 2663,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 209
             }
           ]
         },
@@ -231,21 +387,61 @@
           "number": 7,
           "name": "Parts Developed in an Unusual Manner",
           "airdate": "2013-05-11",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Parts Developed in an Unusual Manner\" (0.97)",
-            "item": "orphan-black",
-            "itemTitle": "Orphan Black",
-            "file": "Season 1/1-7_Parts Developed in an Unusual Manner.mp4",
-            "name": "Season 1/1-7_Parts Developed in an Unusual Manner",
-            "url": "https://archive.org/download/orphan-black/Season%201%2F1-7_Parts%20Developed%20in%20an%20Unusual%20Manner.mp4",
-            "seconds": 2602,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "orphan-black-s-01-e-07-720p-by-luan-harper",
+            "itemTitle": "Orphan Black S 01 E 07 720p By Luan Harper",
+            "file": "Orphan Black S01E07 - 720p - By-LuanHarper.mp4",
+            "name": "Orphan Black S01E07 - 720p - By-LuanHarper",
+            "url": "https://archive.org/download/orphan-black-s-01-e-07-720p-by-luan-harper/Orphan%20Black%20S01E07%20-%20720p%20-%20By-LuanHarper.mp4",
+            "seconds": 2603,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1400
+            "sizeMB": 417
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Parts Developed in an Unusual Manner\" (0.97)",
+              "item": "orphan-black",
+              "itemTitle": "Orphan Black",
+              "file": "Season 1/1-7_Parts Developed in an Unusual Manner.mp4",
+              "name": "Season 1/1-7_Parts Developed in an Unusual Manner",
+              "url": "https://archive.org/download/orphan-black/Season%201%2F1-7_Parts%20Developed%20in%20an%20Unusual%20Manner.mp4",
+              "seconds": 2602,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1400
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 10 in \"orphan black 4 temp\"",
+              "item": "10_20260505",
+              "itemTitle": "orphan black 4 temp",
+              "file": "7.mp4",
+              "name": "7",
+              "url": "https://archive.org/download/10_20260505/7.mp4",
+              "seconds": 2579,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 200
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 7 of 10 in \"temp 3 orphan black\"",
+              "item": "10_20260423_20260423",
+              "itemTitle": "temp 3 orphan black",
+              "file": "7.mp4",
+              "name": "7",
+              "url": "https://archive.org/download/10_20260423_20260423/7.mp4",
+              "seconds": 2571,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 199
+            }
+          ]
         },
         {
           "number": 8,
@@ -278,6 +474,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1400
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 10 in \"temp 3 orphan black\"",
+              "item": "10_20260423_20260423",
+              "itemTitle": "temp 3 orphan black",
+              "file": "8.mp4",
+              "name": "8",
+              "url": "https://archive.org/download/10_20260423_20260423/8.mp4",
+              "seconds": 2567,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 200
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 8 of 10 in \"orphan black 4 temp\"",
+              "item": "10_20260505",
+              "itemTitle": "orphan black 4 temp",
+              "file": "8.mp4",
+              "name": "8",
+              "url": "https://archive.org/download/10_20260505/8.mp4",
+              "seconds": 2545,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 197
             }
           ]
         },
@@ -312,6 +534,32 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 1398
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 10 in \"orphan black 4 temp\"",
+              "item": "10_20260505",
+              "itemTitle": "orphan black 4 temp",
+              "file": "9.mp4",
+              "name": "9",
+              "url": "https://archive.org/download/10_20260505/9.mp4",
+              "seconds": 2629,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 204
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 9 of 10 in \"temp 3 orphan black\"",
+              "item": "10_20260423_20260423",
+              "itemTitle": "temp 3 orphan black",
+              "file": "9.mp4",
+              "name": "9",
+              "url": "https://archive.org/download/10_20260423_20260423/9.mp4",
+              "seconds": 2565,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 196
             }
           ]
         },
@@ -319,21 +567,61 @@
           "number": 10,
           "name": "Endless Forms Most Beautiful",
           "airdate": "2013-06-01",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.75,
-            "why": "title ~ \"Endless Forms Most Beautiful\" (0.95)",
-            "item": "orphan-black",
-            "itemTitle": "Orphan Black",
-            "file": "Season 1/1-10_Endless Forms Most Beautiful.mp4",
-            "name": "Season 1/1-10_Endless Forms Most Beautiful",
-            "url": "https://archive.org/download/orphan-black/Season%201%2F1-10_Endless%20Forms%20Most%20Beautiful.mp4",
-            "seconds": 2629,
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "orphan-black-s-01-e-10-720p-by-luan-harper",
+            "itemTitle": "Orphan Black S 01 E 10 720p By Luan Harper",
+            "file": "Orphan Black S01E10 - 720p - By-LuanHarper.mp4",
+            "name": "Orphan Black S01E10 - 720p - By-LuanHarper",
+            "url": "https://archive.org/download/orphan-black-s-01-e-10-720p-by-luan-harper/Orphan%20Black%20S01E10%20-%20720p%20-%20By-LuanHarper.mp4",
+            "seconds": 2628,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1404
+            "sizeMB": 404
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Endless Forms Most Beautiful\" (0.95)",
+              "item": "orphan-black",
+              "itemTitle": "Orphan Black",
+              "file": "Season 1/1-10_Endless Forms Most Beautiful.mp4",
+              "name": "Season 1/1-10_Endless Forms Most Beautiful",
+              "url": "https://archive.org/download/orphan-black/Season%201%2F1-10_Endless%20Forms%20Most%20Beautiful.mp4",
+              "seconds": 2629,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1404
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 10 in \"orphan black 4 temp\"",
+              "item": "10_20260505",
+              "itemTitle": "orphan black 4 temp",
+              "file": "10.mp4",
+              "name": "10",
+              "url": "https://archive.org/download/10_20260505/10.mp4",
+              "seconds": 2787,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 215
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 10 of 10 in \"temp 3 orphan black\"",
+              "item": "10_20260423_20260423",
+              "itemTitle": "temp 3 orphan black",
+              "file": "10.mp4",
+              "name": "10",
+              "url": "https://archive.org/download/10_20260423_20260423/10.mp4",
+              "seconds": 2647,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 205
+            }
+          ]
         }
       ]
     },
