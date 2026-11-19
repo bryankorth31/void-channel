@@ -85,6 +85,8 @@ Not drift, but worth knowing: labs, the boundary course and the guess-first chan
 | 50 | 15 Nov 2026 | Sources: papers and public-domain texts; never get round a blocked site. | "gatherers use papers and public-domain texts" (memory) | sources/FORMAT.md, check.json | HOLDS | Sites that refuse the checker are marked "open by hand", not bypassed. |
 | 51 | 15 Nov 2026 | Licence travels with every piece; every piece names its source. | (plan doc) | build.js piece(), footer | HOLDS | Live footer: "each piece names its source and licence." CC licences link their deeds. |
 | 52 | 15 Nov 2026 | Lessons play from the Internet Archive; nothing is downloaded or stored. | (plan doc) | build.js piece() | HOLDS | Pieces embed Archive items; no media files in `site/` beyond photos. |
+| 53 | 19 Nov 2026 | The University teaches life knowledge too, not only lecture courses; teaching comes in two sizes, a course or a smaller class, and can be found or made by us. | "University needs to be life knowledge as well. We can find and create \"courses\" or \"classes\"" (relayed by the Void University build chat) | course JSON `size: class`; scripts/lib/uni.js classFrom(); shelf/ | PARTLY BUILT | First class: Grow your own vegetables (Land), from the 1916 gardening book on the shelf. Not live. |
+| 54 | 19 Nov 2026 | Finish, do not expand: every University step runs on this PC without a Claude chat (local model for the words, code as the gate), with a run guide and a self-test. | "void university is now the least finished ... lets fix that" | docs/FINISH-PLAN.md, docs/RUN.md, uni.js selftest, draft, keep, shelf, class | HOLDS | HQ buttons for the new commands are still to come (HQ areas chat). |
 
 ## Notes for the next chat
 

@@ -112,6 +112,29 @@ function scaffold(area, name) {
 }
 
 // The goes-live switch: build.js --site carries only courses marked live. Deploying is still Bryan's own step.
+// A course built on an open course's recorded lectures: one unit to do for each lecture file in the Archive item
+// (video, or sound only), named as the Archive names it. The proposed topics stay in the file as "topics".
+async function lectures(slug) {
+  if (!SLUG_OK.test(String(slug))) throw new Error('Not a course slug: ' + String(slug).slice(0, 40));
+  const c = readJson(courseFile(slug), null);
+  if (!c) throw new Error('No course ' + slug);
+  const src = c.source && sourceById(c.domain, c.source.id);
+  const media = src && ((src.video && src.video.archive) || (src.audio && src.audio.archive));
+  if (!media) throw new Error('The source of this course has no lectures on the Internet Archive.');
+  const meta = await (await fetch('https://archive.org/metadata/' + media + '/files', { signal: AbortSignal.timeout(30000) })).json();
+  const files = (meta.result || []).filter((f) => f.source === 'original' && /\.(mp4|ogv|webm|mp3)$/i.test(f.name)).sort((a, b) => a.name.localeCompare(b.name, 'en', { numeric: true }));
+  if (!files.length) throw new Error('No lecture files found in the Archive item ' + media);
+  const have = new Set(c.units.map((u) => u.main && u.main.file).filter(Boolean));
+  if (c.todo && c.todo.length && !c.todo.some((t) => t.lecture)) c.topics = c.todo.map((t) => t.title);
+  c.todo = files.filter((f) => !have.has(f.name)).map((f, i) => {
+    const title = clean(f.title || f.name.replace(/\.[a-z0-9]+$/i, '').replace(/^[\d.\s_-]+/, '').replace(/_/g, ' '));
+    return { n: files.indexOf(f) + 1, title, lecture: { title: 'Lecture ' + (files.indexOf(f) + 1) + ': ' + title, item: media, file: f.name, page: src.url } };
+  });
+  c.planned = files.length;
+  writeJson(courseFile(slug), c);
+  return { slug, lectures: files.length, todo: c.todo.length, sound: !/\.(mp4|ogv|webm)$/i.test(files[0].name), seconds: Math.round(files.reduce((a, f) => a + (+f.length || 0), 0)) };
+}
+
 function setLive(slug, live) {
   const L = list();
   const c = (L.courses || []).find((x) => x.slug === slug);
@@ -465,7 +488,7 @@ function sceneFrom(w) {
 // The gate. Takes what the model wrote and the transcript; returns the unit parts that passed and plain notes on
 // everything dropped. Pure: no model, no web, no files (tests/uni.test.js runs it).
 const WORDS = ['needIt', 'why', 'outcome', 'reachesYou', 'do']; // the plain sentences every unit shows
-function gateDraft(raw, tr) {
+function gateDraft(raw, tr, opt = {}) {
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) raw = {};
   const notes = [];
   const unit = { needIt: clean(raw.needIt), why: clean(raw.why), outcome: clean(raw.outcome), reachesYou: clean(raw.reachesYou), do: clean(raw.do) };
@@ -508,7 +531,7 @@ function gateDraft(raw, tr) {
   if (unit.needIt.length < 20) missing.push('why you need this');
   if (unit.reachesYou.length < 20) missing.push('how this reaches you');
   if (unit.do.length < 20) missing.push('do this week');
-  if (unit.chapters.length < 3) missing.push('3 chapters (has ' + unit.chapters.length + ')');
+  if (opt.reading) delete unit.chapters; else if (unit.chapters.length < 3) missing.push('3 chapters (has ' + unit.chapters.length + ')');
   if (unit.quiz.length < 4) missing.push('4 quiz questions (has ' + unit.quiz.length + ')');
   if (!unit.crystal) missing.push('crystal');
   const sc = sceneFrom(raw.scene);
@@ -518,11 +541,11 @@ function gateDraft(raw, tr) {
 
 // Plain JSON mode with thinking off: on gemma4:12b a strict schema with thinking on came back empty after 3 minutes;
 // this way a 5,000 word lecture is answered in about 20 seconds (tried 19 Nov 2026). The gate checks the shape.
-function draftPrompt(c, t, tr, more) {
+function draftPrompt(c, t, tr, more, reading) {
   const lines = []; let cur = [];
   for (const sg of tr.segments) { cur.push(String(sg.text).trim()); if (cur.join(' ').split(' ').length > 60) { lines.push(cur.join(' ')); cur = []; } }
   if (cur.length) lines.push(cur.join(' '));
-  return `You are writing one unit of Void University, a free public learning site. Plain language, short sentences, words a 14 year old knows. No dashes. Write only from the lecture below. Add no fact it does not say.
+  return `You are writing one unit of Void University, a free public learning site. Plain language, short sentences, words a 14 year old knows. No dashes. Write only from the ${reading ? 'chapter' : 'lecture'} below. Add no fact it does not say.
 
 COURSE: ${c.name}. ${c.why}
 UNIT ${t.n}: ${t.title}
@@ -536,11 +559,11 @@ Write JSON with these fields:
 - do: one small thing to try this week that uses the idea, in one or two sentences, starting with a verb.
 - scene: the words for a small picture of ONE everyday situation that works the same way as the lecture's main idea (not the lecture's own example; something from a kitchen, a shop, a school, a street). Two sides face each other with one thing between them. Keep every length limit, they are hard limits:
   "analogy" (the situation in a few words, at most 70 letters), "left" and "right" (who or what is on each side, at most 20 letters each), "thing" (what is between them, one or two words, at most 11 letters), "act" (what happens, one word, at most 11 letters), "leftEnd" and "rightEnd" (how each side ends up, at most 30 letters each), "line" (what someone says or feels at the end, at most 56 letters), "says" (exactly 4 short captions telling it in order: the setup, what happens, the result, the feeling; at most 70 letters each), and "idea": the same picture renamed as the lecture's idea, with "left", "right", "thing", "act", "line" (same limits; the idea's own name for each part) and "say" (one caption that states the idea plainly, at most 70 letters).
-- chapters: 4 to 7 parts of the lecture, in order. Each has "title" (a few plain words) and "words": the first 8 to 12 words spoken where that part begins, COPIED EXACTLY from the lecture text, letter for letter.
+${reading ? '- chapters: leave this as an empty list.\n- (not used) ' : '- chapters: '}4 to 7 parts of the lecture, in order. Each has "title" (a few plain words) and "words": the first 8 to 12 words spoken where that part begins, COPIED EXACTLY from the lecture text, letter for letter.
 - quiz: ${more ? more + ' more questions, on other moments of the lecture than the ones already kept (listed at the end). ' : '6 questions. '}Each has "q", "choices" (4 different short answers), "a" (the place of the right one, 0 to 3), "why" (one or two plain sentences on why it is right), and "quote": ONE sentence of 10 to 40 words COPIED EXACTLY from the lecture text, letter for letter, that proves the answer. Do not shorten, join or fix the quote. Spread the questions across the whole lecture.
 - crystal: "partials" (exactly 5 short true statements from the lecture that all point at one idea), "key" (that one idea in a sentence), "decoys" (exactly 2 tempting wrong ideas, each with "text" and "why" it is wrong according to the lecture), "aha" (one line saying how the partials fit the key).
 
-LECTURE (heard by Whisper, word for word):
+${reading ? 'CHAPTER (the printed words of an old book, as a machine read the scan; copy quotes from it exactly, mistakes included)' : 'LECTURE (heard by Whisper, word for word)'}:
 ${lines.join('\n')}`;
 }
 async function askOllama(prompt) {
@@ -563,24 +586,33 @@ async function draft(slug, n, log = () => {}, ask = askOllama) {
   if (!SLUG_OK.test(String(slug))) throw new Error('Not a course slug: ' + String(slug).slice(0, 40));
   const c = readJson(courseFile(slug), null);
   if (!c) throw new Error('No course ' + slug);
-  const t = (c.todo || []).find((x) => x.n === +n) || c.units.find((x) => x.n === +n);
+  let t = (c.todo || []).find((x) => x.n === +n) || c.units.find((x) => x.n === +n);
   if (!t) throw new Error('No unit ' + n + ' in ' + slug);
   const m = t.main || t.lecture;
-  if (!m || !m.item || !m.file) throw new Error('Unit ' + n + ' plays no lecture. The local draft works from a heard lecture.');
-  const tr = transcript(m.item, m.file);
-  if (!tr) throw new Error('This lecture has not been heard yet. Run: node scripts/uni.js listen ' + slug);
+  const rd = t.reading || null; // { shelf, chapter }: the unit is drawn from a chapter of a shelf book
+  let tr = null; let book = null; let bch = null;
+  if (rd) {
+    book = readJson(shelfFile(rd.shelf), null); bch = book && book.chapters.find((x) => x.n === +rd.chapter);
+    if (!bch) throw new Error('Unit ' + n + ' reads chapter ' + rd.chapter + ' of shelf/' + rd.shelf + '.json, which is not there.');
+    const words = []; for (const ps of bch.passages) for (const w of tokens(ps.old)) words.push({ w, raw: w, t: words.length });
+    tr = { words, segments: bch.passages.map((ps) => ({ text: ps.old })), seconds: 0 };
+  } else {
+    if (!m || !m.item || !m.file) throw new Error('Unit ' + n + ' plays no lecture and reads no shelf chapter, so there is nothing to draft it from.');
+    tr = transcript(m.item, m.file);
+    if (!tr) throw new Error('This lecture has not been heard yet. Run: node scripts/uni.js listen ' + slug);
+  }
   let best = null; const kept = [];
   for (let round = 1; round <= 3; round++) {
     log('Round ' + round + ': ' + DRAFT_MODEL + ' is reading the lecture (' + tr.words.length + ' words). This takes a few minutes.');
     // a round the model fails (it can loop on a word and be cut off) counts as an empty round, and the next one tries again
     let raw = {};
-    try { raw = await ask(draftPrompt(c, t, tr, best ? 8 - kept.length : 0) + (best ? '\n\nALREADY KEPT:\n' + kept.map((q) => '- ' + q.q).join('\n') : '')); } catch (err) { if (/not answering|is it installed/.test(err.message)) throw err; log('Round ' + round + ' failed in the model: ' + err.message); }
-    const g = gateDraft(raw, tr);
+    try { raw = await ask(draftPrompt(c, t, tr, best ? 8 - kept.length : 0, !!rd) + (best ? '\n\nALREADY KEPT:\n' + kept.map((q) => '- ' + q.q).join('\n') : '')); } catch (err) { if (/not answering|is it installed/.test(err.message)) throw err; log('Round ' + round + ' failed in the model: ' + err.message); }
+    const g = gateDraft(raw, tr, { reading: !!rd });
     for (const q of g.unit.quiz) if (!kept.some((k) => Math.abs(k.t - q.t) < 5)) kept.push(q);
     if (!best) best = { notes: [], unit: g.unit };
     best.notes.push(...g.notes.map((x) => 'round ' + round + ': ' + x));
     for (const k of WORDS) if (best.unit[k].length < 20) best.unit[k] = g.unit[k];
-    if (g.unit.chapters.length > best.unit.chapters.length) best.unit.chapters = g.unit.chapters;
+    if (!rd && g.unit.chapters.length > best.unit.chapters.length) best.unit.chapters = g.unit.chapters;
     best.unit.crystal = best.unit.crystal || g.unit.crystal;
     best.unit.scene = best.unit.scene || g.unit.scene;
     best.unit.quiz = kept.slice().sort((a, b) => a.t - b.t).slice(0, 7);
@@ -588,16 +620,21 @@ async function draft(slug, n, log = () => {}, ask = askOllama) {
     if (best.unit.needIt.length < 20) best.missing.push('why you need this');
     if (best.unit.reachesYou.length < 20) best.missing.push('how this reaches you');
     if (best.unit.do.length < 20) best.missing.push('do this week');
-    if (best.unit.chapters.length < 3) best.missing.push('3 chapters (has ' + best.unit.chapters.length + ')');
+    if (!rd && best.unit.chapters.length < 3) best.missing.push('3 chapters (has ' + best.unit.chapters.length + ')');
     if (best.unit.quiz.length < 4) best.missing.push('4 quiz questions (has ' + best.unit.quiz.length + ')');
     if (!best.unit.crystal) best.missing.push('crystal');
     if (!best.unit.scene) best.missing.push('scene');
     best.ok = !best.missing.length;
-    log('Round ' + round + ': ' + best.unit.quiz.length + ' questions with a word for word quote, ' + best.unit.chapters.length + ' chapters' + (best.missing.length ? '; still missing: ' + best.missing.join(', ') : ''));
+    log('Round ' + round + ': ' + best.unit.quiz.length + ' questions with a word for word quote' + (rd ? '' : ', ' + best.unit.chapters.length + ' chapters') + (best.missing.length ? '; still missing: ' + best.missing.join(', ') : ''));
     if (best.ok && best.unit.quiz.length >= 5) break;
   }
   const lic = (c.units.find((u) => u.main && u.main.licence) || { main: {} }).main.licence || (c.source && c.source.licence) || '';
-  const unit = { n: t.n, title: t.title, ...best.unit, main: t.main || { role: 'watch', title: m.title || t.title, by: (c.source && c.source.by) || '', item: m.item, file: m.file, seconds: Math.round(tr.seconds), licence: lic, note: 'A full lecture. Use the chapters to watch it in pieces.' } };
+  if (rd) { // a quote from a book points at its chapter on the shelf page, not at a time
+    const ref = 'shelf-' + rd.shelf + '.html#c' + bch.n;
+    for (const q of best.unit.quiz) { delete q.t; q.ref = ref; }
+    t = { ...t, main: { role: 'read', title: bch.title, by: book.by + ', ' + book.year, url: ref, licence: book.licence + '. The plain English beside it is ours.', note: 'One chapter of an old book, in plain English, with the printed words beside it.' } };
+  }
+  const unit = { n: t.n, title: t.title, ...(rd ? { reading: rd } : {}), ...best.unit, main: t.main || { role: /\.mp3$/i.test(m.file) ? 'listen' : 'watch', title: m.title || t.title, by: (c.source && c.source.by) || '', item: m.item, file: m.file, seconds: Math.round(tr.seconds), licence: lic, note: /\.mp3$/i.test(m.file) ? 'A full lecture, sound only. Use the chapters to hear it in pieces.' : 'A full lecture. Use the chapters to watch it in pieces.' } };
   const out = { slug, n: t.n, title: t.title, model: DRAFT_MODEL, made: new Date().toISOString(), ok: best.ok, missing: best.missing, notes: best.notes, unit };
   fs.mkdirSync(DRAFTS, { recursive: true });
   writeJson(draftFile(slug, t.n), out);
@@ -656,7 +693,10 @@ function shelfChapters(text, title) {
     const hit = [...seen.keys()].find((x) => near(x, k));
     if (hit) seen.get(hit).count++; else seen.set(k, { key: k, line: i, count: 1 });
   });
-  const heads = [...seen.values()].sort((a, b) => a.line - b.line);
+  let heads = [...seen.values()].sort((a, b) => a.line - b.line);
+  // A book that numbers its chapters ("CHAPTER IV") is cut at those marks; each takes the heading under it as its name.
+  const marks = lines.map((l, i) => (i >= bodyFrom && /^CHAPTER\s+[IVXLCHN\d]{1,7}\.?$/i.test(l) ? i : -1)).filter((i) => i >= 0);
+  if (marks.length >= 3) heads = marks.map((i) => { const next = lines.slice(i + 1, i + 8).filter((l) => HEAD_LINE.test(l) && headKey(l) !== titleKey).slice(0, 2); return { key: next.length ? next.map(headKey).join(' ') : headKey(lines[i].toUpperCase()), line: i + next.length, count: 1 }; });
   return heads.map((h, i) => {
     const end = i + 1 < heads.length ? heads[i + 1].line : lines.length;
     const body = lines.slice(h.line + 1, end).filter((l) => l && !HEAD_LINE.test(l) && !/^[\divxlc .,|-]{1,6}$/i.test(l) && (l.match(/[A-Za-z]/g) || []).length >= Math.max(3, l.length * 0.6));
@@ -744,6 +784,30 @@ async function shelfWrite(id, n, log = () => {}, ask = askPlain) {
   writeJson(shelfFile(id), book);
   return { id, n: ch.n, title: ch.title, done, left, warned: ch.passages.filter((p) => p.warnings).length };
 }
+// A class (Bryan, 19 Nov 2026: "We can find and create \"courses\" or \"classes\""): a small course built from one
+// shelf book, one unit for each chapter. It is a course like any other (same file, same build, same Live switch),
+// marked "size": "class". Its units are drafted from the printed chapters and read them on the shelf page.
+function classFrom(id, name) {
+  const book = readJson(shelfFile(id), null);
+  if (!book) throw new Error('No shelf book ' + id + '. Start with: node scripts/uni.js shelf plan <area> ' + id);
+  const title = clean(name) || book.title;
+  const slug = slugify(title);
+  if (!SLUG_OK.test(slug)) throw new Error('That name does not make a plain address: ' + title.slice(0, 40));
+  if (fs.existsSync(courseFile(slug))) throw new Error('courses/' + slug + '.json already exists.');
+  const written = book.chapters.filter((c) => c.passages.length && c.passages.every((x) => x.plain || x.skipped)); // only chapters already in plain English
+  if (!written.length) throw new Error('No chapter of this book is in plain English yet. Run: node scripts/uni.js shelf write ' + id + ' 1');
+  const course = {
+    slug, name: title, domain: book.area, kind: 'found', size: 'class', status: 'draft', levels: book.levels && book.levels.length ? book.levels : ['high school', 'young adults', 'everyday'],
+    planned: written.length, source: { id: book.source, title: book.title, by: book.by, url: book.scan || book.url, licence: book.licence },
+    draftedBy: 'class from shelf/' + id + '.json, ' + new Date().toISOString().slice(0, 10),
+    why: book.needIt || '', outcomes: [], units: [], voices: {},
+    todo: written.map((c, i) => ({ n: i + 1, title: c.title, reading: { shelf: id, chapter: c.n } })),
+  };
+  writeJson(courseFile(slug), course);
+  const L = list();
+  if (!(L.courses || []).some((c) => c.slug === slug)) { L.courses.push({ slug, name: title, type: book.area, kind: 'found', status: 'draft', live: false }); writeJson(LIST, L); }
+  return { slug, file: path.relative(ROOT, courseFile(slug)), todo: course.todo.length };
+}
 function setShelfLive(id, live) {
   if (!fs.existsSync(shelfFile(id))) throw new Error('No shelf book ' + id);
   const L = list();
@@ -758,4 +822,4 @@ function shelfBooks() {
     .map((b) => ({ ...b, live: live.has(b.source), written: b.chapters.filter((c) => c.passages.some((p) => p.plain)).length }));
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, listen, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks };
+module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, listen, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures };

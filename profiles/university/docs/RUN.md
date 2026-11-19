@@ -186,6 +186,39 @@ write line again (it re-applies the rules without rewriting anything).
 node scripts\uni.js shelf live abc-vegetable-gardening-1916 on
 ```
 
+## 10. A class from an old book
+
+A class is a small course built from one book on the shelf: one unit for each chapter that is in plain English.
+Each unit gets Why you need this, a scene, the chapter to read, a quiz whose answers quote the printed book, and
+a crystal. It is a course like any other: same Courses tab, same Live switch.
+
+```
+node scripts\uni.js class abc-vegetable-gardening-1916 "Grow your own vegetables"
+```
+
+```
+node scripts\uni.js draft grow-your-own-vegetables all
+```
+
+Then read the drafts in the preview and `keep` each one (step 5). The name after the book id is the class's name;
+leave it off to use the book's own title. When the class goes Live, its book goes public with it.
+
+## 11. A course from recorded lectures
+
+For a proposed course whose source is an open course with lectures on the Internet Archive (Areas tab shows
+"Archive video" or "Archive audio only" on the source):
+
+```
+node scripts\uni.js scaffold "Civics and history" "How the country began"
+```
+
+```
+node scripts\uni.js lectures how-the-country-began
+```
+
+The second line makes one unit to do for each lecture in the Archive item and says how long listening will take.
+Then step 4 (Listen), then `draft how-the-country-began all`, then read and keep. This is how Human nature is made.
+
 ## Rules that keep it legal
 
 - No ads, sponsor listings, fees or email sign-up anywhere on the University. Open Yale and MIT allow their courses

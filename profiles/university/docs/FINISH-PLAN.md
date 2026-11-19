@@ -88,3 +88,29 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   scan by the program, the plain side is the local model's, gated on length; warnings come from
   shelf/warnings.json (one rule so far: old pest poisons, US EPA page opened 19 Nov). The book's page and the front
   page row were checked at 1920, 1316 and 821 wide. Not live: Bryan reads it first.
+- 19 Nov 2026: Bryan refilled the usage (both weekly meters read 0% that afternoon; the 92% line stands).
+- 19 Nov 2026, step 10 starts now, not after the reset. Bryan's words as relayed by the "Void University build"
+  chat, asked whether to start the first courses in the 12 empty areas: "Yes. University needs to be life knowledge
+  as well. We can find and create "courses" or "classes"". How it is built (this chat's reading, his to change):
+  - A class is a small course built from one old book on the shelf: one unit for each chapter, each with Why you
+    need this, a scene, the chapter to read in plain English, a quiz whose answers quote the printed book, and a
+    crystal. It is a course like any other (same file, same build, same Live switch), marked `"size": "class"`.
+    `node scripts/uni.js class <shelf-id> [name]`, then `draft <slug> all`.
+  - A course from filmed or recorded lectures is made the way Human nature is: Listen, then `draft <slug> all`.
+  - Only sources already in the source lists with a licence read on the page are used. Books whose text is on
+    Gutenberg wait: Gutenberg turned the checker away on 19 Nov, and a site that blocks is left alone.
+  - Books with old medicine, first aid, canning, wiring or baby care wait until each has its warning rules, written
+    by a person from a government page.
+- 19 Nov 2026, step 10 tools built: `uni.js class <shelf-id> [name]` (a class from a shelf book; its units are
+  drafted from the printed chapters, and a quiz quote opens its chapter on the book's page), `uni.js lectures <slug>`
+  (one unit to do for each lecture in the source's Archive item, video or sound only; sound-only lectures play and
+  jump by chapter like filmed ones). Books that number their chapters are cut at the "CHAPTER" marks. A book goes
+  public when a live class reads it. Started: Grow your own vegetables (Land, class, 13 units); How the country
+  began (Civics and history, Yale HIST 116, 25 filmed lectures) and Why we eat what we eat (Food, Yale PSYC 123,
+  23 sound-only lectures) are laid out and wait in line for Whisper after Human nature (about 7 and 11 hours).
+  On the shelf and being rewritten: The home dressmakers' guide (1919, Making) and eight chapters of Emily Post's
+  Etiquette (1923 printing, Family). tests/uni.test.js 14 of 14.
+  Not started, and why: Home, Words and Work and trades (their books are on Gutenberg, which turned the checker
+  away that day); Body, Emergencies and most of Family (old medicine, first aid and baby care need warning rules
+  first); Machines (its filmed course is Walter Lewin's MIT 8.01, which MIT itself took down in 2014: Bryan's call);
+  Law and rights (a Yale sound-only course is ready to lay out the same way: Environmental politics and law).

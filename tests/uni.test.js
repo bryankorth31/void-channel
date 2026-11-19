@@ -129,3 +129,28 @@ test('the draft gate does not fall over when the model hands back the wrong kind
     assert.ok(g.missing.length >= 4);
   }
 });
+
+// Classes from old books (19 Nov 2026, Bryan: "We can find and create \"courses\" or \"classes\"").
+test('a unit drawn from a book chapter needs no lecture chapters, and its quiz still quotes the book word for word', () => {
+  const said = 'dig the ground only when a handful of it crumbles apart in your hand and never while it is wet and sticky because wet ground packs hard and the seed will rot before it can sprout in the cold';
+  const tr = { words: said.split(' ').map((w, i) => ({ w, raw: w, t: i })) };
+  const g = uni.gateDraft({ needIt: 'x'.repeat(30), why: 'y'.repeat(30), outcome: 'z'.repeat(30), reachesYou: 'r'.repeat(30), do: 'd'.repeat(30), chapters: [],
+    quiz: [{ q: 'When do you dig?', choices: ['When it crumbles', 'When wet', 'At night', 'Never'], a: 0, why: 'The book says so.', quote: 'dig the ground only when a handful of it crumbles apart in your hand' },
+      { q: 'Why not wet?', choices: ['It packs hard', 'It smells', 'It is cold', 'It is heavy'], a: 0, why: 'The book says so.', quote: 'wet ground packs hard and the seed will rot before it can grow' }] }, tr, { reading: true });
+  assert.strictEqual(g.unit.chapters, undefined);
+  assert.ok(!g.missing.some((m) => /chapters/.test(m)));
+  assert.strictEqual(g.unit.quiz.length, 1, 'the quote that changes the last word is dropped');
+});
+test('every class reads chapters that are really on the shelf, in plain English', () => {
+  const fsx = require('fs');
+  for (const f of fsx.readdirSync(path.join(uni.UNI, 'courses'))) {
+    const c = JSON.parse(fsx.readFileSync(path.join(uni.UNI, 'courses', f), 'utf8'));
+    if (c.size !== 'class') continue;
+    for (const u of [...c.units, ...(c.todo || [])]) {
+      assert.ok(u.reading, c.slug + ' unit ' + u.n + ' names its chapter');
+      const b = JSON.parse(fsx.readFileSync(path.join(uni.UNI, 'shelf', u.reading.shelf + '.json'), 'utf8'));
+      const ch = b.chapters.find((x) => x.n === u.reading.chapter);
+      assert.ok(ch && ch.passages.some((x) => x.plain), c.slug + ' unit ' + u.n + ' reads a chapter that is in plain English');
+    }
+  }
+});

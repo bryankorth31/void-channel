@@ -57,6 +57,30 @@
       "kind": "found",
       "status": "draft",
       "live": true
+    },
+    {
+      "slug": "grow-your-own-vegetables",
+      "name": "Grow your own vegetables",
+      "type": "Land",
+      "kind": "found",
+      "status": "draft",
+      "live": false
+    },
+    {
+      "slug": "how-the-country-began",
+      "name": "How the country began",
+      "type": "Civics and history",
+      "kind": "found",
+      "status": "draft",
+      "live": false
+    },
+    {
+      "slug": "why-we-eat-what-we-eat",
+      "name": "Why we eat what we eat",
+      "type": "Food",
+      "kind": "found",
+      "status": "draft",
+      "live": false
     }
   ],
   "_types": "The 15 areas are the front page rows (Bryan, 15 Nov 2026: \"I like those rows\"). A row shows each whole course as one card. A course with \"shelf\": \"supplement\" (the mind's mechanisms) shows its units as small cards instead, and any unit anywhere can point to them with \"mechanisms\": [unit numbers]."

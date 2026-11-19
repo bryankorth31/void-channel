@@ -11,6 +11,8 @@
 //   node scripts/uni.js shelf plan <area> <id>    an old book from the source list: fetch its Archive scan, find its chapters (writes shelf/<id>.json)
 //   node scripts/uni.js shelf write <id> <n|all>  the local model rewrites a chapter into plain English beside the original
 //   node scripts/uni.js shelf live <id> on|off    put a shelf book in, or take it out of, the public copy
+//   node scripts/uni.js class <shelf-id> [name]   a class from a shelf book: one unit for each chapter, drafted with: draft <slug> all
+//   node scripts/uni.js lectures <slug>           a course built on recorded lectures: one unit to do for each lecture in its Archive item
 //   node scripts/uni.js listen <slug>           Whisper hears every lecture the course plays (a time for every word)
 //   node scripts/uni.js times <slug>              set every quiz and chapter time from where the words are said (after listen)
 //   node scripts/uni.js find <slug> <unit> <quote> the second in that unit's lecture where the quote is said
@@ -70,19 +72,19 @@ const [cmd, ...args] = process.argv.slice(2);
     let made = 0, waiting = 0;
     for (const t of c.todo || []) {
       const m = t.lecture || t.main;
-      if (!m || !uni.transcript(m.item, m.file)) { waiting++; continue; }
+      if (!t.reading && (!m || !uni.transcript(m.item, m.file))) { waiting++; continue; }
       const df = path.join(uni.UNI, 'drafts', args[0] + '-' + t.n + '.json');
       if (require('fs').existsSync(df) && JSON.parse(require('fs').readFileSync(df, 'utf8')).ok) continue; // a whole draft is left alone (it may carry Bryan's edits)
       let r = await uni.draft(args[0], t.n);
       for (let again = 0; again < 2 && !r.ok; again++) r = await uni.draft(args[0], t.n); // a draft that is not whole is tried again
       made++;
-      console.log('Unit ' + t.n + ', ' + t.title + ': ' + (r.ok ? 'whole (' + r.unit.quiz.length + ' questions, ' + r.unit.chapters.length + ' chapters)' : 'NOT whole, missing ' + r.missing.join(', ')));
+      console.log('Unit ' + t.n + ', ' + t.title + ': ' + (r.ok ? 'whole (' + r.unit.quiz.length + ' questions' + (r.unit.chapters ? ', ' + r.unit.chapters.length + ' chapters' : '') + ')' : 'NOT whole, missing ' + r.missing.join(', ')));
     }
     console.log(made + ' drafted' + (waiting ? ', ' + waiting + ' not heard yet (node scripts/uni.js listen ' + args[0] + ')' : '') + '. They show in the preview marked as drafts: node scripts/uni.js build');
   } else if (cmd === 'draft') {
     const r = await uni.draft(args[0], args[1], (m) => console.log(m));
     console.log((r.ok ? 'Draft passed the gate: ' : 'Draft is NOT whole yet (' + r.missing.join(', ') + '): ') + r.file);
-    console.log(r.unit.quiz.length + ' questions, each quote said word for word in the lecture; ' + r.unit.chapters.length + ' chapters; crystal ' + (r.unit.crystal ? 'yes' : 'no') + '.');
+    console.log(r.unit.quiz.length + ' questions, each quote word for word from its source; ' + (r.unit.chapters ? r.unit.chapters.length + ' chapters; ' : '') + 'crystal ' + (r.unit.crystal ? 'yes' : 'no') + '.');
     console.log(r.unit.scene ? 'Scene: ' + r.unit.scene.analogy : 'No scene yet.');
     for (const x of r.notes) console.log('- ' + x);
     console.log(r.ok ? 'Read it, change any line, then: node scripts/uni.js keep ' + r.slug + ' ' + r.n : 'Run the draft again, or write the missing parts into the file by hand.');
@@ -106,6 +108,12 @@ const [cmd, ...args] = process.argv.slice(2);
   } else if (cmd === 'shelf' && args[0] === 'live') {
     const r = uni.setShelfLive(args[1], args[2] === 'on');
     console.log(r.id + (r.live ? ' goes in the public copy at the next build --site.' : ' stays out of the public copy.'));
+  } else if (cmd === 'class') {
+    const r = uni.classFrom(args[0], args.slice(1).join(' '));
+    console.log('Made ' + r.file + ' with ' + r.todo + ' units to do. Next: node scripts/uni.js draft ' + r.slug + ' all');
+  } else if (cmd === 'lectures') {
+    const r = await uni.lectures(args[0]);
+    console.log(r.lectures + ' lectures in the Archive item (' + (r.sound ? 'sound only' : 'filmed') + ', ' + Math.round(r.seconds / 3600) + ' hours), ' + r.todo + ' units to do. Next: node scripts/uni.js listen ' + r.slug + ' (about ' + Math.round(r.seconds / 3600 * 0.4 * 10) / 10 + ' hours on the graphics card)');
   } else if (cmd === 'selftest') {
     // One command, no web and no AI: each part says pass or FAIL, and the exit code is 1 if any part failed.
     const root = path.join(__dirname, '..');

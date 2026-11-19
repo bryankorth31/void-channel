@@ -113,14 +113,14 @@ const needIt = (u) => u.needIt || String(u.why || '').split('. ')[0].replace(/\.
 const clock = (t) => Math.floor(t / 60) + ':' + String(Math.floor(t % 60)).padStart(2, '0');
 function chapters(u) {
   if (!(u.chapters || []).length) return '';
-  return '<div class="chap"><span>Watch it in pieces</span>' + u.chapters.map((x) => '<button data-t="' + x.t + '"><i>' + clock(x.t) + '</i>' + esc(x.title) + '</button>').join('') + '</div>';
+  return '<div class="chap"><span>' + (u.main && u.main.role === 'listen' ? 'Hear it in pieces' : 'Watch it in pieces') + '</span>' + u.chapters.map((x) => '<button data-t="' + x.t + '"><i>' + clock(x.t) + '</i>' + esc(x.title) + '</button>').join('') + '</div>';
 }
 // Our own quiz, written from the lecture; every answer quotes the line it comes from (checked word for word).
 function quiz(u) {
   if (!(u.quiz || []).length) return '';
-  return '<details class="quiz"><summary><h3>Check yourself</h3><span>' + u.quiz.length + ' questions, each answer quotes the lecture</span></summary>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
+  return '<details class="quiz"><summary><h3>Check yourself</h3><span>' + u.quiz.length + ' questions, each answer quotes the ' + (u.reading ? 'book' : 'lecture') + '</span></summary>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
     + q.choices.map((ch, j) => '<button data-j="' + j + '">' + esc(ch) + '</button>').join('') + '</div>'
-    + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"<button class="qt" data-t="' + q.t + '">From the lecture, at ' + clock(q.t) + '</button></blockquote></div></div>').join('')
+    + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"' + (q.ref ? '<a class="qt" href="' + esc(q.ref) + '">From the book: open the chapter</a>' : '<button class="qt" data-t="' + q.t + '">From the lecture, at ' + clock(q.t) + '</button>') + '</blockquote></div></div>').join('')
     + '<div class="qs" hidden></div></details>';
 }
 
@@ -296,7 +296,7 @@ details.more summary:hover{color:var(--fg)}
 </style></head><body>
 ${top(c.slug, all)}
 <div class="wrap"><nav><h4>Units</h4>${toc}</nav><main>
-<div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)} · ${c.kind === 'found' ? 'built from a free course' : 'a course we wrote'}</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>${c.source ? '<p class="src">From <a href="' + esc(c.source.url) + '" target="_blank" rel="noopener">' + esc(c.source.title) + '</a>, ' + esc(c.source.by) + '. ' + licence(c.source.licence) + '.' + (c.planned > c.units.length ? ' ' + c.units.length + ' of ' + c.planned + ' lectures ready so far.' : '') + '</p>' : ''}<p class="lv">${LEVELS(c)}</p>
+<div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)} · ${c.size === 'class' ? 'a class built from an old book' : c.kind === 'found' ? 'built from a free course' : 'a course we wrote'}</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>${c.source ? '<p class="src">From <a href="' + esc(c.source.url) + '" target="_blank" rel="noopener">' + esc(c.source.title) + '</a>, ' + esc(c.source.by) + '. ' + licence(c.source.licence) + '.' + (c.planned > c.units.length ? ' ' + c.units.length + ' of ' + c.planned + ' lectures ready so far.' : '') + '</p>' : ''}<p class="lv">${LEVELS(c)}</p>
 <details class="more"><summary>By the end you will be able to...</summary><ol>${c.outcomes.map((o) => '<li>' + esc(o) + '</li>').join('')}</ol></details></div>
 ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this course</h3><div class="chans">' + c.channels.map(chan).join('') + '</div>' : ''}
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
@@ -305,13 +305,13 @@ ${FOOT()}
 <script src="crystal.js"></script><script src="scene.js"></script>${c.units.some(shipsLab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter(shipsLab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}
 <script>
 function seek(el, t) {
-  var v = el.closest('.unit').querySelector('video'); if (!v) return;
+  var v = el.closest('.unit').querySelector('video, audio'); if (!v) return;
   v.scrollIntoView({ behavior: 'smooth', block: 'center' });
   var go = function () { v.currentTime = t; v.play(); };
   if (v.readyState < 1) { v.preload = 'metadata'; v.addEventListener('loadedmetadata', go, { once: true }); v.load(); } else go();
 }
 document.addEventListener('click', function (e) {
-  var b = e.target.closest('.chap button, .qt'); if (b) { seek(b, +b.dataset.t); return; }
+  var b = e.target.closest('.chap button, button.qt'); if (b) { seek(b, +b.dataset.t); return; }
   var c = e.target.closest('.qc button'); if (!c) return;
   var q = c.closest('.qq'); if (q.classList.contains('done')) return;
   var a = +q.dataset.a, j = +c.dataset.j; q.classList.add('done');
@@ -363,9 +363,14 @@ const SHELFBOOKS = (() => {
   const dir = path.join(DIR, 'shelf');
   if (!fs.existsSync(dir)) return [];
   const live = new Set(((JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8')).shelf) || []).filter((x) => x.live).map((x) => x.id));
+  // a book also goes public when a live class reads its chapters, so a class never links to a page that is not there
+  const L = JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'));
+  const liveCourses = new Set((L.courses || []).filter((c) => c.live).map((c) => c.slug));
+  const readBy = new Set();
+  for (const f of fs.readdirSync(path.join(DIR, 'courses')).filter((x) => x.endsWith('.json'))) { const c = JSON.parse(fs.readFileSync(path.join(DIR, 'courses', f), 'utf8')); if (liveCourses.has(c.slug)) for (const u of c.units || []) if (u.reading) readBy.add(u.reading.shelf); }
   return fs.readdirSync(dir).filter((f) => f.endsWith('.json') && f !== 'warnings.json').map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))
     .map((b) => ({ ...b, slug: 'shelf-' + b.source, name: b.title, chapters: b.chapters.map((c) => ({ ...c, passages: c.passages.filter((p) => p.plain) })).filter((c) => c.passages.length) }))
-    .filter((b) => b.chapters.length && (!LIVE || live.has(b.source)));
+    .filter((b) => b.chapters.length && (!LIVE || live.has(b.source) || readBy.has(b.source)));
 })();
 function shelfPage(b, all) {
   const toc = b.chapters.map((c) => '<a href="#c' + c.n + '"><span>' + c.n + '</span>' + esc(c.title) + '</a>').join('');
