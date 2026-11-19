@@ -617,6 +617,8 @@ function keepDraft(slug, n) {
 // name something now known to be unsafe get a warning from shelf/warnings.json (rules written by a person, each
 // with a US government page). A book reaches the public copy only when it is marked live in list.json.
 const SHELF = path.join(UNI, 'shelf');
+// The printed side keeps its words; its long dashes become commas (no dashes anywhere, Bryan's rule).
+const DASH_ALL = new RegExp('\\s*[' + String.fromCharCode(0x2014, 0x2013) + ']\\s*', 'g');
 const shelfFile = (id) => path.join(SHELF, id + '.json');
 const HEAD_LINE = /^[A-Z][A-Z ,.'’-]{7,}$/;
 const headKey = (l) => l.replace(/[^A-Z ]/g, '').replace(/ +/g, ' ').trim();
@@ -644,7 +646,7 @@ function shelfChapters(text, title) {
   return heads.map((h, i) => {
     const end = i + 1 < heads.length ? heads[i + 1].line : lines.length;
     const body = lines.slice(h.line + 1, end).filter((l) => l && !HEAD_LINE.test(l) && !/^[\divxlc .,|-]{1,6}$/i.test(l) && (l.match(/[A-Za-z]/g) || []).length >= Math.max(3, l.length * 0.6));
-    const flat = body.join('\n').replace(/([A-Za-z])-\n([a-z])/g, '$1$2').replace(/\n/g, ' ').replace(/[“”]/g, '"').replace(/[‘’]/g, "'").replace(/\s+/g, ' ').trim();
+    const flat = body.join('\n').replace(/([A-Za-z])-\n([a-z])/g, '$1$2').replace(/\n/g, ' ').replace(DASH_ALL, ', ').replace(/[“”]/g, '"').replace(/[‘’]/g, "'").replace(/\s+/g, ' ').trim();
     const sentences = flat.split(/(?<=[.!?]["']?)\s+(?=[A-Z"'])/);
     const passages = []; let cur = [];
     for (const s of sentences) { cur.push(s); if (cur.join(' ').split(' ').length >= 90) { passages.push(cur.join(' ')); cur = []; } }

@@ -3,7 +3,23 @@
   "rules": [
     {
       "id": "old-pest-poisons",
-      "words": ["paris green", "london purple", "arsenate", "arsenic", "arsenical", "hellebore", "bordeaux", "kerosene emulsion", "tobacco tea", "tobacco dust", "tobacco water", "insecticide", "insecticides"],
+      "words": [
+        "paris green",
+        "london purple",
+        "arsenate",
+        "arsenic",
+        "arsenical",
+        "hellebore",
+        "bordeaux",
+        "kerosene emulsion",
+        "tobacco tea",
+        "tobacco dust",
+        "tobacco water",
+        "insecticide",
+        "insecticides",
+        "nicoticide",
+        "nicotine"
+      ],
       "warning": "This passage names an old pest poison or spray. Some of these are banned now, and none should be mixed at home. Use only a product sold for home gardens today, and follow its label.",
       "source": "US EPA: Pest control and pesticide safety for consumers",
       "url": "https://www.epa.gov/safepestcontrol",
