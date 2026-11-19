@@ -13,7 +13,8 @@
   "outcomes": [
     "See a self as an edge that has to be paid for.",
     "Say why what you can sense and plan for grows and shrinks with what you have to spend.",
-    "Tell a world that is short from a world that is unsteady, and what each one costs."
+    "Tell a world that is short from a world that is unsteady, and what each one costs.",
+    "Say what a group gains and what it risks when its members share signals and food."
   ],
   "units": [
     {
@@ -135,6 +136,123 @@
         "korth",
         "levin",
         "friston"
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Many small selves, one larger self",
+      "outcome": "Say what changes, and what does not, when small selves join up.",
+      "needIt": "Every group you belong to works this way: a body, a family, a crew, a town. Joining changes who gets warned, who gets fed, and who goes down when there is not enough.",
+      "why": "Nothing new is added when small selves become a larger one. Each still pays for its own edge and makes its own predictions. What changes is the join between neighbours: what one senses, all know, and food flows from the fuller to the emptier. That is enough to keep alive a member that could never feed itself. It is also enough to tie every member to the same fate.",
+      "reachesYou": "Your own body is this. Most of your cells never meet food; they are carried by the ones that do. So is a household with one income, and a team where one person hears the bad news first.",
+      "lab": {
+        "bench": "many",
+        "title": "Seven together",
+        "ask": "Seven small selves, each with its own reach, its own gate and its own energy. The one in the middle is walled in by the others and can never feed itself. Choose whether they are joined, guess how many will still be funded at the end, then watch.",
+        "go": "Let them live",
+        "credit": "The same loop as The edge, one scale up, from Bryan Korth's framework. The join follows Michael Levin's work on cells that share signals through gap junctions. It is a model to think with.",
+        "guess": {
+          "ask": "First, your guess. After a minute, how many of the seven will still be funded?"
+        },
+        "triesNote": "each strip is how many of the seven were funded, from start to end",
+        "knobs": [
+          {
+            "id": "join",
+            "label": "If the seven are",
+            "options": [
+              {
+                "v": "alone",
+                "label": "Each on its own"
+              },
+              {
+                "v": "joined",
+                "label": "Joined"
+              }
+            ]
+          },
+          {
+            "id": "give",
+            "label": "and the world gives",
+            "options": [
+              {
+                "v": "plenty",
+                "label": "Plenty"
+              },
+              {
+                "v": "little",
+                "label": "Little"
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "if": "each is on its own and the world gives plenty,",
+            "then": "the outer ones do fine and the middle one stops. Nothing can reach it, and nobody passes it anything. Plenty all around it did not help.",
+            "when": {
+              "knob": {
+                "join": "alone",
+                "give": "plenty"
+              }
+            }
+          },
+          {
+            "if": "they are joined and the world gives plenty,",
+            "then": "all seven stay funded, the middle one too. It is carried by what flows in from its neighbours. Watch the joins light up: one senses, and all of them know.",
+            "when": {
+              "knob": {
+                "join": "joined",
+                "give": "plenty"
+              }
+            }
+          },
+          {
+            "if": "each is on its own and the world gives little,",
+            "then": "they stop one at a time. A few lucky ones are still going at the end, each for itself.",
+            "when": {
+              "knob": {
+                "join": "alone",
+                "give": "little"
+              }
+            }
+          },
+          {
+            "if": "they are joined and the world gives little,",
+            "then": "they share one fate. Run it a few times: most times either all of them make it or none do. Joining spreads what there is, so no one stops first, and when the whole is short it is short for everyone at once.",
+            "when": {
+              "knob": {
+                "join": "joined",
+                "give": "little"
+              },
+              "times": 2
+            }
+          }
+        ],
+        "map": [
+          [
+            "a line between two",
+            "a join: signals and food pass along it"
+          ],
+          [
+            "the joins lighting up",
+            "one sensed it, now all know"
+          ],
+          [
+            "the middle one",
+            "a member that cannot feed itself"
+          ],
+          [
+            "a dark one",
+            "its funding stopped, so it stopped"
+          ]
+        ],
+        "meet": "Where you meet this: a family that pools its money, where nobody goes without until everybody does. A crew where the lookout's shout turns everyone at once. The cells of your own body, nearly all of them fed by others.",
+        "draftedBy": "Claude, 19 Nov 2026: a draft for Bryan to keep, change or strike."
+      },
+      "do": "Pick one group you are part of. Ask what passes along its joins: who hears news first, and who is carried. Then ask what would happen to each of you if the joins were cut.",
+      "voices": [
+        "korth",
+        "levin"
       ]
     }
   ],

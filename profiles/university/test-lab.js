@@ -76,4 +76,22 @@ for (let seed = 1; seed <= 12; seed++) {
   assert.strictEqual(ps.bars.length, 24);
 }
 console.log('boundary  :', bd.run(pl, { give: 'plenty', world: 'steady' }, 1).say);
+
+// Seven together: same seed same run, and joined or alone behaves the way the lab's rules say, seed after seed.
+const many = require('./lab-many.js');
+assert.deepStrictEqual(many.run(pl, { join: 'joined', give: 'little' }, 3).bars, many.run(pl, { join: 'joined', give: 'little' }, 3).bars, 'many: same seed, same run');
+let oneFate = 0, fewer = 0;
+for (let seed = 1; seed <= 12; seed++) {
+  const ap = many.run(pl, { join: 'alone', give: 'plenty' }, seed), jp = many.run(pl, { join: 'joined', give: 'plenty' }, seed);
+  const al = many.run(pl, { join: 'alone', give: 'little' }, seed), jl = many.run(pl, { join: 'joined', give: 'little' }, seed);
+  assert.ok(!ap.midOn && ap.on >= 4 && ap.on <= 6, 'alone with plenty: the middle one stops, most outer ones hold (seed ' + seed + ': ' + ap.on + ')');
+  assert.strictEqual(jp.on, 7, 'joined with plenty: all seven funded (seed ' + seed + ')');
+  assert.ok(!al.midOn && al.on >= 1 && al.on <= 6, 'alone with little: some stop, some hold (seed ' + seed + ': ' + al.on + ')');
+  if (jl.on === 0 || jl.on === 7) oneFate++;
+  if (al.on < ap.on) fewer++;
+  assert.strictEqual(jp.bars.length, 24);
+}
+assert.ok(oneFate >= 9, 'joined with little: all or none in most runs (' + oneFate + ' of 12)');
+assert.ok(fewer >= 10, 'alone: little leaves fewer funded than plenty (' + fewer + ' of 12)');
+console.log('many      :', many.run(pl, { join: 'alone', give: 'plenty' }, 1).say, '| one fate in', oneFate, 'of 12');
 console.log('lab checks passed');
