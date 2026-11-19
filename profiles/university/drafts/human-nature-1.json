@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 1,
-  "title": "Introduction",
+  "title": "Two of you: the planner and the impulse",
   "model": "gemma4:12b",
   "made": "2026-11-19T15:56:34.651Z",
   "ok": true,
@@ -18,8 +18,8 @@
   ],
   "unit": {
     "n": 1,
-    "title": "Introduction",
-    "needIt": "This course helps you understand why you do what you do, like why you procrastinate or how you make hard choices. It gives you tools to better manage your own habits and understand the people around you.",
+    "title": "Two of you: the planner and the impulse",
+    "needIt": "You plan to study and end up on your phone. Knowing you are both a planner and a creature of impulse is the first step to managing either.",
     "why": "The lecture introduces a course that blends old philosophy with modern science. It looks at humans as both smart thinkers who can plan for the future and as animals driven by instincts we cannot always control.",
     "outcome": "Understand the mix of reason and instinct that shapes human behavior.",
     "reachesYou": "You see this when you struggle to stay focused on a goal despite knowing you should. You also feel it when you have to make a split-second choice in a stressful situation.",
@@ -162,19 +162,19 @@
       "aha": "By understanding both our rational and impulsive sides, we can better design our lives and societies."
     },
     "scene": {
-      "analogy": "Choosing a healthy snack over a cookie",
+      "analogy": "A shopping list and the snack aisle",
       "map": [
         [
-          "A person",
-          "A person"
+          "The list",
+          "Reflective self"
         ],
         [
-          "A cookie",
-          "A cookie"
+          "The snack aisle",
+          "Impulse"
         ],
         [
-          "A glass box",
-          "A glass box"
+          "your cart",
+          "a choice"
         ]
       ],
       "actors": [
@@ -185,7 +185,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A person",
+          "label": "The list",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -197,10 +197,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A cookie",
+          "label": "The snack aisle",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "thing",
@@ -208,7 +208,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A GLASS BOX",
+          "label": "YOUR CART",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -220,26 +220,26 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "LOCKING",
+          "label": "WALK PAST",
           "color": "fg",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "If I can't see it, I won't eat it.",
+          "label": "You wrote the list. You also filled the cart.",
           "color": "pink",
-          "size": 22,
+          "size": 18,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A person looks at a cookie.",
+          "say": "You walk in with a list.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -255,7 +255,7 @@
           }
         },
         {
-          "say": "They put the cookie in a box.",
+          "say": "Then you pass the snack aisle.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -266,19 +266,19 @@
           }
         },
         {
-          "say": "The cookie is now hidden.",
+          "say": "The list says what you meant to buy.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Person stays focused"
+              "sub": "what you meant to buy"
             },
             "right": {
-              "sub": "Cookie stays out of reach"
+              "sub": "what ends up in the cart"
             }
           }
         },
         {
-          "say": "They feel more in control.",
+          "say": "The cart shows what you did.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -287,31 +287,31 @@
           }
         },
         {
-          "say": "Making it harder to reach a temptation helps you follow your plans.",
+          "say": "This course asks how those two parts of you can live together.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "A person",
-              "size": 22,
+              "label": "Reflective self",
+              "size": 18,
               "color": "gold"
             },
             "right": {
-              "label": "A cookie",
+              "label": "Impulse",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "A GLASS BOX",
-              "size": 14
+              "label": "A CHOICE",
+              "size": 18
             },
             "act": {
-              "label": "LOCKING",
+              "label": "TEMPTS",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Reducing access helps you stick to your goals.",
-              "size": 18,
+              "label": "We are planners and animals at once.",
+              "size": 22,
               "color": "green"
             }
           }
@@ -328,5 +328,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

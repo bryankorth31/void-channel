@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 3,
-  "title": "Parts of the soul I",
+  "title": "Why you can want and not want the same thing",
   "model": "gemma4:12b",
   "made": "2026-11-19T15:57:21.816Z",
   "ok": true,
@@ -9,8 +9,8 @@
   "notes": [],
   "unit": {
     "n": 3,
-    "title": "Parts of the soul I",
-    "needIt": "Understanding that your mind has different parts helps you realize why you sometimes do things you regret. It helps you plan better ways to handle cravings or habits by knowing how your brain actually works.",
+    "title": "Why you can want and not want the same thing",
+    "needIt": "When you feel torn, it is not weakness or confusion. Minds have parts, and knowing which part is talking helps you decide which to follow.",
     "why": "The lecture explores how humans are often conflicted inside. It uses stories like a man tempted by a sight he finds gross, a woman lost in a love she knows is wrong, and a man with a brain injury who could no longer control his impulses. These stories show that we are not just one single voice, but a mix of drives, instincts, and reasons.",
     "outcome": "Identify the different internal forces that influence your choices and behaviors.",
     "reachesYou": "You feel this when you want to scroll on your phone but know you should be sleeping. You see it when you choose a snack even though you promised yourself you would eat healthy.",
@@ -158,19 +158,19 @@
       "aha": "By understanding our internal divisions, we can better navigate the conflicts between our desires and our reason."
     },
     "scene": {
-      "analogy": "A person choosing between a healthy salad and a donut",
+      "analogy": "A car with two hands on the wheel",
       "map": [
         [
-          "The healthy choice",
-          "Reason"
-        ],
-        [
-          "The sugary treat",
+          "One wants to look",
           "Appetite"
         ],
         [
-          "The donut",
-          "Chocolate"
+          "One turns away",
+          "Reason"
+        ],
+        [
+          "the wheel",
+          "the self"
         ]
       ],
       "actors": [
@@ -181,7 +181,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The healthy choice",
+          "label": "One wants to look",
           "color": "blue",
           "o": 0,
           "size": 18
@@ -193,10 +193,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The sugary treat",
+          "label": "One turns away",
           "color": "blue",
           "o": 0,
-          "size": 18
+          "size": 22
         },
         {
           "id": "thing",
@@ -204,7 +204,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "THE DONUT",
+          "label": "THE WHEEL",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -216,7 +216,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "EATING",
+          "label": "GRAB",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -227,7 +227,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I knew I should have picked the salad.",
+          "label": "One car, two hands on the wheel.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -235,7 +235,7 @@
       ],
       "beats": [
         {
-          "say": "A person stands in a bakery.",
+          "say": "Something awful by the road.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -251,7 +251,7 @@
           }
         },
         {
-          "say": "They look at a chocolate donut.",
+          "say": "Part of you wants to stare.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -262,19 +262,19 @@
           }
         },
         {
-          "say": "They take a bite of the donut.",
+          "say": "Part of you is disgusted and turns away.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Feeling healthy"
+              "sub": "pulls toward it"
             },
             "right": {
-              "sub": "Feeling guilty"
+              "sub": "pulls back"
             }
           }
         },
         {
-          "say": "They feel a bit of regret.",
+          "say": "Both are you.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -283,30 +283,30 @@
           }
         },
         {
-          "say": "We are often conflicted between our desires and our better judgment.",
+          "say": "Feeling torn is how a mind with several parts works.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Reason",
+              "label": "Appetite",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Appetite",
+              "label": "Reason",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "CHOCOLATE",
-              "size": 14
+              "label": "THE SELF",
+              "size": 18
             },
             "act": {
-              "label": "EATING",
+              "label": "CONFLICT",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "The inner struggle of the soul.",
+              "label": "Plato: the soul has parts that can clash.",
               "size": 22,
               "color": "green"
             }
@@ -324,5 +324,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

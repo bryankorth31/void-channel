@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 14,
-  "title": "The trolley problem",
+  "title": "Is it ever right to use one person to save five?",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:46:46.475Z",
   "ok": true,
@@ -9,8 +9,8 @@
   "notes": [],
   "unit": {
     "n": 14,
-    "title": "The trolley problem",
-    "needIt": "This helps you understand why your gut feeling about 'right' and 'wrong' changes depending on how you see a person's role. It helps you think about whether you are treating people as tools or as human beings with their own goals.",
+    "title": "Is it ever right to use one person to save five?",
+    "needIt": "Hospitals, armies and car makers face versions of this choice. Feeling why switching a track seems fine and pushing a man does not shows you your own rules.",
     "why": "A doctor faces a choice to save five dying people by taking organs from one healthy man. Most people say this is wrong because it treats the healthy man like a spare parts bin. However, in a different story about a runaway train, many people say it is okay to switch tracks to save five people by hitting one. This shows that our morals change based on how we view the person involved.",
     "outcome": "Evaluate whether your moral choices treat others as people or as tools.",
     "reachesYou": "You see this when you decide if it is okay to use a friend's help just to get a grade. You also feel it when you wonder if it is okay to ignore one person's needs to help a larger group.",
@@ -145,19 +145,19 @@
       "aha": "When we treat people as tools, we violate the moral law of treating humanity as an end."
     },
     "scene": {
-      "analogy": "A doctor and a healthy man",
+      "analogy": "Asking for help, or using someone",
       "map": [
         [
-          "Doctor",
-          "Doctor"
+          "Ask for help",
+          "As an end"
         ],
         [
-          "Healthy man",
-          "Healthy man"
+          "Use them",
+          "As a means only"
         ],
         [
-          "Organs",
-          "Organs"
+          "a person",
+          "humanity"
         ]
       ],
       "actors": [
@@ -168,7 +168,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Doctor",
+          "label": "Ask for help",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -180,7 +180,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Healthy man",
+          "label": "Use them",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -191,7 +191,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "ORGANS",
+          "label": "A PERSON",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -203,7 +203,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "SURGERY",
+          "label": "NEED",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -214,15 +214,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "Is it okay to use a person as a tool for others?",
+          "label": "A person is not a spare part.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A doctor sees five dying people.",
+          "say": "You need something done.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -238,7 +238,7 @@
           }
         },
         {
-          "say": "A healthy man stands nearby.",
+          "say": "Another person could get you there.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -249,19 +249,19 @@
           }
         },
         {
-          "say": "The doctor takes his organs.",
+          "say": "You can ask, and they may refuse.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Five people live"
+              "sub": "they can say no"
             },
             "right": {
-              "sub": "One man dies"
+              "sub": "they are just a tool"
             }
           }
         },
         {
-          "say": "The doctor feels a moral conflict.",
+          "say": "Or you can simply use them.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -270,30 +270,30 @@
           }
         },
         {
-          "say": "Kant says we must treat people as ends, never merely as means.",
+          "say": "That rule is why the surgeon may not take one to save five.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Doctor",
+              "label": "As an end",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Healthy man",
-              "size": 22,
+              "label": "As a means only",
+              "size": 18,
               "color": "green"
             },
             "thing": {
-              "label": "ORGANS",
+              "label": "HUMANITY",
               "size": 18
             },
             "act": {
-              "label": "SURGERY",
+              "label": "TREAT",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Treating a person as a means rather than an end.",
+              "label": "Kant: never treat a person merely as a means.",
               "size": 18,
               "color": "green"
             }
@@ -311,5 +311,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

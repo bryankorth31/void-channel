@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 16,
-  "title": "Philosophical puzzles",
+  "title": "Blamed for bad luck",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:51:23.024Z",
   "ok": true,
@@ -12,8 +12,8 @@
   ],
   "unit": {
     "n": 16,
-    "title": "Philosophical puzzles",
-    "needIt": "This helps you understand why we judge people differently even when they do the same thing. It helps you see how your own feelings might be tricked by how a story is told.",
+    "title": "Blamed for bad luck",
+    "needIt": "Two people do the same careless thing and only one is punished, because only one was unlucky. Seeing that changes how you judge others and yourself.",
     "why": "Imagine two drivers who both drive home while distracted. One gets home safely, and the other hits a child. We often judge the second driver as a 'bad person' even though both made the exact same choice. This shows how our brains struggle to separate a person's choices from the luck of the outcome.",
     "outcome": "Recognize how framing and luck influence your moral judgments.",
     "reachesYou": "You see this when you judge a friend for a mistake that was mostly an accident. You also feel it when you see news stories where people are blamed for things they couldn't fully control.",
@@ -156,19 +156,19 @@
       "aha": "Our moral sense is often tricked by how a situation is framed or by the luck of the result."
     },
     "scene": {
-      "analogy": "A runner and a hurdle",
+      "analogy": "Two drivers glance at their phones",
       "map": [
         [
-          "A runner",
-          "A runner"
+          "Road was empty",
+          "Good luck"
         ],
         [
-          "A hurdle",
-          "A hurdle"
+          "A child ran out",
+          "Bad luck"
         ],
         [
-          "A trip",
-          "A trip"
+          "one glance",
+          "same act"
         ]
       ],
       "actors": [
@@ -179,7 +179,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A runner",
+          "label": "Road was empty",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -191,10 +191,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A hurdle",
+          "label": "A child ran out",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "thing",
@@ -202,11 +202,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A TRIP",
+          "label": "ONE GLANCE",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "act",
@@ -214,18 +214,18 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "FALLING",
+          "label": "LOOK AWAY",
           "color": "fg",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "It was just a bad trip.",
+          "label": "Same choice. Different luck.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -233,7 +233,7 @@
       ],
       "beats": [
         {
-          "say": "A runner prepares to sprint.",
+          "say": "Two drivers glance at their phones.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -249,7 +249,7 @@
           }
         },
         {
-          "say": "The runner trips on a stone.",
+          "say": "Each looks away for one second.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -260,19 +260,19 @@
           }
         },
         {
-          "say": "The runner falls down.",
+          "say": "One road is empty.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Runner falls"
+              "sub": "home safe, forgotten"
             },
             "right": {
-              "sub": "Hurdle stays"
+              "sub": "blamed for life"
             }
           }
         },
         {
-          "say": "The runner feels frustrated.",
+          "say": "On the other, a child runs out.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -281,30 +281,30 @@
           }
         },
         {
-          "say": "Moral luck means outcomes matter more than choices.",
+          "say": "Moral luck: we judge by results that were partly chance.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "A runner",
+              "label": "Good luck",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "A hurdle",
+              "label": "Bad luck",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "A TRIP",
+              "label": "SAME ACT",
               "size": 18
             },
             "act": {
-              "label": "FALLING",
+              "label": "JUDGED",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Luck changed the outcome.",
+              "label": "We blame outcomes people did not control.",
               "size": 22,
               "color": "green"
             }
@@ -322,5 +322,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 6,
-  "title": "The disordered soul: thémis and PTSD",
+  "title": "When the rules you trusted are broken",
   "model": "gemma4:12b",
   "made": "2026-11-19T15:49:59.523Z",
   "ok": true,
@@ -15,8 +15,8 @@
   ],
   "unit": {
     "n": 6,
-    "title": "The disordered soul: thémis and PTSD",
-    "needIt": "This helps you understand why people act out of fear or why they struggle to trust others. It explains how a broken sense of order can change how you see the world and your own actions.",
+    "title": "When the rules you trusted are broken",
+    "needIt": "People can survive danger. What breaks them is betrayal by those in charge of what is right. That is true in war, at work and in families.",
     "why": "The lecture looks at how people react when the rules of the world break down. It uses stories from ancient wars and modern conflicts to show how losing trust in 'the right way' of doing things can leave deep scars on the human soul.",
     "outcome": "Understand how a loss of social order leads to moral injury and personal trauma.",
     "reachesYou": "You see this when you feel unsafe in a crowd or when you find it hard to trust a stranger. It also shows up when you feel angry because someone broke a fair rule in your workplace or school.",
@@ -132,19 +132,19 @@
       }
     ],
     "scene": {
-      "analogy": "A broken rule in a game",
+      "analogy": "A hard game, and a game with a crooked referee",
       "map": [
         [
-          "A player",
-          "A soldier"
+          "Hard game",
+          "Danger"
         ],
         [
-          "A referee",
-          "The rules"
-        ],
-        [
-          "A foul",
+          "Crooked referee",
           "Betrayal"
+        ],
+        [
+          "the players",
+          "soldiers"
         ]
       ],
       "actors": [
@@ -155,7 +155,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A player",
+          "label": "Hard game",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -167,10 +167,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A referee",
+          "label": "Crooked referee",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "thing",
@@ -178,11 +178,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A FOUL",
+          "label": "THE PLAYERS",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "act",
@@ -190,7 +190,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "CHEATING",
+          "label": "PLAY ON",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -201,7 +201,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "The game is no longer fair.",
+          "label": "Hardship hurts. Betrayal breaks.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -209,7 +209,7 @@
       ],
       "beats": [
         {
-          "say": "A game is being played.",
+          "say": "Two hard games.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -225,7 +225,7 @@
           }
         },
         {
-          "say": "The referee lets a foul go.",
+          "say": "In one, the referee is fair.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -236,19 +236,19 @@
           }
         },
         {
-          "say": "The player feels cheated.",
+          "say": "Players come off tired but fine.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Feels cheated"
+              "sub": "tired but whole"
             },
             "right": {
-              "sub": "Loses trust"
+              "sub": "stop trusting the game"
             }
           }
         },
         {
-          "say": "Trust in the game breaks.",
+          "say": "In the other, the referee cheats, and something breaks.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -257,30 +257,30 @@
           }
         },
         {
-          "say": "Breaking the moral order causes deep internal injury.",
+          "say": "Shay: soldiers break when leaders betray what is right.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "A soldier",
+              "label": "Danger",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "The rules",
+              "label": "Betrayal",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "BETRAYAL",
+              "label": "SOLDIERS",
               "size": 18
             },
             "act": {
-              "label": "BREAKING",
+              "label": "ENDURE",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "When rules break, the soul suffers.",
+              "label": "Betrayal of what is right injures the soul.",
               "size": 22,
               "color": "green"
             }
@@ -320,5 +320,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

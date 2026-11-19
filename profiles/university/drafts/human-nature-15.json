@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 15,
-  "title": "Empirically informed responses",
+  "title": "Why pushing feels different from pulling a lever",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:50:44.385Z",
   "ok": true,
@@ -17,8 +17,8 @@
   ],
   "unit": {
     "n": 15,
-    "title": "Empirically informed responses",
-    "needIt": "This helps you understand why your gut feelings might be wrong. It shows how your brain uses shortcuts that can lead to biased choices in big life decisions.",
+    "title": "Why pushing feels different from pulling a lever",
+    "needIt": "Your sense of right and wrong often fires before you think, and reasons arrive later to defend it. Knowing that helps you tell a principle from a flinch.",
     "why": "People often feel that pushing a man to stop a train is wrong, but turning a track to save five people is right. Scientists found that our brains use different systems for these choices. One system uses logic while the other reacts with raw emotion.",
     "outcome": "Identify when your moral gut feeling might be a shortcut rather than a logical conclusion.",
     "reachesYou": "You see this when you make a quick choice at a store or judge a person's actions on social media. It happens whenever you feel a strong 'no' without being able to explain why.",
@@ -166,19 +166,19 @@
       "aha": "When we feel a strong moral 'no' without a reason, our brain might be using an emotional shortcut instead of a logical calculation."
     },
     "scene": {
-      "analogy": "A shopper chooses a snack based on bright colors instead of nutrition",
+      "analogy": "Pressing a button, or doing it by hand",
       "map": [
         [
-          "A hungry shopper",
-          "Your logic"
+          "Press a button",
+          "Bystander case"
         ],
         [
-          "A healthy diet",
-          "Your goal"
+          "Do it by hand",
+          "Push case"
         ],
         [
-          "Neon snack",
-          "Emotion"
+          "same result",
+          "five saved"
         ]
       ],
       "actors": [
@@ -189,10 +189,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A hungry shopper",
+          "label": "Press a button",
           "color": "blue",
           "o": 0,
-          "size": 18
+          "size": 22
         },
         {
           "id": "right",
@@ -201,7 +201,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A healthy diet",
+          "label": "Do it by hand",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -212,7 +212,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "NEON SNACK",
+          "label": "SAME RESULT",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -224,7 +224,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "GRABS",
+          "label": "CHOOSE",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -235,15 +235,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I thought it would be good but it was just sugar.",
+          "label": "Same outcome. Different gut.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A person looks at a shelf of snacks.",
+          "say": "Two ways to cause the same result.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -259,7 +259,7 @@
           }
         },
         {
-          "say": "They grab the brightest bag.",
+          "say": "You must choose one.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -270,19 +270,19 @@
           }
         },
         {
-          "say": "They eat it quickly.",
+          "say": "A switch feels like arithmetic.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Feels full for a moment"
+              "sub": "feels like a decision"
             },
             "right": {
-              "sub": "Feels regretful later"
+              "sub": "feels like a crime"
             }
           }
         },
         {
-          "say": "They feel a sudden crash.",
+          "say": "Your own hands feel like guilt.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -291,31 +291,31 @@
           }
         },
         {
-          "say": "Emotional shortcuts often override your logical thinking.",
+          "say": "Moral judgments often run on fast shortcuts, not careful logic.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Your logic",
+              "label": "Bystander case",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Your goal",
+              "label": "Push case",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "EMOTION",
-              "size": 18
+              "label": "FIVE SAVED",
+              "size": 14
             },
             "act": {
-              "label": "SKIPS",
+              "label": "WEIGH",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Your gut feeling took the lead over your clear plan.",
-              "size": 18,
+              "label": "Emotion answers first. Reasons come after.",
+              "size": 22,
               "color": "green"
             }
           }
@@ -332,5 +332,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 17,
-  "title": "Punishment I",
+  "title": "What punishment is for",
   "model": "gemma4:12b",
   "made": "2026-11-19T17:07:27.910Z",
   "ok": true,
@@ -19,8 +19,8 @@
   ],
   "unit": {
     "n": 17,
-    "title": "Punishment I",
-    "needIt": "This helps you understand why we feel some people deserve to be punished while others do not. It helps you think about whether a rule is fair because it stops future harm or because it balances the scales of justice.",
+    "title": "What punishment is for",
+    "needIt": "Every parent, boss and voter decides how wrongdoing should be answered. Is it to pay someone back, or to stop the next one? The answer changes what is fair.",
     "why": "A man hits a child while texting. Most people think he deserves punishment. The lecture explores why we feel this way and whether punishment should be about stopping him from doing it again or making him pay for what he did.",
     "outcome": "Evaluate different reasons for why a society chooses to punish people.",
     "reachesYou": "You see this when you think about why a person gets a speeding ticket or a fine. You feel it when you wonder if a criminal should be in jail to protect others or just to pay for their crime.",
@@ -168,19 +168,19 @@
       "aha": "Punishment is a tool of the state that balances the scales of justice or protects the future by causing intentional suffering."
     },
     "scene": {
-      "analogy": "A referee giving a red card to a player",
+      "analogy": "A ball goes through a window",
       "map": [
         [
-          "The Referee",
-          "The State"
+          "Pay for it",
+          "Retribution"
         ],
         [
-          "The Player",
-          "The Offender"
+          "Stop it next time",
+          "Deterrence"
         ],
         [
-          "Red Card",
-          "Punishment"
+          "the window",
+          "the offense"
         ]
       ],
       "actors": [
@@ -191,7 +191,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The Referee",
+          "label": "Pay for it",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -203,10 +203,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The Player",
+          "label": "Stop it next time",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "thing",
@@ -214,11 +214,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "RED CARD",
+          "label": "THE WINDOW",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "act",
@@ -226,7 +226,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "REFEREES",
+          "label": "BREAK",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -237,15 +237,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "The rules must be followed for the game to be fair.",
+          "label": "Looking back, or looking ahead?",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A player breaks a rule.",
+          "say": "A ball goes through a window.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -261,7 +261,7 @@
           }
         },
         {
-          "say": "The referee sees the foul.",
+          "say": "Something has to be done.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -272,19 +272,19 @@
           }
         },
         {
-          "say": "The player is sent off.",
+          "say": "One parent says: you broke it, you pay.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Maintains the game rules"
+              "sub": "because they did it"
             },
             "right": {
-              "sub": "Leaves the field"
+              "sub": "so it does not happen again"
             }
           }
         },
         {
-          "say": "The game stays fair.",
+          "say": "Another says: what will stop this next time?",
           "dur": 2.6,
           "set": {
             "line": {
@@ -293,31 +293,31 @@
           }
         },
         {
-          "say": "Punishment is a formal response to a violation of social rules.",
+          "say": "Punishment is justified by desert or by future good.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "The State",
+              "label": "Retribution",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "The Offender",
+              "label": "Deterrence",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "PUNISHMENT",
+              "label": "THE OFFENSE",
               "size": 14
             },
             "act": {
-              "label": "JUSTICE",
+              "label": "ANSWER",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Punishment is a response to a violation of a code.",
-              "size": 18,
+              "label": "Desert looks back. Safety looks forward.",
+              "size": 22,
               "color": "green"
             }
           }
@@ -334,5 +334,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

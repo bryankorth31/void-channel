@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 7,
-  "title": "Flourishing and attachment",
+  "title": "We need each other more than we think",
   "model": "gemma4:12b",
   "made": "2026-11-19T15:58:30.665Z",
   "ok": true,
@@ -33,8 +33,8 @@
   ],
   "unit": {
     "n": 7,
-    "title": "Flourishing and attachment",
-    "needIt": "Understanding how we bond helps you build better trust in your own relationships. It explains why you feel safer with some people and how to create a stable life with others.",
+    "title": "We need each other more than we think",
+    "needIt": "Babies need holding as much as feeding, and adults do what the person beside them expects. Knowing how strongly others shape you helps you choose who is beside you.",
     "why": "The lecture looks at how humans are built to need others to survive and thrive. It shows that when we feel a real connection, we feel safe, but when that connection is missing, we struggle to trust the world.",
     "outcome": "Identify how early bonds and social connections shape your ability to trust and flourish.",
     "reachesYou": "You see this when you feel a deep bond with a friend or a sense of safety with your family. You also feel it when you struggle to trust a stranger or a new coworker.",
@@ -182,19 +182,19 @@
       "aha": "We are built to thrive through emotional bonds and social trust."
     },
     "scene": {
-      "analogy": "A child reaching for a parent's hand",
+      "analogy": "A child at a new playground",
       "map": [
         [
-          "A lonely child",
-          "A lonely child"
+          "Parent on bench",
+          "Secure bond"
         ],
         [
-          "A parent",
-          "A parent"
+          "No one there",
+          "No bond"
         ],
         [
-          "A hand",
-          "A hand"
+          "playground",
+          "the world"
         ]
       ],
       "actors": [
@@ -205,10 +205,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A lonely child",
+          "label": "Parent on bench",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "right",
@@ -217,7 +217,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A parent",
+          "label": "No one there",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -228,11 +228,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A HAND",
+          "label": "PLAYGROUND",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "act",
@@ -240,7 +240,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "REACH",
+          "label": "EXPLORE",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -251,7 +251,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I know you will catch me.",
+          "label": "A safe base makes you brave.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -259,7 +259,7 @@
       ],
       "beats": [
         {
-          "say": "A child stands alone.",
+          "say": "A child at a new playground.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -275,7 +275,7 @@
           }
         },
         {
-          "say": "The parent reaches out.",
+          "say": "Will they go and explore?",
           "dur": 2.4,
           "set": {
             "act": {
@@ -286,19 +286,19 @@
           }
         },
         {
-          "say": "The child grabs the hand.",
+          "say": "With a parent on the bench, they roam.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Feels safe"
+              "sub": "roams far, checks back"
             },
             "right": {
-              "sub": "Feels proud"
+              "sub": "stays near the gate"
             }
           }
         },
         {
-          "say": "The child feels safe.",
+          "say": "Alone, they hang back.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -307,30 +307,30 @@
           }
         },
         {
-          "say": "Early bonds create the foundation for a trusting life.",
+          "say": "Harlow: warmth and contact matter as much as food.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "A lonely child",
+              "label": "Secure bond",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "A parent",
+              "label": "No bond",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "A HAND",
-              "size": 18
+              "label": "THE WORLD",
+              "size": 14
             },
             "act": {
-              "label": "REACH",
+              "label": "FACE",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Early trust builds a safe world.",
+              "label": "Trust comes first, courage after.",
               "size": 22,
               "color": "green"
             }
@@ -348,5 +348,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

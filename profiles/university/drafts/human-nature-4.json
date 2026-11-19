@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 4,
-  "title": "Parts of the soul II",
+  "title": "Knowing better and flinching anyway",
   "model": "gemma4:12b",
   "made": "2026-11-19T15:47:45.505Z",
   "ok": true,
@@ -12,8 +12,8 @@
   ],
   "unit": {
     "n": 4,
-    "title": "Parts of the soul II",
-    "needIt": "Understanding how your brain works helps you see why you make quick mistakes or feel sudden urges. It helps you catch your own habits before they lead to bad choices.",
+    "title": "Knowing better and flinching anyway",
+    "needIt": "You know the glass floor is safe and your legs still shake. Seeing that habit and knowledge are separate systems explains a lot of what you do.",
     "why": "Our brains have two systems. One is fast and automatic, like a reflex. The other is slow and logical, like solving a math problem. Sometimes, our old habits act like a 'ghost' that pulls us toward a choice even when we know better.",
     "outcome": "Identify when your automatic habits are overriding your logical goals.",
     "reachesYou": "You feel this when you grab a snack even though you are on a diet. You see it when you reach for your phone out of habit before you even think about it.",
@@ -161,19 +161,19 @@
       "aha": "The automatic 'alief' system often acts faster than our conscious 'System Two' logic."
     },
     "scene": {
-      "analogy": "A person reaching for a snack on a diet",
+      "analogy": "Walking on a glass floor high up",
       "map": [
         [
-          "The hungry person",
-          "The logical mind"
+          "What you know",
+          "Belief"
         ],
         [
-          "The snack",
-          "The old habit"
+          "What your legs do",
+          "Alief"
         ],
         [
-          "A habit",
-          "A snack"
+          "glass floor",
+          "one moment"
         ]
       ],
       "actors": [
@@ -184,10 +184,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The hungry person",
+          "label": "What you know",
           "color": "blue",
           "o": 0,
-          "size": 18
+          "size": 22
         },
         {
           "id": "right",
@@ -196,10 +196,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The snack",
+          "label": "What your legs do",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "thing",
@@ -207,11 +207,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A HABIT",
+          "label": "GLASS FLOOR",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "act",
@@ -219,7 +219,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "REACHING",
+          "label": "STEP OUT",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -230,7 +230,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I knew I should not have eaten that.",
+          "label": "Knowing is not the same as feeling.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -238,7 +238,7 @@
       ],
       "beats": [
         {
-          "say": "They want to lose weight.",
+          "say": "A glass floor over a long drop.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -254,7 +254,7 @@
           }
         },
         {
-          "say": "They see the snack.",
+          "say": "You step out onto it.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -265,19 +265,19 @@
           }
         },
         {
-          "say": "They grab it fast.",
+          "say": "You know it will hold.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Grabs the snack"
+              "sub": "it is perfectly safe"
             },
             "right": {
-              "sub": "Feels regret"
+              "sub": "knees shake anyway"
             }
           }
         },
         {
-          "say": "They feel guilty.",
+          "say": "Your body does not agree.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -286,30 +286,30 @@
           }
         },
         {
-          "say": "Habits act as a hidden force that overrides our conscious plans.",
+          "say": "A quick automatic system runs beside your careful one.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "The logical mind",
-              "size": 18,
+              "label": "Belief",
+              "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "The old habit",
+              "label": "Alief",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "A SNACK",
-              "size": 18
+              "label": "ONE MOMENT",
+              "size": 14
             },
             "act": {
-              "label": "REACHING",
+              "label": "REACT",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "The habit pulls harder than the logic.",
+              "label": "Fast habit can overrule slow reason.",
               "size": 22,
               "color": "green"
             }
@@ -327,5 +327,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

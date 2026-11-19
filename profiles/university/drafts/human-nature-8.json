@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 8,
-  "title": "Flourishing and detachment",
+  "title": "Worry only about what is yours to change",
   "model": "gemma4:12b",
   "made": "2026-11-19T15:51:27.515Z",
   "ok": true,
@@ -11,8 +11,8 @@
   ],
   "unit": {
     "n": 8,
-    "title": "Flourishing and detachment",
-    "needIt": "This helps you stay calm when things go wrong by teaching you to focus only on what you can control. It helps you stop stressing over traffic, the weather, or what other people think of you.",
+    "title": "Worry only about what is yours to change",
+    "needIt": "Most upset comes from fighting things you cannot control. Sorting what is up to you from what is not costs nothing and works the same day.",
     "why": "A man named Epictetus lived as a slave but found freedom by changing how he thought about his life. He taught that we only suffer when we try to control things that are not up to us. By letting go of the outside world, he found a way to stay steady even when life was hard.",
     "outcome": "Distinguish between things you can change and things you cannot.",
     "reachesYou": "You feel this when you get stuck in a long line at a store and feel your blood pressure rise. You also feel it when you worry about a mean comment on your phone that you cannot take back.",
@@ -129,19 +129,19 @@
       "aha": "By separating what you can control from what you cannot, you find peace."
     },
     "scene": {
-      "analogy": "A person waiting for a bus in the rain",
+      "analogy": "Stuck in traffic",
       "map": [
         [
-          "A person",
-          "Your mind"
+          "The traffic",
+          "Not up to us"
         ],
         [
-          "The rain",
-          "The weather"
+          "Your reaction",
+          "Up to us"
         ],
         [
-          "A bus stop",
-          "Your choice"
+          "the jam",
+          "events"
         ]
       ],
       "actors": [
@@ -152,7 +152,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A person",
+          "label": "The traffic",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -164,7 +164,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The rain",
+          "label": "Your reaction",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -175,11 +175,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A BUS STOP",
+          "label": "THE JAM",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 14
+          "size": 18
         },
         {
           "id": "act",
@@ -187,7 +187,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "WAITING",
+          "label": "SIT IN",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -198,15 +198,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I cannot stop the rain, but I can choose my reaction.",
+          "label": "Shout at the cars, or put on some music.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A person stands at a bus stop.",
+          "say": "You are stuck in traffic.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -222,7 +222,7 @@
           }
         },
         {
-          "say": "It starts to rain heavily.",
+          "say": "Nothing you do moves the cars.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -233,19 +233,19 @@
           }
         },
         {
-          "say": "The person stays calm.",
+          "say": "The jam is not up to you.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Stays calm"
+              "sub": "not up to you"
             },
             "right": {
-              "sub": "Falls down"
+              "sub": "all yours"
             }
           }
         },
         {
-          "say": "They feel peaceful.",
+          "say": "How you sit in it is.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -254,31 +254,31 @@
           }
         },
         {
-          "say": "Focus on your reaction rather than trying to change the world.",
+          "say": "Put your effort only where you have control.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Your mind",
+              "label": "Not up to us",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "The weather",
+              "label": "Up to us",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "YOUR CHOICE",
-              "size": 14
+              "label": "EVENTS",
+              "size": 18
             },
             "act": {
-              "label": "ACCEPTANCE",
-              "size": 14,
+              "label": "JUDGE",
+              "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Control your inner world, not the outer one.",
-              "size": 22,
+              "label": "Epictetus: it is our judgments that upset us.",
+              "size": 18,
               "color": "green"
             }
           }
@@ -295,5 +295,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

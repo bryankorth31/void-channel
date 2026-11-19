@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 13,
-  "title": "Deontology",
+  "title": "Doing right because it is right",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:15:07.866Z",
   "ok": true,
@@ -12,8 +12,8 @@
   ],
   "unit": {
     "n": 13,
-    "title": "Deontology",
-    "needIt": "This helps you understand that doing the right thing matters even when it is hard or produces no reward. It teaches you to act based on honest principles rather than just looking for the easiest result.",
+    "title": "Doing right because it is right",
+    "needIt": "A shopkeeper who is honest only so customers come back is one bad day from cheating. Kant asks what your reason is, because reasons are what last.",
     "why": "Imagine you help a friend move houses. You do it because you believe in being a helpful person, not because you want them to owe you a favor later. Kant argues that your help is only truly 'good' because of your inner motive, not the move itself.",
     "outcome": "Evaluate your own actions based on your underlying principles rather than just the final results.",
     "reachesYou": "You see this when you choose to be honest at work even if it costs you a sale. You feel it when you help a stranger because it is the right thing to do, not for a reward.",
@@ -149,19 +149,19 @@
       }
     ],
     "scene": {
-      "analogy": "A student returning a lost wallet",
+      "analogy": "Two honest shopkeepers",
       "map": [
         [
-          "A student",
-          "The student"
+          "Honest for profit",
+          "From inclination"
         ],
         [
-          "A lost wallet",
-          "The wallet"
+          "Honest on principle",
+          "From duty"
         ],
         [
-          "Honesty",
-          "Good will"
+          "your change",
+          "moral worth"
         ]
       ],
       "actors": [
@@ -172,10 +172,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A student",
+          "label": "Honest for profit",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "right",
@@ -184,10 +184,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A lost wallet",
+          "label": "Honest on principle",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "thing",
@@ -195,11 +195,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "HONESTY",
+          "label": "YOUR CHANGE",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "act",
@@ -207,7 +207,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "RETURN",
+          "label": "COUNT",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -218,15 +218,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I did it because it was the right thing to do.",
+          "label": "Same act. Different reason.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A student finds a wallet.",
+          "say": "Two shopkeepers give correct change.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -242,7 +242,7 @@
           }
         },
         {
-          "say": "They decide to return it.",
+          "say": "You cannot tell them apart.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -253,19 +253,19 @@
           }
         },
         {
-          "say": "The owner gets it back.",
+          "say": "One is honest because it is good for business.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Feels proud"
+              "sub": "until cheating pays"
             },
             "right": {
-              "sub": "Owner happy"
+              "sub": "every time"
             }
           }
         },
         {
-          "say": "They feel a sense of duty.",
+          "say": "One is honest because it is right.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -274,31 +274,31 @@
           }
         },
         {
-          "say": "Moral worth comes from the motive, not the outcome.",
+          "say": "For Kant an act has moral worth only when done from duty.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "The student",
-              "size": 22,
+              "label": "From inclination",
+              "size": 18,
               "color": "gold"
             },
             "right": {
-              "label": "The wallet",
+              "label": "From duty",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "GOOD WILL",
+              "label": "MORAL WORTH",
               "size": 14
             },
             "act": {
-              "label": "RETURN",
+              "label": "LIES IN",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "The motive is what gives the act its value.",
-              "size": 22,
+              "label": "Kant: the worth is in the will, not the result.",
+              "size": 18,
               "color": "green"
             }
           }
@@ -337,5 +337,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

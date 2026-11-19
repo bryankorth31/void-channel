@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 5,
-  "title": "The well-ordered soul: happiness and harmony",
+  "title": "Getting your own parts to pull together",
   "model": "gemma4:12b",
   "made": "2026-11-19T15:48:48.637Z",
   "ok": true,
@@ -15,8 +15,8 @@
   ],
   "unit": {
     "n": 5,
-    "title": "The well-ordered soul: happiness and harmony",
-    "needIt": "This helps you understand why it feels hard to stay focused on your goals. You can use these ideas to build better habits, like choosing to study instead of scrolling on your phone.",
+    "title": "Getting your own parts to pull together",
+    "needIt": "Willpower in the moment is weak. People who do what they meant to do mostly arrange things ahead of time, so the fight never happens.",
     "why": "The lecture explores how our inner selves can feel like a tug-of-war between different desires. It tells the story of how ancient thinkers tried to figure out how to make our minds work in harmony. By understanding these internal parts, we can learn to lead ourselves better.",
     "outcome": "Apply ancient wisdom to improve your own self-regulation and focus.",
     "reachesYou": "You feel this when you want to sleep in but know you need to get up for work. You also feel it when you try to stay off social media but find yourself clicking on apps anyway.",
@@ -137,156 +137,156 @@
       }
     ],
     "scene": {
-      "analogy": "A person trying to choose a healthy meal",
+      "analogy": "Driving without checking your phone",
+      "layout": "steps",
       "map": [
         [
-          "Hunger",
-          "Appetite"
+          "Phone buzzes",
+          "Desire"
         ],
         [
-          "Health",
-          "Reason"
+          "Bag it first",
+          "Precommitment"
         ],
         [
-          "Pizza",
-          "Choice"
+          "Drive in peace",
+          "Harmony"
         ]
       ],
       "actors": [
         {
-          "id": "left",
+          "id": "s0",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
+          "x": 30,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "Hunger",
+          "label": "Phone buzzes",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "right",
+          "id": "s1",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
+          "x": 290,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "Health",
+          "label": "Bag it first",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "PIZZA",
-          "color": "gold",
+          "id": "a1",
+          "type": "arrow",
+          "x": 256,
+          "y": 140,
+          "x2": 284,
+          "y2": 140,
+          "color": "dim",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "draw": 0
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "CHOOSING",
-          "color": "fg",
+          "id": "s2",
+          "type": "card",
+          "x": 550,
+          "y": 90,
+          "w": 220,
+          "h": 100,
+          "label": "Drive in peace",
+          "color": "blue",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 17
+        },
+        {
+          "id": "a2",
+          "type": "arrow",
+          "x": 516,
+          "y": 140,
+          "x2": 544,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
-          "label": "I want the pizza but I know I need the salad.",
+          "y": 270,
+          "label": "Decide once, before the moment.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "You see a delicious pizza.",
-          "dur": 2.4,
-          "set": {
-            "left": {
-              "o": 1
-            },
-            "right": {
-              "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
-            }
-          }
-        },
-        {
-          "say": "Your stomach wants it.",
-          "dur": 2.4,
-          "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
-            }
-          }
-        },
-        {
-          "say": "You choose a salad.",
+          "say": "While you drive, the phone will buzz.",
           "dur": 2.6,
           "set": {
-            "left": {
-              "sub": "Full but tired"
-            },
-            "right": {
-              "sub": "Healthy and alert"
+            "s0": {
+              "o": 1,
+              "sub": "you will want to look"
             }
           }
         },
         {
-          "say": "You feel proud.",
+          "say": "So before you start, you seal it in a bag.",
           "dur": 2.6,
           "set": {
+            "s1": {
+              "o": 1,
+              "sub": "sealed, out of reach"
+            },
+            "a1": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "Now there is nothing to fight.",
+          "dur": 2.6,
+          "set": {
+            "s2": {
+              "o": 1,
+              "sub": "nothing to resist"
+            },
+            "a2": {
+              "o": 1,
+              "draw": 1
+            },
             "line": {
               "o": 1
             }
           }
         },
         {
-          "say": "A well-ordered soul lets reason guide our desires.",
-          "dur": 3.4,
+          "say": "A well ordered soul lets reason set things up in advance.",
+          "dur": 3.6,
           "set": {
-            "left": {
-              "label": "Appetite",
-              "size": 22,
-              "color": "gold"
-            },
-            "right": {
-              "label": "Reason",
+            "line": {
+              "label": "Reason leads by planning ahead.",
               "size": 22,
               "color": "green"
             },
-            "thing": {
-              "label": "CHOICE",
-              "size": 18
+            "s0": {
+              "label": "Desire",
+              "size": 20,
+              "color": "gold"
             },
-            "act": {
-              "label": "REGULATING",
-              "size": 14,
-              "color": "pink"
+            "s1": {
+              "label": "Precommitment",
+              "size": 20,
+              "color": "gold"
             },
-            "line": {
-              "label": "Harmony comes when reason leads the soul.",
-              "size": 22,
+            "s2": {
+              "label": "Harmony",
+              "size": 20,
               "color": "green"
             }
           }
@@ -325,5 +325,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

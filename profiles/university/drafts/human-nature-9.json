@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 9,
-  "title": "Virtue and habit I",
+  "title": "You become what you practice",
   "model": "gemma4:12b",
   "made": "2026-11-19T15:59:31.209Z",
   "ok": true,
@@ -12,8 +12,8 @@
   ],
   "unit": {
     "n": 9,
-    "title": "Virtue and habit I",
-    "needIt": "This helps you build better habits by turning 'should' into 'just doing.' You can use it to stop procrastinating or start a new routine by changing your environment.",
+    "title": "You become what you practice",
+    "needIt": "Nobody decides to be patient or brave. You do the patient thing, clumsily, many times, and one day it is just how you are.",
     "why": "Aristotle believed we become good by doing good things until they become automatic. The lecture explains how we can use science to turn our goals into these automatic habits.",
     "outcome": "Create a plan to turn a goal into a daily habit using rewards and environment changes.",
     "reachesYou": "You see this when you struggle to stop checking your phone or when you find it hard to start a new workout. It shows up every time you try to change a small daily routine.",
@@ -134,156 +134,156 @@
       }
     ],
     "scene": {
-      "analogy": "A student trying to study without a phone",
+      "analogy": "Learning to drive",
+      "layout": "steps",
       "map": [
         [
-          "A student",
-          "A goal"
+          "Think each move",
+          "Ought"
         ],
         [
-          "A phone",
-          "A habit"
+          "Practice daily",
+          "Repetition"
         ],
         [
-          "A desk",
-          "Practice"
+          "No thought now",
+          "Is"
         ]
       ],
       "actors": [
         {
-          "id": "left",
+          "id": "s0",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
+          "x": 30,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "A student",
+          "label": "Think each move",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 17
         },
         {
-          "id": "right",
+          "id": "s1",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
+          "x": 290,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "A phone",
+          "label": "Practice daily",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 17
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "A DESK",
-          "color": "gold",
+          "id": "a1",
+          "type": "arrow",
+          "x": 256,
+          "y": 140,
+          "x2": 284,
+          "y2": 140,
+          "color": "dim",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "draw": 0
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "PUT AWAY",
-          "color": "fg",
+          "id": "s2",
+          "type": "card",
+          "x": 550,
+          "y": 90,
+          "w": 220,
+          "h": 100,
+          "label": "No thought now",
+          "color": "blue",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 17
+        },
+        {
+          "id": "a2",
+          "type": "arrow",
+          "x": 516,
+          "y": 140,
+          "x2": 544,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
-          "label": "I can finally get my work done without distractions.",
+          "y": 270,
+          "label": "Repeat it until it runs itself.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A student sits at a desk.",
-          "dur": 2.4,
-          "set": {
-            "left": {
-              "o": 1
-            },
-            "right": {
-              "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
-            }
-          }
-        },
-        {
-          "say": "The phone vibrates nearby.",
-          "dur": 2.4,
-          "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
-            }
-          }
-        },
-        {
-          "say": "The student puts it away.",
+          "say": "At first you think about every move.",
           "dur": 2.6,
           "set": {
-            "left": {
-              "sub": "Focuses on work"
-            },
-            "right": {
-              "sub": "Stays silent"
+            "s0": {
+              "o": 1,
+              "sub": "mirror, signal, brake"
             }
           }
         },
         {
-          "say": "They feel a sense of focus.",
+          "say": "You drive the same streets again and again.",
           "dur": 2.6,
           "set": {
+            "s1": {
+              "o": 1,
+              "sub": "same route, again"
+            },
+            "a1": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "One day you arrive and cannot remember driving.",
+          "dur": 2.6,
+          "set": {
+            "s2": {
+              "o": 1,
+              "sub": "it just happens"
+            },
+            "a2": {
+              "o": 1,
+              "draw": 1
+            },
             "line": {
               "o": 1
             }
           }
         },
         {
-          "say": "Repeated practice turns a choice into a natural law.",
-          "dur": 3.4,
+          "say": "Aristotle: habit turns what you should do into what you do.",
+          "dur": 3.6,
           "set": {
-            "left": {
-              "label": "A goal",
-              "size": 22,
-              "color": "gold"
-            },
-            "right": {
-              "label": "A habit",
+            "line": {
+              "label": "We become builders by building.",
               "size": 22,
               "color": "green"
             },
-            "thing": {
-              "label": "PRACTICE",
-              "size": 18
+            "s0": {
+              "label": "Ought",
+              "size": 20,
+              "color": "gold"
             },
-            "act": {
-              "label": "REPEAT",
-              "size": 18,
-              "color": "pink"
+            "s1": {
+              "label": "Repetition",
+              "size": 20,
+              "color": "gold"
             },
-            "line": {
-              "label": "Practice turns a goal into a natural habit.",
-              "size": 22,
+            "s2": {
+              "label": "Is",
+              "size": 20,
               "color": "green"
             }
           }
@@ -322,5 +322,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

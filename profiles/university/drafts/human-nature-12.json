@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 12,
-  "title": "Utilitarianism and its critiques",
+  "title": "The greatest good for the most people",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:13:53.248Z",
   "ok": true,
@@ -9,8 +9,8 @@
   "notes": [],
   "unit": {
     "n": 12,
-    "title": "Utilitarianism and its critiques",
-    "needIt": "This helps you decide if an action is right by looking at the total happiness it creates for everyone. It helps you weigh choices like whether a small personal sacrifice is worth a big gain for a group.",
+    "title": "The greatest good for the most people",
+    "needIt": "Budgets, triage, public rules: many decisions are made by adding up who is helped and who is hurt. You should know that way of thinking and where it goes wrong.",
     "why": "A teacher shows how different people react to a choice between personal comfort and the happiness of others. Some people choose their own comfort, while others feel a moral duty to help the group. The lecture explores how these choices define our moral rules.",
     "outcome": "Evaluate the morality of actions based on their consequences for the community.",
     "reachesYou": "You see this when you decide if a small personal inconvenience is worth helping a friend. You also face it when thinking about how your daily habits might affect people far away.",
@@ -150,19 +150,19 @@
       "aha": "By looking at the results instead of the person or the reason, utilitarianism provides a systematic way to measure the 'good' of any action."
     },
     "scene": {
-      "analogy": "Sharing a large pizza with a hungry group",
+      "analogy": "Choosing one pizza for the whole table",
       "map": [
         [
-          "A hungry person",
-          "Your happiness"
+          "Your favorite",
+          "My happiness"
         ],
         [
-          "A group of friends",
-          "Group happiness"
+          "What most enjoy",
+          "Total happiness"
         ],
         [
-          "One pizza",
-          "A choice"
+          "one pizza",
+          "an act"
         ]
       ],
       "actors": [
@@ -173,10 +173,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A hungry person",
+          "label": "Your favorite",
           "color": "blue",
           "o": 0,
-          "size": 18
+          "size": 22
         },
         {
           "id": "right",
@@ -185,7 +185,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A group of friends",
+          "label": "What most enjoy",
           "color": "blue",
           "o": 0,
           "size": 18
@@ -208,7 +208,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "SHARING",
+          "label": "ORDER",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -219,7 +219,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "Everyone is fed and the mood is great.",
+          "label": "Count everyone, yourself only once.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -227,7 +227,7 @@
       ],
       "beats": [
         {
-          "say": "A group of friends is hungry.",
+          "say": "One pizza for six people.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -243,7 +243,7 @@
           }
         },
         {
-          "say": "One person has a pizza.",
+          "say": "You are ordering.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -254,19 +254,19 @@
           }
         },
         {
-          "say": "They share the pizza.",
+          "say": "Your favorite pleases you.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Full and happy"
+              "sub": "one very happy eater"
             },
             "right": {
-              "sub": "Full and happy"
+              "sub": "the table is happy"
             }
           }
         },
         {
-          "say": "Everyone feels happy.",
+          "say": "Another choice pleases the most people.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -275,31 +275,31 @@
           }
         },
         {
-          "say": "Utilitarianism seeks to maximize total happiness for everyone.",
+          "say": "Utilitarianism judges an act by the happiness it brings everyone.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Your happiness",
+              "label": "My happiness",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Group happiness",
+              "label": "Total happiness",
               "size": 18,
               "color": "green"
             },
             "thing": {
-              "label": "A CHOICE",
+              "label": "AN ACT",
               "size": 18
             },
             "act": {
-              "label": "SACRIFICE",
-              "size": 14,
+              "label": "JUDGE",
+              "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "The goal is the most good for the most people.",
-              "size": 18,
+              "label": "Mill: right acts promote happiness for all.",
+              "size": 22,
               "color": "green"
             }
           }
@@ -316,5 +316,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

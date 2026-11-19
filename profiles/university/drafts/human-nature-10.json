@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 10,
-  "title": "Virtue and habit II",
+  "title": "Good people, or good situations?",
   "model": "gemma4:12b",
   "made": "2026-11-19T15:52:59.103Z",
   "ok": true,
@@ -12,8 +12,8 @@
   ],
   "unit": {
     "n": 10,
-    "title": "Virtue and habit II",
-    "needIt": "Knowing how your habits and surroundings shape your choices helps you understand why you sometimes act against your own values. It helps you see when you are being lazy versus when you are just stuck in a bad situation.",
+    "title": "Good people, or good situations?",
+    "needIt": "Whether you stop to help depends a great deal on whether you are in a hurry. Knowing that, you can arrange your days so your better self gets a chance.",
     "why": "Aristotle says being a good person is like playing an instrument. You have to practice until it feels natural. But science shows that sometimes we don't choose our actions because of who we are, but because of how much of a rush we are in.",
     "outcome": "Identify whether your actions come from your true character or just your current situation.",
     "reachesYou": "You see this when you feel guilty for being lazy at home or when you feel like a hero for helping a stranger. It also shows up when you wonder if your friends are actually nice people or just acting nice for a reward.",
@@ -135,19 +135,19 @@
       "aha": "Virtue is when your character and your situation align so perfectly that doing the right thing feels like a natural flow."
     },
     "scene": {
-      "analogy": "A student choosing to study or sleep",
+      "analogy": "Someone drops their groceries",
       "map": [
         [
-          "The student",
-          "The student"
+          "Plenty of time",
+          "Character"
         ],
         [
-          "The desk",
-          "The desk"
+          "Running late",
+          "Situation"
         ],
         [
-          "A book",
-          "A book"
+          "a stranger",
+          "the act"
         ]
       ],
       "actors": [
@@ -158,7 +158,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The student",
+          "label": "Plenty of time",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -170,7 +170,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The desk",
+          "label": "Running late",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -181,11 +181,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A BOOK",
+          "label": "A STRANGER",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "act",
@@ -193,26 +193,26 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "STUDYING",
+          "label": "NEEDS HELP",
           "color": "fg",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I only studied because the test was tomorrow.",
+          "label": "Same person. Different hurry.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "The student sits at the desk.",
+          "say": "Someone drops their groceries.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -228,7 +228,7 @@
           }
         },
         {
-          "say": "They open a heavy book.",
+          "say": "Two people walk by.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -239,19 +239,19 @@
           }
         },
         {
-          "say": "They finish a chapter.",
+          "say": "The one with time stops.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Gets a good grade"
+              "sub": "stops and helps"
             },
             "right": {
-              "sub": "Feels tired"
+              "sub": "walks right past"
             }
           }
         },
         {
-          "say": "They feel tired but proud.",
+          "say": "The one running late does not.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -260,30 +260,30 @@
           }
         },
         {
-          "say": "Virtue is a habit that feels natural and effortless.",
+          "say": "Aristotle wants steady virtue. Studies show the moment bends it.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "The student",
+              "label": "Character",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "The desk",
+              "label": "Situation",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "A BOOK",
+              "label": "THE ACT",
               "size": 18
             },
             "act": {
-              "label": "STUDYING",
+              "label": "DECIDES",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "True virtue feels like a natural habit.",
+              "label": "Hurry beat character in the study.",
               "size": 22,
               "color": "green"
             }
@@ -301,5 +301,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

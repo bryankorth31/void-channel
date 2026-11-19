@@ -1,7 +1,7 @@
 {
   "slug": "human-nature",
   "n": 18,
-  "title": "Punishment II",
+  "title": "Should a failed crime be punished less?",
   "model": "gemma4:12b",
   "made": "2026-11-19T17:08:06.552Z",
   "ok": true,
@@ -13,8 +13,8 @@
   ],
   "unit": {
     "n": 18,
-    "title": "Punishment II",
-    "needIt": "Understanding why we feel some actions deserve more punishment than others helps you judge fairness in your own life. It helps you see why we focus on a person's intent rather than just the final result.",
+    "title": "Should a failed crime be punished less?",
+    "needIt": "Courts punish attempted murder less than murder, though the intent was the same. Asking whether that is fair shows what you think punishment is really for.",
     "why": "A person might think that if a crime fails, it shouldn't be punished. But if we only looked at results, a person who tried to hurt someone but got lucky and failed would go free. This shows that our sense of justice is tied to what a person intended to do, not just what happened.",
     "outcome": "Evaluate whether a punishment is fair based on intent versus outcome.",
     "reachesYou": "You see this when you decide how much to scold a friend for a mistake. You also see it when you judge a coworker who tried to help but accidentally caused a mess.",
@@ -157,19 +157,19 @@
       "aha": "We use utility to set the rules, but we use intent to judge the person."
     },
     "scene": {
-      "analogy": "A chef accidentally burns a cake",
+      "analogy": "Two kids throw a rock at a window",
       "map": [
         [
-          "The Chef",
-          "The Chef"
+          "Rock missed",
+          "Failed attempt"
         ],
         [
-          "The Customer",
-          "The Customer"
+          "Rock hit",
+          "Finished crime"
         ],
         [
-          "Burnt Cake",
-          "Burnt Cake"
+          "the window",
+          "the intent"
         ]
       ],
       "actors": [
@@ -180,7 +180,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The Chef",
+          "label": "Rock missed",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -192,7 +192,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The Customer",
+          "label": "Rock hit",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -203,7 +203,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "BURNT CAKE",
+          "label": "THE WINDOW",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -215,7 +215,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "SERVE",
+          "label": "THROW",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -226,7 +226,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "It was a mistake, but it still tastes bad.",
+          "label": "Both meant to break it.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -234,7 +234,7 @@
       ],
       "beats": [
         {
-          "say": "The chef prepares a cake.",
+          "say": "Two kids each throw a rock at a window.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -250,7 +250,7 @@
           }
         },
         {
-          "say": "The cake burns in the oven.",
+          "say": "Both mean to break it.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -261,19 +261,19 @@
           }
         },
         {
-          "say": "The customer eats the cake.",
+          "say": "One misses.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Chef feels guilty"
+              "sub": "nothing broke"
             },
             "right": {
-              "sub": "Customer is sad"
+              "sub": "glass everywhere"
             }
           }
         },
         {
-          "say": "The customer feels disappointed.",
+          "say": "One hits.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -282,30 +282,30 @@
           }
         },
         {
-          "say": "We judge the chef by his goal, not just the burnt cake.",
+          "say": "Justice weighs what was intended, not only what happened.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "The Chef",
+              "label": "Failed attempt",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "The Customer",
+              "label": "Finished crime",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "BURNT CAKE",
+              "label": "THE INTENT",
               "size": 14
             },
             "act": {
-              "label": "SERVE",
+              "label": "SAME",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Intent matters more than the final result.",
+              "label": "Results alone cannot tell us what is fair.",
               "size": 22,
               "color": "green"
             }
@@ -323,5 +323,6 @@
       "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
       "note": "A full lecture. Use the chapters to watch it in pieces."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }
