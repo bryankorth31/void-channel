@@ -95,6 +95,38 @@ function lab(u) {
     + '</div>';
 }
 
+// The scale: measured things in 3D at their true size to each other (scale.js; B, 19 Nov 2026: "3 dimensional visible
+// visual explainers to show scale ... that can be rotated and manipulated spatially"). The list, the numbers and the
+// sources are plain HTML here, so they read with no 3D at all; scale.js draws the stage and wires the list to it.
+const SCALE_COLOR = { plant: '#4fb873', microbe: '#9b8cf0', fungi: '#d79a55', animal: '#58b6e8', people: '#ff6fb5', farm: '#ffc44d', wild: '#6fe0c0' };
+// 450 with "tonnes of carbon" counted in billions -> "450 billion tonnes of carbon"; 0.007 -> "7 million ..."
+function amount(v, unit) {
+  if (v === 0) return 'none';
+  const n = v * unit.per;
+  const say = (x, word) => String(Number(x.toPrecision(2))) + (word ? ' ' + word : '');
+  const t = n >= 1e12 ? say(n / 1e12, 'trillion') : n >= 1e9 ? say(n / 1e9, 'billion') : n >= 1e6 ? say(n / 1e6, 'million') : n >= 1e3 ? Number(n.toPrecision(2)).toLocaleString('en-US') : say(n, '');
+  return t + ' ' + unit.words;
+}
+function scaleBlock(u) {
+  if (!shipsScale(u)) return ''; // the public copy carries a scale only once it is marked live
+  const sc = u.scale;
+  const things = sc.things.map((t) => ({ name: t.name, more: t.more || '', color: SCALE_COLOR[t.group], values: t.values }));
+  const cfg = { kind: sc.kind, states: sc.states, things, base: sc.base || null, guess: sc.guess || null, hint: 'Press a name in the list, or turn the stage, to look closer.' };
+  const rows = sc.things.map((t) => '<li><button type="button" title="Go to ' + esc(t.name) + ' on the stage"' + sc.states.map((st) => ' data-v' + st.key + '="' + esc(t.values[st.key] === undefined ? 'no measured number for then' : amount(t.values[st.key], sc.unit)) + '"').join('') + '><i style="background:' + SCALE_COLOR[t.group] + '"></i><b>' + esc(t.name) + '</b><span class="v">' + esc(amount(t.values[sc.states[0].key], sc.unit)) + '</span></button></li>').join('');
+  const states = sc.states.length > 1 ? '<div class="scale-states"><span>When</span>' + sc.states.map((st, i) => '<button type="button" data-state="' + esc(st.key) + '"' + (i ? '' : ' class="on"') + ' title="Show the amounts for: ' + esc(st.name) + '">' + esc(st.name) + '</button>').join('') + '</div>' : '<div class="scale-states" hidden></div>';
+  const g = sc.guess ? '<b>Guess first</b><p>' + esc(sc.guess.q) + '</p><div class="opts">' + sc.guess.options.map((o, i) => '<button type="button" data-i="' + i + '">' + esc(o) + '</button>').join('') + '</div><p class="said" hidden></p><button type="button" class="see" hidden>Show me</button>' : '';
+  const tools = [['bigger', '&#8249; Bigger', 'Go to the next bigger thing'], ['smaller', 'Smaller &#8250;', 'Go to the next smaller thing'], ['in', '+', 'Zoom in'], ['out', '&#8722;', 'Zoom out'], ['all', 'See all', 'Step back until everything fits']].map(([d, t, tip]) => '<button type="button" data-do="' + d + '" title="' + tip + '" aria-label="' + tip + '">' + t + '</button>').join('');
+  const srcs = Object.values(sc.sources).map((x) => '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.by) + ', ' + esc(String(x.year)) + ', ' + esc(x.title) + (x.where ? ', ' + esc(x.where) : '') + '</a>').join('; ');
+  return '<div class="scale" data-scale="' + esc(JSON.stringify(cfg)) + '">'
+    + '<div class="scale-top"><span class="scale-kick">See the scale</span><b>' + esc(sc.title) + '</b><p>' + esc(sc.ask) + '</p></div>'
+    + '<div class="scale-body"><div class="scale-main"><div class="scale-stage" tabindex="0" aria-label="3D stage: ' + esc(sc.title) + '. Drag to turn it, arrow keys also turn it, plus and minus zoom."><canvas></canvas><div class="scale-labels"></div><div class="scale-guess">' + g + '</div><p class="scale-hint">Drag to turn. Pinch, or press the stage and scroll, to zoom. Two fingers or Shift and drag to slide.</p></div>'
+    + '<div class="scale-tools">' + tools + '</div><p class="scale-read" aria-live="polite"></p></div>'
+    + '<div class="scale-side">' + states + '<p class="scale-statenote"></p><ol class="scale-list">' + rows + '</ol></div></div>'
+    + (sc.note ? '<p class="scale-note">' + esc(sc.note) + '</p>' : '')
+    + '<p class="scale-src">Where the numbers come from: ' + srcs + '</p>'
+    + '</div>';
+}
+
 // Bryan, 15 Nov 2026: "less words". A unit shows its picture, its main piece and its crystal; the rest is one tap away.
 // The mind's mechanisms are a supplement shelf (Bryan, 15 Nov 2026: "the smaller ones like the FOMO ... are
 // supplemental that go for anything"). Any unit lists the mechanisms it leans on; the mechanism shows where it is used.
@@ -146,6 +178,7 @@ function unit(u, voices, c) {
     + scene(u)
     + links(u, c)
     + lab(u)
+    + scaleBlock(u)
     + (u.main ? '<div class="pieces">' + piece(u.main, true) + '</div>' : '')
     + reader(u)
     + chapters(u)
@@ -269,6 +302,28 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .sc-dots button.on{background:var(--acc);border-color:var(--acc)}
 .sc-map{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:12px;font-size:15px;color:var(--dim);opacity:.35;transition:opacity .8s}
 .sc.done .sc-map{opacity:1}.sc-map i{font-style:normal;color:var(--soft)}.sc-map b{color:var(--acc)}
+.scale{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:16px 18px 18px;margin:0 0 18px}
+.scale-kick{display:block;font-size:14px;color:var(--acc);font-weight:700}.scale-top b{display:block;font-family:var(--head);font-size:22px;margin:2px 0 4px}.scale-top p{margin:0 0 12px;color:var(--soft);max-width:860px}
+.scale-body{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;align-items:start}
+.scale-stage{position:relative;border-radius:10px;background:#07080c;aspect-ratio:16/10;max-height:68vh;width:100%;overflow:hidden;border:1px solid #20242f;outline:none}.scale-stage:focus-visible,.scale-stage.live{border-color:#5fd4ff}
+.scale-stage canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}.scale-stage canvas:active{cursor:grabbing}
+.scale-stage.flat canvas{display:none}.scale-stage.flat{aspect-ratio:auto;padding:18px}
+.scale-labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}.scale-labels span{position:absolute;left:0;top:0;white-space:nowrap;font-size:13px;font-weight:600;color:#f6f7fb;background:rgba(7,8,12,.72);border:1px solid #2b2f41;border-radius:6px;padding:2px 7px}.scale-labels span.on{border-color:#fff}
+.scale-stage:not(.open) canvas,.scale-stage:not(.open) .scale-labels,.scale-stage:not(.open) .scale-hint{visibility:hidden}
+.scale-hint{position:absolute;left:10px;right:10px;bottom:8px;margin:0;font-size:13px;color:#a6abc0;pointer-events:none;text-align:center}.scale-stage.live .scale-hint{display:none}.scale-stage.flat .scale-hint{position:static;visibility:visible;font-size:15px;color:#dcdfec;text-align:left}
+.scale-guess{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:10px;padding:22px 26px;color:#f6f7fb;overflow:auto}.scale-guess[hidden]{display:none}
+.scale-guess>b{font-size:14px;color:#ffc44d}.scale-guess p{margin:0;font-size:19px;max-width:620px}.scale-guess .said{font-size:16px;color:#dcdfec}.scale-guess .opts{display:flex;flex-wrap:wrap;gap:8px}
+.scale-guess button,.scale-tools button,.scale-states button{font:inherit;font-size:15px;padding:8px 14px;border-radius:8px;border:1px solid #2b2f41;background:#14161f;color:#f6f7fb;cursor:pointer}
+.scale-guess button:hover:not(:disabled),.scale-tools button:hover{border-color:#5fd4ff}.scale-guess button:disabled{cursor:default;opacity:.55}.scale-guess button.right{opacity:1;border-color:#5fe39a;color:#5fe39a}.scale-guess button.wrong{opacity:1;border-color:#ff8f96;color:#ff8f96}.scale-guess .see{border-color:#ffc44d;color:#ffc44d}
+.scale-tools{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}.scale-tools button,.scale-states button{background:var(--panel);color:var(--fg);border-color:var(--line)}
+.scale.js:not(.opened) .scale-side,.scale.js:not(.opened) .scale-tools,.scale.js:not(.opened) .scale-read{visibility:hidden}.scale-read{margin:10px 0 0;min-height:3.2em;color:var(--soft);font-size:16px}
+.scale-states{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 6px}.scale-states[hidden]{display:none}.scale-states span{font-size:14px;color:var(--dim);font-weight:600}.scale-states button.on{border-color:var(--gold);color:var(--gold)}
+.scale-statenote{margin:0 0 8px;font-size:14px;color:var(--dim)}.scale-statenote:empty{display:none}
+.scale-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px;max-height:60vh;overflow:auto}
+.scale-list button{width:100%;display:grid;grid-template-columns:14px minmax(0,1fr);gap:1px 9px;align-items:center;text-align:left;font:inherit;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer}
+.scale-list button:hover,.scale-list button.on{border-color:var(--gold)}.scale-list i{width:14px;height:14px;border-radius:3px;grid-row:1 / span 2}.scale-list b{font-size:15px;font-weight:600}.scale-list .v{grid-column:2;font-size:13px;color:var(--dim)}.scale-list button.ghost i{opacity:.35}
+.scale-note,.scale-src{margin:12px 0 0;font-size:14px;color:var(--dim)}.scale-src a{color:var(--acc)}
+@media (max-width:1000px){.scale-body{grid-template-columns:1fr}.scale-list{max-height:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}}
 .lab{background:var(--deep);border:1px solid rgba(212,176,106,.45);border-radius:12px;padding:16px 18px 18px;margin:0 0 18px}
 .lab-kick{display:block;font-size:14px;color:var(--gold);font-weight:700}
 .lab-top b{display:block;font-family:var(--head);font-size:24px;font-weight:600;margin:2px 0}
@@ -323,7 +378,7 @@ ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this cou
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
 </main></div>
 ${FOOT()}
-<script src="crystal.js"></script><script src="scene.js"></script>${c.units.some(shipsLab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter(shipsLab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}
+<script src="crystal.js"></script><script src="scene.js"></script>${c.units.some(shipsLab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter(shipsLab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}${c.units.some(shipsScale) ? '<script type="module" src="scale.js"></script>' : ''}
 <script>
 function seek(el, t) {
   var v = el.closest('.unit').querySelector('video, audio'); if (!v) return;
@@ -692,7 +747,7 @@ function credits(all) {
   const rows = Object.keys(IMG).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
   return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Photo credits | Void University</title>${FONTS}<style>${BASE}
 main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}${LOOKCSS}${TYPECSS}</style></head><body>
-${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}</main>${FOOT()}</body></html>`;
+${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
 
 // A wrong address: wrangler.jsonc serves 404.html for it. Links start from the site root, since the wrong address can be
@@ -717,6 +772,7 @@ shipJs(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
 shipJs(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
 // A lab is on a page when the unit has one; the public copy carries only labs marked live.
 const shipsLab = (u) => !!(u.lab && (!LIVE || u.lab.live));
+const shipsScale = (u) => !!(u.scale && (!LIVE || u.scale.live));
 const LIVE_SLUGS = new Set((JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8')).courses || []).filter((c) => c.live).map((c) => c.slug));
 const courses = fs.readdirSync(path.join(DIR, 'courses')).filter((f) => f.endsWith('.json'));
 // The preview (never the public copy) also shows each whole local draft (scripts/uni.js draft) inside its course,
@@ -743,6 +799,12 @@ if (loaded.some((c) => c.units.some(shipsLab))) {
   const used = new Set(loaded.flatMap((c) => c.units.filter(shipsLab).map((u) => 'lab-' + u.lab.bench + '.js')).concat('lab.js'));
   for (const f of fs.readdirSync(DIR).filter((f) => used.has(f))) shipJs(path.join(DIR, f), path.join(OUT, f));
   for (const f of ['planck.min.js', 'planck-LICENSE.txt']) fs.copyFileSync(path.join(DIR, 'vendor', f), path.join(OUT, f));
+}
+// The scale stage and its drawing library go along only when a page shows a scale.
+if (loaded.some((c) => c.units.some(shipsScale))) {
+  shipJs(path.join(DIR, 'scale.js'), path.join(OUT, 'scale.js'));
+  fs.copyFileSync(path.join(DIR, 'vendor', 'three.module.min.js'), path.join(OUT, 'three.module.min.js'));
+  fs.copyFileSync(path.join(DIR, 'vendor', 'three-LICENSE.txt'), path.join(OUT, 'three-LICENSE.txt'));
 }
 MECH = loaded.find((c) => c.shelf === 'supplement') || null;
 for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });

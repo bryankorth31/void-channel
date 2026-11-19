@@ -165,3 +165,17 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
 - 19 Nov 2026: Bryan picked the type: "Atkinson". profile.json `"type": "hyper"` (Atkinson Hyperlegible for
   reading, Bricolage Grotesque for headings); the preview and the public copy are both built with it. The live
   site changes at his next deploy.
+- 19 Nov 2026, 3D scale stage (Bryan, voice typed in the first University chat: "you need to have visual explainers
+  3 dimensional visible visual explainers to show scale ... that can be rotated and manipulated spatially"; in this
+  chat: "Yes, build it"). A unit can now carry a `"scale"` block beside its scene and lab (scale.js): measured things
+  as solid blocks whose volume is their number, on a stage you turn with a finger or the mouse, zoom by pinch or
+  wheel, and walk along with Bigger and Smaller. Guess first, then the stage opens. A When switch grows and shrinks
+  the blocks between two times; a thing with no measured number for a time is shown as a faint outline and says so.
+  The list, numbers and sources are plain HTML, so they read with no 3D. three.js r160 (MIT) is in vendor with its
+  licence and source note, and is credited on the credits page. First set: The weight of everything alive, 18
+  groups from Table 1 of Bar-On, Phillips and Milo 2018 (read from the open-access text on Europe PMC), in Critical
+  thinking unit 3. `uni.js check` refuses a thing with no number or no source. Checked by hand in the preview at
+  1920x1080, 1316x821, 821x1316 and 1278x513: guess, turn, wheel zoom, list, walk, time switch; no sideways scroll,
+  no console errors. Not checked: a real tablet's two-finger pinch (the preview has no touch). The block is
+  `"live": false`, so the public copy does not carry it yet. Next step, not started: scale of size (cell to galaxy),
+  the same block with spheres and travel across about 27 powers of ten.

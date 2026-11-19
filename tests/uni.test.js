@@ -205,3 +205,37 @@ test('the public pages carry no machine-made tells: no middle-dot strings, no ca
     assert.equal((h.match(/fonts\.googleapis\.com\/css2/g) || []).length, 1, p + ': the public copy loads only the faces it uses');
   }
 });
+
+test('scale: every thing on a 3D stage has a real number and a source, and the page says the amounts in words', () => {
+  const course = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', 'critical-thinking.json'), 'utf8'));
+  const sc = course.units.find((u) => u.scale).scale;
+  assert.deepEqual(uni.scaleProblems(sc), []);
+  const copy = () => JSON.parse(JSON.stringify(sc));
+  let x = copy(); delete x.things[0].values.now;
+  assert.match(uni.scaleProblems(x).join(' | '), /no measured number/);
+  x = copy(); x.things[1].src = 'nobody';
+  assert.match(uni.scaleProblems(x).join(' | '), /no source/);
+  x = copy(); x.sources.baron.url = 'http://example.org/paper';
+  assert.match(uni.scaleProblems(x).join(' | '), /https link/);
+  x = copy(); x.kind = 'size';
+  assert.match(uni.scaleProblems(x).join(' | '), /kind must be/);
+  x = copy(); x.guess.answer = 9;
+  assert.match(uni.scaleProblems(x).join(' | '), /right answer/);
+  // the numbers on the stage are the paper's own (Bar-On, Phillips and Milo 2018, Table 1), so a slip here is caught
+  const now = Object.fromEntries(sc.things.map((t) => [t.name, t.values.now]));
+  assert.deepEqual([now.Plants, now.Bacteria, now.Fungi, now.Livestock, now.People, now['Wild mammals'], now['Wild birds']], [450, 70, 12, 0.1, 0.06, 0.007, 0.002]);
+  build();
+  const prev = path.join(uni.UNI, 'site-preview');
+  const page = fs.readFileSync(path.join(prev, 'critical-thinking.html'), 'utf8');
+  assert.match(page, /450 billion tonnes of carbon/);
+  assert.match(page, /60 million tonnes of carbon/);
+  assert.match(page, /7 million tonnes of carbon/);
+  assert.match(page, /no measured number for then/);
+  assert.match(page, /europepmc\.org\/article\/PMC\/PMC6016768/, 'the source link is not on the card');
+  for (const f of ['scale.js', 'three.module.min.js', 'three-LICENSE.txt']) assert.ok(fs.existsSync(path.join(prev, f)), f + ' is not beside the page that needs it');
+  // the public copy carries a scale only once it is marked live, the same rule as a lab
+  build('--site');
+  const live = course.units.some((u) => u.scale && u.scale.live) && list().courses.find((c) => c.slug === 'critical-thinking').live;
+  assert.equal(fs.existsSync(path.join(SITE, 'scale.js')), !!live);
+  if (!live) assert.doesNotMatch(fs.readFileSync(path.join(SITE, 'critical-thinking.html'), 'utf8'), /src="scale\.js"|data-scale=/);
+});

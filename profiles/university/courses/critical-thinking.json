@@ -915,7 +915,220 @@
         5,
         10
       ],
-      "needIt": "Loan rates, medical risks and \"50% off\" are all numbers someone chose to show you; three quick questions tell you whether they mean what they seem to."
+      "needIt": "Loan rates, medical risks and \"50% off\" are all numbers someone chose to show you; three quick questions tell you whether they mean what they seem to.",
+      "scale": {
+        "live": false,
+        "kind": "amount",
+        "title": "The weight of everything alive",
+        "ask": "Each block is one group of living things, and its volume is that group's real share of all life on Earth. Guess first, then turn it, zoom in, and walk down the row until you find the people.",
+        "unit": {
+          "words": "tonnes of carbon",
+          "per": 1000000000
+        },
+        "base": {
+          "name": "People",
+          "words": "all people",
+          "cap": "All people"
+        },
+        "states": [
+          {
+            "key": "now",
+            "name": "Today"
+          },
+          {
+            "key": "before",
+            "name": "Before people spread",
+            "note": "The paper's rough numbers for the world before the great loss of large animals (which began about 50,000 years ago) and before farming. A faint outline means the paper gives no number for then, so today's size is kept."
+          }
+        ],
+        "things": [
+          {
+            "name": "Plants",
+            "group": "plant",
+            "values": {
+              "now": 450,
+              "before": 900
+            },
+            "more": "Mostly trees, and mostly wood. The paper says plants have fallen to about half since people began clearing land.",
+            "src": "baron"
+          },
+          {
+            "name": "Bacteria",
+            "group": "microbe",
+            "values": {
+              "now": 70
+            },
+            "more": "Most of them live deep underground. This number is sure only to within about ten times.",
+            "src": "baron"
+          },
+          {
+            "name": "Fungi",
+            "group": "fungi",
+            "values": {
+              "now": 12
+            },
+            "more": "Mushrooms are the small part you see; most of it is threads in the soil.",
+            "src": "baron"
+          },
+          {
+            "name": "Archaea",
+            "group": "microbe",
+            "values": {
+              "now": 7
+            },
+            "more": "Single cells much like bacteria, mostly deep underground.",
+            "src": "baron"
+          },
+          {
+            "name": "Protists",
+            "group": "microbe",
+            "values": {
+              "now": 4
+            },
+            "more": "Algae, amoebas and other single cells that have a nucleus.",
+            "src": "baron"
+          },
+          {
+            "name": "Sea arthropods",
+            "group": "animal",
+            "values": {
+              "now": 1
+            },
+            "more": "Krill, crabs, shrimp and the tiny copepods that fill the oceans.",
+            "src": "baron"
+          },
+          {
+            "name": "Fish",
+            "group": "animal",
+            "values": {
+              "now": 0.7,
+              "before": 0.8
+            },
+            "more": "Fishing has taken about 100 million tonnes out of the total.",
+            "src": "baron"
+          },
+          {
+            "name": "Land arthropods",
+            "group": "animal",
+            "values": {
+              "now": 0.2
+            },
+            "more": "Insects, spiders and their kin.",
+            "src": "baron"
+          },
+          {
+            "name": "Worms",
+            "group": "animal",
+            "values": {
+              "now": 0.2
+            },
+            "more": "Earthworms and the other segmented worms (annelids).",
+            "src": "baron"
+          },
+          {
+            "name": "Molluscs",
+            "group": "animal",
+            "values": {
+              "now": 0.2
+            },
+            "more": "Snails, clams, squid.",
+            "src": "baron"
+          },
+          {
+            "name": "Viruses",
+            "group": "microbe",
+            "values": {
+              "now": 0.2
+            },
+            "more": "Counted by the paper beside the living things. Sure only to within about twenty times.",
+            "src": "baron"
+          },
+          {
+            "name": "Jellyfish and corals",
+            "group": "animal",
+            "values": {
+              "now": 0.1
+            },
+            "src": "baron"
+          },
+          {
+            "name": "Livestock",
+            "group": "farm",
+            "values": {
+              "now": 0.1,
+              "before": 0
+            },
+            "more": "Farm mammals, mostly cattle and pigs.",
+            "src": "baron"
+          },
+          {
+            "name": "People",
+            "group": "people",
+            "values": {
+              "now": 0.06
+            },
+            "src": "baron"
+          },
+          {
+            "name": "Roundworms",
+            "group": "animal",
+            "values": {
+              "now": 0.02
+            },
+            "more": "Nematodes: more of them by count than any other animal, and still this small.",
+            "src": "baron"
+          },
+          {
+            "name": "Wild mammals",
+            "group": "wild",
+            "values": {
+              "now": 0.007,
+              "before": 0.04
+            },
+            "more": "Every wild mammal on land and in the sea, whales included.",
+            "src": "baron"
+          },
+          {
+            "name": "Farmed birds",
+            "group": "farm",
+            "values": {
+              "now": 0.005,
+              "before": 0
+            },
+            "more": "Mostly chickens.",
+            "src": "baron"
+          },
+          {
+            "name": "Wild birds",
+            "group": "wild",
+            "values": {
+              "now": 0.002
+            },
+            "src": "baron"
+          }
+        ],
+        "sources": {
+          "baron": {
+            "title": "The biomass distribution on Earth",
+            "by": "Yinon Bar-On, Rob Phillips and Ron Milo",
+            "year": 2018,
+            "where": "Proceedings of the National Academy of Sciences 115, 6506 (doi 10.1073/pnas.1711842115), free to read at Europe PMC",
+            "url": "https://europepmc.org/article/PMC/PMC6016768"
+          }
+        },
+        "note": "Living things are weighed here by the carbon in them, the usual yardstick, because the water in a body varies. These are estimates: most are sure to within a few times, not to the last digit, and the paper gives the range for each.",
+        "guess": {
+          "q": "Which holds more living mass: every wild mammal on Earth, or all the people?",
+          "options": [
+            "Wild mammals",
+            "People",
+            "About the same"
+          ],
+          "answer": 1,
+          "after": "People come to about 60 million tonnes of carbon. Every wild mammal on land and sea together comes to about 7 million. Livestock is larger again, about 100 million.",
+          "show": "People"
+        }
+      }
     },
     {
       "n": 4,

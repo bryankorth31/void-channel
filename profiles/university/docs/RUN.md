@@ -247,6 +247,32 @@ Type works the same way: the preview header has a Type picker (Inter, Atkinson H
 - Sources: public domain, Open Yale, MIT OCW, US government. Never OpenStax or Radiopaedia.
 - Pushing void-channel to GitHub does not deploy the University, but it does rebuild voidtv.net.
 
+## 13. A 3D scale stage
+
+A unit can carry a `"scale"` block beside its scene and its lab: measured things drawn in 3D at their true size to
+each other, that you can turn, zoom and walk along. Each thing is a block whose volume is its number.
+
+The first one is in Critical thinking, unit 3 (The weight of everything alive). To make another, copy that block in
+`profiles\university\courses\critical-thinking.json` into the unit you want and change:
+
+- `things`: a name (22 letters at most), a `group` for its colour (plant, microbe, fungi, animal, people, farm, wild),
+  its number under `values`, and `src`, the key of its source. Leave a number out of a state when no paper gives one;
+  the stage then shows a faint outline and says so.
+- `unit`: the words for the number and how many of them one counts for (the first set counts billions of tonnes of carbon).
+- `states`: one or more times to compare (Today, Before people spread).
+- `sources`: title, who wrote it, year and an https link. Papers only.
+- `guess`: the question asked before the stage opens, its answers, the right one, and the line shown after.
+
+Then check and look:
+
+```
+node scripts\uni.js check
+node scripts\uni.js build
+```
+
+A thing with no number or no source is refused by the check. The stage shows in the preview at once. It goes in the
+public copy only when the block says `"live": true`, the same rule as a lab.
+
 ## Where things are
 
 - Courses: `profiles\university\courses\*.json`. Which are live: `profiles\university\list.json`.

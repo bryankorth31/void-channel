@@ -40,7 +40,7 @@ const builtCourses = () => fs.readdirSync(COURSES).filter((f) => f.endsWith('.js
 function unitNeeds(u, c = {}) {
   const need = [];
   if (!u.needIt) need.push('why you need this');
-  if (!u.scene && !u.lab) need.push('scene');
+  if (!u.scene && !u.lab && !u.scale) need.push('scene');
   if (!u.main && c.shelf !== 'supplement') need.push('main piece');
   if (c.kind === 'found' && !(u.quiz || []).length) need.push('quiz');
   if (c.shelf !== 'supplement' && !u.crystal) need.push('crystal');
@@ -202,6 +202,43 @@ RULES: plain language, no em dashes anywhere, never get round a site that blocks
 // Every link answers; every source names its licence and where it was seen; nothing forbidden; no dashes; every
 // built unit's quiz is whole. Writes sources/check.json, which HQ shows.
 // check(log, { links: false }) does everything but call the web (the self-test), and leaves check.json alone.
+// A scale block (scale.js): measured things drawn in 3D at their true size to each other. Every number must be a real
+// one with its source beside it, so a thing with no number, or a number with no source link, is refused here.
+const SCALE_GROUPS = ['plant', 'microbe', 'fungi', 'animal', 'people', 'farm', 'wild'];
+function scaleProblems(sc) {
+  const out = [];
+  if (!sc || typeof sc !== 'object') return ['the scale block is not an object'];
+  if (sc.kind !== 'amount') out.push('kind must be "amount" (blocks whose volume is the number)');
+  if (!sc.title || !sc.ask) out.push('needs a title and an ask');
+  if (!sc.unit || !sc.unit.words || !(sc.unit.per > 0)) out.push('needs a unit: its words and how many of them one counts for');
+  const states = Array.isArray(sc.states) ? sc.states : [];
+  if (!states.length || states.some((x) => !x.key || !/^[a-z]+$/.test(x.key) || !x.name)) out.push('needs at least one state with a plain key and a name');
+  const things = Array.isArray(sc.things) ? sc.things : [];
+  if (things.length < 2) out.push('needs at least two things to compare');
+  const names = new Set();
+  for (const t of things) {
+    const who = 'thing ' + String(t && t.name).slice(0, 30);
+    if (!t || !t.name) { out.push('a thing has no name'); continue; }
+    if (names.has(t.name)) out.push(who + ' is listed twice'); names.add(t.name);
+    if (t.name.length > 22) out.push(who + ': the name is over 22 letters, too long for its label');
+    if (!SCALE_GROUPS.includes(t.group)) out.push(who + ': group must be one of ' + SCALE_GROUPS.join(', '));
+    const v = t.values || {};
+    if (!states.length || !(v[states[0].key] > 0)) out.push(who + ': no measured number for ' + (states[0] ? states[0].name : 'the first state'));
+    for (const k of Object.keys(v)) { if (!states.some((x) => x.key === k)) out.push(who + ': a number for a state that is not listed: ' + k); if (!(typeof v[k] === 'number' && v[k] >= 0 && Number.isFinite(v[k]))) out.push(who + ': ' + k + ' is not a number'); }
+    if (!t.src || !(sc.sources || {})[t.src]) out.push(who + ': no source');
+  }
+  for (const [k, x] of Object.entries(sc.sources || {})) if (!x.title || !x.by || !x.year || !/^https:\/\//.test(x.url || '')) out.push('source ' + k + ' needs a title, who wrote it, a year and an https link');
+  if (sc.base && !names.has(sc.base.name)) out.push('the thing to compare against (' + sc.base.name + ') is not in the list');
+  if (sc.base && (!sc.base.words || !sc.base.cap)) out.push('the thing to compare against needs its words for a sentence');
+  if (sc.guess) {
+    if (!sc.guess.q || !Array.isArray(sc.guess.options) || sc.guess.options.length < 2) out.push('the guess needs a question and at least two answers');
+    else if (!(Number.isInteger(sc.guess.answer) && sc.guess.answer >= 0 && sc.guess.answer < sc.guess.options.length)) out.push('the right answer of the guess is not one of its answers');
+    if (!sc.guess.after) out.push('the guess needs the line shown after it');
+    if (sc.guess.show && !names.has(sc.guess.show)) out.push('the guess shows a thing that is not in the list');
+  }
+  return out;
+}
+
 async function check(log = () => {}, opt = {}) {
   const problems = [];
   const urls = new Map();
@@ -234,6 +271,10 @@ async function check(log = () => {}, opt = {}) {
   }
   for (const c of builtCourses()) for (const u of [...c.units, ...(c.todo || [])]) if (!Number.isInteger(u.n)) problems.push({ where: c.slug, what: 'a unit number is not a whole number: ' + String(u.n).slice(0, 20) });
   for (const c of builtCourses()) walkText(c.slug + '.json', c);
+  for (const c of builtCourses()) for (const u of c.units) if (u.scale) {
+    for (const what of scaleProblems(u.scale)) problems.push({ where: c.slug + ' unit ' + u.n + ' scale', what });
+    for (const x of Object.values(u.scale.sources || {})) if (/^https:\/\//.test(x.url || '')) urls.set(x.url, c.slug + ' unit ' + u.n + ' scale');
+  }
   for (const b of shelfBooks()) { walkText('shelf/' + b.source + '.json', b.chapters.map((c) => [c.title, c.why, c.passages.map((x) => [x.plain, x.warnings])])); if (b.scan) urls.set(b.scan, 'shelf/' + b.source + '.json'); }
   for (const r of readJson(path.join(UNI, 'shelf', 'warnings.json'), { rules: [] }).rules || []) { walkText('shelf/warnings.json ' + r.id, [r.warning, r.source]); if (/^https:\/\//.test(r.url || '')) urls.set(r.url, 'shelf/warnings.json ' + r.id); else problems.push({ where: 'shelf/warnings.json ' + r.id, what: 'a warning needs an https page' }); }
   for (const c of builtCourses()) for (const u of c.units) for (const [i, q] of (u.quiz || []).entries()) {
@@ -862,4 +903,4 @@ function shelfBooks() {
     .map((b) => ({ ...b, live: live.has(b.source), written: b.chapters.filter((c) => c.passages.some((p) => p.plain)).length }));
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures };
+module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems };
