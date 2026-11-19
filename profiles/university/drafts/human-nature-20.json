@@ -1,0 +1,331 @@
+{
+  "slug": "human-nature",
+  "n": 20,
+  "title": "Why doing what is best for you can be worst for all",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T18:19:06.303Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line"
+  ],
+  "unit": {
+    "n": 20,
+    "title": "Why doing what is best for you can be worst for all",
+    "needIt": "Overfishing, traffic, price wars, dishes in a shared kitchen: each person does the sensible thing and everyone loses. Spotting the trap is how you get out of it.",
+    "why": "Two people want to work together to get a big reward. However, each person thinks they can get a bigger reward by cheating while the other person stays honest. Because both people think this way, they both cheat and end up with a much worse result than if they had just cooperated.",
+    "outcome": "Identify situations where individual choices lead to a bad group outcome.",
+    "reachesYou": "You see this when you choose not to help with chores because you think someone else will do them. You also see it when everyone uses a public space until it becomes crowded and messy.",
+    "do": "Identify one thing you do daily that hurts your long-term goals. Create a small rule or 'penalty' to help you stay on track.",
+    "chapters": [
+      {
+        "t": 1,
+        "title": "The Prisoner's Dilemma",
+        "words": "What I want to talk about today in lecture is a game"
+      },
+      {
+        "t": 415,
+        "title": "The Matrix of Choice",
+        "words": "So the prisoner's dilemma is a way of representing, in in"
+      },
+      {
+        "t": 1245,
+        "title": "The Classroom Game",
+        "words": "If you choose one, and the majority of the class chooses"
+      },
+      {
+        "t": 1760,
+        "title": "Tragedy of the Commons",
+        "words": "So here's the problem of the commons, tragedy of the commons. So suppose"
+      },
+      {
+        "t": 2241,
+        "title": "Strategies for Escape",
+        "words": "Well, we need somehow to structure the decision situation so that we"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does Glaucon say is the best outcome for an individual?",
+        "choices": [
+          "Doing injustice without penalty",
+          "Cooperating with others",
+          "Suffering injustice",
+          "Finding a middle ground"
+        ],
+        "a": 0,
+        "why": "Glaucon describes the best outcome as doing injustice without paying the penalty.",
+        "quote": "The best is to do injustice without paying the penalty.",
+        "t": 150
+      },
+      {
+        "q": "What is the first law of nature according to Hobbes?",
+        "choices": [
+          "Seek peace if possible",
+          "Give up all rights",
+          "Follow the law",
+          "Punish the guilty"
+        ],
+        "a": 0,
+        "why": "The first law of nature tells people to seek peace if there is a chance of obtaining it.",
+        "quote": "So the first law of nature is a two-part law. It says, seek peace if there's a chance of obtaining peace, and if there is, not engage in war.",
+        "t": 288
+      },
+      {
+        "q": "What is the second law of nature?",
+        "choices": [
+          "Seek peace",
+          "Follow the law",
+          "Punish the guilty",
+          "Lay down rights conditionally"
+        ],
+        "a": 3,
+        "why": "The second law of nature involves giving up rights only if others do the same.",
+        "quote": "The second law of nature tells you to be willing to lay down your rights to the extent that others are willing to do the same, and to content yourself with as much liberty against others as they have against you.",
+        "t": 314
+      },
+      {
+        "q": "What is the 'third choice' in the prisoner's dilemma?",
+        "choices": [
+          "Peace-peace",
+          "War-war",
+          "War-peace",
+          "Peace-war"
+        ],
+        "a": 1,
+        "why": "The third choice is a state of total war where both parties are in a state of war.",
+        "quote": "Or it can be the case that A behaves in a warlike fashion, whereas B behaves in a peace-like fashion. Now, what's important to notice about the structure of the prisoner's dilemma is that A has control over which row obtains.",
+        "t": 559
+      },
+      {
+        "q": "In the prisoner's dilemma matrix, what does A control?",
+        "choices": [
+          "The columns",
+          "The outcome",
+          "The rows",
+          "The other player"
+        ],
+        "a": 2,
+        "why": "The lecture states that A has control over which row obtains.",
+        "quote": "Now, what's important to notice about the structure of the prisoner's dilemma is that A has control over which row obtains.",
+        "t": 567
+      },
+      {
+        "q": "What is an example of the tragedy of the commons?",
+        "choices": [
+          "A fence",
+          "A garden",
+          "A reward",
+          "Pollution"
+        ],
+        "a": 3,
+        "why": "The lecture uses industrial pollution as an example of the tragedy of the commons.",
+        "quote": "Each of you did the thing that was rational, but the coordinated effect of your actions gave you a wildly suboptimal result, an environment full of pollution.",
+        "t": 1891
+      },
+      {
+        "q": "What is a 'tit-for-tat' strategy?",
+        "choices": [
+          "Always cooperate",
+          "Cooperate first then follow lead",
+          "Always defect",
+          "Random choices"
+        ],
+        "a": 1,
+        "why": "Tit-for-tat means cooperating in the first round and then following the lead of the co-player.",
+        "quote": "So, for example, you might adopt a strategy of cooperating in the first round of a Prisoner's Dilemma game and then following the lead of whatever your co-player does in subsequent rounds of the game. That, as you know from your reading, is called a tit-for-tat strategy.",
+        "t": 2552
+      }
+    ],
+    "scene": {
+      "analogy": "Dishes in a shared kitchen",
+      "map": [
+        [
+          "Wash yours",
+          "Cooperate"
+        ],
+        [
+          "Leave them",
+          "Defect"
+        ],
+        [
+          "the sink",
+          "payoff"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Wash yours",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Leave them",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "THE SINK",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "DECIDE",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "Each choice is sensible. The sink is full.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "Four housemates share one sink.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "Each decides alone.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "Leaving your dish saves you a minute.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "clean, if all do it"
+            },
+            "right": {
+              "sub": "easy, until all do it"
+            }
+          }
+        },
+        {
+          "say": "When all think so, nobody has a clean plate.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "The prisoner's dilemma: each gains by cheating, and all lose.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Cooperate",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Defect",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "PAYOFF",
+              "size": 18
+            },
+            "act": {
+              "label": "CHOOSE",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Sensible for one, bad for all.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Individuals act in their own self-interest.",
+        "Fear of others cheating leads to bad group outcomes.",
+        "Cooperation is often the best result for everyone.",
+        "Lack of enforcement makes cooperation hard.",
+        "Rational choices can lead to irrational results."
+      ],
+      "key": "The prisoner's dilemma shows how individual rational choices can lead to a suboptimal outcome for everyone.",
+      "decoys": [
+        {
+          "text": "People only cooperate because they are naturally good.",
+          "why": "Glaucon argues people cooperate because they are too weak to do injustice with impunity."
+        },
+        {
+          "text": "The tragedy of the commons is caused by bad people.",
+          "why": "The lecture says it happens because each person does what is individually rational."
+        }
+      ],
+      "aha": "When everyone acts only for themselves without trust or rules, everyone loses."
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 20: The prisoner's dilemma",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "20. The Prisoner s Dilemma.mp4",
+      "seconds": 2834,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
+}

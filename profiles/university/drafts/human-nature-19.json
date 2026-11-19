@@ -1,0 +1,334 @@
+{
+  "slug": "human-nature",
+  "n": 19,
+  "title": "Why we agree to be governed",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T18:18:00.367Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: chapter dropped, its opening words are not said in the lecture: The logic of the state",
+    "round 1: question dropped, its quote is not said word for word: What is the main focus of this unit?",
+    "round 1: question dropped, its quote is not said word for word: What does Kasdan suggest about rewarding behavior?",
+    "round 1: question dropped, its quote is not said word for word: Why is life 'brutish and short' without a state?",
+    "round 1: question dropped, its quote is not said word for word: What is a 'right of nature' in Hobbes' view?",
+    "round 2: chapter dropped, its opening words are not said in the lecture: The logic of the state",
+    "round 2: question dropped, its quote is not said word for word: What is 'glory' in Hobbes' view?",
+    "round 2: question dropped, its quote is not said word for word: ",
+    "round 2: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line"
+  ],
+  "unit": {
+    "n": 19,
+    "title": "Why we agree to be governed",
+    "needIt": "Rules you did not choose still protect you. Seeing what life is like with nobody in charge explains why people accept police, courts and taxes at all.",
+    "why": "Imagine a world where no one follows rules and everyone is out for themselves. People would live in constant fear because anyone could take what they have at any moment. To stop this, people agree to a 'social contract' where they trade some personal freedom for the safety of a community.",
+    "outcome": "Explain why a government is considered legitimate based on the idea of mutual benefit.",
+    "reachesYou": "You see this when you follow traffic lights or wait in a line at a store. You do it because you trust that everyone else is following the same rules to keep things moving smoothly.",
+    "do": "Think about one rule you follow every day. Ask yourself if you follow it because you want to, or because you know everyone else does too.",
+    "chapters": [
+      {
+        "t": 12,
+        "title": "From the individual to the community",
+        "words": "And the second is to start with the third unit of the course."
+      },
+      {
+        "t": 347,
+        "title": "The goal of punishment",
+        "words": "And what those motivations for punishment suggested is that with respect to"
+      },
+      {
+        "t": 1772,
+        "title": "The state of nature",
+        "words": "The result will be a war, says Hobbes, of every man against"
+      },
+      {
+        "t": 2387,
+        "title": "The laws of nature",
+        "words": "The first law of nature he derives as follows. He says, as we"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the main reason Hobbes thinks we need a state?",
+        "choices": [
+          "To punish bad people",
+          "To have a king",
+          "For commodious self-preservation",
+          "To follow religious laws"
+        ],
+        "a": 2,
+        "why": "Hobbes argues that the state is the only way to ensure a comfortable and safe life.",
+        "quote": "Hobbes' answer is, having a civil state, having civil society, is the only effective means of what he calls commodious self-preservation.",
+        "t": 1449
+      },
+      {
+        "q": "What does Hobbes say about human equality?",
+        "choices": [
+          "People are naturally different",
+          "Only the rich are equal",
+          "Equality is a myth",
+          "People are physically and mentally equal"
+        ],
+        "a": 3,
+        "why": "He argues that because everyone has the same ability to kill or learn, they are roughly equal.",
+        "quote": "They are physically equal, in the sense that each of them has the live possibility of killing and of being killed.",
+        "t": 1526
+      },
+      {
+        "q": "What is the 'state of nature' according to Hobbes?",
+        "choices": [
+          "A peaceful society",
+          "A war of all against all",
+          "A land of laws",
+          "A religious state"
+        ],
+        "a": 1,
+        "why": "Hobbes describes the state of nature as a condition of constant conflict and fear.",
+        "quote": "The result will be a war, says Hobbes, of every man against every man, not necessarily a hot war in the sense of violence going on at every moment.",
+        "t": 1772
+      },
+      {
+        "q": "What happens to industry and culture in the state of nature?",
+        "choices": [
+          "They flourish",
+          "They stay the same",
+          "They disappear",
+          "They become religious"
+        ],
+        "a": 2,
+        "why": "Without safety, people cannot plan for the future or build things.",
+        "quote": "In addition, there is no place for industry, because the fruit thereof is uncertain, and consequently there is no culture of the earth",
+        "t": 1849
+      },
+      {
+        "q": "What is a 'right of nature' for Hobbes?",
+        "choices": [
+          "A law from the king",
+          "A social rule",
+          "The freedom to preserve oneself",
+          "A religious command"
+        ],
+        "a": 2,
+        "why": "It is the fundamental freedom to do whatever is needed to stay alive.",
+        "quote": "Each human being has rights that Hobbes explicitly calls calls inalienable, to engage in whatever way he or she can to self-preservation.",
+        "t": 2256
+      },
+      {
+        "q": "What is the third law of nature?",
+        "choices": [
+          "Perform covenants",
+          "Seek peace",
+          "Defend yourself",
+          "Seek glory"
+        ],
+        "a": 0,
+        "why": "The third law is the requirement to keep promises to ensure others do the same.",
+        "quote": "The third law of nature, according to Hobbes, is that you need to perform your covenants. That is, you need to do what you have promised.",
+        "t": 2601
+      },
+      {
+        "q": "Why are covenants invalid without enforcement?",
+        "choices": [
+          "People might break them",
+          "They are too expensive",
+          "They are illegal",
+          "They are not logical"
+        ],
+        "a": 0,
+        "why": "If you think someone else will break a promise, you have no reason to keep yours.",
+        "quote": "Covenants, he says, are invalid if you fear that the other party may renege.",
+        "t": 2621
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Human beings are physically and mentally equal.",
+        "Self-interests often conflict with others.",
+        "Without a common power, life is a state of war.",
+        "People fear the constant threat of violence.",
+        "Stability allows for industry and culture."
+      ],
+      "key": "People agree to a social contract to escape a life of fear and gain security.",
+      "decoys": [
+        {
+          "text": "The state of nature is a historical fact.",
+          "why": "Hobbes says the argument works regardless of whether the state of nature actually happened."
+        },
+        {
+          "text": "Justice is a natural human instinct.",
+          "why": "Hobbes and Glaucon suggest justice is a social notion created by agreements to avoid suffering."
+        }
+      ],
+      "aha": "Because we are naturally equal and self-interested, we must trade some freedom for a government that guarantees our safety."
+    },
+    "scene": {
+      "analogy": "A four-way crossing with no lights",
+      "map": [
+        [
+          "No signals",
+          "State of nature"
+        ],
+        [
+          "Traffic lights",
+          "Commonwealth"
+        ],
+        [
+          "crossing",
+          "safety"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "No signals",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Traffic lights",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "CROSSING",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "ARRIVE",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "You give up going first. You get home.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "Four roads meet. No lights, no signs.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "Every driver arrives at once.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "Each fears the others, so nobody is safe.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "everyone edges and fears"
+            },
+            "right": {
+              "sub": "everyone waits, and goes"
+            }
+          }
+        },
+        {
+          "say": "Lights make everyone wait, and everyone gets through.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "We give up some freedom to a common power and get peace.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "State of nature",
+              "size": 18,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Commonwealth",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "SAFETY",
+              "size": 18
+            },
+            "act": {
+              "label": "TRADE FOR",
+              "size": 14,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Hobbes: without a common power, life is war.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 19: Contract and commonwealth: Thomas Hobbes",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "19. Contract & Commonwealth  Thomas Hobbes.mp4",
+      "seconds": 2787,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
+}

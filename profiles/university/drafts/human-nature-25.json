@@ -1,0 +1,316 @@
+{
+  "slug": "human-nature",
+  "n": 25,
+  "title": "What an action means depends on where you are",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T18:23:08.811Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 25,
+    "title": "What an action means depends on where you are",
+    "needIt": "The same act can be polite in one place and an insult in another. Rules change behavior partly by changing what an act says about you.",
+    "why": "The professor explains how social norms act like invisible rules for behavior. He shares how wearing a seatbelt or having a compost heap can mean different things depending on where you live.",
+    "outcome": "Identify how social norms shape the meaning of your everyday actions.",
+    "reachesYou": "You see this when you decide how to dress for a job interview or a party. You feel it when you follow unwritten rules at a grocery store or a park.",
+    "do": "Observe one social norm today and think about what message it sends to others. Ask yourself if that message is what you actually want to convey.",
+    "chapters": [
+      {
+        "t": 1,
+        "title": "Introduction to the lecture",
+        "words": "So today's lecture is devoted, in some sense, to the tying up"
+      },
+      {
+        "t": 368,
+        "title": "Social norms and meanings",
+        "words": "Social norms are basically social attitudes of approval and disapproval that specify"
+      },
+      {
+        "t": 676,
+        "title": "The endowment effect",
+        "words": "Sunstein, in that article, you may recall, introduces a a discussion of"
+      },
+      {
+        "t": 1341,
+        "title": "Dual processing and heuristics",
+        "words": "It suggests that there are two systems, system one and system two"
+      },
+      {
+        "t": 1697,
+        "title": "Hobbes and the state of nature",
+        "words": "Hobbes argues that it is of prudential utility for us to engage"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the main goal of the lecture today?",
+        "choices": [
+          "To tie up loose ends",
+          "To answer every single question",
+          "To teach about the Eiffel Tower",
+          "To discuss only coffee"
+        ],
+        "a": 0,
+        "why": "The professor states the lecture is devoted to tying up loose ends.",
+        "quote": "So today's lecture is devoted, in some sense, to the tying up of loose ends.",
+        "t": 1
+      },
+      {
+        "q": "How does Sunstein define social norms?",
+        "choices": [
+          "Laws passed by government",
+          "Personal feelings of joy",
+          "Social attitudes of approval",
+          "Economic rules of trade"
+        ],
+        "a": 2,
+        "why": "Sunstein defines them as social attitudes of approval and disapproval.",
+        "quote": "Social norms are basically social attitudes of approval and disapproval that specify, through the kinds of tacit mechanisms that human beings as social primates have, for for expressing disapproval and approval of one's and others' action.",
+        "t": 368
+      },
+      {
+        "q": "What is the endowment effect?",
+        "choices": [
+          "Buying things on sale",
+          "Demanding more to give up an owned object",
+          "Saving money for the future",
+          "Sharing items with friends"
+        ],
+        "a": 1,
+        "why": "It is the tendency to value owned objects more than unowned ones.",
+        "quote": "Sunstein, in that article, you may recall, introduces a a discussion of what's known as the endowment effect, which is basically the tendency of human beings to demand more to give up an owned object than they would be prepared to pay to acquire that object.",
+        "t": 676
+      },
+      {
+        "q": "What is System 1 in dual processing?",
+        "choices": [
+          "Slow and rule-based",
+          "Only used by humans",
+          "A conscious thought process",
+          "Fast and effortless"
+        ],
+        "a": 3,
+        "why": "System 1 is described as automatic, effortless, and fast.",
+        "quote": "System 1 is unconscious or pre-conscious, where a system 2 is conscious. System 1 is automatic, where a system 2 is controlled. System 1 is effortless, where a system 2 is effortful. System 1 is fast, where a system 2 is slow.",
+        "t": 1369
+      },
+      {
+        "q": "What is Hobbes' aim for the social contract?",
+        "choices": [
+          "Prudential utility",
+          "Moral utility",
+          "Historical justice",
+          "Environmental protection"
+        ],
+        "a": 0,
+        "why": "Hobbes believes we enter a contract for our own practical benefit.",
+        "quote": "Hobbes argues that it is of prudential utility for us to engage in a social contract.",
+        "t": 1697
+      },
+      {
+        "q": "What is Nozick's main concern?",
+        "choices": [
+          "Hypothetical situations",
+          "The state of nature",
+          "The veil of ignorance",
+          "Historical situations"
+        ],
+        "a": 3,
+        "why": "Nozick looks at how things actually came into being through history.",
+        "quote": "Nozick, in contrast to Rawls, is concerned with how things actually came into being.",
+        "t": 1759
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Social norms determine social meanings.",
+        "The endowment effect involves valuing owned objects more.",
+        "System 1 is fast and automatic.",
+        "Hobbes focuses on prudential utility.",
+        "Nozick focuses on historical justice."
+      ],
+      "key": "Human behavior is shaped by social norms, internal processing systems, and different philosophical views on justice.",
+      "decoys": [
+        {
+          "text": "Social norms are the same everywhere.",
+          "why": "The lecture shows how a compost heap or seatbelt means different things in different places."
+        },
+        {
+          "text": "System 1 is a conscious thought process.",
+          "why": "The lecture states System 1 is unconscious or pre-conscious."
+        }
+      ],
+      "aha": "Social norms and internal processing systems explain why we act the way we do in different contexts."
+    },
+    "scene": {
+      "analogy": "Buckling a seatbelt in two countries",
+      "map": [
+        [
+          "Where few buckle",
+          "Old norm"
+        ],
+        [
+          "Where all buckle",
+          "New norm"
+        ],
+        [
+          "seatbelt",
+          "the act"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Where few buckle",
+          "color": "blue",
+          "o": 0,
+          "size": 18
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Where all buckle",
+          "color": "blue",
+          "o": 0,
+          "size": 18
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "SEATBELT",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "BUCKLE",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "Same click. Different message.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "You get in a friend's car.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "You buckle your seatbelt.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "Where few do, it can insult the driver.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "says: I do not trust you"
+            },
+            "right": {
+              "sub": "says nothing at all"
+            }
+          }
+        },
+        {
+          "say": "Where everyone does, nobody notices.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Change the norm and the same act carries a new meaning.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Old norm",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "New norm",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "THE ACT",
+              "size": 18
+            },
+            "act": {
+              "label": "MEANS",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Norms set what an act says about you.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 25: Tying up loose ends",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "25. Tying up Loose Ends.mp4",
+      "seconds": 2654,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
+}

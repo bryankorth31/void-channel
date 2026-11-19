@@ -137,3 +137,9 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
     credits at 1316 wide, and no sideways scroll at 1920, 1316 and 821.
 - 19 Nov 2026: Bryan picked the look: "Bright night". profile.json `"look": "bright"`; the preview and the public
   copy are both built with it. The live site changes at his next deploy.
+- 19 Nov 2026, step 8: Whisper finished all 26 Human nature lectures, and every one of the 24 new lectures is
+  drafted whole. Bryan in this chat, asked whether to carry on after the chat cleanup note: "Yes, carry on".
+  All 24 drafts have a plain title, a Why you need this and an everyday scene written by hand, each idea checked
+  against what its lecture says (the seatbelt scene for lecture 25 was corrected to match it). Chapters, quiz,
+  crystal, How this reaches you and Do this week are the local model's. Human nature reads 26 of 26 once Bryan has
+  read and kept each draft. Whisper moved on to How the country began (Civics).

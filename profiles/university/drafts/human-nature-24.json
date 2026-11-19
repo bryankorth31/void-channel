@@ -1,0 +1,345 @@
+{
+  "slug": "human-nature",
+  "n": 24,
+  "title": "Do the stories we watch change us?",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T18:22:42.414Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: thing is over 11 letters: A hero stealing",
+    "round 1: scene: idea.thing is over 11 letters: A hero stealing",
+    "round 2: scene: thing is over 11 letters: A video game",
+    "round 3: scene: line is over 56 letters: I know it is not real food, but I still ",
+    "round 3: scene: idea.line is over 56 letters: The mind knows it is fake, but the soul "
+  ],
+  "unit": {
+    "n": 24,
+    "title": "Do the stories we watch change us?",
+    "needIt": "Shows, games and feeds work on the part of you that does not argue back. Knowing that, you can choose what you and your children soak in.",
+    "why": "Plato argued that stories affect the parts of our soul that do not use logic. He believed that if we watch heroes do bad things, we might start to think those actions are okay. This is why he thought the government should choose which stories people are allowed to see.",
+    "outcome": "Recognize how fictional stories shape your habits and emotions.",
+    "reachesYou": "You see this when you watch a show and find yourself liking a character's bad choices. You also feel it when a video game makes a violent action feel like a natural instinct.",
+    "do": "Think about a show you enjoy and ask yourself if the characters' actions are things you would actually want to do in real life.",
+    "chapters": [
+      {
+        "t": 1,
+        "title": "The problem of non-rational persuasion",
+        "words": "Our topic today is the general question of what sort of"
+      },
+      {
+        "t": 382,
+        "title": "Fiction and the presidency",
+        "words": "In 2002, the television show 24 had, depicting the President"
+      },
+      {
+        "t": 720,
+        "title": "The non-rational soul",
+        "words": "The response to the puzzle that gives rise to the concerns"
+      },
+      {
+        "t": 1062,
+        "title": "Playful imitation vs habituation",
+        "words": "There is available to us, recognizes Plato, a capacity for playful"
+      },
+      {
+        "t": 1412,
+        "title": "The role of education",
+        "words": "So too suggests Plato by putting the education of the guardians"
+      },
+      {
+        "t": 1855,
+        "title": "The risk of contagion",
+        "words": "But to the extent that there is sufficient similarity between the"
+      },
+      {
+        "t": 2556,
+        "title": "External regulation of experience",
+        "words": "Instead, he says, it is possible to regulate these effects externally"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the main problem with the prisoner's dilemma?",
+        "choices": [
+          "It is a paradox of rationality",
+          "It is a legal issue",
+          "It is a moral failure",
+          "It is a social contract"
+        ],
+        "a": 0,
+        "why": "The lecture describes the prisoner's dilemma as a paradox of rationality where self-interests conflict.",
+        "quote": "The argument that Hobbes makes appeals to the notion of the prisoner's dilemma, which is a paradox of rationality.",
+        "t": 82
+      },
+      {
+        "q": "What did Dan Quayle say about Murphy Brown?",
+        "choices": [
+          "She was a great hero",
+          "She was a lifestyle choice",
+          "She was a moral issue",
+          "She was a fake person"
+        ],
+        "a": 2,
+        "why": "Quayle argued that her character's choices were a moral issue requiring social sanction.",
+        "quote": "And the then Vice President of the United States, Dan Quayle, famously gave a speech in San Francisco in 1992 at which he he said, marriage is a moral issue that requires consensus",
+        "t": 213
+      },
+      {
+        "q": "Why did Dan Quayle criticize the show Murphy Brown?",
+        "choices": [
+          "It mocked family values",
+          "The acting was bad",
+          "It showed a child alone",
+          "It was too long"
+        ],
+        "a": 0,
+        "why": "He believed the show eroded values that are important to the country.",
+        "quote": "Dan Quayle slightly misrepresented what happened on the show. Murphy Brown, though she lacked a long-term partner and did bear a child without the support of a second adult figure, didn't call it just a lifestyle choice.",
+        "t": 256
+      },
+      {
+        "q": "How do people react to the show 24?",
+        "choices": [
+          "They thought it was real",
+          "They ignored it",
+          "They saw it as a role model",
+          "They hated it"
+        ],
+        "a": 2,
+        "why": "The lecture explains that the show provided conceptual space for people to see different types of leaders.",
+        "quote": "What it points out is that the availability in fictional representation of a character who served as president and was of African descent, or who served as president and was a played some role in allowing actual citizens in the real world, not imaginary people on TV, to have conceptual space available for the possibility of there being a president of that kind.",
+        "t": 438
+      },
+      {
+        "q": "What is the 'puzzle' regarding fiction?",
+        "choices": [
+          "Why do we watch it?",
+          "Why is it free?",
+          "How can fiction affect behavior?",
+          "Who writes the stories?"
+        ],
+        "a": 2,
+        "why": "The puzzle is how something we know is fictional can still change our actual attitudes.",
+        "quote": "Now, the puzzle that this raises, if we think only in terms of rationality, is the following. How can something that we know to be fictional affect our actual behaviors and attitudes.",
+        "t": 600
+      },
+      {
+        "q": "What is the 'puzzle' regarding fiction and behavior?",
+        "choices": [
+          "Why people like stories",
+          "Why children can't lie",
+          "Why people watch TV",
+          "How fiction affects non-rational parts"
+        ],
+        "a": 3,
+        "why": "The puzzle is how something we know is fake can still change our real attitudes.",
+        "quote": "How can something that we know to be fictional affect our actual behaviors and attitudes.",
+        "t": 611
+      },
+      {
+        "q": "What does Plato say about the 'imitative poet'?",
+        "choices": [
+          "He helps the soul",
+          "He appeals to an inferior part",
+          "He is a good teacher",
+          "He is a rational guide"
+        ],
+        "a": 1,
+        "why": "Plato argues that the poet appeals to the part of the soul that is not rational.",
+        "quote": "He says, the imitative poet appeals to a part of the soul that is inferior.",
+        "t": 898
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Fiction affects non-rational parts of the soul.",
+        "Reason alone cannot regulate these effects.",
+        "Stories can provide problematic role models.",
+        "Habits are formed through early imitation.",
+        "External regulation may be necessary for harmony."
+      ],
+      "key": "Fiction can shape our non-rational habits in ways that reason alone cannot control.",
+      "decoys": [
+        {
+          "text": "People are always aware of the difference between fiction and reality.",
+          "why": "The lecture says that even if we are aware, the non-rational parts of the soul can still be affected."
+        },
+        {
+          "text": "All forms of imitation are dangerous to the soul.",
+          "why": "Plato distinguishes between 'playful imitation' and the more problematic types of imitation."
+        }
+      ],
+      "aha": "Because our souls have non-rational parts, stories can shape our habits even when we know they are fake, requiring external rules to maintain harmony."
+    },
+    "scene": {
+      "analogy": "A song stuck in your head",
+      "map": [
+        [
+          "You, deciding",
+          "Reason"
+        ],
+        [
+          "The catchy song",
+          "Stories"
+        ],
+        [
+          "your head",
+          "the soul"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "You, deciding",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The catchy song",
+          "color": "blue",
+          "o": 0,
+          "size": 18
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "YOUR HEAD",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "HEAR ONCE",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "It got in without asking.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "You hear a catchy song once.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "You did not decide to remember it.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "All day it plays in your head.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "did not choose it"
+            },
+            "right": {
+              "sub": "plays all day"
+            }
+          }
+        },
+        {
+          "say": "Reason had no say.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Stories build habits, so Plato wanted them chosen with care.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Reason",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Stories",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "THE SOUL",
+              "size": 18
+            },
+            "act": {
+              "label": "SHAPE",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Plato: fiction trains the part that does not reason.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 24: Censorship",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "24. Censorship.mp4",
+      "seconds": 2721,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
+}

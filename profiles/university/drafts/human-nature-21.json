@@ -1,0 +1,332 @@
+{
+  "slug": "human-nature",
+  "n": 21,
+  "title": "Fair rules, chosen without knowing who you will be",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T18:20:08.048Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: What does Rawls say is the first virtue of social ",
+    "round 1: question dropped, its quote is not said word for word: What is the first principle of Rawls' theory?",
+    "round 2: chapter dropped, its opening words are not said in the lecture: Inviolability and dignity",
+    "round 2: question dropped, its quote is not said word for word: What does Rawls say is the first virtue of social ",
+    "round 2: question dropped, its quote is not said word for word: What does the Declaration of Independence say abou"
+  ],
+  "unit": {
+    "n": 21,
+    "title": "Fair rules, chosen without knowing who you will be",
+    "needIt": "Arguing about what is fair is hard because everyone knows what they stand to gain. One simple test takes that out of the argument.",
+    "why": "Imagine you have to design a new school system but you don't know if you will be the principal, a teacher, or a student. To be fair, you would want to make sure that even the student with the fewest resources still has a good chance to succeed. This is how the philosopher John Rawls thinks we should decide on justice.",
+    "outcome": "Evaluate social rules by imagining yourself in the most vulnerable position.",
+    "reachesYou": "You see this when you think about why some people have better access to good jobs or schools. It also shows up when you wonder if a new rule at work is fair for everyone or just for the bosses.",
+    "do": "Think of a rule you follow at school or work. Ask yourself: 'If I were the person who benefited the least from this rule, would I still think it is fair?'",
+    "chapters": [
+      {
+        "t": 1,
+        "title": "The social contract",
+        "words": "OK, so as you know, we've moved in our discussion to the question"
+      },
+      {
+        "t": 505,
+        "title": "The American tradition",
+        "words": "So among the truths that Thomas Jefferson thought we hold to be"
+      },
+      {
+        "t": 957,
+        "title": "Conflict of interests",
+        "words": "It is nonetheless the case that there is a conflict of in"
+      },
+      {
+        "t": 1297,
+        "title": "The four requirements",
+        "words": "That is, there are four fundamental ideas that underlie this picture. The"
+      },
+      {
+        "t": 1681,
+        "title": "The clicker exercises",
+        "words": "So if you will take out your clickers, we'll do three quick"
+      },
+      {
+        "t": 2062,
+        "title": "The two principles",
+        "words": "Rawls is very clear that the society that you choose has"
+      },
+      {
+        "t": 2416,
+        "title": "Lexical ordering",
+        "words": "Moreover, Rawls thinks that these principles which have articulated, the first principle,"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the core idea of the social contract?",
+        "choices": [
+          "Winning at all costs",
+          "Absolute monarchy",
+          "Mutual self-interest",
+          "Total freedom"
+        ],
+        "a": 2,
+        "why": "The social contract is based on the idea that cooperation advances the good of those taking part.",
+        "quote": "The idea that entering into a social contract with one another, whereby as a way of securing the rights to life, pursuit of happiness, we subject ourselves to a rule of law, which we thereby take to be legitimate, is central both to the social contract tradition",
+        "t": 592
+      },
+      {
+        "q": "How does Rawls define a society?",
+        "choices": [
+          "A group of people with same goals",
+          "A place of absolute power",
+          "A self-sufficient association of persons",
+          "A place of perfect equality"
+        ],
+        "a": 2,
+        "why": "Rawls defines society as an association where people recognize rules of conduct as binding.",
+        "quote": "Society, that which we're trying to identify a set of characteristics for, is a more or less self-sufficient association of persons who, in their relations to one another, recognize certain rules of conduct as binding",
+        "t": 734
+      },
+      {
+        "q": "Why is there conflict in a cooperative society?",
+        "choices": [
+          "Lack of trust",
+          "Different shares",
+          "Too many rules",
+          "No common goals"
+        ],
+        "a": 1,
+        "why": "People want to cooperate, but they also want a larger share of the benefits.",
+        "quote": "It is nonetheless the case that there is a conflict of in any society, since persons are not indifferent as to how the greater benefits of their collaboration are distributed.",
+        "t": 957
+      },
+      {
+        "q": "What is the 'veil of ignorance'?",
+        "choices": [
+          "A secret law",
+          "A physical barrier",
+          "A lack of status knowledge",
+          "A state of war"
+        ],
+        "a": 2,
+        "why": "It is a thought experiment where you do not know your own social status or talents.",
+        "quote": "Rawls' idea is this. The principles that articulate the legitimate structure of society are those to which you would agree if you did not know which person you were going to be.",
+        "t": 1381
+      },
+      {
+        "q": "Why is the first principle non-negotiable?",
+        "choices": [
+          "It is the most efficient",
+          "It cannot be traded for utility",
+          "It is the most popular",
+          "It is only for the wealthy"
+        ],
+        "a": 1,
+        "why": "Rawls argues that from behind the veil of ignorance, you would not trade basic liberties for utility.",
+        "quote": "These, says Rawls, are non-negotiable, and they're non-negotiable in the sense that if we offered you from behind the veil of ignorance the possibility of trading off some of these goods for the sake of utility, if you did not know which individual you were going to be in that society, you would not make that trade.",
+        "t": 2126
+      },
+      {
+        "q": "When is economic inequality acceptable to Rawls?",
+        "choices": [
+          "Always",
+          "If it helps the rich",
+          "If it is efficient",
+          "If it helps the least well off"
+        ],
+        "a": 3,
+        "why": "Inequality is only justified if it results in a better situation for the people at the bottom.",
+        "quote": "Nonetheless, it is because and only because those inequalities benefit the least well off that Rawls thinks they would be agreed to behind the veil of ignorance.",
+        "t": 2400
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Justice is the first virtue of social institutions.",
+        "Each person has an inviolability that society cannot override.",
+        "The veil of ignorance removes personal bias.",
+        "Rules should be accepted by everyone in a position of equality.",
+        "Inequality is only okay if it helps the least well off."
+      ],
+      "key": "A just society is one that people would choose if they did not know their own place in it.",
+      "decoys": [
+        {
+          "text": "Justice is about making the average person as wealthy as possible.",
+          "why": "Rawls focuses on the least well off, not just the average."
+        },
+        {
+          "text": "The social contract requires a king to enforce the rules.",
+          "why": "Rawls looks at the principles of justice, not just Hobbes' monarch."
+        }
+      ],
+      "aha": "By ignoring our own advantages, we can see which rules truly protect everyone."
+    },
+    "scene": {
+      "analogy": "One cuts the cake, the other chooses",
+      "map": [
+        [
+          "The cutter",
+          "Rule makers"
+        ],
+        [
+          "The chooser",
+          "Their place"
+        ],
+        [
+          "the cake",
+          "society"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The cutter",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The chooser",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "THE CAKE",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "CUT",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "So the cutter cuts fair.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "Two kids, one cake.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "One cuts. The other picks first.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The cutter cannot know which slice is theirs.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "does not know their slice"
+            },
+            "right": {
+              "sub": "picks first"
+            }
+          }
+        },
+        {
+          "say": "So the cutter makes them even.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "A just society is the one you would pick not knowing your place.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Rule makers",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Their place",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "SOCIETY",
+              "size": 18
+            },
+            "act": {
+              "label": "DESIGN",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Rawls: choose rules behind a veil of ignorance.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 21: Equality",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "21. Equality.mp4",
+      "seconds": 2753,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
+}

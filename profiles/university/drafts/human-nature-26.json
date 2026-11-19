@@ -1,0 +1,378 @@
+{
+  "slug": "human-nature",
+  "n": 26,
+  "title": "How to live with what you now know",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T18:24:28.348Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: What does Aristotle say about virtue?",
+    "round 1: question dropped, its quote is not said word for word: ",
+    "round 1: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line",
+    "round 1: scene: idea.thing is over 11 letters: Instant reward",
+    "round 1: scene: idea.line is over 56 letters: Our inner parts often fight over what we",
+    "round 2: question dropped, its quote is not said word for word: How does the lecture describe the relationship bet",
+    "round 2: scene: line is over 56 letters: I knew I should eat the meal, but the ca",
+    "round 2: scene: idea.thing is over 11 letters: Instant reward",
+    "round 2: scene: idea.say is over 70 letters: We often choose small rewards over long-",
+    "round 3: scene: line is over 56 letters: I know I should eat the meal, but the sn",
+    "round 3: scene: idea.thing is over 11 letters: Small reward",
+    "round 3: scene: idea.say is over 70 letters: Our minds often choose small, instant re"
+  ],
+  "unit": {
+    "n": 26,
+    "title": "How to live with what you now know",
+    "needIt": "Knowing how your mind works is only useful if you set your life up around it. This last lecture gathers the tools in one place.",
+    "why": "The lecture looks back at a whole semester of study. It shows how our minds have different parts that often fight each other. It tells a story of how we can learn to balance these parts to live better.",
+    "outcome": "Understand your own inner conflicts to make better daily choices.",
+    "reachesYou": "You see this when you want to study but keep checking your phone. You feel it when you know what is right but find it hard to actually do it.",
+    "do": "Identify one habit you want to change this week. Create a small rule to help your 'reflective' side guide your 'impulsive' side.",
+    "chapters": [
+      {
+        "t": 241,
+        "title": "Reviewing the course goals",
+        "words": "So let's start out by remembering what it said on the syllabus"
+      },
+      {
+        "t": 1508,
+        "title": "The three main themes",
+        "words": "Path number three, three organizing themes. And I will, because I don't"
+      },
+      {
+        "t": 2511,
+        "title": "Luck and moral responsibility",
+        "words": "Determining what is and isn't in our control regarding our attribution"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the theme of the 'multi-part soul'?",
+        "choices": [
+          "We have one mind",
+          "We have many parts",
+          "We have no soul",
+          "We are all the same"
+        ],
+        "a": 1,
+        "why": "The lecture discusses the soul having various parts that can pull us in different directions.",
+        "quote": "The first, unsurprisingly, is the theme of the multi-part soul.",
+        "t": 198
+      },
+      {
+        "q": "What was the first goal of the course?",
+        "choices": [
+          "Learn philosophy tools",
+          "Read many books",
+          "Study science",
+          "Write a paper"
+        ],
+        "a": 0,
+        "why": "The lecture says the goal was to provide tools to make texts your own.",
+        "quote": "And what I tried to provide you with in each of these cases were the tools to make these texts your own for the rest of your life.",
+        "t": 304
+      },
+      {
+        "q": "How did the course use science?",
+        "choices": [
+          "To ignore philosophy",
+          "To replace philosophy",
+          "To provide insights",
+          "To prove people are bad"
+        ],
+        "a": 2,
+        "why": "The lecture explains that science provides insights into fundamental questions.",
+        "quote": "The second goal of the course was to introduce you to related discussions of these topics from the perspective of of other academic disciplines, particularly contemporary cognitive science and psychology, and to help you think about the ways in which the methodologies of those disciplines provides insights regarding these fundamental questions.",
+        "t": 402
+      },
+      {
+        "q": "What is the 'dual processing' tradition mentioned in the lecture?",
+        "choices": [
+          "A way to process two thoughts at once",
+          "A method for studying brain waves",
+          "A way to see the soul has different parts",
+          "A theory about how we see colors"
+        ],
+        "a": 2,
+        "why": "The lecture explains that the soul having parts is reflected in the modern dual processing tradition.",
+        "quote": "And we explored not only Plato's idea that we're composed of a reasonable part, a spirited part, and an repetitive part, but looked also at numerous manifestations of what's now known as the dual processing tradition.",
+        "t": 856
+      },
+      {
+        "q": "What did the course learn about moral luck?",
+        "choices": [
+          "Luck does not matter",
+          "Luck is always bad",
+          "Luck affects blame",
+          "Luck is a myth"
+        ],
+        "a": 2,
+        "why": "The lecture explores how unintended outcomes and luck affect our view of blame.",
+        "quote": "Determining what is and isn't in our control regarding our attribution of praise and blame in cases of unintended outcomes, resolving the role of what is and isn't in our control in our own internal reactions to events",
+        "t": 2511
+      },
+      {
+        "q": "What is the 'veil of ignorance' used for?",
+        "choices": [
+          "To think of justice",
+          "To hide facts",
+          "To win games",
+          "To ignore others"
+        ],
+        "a": 0,
+        "why": "It is a way to think about what justice demands for a community.",
+        "quote": "And in Rawls' articulation of the veil of ignorance as a way of thinking about what justice demands.",
+        "t": 2669
+      },
+      {
+        "q": "What does Aristotle say about how we cultivate virtues?",
+        "choices": [
+          "By acting as if we are already virtuous",
+          "By thinking about them",
+          "By reading many books",
+          "By avoiding bad habits"
+        ],
+        "a": 0,
+        "why": "Aristotle suggests that we cultivate virtues by acting as if we were already virtuous.",
+        "quote": "And that we cultivate virtues by acting as if we were already virtuous.",
+        "t": 2778
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "The soul has different parts.",
+        "We often choose instant rewards.",
+        "Habits help us act on values.",
+        "Our surroundings shape our actions.",
+        "Reason helps us judge our choices."
+      ],
+      "key": "Understanding our internal parts and external structures helps us live a more just and flourishing life.",
+      "decoys": [
+        {
+          "text": "We only make choices based on pure reason.",
+          "why": "The lecture shows that our instincts and 'parts of the soul' often pull us away from reason."
+        },
+        {
+          "text": "Our actions are entirely independent of our society.",
+          "why": "The lecture explains that communal structures and social norms heavily influence how we act."
+        }
+      ],
+      "aha": "By recognizing our internal complexity and social influences, we can better choose the life we want to live."
+    },
+    "scene": {
+      "analogy": "Setting up your week so it goes well",
+      "layout": "steps",
+      "map": [
+        [
+          "Know yourself",
+          "Parts of soul"
+        ],
+        [
+          "Set it up",
+          "Precommit"
+        ],
+        [
+          "Practice",
+          "Habit"
+        ],
+        [
+          "Good company",
+          "Structures"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "s0",
+          "type": "card",
+          "x": 22.5,
+          "y": 90,
+          "w": 170,
+          "h": 100,
+          "label": "Know yourself",
+          "color": "blue",
+          "o": 0,
+          "size": 17
+        },
+        {
+          "id": "s1",
+          "type": "card",
+          "x": 217.5,
+          "y": 90,
+          "w": 170,
+          "h": 100,
+          "label": "Set it up",
+          "color": "blue",
+          "o": 0,
+          "size": 20
+        },
+        {
+          "id": "a1",
+          "type": "arrow",
+          "x": 198.5,
+          "y": 140,
+          "x2": 211.5,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
+        },
+        {
+          "id": "s2",
+          "type": "card",
+          "x": 412.5,
+          "y": 90,
+          "w": 170,
+          "h": 100,
+          "label": "Practice",
+          "color": "blue",
+          "o": 0,
+          "size": 20
+        },
+        {
+          "id": "a2",
+          "type": "arrow",
+          "x": 393.5,
+          "y": 140,
+          "x2": 406.5,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
+        },
+        {
+          "id": "s3",
+          "type": "card",
+          "x": 607.5,
+          "y": 90,
+          "w": 170,
+          "h": 100,
+          "label": "Good company",
+          "color": "blue",
+          "o": 0,
+          "size": 17
+        },
+        {
+          "id": "a3",
+          "type": "arrow",
+          "x": 588.5,
+          "y": 140,
+          "x2": 601.5,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 270,
+          "label": "Arrange your life for the person you want to be.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "First, be honest about what trips you up.",
+          "dur": 2.6,
+          "set": {
+            "s0": {
+              "o": 1,
+              "sub": "what trips you up"
+            }
+          }
+        },
+        {
+          "say": "Arrange things before the hard moment comes.",
+          "dur": 2.6,
+          "set": {
+            "s1": {
+              "o": 1,
+              "sub": "before the moment"
+            },
+            "a1": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "Repeat the good choice until it runs itself.",
+          "dur": 2.6,
+          "set": {
+            "s2": {
+              "o": 1,
+              "sub": "until it is habit"
+            },
+            "a2": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "And choose the people and places around you.",
+          "dur": 2.6,
+          "set": {
+            "s3": {
+              "o": 1,
+              "sub": "people shape you"
+            },
+            "a3": {
+              "o": 1,
+              "draw": 1
+            },
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Flourishing comes from good habits and good surroundings.",
+          "dur": 3.6,
+          "set": {
+            "line": {
+              "label": "Reason leads best by arranging the rest.",
+              "size": 22,
+              "color": "green"
+            },
+            "s0": {
+              "label": "Parts of soul",
+              "size": 17,
+              "color": "gold"
+            },
+            "s1": {
+              "label": "Precommit",
+              "size": 20,
+              "color": "gold"
+            },
+            "s2": {
+              "label": "Habit",
+              "size": 20,
+              "color": "gold"
+            },
+            "s3": {
+              "label": "Structures",
+              "size": 20,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 26: Concluding lecture",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "26. Concluding Lecture.mp4",
+      "seconds": 2906,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
+}
