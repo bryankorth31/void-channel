@@ -459,15 +459,8 @@ function gateDraft(raw, tr) {
   return { ok: !missing.length, missing, notes, unit };
 }
 
-const DRAFT_SHAPE = {
-  type: 'object', required: ['needIt', 'why', 'outcome', 'analogy', 'chapters', 'quiz', 'crystal'],
-  properties: {
-    needIt: { type: 'string' }, why: { type: 'string' }, outcome: { type: 'string' }, analogy: { type: 'string' },
-    chapters: { type: 'array', items: { type: 'object', required: ['title', 'words'], properties: { title: { type: 'string' }, words: { type: 'string' } } } },
-    quiz: { type: 'array', items: { type: 'object', required: ['q', 'choices', 'a', 'why', 'quote'], properties: { q: { type: 'string' }, choices: { type: 'array', items: { type: 'string' } }, a: { type: 'integer' }, why: { type: 'string' }, quote: { type: 'string' } } } },
-    crystal: { type: 'object', required: ['partials', 'key', 'decoys', 'aha'], properties: { partials: { type: 'array', items: { type: 'string' } }, key: { type: 'string' }, decoys: { type: 'array', items: { type: 'object', required: ['text', 'why'], properties: { text: { type: 'string' }, why: { type: 'string' } } } }, aha: { type: 'string' } } },
-  },
-};
+// Plain JSON mode with thinking off: on gemma4:12b a strict schema with thinking on came back empty after 3 minutes;
+// this way a 5,000 word lecture is answered in about 20 seconds (tried 19 Nov 2026). The gate checks the shape.
 function draftPrompt(c, t, tr, more) {
   const lines = []; let cur = [];
   for (const sg of tr.segments) { cur.push(String(sg.text).trim()); if (cur.join(' ').split(' ').length > 60) { lines.push(cur.join(' ')); cur = []; } }
@@ -493,7 +486,7 @@ ${lines.join('\n')}`;
 async function askOllama(prompt) {
   let r;
   try {
-    r = await fetch(OLLAMA + '/api/chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ model: DRAFT_MODEL, stream: true, format: DRAFT_SHAPE, options: { temperature: 0.2, num_ctx: 24576 }, messages: [{ role: 'user', content: prompt }] }) });
+    r = await fetch(OLLAMA + '/api/chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ model: DRAFT_MODEL, stream: true, think: false, format: 'json', options: { temperature: 0.2, num_ctx: 24576 }, messages: [{ role: 'user', content: prompt }] }) });
   } catch (e) { throw new Error('Ollama is not answering at ' + OLLAMA + '. Start Ollama, then try again.'); }
   if (!r.ok) throw new Error('Ollama answered ' + r.status + ' for the model ' + DRAFT_MODEL + ' (is it installed? ollama pull ' + DRAFT_MODEL + ')');
   let text = ''; let buf = '';

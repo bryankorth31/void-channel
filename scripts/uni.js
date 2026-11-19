@@ -66,7 +66,7 @@ const [cmd, ...args] = process.argv.slice(2);
     console.log(r.unit.quiz.length + ' questions, each quote said word for word in the lecture; ' + r.unit.chapters.length + ' chapters; crystal ' + (r.unit.crystal ? 'yes' : 'no') + '.');
     if (r.sceneIdea) console.log('Scene idea (the scene itself is still made by hand): ' + r.sceneIdea);
     for (const x of r.notes) console.log('- ' + x);
-    console.log('Read it, change any line, then: node scripts/uni.js keep ' + r.slug + ' ' + r.n);
+    console.log(r.ok ? 'Read it, change any line, add the scene, then: node scripts/uni.js keep ' + r.slug + ' ' + r.n : 'Run the draft again, or write the missing parts into the file by hand.');
   } else if (cmd === 'keep') {
     const r = uni.keepDraft(args[0], args[1]);
     console.log('Unit ' + r.n + ' is in courses/' + r.slug + '.json (' + r.units + ' units). Next: node scripts/uni.js times ' + r.slug + ', then build.');

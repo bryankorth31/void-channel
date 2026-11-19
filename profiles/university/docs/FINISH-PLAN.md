@@ -61,3 +61,12 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   everyday life (they are full Yale lectures), Critical thinking and the mechanisms keep all three. Picking High
   school on the front page now shows the Mind row only, and an area row with nothing left hides. Seen at 1920, 1316
   and 821 wide in the preview. Bryan can put "high school" back in a course file's `levels` at any time. Not deployed.
+- 19 Nov 2026, step 5 done: `node scripts/uni.js draft <slug> <unit>` and `keep`. Trial on Human nature lecture 2
+  (already heard): gemma4:12b answered in 17 seconds; 5 of 6 quiz questions kept, each quote said word for word in
+  the lecture, times taken from the lecture (the Ring of Gyges quote at 1185 s; Yale's printed mark is 1200), 5
+  chapters, a whole crystal, and a scene idea. The one question whose quote was not word for word was dropped and
+  listed. `keep` refused the draft because it has no scene yet, as it should. The draft reads plainly but flatter
+  than the units written with a chat: Bryan reads each one before keeping it. First try with a strict schema and
+  the model's thinking on came back empty after 3 minutes a round; plain JSON with thinking off is what works.
+  Human nature now lists its other 24 lectures as units to do, so Listen queues all 24 (about 7 hours of PC time).
+  tests/uni.test.js 7 of 7. Step 6 (the HQ buttons) is written up for the HQ areas chat in the shared notes.
