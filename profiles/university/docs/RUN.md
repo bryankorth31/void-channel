@@ -134,7 +134,13 @@ Drafts show in the preview with a draft badge. They are not on the public site.
 
 ## 8. Put a course on the public site
 
-1. HQ > University > Courses > tick **Live** on the course. Only ticked courses go public.
+1. HQ > University > Courses > tick **Live** on the course. Only ticked courses go public. Or one line
+   (`off` takes it back out):
+
+```
+node scripts\uni.js live human-nature on
+```
+
 2. HQ > University > **Build public copy**, or:
 
 ```

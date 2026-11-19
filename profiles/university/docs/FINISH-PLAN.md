@@ -143,3 +143,14 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   against what its lecture says (the seatbelt scene for lecture 25 was corrected to match it). Chapters, quiz,
   crystal, How this reaches you and Do this week are the local model's. Human nature reads 26 of 26 once Bryan has
   read and kept each draft. Whisper moved on to How the country began (Civics).
+- 19 Nov 2026, audit round (the audit chat's findings U1 to U8; Bryan in this chat: "Yes, fix them"). The header
+  now stays at the top of the window on every page, with a back arrow to Home and an up arrow on the page's own
+  name that returns to its start; a link into the middle of a page lands below the header, not under it. The front
+  page shows a tile only for an area that has a course, and each tile opens that area's row (no more "coming"
+  tiles). A wrong address gets a real page (404.html) with a way to the front page and the course list. The offline
+  note in the installed app has a Try again button. The public copies of our scripts carry the code only, no
+  working notes, so no name is in a public comment. A course still being added to says the rest are coming and why
+  the numbers skip; Human nature no longer says "full course". `node scripts\uni.js live <course> on|off` puts
+  a course on or off the public copy without HQ (RUN.md section 8). Checked in the preview at 1920x1080, 1316x821,
+  821x1316 and 1278x513: no sideways scroll, no console errors. Left for Bryan to decide: his full name as author on
+  the Boundary course page, and whether a quiz answer should allow a second try. Nothing deployed.

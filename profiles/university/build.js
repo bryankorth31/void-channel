@@ -190,7 +190,7 @@ ${CARDCSS}
 .chans{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 28px}.chans .chan{width:280px}
 .uimg{width:132px;height:84px;object-fit:cover;border-radius:6px;margin-left:auto;border:1px solid var(--line)}
 .wrap{display:grid;grid-template-columns:260px 1fr;gap:32px;max-width:1500px;margin:0 auto;padding:28px 32px}
-nav{position:sticky;top:20px;align-self:start}
+nav{position:sticky;top:calc(var(--hh,64px) + 20px);align-self:start;max-height:calc(100vh - var(--hh,64px) - 40px);overflow:auto}
 nav h4{margin:0 0 10px;color:var(--dim);font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
 nav a{display:flex;gap:10px;padding:8px 10px;border-radius:8px;color:var(--fg);text-decoration:none;font-size:15px}
 nav a:hover{background:var(--panel2)}nav a span{color:var(--acc);font-weight:600;width:16px}
@@ -313,11 +313,11 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 details.more{margin-top:6px;border-top:1px solid var(--line);padding-top:10px}
 details.more summary{cursor:pointer;color:var(--dim);font-size:15px;padding:6px 0}
 details.more summary:hover{color:var(--fg)}
-@media (max-width:1000px){.wrap{grid-template-columns:1fr}nav{position:static}nav{display:flex;flex-wrap:wrap;gap:4px}nav h4{width:100%}.row2{grid-template-columns:1fr}.hero ol{columns:1}}
+@media (max-width:1000px){.wrap{grid-template-columns:1fr}nav{position:static;max-height:none}nav{display:flex;flex-wrap:wrap;gap:4px}nav h4{width:100%}.row2{grid-template-columns:1fr}.hero ol{columns:1}}
 ${LOOKCSS}</style></head><body>
 ${top(c.slug, all)}
 <div class="wrap"><nav><h4>Units</h4>${toc}<p class="donecount"></p></nav><main>
-<div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)} · ${c.size === 'class' ? 'a class built from an old book' : c.kind === 'found' ? 'built from a free course' : 'a course we wrote'}</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>${c.source ? '<p class="src">From <a href="' + esc(c.source.url) + '" target="_blank" rel="noopener">' + esc(c.source.title) + '</a>, ' + esc(c.source.by) + '. ' + licence(c.source.licence) + '.' + (c.planned > c.units.length ? ' ' + c.units.length + ' of ' + c.planned + ' lectures ready so far.' : '') + '</p>' : ''}<p class="lv">${LEVELS(c)}</p>
+<div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)} · ${c.size === 'class' ? 'a class built from an old book' : c.kind === 'found' ? 'built from a free course' : 'a course we wrote'}</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>${c.source ? '<p class="src">From <a href="' + esc(c.source.url) + '" target="_blank" rel="noopener">' + esc(c.source.title) + '</a>, ' + esc(c.source.by) + '. ' + licence(c.source.licence) + '.' + (c.planned > c.units.length ? ' ' + c.units.length + ' of ' + c.planned + ' lectures are ready so far. The rest are being added one at a time, so the numbers in the list skip.' : '') + '</p>' : ''}<p class="lv">${LEVELS(c)}</p>
 ${(() => { const outs = (c.outcomes || []).length ? c.outcomes : c.units.map((u) => u.outcome).filter(Boolean); return outs.length ? '<details class="more"><summary>By the end you will be able to...</summary><ol>' + outs.map((o) => '<li>' + esc(o) + '</li>').join('') + '</ol></details>' : ''; })()}</div>
 ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this course</h3><div class="chans">' + c.channels.map(chan).join('') + '</div>' : ''}
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
@@ -414,12 +414,12 @@ html[data-look="bright"] .hero .kick{color:var(--acc)}
 // Install on a phone or tablet (Bryan, 19 Nov 2026: "the whole pwa"; "Yes, do it here"). Every page names the manifest and the
 // home-screen icons (img/, drawn by make-icons.js), so iPhone and iPad Safari add it as an app with the crest, and Chrome and
 // Edge can offer to install it. The Install button in the header (INSTALL below) shows the steps on iPhone and iPad, which have
-// no install prompt of their own. sw.js only shows an offline note; nothing is cached.
+// no install prompt of their own. sw.js only shows an offline note with a Try again button; nothing is cached.
 const APPHEAD = '<link rel="manifest" href="/manifest.webmanifest"><link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png"><link rel="apple-touch-icon" href="/img/apple-touch-icon.png"><meta name="theme-color" content="#07080c"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Void University"><meta name="apple-mobile-web-app-status-bar-style" content="black">';
 const MANIFEST = { name: 'Void University', short_name: 'Void University', description: 'Free courses in plain words: learn from people who did it.', start_url: '/', scope: '/', display: 'standalone', background_color: '#0b0c12', theme_color: '#07080c',
   icons: [{ src: '/img/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/img/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' }, { src: '/img/icon-512-maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }] };
 const APPICONS = ['apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'icon-512-maskable.png'];
-const SW = "self.addEventListener('install',()=>self.skipWaiting());\nself.addEventListener('activate',(e)=>e.waitUntil(self.clients.claim()));\nself.addEventListener('fetch',(e)=>{if(e.request.mode!=='navigate')return;e.respondWith(fetch(e.request).catch(()=>new Response('<!doctype html><meta name=viewport content=\"width=device-width\"><body style=\"background:#0b0c12;color:#f6f7fb;font-family:sans-serif;padding:24px\"><h1>Void University</h1><p>You are offline. Connect and reload.</p>',{headers:{'content-type':'text/html; charset=utf-8'}})))});\n";
+const SW = "self.addEventListener('install',()=>self.skipWaiting());\nself.addEventListener('activate',(e)=>e.waitUntil(self.clients.claim()));\nself.addEventListener('fetch',(e)=>{if(e.request.mode!=='navigate')return;e.respondWith(fetch(e.request).catch(()=>new Response('<!doctype html><meta name=viewport content=\"width=device-width\"><body style=\"background:#0b0c12;color:#f6f7fb;font-family:sans-serif;padding:24px\"><h1>Void University</h1><p>You are offline. Connect to the internet, then press Try again.</p><p><button onclick=\"location.reload()\" style=\"font:inherit;font-size:16px;padding:10px 20px;border-radius:999px;border:1px solid #5fd4ff;background:transparent;color:#5fd4ff;cursor:pointer\">Try again</button></p>',{headers:{'content-type':'text/html; charset=utf-8'}})))});\n";
 const INSTALL = '<button type="button" class="inst" id="inst" hidden>Install</button><div class="instnote" id="instnote" hidden><b>Add Void University to your home screen</b><p>Tap the Share button <span aria-hidden="true">(the square with an arrow)</span>, then <b>Add to Home Screen</b>.</p><button type="button" id="instok">Got it</button></div>'
   + '<script>(function(){var b=document.getElementById("inst"),n=document.getElementById("instnote"),P=null;'
   + 'var ios=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);'
@@ -441,9 +441,9 @@ const CARDCSS = `.card{flex:0 0 auto;display:flex;flex-direction:column;border-r
 .mini{width:220px}.mini .ph{aspect-ratio:4/3}.mini b{font-size:18px}.mini span{font-size:13px}
 .chan{width:300px}.chan .ph{aspect-ratio:16/9}.chan b{font-size:19px}.chan span{font-size:13px}`;
 const BASE = `:root{--bg:#0b1220;--panel:#111a2c;--panel2:#17223a;--line:#24304a;--fg:#efe9dc;--dim:#9aa3b5;--acc:#d4b06a;--gold:#d4b06a;--pink:#e08a8f;--ink:#0b1220;--soft:#cfd2dc;--line2:#2c3550;--panel3:#141c2e;--dim2:#aab0c2;--chip:#1c2a33;--deep:#0a101c;--head:Fraunces,Georgia,serif;--radius:8px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,sans-serif}a{color:var(--acc)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh,64px) + 14px)}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,sans-serif}a{color:var(--acc)}
 .serif{font-family:var(--head)}
-header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:14px 32px;border-bottom:1px solid var(--line);background:var(--deep)}
+header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:14px 32px;border-bottom:1px solid var(--line);background:var(--deep);position:sticky;top:0;z-index:50}
 .crest{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg)}
 .crest svg{width:34px;height:34px;flex:none}
 .crest span{white-space:nowrap}.crest b{font-family:var(--head);font-weight:700;font-size:19px;letter-spacing:.14em;text-transform:uppercase}
@@ -451,7 +451,7 @@ header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:
 .nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto;position:static;align-items:center}
 .navall{position:relative}.navall summary{cursor:pointer;list-style:none;font-size:14px;padding:6px 12px;border-radius:6px;color:var(--fg);border:1px solid var(--line)}.navall summary::-webkit-details-marker{display:none}.navall summary:hover{border-color:var(--gold)}
 .navlist{position:absolute;right:0;top:calc(100% + 8px);z-index:30;width:min(640px,calc(100vw - 40px));max-height:70vh;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px 18px;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.5)}
-@media (max-width:1000px){header.top{position:relative}.navall{position:static}.navlist{left:20px;right:20px;width:auto}}
+@media (max-width:1000px){header.top{padding:8px 20px;gap:6px 14px}.navall{position:static}.navlist{left:20px;right:20px;width:auto}}
 .navlist h5{margin:0 0 4px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}.navlist a,.navlist b{display:block;padding:4px 0;font-size:14px}
 .nav a,.nav b{font-size:14px;padding:6px 12px;border-radius:6px;text-decoration:none;color:var(--dim)}
 .nav a:hover{color:var(--fg);background:var(--panel2)}.nav b{color:var(--gold);font-weight:600}
@@ -460,7 +460,7 @@ header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:
 .inst{font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1px solid var(--gold);background:transparent;color:var(--gold);cursor:pointer}.inst:hover{background:var(--panel2)}
 .instnote{position:absolute;right:16px;top:calc(100% + 8px);z-index:40;width:min(340px,calc(100vw - 32px));padding:16px 18px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.5);font-size:15px}.instnote p{margin:8px 0 12px;color:var(--soft)}
 .instnote button{font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}
-header.top{position:relative}
+.nav a.here{color:var(--gold);font-weight:600}
 footer{max-width:1400px;margin:0 auto;padding:30px 32px 44px;color:var(--dim);font-size:14px;border-top:1px solid var(--line)}
 footer a{color:var(--gold)}`;
 const CREST = '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 L36 8 V20 C36 30 28 36 20 38 C12 36 4 30 4 20 V8 Z" fill="#132038" stroke="#d4b06a" stroke-width="1.6"/><path d="M11 15 h18 M11 20 h18 M11 25 h12" stroke="#d4b06a" stroke-width="1.6" stroke-linecap="round"/><circle cx="27" cy="26" r="3" fill="none" stroke="#efe9dc" stroke-width="1.4"/></svg>';
@@ -488,7 +488,7 @@ function shelfPage(b, all) {
       + '</div><details class="old"><summary>As printed in ' + esc(String(b.year)) + '</summary><p>' + esc(p.old) + '</p></details></div>').join('') + '</section>').join('');
   return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>${esc(b.title)} · Void University</title>${FONTS}<style>${BASE}
 .swrap{display:grid;grid-template-columns:250px minmax(0,1fr);gap:34px;max-width:1500px;margin:0 auto;padding:26px 32px 60px}
-.swrap nav{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;display:flex;flex-direction:column;gap:2px}
+.swrap nav{position:sticky;top:calc(var(--hh,64px) + 16px);align-self:start;max-height:calc(100vh - var(--hh,64px) - 36px);overflow:auto;display:flex;flex-direction:column;gap:2px}
 .swrap nav h4{margin:0 0 8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
 .swrap nav a{display:flex;gap:10px;padding:7px 10px;border-radius:6px;color:var(--fg);text-decoration:none;font-size:15px}
 .swrap nav a:hover{background:var(--panel)}.swrap nav a span{color:var(--acc);min-width:18px}
@@ -525,8 +525,11 @@ document.getElementById('both').onclick = function () {
 function top(current, all) {
   // Up to six courses sit in the header as links. More than that (classes and shelf books add up fast) fold into one
   // "All courses" list grouped by area, so the header stays one row at every width.
-  const home = '<a href="index.html"' + (current === 'home' ? ' aria-current="page"' : '') + '>Home</a>';
-  const link = (o) => (o.slug === current ? '<b>' + esc(o.name) + '</b>' : '<a href="' + esc(o.slug) + '.html">' + esc(o.name) + '</a>');
+  // Home and the page's own name stay in reach while you read (the header is sticky): Home goes to the front page, the
+  // name goes back to the start of the page. The installed app has no browser Back, so this is the way out.
+  const home = current === 'home' ? '<a href="index.html" aria-current="page">Home</a>' : '<a href="index.html" title="Back to the front page">&#8592; Home</a>';
+  const hereLink = (o) => '<a class="here" href="#top" title="Back to the start of this page">&#8593; ' + esc(o.name) + '</a>';
+  const link = (o) => (o.slug === current ? hereLink(o) : '<a href="' + esc(o.slug) + '.html">' + esc(o.name) + '</a>');
   const everything = all.concat(SHELFBOOKS);
   let links;
   if (everything.length <= 6) links = home + all.map(link).join('');
@@ -535,9 +538,10 @@ function top(current, all) {
     const areas = [...new Set(all.map((o) => o.domain))];
     const groups = areas.map((a) => '<div><h5>' + esc(a) + '</h5>' + all.filter((o) => o.domain === a).map(link).join('') + '</div>').join('')
       + (SHELFBOOKS.length ? '<div><h5>Old books in plain English</h5>' + SHELFBOOKS.map(link).join('') + '</div>' : '');
-    links = home + (here ? '<b>' + esc(here.name) + '</b>' : '') + '<details class="navall"><summary>All courses</summary><div class="navlist">' + groups + '</div></details>';
+    links = home + (here ? hereLink(here) : '') + '<details class="navall"><summary>All courses</summary><div class="navlist">' + groups + '</div></details>';
   }
-  return '<header class="top"><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + INSTALL + DRAFT + '</header>';
+  return '<header class="top"><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + INSTALL + DRAFT + '</header>'
+    + '<script>(function(){var h=document.querySelector("header.top"),s=function(){document.documentElement.style.setProperty("--hh",h.offsetHeight+"px")};s();addEventListener("load",s);if(window.ResizeObserver)new ResizeObserver(s).observe(h);else addEventListener("resize",s)})()</script>';
 }
 const IMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'img', 'images.json'), 'utf8')); } catch (e) { return {}; } })();
 const img = (name) => IMG[name] ? IMG[name].file : '';
@@ -556,7 +560,8 @@ function home(all, list) {
   const sup = all.filter((c) => c.shelf === 'supplement');
   const card = (c) => '<a class="card course" data-slug="' + esc(c.slug) + '" data-units="' + c.units.length + '" data-lv="' + esc((c.levels || []).join('|')) + '" href="' + esc(c.slug) + '.html"><div class="ph"><img src="' + (img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))) + '" alt=""></div><div class="t"><small>' + esc(c.domain) + ' · ' + (c.planned > c.units.length ? c.units.length + ' of ' + c.planned + ' units' : c.units.length + (c.units.length === 1 ? ' unit' : ' units')) + '</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
   const mini = (c, u) => '<a class="card mini" href="' + esc(c.slug) + '.html#u' + u.n + '"><div class="ph"><img loading="lazy" src="' + img('m' + u.n) + '" alt=""></div><div class="t"><b>' + esc(u.title) + '</b><span>' + esc(u.scene ? u.scene.analogy : '') + '</span></div></a>';
-  const row = (title, note, cards) => '<section class="row"><h2><span>' + esc(title) + '</span>' + (note ? '<small>' + esc(note) + '</small>' : '') + '</h2><div class="rowwrap"><button class="arrow l" aria-label="Back">&#8249;</button><div class="track">' + cards + '</div><button class="arrow r" aria-label="More">&#8250;</button></div></section>';
+  const row = (title, note, cards, id) => '<section class="row"' + (id ? ' id="' + id + '"' : '') + '><h2><span>' + esc(title) + '</span>' + (note ? '<small>' + esc(note) + '</small>' : '') + '</h2><div class="rowwrap"><button class="arrow l" aria-label="Back">&#8249;</button><div class="track">' + cards + '</div><button class="arrow r" aria-label="More">&#8250;</button></div></section>';
+  const areaId = (t) => 'area-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-');
   const seen = new Set();
   const chans = (cs) => cs.flatMap((c) => c.channels || []).filter((x) => !seen.has(x.url) && seen.add(x.url));
   const rows = list.types.map((t) => {
@@ -564,14 +569,16 @@ function home(all, list) {
     if (!cs.length) return '';
     const ss = t === 'Mind' ? sup : [];
     const ch = chans(cs.concat(ss));
-    return row(t, cs.length + (cs.length === 1 ? ' course' : ' courses'), cs.map(card).join(''))
+    return row(t, cs.length + (cs.length === 1 ? ' course' : ' courses'), cs.map(card).join(''), areaId(t))
       + ss.map((c) => row(c.name, 'short pieces any course can use', c.units.map((u) => mini(c, u)).join(''))).join('')
       + (ch.length ? row('Channels for ' + t, 'whole series on the Internet Archive that go with these courses', ch.map(chan).join('')) : '');
   }).join('');
   const shelfRow = SHELFBOOKS.length ? row('Old books in plain English', 'useful old how-to, with the printed words beside it', SHELFBOOKS.map((b) => '<a class="card course" data-lv="' + esc((b.levels || []).join('|')) + '" href="' + esc(b.slug) + '.html"><div class="ph"><img src="' + img('a-' + String(b.area).toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""></div><div class="t"><small>' + esc(b.area) + ' · printed ' + esc(String(b.year)) + ' · ' + b.chapters.length + ' chapters</small><b>' + esc(b.title) + '</b><span>' + esc(b.needIt) + '</span></div></a>').join('')) : '';
+  // One tile for each area that has a course, and the tile opens that area's row. An area with nothing in it yet is
+  // not shown: a tile that leads nowhere is a placeholder.
   const tiles = list.types.map((t) => {
     const n = full.filter((c) => c.domain === t).length; // same count as the row: the mechanisms shelf is not a course
-    return '<div class="area' + (n ? ' has' : '') + '"><img loading="lazy" src="' + img('a-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""><div><b>' + esc(t) + '</b><small>' + (n ? n + (n === 1 ? ' course' : ' courses') : 'coming') + '</small></div></div>';
+    return n ? '<a class="area has" href="#' + areaId(t) + '"><img loading="lazy" src="' + img('a-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""><div><b>' + esc(t) + '</b><small>' + n + (n === 1 ? ' course' : ' courses') + '</small></div></a>' : '';
   }).join('');
   return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}
 <title>Void University</title>
@@ -605,9 +612,9 @@ ${CARDCSS}
 @media (max-width:1000px){#find{margin-left:0;flex-basis:100%}}
 .course.off{display:none}
 .areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;padding:0 20px}
-.area{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line)}
+.area{display:block;color:var(--fg);text-decoration:none;position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line)}
 .area img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.45)}
-.area.has img{filter:saturate(.85) brightness(.6)}.area.has{border-color:var(--gold)}
+.area.has img{filter:saturate(.85) brightness(.6)}.area.has{border-color:var(--gold)}.area.has:hover img,.area.has:focus-visible img{filter:saturate(1) brightness(.75)}
 .area div{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;background:linear-gradient(0deg,rgba(11,18,32,.92),rgba(11,18,32,0))}
 .area b{display:block;font-family:var(--head);font-size:19px;font-weight:600}.area small{color:var(--dim);font-size:13px}.area.has small{color:var(--gold)}
 @media(max-width:900px){.hero h1{font-size:36px}.course{width:290px}}
@@ -618,7 +625,7 @@ ${top('home', all)}
 <div id="found" hidden></div><div id="resume" hidden></div>
 ${rows}
 ${shelfRow}
-<h2><span>Every area</span><small>more courses are on the way</small></h2><div class="areas">${tiles}</div></main>
+<h2><span>Jump to an area</span></h2><div class="areas">${tiles}</div></main>
 ${FOOT()}
 <script>
 document.querySelectorAll('.who button').forEach(function (b) {
@@ -675,11 +682,26 @@ main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)
 ${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
 
+// A wrong address: wrangler.jsonc serves 404.html for it. Links start from the site root, since the wrong address can be
+// any depth.
+function notFound(all) {
+  const list = all.filter((c) => c.shelf !== 'supplement').map((c) => '<a href="' + esc(c.slug) + '.html">' + esc(c.name) + '</a>').join('');
+  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/">${APPHEAD}<title>Page not found · Void University</title>${FONTS}<style>${BASE}
+main{max-width:760px;margin:0 auto;padding:48px 32px 60px}h1{font-family:var(--head);font-size:36px;margin:0 0 10px}main p{color:var(--soft);font-size:17px}
+.go{display:inline-block;margin:10px 0 26px;padding:10px 20px;border-radius:999px;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:16px}.go:hover{background:var(--panel2)}
+.all{display:flex;flex-direction:column;gap:2px}.all a{padding:10px 12px;border-radius:8px;color:var(--fg);text-decoration:none;border:1px solid var(--line);background:var(--panel);font-size:16px}.all a:hover{border-color:var(--gold)}${LOOKCSS}</style></head><body>
+${top('404', all)}<main><h1>That page is not here</h1><p>The address may be old or mistyped. Everything on Void University starts from the front page.</p><a class="go" href="index.html">&#8592; Front page</a><div class="all">${list}</div></main>${FOOT()}</body></html>`;
+}
+
+// The public copies of our own scripts carry the code only, never the working notes above it (B, 19 Nov 2026: no names
+// in public pages or comments). The preview gets the same files, so what is checked is what ships.
+const shipJs = (from, to) => fs.writeFileSync(to, fs.readFileSync(from, 'utf8').split(/\r?\n/).filter((l) => !/^\s*\/\//.test(l)).join('\n'));
+
 // Start from an empty folder: a page left from an earlier build (a course since taken off Live) would otherwise deploy.
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
-fs.copyFileSync(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
-fs.copyFileSync(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
+shipJs(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
+shipJs(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
 // A lab is on a page when the unit has one; the public copy carries only labs marked live.
 const shipsLab = (u) => !!(u.lab && (!LIVE || u.lab.live));
 const LIVE_SLUGS = new Set((JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8')).courses || []).filter((c) => c.live).map((c) => c.slug));
@@ -706,7 +728,7 @@ const loaded = courses.map((f) => withDrafts(JSON.parse(fs.readFileSync(path.joi
 if (loaded.some((c) => c.units.some(shipsLab))) {
   // Only the benches a shipped lab uses: a draft bench never rides along in the public copy.
   const used = new Set(loaded.flatMap((c) => c.units.filter(shipsLab).map((u) => 'lab-' + u.lab.bench + '.js')).concat('lab.js'));
-  for (const f of fs.readdirSync(DIR).filter((f) => used.has(f))) fs.copyFileSync(path.join(DIR, f), path.join(OUT, f));
+  for (const f of fs.readdirSync(DIR).filter((f) => used.has(f))) shipJs(path.join(DIR, f), path.join(OUT, f));
   for (const f of ['planck.min.js', 'planck-LICENSE.txt']) fs.copyFileSync(path.join(DIR, 'vendor', f), path.join(OUT, f));
 }
 MECH = loaded.find((c) => c.shelf === 'supplement') || null;
@@ -717,6 +739,7 @@ for (const f of APPICONS) fs.copyFileSync(path.join(DIR, 'img', f), path.join(OU
 fs.writeFileSync(path.join(OUT, 'manifest.webmanifest'), JSON.stringify(MANIFEST));
 fs.writeFileSync(path.join(OUT, 'sw.js'), SW);
 fs.writeFileSync(path.join(OUT, 'credits.html'), credits(loaded));
+fs.writeFileSync(path.join(OUT, '404.html'), notFound(loaded));
 fs.writeFileSync(path.join(OUT, 'index.html'), home(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
 for (const b of SHELFBOOKS) {
   fs.writeFileSync(path.join(OUT, b.slug + '.html'), shelfPage(b, loaded));

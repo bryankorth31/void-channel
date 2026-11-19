@@ -105,6 +105,10 @@ const [cmd, ...args] = process.argv.slice(2);
       console.log('Chapter ' + r.n + ', ' + r.title + ': ' + r.done + ' passages in plain English' + (r.left ? ', ' + r.left + ' left out (run it again to retry them)' : '') + (r.warned ? ', ' + r.warned + ' with a warning' : ''));
     }
     console.log('Look at it: node scripts/uni.js build, then the preview. When it reads right: node scripts/uni.js shelf live ' + args[1] + ' on');
+  } else if (cmd === 'live') {
+    if (!/^(on|off)$/.test(args[1] || '')) throw new Error('Say on or off: node scripts/uni.js live <course> on');
+    const r = uni.setLive(args[0], args[1] === 'on');
+    console.log(r.slug + (r.live ? ' goes in the public copy at the next build --site.' : ' stays out of the public copy.'));
   } else if (cmd === 'shelf' && args[0] === 'live') {
     const r = uni.setShelfLive(args[1], args[2] === 'on');
     console.log(r.id + (r.live ? ' goes in the public copy at the next build --site.' : ' stays out of the public copy.'));

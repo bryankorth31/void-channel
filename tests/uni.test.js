@@ -28,7 +28,7 @@ test('the public copy carries only live courses, and no lab unless a lab is live
   assert.ok(!fs.existsSync(path.join(SITE, 'stale-page.html')), 'a page from an earlier build was left in site/');
   const live = new Set(list().courses.filter((c) => c.live).map((c) => c.slug));
   const pages = fs.readdirSync(SITE).filter((f) => f.endsWith('.html')).map((f) => f.replace(/\.html$/, ''));
-  for (const p of pages) assert.ok(live.has(p) || ['index', 'credits'].includes(p), p + '.html is in the public copy but not live');
+  for (const p of pages) assert.ok(live.has(p) || ['index', 'credits', '404'].includes(p), p + '.html is in the public copy but not live');
   const anyLiveLab = fs.readdirSync(path.join(uni.UNI, 'courses')).some((f) => {
     const c = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', f), 'utf8'));
     return live.has(c.slug) && c.units.some((u) => u.lab && u.lab.live);
@@ -167,4 +167,29 @@ test('the steps scene: three or four cards in a row that never touch, and the wr
     assert.strictEqual(r.scene.beats.length, n + 1);
   }
   assert.strictEqual(uni.sceneFrom({ layout: 'steps', analogy: 'x', steps: ['One', 'Two'], subs: ['a', 'b'], says: ['a', 'b'], line: 'l', idea: { steps: ['a', 'b'], line: 'l', say: 's' } }).scene, null);
+});
+
+test('the public copy: a way back on every page, no empty area tiles, a not-found page, an offline Try again, no working notes', () => {
+  build('--site');
+  const read = (f) => fs.readFileSync(path.join(SITE, f), 'utf8');
+  const pages = fs.readdirSync(SITE).filter((f) => f.endsWith('.html'));
+  for (const p of pages) {
+    const h = read(p);
+    assert.match(h, /header\.top\{[^}]*position:sticky;top:0/, p + ': the header does not stay in reach');
+    assert.match(h, /<header class="top">[\s\S]*?href="index\.html"/, p + ': no way to the front page in the header');
+    assert.doesNotMatch(h, /Bryan's|\/\/ .*Bryan/, p + ': a working note is in the public page');
+  }
+  const home = read('index.html');
+  assert.doesNotMatch(home, /<small>coming<\/small>|on the way/, 'the front page shows an area with nothing in it');
+  for (const m of home.matchAll(/class="area has" href="#([a-z0-9-]+)"/g)) assert.ok(home.includes('id="' + m[1] + '"'), 'the ' + m[1] + ' tile opens nothing');
+  assert.ok(fs.existsSync(path.join(SITE, '404.html')), 'no 404.html, but wrangler.jsonc serves one for a wrong address');
+  assert.match(read('404.html'), /<base href="\/">/, 'the not-found page must link from the site root');
+  assert.match(read('sw.js'), /Try again/, 'the offline note has no way to try again');
+  for (const f of fs.readdirSync(SITE).filter((x) => x.endsWith('.js') && !/planck|sw\.js/.test(x))) assert.doesNotMatch(read(f), /^\s*\/\//m, f + ' ships with working notes in it');
+});
+
+test('live: one line puts a course on or off the public copy', () => {
+  const before = list().courses.find((c) => c.slug === 'critical-thinking').live;
+  assert.equal(uni.setLive('critical-thinking', before).live, before);
+  assert.throws(() => uni.setLive('no-such-course', true));
 });
