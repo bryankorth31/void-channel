@@ -1,0 +1,307 @@
+{
+  "slug": "manners-that-make-people-comfortable",
+  "n": 1,
+  "title": "Introductions and the correct form",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:40:18.061Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: thing is over 11 letters: Introduction",
+    "round 2: scene: idea.thing is over 11 letters: Introduction",
+    "round 2: scene: idea.line is over 56 letters: An introduction connects people and star"
+  ],
+  "unit": {
+    "n": 1,
+    "title": "Introductions and the correct form",
+    "reading": {
+      "shelf": "post-etiquette-1922",
+      "chapter": 2
+    },
+    "needIt": "Knowing how to introduce people helps you avoid awkward silences and makes others feel respected. It helps you navigate job interviews and social parties without feeling nervous.",
+    "why": "Imagine you are at a party and see a friend standing alone with a stranger. If you jump in and introduce them correctly, you make your friend feel included and the stranger feel welcomed. It turns a lonely moment into a comfortable conversation.",
+    "outcome": "Navigate social introductions with confidence and grace.",
+    "reachesYou": "You meet this when meeting a new coworker at a desk or meeting your friend's parents for the first time. It happens every time you are the bridge between two people who do not know each other.",
+    "do": "Next time you are with a friend and meet someone new, introduce your friend first by saying their name clearly.",
+    "quiz": [
+      {
+        "q": "Which word is better for formal occasions?",
+        "choices": [
+          "Present",
+          "Introduce",
+          "Meet",
+          "Say"
+        ],
+        "a": 0,
+        "why": "The text states that 'present' is the preferred word for formal events.",
+        "quote": "The word \"present\" is preferable on formal occasions to the word \"introduce.\"",
+        "ref": "shelf-post-etiquette-1922.html#c2"
+      },
+      {
+        "q": "Who should be presented to whom in a formal setting?",
+        "choices": [
+          "The older person",
+          "The gentleman",
+          "The lady",
+          "The person of higher rank"
+        ],
+        "a": 2,
+        "why": "The text says a gentleman is always presented to a lady regardless of age.",
+        "quote": "The younger person is always presented to the older or more distinguished, but a gentleman is always presented to a lady, even though he is an old gentleman of great distinction and the lady a mere slip of a girl.",
+        "ref": "shelf-post-etiquette-1922.html#c2"
+      },
+      {
+        "q": "How should you introduce a person of high rank like a Cardinal?",
+        "choices": [
+          "By their title",
+          "By their first name",
+          "By their city",
+          "By their job"
+        ],
+        "a": 0,
+        "why": "Doctors, judges, and bishops are introduced by their titles.",
+        "quote": "A doctor, a judge, a bishop, are addressed and introduced by their titles.",
+        "ref": "shelf-post-etiquette-1922.html#c2"
+      },
+      {
+        "q": "When introducing two ladies to each other, what is the rule?",
+        "choices": [
+          "The younger lady is always first",
+          "No distinction is made",
+          "The married lady is always first",
+          "The lady with the higher rank is first"
+        ],
+        "a": 1,
+        "why": "The text states that in introducing two ladies to each other or one gentleman to another, no distinction is made.",
+        "quote": "As a matter of fact, in introducing two ladies to each other or one gentleman to another, no distinction is made.",
+        "ref": "shelf-post-etiquette-1922.html#c2"
+      },
+      {
+        "q": "What is the rule for introducing a daughter to a married lady?",
+        "choices": [
+          "Use her first name",
+          "Use her title",
+          "Omit her name",
+          "Ask her to speak"
+        ],
+        "a": 2,
+        "why": "The text says it is bad taste to call a daughter 'Miss Mary' to anyone but a servant.",
+        "quote": "The daughter's name is omitted because it is ’ extremely bad taste (except in the South) to call her daughter y\"Miss Mary\" to any one but a servant",
+        "ref": "shelf-post-etiquette-1922.html#c2"
+      },
+      {
+        "q": "What is considered 'abrupt and unflattering'?",
+        "choices": [
+          "Shaking hands",
+          "Bowing",
+          "Smiling",
+          "Asking a name"
+        ],
+        "a": 3,
+        "why": "The text explicitly says asking 'What is your name?' is abrupt.",
+        "quote": "Most people of good taste very much dislike being asked their names. To say \"What is your name?\" is always abrupt and unflattering.",
+        "ref": "shelf-post-etiquette-1922.html#c2"
+      },
+      {
+        "q": "What is considered 'abrupt and unflattering'?",
+        "choices": [
+          "Shaking hands",
+          "Saying goodbye",
+          "Sitting down",
+          "Asking a name"
+        ],
+        "a": 3,
+        "why": "The text says asking 'What is your name?' is too direct and rude.",
+        "quote": "To say \"What is your name?\" is always abrupt and unflattering.",
+        "ref": "shelf-post-etiquette-1922.html#c2"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Use 'present' for formal events.",
+        "Introduce the younger to the older.",
+        "A gentleman is presented to a lady.",
+        "Use titles for doctors and judges.",
+        "Avoid asking 'What is your name?'"
+      ],
+      "key": "Manners of introduction focus on showing respect through proper order and titles.",
+      "decoys": [
+        {
+          "text": "Always ask for a person's name.",
+          "why": "The text says asking 'What is your name?' is abrupt and unflattering."
+        },
+        {
+          "text": "Introduce people by their first names only.",
+          "why": "The text says doctors, judges, and bishops should be introduced by their titles."
+        }
+      ],
+      "aha": "By following the correct order and using proper titles, you remove social friction and make others feel comfortable."
+    },
+    "scene": {
+      "analogy": "A bridge connecting two islands",
+      "map": [
+        [
+          "Person A",
+          "Person A"
+        ],
+        [
+          "Person B",
+          "Person B"
+        ],
+        [
+          "The bridge",
+          "The bridge"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Person A",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Person B",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "THE BRIDGE",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "CONNECT",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "Now you can talk freely.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "Two people stand apart.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "A bridge appears between them.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They walk across to meet.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Both reach each other"
+            },
+            "right": {
+              "sub": "Both feel safe"
+            }
+          }
+        },
+        {
+          "say": "They feel connected and happy.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "A good introduction is a bridge for others.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Person A",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Person B",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "THE BRIDGE",
+              "size": 14
+            },
+            "act": {
+              "label": "CONNECT",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "A good introduction is a bridge for others.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Introductions and the correct form",
+      "by": "Emily Post, 1923",
+      "url": "shelf-post-etiquette-1922.html#c2",
+      "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

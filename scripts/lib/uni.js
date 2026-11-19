@@ -541,6 +541,8 @@ function gateDraft(raw, tr, opt = {}) {
 
 // Plain JSON mode with thinking off: on gemma4:12b a strict schema with thinking on came back empty after 3 minutes;
 // this way a 5,000 word lecture is answered in about 20 seconds (tried 19 Nov 2026). The gate checks the shape.
+const SCENE_ASK = `- scene: the words for a small picture of ONE everyday situation that works the same way as the lecture's main idea (not the lecture's own example; something from a kitchen, a shop, a school, a street). Two sides face each other with one thing between them. Keep every length limit, they are hard limits:
+  "analogy" (the situation in a few words, at most 70 letters), "left" and "right" (who or what is on each side, at most 20 letters each), "thing" (what is between them, one or two words, at most 11 letters), "act" (what happens, one word, at most 11 letters), "leftEnd" and "rightEnd" (how each side ends up, at most 30 letters each), "line" (what someone says or feels at the end, at most 56 letters), "says" (exactly 4 short captions telling it in order: the setup, what happens, the result, the feeling; at most 70 letters each), and "idea": the same picture renamed as the lecture's idea, with "left", "right", "thing", "act", "line" (same limits; the idea's own name for each part) and "say" (one caption that states the idea plainly, at most 70 letters).`;
 function draftPrompt(c, t, tr, more, reading) {
   const lines = []; let cur = [];
   for (const sg of tr.segments) { cur.push(String(sg.text).trim()); if (cur.join(' ').split(' ').length > 60) { lines.push(cur.join(' ')); cur = []; } }
@@ -557,8 +559,7 @@ Write JSON with these fields:
 - outcome: one short line that starts with a verb: what the learner can do afterwards.
 - reachesYou: two sentences on where an ordinary person meets this in daily life (shops, phones, work, family), speaking to "you".
 - do: one small thing to try this week that uses the idea, in one or two sentences, starting with a verb.
-- scene: the words for a small picture of ONE everyday situation that works the same way as the lecture's main idea (not the lecture's own example; something from a kitchen, a shop, a school, a street). Two sides face each other with one thing between them. Keep every length limit, they are hard limits:
-  "analogy" (the situation in a few words, at most 70 letters), "left" and "right" (who or what is on each side, at most 20 letters each), "thing" (what is between them, one or two words, at most 11 letters), "act" (what happens, one word, at most 11 letters), "leftEnd" and "rightEnd" (how each side ends up, at most 30 letters each), "line" (what someone says or feels at the end, at most 56 letters), "says" (exactly 4 short captions telling it in order: the setup, what happens, the result, the feeling; at most 70 letters each), and "idea": the same picture renamed as the lecture's idea, with "left", "right", "thing", "act", "line" (same limits; the idea's own name for each part) and "say" (one caption that states the idea plainly, at most 70 letters).
+${SCENE_ASK}
 ${reading ? '- chapters: leave this as an empty list.\n- (not used) ' : '- chapters: '}4 to 7 parts of the lecture, in order. Each has "title" (a few plain words) and "words": the first 8 to 12 words spoken where that part begins, COPIED EXACTLY from the lecture text, letter for letter.
 - quiz: ${more ? more + ' more questions, on other moments of the lecture than the ones already kept (listed at the end). ' : '6 questions. '}Each has "q", "choices" (4 different short answers), "a" (the place of the right one, 0 to 3), "why" (one or two plain sentences on why it is right), and "quote": ONE sentence of 10 to 40 words COPIED EXACTLY from the lecture text, letter for letter, that proves the answer. Do not shorten, join or fix the quote. Spread the questions across the whole lecture.
 - crystal: "partials" (exactly 5 short true statements from the lecture that all point at one idea), "key" (that one idea in a sentence), "decoys" (exactly 2 tempting wrong ideas, each with "text" and "why" it is wrong according to the lecture), "aha" (one line saying how the partials fit the key).
@@ -627,6 +628,13 @@ async function draft(slug, n, log = () => {}, ask = askOllama) {
     best.ok = !best.missing.length;
     log('Round ' + round + ': ' + best.unit.quiz.length + ' questions with a word for word quote' + (rd ? '' : ', ' + best.unit.chapters.length + ' chapters') + (best.missing.length ? '; still missing: ' + best.missing.join(', ') : ''));
     if (best.ok && best.unit.quiz.length >= 5) break;
+  }
+  // The scene's length limits are what a round most often fails. When it is the only thing missing, ask for it alone.
+  for (let k = 0; k < 4 && !best.unit.scene && best.unit.crystal; k++) {
+    let raw = {};
+    try { raw = await ask('You are writing for Void University, a free public learning site. Plain words, no dashes.\nTHE IDEA of this unit (' + t.title + '): ' + best.unit.crystal.key + '\nWHY IT MATTERS: ' + best.unit.needIt + '\n\nGive JSON with one field, "scene":\n' + SCENE_ASK.replace('- scene: ', '') + (k ? '\nCount the letters. Shorter is better: one or two plain words where it says so.' : '')); } catch (err) { if (/not answering|is it installed/.test(err.message)) throw err; }
+    const sc = sceneFrom(raw && raw.scene);
+    if (sc.scene) { best.unit.scene = sc.scene; best.missing = best.missing.filter((x) => x !== 'scene'); best.ok = !best.missing.length; log('The scene was asked for by itself and now fits.'); }
   }
   const lic = (c.units.find((u) => u.main && u.main.licence) || { main: {} }).main.licence || (c.source && c.source.licence) || '';
   if (rd) { // a quote from a book points at its chapter on the shelf page, not at a time

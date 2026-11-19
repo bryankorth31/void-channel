@@ -1,0 +1,306 @@
+{
+  "slug": "manners-that-make-people-comfortable",
+  "n": 7,
+  "title": "The kindergarten of etiquette",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:45:10.300Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: ",
+    "round 1: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line"
+  ],
+  "unit": {
+    "n": 7,
+    "title": "The kindergarten of etiquette",
+    "reading": {
+      "shelf": "post-etiquette-1922",
+      "chapter": 34
+    },
+    "needIt": "Good manners help you fit in and make others feel relaxed around you. It helps you avoid making a mess or being annoying at a dinner party or a job interview.",
+    "why": "A child learns to use a spoon by holding it like a bar. If they learn the right way early, they do not have to break bad habits later. It is about building a foundation of patience and steady practice.",
+    "outcome": "Practice using tools and your body to keep a shared space neat.",
+    "reachesYou": "You see this when you eat with friends or family at a table. You feel it when you decide whether to make a mess or keep things tidy for others.",
+    "do": "Practice holding a fork like a pencil today. Focus on keeping your movements steady and your space clean.",
+    "quiz": [
+      {
+        "q": "What is training a child compared to?",
+        "choices": [
+          "Teaching a book",
+          "Painting a house",
+          "Growing a tree",
+          "Training a puppy"
+        ],
+        "a": 3,
+        "why": "The text says training a child is exactly like training a puppy.",
+        "quote": "Training a child is exactly like training a puppy; a little heedless inattention and it is out if hand immediately;",
+        "ref": "shelf-post-etiquette-1922.html#c34"
+      },
+      {
+        "q": "What is the first rule of table manners?",
+        "choices": [
+          "Speed",
+          "Silence",
+          "Neatness",
+          "Sharing"
+        ],
+        "a": 2,
+        "why": "The text states neatness is the first requirement.",
+        "quote": "as neatness is the first requisite in table-manners,",
+        "ref": "shelf-post-etiquette-1922.html#c34"
+      },
+      {
+        "q": "How should a very little child hold a spoon?",
+        "choices": [
+          "With two fingers",
+          "In a fist",
+          "With a napkin",
+          "Like a bar"
+        ],
+        "a": 3,
+        "why": "The text says they should hold it as if it were a bar.",
+        "quote": "it should be allowed to hold its spoon as it might take hold of a bar in front of it, back of the hand up, thumb closed over fist.",
+        "ref": "shelf-post-etiquette-1922.html#c34"
+      },
+      {
+        "q": "How should a child hold a fork when they are older?",
+        "choices": [
+          "In a fist",
+          "Like a pencil",
+          "With a napkin",
+          "With two hands"
+        ],
+        "a": 1,
+        "why": "The text says it should be held much as a pencil is held in writing.",
+        "quote": "the child must be taught to hold his fork, no longer gripped baby-fashion in his fist, but much as a pencil is held in writing;",
+        "ref": "shelf-post-etiquette-1922.html#c34"
+      },
+      {
+        "q": "Why is it bad to fill a soup bowl to the very top?",
+        "choices": [
+          "It is hard to lift",
+          "It gets too hot",
+          "It looks messy",
+          "It tastes different"
+        ],
+        "a": 0,
+        "why": "The text explains that a full bowl makes it impossible to lift the spoon without spilling.",
+        "quote": "The reason why the bowl must not be filled full Is because it is impossible to lift a brimming spoonful of liquid to his mouth without spilling some",
+        "ref": "shelf-post-etiquette-1922.html#c34"
+      },
+      {
+        "q": "What should a child do when they finish eating?",
+        "choices": [
+          "Lay knife and fork side by side",
+          "Leave the plate",
+          "Put them in a pocket",
+          "Throw them away"
+        ],
+        "a": 0,
+        "why": "The text says they should lay them close together side by side.",
+        "quote": "When he has finished eating, he should lay his knife and fork close together, side by side, with handles toward the right side of his plate,",
+        "ref": "shelf-post-etiquette-1922.html#c34"
+      },
+      {
+        "q": "What should a child do if they want to speak while adults are talking?",
+        "choices": [
+          "Interrupt immediately",
+          "Shout to be heard",
+          "Wait until the meal is over",
+          "Wait for a pause"
+        ],
+        "a": 3,
+        "why": "The text says the child should wait for a pause in the conversation to speak.",
+        "quote": "When older people are present at table and a child wants to say something, he must be taught to stop eating momentarily and look at his mother, who at the first pause in the conversation will say, \"What is it, dear?\"",
+        "ref": "shelf-post-etiquette-1922.html#c34"
+      }
+    ],
+    "scene": {
+      "analogy": "A child learning to hold a spoon",
+      "map": [
+        [
+          "A small child",
+          "A child"
+        ],
+        [
+          "A dining table",
+          "A dining table"
+        ],
+        [
+          "A spoon",
+          "A spoon"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A small child",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A dining table",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "A SPOON",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "EATING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "I can eat my food without making a mess.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A child sits at a table.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They pick up a spoon.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They eat a small bite.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "The child stays clean"
+            },
+            "right": {
+              "sub": "The table stays neat"
+            }
+          }
+        },
+        {
+          "say": "They feel proud and calm.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Good manners start with small, steady movements.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "A child",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "A dining table",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "A SPOON",
+              "size": 18
+            },
+            "act": {
+              "label": "EATING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Early habits prevent messy mistakes later.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Training a child is like training a puppy.",
+        "Bad habits are a Herculean task to break.",
+        "Good behavior is the price of admission.",
+        "Children imitate everything they see.",
+        "All rules of table manners are made to avoid ugliness."
+      ],
+      "key": "Early training prevents bad habits and creates smooth social behavior.",
+      "decoys": [
+        {
+          "text": "Manners are only for formal dinners.",
+          "why": "The text says manners are useful for weddings, funerals, jobs, and neighbors."
+        },
+        {
+          "text": "It is okay to be messy if you are a child.",
+          "why": "The text says children should be taught to avoid making a mess and to be well-behaved."
+        }
+      ],
+      "aha": "By teaching small habits early, you prevent the hard work of breaking bad habits later."
+    },
+    "main": {
+      "role": "read",
+      "title": "The kindergarten of etiquette",
+      "by": "Emily Post, 1923",
+      "url": "shelf-post-etiquette-1922.html#c34",
+      "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "slug": "manners-that-make-people-comfortable",
+  "n": 5,
+  "title": "Notes and shorter letters",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:43:51.692Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: What does a sloppy letter proclaim about a person?"
+  ],
+  "unit": {
+    "n": 5,
+    "title": "Notes and shorter letters",
+    "reading": {
+      "shelf": "post-etiquette-1922",
+      "chapter": 27
+    },
+    "needIt": "Good manners in writing help people trust your character and see you as organized. It shows you care enough to be clear and neat when you send a note to a neighbor or a boss.",
+    "why": "A messy letter with bad spelling and crooked lines tells a story about a messy mind. A neat note shows you are a person who takes pride in the small details of life.",
+    "outcome": "Write notes that reflect a neat and reliable character.",
+    "reachesYou": "You see this when you send a thank you note to a family friend or a quick message to a coworker. It is the difference between looking like a professional and looking like a mess.",
+    "do": "Write a short thank you note this week on a clean piece of paper. Focus on making your handwriting steady and your spelling perfect.",
+    "quiz": [
+      {
+        "q": "What is the highest achievement in writing notes or letters?",
+        "choices": [
+          "Long periods of flowered prolixity",
+          "Appearance of simplicity",
+          "Pretentious phrases",
+          "Meaningless flourishes"
+        ],
+        "a": 1,
+        "why": "The text states that simplicity and naturalness are the highest goals.",
+        "quote": "the highest achievement is in giving the appearance of simplicity, naturalness and force.",
+        "ref": "shelf-post-etiquette-1922.html#c27"
+      },
+      {
+        "q": "What should you do if it is hard to write in a straight line?",
+        "choices": [
+          "Use a lined guide",
+          "Write faster",
+          "Use a dictionary",
+          "Write on a wall"
+        ],
+        "a": 0,
+        "why": "The text suggests using a lined guide for those who struggle with straight lines.",
+        "quote": "If it is hard for you to write in a straight line, use the lined guide that comes with nearly all stationery;",
+        "ref": "shelf-post-etiquette-1922.html#c27"
+      },
+      {
+        "q": "What is the rule for choosing paper for a man?",
+        "choices": [
+          "It should be strictly conservative",
+          "It should be gay",
+          "It should be highly scented",
+          "It should be odd in shape"
+        ],
+        "a": 0,
+        "why": "The text specifies that a man's paper should always be strictly conservative.",
+        "quote": "Writing paper for a man should always be strictly conservative.",
+        "ref": "shelf-post-etiquette-1922.html#c27"
+      },
+      {
+        "q": "What is the best ending to a formal social note?",
+        "choices": [
+          "Yours truly",
+          "Respectfully",
+          "Cordially",
+          "Sincerely"
+        ],
+        "a": 3,
+        "why": "The text lists 'Sincerely' as the best ending for a formal social note.",
+        "quote": "The best ending to a formal social note is, \"Sincerely,\" \"Sincerely yours,\" \"Very sincerely,\" \"Very sincerely yours,\" \"Yours always sincerely,\" or \"Always sincerely yours.\"",
+        "ref": "shelf-post-etiquette-1922.html#c27"
+      },
+      {
+        "q": "What is the rule for writing a letter of condolence?",
+        "choices": [
+          "Quote the poets",
+          "Follow a set form",
+          "Write a long period",
+          "Say what you truly feel"
+        ],
+        "a": 3,
+        "why": "The text says you should say what you truly feel and nothing else.",
+        "quote": "One rule, and one only, should guide you in writing such letters. Say what you truly feel. Say that and nothing else.",
+        "ref": "shelf-post-etiquette-1922.html#c27"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Simplicity is the highest achievement.",
+        "A letter reflects your character.",
+        "Neatness shows a tidy mind.",
+        "Avoid flowered prolixity.",
+        "Sincerity is of value."
+      ],
+      "key": "A note is a mirror that reflects your character and taste.",
+      "decoys": [
+        {
+          "text": "Use flowered prolixity to impress.",
+          "why": "The text says this shows vainglory and ignorance."
+        },
+        {
+          "text": "Use 'Cordially' for all notes.",
+          "why": "The text says it is an offense of pretentiousness."
+        }
+      ],
+      "aha": "When you write simply and neatly, you show the reader you are a person of good character."
+    },
+    "scene": {
+      "analogy": "A messy desk vs a tidy workspace",
+      "map": [
+        [
+          "Messy desk",
+          "Messy letter"
+        ],
+        [
+          "Tidy desk",
+          "Neat letter"
+        ],
+        [
+          "Worker",
+          "Reader"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Messy desk",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Tidy desk",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "WORKER",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "WORK",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "A tidy space shows a clear mind.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A worker sits at a desk.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "One desk is full of trash.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The worker looks confused.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Stressed and slow"
+            },
+            "right": {
+              "sub": "Calm and fast"
+            }
+          }
+        },
+        {
+          "say": "The room feels chaotic.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "A neat note shows you are a person of good character.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Messy letter",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Neat letter",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "READER",
+              "size": 18
+            },
+            "act": {
+              "label": "READ",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "The letter reflects your character.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Notes and shorter letters",
+      "by": "Emily Post, 1923",
+      "url": "shelf-post-etiquette-1922.html#c27",
+      "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

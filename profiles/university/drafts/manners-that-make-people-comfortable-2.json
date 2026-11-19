@@ -1,0 +1,290 @@
+{
+  "slug": "manners-that-make-people-comfortable",
+  "n": 2,
+  "title": "Greetings and what to say when introduced",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:40:38.183Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 2,
+    "title": "Greetings and what to say when introduced",
+    "reading": {
+      "shelf": "post-etiquette-1922",
+      "chapter": 3
+    },
+    "needIt": "Knowing the right words makes people feel safe and respected around you. It helps you avoid awkward moments when meeting a new boss or a neighbor.",
+    "why": "Imagine meeting a new neighbor who looks nervous. If you use the right greeting, they relax and smile. If you use a weird phrase, they might feel confused or uneasy.",
+    "outcome": "Use the correct greeting to make others feel comfortable.",
+    "reachesYou": "You will use these rules when meeting a new coworker or a friend of a friend. You will also use them when you meet someone new at a party or a wedding.",
+    "do": "Practice saying 'How do you do?' clearly to a friend today to get used to the formal tone.",
+    "quiz": [
+      {
+        "q": "What is the correct formal greeting mentioned in the text?",
+        "choices": [
+          "How do you do?",
+          "Hello",
+          "Pleased to meet you",
+          "Good morning"
+        ],
+        "a": 0,
+        "why": "The text states this is the correct formal greeting for people like ambassadors or formal acquaintances.",
+        "quote": "As explained in the foregoing chapter, the correct formal greeting is: \"How do you do?\"",
+        "ref": "shelf-post-etiquette-1922.html#c3"
+      },
+      {
+        "q": "When should you say 'meet you at last'?",
+        "choices": [
+          "When meeting a stranger",
+          "When you have heard much of a person through common friends",
+          "When meeting a friend",
+          "At a wedding"
+        ],
+        "a": 1,
+        "why": "The text says you can use this if you have heard much of the person through common friends.",
+        "quote": "If you have, through friends in common, long heard of a certain lady, or gentleman, and you know that she, or he, also has heard much of you, you may say when you are introduced to meet you at last I",
+        "ref": "shelf-post-etiquette-1922.html#c3"
+      },
+      {
+        "q": "What should you avoid saying on any occasion?",
+        "choices": [
+          "Good night",
+          "How do you do?",
+          "Pleased to meet you",
+          "Good morning"
+        ],
+        "a": 2,
+        "why": "The text explicitly tells the reader not to use this expression.",
+        "quote": "Do not use the expression \"pleased to meet you\" then or on any occasion.",
+        "ref": "shelf-post-etiquette-1922.html#c3"
+      },
+      {
+        "q": "When is it okay to say 'Hello'?",
+        "choices": [
+          "In a church",
+          "To a boss",
+          "To a stranger",
+          "Between intimate friends"
+        ],
+        "a": 3,
+        "why": "The text says 'Hello' is for intimate friends who call each other by first names.",
+        "quote": "Never used except between intimate friends who call each other by the first name.",
+        "ref": "shelf-post-etiquette-1922.html#c3"
+      },
+      {
+        "q": "What is the rule for saying 'Au revoir'?",
+        "choices": [
+          "Say it to everyone",
+          "Only if you speak French",
+          "Only to friends",
+          "Never say it"
+        ],
+        "a": 1,
+        "why": "The text says you should only say it if you have been talking French or are speaking to a French person.",
+        "quote": "Never say \"Au revoir\" unless you have been talking French, or are speaking to a French person.",
+        "ref": "shelf-post-etiquette-1922.html#c3"
+      },
+      {
+        "q": "What should a gentleman do before shaking a lady's hand on the street?",
+        "choices": [
+          "Bow",
+          "Say hello",
+          "Wait for her to speak",
+          "Remove his right glove"
+        ],
+        "a": 3,
+        "why": "The text specifies that a gentleman must remove his right glove first.",
+        "quote": "A gentleman on the street never shakes hands with a lady without first removing his right glove.",
+        "ref": "shelf-post-etiquette-1922.html#c3"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "The correct formal greeting is How do you do?",
+        "Do not use pleased to meet you on any occasion.",
+        "Hello is for intimate friends only.",
+        "Never interlard conversation with foreign words.",
+        "A proper handshake should have strength and warmth."
+      ],
+      "key": "Use specific, appropriate greetings to make others feel comfortable.",
+      "decoys": [
+        {
+          "text": "Say 'Hello' to everyone to be friendly.",
+          "why": "The text says 'Hello' is only for intimate friends."
+        },
+        {
+          "text": "Always say 'Pleased to meet you' when meeting someone new.",
+          "why": "The text says do not use that expression on any occasion."
+        }
+      ],
+      "aha": "By choosing the right words for the right person, you create a comfortable social connection."
+    },
+    "scene": {
+      "analogy": "A person handing a gift to a friend",
+      "map": [
+        [
+          "A person",
+          "You"
+        ],
+        [
+          "A friend",
+          "A stranger"
+        ],
+        [
+          "A gift",
+          "Words"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A person",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A friend",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "A GIFT",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "HANDING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "The right way makes the gift feel special.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A person holds a gift.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They hand it over gently.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The friend smiles.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "The gift is given"
+            },
+            "right": {
+              "sub": "The friend is happy"
+            }
+          }
+        },
+        {
+          "say": "The mood is happy.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Correct greetings make people feel comfortable and safe.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "You",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "A stranger",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "WORDS",
+              "size": 18
+            },
+            "act": {
+              "label": "GREETING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "The right words make the stranger feel welcome.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Greetings and what to say when introduced",
+      "by": "Emily Post, 1923",
+      "url": "shelf-post-etiquette-1922.html#c3",
+      "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

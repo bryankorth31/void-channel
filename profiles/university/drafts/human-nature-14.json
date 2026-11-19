@@ -1,0 +1,315 @@
+{
+  "slug": "human-nature",
+  "n": 14,
+  "title": "The trolley problem",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:46:46.475Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 14,
+    "title": "The trolley problem",
+    "needIt": "This helps you understand why your gut feeling about 'right' and 'wrong' changes depending on how you see a person's role. It helps you think about whether you are treating people as tools or as human beings with their own goals.",
+    "why": "A doctor faces a choice to save five dying people by taking organs from one healthy man. Most people say this is wrong because it treats the healthy man like a spare parts bin. However, in a different story about a runaway train, many people say it is okay to switch tracks to save five people by hitting one. This shows that our morals change based on how we view the person involved.",
+    "outcome": "Evaluate whether your moral choices treat others as people or as tools.",
+    "reachesYou": "You see this when you decide if it is okay to use a friend's help just to get a grade. You also feel it when you wonder if it is okay to ignore one person's needs to help a larger group.",
+    "do": "Think about a choice you made today. Ask yourself if you treated the other person as a person or just as a way to get what you wanted.",
+    "chapters": [
+      {
+        "t": 59,
+        "title": "Kant's three claims",
+        "words": "The first is the claim that in order to have moral worth,"
+      },
+      {
+        "t": 395,
+        "title": "Autonomous actions",
+        "words": "To act autonomously, on Kant's picture, is to act on the basis"
+      },
+      {
+        "t": 1502,
+        "title": "The trolley driver",
+        "words": "So as you know, the paper which we read for today is a"
+      },
+      {
+        "t": 2039,
+        "title": "The bystander case",
+        "words": "Here's Jim. Poor Jim's really bad luck. First he shows up in"
+      },
+      {
+        "t": 2666,
+        "title": "The loop track",
+        "words": "Suppose that you're Jim, you're standing next to the trolley, trolley's on"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What must an action be done from to have moral worth?",
+        "choices": [
+          "From duty",
+          "From desire",
+          "From habit",
+          "From fear"
+        ],
+        "a": 0,
+        "why": "Kant says an action only has moral worth if it is done from duty.",
+        "quote": "The first is the claim that in order to have moral worth, an action needs to be done from duty.",
+        "t": 59
+      },
+      {
+        "q": "What is the categorical imperative?",
+        "choices": [
+          "A list of rules",
+          "A way to be free",
+          "A way to be mean",
+          "A way to be rich"
+        ],
+        "a": 1,
+        "why": "Kant links the categorical imperative to acting autonomously and being free.",
+        "quote": "So, as I said, the reason we were interested in these three principles was to get to Kant's famous formulation of the categorical imperative.",
+        "t": 283
+      },
+      {
+        "q": "What does it mean to act autonomously?",
+        "choices": [
+          "Following outside laws",
+          "Acting by own strength",
+          "Following your desires",
+          "Doing what is easy"
+        ],
+        "a": 1,
+        "why": "Autonomy means acting on a law you set for yourself from within.",
+        "quote": "To act autonomously, on Kant's picture, is to act on the basis of a law that you yourself have imposed.",
+        "t": 395
+      },
+      {
+        "q": "Why is the transplant case different from the trolley driver?",
+        "choices": [
+          "The number of people",
+          "The use of a person",
+          "The speed of the train",
+          "The location"
+        ],
+        "a": 1,
+        "why": "In the transplant case, you are using the person as a means to an end.",
+        "quote": "And that is that in the case of transplant, you are using the one as a means.",
+        "t": 2596
+      },
+      {
+        "q": "What is the formula of humanity?",
+        "choices": [
+          "Treating people as means",
+          "Helping your family",
+          "Treating people as ends",
+          "Following the law"
+        ],
+        "a": 2,
+        "why": "Kant says we must treat people as ends and never merely as means.",
+        "quote": "Kant's formula of humanity said, so act as to treat humanity, whether in your own person or that of any other, in every case as an end, and never merely as a means only.",
+        "t": 2627
+      },
+      {
+        "q": "What happens in the fat man case?",
+        "choices": [
+          "People disagree to push",
+          "People agree to push",
+          "People feel neutral",
+          "People feel happy"
+        ],
+        "a": 0,
+        "why": "Most people find pushing the man prohibited because it uses him as a means.",
+        "quote": "My goodness, that looks awfully different. What is going on?",
+        "t": 2894
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Action must come from duty.",
+        "Autonomy is self-law giving.",
+        "Treat people as ends.",
+        "Do not use people as means.",
+        "Avoid first-person exceptionalism."
+      ],
+      "key": "Morality requires treating people as ends in themselves, not as tools to reach a goal.",
+      "decoys": [
+        {
+          "text": "Morality is just about the number of lives saved.",
+          "why": "The lecture shows that people's moral choices change based on how they view the person, not just the numbers."
+        },
+        {
+          "text": "Duty is doing what you want to do.",
+          "why": "Kant says duty is acting out of respect for a law you set for yourself as a rational being."
+        }
+      ],
+      "aha": "When we treat people as tools, we violate the moral law of treating humanity as an end."
+    },
+    "scene": {
+      "analogy": "A doctor and a healthy man",
+      "map": [
+        [
+          "Doctor",
+          "Doctor"
+        ],
+        [
+          "Healthy man",
+          "Healthy man"
+        ],
+        [
+          "Organs",
+          "Organs"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Doctor",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Healthy man",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "ORGANS",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "SURGERY",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "Is it okay to use a person as a tool for others?",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A doctor sees five dying people.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "A healthy man stands nearby.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The doctor takes his organs.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Five people live"
+            },
+            "right": {
+              "sub": "One man dies"
+            }
+          }
+        },
+        {
+          "say": "The doctor feels a moral conflict.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Kant says we must treat people as ends, never merely as means.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Doctor",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Healthy man",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "ORGANS",
+              "size": 18
+            },
+            "act": {
+              "label": "SURGERY",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Treating a person as a means rather than an end.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 14: The trolley problem",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "14. The Trolley Problem.mp4",
+      "seconds": 2915,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  }
+}

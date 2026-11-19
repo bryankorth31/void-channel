@@ -1,0 +1,279 @@
+{
+  "slug": "sew-mend-and-make-clothes",
+  "n": 8,
+  "title": "Cutting and making the one-piece dress",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:38:29.283Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: How much larger should the sleeve be than the arms"
+  ],
+  "unit": {
+    "n": 8,
+    "title": "Cutting and making the one-piece dress",
+    "reading": {
+      "shelf": "homedressmakersg00blac",
+      "chapter": 8
+    },
+    "needIt": "Knowing how to construct a one-piece dress helps you create high-quality clothing that fits your specific body shape. You can save money by making your own garments instead of buying clothes that do not fit well.",
+    "why": "A dressmaker wants to make a dress that looks perfect on a person with a large figure. She learns that a one-piece dress creates long lines to help the wearer feel confident. She discovers that a well-fitted lining is the secret to making the dress stay in place and look smooth.",
+    "outcome": "Construct a one-piece dress with a fitted lining and proper proportions.",
+    "reachesYou": "You see these techniques when you notice how a well-made dress hangs on a mannequin in a shop. You also feel them when your own clothes shift out of place because they lack a proper lining.",
+    "do": "Measure your waist and find a piece of sturdy fabric to practice making a simple waist lining.",
+    "quiz": [
+      {
+        "q": "What is a one-piece dress?",
+        "choices": [
+          "A garment cut in one piece from shoulder to hem",
+          "A dress with a separate skirt",
+          "A dress with a belt",
+          "A dress with a lining"
+        ],
+        "a": 0,
+        "why": "The text defines a one-piece dress as a garment cut in one piece from the shoulder to the hem.",
+        "quote": "When we talk about the \"One-Piece Dress'' we mean a garment all cut in one piece from the shoulder to the hem at the bottom.",
+        "ref": "shelf-homedressmakersg00blac.html#c8"
+      },
+      {
+        "q": "Why is a lining important for woolens?",
+        "choices": [
+          "It makes ironing easier",
+          "It changes the color",
+          "It makes the dress shorter",
+          "It keeps the garment in position"
+        ],
+        "a": 3,
+        "why": "The text says the lining will keep the garment in position on the body for woolens.",
+        "quote": "When this dress is made from Woolens it is much more satisfactory if the waist is lined as it will not only wear better but the lining will keep the garment in position on the body.",
+        "ref": "shelf-homedressmakersg00blac.html#c8"
+      },
+      {
+        "q": "Where should hooks be sewn on the lining?",
+        "choices": [
+          "On the left side",
+          "On the right side",
+          "In the middle",
+          "On the bottom"
+        ],
+        "a": 1,
+        "why": "The instructions state that hooks must always be sewn on to the right side.",
+        "quote": "Hooks must always be sewed on to the right side and eyes on the left.",
+        "ref": "shelf-homedressmakersg00blac.html#c8"
+      },
+      {
+        "q": "How much longer should the belting be than the waist?",
+        "choices": [
+          "Two inches",
+          "Half an inch",
+          "One inch",
+          "Three inches"
+        ],
+        "a": 2,
+        "why": "The text says to measure the belting one inch longer than the waist measurement.",
+        "quote": "Measure the belting having it one inch longer than the waist measurement.",
+        "ref": "shelf-homedressmakersg00blac.html#c8"
+      },
+      {
+        "q": "What should you do to the lining before pinning it to the belting?",
+        "choices": [
+          "Wash it",
+          "Cut it",
+          "Stretch it down",
+          "Iron it"
+        ],
+        "a": 2,
+        "why": "The lining must be stretched down to fit the body snugly before pinning.",
+        "quote": "The lining must be stretched down and made to fit snugly before it is pinned.",
+        "ref": "shelf-homedressmakersg00blac.html#c8"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "One-piece dress gives long lines",
+        "Lining keeps garment in position",
+        "Lining must be fitted very carefully",
+        "Belting must be one inch longer",
+        "Lining must be stretched down"
+      ],
+      "key": "A well-fitted lining is essential for the shape and position of a one-piece dress.",
+      "decoys": [
+        {
+          "text": "Lining makes ironing easier.",
+          "why": "The text says a lining in a dress that is to be washed makes ironing more difficult."
+        },
+        {
+          "text": "Hooks and eyes are sewn on the left.",
+          "why": "The text says hooks must be sewn on the right side."
+        }
+      ],
+      "aha": "The lining acts as the hidden foundation that ensures the dress fits and moves correctly."
+    },
+    "scene": {
+      "analogy": "A house with a hidden frame",
+      "map": [
+        [
+          "Outer walls",
+          "Outer dress"
+        ],
+        [
+          "Inner frame",
+          "Inner lining"
+        ],
+        [
+          "Support",
+          "Body fit"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Outer walls",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Inner frame",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "SUPPORT",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "HOLD",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "The inside structure makes the outside look perfect.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A house stands tall.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The frame holds the weight.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The walls look smooth.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Walls stay straight"
+            },
+            "right": {
+              "sub": "House stays firm"
+            }
+          }
+        },
+        {
+          "say": "It feels very stable.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "A fitted lining keeps the garment in position on the body.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Outer dress",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Inner lining",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "BODY FIT",
+              "size": 18
+            },
+            "act": {
+              "label": "ANCHOR",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "The lining holds the dress in its proper place.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Cutting and making the one-piece dress",
+      "by": "Mrs. Judith Blackburn, 1919",
+      "url": "shelf-homedressmakersg00blac.html#c8",
+      "licence": "Public domain (US, by age). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

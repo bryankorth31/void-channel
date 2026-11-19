@@ -1,0 +1,305 @@
+{
+  "slug": "sew-mend-and-make-clothes",
+  "n": 4,
+  "title": "How to select a waist pattern",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:37:03.662Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: idea.thing is over 11 letters: Measurements"
+  ],
+  "unit": {
+    "n": 4,
+    "title": "How to select a waist pattern",
+    "reading": {
+      "shelf": "homedressmakersg00blac",
+      "chapter": 4
+    },
+    "needIt": "Choosing the right pattern helps you make clothes that fit your unique body shape. It ensures your new clothes look good on you instead of just looking good on a model.",
+    "why": "A dress that looks great on a friend might not fit you well because everyone has a different body shape. You must look at your own shoulders, face, and arms to pick the right style. This lesson shows how to adjust a pattern so it fits your specific measurements.",
+    "outcome": "Adjust a garment pattern to fit your personal body measurements.",
+    "reachesYou": "You see this when you try on clothes at a store and they feel tight in one spot but loose in another. It also happens when you look at a friend's outfit and wonder why it looks different on them.",
+    "do": "Measure your bust and waist today to see how they compare to a standard size chart.",
+    "quiz": [
+      {
+        "q": "What should you consider first when selecting a pattern?",
+        "choices": [
+          "The color of the fabric",
+          "The contour of your face",
+          "The price of the pattern",
+          "The brand of the sewing machine"
+        ],
+        "a": 1,
+        "why": "The text says to study the contour of your face and the size of your shoulders.",
+        "quote": "Study the contour of your face and the size of your shoulders and above all take into consideration the length of your arm.",
+        "ref": "shelf-homedressmakersg00blac.html#c4"
+      },
+      {
+        "q": "If your arm is short, what should you do with the sleeve pattern?",
+        "choices": [
+          "Add cuffs that flare",
+          "Shorten the sleeve",
+          "Add cuffs that taper",
+          "Remove the sleeve"
+        ],
+        "a": 2,
+        "why": "The text advises adding cuffs that taper over the hand for short arms.",
+        "quote": "Likewise if your arm is short study to add the appearance of length. Do not break the length lines of the sleeve pattern and add cuffs that taper over the hand.",
+        "ref": "shelf-homedressmakersg00blac.html#c4"
+      },
+      {
+        "q": "What is the rule for choosing a size if your exact size is not available?",
+        "choices": [
+          "Choose the larger size",
+          "Choose the smaller size",
+          "Choose a medium size",
+          "Do not buy a pattern"
+        ],
+        "a": 0,
+        "why": "The text states it is easier to decrease a pattern than to increase it.",
+        "quote": "If the correct size is not obtainable, choose the larger size rather than a smaller one ; it is always easier to decrease the size of a pattern than it is to increase it.",
+        "ref": "shelf-homedressmakersg00blac.html#c4"
+      },
+      {
+        "q": "Where should you measure the waist line on the pattern?",
+        "choices": [
+          "From the neck down",
+          "From the bust line",
+          "From the waist line up",
+          "From the armseye"
+        ],
+        "a": 2,
+        "why": "All length measurements for the waist must be measured from the waist line up.",
+        "quote": "All length measurements for the waist must be measured from this waist line up.",
+        "ref": "shelf-homedressmakersg00blac.html#c4"
+      },
+      {
+        "q": "Why is it important to add length above the waist line if your measurements are longer than the pattern?",
+        "choices": [
+          "To make the dress longer",
+          "To make the back look better",
+          "To change the sleeve size",
+          "To prevent the front from drawing up"
+        ],
+        "a": 3,
+        "why": "The text explains that if you do not add length above the waist line, the garment will draw up in the front or pull down in the back.",
+        "quote": "If, when measuring the pattern, from the waist line at the center front up to the base of the neck, the individual measures more than the pattern, it is very necessary that the length be added above the waist line.",
+        "ref": "shelf-homedressmakersg00blac.html#c4"
+      },
+      {
+        "q": "When should you apply individual bust and waist measurements to a pattern?",
+        "choices": [
+          "For every garment",
+          "Only for coats",
+          "Only for skirts",
+          "Only for form fitted garments"
+        ],
+        "a": 3,
+        "why": "The text says these measurements are only for form fitted garments.",
+        "quote": "These measurements are applied for a form fitted garment only.",
+        "ref": "shelf-homedressmakersg00blac.html#c4"
+      },
+      {
+        "q": "What should you do if the pattern is too short at the back of the neck?",
+        "choices": [
+          "Fold a tuck",
+          "Add a piece of paper",
+          "Cut the fabric",
+          "Sew a new neck"
+        ],
+        "a": 1,
+        "why": "The text says to fasten a piece of paper to add the needed length.",
+        "quote": "If the pattern is found to be too short you must fasten a piece of paper to the pattern and add the needed length to the back of the neck and shoulders as shown by the dotted line",
+        "ref": "shelf-homedressmakersg00blac.html#c4"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Study the contour of your face",
+        "Take into consideration the length of your arm",
+        "Choose the larger size rather than a smaller one",
+        "Apply individual measurements to the waist pattern",
+        "Add the needed length to the back of the neck"
+      ],
+      "key": "Adjusting a pattern to fit your specific body measurements.",
+      "decoys": [
+        {
+          "text": "Always choose the smaller size if your size is missing.",
+          "why": "The text says it is easier to decrease a pattern, so you should choose the larger size."
+        },
+        {
+          "text": "Apply bust measurements to every garment type.",
+          "why": "The text says these are only for form fitted garments."
+        }
+      ],
+      "aha": "By studying your body and adjusting the pattern measurements, you can make clothes that fit perfectly."
+    },
+    "scene": {
+      "analogy": "A tailor fitting a suit",
+      "map": [
+        [
+          "The Client",
+          "Standard Pattern"
+        ],
+        [
+          "The Tailor",
+          "Your Body"
+        ],
+        [
+          "The Suit",
+          "Adjustments"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The Client",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The Tailor",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "THE SUIT",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "PINNING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "It fits just right now.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A client tries on a suit.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The tailor pins the fabric.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The suit fits the body.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Perfect fit"
+            },
+            "right": {
+              "sub": "Happy client"
+            }
+          }
+        },
+        {
+          "say": "The client feels proud.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Adjusting a pattern makes a garment fit your unique shape.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Standard Pattern",
+              "size": 18,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Your Body",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "ADJUSTMENTS",
+              "size": 14
+            },
+            "act": {
+              "label": "MODIFYING",
+              "size": 14,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Small changes make a big difference.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "How to select a waist pattern",
+      "by": "Mrs. Judith Blackburn, 1919",
+      "url": "shelf-homedressmakersg00blac.html#c4",
+      "licence": "Public domain (US, by age). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

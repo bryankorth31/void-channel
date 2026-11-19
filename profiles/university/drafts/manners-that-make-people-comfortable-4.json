@@ -1,0 +1,287 @@
+{
+  "slug": "manners-that-make-people-comfortable",
+  "n": 4,
+  "title": "Funerals",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:43:21.928Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line",
+    "round 1: scene: line is over 56 letters: I am here if you need me, but I will let",
+    "round 1: scene: idea.right is over 20 letters: A well-meaning friend",
+    "round 1: scene: idea.thing is over 11 letters: Social rules",
+    "round 2: question dropped, its quote is not said word for word: What should a person do if they are selected to he",
+    "round 2: question dropped, its quote is not said word for word: What should you do if a notice says 'funeral priva",
+    "round 2: question dropped, its quote is not said word for word: Where should an acquaintance sit at a funeral?",
+    "round 2: scene: idea.right is over 20 letters: A well-meaning friend",
+    "round 3: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line"
+  ],
+  "unit": {
+    "n": 4,
+    "title": "Funerals",
+    "reading": {
+      "shelf": "post-etiquette-1922",
+      "chapter": 24
+    },
+    "needIt": "Knowing funeral manners helps you support a grieving friend without making things awkward. It ensures you provide comfort instead of adding stress during a hard time.",
+    "why": "Imagine a friend loses a parent. They are overwhelmed and exhausted. By following simple rules, like staying quiet and not forcing your presence, you act as a shield that lets them rest.",
+    "outcome": "Provide respectful support to others during a time of loss.",
+    "reachesYou": "You might see this when a neighbor loses a loved one or a coworker passes away. It helps you know what to say and how to act when everyone feels uncomfortable.",
+    "do": "If a friend is grieving, send a short note of sympathy instead of calling them to ask for a long conversation.",
+    "quiz": [
+      {
+        "q": "What is the main goal of etiquette during a funeral?",
+        "choices": [
+          "To smooth personal contacts",
+          "To show off wealth",
+          "To follow old traditions",
+          "To make the event fancy"
+        ],
+        "a": 0,
+        "why": "The text states that all rules for social observance aim to smooth personal contacts.",
+        "quote": "All set rules for social observance have for their object the smoothing of personal contacts, and in nothing is smoothness so necessary as in observing the solemn rites accorded our dead.",
+        "ref": "shelf-post-etiquette-1922.html#c24"
+      },
+      {
+        "q": "Who should be barred from the bereaved during a time of grief?",
+        "choices": [
+          "Close family",
+          "Over-emotional people",
+          "The clergyman",
+          "The sexton"
+        ],
+        "a": 1,
+        "why": "The text says over-emotional people should be kept away to protect the grieving.",
+        "quote": "No one should ever be forced upon those in grief, and all over-emotional people, no matter how near or dear, should be barred absolutely.",
+        "ref": "shelf-post-etiquette-1922.html#c24"
+      },
+      {
+        "q": "What kind of food is best for someone in deep sorrow?",
+        "choices": [
+          "A very little food",
+          "A large feast",
+          "Spicy dishes",
+          "Cold milk"
+        ],
+        "a": 0,
+        "why": "The palate rejects the thought of food, so only a very little should be offered.",
+        "quote": "The cook may suggest something that appeals usually to their taste, but very little should be offered at a time, for although the stomach may be empty, the palate rejects the thought of food, and digestion is never in best order.",
+        "ref": "shelf-post-etiquette-1922.html#c24"
+      },
+      {
+        "q": "What should a friend do if they see a person in deep mourning?",
+        "choices": [
+          "Ask them to a dance",
+          "Ask for their life story",
+          "Stop and press their hand",
+          "Give them a long hug"
+        ],
+        "a": 2,
+        "why": "The text suggests a brief gesture of sympathy rather than long conversation.",
+        "quote": "If you pass close to them, irresistible sympathy compels you merely to stop and press their hand and pass on.",
+        "ref": "shelf-post-etiquette-1922.html#c24"
+      },
+      {
+        "q": "What is the rule for sending cards to intimate friends?",
+        "choices": [
+          "Send them a long letter",
+          "Send a professional card",
+          "Send a card with flowers",
+          "Do not send a card"
+        ],
+        "a": 3,
+        "why": "The text says cards should not be sent to intimate friends who have already reached out.",
+        "quote": "Under no circumstances should such cards be sent to intimate friends, or to those who have sent flowers or written personal letters.",
+        "ref": "shelf-post-etiquette-1922.html#c24"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Etiquette acts as a servant to keep the house quiet.",
+        "It protects the bereaved from over-emotional people.",
+        "It ensures the rites are performed with beauty and gravity.",
+        "It helps smooth out personal contacts during sorrow.",
+        "It allows the poignancy of grief to be eased."
+      ],
+      "key": "Etiquette serves as a protective shield that provides order and comfort during the chaos of death.",
+      "decoys": [
+        {
+          "text": "Etiquette is about following strict rules to show off your status.",
+          "why": "The text says etiquette is for smoothing contacts and providing comfort, not for status."
+        },
+        {
+          "text": "You should always call a grieving person to check on them.",
+          "why": "The text says to avoid long conversations and to let them have seclusion."
+        }
+      ],
+      "aha": "By following these rules, you remove the burden of social guesswork from the grieving person."
+    },
+    "scene": {
+      "analogy": "A quiet library during a study session",
+      "map": [
+        [
+          "A student",
+          "The bereaved"
+        ],
+        [
+          "A student",
+          "The visitor"
+        ],
+        [
+          "A book",
+          "Etiquette"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A student",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A student",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "A BOOK",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "WHISPER",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "A soft voice helps keep the peace for everyone.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A student sits in a quiet room.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "Another student enters nearby.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They speak in a very low voice.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Both stay focused"
+            },
+            "right": {
+              "sub": "The room stays calm"
+            }
+          }
+        },
+        {
+          "say": "The peace of the room stays.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Etiquette acts as a servant to muffle noise and protect the grieving.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "The bereaved",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "The visitor",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "ETIQUETTE",
+              "size": 14
+            },
+            "act": {
+              "label": "MUFFLE",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Rules keep the environment calm for the grieving.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Funerals",
+      "by": "Emily Post, 1923",
+      "url": "shelf-post-etiquette-1922.html#c24",
+      "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

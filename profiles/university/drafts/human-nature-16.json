@@ -1,0 +1,326 @@
+{
+  "slug": "human-nature",
+  "n": 16,
+  "title": "Philosophical puzzles",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:51:23.024Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: line is over 56 letters: Is it their fault for choosing the path ",
+    "round 2: question dropped, its quote is not said word for word: What is the 'moral luck principle'?"
+  ],
+  "unit": {
+    "n": 16,
+    "title": "Philosophical puzzles",
+    "needIt": "This helps you understand why we judge people differently even when they do the same thing. It helps you see how your own feelings might be tricked by how a story is told.",
+    "why": "Imagine two drivers who both drive home while distracted. One gets home safely, and the other hits a child. We often judge the second driver as a 'bad person' even though both made the exact same choice. This shows how our brains struggle to separate a person's choices from the luck of the outcome.",
+    "outcome": "Recognize how framing and luck influence your moral judgments.",
+    "reachesYou": "You see this when you judge a friend for a mistake that was mostly an accident. You also feel it when you see news stories where people are blamed for things they couldn't fully control.",
+    "do": "Think of a time you judged someone harshly. Ask yourself if they were actually in control of the final result.",
+    "chapters": [
+      {
+        "t": 193,
+        "title": "Heuristics in moral cases",
+        "words": "And what Sunstein suggests in the paper is that in general,"
+      },
+      {
+        "t": 684,
+        "title": "Risk and certainty",
+        "words": "So take company A, which produces a product that 10 million"
+      },
+      {
+        "t": 1458,
+        "title": "Ducking and shielding",
+        "words": "The first of these is a classic, what's called ducking case."
+      },
+      {
+        "t": 2153,
+        "title": "Moral luck",
+        "words": "So what these examples demonstrate is a phenomenon known as"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does Sunstein say about heuristics in moral cases?",
+        "choices": [
+          "They are non-moral",
+          "They are useless",
+          "They are always right",
+          "They are impossible"
+        ],
+        "a": 0,
+        "why": "Sunstein argues that heuristics are used in moral cases just as they are in non-moral cases.",
+        "quote": "And then went on to contend that just as heuristics are non-moral cases, so too does it occur in moral cases.",
+        "t": 143
+      },
+      {
+        "q": "How did the clicker results change when the disease case was inverted?",
+        "choices": [
+          "They stayed the same",
+          "They flipped",
+          "They moved to 50/50",
+          "They disappeared"
+        ],
+        "a": 1,
+        "why": "When the framing changed from 'who lives' to 'who dies', the majority opinion flipped.",
+        "quote": "When we inverted the framing, the numbers came out exactly the opposite.",
+        "t": 302
+      },
+      {
+        "q": "What happens in the crying baby case if you shift your attention?",
+        "choices": [
+          "Your response shifts",
+          "You feel more guilt",
+          "You feel less fear",
+          "Nothing changes"
+        ],
+        "a": 0,
+        "why": "Redirecting attention to the other people in the room changes the moral judgment.",
+        "quote": "And this shiftiness in the direction of our attention is something that's going to be endemic to all of these kinds of cases.",
+        "t": 440
+      },
+      {
+        "q": "Why do people resist the idea of 'cap and trade'?",
+        "choices": [
+          "It feels like paying to pollute",
+          "It is too expensive",
+          "It is too complex",
+          "It is illegal"
+        ],
+        "a": 0,
+        "why": "People use a heuristic that says you shouldn't be able to pay your way out of wrongdoing.",
+        "quote": "the heuristic attribute, people are paying to pollute, you shouldn't be able to pay your way out of serious wrongdoing, strikes us as problematic.",
+        "t": 881
+      },
+      {
+        "q": "What is the 'control principle'?",
+        "choices": [
+          "Control everything",
+          "Always blame the agent",
+          "No blame for no control",
+          "Luck is everything"
+        ],
+        "a": 2,
+        "why": "It is the idea that people should not be blamed for things beyond their control.",
+        "quote": "That moral place and blame shouldn't be assigned in cases where the action or the consequences lie beyond the agent's control.",
+        "t": 2255
+      },
+      {
+        "q": "What is 'resultant luck'?",
+        "choices": [
+          "Luck of birth",
+          "Luck of location",
+          "Luck of outcome",
+          "Luck of genes"
+        ],
+        "a": 2,
+        "why": "Resultant luck is when an action goes awry in a way the agent did not expect.",
+        "quote": "That's one class of cases of moral luck. But it's harder to see how we can use that explanation for some of the deep and profound instances.",
+        "t": 2647
+      },
+      {
+        "q": "What is 'constitutive luck'?",
+        "choices": [
+          "Luck that affects the outcome of an action.",
+          "Luck that shapes your genes and upbringing.",
+          "Luck that affects the environment around you.",
+          "Luck that determines if you are in a war."
+        ],
+        "a": 1,
+        "why": "Constitutive luck refers to the features like genes and family that shape a person's character.",
+        "quote": "Some of you were born with genes that make it easier for you to behave in altruistic ways, and some of you weren't.",
+        "t": 2659
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Framing changes our moral choices.",
+        "Heuristics can lead to errors.",
+        "We judge based on outcomes.",
+        "Control is a key factor.",
+        "Luck affects our blame."
+      ],
+      "key": "We often judge moral actions based on outcomes that are actually due to luck.",
+      "decoys": [
+        {
+          "text": "Moral judgments are always perfectly rational.",
+          "why": "The lecture shows that framing and emotions often make our judgments irrational."
+        },
+        {
+          "text": "The control principle is never used.",
+          "why": "The lecture shows that many people do subscribe to the control principle."
+        }
+      ],
+      "aha": "Our moral sense is often tricked by how a situation is framed or by the luck of the result."
+    },
+    "scene": {
+      "analogy": "A runner and a hurdle",
+      "map": [
+        [
+          "A runner",
+          "A runner"
+        ],
+        [
+          "A hurdle",
+          "A hurdle"
+        ],
+        [
+          "A trip",
+          "A trip"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A runner",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A hurdle",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "A TRIP",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "FALLING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "It was just a bad trip.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A runner prepares to sprint.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The runner trips on a stone.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The runner falls down.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Runner falls"
+            },
+            "right": {
+              "sub": "Hurdle stays"
+            }
+          }
+        },
+        {
+          "say": "The runner feels frustrated.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Moral luck means outcomes matter more than choices.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "A runner",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "A hurdle",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "A TRIP",
+              "size": 18
+            },
+            "act": {
+              "label": "FALLING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Luck changed the outcome.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 16: Philosophical puzzles",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "16. Philosophical Puzzles.mp4",
+      "seconds": 2849,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  }
+}

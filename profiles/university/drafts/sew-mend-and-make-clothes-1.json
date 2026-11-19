@@ -1,0 +1,307 @@
+{
+  "slug": "sew-mend-and-make-clothes",
+  "n": 1,
+  "title": "Common stitches and seams",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:35:14.086Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: What are tailor tacks used for?",
+    "round 1: scene: idea.line is over 56 letters: Temporary stitches hold the fabric until",
+    "round 2: question dropped, its quote is not said word for word: What is the purpose of tailor tacks or trace threa"
+  ],
+  "unit": {
+    "n": 1,
+    "title": "Common stitches and seams",
+    "reading": {
+      "shelf": "homedressmakersg00blac",
+      "chapter": 1
+    },
+    "needIt": "Knowing basic stitches helps you fix a loose button or a torn seam at home. It saves you money by letting you repair your own clothes instead of buying new ones.",
+    "why": "Many people think sewing is a secret talent. This lesson shows that neat sewing is just the result of steady practice. It turns a hard task into a step by step skill.",
+    "outcome": "Identify and use different types of stitches and seams to build a garment.",
+    "reachesYou": "You see these stitches every time you check the inside of your favorite shirt. You also see them when you shop for clothes and look for quality seams.",
+    "do": "Find a piece of fabric and practice a simple running stitch to feel how the needle moves.",
+    "quiz": [
+      {
+        "q": "What are bastings used for?",
+        "choices": [
+          "To finish a garment",
+          "To make pretty designs",
+          "To sew buttons",
+          "To hold fabric together temporarily"
+        ],
+        "a": 3,
+        "why": "The text says bastings are temporary stitches to hold fabric until finishing stitches are made.",
+        "quote": "Bastings are temporary stitches put in to hold the fabric together until the finishing stitches can be made.",
+        "ref": "shelf-homedressmakersg00blac.html#c1"
+      },
+      {
+        "q": "What happens if you skip basting and use pins or machine sewing instead?",
+        "choices": [
+          "It saves time",
+          "It makes the seam stronger",
+          "It results in loss of time",
+          "It makes the garment look better"
+        ],
+        "a": 2,
+        "why": "The text explains that skipping basting leads to a loss of time in the end.",
+        "quote": "This always results in loss of time in the end and invariably proves that ''haste makes waste.\"",
+        "ref": "shelf-homedressmakersg00blac.html#c1"
+      },
+      {
+        "q": "Which stitch is used when basting cloth onto lining or canvass?",
+        "choices": [
+          "Running stitch",
+          "Back stitch",
+          "Chain stitch",
+          "Diagonal basting"
+        ],
+        "a": 3,
+        "why": "The text specifies diagonal basting for lining or canvass.",
+        "quote": "Diagonal basting is always used when basting cloth on to the lining or canvass.",
+        "ref": "shelf-homedressmakersg00blac.html#c1"
+      },
+      {
+        "q": "How are running stitches described?",
+        "choices": [
+          "Small stitches of equal length",
+          "Long and loose",
+          "Crosswise stitches",
+          "Invisible stitches"
+        ],
+        "a": 0,
+        "why": "Running stitches are defined by having equal lengths for stitches and spaces.",
+        "quote": "Running stitches are a succession of small stitches, the stitches and spaces in between being of equal length.",
+        "ref": "shelf-homedressmakersg00blac.html#c1"
+      },
+      {
+        "q": "When should you use a slip stitch?",
+        "choices": [
+          "To finish a hem invisibly",
+          "To make a strong seam",
+          "To make a chain",
+          "To sew a pocket"
+        ],
+        "a": 0,
+        "why": "The slip stitch is specifically for making stitches invisible, like on a hem.",
+        "quote": "The slip stitch is used when hemming or sewing on facing or at any other part of the garment where stitches are to be made invisible.",
+        "ref": "shelf-homedressmakersg00blac.html#c1"
+      },
+      {
+        "q": "How should you handle the thread when making a chain stitch?",
+        "choices": [
+          "Pull it very tight",
+          "Cut it every few inches",
+          "Use a double strand",
+          "Do not pull the thread tight"
+        ],
+        "a": 3,
+        "why": "Pulling the thread too tight prevents the chain from having a nice appearance.",
+        "quote": "Do not pull the thread tight as it will not make a nice looking chain if you do.",
+        "ref": "shelf-homedressmakersg00blac.html#c1"
+      },
+      {
+        "q": "What is a French seam used for?",
+        "choices": [
+          "Sheer material like crepes",
+          "Joining heavy denim",
+          "Making a button hole",
+          "Adding a pocket"
+        ],
+        "a": 0,
+        "why": "French seams hide raw edges, which is necessary for thin or see-through fabrics.",
+        "quote": "French seams are used when making garments out of any sheer material such as crepes or voiles",
+        "ref": "shelf-homedressmakersg00blac.html#c1"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Bastings hold fabric together temporarily.",
+        "Running stitches have equal lengths.",
+        "Tailor tacks mark both sides of cloth.",
+        "Back stitches make seams firm and strong.",
+        "Slip stitches make sewing invisible."
+      ],
+      "key": "Different stitches serve specific purposes like holding, marking, or finishing.",
+      "decoys": [
+        {
+          "text": "Bastings are the final stitches on a garment.",
+          "why": "The text says they are temporary stitches used until finishing stitches are made."
+        },
+        {
+          "text": "Running stitches are used to make seams invisible.",
+          "why": "The text says slip stitches are used to make stitches invisible."
+        }
+      ],
+      "aha": "Each stitch has a specific job to ensure the garment is accurate and well finished."
+    },
+    "scene": {
+      "analogy": "A builder uses tape to mark a wall before painting.",
+      "map": [
+        [
+          "Blue tape",
+          "Basting"
+        ],
+        [
+          "Final paint",
+          "Final seam"
+        ],
+        [
+          "Wall",
+          "Fabric"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Blue tape",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Final paint",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "WALL",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "MARKING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "The first step makes the final job easy.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A builder wants to paint a long wall.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They put tape down to mark the line.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They paint over the tape perfectly.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Wall is marked"
+            },
+            "right": {
+              "sub": "Paint is perfect"
+            }
+          }
+        },
+        {
+          "say": "The work looks clean and straight.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Use basting to hold fabric in place before the final sewing.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Basting",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Final seam",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "FABRIC",
+              "size": 18
+            },
+            "act": {
+              "label": "HOLDING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Temporary stitches save time and effort.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Common stitches and seams",
+      "by": "Mrs. Judith Blackburn, 1919",
+      "url": "shelf-homedressmakersg00blac.html#c1",
+      "licence": "Public domain (US, by age). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

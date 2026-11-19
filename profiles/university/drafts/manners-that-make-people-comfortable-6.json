@@ -1,0 +1,306 @@
+{
+  "slug": "manners-that-make-people-comfortable",
+  "n": 6,
+  "title": "The fundamentals of good behavior",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:44:29.686Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: line is over 56 letters: Kindness is the same for everyone regard",
+    "round 1: scene: idea.line is over 56 letters: True manners mean treating everyone with"
+  ],
+  "unit": {
+    "n": 6,
+    "title": "The fundamentals of good behavior",
+    "reading": {
+      "shelf": "post-etiquette-1922",
+      "chapter": 29
+    },
+    "needIt": "Good manners help you build trust and respect with everyone you meet. It helps you stay calm in tough spots and shows people you are reliable.",
+    "why": "A man once tried to look important by bragging about his expensive watch and the famous people he knew. People did not admire him; they felt uncomfortable because he was only trying to show off. True honor comes from being kind to everyone, from the boss to the person cleaning the floor.",
+    "outcome": "Act with self-control and respect for others in every situation.",
+    "reachesYou": "You see this when you choose not to complain about a slow waiter or a rude coworker. It shows up when you keep your private business private even when you are frustrated.",
+    "do": "Practice self-control this week by staying calm and polite even if someone is being rude to you.",
+    "quiz": [
+      {
+        "q": "What is more important than a mere rule of etiquette?",
+        "choices": [
+          "A code of honor",
+          "Polished looks",
+          "Money",
+          "Famous friends"
+        ],
+        "a": 0,
+        "why": "The text states that a code of honor is the foundation of being a gentleman.",
+        "quote": "Far more important than any mere dictum of etiquette Is the fundamental code of honor",
+        "ref": "shelf-post-etiquette-1922.html#c29"
+      },
+      {
+        "q": "How should a gentleman handle borrowed money?",
+        "choices": [
+          "Pay it back slowly",
+          "Never borrow it",
+          "Ask for more time",
+          "Pay it back promptly"
+        ],
+        "a": 3,
+        "why": "The text says debts of honor must be paid as quickly as possible.",
+        "quote": "Money borrowed without security is a debt of honor which must be paid without fail and promptly as possible.",
+        "ref": "shelf-post-etiquette-1922.html#c29"
+      },
+      {
+        "q": "What should a gentleman avoid doing in public?",
+        "choices": [
+          "Talking about costs",
+          "Working hard",
+          "Helping others",
+          "Being honest"
+        ],
+        "a": 0,
+        "why": "The text says a well-bred man dislikes talking about money.",
+        "quote": "A very well-bred man intensely dislikes the mention of money, and never speaks of it (out of business hours) if he can avoid it.",
+        "ref": "shelf-post-etiquette-1922.html#c29"
+      },
+      {
+        "q": "What should a man avoid doing when talking about his wife?",
+        "choices": [
+          "Talking about her clothes",
+          "Mentioning her name",
+          "Talking about her job",
+          "Sharing her private secrets"
+        ],
+        "a": 3,
+        "why": "The text says a man is a cad if he tells anyone what his wife told him in confidence.",
+        "quote": "A man is a cad who tells anyone, no matter who, what his wife told him in confidence, or describes what she looks like in her bedroom.",
+        "ref": "shelf-post-etiquette-1922.html#c29"
+      },
+      {
+        "q": "How should a gentleman react to difficult circumstances?",
+        "choices": [
+          "Show anger",
+          "Show fear",
+          "Show self-control",
+          "Show hilarity"
+        ],
+        "a": 2,
+        "why": "Self-control is described as a person's chief power over others.",
+        "quote": "In fact, in his own self-control under difficult or dangerous circumstances, lies his chief ascendancy over others",
+        "ref": "shelf-post-etiquette-1922.html#c29"
+      },
+      {
+        "q": "What is 'bad form' according to the text?",
+        "choices": [
+          "Being late",
+          "Wearing old clothes",
+          "Speaking too loudly",
+          "Actions that jar others"
+        ],
+        "a": 3,
+        "why": "The text defines bad form as actions that disturb the feelings of others.",
+        "quote": "And bad form IS merely an action which \"jars\" the sensibilities of others.",
+        "ref": "shelf-post-etiquette-1922.html#c29"
+      },
+      {
+        "q": "What does simplicity mean in manners?",
+        "choices": [
+          "Pure and direct",
+          "Being crude",
+          "Being quiet",
+          "Having few clothes"
+        ],
+        "a": 0,
+        "why": "Simplicity means manners that are so perfect they do not look like they are being tried.",
+        "quote": "simplicity of speech and manners means language in its purest, most limpid form, and manners of such perfection that they do not suggest \"manner\" at all.",
+        "ref": "shelf-post-etiquette-1922.html#c29"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Honor is more important than rules.",
+        "A gentleman stays calm in danger.",
+        "Never brag about money or status.",
+        "Treat everyone with the same respect.",
+        "Manners should be natural and simple."
+      ],
+      "key": "True manners come from an inner code of honor and self-control.",
+      "decoys": [
+        {
+          "text": "Manners are just about following rules.",
+          "why": "The text says honor is far more important than mere rules of etiquette."
+        },
+        {
+          "text": "You should only be polite to people who are important.",
+          "why": "The text says a gentleman is considerate of others no matter what their station is."
+        }
+      ],
+      "aha": "When you act from a place of inner honor, your manners become natural and respectful to everyone."
+    },
+    "scene": {
+      "analogy": "A person showing off a trophy to a crowd",
+      "map": [
+        [
+          "A proud person",
+          "A person"
+        ],
+        [
+          "A quiet crowd",
+          "A quiet crowd"
+        ],
+        [
+          "A trophy",
+          "A trophy"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A proud person",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A quiet crowd",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "A TROPHY",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "BRAGGING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "True value is felt, not shouted.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A person holds a trophy high.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They shout about the cost.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The crowd looks away.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Feels lonely"
+            },
+            "right": {
+              "sub": "Feels awkward"
+            }
+          }
+        },
+        {
+          "say": "The person feels empty.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "True honor is about being steady and kind, not about how much you own.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "A person",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "A quiet crowd",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "A TROPHY",
+              "size": 18
+            },
+            "act": {
+              "label": "BRAGGING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "True value is felt, not shouted.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "The fundamentals of good behavior",
+      "by": "Emily Post, 1923",
+      "url": "shelf-post-etiquette-1922.html#c29",
+      "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

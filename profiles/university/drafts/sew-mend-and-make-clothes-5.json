@@ -1,0 +1,279 @@
+{
+  "slug": "sew-mend-and-make-clothes",
+  "n": 5,
+  "title": "How to select the sleeve",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:37:26.377Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: What part of a garment is most important for its b"
+  ],
+  "unit": {
+    "n": 5,
+    "title": "How to select the sleeve",
+    "reading": {
+      "shelf": "homedressmakersg00blac",
+      "chapter": 5
+    },
+    "needIt": "Choosing the right sleeve helps your clothes fit your body perfectly. It stops a nice dress from looking messy because of a sleeve that is too big or too small.",
+    "why": "A dressmaker once saw a beautiful gown ruined by a poorly fitting sleeve. She learned that the sleeve is the most important part of a garment's look. You must plan the sleeve to match the unique shape of your own arm.",
+    "outcome": "Select and adjust a sleeve pattern to fit your specific arm shape.",
+    "reachesYou": "You see this when you try on a shirt at a shop and the arm feels tight. You also notice it when a friend's sleeve twists around their wrist.",
+    "do": "Measure your arm from shoulder to wrist and notice if your arm is thick or slender.",
+    "quiz": [
+      {
+        "q": "How should a short, thick arm be treated in a sleeve design?",
+        "choices": [
+          "Use broken lines",
+          "Use very wide cuffs",
+          "Use many buttons",
+          "Use long unbroken lines"
+        ],
+        "a": 3,
+        "why": "The text says short thick arms need long unbroken lines to add length.",
+        "quote": "the short, thick arm should have long unbroken lines predominating in the sleeve",
+        "ref": "shelf-homedressmakersg00blac.html#c5"
+      },
+      {
+        "q": "What should be avoided for a short fleshy arm?",
+        "choices": [
+          "Straight round cuffs",
+          "Pointed cuffs",
+          "Flared cuffs",
+          "Buttons on the back"
+        ],
+        "a": 0,
+        "why": "The text says these arms should never be divided up with straight round cuffs.",
+        "quote": "This arm should never be divided up with straight round cuffs.",
+        "ref": "shelf-homedressmakersg00blac.html#c5"
+      },
+      {
+        "q": "How should long, slender arms be designed?",
+        "choices": [
+          "With long unbroken lines",
+          "With lines broken here and there",
+          "With very wide cuffs",
+          "With no trimmings"
+        ],
+        "a": 1,
+        "why": "The text explains that long arms look better when the lines are broken.",
+        "quote": "made to look well proportioned by choosing a sleeve with length lines broken here and there.",
+        "ref": "shelf-homedressmakersg00blac.html#c5"
+      },
+      {
+        "q": "What is 'sleeve twisting'?",
+        "choices": [
+          "The sleeve is too long",
+          "The sleeve is too tight",
+          "The inside seam twists to the top of the arm",
+          "The sleeve falls off"
+        ],
+        "a": 2,
+        "why": "The text defines twisting as the inside seam moving to the top of the arm at the wrist.",
+        "quote": "By \"sleeve twisting\" we mean when the inside seam of the sleeve will twist around to the top of the arm at the wrist.",
+        "ref": "shelf-homedressmakersg00blac.html#c5"
+      },
+      {
+        "q": "How can you tell if a sleeve will twist from a pattern?",
+        "choices": [
+          "If the pattern is too small",
+          "If the inside seam is even at the wrist",
+          "If the pattern is too wide",
+          "If the pattern is too long"
+        ],
+        "a": 1,
+        "why": "The text says if the inside seam meets all the way and is even at the wrist, it may twist.",
+        "quote": "the inside seam meets all the way and is even at the wrist, the sleeve may twist",
+        "ref": "shelf-homedressmakersg00blac.html#c5"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Sleeves are very important for a garment's beauty.",
+        "A poorly made sleeve ruins a style.",
+        "You must plan the sleeve to fit your arm shape.",
+        "Short arms need long lines to add length.",
+        "Long arms need broken lines to look balanced."
+      ],
+      "key": "The sleeve must be planned to match the specific shape and size of the wearer's arm.",
+      "decoys": [
+        {
+          "text": "Any sleeve pattern will fit any person perfectly.",
+          "why": "The text says we cannot always wear the sleeve designed for the gown we have selected."
+        },
+        {
+          "text": "Straight round cuffs are best for short arms.",
+          "why": "The text says a short fleshy arm should never be divided up with straight round cuffs."
+        }
+      ],
+      "aha": "By matching the sleeve lines to your arm's unique shape, you ensure the garment looks beautiful and fits well."
+    },
+    "scene": {
+      "analogy": "A chair and a person sitting in it",
+      "map": [
+        [
+          "A person",
+          "Your arm"
+        ],
+        [
+          "A chair",
+          "The sleeve"
+        ],
+        [
+          "The fit",
+          "The fit"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A person",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A chair",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "THE FIT",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "SITTING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "It feels just right for my body.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A person finds a chair.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They sit down to rest.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The chair fits their size.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Comfortable seat"
+            },
+            "right": {
+              "sub": "Proper posture"
+            }
+          }
+        },
+        {
+          "say": "They feel relaxed and happy.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "A sleeve must be planned to fit the specific shape of the arm.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Your arm",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "The sleeve",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "THE FIT",
+              "size": 18
+            },
+            "act": {
+              "label": "MATCHING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "The sleeve must match the arm shape.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "How to select the sleeve",
+      "by": "Mrs. Judith Blackburn, 1919",
+      "url": "shelf-homedressmakersg00blac.html#c5",
+      "licence": "Public domain (US, by age). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

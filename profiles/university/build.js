@@ -349,7 +349,11 @@ header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:
 .crest svg{width:34px;height:34px;flex:none}
 .crest span{white-space:nowrap}.crest b{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.14em;text-transform:uppercase}
 .crest small{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-top:1px}
-.nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto;position:static;align-items:center}
+.navall{position:relative}.navall summary{cursor:pointer;list-style:none;font-size:14px;padding:6px 12px;border-radius:6px;color:var(--fg);border:1px solid var(--line)}.navall summary::-webkit-details-marker{display:none}.navall summary:hover{border-color:var(--gold)}
+.navlist{position:absolute;right:0;top:calc(100% + 8px);z-index:30;width:min(640px,calc(100vw - 40px));max-height:70vh;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px 18px;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+@media (max-width:1000px){header.top{position:relative}.navall{position:static}.navlist{left:20px;right:20px;width:auto}}
+.navlist h5{margin:0 0 4px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}.navlist a,.navlist b{display:block;padding:4px 0;font-size:14px}
 .nav a,.nav b{font-size:14px;padding:6px 12px;border-radius:6px;text-decoration:none;color:var(--dim)}
 .nav a:hover{color:var(--fg);background:var(--panel2)}.nav b{color:var(--gold);font-weight:600}
 .draft{font-size:12px;color:var(--gold);border:1px solid #5a4a24;padding:3px 9px;border-radius:999px}
@@ -387,6 +391,7 @@ function shelfPage(b, all) {
 .shero{padding:26px 30px;border:1px solid var(--line);border-radius:10px;background:var(--panel);margin-bottom:26px}
 .shero .dom{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
 .shero h1{font-family:Fraunces,Georgia,serif;font-size:40px;margin:8px 0 6px;line-height:1.1}.shero p{margin:6px 0;color:#cfd2dc;font-size:17px;max-width:900px}.shero .src{font-size:14px;color:var(--dim)}.shero a{color:var(--acc)}
+.shero .caution{color:var(--gold);font-size:15px;border-left:3px solid var(--gold);padding-left:12px}
 .shero .both button{font:inherit;font-size:14px;margin-top:10px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}
 .chap{margin:0 0 34px}.chap h2{font-family:Fraunces,Georgia,serif;font-size:28px;margin:0 0 6px;display:flex;gap:12px;align-items:baseline}.chap h2 .n{color:var(--acc);font-size:20px}
 .chap .why{color:var(--dim);margin:0 0 14px;font-size:16px}
@@ -399,7 +404,7 @@ function shelfPage(b, all) {
 </style></head><body>
 ${top(b.slug, all)}
 <div class="swrap"><nav><h4>Chapters</h4>${toc}</nav><main>
-<div class="shero"><div class="dom">${esc(b.area)} · an old book in plain English</div><h1>${esc(b.title)}</h1><p>${esc(b.needIt)}</p>
+<div class="shero"><div class="dom">${esc(b.area)} · an old book in plain English</div><h1>${esc(b.title)}</h1><p>${esc(b.needIt)}</p>${b.caution ? '<p class="caution">' + esc(b.caution) + '</p>' : ''}
 <p class="src">By ${esc(b.by)}, ${esc(String(b.year))}. ${esc(b.licence)}. <a href="${esc(b.scan || b.url)}" target="_blank" rel="noopener">Read the scanned book on the Internet Archive</a>. The plain side is our rewrite: same facts and steps, today's words. The printed side is a machine's reading of the scan, so a few letters are wrong.</p>
 <div class="both"><button type="button" id="both">Show the printed words beside every passage</button></div></div>
 ${chapters}
@@ -414,8 +419,20 @@ document.getElementById('both').onclick = function () {
 </body></html>`;
 }
 function top(current, all) {
-  all = all.concat(SHELFBOOKS); // shelf books sit in the header beside the courses
-  const links = '<a href="index.html"' + (current === 'home' ? ' aria-current="page"' : '') + '>Home</a>' + all.map((o) => o.slug === current ? '<b>' + esc(o.name) + '</b>' : '<a href="' + esc(o.slug) + '.html">' + esc(o.name) + '</a>').join('');
+  // Up to six courses sit in the header as links. More than that (classes and shelf books add up fast) fold into one
+  // "All courses" list grouped by area, so the header stays one row at every width.
+  const home = '<a href="index.html"' + (current === 'home' ? ' aria-current="page"' : '') + '>Home</a>';
+  const link = (o) => (o.slug === current ? '<b>' + esc(o.name) + '</b>' : '<a href="' + esc(o.slug) + '.html">' + esc(o.name) + '</a>');
+  const everything = all.concat(SHELFBOOKS);
+  let links;
+  if (everything.length <= 6) links = home + all.map(link).join('');
+  else {
+    const here = everything.find((o) => o.slug === current);
+    const areas = [...new Set(all.map((o) => o.domain))];
+    const groups = areas.map((a) => '<div><h5>' + esc(a) + '</h5>' + all.filter((o) => o.domain === a).map(link).join('') + '</div>').join('')
+      + (SHELFBOOKS.length ? '<div><h5>Old books in plain English</h5>' + SHELFBOOKS.map(link).join('') + '</div>' : '');
+    links = home + (here ? '<b>' + esc(here.name) + '</b>' : '') + '<details class="navall"><summary>All courses</summary><div class="navlist">' + groups + '</div></details>';
+  }
   return '<header class="top"><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + DRAFT + '</header>';
 }
 const IMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'img', 'images.json'), 'utf8')); } catch (e) { return {}; } })();

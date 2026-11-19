@@ -114,3 +114,11 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   away that day); Body, Emergencies and most of Family (old medicine, first aid and baby care need warning rules
   first); Machines (its filmed course is Walter Lewin's MIT 8.01, which MIT itself took down in 2014: Bryan's call);
   Law and rights (a Yale sound-only course is ready to lay out the same way: Environmental politics and law).
+- 19 Nov 2026, step 10, three areas now have a class in the preview (all drafts, none live): Land, Grow your own
+  vegetables (13 units); Making, Sew, mend and make clothes (10 units, from The home dressmakers' guide, 1919);
+  Family, Manners that make people comfortable (8 units, from eight chapters of Emily Post's Etiquette, 1923
+  printing). Both new books carry a line on their page saying what is of its time. Human nature: 14 of 24 lectures
+  drafted. When only the scene is missing from a draft the model is now asked for the scene alone. With more than
+  six courses and books the header folds them into one "All courses" list by area, so it stays one row (the live
+  site, with four courses, keeps its plain links); the header's own links are no longer caught by the unit list's
+  sticky rule. Checked at 1920, 1316 and 821 wide.

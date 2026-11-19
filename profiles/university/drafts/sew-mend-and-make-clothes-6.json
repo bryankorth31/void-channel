@@ -1,0 +1,279 @@
+{
+  "slug": "sew-mend-and-make-clothes",
+  "n": 6,
+  "title": "Cutting and making skirts",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:37:49.039Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: Why should you avoid using a tracing wheel on silk"
+  ],
+  "unit": {
+    "n": 6,
+    "title": "Cutting and making skirts",
+    "reading": {
+      "shelf": "homedressmakersg00blac",
+      "chapter": 6
+    },
+    "needIt": "Knowing how to cut and sew a skirt helps you make your own clothes that fit perfectly. It saves you money and lets you fix your favorite pieces instead of throwing them away.",
+    "why": "A dressmaker wants to make a beautiful silk skirt without ruining the fabric. She learns that using the wrong iron or pulling a thread too hard can destroy a garment in seconds. By following the right steps for pressing and basting, she ensures the skirt stays perfect.",
+    "outcome": "Create a professional skirt by correctly cutting, pressing, and basting fabric.",
+    "reachesYou": "You see these skills when you notice a perfectly hemmed skirt in a shop. You also feel them when you try to iron a shirt at home and worry about burning it.",
+    "do": "Practice pressing a piece of fabric with a wet cloth and a hot iron to see how it smooths out.",
+    "quiz": [
+      {
+        "q": "What is the best way to remove basting threads from delicate fabric like silk?",
+        "choices": [
+          "Pull them out",
+          "Rip them out",
+          "Leave them in",
+          "Cut them in sections"
+        ],
+        "a": 3,
+        "why": "The text says to clip them in small sections to avoid ruining the fabric.",
+        "quote": "The better way is to clip in small sections before removing.",
+        "ref": "shelf-homedressmakersg00blac.html#c6"
+      },
+      {
+        "q": "How should you press woolen goods to avoid making them shiny?",
+        "choices": [
+          "Use a hot iron",
+          "Use a dry iron",
+          "Use a heavy weight",
+          "Use a wet cloth and sponge"
+        ],
+        "a": 3,
+        "why": "The text suggests using a wet cloth and a sponge to avoid marks.",
+        "quote": "To press Woolens, lay a wet cloth, preferably cotton, on the garment just where you want it pressed.",
+        "ref": "shelf-homedressmakersg00blac.html#c6"
+      },
+      {
+        "q": "What should you do to shrink white wash goods?",
+        "choices": [
+          "Boil them in water",
+          "Dry them in the sun",
+          "Iron them very hot",
+          "Wash them in cold water"
+        ],
+        "a": 0,
+        "why": "The instructions say to put the material in a pan of cold water and let it boil.",
+        "quote": "Lay the material in a pan of cold water and let come to a boil.",
+        "ref": "shelf-homedressmakersg00blac.html#c6"
+      },
+      {
+        "q": "How should you handle a skirt while basting it?",
+        "choices": [
+          "Lay it flat on a table",
+          "Hold it in your hands",
+          "Hang it on a hook",
+          "Fold it in half"
+        ],
+        "a": 0,
+        "why": "The text warns that holding the skirt will cause the seams to stretch.",
+        "quote": "Do not hold a skirt, or any full length garment, in your hands while basting it.",
+        "ref": "shelf-homedressmakersg00blac.html#c6"
+      },
+      {
+        "q": "What is the purpose of using a piece of cambric for side seams?",
+        "choices": [
+          "To stay the bias",
+          "To make it pretty",
+          "To hide the seam",
+          "To add length"
+        ],
+        "a": 0,
+        "why": "The text explains that any seam with bias must be stayed to prevent stretching.",
+        "quote": "Any seam in a full length garment where there is bias must be stayed.",
+        "ref": "shelf-homedressmakersg00blac.html#c6"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Clip basting threads in sections",
+        "Use a wet cloth for woolens",
+        "Avoid hot irons on silk",
+        "Stay seams that have bias",
+        "Lay pieces flat on a table"
+      ],
+      "key": "Handle fabric carefully to prevent stretching and damage.",
+      "decoys": [
+        {
+          "text": "Pull basting threads out quickly",
+          "why": "The text says not to pull ruthlessly as it ruins fine garments."
+        },
+        {
+          "text": "Use a hot iron on silk",
+          "why": "The text says a hot iron will take the life out of silken fabric."
+        }
+      ],
+      "aha": "Proper handling and specific tools protect the fabric from permanent damage."
+    },
+    "scene": {
+      "analogy": "A chef seasoning a soup",
+      "map": [
+        [
+          "The chef",
+          "The sewer"
+        ],
+        [
+          "The soup",
+          "The skirt"
+        ],
+        [
+          "Salt",
+          "Basting"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The chef",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The soup",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "SALT",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "SEASONING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "The right amount makes all the difference.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "The chef holds the salt.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "He sprinkles it in.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The soup tastes great.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "The soup tastes good"
+            },
+            "right": {
+              "sub": "The chef is happy"
+            }
+          }
+        },
+        {
+          "say": "He feels proud.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Basting keeps the fabric from moving while you work.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "The sewer",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "The skirt",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "BASTING",
+              "size": 18
+            },
+            "act": {
+              "label": "SECURING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Small stitches hold everything in place.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Cutting and making skirts",
+      "by": "Mrs. Judith Blackburn, 1919",
+      "url": "shelf-homedressmakersg00blac.html#c6",
+      "licence": "Public domain (US, by age). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

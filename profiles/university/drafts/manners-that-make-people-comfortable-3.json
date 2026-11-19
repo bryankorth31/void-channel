@@ -1,0 +1,290 @@
+{
+  "slug": "manners-that-make-people-comfortable",
+  "n": 3,
+  "title": "Conversation needs reciprocity",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:41:03.234Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 3,
+    "title": "Conversation needs reciprocity",
+    "reading": {
+      "shelf": "post-etiquette-1922",
+      "chapter": 7
+    },
+    "needIt": "Good conversation makes people feel included and valued. It helps you build stronger friendships and professional bonds by making sure the other person feels heard too.",
+    "why": "Imagine a person who talks for an hour without stopping. Everyone else feels like a statue, just waiting for a turn that never comes. Conversation is a game of catch, not a solo performance.",
+    "outcome": "Practice pausing before you speak to ensure your words are helpful to the listener.",
+    "reachesYou": "You see this when a friend dominates a dinner chat or a coworker talks over you at lunch. It happens every time you try to connect with someone new.",
+    "do": "Next time you are talking to someone, stop after two sentences and ask them a question about their day.",
+    "quiz": [
+      {
+        "q": "What is the main problem with a 'voluble talker'?",
+        "choices": [
+          "They speak too quietly.",
+          "They use too many big words.",
+          "They do not give others a chance to speak.",
+          "They speak about too many different topics."
+        ],
+        "a": 2,
+        "why": "The text says the chatterer rides through hours without giving others a chance to speak.",
+        "quote": "The voluble talker, or chatterer, rides his own hobby straight through the hours without giving anyone else, who might also .like to say something, a chance to do other than exhaustedly await the turn that never comes.",
+        "ref": "shelf-post-etiquette-1922.html#c7"
+      },
+      {
+        "q": "What is the 'simple rule' to avoid being a bore?",
+        "choices": [
+          "Speak more often.",
+          "Stop and think.",
+          "Speak only about yourself.",
+          "Speak very loudly."
+        ],
+        "a": 1,
+        "why": "The text identifies stopping and thinking as the primary way to avoid being a pest.",
+        "quote": "There is a simple rule, by which if one is a voluble chatterer (to be a good talker necessitates a good mind) one can at least refrain from being a pest or a bore.",
+        "ref": "shelf-post-etiquette-1922.html#c7"
+      },
+      {
+        "q": "Why does the text mention a mother describing a baby's tricks to a bachelor?",
+        "choices": [
+          "To show how oversharing can bore others.",
+          "To show how funny babies are.",
+          "To explain how to train a baby.",
+          "To show how to be a good mother."
+        ],
+        "a": 0,
+        "why": "The text uses this to show that even friends might not want to hear every tiny detail.",
+        "quote": "She would know very well, alas! that not even a very dear friend would really care for more than a hots Hoeuvre of the subject, at the board of general conversation.",
+        "ref": "shelf-post-etiquette-1922.html#c7"
+      },
+      {
+        "q": "What should you do if you find yourself in a disagreement?",
+        "choices": [
+          "Switch to a different subject.",
+          "Argue until you win.",
+          "Tell the person they are wrong.",
+          "Stop talking entirely."
+        ],
+        "a": 0,
+        "why": "The text says a tactful person switches to a pleasanter channel of conversation.",
+        "quote": "If he finds another's opinion utterly opposed to his own, he switches to another subject for a pleasanter channel of conversation.",
+        "ref": "shelf-post-etiquette-1922.html#c7"
+      },
+      {
+        "q": "What is a common mistake people make when asking someone to repeat themselves?",
+        "choices": [
+          "They do it out of habit and inattention.",
+          "They do it because they are deaf.",
+          "They do it to be rude.",
+          "They do it because they are bored."
+        ],
+        "a": 0,
+        "why": "The text notes that many people say 'What?' due to careless inattention.",
+        "quote": "But countless persons with perfectly good hearing say \"What?\" from force of habit and careless inattention.",
+        "ref": "shelf-post-etiquette-1922.html#c7"
+      },
+      {
+        "q": "What is the 'first, last and only rule' of conversation?",
+        "choices": [
+          "Be funny.",
+          "Stop and think.",
+          "Listen well.",
+          "Speak clearly."
+        ],
+        "a": 1,
+        "why": "The text explicitly states that stopping and thinking is the only rule.",
+        "quote": "Above all, stop and think what you are saying I This is really the first, last and only rule.",
+        "ref": "shelf-post-etiquette-1922.html#c7"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Conversation should be equal give and take.",
+        "Chatterers do not give others a chance to speak.",
+        "Most mistakes happen because people do not think.",
+        "You should try to say things agreeable to others.",
+        "Stopping and thinking prevents you from being a bore."
+      ],
+      "key": "Good conversation requires you to stop and think before you speak to ensure a balanced exchange.",
+      "decoys": [
+        {
+          "text": "The goal is to be the most interesting person in the room.",
+          "why": "The text says the goal is to be agreeable and give others a chance to speak, not just to be interesting."
+        },
+        {
+          "text": "It is okay to repeat stories if they are very funny.",
+          "why": "The text says nothing interests when it is told a second time."
+        }
+      ],
+      "aha": "By stopping to think, you move from being a 'take' (a pest) to a 'give' (a good conversationalist)."
+    },
+    "scene": {
+      "analogy": "A game of catch in a park",
+      "map": [
+        [
+          "Player A",
+          "Speaker"
+        ],
+        [
+          "Player B",
+          "Listener"
+        ],
+        [
+          "The ball",
+          "Words"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Player A",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Player B",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "THE BALL",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "THROWING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "The game only works if both people throw the ball.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "Player A holds the ball.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "Player A throws the ball.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "Player B catches the ball.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Player A waits"
+            },
+            "right": {
+              "sub": "Player B catches"
+            }
+          }
+        },
+        {
+          "say": "Both players feel happy.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Conversation requires both people to give and take equally.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Speaker",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Listener",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "WORDS",
+              "size": 18
+            },
+            "act": {
+              "label": "SHARING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Conversation is a shared exchange of words.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Conversation needs reciprocity",
+      "by": "Emily Post, 1923",
+      "url": "shelf-post-etiquette-1922.html#c7",
+      "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

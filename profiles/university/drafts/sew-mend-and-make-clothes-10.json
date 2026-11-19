@@ -1,0 +1,290 @@
+{
+  "slug": "sew-mend-and-make-clothes",
+  "n": 10,
+  "title": "The suit coat sleeve",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:39:17.983Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 10,
+    "title": "The suit coat sleeve",
+    "reading": {
+      "shelf": "homedressmakersg00blac",
+      "chapter": 10
+    },
+    "needIt": "Knowing how to shape a sleeve helps you fix a suit that feels stiff or awkward. It lets you make clothes that move naturally with your body instead of feeling like a costume.",
+    "why": "A suit sleeve needs to look sharp but still let your arm move freely. The author explains how to add a tiny bit of extra fabric at the elbow to create a natural curve. This small trick makes a stiff coat feel comfortable and look professional.",
+    "outcome": "Construct a tailored coat sleeve with proper shape and balance.",
+    "reachesYou": "You see this when you notice a suit jacket sleeve looks flat or bunchy at the elbow. You also see it when you try to move your arm and the fabric feels too tight.",
+    "do": "Find a jacket you own and look at the elbow area. See if the fabric folds naturally or if it looks flat and stiff.",
+    "quiz": [
+      {
+        "q": "What is a requirement for a tailored suit sleeve compared to a sport coat sleeve?",
+        "choices": [
+          "It must be closer fitting",
+          "It must be fuller",
+          "It must be longer",
+          "It must be wider"
+        ],
+        "a": 0,
+        "why": "The text states that a tailored suit sleeve must be closer fitting than a sport coat sleeve.",
+        "quote": "The sleeve for a Tailored suit must of necessity be closer fitting than the fuller Sport Coat or Top Coat Sleeve.",
+        "ref": "shelf-homedressmakersg00blac.html#c10"
+      },
+      {
+        "q": "How much longer should the under sleeve be than the upper sleeve?",
+        "choices": [
+          "One inch",
+          "Two inches",
+          "Half an inch",
+          "Three inches"
+        ],
+        "a": 2,
+        "why": "The instructions specify a half inch difference for the under sleeve.",
+        "quote": "It must also be remembered that the under sleeve must be one-half inch longer than the upper sleeve",
+        "ref": "shelf-homedressmakersg00blac.html#c10"
+      },
+      {
+        "q": "Why is fullness added between the top and the elbow?",
+        "choices": [
+          "To make it hang properly",
+          "To make it look baggy",
+          "To hide a mistake",
+          "To make it easier to sew"
+        ],
+        "a": 0,
+        "why": "The fullness is necessary to shape the sleeve and make it hang properly.",
+        "quote": "This fullness is necessary to shape the sleeve and make it hang properly.",
+        "ref": "shelf-homedressmakersg00blac.html#c10"
+      },
+      {
+        "q": "What should you do when sewing the front seam on a machine?",
+        "choices": [
+          "Pull the fabric tight",
+          "Skip every third stitch",
+          "Sew as fast as possible",
+          "Stitch so no gathers appear"
+        ],
+        "a": 3,
+        "why": "The text warns to stitch the seam so that no gathers will appear.",
+        "quote": "When sewing the front seam, and especially if you are using a sewing machine, stitch the seam so that no gathers will appear.",
+        "ref": "shelf-homedressmakersg00blac.html#c10"
+      },
+      {
+        "q": "What is the purpose of the canvas in the sleeve?",
+        "choices": [
+          "To add color",
+          "To prevent working down",
+          "To make it heavy",
+          "To keep it soft"
+        ],
+        "a": 1,
+        "why": "The canvas is tacked to the inside seam to prevent it from working down.",
+        "quote": "the canvas is tacked to the inside seam to prevent it from working down after the sleeve is finished.",
+        "ref": "shelf-homedressmakersg00blac.html#c10"
+      },
+      {
+        "q": "How should you handle the lining when putting it into the sleeve?",
+        "choices": [
+          "Keep it a trifle smaller",
+          "Hold it tightly",
+          "Make it larger",
+          "Make it the same size"
+        ],
+        "a": 0,
+        "why": "The lining should be a trifle smaller than the outside.",
+        "quote": "as it is necessary to have the lining a trifle smaller than the outside.",
+        "ref": "shelf-homedressmakersg00blac.html#c10"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Tailored sleeves require straighter lines",
+        "Under sleeve must be half inch longer",
+        "Fullness is necessary to shape the sleeve",
+        "Stitch so no gathers will appear",
+        "Canvas prevents it from working down"
+      ],
+      "key": "A tailored sleeve needs specific balance and shaping to move naturally.",
+      "decoys": [
+        {
+          "text": "The lining should be the exact same size as the outside.",
+          "why": "The text says the lining must be a trifle smaller than the outside."
+        },
+        {
+          "text": "The sleeve should be as full as a sport coat.",
+          "why": "The text says a tailored sleeve must be closer fitting than a sport coat."
+        }
+      ],
+      "aha": "By balancing straight lines with specific fullness at the elbow, the sleeve achieves both shape and movement."
+    },
+    "scene": {
+      "analogy": "A hinge on a door",
+      "map": [
+        [
+          "Door frame",
+          "Upper sleeve"
+        ],
+        [
+          "Door leaf",
+          "Under sleeve"
+        ],
+        [
+          "Hinge",
+          "Fullness"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Door frame",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Door leaf",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "HINGE",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "ROTATE",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "It moves smoothly because of the pivot point.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A door is closed.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "Someone turns the handle.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The door swings open.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Door opens wide"
+            },
+            "right": {
+              "sub": "Door stays firm"
+            }
+          }
+        },
+        {
+          "say": "It feels easy to move.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Adding fullness at the elbow allows the arm to bend naturally.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Upper sleeve",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Under sleeve",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "FULLNESS",
+              "size": 18
+            },
+            "act": {
+              "label": "SHAPE",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "The extra fabric creates the curve for the arm.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "The suit coat sleeve",
+      "by": "Mrs. Judith Blackburn, 1919",
+      "url": "shelf-homedressmakersg00blac.html#c10",
+      "licence": "Public domain (US, by age). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

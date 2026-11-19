@@ -1,0 +1,290 @@
+{
+  "slug": "sew-mend-and-make-clothes",
+  "n": 7,
+  "title": "Cutting and making blouses",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:38:08.434Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 7,
+    "title": "Cutting and making blouses",
+    "reading": {
+      "shelf": "homedressmakersg00blac",
+      "chapter": 7
+    },
+    "needIt": "Knowing how to make a blouse helps you create high-quality clothes that fit your body perfectly. You can save money by making your own clothes instead of buying expensive brands.",
+    "why": "A woman wants a blouse that looks professional and stays in style. She learns that the secret is in the small details like the seams and the way the collar sits. By mastering these steps, she turns a simple piece of fabric into a well-tailored garment.",
+    "outcome": "Make a well-tailored blouse with professional finishes.",
+    "reachesYou": "You see these details when you shop for high-quality shirts or notice a loose seam on your favorite top. You can use these skills to fix your own clothes or make a custom blouse for a special event.",
+    "do": "Look at the inside seams of your favorite blouse this week to see if they are finished with a French seam or a simple stitch.",
+    "quiz": [
+      {
+        "q": "What is a constant in a woman's wardrobe?",
+        "choices": [
+          "Skirts",
+          "Dresses",
+          "Hats",
+          "Blouses"
+        ],
+        "a": 3,
+        "why": "The text states that while styles change, the blouse remains a staple.",
+        "quote": "Styles come and go and come again but the blouse always remains.",
+        "ref": "shelf-homedressmakersg00blac.html#c7"
+      },
+      {
+        "q": "What is necessary for a blouse to have the desired appearance?",
+        "choices": [
+          "Cheap fabric",
+          "Large buttons",
+          "Bright colors",
+          "Exquisite workmanship"
+        ],
+        "a": 3,
+        "why": "The text emphasizes that workmanship is key to the finished look.",
+        "quote": "In the blouse, perhaps more than in any other garment, exquisite workmanship is necessary if the finished blouse is to have the desired appearance.",
+        "ref": "shelf-homedressmakersg00blac.html#c7"
+      },
+      {
+        "q": "When should a French seam be used for a sheer material blouse?",
+        "choices": [
+          "On the hem",
+          "On the collar",
+          "On the buttons",
+          "Under-arm and inside sleeve seams"
+        ],
+        "a": 3,
+        "why": "The text specifies French seams for these specific areas when using sheer material.",
+        "quote": "When the blouse is made from sheer material the under-arm seam and the inside seam of the sleeve should be French seamed.",
+        "ref": "shelf-homedressmakersg00blac.html#c7"
+      },
+      {
+        "q": "How can you finish the bottom of a blouse besides a hem?",
+        "choices": [
+          "With a zipper",
+          "With a band",
+          "With a belt",
+          "With a lace"
+        ],
+        "a": 1,
+        "why": "The text describes making a band and attaching it to the back.",
+        "quote": "Another way to finish the bottom of a blouse is to make a band one inch wide and attach it to the back of the blouse",
+        "ref": "shelf-homedressmakersg00blac.html#c7"
+      },
+      {
+        "q": "Where should a box plait be placed on a tailored blouse?",
+        "choices": [
+          "On the left side",
+          "In the middle",
+          "On the right side of the opening",
+          "On the sleeve"
+        ],
+        "a": 2,
+        "why": "The text says the box plait must be on the right side of the opening.",
+        "quote": "The box plait must be on the right side of the opening and the center of the box plait should be the center front of the blouse.",
+        "ref": "shelf-homedressmakersg00blac.html#c7"
+      },
+      {
+        "q": "What is used to finish a blouse with a slot seam?",
+        "choices": [
+          "Snap fasteners or hooks and eyes",
+          "Buttons",
+          "Velcro",
+          "Ribbons"
+        ],
+        "a": 0,
+        "why": "The text mentions these fasteners for the slot seam style.",
+        "quote": "The front of this blouse is fastened with snap fasteners or hooks and eyes.",
+        "ref": "shelf-homedressmakersg00blac.html#c7"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Exquisite workmanship is necessary.",
+        "Finishing seams on the wrong side matters.",
+        "French seams are used for sheer material.",
+        "A box plait adds a tailored look.",
+        "Seams can be bound or overcast."
+      ],
+      "key": "Small details in sewing create a professional and well-tailored look.",
+      "decoys": [
+        {
+          "text": "Blouses go out of style quickly.",
+          "why": "The text says blouses always remain even as styles come and go."
+        },
+        {
+          "text": "French seams are only for the front of the blouse.",
+          "why": "The text says they are used for under-arm and inside sleeve seams."
+        }
+      ],
+      "aha": "Focusing on the hidden details like seams and plait placement transforms a basic garment into a high-quality blouse."
+    },
+    "scene": {
+      "analogy": "A chef preparing a complex meal",
+      "map": [
+        [
+          "The Chef",
+          "The Maker"
+        ],
+        [
+          "The Guest",
+          "The Wearer"
+        ],
+        [
+          "The Dish",
+          "The Blouse"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The Chef",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The Guest",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "THE DISH",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "PLATING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "The small details make the big difference.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "The chef prepares the food.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They place it on a plate.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The meal looks beautiful.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "The meal looks perfect"
+            },
+            "right": {
+              "sub": "The guest is happy"
+            }
+          }
+        },
+        {
+          "say": "The guest feels special.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Small details like seams create a professional look.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "The Maker",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "The Wearer",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "THE BLOUSE",
+              "size": 14
+            },
+            "act": {
+              "label": "SEWING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Good workmanship makes a garment look smart.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Cutting and making blouses",
+      "by": "Mrs. Judith Blackburn, 1919",
+      "url": "shelf-homedressmakersg00blac.html#c7",
+      "licence": "Public domain (US, by age). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

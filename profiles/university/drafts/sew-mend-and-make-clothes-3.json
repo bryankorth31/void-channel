@@ -1,0 +1,308 @@
+{
+  "slug": "sew-mend-and-make-clothes",
+  "n": 3,
+  "title": "How to select a skirt pattern",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:36:26.208Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line",
+    "round 2: question dropped, its quote is not said word for word: Why is it better to choose a larger pattern size i",
+    "round 2: scene: thing is over 11 letters: Measuring Tape",
+    "round 2: scene: idea.thing is over 11 letters: Measurements"
+  ],
+  "unit": {
+    "n": 3,
+    "title": "How to select a skirt pattern",
+    "reading": {
+      "shelf": "homedressmakersg00blac",
+      "chapter": 3
+    },
+    "needIt": "Choosing the right pattern helps you make clothes that fit your unique body shape instead of just fitting a model. It saves you from buying clothes that don't look right or have to be fixed later.",
+    "why": "A woman wanted a skirt that looked good on her tall frame. She learned that a pattern is just a map of seams. By moving those seams to the right spots, she turned a basic piece of cloth into a perfect fit.",
+    "outcome": "Adjust a skirt pattern to match your specific body measurements.",
+    "reachesYou": "You see this when you try on clothes at a store and notice they fit tight in one spot but loose in another. You also see it when you look at a sewing pattern online and wonder if it will actually fit you.",
+    "do": "Measure your waist and hips today. Fold a tape measure to find the exact half and quarter marks to prepare for your next project.",
+    "quiz": [
+      {
+        "q": "What should you look for when selecting a skirt pattern?",
+        "choices": [
+          "The lines of the individual",
+          "The latest fashion",
+          "The cheapest price",
+          "The color of the fabric"
+        ],
+        "a": 0,
+        "why": "The text says you should study the lines of the individual to find a style that adds beauty to the figure.",
+        "quote": "In selecting a pattern for a skirt the lines of the individual should be studied.",
+        "ref": "shelf-homedressmakersg00blac.html#c3"
+      },
+      {
+        "q": "What is the best way to find the half and quarter of your measurements?",
+        "choices": [
+          "Use a calculator",
+          "Fold the tape measure",
+          "Use a ruler",
+          "Ask a friend"
+        ],
+        "a": 1,
+        "why": "The text suggests folding the tape as an easy way to divide the measurements.",
+        "quote": "An easy way to do this is to take your waist or hip measurement and then fold the tape, getting just the half, then folding the half and getting the quarter.",
+        "ref": "shelf-homedressmakersg00blac.html#c3"
+      },
+      {
+        "q": "What should you do if one side of your body is much larger than the other?",
+        "choices": [
+          "Place a pin at the center front and back",
+          "Wear a larger skirt",
+          "Cut the skirt shorter",
+          "Add more fabric to the side"
+        ],
+        "a": 0,
+        "why": "The text says to place pins at the center front and back to measure and divide correctly.",
+        "quote": "If one side is very much larger than the other you can place a pin at the center front and center back and measure from pin to pin",
+        "ref": "shelf-homedressmakersg00blac.html#c3"
+      },
+      {
+        "q": "How should you handle a pattern that is too long from the waist to the hip?",
+        "choices": [
+          "Cut it off",
+          "Lay a tuck in the pattern",
+          "Add a plait",
+          "Sew it as is"
+        ],
+        "a": 1,
+        "why": "The text says to lay a tuck in the pattern if the distance is too long.",
+        "quote": "If the distance from the waist line to the hipe line given on the pattern is too long, lay a tuck in the pattern, making it the required length.",
+        "ref": "shelf-homedressmakersg00blac.html#c3"
+      },
+      {
+        "q": "What should you do if the pattern is too short for the desired length?",
+        "choices": [
+          "Stretch the fabric",
+          "Add a hem",
+          "Cut the pattern and set in paper",
+          "Buy a new pattern"
+        ],
+        "a": 2,
+        "why": "The text says to cut the pattern and set in a piece of paper to make it the desired length.",
+        "quote": "If the (distance given is not long enough, cut the pattern across and set in a piece of paper, making it the length desired.",
+        "ref": "shelf-homedressmakersg00blac.html#c3"
+      },
+      {
+        "q": "How should you handle a skirt that hikes up in front?",
+        "choices": [
+          "Increase the length at the waist line",
+          "Shorten the back",
+          "Add a plait to the front",
+          "Tighten the waist"
+        ],
+        "a": 0,
+        "why": "The text says to increase the length of the pattern in the front at the waist line.",
+        "quote": "To remedy this fault it is necessary to increase the length of the pattern in the front at the waist line, adding a little to the sides and tapering off to nothing",
+        "ref": "shelf-homedressmakersg00blac.html#c3"
+      },
+      {
+        "q": "What is the rule for a skirt with an uneven number of gores?",
+        "choices": [
+          "Put the odd one in front",
+          "Make all gores equal",
+          "Make the front gore smaller",
+          "Skip the odd gore"
+        ],
+        "a": 0,
+        "why": "The text states that in all gored skirts with an uneven number, the odd one is placed in front.",
+        "quote": "In all gored skirts having an uneven number of gores, the odd one is placed in front.",
+        "ref": "shelf-homedressmakersg00blac.html#c3"
+      }
+    ],
+    "scene": {
+      "analogy": "Adjusting a chair to fit a person",
+      "map": [
+        [
+          "A tall person",
+          "Body shape"
+        ],
+        [
+          "A small person",
+          "Skirt pattern"
+        ],
+        [
+          "A chair",
+          "Seams"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A tall person",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A small person",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "A CHAIR",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "ADJUSTING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "It feels much more comfortable now.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A person sits down.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The chair is too big.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They adjust the height.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "The chair fits perfectly"
+            },
+            "right": {
+              "sub": "The chair fits perfectly"
+            }
+          }
+        },
+        {
+          "say": "They feel happy.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Move the seams to match your body shape.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Body shape",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Skirt pattern",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "SEAMS",
+              "size": 18
+            },
+            "act": {
+              "label": "MOVING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "The seams must be in the right place.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Study the lines of the individual.",
+        "Fold the tape to get half and quarter marks.",
+        "Adjust the pattern before cutting the cloth.",
+        "Use pins to find center points for uneven sides.",
+        "Add or subtract inches based on your specific body."
+      ],
+      "key": "Adjust the paper pattern to match your body measurements before cutting fabric.",
+      "decoys": [
+        {
+          "text": "Always choose the pattern size that matches your waist.",
+          "why": "The text says it is better to choose based on the hip measurement because the waist is easier to alter."
+        },
+        {
+          "text": "Make all changes to the fabric after it is cut.",
+          "why": "The text says to make all alterations in the pattern to avoid wasting material."
+        }
+      ],
+      "aha": "By adjusting the paper pattern first, you ensure the final garment fits perfectly without wasting any fabric."
+    },
+    "main": {
+      "role": "read",
+      "title": "How to select a skirt pattern",
+      "by": "Mrs. Judith Blackburn, 1919",
+      "url": "shelf-homedressmakersg00blac.html#c3",
+      "licence": "Public domain (US, by age). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

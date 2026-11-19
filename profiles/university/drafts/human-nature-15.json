@@ -1,0 +1,336 @@
+{
+  "slug": "human-nature",
+  "n": 15,
+  "title": "Empirically informed responses",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:50:44.385Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: What does Josh Green suggest is the right thing to",
+    "round 1: scene: thing is over 11 letters: Bright wrapper",
+    "round 1: scene: idea.thing is over 11 letters: Moral choice",
+    "round 2: scene: thing is over 11 letters: Bright sticker",
+    "round 2: scene: idea.thing is over 11 letters: Moral choice",
+    "round 3: scene: line is over 56 letters: I chose it because it looked the best, n",
+    "round 3: scene: idea.line is over 56 letters: The brain picks the easy visual cue over"
+  ],
+  "unit": {
+    "n": 15,
+    "title": "Empirically informed responses",
+    "needIt": "This helps you understand why your gut feelings might be wrong. It shows how your brain uses shortcuts that can lead to biased choices in big life decisions.",
+    "why": "People often feel that pushing a man to stop a train is wrong, but turning a track to save five people is right. Scientists found that our brains use different systems for these choices. One system uses logic while the other reacts with raw emotion.",
+    "outcome": "Identify when your moral gut feeling might be a shortcut rather than a logical conclusion.",
+    "reachesYou": "You see this when you make a quick choice at a store or judge a person's actions on social media. It happens whenever you feel a strong 'no' without being able to explain why.",
+    "do": "Next time you feel a strong moral judgment, stop and ask yourself if you are reacting to a fact or just a feeling.",
+    "chapters": [
+      {
+        "t": 1,
+        "title": "The Trolley Puzzle",
+        "words": "All right, so we left ourselves at the end of the last"
+      },
+      {
+        "t": 578,
+        "title": "The First Person Case",
+        "words": "So the case that Thomson presents us with is a case that"
+      },
+      {
+        "t": 1413,
+        "title": "Emotional vs Rational Brains",
+        "words": "So what happens in the bystander case, where we're trying to decide"
+      },
+      {
+        "t": 2408,
+        "title": "How Heuristics Work",
+        "words": "Heuristics are fast and frugal tools for dealing with the complexity of"
+      },
+      {
+        "t": 2860,
+        "title": "Moral Dumbfounding",
+        "words": "As you know from reading Sunstein's paper, people often respond to the"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the main difference in the bystander case versus the fat man case?",
+        "choices": [
+          "The number of people",
+          "The role of rights",
+          "The speed of the trolley",
+          "The color of the tracks"
+        ],
+        "a": 1,
+        "why": "Thompson suggests that the fat man case involves a violation of an individual's right.",
+        "quote": "The notion of a right is what prohibits killing the one in the fat man case.",
+        "t": 205
+      },
+      {
+        "q": "What is the main difference in the bystander case versus the fat man case?",
+        "choices": [
+          "The number of people",
+          "The moral mandate",
+          "The speed of the train",
+          "The color of the track"
+        ],
+        "a": 1,
+        "why": "The lecture explains that people see these as having different moral mandates.",
+        "quote": "The difference between our response to Fat Man and our response to Bystander, says Thompson in that 1985 article, is one that we should respect.",
+        "t": 278
+      },
+      {
+        "q": "What is a 'confabulation' in the context of human reasoning?",
+        "choices": [
+          "A type of memory",
+          "A physical injury",
+          "A post-facto rationalization",
+          "A logical proof"
+        ],
+        "a": 2,
+        "why": "Green notes that people often make up reasons for choices their brains already made.",
+        "quote": "So famously, people are more likely to choose an object that lies on the left-hand side of a visual array than an object that lies on the right-hand side of that visual array.",
+        "t": 1331
+      },
+      {
+        "q": "According to Josh Green, why do we often struggle to explain our moral feelings?",
+        "choices": [
+          "We are lying to ourselves",
+          "Our motivations are opaque to us",
+          "We lack enough information",
+          "We are not thinking at all"
+        ],
+        "a": 1,
+        "why": "Green argues that our brains often make decisions based on feelings we aren't even aware of.",
+        "quote": "So there are many cases, Green points out, where our motivations are opaque to us, where we think we're responding to one thing, but in fact we're responding to else.",
+        "t": 1388
+      },
+      {
+        "q": "What is a heuristic?",
+        "choices": [
+          "A slow process",
+          "A complex math problem",
+          "A moral rule",
+          "A fast and frugal tool"
+        ],
+        "a": 3,
+        "why": "Sunstein defines heuristics as tools for dealing with complex worlds quickly.",
+        "quote": "Heuristics are fast and frugal tools for dealing with the complexity of the world when we're faced with time sensitive decision-making tasks.",
+        "t": 2408
+      },
+      {
+        "q": "What does Sunstein say about the relationship between target and heuristic attributes?",
+        "choices": [
+          "They are usually the same",
+          "They are always different",
+          "They are never useful",
+          "They are only for non-moral cases"
+        ],
+        "a": 0,
+        "why": "He explains that these attributes usually match up, which is why the shortcuts work so well in daily life.",
+        "quote": "Target and heuristic attributes generally coincide. That's how the heuristic attributes came to be the ones which you're using as the markers of the target.",
+        "t": 2499
+      },
+      {
+        "q": "What is the 'availability heuristic'?",
+        "choices": [
+          "How much a thing costs",
+          "How many people are watching",
+          "How fast a train moves",
+          "How easy it is to think of cases"
+        ],
+        "a": 3,
+        "why": "It is the tendency to judge likelihood based on how easily examples come to mind.",
+        "quote": "That's a heuristic that says, look, I'm trying to figure out likely something is to happen, and here's a good way to determine how likely something is to happen. I think about how easy it is for me to think of cases where that did happen.",
+        "t": 2633
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "People react differently to the fat man and bystander cases.",
+        "The fat man case may trigger an emotional response.",
+        "The bystander case may trigger a rational response.",
+        "Our brains use shortcuts called heuristics.",
+        "We often make up reasons for our intuitive feelings."
+      ],
+      "key": "Our moral judgments are often driven by emotional shortcuts rather than pure logic.",
+      "decoys": [
+        {
+          "text": "We always make the most logical choice.",
+          "why": "The lecture says our emotions often override our rational processing."
+        },
+        {
+          "text": "The bystander case is always a logical choice.",
+          "why": "The lecture shows that people's reactions to it can be inconsistent and influenced by heuristics."
+        }
+      ],
+      "aha": "When we feel a strong moral 'no' without a reason, our brain might be using an emotional shortcut instead of a logical calculation."
+    },
+    "scene": {
+      "analogy": "A shopper chooses a snack based on bright colors instead of nutrition",
+      "map": [
+        [
+          "A hungry shopper",
+          "Your logic"
+        ],
+        [
+          "A healthy diet",
+          "Your goal"
+        ],
+        [
+          "Neon snack",
+          "Emotion"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A hungry shopper",
+          "color": "blue",
+          "o": 0,
+          "size": 18
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A healthy diet",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "NEON SNACK",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "GRABS",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "I thought it would be good but it was just sugar.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A person looks at a shelf of snacks.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They grab the brightest bag.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They eat it quickly.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Feels full for a moment"
+            },
+            "right": {
+              "sub": "Feels regretful later"
+            }
+          }
+        },
+        {
+          "say": "They feel a sudden crash.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Emotional shortcuts often override your logical thinking.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Your logic",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Your goal",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "EMOTION",
+              "size": 18
+            },
+            "act": {
+              "label": "SKIPS",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Your gut feeling took the lead over your clear plan.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 15: Empirically informed responses",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "15. Empirically-informed Responses.mp4",
+      "seconds": 2978,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  }
+}

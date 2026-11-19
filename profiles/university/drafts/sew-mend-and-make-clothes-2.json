@@ -1,0 +1,306 @@
+{
+  "slug": "sew-mend-and-make-clothes",
+  "n": 2,
+  "title": "Measurements",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:35:40.856Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: thing is over 11 letters: Measuring Tape",
+    "round 1: scene: idea.thing is over 11 letters: Measuring Tape"
+  ],
+  "unit": {
+    "n": 2,
+    "title": "Measurements",
+    "reading": {
+      "shelf": "homedressmakersg00blac",
+      "chapter": 2
+    },
+    "needIt": "Knowing your measurements helps you buy clothes that actually fit your body. It stops you from wasting money on items that are too tight or too loose.",
+    "why": "A dressmaker once tried to make a coat for a friend who did not know their size. The coat was so tight the friend could not move her arms. They learned that taking a little extra space is better because it is easier to cut away extra fabric than to add it back.",
+    "outcome": "Take accurate body measurements to create a custom clothing pattern.",
+    "reachesYou": "You see this when you try on clothes at a store and they feel uncomfortable. You also see it when you look at a size chart on a shopping website.",
+    "do": "Use a tape measure to find your waist size today. Write it down so you have a record for next time.",
+    "quiz": [
+      {
+        "q": "What is the best way to handle a measurement that is slightly too large?",
+        "choices": [
+          "It is easier to trim off.",
+          "It is impossible to fix.",
+          "You must add more fabric.",
+          "It makes the garment look bad."
+        ],
+        "a": 0,
+        "why": "The text says it is easier to trim off extra fabric than to piece on more.",
+        "quote": "It is better, however, to take measurements a little loose rather than too snugly, as it is easier trimming off than piecing on.",
+        "ref": "shelf-homedressmakersg00blac.html#c2"
+      },
+      {
+        "q": "Where should you measure the base of the neck?",
+        "choices": [
+          "At the chin",
+          "At the collarbone",
+          "At the throat",
+          "Where it joins the body"
+        ],
+        "a": 3,
+        "why": "The text specifies the line where the neck joins the body.",
+        "quote": "Measure around the base of the neck; that is, at the line where it joins the body.",
+        "ref": "shelf-homedressmakersg00blac.html#c2"
+      },
+      {
+        "q": "Where should you measure the bust line?",
+        "choices": [
+          "Around the largest part of the bust.",
+          "Only at the armpit.",
+          "At the waist line.",
+          "At the tip of the shoulder."
+        ],
+        "a": 0,
+        "why": "The instructions state to measure around the largest part of the bust.",
+        "quote": "Place the tape measure around the largest part of the bust, close up under the arm and across the shoulder blades, in a straight line to the center of the back.",
+        "ref": "shelf-homedressmakersg00blac.html#c2"
+      },
+      {
+        "q": "How should you hold the tape measure when taking the bust line?",
+        "choices": [
+          "Hold it with your right hand only.",
+          "Let it hang loose.",
+          "Hold it with your left hand only.",
+          "Hold the union firmly between thumb and forefinger."
+        ],
+        "a": 3,
+        "why": "The text explains holding the union of the tape firmly between the forefinger and thumb.",
+        "quote": "Standing directly in the rear of your model, hold the union of the tape measure, that is, as you bring it together, firmly between the forefinger and thumb of the left hand",
+        "ref": "shelf-homedressmakersg00blac.html#c2"
+      },
+      {
+        "q": "What should you do when measuring the elbow?",
+        "choices": [
+          "Bend the arm slightly.",
+          "Keep the arm perfectly straight.",
+          "Hold the arm behind your back.",
+          "Measure only the wrist."
+        ],
+        "a": 0,
+        "why": "The text says to bend the arm slightly to get a measurement greater than a straight arm.",
+        "quote": "Bend the arm slightly and take the measurement around the elbow. It will be noted that this measurement must be greater than if the arm had been held straight.",
+        "ref": "shelf-homedressmakersg00blac.html#c2"
+      },
+      {
+        "q": "What should you do when measuring the hand?",
+        "choices": [
+          "Measure the palm",
+          "Hold the thumb straight inside",
+          "Measure the fingers",
+          "Measure the wrist"
+        ],
+        "a": 1,
+        "why": "The instructions say to hold the thumb straight inside of the hand.",
+        "quote": "Now holding the thumb straight inside of the hand, measure around the largest part of the hand.",
+        "ref": "shelf-homedressmakersg00blac.html#c2"
+      },
+      {
+        "q": "How can you take your own skirt length measurement?",
+        "choices": [
+          "By using a ruler on the floor.",
+          "By guessing based on height.",
+          "By fastening a weight to your tape measure.",
+          "By measuring your hips only."
+        ],
+        "a": 2,
+        "why": "The text suggests using a weight on the tape while standing erect.",
+        "quote": "By fastening a weight to your tape measure, while standing erect, you may easily take your own skirt length measurement, from the waist line to the floor.",
+        "ref": "shelf-homedressmakersg00blac.html#c2"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Take measurements correctly first.",
+        "Apply them to your pattern.",
+        "Alter your foundation to fit you.",
+        "Measurements must be accurate.",
+        "Use judgment when taking them."
+      ],
+      "key": "Accurate measurements are the foundation of a well fitting garment.",
+      "decoys": [
+        {
+          "text": "Take measurements as snugly as possible.",
+          "why": "The text says it is better to take them a little loose because it is easier to trim off."
+        },
+        {
+          "text": "Measurements do not need to be accurate if you have good judgment.",
+          "why": "The text says measurements must be accurate and judgment must be used."
+        }
+      ],
+      "aha": "Correct measurements remove the annoyances of dressmaking by ensuring the garment fits your specific body shape."
+    },
+    "scene": {
+      "analogy": "A tailor adjusting a loose coat",
+      "map": [
+        [
+          "Loose coat",
+          "Loose measure"
+        ],
+        [
+          "Perfect fit",
+          "Tight fit"
+        ],
+        [
+          "Scissors",
+          "Trimming"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Loose coat",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Perfect fit",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "SCISSORS",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "TRIM",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "It is easier to take away than to add back.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A coat is too big.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The tailor cuts the fabric.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The coat fits perfectly.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Coat fits well"
+            },
+            "right": {
+              "sub": "Waste is gone"
+            }
+          }
+        },
+        {
+          "say": "The extra is gone.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Take measurements slightly loose to allow for easy trimming.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Loose measure",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Tight fit",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "TRIMMING",
+              "size": 18
+            },
+            "act": {
+              "label": "CUT",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Loose is better than too snug.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Measurements",
+      "by": "Mrs. Judith Blackburn, 1919",
+      "url": "shelf-homedressmakersg00blac.html#c2",
+      "licence": "Public domain (US, by age). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

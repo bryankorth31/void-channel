@@ -1,0 +1,290 @@
+{
+  "slug": "sew-mend-and-make-clothes",
+  "n": 9,
+  "title": "Cutting and making the tailored suit",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:38:58.279Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 9,
+    "title": "Cutting and making the tailored suit",
+    "reading": {
+      "shelf": "homedressmakersg00blac",
+      "chapter": 9
+    },
+    "needIt": "Knowing how to cut and shape a suit helps you understand how clothes are built to fit a body. It helps you make your own clothes fit better or fix expensive items instead of buying new ones.",
+    "why": "A tailor must balance a coat so it sits perfectly on the shoulders without bulging. This lesson shows how a flat piece of cloth becomes a structured garment through careful cutting and internal support.",
+    "outcome": "Construct a structured tailored suit coat with proper canvas support.",
+    "reachesYou": "You see this when you try on a suit at a shop and feel how the shoulders sit. You also see it when you notice a cheap jacket looks flat because it lacks internal structure.",
+    "do": "Check the grain of a piece of fabric in your closet to see which way the threads run.",
+    "quiz": [
+      {
+        "q": "What is the rule for the armseye measurement?",
+        "choices": [
+          "Make it smaller",
+          "Make it one inch larger",
+          "Keep it the same",
+          "Make it double"
+        ],
+        "a": 1,
+        "why": "The instructions state the armseye must be at least one inch larger than the measurement taken.",
+        "quote": "The armseye of a coat must be at least one inch larger than the measurement taken as the armseye for a suit coat must be larger than the armseye of a dress.",
+        "ref": "shelf-homedressmakersg00blac.html#c9"
+      },
+      {
+        "q": "What should you do with the pattern before trying it on?",
+        "choices": [
+          "Cut it out",
+          "Pin it together",
+          "Wash it",
+          "Color it"
+        ],
+        "a": 1,
+        "why": "The text says to pin the pattern together with all seams on the outside.",
+        "quote": "When the alterations have been made pin the pattern together with all seams on the outside and the seams pinned to allow all the seam allowance given on the pattern and shown by the perforated lines.",
+        "ref": "shelf-homedressmakersg00blac.html#c9"
+      },
+      {
+        "q": "What should you do before cutting the coat from the cloth?",
+        "choices": [
+          "Wash the cloth",
+          "Paint the cloth",
+          "Fold the cloth",
+          "Sponged and shrunk"
+        ],
+        "a": 3,
+        "why": "The text says the material must be sponged and shrunk before cutting.",
+        "quote": "Before the coat is cut from the cloth be sure the material is sponged and shrunk.",
+        "ref": "shelf-homedressmakersg00blac.html#c9"
+      },
+      {
+        "q": "What is the 'woof' of the cloth?",
+        "choices": [
+          "Threads crossing the warp",
+          "Lengthwise threads",
+          "The edge of the cloth",
+          "The thickness of the cloth"
+        ],
+        "a": 0,
+        "why": "The text defines the woof as the threads crossing the warp.",
+        "quote": "The lengthwise threads of the cloth are the warp and the threads crossing the warp are the woof.",
+        "ref": "shelf-homedressmakersg00blac.html#c9"
+      },
+      {
+        "q": "What is the first part of the garment you should cut?",
+        "choices": [
+          "The skirt",
+          "The sleeves",
+          "The collar",
+          "The lapel"
+        ],
+        "a": 0,
+        "why": "The text says it is best to cut the skirt first because it is the largest.",
+        "quote": "When cutting out the garment it is best to cut the skirt first as the sections of the skirt are the largest and often, where there is no \"up or down\" to the cloth, the coat sections can be fitted in, making the cutting more economical.",
+        "ref": "shelf-homedressmakersg00blac.html#c9"
+      },
+      {
+        "q": "What should you do with the canvas before cutting it?",
+        "choices": [
+          "Dry it",
+          "Shrink it",
+          "Paint it",
+          "Fold it"
+        ],
+        "a": 1,
+        "why": "The text states the canvas must be shrunken before it is cut.",
+        "quote": "The canvas must be shrunken before it is cut.",
+        "ref": "shelf-homedressmakersg00blac.html#c9"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "The armseye must be one inch larger.",
+        "The pattern must be pinned together.",
+        "The material must be sponged and shrunk.",
+        "The canvas must be shrunken.",
+        "The cloth must be basted to the canvas."
+      ],
+      "key": "Proper preparation and internal support ensure a perfectly balanced suit.",
+      "decoys": [
+        {
+          "text": "Sew the canvas onto the cloth first.",
+          "why": "The text warns that basting canvas onto cloth will cause puckering."
+        },
+        {
+          "text": "Cut the collar before the coat fits.",
+          "why": "The text says the under collar should not be cut until the neck fits perfectly."
+        }
+      ],
+      "aha": "Preparation of the fabric and canvas creates the structure for the final garment."
+    },
+    "scene": {
+      "analogy": "A house frame and its walls",
+      "map": [
+        [
+          "Wooden frame",
+          "Internal canvas"
+        ],
+        [
+          "Brick walls",
+          "Outer cloth"
+        ],
+        [
+          "Support",
+          "Structure"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Wooden frame",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Brick walls",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "SUPPORT",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "HOLD",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "The inside structure makes the outside look good.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A house needs a frame.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "Builders add the walls.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The house stays strong.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "House stands tall"
+            },
+            "right": {
+              "sub": "Walls stay straight"
+            }
+          }
+        },
+        {
+          "say": "The structure is key.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Internal canvas provides the shape for the outer cloth.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Internal canvas",
+              "size": 18,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Outer cloth",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "STRUCTURE",
+              "size": 14
+            },
+            "act": {
+              "label": "SUPPORT",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Internal support gives the coat its shape.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Cutting and making the tailored suit",
+      "by": "Mrs. Judith Blackburn, 1919",
+      "url": "shelf-homedressmakersg00blac.html#c9",
+      "licence": "Public domain (US, by age). The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}
