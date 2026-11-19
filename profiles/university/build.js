@@ -475,7 +475,9 @@ const loaded = courses.map((f) => JSON.parse(fs.readFileSync(path.join(DIR, 'cou
   .filter((c) => c.units.length && (!LIVE || LIVE_SLUGS.has(c.slug)));
 // The lab engine and its physics library go in the public copy only when a live course has a live lab.
 if (loaded.some((c) => c.units.some(shipsLab))) {
-  for (const f of fs.readdirSync(DIR).filter((f) => /^lab(-[a-z]+)?\.js$/.test(f))) fs.copyFileSync(path.join(DIR, f), path.join(OUT, f));
+  // Only the benches a shipped lab uses: a draft bench never rides along in the public copy.
+  const used = new Set(loaded.flatMap((c) => c.units.filter(shipsLab).map((u) => 'lab-' + u.lab.bench + '.js')).concat('lab.js'));
+  for (const f of fs.readdirSync(DIR).filter((f) => used.has(f))) fs.copyFileSync(path.join(DIR, f), path.join(OUT, f));
   for (const f of ['planck.min.js', 'planck-LICENSE.txt']) fs.copyFileSync(path.join(DIR, 'vendor', f), path.join(OUT, f));
 }
 MECH = loaded.find((c) => c.shelf === 'supplement') || null;
