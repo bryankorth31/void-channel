@@ -162,3 +162,6 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   still play; they are the lesson). Type is now a setting like the look: `"type"` in profile.json (inter, hyper,
   literata), with a Type picker beside the Look picker in the preview. The public copy loads only the faces it
   uses. Left for Bryan: pick the type. Nothing deployed.
+- 19 Nov 2026: Bryan picked the type: "Atkinson". profile.json `"type": "hyper"` (Atkinson Hyperlegible for
+  reading, Bricolage Grotesque for headings); the preview and the public copy are both built with it. The live
+  site changes at his next deploy.
