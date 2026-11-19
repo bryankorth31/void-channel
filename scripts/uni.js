@@ -49,7 +49,7 @@ const [cmd, ...args] = process.argv.slice(2);
   } else if (cmd === 'rewrite') {
     console.log(uni.rewriteBrief(args[0], args[1]));
   } else if (cmd === 'listen') {
-    const r = uni.listen(args[0]);
+    const r = uni.hearLectures(args[0]);
     console.log(r.queued ? 'Listened to ' + r.queued + ' lectures.' : 'Every lecture in this course has been heard.');
   } else if (cmd === 'times') {
     const r = uni.retime(args[0]);

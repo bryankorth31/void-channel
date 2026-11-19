@@ -361,7 +361,7 @@ function retime(slug) {
 }
 
 // Listen to every lecture a course plays that has not been heard yet.
-function listen(slug, run = true) {
+function hearLectures(slug, run = true) {
   if (!SLUG_OK.test(String(slug))) throw new Error('Not a course slug: ' + String(slug).slice(0, 40));
   const c = readJson(courseFile(slug), null);
   if (!c) throw new Error('No course ' + slug);
@@ -862,4 +862,4 @@ function shelfBooks() {
     .map((b) => ({ ...b, live: live.has(b.source), written: b.chapters.filter((c) => c.passages.some((p) => p.plain)).length }));
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, listen, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures };
+module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures };
