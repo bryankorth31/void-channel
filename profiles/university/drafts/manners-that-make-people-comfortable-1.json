@@ -1,7 +1,7 @@
 {
   "slug": "manners-that-make-people-comfortable",
   "n": 1,
-  "title": "Introductions and the correct form",
+  "title": "How to introduce people",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:40:18.061Z",
   "ok": true,
@@ -13,12 +13,12 @@
   ],
   "unit": {
     "n": 1,
-    "title": "Introductions and the correct form",
+    "title": "How to introduce people",
     "reading": {
       "shelf": "post-etiquette-1922",
       "chapter": 2
     },
-    "needIt": "Knowing how to introduce people helps you avoid awkward silences and makes others feel respected. It helps you navigate job interviews and social parties without feeling nervous.",
+    "needIt": "At a job, a wedding or a dinner, someone has to say who is who. Doing it smoothly makes two strangers comfortable in ten seconds.",
     "why": "Imagine you are at a party and see a friend standing alone with a stranger. If you jump in and introduce them correctly, you make your friend feel included and the stranger feel welcomed. It turns a lonely moment into a comfortable conversation.",
     "outcome": "Navigate social introductions with confidence and grace.",
     "reachesYou": "You meet this when meeting a new coworker at a desk or meeting your friend's parents for the first time. It happens every time you are the bridge between two people who do not know each other.",
@@ -139,76 +139,87 @@
       "aha": "By following the correct order and using proper titles, you remove social friction and make others feel comfortable."
     },
     "scene": {
-      "analogy": "A bridge connecting two islands",
+      "analogy": "Passing a dish at the table",
+      "layout": "steps",
       "map": [
         [
-          "Person A",
-          "Person A"
+          "Offer it",
+          "Name the elder"
         ],
         [
-          "Person B",
-          "Person B"
+          "Say what it is",
+          "Then the other"
         ],
         [
-          "The bridge",
-          "The bridge"
+          "Then let go",
+          "Let them talk"
         ]
       ],
       "actors": [
         {
-          "id": "left",
+          "id": "s0",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
+          "x": 30,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "Person A",
+          "label": "Offer it",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "right",
+          "id": "s1",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
+          "x": 290,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "Person B",
+          "label": "Say what it is",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 17
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "THE BRIDGE",
-          "color": "gold",
+          "id": "a1",
+          "type": "arrow",
+          "x": 256,
+          "y": 140,
+          "x2": 284,
+          "y2": 140,
+          "color": "dim",
           "o": 0,
-          "s": 0.4,
-          "size": 14
+          "draw": 0
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "CONNECT",
-          "color": "fg",
+          "id": "s2",
+          "type": "card",
+          "x": 550,
+          "y": 90,
+          "w": 220,
+          "h": 100,
+          "label": "Then let go",
+          "color": "blue",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 20
+        },
+        {
+          "id": "a2",
+          "type": "arrow",
+          "x": 516,
+          "y": 140,
+          "x2": 544,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
-          "label": "Now you can talk freely.",
+          "y": 270,
+          "label": "The honored person is served first.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -216,79 +227,68 @@
       ],
       "beats": [
         {
-          "say": "Two people stand apart.",
-          "dur": 2.4,
-          "set": {
-            "left": {
-              "o": 1
-            },
-            "right": {
-              "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
-            }
-          }
-        },
-        {
-          "say": "A bridge appears between them.",
-          "dur": 2.4,
-          "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
-            }
-          }
-        },
-        {
-          "say": "They walk across to meet.",
+          "say": "You offer the dish to the guest first.",
           "dur": 2.6,
           "set": {
-            "left": {
-              "sub": "Both reach each other"
-            },
-            "right": {
-              "sub": "Both feel safe"
+            "s0": {
+              "o": 1,
+              "sub": "to the guest first"
             }
           }
         },
         {
-          "say": "They feel connected and happy.",
+          "say": "You say what it is.",
           "dur": 2.6,
           "set": {
+            "s1": {
+              "o": 1,
+              "sub": "so they know"
+            },
+            "a1": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "Then you let them take over.",
+          "dur": 2.6,
+          "set": {
+            "s2": {
+              "o": 1,
+              "sub": "and step back"
+            },
+            "a2": {
+              "o": 1,
+              "draw": 1
+            },
             "line": {
               "o": 1
             }
           }
         },
         {
-          "say": "A good introduction is a bridge for others.",
-          "dur": 3.4,
+          "say": "An introduction shows respect by who is named first.",
+          "dur": 3.6,
           "set": {
-            "left": {
-              "label": "Person A",
-              "size": 22,
-              "color": "gold"
-            },
-            "right": {
-              "label": "Person B",
+            "line": {
+              "label": "The younger is presented to the older.",
               "size": 22,
               "color": "green"
             },
-            "thing": {
-              "label": "THE BRIDGE",
-              "size": 14
+            "s0": {
+              "label": "Name the elder",
+              "size": 17,
+              "color": "gold"
             },
-            "act": {
-              "label": "CONNECT",
-              "size": 18,
-              "color": "pink"
+            "s1": {
+              "label": "Then the other",
+              "size": 17,
+              "color": "gold"
             },
-            "line": {
-              "label": "A good introduction is a bridge for others.",
-              "size": 22,
+            "s2": {
+              "label": "Let them talk",
+              "size": 20,
               "color": "green"
             }
           }
@@ -303,5 +303,6 @@
       "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

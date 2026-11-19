@@ -1,7 +1,7 @@
 {
   "slug": "grow-your-own-vegetables",
   "n": 11,
-  "title": "Small gardens",
+  "title": "No yard? Grow something anyway",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:10:38.857Z",
   "ok": true,
@@ -12,12 +12,12 @@
   ],
   "unit": {
     "n": 11,
-    "title": "Small gardens",
+    "title": "No yard? Grow something anyway",
     "reading": {
       "shelf": "abc-vegetable-gardening-1916",
       "chapter": 11
     },
-    "needIt": "You can start a garden even if you think your space is too small. This helps you turn a messy corner into a useful spot for food or beauty.",
+    "needIt": "A few pots on a step still give you fresh food and the habit of growing it. Waiting for a big garden means growing nothing.",
     "why": "Many people never start a garden because they think they need a huge field. This story shows that a tiny space with a lot of love is better than a big field that is ignored. Small efforts at home are the best way to make a big change.",
     "outcome": "Start a small garden in a tiny space.",
     "reachesYou": "You see small patches of dirt or weeds in your backyard or near your front door. You might also see small pots of herbs on a kitchen window sill.",
@@ -125,19 +125,19 @@
       "aha": "Small scale gardening is better than no gardening because attention and small successes lead to growth."
     },
     "scene": {
-      "analogy": "A small snack on a plate",
+      "analogy": "One shelf of books is still a library",
       "map": [
         [
-          "A hungry person",
-          "A small space"
+          "No books",
+          "No garden"
         ],
         [
-          "A full meal",
-          "A big garden"
+          "One shelf",
+          "A few plants"
         ],
         [
-          "A cracker",
-          "One plant"
+          "reading",
+          "fresh food"
         ]
       ],
       "actors": [
@@ -148,10 +148,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A hungry person",
+          "label": "No books",
           "color": "blue",
           "o": 0,
-          "size": 18
+          "size": 22
         },
         {
           "id": "right",
@@ -160,7 +160,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A full meal",
+          "label": "One shelf",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -171,11 +171,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A CRACKER",
+          "label": "READING",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 14
+          "size": 18
         },
         {
           "id": "act",
@@ -183,7 +183,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "EAT",
+          "label": "START",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -194,7 +194,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "A small bite is better than no food at all.",
+          "label": "A little, well used, beats none.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -202,7 +202,7 @@
       ],
       "beats": [
         {
-          "say": "A person looks at a big feast.",
+          "say": "You have no room for a library.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -218,7 +218,7 @@
           }
         },
         {
-          "say": "They only have a small cracker.",
+          "say": "You could still start with one shelf.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -229,19 +229,19 @@
           }
         },
         {
-          "say": "They eat the cracker.",
+          "say": "No shelf, no reading.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Slightly full"
+              "sub": "nothing to read"
             },
             "right": {
-              "sub": "Still hungry"
+              "sub": "read every one"
             }
           }
         },
         {
-          "say": "They feel a little better.",
+          "say": "One shelf, and every book gets read.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -250,30 +250,30 @@
           }
         },
         {
-          "say": "Small efforts lead to real results.",
+          "say": "A tiny garden gets more care per plant, and often does better.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "A small space",
+              "label": "No garden",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "A big garden",
+              "label": "A few plants",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "ONE PLANT",
+              "label": "FRESH FOOD",
               "size": 14
             },
             "act": {
-              "label": "GROW",
+              "label": "TEND",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "One plant is better than no garden at all.",
+              "label": "A few plants are better than none.",
               "size": 22,
               "color": "green"
             }
@@ -289,5 +289,6 @@
       "licence": "Public domain. The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

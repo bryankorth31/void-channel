@@ -1,7 +1,7 @@
 {
   "slug": "grow-your-own-vegetables",
   "n": 9,
-  "title": "Small fruits and their culture",
+  "title": "Berries in a small yard",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:09:00.360Z",
   "ok": true,
@@ -9,12 +9,12 @@
   "notes": [],
   "unit": {
     "n": 9,
-    "title": "Small fruits and their culture",
+    "title": "Berries in a small yard",
     "reading": {
       "shelf": "abc-vegetable-gardening-1916",
       "chapter": 9
     },
-    "needIt": "Growing small fruits lets you enjoy fresh snacks like berries and currants in your own backyard. It helps you turn a small, unused corner of your yard into a productive food source.",
+    "needIt": "Berry bushes cost little, take a corner of a yard, and give fruit for years. They are easier than most people think.",
     "why": "Many people think growing berries is too hard or requires expert skills. This lesson shows that with a simple system and a bit of care, anyone can grow delicious fruit at home.",
     "outcome": "Grow a successful small-fruit garden using simple methods.",
     "reachesYou": "You see these berries at the grocery store or in your neighbor's yard. You might also see them in photos of beautiful home gardens.",
@@ -122,76 +122,87 @@
       "aha": "By following a simple system like the one-crop method, anyone can successfully grow a berry garden."
     },
     "scene": {
-      "analogy": "A student learning a new hobby",
+      "analogy": "Keeping a houseplant alive",
+      "layout": "steps",
       "map": [
         [
-          "A beginner",
-          "A beginner"
+          "Pick a spot",
+          "Plant berries"
         ],
         [
-          "A master",
-          "A master"
+          "Weekly care",
+          "Prune and feed"
         ],
         [
-          "A book",
-          "A book"
+          "Fruit each year",
+          "Pick for years"
         ]
       ],
       "actors": [
         {
-          "id": "left",
+          "id": "s0",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
+          "x": 30,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "A beginner",
+          "label": "Pick a spot",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "right",
+          "id": "s1",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
+          "x": 290,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "A master",
+          "label": "Weekly care",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "A BOOK",
-          "color": "gold",
+          "id": "a1",
+          "type": "arrow",
+          "x": 256,
+          "y": 140,
+          "x2": 284,
+          "y2": 140,
+          "color": "dim",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "draw": 0
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "READING",
-          "color": "fg",
+          "id": "s2",
+          "type": "card",
+          "x": 550,
+          "y": 90,
+          "w": 220,
+          "h": 100,
+          "label": "Fruit each year",
+          "color": "blue",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 17
+        },
+        {
+          "id": "a2",
+          "type": "arrow",
+          "x": 516,
+          "y": 140,
+          "x2": 544,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
-          "label": "I can do this too if I just start.",
+          "y": 270,
+          "label": "Simple care, kept up.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -199,79 +210,68 @@
       ],
       "beats": [
         {
-          "say": "A student looks at a thick book.",
-          "dur": 2.4,
-          "set": {
-            "left": {
-              "o": 1
-            },
-            "right": {
-              "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
-            }
-          }
-        },
-        {
-          "say": "They start reading the first page.",
-          "dur": 2.4,
-          "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
-            }
-          }
-        },
-        {
-          "say": "They understand the first step.",
+          "say": "You set the plant where it gets sun.",
           "dur": 2.6,
           "set": {
-            "left": {
-              "sub": "Feels capable"
-            },
-            "right": {
-              "sub": "Feels confident"
+            "s0": {
+              "o": 1,
+              "sub": "sun and good soil"
             }
           }
         },
         {
-          "say": "They feel ready to try it.",
+          "say": "Each week you give it the same simple care.",
           "dur": 2.6,
           "set": {
+            "s1": {
+              "o": 1,
+              "sub": "weed, trim, feed"
+            },
+            "a1": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "It pays you back, year after year.",
+          "dur": 2.6,
+          "set": {
+            "s2": {
+              "o": 1,
+              "sub": "for years to come"
+            },
+            "a2": {
+              "o": 1,
+              "draw": 1
+            },
             "line": {
               "o": 1
             }
           }
         },
         {
-          "say": "Anyone can learn a complex skill by starting with simple steps.",
-          "dur": 3.4,
+          "say": "Small fruits need little space and steady, simple care.",
+          "dur": 3.6,
           "set": {
-            "left": {
-              "label": "A beginner",
-              "size": 22,
-              "color": "gold"
-            },
-            "right": {
-              "label": "A master",
+            "line": {
+              "label": "Berries are not too hard for a beginner.",
               "size": 22,
               "color": "green"
             },
-            "thing": {
-              "label": "A BOOK",
-              "size": 18
+            "s0": {
+              "label": "Plant berries",
+              "size": 20,
+              "color": "gold"
             },
-            "act": {
-              "label": "READING",
-              "size": 18,
-              "color": "pink"
+            "s1": {
+              "label": "Prune and feed",
+              "size": 17,
+              "color": "gold"
             },
-            "line": {
-              "label": "Simple steps make hard tasks easy.",
-              "size": 22,
+            "s2": {
+              "label": "Pick for years",
+              "size": 17,
               "color": "green"
             }
           }
@@ -286,5 +286,6 @@
       "licence": "Public domain. The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

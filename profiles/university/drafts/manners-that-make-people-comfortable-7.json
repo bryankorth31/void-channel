@@ -1,7 +1,7 @@
 {
   "slug": "manners-that-make-people-comfortable",
   "n": 7,
-  "title": "The kindergarten of etiquette",
+  "title": "Table manners start young",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:45:10.300Z",
   "ok": true,
@@ -12,12 +12,12 @@
   ],
   "unit": {
     "n": 7,
-    "title": "The kindergarten of etiquette",
+    "title": "Table manners start young",
     "reading": {
       "shelf": "post-etiquette-1922",
       "chapter": 34
     },
-    "needIt": "Good manners help you fit in and make others feel relaxed around you. It helps you avoid making a mess or being annoying at a dinner party or a job interview.",
+    "needIt": "A child who learns to eat neatly at three never has to think about it at thirty. The same is true of most habits.",
     "why": "A child learns to use a spoon by holding it like a bar. If they learn the right way early, they do not have to break bad habits later. It is about building a foundation of patience and steady practice.",
     "outcome": "Practice using tools and your body to keep a shared space neat.",
     "reachesYou": "You see this when you eat with friends or family at a table. You feel it when you decide whether to make a mess or keep things tidy for others.",
@@ -116,19 +116,19 @@
       }
     ],
     "scene": {
-      "analogy": "A child learning to hold a spoon",
+      "analogy": "Wet cement and set cement",
       "map": [
         [
-          "A small child",
-          "A child"
+          "Wet cement",
+          "Young child"
         ],
         [
-          "A dining table",
-          "A dining table"
+          "Set cement",
+          "Grown habit"
         ],
         [
-          "A spoon",
-          "A spoon"
+          "a footprint",
+          "table ways"
         ]
       ],
       "actors": [
@@ -139,7 +139,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A small child",
+          "label": "Wet cement",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -151,7 +151,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A dining table",
+          "label": "Set cement",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -162,11 +162,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A SPOON",
+          "label": "A FOOTPRINT",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "act",
@@ -174,7 +174,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "EATING",
+          "label": "PRESS",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -185,7 +185,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I can eat my food without making a mess.",
+          "label": "Shape it while it is soft.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -193,7 +193,7 @@
       ],
       "beats": [
         {
-          "say": "A child sits at a table.",
+          "say": "A footprint in cement.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -209,7 +209,7 @@
           }
         },
         {
-          "say": "They pick up a spoon.",
+          "say": "When can you fix it?",
           "dur": 2.4,
           "set": {
             "act": {
@@ -220,19 +220,19 @@
           }
         },
         {
-          "say": "They eat a small bite.",
+          "say": "Wet, it smooths out with a hand.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "The child stays clean"
+              "sub": "smooths out in a second"
             },
             "right": {
-              "sub": "The table stays neat"
+              "sub": "needs a hammer"
             }
           }
         },
         {
-          "say": "They feel proud and calm.",
+          "say": "Set, it takes a hammer.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -241,30 +241,30 @@
           }
         },
         {
-          "say": "Good manners start with small, steady movements.",
+          "say": "Teach table manners young. Later, breaking a habit is hard work.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "A child",
+              "label": "Young child",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "A dining table",
+              "label": "Grown habit",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "A SPOON",
-              "size": 18
+              "label": "TABLE WAYS",
+              "size": 14
             },
             "act": {
-              "label": "EATING",
+              "label": "TEACH",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Early habits prevent messy mistakes later.",
+              "label": "A habit taught early is easy to keep.",
               "size": 22,
               "color": "green"
             }
@@ -302,5 +302,6 @@
       "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

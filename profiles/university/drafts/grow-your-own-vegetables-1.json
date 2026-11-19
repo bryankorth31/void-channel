@@ -1,7 +1,7 @@
 {
   "slug": "grow-your-own-vegetables",
   "n": 1,
-  "title": "Foreword",
+  "title": "You can grow food, even in a small yard",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:01:54.819Z",
   "ok": true,
@@ -12,12 +12,12 @@
   ],
   "unit": {
     "n": 1,
-    "title": "Foreword",
+    "title": "You can grow food, even in a small yard",
     "reading": {
       "shelf": "abc-vegetable-gardening-1916",
       "chapter": 1
     },
-    "needIt": "Growing your own food helps you save money and eat fresher meals. It turns a small backyard into a source of healthy food for your family.",
+    "needIt": "A plot 25 feet on each side can put fresh vegetables on a family table all summer. You need no training, only one season of trying.",
     "why": "Many people think they need a huge farm or special skills to start a garden. This story shows that anyone can learn in just one season using simple tools. You can turn a tiny space into a productive garden that feeds your home.",
     "outcome": "Start a small vegetable garden in your own backyard or yard.",
     "reachesYou": "You see vegetables at the grocery store every week. You might also see neighbors with green patches of grass or dirt in their yards.",
@@ -138,19 +138,19 @@
       "aha": "Small spaces and simple tools turn a beginner into a successful gardener in just one season."
     },
     "scene": {
-      "analogy": "A small kitchen making a big feast",
+      "analogy": "A small pan can still cook dinner for four",
       "map": [
         [
-          "Small kitchen",
-          "Small space"
+          "Big kitchen",
+          "Big farm"
         ],
         [
-          "Big feast",
-          "Big harvest"
+          "One small pan",
+          "25 foot plot"
         ],
         [
-          "Good recipe",
-          "Smart plan"
+          "dinner",
+          "food"
         ]
       ],
       "actors": [
@@ -161,7 +161,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Small kitchen",
+          "label": "Big kitchen",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -173,7 +173,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Big feast",
+          "label": "One small pan",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -184,11 +184,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "GOOD RECIPE",
+          "label": "DINNER",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 14
+          "size": 18
         },
         {
           "id": "act",
@@ -196,7 +196,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "COOKING",
+          "label": "PLAN",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -207,15 +207,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "You do not need a palace to cook a great meal.",
+          "label": "It was never about the size.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A tiny kitchen sits empty.",
+          "say": "Dinner for four. Do you need a big kitchen?",
           "dur": 2.4,
           "set": {
             "left": {
@@ -231,7 +231,7 @@
           }
         },
         {
-          "say": "A cook follows a plan.",
+          "say": "With one pan, you plan what cooks when.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -242,19 +242,19 @@
           }
         },
         {
-          "say": "A huge feast is served.",
+          "say": "One dish after another, the pan feeds everyone.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Full plates"
+              "sub": "not needed"
             },
             "right": {
-              "sub": "Happy family"
+              "sub": "feeds four, in turns"
             }
           }
         },
         {
-          "say": "The family feels full.",
+          "say": "Small, but never empty.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -263,30 +263,30 @@
           }
         },
         {
-          "say": "Smart planning makes a small garden very productive.",
+          "say": "A small garden kept planted grows a family's summer food.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Small space",
+              "label": "Big farm",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Big harvest",
+              "label": "25 foot plot",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "SMART PLAN",
-              "size": 14
+              "label": "FOOD",
+              "size": 18
             },
             "act": {
-              "label": "GROWING",
-              "size": 18,
+              "label": "SUCCESSION",
+              "size": 14,
               "color": "pink"
             },
             "line": {
-              "label": "Small spaces can produce plenty of food.",
+              "label": "A small plot, replanted, feeds a family.",
               "size": 22,
               "color": "green"
             }
@@ -302,5 +302,6 @@
       "licence": "Public domain. The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

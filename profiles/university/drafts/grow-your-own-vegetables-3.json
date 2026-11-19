@@ -1,7 +1,7 @@
 {
   "slug": "grow-your-own-vegetables",
   "n": 3,
-  "title": "Laying out the garden",
+  "title": "Plan the rows before you dig",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:02:26.903Z",
   "ok": true,
@@ -9,12 +9,12 @@
   "notes": [],
   "unit": {
     "n": 3,
-    "title": "Laying out the garden",
+    "title": "Plan the rows before you dig",
     "reading": {
       "shelf": "abc-vegetable-gardening-1916",
       "chapter": 3
     },
-    "needIt": "Good layout saves you from extra work later. It helps you organize your space so you can reach everything easily without getting tired.",
+    "needIt": "Ten minutes with a pencil decides how much food a small plot gives you, and how hard it is to work in all summer.",
     "why": "A gardener wants to grow a lot of food but has a small space. They learn that placing plants in rows helps them use tools to clear weeds quickly. By planning the direction of the rows, they make sure every plant gets enough sunlight to grow big.",
     "outcome": "Design a garden layout that maximizes space and sunlight.",
     "reachesYou": "You see this when you organize your kitchen shelves to reach your favorite snacks. You also see it when you plan a path through a crowded store.",
@@ -122,156 +122,156 @@
       "aha": "By planning the layout carefully, you ensure every plant gets sun and every task is easier to do."
     },
     "scene": {
-      "analogy": "A grocery store aisle layout",
+      "analogy": "Packing a car trunk for a trip",
+      "layout": "steps",
       "map": [
         [
-          "Customer",
-          "Gardener"
+          "Empty trunk",
+          "Bare plot"
         ],
         [
-          "Shelf",
-          "Plants"
+          "Plan the fit",
+          "Draw the rows"
         ],
         [
-          "Aisle",
-          "Path"
+          "Every gap used",
+          "No soil wasted"
         ]
       ],
       "actors": [
         {
-          "id": "left",
+          "id": "s0",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
+          "x": 30,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "Customer",
+          "label": "Empty trunk",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "right",
+          "id": "s1",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
+          "x": 290,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "Shelf",
+          "label": "Plan the fit",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "AISLE",
-          "color": "gold",
+          "id": "a1",
+          "type": "arrow",
+          "x": 256,
+          "y": 140,
+          "x2": 284,
+          "y2": 140,
+          "color": "dim",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "draw": 0
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "WALKING",
-          "color": "fg",
+          "id": "s2",
+          "type": "card",
+          "x": 550,
+          "y": 90,
+          "w": 220,
+          "h": 100,
+          "label": "Every gap used",
+          "color": "blue",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 17
+        },
+        {
+          "id": "a2",
+          "type": "arrow",
+          "x": 516,
+          "y": 140,
+          "x2": 544,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
-          "label": "A clear path makes getting what you need much faster.",
+          "y": 270,
+          "label": "A minute of planning saves the space.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A store is full of food.",
-          "dur": 2.4,
-          "set": {
-            "left": {
-              "o": 1
-            },
-            "right": {
-              "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
-            }
-          }
-        },
-        {
-          "say": "The aisles are wide.",
-          "dur": 2.4,
-          "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
-            }
-          }
-        },
-        {
-          "say": "The shopper moves fast.",
+          "say": "An empty trunk and a pile of bags.",
           "dur": 2.6,
           "set": {
-            "left": {
-              "sub": "Reaches the item"
-            },
-            "right": {
-              "sub": "Stays organized"
+            "s0": {
+              "o": 1,
+              "sub": "just throw it in?"
             }
           }
         },
         {
-          "say": "The shopper feels happy.",
+          "say": "You look first, and decide what goes where.",
           "dur": 2.6,
           "set": {
+            "s1": {
+              "o": 1,
+              "sub": "big things first"
+            },
+            "a1": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "Now it all fits, and you can still reach everything.",
+          "dur": 2.6,
+          "set": {
+            "s2": {
+              "o": 1,
+              "sub": "and you can reach it all"
+            },
+            "a2": {
+              "o": 1,
+              "draw": 1
+            },
             "line": {
               "o": 1
             }
           }
         },
         {
-          "say": "Wide paths make it easy to move and work in a garden.",
-          "dur": 3.4,
+          "say": "Plan narrow paths and sunlit rows, and every bit of soil works.",
+          "dur": 3.6,
           "set": {
-            "left": {
-              "label": "Gardener",
-              "size": 22,
-              "color": "gold"
-            },
-            "right": {
-              "label": "Plants",
+            "line": {
+              "label": "Rows run north and south, for sun.",
               "size": 22,
               "color": "green"
             },
-            "thing": {
-              "label": "PATH",
-              "size": 18
+            "s0": {
+              "label": "Bare plot",
+              "size": 20,
+              "color": "gold"
             },
-            "act": {
-              "label": "WALKING",
-              "size": 18,
-              "color": "pink"
+            "s1": {
+              "label": "Draw the rows",
+              "size": 20,
+              "color": "gold"
             },
-            "line": {
-              "label": "Paths allow you to work and reach every plant easily.",
-              "size": 18,
+            "s2": {
+              "label": "No soil wasted",
+              "size": 17,
               "color": "green"
             }
           }
@@ -286,5 +286,6 @@
       "licence": "Public domain. The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

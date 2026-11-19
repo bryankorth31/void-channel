@@ -1,7 +1,7 @@
 {
   "slug": "sew-mend-and-make-clothes",
   "n": 4,
-  "title": "How to select a waist pattern",
+  "title": "Choose a top that suits your shape",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:37:03.662Z",
   "ok": true,
@@ -11,12 +11,12 @@
   ],
   "unit": {
     "n": 4,
-    "title": "How to select a waist pattern",
+    "title": "Choose a top that suits your shape",
     "reading": {
       "shelf": "homedressmakersg00blac",
       "chapter": 4
     },
-    "needIt": "Choosing the right pattern helps you make clothes that fit your unique body shape. It ensures your new clothes look good on you instead of just looking good on a model.",
+    "needIt": "What looks good on a hanger or a model may not suit you. Looking at your own lines first is how you stop buying clothes you never wear.",
     "why": "A dress that looks great on a friend might not fit you well because everyone has a different body shape. You must look at your own shoulders, face, and arms to pick the right style. This lesson shows how to adjust a pattern so it fits your specific measurements.",
     "outcome": "Adjust a garment pattern to fit your personal body measurements.",
     "reachesYou": "You see this when you try on clothes at a store and they feel tight in one spot but loose in another. It also happens when you look at a friend's outfit and wonder why it looks different on them.",
@@ -137,19 +137,19 @@
       "aha": "By studying your body and adjusting the pattern measurements, you can make clothes that fit perfectly."
     },
     "scene": {
-      "analogy": "A tailor fitting a suit",
+      "analogy": "Picking glasses frames for your face",
       "map": [
         [
-          "The Client",
-          "Standard Pattern"
+          "Looks good on rack",
+          "Pretty pattern"
         ],
         [
-          "The Tailor",
-          "Your Body"
+          "Tried on your face",
+          "Your proportions"
         ],
         [
-          "The Suit",
-          "Adjustments"
+          "frames",
+          "bodice"
         ]
       ],
       "actors": [
@@ -160,10 +160,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The Client",
+          "label": "Looks good on rack",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "right",
@@ -172,10 +172,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The Tailor",
+          "label": "Tried on your face",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "thing",
@@ -183,7 +183,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "THE SUIT",
+          "label": "FRAMES",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -195,7 +195,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "PINNING",
+          "label": "TRY ON",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -206,7 +206,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "It fits just right now.",
+          "label": "Choose for you, not for the shelf.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -214,7 +214,7 @@
       ],
       "beats": [
         {
-          "say": "A client tries on a suit.",
+          "say": "A wall of glasses frames.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -230,7 +230,7 @@
           }
         },
         {
-          "say": "The tailor pins the fabric.",
+          "say": "You try them on your own face.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -241,19 +241,19 @@
           }
         },
         {
-          "say": "The suit fits the body.",
+          "say": "The pretty pair on the rack looks wrong on you.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Perfect fit"
+              "sub": "wrong for your face"
             },
             "right": {
-              "sub": "Happy client"
+              "sub": "suits you"
             }
           }
         },
         {
-          "say": "The client feels proud.",
+          "say": "Another pair suits your face.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -262,30 +262,30 @@
           }
         },
         {
-          "say": "Adjusting a pattern makes a garment fit your unique shape.",
+          "say": "Pick the pattern for your face, arms and frame.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Standard Pattern",
-              "size": 18,
+              "label": "Pretty pattern",
+              "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Your Body",
-              "size": 22,
+              "label": "Your proportions",
+              "size": 18,
               "color": "green"
             },
             "thing": {
-              "label": "ADJUSTMENTS",
-              "size": 14
+              "label": "BODICE",
+              "size": 18
             },
             "act": {
-              "label": "MODIFYING",
-              "size": 14,
+              "label": "STUDY",
+              "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Small changes make a big difference.",
+              "label": "Study your own lines, then choose.",
               "size": 22,
               "color": "green"
             }
@@ -301,5 +301,6 @@
       "licence": "Public domain (US, by age). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

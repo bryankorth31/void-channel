@@ -1,7 +1,7 @@
 {
   "slug": "sew-mend-and-make-clothes",
   "n": 7,
-  "title": "Cutting and making blouses",
+  "title": "Finish the inside as well as the outside",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:38:08.434Z",
   "ok": true,
@@ -9,12 +9,12 @@
   "notes": [],
   "unit": {
     "n": 7,
-    "title": "Cutting and making blouses",
+    "title": "Finish the inside as well as the outside",
     "reading": {
       "shelf": "homedressmakersg00blac",
       "chapter": 7
     },
-    "needIt": "Knowing how to make a blouse helps you create high-quality clothes that fit your body perfectly. You can save money by making your own clothes instead of buying expensive brands.",
+    "needIt": "Turn a garment inside out before you buy it. The seams tell you how long it will last.",
     "why": "A woman wants a blouse that looks professional and stays in style. She learns that the secret is in the small details like the seams and the way the collar sits. By mastering these steps, she turns a simple piece of fabric into a well-tailored garment.",
     "outcome": "Make a well-tailored blouse with professional finishes.",
     "reachesYou": "You see these details when you shop for high-quality shirts or notice a loose seam on your favorite top. You can use these skills to fix your own clothes or make a custom blouse for a special event.",
@@ -122,19 +122,19 @@
       "aha": "Focusing on the hidden details like seams and plait placement transforms a basic garment into a high-quality blouse."
     },
     "scene": {
-      "analogy": "A chef preparing a complex meal",
+      "analogy": "Two drawers that look the same shut",
       "map": [
         [
-          "The Chef",
-          "The Maker"
+          "Cheap drawer",
+          "Raw seams"
         ],
         [
-          "The Guest",
-          "The Wearer"
+          "Well made drawer",
+          "French seams"
         ],
         [
-          "The Dish",
-          "The Blouse"
+          "inside",
+          "blouse"
         ]
       ],
       "actors": [
@@ -145,7 +145,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The Chef",
+          "label": "Cheap drawer",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -157,10 +157,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The Guest",
+          "label": "Well made drawer",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "thing",
@@ -168,7 +168,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "THE DISH",
+          "label": "INSIDE",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -180,7 +180,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "PLATING",
+          "label": "OPEN",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -191,7 +191,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "The small details make the big difference.",
+          "label": "Quality is how the hidden part is done.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -199,7 +199,7 @@
       ],
       "beats": [
         {
-          "say": "The chef prepares the food.",
+          "say": "Two drawers look the same shut.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -215,7 +215,7 @@
           }
         },
         {
-          "say": "They place it on a plate.",
+          "say": "Open them.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -226,19 +226,19 @@
           }
         },
         {
-          "say": "The meal looks beautiful.",
+          "say": "One is rough and stapled inside.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "The meal looks perfect"
+              "sub": "rough and stapled"
             },
             "right": {
-              "sub": "The guest is happy"
+              "sub": "smooth, joined, lasts"
             }
           }
         },
         {
-          "say": "The guest feels special.",
+          "say": "One is smooth and will last.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -247,30 +247,30 @@
           }
         },
         {
-          "say": "Small details like seams create a professional look.",
+          "say": "Neat seams on the wrong side make a blouse look well made.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "The Maker",
+              "label": "Raw seams",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "The Wearer",
+              "label": "French seams",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "THE BLOUSE",
-              "size": 14
+              "label": "BLOUSE",
+              "size": 18
             },
             "act": {
-              "label": "SEWING",
-              "size": 18,
+              "label": "TURN OVER",
+              "size": 14,
               "color": "pink"
             },
             "line": {
-              "label": "Good workmanship makes a garment look smart.",
+              "label": "Sheer cloth shows every seam.",
               "size": 22,
               "color": "green"
             }
@@ -286,5 +286,6 @@
       "licence": "Public domain (US, by age). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

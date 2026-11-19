@@ -1,7 +1,7 @@
 {
   "slug": "grow-your-own-vegetables",
   "n": 2,
-  "title": "Getting the garden ready",
+  "title": "Wait for the ground, then feed it",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:02:11.507Z",
   "ok": true,
@@ -11,12 +11,12 @@
   ],
   "unit": {
     "n": 2,
-    "title": "Getting the garden ready",
+    "title": "Wait for the ground, then feed it",
     "reading": {
       "shelf": "abc-vegetable-gardening-1916",
       "chapter": 2
     },
-    "needIt": "Waiting for the right time helps you avoid wasting money and effort on things that won't grow. It teaches you that some results take time and the right conditions to succeed.",
+    "needIt": "Seeds planted too early rot and the money is gone. Knowing when the ground is ready saves you a whole wasted start.",
     "why": "A gardener wants to plant seeds as soon as the sun comes out. However, the ground is still frozen and too wet for the seeds to survive. By waiting for the right weather, the gardener ensures the plants grow strong instead of dying in the cold.",
     "outcome": "Wait for the right weather and soil conditions before starting your garden.",
     "reachesYou": "You see this when you wait for a sale to buy a good deal instead of buying something useless. You also feel it when you wait for a clear day to finish a big project at home.",
@@ -111,156 +111,202 @@
       "aha": "By waiting for the right weather and feeding the shallow roots of vegetables, you ensure a healthy harvest."
     },
     "scene": {
-      "analogy": "Waiting for a clear day to paint a wall",
+      "analogy": "Painting a wall: wait until it is dry",
+      "layout": "steps",
       "map": [
         [
-          "A painter",
-          "Gardener"
+          "Wet wall",
+          "Cold wet soil"
         ],
         [
-          "A wet wall",
-          "Seeds"
+          "Wait",
+          "Let it drain"
         ],
         [
-          "Rain",
-          "Frost"
+          "Prime",
+          "Add manure"
+        ],
+        [
+          "Paint",
+          "Plant"
         ]
       ],
       "actors": [
         {
-          "id": "left",
+          "id": "s0",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
+          "x": 22.5,
+          "y": 90,
+          "w": 170,
           "h": 100,
-          "label": "A painter",
+          "label": "Wet wall",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "right",
+          "id": "s1",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
+          "x": 217.5,
+          "y": 90,
+          "w": 170,
           "h": 100,
-          "label": "A wet wall",
+          "label": "Wait",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "RAIN",
-          "color": "gold",
+          "id": "a1",
+          "type": "arrow",
+          "x": 198.5,
+          "y": 140,
+          "x2": 211.5,
+          "y2": 140,
+          "color": "dim",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "draw": 0
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "WAITING",
-          "color": "fg",
+          "id": "s2",
+          "type": "card",
+          "x": 412.5,
+          "y": 90,
+          "w": 170,
+          "h": 100,
+          "label": "Prime",
+          "color": "blue",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 20
+        },
+        {
+          "id": "a2",
+          "type": "arrow",
+          "x": 393.5,
+          "y": 140,
+          "x2": 406.5,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
+        },
+        {
+          "id": "s3",
+          "type": "card",
+          "x": 607.5,
+          "y": 90,
+          "w": 170,
+          "h": 100,
+          "label": "Paint",
+          "color": "blue",
+          "o": 0,
+          "size": 20
+        },
+        {
+          "id": "a3",
+          "type": "arrow",
+          "x": 588.5,
+          "y": 140,
+          "x2": 601.5,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
-          "label": "The paint stays on the wall instead of washing away.",
+          "y": 270,
+          "label": "Rushing it means doing it twice.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "The painter looks at the gray clouds.",
-          "dur": 2.4,
-          "set": {
-            "left": {
-              "o": 1
-            },
-            "right": {
-              "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
-            }
-          }
-        },
-        {
-          "say": "Rain starts to fall on the wet wall.",
-          "dur": 2.4,
-          "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
-            }
-          }
-        },
-        {
-          "say": "The painter waits for the sun to come out.",
+          "say": "Paint on a wet wall peels off.",
           "dur": 2.6,
           "set": {
-            "left": {
-              "sub": "Dry wall"
-            },
-            "right": {
-              "sub": "Perfect paint"
+            "s0": {
+              "o": 1,
+              "sub": "paint will peel"
             }
           }
         },
         {
-          "say": "The wall is dry and ready for a new coat.",
+          "say": "So you wait for it to dry.",
           "dur": 2.6,
           "set": {
+            "s1": {
+              "o": 1,
+              "sub": "let it dry out"
+            },
+            "a1": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "Then you prime it, so the paint has something to hold.",
+          "dur": 2.6,
+          "set": {
+            "s2": {
+              "o": 1,
+              "sub": "feed the surface"
+            },
+            "a2": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "Now the paint goes on and stays.",
+          "dur": 2.6,
+          "set": {
+            "s3": {
+              "o": 1,
+              "sub": "now it holds"
+            },
+            "a3": {
+              "o": 1,
+              "draw": 1
+            },
             "line": {
               "o": 1
             }
           }
         },
         {
-          "say": "Waiting for the right weather ensures the seeds will grow well.",
-          "dur": 3.4,
+          "say": "Seeds rot in cold wet ground. Wait, feed the soil, then plant.",
+          "dur": 3.6,
           "set": {
-            "left": {
-              "label": "Gardener",
-              "size": 22,
-              "color": "gold"
-            },
-            "right": {
-              "label": "Seeds",
+            "line": {
+              "label": "One warm day is not spring.",
               "size": 22,
               "color": "green"
             },
-            "thing": {
-              "label": "FROST",
-              "size": 18
+            "s0": {
+              "label": "Cold wet soil",
+              "size": 17,
+              "color": "gold"
             },
-            "act": {
-              "label": "WAITING",
-              "size": 18,
-              "color": "pink"
+            "s1": {
+              "label": "Let it drain",
+              "size": 17,
+              "color": "gold"
             },
-            "line": {
-              "label": "Good growth needs the right timing.",
-              "size": 22,
+            "s2": {
+              "label": "Add manure",
+              "size": 20,
+              "color": "gold"
+            },
+            "s3": {
+              "label": "Plant",
+              "size": 20,
               "color": "green"
             }
           }
@@ -275,5 +321,6 @@
       "licence": "Public domain. The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

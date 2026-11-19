@@ -1,7 +1,7 @@
 {
   "slug": "manners-that-make-people-comfortable",
   "n": 8,
-  "title": "Everyday manners at home",
+  "title": "Manners at home, when no one is looking",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:46:14.230Z",
   "ok": true,
@@ -13,12 +13,12 @@
   ],
   "unit": {
     "n": 8,
-    "title": "Everyday manners at home",
+    "title": "Manners at home, when no one is looking",
     "reading": {
       "shelf": "post-etiquette-1922",
       "chapter": 35
     },
-    "needIt": "Good manners at home help you build stronger, happier relationships with your family. When you treat your parents or siblings with respect daily, it makes your home a peaceful place to be.",
+    "needIt": "How you speak to the people you live with is who you are. Children learn it by watching, not by being told.",
     "why": "A family that is rude to each other in private cannot pretend to be polite in public. If a mother only acts nice for guests but is mean to her kids at home, the kids will learn that manners are just a fake act. True character is built by how you treat the people you see every single day.",
     "outcome": "Practice consistent kindness and courtesy with your family members.",
     "reachesYou": "You see this when you are at home with your parents or siblings after a long day. It also shows up when you decide whether to be grumpy or helpful when someone asks you for a favor.",
@@ -139,19 +139,19 @@
       "aha": "When you act the same way at home as you do in public, your manners become a real part of who you are."
     },
     "scene": {
-      "analogy": "A house with a hidden messy backyard",
+      "analogy": "Guests for an hour, family all day",
       "map": [
         [
-          "The front yard",
-          "Public manners"
+          "Company manners",
+          "A performance"
         ],
         [
-          "The backyard",
-          "Home manners"
+          "Home manners",
+          "A habit"
         ],
         [
-          "The fence",
-          "The person"
+          "the family",
+          "character"
         ]
       ],
       "actors": [
@@ -162,10 +162,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The front yard",
+          "label": "Company manners",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "right",
@@ -174,7 +174,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The backyard",
+          "label": "Home manners",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -185,7 +185,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "THE FENCE",
+          "label": "THE FAMILY",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -197,7 +197,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "HIDING",
+          "label": "SEE",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -208,15 +208,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "People only see the front, but the truth is in the back.",
+          "label": "Home is where manners are tested.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A house has a nice front yard.",
+          "say": "Guests see you for an hour.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -232,7 +232,7 @@
           }
         },
         {
-          "say": "The fence hides the back.",
+          "say": "Your family sees you all day.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -243,19 +243,19 @@
           }
         },
         {
-          "say": "The back is a mess.",
+          "say": "Company manners switch on and off.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Looks perfect"
+              "sub": "on for an hour"
             },
             "right": {
-              "sub": "Is a mess"
+              "sub": "on all day, every day"
             }
           }
         },
         {
-          "say": "It feels like a lie.",
+          "say": "Home manners are the real ones.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -264,30 +264,30 @@
           }
         },
         {
-          "say": "True manners are a habit, not a costume for guests.",
+          "say": "Real manners are a daily habit at home, not a show for guests.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Public manners",
+              "label": "A performance",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Home manners",
+              "label": "A habit",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "THE PERSON",
+              "label": "CHARACTER",
               "size": 14
             },
             "act": {
-              "label": "ACTING",
+              "label": "SHOWS",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Manners must be the same in both places.",
+              "label": "Children copy what parents do.",
               "size": 22,
               "color": "green"
             }
@@ -303,5 +303,6 @@
       "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

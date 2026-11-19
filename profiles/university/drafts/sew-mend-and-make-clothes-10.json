@@ -1,7 +1,7 @@
 {
   "slug": "sew-mend-and-make-clothes",
   "n": 10,
-  "title": "The suit coat sleeve",
+  "title": "A sleeve that lets the arm move",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:39:17.983Z",
   "ok": true,
@@ -9,12 +9,12 @@
   "notes": [],
   "unit": {
     "n": 10,
-    "title": "The suit coat sleeve",
+    "title": "A sleeve that lets the arm move",
     "reading": {
       "shelf": "homedressmakersg00blac",
       "chapter": 10
     },
-    "needIt": "Knowing how to shape a sleeve helps you fix a suit that feels stiff or awkward. It lets you make clothes that move naturally with your body instead of feeling like a costume.",
+    "needIt": "A coat should let you reach and bend. The shaping at the elbow is why a good one does and a cheap one does not.",
     "why": "A suit sleeve needs to look sharp but still let your arm move freely. The author explains how to add a tiny bit of extra fabric at the elbow to create a natural curve. This small trick makes a stiff coat feel comfortable and look professional.",
     "outcome": "Construct a tailored coat sleeve with proper shape and balance.",
     "reachesYou": "You see this when you notice a suit jacket sleeve looks flat or bunchy at the elbow. You also see it when you try to move your arm and the fabric feels too tight.",
@@ -122,19 +122,19 @@
       "aha": "By balancing straight lines with specific fullness at the elbow, the sleeve achieves both shape and movement."
     },
     "scene": {
-      "analogy": "A hinge on a door",
+      "analogy": "A pipe that has to turn a corner",
       "map": [
         [
-          "Door frame",
-          "Upper sleeve"
+          "Straight pipe",
+          "Flat sleeve"
         ],
         [
-          "Door leaf",
-          "Under sleeve"
+          "Elbow joint",
+          "Shaped sleeve"
         ],
         [
-          "Hinge",
-          "Fullness"
+          "the bend",
+          "elbow"
         ]
       ],
       "actors": [
@@ -145,7 +145,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Door frame",
+          "label": "Straight pipe",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -157,7 +157,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Door leaf",
+          "label": "Elbow joint",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -168,7 +168,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "HINGE",
+          "label": "THE BEND",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -180,7 +180,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "ROTATE",
+          "label": "TURN",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -191,15 +191,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "It moves smoothly because of the pivot point.",
+          "label": "Shape it for how it has to move.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A door is closed.",
+          "say": "A pipe has to turn a corner.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -215,7 +215,7 @@
           }
         },
         {
-          "say": "Someone turns the handle.",
+          "say": "A straight piece will not bend.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -226,19 +226,19 @@
           }
         },
         {
-          "say": "The door swings open.",
+          "say": "It kinks.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Door opens wide"
+              "sub": "kinks at the corner"
             },
             "right": {
-              "sub": "Door stays firm"
+              "sub": "built for the bend"
             }
           }
         },
         {
-          "say": "It feels easy to move.",
+          "say": "An elbow joint is made for the turn.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -247,31 +247,31 @@
           }
         },
         {
-          "say": "Adding fullness at the elbow allows the arm to bend naturally.",
+          "say": "The under sleeve is cut longer and eased, so the arm can bend.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Upper sleeve",
+              "label": "Flat sleeve",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Under sleeve",
+              "label": "Shaped sleeve",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "FULLNESS",
+              "label": "ELBOW",
               "size": 18
             },
             "act": {
-              "label": "SHAPE",
+              "label": "EASE IN",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "The extra fabric creates the curve for the arm.",
-              "size": 18,
+              "label": "Fullness shapes the sleeve to the arm.",
+              "size": 22,
               "color": "green"
             }
           }
@@ -286,5 +286,6 @@
       "licence": "Public domain (US, by age). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

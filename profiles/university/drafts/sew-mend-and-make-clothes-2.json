@@ -1,7 +1,7 @@
 {
   "slug": "sew-mend-and-make-clothes",
   "n": 2,
-  "title": "Measurements",
+  "title": "Measure first",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:35:40.856Z",
   "ok": true,
@@ -12,12 +12,12 @@
   ],
   "unit": {
     "n": 2,
-    "title": "Measurements",
+    "title": "Measure first",
     "reading": {
       "shelf": "homedressmakersg00blac",
       "chapter": 2
     },
-    "needIt": "Knowing your measurements helps you buy clothes that actually fit your body. It stops you from wasting money on items that are too tight or too loose.",
+    "needIt": "Clothes that fit start with a tape measure, whether you sew them, alter them or order them online.",
     "why": "A dressmaker once tried to make a coat for a friend who did not know their size. The coat was so tight the friend could not move her arms. They learned that taking a little extra space is better because it is easier to cut away extra fabric than to add it back.",
     "outcome": "Take accurate body measurements to create a custom clothing pattern.",
     "reachesYou": "You see this when you try on clothes at a store and they feel uncomfortable. You also see it when you look at a size chart on a shopping website.",
@@ -138,19 +138,19 @@
       "aha": "Correct measurements remove the annoyances of dressmaking by ensuring the garment fits your specific body shape."
     },
     "scene": {
-      "analogy": "A tailor adjusting a loose coat",
+      "analogy": "Buying shoes without knowing your size",
       "map": [
         [
-          "Loose coat",
-          "Loose measure"
+          "Guessed size",
+          "Guessed pattern"
         ],
         [
-          "Perfect fit",
-          "Tight fit"
+          "Measured foot",
+          "Your measures"
         ],
         [
-          "Scissors",
-          "Trimming"
+          "new shoes",
+          "garment"
         ]
       ],
       "actors": [
@@ -161,7 +161,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Loose coat",
+          "label": "Guessed size",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -173,7 +173,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Perfect fit",
+          "label": "Measured foot",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -184,11 +184,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "SCISSORS",
+          "label": "NEW SHOES",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "act",
@@ -196,7 +196,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "TRIM",
+          "label": "MEASURE",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -207,7 +207,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "It is easier to take away than to add back.",
+          "label": "Measure first, buy once.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -215,7 +215,7 @@
       ],
       "beats": [
         {
-          "say": "A coat is too big.",
+          "say": "You want new shoes.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -231,7 +231,7 @@
           }
         },
         {
-          "say": "The tailor cuts the fabric.",
+          "say": "One person guesses. One measures.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -242,19 +242,19 @@
           }
         },
         {
-          "say": "The coat fits perfectly.",
+          "say": "The guess pinches.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Coat fits well"
+              "sub": "pinch all day"
             },
             "right": {
-              "sub": "Waste is gone"
+              "sub": "fit from the first step"
             }
           }
         },
         {
-          "say": "The extra is gone.",
+          "say": "The measured pair fits.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -263,30 +263,30 @@
           }
         },
         {
-          "say": "Take measurements slightly loose to allow for easy trimming.",
+          "say": "A garment fits only as well as the measurements under it.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Loose measure",
-              "size": 22,
+              "label": "Guessed pattern",
+              "size": 18,
               "color": "gold"
             },
             "right": {
-              "label": "Tight fit",
+              "label": "Your measures",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "TRIMMING",
+              "label": "GARMENT",
               "size": 18
             },
             "act": {
-              "label": "CUT",
+              "label": "APPLY",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Loose is better than too snug.",
+              "label": "Take measures, then alter the pattern.",
               "size": 22,
               "color": "green"
             }
@@ -302,5 +302,6 @@
       "licence": "Public domain (US, by age). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

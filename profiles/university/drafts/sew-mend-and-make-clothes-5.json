@@ -1,7 +1,7 @@
 {
   "slug": "sew-mend-and-make-clothes",
   "n": 5,
-  "title": "How to select the sleeve",
+  "title": "The sleeve makes or breaks it",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:37:26.377Z",
   "ok": true,
@@ -11,12 +11,12 @@
   ],
   "unit": {
     "n": 5,
-    "title": "How to select the sleeve",
+    "title": "The sleeve makes or breaks it",
     "reading": {
       "shelf": "homedressmakersg00blac",
       "chapter": 5
     },
-    "needIt": "Choosing the right sleeve helps your clothes fit your body perfectly. It stops a nice dress from looking messy because of a sleeve that is too big or too small.",
+    "needIt": "A jacket that pulls at the shoulder or twists at the arm is a sleeve problem. Knowing that tells you what to check before you buy or sew.",
     "why": "A dressmaker once saw a beautiful gown ruined by a poorly fitting sleeve. She learned that the sleeve is the most important part of a garment's look. You must plan the sleeve to match the unique shape of your own arm.",
     "outcome": "Select and adjust a sleeve pattern to fit your specific arm shape.",
     "reachesYou": "You see this when you try on a shirt at a shop and the arm feels tight. You also notice it when a friend's sleeve twists around their wrist.",
@@ -111,19 +111,19 @@
       "aha": "By matching the sleeve lines to your arm's unique shape, you ensure the garment looks beautiful and fits well."
     },
     "scene": {
-      "analogy": "A chair and a person sitting in it",
+      "analogy": "A nice car with one wrong wheel",
       "map": [
         [
-          "A person",
-          "Your arm"
+          "Fine car",
+          "Good dress"
         ],
         [
-          "A chair",
-          "The sleeve"
+          "One wrong wheel",
+          "Poor sleeve"
         ],
         [
-          "The fit",
-          "The fit"
+          "ride",
+          "style"
         ]
       ],
       "actors": [
@@ -134,7 +134,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A person",
+          "label": "Fine car",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -146,10 +146,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A chair",
+          "label": "One wrong wheel",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "thing",
@@ -157,7 +157,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "THE FIT",
+          "label": "RIDE",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -169,7 +169,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "SITTING",
+          "label": "DRIVE",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -180,7 +180,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "It feels just right for my body.",
+          "label": "One part off, and all of it is off.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -188,7 +188,7 @@
       ],
       "beats": [
         {
-          "say": "A person finds a chair.",
+          "say": "A fine car, parked.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -204,7 +204,7 @@
           }
         },
         {
-          "say": "They sit down to rest.",
+          "say": "Then you drive it.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -215,19 +215,19 @@
           }
         },
         {
-          "say": "The chair fits their size.",
+          "say": "It looked perfect standing still.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Comfortable seat"
+              "sub": "looked perfect parked"
             },
             "right": {
-              "sub": "Proper posture"
+              "sub": "ruins the whole ride"
             }
           }
         },
         {
-          "say": "They feel relaxed and happy.",
+          "say": "One wrong wheel spoils everything.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -236,30 +236,30 @@
           }
         },
         {
-          "say": "A sleeve must be planned to fit the specific shape of the arm.",
+          "say": "Plan the sleeve to the shape of your own arm.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Your arm",
+              "label": "Good dress",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "The sleeve",
+              "label": "Poor sleeve",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "THE FIT",
+              "label": "STYLE",
               "size": 18
             },
             "act": {
-              "label": "MATCHING",
+              "label": "MOVE",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "The sleeve must match the arm shape.",
+              "label": "A poorly made sleeve ruins the style.",
               "size": 22,
               "color": "green"
             }
@@ -275,5 +275,6 @@
       "licence": "Public domain (US, by age). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

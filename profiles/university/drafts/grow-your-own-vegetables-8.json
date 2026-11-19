@@ -1,7 +1,7 @@
 {
   "slug": "grow-your-own-vegetables",
   "n": 8,
-  "title": "Standard varieties of vegetables",
+  "title": "Which kinds to plant",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:08:29.184Z",
   "ok": true,
@@ -13,12 +13,12 @@
   ],
   "unit": {
     "n": 8,
-    "title": "Standard varieties of vegetables",
+    "title": "Which kinds to plant",
     "reading": {
       "shelf": "abc-vegetable-gardening-1916",
       "chapter": 8
     },
-    "needIt": "Knowing standard varieties helps you avoid getting overwhelmed by too many choices at the store or garden center. It ensures you pick a vegetable that is proven to taste good and grow well.",
+    "needIt": "A seed catalog lists hundreds of kinds and praises them all. One test tells you which are safe to start with.",
     "why": "A new gardener looks at a seed catalog and feels dizzy because there are hundreds of options. They worry that picking the wrong one will ruin their garden. The author explains that if you pick a 'standard' variety, you are choosing a winner that everyone agrees is great.",
     "outcome": "Identify reliable vegetable varieties that are guaranteed to produce high-quality results.",
     "reachesYou": "You see these names on seed packets at the local hardware store. You also see them listed on websites when you are trying to decide what to plant in your backyard.",
@@ -139,19 +139,19 @@
       "aha": "By choosing varieties that all dealers carry, you guarantee a high-quality result."
     },
     "scene": {
-      "analogy": "Choosing a reliable car from a huge dealership",
+      "analogy": "Ordering at a diner with a huge menu",
       "map": [
         [
-          "A new driver",
-          "Beginner gardener"
+          "Fancy special",
+          "New novelty"
         ],
         [
-          "A car dealer",
-          "Seed catalog"
+          "What everyone orders",
+          "Standard variety"
         ],
         [
-          "Car models",
-          "Varieties"
+          "menu",
+          "catalog"
         ]
       ],
       "actors": [
@@ -162,7 +162,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A new driver",
+          "label": "Fancy special",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -174,10 +174,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A car dealer",
+          "label": "What everyone orders",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "thing",
@@ -185,11 +185,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "CAR MODELS",
+          "label": "MENU",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 14
+          "size": 18
         },
         {
           "id": "act",
@@ -197,7 +197,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "CHOOSING",
+          "label": "CHOOSE",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -208,7 +208,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I just want a car that works every day.",
+          "label": "Popular for a reason.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -216,7 +216,7 @@
       ],
       "beats": [
         {
-          "say": "A driver looks at many cars.",
+          "say": "A menu with a hundred dishes.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -232,7 +232,7 @@
           }
         },
         {
-          "say": "The dealer shows many types.",
+          "say": "You have to choose one.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -243,19 +243,19 @@
           }
         },
         {
-          "say": "The driver picks a classic.",
+          "say": "The dish every table orders is a safe bet.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Drives a reliable car"
+              "sub": "might be great, or not"
             },
             "right": {
-              "sub": "Sells a popular car"
+              "sub": "good every time"
             }
           }
         },
         {
-          "say": "The driver feels relieved.",
+          "say": "The fancy special is a gamble.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -264,30 +264,30 @@
           }
         },
         {
-          "say": "Choose standard varieties that are common to all major dealers.",
+          "say": "Start with the kinds every seed seller carries. They are proven.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Beginner gardener",
-              "size": 18,
+              "label": "New novelty",
+              "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Seed catalog",
-              "size": 22,
+              "label": "Standard variety",
+              "size": 18,
               "color": "green"
             },
             "thing": {
-              "label": "VARIETIES",
-              "size": 14
+              "label": "CATALOG",
+              "size": 18
             },
             "act": {
-              "label": "SELECTING",
-              "size": 14,
+              "label": "PICK",
+              "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Stick to the names everyone knows.",
+              "label": "Every dealer sells the standard kinds.",
               "size": 22,
               "color": "green"
             }
@@ -303,5 +303,6 @@
       "licence": "Public domain. The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

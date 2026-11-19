@@ -1,7 +1,7 @@
 {
   "slug": "sew-mend-and-make-clothes",
   "n": 1,
-  "title": "Common stitches and seams",
+  "title": "The basic stitches and what each is for",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:35:14.086Z",
   "ok": true,
@@ -13,12 +13,12 @@
   ],
   "unit": {
     "n": 1,
-    "title": "Common stitches and seams",
+    "title": "The basic stitches and what each is for",
     "reading": {
       "shelf": "homedressmakersg00blac",
       "chapter": 1
     },
-    "needIt": "Knowing basic stitches helps you fix a loose button or a torn seam at home. It saves you money by letting you repair your own clothes instead of buying new ones.",
+    "needIt": "Three or four hand stitches are enough to mend a seam, fix a hem or fit a garment. Knowing which does what saves a trip to the tailor.",
     "why": "Many people think sewing is a secret talent. This lesson shows that neat sewing is just the result of steady practice. It turns a hard task into a step by step skill.",
     "outcome": "Identify and use different types of stitches and seams to build a garment.",
     "reachesYou": "You see these stitches every time you check the inside of your favorite shirt. You also see them when you shop for clothes and look for quality seams.",
@@ -139,76 +139,87 @@
       "aha": "Each stitch has a specific job to ensure the garment is accurate and well finished."
     },
     "scene": {
-      "analogy": "A builder uses tape to mark a wall before painting.",
+      "analogy": "Hanging a shelf",
+      "layout": "steps",
       "map": [
         [
-          "Blue tape",
+          "Tape it up",
           "Basting"
         ],
         [
-          "Final paint",
-          "Final seam"
+          "Mark the spot",
+          "Tailor tacks"
         ],
         [
-          "Wall",
-          "Fabric"
+          "Screw it in",
+          "Final stitch"
         ]
       ],
       "actors": [
         {
-          "id": "left",
+          "id": "s0",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
+          "x": 30,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "Blue tape",
+          "label": "Tape it up",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "right",
+          "id": "s1",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
+          "x": 290,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "Final paint",
+          "label": "Mark the spot",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "WALL",
-          "color": "gold",
+          "id": "a1",
+          "type": "arrow",
+          "x": 256,
+          "y": 140,
+          "x2": 284,
+          "y2": 140,
+          "color": "dim",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "draw": 0
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "MARKING",
-          "color": "fg",
+          "id": "s2",
+          "type": "card",
+          "x": 550,
+          "y": 90,
+          "w": 220,
+          "h": 100,
+          "label": "Screw it in",
+          "color": "blue",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 20
+        },
+        {
+          "id": "a2",
+          "type": "arrow",
+          "x": 516,
+          "y": 140,
+          "x2": 544,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
-          "label": "The first step makes the final job easy.",
+          "y": 270,
+          "label": "Each tool has one job.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -216,79 +227,68 @@
       ],
       "beats": [
         {
-          "say": "A builder wants to paint a long wall.",
-          "dur": 2.4,
-          "set": {
-            "left": {
-              "o": 1
-            },
-            "right": {
-              "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
-            }
-          }
-        },
-        {
-          "say": "They put tape down to mark the line.",
-          "dur": 2.4,
-          "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
-            }
-          }
-        },
-        {
-          "say": "They paint over the tape perfectly.",
+          "say": "Tape holds the shelf while you look.",
           "dur": 2.6,
           "set": {
-            "left": {
-              "sub": "Wall is marked"
-            },
-            "right": {
-              "sub": "Paint is perfect"
+            "s0": {
+              "o": 1,
+              "sub": "holds for now"
             }
           }
         },
         {
-          "say": "The work looks clean and straight.",
+          "say": "A pencil mark shows where it goes.",
           "dur": 2.6,
           "set": {
+            "s1": {
+              "o": 1,
+              "sub": "shows where"
+            },
+            "a1": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "Screws hold it for good.",
+          "dur": 2.6,
+          "set": {
+            "s2": {
+              "o": 1,
+              "sub": "holds for good"
+            },
+            "a2": {
+              "o": 1,
+              "draw": 1
+            },
             "line": {
               "o": 1
             }
           }
         },
         {
-          "say": "Use basting to hold fabric in place before the final sewing.",
-          "dur": 3.4,
+          "say": "Some stitches hold for now, some mark, some stay for good.",
+          "dur": 3.6,
           "set": {
-            "left": {
-              "label": "Basting",
-              "size": 22,
-              "color": "gold"
-            },
-            "right": {
-              "label": "Final seam",
+            "line": {
+              "label": "Temporary, marking, permanent.",
               "size": 22,
               "color": "green"
             },
-            "thing": {
-              "label": "FABRIC",
-              "size": 18
+            "s0": {
+              "label": "Basting",
+              "size": 20,
+              "color": "gold"
             },
-            "act": {
-              "label": "HOLDING",
-              "size": 18,
-              "color": "pink"
+            "s1": {
+              "label": "Tailor tacks",
+              "size": 20,
+              "color": "gold"
             },
-            "line": {
-              "label": "Temporary stitches save time and effort.",
-              "size": 22,
+            "s2": {
+              "label": "Final stitch",
+              "size": 20,
               "color": "green"
             }
           }
@@ -303,5 +303,6 @@
       "licence": "Public domain (US, by age). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

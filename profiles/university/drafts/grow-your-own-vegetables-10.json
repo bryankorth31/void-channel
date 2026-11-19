@@ -1,7 +1,7 @@
 {
   "slug": "grow-your-own-vegetables",
   "n": 10,
-  "title": "Hotbeds and coldframes",
+  "title": "A warm bed for early plants",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:09:34.533Z",
   "ok": true,
@@ -9,12 +9,12 @@
   "notes": [],
   "unit": {
     "n": 10,
-    "title": "Hotbeds and coldframes",
+    "title": "A warm bed for early plants",
     "reading": {
       "shelf": "abc-vegetable-gardening-1916",
       "chapter": 10
     },
-    "needIt": "Hotbeds let you grow food earlier than your neighbors by creating a tiny summer inside a box. It helps you get a head start on your garden even when the ground is still frozen.",
+    "needIt": "A box with a glass lid lets you start plants weeks before the weather allows. The same idea runs every greenhouse.",
     "why": "A gardener wants to grow lettuce before everyone else. They build a box with glass and use rotting manure to create a steady heat source. This box acts like a tiny greenhouse that mimics summer weather in the middle of winter.",
     "outcome": "Build a hotbed to start seeds early in the season.",
     "reachesYou": "You might see these wooden boxes in a backyard or a local nursery. You will use this idea when you want to grow plants that need warmth but the weather is still cold.",
@@ -122,19 +122,19 @@
       "aha": "By trapping heat from manure inside a glass box, you create a controlled summer for your plants."
     },
     "scene": {
-      "analogy": "A person wearing a heavy coat inside a warm house",
+      "analogy": "A parked car in the sun",
       "map": [
         [
-          "Cold outside",
-          "Cold weather"
-        ],
-        [
-          "Warm inside",
-          "Warm plants"
-        ],
-        [
-          "Heavy coat",
+          "Car in the sun",
           "Hotbed"
+        ],
+        [
+          "Open bench",
+          "Open ground"
+        ],
+        [
+          "sunlight",
+          "heat"
         ]
       ],
       "actors": [
@@ -145,7 +145,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Cold outside",
+          "label": "Car in the sun",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -157,7 +157,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Warm inside",
+          "label": "Open bench",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -168,11 +168,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "HEAVY COAT",
+          "label": "SUNLIGHT",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 14
+          "size": 18
         },
         {
           "id": "act",
@@ -180,7 +180,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "INSULATE",
+          "label": "TRAP",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -191,15 +191,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "The coat keeps the heat from escaping into the cold.",
+          "label": "Glass lets the sun in and keeps the heat.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "It is freezing outside.",
+          "say": "A cold bright day in March.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -215,7 +215,7 @@
           }
         },
         {
-          "say": "The person puts on a coat.",
+          "say": "Glass lets sunlight in and holds the warmth.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -226,19 +226,19 @@
           }
         },
         {
-          "say": "The body heat stays inside.",
+          "say": "Inside the car it is warm.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Person stays warm"
+              "sub": "warm inside in March"
             },
             "right": {
-              "sub": "Heat stays inside"
+              "sub": "still cold"
             }
           }
         },
         {
-          "say": "They feel cozy and warm.",
+          "say": "On the bench beside it, still cold.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -247,31 +247,31 @@
           }
         },
         {
-          "say": "A hotbed traps heat from manure to keep plants warm.",
+          "say": "A hotbed makes summer early: heat from below, glass on top.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Cold weather",
+              "label": "Hotbed",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Warm plants",
+              "label": "Open ground",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "HOTBED",
+              "label": "HEAT",
               "size": 18
             },
             "act": {
-              "label": "TRAP HEAT",
-              "size": 14,
+              "label": "HOLD",
+              "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "The hotbed keeps the heat from escaping into the cold.",
-              "size": 18,
+              "label": "Manure below warms it. Glass above keeps it.",
+              "size": 22,
               "color": "green"
             }
           }
@@ -286,5 +286,6 @@
       "licence": "Public domain. The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

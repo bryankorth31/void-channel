@@ -1,7 +1,7 @@
 {
   "slug": "sew-mend-and-make-clothes",
   "n": 6,
-  "title": "Cutting and making skirts",
+  "title": "Cut, press and handle cloth gently",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:37:49.039Z",
   "ok": true,
@@ -11,12 +11,12 @@
   ],
   "unit": {
     "n": 6,
-    "title": "Cutting and making skirts",
+    "title": "Cut, press and handle cloth gently",
     "reading": {
       "shelf": "homedressmakersg00blac",
       "chapter": 6
     },
-    "needIt": "Knowing how to cut and sew a skirt helps you make your own clothes that fit perfectly. It saves you money and lets you fix your favorite pieces instead of throwing them away.",
+    "needIt": "Most ruined clothes are ruined by heat or pulling, not wear. Knowing how each cloth wants to be handled makes them last.",
     "why": "A dressmaker wants to make a beautiful silk skirt without ruining the fabric. She learns that using the wrong iron or pulling a thread too hard can destroy a garment in seconds. By following the right steps for pressing and basting, she ensures the skirt stays perfect.",
     "outcome": "Create a professional skirt by correctly cutting, pressing, and basting fabric.",
     "reachesYou": "You see these skills when you notice a perfectly hemmed skirt in a shop. You also feel them when you try to iron a shirt at home and worry about burning it.",
@@ -111,19 +111,19 @@
       "aha": "Proper handling and specific tools protect the fabric from permanent damage."
     },
     "scene": {
-      "analogy": "A chef seasoning a soup",
+      "analogy": "Ironing a silk shirt like a cotton towel",
       "map": [
         [
-          "The chef",
-          "The sewer"
+          "Cotton towel",
+          "Wool"
         ],
         [
-          "The soup",
-          "The skirt"
+          "Silk shirt",
+          "Silk"
         ],
         [
-          "Salt",
-          "Basting"
+          "hot iron",
+          "pressing"
         ]
       ],
       "actors": [
@@ -134,7 +134,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The chef",
+          "label": "Cotton towel",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -146,7 +146,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The soup",
+          "label": "Silk shirt",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -157,7 +157,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "SALT",
+          "label": "HOT IRON",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -169,18 +169,18 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "SEASONING",
+          "label": "PRESS",
           "color": "fg",
           "o": 0,
           "s": 0.4,
-          "size": 14
+          "size": 18
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "The right amount makes all the difference.",
+          "label": "Know the cloth before the iron.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -188,7 +188,7 @@
       ],
       "beats": [
         {
-          "say": "The chef holds the salt.",
+          "say": "Two things to iron.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -204,7 +204,7 @@
           }
         },
         {
-          "say": "He sprinkles it in.",
+          "say": "Same hot iron on both.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -215,19 +215,19 @@
           }
         },
         {
-          "say": "The soup tastes great.",
+          "say": "The towel is fine.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "The soup tastes good"
+              "sub": "fine with high heat"
             },
             "right": {
-              "sub": "The chef is happy"
+              "sub": "scorched"
             }
           }
         },
         {
-          "say": "He feels proud.",
+          "say": "The silk is ruined.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -236,30 +236,30 @@
           }
         },
         {
-          "say": "Basting keeps the fabric from moving while you work.",
+          "say": "Each fabric needs its own handling, or it stretches and scorches.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "The sewer",
+              "label": "Wool",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "The skirt",
+              "label": "Silk",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "BASTING",
+              "label": "PRESSING",
               "size": 18
             },
             "act": {
-              "label": "SECURING",
+              "label": "HANDLE",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Small stitches hold everything in place.",
+              "label": "Wet cloth for wool. No hot iron on silk.",
               "size": 22,
               "color": "green"
             }
@@ -275,5 +275,6 @@
       "licence": "Public domain (US, by age). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

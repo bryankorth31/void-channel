@@ -1,7 +1,7 @@
 {
   "slug": "manners-that-make-people-comfortable",
   "n": 2,
-  "title": "Greetings and what to say when introduced",
+  "title": "What to say when you meet",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:40:38.183Z",
   "ok": true,
@@ -9,12 +9,12 @@
   "notes": [],
   "unit": {
     "n": 2,
-    "title": "Greetings and what to say when introduced",
+    "title": "What to say when you meet",
     "reading": {
       "shelf": "post-etiquette-1922",
       "chapter": 3
     },
-    "needIt": "Knowing the right words makes people feel safe and respected around you. It helps you avoid awkward moments when meeting a new boss or a neighbor.",
+    "needIt": "The first five words you say to a stranger set the tone. Plain, fitting words beat clever ones every time.",
     "why": "Imagine meeting a new neighbor who looks nervous. If you use the right greeting, they relax and smile. If you use a weird phrase, they might feel confused or uneasy.",
     "outcome": "Use the correct greeting to make others feel comfortable.",
     "reachesYou": "You will use these rules when meeting a new coworker or a friend of a friend. You will also use them when you meet someone new at a party or a wedding.",
@@ -122,19 +122,19 @@
       "aha": "By choosing the right words for the right person, you create a comfortable social connection."
     },
     "scene": {
-      "analogy": "A person handing a gift to a friend",
+      "analogy": "A handshake, or a hug from a stranger",
       "map": [
         [
-          "A person",
-          "You"
+          "Plain handshake",
+          "How do you do?"
         ],
         [
-          "A friend",
-          "A stranger"
+          "Stranger's hug",
+          "Hello!"
         ],
         [
-          "A gift",
-          "Words"
+          "hello",
+          "first words"
         ]
       ],
       "actors": [
@@ -145,10 +145,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A person",
+          "label": "Plain handshake",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "right",
@@ -157,7 +157,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A friend",
+          "label": "Stranger's hug",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -168,7 +168,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A GIFT",
+          "label": "HELLO",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -180,7 +180,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "HANDING",
+          "label": "GREET",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -191,15 +191,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "The right way makes the gift feel special.",
+          "label": "Match the greeting to how well you know them.",
           "color": "pink",
-          "size": 22,
+          "size": 18,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A person holds a gift.",
+          "say": "Two people meet for the first time.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -215,7 +215,7 @@
           }
         },
         {
-          "say": "They hand it over gently.",
+          "say": "Each chooses a greeting.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -226,19 +226,19 @@
           }
         },
         {
-          "say": "The friend smiles.",
+          "say": "A plain handshake puts both at ease.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "The gift is given"
+              "sub": "both feel at ease"
             },
             "right": {
-              "sub": "The friend is happy"
+              "sub": "one feels trapped"
             }
           }
         },
         {
-          "say": "The mood is happy.",
+          "say": "Too much, too soon, makes one squirm.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -247,31 +247,31 @@
           }
         },
         {
-          "say": "Correct greetings make people feel comfortable and safe.",
+          "say": "Simple, fitting words put a new person at ease.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "You",
+              "label": "How do you do?",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "A stranger",
+              "label": "Hello!",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "WORDS",
-              "size": 18
+              "label": "FIRST WORDS",
+              "size": 14
             },
             "act": {
-              "label": "GREETING",
+              "label": "SAY",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "The right words make the stranger feel welcome.",
-              "size": 18,
+              "label": "Formal for strangers, hello for friends.",
+              "size": 22,
               "color": "green"
             }
           }
@@ -286,5 +286,6 @@
       "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

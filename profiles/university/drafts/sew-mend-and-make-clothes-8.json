@@ -1,7 +1,7 @@
 {
   "slug": "sew-mend-and-make-clothes",
   "n": 8,
-  "title": "Cutting and making the one-piece dress",
+  "title": "The lining holds the dress in shape",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:38:29.283Z",
   "ok": true,
@@ -11,12 +11,12 @@
   ],
   "unit": {
     "n": 8,
-    "title": "Cutting and making the one-piece dress",
+    "title": "The lining holds the dress in shape",
     "reading": {
       "shelf": "homedressmakersg00blac",
       "chapter": 8
     },
-    "needIt": "Knowing how to construct a one-piece dress helps you create high-quality clothing that fits your specific body shape. You can save money by making your own garments instead of buying clothes that do not fit well.",
+    "needIt": "When a dress or coat hangs well, something hidden is doing the work. Knowing that explains why cheap clothes lose their shape.",
     "why": "A dressmaker wants to make a dress that looks perfect on a person with a large figure. She learns that a one-piece dress creates long lines to help the wearer feel confident. She discovers that a well-fitted lining is the secret to making the dress stay in place and look smooth.",
     "outcome": "Construct a one-piece dress with a fitted lining and proper proportions.",
     "reachesYou": "You see these techniques when you notice how a well-made dress hangs on a mannequin in a shop. You also feel them when your own clothes shift out of place because they lack a proper lining.",
@@ -111,19 +111,19 @@
       "aha": "The lining acts as the hidden foundation that ensures the dress fits and moves correctly."
     },
     "scene": {
-      "analogy": "A house with a hidden frame",
+      "analogy": "A tent and its poles",
       "map": [
         [
-          "Outer walls",
-          "Outer dress"
+          "Tent cloth",
+          "Dress cloth"
         ],
         [
-          "Inner frame",
-          "Inner lining"
+          "Poles",
+          "Fitted lining"
         ],
         [
-          "Support",
-          "Body fit"
+          "shape",
+          "fit"
         ]
       ],
       "actors": [
@@ -134,7 +134,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Outer walls",
+          "label": "Tent cloth",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -146,7 +146,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Inner frame",
+          "label": "Poles",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -157,7 +157,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "SUPPORT",
+          "label": "SHAPE",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -169,7 +169,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "HOLD",
+          "label": "HOLD UP",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -180,15 +180,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "The inside structure makes the outside look perfect.",
+          "label": "What you do not see holds it up.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A house stands tall.",
+          "say": "A tent is cloth and poles.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -204,7 +204,7 @@
           }
         },
         {
-          "say": "The frame holds the weight.",
+          "say": "The poles go inside.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -215,19 +215,19 @@
           }
         },
         {
-          "say": "The walls look smooth.",
+          "say": "Cloth alone sags.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Walls stay straight"
+              "sub": "sags on its own"
             },
             "right": {
-              "sub": "House stays firm"
+              "sub": "gives it its shape"
             }
           }
         },
         {
-          "say": "It feels very stable.",
+          "say": "The poles give it shape.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -236,31 +236,31 @@
           }
         },
         {
-          "say": "A fitted lining keeps the garment in position on the body.",
+          "say": "Fit the lining with great care. The dress hangs from it.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Outer dress",
+              "label": "Dress cloth",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Inner lining",
+              "label": "Fitted lining",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "BODY FIT",
+              "label": "FIT",
               "size": 18
             },
             "act": {
-              "label": "ANCHOR",
+              "label": "SUPPORT",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "The lining holds the dress in its proper place.",
-              "size": 18,
+              "label": "The lining keeps the garment in position.",
+              "size": 22,
               "color": "green"
             }
           }
@@ -275,5 +275,6 @@
       "licence": "Public domain (US, by age). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

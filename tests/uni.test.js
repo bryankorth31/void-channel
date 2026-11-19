@@ -154,3 +154,17 @@ test('every class reads chapters that are really on the shelf, in plain English'
     }
   }
 });
+
+test('the steps scene: three or four cards in a row that never touch, and the wrong count is refused', () => {
+  for (const n of [3, 4]) {
+    const steps = ['Measure', 'Mark', 'Cut', 'Fit'].slice(0, n);
+    const r = uni.sceneFrom({ layout: 'steps', analogy: 'Wrapping a gift', steps, subs: steps.map(() => 'a short note'), line: 'Measure twice, cut once.', says: steps.map((x) => x + ' comes next.'), idea: { steps: steps.map((x) => x + '!'), line: 'Order matters.', say: 'Each step makes the next one possible.' } });
+    assert.ok(r.scene, JSON.stringify(r.notes));
+    const cards = r.scene.actors.filter((a) => a.type === 'card');
+    assert.strictEqual(cards.length, n);
+    for (let i = 1; i < cards.length; i++) assert.ok(cards[i - 1].x + cards[i - 1].w < cards[i].x, 'cards do not touch');
+    assert.ok(cards[0].x >= 0 && cards[n - 1].x + cards[n - 1].w <= 800);
+    assert.strictEqual(r.scene.beats.length, n + 1);
+  }
+  assert.strictEqual(uni.sceneFrom({ layout: 'steps', analogy: 'x', steps: ['One', 'Two'], subs: ['a', 'b'], says: ['a', 'b'], line: 'l', idea: { steps: ['a', 'b'], line: 'l', say: 's' } }).scene, null);
+});

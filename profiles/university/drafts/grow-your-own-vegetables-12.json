@@ -1,7 +1,7 @@
 {
   "slug": "grow-your-own-vegetables",
   "n": 12,
-  "title": "Leftovers",
+  "title": "Waste nothing",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:11:58.856Z",
   "ok": true,
@@ -31,12 +31,12 @@
   ],
   "unit": {
     "n": 12,
-    "title": "Leftovers",
+    "title": "Waste nothing",
     "reading": {
       "shelf": "abc-vegetable-gardening-1916",
       "chapter": 12
     },
-    "needIt": "You can save money and reduce waste by using every part of your garden. This helps you turn 'trash' like soapy water or old plants into free food and fertilizer.",
+    "needIt": "Much of what a household throws out can feed a garden for free. Learning to see it saves money every week.",
     "why": "A gardener sees a pile of old weeds and soapy water as waste. They see a way to make rich soil and free fertilizer. By reusing what others throw away, the garden stays healthy and the wallet stays full.",
     "outcome": "Reuse garden waste to create free fertilizer and food.",
     "reachesYou": "You see this when you decide to compost food scraps instead of tossing them. You also see it when you choose to reuse old containers or water in your daily chores.",
@@ -157,76 +157,87 @@
       "aha": "By looking at waste as a resource, you save money and create a better garden."
     },
     "scene": {
-      "analogy": "A kitchen waste bin and a compost pile",
+      "analogy": "Yesterday's roast becomes today's soup",
+      "layout": "steps",
       "map": [
         [
-          "Food scraps",
-          "Garden waste"
+          "Leftovers",
+          "Clippings, suds"
         ],
         [
-          "Garden soil",
-          "New growth"
+          "Into the pot",
+          "Onto the garden"
         ],
         [
-          "Compost",
-          "Fertilizer"
+          "Tomorrow's meal",
+          "Next crop"
         ]
       ],
       "actors": [
         {
-          "id": "left",
+          "id": "s0",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
+          "x": 30,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "Food scraps",
+          "label": "Leftovers",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "right",
+          "id": "s1",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
+          "x": 290,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "Garden soil",
+          "label": "Into the pot",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "COMPOST",
-          "color": "gold",
+          "id": "a1",
+          "type": "arrow",
+          "x": 256,
+          "y": 140,
+          "x2": 284,
+          "y2": 140,
+          "color": "dim",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "draw": 0
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "ROTTING",
-          "color": "fg",
+          "id": "s2",
+          "type": "card",
+          "x": 550,
+          "y": 90,
+          "w": 220,
+          "h": 100,
+          "label": "Tomorrow's meal",
+          "color": "blue",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 17
+        },
+        {
+          "id": "a2",
+          "type": "arrow",
+          "x": 516,
+          "y": 140,
+          "x2": 544,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
-          "label": "Nothing is truly wasted in a good garden.",
+          "y": 270,
+          "label": "Waste is food in the wrong place.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -234,79 +245,68 @@
       ],
       "beats": [
         {
-          "say": "Scraps sit in a bin.",
-          "dur": 2.4,
-          "set": {
-            "left": {
-              "o": 1
-            },
-            "right": {
-              "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
-            }
-          }
-        },
-        {
-          "say": "They go into a pile.",
-          "dur": 2.4,
-          "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
-            }
-          }
-        },
-        {
-          "say": "They turn into dirt.",
+          "say": "Dinner leaves bones and scraps.",
           "dur": 2.6,
           "set": {
-            "left": {
-              "sub": "Becomes nutrients"
-            },
-            "right": {
-              "sub": "Feeds the plants"
+            "s0": {
+              "o": 1,
+              "sub": "bones, peels, scraps"
             }
           }
         },
         {
-          "say": "The garden grows strong.",
+          "say": "They go into the pot, not the bin.",
           "dur": 2.6,
           "set": {
+            "s1": {
+              "o": 1,
+              "sub": "nothing thrown away"
+            },
+            "a1": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "Tomorrow there is soup.",
+          "dur": 2.6,
+          "set": {
+            "s2": {
+              "o": 1,
+              "sub": "made from waste"
+            },
+            "a2": {
+              "o": 1,
+              "draw": 1
+            },
             "line": {
               "o": 1
             }
           }
         },
         {
-          "say": "Turn your leftovers into the fuel for your next crop.",
-          "dur": 3.4,
+          "say": "Scraps and wash water from the house can feed next year's garden.",
+          "dur": 3.6,
           "set": {
-            "left": {
-              "label": "Garden waste",
-              "size": 22,
-              "color": "gold"
-            },
-            "right": {
-              "label": "New growth",
-              "size": 22,
+            "line": {
+              "label": "Roadside grass and soapy water feed the soil.",
+              "size": 18,
               "color": "green"
             },
-            "thing": {
-              "label": "FERTILIZER",
-              "size": 14
+            "s0": {
+              "label": "Clippings, suds",
+              "size": 17,
+              "color": "gold"
             },
-            "act": {
-              "label": "RECYCLE",
-              "size": 18,
-              "color": "pink"
+            "s1": {
+              "label": "Onto the garden",
+              "size": 17,
+              "color": "gold"
             },
-            "line": {
-              "label": "Waste becomes the fuel for next year's harvest.",
-              "size": 18,
+            "s2": {
+              "label": "Next crop",
+              "size": 20,
               "color": "green"
             }
           }
@@ -321,5 +321,6 @@
       "licence": "Public domain. The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

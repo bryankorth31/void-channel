@@ -1,7 +1,7 @@
 {
   "slug": "grow-your-own-vegetables",
   "n": 5,
-  "title": "Seeds that give best results",
+  "title": "Buy the best seed you can",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:04:32.720Z",
   "ok": true,
@@ -9,12 +9,12 @@
   "notes": [],
   "unit": {
     "n": 5,
-    "title": "Seeds that give best results",
+    "title": "Buy the best seed you can",
     "reading": {
       "shelf": "abc-vegetable-gardening-1916",
       "chapter": 5
     },
-    "needIt": "Choosing the right seeds helps you save time and money by ensuring your plants actually grow well. It stops you from wasting effort on seeds that will never produce a good harvest.",
+    "needIt": "Seed is the cheapest thing in a garden and the one thing work cannot fix. A few cents more decides the whole season.",
     "why": "An amateur gardener thought that only hard work mattered for a good crop. He believed any seed would work if you just took good care of the plant. However, he did not realize that some seeds are born with better traits that no amount of care can fix.",
     "outcome": "Select high-quality seeds from reputable firms to ensure a successful garden.",
     "reachesYou": "You see this when you shop for groceries and notice some brands are more reliable than others. You also see it when you choose a brand of tool that is known to last a long time.",
@@ -122,19 +122,19 @@
       "aha": "The quality of the starting seed determines the final result more than the care provided later."
     },
     "scene": {
-      "analogy": "A chef cooking with cheap ingredients vs high quality",
+      "analogy": "Baking with fresh flour or stale flour",
       "map": [
         [
-          "A hungry diner",
-          "A gardener"
+          "Fresh flour",
+          "Best seed"
         ],
         [
-          "A chef",
-          "The harvest"
+          "Stale flour",
+          "Cheap seed"
         ],
         [
-          "The food",
-          "The seed"
+          "same oven",
+          "same garden"
         ]
       ],
       "actors": [
@@ -145,7 +145,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A hungry diner",
+          "label": "Fresh flour",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -157,7 +157,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A chef",
+          "label": "Stale flour",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -168,11 +168,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "THE FOOD",
+          "label": "SAME OVEN",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "act",
@@ -180,7 +180,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "COOKING",
+          "label": "BAKE",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -191,15 +191,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "You cannot make a feast out of poor ingredients.",
+          "label": "No care fixes a bad start.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A chef stands in a kitchen.",
+          "say": "Two bakers, one oven.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -215,7 +215,7 @@
           }
         },
         {
-          "say": "He uses low quality meat.",
+          "say": "Both bake with the same care.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -226,19 +226,19 @@
           }
         },
         {
-          "say": "The meal tastes very bad.",
+          "say": "Fresh flour makes good bread. Stale flour does not.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Gets a bland meal"
+              "sub": "good bread"
             },
             "right": {
-              "sub": "Serves a great dish"
+              "sub": "bad bread, same work"
             }
           }
         },
         {
-          "say": "The diner feels disappointed.",
+          "say": "The work was the same. The start was not.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -247,30 +247,30 @@
           }
         },
         {
-          "say": "Better seeds lead to better vegetables regardless of care.",
+          "say": "Good seed costs a little more and decides the whole season.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "A gardener",
+              "label": "Best seed",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "The harvest",
+              "label": "Cheap seed",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "THE SEED",
-              "size": 18
+              "label": "SAME GARDEN",
+              "size": 14
             },
             "act": {
-              "label": "GROWING",
+              "label": "TEND",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Good seeds are the start of a good harvest.",
+              "label": "No amount of care fixes poor seed.",
               "size": 22,
               "color": "green"
             }
@@ -286,5 +286,6 @@
       "licence": "Public domain. The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

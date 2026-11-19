@@ -445,7 +445,39 @@ const clean = (v) => String(v == null ? '' : v).replace(/\s*[\u2014\u2013]\s*/g,
 // (scene.js). The local model gives only the words. This lays them out on places that are known not to touch, and
 // refuses a word that is too long for its place, so nothing overlaps at any width. Pure.
 const SCENE_FIT = { left: 20, right: 20, thing: 11, act: 11, leftEnd: 30, rightEnd: 30, line: 56 };
+// Layout "steps": a how-to told as three or four things in a row with arrows between them, a line under them, and
+// then every card renamed as the idea. Words: analogy, steps [3 or 4, each up to 15 letters], subs [one for each
+// step, up to 24 letters], line (up to 56), says [one caption for each step, up to 70], and idea { steps, line, say }.
+function sceneSteps(w) {
+  const idea = w.idea && typeof w.idea === 'object' ? w.idea : {};
+  const bad = [];
+  const list = (v, name, n, max) => { const a = arr(v).map(clean).filter(Boolean); if (a.length !== n) bad.push(name + ' needs ' + n + ' entries (has ' + a.length + ')'); for (const x of a) if (x.length > max) bad.push(name + ' has an entry over ' + max + ' letters: ' + x.slice(0, 40)); return a; };
+  const one = (v, name, max) => { const x = clean(v); if (!x) bad.push(name + ' is missing'); else if (x.length > max) bad.push(name + ' is over ' + max + ' letters: ' + x.slice(0, 40)); return x; };
+  const n = arr(w.steps).length === 4 ? 4 : 3;
+  const max = n === 4 ? 13 : 15;
+  const steps = list(w.steps, 'steps', n, max), subs = list(w.subs, 'subs', n, n === 4 ? 20 : 24), says = list(w.says, 'says', n, 70), isteps = list(idea.steps, 'idea.steps', n, max);
+  const analogy = one(w.analogy, 'analogy', 70), line = one(w.line, 'line', 56), iline = one(idea.line, 'idea.line', 56), isay = one(idea.say, 'idea.say', 70);
+  if (bad.length) return { scene: null, notes: bad };
+  const cw = n === 4 ? 170 : 220, gap = n === 4 ? 25 : 40, x0 = (800 - n * cw - (n - 1) * gap) / 2;
+  const size = (t) => (t.length <= (n === 4 ? 10 : 13) ? 20 : 17);
+  const lineSize = (t) => (t.length <= 44 ? 22 : 18);
+  const actors = []; const beats = [];
+  steps.forEach((t, i) => {
+    const x = x0 + i * (cw + gap);
+    actors.push({ id: 's' + i, type: 'card', x, y: 90, w: cw, h: 100, label: t, color: 'blue', o: 0, size: size(t) });
+    if (i) actors.push({ id: 'a' + i, type: 'arrow', x: x - gap + 6, y: 140, x2: x - 6, y2: 140, color: 'dim', o: 0, draw: 0 });
+    const set = { ['s' + i]: { o: 1, sub: subs[i] } }; if (i) set['a' + i] = { o: 1, draw: 1 };
+    if (i === n - 1) set.line = { o: 1 };
+    beats.push({ say: says[i], dur: 2.6, set });
+  });
+  actors.push({ id: 'line', type: 'text', x: 400, y: 270, label: line, color: 'pink', size: lineSize(line), o: 0 });
+  const last = { line: { label: iline, size: lineSize(iline), color: 'green' } };
+  isteps.forEach((t, i) => { last['s' + i] = { label: t, size: size(t), color: i === n - 1 ? 'green' : 'gold' }; });
+  beats.push({ say: isay, dur: 3.6, set: last });
+  return { scene: { analogy, layout: 'steps', map: steps.map((t, i) => [t, isteps[i]]), actors, beats }, notes: [] };
+}
 function sceneFrom(w) {
+  if (w && typeof w === 'object' && w.layout === 'steps') return sceneSteps(w);
   w = w && typeof w === 'object' ? w : {}; const idea = w.idea && typeof w.idea === 'object' ? w.idea : {};
   const bad = [];
   const fit = (o, k, max, name) => { const v = clean(o[k]); if (!v) bad.push(name + ' is missing'); else if (v.length > max) bad.push(name + ' is over ' + max + ' letters: ' + v.slice(0, 40)); return v; };

@@ -1,7 +1,7 @@
 {
   "slug": "sew-mend-and-make-clothes",
   "n": 9,
-  "title": "Cutting and making the tailored suit",
+  "title": "Prepare the cloth before you cut",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:38:58.279Z",
   "ok": true,
@@ -9,12 +9,12 @@
   "notes": [],
   "unit": {
     "n": 9,
-    "title": "Cutting and making the tailored suit",
+    "title": "Prepare the cloth before you cut",
     "reading": {
       "shelf": "homedressmakersg00blac",
       "chapter": 9
     },
-    "needIt": "Knowing how to cut and shape a suit helps you understand how clothes are built to fit a body. It helps you make your own clothes fit better or fix expensive items instead of buying new ones.",
+    "needIt": "A suit that shrinks or twists after the first cleaning was not prepared. The careful steps before sewing are what you pay a tailor for.",
     "why": "A tailor must balance a coat so it sits perfectly on the shoulders without bulging. This lesson shows how a flat piece of cloth becomes a structured garment through careful cutting and internal support.",
     "outcome": "Construct a structured tailored suit coat with proper canvas support.",
     "reachesYou": "You see this when you try on a suit at a shop and feel how the shoulders sit. You also see it when you notice a cheap jacket looks flat because it lacks internal structure.",
@@ -122,156 +122,202 @@
       "aha": "Preparation of the fabric and canvas creates the structure for the final garment."
     },
     "scene": {
-      "analogy": "A house frame and its walls",
+      "analogy": "Painting a room the right way",
+      "layout": "steps",
       "map": [
         [
-          "Wooden frame",
-          "Internal canvas"
+          "Wash walls",
+          "Shrink cloth"
         ],
         [
-          "Brick walls",
-          "Outer cloth"
+          "Tape edges",
+          "Pin pattern"
         ],
         [
-          "Support",
-          "Structure"
+          "Prime",
+          "Add support"
+        ],
+        [
+          "Paint",
+          "Sew"
         ]
       ],
       "actors": [
         {
-          "id": "left",
+          "id": "s0",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
+          "x": 22.5,
+          "y": 90,
+          "w": 170,
           "h": 100,
-          "label": "Wooden frame",
+          "label": "Wash walls",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "right",
+          "id": "s1",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
+          "x": 217.5,
+          "y": 90,
+          "w": 170,
           "h": 100,
-          "label": "Brick walls",
+          "label": "Tape edges",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "SUPPORT",
-          "color": "gold",
+          "id": "a1",
+          "type": "arrow",
+          "x": 198.5,
+          "y": 140,
+          "x2": 211.5,
+          "y2": 140,
+          "color": "dim",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "draw": 0
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "HOLD",
-          "color": "fg",
+          "id": "s2",
+          "type": "card",
+          "x": 412.5,
+          "y": 90,
+          "w": 170,
+          "h": 100,
+          "label": "Prime",
+          "color": "blue",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 20
+        },
+        {
+          "id": "a2",
+          "type": "arrow",
+          "x": 393.5,
+          "y": 140,
+          "x2": 406.5,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
+        },
+        {
+          "id": "s3",
+          "type": "card",
+          "x": 607.5,
+          "y": 90,
+          "w": 170,
+          "h": 100,
+          "label": "Paint",
+          "color": "blue",
+          "o": 0,
+          "size": 20
+        },
+        {
+          "id": "a3",
+          "type": "arrow",
+          "x": 588.5,
+          "y": 140,
+          "x2": 601.5,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
-          "label": "The inside structure makes the outside look good.",
+          "y": 270,
+          "label": "Most of the job is before the job.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A house needs a frame.",
-          "dur": 2.4,
-          "set": {
-            "left": {
-              "o": 1
-            },
-            "right": {
-              "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
-            }
-          }
-        },
-        {
-          "say": "Builders add the walls.",
-          "dur": 2.4,
-          "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
-            }
-          }
-        },
-        {
-          "say": "The house stays strong.",
+          "say": "First you wash the walls.",
           "dur": 2.6,
           "set": {
-            "left": {
-              "sub": "House stands tall"
-            },
-            "right": {
-              "sub": "Walls stay straight"
+            "s0": {
+              "o": 1,
+              "sub": "so paint sticks"
             }
           }
         },
         {
-          "say": "The structure is key.",
+          "say": "Then you tape the edges.",
           "dur": 2.6,
           "set": {
+            "s1": {
+              "o": 1,
+              "sub": "so lines are clean"
+            },
+            "a1": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "Then you prime.",
+          "dur": 2.6,
+          "set": {
+            "s2": {
+              "o": 1,
+              "sub": "so color is even"
+            },
+            "a2": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "Painting comes last, and goes fast.",
+          "dur": 2.6,
+          "set": {
+            "s3": {
+              "o": 1,
+              "sub": "the easy part"
+            },
+            "a3": {
+              "o": 1,
+              "draw": 1
+            },
             "line": {
               "o": 1
             }
           }
         },
         {
-          "say": "Internal canvas provides the shape for the outer cloth.",
-          "dur": 3.4,
+          "say": "A suit that keeps its shape is mostly careful preparation.",
+          "dur": 3.6,
           "set": {
-            "left": {
-              "label": "Internal canvas",
-              "size": 18,
-              "color": "gold"
-            },
-            "right": {
-              "label": "Outer cloth",
+            "line": {
+              "label": "Sponge and shrink the material first.",
               "size": 22,
               "color": "green"
             },
-            "thing": {
-              "label": "STRUCTURE",
-              "size": 14
+            "s0": {
+              "label": "Shrink cloth",
+              "size": 17,
+              "color": "gold"
             },
-            "act": {
-              "label": "SUPPORT",
-              "size": 18,
-              "color": "pink"
+            "s1": {
+              "label": "Pin pattern",
+              "size": 17,
+              "color": "gold"
             },
-            "line": {
-              "label": "Internal support gives the coat its shape.",
-              "size": 22,
+            "s2": {
+              "label": "Add support",
+              "size": 17,
+              "color": "gold"
+            },
+            "s3": {
+              "label": "Sew",
+              "size": 20,
               "color": "green"
             }
           }
@@ -286,5 +332,6 @@
       "licence": "Public domain (US, by age). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

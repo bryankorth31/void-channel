@@ -1,7 +1,7 @@
 {
   "slug": "sew-mend-and-make-clothes",
   "n": 3,
-  "title": "How to select a skirt pattern",
+  "title": "Fit the skirt pattern to you",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:36:26.208Z",
   "ok": true,
@@ -14,12 +14,12 @@
   ],
   "unit": {
     "n": 3,
-    "title": "How to select a skirt pattern",
+    "title": "Fit the skirt pattern to you",
     "reading": {
       "shelf": "homedressmakersg00blac",
       "chapter": 3
     },
-    "needIt": "Choosing the right pattern helps you make clothes that fit your unique body shape instead of just fitting a model. It saves you from buying clothes that don't look right or have to be fixed later.",
+    "needIt": "A pattern is cut for an average body nobody has. Changing the paper first costs nothing; changing cut cloth costs the cloth.",
     "why": "A woman wanted a skirt that looked good on her tall frame. She learned that a pattern is just a map of seams. By moving those seams to the right spots, she turned a basic piece of cloth into a perfect fit.",
     "outcome": "Adjust a skirt pattern to match your specific body measurements.",
     "reachesYou": "You see this when you try on clothes at a store and notice they fit tight in one spot but loose in another. You also see it when you look at a sewing pattern online and wonder if it will actually fit you.",
@@ -118,76 +118,87 @@
       }
     ],
     "scene": {
-      "analogy": "Adjusting a chair to fit a person",
+      "analogy": "Adjusting a car seat before driving",
+      "layout": "steps",
       "map": [
         [
-          "A tall person",
-          "Body shape"
+          "Sit down",
+          "Paper pattern"
         ],
         [
-          "A small person",
-          "Skirt pattern"
+          "Slide and tilt",
+          "Alter to fit"
         ],
         [
-          "A chair",
-          "Seams"
+          "Then drive",
+          "Then cut cloth"
         ]
       ],
       "actors": [
         {
-          "id": "left",
+          "id": "s0",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
+          "x": 30,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "A tall person",
+          "label": "Sit down",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "right",
+          "id": "s1",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
+          "x": 290,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "A small person",
+          "label": "Slide and tilt",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 17
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "A CHAIR",
-          "color": "gold",
+          "id": "a1",
+          "type": "arrow",
+          "x": 256,
+          "y": 140,
+          "x2": 284,
+          "y2": 140,
+          "color": "dim",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "draw": 0
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "ADJUSTING",
-          "color": "fg",
+          "id": "s2",
+          "type": "card",
+          "x": 550,
+          "y": 90,
+          "w": 220,
+          "h": 100,
+          "label": "Then drive",
+          "color": "blue",
           "o": 0,
-          "s": 0.4,
-          "size": 14
+          "size": 20
+        },
+        {
+          "id": "a2",
+          "type": "arrow",
+          "x": 516,
+          "y": 140,
+          "x2": 544,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
-          "label": "It feels much more comfortable now.",
+          "y": 270,
+          "label": "Adjust before you start, not after.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -195,79 +206,68 @@
       ],
       "beats": [
         {
-          "say": "A person sits down.",
-          "dur": 2.4,
-          "set": {
-            "left": {
-              "o": 1
-            },
-            "right": {
-              "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
-            }
-          }
-        },
-        {
-          "say": "The chair is too big.",
-          "dur": 2.4,
-          "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
-            }
-          }
-        },
-        {
-          "say": "They adjust the height.",
+          "say": "The seat was set for someone else.",
           "dur": 2.6,
           "set": {
-            "left": {
-              "sub": "The chair fits perfectly"
-            },
-            "right": {
-              "sub": "The chair fits perfectly"
+            "s0": {
+              "o": 1,
+              "sub": "it was set for someone"
             }
           }
         },
         {
-          "say": "They feel happy.",
+          "say": "You adjust it before you start.",
           "dur": 2.6,
           "set": {
+            "s1": {
+              "o": 1,
+              "sub": "until it fits you"
+            },
+            "a1": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "Now the whole drive is comfortable.",
+          "dur": 2.6,
+          "set": {
+            "s2": {
+              "o": 1,
+              "sub": "comfortable all trip"
+            },
+            "a2": {
+              "o": 1,
+              "draw": 1
+            },
             "line": {
               "o": 1
             }
           }
         },
         {
-          "say": "Move the seams to match your body shape.",
-          "dur": 3.4,
+          "say": "Fit the paper pattern to your measures before you cut.",
+          "dur": 3.6,
           "set": {
-            "left": {
-              "label": "Body shape",
-              "size": 22,
-              "color": "gold"
-            },
-            "right": {
-              "label": "Skirt pattern",
+            "line": {
+              "label": "Change the paper, not the cloth.",
               "size": 22,
               "color": "green"
             },
-            "thing": {
-              "label": "SEAMS",
-              "size": 18
+            "s0": {
+              "label": "Paper pattern",
+              "size": 20,
+              "color": "gold"
             },
-            "act": {
-              "label": "MOVING",
-              "size": 18,
-              "color": "pink"
+            "s1": {
+              "label": "Alter to fit",
+              "size": 20,
+              "color": "gold"
             },
-            "line": {
-              "label": "The seams must be in the right place.",
-              "size": 22,
+            "s2": {
+              "label": "Then cut cloth",
+              "size": 17,
               "color": "green"
             }
           }
@@ -304,5 +304,6 @@
       "licence": "Public domain (US, by age). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

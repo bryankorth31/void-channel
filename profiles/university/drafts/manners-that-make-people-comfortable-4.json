@@ -1,7 +1,7 @@
 {
   "slug": "manners-that-make-people-comfortable",
   "n": 4,
-  "title": "Funerals",
+  "title": "What to do when someone dies",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:43:21.928Z",
   "ok": true,
@@ -19,12 +19,12 @@
   ],
   "unit": {
     "n": 4,
-    "title": "Funerals",
+    "title": "What to do when someone dies",
     "reading": {
       "shelf": "post-etiquette-1922",
       "chapter": 24
     },
-    "needIt": "Knowing funeral manners helps you support a grieving friend without making things awkward. It ensures you provide comfort instead of adding stress during a hard time.",
+    "needIt": "Sooner or later you will stand in a house where someone has died and not know what to do. The old customs exist so you do not have to think.",
     "why": "Imagine a friend loses a parent. They are overwhelmed and exhausted. By following simple rules, like staying quiet and not forcing your presence, you act as a shield that lets them rest.",
     "outcome": "Provide respectful support to others during a time of loss.",
     "reachesYou": "You might see this when a neighbor loses a loved one or a coworker passes away. It helps you know what to say and how to act when everyone feels uncomfortable.",
@@ -119,19 +119,19 @@
       "aha": "By following these rules, you remove the burden of social guesswork from the grieving person."
     },
     "scene": {
-      "analogy": "A quiet library during a study session",
+      "analogy": "A fire drill everyone already knows",
       "map": [
         [
-          "A student",
-          "The bereaved"
+          "No plan",
+          "No custom"
         ],
         [
-          "A student",
-          "The visitor"
-        ],
-        [
-          "A book",
+          "Known steps",
           "Etiquette"
+        ],
+        [
+          "the alarm",
+          "a death"
         ]
       ],
       "actors": [
@@ -142,7 +142,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A student",
+          "label": "No plan",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -154,7 +154,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A student",
+          "label": "Known steps",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -165,11 +165,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A BOOK",
+          "label": "THE ALARM",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "act",
@@ -177,7 +177,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "WHISPER",
+          "label": "RING",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -188,15 +188,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "A soft voice helps keep the peace for everyone.",
+          "label": "Known steps carry people through.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A student sits in a quiet room.",
+          "say": "The alarm rings.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -212,7 +212,7 @@
           }
         },
         {
-          "say": "Another student enters nearby.",
+          "say": "Everyone must act at once.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -223,19 +223,19 @@
           }
         },
         {
-          "say": "They speak in a very low voice.",
+          "say": "With no plan there is panic.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Both stay focused"
+              "sub": "panic and noise"
             },
             "right": {
-              "sub": "The room stays calm"
+              "sub": "calm, each does a part"
             }
           }
         },
         {
-          "say": "The peace of the room stays.",
+          "say": "With known steps, people stay calm.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -244,31 +244,31 @@
           }
         },
         {
-          "say": "Etiquette acts as a servant to muffle noise and protect the grieving.",
+          "say": "Funeral customs give order and quiet when a family cannot think.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "The bereaved",
+              "label": "No custom",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "The visitor",
+              "label": "Etiquette",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "ETIQUETTE",
-              "size": 14
+              "label": "A DEATH",
+              "size": 18
             },
             "act": {
-              "label": "MUFFLE",
+              "label": "COMES",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Rules keep the environment calm for the grieving.",
-              "size": 18,
+              "label": "Custom shields the grieving family.",
+              "size": 22,
               "color": "green"
             }
           }
@@ -283,5 +283,6 @@
       "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

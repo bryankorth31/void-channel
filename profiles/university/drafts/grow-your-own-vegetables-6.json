@@ -1,7 +1,7 @@
 {
   "slug": "grow-your-own-vegetables",
   "n": 6,
-  "title": "Early garden work",
+  "title": "Pull weeds while they are small",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:05:41.466Z",
   "ok": true,
@@ -11,12 +11,12 @@
   ],
   "unit": {
     "n": 6,
-    "title": "Early garden work",
+    "title": "Pull weeds while they are small",
     "reading": {
       "shelf": "abc-vegetable-gardening-1916",
       "chapter": 6
     },
-    "needIt": "Knowing how to manage small tasks early prevents big problems later. It helps you stay ahead of chores like cleaning or homework so they do not pile up.",
+    "needIt": "Ten minutes of weeding in the first weeks saves hours in July. It is the same with most chores you would rather put off.",
     "why": "A gardener who waits too long to pull weeds finds them hard to move. By starting early and using the right tool, the work stays easy and fast.",
     "outcome": "Use a weedinghook to keep a garden clear of unwanted plants.",
     "reachesYou": "You see this when you try to keep a messy room tidy before it gets out of control. You also see it when you check your phone for new messages to keep your day moving.",
@@ -137,19 +137,19 @@
       "aha": "Small actions taken early keep the garden easy to manage."
     },
     "scene": {
-      "analogy": "Keeping a room clean",
+      "analogy": "Washing a dish now or next week",
       "map": [
         [
-          "A messy room",
-          "A messy room"
+          "Washed tonight",
+          "Weed early"
         ],
         [
-          "A clean room",
-          "A clean room"
+          "Left a week",
+          "Weed late"
         ],
         [
-          "Dust",
-          "Dust"
+          "one dish",
+          "weeds"
         ]
       ],
       "actors": [
@@ -160,7 +160,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A messy room",
+          "label": "Washed tonight",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -172,7 +172,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A clean room",
+          "label": "Left a week",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -183,7 +183,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "DUST",
+          "label": "ONE DISH",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -195,7 +195,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "DUSTING",
+          "label": "WAIT",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -206,15 +206,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "Small bits of dust make a big mess if left alone.",
+          "label": "Small jobs grow when you leave them.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A room fills with dust over time.",
+          "say": "One dirty dish.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -230,7 +230,7 @@
           }
         },
         {
-          "say": "Someone wipes a small corner.",
+          "say": "You can wash it now, or leave it.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -241,19 +241,19 @@
           }
         },
         {
-          "say": "The room stays clear and bright.",
+          "say": "Tonight it wipes clean in seconds.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "A dusty room"
+              "sub": "ten seconds"
             },
             "right": {
-              "sub": "A clear room"
+              "sub": "scrub for ten minutes"
             }
           }
         },
         {
-          "say": "It feels calm and easy.",
+          "say": "In a week it is stuck fast.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -262,31 +262,31 @@
           }
         },
         {
-          "say": "Small actions early prevent big messes later.",
+          "say": "Weeds pulled young come out easily. Left alone, they take over.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "A messy room",
+              "label": "Weed early",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "A clean room",
+              "label": "Weed late",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "DUST",
+              "label": "WEEDS",
               "size": 18
             },
             "act": {
-              "label": "DUSTING",
+              "label": "GROW",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Small actions early prevent big messes later.",
-              "size": 18,
+              "label": "Early weeding is easy weeding.",
+              "size": 22,
               "color": "green"
             }
           }
@@ -301,5 +301,6 @@
       "licence": "Public domain. The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

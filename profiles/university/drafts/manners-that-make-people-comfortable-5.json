@@ -1,7 +1,7 @@
 {
   "slug": "manners-that-make-people-comfortable",
   "n": 5,
-  "title": "Notes and shorter letters",
+  "title": "Short notes that say it well",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:43:51.692Z",
   "ok": true,
@@ -11,12 +11,12 @@
   ],
   "unit": {
     "n": 5,
-    "title": "Notes and shorter letters",
+    "title": "Short notes that say it well",
     "reading": {
       "shelf": "post-etiquette-1922",
       "chapter": 27
     },
-    "needIt": "Good manners in writing help people trust your character and see you as organized. It shows you care enough to be clear and neat when you send a note to a neighbor or a boss.",
+    "needIt": "A thank you, a sympathy note, a message to a boss: a few plain lines, sent promptly, do more than a long message sent late.",
     "why": "A messy letter with bad spelling and crooked lines tells a story about a messy mind. A neat note shows you are a person who takes pride in the small details of life.",
     "outcome": "Write notes that reflect a neat and reliable character.",
     "reachesYou": "You see this when you send a thank you note to a family friend or a quick message to a coworker. It is the difference between looking like a professional and looking like a mess.",
@@ -111,19 +111,19 @@
       "aha": "When you write simply and neatly, you show the reader you are a person of good character."
     },
     "scene": {
-      "analogy": "A messy desk vs a tidy workspace",
+      "analogy": "A clear road sign and a cluttered one",
       "map": [
         [
-          "Messy desk",
-          "Messy letter"
+          "Cluttered sign",
+          "Fussy note"
         ],
         [
-          "Tidy desk",
-          "Neat letter"
+          "Three clear words",
+          "Simple note"
         ],
         [
-          "Worker",
-          "Reader"
+          "driver",
+          "reader"
         ]
       ],
       "actors": [
@@ -134,7 +134,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Messy desk",
+          "label": "Cluttered sign",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -146,10 +146,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Tidy desk",
+          "label": "Three clear words",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "thing",
@@ -157,7 +157,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "WORKER",
+          "label": "DRIVER",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -169,7 +169,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "WORK",
+          "label": "READ",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -180,7 +180,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "A tidy space shows a clear mind.",
+          "label": "Simple is hardest, and best.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -188,7 +188,7 @@
       ],
       "beats": [
         {
-          "say": "A worker sits at a desk.",
+          "say": "A driver has two seconds to read a sign.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -204,7 +204,7 @@
           }
         },
         {
-          "say": "One desk is full of trash.",
+          "say": "One sign is crowded. One is plain.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -215,19 +215,19 @@
           }
         },
         {
-          "say": "The worker looks confused.",
+          "say": "The crowded one is missed.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Stressed and slow"
+              "sub": "missed the turn"
             },
             "right": {
-              "sub": "Calm and fast"
+              "sub": "understood at a glance"
             }
           }
         },
         {
-          "say": "The room feels chaotic.",
+          "say": "The plain one is understood.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -236,16 +236,16 @@
           }
         },
         {
-          "say": "A neat note shows you are a person of good character.",
+          "say": "A short, neat, simple note says the most about its writer.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Messy letter",
+              "label": "Fussy note",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Neat letter",
+              "label": "Simple note",
               "size": 22,
               "color": "green"
             },
@@ -254,12 +254,12 @@
               "size": 18
             },
             "act": {
-              "label": "READ",
+              "label": "OPEN",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "The letter reflects your character.",
+              "label": "A note shows your character.",
               "size": 22,
               "color": "green"
             }
@@ -275,5 +275,6 @@
       "licence": "Public domain (the Archive item says not in copyright). The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }

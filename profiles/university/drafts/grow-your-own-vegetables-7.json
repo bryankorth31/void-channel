@@ -1,7 +1,7 @@
 {
   "slug": "grow-your-own-vegetables",
   "n": 7,
-  "title": "Vegetable plants in the house",
+  "title": "Starting seedlings indoors",
   "model": "gemma4:12b",
   "made": "2026-11-19T16:06:48.560Z",
   "ok": true,
@@ -11,12 +11,12 @@
   ],
   "unit": {
     "n": 7,
-    "title": "Vegetable plants in the house",
+    "title": "Starting seedlings indoors",
     "reading": {
       "shelf": "abc-vegetable-gardening-1916",
       "chapter": 7
     },
-    "needIt": "Knowing how to manage a small space helps you grow food even if you do not have a yard. It teaches you how to balance heat, air, and water to keep living things healthy.",
+    "needIt": "Starting plants on a windowsill gives you weeks of head start for the price of a seed packet, if you avoid three easy mistakes.",
     "why": "Many people try to grow plants inside but the plants die quickly. This happens because a house is often too hot or lacks fresh air. You can succeed if you learn to control these three specific things.",
     "outcome": "Manage the environment of indoor seedlings to ensure they survive.",
     "reachesYou": "You see this when you try to keep a houseplant alive in a sunny window. You also see it when you notice how a room feels too stuffy or too hot for a pet.",
@@ -137,156 +137,156 @@
       "aha": "By balancing these three factors, you create a healthy environment that mimics professional growing conditions."
     },
     "scene": {
-      "analogy": "A baby in a room that is too hot",
+      "analogy": "Keeping a baby comfortable",
+      "layout": "steps",
       "map": [
         [
-          "A baby",
-          "Seedlings"
+          "Not too warm",
+          "Cool room"
         ],
         [
-          "A hot room",
-          "Living room"
+          "Fresh air",
+          "Open air daily"
         ],
         [
-          "Heat",
-          "Heat"
+          "Enough to drink",
+          "Water with care"
         ]
       ],
       "actors": [
         {
-          "id": "left",
+          "id": "s0",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
+          "x": 30,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "A baby",
+          "label": "Not too warm",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "right",
+          "id": "s1",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
+          "x": 290,
+          "y": 90,
+          "w": 220,
           "h": 100,
-          "label": "A hot room",
+          "label": "Fresh air",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 20
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "HEAT",
-          "color": "gold",
+          "id": "a1",
+          "type": "arrow",
+          "x": 256,
+          "y": 140,
+          "x2": 284,
+          "y2": 140,
+          "color": "dim",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "draw": 0
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "OVERHEATS",
-          "color": "fg",
+          "id": "s2",
+          "type": "card",
+          "x": 550,
+          "y": 90,
+          "w": 220,
+          "h": 100,
+          "label": "Enough to drink",
+          "color": "blue",
           "o": 0,
-          "s": 0.4,
-          "size": 14
+          "size": 17
+        },
+        {
+          "id": "a2",
+          "type": "arrow",
+          "x": 516,
+          "y": 140,
+          "x2": 544,
+          "y2": 140,
+          "color": "dim",
+          "o": 0,
+          "draw": 0
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
-          "label": "It is too hot for a little one to stay healthy.",
+          "y": 270,
+          "label": "Comfort, not coddling.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A baby is in a warm room.",
-          "dur": 2.4,
-          "set": {
-            "left": {
-              "o": 1
-            },
-            "right": {
-              "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
-            }
-          }
-        },
-        {
-          "say": "The heater stays on high.",
-          "dur": 2.4,
-          "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
-            }
-          }
-        },
-        {
-          "say": "The baby feels too hot.",
+          "say": "A baby in a hot room gets weak and fussy.",
           "dur": 2.6,
           "set": {
-            "left": {
-              "sub": "The baby gets weak"
-            },
-            "right": {
-              "sub": "The baby gets tired"
+            "s0": {
+              "o": 1,
+              "sub": "a hot room makes it limp"
             }
           }
         },
         {
-          "say": "The baby becomes very weak.",
+          "say": "It needs fresh air too.",
           "dur": 2.6,
           "set": {
+            "s1": {
+              "o": 1,
+              "sub": "open the window a little"
+            },
+            "a1": {
+              "o": 1,
+              "draw": 1
+            }
+          }
+        },
+        {
+          "say": "And a drink when it needs one, not all at once.",
+          "dur": 2.6,
+          "set": {
+            "s2": {
+              "o": 1,
+              "sub": "little and often"
+            },
+            "a2": {
+              "o": 1,
+              "draw": 1
+            },
             "line": {
               "o": 1
             }
           }
         },
         {
-          "say": "Excessive heat causes abnormal growth and death in young plants.",
-          "dur": 3.4,
+          "say": "Seedlings indoors need a cool room, fresh air and careful water.",
+          "dur": 3.6,
           "set": {
-            "left": {
-              "label": "Seedlings",
-              "size": 22,
-              "color": "gold"
-            },
-            "right": {
-              "label": "Living room",
+            "line": {
+              "label": "Too much heat makes weak, leggy plants.",
               "size": 22,
               "color": "green"
             },
-            "thing": {
-              "label": "HEAT",
-              "size": 18
+            "s0": {
+              "label": "Cool room",
+              "size": 20,
+              "color": "gold"
             },
-            "act": {
-              "label": "WEAKENS",
-              "size": 18,
-              "color": "pink"
+            "s1": {
+              "label": "Open air daily",
+              "size": 17,
+              "color": "gold"
             },
-            "line": {
-              "label": "Too much heat makes young plants lose their strength.",
-              "size": 18,
+            "s2": {
+              "label": "Water with care",
+              "size": 17,
               "color": "green"
             }
           }
@@ -301,5 +301,6 @@
       "licence": "Public domain. The plain English beside it is ours.",
       "note": "One chapter of an old book, in plain English, with the printed words beside it."
     }
-  }
+  },
+  "upgraded": "title, why you need this and scene written by hand in a Claude chat, 19 Nov 2026"
 }
