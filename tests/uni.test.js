@@ -120,3 +120,12 @@ test('shelf: the public copy carries a shelf book only when it is marked live', 
   const liveIds = new Set((list().shelf || []).filter((x) => x.live).map((x) => x.id));
   for (const f of fs.readdirSync(SITE).filter((x) => x.startsWith('shelf-'))) assert.ok(liveIds.has(f.slice(6, -5)), f + ' is public but not marked live');
 });
+
+test('the draft gate does not fall over when the model hands back the wrong kind of thing', () => {
+  const tr = { words: [{ w: 'a', raw: 'a', t: 0 }] };
+  for (const raw of [null, [], 'text', { quiz: 'none', chapters: {}, crystal: 'x', scene: 'y' }, { quiz: [{ choices: 'a b' }], crystal: { partials: 5, decoys: {} }, scene: { says: 'one', idea: 3 } }]) {
+    const g = uni.gateDraft(raw, tr);
+    assert.strictEqual(g.ok, false);
+    assert.ok(g.missing.length >= 4);
+  }
+});

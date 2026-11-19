@@ -1,0 +1,313 @@
+{
+  "slug": "human-nature",
+  "n": 7,
+  "title": "Flourishing and attachment",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T15:41:05.940Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 7,
+    "title": "Flourishing and attachment",
+    "needIt": "Understanding how your early life shapes your trust helps you see why you react to people the way you do. It helps you realize that building strong bonds is a biological need for a happy life.",
+    "why": "A man in a lab was told to give electric shocks to a stranger. Even though he felt terrible and shook with fear, he kept doing it because an authority figure told him to. This shows how our social brains can push us to do things that go against our own feelings.",
+    "outcome": "Recognize how early bonds and social connections shape your ability to trust and flourish.",
+    "chapters": [
+      {
+        "t": 33,
+        "title": "The Milgram Study",
+        "words": "So in 1961, in newspapers throughout the New Haven area, the following"
+      },
+      {
+        "t": 488,
+        "title": "The Cost of Obedience",
+        "words": "The psychological response of the subjects sounds like what we read"
+      },
+      {
+        "t": 804,
+        "title": "Social Connection and Flourishing",
+        "words": "What Milgram discovered is that although compliance is extremely high when"
+      },
+      {
+        "t": 1349,
+        "title": "Attachment Theory",
+        "words": "The first, which she called secure attachment, results from early childhood"
+      },
+      {
+        "t": 2065,
+        "title": "The Importance of Friendship",
+        "words": "nothing plays a more central role in allowing you to flourish"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What was the main goal of the Milgram study?",
+        "choices": [
+          "To test memory",
+          "To measure pain",
+          "To study obedience",
+          "To study electricity"
+        ],
+        "a": 2,
+        "why": "The lecture explains how people obeyed commands to give shocks even when they felt distressed.",
+        "quote": "The research that Milgram conducted was inspired by an an attempt to understand what could possibly have explained the behavior of ordinary German citizens in Nazi Germany.",
+        "t": 443
+      },
+      {
+        "q": "How did the subjects react physically during the experiment?",
+        "choices": [
+          "They showed signs of tension",
+          "They stayed calm",
+          "They laughed",
+          "They ignored the shocks"
+        ],
+        "a": 0,
+        "why": "The lecture describes subjects sweating, stuttering, and biting their lips.",
+        "quote": "Many subjects showed signs of nervousness, especially upon administering the more powerful shocks in a large number of cases, the degree of tension reached extremes rarely seen in such laboratory subjects.",
+        "t": 498
+      },
+      {
+        "q": "What happened to obedience when the victim gave voice feedback?",
+        "choices": [
+          "Obedience stayed high",
+          "Obedience declined",
+          "Obedience increased",
+          "People stopped immediately"
+        ],
+        "a": 1,
+        "why": "The lecture states that compliance declined as the interaction became more direct.",
+        "quote": "And the tendency of subjects to collaborate, to cooperate, to do what was asked of them, declined directly with whether the experimenter was present in the room with them.",
+        "t": 747
+      },
+      {
+        "q": "What is a key strategy used in Nazi Germany to commit harm?",
+        "choices": [
+          "Dehumanization",
+          "Physical force",
+          "Secret meetings",
+          "Economic pressure"
+        ],
+        "a": 0,
+        "why": "The lecture explains that viewing others as non-human makes it easier to harm them.",
+        "quote": "And it turns out that one of the major strategies in Nazi Germany to enable people to commit harm against their neighbors was to use a language of dehumanization",
+        "t": 966
+      },
+      {
+        "q": "What does 'secure attachment' mean in the lecture?",
+        "choices": [
+          "Predictable responsiveness",
+          "Being alone",
+          "Avoiding others",
+          "Constant fighting"
+        ],
+        "a": 0,
+        "why": "Secure attachment comes from a caregiver who responds predictably to a child's needs.",
+        "quote": "The first, which she called secure attachment, results from early childhood experience that involves predictable responsiveness to one's needs by somebody who feels affection for you.",
+        "t": 1349
+      },
+      {
+        "q": "What does Aristotle say about friendship?",
+        "choices": [
+          "It is central to flourishing",
+          "It is for the rich",
+          "It is a distraction",
+          "It is not important"
+        ],
+        "a": 0,
+        "why": "Aristotle argues that friendship is vital for a good life regardless of your status.",
+        "quote": "nothing plays a more central role in allowing you to flourish than friendship does.",
+        "t": 2065
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "People obey authority even when it causes them distress.",
+        "Direct interaction with a victim reduces the urge to harm.",
+        "Dehumanizing others makes it easier to ignore their suffering.",
+        "Early childhood bonds create a foundation of trust.",
+        "Social connections are vital for health and long life."
+      ],
+      "key": "Human flourishing depends on social bonds and the ability to trust others.",
+      "decoys": [
+        {
+          "text": "Obedience is always a choice of free will.",
+          "why": "The lecture shows that social pressure and authority can override personal conscience."
+        },
+        {
+          "text": "Early childhood only matters for physical growth.",
+          "why": "The lecture shows it shapes social trust and later patterns of response to the world."
+        }
+      ],
+      "aha": "Our social brains are wired to seek connection, which shapes how we behave, trust, and thrive."
+    },
+    "scene": {
+      "analogy": "A child reaching for a toy in a store",
+      "map": [
+        [
+          "A crying child",
+          "A crying child"
+        ],
+        [
+          "A busy parent",
+          "A busy parent"
+        ],
+        [
+          "A soft toy",
+          "A soft toy"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A crying child",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A busy parent",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "A SOFT TOY",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "REACHING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "I feel safe because you are here to help me.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A child wants a toy and starts to cry.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The parent picks them up and gives the toy.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The child stops crying and smiles.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Child feels safe"
+            },
+            "right": {
+              "sub": "Parent feels proud"
+            }
+          }
+        },
+        {
+          "say": "The child feels loved and secure.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Early bonds create the foundation for a trusting life.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "A crying child",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "A busy parent",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "A SOFT TOY",
+              "size": 14
+            },
+            "act": {
+              "label": "REACHING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Early care builds the trust needed to grow.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 7: Flourishing and attachment",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "7. Flourishing and Attachment.mp4",
+      "seconds": 2266,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  }
+}

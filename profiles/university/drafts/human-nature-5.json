@@ -1,0 +1,336 @@
+{
+  "slug": "human-nature",
+  "n": 5,
+  "title": "The well-ordered soul: happiness and harmony",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T15:38:59.311Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: ",
+    "round 1: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line",
+    "round 2: scene: line is over 56 letters: It is easier to stay healthy when the co",
+    "round 2: scene: idea.thing is over 11 letters: External rules"
+  ],
+  "unit": {
+    "n": 5,
+    "title": "The well-ordered soul: happiness and harmony",
+    "needIt": "This helps you understand why it feels hard to stay focused on your goals. It shows how to balance your urges with your long-term plans to find true happiness.",
+    "why": "A student wants to stop using the internet in class but finds it hard to resist. They learn that making a promise is not enough; they need external rules and a balanced soul to succeed.",
+    "outcome": "Identify how to balance your inner desires with reason to achieve a well-ordered life.",
+    "chapters": [
+      {
+        "t": 95,
+        "title": "Making a commitment",
+        "words": "But you took an action at a time when you felt yourself"
+      },
+      {
+        "t": 390,
+        "title": "Plato's three parts of the soul",
+        "words": "Plato had suggested that our soul can be understood as having three"
+      },
+      {
+        "t": 561,
+        "title": "The city and the soul",
+        "words": "Socrates suggests at the end of the discussion in Book Two, which"
+      },
+      {
+        "t": 1048,
+        "title": "Justice as health",
+        "words": "Roughly, justice is to the soul as health is to the body."
+      },
+      {
+        "t": 2289,
+        "title": "Aristotle's highest good",
+        "words": "The idea is that every good, that is, everything that you"
+      },
+      {
+        "t": 2538,
+        "title": "The human function",
+        "words": "What distinguishes us from those beings is reason. So just as"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What did 43% of students do to help themselves stay focused?",
+        "choices": [
+          "Made a promise",
+          "Bought a phone",
+          "Left the room",
+          "Did nothing"
+        ],
+        "a": 0,
+        "why": "The lecture explains that writing down a commitment is a form of pre-commitment.",
+        "quote": "43% of you, 43% of the students in this room made a pre-commitment in the form of a promise.",
+        "t": 81
+      },
+      {
+        "q": "What is a 'phone condom'?",
+        "choices": [
+          "A bag to block access",
+          "A protective case",
+          "A screen protector",
+          "A silent mode"
+        ],
+        "a": 0,
+        "why": "It is an external constraint that physically prevents the person from using the phone.",
+        "quote": "the idea is that you take your cell phone and you put it in this little Ziploc bag, and while you're driving, you are unable to gain access to it.",
+        "t": 224
+      },
+      {
+        "q": "According to Plato, what is the 'appetitive' part of the soul?",
+        "choices": [
+          "Reason",
+          "Spirit",
+          "Justice",
+          "Desires"
+        ],
+        "a": 3,
+        "why": "Plato describes the appetitive part as the part full of desires and needs.",
+        "quote": "and that we have in addition an appetitive part, which is the which he represents sometimes as a wild horse and sometimes as the multi-headed beast.",
+        "t": 412
+      },
+      {
+        "q": "How does Plato define a 'just' person?",
+        "choices": [
+          "Someone who follows laws",
+          "Someone who is healthy",
+          "Someone who is rich",
+          "Someone who is brave"
+        ],
+        "a": 1,
+        "why": "Plato argues that justice is the health of the soul.",
+        "quote": "Roughly, justice is to the soul as health is to the body.",
+        "t": 1048
+      },
+      {
+        "q": "Why does Plato believe that a well-ordered soul leads to happiness?",
+        "choices": [
+          "It provides more money.",
+          "It makes people more famous.",
+          "It removes all physical pain.",
+          "It allows for a greater form of pleasure."
+        ],
+        "a": 3,
+        "why": "Plato argues that those who regulate their souls experience a higher form of pleasure than those who only follow their appetites.",
+        "quote": "And those of us who have had the great pleasure of doing the second, says Plato, have recognized that that pleasure is a greater form of pleasure than the pleasure of Angry Birds.",
+        "t": 1293
+      },
+      {
+        "q": "What does Jonathan Haidt say about how we experience pleasure?",
+        "choices": [
+          "We only feel pleasure when we reach a goal.",
+          "More of something always makes us happier.",
+          "Pleasure is only found in material goods.",
+          "We are more sensitive to changes than absolute levels."
+        ],
+        "a": 3,
+        "why": "Haidt explains that humans are sensitive to contrasts, which leads to the hedonic treadmill where we always want more.",
+        "quote": "And the second, which hearkens back to the material that we read last week from Daniel Kahneman and the day before that from Jonathan Evans, that because we are more sensitive to changes in goods than to absolute levels of goods, more of something doesn't always make us happier.",
+        "t": 1863
+      },
+      {
+        "q": "What is the 'summum bonum' in Aristotle's work?",
+        "choices": [
+          "The lowest goal",
+          "The highest good",
+          "The city state",
+          "The mean"
+        ],
+        "a": 1,
+        "why": "Aristotle describes it as the thing pursued for its own sake.",
+        "quote": "Sometimes called the highest good, that which is pursued for its own sake.",
+        "t": 2276
+      }
+    ],
+    "scene": {
+      "analogy": "A person trying to eat healthy food in a kitchen",
+      "map": [
+        [
+          "A hungry person",
+          "The rational soul"
+        ],
+        [
+          "A box of cookies",
+          "Appetites"
+        ],
+        [
+          "Willpower",
+          "Reason"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A hungry person",
+          "color": "blue",
+          "o": 0,
+          "size": 18
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A box of cookies",
+          "color": "blue",
+          "o": 0,
+          "size": 18
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "WILLPOWER",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "CHOOSING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "I knew I should have picked the salad.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A person stands in a kitchen.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They look at a box of cookies.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They eat a cookie.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Feels satisfied"
+            },
+            "right": {
+              "sub": "Feels regretful"
+            }
+          }
+        },
+        {
+          "say": "They feel a bit sad.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Happiness comes from a soul where reason rules over desires.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "The rational soul",
+              "size": 18,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Appetites",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "REASON",
+              "size": 18
+            },
+            "act": {
+              "label": "REGULATING",
+              "size": 14,
+              "color": "pink"
+            },
+            "line": {
+              "label": "A well-ordered soul balances all its parts.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Promises alone are often not enough to change behavior.",
+        "External constraints help us stay on track.",
+        "The soul has parts that can pull in different directions.",
+        "Reason should lead the other parts of the soul.",
+        "Happiness comes from a well-ordered and harmonious soul."
+      ],
+      "key": "True happiness comes from using reason to harmonize our inner desires and actions.",
+      "decoys": [
+        {
+          "text": "Happiness is just about getting what you want.",
+          "why": "Plato and Aristotle argue that unregulated desires lead to a disordered soul, not true flourishing."
+        },
+        {
+          "text": "Justice is only about following the laws of society.",
+          "why": "Socrates argues that justice is an intrinsic health of the soul, not just a set of external rules."
+        }
+      ],
+      "aha": "By using reason to organize our inner parts, we achieve a state of harmony that provides the highest form of happiness."
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 5: The well-ordered soul: happiness and harmony",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "5. The Well-Ordered Soul  Happiness and Harmony.mp4",
+      "seconds": 2665,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  }
+}

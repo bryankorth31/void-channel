@@ -1,0 +1,339 @@
+{
+  "slug": "human-nature",
+  "n": 4,
+  "title": "Parts of the soul II",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T15:38:23.918Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: thing is over 11 letters: Chocolate bar",
+    "round 2: chapter dropped, its opening words are not said in the lecture: The power of framing"
+  ],
+  "unit": {
+    "n": 4,
+    "title": "Parts of the soul II",
+    "needIt": "Understanding how your brain works helps you see why you make quick mistakes or feel sudden urges. It helps you realize that your first instinct isn't always your best choice.",
+    "why": "Our brains have two systems. One is fast and automatic, like a reflex. The other is slow and logical, like solving a math problem. Sometimes, these two systems fight each other, leading us to make choices that don't make sense.",
+    "outcome": "Identify when your automatic habits are overriding your logical goals.",
+    "chapters": [
+      {
+        "t": 70,
+        "title": "Sampling Bias",
+        "words": "We just made a classic and dangerous mistake, a mistake known as"
+      },
+      {
+        "t": 208,
+        "title": "The Weirdest People",
+        "words": "And what the article argued was that a great deal of"
+      },
+      {
+        "t": 510,
+        "title": "Thorndike's Reasoning",
+        "words": "So he describes in this 1922 article an experiment that he does,"
+      },
+      {
+        "t": 833,
+        "title": "Wason Selection Task",
+        "words": "So famously, the Wason selection tasks ask people to determine which"
+      },
+      {
+        "t": 1201,
+        "title": "System 1 and 2",
+        "words": "They suggest that we have two relatively autonomous mechanisms for processing"
+      },
+      {
+        "t": 1740,
+        "title": "Framing Effects",
+        "words": "Notice, again, plan A and plan B on the two sides"
+      },
+      {
+        "t": 2474,
+        "title": "The Concept of Alief",
+        "words": "So to have an alief is roughly to have a representationally"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is sampling bias?",
+        "choices": [
+          "A biased sample",
+          "A random error",
+          "A fast reflex",
+          "A logical choice"
+        ],
+        "a": 0,
+        "why": "The lecture explains that using a non-representative group leads to inaccurate information.",
+        "quote": "We used a measure which doesn't give us accurate information about what we wanted to find out.",
+        "t": 84
+      },
+      {
+        "q": "What does 'WEIRD' stand for?",
+        "choices": [
+          "Western, Educated, Rich, Democratic",
+          "Western, Educated, Industrialized, Rich, Democratic",
+          "Wild, Energetic, Rare, Diverse",
+          "Wise, Experienced, Intelligent, Rational"
+        ],
+        "a": 1,
+        "why": "The lecture defines WEIRD as a specific group of people often used in psychological research.",
+        "quote": "And weird here stands for Western, educated, industrialized, rich, and democratic.",
+        "t": 185
+      },
+      {
+        "q": "Why did people find the question about 'b1 plus b2' harder than 'x plus y'?",
+        "choices": [
+          "The math was more complex",
+          "They did not know the letters",
+          "It was a different type of math",
+          "The characters were more complex"
+        ],
+        "a": 3,
+        "why": "The lecture explains that using complex characters instead of simple ones lowers performance even if the math is the same.",
+        "quote": "Presenting people with problems that were formally identical, but which differed in terms of the complexity of the characters used to represent them, produced a massive decrement in performance.",
+        "t": 585
+      },
+      {
+        "q": "How did people react to the 'unbelievable' syllogism?",
+        "choices": [
+          "55% saw it as valid",
+          "90% saw it as valid",
+          "100% saw it as valid",
+          "20% saw it as valid"
+        ],
+        "a": 0,
+        "why": "People struggle to see logic when the conclusion feels impossible.",
+        "quote": "But as a result of the conclusion being implausible, only 55% of people were able to recognize that the conclusion followed from the premises.",
+        "t": 712
+      },
+      {
+        "q": "What is the difference between a 'descriptive' rule and a 'normative' rule?",
+        "choices": [
+          "Descriptive is how things are, normative is how they ought to be",
+          "Descriptive is about math, normative is about feelings",
+          "Descriptive is fast, normative is slow",
+          "There is no difference"
+        ],
+        "a": 0,
+        "why": "The lecture uses these terms to explain why social rules trigger different reasoning processes.",
+        "quote": "And the second difference between the bottom and the top is, of course, that this is a normative rule. It's about how things ought to be. Whereas this is a descriptive rule. It's about how things are.",
+        "t": 1052
+      },
+      {
+        "q": "What is a main characteristic of System 1?",
+        "choices": [
+          "Automatic",
+          "Slow",
+          "Effortful",
+          "Rule-based"
+        ],
+        "a": 0,
+        "why": "System 1 is described as the fast, unconscious, and automatic part of our processing.",
+        "quote": "System one operates automatically, whereas system two is consciously controlled.",
+        "t": 1245
+      },
+      {
+        "q": "What is a framing effect?",
+        "choices": [
+          "A bias based on how info is presented",
+          "A type of memory",
+          "A fast reflex",
+          "A logical rule"
+        ],
+        "a": 0,
+        "why": "The lecture shows how changing the way a choice is described changes the choice people make.",
+        "quote": "Just one is framed in terms of who will live, the other in terms of who will die, and the result is almost a complete inversion of people's preferences.",
+        "t": 1747
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "System 1 is fast and automatic.",
+        "System 2 is slow and effortful.",
+        "Framing changes our choices.",
+        "Aliefs are lagging habits.",
+        "We have a multi-part soul."
+      ],
+      "key": "Our brains use different systems that can conflict with our conscious goals.",
+      "decoys": [
+        {
+          "text": "System 1 is always correct.",
+          "why": "The lecture shows System 1 can be biased by framing and aliefs."
+        },
+        {
+          "text": "Aliefs are the same as beliefs.",
+          "why": "The lecture distinguishes aliefs as habitual propensities, while beliefs are what we think is true."
+        }
+      ],
+      "aha": "Fast habits (System 1/Aliefs) often override slow logic (System 2/Beliefs)."
+    },
+    "scene": {
+      "analogy": "A person reaches for a snack in a dark kitchen.",
+      "map": [
+        [
+          "The person",
+          "The person"
+        ],
+        [
+          "The snack",
+          "The snack"
+        ],
+        [
+          "Habit",
+          "Alief"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The person",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The snack",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "HABIT",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "REACH",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "I didn't even think about it, I just did it.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "The kitchen is dark and quiet.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The person reaches out.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They grab the snack.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Grabs the snack"
+            },
+            "right": {
+              "sub": "Feels a bit guilty"
+            }
+          }
+        },
+        {
+          "say": "They feel a bit surprised.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "An alief is a fast habit that acts before you think.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "The person",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "The snack",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "ALIEF",
+              "size": 18
+            },
+            "act": {
+              "label": "REACH",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "A habit is a fast way of responding to the world.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 4: Parts of the soul II",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "4. Parts of the Soul II.mp4",
+      "seconds": 2705,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  }
+}

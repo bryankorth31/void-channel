@@ -414,6 +414,7 @@ function exact(tr, quote) {
   }
   return null;
 }
+const arr = (v) => (Array.isArray(v) ? v : []); // a model may hand back a word where a list was asked for
 const clean = (v) => String(v == null ? '' : v).replace(/\s*[\u2014\u2013]\s*/g, ', ').replace(/\s+/g, ' ').trim();
 
 // The everyday scene, from words alone (19 Nov 2026). A scene is a picture: two sides, the thing between them, what
@@ -422,14 +423,14 @@ const clean = (v) => String(v == null ? '' : v).replace(/\s*[\u2014\u2013]\s*/g,
 // refuses a word that is too long for its place, so nothing overlaps at any width. Pure.
 const SCENE_FIT = { left: 20, right: 20, thing: 11, act: 11, leftEnd: 30, rightEnd: 30, line: 56 };
 function sceneFrom(w) {
-  w = w || {}; const idea = w.idea || {};
+  w = w && typeof w === 'object' ? w : {}; const idea = w.idea && typeof w.idea === 'object' ? w.idea : {};
   const bad = [];
   const fit = (o, k, max, name) => { const v = clean(o[k]); if (!v) bad.push(name + ' is missing'); else if (v.length > max) bad.push(name + ' is over ' + max + ' letters: ' + v.slice(0, 40)); return v; };
   const a = {}; const b = {};
   for (const k of Object.keys(SCENE_FIT)) a[k] = fit(w, k, SCENE_FIT[k], k);
   for (const k of ['left', 'right', 'thing', 'act', 'line']) b[k] = fit(idea, k, SCENE_FIT[k], 'idea.' + k);
   const analogy = fit(w, 'analogy', 70, 'analogy');
-  const says = (w.says || []).map(clean).filter(Boolean);
+  const says = arr(w.says).map(clean).filter(Boolean);
   if (says.length !== 4) bad.push('says needs exactly 4 captions (has ' + says.length + ')');
   for (const x of says) if (x.length > 70) bad.push('a caption is over 70 letters: ' + x.slice(0, 40));
   const ideaSay = fit(idea, 'say', 70, 'idea.say');
@@ -464,22 +465,26 @@ function sceneFrom(w) {
 // The gate. Takes what the model wrote and the transcript; returns the unit parts that passed and plain notes on
 // everything dropped. Pure: no model, no web, no files (tests/uni.test.js runs it).
 function gateDraft(raw, tr) {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) raw = {};
   const notes = [];
   const unit = { needIt: clean(raw.needIt), why: clean(raw.why), outcome: clean(raw.outcome) };
   for (const k of ['needIt', 'why', 'outcome']) if (unit[k].length < 20) notes.push('"' + k + '" is missing or too short');
   for (const k of ['needIt', 'why', 'outcome']) if (FORBIDDEN.test(unit[k])) notes.push('"' + k + '" names a forbidden source');
   const chapters = [];
-  for (const c of raw.chapters || []) {
+  for (const c of arr(raw.chapters)) {
     const hit = exact(tr, c.words);
     if (!clean(c.title) || !hit) { notes.push('chapter dropped, its opening words are not said in the lecture: ' + clean(c.title).slice(0, 50)); continue; }
     chapters.push({ t: hit.t, title: clean(c.title), words: clean(c.words) });
   }
   chapters.sort((a, b) => a.t - b.t);
-  unit.chapters = chapters.filter((c, i) => !i || c.t - chapters[i - 1].t >= 60);
+  // chapters sit at least a minute apart, and far enough apart that a lecture has no more than about 8
+  const gap = Math.max(60, (tr.words.length ? tr.words[tr.words.length - 1].t : 0) / 9);
+  unit.chapters = [];
+  for (const c of chapters) if (!unit.chapters.length || c.t - unit.chapters[unit.chapters.length - 1].t >= gap) unit.chapters.push(c);
   const quiz = []; const seenQ = new Set();
-  for (const q of raw.quiz || []) {
+  for (const q of arr(raw.quiz)) {
     const label = clean(q.q).slice(0, 50);
-    const choices = (q.choices || []).map(clean).filter(Boolean);
+    const choices = arr(q.choices).map(clean).filter(Boolean);
     const hit = exact(tr, q.quote);
     if (!hit) { notes.push('question dropped, its quote is not said word for word: ' + label); continue; }
     if (hit.n < 8) { notes.push('question dropped, its quote is under 8 words: ' + label); continue; }
@@ -493,9 +498,9 @@ function gateDraft(raw, tr) {
     quiz.push({ q: clean(q.q), choices: rest, a: at, why: clean(q.why), quote: clean(q.quote), t: hit.t });
   }
   unit.quiz = quiz.sort((a, b) => a.t - b.t);
-  const cr = raw.crystal || {};
-  const partials = (cr.partials || []).map(clean).filter(Boolean);
-  const decoys = (cr.decoys || []).map((d) => ({ text: clean(d && d.text), why: clean(d && d.why) })).filter((d) => d.text && d.why);
+  const cr = raw.crystal && typeof raw.crystal === 'object' ? raw.crystal : {};
+  const partials = arr(cr.partials).map(clean).filter(Boolean);
+  const decoys = arr(cr.decoys).map((d) => ({ text: clean(d && d.text), why: clean(d && d.why) })).filter((d) => d.text && d.why);
   if (partials.length === 5 && decoys.length === 2 && clean(cr.key) && clean(cr.aha)) unit.crystal = { speed: 0.3, partials, key: clean(cr.key), decoys, aha: clean(cr.aha) };
   else notes.push('the crystal needs 5 partials, a key, 2 decoys with why, and an aha line');
   const missing = [];
@@ -562,7 +567,9 @@ async function draft(slug, n, log = () => {}, ask = askOllama) {
   let best = null; const kept = [];
   for (let round = 1; round <= 3; round++) {
     log('Round ' + round + ': ' + DRAFT_MODEL + ' is reading the lecture (' + tr.words.length + ' words). This takes a few minutes.');
-    const raw = await ask(draftPrompt(c, t, tr, best ? 8 - kept.length : 0) + (best ? '\n\nALREADY KEPT:\n' + kept.map((q) => '- ' + q.q).join('\n') : ''));
+    // a round the model fails (it can loop on a word and be cut off) counts as an empty round, and the next one tries again
+    let raw = {};
+    try { raw = await ask(draftPrompt(c, t, tr, best ? 8 - kept.length : 0) + (best ? '\n\nALREADY KEPT:\n' + kept.map((q) => '- ' + q.q).join('\n') : '')); } catch (err) { if (/not answering|is it installed/.test(err.message)) throw err; log('Round ' + round + ' failed in the model: ' + err.message); }
     const g = gateDraft(raw, tr);
     for (const q of g.unit.quiz) if (!kept.some((k) => Math.abs(k.t - q.t) < 5)) kept.push(q);
     if (!best) best = { notes: [], unit: g.unit };
