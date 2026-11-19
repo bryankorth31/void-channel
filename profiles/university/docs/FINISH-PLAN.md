@@ -55,3 +55,9 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
 ## Log
 
 - 19 Nov 2026: plan written.
+- 19 Nov 2026, steps 1 and 2 done: preview no longer tracked; `node scripts/uni.js selftest` (4 parts, all pass);
+  fresh source check: 187 links, 0 problems, Gutenberg refused the checker that day (71 links to open by hand).
+- 19 Nov 2026, steps 3 and 4 done: `docs/RUN.md`; Human nature and Your money, plainly are now for young adults and
+  everyday life (they are full Yale lectures), Critical thinking and the mechanisms keep all three. Picking High
+  school on the front page now shows the Mind row only, and an area row with nothing left hides. Seen at 1920, 1316
+  and 821 wide in the preview. Bryan can put "high school" back in a course file's `levels` at any time. Not deployed.

@@ -438,6 +438,9 @@ document.querySelectorAll('.who button').forEach(function (b) {
     document.querySelectorAll('.who button').forEach(function (x) { x.classList.toggle('on', x === b); });
     var lv = b.dataset.lv;
     document.querySelectorAll('.card.course').forEach(function (c) { c.classList.toggle('off', !!lv && (c.dataset.lv || '').split('|').indexOf(lv) < 0); });
+    // an area whose courses are all filtered out hides its whole row (and the shelf or channels rows under it)
+    var gone = false;
+    document.querySelectorAll('section.row').forEach(function (r) { if (r.querySelector('.card.course')) gone = !r.querySelector('.card.course:not(.off)'); r.hidden = gone; });
   };
 });
 document.querySelectorAll('.rowwrap').forEach(function (w) {
