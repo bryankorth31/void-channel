@@ -2,6 +2,8 @@
 // Archive DOS games come as one zip. The core starts a program by itself only when it is handed the program file, so
 // the host unpacks the zip into the core's memory disk first. Reads the zip's own table of contents (the central
 // directory at the end), then each file: stored as is, or deflated (the browser's own DecompressionStream inflates).
+// Limits, fine for hand-picked cards: no ZIP64 (zips over 4 GB or 65535 files) and no cap on the unpacked size.
+// Both need adding before cards come from Archive metadata in bulk (plan T14).
 (function (root) {
   const u16 = (b, o) => b[o] | (b[o + 1] << 8);
   const u32 = (b, o) => (b[o] | (b[o + 1] << 8) | (b[o + 2] << 16) | (b[o + 3] << 24)) >>> 0;

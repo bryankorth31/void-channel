@@ -5,7 +5,7 @@
 /* global PlayCards, PlayHub, PlayLayout, PlayTouch, PlaySaves, PlayRunner */
 (function () {
   'use strict';
-  // The project's donation setting (scripts/lib/app.js DONATE_URL); tests/play.test.js keeps the two the same.
+  // The project's donation setting (scripts/lib/app.js DONATE_URL); play/test/page.test.js keeps the two the same.
   const DONATE_URL = 'https://square.link/u/bJl9PGAC';
   const DONATE_LINE = 'If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world.';
 
