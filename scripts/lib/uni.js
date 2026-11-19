@@ -388,4 +388,179 @@ async function media(log = () => {}) {
   return changes;
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, listen, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC };
+// The local draft (Bryan, 17 and 18 Nov 2026: every tool ends runnable without a Claude chat, local models for the
+// thinking parts). A model on this PC (Ollama) reads the heard lecture and writes the words of a unit: why you need
+// this, chapters, quiz, crystal. The model is never trusted: the gate below keeps a quiz answer or a chapter only when
+// its quoted words are found, in order and word for word, in what Whisper heard, and takes the time from there.
+// The draft goes to profiles/university/drafts/<slug>-<n>.json. keepDraft() moves it into the course once nothing is
+// missing (the everyday scene is still made by a person or a chat).
+const DRAFTS = path.join(UNI, 'drafts');
+const OLLAMA = process.env.UNI_OLLAMA || 'http://127.0.0.1:11434';
+const DRAFT_MODEL = process.env.UNI_MODEL || 'gemma4:12b';
+const draftFile = (slug, n) => path.join(DRAFTS, slug + '-' + (+n) + '.json');
+
+// Where a quote is said word for word: every word of it, in order, with nothing between. Null if it is not.
+function exact(tr, quote) {
+  const q = tokens(quote);
+  if (q.length < 5) return null;
+  const W = tr.words;
+  for (let i = 0; i + q.length <= W.length; i++) {
+    if (W[i].w !== q[0]) continue;
+    let k = 1;
+    while (k < q.length && W[i + k].w === q[k]) k++;
+    if (k === q.length) return { t: Math.round(W[i].t), i, n: q.length };
+  }
+  return null;
+}
+const clean = (v) => String(v == null ? '' : v).replace(/\s*[—–]\s*/g, ', ').replace(/\s+/g, ' ').trim();
+
+// The gate. Takes what the model wrote and the transcript; returns the unit parts that passed and plain notes on
+// everything dropped. Pure: no model, no web, no files (tests/uni.test.js runs it).
+function gateDraft(raw, tr) {
+  const notes = [];
+  const unit = { needIt: clean(raw.needIt), why: clean(raw.why), outcome: clean(raw.outcome) };
+  for (const k of ['needIt', 'why', 'outcome']) if (unit[k].length < 20) notes.push('"' + k + '" is missing or too short');
+  for (const k of ['needIt', 'why', 'outcome']) if (FORBIDDEN.test(unit[k])) notes.push('"' + k + '" names a forbidden source');
+  const chapters = [];
+  for (const c of raw.chapters || []) {
+    const hit = exact(tr, c.words);
+    if (!clean(c.title) || !hit) { notes.push('chapter dropped, its opening words are not said in the lecture: ' + clean(c.title).slice(0, 50)); continue; }
+    chapters.push({ t: hit.t, title: clean(c.title), words: clean(c.words) });
+  }
+  chapters.sort((a, b) => a.t - b.t);
+  unit.chapters = chapters.filter((c, i) => !i || c.t - chapters[i - 1].t >= 60);
+  const quiz = []; const seenQ = new Set();
+  for (const q of raw.quiz || []) {
+    const label = clean(q.q).slice(0, 50);
+    const choices = (q.choices || []).map(clean).filter(Boolean);
+    const hit = exact(tr, q.quote);
+    if (!hit) { notes.push('question dropped, its quote is not said word for word: ' + label); continue; }
+    if (hit.n < 8) { notes.push('question dropped, its quote is under 8 words: ' + label); continue; }
+    if (choices.length !== 4 || new Set(choices.map((x) => x.toLowerCase())).size !== 4) { notes.push('question dropped, it needs 4 different choices: ' + label); continue; }
+    if (!(Number.isInteger(q.a) && q.a >= 0 && q.a < 4)) { notes.push('question dropped, its answer is not one of the choices: ' + label); continue; }
+    if (!clean(q.q) || !clean(q.why) || seenQ.has(hit.i)) { notes.push('question dropped, it repeats a quote or has no question or reason: ' + label); continue; }
+    seenQ.add(hit.i);
+    // the right answer moves to a place set by where the quote is said, so it is not always the first choice
+    const right = choices[q.a]; const rest = choices.filter((x, i) => i !== q.a); const at = hit.i % 4;
+    rest.splice(at, 0, right);
+    quiz.push({ q: clean(q.q), choices: rest, a: at, why: clean(q.why), quote: clean(q.quote), t: hit.t });
+  }
+  unit.quiz = quiz.sort((a, b) => a.t - b.t);
+  const cr = raw.crystal || {};
+  const partials = (cr.partials || []).map(clean).filter(Boolean);
+  const decoys = (cr.decoys || []).map((d) => ({ text: clean(d && d.text), why: clean(d && d.why) })).filter((d) => d.text && d.why);
+  if (partials.length === 5 && decoys.length === 2 && clean(cr.key) && clean(cr.aha)) unit.crystal = { speed: 0.3, partials, key: clean(cr.key), decoys, aha: clean(cr.aha) };
+  else notes.push('the crystal needs 5 partials, a key, 2 decoys with why, and an aha line');
+  const missing = [];
+  if (unit.needIt.length < 20) missing.push('why you need this');
+  if (unit.chapters.length < 3) missing.push('3 chapters (has ' + unit.chapters.length + ')');
+  if (unit.quiz.length < 4) missing.push('4 quiz questions (has ' + unit.quiz.length + ')');
+  if (!unit.crystal) missing.push('crystal');
+  return { ok: !missing.length, missing, notes, unit };
+}
+
+const DRAFT_SHAPE = {
+  type: 'object', required: ['needIt', 'why', 'outcome', 'analogy', 'chapters', 'quiz', 'crystal'],
+  properties: {
+    needIt: { type: 'string' }, why: { type: 'string' }, outcome: { type: 'string' }, analogy: { type: 'string' },
+    chapters: { type: 'array', items: { type: 'object', required: ['title', 'words'], properties: { title: { type: 'string' }, words: { type: 'string' } } } },
+    quiz: { type: 'array', items: { type: 'object', required: ['q', 'choices', 'a', 'why', 'quote'], properties: { q: { type: 'string' }, choices: { type: 'array', items: { type: 'string' } }, a: { type: 'integer' }, why: { type: 'string' }, quote: { type: 'string' } } } },
+    crystal: { type: 'object', required: ['partials', 'key', 'decoys', 'aha'], properties: { partials: { type: 'array', items: { type: 'string' } }, key: { type: 'string' }, decoys: { type: 'array', items: { type: 'object', required: ['text', 'why'], properties: { text: { type: 'string' }, why: { type: 'string' } } } }, aha: { type: 'string' } } },
+  },
+};
+function draftPrompt(c, t, tr, more) {
+  const lines = []; let cur = [];
+  for (const sg of tr.segments) { cur.push(String(sg.text).trim()); if (cur.join(' ').split(' ').length > 60) { lines.push(cur.join(' ')); cur = []; } }
+  if (cur.length) lines.push(cur.join(' '));
+  return `You are writing one unit of Void University, a free public learning site. Plain language, short sentences, words a 14 year old knows. No dashes. Write only from the lecture below. Add no fact it does not say.
+
+COURSE: ${c.name}. ${c.why}
+UNIT ${t.n}: ${t.title}
+AUDIENCES: ${(c.levels || []).join(', ')}. People say "it is cool, but why do I need to know it". needIt answers that first.
+
+Write JSON with these fields:
+- needIt: one or two plain sentences on how this helps a person decide or live better, with everyday examples, for someone who will never study the field.
+- why: two or three sentences that tell the heart of the lecture as a small story.
+- outcome: one short line that starts with a verb: what the learner can do afterwards.
+- analogy: one sentence naming an everyday situation that works the same way as the main idea (it becomes a picture later).
+- chapters: 4 to 7 parts of the lecture, in order. Each has "title" (a few plain words) and "words": the first 8 to 12 words spoken where that part begins, COPIED EXACTLY from the lecture text, letter for letter.
+- quiz: ${more ? more + ' more questions, on other moments of the lecture than the ones already kept (listed at the end). ' : '6 questions. '}Each has "q", "choices" (4 different short answers), "a" (the place of the right one, 0 to 3), "why" (one or two plain sentences on why it is right), and "quote": ONE sentence of 10 to 40 words COPIED EXACTLY from the lecture text, letter for letter, that proves the answer. Do not shorten, join or fix the quote. Spread the questions across the whole lecture.
+- crystal: "partials" (exactly 5 short true statements from the lecture that all point at one idea), "key" (that one idea in a sentence), "decoys" (exactly 2 tempting wrong ideas, each with "text" and "why" it is wrong according to the lecture), "aha" (one line saying how the partials fit the key).
+
+LECTURE (heard by Whisper, word for word):
+${lines.join('\n')}`;
+}
+async function askOllama(prompt) {
+  let r;
+  try {
+    r = await fetch(OLLAMA + '/api/chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ model: DRAFT_MODEL, stream: true, format: DRAFT_SHAPE, options: { temperature: 0.2, num_ctx: 24576 }, messages: [{ role: 'user', content: prompt }] }) });
+  } catch (e) { throw new Error('Ollama is not answering at ' + OLLAMA + '. Start Ollama, then try again.'); }
+  if (!r.ok) throw new Error('Ollama answered ' + r.status + ' for the model ' + DRAFT_MODEL + ' (is it installed? ollama pull ' + DRAFT_MODEL + ')');
+  let text = ''; let buf = '';
+  const dec = new TextDecoder();
+  for await (const chunk of r.body) { // streamed, so a long answer never times out
+    buf += dec.decode(chunk, { stream: true });
+    const parts = buf.split('\n'); buf = parts.pop();
+    for (const p of parts) if (p.trim()) { const j = JSON.parse(p); if (j.error) throw new Error('Ollama: ' + j.error); text += (j.message && j.message.content) || ''; }
+  }
+  try { return JSON.parse(text); } catch (e) { return {}; }
+}
+// Draft one unit on this PC. ask can be swapped in a test; by default it is the local model.
+async function draft(slug, n, log = () => {}, ask = askOllama) {
+  if (!SLUG_OK.test(String(slug))) throw new Error('Not a course slug: ' + String(slug).slice(0, 40));
+  const c = readJson(courseFile(slug), null);
+  if (!c) throw new Error('No course ' + slug);
+  const t = (c.todo || []).find((x) => x.n === +n) || c.units.find((x) => x.n === +n);
+  if (!t) throw new Error('No unit ' + n + ' in ' + slug);
+  const m = t.main || t.lecture;
+  if (!m || !m.item || !m.file) throw new Error('Unit ' + n + ' plays no lecture. The local draft works from a heard lecture.');
+  const tr = transcript(m.item, m.file);
+  if (!tr) throw new Error('This lecture has not been heard yet. Run: node scripts/uni.js listen ' + slug);
+  let best = null; const kept = [];
+  for (let round = 1; round <= 3; round++) {
+    log('Round ' + round + ': ' + DRAFT_MODEL + ' is reading the lecture (' + tr.words.length + ' words). This takes a few minutes.');
+    const raw = await ask(draftPrompt(c, t, tr, best ? 8 - kept.length : 0) + (best ? '\n\nALREADY KEPT:\n' + kept.map((q) => '- ' + q.q).join('\n') : ''));
+    const g = gateDraft(raw, tr);
+    for (const q of g.unit.quiz) if (!kept.some((k) => Math.abs(k.t - q.t) < 5)) kept.push(q);
+    if (!best) best = { notes: [], analogy: '', unit: g.unit };
+    best.notes.push(...g.notes.map((x) => 'round ' + round + ': ' + x));
+    for (const k of ['needIt', 'why', 'outcome']) if (best.unit[k].length < 20) best.unit[k] = g.unit[k];
+    if (g.unit.chapters.length > best.unit.chapters.length) best.unit.chapters = g.unit.chapters;
+    best.unit.crystal = best.unit.crystal || g.unit.crystal;
+    best.analogy = best.analogy || clean(raw.analogy);
+    best.unit.quiz = kept.slice().sort((a, b) => a.t - b.t).slice(0, 7);
+    best.missing = [];
+    if (best.unit.needIt.length < 20) best.missing.push('why you need this');
+    if (best.unit.chapters.length < 3) best.missing.push('3 chapters (has ' + best.unit.chapters.length + ')');
+    if (best.unit.quiz.length < 4) best.missing.push('4 quiz questions (has ' + best.unit.quiz.length + ')');
+    if (!best.unit.crystal) best.missing.push('crystal');
+    best.ok = !best.missing.length;
+    log('Round ' + round + ': ' + best.unit.quiz.length + ' questions with a word for word quote, ' + best.unit.chapters.length + ' chapters' + (best.missing.length ? '; still missing: ' + best.missing.join(', ') : ''));
+    if (best.ok && best.unit.quiz.length >= 5) break;
+  }
+  const lic = (c.units.find((u) => u.main && u.main.licence) || { main: {} }).main.licence || (c.source && c.source.licence) || '';
+  const unit = { n: t.n, title: t.title, ...best.unit, main: t.main || { role: 'watch', title: m.title || t.title, by: (c.source && c.source.by) || '', item: m.item, file: m.file, seconds: Math.round(tr.seconds), licence: lic, note: 'A full lecture. Use the chapters to watch it in pieces.' } };
+  const out = { slug, n: t.n, title: t.title, model: DRAFT_MODEL, made: new Date().toISOString(), ok: best.ok, missing: best.missing, notes: best.notes, sceneIdea: best.analogy, unit };
+  fs.mkdirSync(DRAFTS, { recursive: true });
+  writeJson(draftFile(slug, t.n), out);
+  return { ...out, file: path.relative(ROOT, draftFile(slug, t.n)) };
+}
+// Move a draft into its course. Refused while the gate or the unit's own needs list says something is missing, so a
+// half unit never reaches a course that may be live.
+function keepDraft(slug, n) {
+  if (!SLUG_OK.test(String(slug))) throw new Error('Not a course slug: ' + String(slug).slice(0, 40));
+  const d = readJson(draftFile(slug, n), null);
+  if (!d) throw new Error('No draft for unit ' + n + ' of ' + slug + '. Run: node scripts/uni.js draft ' + slug + ' ' + n);
+  const c = readJson(courseFile(slug), null);
+  const needs = [...(d.ok ? [] : d.missing), ...unitNeeds(d.unit, c)];
+  if (needs.length) throw new Error('Not kept yet. The draft still needs: ' + needs.join(', ') + '. Add it to ' + path.relative(ROOT, draftFile(slug, n)) + ' and run this again.');
+  if (c.units.some((u) => u.n === d.unit.n)) throw new Error('Unit ' + n + ' is already written in courses/' + slug + '.json. Edit it there.');
+  c.todo = (c.todo || []).filter((x) => x.n !== d.unit.n);
+  if (!c.todo.length) delete c.todo;
+  c.units.push(d.unit); c.units.sort((a, b) => a.n - b.n);
+  writeJson(courseFile(slug), c);
+  fs.unlinkSync(draftFile(slug, n));
+  return { slug, n: d.unit.n, units: c.units.length };
+}
+
+module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, listen, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft };

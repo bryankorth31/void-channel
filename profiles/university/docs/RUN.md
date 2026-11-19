@@ -60,8 +60,30 @@ text is kept (`profiles\university\listen`). It can run overnight. Close other h
 
 ## 5. Write a unit
 
-Today this is the one step that still needs a Claude chat: HQ > University > Courses > **Copy brief** beside the
-unit, paste the whole prompt into a new chat started in the void-channel folder.
+On this PC, with no chat (the lecture must be heard first, step 4; Ollama must be running):
+
+```
+node scripts\uni.js draft human-nature 3
+```
+
+The local model (gemma4:12b on Ollama) reads what Whisper heard and writes Why you need this, the chapters, the quiz
+and the crystal. It takes a few minutes. The program then checks the model: a quiz answer or a chapter is kept only
+if its quoted words are said in the lecture word for word, and its time is taken from there. Everything dropped is
+listed. The draft lands in `profiles\university\drafts\human-nature-3.json`. Open it, read it, change any line.
+
+The draft has no everyday scene yet (the picture at the top of a unit). It gives a one-line scene idea; the scene
+itself is added to the draft file by hand or by a chat (Copy brief). When nothing is missing:
+
+```
+node scripts\uni.js keep human-nature 3
+```
+
+That moves the unit into the course. It refuses, and says what is missing, if the draft is not whole.
+
+To use another local model for one run (PowerShell): `$env:UNI_MODEL='gpt-oss:20b'` before the draft line.
+
+The other way is still there: HQ > University > Courses > **Copy brief** beside the unit, paste the whole prompt
+into a new Claude chat started in the void-channel folder.
 
 A unit is finished when HQ shows the green "finished" chip: Why you need this, a scene or a lab, the main piece,
 a crystal, and (for a found course) a quiz whose answers quote the source.

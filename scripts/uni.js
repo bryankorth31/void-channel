@@ -5,7 +5,9 @@
 //   node scripts/uni.js scaffold <area> <course>  make courses/<slug>.json from a proposed course
 //   node scripts/uni.js brief <slug> <unit>       print the whole prompt for a Claude chat to build that unit
 //   node scripts/uni.js rewrite <area> <source>   print the whole prompt to rewrite an old book into plain English
-//   node scripts/uni.js listen <slug>             Whisper hears every lecture the course plays (a time for every word)
+//   node scripts/uni.js draft <slug> <unit>       the local model (Ollama) drafts a unit from its heard lecture; only word for word quotes are kept
+//   node scripts/uni.js keep <slug> <unit>        move a whole draft from drafts/ into the course
+//   node scripts/uni.js listen <slug>           Whisper hears every lecture the course plays (a time for every word)
 //   node scripts/uni.js times <slug>              set every quiz and chapter time from where the words are said (after listen)
 //   node scripts/uni.js find <slug> <unit> <quote> the second in that unit's lecture where the quote is said
 //   node scripts/uni.js search <phrase>           a phrase across every lecture heard so far, with times
@@ -58,6 +60,16 @@ const [cmd, ...args] = process.argv.slice(2);
     const ch = await uni.media((m) => console.log(m));
     console.log('\n' + ch.length + ' sources changed');
     for (const x of ch) console.log('- ' + x.where + ': ' + x.what);
+  } else if (cmd === 'draft') {
+    const r = await uni.draft(args[0], args[1], (m) => console.log(m));
+    console.log((r.ok ? 'Draft passed the gate: ' : 'Draft is NOT whole yet (' + r.missing.join(', ') + '): ') + r.file);
+    console.log(r.unit.quiz.length + ' questions, each quote said word for word in the lecture; ' + r.unit.chapters.length + ' chapters; crystal ' + (r.unit.crystal ? 'yes' : 'no') + '.');
+    if (r.sceneIdea) console.log('Scene idea (the scene itself is still made by hand): ' + r.sceneIdea);
+    for (const x of r.notes) console.log('- ' + x);
+    console.log('Read it, change any line, then: node scripts/uni.js keep ' + r.slug + ' ' + r.n);
+  } else if (cmd === 'keep') {
+    const r = uni.keepDraft(args[0], args[1]);
+    console.log('Unit ' + r.n + ' is in courses/' + r.slug + '.json (' + r.units + ' units). Next: node scripts/uni.js times ' + r.slug + ', then build.');
   } else if (cmd === 'selftest') {
     // One command, no web and no AI: each part says pass or FAIL, and the exit code is 1 if any part failed.
     const root = path.join(__dirname, '..');
