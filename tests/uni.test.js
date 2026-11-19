@@ -193,3 +193,15 @@ test('live: one line puts a course on or off the public copy', () => {
   assert.equal(uni.setLive('critical-thinking', before).live, before);
   assert.throws(() => uni.setLive('no-such-course', true));
 });
+
+test('the public pages carry no machine-made tells: no middle-dot strings, no capitals labels, and less motion when asked', () => {
+  build('--site');
+  for (const p of fs.readdirSync(SITE).filter((f) => f.endsWith('.html'))) {
+    const h = fs.readFileSync(path.join(SITE, p), 'utf8');
+    assert.doesNotMatch(h, /\u00b7/, p + ': a middle dot joins two things; say it in words');
+    assert.equal((h.match(/text-transform:uppercase/g) || []).length, 1, p + ': only the crest wordmark is in capitals');
+    assert.match(h, /prefers-reduced-motion:reduce/, p + ': no reduced-motion rule');
+    assert.doesNotMatch(h, /class="kick"/, p + ': a label line sits over the headline');
+    assert.equal((h.match(/fonts\.googleapis\.com\/css2/g) || []).length, 1, p + ': the public copy loads only the faces it uses');
+  }
+});

@@ -10,7 +10,7 @@ const DIR = __dirname;
 // without the draft badge; with no flag it builds the local preview.
 const LIVE = process.argv.includes('--site');
 const OUT = path.join(DIR, LIVE ? 'site' : 'site-preview');
-const DRAFT = LIVE ? '' : '<span class="draft">Draft for Bryan: nothing here is public</span><label class="lookpick">Look <select id="lookpick"><option value="classic">Navy and brass (the first look)</option><option value="bright">Bright night</option><option value="daylight">Daylight</option></select></label><script>(function(){var k="vu:look",h=document.documentElement,s=document.getElementById("lookpick"),v=null;try{v=localStorage.getItem(k)}catch(e){}if(v&&s.querySelector("option[value=\'"+v+"\']"))h.dataset.look=v;s.value=h.dataset.look;s.onchange=function(){h.dataset.look=s.value;try{localStorage.setItem(k,s.value)}catch(e){}}})()</script>';
+const DRAFT = LIVE ? '' : '<span class="draft">Draft for Bryan: nothing here is public</span><label class="lookpick">Look <select id="lookpick"><option value="classic">Navy and brass (the first look)</option><option value="bright">Bright night</option><option value="daylight">Daylight</option></select></label><label class="lookpick">Type <select id="typepick"><option value="inter">Inter (as it was)</option><option value="hyper">Atkinson Hyperlegible, made for easy reading</option><option value="literata">Literata, a book face</option></select></label><script>(function(){var k="vu:type",h=document.documentElement,s=document.getElementById("typepick"),v=null;try{v=localStorage.getItem(k)}catch(e){}if(v&&s.querySelector("option[value=\'"+v+"\']"))h.dataset.type=v;s.value=h.dataset.type;s.onchange=function(){h.dataset.type=s.value;try{localStorage.setItem(k,s.value)}catch(e){}}})()</script><script>(function(){var k="vu:look",h=document.documentElement,s=document.getElementById("lookpick"),v=null;try{v=localStorage.getItem(k)}catch(e){}if(v&&s.querySelector("option[value=\'"+v+"\']"))h.dataset.look=v;s.value=h.dataset.look;s.onchange=function(){h.dataset.look=s.value;try{localStorage.setItem(k,s.value)}catch(e){}}})()</script>';
 const DONATE = 'https://square.link/u/dJioBmlW'; // CASH, one setting for this profile
 
 const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -23,7 +23,7 @@ const ROLE = { watch: 'Watch', listen: 'Listen', read: 'Read', do: 'Do' };
 
 function piece(p, main) {
   const url = fileUrl(p);
-  const meta = [p.by, mins(p.seconds)].filter(Boolean).join(' · ');
+  const meta = [p.by, mins(p.seconds)].filter(Boolean).join(', ');
   const held = !!p.hold;
   let media = '';
   if (!held && url && p.role === 'watch') media = '<video controls preload="none" src="' + esc(url) + '"></video>';
@@ -87,7 +87,7 @@ function lab(u) {
   const map = (l.map || []).map(([a, z]) => '<span><i>' + esc(a) + '</i> = <b>' + esc(z) + '</b></span>').join('');
   const cfg = { bench: l.bench, go: l.go, knobs: l.knobs, rules: l.rules, meet: l.meet, triesNote: l.triesNote, guess: l.guess };
   return '<div class="lab" data-lab="' + esc(JSON.stringify(cfg)) + '">'
-    + '<div class="lab-top"><span class="lab-kick">Lab · if this, then that</span><b>' + esc(l.title) + '</b><p>' + esc(l.ask) + '</p></div>'
+    + '<div class="lab-top"><span class="lab-kick">Lab: if this, then that</span><b>' + esc(l.title) + '</b><p>' + esc(l.ask) + '</p></div>'
     + '<div class="lab-body"><div class="lab-stage"><canvas></canvas></div><div class="lab-side"></div></div>'
     + '<div class="lab-tries"></div><div class="lab-rules"></div>'
     + (map ? '<div class="lab-map">' + map + '</div>' : '')
@@ -166,8 +166,8 @@ function unit(u, voices, c) {
 function page(c, all) {
   const others = '<a href="index.html">Home</a>' + all.map((o) => o.slug === c.slug ? '<b>' + esc(o.name) + '</b>' : '<a href="' + esc(o.slug) + '.html">' + esc(o.name) + '</a>').join('');
   const toc = c.units.map((u) => '<a href="#u' + u.n + '"><span>' + u.n + '</span>' + esc(u.title) + '</a>').join('');
-  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}
-<title>${esc(c.name)} · Void University</title>
+  return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}
+<title>${esc(c.name)} | Void University</title>
 ${FONTS}
 <style>
 ${BASE}
@@ -175,7 +175,7 @@ ${CARDCSS}
 .need{margin:0 0 14px;padding:12px 16px;border-left:3px solid var(--gold);background:var(--panel3);border-radius:0 8px 8px 0;font-size:16px;color:#e4ddcc}.need b{color:var(--gold)}
 .hero .src{font-size:14px;color:var(--dim)}.hero .src a{color:var(--gold)}
 .lv{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 0}.lv span{font-size:12px;letter-spacing:.06em;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--soft)}
-.chap{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-6px 0 18px}.chap>span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600;margin-right:4px}
+.chap{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-6px 0 18px}.chap>span{font-size:14px;color:var(--dim);font-weight:600;margin-right:4px}
 .chap button,.qc button,.qt{font:inherit;font-size:14px;background:var(--panel2);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;text-align:left}
 .chap button:hover,.qc button:hover:not(:disabled),.qt:hover{border-color:var(--gold)}.chap i{font-style:normal;color:var(--gold);margin-right:8px}
 .quiz>summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}.quiz>summary::-webkit-details-marker{display:none}.quiz>summary h3{margin:0}.quiz>summary span{font-size:14px;color:var(--dim)}.quiz>summary::after{content:'Open';margin-left:auto;font-size:13px;color:var(--gold)}.quiz[open]>summary::after{content:'Close'}.quiz[open]>summary{margin-bottom:8px}
@@ -185,17 +185,17 @@ ${CARDCSS}
 .qc button:disabled{cursor:default;opacity:.55}.qc button.right{opacity:1;border-color:#5fe39a;color:#5fe39a}.qc button.wrong{opacity:1;border-color:#e08a8f;color:#e08a8f}
 .qa{margin-top:10px;font-size:15px;color:var(--soft)}.qa p{margin:0 0 6px}.qr{font-weight:600}.qr.ok{color:#5fe39a}.qr.no{color:#e08a8f}
 .qa blockquote{margin:6px 0 0;padding:8px 12px;border-left:3px solid var(--line);font-family:var(--head);color:#e4ddcc}
-.qt{display:block;margin-top:8px;font-family:Inter,system-ui,sans-serif;font-size:13px;padding:5px 10px;color:var(--gold)}
+.qt{display:block;margin-top:8px;font-family:var(--body);font-size:13px;padding:5px 10px;color:var(--gold)}
 .qs{margin-top:12px;padding:10px 14px;border-radius:8px;background:var(--chip);color:var(--gold)}
 .chans{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 28px}.chans .chan{width:280px}
 .uimg{width:132px;height:84px;object-fit:cover;border-radius:6px;margin-left:auto;border:1px solid var(--line)}
 .wrap{display:grid;grid-template-columns:260px 1fr;gap:32px;max-width:1500px;margin:0 auto;padding:28px 32px}
 nav{position:sticky;top:calc(var(--hh,64px) + 20px);align-self:start;max-height:calc(100vh - var(--hh,64px) - 40px);overflow:auto}
-nav h4{margin:0 0 10px;color:var(--dim);font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+nav h4{margin:0 0 10px;color:var(--dim);font-weight:500;font-size:14px}
 nav a{display:flex;gap:10px;padding:8px 10px;border-radius:8px;color:var(--fg);text-decoration:none;font-size:15px}
 nav a:hover{background:var(--panel2)}nav a span{color:var(--acc);font-weight:600;width:16px}
 .hero{background:linear-gradient(135deg,#0f1a22,#120f1c);border:1px solid var(--line);border-radius:16px;padding:28px 32px;margin-bottom:28px}
-.hero .dom{color:var(--acc);font-size:13px;text-transform:uppercase;letter-spacing:.1em}
+.hero .dom{color:var(--acc);font-size:14px}
 .hero h1{font-family:var(--head);font-size:36px;margin:6px 0 12px}
 .hero p{max-width:820px;color:var(--soft);font-size:17px}
 .hero ol{columns:2;column-gap:32px;max-width:900px;padding-left:20px;color:var(--soft)}
@@ -204,7 +204,7 @@ nav a:hover{background:var(--panel2)}nav a span{color:var(--acc);font-weight:600
 .uh .n{font-family:var(--head);font-size:28px;color:var(--acc);width:44px;text-align:center}
 .uh h2{margin:0;font-size:24px}.out{color:var(--dim);font-size:14px}
 .seed{border-left:3px solid var(--gold);padding:2px 16px;margin:10px 0}.seed.reach{border-color:var(--pink)}
-h3{margin:0 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600}
+h3{margin:0 0 4px;font-size:14px;color:var(--dim);font-weight:600}
 .seed p,.do p{margin:0;font-size:16px}
 .pieces{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:18px 0}
 .piece{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
@@ -212,12 +212,12 @@ h3{margin:0 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;c
 .unit.isdone .donebtn{border-color:#3f7a57;color:#8fd6aa}.wrap nav a.isdone span::after{content:' \\2713';color:#8fd6aa}.donecount{font-size:13px;color:#8fd6aa;margin:10px 0 0;padding:0 10px}
 .reader{margin:12px 0;border:1px solid var(--line);border-radius:12px;background:var(--panel2);padding:4px 18px}
 .reader summary{cursor:pointer;display:flex;gap:14px;align-items:baseline;padding:10px 0;list-style:none}.reader summary::-webkit-details-marker{display:none}
-.reader summary h3{margin:0;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}.reader summary span{color:var(--dim);font-size:14px}
+.reader summary h3{margin:0;font-size:14px;color:var(--gold)}.reader summary span{color:var(--dim);font-size:14px}
 .reader p{font-size:18px;line-height:1.65;max-width:760px;margin:0 0 16px}.reader .warn{font-size:15px;padding:10px 12px;border:1px solid #6b3a3d;background:#221316;border-radius:8px;color:#f0c9cb}.reader .warn a,.reader .rd-more a{color:var(--gold)}.reader .rd-more{font-size:14px}
 .piece.main{grid-column:1/-1;border-color:rgba(95,212,255,.45)}
 .piece.held{opacity:.6;border-style:dashed}
 .ph{display:flex;gap:8px;align-items:center}
-.role{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:2px 8px;border-radius:6px;background:var(--chip);color:var(--acc)}
+.role{font-size:14px;font-weight:700;padding:2px 8px;border-radius:6px;background:var(--chip);color:var(--acc)}
 .r-listen{background:#2a1f33;color:#d39bff}.r-read{background:#2e2316;color:var(--gold)}
 .tag{font-size:12px;color:var(--pink)}
 .piece b{font-size:17px}.piece.main b{font-size:20px}.meta{color:var(--dim);font-size:14px}.piece p{margin:2px 0;color:var(--soft);font-size:15px}
@@ -257,7 +257,7 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .cx-after textarea{width:100%;background:var(--panel2);color:var(--fg);border:1px solid var(--line2);border-radius:10px;padding:10px;font:inherit}
 .cx-after small{color:var(--dim)}
 .sc{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:14px 18px 16px;margin:0 0 18px}
-.sc-like{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--pink);font-weight:700}
+.sc-like{font-size:14px;color:var(--pink);font-weight:700}
 .sc-stage{margin-top:8px;border-radius:10px;background:radial-gradient(ellipse at center,#0e1a24 0%,#07090f 75%);aspect-ratio:800/360;overflow:hidden}
 .sc-stage svg{display:block;width:100%;height:100%;font-family:system-ui,Segoe UI,Roboto,sans-serif}
 .sc-say{min-height:40px;margin:12px 2px 6px;font-family:var(--head);font-size:22px;font-weight:500;text-align:center}
@@ -270,14 +270,14 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .sc-map{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:12px;font-size:15px;color:var(--dim);opacity:.35;transition:opacity .8s}
 .sc.done .sc-map{opacity:1}.sc-map i{font-style:normal;color:var(--soft)}.sc-map b{color:var(--acc)}
 .lab{background:var(--deep);border:1px solid rgba(212,176,106,.45);border-radius:12px;padding:16px 18px 18px;margin:0 0 18px}
-.lab-kick{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:700}
+.lab-kick{display:block;font-size:14px;color:var(--gold);font-weight:700}
 .lab-top b{display:block;font-family:var(--head);font-size:24px;font-weight:600;margin:2px 0}
 .lab-top p{margin:0 0 12px;color:var(--soft);font-size:16px;max-width:820px}
 .lab-body{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,1fr);gap:18px;align-items:start}
 .lab-stage{border-radius:10px;background:radial-gradient(ellipse at center,#0e1a24 0%,#07090f 75%);aspect-ratio:1/1;max-height:560px;overflow:hidden}
 .lab-stage canvas{display:block;width:100%;height:100%}
 .lab-side{display:flex;flex-direction:column;gap:14px}
-.lab-knob>span{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600;margin-bottom:6px}
+.lab-knob>span{display:block;font-size:14px;color:var(--dim);font-weight:600;margin-bottom:6px}
 .lab-seg{display:flex;flex-wrap:wrap;gap:8px}
 .lab-seg button{font:inherit;font-size:16px;min-height:44px;min-width:64px;background:var(--panel2);color:var(--fg);border:1px solid var(--line2);border-radius:10px;padding:8px 16px;cursor:pointer}
 .lab-seg button:hover{border-color:var(--gold)}.lab-seg button.on{border-color:var(--gold);color:var(--ink);background:var(--gold);font-weight:600}
@@ -291,13 +291,13 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .lab-act{font:inherit;font-size:17px;min-height:52px;background:var(--panel2);color:var(--fg);border:1px solid var(--line2);border-radius:10px;padding:10px 20px;cursor:pointer}
 .lab-act:hover{border-color:var(--gold)}.lab-act.main{background:var(--gold);color:var(--ink);border-color:var(--gold);font-weight:600}
 .lab-say{font-family:var(--head);font-size:20px;line-height:1.35;min-height:54px}
-.lab-h{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600;margin:16px 0 8px}
+.lab-h{display:block;font-size:14px;color:var(--dim);font-weight:600;margin:16px 0 8px}
 .lab-strip{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px}
 .lab-strip figure{margin:0;flex:none;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 8px 6px}
 .lab-strip canvas{display:block;width:132px;height:60px}.lab-strip figcaption{font-size:12px;color:var(--dim);margin-top:4px;text-align:center}
 .lab-rules ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .lab-rules li{padding:10px 14px;border-radius:10px;border:1px dashed var(--line2);font-size:16px;color:var(--dim2)}
-.lab-rules li b{color:var(--gold);font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.08em}
+.lab-rules li b{color:var(--gold);font-weight:700;font-size:14px}
 .lab-rules li i{color:var(--dim)}
 .lab-rules li.found{border-style:solid;border-color:rgba(212,176,106,.6);color:var(--fg);background:var(--panel3)}
 .lab-rules li.fresh{animation:labfound 1.6s ease}
@@ -307,17 +307,17 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .lab-map{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:14px;font-size:15px;color:var(--dim)}.lab-map i{font-style:normal;color:var(--soft)}.lab-map b{color:var(--acc)}
 @media (max-width:900px){.lab-body{grid-template-columns:1fr}.lab-stage{max-height:70vh}}
 .uses{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 14px}
-.uses span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:600;margin-right:4px}
+.uses span{font-size:14px;color:var(--dim);font-weight:600;margin-right:4px}
 .uses a{font-size:14px;padding:4px 12px;border-radius:999px;text-decoration:none;color:var(--pink);border:1px solid rgba(255,79,200,.35);background:#1a0f19}
 .uses a:hover{border-color:var(--pink)}
 details.more{margin-top:6px;border-top:1px solid var(--line);padding-top:10px}
 details.more summary{cursor:pointer;color:var(--dim);font-size:15px;padding:6px 0}
 details.more summary:hover{color:var(--fg)}
 @media (max-width:1000px){.wrap{grid-template-columns:1fr}nav{position:static;max-height:none}nav{display:flex;flex-wrap:wrap;gap:4px}nav h4{width:100%}.row2{grid-template-columns:1fr}.hero ol{columns:1}}
-${LOOKCSS}</style></head><body>
+${LOOKCSS}${TYPECSS}</style></head><body>
 ${top(c.slug, all)}
 <div class="wrap"><nav><h4>Units</h4>${toc}<p class="donecount"></p></nav><main>
-<div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)} · ${c.size === 'class' ? 'a class built from an old book' : c.kind === 'found' ? 'built from a free course' : 'a course we wrote'}</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>${c.source ? '<p class="src">From <a href="' + esc(c.source.url) + '" target="_blank" rel="noopener">' + esc(c.source.title) + '</a>, ' + esc(c.source.by) + '. ' + licence(c.source.licence) + '.' + (c.planned > c.units.length ? ' ' + c.units.length + ' of ' + c.planned + ' lectures are ready so far. The rest are being added one at a time, so the numbers in the list skip.' : '') + '</p>' : ''}<p class="lv">${LEVELS(c)}</p>
+<div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)}, ${c.size === 'class' ? 'a class built from an old book' : c.kind === 'found' ? 'built from a free course' : 'a course we wrote'}</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>${c.source ? '<p class="src">From <a href="' + esc(c.source.url) + '" target="_blank" rel="noopener">' + esc(c.source.title) + '</a>, ' + esc(c.source.by) + '. ' + licence(c.source.licence) + '.' + (c.planned > c.units.length ? ' ' + c.units.length + ' of ' + c.planned + ' lectures are ready so far. The rest are being added one at a time, so the numbers in the list skip.' : '') + '</p>' : ''}<p class="lv">${LEVELS(c)}</p>
 ${(() => { const outs = (c.outcomes || []).length ? c.outcomes : c.units.map((u) => u.outcome).filter(Boolean); return outs.length ? '<details class="more"><summary>By the end you will be able to...</summary><ol>' + outs.map((o) => '<li>' + esc(o) + '</li>').join('') + '</ol></details>' : ''; })()}</div>
 ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this course</h3><div class="chans">' + c.channels.map(chan).join('') + '</div>' : ''}
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
@@ -406,10 +406,9 @@ html[data-look="daylight"] header.top{box-shadow:0 1px 0 var(--line)}
 html[data-look="daylight"] .quiz{background:#f1f4fa}html[data-look="daylight"] .qa blockquote{color:#2f3647;border-left-color:#c5cbdc}html[data-look="daylight"] .qc button.right{border-color:#1b7a43;color:#1b7a43}html[data-look="daylight"] .qc button.wrong{border-color:#b3261e;color:#b3261e}html[data-look="daylight"] .qr.ok{color:#1b7a43}html[data-look="daylight"] .qr.no{color:#b3261e}
 html[data-look="daylight"] .r-read{background:#fff1d6;color:#7a5200}html[data-look="daylight"] .r-listen{background:#f1e6ff;color:#5b2a9a}html[data-look="daylight"] .r-watch{background:#e3edff;color:#1f55e6}html[data-look="daylight"] .do{background:#ecf8f0;border-color:#b9e2c7}html[data-look="daylight"] .sc-dots button{background:#c9d0e2}html[data-look="daylight"] .sc-dots button.on{background:var(--acc)}html[data-look="daylight"] .uses a{background:#fdeaf1;border-color:#f2b6cd}
 html[data-look="daylight"] .hero::after{background:linear-gradient(180deg,rgba(11,18,32,.25) 0%,rgba(11,18,32,.72) 100%)}
-html[data-look="daylight"] .hero .kick{color:#ffd98a}html[data-look="daylight"] .hero .dom{color:#ffd98a}
+html[data-look="daylight"] .hero .dom{color:#ffd98a}
 html[data-look="daylight"] .arrow{background:#fff;color:#141926;border-color:var(--line);box-shadow:0 4px 14px rgba(20,25,38,.18)}
 html[data-look="bright"] .hero::after{background:linear-gradient(180deg,rgba(11,12,18,.1) 0%,rgba(11,12,18,.6) 60%,var(--bg) 100%)}
-html[data-look="bright"] .hero .kick{color:var(--acc)}
 `;
 // Install on a phone or tablet (Bryan, 19 Nov 2026: "the whole pwa"; "Yes, do it here"). Every page names the manifest and the
 // home-screen icons (img/, drawn by make-icons.js), so iPhone and iPad Safari add it as an app with the crest, and Chrome and
@@ -429,30 +428,45 @@ const INSTALL = '<button type="button" class="inst" id="inst" hidden>Install</bu
   + 'b.onclick=function(){if(P){P.prompt();P.userChoice.then(function(){P=null;show()},function(){});return}n.hidden=!n.hidden};'
   + 'document.getElementById("instok").onclick=function(){n.hidden=true};show();'
   + 'if("serviceWorker" in navigator&&location.protocol==="https:")addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})})()</script>';
-const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">';
+// Type (B, 19 Nov 2026: no AI-built look; Inter is the face every machine-made page uses). profile.json "type" names
+// the faces the site is built with; the preview has a Type picker beside the Look picker so they can be judged on the
+// real pages. The public copy loads only the faces it uses.
+const TYPE = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'profile.json'), 'utf8')).type || 'inter'; } catch (e) { return 'inter'; } })();
+const TYPES = {
+  inter: { name: 'Inter (as it was)', href: 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;800&display=swap' },
+  hyper: { name: 'Atkinson Hyperlegible, made for easy reading', href: 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap' },
+  literata: { name: 'Literata, a book face', href: 'https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Schibsted+Grotesk:wght@600;800&display=swap' },
+};
+const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' + (LIVE ? [TYPE] : Object.keys(TYPES)).map((k) => '<link href="' + (TYPES[k] || TYPES.inter).href + '" rel="stylesheet">').join('');
+const TYPECSS = `
+html[data-type="hyper"]{--body:"Atkinson Hyperlegible Next","Atkinson Hyperlegible",Verdana,sans-serif;--head:"Bricolage Grotesque","Atkinson Hyperlegible Next",Verdana,sans-serif}
+html[data-type="literata"]{--body:Literata,"Iowan Old Style",Palatino,serif;--head:"Schibsted Grotesk",Verdana,sans-serif}
+html[data-type="literata"] body{font-size:17px}
+`;
 const CARDCSS = `.card{flex:0 0 auto;display:flex;flex-direction:column;border-radius:8px;overflow:hidden;background:var(--panel);border:1px solid var(--line);text-decoration:none;color:var(--fg);transition:transform .18s ease,border-color .18s ease}
 .card:hover,.card:focus-visible{transform:translateY(-3px);border-color:var(--gold);outline:none}
 .card .ph{background:var(--deep);overflow:hidden}.card .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}.card:hover .ph img{transform:scale(1.04)}
 .card .t{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px}
-.card small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.card small{font-size:14px;color:var(--gold)}
 .card b{font-family:var(--head);font-weight:600;line-height:1.2}
 .card span{color:var(--soft);font-size:14px;line-height:1.45}
 .course{width:340px}.course .ph{aspect-ratio:16/10}.course b{font-size:24px}
 .mini{width:220px}.mini .ph{aspect-ratio:4/3}.mini b{font-size:18px}.mini span{font-size:13px}
 .chan{width:300px}.chan .ph{aspect-ratio:16/9}.chan b{font-size:19px}.chan span{font-size:13px}`;
-const BASE = `:root{--bg:#0b1220;--panel:#111a2c;--panel2:#17223a;--line:#24304a;--fg:#efe9dc;--dim:#9aa3b5;--acc:#d4b06a;--gold:#d4b06a;--pink:#e08a8f;--ink:#0b1220;--soft:#cfd2dc;--line2:#2c3550;--panel3:#141c2e;--dim2:#aab0c2;--chip:#1c2a33;--deep:#0a101c;--head:Fraunces,Georgia,serif;--radius:8px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh,64px) + 14px)}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,sans-serif}a{color:var(--acc)}
+const BASE = `:root{--bg:#0b1220;--panel:#111a2c;--panel2:#17223a;--line:#24304a;--fg:#efe9dc;--dim:#9aa3b5;--acc:#d4b06a;--gold:#d4b06a;--pink:#e08a8f;--ink:#0b1220;--soft:#cfd2dc;--line2:#2c3550;--panel3:#141c2e;--dim2:#aab0c2;--chip:#1c2a33;--deep:#0a101c;--head:Fraunces,Georgia,serif;--body:Inter,system-ui,Segoe UI,Roboto,sans-serif;--radius:8px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh,64px) + 14px)}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--body)}a{color:var(--acc)}
 .serif{font-family:var(--head)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important;animation-iteration-count:1 !important}.card:hover,.card:focus-visible{transform:none}.card:hover .ph img{transform:none}}
 header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:14px 32px;border-bottom:1px solid var(--line);background:var(--deep);position:sticky;top:0;z-index:50}
 .crest{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg)}
 .crest svg{width:34px;height:34px;flex:none}
 .crest span{white-space:nowrap}.crest b{font-family:var(--head);font-weight:700;font-size:19px;letter-spacing:.14em;text-transform:uppercase}
-.crest small{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-top:1px}
+.crest small{display:block;font-size:12px;color:var(--gold);margin-top:1px}
 .nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto;position:static;align-items:center}
 .navall{position:relative}.navall summary{cursor:pointer;list-style:none;font-size:14px;padding:6px 12px;border-radius:6px;color:var(--fg);border:1px solid var(--line)}.navall summary::-webkit-details-marker{display:none}.navall summary:hover{border-color:var(--gold)}
 .navlist{position:absolute;right:0;top:calc(100% + 8px);z-index:30;width:min(640px,calc(100vw - 40px));max-height:70vh;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px 18px;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.5)}
 @media (max-width:1000px){header.top{padding:8px 20px;gap:6px 14px}.navall{position:static}.navlist{left:20px;right:20px;width:auto}}
-.navlist h5{margin:0 0 4px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}.navlist a,.navlist b{display:block;padding:4px 0;font-size:14px}
+.navlist h5{margin:0 0 4px;font-size:14px;color:var(--acc)}.navlist a,.navlist b{display:block;padding:4px 0;font-size:14px}
 .nav a,.nav b{font-size:14px;padding:6px 12px;border-radius:6px;text-decoration:none;color:var(--dim)}
 .nav a:hover{color:var(--fg);background:var(--panel2)}.nav b{color:var(--gold);font-weight:600}
 .lookpick{font-size:12px;color:var(--dim);display:flex;align-items:center;gap:6px}.lookpick select{font:inherit;font-size:12px;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:3px 8px}
@@ -486,14 +500,14 @@ function shelfPage(b, all) {
     + c.passages.map((p) => '<div class="pair"><div class="plain"><p>' + esc(p.plain) + '</p>'
       + (p.warnings || []).map((w) => '<p class="warn"><b>Do not follow this part as written.</b> ' + esc(w.text) + ' <a href="' + esc(w.url) + '" target="_blank" rel="noopener">' + esc(w.source) + '</a></p>').join('')
       + '</div><details class="old"><summary>As printed in ' + esc(String(b.year)) + '</summary><p>' + esc(p.old) + '</p></details></div>').join('') + '</section>').join('');
-  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>${esc(b.title)} · Void University</title>${FONTS}<style>${BASE}
+  return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>${esc(b.title)} | Void University</title>${FONTS}<style>${BASE}
 .swrap{display:grid;grid-template-columns:250px minmax(0,1fr);gap:34px;max-width:1500px;margin:0 auto;padding:26px 32px 60px}
 .swrap nav{position:sticky;top:calc(var(--hh,64px) + 16px);align-self:start;max-height:calc(100vh - var(--hh,64px) - 36px);overflow:auto;display:flex;flex-direction:column;gap:2px}
-.swrap nav h4{margin:0 0 8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.swrap nav h4{margin:0 0 8px;font-size:14px;color:var(--dim)}
 .swrap nav a{display:flex;gap:10px;padding:7px 10px;border-radius:6px;color:var(--fg);text-decoration:none;font-size:15px}
 .swrap nav a:hover{background:var(--panel)}.swrap nav a span{color:var(--acc);min-width:18px}
 .shero{padding:26px 30px;border:1px solid var(--line);border-radius:10px;background:var(--panel);margin-bottom:26px}
-.shero .dom{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+.shero .dom{font-size:14px;color:var(--acc)}
 .shero h1{font-family:var(--head);font-size:40px;margin:8px 0 6px;line-height:1.1}.shero p{margin:6px 0;color:var(--soft);font-size:17px;max-width:900px}.shero .src{font-size:14px;color:var(--dim)}.shero a{color:var(--acc)}
 .shero .caution{color:var(--gold);font-size:15px;border-left:3px solid var(--gold);padding-left:12px}
 .shero .both button{font:inherit;font-size:14px;margin-top:10px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}
@@ -502,13 +516,13 @@ function shelfPage(b, all) {
 .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;padding:14px 0;border-top:1px solid var(--line);align-items:start}
 .pair .plain p{margin:0;font-size:18px;line-height:1.6}
 .pair .warn{margin-top:10px !important;font-size:15px !important;padding:10px 12px;border:1px solid #6b3a3d;background:#221316;border-radius:8px;color:#f0c9cb}.pair .warn a{color:var(--pink)}
-.pair .old summary{cursor:pointer;color:var(--dim);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.pair .old summary{cursor:pointer;color:var(--dim);font-size:14px}
 .pair .old p{margin:8px 0 0;font-family:Georgia,serif;font-size:15px;line-height:1.55;color:#a9afbf}
 @media (max-width:1000px){.swrap{grid-template-columns:1fr;padding:18px 20px 50px}.swrap nav{position:static;flex-direction:row;flex-wrap:wrap;max-height:none}.swrap nav h4{width:100%}.pair{grid-template-columns:1fr;gap:8px}.shero h1{font-size:30px}}
-${LOOKCSS}</style></head><body>
+${LOOKCSS}${TYPECSS}</style></head><body>
 ${top(b.slug, all)}
 <div class="swrap"><nav><h4>Chapters</h4>${toc}</nav><main>
-<div class="shero"><div class="dom">${esc(b.area)} · an old book in plain English</div><h1>${esc(b.title)}</h1><p>${esc(b.needIt)}</p>${b.caution ? '<p class="caution">' + esc(b.caution) + '</p>' : ''}
+<div class="shero"><div class="dom">${esc(b.area)}, an old book in plain English</div><h1>${esc(b.title)}</h1><p>${esc(b.needIt)}</p>${b.caution ? '<p class="caution">' + esc(b.caution) + '</p>' : ''}
 <p class="src">By ${esc(b.by)}, ${esc(String(b.year))}. ${esc(b.licence)}. <a href="${esc(b.scan || b.url)}" target="_blank" rel="noopener">Read the scanned book on the Internet Archive</a>. The plain side is our rewrite: same facts and steps, today's words. The printed side is a machine's reading of the scan, so a few letters are wrong.</p>
 <div class="both"><button type="button" id="both">Show the printed words beside every passage</button></div></div>
 ${chapters}
@@ -540,7 +554,7 @@ function top(current, all) {
       + (SHELFBOOKS.length ? '<div><h5>Old books in plain English</h5>' + SHELFBOOKS.map(link).join('') + '</div>' : '');
     links = home + (here ? hereLink(here) : '') + '<details class="navall"><summary>All courses</summary><div class="navlist">' + groups + '</div></details>';
   }
-  return '<header class="top"><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + INSTALL + DRAFT + '</header>'
+  return '<header class="top"><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>Learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + INSTALL + DRAFT + '</header>'
     + '<script>(function(){var h=document.querySelector("header.top"),s=function(){document.documentElement.style.setProperty("--hh",h.offsetHeight+"px")};s();addEventListener("load",s);if(window.ResizeObserver)new ResizeObserver(s).observe(h);else addEventListener("resize",s)})()</script>';
 }
 const IMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'img', 'images.json'), 'utf8')); } catch (e) { return {}; } })();
@@ -553,12 +567,12 @@ const LEVELS = (c) => (c.levels || []).map((l) => '<span>' + esc(LEVELNAME[l] ||
 const FOOT = () => `<footer>Free, no account. Lessons play from the Internet Archive; each piece names its source and licence. Photos are public domain (CC0); <a href="credits.html">who took them</a>.<br>
 If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="${DONATE}" target="_blank" rel="noopener">Donate to CASH</a></footer>`;
 function chan(x) {
-  return '<a class="card chan" href="' + esc(x.url) + '" target="_blank" rel="noopener"><div class="ph"><img loading="lazy" src="' + esc(x.thumb) + '" alt=""></div><div class="t"><small>Channel · ' + esc(x.count) + '</small><b>' + esc(x.name) + '</b><span>' + esc(x.what) + '</span></div></a>';
+  return '<a class="card chan" href="' + esc(x.url) + '" target="_blank" rel="noopener"><div class="ph"><img loading="lazy" src="' + esc(x.thumb) + '" alt=""></div><div class="t"><small>Channel, ' + esc(x.count) + '</small><b>' + esc(x.name) + '</b><span>' + esc(x.what) + '</span></div></a>';
 }
 function home(all, list) {
   const full = all.filter((c) => c.shelf !== 'supplement');
   const sup = all.filter((c) => c.shelf === 'supplement');
-  const card = (c) => '<a class="card course" data-slug="' + esc(c.slug) + '" data-units="' + c.units.length + '" data-lv="' + esc((c.levels || []).join('|')) + '" href="' + esc(c.slug) + '.html"><div class="ph"><img src="' + (img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))) + '" alt=""></div><div class="t"><small>' + esc(c.domain) + ' · ' + (c.planned > c.units.length ? c.units.length + ' of ' + c.planned + ' units' : c.units.length + (c.units.length === 1 ? ' unit' : ' units')) + '</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
+  const card = (c) => '<a class="card course" data-slug="' + esc(c.slug) + '" data-units="' + c.units.length + '" data-lv="' + esc((c.levels || []).join('|')) + '" href="' + esc(c.slug) + '.html"><div class="ph"><img src="' + (img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))) + '" alt=""></div><div class="t"><small>' + esc(c.domain) + ', ' + (c.planned > c.units.length ? c.units.length + ' of ' + c.planned + ' units' : c.units.length + (c.units.length === 1 ? ' unit' : ' units')) + '</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
   const mini = (c, u) => '<a class="card mini" href="' + esc(c.slug) + '.html#u' + u.n + '"><div class="ph"><img loading="lazy" src="' + img('m' + u.n) + '" alt=""></div><div class="t"><b>' + esc(u.title) + '</b><span>' + esc(u.scene ? u.scene.analogy : '') + '</span></div></a>';
   const row = (title, note, cards, id) => '<section class="row"' + (id ? ' id="' + id + '"' : '') + '><h2><span>' + esc(title) + '</span>' + (note ? '<small>' + esc(note) + '</small>' : '') + '</h2><div class="rowwrap"><button class="arrow l" aria-label="Back">&#8249;</button><div class="track">' + cards + '</div><button class="arrow r" aria-label="More">&#8250;</button></div></section>';
   const areaId = (t) => 'area-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -573,14 +587,14 @@ function home(all, list) {
       + ss.map((c) => row(c.name, 'short pieces any course can use', c.units.map((u) => mini(c, u)).join(''))).join('')
       + (ch.length ? row('Channels for ' + t, 'whole series on the Internet Archive that go with these courses', ch.map(chan).join('')) : '');
   }).join('');
-  const shelfRow = SHELFBOOKS.length ? row('Old books in plain English', 'useful old how-to, with the printed words beside it', SHELFBOOKS.map((b) => '<a class="card course" data-lv="' + esc((b.levels || []).join('|')) + '" href="' + esc(b.slug) + '.html"><div class="ph"><img src="' + img('a-' + String(b.area).toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""></div><div class="t"><small>' + esc(b.area) + ' · printed ' + esc(String(b.year)) + ' · ' + b.chapters.length + ' chapters</small><b>' + esc(b.title) + '</b><span>' + esc(b.needIt) + '</span></div></a>').join('')) : '';
+  const shelfRow = SHELFBOOKS.length ? row('Old books in plain English', 'useful old how-to, with the printed words beside it', SHELFBOOKS.map((b) => '<a class="card course" data-lv="' + esc((b.levels || []).join('|')) + '" href="' + esc(b.slug) + '.html"><div class="ph"><img src="' + img('a-' + String(b.area).toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""></div><div class="t"><small>' + esc(b.area) + ', printed ' + esc(String(b.year)) + ', ' + b.chapters.length + ' chapters</small><b>' + esc(b.title) + '</b><span>' + esc(b.needIt) + '</span></div></a>').join('')) : '';
   // One tile for each area that has a course, and the tile opens that area's row. An area with nothing in it yet is
   // not shown: a tile that leads nowhere is a placeholder.
   const tiles = list.types.map((t) => {
     const n = full.filter((c) => c.domain === t).length; // same count as the row: the mechanisms shelf is not a course
     return n ? '<a class="area has" href="#' + areaId(t) + '"><img loading="lazy" src="' + img('a-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""><div><b>' + esc(t) + '</b><small>' + n + (n === 1 ? ' course' : ' courses') + '</small></div></a>' : '';
   }).join('');
-  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}
+  return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}
 <title>Void University</title>
 ${FONTS}
 <style>
@@ -589,8 +603,7 @@ ${BASE}
 .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.75) brightness(.55)}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,32,.15) 0%,rgba(11,18,32,.65) 60%,var(--bg) 100%)}
 .hero div{position:relative;z-index:1;max-width:1400px;width:100%;margin:0 auto;padding:40px 32px 34px}
-.hero .kick{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
-.hero h1{font-family:var(--head);font-weight:700;font-size:48px;line-height:1.08;margin:10px 0 12px;max-width:820px}
+.hero h1{font-family:var(--head);font-weight:700;font-size:48px;line-height:1.08;margin:0 0 12px;max-width:820px}
 .hero p{margin:0;color:#e4ddcc;font-size:19px;max-width:680px}
 main{max-width:1400px;margin:0 auto;padding:6px 12px 28px}
 h2{margin:34px 20px 12px;display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
@@ -618,9 +631,9 @@ ${CARDCSS}
 .area div{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;background:linear-gradient(0deg,rgba(11,18,32,.92),rgba(11,18,32,0))}
 .area b{display:block;font-family:var(--head);font-size:19px;font-weight:600}.area small{color:var(--dim);font-size:13px}.area.has small{color:var(--gold)}
 @media(max-width:900px){.hero h1{font-size:36px}.course{width:290px}}
-${LOOKCSS}</style></head><body>
+${LOOKCSS}${TYPECSS}</style></head><body>
 ${top('home', all)}
-<div class="hero"><img src="${img('a-mind')}" alt=""><div><div class="kick">Free courses · no account</div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way.</p></div></div>
+<div class="hero"><img src="${img('a-mind')}" alt=""><div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way. Every course is free, and there is no account to make.</p></div></div>
 <main><div class="who"><span>Who is it for?</span><button class="on" data-lv="">Everyone</button><button data-lv="high school">High school</button><button data-lv="young adults">Young adults</button><button data-lv="everyday">Everyday life</button><input type="search" id="find" placeholder="Find a course or a lesson" aria-label="Find a course or a lesson"><small>Everyday life: not for a job in the field, just useful for living, deciding and understanding people.</small></div>
 <div id="found" hidden></div><div id="resume" hidden></div>
 ${rows}
@@ -677,8 +690,8 @@ find.addEventListener('input', function () {
 }
 function credits(all) {
   const rows = Object.keys(IMG).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
-  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Photo credits · Void University</title>${FONTS}<style>${BASE}
-main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}${LOOKCSS}</style></head><body>
+  return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Photo credits | Void University</title>${FONTS}<style>${BASE}
+main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}${LOOKCSS}${TYPECSS}</style></head><body>
 ${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
 
@@ -686,10 +699,10 @@ ${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public 
 // any depth.
 function notFound(all) {
   const list = all.filter((c) => c.shelf !== 'supplement').map((c) => '<a href="' + esc(c.slug) + '.html">' + esc(c.name) + '</a>').join('');
-  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/">${APPHEAD}<title>Page not found · Void University</title>${FONTS}<style>${BASE}
+  return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/">${APPHEAD}<title>Page not found | Void University</title>${FONTS}<style>${BASE}
 main{max-width:760px;margin:0 auto;padding:48px 32px 60px}h1{font-family:var(--head);font-size:36px;margin:0 0 10px}main p{color:var(--soft);font-size:17px}
 .go{display:inline-block;margin:10px 0 26px;padding:10px 20px;border-radius:999px;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:16px}.go:hover{background:var(--panel2)}
-.all{display:flex;flex-direction:column;gap:2px}.all a{padding:10px 12px;border-radius:8px;color:var(--fg);text-decoration:none;border:1px solid var(--line);background:var(--panel);font-size:16px}.all a:hover{border-color:var(--gold)}${LOOKCSS}</style></head><body>
+.all{display:flex;flex-direction:column;gap:2px}.all a{padding:10px 12px;border-radius:8px;color:var(--fg);text-decoration:none;border:1px solid var(--line);background:var(--panel);font-size:16px}.all a:hover{border-color:var(--gold)}${LOOKCSS}${TYPECSS}</style></head><body>
 ${top('404', all)}<main><h1>That page is not here</h1><p>The address may be old or mistyped. Everything on Void University starts from the front page.</p><a class="go" href="index.html">&#8592; Front page</a><div class="all">${list}</div></main>${FOOT()}</body></html>`;
 }
 

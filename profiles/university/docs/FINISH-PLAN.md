@@ -154,3 +154,11 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   a course on or off the public copy without HQ (RUN.md section 8). Checked in the preview at 1920x1080, 1316x821,
   821x1316 and 1278x513: no sideways scroll, no console errors. Left for Bryan to decide: his full name as author on
   the Boundary course page, and whether a quiz answer should allow a second try. Nothing deployed.
+- 19 Nov 2026, design tells (the audit chat's measured pass with the two design checklists; Bryan in this chat:
+  "Yes, fix them"). The capitals line over the front page headline is gone; "free, no account" is now in the
+  sentence under it. Every middle-dot string is plain words ("Mind, 6 units"; tab titles use a bar). Small labels
+  are in plain case with no letter spacing; only the crest wordmark stays in capitals. A reduced-motion rule
+  stills the hover lifts and smooth scroll for people who ask their device for less motion (the scenes and labs
+  still play; they are the lesson). Type is now a setting like the look: `"type"` in profile.json (inter, hyper,
+  literata), with a Type picker beside the Look picker in the preview. The public copy loads only the faces it
+  uses. Left for Bryan: pick the type. Nothing deployed.

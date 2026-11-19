@@ -237,6 +237,9 @@ line in `profiles\university\profile.json`:
 
 The words are `classic`, `bright` and `daylight`. Then build and deploy (step 8).
 
+Type works the same way: the preview header has a Type picker (Inter, Atkinson Hyperlegible, Literata), and
+`"type"` in profile.json (`inter`, `hyper` or `literata`) sets the faces the site is built with.
+
 ## Rules that keep it legal
 
 - No ads, sponsor listings, fees or email sign-up anywhere on the University. Open Yale and MIT allow their courses
