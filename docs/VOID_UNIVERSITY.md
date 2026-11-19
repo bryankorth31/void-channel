@@ -737,3 +737,5 @@ B: "Yes, add scale". Built from the current framework paper (The Framework, Curr
 ### 19 Nov 2026: two labs marked live, public copy built
 
 B: "Yes, build it" (to: build the public copy so the labs are ready for him to deploy). The chance machine (Critical thinking unit 3) and The lever (mind's mechanisms unit 17) carry `lab.live: true`; `site/` was rebuilt with `build.js --site` and holds both labs, the engine, the two benches they use and Planck with its licence. The public copy now takes only the benches a shipped lab uses. The boundary course (both units, The edge and Seven together) is NOT marked live: its wording is Claude's reading of his framework and waits on his read. Not deployed: that is his command in his own terminal.
+
+B, 19 Nov 2026, asked whether to put the boundary course in the public copy with the draft wording as it stands: "Yes, include it". `list.json` marks `boundary` live and both its labs carry `lab.live: true`; `site/` rebuilt and holds boundary.html with The edge and Seven together. Still not deployed: his command in his own terminal.
