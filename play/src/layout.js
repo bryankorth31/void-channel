@@ -1,10 +1,22 @@
 // VoidTV PLAY: where the picture and the touch pad go. Licence: GPL-2.0-or-later (play/LICENSE).
-// One small rule set, so every screen gets the same answer: the picture keeps its shape and is never covered;
-// with touch on, landscape puts a column of controls at each side (thumbs at the edges), portrait puts the pad under
-// the picture. Sizes are CSS pixels.
+// One small rule set, so every screen gets the same answer: the picture keeps its shape and is never covered.
+// With touch on, sideways: the picture is as tall as the screen allows and the controls fill the columns left at each
+// side (thumbs at the edges); the columns are never narrower than two thumb keys, so on a narrow screen the picture
+// gives way, not the keys. Upright: the picture fills the width and the pad fills everything under it.
+// Sizes are CSS pixels. The numbers here and the columns in play.css (.pcol) are one rule: keep them the same.
 (function (root) {
   const HEADER = 52;
   const MIN_KEY = 56;          // smallest touch target we draw (a thumb, not a fingertip)
+  const PAD = 12;              // a zone's inner margin
+  const GAP = 10;              // space between keys
+  const ROWS = 5;              // rows of keys a side column needs for two columns (play.css @container)
+
+  // How many key columns a side column uses: two when five rows of keys fit in its height, three when they do not.
+  function columns(zoneH) {
+    return zoneH - 2 * PAD >= ROWS * MIN_KEY + (ROWS - 1) * GAP ? 2 : 3;
+  }
+  // The narrowest a side column may be for that many columns of keys.
+  const columnWidth = (cols) => 2 * PAD + cols * MIN_KEY + (cols - 1) * GAP;
 
   function fit(boxW, boxH, aspect) {
     let w = boxW, h = w / aspect;
@@ -20,12 +32,13 @@
       return { mode: 'plain', screen: { x: Math.floor((vw - s.w) / 2), y: top + Math.floor((stageH - s.h) / 2), w: s.w, h: s.h } };
     }
     if (vw > vh) {
-      const col = Math.round(Math.min(300, Math.max(200, vw * 0.2)));
-      const s = fit(vw - 2 * col - 16, stageH - 16, aspect);
-      const screen = { x: Math.floor((vw - s.w) / 2), y: top + Math.floor((stageH - s.h) / 2), w: s.w, h: s.h };
+      const cols = columns(stageH);
+      const s = fit(vw - 2 * columnWidth(cols), stageH - 16, aspect);
+      const col = Math.floor((vw - s.w) / 2);
+      const screen = { x: col, y: top + Math.floor((stageH - s.h) / 2), w: s.w, h: s.h };
       return { mode: 'landscape', screen,
-        left: { x: 0, y: top, w: col, h: stageH },
-        right: { x: vw - col, y: top, w: col, h: stageH } };
+        left: { x: 0, y: top, w: col, h: stageH, cols },
+        right: { x: vw - col, y: top, w: col, h: stageH, cols } };
     }
     const s = fit(vw, Math.floor(stageH * 0.5), aspect);
     const screen = { x: Math.floor((vw - s.w) / 2), y: top, w: s.w, h: s.h };
@@ -34,7 +47,7 @@
 
   function overlaps(a, b) { return a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h; }
 
-  const api = { layout, fit, overlaps, HEADER, MIN_KEY };
+  const api = { layout, fit, overlaps, columns, columnWidth, HEADER, MIN_KEY, PAD, GAP, ROWS };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayLayout = api;
 })(typeof self !== 'undefined' ? self : this);
