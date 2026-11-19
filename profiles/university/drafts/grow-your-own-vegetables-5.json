@@ -1,0 +1,290 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 5,
+  "title": "Seeds that give best results",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:04:32.720Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 5,
+    "title": "Seeds that give best results",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 5
+    },
+    "needIt": "Choosing the right seeds helps you save time and money by ensuring your plants actually grow well. It stops you from wasting effort on seeds that will never produce a good harvest.",
+    "why": "An amateur gardener thought that only hard work mattered for a good crop. He believed any seed would work if you just took good care of the plant. However, he did not realize that some seeds are born with better traits that no amount of care can fix.",
+    "outcome": "Select high-quality seeds from reputable firms to ensure a successful garden.",
+    "reachesYou": "You see this when you shop for groceries and notice some brands are more reliable than others. You also see it when you choose a brand of tool that is known to last a long time.",
+    "do": "Research one well-known seed company that has a long history of selling high-quality garden seeds.",
+    "quiz": [
+      {
+        "q": "What is the most important factor for growing superior quality vegetables?",
+        "choices": [
+          "The kind of seed",
+          "The size of the garden",
+          "The amount of water",
+          "The type of soil"
+        ],
+        "a": 0,
+        "why": "The text states that using only the best kind of seed is very important for quality.",
+        "quote": "T is very important that seed of only the best kind should be used, if we would grow vegetables of superior quality.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c5"
+      },
+      {
+        "q": "What did the amateur gardener believe about seeds?",
+        "choices": [
+          "Any seed works if you care for it",
+          "Only the best seeds work",
+          "Seeds must be very expensive",
+          "Seeds should be local"
+        ],
+        "a": 0,
+        "why": "The amateur gardener argued that the culture you give the plant is what counts.",
+        "quote": "Plant any kind of seed that happens to be handiest and take good care of the plants that grow from it and you'll have good vegetables.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c5"
+      },
+      {
+        "q": "Can good care make a bad seed produce a superior vegetable?",
+        "choices": [
+          "Yes, with enough water",
+          "No, it cannot",
+          "Yes, if you are patient",
+          "Only in large gardens"
+        ],
+        "a": 1,
+        "why": "The text says no amount of culture can make a superior vegetable from inferior seed.",
+        "quote": "No amount of culture can make a superior vegetable from plants grown from inferior seed.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c5"
+      },
+      {
+        "q": "How does the size of your garden affect seed choice?",
+        "choices": [
+          "Large gardens need better seeds",
+          "Size does not matter",
+          "Small gardens need cheaper seeds",
+          "Small gardens need better seeds"
+        ],
+        "a": 3,
+        "why": "The text explains that the smaller the garden is, the more important it is to use the best seed.",
+        "quote": "The smaller it is, the greater the importance of using only the best.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c5"
+      },
+      {
+        "q": "How can you identify a reliable seed firm?",
+        "choices": [
+          "By their long history and reputation",
+          "By the lowest price",
+          "By the color of the bag",
+          "By the size of the office"
+        ],
+        "a": 0,
+        "why": "Reliable firms have been in existence for years and have built a reputation for quality.",
+        "quote": "We have in this country many seed firms that have been in existence for years, some of them over half a century, and these have built up for themselves a reputation for handling only seed of the very best.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c5"
+      },
+      {
+        "q": "What is the risk of buying 'cheap' seed advertised as 'just as good'?",
+        "choices": [
+          "It will grow too fast",
+          "It will be too expensive",
+          "It will not grow at all",
+          "It will be poor in quality"
+        ],
+        "a": 3,
+        "why": "The text warns that cheap seed is likely to be cheap in quality as well as price.",
+        "quote": "Cheap seed, that which is advertised as being ''just as good as higher-priced seed for a much smaller amount of money'', is likely to prove as cheap in quality as in price.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c5"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Only the best kind of seed gives superior quality.",
+        "No amount of care fixes inferior seed.",
+        "Small gardens need the best seeds even more.",
+        "Old firms have reputations for high quality.",
+        "Cheap seed is often poor in quality."
+      ],
+      "key": "Quality seeds are the foundation of a successful garden.",
+      "decoys": [
+        {
+          "text": "Good care can make any seed grow well.",
+          "why": "The text says no amount of culture can make a superior vegetable from inferior seed."
+        },
+        {
+          "text": "Cheap seeds are a good way to save money.",
+          "why": "The text says cheap seed is likely to be cheap in quality as well as price."
+        }
+      ],
+      "aha": "The quality of the starting seed determines the final result more than the care provided later."
+    },
+    "scene": {
+      "analogy": "A chef cooking with cheap ingredients vs high quality",
+      "map": [
+        [
+          "A hungry diner",
+          "A gardener"
+        ],
+        [
+          "A chef",
+          "The harvest"
+        ],
+        [
+          "The food",
+          "The seed"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A hungry diner",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A chef",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "THE FOOD",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "COOKING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "You cannot make a feast out of poor ingredients.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A chef stands in a kitchen.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "He uses low quality meat.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The meal tastes very bad.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Gets a bland meal"
+            },
+            "right": {
+              "sub": "Serves a great dish"
+            }
+          }
+        },
+        {
+          "say": "The diner feels disappointed.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Better seeds lead to better vegetables regardless of care.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "A gardener",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "The harvest",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "THE SEED",
+              "size": 18
+            },
+            "act": {
+              "label": "GROWING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Good seeds are the start of a good harvest.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Seeds that give best results",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c5",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

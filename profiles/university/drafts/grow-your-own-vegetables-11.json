@@ -1,0 +1,293 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 11,
+  "title": "Small gardens",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:10:38.857Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: thing is over 11 letters: A small apple",
+    "round 2: question dropped, its quote is not said word for word: How should you arrange plants of different heights"
+  ],
+  "unit": {
+    "n": 11,
+    "title": "Small gardens",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 11
+    },
+    "needIt": "You can start a garden even if you think your space is too small. This helps you turn a messy corner into a useful spot for food or beauty.",
+    "why": "Many people never start a garden because they think they need a huge field. This story shows that a tiny space with a lot of love is better than a big field that is ignored. Small efforts at home are the best way to make a big change.",
+    "outcome": "Start a small garden in a tiny space.",
+    "reachesYou": "You see small patches of dirt or weeds in your backyard or near your front door. You might also see small pots of herbs on a kitchen window sill.",
+    "do": "Find one small corner of your yard or a balcony that has weeds or trash. Clear it out and put one single plant there this week.",
+    "quiz": [
+      {
+        "q": "Why do some people fail to start a garden?",
+        "choices": [
+          "They think their space is too small",
+          "They lack seeds",
+          "They do not like dirt",
+          "They have too many plants"
+        ],
+        "a": 0,
+        "why": "The text says people do not attempt to grow anything because they think they lack a large enough place.",
+        "quote": "ANY persons who would like to grow flowers and vegetables do not attempt to grow any because they do not consider that they have a place large enough to justify them in doing so.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c11"
+      },
+      {
+        "q": "What is a key feature of a successful garden?",
+        "choices": [
+          "Large size",
+          "Expensive tools",
+          "Many varieties",
+          "Attention"
+        ],
+        "a": 3,
+        "why": "The text states that attention is one of the important features for success.",
+        "quote": "it will be more likely to get more attention than would be given to the larger one, and attention is one of the important features of any successful garden.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c11"
+      },
+      {
+        "q": "What happens to small nooks if they are not used?",
+        "choices": [
+          "They grow weeds",
+          "They stay clean",
+          "They get flowers",
+          "They stay empty"
+        ],
+        "a": 0,
+        "why": "The text says these areas will be given over to weeds or rubbish if not improved.",
+        "quote": "These, if not improved, will be pretty sure to be given over to weeds, or to the accumulation of rubbish of one kind or another",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c11"
+      },
+      {
+        "q": "Where should civic improvement start?",
+        "choices": [
+          "At the home",
+          "In the city hall",
+          "In the streets",
+          "In the park"
+        ],
+        "a": 0,
+        "why": "The text says civic improvement should start at the home.",
+        "quote": "this would be done at the very place where civic improvement ought to start, the home.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c11"
+      },
+      {
+        "q": "What is the advice regarding mixing varieties?",
+        "choices": [
+          "Mix as many as possible",
+          "Do not mix varieties",
+          "Mix only in large gardens",
+          "Mix only in small gardens"
+        ],
+        "a": 1,
+        "why": "The author advises against mixing varieties and prefers one plant per piece of ground.",
+        "quote": "I would not advise much mixing of varieties. On the contrary, I would prefer to give over each little piece of ground to one plant.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c11"
+      },
+      {
+        "q": "What is the final rule for small spaces?",
+        "choices": [
+          "Only grow in large fields",
+          "One plant is better than none",
+          "Wait for a bigger yard",
+          "Do not grow anything"
+        ],
+        "a": 1,
+        "why": "The text concludes that even one solitary plant is better than having nothing.",
+        "quote": "Have flowers and vegetables, even if there isn't room for more than half a dozen plants, or only one plant for that matter, for that one solitary plant will be a great deal better than none at all.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c11"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "A garden need not be a large one to be enjoyable.",
+        "A few plants are better than none.",
+        "Small spaces can be more satisfactory because they get more attention.",
+        "Not an inch of soil is allowed to go to waste.",
+        "One solitary plant will be a great deal better than none at all."
+      ],
+      "key": "Small spaces and single plants are better than no garden at all.",
+      "decoys": [
+        {
+          "text": "You must have a large field to have a successful garden.",
+          "why": "The text says a garden need not be large to be enjoyable."
+        },
+        {
+          "text": "You should mix many different plants in every small corner.",
+          "why": "The author advises against mixing varieties and prefers one plant per piece of ground."
+        }
+      ],
+      "aha": "Small scale gardening is better than no gardening because attention and small successes lead to growth."
+    },
+    "scene": {
+      "analogy": "A small snack on a plate",
+      "map": [
+        [
+          "A hungry person",
+          "A small space"
+        ],
+        [
+          "A full meal",
+          "A big garden"
+        ],
+        [
+          "A cracker",
+          "One plant"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A hungry person",
+          "color": "blue",
+          "o": 0,
+          "size": 18
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A full meal",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "A CRACKER",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "EAT",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "A small bite is better than no food at all.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A person looks at a big feast.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They only have a small cracker.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They eat the cracker.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Slightly full"
+            },
+            "right": {
+              "sub": "Still hungry"
+            }
+          }
+        },
+        {
+          "say": "They feel a little better.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Small efforts lead to real results.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "A small space",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "A big garden",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "ONE PLANT",
+              "size": 14
+            },
+            "act": {
+              "label": "GROW",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "One plant is better than no garden at all.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Small gardens",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c11",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

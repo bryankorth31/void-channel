@@ -1,0 +1,307 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 8,
+  "title": "Standard varieties of vegetables",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:08:29.184Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: idea.thing is over 11 letters: Too many choices",
+    "round 2: scene: idea.thing is over 11 letters: Standard variety",
+    "round 3: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line"
+  ],
+  "unit": {
+    "n": 8,
+    "title": "Standard varieties of vegetables",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 8
+    },
+    "needIt": "Knowing standard varieties helps you avoid getting overwhelmed by too many choices at the store or garden center. It ensures you pick a vegetable that is proven to taste good and grow well.",
+    "why": "A new gardener looks at a seed catalog and feels dizzy because there are hundreds of options. They worry that picking the wrong one will ruin their garden. The author explains that if you pick a 'standard' variety, you are choosing a winner that everyone agrees is great.",
+    "outcome": "Identify reliable vegetable varieties that are guaranteed to produce high-quality results.",
+    "reachesYou": "You see these names on seed packets at the local hardware store. You also see them listed on websites when you are trying to decide what to plant in your backyard.",
+    "do": "Next time you look at a seed packet, check if it is a 'standard' variety by seeing if multiple different stores carry it.",
+    "quiz": [
+      {
+        "q": "Why is the amateur gardener often bewildered by seed catalogs?",
+        "choices": [
+          "There are too many varieties",
+          "They are too expensive",
+          "The seeds are hard to find",
+          "The instructions are confusing"
+        ],
+        "a": 0,
+        "why": "The text says there are so many varieties mentioned that the gardener feels overwhelmed.",
+        "quote": "he discovers that of each kind of vegetable listed therein there are so many varieties mentioned that he is bewildered.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c8"
+      },
+      {
+        "q": "What is the author's advice for a beginner's seed list?",
+        "choices": [
+          "Grow every variety",
+          "Grow only the cheapest",
+          "Grow only a few of the very best",
+          "Grow only the rarest"
+        ],
+        "a": 2,
+        "why": "The author suggests focusing on a few high-quality varieties rather than a huge list.",
+        "quote": "I would advise the amateur gardener to attempt the culture of only a few of the many varieties described in the catalogues, and these of the very best.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c8"
+      },
+      {
+        "q": "How can a gardener identify a 'standard' variety?",
+        "choices": [
+          "All leading dealers carry it",
+          "It has a gold sticker",
+          "It is listed in every catalog",
+          "It is the cheapest one"
+        ],
+        "a": 0,
+        "why": "The text states that if all leading dealers carry it, it is a standard variety.",
+        "quote": "the fact that all . leading dealers carry these varieties in stock is sufficient proof that they are standard varieties",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c8"
+      },
+      {
+        "q": "What is the author's advice regarding the use of 'specialty' varieties found in only one catalog?",
+        "choices": [
+          "We cannot be sure of their quality.",
+          "They are always better than standard varieties.",
+          "They should be avoided by beginners entirely.",
+          "They are the only ones worth growing."
+        ],
+        "a": 0,
+        "why": "The author notes that while these may have good qualities, we cannot be sure of them because they are not common to all dealers.",
+        "quote": "Many of these are doubtless possessors of all the good qualities claimed for them, but this we cannot be sure about.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c8"
+      },
+      {
+        "q": "What is the author's reason for listing specific vegetables?",
+        "choices": [
+          "They are the only ones that grow",
+          "They are the cheapest to buy",
+          "They are the easiest to cook",
+          "He has grown them in his own garden"
+        ],
+        "a": 3,
+        "why": "The author mentions he chose these because he has personal experience growing them.",
+        "quote": "I do this because so many beginners in gardening prefer to depend on the advice of some one who has familiarized himself with the merits of the various vegetables",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c8"
+      },
+      {
+        "q": "What is the author's opinion on the 'Champion of England' pea?",
+        "choices": [
+          "It is a medium variety",
+          "It is only for large gardens",
+          "It is not very sweet",
+          "It is the ideal pea"
+        ],
+        "a": 3,
+        "why": "The text explicitly calls it the ideal pea for productiveness and flavor.",
+        "quote": "Telephone is a most excellent late variety, second only to Champion of England, which is everywhere conceded to be the ideal pea",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c8"
+      },
+      {
+        "q": "What is the author's advice for growing tomatoes from seed?",
+        "choices": [
+          "Sow them in the hotbed",
+          "Sow them in the open ground",
+          "Buy plants from a gardener",
+          "Plant them in the cellar"
+        ],
+        "a": 0,
+        "why": "The author suggests using a hotbed for a very early crop.",
+        "quote": "To secure a very early crop the plants must be started as early as March.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c8"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Many varieties are described as desirable",
+        "The gardener is bewildered by the choices",
+        "Standard varieties are common to all dealers",
+        "Standard varieties have superior merit",
+        "Standard varieties are universal favorites"
+      ],
+      "key": "Standard varieties are the proven, high-quality choices that all dealers carry.",
+      "decoys": [
+        {
+          "text": "Grow every variety in the catalog.",
+          "why": "The author warns that this would provide enough seed for a market-garden, not a small garden."
+        },
+        {
+          "text": "Only grow varieties unique to one dealer.",
+          "why": "The author says these are specialties and we cannot be sure of their quality."
+        }
+      ],
+      "aha": "By choosing varieties that all dealers carry, you guarantee a high-quality result."
+    },
+    "scene": {
+      "analogy": "Choosing a reliable car from a huge dealership",
+      "map": [
+        [
+          "A new driver",
+          "Beginner gardener"
+        ],
+        [
+          "A car dealer",
+          "Seed catalog"
+        ],
+        [
+          "Car models",
+          "Varieties"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A new driver",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A car dealer",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "CAR MODELS",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "CHOOSING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "I just want a car that works every day.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A driver looks at many cars.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The dealer shows many types.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The driver picks a classic.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Drives a reliable car"
+            },
+            "right": {
+              "sub": "Sells a popular car"
+            }
+          }
+        },
+        {
+          "say": "The driver feels relieved.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Choose standard varieties that are common to all major dealers.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Beginner gardener",
+              "size": 18,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Seed catalog",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "VARIETIES",
+              "size": 14
+            },
+            "act": {
+              "label": "SELECTING",
+              "size": 14,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Stick to the names everyone knows.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Standard varieties of vegetables",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c8",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

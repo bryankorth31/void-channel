@@ -1,0 +1,306 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 1,
+  "title": "Foreword",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:01:54.819Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: idea.line is over 56 letters: Small spaces can produce plenty of food ",
+    "round 2: scene: thing is over 11 letters: Good planning"
+  ],
+  "unit": {
+    "n": 1,
+    "title": "Foreword",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 1
+    },
+    "needIt": "Growing your own food helps you save money and eat fresher meals. It turns a small backyard into a source of healthy food for your family.",
+    "why": "Many people think they need a huge farm or special skills to start a garden. This story shows that anyone can learn in just one season using simple tools. You can turn a tiny space into a productive garden that feeds your home.",
+    "outcome": "Start a small vegetable garden in your own backyard or yard.",
+    "reachesYou": "You see vegetables at the grocery store every week. You might also see neighbors with green patches of grass or dirt in their yards.",
+    "do": "Walk around your yard or balcony to find a small spot where you could put a single pot or a small patch of dirt.",
+    "quiz": [
+      {
+        "q": "What is a common mistake people make about starting a garden?",
+        "choices": [
+          "They think it is too easy.",
+          "They think they need special training.",
+          "They think it takes too little time.",
+          "They think it is only for men."
+        ],
+        "a": 1,
+        "why": "The text says people often think special training is necessary to succeed.",
+        "quote": "Some deny themselves the pleasure and the profit of one because they have never had any experience in gardening, and have somehow got the impression that special training is necessary to make a success of the undertaking.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c1"
+      },
+      {
+        "q": "How long does it take to become a successful gardener?",
+        "choices": [
+          "One season",
+          "Ten years",
+          "A lifetime",
+          "One day"
+        ],
+        "a": 0,
+        "why": "The author states you can become a successful gardener in one season.",
+        "quote": "Any one who owns a bit of land, and has some time that can be given to garden-work, and an inclination to do so, can make a gardener of himself in a season, and a successful one, too",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c1"
+      },
+      {
+        "q": "What is 'intensive gardening'?",
+        "choices": [
+          "Using many machines",
+          "Growing a lot on a small piece of ground",
+          "Growing only one type of plant",
+          "Gardening with a large group of people"
+        ],
+        "a": 1,
+        "why": "The text describes growing all summer vegetables for a family of four on a small 25-foot square plot.",
+        "quote": "This calls for what the scientific people call 'Gntensive gardening,' and makes it necessary to plant and plan for a succession of vegetables",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c1"
+      },
+      {
+        "q": "How has modern technology changed gardening?",
+        "choices": [
+          "It made it harder.",
+          "It made it easier with labor-saving tools.",
+          "It made it more expensive.",
+          "It made it unnecessary."
+        ],
+        "a": 1,
+        "why": "The author explains that modern tools allow people to do more in an hour than was possible in a day before.",
+        "quote": "Happily those days are over, and with the gardening facilities of the present it is an easy matter to accomplish more in an hour than could be done then ina day.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c1"
+      },
+      {
+        "q": "What is the main difference between store-bought and garden-grown vegetables?",
+        "choices": [
+          "The color",
+          "The delicacy of flavor",
+          "The size",
+          "The price"
+        ],
+        "a": 1,
+        "why": "The text says garden-fresh vegetables have a flavor that store-bought ones cannot keep.",
+        "quote": "While it is possible to keep most vegetables looking fresh for a considerable time by the use of water and ice, it is not possible to make them retain that delicacy of flavor known only to those whose vegetables go straight from the garden to the kitchen.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c1"
+      },
+      {
+        "q": "What is the main reason the author says women and children should garden?",
+        "choices": [
+          "To keep them busy",
+          "To save the man's time",
+          "To learn science",
+          "For their health"
+        ],
+        "a": 3,
+        "why": "The text states that the tonic of outdoor life is taking the place of doctor's prescriptions and is a healthful occupation.",
+        "quote": "I would urge the importance of interesting women and children in it, and of encouraging them to take part in it from the viewpoint of health.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c1"
+      },
+      {
+        "q": "What does the author say about the variety of food you can have?",
+        "choices": [
+          "It is harder to plan",
+          "It costs more money",
+          "It gives more variety",
+          "It is less fresh"
+        ],
+        "a": 2,
+        "why": "The author explains that growing your own vegetables gives you a greater variety to add to your daily meals.",
+        "quote": "If we grow our own vegetables we are quite sure to have a greater variety to add to the daily bill of fare than would be the case if we were to buy them.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c1"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "You do not need special training.",
+        "One season of work is enough to learn.",
+        "Small plots can produce a lot of food.",
+        "Modern tools make the work easier.",
+        "Garden vegetables taste better than store ones."
+      ],
+      "key": "Anyone can successfully grow a lot of food in a small space with simple tools and a good plan.",
+      "decoys": [
+        {
+          "text": "You need a huge farm to be successful.",
+          "why": "The text says a 25-foot square plot can feed a family of four."
+        },
+        {
+          "text": "Gardening is very hard manual labor.",
+          "why": "The text says modern tools make it easy and that there is no drudgery."
+        }
+      ],
+      "aha": "Small spaces and simple tools turn a beginner into a successful gardener in just one season."
+    },
+    "scene": {
+      "analogy": "A small kitchen making a big feast",
+      "map": [
+        [
+          "Small kitchen",
+          "Small space"
+        ],
+        [
+          "Big feast",
+          "Big harvest"
+        ],
+        [
+          "Good recipe",
+          "Smart plan"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Small kitchen",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Big feast",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "GOOD RECIPE",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "COOKING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "You do not need a palace to cook a great meal.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A tiny kitchen sits empty.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "A cook follows a plan.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "A huge feast is served.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Full plates"
+            },
+            "right": {
+              "sub": "Happy family"
+            }
+          }
+        },
+        {
+          "say": "The family feels full.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Smart planning makes a small garden very productive.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Small space",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Big harvest",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "SMART PLAN",
+              "size": 14
+            },
+            "act": {
+              "label": "GROWING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Small spaces can produce plenty of food.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Foreword",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c1",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

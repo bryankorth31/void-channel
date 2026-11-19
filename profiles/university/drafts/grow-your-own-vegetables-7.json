@@ -1,0 +1,305 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 7,
+  "title": "Vegetable plants in the house",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:06:48.560Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: idea.thing is over 11 letters: Too much heat"
+  ],
+  "unit": {
+    "n": 7,
+    "title": "Vegetable plants in the house",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 7
+    },
+    "needIt": "Knowing how to manage a small space helps you grow food even if you do not have a yard. It teaches you how to balance heat, air, and water to keep living things healthy.",
+    "why": "Many people try to grow plants inside but the plants die quickly. This happens because a house is often too hot or lacks fresh air. You can succeed if you learn to control these three specific things.",
+    "outcome": "Manage the environment of indoor seedlings to ensure they survive.",
+    "reachesYou": "You see this when you try to keep a houseplant alive in a sunny window. You also see it when you notice how a room feels too stuffy or too hot for a pet.",
+    "do": "Check the temperature of a room where you keep plants. Make sure it stays below 65 degrees to avoid over-heating them.",
+    "quiz": [
+      {
+        "q": "What is a common result of trying to grow plants in a house?",
+        "choices": [
+          "Total success",
+          "Entire failure",
+          "Perfect growth",
+          "Slow growth"
+        ],
+        "a": 1,
+        "why": "The text states that nine times out of ten, the result is a failure.",
+        "quote": "In some instances comparative success has resulted from plants started into growth in the house, but nine times out of ten, it is safe to say, the result has been entire failure.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c7"
+      },
+      {
+        "q": "Why does too much heat hurt seedlings in a living room?",
+        "choices": [
+          "It makes them grow too fast",
+          "It causes abnormal development",
+          "It makes the soil dry",
+          "It helps them grow tall"
+        ],
+        "a": 1,
+        "why": "Heat forces the plants into abnormal development which leads to death.",
+        "quote": "An undue amount of warmth forces them into abnormal development in the early stages of their growth, and a little later on there comes a reaction from the weakness thus brought about, and this reaction is almost invariably death to the tender plant.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c7"
+      },
+      {
+        "q": "What is a problem with 'indiscriminate watering'?",
+        "choices": [
+          "The soil is either too wet or too dry",
+          "The soil is always wet",
+          "The soil is always dry",
+          "The water is too cold"
+        ],
+        "a": 0,
+        "why": "The text says the soil is kept either too wet or too dry because of irregular watering.",
+        "quote": "Another unfavorable condition is the result of indiscriminate watering. The soil is either kept too wet or too dry.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c7"
+      },
+      {
+        "q": "What temperature is recommended for a room with seedlings?",
+        "choices": [
+          "Above 80 degrees",
+          "Not above 65 degrees",
+          "Exactly 70 degrees",
+          "Below 50 degrees"
+        ],
+        "a": 1,
+        "why": "The author advises a room where the temperature will not go above 65 degrees.",
+        "quote": "I would advise giving them place in a room opening off the sitting-room, where the temperature can be so regulated that it will not go above 65° at any time.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c7"
+      },
+      {
+        "q": "What is the author's advice regarding the use of stormsashes?",
+        "choices": [
+          "Use them to keep plants warm.",
+          "Use them only on very cold nights.",
+          "Avoid them because they block fresh air.",
+          "Use them to keep the soil wet."
+        ],
+        "a": 2,
+        "why": "The author prefers shades over stormsashes because stormsashes stop the plants from getting the fresh air they need.",
+        "quote": "Stormsash will do this most effectively, but it interferes with giving the young plants the fresh air they need.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c7"
+      },
+      {
+        "q": "How should fresh air be introduced to the room?",
+        "choices": [
+          "Keep all windows shut",
+          "Use a large fan",
+          "Open a window at the top",
+          "Open the door only at night"
+        ],
+        "a": 2,
+        "why": "The text suggests opening a window at the top or a door at a distance.",
+        "quote": "It should be admitted to the room on every pleasant day by opening a window at the top, or a door at some distance from the plants.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c7"
+      },
+      {
+        "q": "What happens when you combine too much heat, lack of air, and too much water?",
+        "choices": [
+          "The plant grows very fast.",
+          "The plant loses its vital force.",
+          "The plant becomes very green.",
+          "The plant grows bigger leaves."
+        ],
+        "a": 1,
+        "why": "The combination of these three factors causes unnatural development and lowers the plant's strength to a dangerous point.",
+        "quote": "An over-supply of water at the roots, combined with too much heat and lack of fresh air, will undermine the constitution of any plant, because such a combination excites unnatural development, and this means a lowering of the vital force to the danger-point.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c7"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Too much heat causes abnormal development.",
+        "Indiscriminate watering makes soil too wet or too dry.",
+        "Lack of fresh air makes indoor growth nearly impossible.",
+        "Temperature should stay below 65 degrees.",
+        "Moss helps keep moisture steady and even."
+      ],
+      "key": "Success requires controlling heat, air, and moisture to maintain the plant's vital force.",
+      "decoys": [
+        {
+          "text": "Just adding water and earth is enough.",
+          "why": "The text says simply filling boxes and supplying water will not insure success."
+        },
+        {
+          "text": "Plants prefer the warmth of a living room.",
+          "why": "The text says undue warmth forces abnormal development and death."
+        }
+      ],
+      "aha": "By balancing these three factors, you create a healthy environment that mimics professional growing conditions."
+    },
+    "scene": {
+      "analogy": "A baby in a room that is too hot",
+      "map": [
+        [
+          "A baby",
+          "Seedlings"
+        ],
+        [
+          "A hot room",
+          "Living room"
+        ],
+        [
+          "Heat",
+          "Heat"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A baby",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A hot room",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "HEAT",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "OVERHEATS",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "It is too hot for a little one to stay healthy.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A baby is in a warm room.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The heater stays on high.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The baby feels too hot.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "The baby gets weak"
+            },
+            "right": {
+              "sub": "The baby gets tired"
+            }
+          }
+        },
+        {
+          "say": "The baby becomes very weak.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Excessive heat causes abnormal growth and death in young plants.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Seedlings",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Living room",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "HEAT",
+              "size": 18
+            },
+            "act": {
+              "label": "WEAKENS",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Too much heat makes young plants lose their strength.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Vegetable plants in the house",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c7",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

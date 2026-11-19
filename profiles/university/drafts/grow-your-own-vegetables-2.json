@@ -1,0 +1,279 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 2,
+  "title": "Getting the garden ready",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:02:11.507Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: What is a common mistake for new gardeners in the "
+  ],
+  "unit": {
+    "n": 2,
+    "title": "Getting the garden ready",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 2
+    },
+    "needIt": "Waiting for the right time helps you avoid wasting money and effort on things that won't grow. It teaches you that some results take time and the right conditions to succeed.",
+    "why": "A gardener wants to plant seeds as soon as the sun comes out. However, the ground is still frozen and too wet for the seeds to survive. By waiting for the right weather, the gardener ensures the plants grow strong instead of dying in the cold.",
+    "outcome": "Wait for the right weather and soil conditions before starting your garden.",
+    "reachesYou": "You see this when you wait for a sale to buy a good deal instead of buying something useless. You also feel it when you wait for a clear day to finish a big project at home.",
+    "do": "Check the local weather forecast for the next week. Look for a stretch of warm days to plan your first planting date.",
+    "quiz": [
+      {
+        "q": "What must happen to the ground before work can be done?",
+        "choices": [
+          "Snow must be added",
+          "Soil must be dry",
+          "Frost must get out",
+          "Plants must be moved"
+        ],
+        "a": 2,
+        "why": "The frost needs to leave the ground so the soil can be worked.",
+        "quote": "The frost must be allowed to get out of it, and after that an opportunity must be given for surplus water from melting snows and spring rains to drain away before work can be done to any advantage.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c2"
+      },
+      {
+        "q": "Why is it bad to plant seeds too early?",
+        "choices": [
+          "They grow too fast",
+          "They fail to germinate",
+          "They turn into trees",
+          "They need too much sun"
+        ],
+        "a": 1,
+        "why": "Early seeds often fail to sprout because of the cold.",
+        "quote": "the gardener who is in too great a hurry often learns the truth which underlies the saying by the failure to germinate of the seed he puts into the ground very early in the season.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c2"
+      },
+      {
+        "q": "What does the saying 'one swallow does not make a summer' mean here?",
+        "choices": [
+          "Birds are nice",
+          "Summer is very short",
+          "One warm day is not enough",
+          "Swallows help the garden"
+        ],
+        "a": 2,
+        "why": "A few warm days are not enough to guarantee the weather will stay warm.",
+        "quote": "Read '' warm day\"\" for ''swallow\"\" and you will get the force of the statement.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c2"
+      },
+      {
+        "q": "What is the best manure for all kinds of vegetables?",
+        "choices": [
+          "Commercial fertilizer",
+          "Fresh grass",
+          "Old and well rotted barn-yard manure",
+          "Tree leaves"
+        ],
+        "a": 2,
+        "why": "The text states this is better than anything else for vegetables.",
+        "quote": "Barn-yard manure, if old and well rotted, is better than anything else I have any knowledge of for all kinds of vegetables",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c2"
+      },
+      {
+        "q": "Why do vegetables need extra food more than trees do?",
+        "choices": [
+          "Vegetables grow faster",
+          "Trees have no roots",
+          "Vegetables have shallow roots",
+          "Vegetables are bigger"
+        ],
+        "a": 2,
+        "why": "Vegetable roots do not go deep, so they cannot find food on their own.",
+        "quote": "The roots of most garden plants do not extend far in any direction, nor go very deep; therefore food must be given directly to them if we would secure the best possible result.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c2"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Haste makes waste in the garden.",
+        "Frost must leave the ground first.",
+        "One warm day is not a summer.",
+        "Wait for growing weather to stay.",
+        "Vegetables need food given directly to them."
+      ],
+      "key": "Good gardening requires waiting for the right conditions and providing direct nutrients.",
+      "decoys": [
+        {
+          "text": "Planting early makes plants grow faster.",
+          "why": "The text says early plants are often damaged by frost and grow slower than later sowings."
+        },
+        {
+          "text": "Trees and vegetables need the same amount of manure.",
+          "why": "The text explains that trees have deep roots and vegetables have shallow roots."
+        }
+      ],
+      "aha": "By waiting for the right weather and feeding the shallow roots of vegetables, you ensure a healthy harvest."
+    },
+    "scene": {
+      "analogy": "Waiting for a clear day to paint a wall",
+      "map": [
+        [
+          "A painter",
+          "Gardener"
+        ],
+        [
+          "A wet wall",
+          "Seeds"
+        ],
+        [
+          "Rain",
+          "Frost"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A painter",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A wet wall",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "RAIN",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "WAITING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "The paint stays on the wall instead of washing away.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "The painter looks at the gray clouds.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "Rain starts to fall on the wet wall.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The painter waits for the sun to come out.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Dry wall"
+            },
+            "right": {
+              "sub": "Perfect paint"
+            }
+          }
+        },
+        {
+          "say": "The wall is dry and ready for a new coat.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Waiting for the right weather ensures the seeds will grow well.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Gardener",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Seeds",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "FROST",
+              "size": 18
+            },
+            "act": {
+              "label": "WAITING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Good growth needs the right timing.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Getting the garden ready",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c2",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

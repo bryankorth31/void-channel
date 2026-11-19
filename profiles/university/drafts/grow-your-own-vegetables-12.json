@@ -1,0 +1,325 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 12,
+  "title": "Leftovers",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:11:58.856Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: \"needIt\" is missing or too short",
+    "round 1: \"why\" is missing or too short",
+    "round 1: \"outcome\" is missing or too short",
+    "round 1: \"reachesYou\" is missing or too short",
+    "round 1: \"do\" is missing or too short",
+    "round 1: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line",
+    "round 1: scene: left is missing",
+    "round 1: scene: right is missing",
+    "round 1: scene: thing is missing",
+    "round 1: scene: act is missing",
+    "round 1: scene: leftEnd is missing",
+    "round 1: scene: rightEnd is missing",
+    "round 1: scene: line is missing",
+    "round 1: scene: idea.left is missing",
+    "round 1: scene: idea.right is missing",
+    "round 1: scene: idea.thing is missing",
+    "round 1: scene: idea.act is missing",
+    "round 1: scene: idea.line is missing",
+    "round 1: scene: analogy is missing",
+    "round 1: scene: says needs exactly 4 captions (has 0)",
+    "round 1: scene: idea.say is missing"
+  ],
+  "unit": {
+    "n": 12,
+    "title": "Leftovers",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 12
+    },
+    "needIt": "You can save money and reduce waste by using every part of your garden. This helps you turn 'trash' like soapy water or old plants into free food and fertilizer.",
+    "why": "A gardener sees a pile of old weeds and soapy water as waste. They see a way to make rich soil and free fertilizer. By reusing what others throw away, the garden stays healthy and the wallet stays full.",
+    "outcome": "Reuse garden waste to create free fertilizer and food.",
+    "reachesYou": "You see this when you decide to compost food scraps instead of tossing them. You also see it when you choose to reuse old containers or water in your daily chores.",
+    "do": "Save your next bucket of soapy laundry water to pour on your garden plants.",
+    "quiz": [
+      {
+        "q": "What can you do with roadside grass to make fertilizer?",
+        "choices": [
+          "Chop it and store it",
+          "Burn it immediately",
+          "Leave it on the road",
+          "Throw it in the trash"
+        ],
+        "a": 0,
+        "why": "The text says to chop it into small pieces and store it away.",
+        "quote": "If sward is cut from the roadside, chopped into small pieces, and stored away in some corner of the yard that is convenient to get at",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c12"
+      },
+      {
+        "q": "Why should you pinch off the ends of tomato vines?",
+        "choices": [
+          "To make them grow taller",
+          "To put strength into the fruit",
+          "To stop them from growing",
+          "To make more branches"
+        ],
+        "a": 1,
+        "why": "Pinching off ends directs the plant's energy toward the fruit instead of new branches.",
+        "quote": "This throws the strength of the plant into the development of the fruit that has set, instead of into the production of new branches which are not needed.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c12"
+      },
+      {
+        "q": "How can you preserve the flavor of sage and summer savory?",
+        "choices": [
+          "Freeze them in bags",
+          "Keep them in the fridge",
+          "Cook them with oil",
+          "Dry them in the shade"
+        ],
+        "a": 3,
+        "why": "The text suggests hanging them in the shade to dry to retain flavor.",
+        "quote": "If cut when in their prime and hung in the shade to dry, all their flavor will be retained.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c12"
+      },
+      {
+        "q": "What should you do if frost nips your tomato vines?",
+        "choices": [
+          "Pull them up and hang them",
+          "Cut them down and burn them",
+          "Leave them on the ground",
+          "Cover them with sand"
+        ],
+        "a": 0,
+        "why": "Hanging them against a wall lets the sun ripen them.",
+        "quote": "If frost nips the tomato-vines before all their fruit is fully ripened, pull them up and hang them against a wall where the sun can get at them.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c12"
+      },
+      {
+        "q": "Why should you avoid using fresh barn-yard manure?",
+        "choices": [
+          "It needs to ferment",
+          "It smells too bad",
+          "It has too many seeds",
+          "It kills the plants"
+        ],
+        "a": 0,
+        "why": "It needs to lie for a season to ferment and kill seeds.",
+        "quote": "Fresh barn-yard manure should never be used. It ought to lie for at least a season before applying it to the vegetable-garden.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c12"
+      },
+      {
+        "q": "What is a good way to grow dandelions for salad?",
+        "choices": [
+          "Let them bloom",
+          "Cover them with dry leaves",
+          "Pick them from the road",
+          "Spray them with salt"
+        ],
+        "a": 1,
+        "why": "Covering them with leaves excludes light and makes them tender.",
+        "quote": "This can be done by covering the plants with dry leaves as soon as they begin to grow, thus excluding light and inducing rapid development.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c12"
+      },
+      {
+        "q": "What is the benefit of using soapy water from wash-day?",
+        "choices": [
+          "It kills all bugs",
+          "It acts as a fertilizer",
+          "It makes the soil blue",
+          "It keeps the garden clean"
+        ],
+        "a": 1,
+        "why": "The text says it can be as beneficial as a paid fertilizer.",
+        "quote": "If applied to growing things in tne garden they will often prove as beneficial as the application of a fertilizer that costs quite a little sum of money.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c12"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Roadside grass can become fertilizer.",
+        "Soapy water from laundry is useful.",
+        "Old plants can be burned for waste.",
+        "Nothing in the garden should go to waste.",
+        "Leftovers can be turned into new growth."
+      ],
+      "key": "Every part of the garden and home can be reused to help the next season grow.",
+      "decoys": [
+        {
+          "text": "Fresh manure is the best way to start.",
+          "why": "The text says fresh manure should never be used because it needs to ferment first."
+        },
+        {
+          "text": "Always buy new seeds to get the best results.",
+          "why": "The text says you can use home-grown seeds, but they might mix; it's a choice, not a rule."
+        }
+      ],
+      "aha": "By looking at waste as a resource, you save money and create a better garden."
+    },
+    "scene": {
+      "analogy": "A kitchen waste bin and a compost pile",
+      "map": [
+        [
+          "Food scraps",
+          "Garden waste"
+        ],
+        [
+          "Garden soil",
+          "New growth"
+        ],
+        [
+          "Compost",
+          "Fertilizer"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Food scraps",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Garden soil",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "COMPOST",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "ROTTING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "Nothing is truly wasted in a good garden.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "Scraps sit in a bin.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They go into a pile.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They turn into dirt.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Becomes nutrients"
+            },
+            "right": {
+              "sub": "Feeds the plants"
+            }
+          }
+        },
+        {
+          "say": "The garden grows strong.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Turn your leftovers into the fuel for your next crop.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Garden waste",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "New growth",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "FERTILIZER",
+              "size": 14
+            },
+            "act": {
+              "label": "RECYCLE",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Waste becomes the fuel for next year's harvest.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Leftovers",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c12",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

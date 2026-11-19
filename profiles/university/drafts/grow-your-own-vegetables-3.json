@@ -1,0 +1,290 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 3,
+  "title": "Laying out the garden",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:02:26.903Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 3,
+    "title": "Laying out the garden",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 3
+    },
+    "needIt": "Good layout saves you from extra work later. It helps you organize your space so you can reach everything easily without getting tired.",
+    "why": "A gardener wants to grow a lot of food but has a small space. They learn that placing plants in rows helps them use tools to clear weeds quickly. By planning the direction of the rows, they make sure every plant gets enough sunlight to grow big.",
+    "outcome": "Design a garden layout that maximizes space and sunlight.",
+    "reachesYou": "You see this when you organize your kitchen shelves to reach your favorite snacks. You also see it when you plan a path through a crowded store.",
+    "do": "Draw a simple map of a small space you want to use. Mark out narrow paths and rows to see how much room is left for plants.",
+    "quiz": [
+      {
+        "q": "What is the chief aim when laying out a small garden?",
+        "choices": [
+          "To use every bit of soil",
+          "To make large paths",
+          "To leave space for grass",
+          "To grow only one type of plant"
+        ],
+        "a": 0,
+        "why": "The text says the goal is to use all available soil by making paths just wide enough to walk in.",
+        "quote": "Here the chief aim will be to make use of every available bit of soil",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c3"
+      },
+      {
+        "q": "Why is it better to run rows from north to south?",
+        "choices": [
+          "It looks better",
+          "It lets sun reach the ground",
+          "It makes rows shorter",
+          "It keeps the soil wet"
+        ],
+        "a": 1,
+        "why": "North to south rows allow the sun to reach the ground lengthwise between the rows.",
+        "quote": "This enables the sun to get at the eround lengthwise of the rows, and between them",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c3"
+      },
+      {
+        "q": "How should you arrange plants based on their height?",
+        "choices": [
+          "Put tall plants at the back",
+          "Put tall plants in the middle",
+          "Put tall plants at the front",
+          "Put tall plants at the side"
+        ],
+        "a": 3,
+        "why": "The text suggests putting corn at the side and then working down to lower plants.",
+        "quote": "Give corn a place at the side of the garden.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c3"
+      },
+      {
+        "q": "How much space should be left between rows for a cultivator?",
+        "choices": [
+          "Six inches",
+          "Eighteen inches",
+          "Twelve inches",
+          "Twenty-four inches"
+        ],
+        "a": 1,
+        "why": "The text specifies eighteen inches to allow the tool to work properly.",
+        "quote": "If the garden-cultivator is to be used, leave a space about eighteen inches wide between the rows to work in.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c3"
+      },
+      {
+        "q": "What does the garden-cultivator do to the soil?",
+        "choices": [
+          "It waters the plants",
+          "It cuts the weeds in half",
+          "It moves the plants closer",
+          "It stirs the soil and uproots weeds"
+        ],
+        "a": 3,
+        "why": "The cultivator is a labor-saving tool that stirs soil and removes weeds at once.",
+        "quote": "this implement stirs the soil and uproots weeds at the same time.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c3"
+      },
+      {
+        "q": "What is a weeding-hook used for?",
+        "choices": [
+          "To dig deep holes",
+          "To cut tall corn",
+          "To move heavy rocks",
+          "To do weeding in a short time"
+        ],
+        "a": 3,
+        "why": "The weeding-hook is a cheap tool that allows for fast weeding without hand-pulling.",
+        "quote": "It enables one to do a good deal of weeding in a short time",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c3"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Use every bit of soil.",
+        "Make paths just wide enough to walk.",
+        "Run rows north and south for sun.",
+        "Arrange plants by height.",
+        "Use tools to save labor."
+      ],
+      "key": "Plan the layout to maximize space, sunlight, and ease of work.",
+      "decoys": [
+        {
+          "text": "Make paths as wide as possible.",
+          "why": "The text says paths should be just wide enough to walk in to save soil space."
+        },
+        {
+          "text": "Run rows east to west for better sun.",
+          "why": "The text says east to west rows would shade the ground except for the first row."
+        }
+      ],
+      "aha": "By planning the layout carefully, you ensure every plant gets sun and every task is easier to do."
+    },
+    "scene": {
+      "analogy": "A grocery store aisle layout",
+      "map": [
+        [
+          "Customer",
+          "Gardener"
+        ],
+        [
+          "Shelf",
+          "Plants"
+        ],
+        [
+          "Aisle",
+          "Path"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Customer",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Shelf",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "AISLE",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "WALKING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "A clear path makes getting what you need much faster.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A store is full of food.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The aisles are wide.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The shopper moves fast.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Reaches the item"
+            },
+            "right": {
+              "sub": "Stays organized"
+            }
+          }
+        },
+        {
+          "say": "The shopper feels happy.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Wide paths make it easy to move and work in a garden.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Gardener",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Plants",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "PATH",
+              "size": 18
+            },
+            "act": {
+              "label": "WALKING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Paths allow you to work and reach every plant easily.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Laying out the garden",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c3",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 9,
+  "title": "Small fruits and their culture",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:09:00.360Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 9,
+    "title": "Small fruits and their culture",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 9
+    },
+    "needIt": "Growing small fruits lets you enjoy fresh snacks like berries and currants in your own backyard. It helps you turn a small, unused corner of your yard into a productive food source.",
+    "why": "Many people think growing berries is too hard or requires expert skills. This lesson shows that with a simple system and a bit of care, anyone can grow delicious fruit at home.",
+    "outcome": "Grow a successful small-fruit garden using simple methods.",
+    "reachesYou": "You see these berries at the grocery store or in your neighbor's yard. You might also see them in photos of beautiful home gardens.",
+    "do": "Look for a small corner in your yard or balcony where you could fit a row of strawberries.",
+    "quiz": [
+      {
+        "q": "Why do some people avoid growing small fruits?",
+        "choices": [
+          "They are too expensive",
+          "They take up too much space",
+          "They do not taste good",
+          "They are too hard to grow"
+        ],
+        "a": 3,
+        "why": "The text mentions people think these plants are so exacting that only skilled gardeners can grow them.",
+        "quote": "Another is: The impression that these plants are so exacting in their demands that none but skilled gardeners are warranted in undertaking their culture.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c9"
+      },
+      {
+        "q": "What is the 'one-crop system' for strawberries?",
+        "choices": [
+          "Planting only one type",
+          "Alternating plant locations",
+          "Growing only in summer",
+          "Using only one row"
+        ],
+        "a": 1,
+        "why": "The one-crop system involves alternating the location of plants to keep the garden supplied with one-year-old plants.",
+        "quote": "By thus alternating the location of the plants you keep the garden supplied with one-year-old ones from which you get but one crop of fruit.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c9"
+      },
+      {
+        "q": "What should you do to keep strawberries off the ground?",
+        "choices": [
+          "Cover them with plastic",
+          "Spread clean straw",
+          "Put them in pots",
+          "Dig a deep hole"
+        ],
+        "a": 1,
+        "why": "The text suggests spreading clean straw between rows before the crop ripens to keep fruit off the ground.",
+        "quote": "It is a good plan to spread clean straw between the rows before the crop ripens, to keep the fruit from coming in contact with the ground or having sand washed upon it 'by heavy rains.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c9"
+      },
+      {
+        "q": "Which strawberry variety is noted for being very productive?",
+        "choices": [
+          "Gandy",
+          "Brandywine",
+          "Superb",
+          "Progressive"
+        ],
+        "a": 1,
+        "why": "The author identifies Brandywine as a very productive variety with large berries and delicious flavor.",
+        "quote": "The best variety of strawberry that I have ever grown is Brandywine. It is very productive, bears large berries, has a most delicious flavor, and is never hollow-hearted.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c9"
+      },
+      {
+        "q": "How should you handle blackberry canes after they fruit?",
+        "choices": [
+          "Leave them alone",
+          "Water them more",
+          "Prune them in spring",
+          "Cut them away"
+        ],
+        "a": 3,
+        "why": "To ensure new canes grow for the next season, old canes should be cut away as soon as they have ripened.",
+        "quote": "In order to secure a fresh stock of wood for each season's Pop: the old canes should be cut away as soon as they have ripened their fruit, thus throwing all the strength of the plant into the production of new canes from which fruit is to be expected next sea-",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c9"
+      },
+      {
+        "q": "What is 'heeling-in'?",
+        "choices": [
+          "Adding fertilizer",
+          "Burying roots over winter",
+          "Pruning in spring",
+          "Covering with paper"
+        ],
+        "a": 1,
+        "why": "Heeling-in consists of burying the roots in a place where they stay dry during the winter.",
+        "quote": "''Heeling-in'' consists in burying the roots in a place where they will be kept dry during the winter.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c9"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Small fruits can grow in tiny spaces.",
+        "They are not too hard for beginners.",
+        "The one-crop system keeps things simple.",
+        "Strawberries need care but not extreme care.",
+        "Hardy varieties can survive northern winters."
+      ],
+      "key": "Anyone can grow small fruits by using simple, consistent methods.",
+      "decoys": [
+        {
+          "text": "Only experts can grow berries.",
+          "why": "The text says it is an easy matter for any man to learn if he intends to master the details."
+        },
+        {
+          "text": "Strawberries require more care than vegetables.",
+          "why": "The text states they require no more attention than most other crops."
+        }
+      ],
+      "aha": "By following a simple system like the one-crop method, anyone can successfully grow a berry garden."
+    },
+    "scene": {
+      "analogy": "A student learning a new hobby",
+      "map": [
+        [
+          "A beginner",
+          "A beginner"
+        ],
+        [
+          "A master",
+          "A master"
+        ],
+        [
+          "A book",
+          "A book"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A beginner",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A master",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "A BOOK",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "READING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "I can do this too if I just start.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A student looks at a thick book.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They start reading the first page.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They understand the first step.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Feels capable"
+            },
+            "right": {
+              "sub": "Feels confident"
+            }
+          }
+        },
+        {
+          "say": "They feel ready to try it.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Anyone can learn a complex skill by starting with simple steps.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "A beginner",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "A master",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "A BOOK",
+              "size": 18
+            },
+            "act": {
+              "label": "READING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Simple steps make hard tasks easy.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Small fruits and their culture",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c9",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

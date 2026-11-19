@@ -1,0 +1,306 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 4,
+  "title": "Planting the garden",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:03:56.932Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: thing is over 11 letters: Deep clothes",
+    "round 2: scene: line is over 56 letters: There is not enough room for everyone to"
+  ],
+  "unit": {
+    "n": 4,
+    "title": "Planting the garden",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 4
+    },
+    "needIt": "Knowing how to plant seeds helps you grow your own food instead of buying it. It lets you decide how much to plant so you do not waste space.",
+    "why": "A gardener wants to grow a big crop but covers the tiny seeds too deep. The seeds stay hidden and never wake up. By learning the right depth, the gardener ensures every seed has a chance to reach the sun.",
+    "outcome": "Plant seeds at the correct depth to ensure they sprout.",
+    "reachesYou": "You see seeds in the grocery store aisle or on a garden website. You might see your neighbors working in their backyard plots.",
+    "do": "Find a small seed and place it on the soil surface. Press it down gently with your hand to see how it sits.",
+    "quiz": [
+      {
+        "q": "What is a common mistake people make when planting seeds?",
+        "choices": [
+          "Covering them too deeply",
+          "Planting too shallow",
+          "Using too much water",
+          "Planting in the sun"
+        ],
+        "a": 0,
+        "why": "The text states that people often cover seeds too deeply.",
+        "quote": "OST persons make the serious mistake of covering garden seed too deeply.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c4"
+      },
+      {
+        "q": "How should very small seeds be planted?",
+        "choices": [
+          "Scattered on the surface",
+          "Deep in a furrow",
+          "In a pot",
+          "Under a heavy rock"
+        ],
+        "a": 0,
+        "why": "Small seeds do best when scattered on the surface and pressed down.",
+        "quote": "Very small seed needs hardly any covering. Indeed, it does its best, as a general thing, when simply scattered on the surface and pressed down into the soil by a smooth board.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c4"
+      },
+      {
+        "q": "What should you do if you do not have a seed-sower?",
+        "choices": [
+          "Throw seeds in the air",
+          "Put seeds in a bucket",
+          "Make little furrows",
+          "Wait for rain"
+        ],
+        "a": 2,
+        "why": "The text says to draw a stick through the soil to make furrows.",
+        "quote": "If a seed-sower is not used, little furrows should be made by drawing a stick through the soil, into which the seed should be dropped as evenly as possible.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c4"
+      },
+      {
+        "q": "What should you do with extra seedlings that grow?",
+        "choices": [
+          "Leave them alone",
+          "Water them more",
+          "Remove them from the rows",
+          "Sell them"
+        ],
+        "a": 2,
+        "why": "Surplus seedlings should be removed once they get a good start.",
+        "quote": "These surplus seedlings should be removed from the rows as soon as the plants get a good start.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c4"
+      },
+      {
+        "q": "What is a benefit of using a seed-sower?",
+        "choices": [
+          "It is cheaper",
+          "It is a labor-saver",
+          "It makes seeds bigger",
+          "It changes the color"
+        ],
+        "a": 1,
+        "why": "The seed-sower is described as a labor-saver in large gardens.",
+        "quote": "but in large gardens it will be found as much a labor-saver as the garden-cultivator.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c4"
+      },
+      {
+        "q": "How can you have fresh vegetables throughout almost the entire season?",
+        "choices": [
+          "By planting all seeds at once",
+          "By planting at intervals of ten days or two weeks",
+          "By only planting early varieties",
+          "By using a seed-sower every day"
+        ],
+        "a": 1,
+        "why": "The text explains that planting at intervals allows for a continuous supply of food.",
+        "quote": "By planting at intervals of ten days or two weeks it is possible to have fresh vegetables throughout almost the entire season.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c4"
+      },
+      {
+        "q": "Why might a small garden choose later varieties?",
+        "choices": [
+          "They grow faster",
+          "They have better flavor",
+          "They are easier to find",
+          "They need less water"
+        ],
+        "a": 1,
+        "why": "Later varieties are often superior in flavor to earlier ones.",
+        "quote": "In the small garden I would advise the choice of the later varieties, as these are almost without exception superior in flavor to the earlier kinds",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c4"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Small seeds need hardly any covering.",
+        "Deep covering causes small seeds to fail.",
+        "Pressing soil helps retain moisture.",
+        "Furrows help drop seeds evenly.",
+        "Later varieties often have better flavor."
+      ],
+      "key": "Proper planting depth and variety choice ensure a successful and tasty garden.",
+      "decoys": [
+        {
+          "text": "Deep soil is always better for all seeds.",
+          "why": "The text says very small seeds fail if covered too deeply."
+        },
+        {
+          "text": "Early varieties are always the best choice.",
+          "why": "The text says later varieties are usually superior in flavor."
+        }
+      ],
+      "aha": "By matching the seed size to the correct depth and choosing the right variety, you get a better harvest."
+    },
+    "scene": {
+      "analogy": "A crowded bus stop",
+      "map": [
+        [
+          "Waiting people",
+          "Garden space"
+        ],
+        [
+          "Waiting people",
+          "Many plants"
+        ],
+        [
+          "A bench",
+          "Soil"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Waiting people",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Waiting people",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "A BENCH",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "SITTING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "There is only enough room for a few people.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A bus stop has a small bench.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "Many people arrive at once.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "Only a few can sit down.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Everyone sits"
+            },
+            "right": {
+              "sub": "No one can stand"
+            }
+          }
+        },
+        {
+          "say": "The rest must stand in line.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Spacing ensures every plant has enough room to thrive.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Garden space",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Many plants",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "SOIL",
+              "size": 18
+            },
+            "act": {
+              "label": "SPACING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Plants need room to grow well.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Planting the garden",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c4",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 10,
+  "title": "Hotbeds and coldframes",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:09:34.533Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 10,
+    "title": "Hotbeds and coldframes",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 10
+    },
+    "needIt": "Hotbeds let you grow food earlier than your neighbors by creating a tiny summer inside a box. It helps you get a head start on your garden even when the ground is still frozen.",
+    "why": "A gardener wants to grow lettuce before everyone else. They build a box with glass and use rotting manure to create a steady heat source. This box acts like a tiny greenhouse that mimics summer weather in the middle of winter.",
+    "outcome": "Build a hotbed to start seeds early in the season.",
+    "reachesYou": "You might see these wooden boxes in a backyard or a local nursery. You will use this idea when you want to grow plants that need warmth but the weather is still cold.",
+    "do": "Find a sunny spot in your yard and look at how much heat a glass window can trap from the sun.",
+    "quiz": [
+      {
+        "q": "What is the main purpose of a hotbed?",
+        "choices": [
+          "To keep plants dry",
+          "To imitate summer conditions",
+          "To store tools",
+          "To keep birds away"
+        ],
+        "a": 1,
+        "why": "The text says a hotbed is a place where summer conditions can be imitated by supplying steady heat.",
+        "quote": "It is simply making a place in which summer conditions can be imitated by supplying it with steady, gentle heat, and in confining this heat within an inclosure.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c10"
+      },
+      {
+        "q": "What material is generally used to generate heat?",
+        "choices": [
+          "Wood chips",
+          "Rocks",
+          "Dry leaves",
+          "Fresh manure"
+        ],
+        "a": 3,
+        "why": "The lecture states that fresh manure from a horse-stable is the common heat source.",
+        "quote": "The heat-generating material is generally fresh manure from the horse-stable, or a mixture of that and coarse litter.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c10"
+      },
+      {
+        "q": "How deep should the heat-generating material be?",
+        "choices": [
+          "One inch",
+          "A foot and a half",
+          "Three feet",
+          "Two inches"
+        ],
+        "a": 1,
+        "why": "The text specifies that there should be at least a foot and a half of this material.",
+        "quote": "There should be at least a foot and a half of this heat-generating material.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c10"
+      },
+      {
+        "q": "Which direction should a hotbed face for the best results?",
+        "choices": [
+          "North",
+          "East",
+          "West",
+          "South"
+        ],
+        "a": 3,
+        "why": "Facing south allows the hotbed to take the most advantage of the sunshine.",
+        "quote": "The best location for a hotbed is one facing the south, that all possible advantage can. be taken of sunshine",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c10"
+      },
+      {
+        "q": "What must be done to ensure plants stay healthy?",
+        "choices": [
+          "Give them plenty of fresh air",
+          "Keep them in total darkness",
+          "Water them every hour",
+          "Keep the glass closed forever"
+        ],
+        "a": 0,
+        "why": "Plants need fresh air to grow vigorously and avoid becoming weak.",
+        "quote": "In it plants will grow healthily and vigorously, provided they are given plenty of fresh air.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c10"
+      },
+      {
+        "q": "What temperature should the hotbed reach before seeding?",
+        "choices": [
+          "50 degrees",
+          "70 degrees",
+          "100 degrees",
+          "85 or 90 degrees"
+        ],
+        "a": 3,
+        "why": "The text says the bed is ready for seeding when the thermometer hits 85 or 90 degrees.",
+        "quote": "When it registers 85° or 90° the bed is ready for seeding.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c10"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "It imitates summer conditions.",
+        "It uses manure to make heat.",
+        "It uses glass to trap that heat.",
+        "It needs fresh air to stay healthy.",
+        "It gives plants an early start."
+      ],
+      "key": "A hotbed is a glass enclosure that uses fermenting manure to create a warm summer environment for early plants.",
+      "decoys": [
+        {
+          "text": "A hotbed is a self-regulating system.",
+          "why": "The text says it is not a self-regulating thing and needs frequent attention."
+        },
+        {
+          "text": "You should keep the sash closed all day.",
+          "why": "The text says you must lift the sash to provide fresh air."
+        }
+      ],
+      "aha": "By trapping heat from manure inside a glass box, you create a controlled summer for your plants."
+    },
+    "scene": {
+      "analogy": "A person wearing a heavy coat inside a warm house",
+      "map": [
+        [
+          "Cold outside",
+          "Cold weather"
+        ],
+        [
+          "Warm inside",
+          "Warm plants"
+        ],
+        [
+          "Heavy coat",
+          "Hotbed"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Cold outside",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "Warm inside",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "HEAVY COAT",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "INSULATE",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "The coat keeps the heat from escaping into the cold.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "It is freezing outside.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The person puts on a coat.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The body heat stays inside.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Person stays warm"
+            },
+            "right": {
+              "sub": "Heat stays inside"
+            }
+          }
+        },
+        {
+          "say": "They feel cozy and warm.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "A hotbed traps heat from manure to keep plants warm.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "Cold weather",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "Warm plants",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "HOTBED",
+              "size": 18
+            },
+            "act": {
+              "label": "TRAP HEAT",
+              "size": 14,
+              "color": "pink"
+            },
+            "line": {
+              "label": "The hotbed keeps the heat from escaping into the cold.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Hotbeds and coldframes",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c10",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

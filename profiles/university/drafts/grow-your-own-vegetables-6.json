@@ -1,0 +1,305 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 6,
+  "title": "Early garden work",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:05:41.466Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: scene: line is over 56 letters: It is much easier to wipe a small spill "
+  ],
+  "unit": {
+    "n": 6,
+    "title": "Early garden work",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 6
+    },
+    "needIt": "Knowing how to manage small tasks early prevents big problems later. It helps you stay ahead of chores like cleaning or homework so they do not pile up.",
+    "why": "A gardener who waits too long to pull weeds finds them hard to move. By starting early and using the right tool, the work stays easy and fast.",
+    "outcome": "Use a weedinghook to keep a garden clear of unwanted plants.",
+    "reachesYou": "You see this when you try to keep a messy room tidy before it gets out of control. You also see it when you check your phone for new messages to keep your day moving.",
+    "do": "Identify one small chore you have been putting off and do it today to keep it from growing bigger.",
+    "quiz": [
+      {
+        "q": "What tool is used to pull weeds without hurting other plants?",
+        "choices": [
+          "A rake",
+          "A cultivator",
+          "A shovel",
+          "A weedinghook"
+        ],
+        "a": 3,
+        "why": "The text describes the weedinghook as a claw tool for this specific job.",
+        "quote": "Here is where the weedinghook of which I have spoken will come into play in the small garden.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c6"
+      },
+      {
+        "q": "What is the goal of using a weedinghook among plants?",
+        "choices": [
+          "To turn the soil over",
+          "To make the soil soft",
+          "To tear away weeds without disturbing other plants",
+          "To move plants to new rows"
+        ],
+        "a": 2,
+        "why": "The text says the tool is designed to reach into the ground and take a firm hold of weeds while leaving the desired plants alone.",
+        "quote": "It can be so operated that these fingers, working close to plants which it is not desired to uproot, will tear away the weeds without disturbing the other plants, and the soil will be left in ight and mellow condition, as if a tiny rake had been drawn through it.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c6"
+      },
+      {
+        "q": "When should weeding work begin?",
+        "choices": [
+          "Only when the weeds are very tall",
+          "After the harvest is done",
+          "As soon as plants are big enough to tell them apart",
+          "The day after planting"
+        ],
+        "a": 2,
+        "why": "The text says to start when you can tell a seedling from a weed.",
+        "quote": "Weeding should be begun as soon as the plants are of a size that makes it possible to tell which is seedling and which is weed.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c6"
+      },
+      {
+        "q": "What is the best way to keep weeds under control?",
+        "choices": [
+          "Early work and regular attention",
+          "Using a lot of fertilizer",
+          "Waiting until the end of the season",
+          "Moving the plants to a new spot"
+        ],
+        "a": 0,
+        "why": "The text says early work and regular attention make it a comparatively easy matter.",
+        "quote": "By beginning the work of clearing the garden at this period, and doing it thoroughly, and continuing it at intervals thereafter, it will be a comparatively easy matter to keep weeds under control.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c6"
+      },
+      {
+        "q": "What happens if weeds are allowed to get a strong start?",
+        "choices": [
+          "They will die on their own",
+          "They become difficult to subdue",
+          "They help the vegetables grow",
+          "They make the soil better"
+        ],
+        "a": 1,
+        "why": "The text warns that letting them grow makes them hard to control.",
+        "quote": "But if they are allowed to get a strong start, as they will in an incredibly short time if let alone, it will be a difficult matter to subdue them and keep the upper hand during the rest of the season.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c6"
+      },
+      {
+        "q": "What should you do if there are vacant spots in the garden beds?",
+        "choices": [
+          "Leave them empty",
+          "Put more fertilizer in the dirt",
+          "Fill them with plants from thick areas",
+          "Cover them with mulch"
+        ],
+        "a": 2,
+        "why": "The text says to fill vacant spots with plants from places where they stand too thick.",
+        "quote": "If there are any vacant places in the beds or rows, fill with plants~taken from places where they stand too thick.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c6"
+      },
+      {
+        "q": "Why should you destroy every weed as soon as you find it?",
+        "choices": [
+          "To keep the soil soft",
+          "To prevent them from making seeds",
+          "To make the plants grow faster",
+          "To save water"
+        ],
+        "a": 1,
+        "why": "Preventing seeds saves a lot of work for the next season.",
+        "quote": "But there will be no time when there will not be some to wage warfare against, and every gardener should make it a rule to destroy every one that gets a start as soon as discovered, for, by preventing it from developing seed, we can save ourselves a good deal of work next season.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c6"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Weedinghook fingers reach into the ground.",
+        "Weeding should be begun early.",
+        "Early work makes it a comparatively easy matter.",
+        "Destroy every weed as soon as discovered.",
+        "Little attentions count more than large amounts of labor."
+      ],
+      "key": "Early and regular attention prevents difficult work later.",
+      "decoys": [
+        {
+          "text": "Wait for weeds to grow large before pulling them.",
+          "why": "The text says this makes it a difficult matter to subdue them."
+        },
+        {
+          "text": "Only use a cultivator for all weeding tasks.",
+          "why": "The text says a cultivator cannot be worked among the plants in the row."
+        }
+      ],
+      "aha": "Small actions taken early keep the garden easy to manage."
+    },
+    "scene": {
+      "analogy": "Keeping a room clean",
+      "map": [
+        [
+          "A messy room",
+          "A messy room"
+        ],
+        [
+          "A clean room",
+          "A clean room"
+        ],
+        [
+          "Dust",
+          "Dust"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A messy room",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A clean room",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "DUST",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "DUSTING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "Small bits of dust make a big mess if left alone.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A room fills with dust over time.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "Someone wipes a small corner.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The room stays clear and bright.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "A dusty room"
+            },
+            "right": {
+              "sub": "A clear room"
+            }
+          }
+        },
+        {
+          "say": "It feels calm and easy.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Small actions early prevent big messes later.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "A messy room",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "A clean room",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "DUST",
+              "size": 18
+            },
+            "act": {
+              "label": "DUSTING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Small actions early prevent big messes later.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Early garden work",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c6",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}

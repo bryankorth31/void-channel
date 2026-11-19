@@ -1,0 +1,290 @@
+{
+  "slug": "grow-your-own-vegetables",
+  "n": 13,
+  "title": "Health in the garden",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T16:12:39.988Z",
+  "ok": true,
+  "missing": [],
+  "notes": [],
+  "unit": {
+    "n": 13,
+    "title": "Health in the garden",
+    "reading": {
+      "shelf": "abc-vegetable-gardening-1916",
+      "chapter": 13
+    },
+    "needIt": "Gardening helps you feel better when you are tired or bored. It gives you a clear goal to work toward so you don't feel like you are just doing chores.",
+    "why": "A woman felt tired and stuck inside her house. She did not feel sick, but she felt worn out from caring for others. The author told her to go into the garden to find her energy again.",
+    "outcome": "Use a specific goal to turn a chore into a source of joy.",
+    "reachesYou": "You see this when you feel bored at home or tired from school work. It helps you choose a hobby that makes you feel strong instead of just resting on the couch.",
+    "do": "Pick one small area outside or a pot to plant a few seeds. Focus on the goal of growing the plant rather than just the exercise.",
+    "quiz": [
+      {
+        "q": "Why did the author suggest a garden for the women she saw?",
+        "choices": [
+          "They had a physical illness",
+          "They wanted to learn how to farm",
+          "They were bored with the weather",
+          "They were overworked and neglected themselves"
+        ],
+        "a": 3,
+        "why": "The text says they were overworked and had neglected to care for themselves.",
+        "quote": "Inquiry generally develops the fact that they have overworked; that they have been confined to the house the greater part of the time, busy with household matters, and that in caring for others they have neglected to care for themselves.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c13"
+      },
+      {
+        "q": "What does the author say about people who refuse to work in the garden?",
+        "choices": [
+          "They are very healthy",
+          "They are lazy",
+          "They are incurable",
+          "They are experts"
+        ],
+        "a": 2,
+        "why": "The author calls those who prefer to stay miserable 'incurables'.",
+        "quote": "These are the incurables, the ''chronic\"\" cases that one cannot expect to do much with or for.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c13"
+      },
+      {
+        "q": "How does the author describe the earth in spring?",
+        "choices": [
+          "It tingles with life",
+          "It is very dry",
+          "It is quiet",
+          "It is very cold"
+        ],
+        "a": 0,
+        "why": "The text says the earth tingles with life in the spring.",
+        "quote": "The earth fairly tingles with life in spring, and by putting ourselves in contact with it we absorb some of this vitality.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c13"
+      },
+      {
+        "q": "Why does the author suggest giving a woman seeds instead of just telling her to walk?",
+        "choices": [
+          "Walking is too hard",
+          "Seeds are cheaper",
+          "She might not walk if she has to",
+          "Walking is boring"
+        ],
+        "a": 2,
+        "why": "The author says if you advise walking, the chances are she won't walk much.",
+        "quote": "You can tell a woman who needs a change from indoors to outdoors that she ought to take more exercise, but if you advise walking the chances are that she won't walk much.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c13"
+      },
+      {
+        "q": "What happens to the person's awareness of tiredness while they work?",
+        "choices": [
+          "They forget the wear and tear",
+          "They feel very tired immediately",
+          "They feel very sleepy",
+          "They feel no tiredness at all"
+        ],
+        "a": 0,
+        "why": "The mind stays busy with the garden, so they don't notice the physical wear.",
+        "quote": "You may work until you are tired, but you do not realize physical wear and tear because your mind has something else that it considers of greater importance to busy itself over.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c13"
+      },
+      {
+        "q": "What is the secret to getting the benefit of the garden?",
+        "choices": [
+          "Buying expensive tools",
+          "Doing all the work yourself",
+          "Hiring someone to help",
+          "Watching others garden"
+        ],
+        "a": 1,
+        "why": "The author states that doing the work yourself is the secret.",
+        "quote": "Have a garden. And do all the work in it yourself. That's the secret of the benefit you are to get out of it.",
+        "ref": "shelf-abc-vegetable-gardening-1916.html#c13"
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "The garden provides a better tonic than medicine.",
+        "Working in the garden gives you a definite object.",
+        "The mind stays busy and forgets the physical wear.",
+        "The garden habit is fixed for all time after one year.",
+        "Doing the work yourself is the secret to the benefit."
+      ],
+      "key": "A garden gives health because it provides a joyful, definite goal that keeps the mind busy.",
+      "decoys": [
+        {
+          "text": "Gardening is only about getting exercise.",
+          "why": "The author says it must be something she enjoys more than a sense of duty."
+        },
+        {
+          "text": "You can get the benefit by just watching the garden.",
+          "why": "The author says you must do all the work in it yourself."
+        }
+      ],
+      "aha": "When you have a clear goal to work toward, your mind stays happy and your body gets healthy without you even noticing the effort."
+    },
+    "scene": {
+      "analogy": "A student doing homework for a prize",
+      "map": [
+        [
+          "A tired student",
+          "A tired person"
+        ],
+        [
+          "A gold star",
+          "A healthy garden"
+        ],
+        [
+          "A math book",
+          "Seeds"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A tired student",
+          "color": "blue",
+          "o": 0,
+          "size": 18
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "A gold star",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "A MATH BOOK",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "SOLVING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "The goal makes the hard work feel fun.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A student sits at a desk feeling very tired.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They start solving hard math problems.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They earn a big gold star at the end.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "The student feels proud"
+            },
+            "right": {
+              "sub": "The star is earned"
+            }
+          }
+        },
+        {
+          "say": "They feel happy and proud of their work.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Having a definite object to work toward keeps you busy and happy.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "A tired person",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "A healthy garden",
+              "size": 18,
+              "color": "green"
+            },
+            "thing": {
+              "label": "SEEDS",
+              "size": 18
+            },
+            "act": {
+              "label": "PLANTING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "A clear goal makes the work feel like a joy.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "read",
+      "title": "Health in the garden",
+      "by": "Eben Eugene Rexford, 1916",
+      "url": "shelf-abc-vegetable-gardening-1916.html#c13",
+      "licence": "Public domain. The plain English beside it is ours.",
+      "note": "One chapter of an old book, in plain English, with the printed words beside it."
+    }
+  }
+}
