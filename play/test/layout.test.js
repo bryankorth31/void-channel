@@ -30,16 +30,56 @@ for (const [vw, vh, name] of SCREENS) {
 }
 
 // The tablet is the device the touch pad is sized for (plan T7): every zone holds thumb-sized keys.
-for (const [vw, vh] of [[1316, 821], [821, 1316]]) {
-  test(`${vw}x${vh}: each touch zone has room for keys of at least ${Layout.MIN_KEY} px`, () => {
+// Sideways, each side column holds its keys in two columns of five rows (three columns of four on a short phone),
+// every key at least MIN_KEY: the room must be there before play.css draws them.
+const { MIN_KEY, PAD, GAP } = Layout;
+const span = (n) => n * MIN_KEY + (n - 1) * GAP + 2 * PAD;
+for (const [vw, vh] of [[1316, 821], [1920, 1080], [844, 390], [740, 360]]) {
+  test(`${vw}x${vh} sideways: each side column has room for its keys at ${MIN_KEY} px or more`, () => {
     const L = Layout.layout(vw, vh, 4 / 3, true);
-    for (const z of ['left', 'right', 'pad']) {
-      if (!L[z]) continue;
-      assert.ok(L[z].w >= Layout.MIN_KEY * 3, z + ' wide enough for three keys');
-      assert.ok(L[z].h >= Layout.MIN_KEY * 3, z + ' tall enough for three keys');
+    for (const z of [L.left, L.right]) {
+      assert.ok(z.cols === 2 || z.cols === 3);
+      assert.ok(z.w >= span(z.cols), 'wide enough for ' + z.cols + ' keys');
+      const rows = z.cols === 2 ? 5 : 4;
+      assert.ok(z.h >= span(rows), 'tall enough for ' + rows + ' rows');
     }
   });
 }
+
+// Upright, the pad holds the numbers (two rows on a phone), Space and Enter, and two rows beside the arrows.
+for (const [vw, vh, numberRows] of [[821, 1316, 1], [390, 844, 2], [360, 740, 2]]) {
+  test(`${vw}x${vh} upright: the pad has room for every row at ${MIN_KEY} px or more`, () => {
+    const L = Layout.layout(vw, vh, 4 / 3, true);
+    const rows = numberRows + 1 + 2;
+    assert.ok(L.pad.h >= rows * MIN_KEY + (rows - 1) * 12 + 2 * PAD, 'tall enough for ' + rows + ' rows');
+    const perRow = Math.ceil(9 / numberRows);
+    assert.ok(L.pad.w >= span(perRow), 'wide enough for ' + perRow + ' numbers in a row');
+  });
+}
+
+test('Bryan, 19 Nov 2026, "use the space better": sideways on the tablet the picture is as tall as it can be', () => {
+  const L = Layout.layout(1316, 821, 4 / 3, true);
+  assert.equal(L.screen.h, 821 - Layout.HEADER - 16);
+  assert.ok(L.screen.w * L.screen.h > 774 * 580 * 1.6, 'at least 60% more picture than before (774 x 580)');
+  assert.equal(L.left.cols, 2);
+});
+
+test('a narrow sideways screen shrinks the picture, never the keys', () => {
+  const L = Layout.layout(700, 400, 4 / 3, true);
+  assert.ok(L.left.w >= Layout.columnWidth(L.left.cols));
+  assert.ok(!Layout.overlaps(L.screen, L.left) && !Layout.overlaps(L.screen, L.right));
+});
+
+test('play.css uses the same thresholds as layout.js', () => {
+  const css = require('node:fs').readFileSync(path.join(__dirname, '..', 'play.css'), 'utf8');
+  const fiveRows = Layout.ROWS * MIN_KEY + (Layout.ROWS - 1) * GAP;          // 320: below it, three columns
+  assert.ok(css.includes('@container (max-height:' + (fiveRows - 0.02) + 'px)'), 'side column switch at ' + fiveRows);
+  assert.ok(css.includes('minmax(56px'), 'keys never under 56 px');
+  assert.match(css, /\.zone\{[^}]*padding:12px/);
+  assert.ok(css.includes('gap:10px'));
+  assert.equal(Layout.columns(span(5)), 2);
+  assert.equal(Layout.columns(span(5) - 1), 3);
+});
 
 test('the picture is as big as the room allows', () => {
   const L = Layout.layout(1920, 1080, 4 / 3, false);

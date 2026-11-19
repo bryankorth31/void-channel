@@ -1,6 +1,7 @@
 // VoidTV PLAY: the on-screen touch pad, drawn from the game's card. Licence: GPL-2.0-or-later (play/LICENSE).
 // Ideas studied, no code taken (play/SOURCES.md): RetroArch overlays (zones at the screen edges), nipplejs (a pad you
 // can slide across), js-dos (keys a DOS game needs, and a keyboard that pops up only when you type).
+// Bryan, 19 Nov 2026: "use the space better": big keys fill the room beside or under the picture, no empty corners.
 // Every press goes to the input hub as a key; nothing here talks to the game.
 (function (root) {
   const LABELS = { Enter: 'Enter', Space: 'Space', Escape: 'Esc', Backspace: '⌫', ShiftLeft: 'Shift',
@@ -14,6 +15,10 @@
   const capture = (node, e) => { try { node.setPointerCapture(e.pointerId); } catch (err) { /* nothing to capture */ } };
   // A small buzz under the thumb, only after a real tap (browsers refuse it before one).
   const tick = () => { try { if (navigator.vibrate && (!navigator.userActivation || navigator.userActivation.hasBeenActive)) navigator.vibrate(8); } catch (e) { /* no haptics here */ } };
+
+  // The keys sit in a box that play.css measures (container queries); the pop-up keyboard stays outside it, so it can
+  // still cover the bottom of the screen.
+  const sizer = (inner) => { const b = el('div', 'pbox'); b.appendChild(inner); return b; };
 
   function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
 
@@ -71,27 +76,72 @@
     return box;
   }
 
+  // Which keys go where, from the card alone (no screen sizes here; play.css and layout.js size them).
+  // Sideways: the right thumb gets the numbers and Enter (pick a number, then Enter); the left thumb gets the arrows,
+  // Space and the rest. A card with no numbers is a game pad: arrows on the left, every key on the right.
+  // Upright: the numbers in one row (two on a narrow phone), then Space and Enter, then the arrows beside the rest.
+  function plan(c) {
+    const numbers = c.numbers || [], keys = c.keys || [];
+    const go = ['Space', 'Enter'].filter((k) => keys.includes(k));
+    const rest = keys.filter((k) => !go.includes(k));
+    const sideways = numbers.length
+      ? { right: [...numbers, ...(keys.includes('Enter') ? ['Enter'] : [])], left: keys.filter((k) => k !== 'Enter') }
+      : { right: keys, left: [] };
+    // Space first and full width on the left: it is the key the game asks for most.
+    sideways.left.sort((a, b) => (b === 'Space') - (a === 'Space'));
+    return { numbers, go, rest, sideways, keyboard: !!c.keyboard, dpad: !!c.dpad };
+  }
+
   // Build the pad for this card into the zones the layout gave us.
   function build(zones, card, hub) {
     const c = (card && card.controls) || {};
+    const p = plan(c);
     for (const z of Object.values(zones)) z.textContent = '';
     const kb = keyboard(hub, () => kb.classList.remove('open'));
-    const kbButton = el('button', 'pk pkbd', 'Keyboard'); kbButton.type = 'button';
-    kbButton.addEventListener('click', () => { kb.classList.toggle('open'); tick(); });
-    const nums = el('div', 'pnums');
-    for (const code of c.numbers || []) nums.appendChild(keyButton(code, hub));
-    const keys = el('div', 'pkeys');
-    for (const code of c.keys || []) keys.appendChild(keyButton(code, hub, code === 'Enter' ? 'go' : ''));
-    const left = el('div', 'pzone'), right = el('div', 'pzone');
-    if (c.dpad) left.appendChild(dpad(hub));
-    right.appendChild(nums); right.appendChild(keys);
-    if (c.keyboard) left.appendChild(kbButton);
-    if (zones.pad) { const row = el('div', 'prow'); row.appendChild(left); row.appendChild(right); zones.pad.appendChild(row); zones.pad.appendChild(kb); }
-    else { zones.left.appendChild(left); zones.right.appendChild(right); zones.right.appendChild(kb); }
+    const kbButton = (text) => {
+      const b = el('button', 'pk pkbd', text); b.type = 'button'; b.setAttribute('aria-label', 'Keyboard');
+      b.addEventListener('click', () => { kb.classList.toggle('open'); tick(); });
+      return b;
+    };
+    const key = (code, extra) => keyButton(code, hub, [code === 'Enter' ? 'go' : '', extra || ''].join(' ').trim());
+
+    if (zones.pad) {
+      const pp = el('div', 'pp');
+      const section = (cls, rows, cols) => {
+        const s = el('div', 'psec ' + cls); s.style.setProperty('--r', rows); s.style.setProperty('--nc', cols); pp.appendChild(s); return s;
+      };
+      if (p.numbers.length) {
+        const s = section('pnums', 1, p.numbers.length);
+        s.style.setProperty('--nc2', Math.ceil(p.numbers.length / 2));
+        for (const code of p.numbers) s.appendChild(key(code));
+      }
+      if (p.go.length) { const s = section('pgo', 1, p.go.length); for (const code of p.go) s.appendChild(key(code)); }
+      const rest = p.rest.map((code) => key(code));
+      if (p.keyboard) rest.push(kbButton('Keyboard'));
+      if (p.dpad || rest.length) {
+        const perRow = p.dpad ? 2 : 5;
+        const rows = Math.max(p.dpad ? 2 : 1, Math.ceil(rest.length / perRow));
+        const s = section('pblock' + (p.dpad ? ' with-dpad' : ''), rows, 1);
+        if (p.dpad) s.appendChild(dpad(hub));
+        if (rest.length) {
+          const g = el('div', 'prest'); g.style.setProperty('--nc', Math.min(perRow, rest.length));
+          for (const b of rest) g.appendChild(b);
+          s.appendChild(g);
+        }
+      }
+      zones.pad.appendChild(sizer(pp)); zones.pad.appendChild(kb);
+    } else {
+      const left = el('div', 'pcol'), right = el('div', 'pcol');
+      for (const code of p.sideways.left) left.appendChild(key(code, code === 'Space' ? 'span' : ''));
+      if (p.keyboard) left.appendChild(kbButton('ABC'));
+      if (p.dpad) { const w = el('div', 'pdwrap'); w.appendChild(dpad(hub)); left.appendChild(w); }   // the wrap keeps the pad round
+      for (const code of p.sideways.right) right.appendChild(key(code));
+      zones.left.appendChild(sizer(left)); zones.right.appendChild(sizer(right)); zones.right.appendChild(kb);
+    }
     return { keyboard: kb, openKeyboard: () => kb.classList.add('open') };
   }
 
-  const api = { build, label, QWERTY };
+  const api = { build, plan, label, QWERTY };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayTouch = api;
 })(typeof self !== 'undefined' ? self : this);

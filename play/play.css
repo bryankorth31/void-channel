@@ -23,23 +23,41 @@ button{font:inherit;color:inherit}
 .status{margin:0;color:var(--dim)}
 .play{font-family:'Unbounded',sans-serif;font-weight:700;font-size:22px;padding:16px 42px;border-radius:999px;border:0;background:var(--pink);color:#07080c;cursor:pointer;box-shadow:0 0 24px rgba(255,79,200,.45)}
 .play[hidden]{display:none}
-.zone{position:absolute;display:flex;flex-direction:column;justify-content:center;padding:12px;gap:12px}
+/* The touch pad (layout.js has the same numbers: PAD 12, GAP 10, MIN_KEY 56, five rows for two columns). */
+.zone{position:absolute;padding:12px}
+.pbox{height:100%;container-type:size}
 .zone[hidden]{display:none}
-.zone.pad{justify-content:flex-start}
-.prow{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;flex:1}
-.pzone{display:flex;flex-direction:column;align-items:center;gap:12px}
-.pk{min-width:56px;min-height:56px;border-radius:14px;border:1px solid #2a3046;background:#141826;font-weight:700;font-size:19px;cursor:pointer;touch-action:none;-webkit-tap-highlight-color:transparent}
+.pk{min-width:56px;min-height:56px;border-radius:14px;border:1px solid #2a3046;background:#141826;font-weight:700;font-size:19px;cursor:pointer;touch-action:none;-webkit-tap-highlight-color:transparent;display:flex;align-items:center;justify-content:center;padding:0 4px}
 .pk[data-down]{background:var(--acc);color:#07080c;border-color:var(--acc)}
 .pk.go{background:#2a1530;border-color:var(--pink)} .pk.go[data-down]{background:var(--pink);color:#07080c}
-.pnums{display:grid;grid-template-columns:repeat(3,64px);gap:10px}
-.pnums .pk{height:60px}
-.pkeys{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;width:202px}
-.pkeys .pk{height:60px;font-size:16px} .pkeys .pk.go{grid-column:span 2;height:66px}
-.pkbd{font-size:15px;padding:0 18px;width:170px}
-.pdpad{position:relative;width:176px;height:176px;border-radius:50%;background:#10131d;border:1px solid #2a3046;touch-action:none}
-.pdir{position:absolute;width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:12px;color:var(--dim);font-size:20px}
+.pkbd{font-size:15px}
+/* Sideways: a column of keys at each edge, as tall as five thumb rows, centred where the thumbs rest. */
+.pcol{--c:2;height:100%;display:grid;grid-template-columns:repeat(var(--c),minmax(56px,104px));grid-auto-rows:minmax(56px,96px);gap:10px;align-content:center;justify-content:center}
+.pcol .pk{width:100%;height:100%}
+.pcol .span{grid-column:1/-1}
+.pcol .pk.go,.pcol .pkbd{font-size:15px}
+.pcol .pdwrap{grid-column:1/-1;grid-row:span 2;container-type:size;display:flex;align-items:center;justify-content:center}
+.pcol .pdwrap .pdpad{width:min(100cqw,100cqh);height:min(100cqw,100cqh)}
+@container (max-height:319.98px){
+  .pcol{--c:3}
+  .pcol .pk.span{grid-column:auto}
+  .pcol .pk.go{grid-column:1/-1}
+}
+/* Upright: rows of big keys fill the room under the picture. --r is how many rows a section holds. */
+.pp{height:100%;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.psec{--r:1;--nc:1;flex:var(--r) 1 0;min-height:calc(var(--r) * 56px + (var(--r) - 1) * 10px);max-height:calc(var(--r) * 120px + (var(--r) - 1) * 10px);display:grid;gap:10px}
+.psec .pk{width:100%;height:100%}
+.pnums,.pgo{grid-template-columns:repeat(var(--nc),minmax(0,1fr));grid-auto-rows:minmax(0,1fr)}
+@container (max-width:649.98px){.pnums{--r:2 !important;grid-template-columns:repeat(var(--nc2),minmax(0,1fr))}}
+.pblock{grid-template-columns:minmax(0,1fr)}
+.pblock.with-dpad{grid-template-columns:auto minmax(0,1fr)}
+.pblock .pdpad{height:100%;aspect-ratio:1;align-self:center}
+.prest{display:grid;grid-template-columns:repeat(var(--nc),minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:10px;min-width:0}
+/* The arrow pad: one round target; the finger slides between directions. Its marks scale with it. */
+.pdpad{position:relative;border-radius:50%;background:#10131d;border:1px solid #2a3046;touch-action:none;min-width:56px;min-height:56px}
+.pdir{position:absolute;width:32%;height:32%;display:flex;align-items:center;justify-content:center;border-radius:12px;color:var(--dim);font-size:20px}
 .pdir.on{background:var(--acc);color:#07080c}
-.pdir.ArrowUp{top:6px;left:60px}.pdir.ArrowDown{bottom:6px;left:60px}.pdir.ArrowLeft{left:6px;top:60px}.pdir.ArrowRight{right:6px;top:60px}
+.pdir.ArrowUp{top:4%;left:34%}.pdir.ArrowDown{bottom:4%;left:34%}.pdir.ArrowLeft{left:4%;top:34%}.pdir.ArrowRight{right:4%;top:34%}
 .pkeyboard{display:none;position:fixed;left:0;right:0;bottom:0;padding:10px 8px calc(10px + env(safe-area-inset-bottom));background:rgba(12,14,22,.97);border-top:1px solid var(--line);z-index:7;flex-direction:column;gap:7px}
 .pkeyboard.open{display:flex}
 .pkrow{display:flex;justify-content:center;gap:6px}
