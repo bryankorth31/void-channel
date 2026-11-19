@@ -3,154 +3,148 @@
   "n": 6,
   "title": "The disordered soul: thémis and PTSD",
   "model": "gemma4:12b",
-  "made": "2026-11-19T15:39:25.246Z",
+  "made": "2026-11-19T15:49:59.523Z",
   "ok": true,
   "missing": [],
-  "notes": [],
+  "notes": [
+    "round 1: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line",
+    "round 3: chapter dropped, its opening words are not said in the lecture: Aristotle's view on the soul",
+    "round 3: chapter dropped, its opening words are not said in the lecture: Moral injury and PTSD",
+    "round 3: scene: thing is over 11 letters: A broken gate",
+    "round 3: scene: idea.thing is over 11 letters: Broken rules"
+  ],
   "unit": {
     "n": 6,
     "title": "The disordered soul: thémis and PTSD",
-    "needIt": "This helps you understand why people act out of fear or why they lose trust in others. It explains how a broken sense of order can change how you see the world and your own actions.",
-    "why": "The lecture looks at how humans need a sense of order to feel safe. When that order is broken by unfairness or violence, it can cause a 'moral injury' that changes how a person sees everything around them.",
-    "outcome": "Understand how trauma and the loss of social trust affect human behavior.",
+    "needIt": "This helps you understand why people act out of fear or why they struggle to trust others. It explains how a broken sense of order can change how you see the world and your own actions.",
+    "why": "The lecture looks at how people react when the rules of the world break down. It uses stories from ancient wars and modern conflicts to show how losing trust in 'the right way' of doing things can leave deep scars on the human soul.",
+    "outcome": "Understand how a loss of social order leads to moral injury and personal trauma.",
+    "reachesYou": "You see this when you feel unsafe in a crowd or when you find it hard to trust a stranger. It also shows up when you feel angry because someone broke a fair rule in your workplace or school.",
+    "do": "Think of a time you felt a loss of trust. Write down one small way you can rebuild a sense of order in your own daily routine.",
     "chapters": [
       {
-        "t": 31,
-        "title": "Aristotle and the soul",
-        "words": "So as you may recall, what we were talking about in the last"
+        "t": 219,
+        "title": "The human good",
+        "words": "So the human good on the Aristotelian picture has got to be"
       },
       {
-        "t": 436,
-        "title": "Virtue and habit",
-        "words": "Virtues of character aren't things that you process rationally and come to"
+        "t": 608,
+        "title": "The process of habit",
+        "words": "So what does this process of habituation look like? Well, Aristotle points out"
       },
       {
-        "t": 884,
-        "title": "The middle way",
-        "words": "The virtues of Aristotle, he says, tend to be ruined by excess"
-      },
-      {
-        "t": 1922,
-        "title": "Moral injury and trauma",
-        "words": "Shay's thesis in this book, as you know, is that when a"
+        "t": 1242,
+        "title": "The disordered soul",
+        "words": "The stories that Shea and Milgram tell us, the descriptions they give"
       }
     ],
     "quiz": [
       {
-        "q": "What does Aristotle say is the special function of a human being?",
+        "q": "What is the special function of a human being according to Aristotle?",
         "choices": [
           "To satisfy appetites",
           "To express reason",
-          "To seek honor",
-          "To seek pleasure"
+          "To gain honor",
+          "To survive"
         ],
         "a": 1,
-        "why": "Aristotle argues that the human good is the activity that expresses reason.",
+        "why": "Aristotle says the human good is the expression of reason.",
         "quote": "And the special function of a human being, says Aristotle, is the expression of reason, the soul's activity that expresses reason, in one of the standard translations.",
         "t": 207
       },
       {
-        "q": "How does Aristotle define virtue in relation to the soul?",
+        "q": "What is the special function of a human being?",
         "choices": [
-          "Doing what you feel like",
-          "Acting against your nature",
+          "To express reason",
+          "To survive",
+          "To have emotions",
+          "To find food"
+        ],
+        "a": 0,
+        "why": "Aristotle says the human good is the expression of reason.",
+        "quote": "So the human good on the Aristotelian picture has got to be the thing about human beings that sets them apart from other sorts of creatures.",
+        "t": 219
+      },
+      {
+        "q": "How does Aristotle define virtue?",
+        "choices": [
+          "Knowing facts",
+          "Doing what is easy",
           "Instincts lining up with commitments",
-          "Learning facts about the world"
+          "Winning at all costs"
         ],
         "a": 2,
-        "why": "Virtue is when your automatic actions match your reflective goals.",
+        "why": "Virtue is when your instinctive responses match your reflective commitments.",
         "quote": "So virtue on Aristotle's picture is being such that instinctive responses fall into line with your reflective commitments.",
         "t": 282
       },
       {
-        "q": "What is the difference between virtues of thought and virtues of character?",
+        "q": "What is a virtue of thought?",
         "choices": [
-          "Character is learned by habit",
-          "Thought is learned by habit",
-          "Thought is against nature",
-          "Character is taught by books"
+          "Learning a habit",
+          "Knowing a fact",
+          "Being brave",
+          "Being temperate"
+        ],
+        "a": 1,
+        "why": "Virtues of thought are things like knowing facts that are taught.",
+        "quote": "It's a virtue of thought to know facts about the periodic table, or to know information of a particular kind about the political structures around you.",
+        "t": 398
+      },
+      {
+        "q": "How are virtues of character acquired?",
+        "choices": [
+          "By habit",
+          "By nature",
+          "By instruction",
+          "By gravity"
         ],
         "a": 0,
-        "why": "Virtues of character are built through habit, not just by being told facts.",
+        "why": "Character virtues are built through repeated actions over time.",
         "quote": "They are things that you process in the spirited and appetitive parts of your soul as the result of a kind of cultivation of habit.",
         "t": 447
       },
       {
-        "q": "What is the 'Aristotelian Mean'?",
+        "q": "How are virtues of character acquired?",
         "choices": [
-          "The most extreme option",
-          "The fastest way to act",
-          "The middle between two extremes",
-          "The most selfish choice"
-        ],
-        "a": 2,
-        "why": "Virtue is found between a deficiency and an excess.",
-        "quote": "The virtues of Aristotle, he says, tend to be ruined by excess and deficiency.",
-        "t": 884
-      },
-      {
-        "q": "What is a 'moral injury' according to Jonathan Shay?",
-        "choices": [
-          "A physical wound",
-          "A loss of memory",
-          "A betrayal of moral order",
-          "A lack of physical strength"
-        ],
-        "a": 2,
-        "why": "Moral injury happens when the structure of what is right is destroyed.",
-        "quote": "In so doing, injuries are inflicted on the soldiers that are not physical injuries. They are what Shay calls moral injuries.",
-        "t": 1945
-      },
-      {
-        "q": "How does PTSD affect a person's perception of the world?",
-        "choices": [
-          "They see things as safer",
-          "They see things as neutral",
-          "They see things as more colorful",
-          "They see things in the most negative light"
+          "By nature",
+          "By instruction",
+          "By gravity",
+          "By habit"
         ],
         "a": 3,
-        "why": "Constant alert makes people see every encounter as a potential danger.",
-        "quote": "And soldiers who are suffering from post-traumatic stress disorder perceive those things around them through the the heightened attentional mechanisms that come with this hair-trigger action and view them as potential dangers.",
-        "t": 2227
+        "why": "Virtues of character are completed in us through habit.",
+        "quote": "They are things for which we have the capacity, and they are completed in us through habit.",
+        "t": 599
+      },
+      {
+        "q": "What happens when you practice a skill like playing the piano?",
+        "choices": [
+          "You do it until it is instinctive",
+          "You read a book",
+          "You watch a video",
+          "You think about it"
+        ],
+        "a": 0,
+        "why": "Aristotle says we learn to be something by acting like that was what we already were.",
+        "quote": "The way that we cultivate habits is first by consciously structuring our lives in such a way that the habit that we wish to cultivate becomes part of our behavioral repertoire.",
+        "t": 725
       }
     ],
-    "crystal": {
-      "speed": 0.3,
-      "partials": [
-        "Virtue is a habit of the soul.",
-        "Reason should guide our instincts.",
-        "The middle way avoids extremes.",
-        "Moral order creates social trust.",
-        "Broken order causes moral injury."
-      ],
-      "key": "Human flourishing requires a soul where reason harmonizes our instincts and habits.",
-      "decoys": [
-        {
-          "text": "Virtue is something you are born with.",
-          "why": "Aristotle says virtues of character are acquired through habit, not nature."
-        },
-        {
-          "text": "Moral injury is only a physical wound.",
-          "why": "The lecture defines it as a non-physical injury caused by the betrayal of moral order."
-        }
-      ],
-      "aha": "When we practice the middle way, our habits align with our reason to create a stable life."
-    },
     "scene": {
-      "analogy": "A shop owner and a customer in a chaotic market",
+      "analogy": "A broken rule in a game",
       "map": [
         [
-          "Shop owner",
-          "Social order"
+          "A player",
+          "A soldier"
         ],
         [
-          "Customer",
-          "Chaos"
+          "A referee",
+          "The rules"
         ],
         [
-          "A bag",
-          "Trust"
+          "A foul",
+          "Betrayal"
         ]
       ],
       "actors": [
@@ -161,7 +155,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Shop owner",
+          "label": "A player",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -173,7 +167,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Customer",
+          "label": "A referee",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -184,7 +178,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A BAG",
+          "label": "A FOUL",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -196,18 +190,18 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "SUSPICION",
+          "label": "CHEATING",
           "color": "fg",
           "o": 0,
           "s": 0.4,
-          "size": 14
+          "size": 18
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I cannot trust anyone in this place anymore.",
+          "label": "The game is no longer fair.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -215,7 +209,7 @@
       ],
       "beats": [
         {
-          "say": "A market becomes very messy and loud.",
+          "say": "A game is being played.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -231,7 +225,7 @@
           }
         },
         {
-          "say": "A person hides a bag quickly.",
+          "say": "The referee lets a foul go.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -242,19 +236,19 @@
           }
         },
         {
-          "say": "The other person looks away.",
+          "say": "The player feels cheated.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Owner hides goods"
+              "sub": "Feels cheated"
             },
             "right": {
-              "sub": "Customer feels unsafe"
+              "sub": "Loses trust"
             }
           }
         },
         {
-          "say": "They feel afraid of everyone.",
+          "say": "Trust in the game breaks.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -263,36 +257,58 @@
           }
         },
         {
-          "say": "Loss of order leads to a loss of social trust.",
+          "say": "Breaking the moral order causes deep internal injury.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Social order",
+              "label": "A soldier",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Chaos",
+              "label": "The rules",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "TRUST",
+              "label": "BETRAYAL",
               "size": 18
             },
             "act": {
-              "label": "BREAK",
+              "label": "BREAKING",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "When rules break, trust disappears.",
+              "label": "When rules break, the soul suffers.",
               "size": 22,
               "color": "green"
             }
           }
         }
       ]
+    },
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Virtue is a habit.",
+        "Reason is the human goal.",
+        "Excess and deficiency ruin virtue.",
+        "Moral order provides structure.",
+        "Betrayal causes internal injury."
+      ],
+      "key": "Virtue is the harmony of the soul through practiced habits.",
+      "decoys": [
+        {
+          "text": "Virtue is something you are born with.",
+          "why": "Aristotle says virtues of character are not by nature."
+        },
+        {
+          "text": "Moral injury is only a physical wound.",
+          "why": "The lecture says moral injuries are not physical injuries."
+        }
+      ],
+      "aha": "When we practice habits that align our instincts with our reason, we create a harmonious soul that can withstand the disorder of the world."
     },
     "main": {
       "role": "watch",

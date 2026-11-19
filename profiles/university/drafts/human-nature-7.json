@@ -3,16 +3,42 @@
   "n": 7,
   "title": "Flourishing and attachment",
   "model": "gemma4:12b",
-  "made": "2026-11-19T15:41:05.940Z",
+  "made": "2026-11-19T15:58:30.665Z",
   "ok": true,
   "missing": [],
-  "notes": [],
+  "notes": [
+    "round 1: scene: thing is over 11 letters: A baby monkey",
+    "round 1: scene: idea.thing is over 11 letters: A baby monkey",
+    "round 2: \"needIt\" is missing or too short",
+    "round 2: \"why\" is missing or too short",
+    "round 2: \"outcome\" is missing or too short",
+    "round 2: \"reachesYou\" is missing or too short",
+    "round 2: \"do\" is missing or too short",
+    "round 2: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line",
+    "round 2: scene: left is missing",
+    "round 2: scene: right is missing",
+    "round 2: scene: thing is missing",
+    "round 2: scene: act is missing",
+    "round 2: scene: leftEnd is missing",
+    "round 2: scene: rightEnd is missing",
+    "round 2: scene: line is missing",
+    "round 2: scene: idea.left is missing",
+    "round 2: scene: idea.right is missing",
+    "round 2: scene: idea.thing is missing",
+    "round 2: scene: idea.act is missing",
+    "round 2: scene: idea.line is missing",
+    "round 2: scene: analogy is missing",
+    "round 2: scene: says needs exactly 4 captions (has 0)",
+    "round 2: scene: idea.say is missing"
+  ],
   "unit": {
     "n": 7,
     "title": "Flourishing and attachment",
-    "needIt": "Understanding how your early life shapes your trust helps you see why you react to people the way you do. It helps you realize that building strong bonds is a biological need for a happy life.",
-    "why": "A man in a lab was told to give electric shocks to a stranger. Even though he felt terrible and shook with fear, he kept doing it because an authority figure told him to. This shows how our social brains can push us to do things that go against our own feelings.",
-    "outcome": "Recognize how early bonds and social connections shape your ability to trust and flourish.",
+    "needIt": "Understanding how we bond helps you build better trust in your own relationships. It explains why you feel safer with some people and how to create a stable life with others.",
+    "why": "The lecture looks at how humans are built to need others to survive and thrive. It shows that when we feel a real connection, we feel safe, but when that connection is missing, we struggle to trust the world.",
+    "outcome": "Identify how early bonds and social connections shape your ability to trust and flourish.",
+    "reachesYou": "You see this when you feel a deep bond with a friend or a sense of safety with your family. You also feel it when you struggle to trust a stranger or a new coworker.",
+    "do": "Reach out to a friend or family member today just to check in and strengthen your social bond.",
     "chapters": [
       {
         "t": 33,
@@ -20,24 +46,24 @@
         "words": "So in 1961, in newspapers throughout the New Haven area, the following"
       },
       {
-        "t": 488,
+        "t": 498,
         "title": "The Cost of Obedience",
-        "words": "The psychological response of the subjects sounds like what we read"
+        "words": "Many subjects showed signs of nervousness, especially upon administering the more"
       },
       {
-        "t": 804,
-        "title": "Social Connection and Flourishing",
-        "words": "What Milgram discovered is that although compliance is extremely high when"
+        "t": 1125,
+        "title": "The Science of Attachment",
+        "words": "So in the famous wire versus cloth mother studies, monkeys, there's"
       },
       {
-        "t": 1349,
-        "title": "Attachment Theory",
-        "words": "The first, which she called secure attachment, results from early childhood"
+        "t": 1759,
+        "title": "Social Bonds and Health",
+        "words": "Having strong social relationships strengthens the immune system. It extends life more"
       },
       {
         "t": 2065,
         "title": "The Importance of Friendship",
-        "words": "nothing plays a more central role in allowing you to flourish"
+        "words": "nothing plays a more central role in allowing you to flourish than"
       }
     ],
     "quiz": [
@@ -45,22 +71,22 @@
         "q": "What was the main goal of the Milgram study?",
         "choices": [
           "To test memory",
-          "To measure pain",
+          "To study learning",
           "To study obedience",
-          "To study electricity"
+          "To test shocks"
         ],
         "a": 2,
-        "why": "The lecture explains how people obeyed commands to give shocks even when they felt distressed.",
+        "why": "The study looked at how people follow orders even when they feel bad about it.",
         "quote": "The research that Milgram conducted was inspired by an an attempt to understand what could possibly have explained the behavior of ordinary German citizens in Nazi Germany.",
         "t": 443
       },
       {
-        "q": "How did the subjects react physically during the experiment?",
+        "q": "What happened when subjects felt bad about the shocks?",
         "choices": [
           "They showed signs of tension",
+          "They stopped",
           "They stayed calm",
-          "They laughed",
-          "They ignored the shocks"
+          "They laughed"
         ],
         "a": 0,
         "why": "The lecture describes subjects sweating, stuttering, and biting their lips.",
@@ -68,54 +94,67 @@
         "t": 498
       },
       {
-        "q": "What happened to obedience when the victim gave voice feedback?",
+        "q": "How did the presence of the experimenter affect obedience?",
         "choices": [
-          "Obedience stayed high",
-          "Obedience declined",
-          "Obedience increased",
-          "People stopped immediately"
+          "It increased it",
+          "It decreased it",
+          "It had no effect",
+          "It made it random"
         ],
         "a": 1,
-        "why": "The lecture states that compliance declined as the interaction became more direct.",
+        "why": "People were less likely to obey when the person giving orders was not right there.",
         "quote": "And the tendency of subjects to collaborate, to cooperate, to do what was asked of them, declined directly with whether the experimenter was present in the room with them.",
         "t": 747
       },
       {
-        "q": "What is a key strategy used in Nazi Germany to commit harm?",
+        "q": "What did the 'wire mother' provide?",
         "choices": [
-          "Dehumanization",
-          "Physical force",
-          "Secret meetings",
-          "Economic pressure"
+          "Warmth",
+          "Safety",
+          "Love",
+          "Milk"
         ],
-        "a": 0,
-        "why": "The lecture explains that viewing others as non-human makes it easier to harm them.",
-        "quote": "And it turns out that one of the major strategies in Nazi Germany to enable people to commit harm against their neighbors was to use a language of dehumanization",
-        "t": 966
+        "a": 3,
+        "why": "The wire mother had milk but the cloth mother provided comfort.",
+        "quote": "The wire mother had milk, and they needed to go to her to get food. But the cloth mother had comfort, and if they wanted to be consoled, they needed to go to her.",
+        "t": 1139
       },
       {
-        "q": "What does 'secure attachment' mean in the lecture?",
+        "q": "What is a result of secure attachment?",
         "choices": [
-          "Predictable responsiveness",
-          "Being alone",
-          "Avoiding others",
-          "Constant fighting"
+          "Social trust",
+          "Fear of others",
+          "Avoidance",
+          "Aggression"
         ],
         "a": 0,
-        "why": "Secure attachment comes from a caregiver who responds predictably to a child's needs.",
-        "quote": "The first, which she called secure attachment, results from early childhood experience that involves predictable responsiveness to one's needs by somebody who feels affection for you.",
-        "t": 1349
+        "why": "Secure attachment creates a sense that the world is a safe and cooperative place.",
+        "quote": "The world becomes a place in which social trust is possible, and the early instincts that you come to have when presented with the faces and bodies of conspecifics cause you later on to have as your most primitive response pattern an expectation that if there's no evidence to the contrary, that conspecific is going to be to be responsive to your honest and expressed needs.",
+        "t": 1403
+      },
+      {
+        "q": "How does social interaction affect physical health in older adults?",
+        "choices": [
+          "It strengthens the immune system",
+          "It has no effect",
+          "It only helps with mood",
+          "It makes people sleep better"
+        ],
+        "a": 0,
+        "why": "The lecture lists several physical benefits of social interaction, including a stronger immune system.",
+        "quote": "Having strong social relationships strengthens the immune system. It extends life more than quitting smoking.",
+        "t": 1759
       },
       {
         "q": "What does Aristotle say about friendship?",
         "choices": [
           "It is central to flourishing",
+          "It is optional",
           "It is for the rich",
-          "It is a distraction",
-          "It is not important"
+          "It is a distraction"
         ],
         "a": 0,
-        "why": "Aristotle argues that friendship is vital for a good life regardless of your status.",
+        "why": "Aristotle argues that friendship is the most central thing for flourishing at any age.",
         "quote": "nothing plays a more central role in allowing you to flourish than friendship does.",
         "t": 2065
       }
@@ -123,39 +162,39 @@
     "crystal": {
       "speed": 0.3,
       "partials": [
-        "People obey authority even when it causes them distress.",
-        "Direct interaction with a victim reduces the urge to harm.",
-        "Dehumanizing others makes it easier to ignore their suffering.",
-        "Early childhood bonds create a foundation of trust.",
-        "Social connections are vital for health and long life."
+        "Humans are social entities.",
+        "Early bonds shape trust.",
+        "Warmth is needed for flourishing.",
+        "Social ties improve health.",
+        "Friendship is central to life."
       ],
-      "key": "Human flourishing depends on social bonds and the ability to trust others.",
+      "key": "Human flourishing depends on deep social connections and early trust.",
       "decoys": [
         {
-          "text": "Obedience is always a choice of free will.",
-          "why": "The lecture shows that social pressure and authority can override personal conscience."
+          "text": "Only food matters for survival.",
+          "why": "The lecture shows that monkeys chose cloth over wire for comfort."
         },
         {
-          "text": "Early childhood only matters for physical growth.",
-          "why": "The lecture shows it shapes social trust and later patterns of response to the world."
+          "text": "Obedience is always a good trait.",
+          "why": "The lecture shows the heavy psychic cost of obeying immoral orders."
         }
       ],
-      "aha": "Our social brains are wired to seek connection, which shapes how we behave, trust, and thrive."
+      "aha": "We are built to thrive through emotional bonds and social trust."
     },
     "scene": {
-      "analogy": "A child reaching for a toy in a store",
+      "analogy": "A child reaching for a parent's hand",
       "map": [
         [
-          "A crying child",
-          "A crying child"
+          "A lonely child",
+          "A lonely child"
         ],
         [
-          "A busy parent",
-          "A busy parent"
+          "A parent",
+          "A parent"
         ],
         [
-          "A soft toy",
-          "A soft toy"
+          "A hand",
+          "A hand"
         ]
       ],
       "actors": [
@@ -166,7 +205,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A crying child",
+          "label": "A lonely child",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -178,7 +217,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A busy parent",
+          "label": "A parent",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -189,11 +228,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A SOFT TOY",
+          "label": "A HAND",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 14
+          "size": 18
         },
         {
           "id": "act",
@@ -201,7 +240,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "REACHING",
+          "label": "REACH",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -212,7 +251,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I feel safe because you are here to help me.",
+          "label": "I know you will catch me.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -220,7 +259,7 @@
       ],
       "beats": [
         {
-          "say": "A child wants a toy and starts to cry.",
+          "say": "A child stands alone.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -236,7 +275,7 @@
           }
         },
         {
-          "say": "The parent picks them up and gives the toy.",
+          "say": "The parent reaches out.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -247,19 +286,19 @@
           }
         },
         {
-          "say": "The child stops crying and smiles.",
+          "say": "The child grabs the hand.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Child feels safe"
+              "sub": "Feels safe"
             },
             "right": {
-              "sub": "Parent feels proud"
+              "sub": "Feels proud"
             }
           }
         },
         {
-          "say": "The child feels loved and secure.",
+          "say": "The child feels safe.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -272,26 +311,26 @@
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "A crying child",
+              "label": "A lonely child",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "A busy parent",
+              "label": "A parent",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "A SOFT TOY",
-              "size": 14
+              "label": "A HAND",
+              "size": 18
             },
             "act": {
-              "label": "REACHING",
+              "label": "REACH",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Early care builds the trust needed to grow.",
+              "label": "Early trust builds a safe world.",
               "size": 22,
               "color": "green"
             }

@@ -3,175 +3,178 @@
   "n": 1,
   "title": "Introduction",
   "model": "gemma4:12b",
-  "made": "2026-11-19T14:36:37.116Z",
+  "made": "2026-11-19T15:56:34.651Z",
   "ok": true,
   "missing": [],
   "notes": [
-    "round 2: scene: thing is over 11 letters: A chocolate bar",
-    "round 2: scene: idea.thing is over 11 letters: Immediate temptation"
+    "round 1: question dropped, its quote is not said word for word: What are the two main strategies for overcoming pr",
+    "round 1: scene: line is over 56 letters: I know I should eat the salad, but the c",
+    "round 1: scene: idea.thing is over 11 letters: A temptation",
+    "round 2: scene: thing is over 11 letters: A plate of cake",
+    "round 2: scene: idea.thing is over 11 letters: Immediate reward",
+    "round 2: scene: idea.line is over 56 letters: We are both the planner and the person w",
+    "round 3: question dropped, its quote is not said word for word: ",
+    "round 3: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line"
   ],
   "unit": {
     "n": 1,
     "title": "Introduction",
-    "needIt": "This course helps you understand why you sometimes do things you regret, like scrolling on your phone instead of studying. It gives you tools to manage your impulses and make better choices for your long-term goals.",
-    "why": "The lecture explores how humans are both rational thinkers and animals driven by instinct. It uses stories like the Ring of Gyges to ask if we are only good because we are afraid of getting caught. It also looks at how we can use simple tricks, like freezing a credit card, to help us stick to our plans.",
-    "outcome": "Understand the balance between rational choice and instinctual behavior.",
+    "needIt": "This course helps you understand why you do what you do, like why you procrastinate or how you make hard choices. It gives you tools to better manage your own habits and understand the people around you.",
+    "why": "The lecture introduces a course that blends old philosophy with modern science. It looks at humans as both smart thinkers who can plan for the future and as animals driven by instincts we cannot always control.",
+    "outcome": "Understand the mix of reason and instinct that shapes human behavior.",
+    "reachesYou": "You see this when you struggle to stay focused on a goal despite knowing you should. You also feel it when you have to make a split-second choice in a stressful situation.",
+    "do": "Identify one thing you want to do but keep putting off. Think of one way to make it harder to get distracted by your phone.",
     "chapters": [
       {
-        "t": 28,
+        "t": 2,
         "title": "Course Overview",
-        "words": "In the first part of the lecture, I'm just going to a"
-      },
-      {
-        "t": 442,
-        "title": "Three Main Topics",
-        "words": "The first topic is the topic of happiness and flourishing. What"
+        "words": "So welcome to Philosophy and the Science of Human Nature. It's nice"
       },
       {
         "t": 742,
         "title": "The Ring of Gyges",
-        "words": "And Glaucon is in conversation with the great ancient Greek philosopher"
+        "words": "And Glaucon is in conversation with the great ancient Greek philosopher Socrates."
       },
       {
         "t": 1456,
-        "title": "Procrastination and Strategy",
-        "words": "So what is it about human beings that we can form these"
+        "title": "Procrastination and Habits",
+        "words": "So what is it about human beings that we can form these sorts"
       },
       {
         "t": 2129,
         "title": "Course Requirements",
-        "words": "The first and perhaps the most important requirement of the course"
+        "words": "The first and perhaps the most important requirement of the course are"
       }
     ],
     "quiz": [
       {
-        "q": "What is the main goal of the first part of the lecture?",
+        "q": "What two fields are combined in this course title?",
         "choices": [
-          "To give a broad overview",
-          "To list all the books",
-          "To explain the grade",
-          "To talk about the ring"
-        ],
-        "a": 0,
-        "why": "The speaker says they want to give a broad overview of the course and their goals.",
-        "quote": "In the first part of the lecture, I'm just going to a very broad overview of what kind of course this is and to say a few words about what my goals are for the course.",
-        "t": 28
-      },
-      {
-        "q": "What are the three main ethical theories the course covers?",
-        "choices": [
-          "Stoicism, Epicureanism, and Cynicism",
-          "Justice, liberty, and equality",
-          "Utilitarianism, deontology, and virtue ethics",
-          "Rationalism, empiricism, and idealism"
+          "History and Art",
+          "Biology and Physics",
+          "Philosophy and Cognitive Science",
+          "Math and Ethics"
         ],
         "a": 2,
-        "why": "The lecture explicitly lists these three theories as part of the Western philosophical tradition.",
+        "why": "The lecture states the course is listed in both philosophy and cognitive science.",
+        "quote": "It's called Philosophy and the Science of Human Nature, and it's listed both in philosophy and in cognitive science.",
+        "t": 65
+      },
+      {
+        "q": "What is one of the three main ethical theories covered?",
+        "choices": [
+          "Stoicism",
+          "Nihilism",
+          "Utilitarianism",
+          "Existentialism"
+        ],
+        "a": 2,
+        "why": "Utilitarianism is listed as one of the three main ethical theories.",
         "quote": "We'll talk about utilitarianism, we'll talk about deontology, and we'll talk about virtue ethics, and we'll talk about how those relate to one another.",
         "t": 130
       },
       {
-        "q": "Which of these is NOT a topic mentioned as part of the course?",
+        "q": "Which philosopher's work on the state is mentioned?",
         "choices": [
-          "Ethics",
-          "Political Philosophy",
-          "Metaphysics",
-          "Cognitive Science"
+          "Plato",
+          "Aristotle",
+          "Thomas Hobbes",
+          "John Rawls"
         ],
         "a": 2,
-        "why": "The speaker explicitly states that the course is not a course in metaphysics.",
-        "quote": "It's not a course in metaphysics. It's not a course in epistemology.",
-        "t": 172
+        "why": "The lecturer mentions looking at the work of Thomas Hobbes on the state.",
+        "quote": "We'll very briefly look at the work of Thomas Hobbes on the legitimacy of the state.",
+        "t": 145
       },
       {
-        "q": "What does the speaker say about the 'Ring of Gyges' story?",
+        "q": "What is the main goal of the course regarding the different fields of study?",
         "choices": [
-          "It shows we fear punishment",
-          "It shows we are naturally good",
-          "It shows we are invisible",
-          "It shows we are brave"
+          "To provide a coherent story about what human beings are",
+          "To teach every single fact from every field",
+          "To focus only on the history of philosophy",
+          "To teach students how to become professional scientists"
         ],
         "a": 0,
-        "why": "Glaucon argues that people only act morally because they fear the punishment of society.",
-        "quote": "They act in that way because they fear the punishment of society. They don't act in that way because it's in any way valuable to them.",
-        "t": 925
+        "why": "The lecturer states the goal is to bring the fields together to tell a story about human nature.",
+        "quote": "So what I'm going to try to do in the course is to bring together these eight fields in a way that provides a coherent story about what kind of thing human beings are and how we can learn about what kind of things human beings are from these various perspectives.",
+        "t": 374
       },
       {
-        "q": "What is the 'push the fat man' case used to explore?",
+        "q": "What does the lecture say about the 'soul' in ancient philosophy?",
         "choices": [
-          "Moral differences",
-          "Physical fitness",
-          "Weight limits",
-          "Trolley speed"
+          "It is the only thing that matters for happiness",
+          "It is a physical organ in the brain",
+          "It thrives when its parts are in harmony",
+          "It is something that science cannot measure"
         ],
-        "a": 0,
-        "why": "The speaker uses these cases to ask if there is a moral difference between different actions.",
-        "quote": "What is it that explains the differences in our reactions to these cases?",
-        "t": 1320
+        "a": 2,
+        "why": "The lecture explains that ancient philosophers believed humans thrive when their souls are well-ordered.",
+        "quote": "It turns out that the ancient philosophers' answer to that question is that human beings thrive when their souls are well-ordered, to use the ancient metaphor.",
+        "t": 485
       },
       {
-        "q": "What is one strategy for overcoming procrastination mentioned by Dan Ariely?",
+        "q": "What is the main idea of the Ring of Gyges?",
         "choices": [
-          "Freezing a credit card",
-          "Studying harder",
-          "Sleeping more",
-          "Buying a new phone"
+          "People are naturally good",
+          "Rings have magic powers",
+          "Kings are always fair",
+          "People only act justly because they fear punishment"
         ],
-        "a": 0,
-        "why": "The speaker describes the ICE credit card solution as a way to restrict immediate access to temptations.",
-        "quote": "if you have a tendency to make impulse purchases on the internet, you take your credit card and you put it put it in a glass of water, which you put into the freezer",
-        "t": 1556
+        "a": 3,
+        "why": "Glaucon argues that people only act justly because they lack the power to do injustice.",
+        "quote": "Glaucon's conclusion from this story is that those who practice justice, those who act in conformity with the moral code of their society, do so because they lack the power to do injustice.",
+        "t": 910
       },
       {
-        "q": "What is the goal of the reading guides provided for the books?",
+        "q": "What is the 'ICE' credit card solution?",
         "choices": [
-          "To orient students and highlight key concepts",
-          "To give students a summary of the plot",
-          "To provide a list of required vocabulary",
-          "To provide answers to the final exam"
+          "Buying ice for drinks",
+          "Putting a card in a freezer",
+          "Deleting your credit card",
+          "Using a different bank"
         ],
-        "a": 0,
-        "why": "The speaker explains that the guides help orient the reader and highlight terms and concepts.",
-        "quote": "And finally, I've asked you to purchase a small $15 philosophy dictionary, which is enormously useful for looking up terms and concepts with which you might be unfamiliar.",
-        "t": 2182
+        "a": 1,
+        "why": "The lecture describes putting a credit card in a glass of water in the freezer.",
+        "quote": "Dan Ariely describes an example of what he calls the ICE credit card solution, where if you have a tendency to make impulse purchases on the internet, you take your credit card and you put it put it in a glass of water, which you put into the freezer.",
+        "t": 1549
       }
     ],
     "crystal": {
       "speed": 0.3,
       "partials": [
         "Humans have a reflective self.",
-        "Humans are also subject to non-reflective forces.",
-        "We can plan for the future.",
-        "We often fail to act on those plans.",
-        "We can use strategies to help ourselves."
+        "Humans have non-reflective instincts.",
+        "We can plan for the long term.",
+        "We often give in to immediate urges.",
+        "We can use strategies to manage these urges."
       ],
-      "key": "Human nature is a mix of rational planning and non-reflective instincts.",
+      "key": "Human nature is a mix of rational planning and non-rational impulses.",
       "decoys": [
         {
-          "text": "The course is only about ancient philosophy.",
-          "why": "The speaker says it draws from many fields like psychology and economics."
+          "text": "Humans are purely rational creatures.",
+          "why": "The lecture says we are also subject to forces beyond our rational control."
         },
         {
-          "text": "The Ring of Gyges proves people are naturally good.",
-          "why": "The story suggests people only act well because they fear being caught."
+          "text": "Procrastination is a lack of intelligence.",
+          "why": "The lecture treats it as a conflict between different parts of our nature."
         }
       ],
-      "aha": "By understanding the tension between our logic and our instincts, we can better manage our behavior."
+      "aha": "By understanding both our rational and impulsive sides, we can better design our lives and societies."
     },
     "scene": {
-      "analogy": "A student choosing between a book and a phone",
+      "analogy": "Choosing a healthy snack over a cookie",
       "map": [
         [
-          "A student",
-          "Rational self"
+          "A person",
+          "A person"
         ],
         [
-          "A phone",
-          "Impulse"
+          "A cookie",
+          "A cookie"
         ],
         [
-          "A choice",
-          "A goal"
+          "A glass box",
+          "A glass box"
         ]
       ],
       "actors": [
@@ -182,7 +185,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A student",
+          "label": "A person",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -194,7 +197,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A phone",
+          "label": "A cookie",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -205,11 +208,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A CHOICE",
+          "label": "A GLASS BOX",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 18
+          "size": 14
         },
         {
           "id": "act",
@@ -217,7 +220,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "CHOOSING",
+          "label": "LOCKING",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -228,15 +231,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I know I should study, but the phone is so easy.",
+          "label": "If I can't see it, I won't eat it.",
           "color": "pink",
-          "size": 18,
+          "size": 22,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A student sits at a desk.",
+          "say": "A person looks at a cookie.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -252,7 +255,7 @@
           }
         },
         {
-          "say": "The phone lights up.",
+          "say": "They put the cookie in a box.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -263,19 +266,19 @@
           }
         },
         {
-          "say": "They pick up the phone.",
+          "say": "The cookie is now hidden.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Reads the book"
+              "sub": "Person stays focused"
             },
             "right": {
-              "sub": "Scrolls on phone"
+              "sub": "Cookie stays out of reach"
             }
           }
         },
         {
-          "say": "They feel guilty later.",
+          "say": "They feel more in control.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -284,30 +287,30 @@
           }
         },
         {
-          "say": "Human nature is a mix of logic and instinct.",
+          "say": "Making it harder to reach a temptation helps you follow your plans.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Rational self",
+              "label": "A person",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Impulse",
+              "label": "A cookie",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "A GOAL",
-              "size": 18
+              "label": "A GLASS BOX",
+              "size": 14
             },
             "act": {
-              "label": "CHOOSING",
+              "label": "LOCKING",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "We must balance our plans with our instincts.",
+              "label": "Reducing access helps you stick to your goals.",
               "size": 18,
               "color": "green"
             }

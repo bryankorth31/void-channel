@@ -1,0 +1,305 @@
+{
+  "slug": "human-nature",
+  "n": 10,
+  "title": "Virtue and habit II",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T15:52:59.103Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: chapter dropped, its opening words are not said in the lecture: The Good Samaritan study",
+    "round 1: question dropped, its quote is not said word for word: What does Aristotle say is a necessary condition f"
+  ],
+  "unit": {
+    "n": 10,
+    "title": "Virtue and habit II",
+    "needIt": "Knowing how your habits and surroundings shape your choices helps you understand why you sometimes act against your own values. It helps you see when you are being lazy versus when you are just stuck in a bad situation.",
+    "why": "Aristotle says being a good person is like playing an instrument. You have to practice until it feels natural. But science shows that sometimes we don't choose our actions because of who we are, but because of how much of a rush we are in.",
+    "outcome": "Identify whether your actions come from your true character or just your current situation.",
+    "reachesYou": "You see this when you feel guilty for being lazy at home or when you feel like a hero for helping a stranger. It also shows up when you wonder if your friends are actually nice people or just acting nice for a reward.",
+    "do": "Notice one time this week when you do something good. Ask yourself if you did it because you wanted to be a good person or just because it was the easiest thing to do.",
+    "chapters": [
+      {
+        "t": 29,
+        "title": "Aristotle's view on virtue",
+        "words": "And so what I want to do today is to read through"
+      },
+      {
+        "t": 378,
+        "title": "The three conditions",
+        "words": "First, you need to do the action knowing that you're doing something"
+      },
+      {
+        "t": 729,
+        "title": "The fourth condition",
+        "words": "And in fact, Aristotle imposes a fourth condition as well. And that"
+      },
+      {
+        "t": 1307,
+        "title": "The flow state",
+        "words": "And what he says, as you should know if you had the"
+      },
+      {
+        "t": 2153,
+        "title": "The role of situation",
+        "words": "What determines how we act in a situation, says Doris, says"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the third condition for a virtuous act?",
+        "choices": [
+          "Doing it for a medal",
+          "Doing it for a reward",
+          "A firm and unchanging state",
+          "Doing it quickly"
+        ],
+        "a": 2,
+        "why": "The action must come from a stable character that lasts over time.",
+        "quote": "And the third is that your choice isn't a one-off thing, which is happening in this situation but not in others.",
+        "t": 423
+      },
+      {
+        "q": "Why does Aristotle say a person who acts justly by mistake isn't virtuous?",
+        "choices": [
+          "They lack knowledge",
+          "They are too slow",
+          "They are too brave",
+          "They are too tired"
+        ],
+        "a": 0,
+        "why": "Virtue requires knowing that the action is virtuous.",
+        "quote": "But because I was mistaken about who the brave ones were and who the cowardly ones were, I mistakenly imitated an action that turned out to be brave. Aristotle says, no credit.",
+        "t": 564
+      },
+      {
+        "q": "What is the fourth condition Aristotle adds?",
+        "choices": [
+          "Doing it for money",
+          "Doing it with enjoyment",
+          "Doing it in public",
+          "Doing it very fast"
+        ],
+        "a": 1,
+        "why": "Aristotle believes a virtuous person finds pleasure in doing the right thing.",
+        "quote": "The brave person on Aristotle's view is the person knowingly, for the sake of being brave, regularly, and with pleasure, acts as the brave person does.",
+        "t": 807
+      },
+      {
+        "q": "What is the 'flow' state according to the lecture?",
+        "choices": [
+          "Complete absorption",
+          "Feeling bored",
+          "Feeling anxious",
+          "Feeling tired"
+        ],
+        "a": 0,
+        "why": "Flow is when you are so absorbed in a task that it feels effortless.",
+        "quote": "And what he says, as you should know if you had the chance to watch his TED talk, is that it is when our attention is deliberately focused on what we are doing that the action is most experienced as effortless.",
+        "t": 1307
+      },
+      {
+        "q": "What does the Good Samaritan study show?",
+        "choices": [
+          "Character is everything",
+          "Situation matters most",
+          "Medals are important",
+          "Books are helpful"
+        ],
+        "a": 1,
+        "why": "The study showed that being in a rush determined behavior more than the person's character.",
+        "quote": "What was predictive of whether the seminarians stopped this man on the wayside was not whether they had prepared a story about the Good Samaritan. It was whether they were in a rush to get to their lecture.",
+        "t": 2482
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Virtue requires knowing the right act.",
+        "Virtue must be done for the right reason.",
+        "Virtue must come from a stable character.",
+        "Virtue should feel like a natural flow.",
+        "Virtue should be done with enjoyment."
+      ],
+      "key": "Virtue is a stable character trait that makes doing the right thing feel natural and pleasurable.",
+      "decoys": [
+        {
+          "text": "Virtue is just doing the right thing.",
+          "why": "Aristotle says it is not enough to just do the action; you must also be in the right state."
+        },
+        {
+          "text": "Character is the only thing that matters.",
+          "why": "The lecture mentions that social psychology shows situation and circumstance often determine our actions."
+        }
+      ],
+      "aha": "Virtue is when your character and your situation align so perfectly that doing the right thing feels like a natural flow."
+    },
+    "scene": {
+      "analogy": "A student choosing to study or sleep",
+      "map": [
+        [
+          "The student",
+          "The student"
+        ],
+        [
+          "The desk",
+          "The desk"
+        ],
+        [
+          "A book",
+          "A book"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The student",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The desk",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "A BOOK",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "STUDYING",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "I only studied because the test was tomorrow.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "The student sits at the desk.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "They open a heavy book.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "They finish a chapter.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Gets a good grade"
+            },
+            "right": {
+              "sub": "Feels tired"
+            }
+          }
+        },
+        {
+          "say": "They feel tired but proud.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Virtue is a habit that feels natural and effortless.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "The student",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "The desk",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "A BOOK",
+              "size": 18
+            },
+            "act": {
+              "label": "STUDYING",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "True virtue feels like a natural habit.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 10: Virtue and habit II",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "10. Virtue and Habit II.mp4",
+      "seconds": 2678,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  }
+}

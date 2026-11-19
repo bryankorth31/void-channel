@@ -3,36 +3,34 @@
   "n": 5,
   "title": "The well-ordered soul: happiness and harmony",
   "model": "gemma4:12b",
-  "made": "2026-11-19T15:38:59.311Z",
+  "made": "2026-11-19T15:48:48.637Z",
   "ok": true,
   "missing": [],
   "notes": [
-    "round 1: question dropped, its quote is not said word for word: ",
     "round 1: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line",
-    "round 2: scene: line is over 56 letters: It is easier to stay healthy when the co",
-    "round 2: scene: idea.thing is over 11 letters: External rules"
+    "round 2: question dropped, its quote is not said word for word: What are the three parts of the soul in Plato's vi",
+    "round 3: scene: thing is over 11 letters: A full plate",
+    "round 3: scene: idea.thing is over 11 letters: A full plate",
+    "round 3: scene: idea.line is over 56 letters: A well-ordered soul chooses what is best"
   ],
   "unit": {
     "n": 5,
     "title": "The well-ordered soul: happiness and harmony",
-    "needIt": "This helps you understand why it feels hard to stay focused on your goals. It shows how to balance your urges with your long-term plans to find true happiness.",
-    "why": "A student wants to stop using the internet in class but finds it hard to resist. They learn that making a promise is not enough; they need external rules and a balanced soul to succeed.",
-    "outcome": "Identify how to balance your inner desires with reason to achieve a well-ordered life.",
+    "needIt": "This helps you understand why it feels hard to stay focused on your goals. You can use these ideas to build better habits, like choosing to study instead of scrolling on your phone.",
+    "why": "The lecture explores how our inner selves can feel like a tug-of-war between different desires. It tells the story of how ancient thinkers tried to figure out how to make our minds work in harmony. By understanding these internal parts, we can learn to lead ourselves better.",
+    "outcome": "Apply ancient wisdom to improve your own self-regulation and focus.",
+    "reachesYou": "You feel this when you want to sleep in but know you need to get up for work. You also feel it when you try to stay off social media but find yourself clicking on apps anyway.",
+    "do": "Pick one goal you struggle to stick to this week. Create an external rule, like putting your phone in a different room, to help your 'reason' part win.",
     "chapters": [
       {
-        "t": 95,
+        "t": 9,
         "title": "Making a commitment",
-        "words": "But you took an action at a time when you felt yourself"
+        "words": "Did you commit to turning off the internet completely, press 1."
       },
       {
         "t": 390,
-        "title": "Plato's three parts of the soul",
+        "title": "Plato's three parts",
         "words": "Plato had suggested that our soul can be understood as having three"
-      },
-      {
-        "t": 561,
-        "title": "The city and the soul",
-        "words": "Socrates suggests at the end of the discussion in Book Two, which"
       },
       {
         "t": 1048,
@@ -43,60 +41,55 @@
         "t": 2289,
         "title": "Aristotle's highest good",
         "words": "The idea is that every good, that is, everything that you"
-      },
-      {
-        "t": 2538,
-        "title": "The human function",
-        "words": "What distinguishes us from those beings is reason. So just as"
       }
     ],
     "quiz": [
       {
-        "q": "What did 43% of students do to help themselves stay focused?",
+        "q": "What did the students do to make a pre-commitment?",
         "choices": [
-          "Made a promise",
-          "Bought a phone",
-          "Left the room",
-          "Did nothing"
+          "They wrote it down",
+          "They thought about it",
+          "They told a friend",
+          "They ignored it"
         ],
         "a": 0,
-        "why": "The lecture explains that writing down a commitment is a form of pre-commitment.",
-        "quote": "43% of you, 43% of the students in this room made a pre-commitment in the form of a promise.",
-        "t": 81
+        "why": "The lecture explains that writing it down turned a thought into a binding action.",
+        "quote": "It became a pre-commitment because you wrote it down just thinking it didn't make a pre-commitment.",
+        "t": 90
       },
       {
         "q": "What is a 'phone condom'?",
         "choices": [
-          "A bag to block access",
           "A protective case",
-          "A screen protector",
-          "A silent mode"
-        ],
-        "a": 0,
-        "why": "It is an external constraint that physically prevents the person from using the phone.",
-        "quote": "the idea is that you take your cell phone and you put it in this little Ziploc bag, and while you're driving, you are unable to gain access to it.",
-        "t": 224
-      },
-      {
-        "q": "According to Plato, what is the 'appetitive' part of the soul?",
-        "choices": [
-          "Reason",
-          "Spirit",
-          "Justice",
-          "Desires"
+          "A screen filter",
+          "A silent mode",
+          "A bag to block access"
         ],
         "a": 3,
-        "why": "Plato describes the appetitive part as the part full of desires and needs.",
-        "quote": "and that we have in addition an appetitive part, which is the which he represents sometimes as a wild horse and sometimes as the multi-headed beast.",
-        "t": 412
+        "why": "It is a physical tool used to create an external constraint on phone use.",
+        "quote": "And the idea is that you take your cell phone and you put it in this little Ziploc bag, and while you're driving, you are unable to gain access to it.",
+        "t": 223
       },
       {
-        "q": "How does Plato define a 'just' person?",
+        "q": "What is the city-state analogy used for?",
         "choices": [
-          "Someone who follows laws",
-          "Someone who is healthy",
-          "Someone who is rich",
-          "Someone who is brave"
+          "To describe politics",
+          "To understand the soul",
+          "To build a city",
+          "To teach history"
+        ],
+        "a": 1,
+        "why": "Socrates uses the city to help us understand the internal structure of a person.",
+        "quote": "Socrates suggests at the end of the discussion in Book Two, which we read for last class, that the best way to understand what it is that's good for the tripartite human being is to think about what would be good for a city that is structured in the same way.",
+        "t": 561
+      },
+      {
+        "q": "How does Plato define justice in relation to the body?",
+        "choices": [
+          "As a law",
+          "As health",
+          "As a feeling",
+          "As a duty"
         ],
         "a": 1,
         "why": "Plato argues that justice is the health of the soul.",
@@ -104,59 +97,59 @@
         "t": 1048
       },
       {
-        "q": "Why does Plato believe that a well-ordered soul leads to happiness?",
+        "q": "What does Plato say about the pleasure of self-regulation?",
         "choices": [
-          "It provides more money.",
-          "It makes people more famous.",
-          "It removes all physical pain.",
-          "It allows for a greater form of pleasure."
+          "It is a lower pleasure",
+          "It is a painful pleasure",
+          "It is a fake pleasure",
+          "It is a greater pleasure"
         ],
         "a": 3,
-        "why": "Plato argues that those who regulate their souls experience a higher form of pleasure than those who only follow their appetites.",
+        "why": "People who regulate themselves experience a higher form of pleasure.",
         "quote": "And those of us who have had the great pleasure of doing the second, says Plato, have recognized that that pleasure is a greater form of pleasure than the pleasure of Angry Birds.",
         "t": 1293
       },
       {
-        "q": "What does Jonathan Haidt say about how we experience pleasure?",
+        "q": "What is the 'hedonic treadmill'?",
         "choices": [
-          "We only feel pleasure when we reach a goal.",
-          "More of something always makes us happier.",
-          "Pleasure is only found in material goods.",
-          "We are more sensitive to changes than absolute levels."
+          "A cycle of wanting more",
+          "A way to run faster",
+          "A type of exercise",
+          "A path to wisdom"
         ],
-        "a": 3,
-        "why": "Haidt explains that humans are sensitive to contrasts, which leads to the hedonic treadmill where we always want more.",
-        "quote": "And the second, which hearkens back to the material that we read last week from Daniel Kahneman and the day before that from Jonathan Evans, that because we are more sensitive to changes in goods than to absolute levels of goods, more of something doesn't always make us happier.",
-        "t": 1863
+        "a": 0,
+        "why": "It describes how we adapt to material goods and always want more to stay happy.",
+        "quote": "The hedonic treadmill is the idea that in order to maintain the same amount of happiness, if it's based on material goods, requires us to run to stay in the same place.",
+        "t": 1914
       },
       {
-        "q": "What is the 'summum bonum' in Aristotle's work?",
+        "q": "What is the special function of a human being according to Aristotle?",
         "choices": [
-          "The lowest goal",
-          "The highest good",
-          "The city state",
-          "The mean"
+          "To reason well",
+          "To work hard",
+          "To feel sensation",
+          "To seek gold"
         ],
-        "a": 1,
-        "why": "Aristotle describes it as the thing pursued for its own sake.",
-        "quote": "Sometimes called the highest good, that which is pursued for its own sake.",
-        "t": 2276
+        "a": 0,
+        "why": "Aristotle believes reason is what makes humans unique and good.",
+        "quote": "Reason is, he writes at 1098, the special function of a human being.",
+        "t": 2551
       }
     ],
     "scene": {
-      "analogy": "A person trying to eat healthy food in a kitchen",
+      "analogy": "A person trying to choose a healthy meal",
       "map": [
         [
-          "A hungry person",
-          "The rational soul"
+          "Hunger",
+          "Appetite"
         ],
         [
-          "A box of cookies",
-          "Appetites"
-        ],
-        [
-          "Willpower",
+          "Health",
           "Reason"
+        ],
+        [
+          "Pizza",
+          "Choice"
         ]
       ],
       "actors": [
@@ -167,10 +160,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A hungry person",
+          "label": "Hunger",
           "color": "blue",
           "o": 0,
-          "size": 18
+          "size": 22
         },
         {
           "id": "right",
@@ -179,10 +172,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A box of cookies",
+          "label": "Health",
           "color": "blue",
           "o": 0,
-          "size": 18
+          "size": 22
         },
         {
           "id": "thing",
@@ -190,11 +183,11 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "WILLPOWER",
+          "label": "PIZZA",
           "color": "gold",
           "o": 0,
           "s": 0.4,
-          "size": 14
+          "size": 18
         },
         {
           "id": "act",
@@ -213,15 +206,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I knew I should have picked the salad.",
+          "label": "I want the pizza but I know I need the salad.",
           "color": "pink",
-          "size": 22,
+          "size": 18,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A person stands in a kitchen.",
+          "say": "You see a delicious pizza.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -237,7 +230,7 @@
           }
         },
         {
-          "say": "They look at a box of cookies.",
+          "say": "Your stomach wants it.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -248,19 +241,19 @@
           }
         },
         {
-          "say": "They eat a cookie.",
+          "say": "You choose a salad.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Feels satisfied"
+              "sub": "Full but tired"
             },
             "right": {
-              "sub": "Feels regretful"
+              "sub": "Healthy and alert"
             }
           }
         },
         {
-          "say": "They feel a bit sad.",
+          "say": "You feel proud.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -269,21 +262,21 @@
           }
         },
         {
-          "say": "Happiness comes from a soul where reason rules over desires.",
+          "say": "A well-ordered soul lets reason guide our desires.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "The rational soul",
-              "size": 18,
+              "label": "Appetite",
+              "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "Appetites",
+              "label": "Reason",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "REASON",
+              "label": "CHOICE",
               "size": 18
             },
             "act": {
@@ -292,7 +285,7 @@
               "color": "pink"
             },
             "line": {
-              "label": "A well-ordered soul balances all its parts.",
+              "label": "Harmony comes when reason leads the soul.",
               "size": 22,
               "color": "green"
             }
@@ -303,24 +296,24 @@
     "crystal": {
       "speed": 0.3,
       "partials": [
-        "Promises alone are often not enough to change behavior.",
-        "External constraints help us stay on track.",
-        "The soul has parts that can pull in different directions.",
-        "Reason should lead the other parts of the soul.",
-        "Happiness comes from a well-ordered and harmonious soul."
+        "Writing down a goal makes it a commitment.",
+        "External rules help us stay on track.",
+        "The soul has parts that can conflict.",
+        "Justice is the health of the soul.",
+        "Reason is our special human function."
       ],
-      "key": "True happiness comes from using reason to harmonize our inner desires and actions.",
+      "key": "A well-ordered soul uses reason to harmonize inner desires and achieve true happiness.",
       "decoys": [
         {
-          "text": "Happiness is just about getting what you want.",
-          "why": "Plato and Aristotle argue that unregulated desires lead to a disordered soul, not true flourishing."
+          "text": "Happiness comes from having more material goods.",
+          "why": "The lecture explains the hedonic treadmill, where more goods do not lead to more happiness."
         },
         {
-          "text": "Justice is only about following the laws of society.",
-          "why": "Socrates argues that justice is an intrinsic health of the soul, not just a set of external rules."
+          "text": "Making a mental promise is enough to stay disciplined.",
+          "why": "The lecture shows that many people need external constraints to stick to their commitments."
         }
       ],
-      "aha": "By using reason to organize our inner parts, we achieve a state of harmony that provides the highest form of happiness."
+      "aha": "When we use reason to balance our inner parts, we achieve a healthy and happy life."
     },
     "main": {
       "role": "watch",

@@ -71,8 +71,10 @@ const [cmd, ...args] = process.argv.slice(2);
     for (const t of c.todo || []) {
       const m = t.lecture || t.main;
       if (!m || !uni.transcript(m.item, m.file)) { waiting++; continue; }
-      if (require('fs').existsSync(path.join(uni.UNI, 'drafts', args[0] + '-' + t.n + '.json'))) continue;
-      const r = await uni.draft(args[0], t.n);
+      const df = path.join(uni.UNI, 'drafts', args[0] + '-' + t.n + '.json');
+      if (require('fs').existsSync(df) && JSON.parse(require('fs').readFileSync(df, 'utf8')).ok) continue; // a whole draft is left alone (it may carry Bryan's edits)
+      let r = await uni.draft(args[0], t.n);
+      for (let again = 0; again < 2 && !r.ok; again++) r = await uni.draft(args[0], t.n); // a draft that is not whole is tried again
       made++;
       console.log('Unit ' + t.n + ', ' + t.title + ': ' + (r.ok ? 'whole (' + r.unit.quiz.length + ' questions, ' + r.unit.chapters.length + ' chapters)' : 'NOT whole, missing ' + r.missing.join(', ')));
     }

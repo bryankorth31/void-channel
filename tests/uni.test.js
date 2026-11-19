@@ -59,7 +59,7 @@ test('the draft gate keeps a quiz quote only when it is said word for word, and 
   const tr = { words: said.split(' ').map((w, i) => ({ w, raw: w, t: i * 2 })) };
   const q = (quote, more = {}) => ({ q: 'What does Plato answer?', choices: ['A good life is its own reward', 'Fear of the law', 'Money', 'Luck'], a: 0, why: 'He says so in the lecture.', quote, ...more });
   const g = uni.gateDraft({
-    needIt: 'When no one checks, you find out what you value.', why: 'Plato asks why we keep promises unseen.', outcome: 'Tell apart looking fair and being fair.',
+    needIt: 'When no one checks, you find out what you value.', why: 'Plato asks why we keep promises unseen.', outcome: 'Tell apart looking fair and being fair.', reachesYou: 'You meet this at the self checkout and on the tax form.', do: 'Notice one time this week when nobody is checking you.',
     chapters: [{ title: 'The question', words: 'so today we ask why a person keeps' }, { title: 'Made up', words: 'these words were never spoken in the room' }],
     quiz: [
       q('The answer that Plato gives is that a good life is its own reward'),

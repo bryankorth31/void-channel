@@ -3,185 +3,177 @@
   "n": 4,
   "title": "Parts of the soul II",
   "model": "gemma4:12b",
-  "made": "2026-11-19T15:38:23.918Z",
+  "made": "2026-11-19T15:47:45.505Z",
   "ok": true,
   "missing": [],
   "notes": [
-    "round 1: scene: thing is over 11 letters: Chocolate bar",
-    "round 2: chapter dropped, its opening words are not said in the lecture: The power of framing"
+    "round 2: scene: thing is over 11 letters: A 'Poison' label",
+    "round 3: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line"
   ],
   "unit": {
     "n": 4,
     "title": "Parts of the soul II",
-    "needIt": "Understanding how your brain works helps you see why you make quick mistakes or feel sudden urges. It helps you realize that your first instinct isn't always your best choice.",
-    "why": "Our brains have two systems. One is fast and automatic, like a reflex. The other is slow and logical, like solving a math problem. Sometimes, these two systems fight each other, leading us to make choices that don't make sense.",
+    "needIt": "Understanding how your brain works helps you see why you make quick mistakes or feel sudden urges. It helps you catch your own habits before they lead to bad choices.",
+    "why": "Our brains have two systems. One is fast and automatic, like a reflex. The other is slow and logical, like solving a math problem. Sometimes, our old habits act like a 'ghost' that pulls us toward a choice even when we know better.",
     "outcome": "Identify when your automatic habits are overriding your logical goals.",
+    "reachesYou": "You feel this when you grab a snack even though you are on a diet. You see it when you reach for your phone out of habit before you even think about it.",
+    "do": "Notice one time today when you do something automatically without thinking. Stop for a second and ask yourself why you did it.",
     "chapters": [
       {
-        "t": 70,
-        "title": "Sampling Bias",
-        "words": "We just made a classic and dangerous mistake, a mistake known as"
-      },
-      {
-        "t": 208,
-        "title": "The Weirdest People",
-        "words": "And what the article argued was that a great deal of"
-      },
-      {
         "t": 510,
-        "title": "Thorndike's Reasoning",
+        "title": "The Thorndike Tradition",
         "words": "So he describes in this 1922 article an experiment that he does,"
       },
       {
         "t": 833,
-        "title": "Wason Selection Task",
-        "words": "So famously, the Wason selection tasks ask people to determine which"
+        "title": "The Wason Selection Task",
+        "words": "So famously, the Wason selection tasks ask people to determine which of"
       },
       {
         "t": 1201,
-        "title": "System 1 and 2",
+        "title": "System One and System Two",
         "words": "They suggest that we have two relatively autonomous mechanisms for processing"
       },
       {
-        "t": 1740,
+        "t": 1760,
         "title": "Framing Effects",
-        "words": "Notice, again, plan A and plan B on the two sides"
+        "words": "And we get these sorts of framing effects over and over."
       },
       {
         "t": 2474,
         "title": "The Concept of Alief",
-        "words": "So to have an alief is roughly to have a representationally"
+        "words": "So to have an alief is roughly to have a representationally mediated"
       }
     ],
     "quiz": [
       {
         "q": "What is sampling bias?",
         "choices": [
-          "A biased sample",
-          "A random error",
-          "A fast reflex",
-          "A logical choice"
+          "Using a biased sample",
+          "Picking a random group",
+          "Testing everyone at once",
+          "A type of memory"
         ],
         "a": 0,
-        "why": "The lecture explains that using a non-representative group leads to inaccurate information.",
+        "why": "The lecture explains that using a group that is not representative of everyone leads to wrong conclusions.",
         "quote": "We used a measure which doesn't give us accurate information about what we wanted to find out.",
         "t": 84
       },
       {
         "q": "What does 'WEIRD' stand for?",
         "choices": [
-          "Western, Educated, Rich, Democratic",
+          "Wise, Early, Intelligent, Rare, Diverse",
           "Western, Educated, Industrialized, Rich, Democratic",
-          "Wild, Energetic, Rare, Diverse",
-          "Wise, Experienced, Intelligent, Rational"
+          "Western, Energetic, Intense, Radical, Direct",
+          "Wild, Easy, Interesting, Real, Different"
         ],
         "a": 1,
-        "why": "The lecture defines WEIRD as a specific group of people often used in psychological research.",
+        "why": "The lecture uses this acronym to describe the specific group of people often studied in psychology.",
         "quote": "And weird here stands for Western, educated, industrialized, rich, and democratic.",
         "t": 185
       },
       {
-        "q": "Why did people find the question about 'b1 plus b2' harder than 'x plus y'?",
+        "q": "How did Thorndike's subjects react to complex characters?",
         "choices": [
-          "The math was more complex",
-          "They did not know the letters",
-          "It was a different type of math",
-          "The characters were more complex"
+          "They did better",
+          "They did the same",
+          "They gave up",
+          "They did much worse"
         ],
         "a": 3,
-        "why": "The lecture explains that using complex characters instead of simple ones lowers performance even if the math is the same.",
+        "why": "The lecture states that complex characters caused a massive drop in performance.",
         "quote": "Presenting people with problems that were formally identical, but which differed in terms of the complexity of the characters used to represent them, produced a massive decrement in performance.",
         "t": 585
       },
       {
-        "q": "How did people react to the 'unbelievable' syllogism?",
+        "q": "What is the main difference between the two Wason selection tasks?",
         "choices": [
-          "55% saw it as valid",
-          "90% saw it as valid",
-          "100% saw it as valid",
-          "20% saw it as valid"
+          "One is easy, one is hard",
+          "One is social, one is abstract",
+          "One is true, one is false",
+          "One is about beer, one is about cards"
         ],
-        "a": 0,
-        "why": "People struggle to see logic when the conclusion feels impossible.",
-        "quote": "But as a result of the conclusion being implausible, only 55% of people were able to recognize that the conclusion followed from the premises.",
-        "t": 712
+        "a": 1,
+        "why": "The lecture explains that social embedding awakens reasoning processes that are not present in abstract tasks.",
+        "quote": "One is that it's socially embedded, whereas the first is purely abstract.",
+        "t": 1001
       },
       {
-        "q": "What is the difference between a 'descriptive' rule and a 'normative' rule?",
+        "q": "What is System One?",
         "choices": [
-          "Descriptive is how things are, normative is how they ought to be",
-          "Descriptive is about math, normative is about feelings",
-          "Descriptive is fast, normative is slow",
-          "There is no difference"
+          "Slow and conscious",
+          "Fast and automatic",
+          "Logical and rule-based",
+          "Only for math"
         ],
-        "a": 0,
-        "why": "The lecture uses these terms to explain why social rules trigger different reasoning processes.",
-        "quote": "And the second difference between the bottom and the top is, of course, that this is a normative rule. It's about how things ought to be. Whereas this is a descriptive rule. It's about how things are.",
-        "t": 1052
-      },
-      {
-        "q": "What is a main characteristic of System 1?",
-        "choices": [
-          "Automatic",
-          "Slow",
-          "Effortful",
-          "Rule-based"
-        ],
-        "a": 0,
-        "why": "System 1 is described as the fast, unconscious, and automatic part of our processing.",
-        "quote": "System one operates automatically, whereas system two is consciously controlled.",
-        "t": 1245
+        "a": 1,
+        "why": "System One is described as effortless, fast, and unconscious.",
+        "quote": "System one is unconscious or preconscious, whereas system two is conscious. System one operates automatically, whereas system two is consciously controlled.",
+        "t": 1240
       },
       {
         "q": "What is a framing effect?",
         "choices": [
           "A bias based on how info is presented",
-          "A type of memory",
-          "A fast reflex",
-          "A logical rule"
+          "A way to frame a picture",
+          "A type of logical reasoning",
+          "A memory trick"
         ],
         "a": 0,
-        "why": "The lecture shows how changing the way a choice is described changes the choice people make.",
+        "why": "The lecture shows how people choose differently based on whether a problem is framed as a gain or a loss.",
         "quote": "Just one is framed in terms of who will live, the other in terms of who will die, and the result is almost a complete inversion of people's preferences.",
         "t": 1747
+      },
+      {
+        "q": "What is an 'alief'?",
+        "choices": [
+          "A logical belief",
+          "A conscious choice",
+          "A habitual propensity",
+          "A new memory"
+        ],
+        "a": 2,
+        "why": "An alief is a habitual way of responding to the world that can override current beliefs.",
+        "quote": "So to have an alief is roughly to have a representationally mediated propensity to respond to an apparent stimulus in a particular way.",
+        "t": 2474
       }
     ],
     "crystal": {
       "speed": 0.3,
       "partials": [
-        "System 1 is fast and automatic.",
-        "System 2 is slow and effortful.",
-        "Framing changes our choices.",
-        "Aliefs are lagging habits.",
-        "We have a multi-part soul."
+        "System One is fast and automatic.",
+        "System Two is slow and effortful.",
+        "Framing changes how we see choices.",
+        "Habits can override our current beliefs.",
+        "Aliefs are habitual ways of responding."
       ],
-      "key": "Our brains use different systems that can conflict with our conscious goals.",
+      "key": "Our brains use automatic habits (aliefs) that can override our conscious logic.",
       "decoys": [
         {
-          "text": "System 1 is always correct.",
-          "why": "The lecture shows System 1 can be biased by framing and aliefs."
+          "text": "System One is always correct.",
+          "why": "The lecture shows that System One can be biased by framing and habits."
         },
         {
-          "text": "Aliefs are the same as beliefs.",
-          "why": "The lecture distinguishes aliefs as habitual propensities, while beliefs are what we think is true."
+          "text": "Aliefs are the same as logical beliefs.",
+          "why": "The lecture distinguishes between what we believe and the habitual 'alief' that pulls us."
         }
       ],
-      "aha": "Fast habits (System 1/Aliefs) often override slow logic (System 2/Beliefs)."
+      "aha": "The automatic 'alief' system often acts faster than our conscious 'System Two' logic."
     },
     "scene": {
-      "analogy": "A person reaches for a snack in a dark kitchen.",
+      "analogy": "A person reaching for a snack on a diet",
       "map": [
         [
-          "The person",
-          "The person"
+          "The hungry person",
+          "The logical mind"
         ],
         [
           "The snack",
-          "The snack"
+          "The old habit"
         ],
         [
-          "Habit",
-          "Alief"
+          "A habit",
+          "A snack"
         ]
       ],
       "actors": [
@@ -192,10 +184,10 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The person",
+          "label": "The hungry person",
           "color": "blue",
           "o": 0,
-          "size": 22
+          "size": 18
         },
         {
           "id": "right",
@@ -215,7 +207,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "HABIT",
+          "label": "A HABIT",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -227,7 +219,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "REACH",
+          "label": "REACHING",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -238,7 +230,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I didn't even think about it, I just did it.",
+          "label": "I knew I should not have eaten that.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -246,7 +238,7 @@
       ],
       "beats": [
         {
-          "say": "The kitchen is dark and quiet.",
+          "say": "They want to lose weight.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -262,7 +254,7 @@
           }
         },
         {
-          "say": "The person reaches out.",
+          "say": "They see the snack.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -273,19 +265,19 @@
           }
         },
         {
-          "say": "They grab the snack.",
+          "say": "They grab it fast.",
           "dur": 2.6,
           "set": {
             "left": {
               "sub": "Grabs the snack"
             },
             "right": {
-              "sub": "Feels a bit guilty"
+              "sub": "Feels regret"
             }
           }
         },
         {
-          "say": "They feel a bit surprised.",
+          "say": "They feel guilty.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -294,31 +286,31 @@
           }
         },
         {
-          "say": "An alief is a fast habit that acts before you think.",
+          "say": "Habits act as a hidden force that overrides our conscious plans.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "The person",
-              "size": 22,
+              "label": "The logical mind",
+              "size": 18,
               "color": "gold"
             },
             "right": {
-              "label": "The snack",
+              "label": "The old habit",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "ALIEF",
+              "label": "A SNACK",
               "size": 18
             },
             "act": {
-              "label": "REACH",
+              "label": "REACHING",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "A habit is a fast way of responding to the world.",
-              "size": 18,
+              "label": "The habit pulls harder than the logic.",
+              "size": 22,
               "color": "green"
             }
           }

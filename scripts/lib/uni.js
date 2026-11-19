@@ -464,12 +464,13 @@ function sceneFrom(w) {
 
 // The gate. Takes what the model wrote and the transcript; returns the unit parts that passed and plain notes on
 // everything dropped. Pure: no model, no web, no files (tests/uni.test.js runs it).
+const WORDS = ['needIt', 'why', 'outcome', 'reachesYou', 'do']; // the plain sentences every unit shows
 function gateDraft(raw, tr) {
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) raw = {};
   const notes = [];
-  const unit = { needIt: clean(raw.needIt), why: clean(raw.why), outcome: clean(raw.outcome) };
-  for (const k of ['needIt', 'why', 'outcome']) if (unit[k].length < 20) notes.push('"' + k + '" is missing or too short');
-  for (const k of ['needIt', 'why', 'outcome']) if (FORBIDDEN.test(unit[k])) notes.push('"' + k + '" names a forbidden source');
+  const unit = { needIt: clean(raw.needIt), why: clean(raw.why), outcome: clean(raw.outcome), reachesYou: clean(raw.reachesYou), do: clean(raw.do) };
+  for (const k of WORDS) if (unit[k].length < 20) notes.push('"' + k + '" is missing or too short');
+  for (const k of WORDS) if (FORBIDDEN.test(unit[k])) notes.push('"' + k + '" names a forbidden source');
   const chapters = [];
   for (const c of arr(raw.chapters)) {
     const hit = exact(tr, c.words);
@@ -505,6 +506,8 @@ function gateDraft(raw, tr) {
   else notes.push('the crystal needs 5 partials, a key, 2 decoys with why, and an aha line');
   const missing = [];
   if (unit.needIt.length < 20) missing.push('why you need this');
+  if (unit.reachesYou.length < 20) missing.push('how this reaches you');
+  if (unit.do.length < 20) missing.push('do this week');
   if (unit.chapters.length < 3) missing.push('3 chapters (has ' + unit.chapters.length + ')');
   if (unit.quiz.length < 4) missing.push('4 quiz questions (has ' + unit.quiz.length + ')');
   if (!unit.crystal) missing.push('crystal');
@@ -529,6 +532,8 @@ Write JSON with these fields:
 - needIt: one or two plain sentences on how this helps a person decide or live better, with everyday examples, for someone who will never study the field.
 - why: two or three sentences that tell the heart of the lecture as a small story.
 - outcome: one short line that starts with a verb: what the learner can do afterwards.
+- reachesYou: two sentences on where an ordinary person meets this in daily life (shops, phones, work, family), speaking to "you".
+- do: one small thing to try this week that uses the idea, in one or two sentences, starting with a verb.
 - scene: the words for a small picture of ONE everyday situation that works the same way as the lecture's main idea (not the lecture's own example; something from a kitchen, a shop, a school, a street). Two sides face each other with one thing between them. Keep every length limit, they are hard limits:
   "analogy" (the situation in a few words, at most 70 letters), "left" and "right" (who or what is on each side, at most 20 letters each), "thing" (what is between them, one or two words, at most 11 letters), "act" (what happens, one word, at most 11 letters), "leftEnd" and "rightEnd" (how each side ends up, at most 30 letters each), "line" (what someone says or feels at the end, at most 56 letters), "says" (exactly 4 short captions telling it in order: the setup, what happens, the result, the feeling; at most 70 letters each), and "idea": the same picture renamed as the lecture's idea, with "left", "right", "thing", "act", "line" (same limits; the idea's own name for each part) and "say" (one caption that states the idea plainly, at most 70 letters).
 - chapters: 4 to 7 parts of the lecture, in order. Each has "title" (a few plain words) and "words": the first 8 to 12 words spoken where that part begins, COPIED EXACTLY from the lecture text, letter for letter.
@@ -574,13 +579,15 @@ async function draft(slug, n, log = () => {}, ask = askOllama) {
     for (const q of g.unit.quiz) if (!kept.some((k) => Math.abs(k.t - q.t) < 5)) kept.push(q);
     if (!best) best = { notes: [], unit: g.unit };
     best.notes.push(...g.notes.map((x) => 'round ' + round + ': ' + x));
-    for (const k of ['needIt', 'why', 'outcome']) if (best.unit[k].length < 20) best.unit[k] = g.unit[k];
+    for (const k of WORDS) if (best.unit[k].length < 20) best.unit[k] = g.unit[k];
     if (g.unit.chapters.length > best.unit.chapters.length) best.unit.chapters = g.unit.chapters;
     best.unit.crystal = best.unit.crystal || g.unit.crystal;
     best.unit.scene = best.unit.scene || g.unit.scene;
     best.unit.quiz = kept.slice().sort((a, b) => a.t - b.t).slice(0, 7);
     best.missing = [];
     if (best.unit.needIt.length < 20) best.missing.push('why you need this');
+    if (best.unit.reachesYou.length < 20) best.missing.push('how this reaches you');
+    if (best.unit.do.length < 20) best.missing.push('do this week');
     if (best.unit.chapters.length < 3) best.missing.push('3 chapters (has ' + best.unit.chapters.length + ')');
     if (best.unit.quiz.length < 4) best.missing.push('4 quiz questions (has ' + best.unit.quiz.length + ')');
     if (!best.unit.crystal) best.missing.push('crystal');

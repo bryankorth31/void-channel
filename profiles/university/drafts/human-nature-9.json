@@ -3,38 +3,31 @@
   "n": 9,
   "title": "Virtue and habit I",
   "model": "gemma4:12b",
-  "made": "2026-11-19T15:42:38.108Z",
+  "made": "2026-11-19T15:59:31.209Z",
   "ok": true,
   "missing": [],
   "notes": [
-    "round 1: scene: idea.thing is over 11 letters: Repeated action"
+    "round 1: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line",
+    "round 2: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line"
   ],
   "unit": {
     "n": 9,
     "title": "Virtue and habit I",
-    "needIt": "This helps you build better habits by turning 'shoulds' into 'just do it' actions. You can use it to stop scrolling on your phone by rewarding yourself for reading a book instead.",
-    "why": "Aristotle taught that we become brave by doing brave acts. Today, we see how our brains turn these repeated actions into automatic laws of nature.",
-    "outcome": "Create a plan to turn a goal into a daily habit using rewards.",
+    "needIt": "This helps you build better habits by turning 'should' into 'just doing.' You can use it to stop procrastinating or start a new routine by changing your environment.",
+    "why": "Aristotle believed we become good by doing good things until they become automatic. The lecture explains how we can use science to turn our goals into these automatic habits.",
+    "outcome": "Create a plan to turn a goal into a daily habit using rewards and environment changes.",
+    "reachesYou": "You see this when you struggle to stop checking your phone or when you find it hard to start a new workout. It shows up every time you try to change a small daily routine.",
+    "do": "Identify one bad habit and remove the tool that makes it easy, like putting your phone in another room.",
     "chapters": [
       {
         "t": 1,
         "title": "Two kinds of laws",
-        "words": "So today's lecture is about the claim that we've been"
-      },
-      {
-        "t": 70,
-        "title": "Normative vs Descriptive",
-        "words": "Because gravity isn't a law that tells you how you ought"
+        "words": "So today's lecture is about the claim that we've been exploring"
       },
       {
         "t": 276,
-        "title": "Habits as tools",
-        "words": "Habits are tools for turning oughts into is's. Habits are ways"
-      },
-      {
-        "t": 500,
-        "title": "How habits form",
-        "words": "So initially when you learned how to drive a car, you"
+        "title": "Turning oughts into is's",
+        "words": "Habits are tools for turning oughts into is's. Habits are ways of"
       },
       {
         "t": 1608,
@@ -44,138 +37,116 @@
       {
         "t": 2131,
         "title": "Structuring your life",
-        "words": "So what the framework of operant conditioning provides is a way"
+        "words": "What the framework of operant conditioning provides is a way of cashing"
       }
     ],
     "quiz": [
       {
-        "q": "What is the difference between a descriptive law and a normative law?",
-        "choices": [
-          "Descriptive is a rule; normative is a fact",
-          "Descriptive is how things are; normative is how they ought to be",
-          "They are exactly the same",
-          "Normative laws only apply to animals"
-        ],
-        "a": 1,
-        "why": "Descriptive laws describe facts of the world, while normative laws express how things should be.",
-        "quote": "Because gravity isn't a law that tells you how you ought to behave. It's a law that tells you how things do behave.",
-        "t": 70
-      },
-      {
         "q": "What is a normative law?",
         "choices": [
           "A law of nature",
-          "A fact about the past",
-          "A rule of how to behave",
-          "A biological process"
+          "A law of physics",
+          "A rule of how things should be",
+          "A descriptive fact"
         ],
         "a": 2,
-        "why": "Normative laws are about how things ought to be, like rules or norms.",
-        "quote": "They are laws in the sense that you find over at the Yale law school.",
+        "why": "Normative laws are about 'oughts' or how people should behave.",
+        "quote": "They are laws in the sense that you find over at the Yale law school. But in addition, there are laws of a very different kind spread around the rest of campus. Spread around, in fact, everything that you ever do. And those are descriptive laws.",
         "t": 143
       },
       {
         "q": "What is a descriptive law?",
         "choices": [
-          "A fact about the world",
+          "A fact about how the world is",
           "A rule of behavior",
-          "A moral judgment",
+          "A moral guide",
           "A social norm"
         ],
         "a": 0,
-        "why": "Descriptive laws describe how things actually are, like gravity or biology.",
-        "quote": "They tell you the way things actually are.",
+        "why": "Descriptive laws describe how things actually behave in the world.",
+        "quote": "They tell you the way things actually are. So it would be sort of funny to have a t-shirt, if a car hits you, you will die. It's not just a bad thing. It's the law.",
         "t": 163
       },
       {
         "q": "How does Aristotle say we learn a craft?",
         "choices": [
           "By thinking about it",
-          "By producing the product",
+          "By producing the same product",
           "By watching others",
           "By reading books"
         ],
         "a": 1,
-        "why": "Aristotle argues that we become what we do by repeatedly performing the action.",
-        "quote": "So when Aristotle says we learn a craft by producing the same product that we must produce when we've learned it",
+        "why": "Aristotle argues that we learn by doing the action itself.",
+        "quote": "So when Aristotle says we learn a craft by producing the same product that we must produce when we've learned it, we become builders by building, harpists by playing the harp in the same way, we become just by doing just",
         "t": 322
       },
       {
-        "q": "What is the main goal of parenting mentioned?",
+        "q": "What happens to behaviors that are initially under conscious control?",
         "choices": [
-          "Teaching facts",
-          "Instilling instinctive responses",
-          "Giving rewards",
-          "Setting rules"
-        ],
-        "a": 1,
-        "why": "Parenting aims to make good choices automatic so children do them without thinking.",
-        "quote": "one of the main goals of parenting is to instill in one's children instinctive responses that accord with reflective commitments.",
-        "t": 613
-      },
-      {
-        "q": "Why is it hard to change habits just by talking to yourself?",
-        "choices": [
-          "We lack enough logic",
-          "Habits are always permanent",
-          "We are not just composed of reason",
-          "Talking is a waste of time"
-        ],
-        "a": 2,
-        "why": "The lecture explains that humans have biological and emotional parts that do not always follow logic.",
-        "quote": "Part of the reason that at least 65% of you fall into the category of people who are unable to talk yourself out of an unwanted behavior is that we aren't just composed of reason.",
-        "t": 929
-      },
-      {
-        "q": "What is operant conditioning?",
-        "choices": [
-          "Passive association",
-          "A biological law",
-          "A type of punishment",
-          "Active behavior and outcomes"
+          "They disappear",
+          "They stay the same",
+          "They become harder",
+          "They become automatized"
         ],
         "a": 3,
-        "why": "It focuses on how our own actions lead to specific consequences or rewards.",
+        "why": "Repeated practice turns conscious actions into automatic routines.",
+        "quote": "So patterns of behavior that are initially under conscious control can, through a process of repeated practice, become automatized.",
+        "t": 487
+      },
+      {
+        "q": "What is a neutral stimulus in classical conditioning?",
+        "choices": [
+          "Something that causes salivation",
+          "Something that produces no reaction",
+          "Something that causes fear",
+          "A food item"
+        ],
+        "a": 1,
+        "why": "A neutral stimulus is something that initially produces no specific response.",
+        "quote": "By contrast, there are lots of things in the world, bells for example, which produce in the dog no reaction at all. You ring a bell, the dog goes, big woof. Who cares, it's a bell.",
+        "t": 1387
+      },
+      {
+        "q": "What is operant conditioning concerned with?",
+        "choices": [
+          "Passive consumption",
+          "Natural instincts",
+          "Genetic traits",
+          "Relation between behaviors and outcomes"
+        ],
+        "a": 3,
+        "why": "Operant conditioning looks at how behaviors are shaped by their consequences.",
         "quote": "Operant conditioning is concerned with the relation between behaviors that you yourself perform and the outcomes to which those behaviors typically give rise.",
         "t": 1608
+      },
+      {
+        "q": "What is negative reinforcement?",
+        "choices": [
+          "Punishing a behavior",
+          "Adding a reward",
+          "Ignoring a behavior",
+          "Removing an aversive stimulus"
+        ],
+        "a": 3,
+        "why": "Negative reinforcement increases a behavior by taking away something unpleasant.",
+        "quote": "I can provide you with positive reinforcement for desired behavior, or one can reinforce a desired behavior through what is technically known as negative reinforcement, the removal of an aversive stimulus.",
+        "t": 1734
       }
     ],
-    "crystal": {
-      "speed": 0.3,
-      "partials": [
-        "Normative laws are about how we ought to act.",
-        "Descriptive laws describe how the world actually is.",
-        "Habits turn 'oughts' into 'is's.",
-        "Repeated practice makes actions automatic.",
-        "Rewards help reinforce desired behaviors."
-      ],
-      "key": "Habits turn conscious choices into automatic laws of behavior.",
-      "decoys": [
-        {
-          "text": "Arguments alone can change habits.",
-          "why": "Aristotle says arguments alone are often not enough to change long-held habits."
-        },
-        {
-          "text": "Punishment is the best way to stop a habit.",
-          "why": "The lecture suggests rewarding the opposite behavior is more effective than punishment."
-        }
-      ],
-      "aha": "By repeating actions and using rewards, we turn our goals into our natural reality."
-    },
     "scene": {
-      "analogy": "A student choosing between a phone and a book",
+      "analogy": "A student trying to study without a phone",
       "map": [
         [
-          "Student",
-          "Old Habit"
+          "A student",
+          "A goal"
         ],
         [
-          "Book",
-          "New Goal"
+          "A phone",
+          "A habit"
         ],
         [
-          "Phone",
-          "Reward"
+          "A desk",
+          "Practice"
         ]
       ],
       "actors": [
@@ -186,7 +157,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Student",
+          "label": "A student",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -198,7 +169,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "Book",
+          "label": "A phone",
           "color": "blue",
           "o": 0,
           "size": 22
@@ -209,7 +180,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "PHONE",
+          "label": "A DESK",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -221,7 +192,7 @@
           "x": 340,
           "y": 160,
           "w": 120,
-          "label": "PUT DOWN",
+          "label": "PUT AWAY",
           "color": "fg",
           "o": 0,
           "s": 0.4,
@@ -232,15 +203,15 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I am choosing to make focus my new default.",
+          "label": "I can finally get my work done without distractions.",
           "color": "pink",
-          "size": 22,
+          "size": 18,
           "o": 0
         }
       ],
       "beats": [
         {
-          "say": "A student sits with a phone and a book.",
+          "say": "A student sits at a desk.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -256,7 +227,7 @@
           }
         },
         {
-          "say": "The phone rings and tempts them.",
+          "say": "The phone vibrates nearby.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -267,19 +238,19 @@
           }
         },
         {
-          "say": "The student puts the phone in another room.",
+          "say": "The student puts it away.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Focuses on study"
+              "sub": "Focuses on work"
             },
             "right": {
-              "sub": "Stays on shelf"
+              "sub": "Stays silent"
             }
           }
         },
         {
-          "say": "They feel calm and start to read.",
+          "say": "They feel a sense of focus.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -288,36 +259,58 @@
           }
         },
         {
-          "say": "Turn a 'should' into a 'do' by rewarding the new path.",
+          "say": "Repeated practice turns a choice into a natural law.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "Old Habit",
+              "label": "A goal",
               "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "New Goal",
+              "label": "A habit",
               "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "REWARD",
+              "label": "PRACTICE",
               "size": 18
             },
             "act": {
-              "label": "REPLACE",
+              "label": "REPEAT",
               "size": 18,
               "color": "pink"
             },
             "line": {
-              "label": "Replace the old urge with a rewarded new action.",
-              "size": 18,
+              "label": "Practice turns a goal into a natural habit.",
+              "size": 22,
               "color": "green"
             }
           }
         }
       ]
+    },
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Normative laws are about how we should act.",
+        "Descriptive laws are about how the world is.",
+        "Habits turn 'oughts' into 'is's.",
+        "Repetition makes actions automatic.",
+        "Aristotle says we learn by doing."
+      ],
+      "key": "Habits turn moral goals into automatic behaviors through repeated practice.",
+      "decoys": [
+        {
+          "text": "Arguments alone can change habits.",
+          "why": "Aristotle says arguments alone are not sufficient to make people decent."
+        },
+        {
+          "text": "Punishment is the best way to build a habit.",
+          "why": "Kasdan says rewarding the opposite is stronger and lasts longer than punishment."
+        }
+      ],
+      "aha": "By repeating a desired action, you turn a moral 'should' into a natural 'is'."
     },
     "main": {
       "role": "watch",

@@ -3,190 +3,174 @@
   "n": 3,
   "title": "Parts of the soul I",
   "model": "gemma4:12b",
-  "made": "2026-11-19T15:37:23.848Z",
+  "made": "2026-11-19T15:57:21.816Z",
   "ok": true,
   "missing": [],
-  "notes": [
-    "round 1: question dropped, its quote is under 8 words: What was the name of the man who struggled with hi",
-    "round 1: question dropped, its quote is not said word for word: How does Plato describe the 'appetite' part of the",
-    "round 2: the crystal needs 5 partials, a key, 2 decoys with why, and an aha line",
-    "round 2: scene: thing is over 11 letters: A chocolate bar",
-    "round 3: scene: line is over 56 letters: I knew I should eat the salad but the do",
-    "round 3: scene: idea.line is over 56 letters: Our minds are a constant tug of war betw",
-    "round 3: scene: idea.say is over 70 letters: We are often pulled in different directi"
-  ],
+  "notes": [],
   "unit": {
     "n": 3,
     "title": "Parts of the soul I",
-    "needIt": "Understanding that your mind has different parts helps you realize why you sometimes do things you regret. It helps you plan better ways to handle cravings or habits by knowing how your brain works.",
-    "why": "A man named Leontius saw bodies and felt a strong urge to look at them even though he knew he should turn away. He struggled with himself but eventually let his appetite win. This shows how our inner drives can sometimes overpower our better judgment.",
+    "needIt": "Understanding that your mind has different parts helps you realize why you sometimes do things you regret. It helps you plan better ways to handle cravings or habits by knowing how your brain actually works.",
+    "why": "The lecture explores how humans are often conflicted inside. It uses stories like a man tempted by a sight he finds gross, a woman lost in a love she knows is wrong, and a man with a brain injury who could no longer control his impulses. These stories show that we are not just one single voice, but a mix of drives, instincts, and reasons.",
     "outcome": "Identify the different internal forces that influence your choices and behaviors.",
+    "reachesYou": "You feel this when you want to scroll on your phone but know you should be sleeping. You see it when you choose a snack even though you promised yourself you would eat healthy.",
+    "do": "Notice one time today when you feel a 'tug' between what you want to do right now and what you know is better for you. Just observe the feeling without judging it.",
     "chapters": [
       {
-        "t": 1,
-        "title": "The conflict of the soul",
-        "words": "So today's lecture is a lecture about the parts of the soul."
+        "t": 51,
+        "title": "The story of Leontius",
+        "words": "Leontius, the son of Aglion, was coming up from the Piraeus along"
       },
       {
-        "t": 181,
-        "title": "Medea and her desire",
-        "words": "Second example comes from Ovid's Metamorphoses, a long story in which,"
-      },
-      {
-        "t": 669,
-        "title": "Freud and the unconscious",
-        "words": "The story of human development, says Freud, is the story of"
+        "t": 630,
+        "title": "Freud's bundle of desires",
+        "words": "So Freud's idea is that each of us, when we are born, are"
       },
       {
         "t": 950,
-        "title": "The elephant and the rider",
-        "words": "Haidt's first distinction is between what he calls mind and body."
+        "title": "The rider and elephant",
+        "words": "Haidt's first distinction is between what he calls mind and body. And"
       },
       {
-        "t": 1167,
-        "title": "The brain's two sides",
-        "words": "And though many features of the brain are duplicated across the"
-      },
-      {
-        "t": 1536,
+        "t": 1574,
         "title": "Phineas Gage's accident",
-        "words": "Anybody know the name of this person? Yeah. Phineas Gage."
+        "words": "In reconstructing the accident, it's become clear that the damage which the"
       },
       {
         "t": 2227,
-        "title": "Plato's charioteer and horses",
-        "words": "The first is what he calls reason, or logos. This is"
+        "title": "Plato's chariot and horses",
+        "words": "The first is what he calls reason, or logos. This is represented"
       }
     ],
     "quiz": [
       {
-        "q": "What does Medea struggle to control in the story?",
+        "q": "What does Plato's story of Leontius show?",
         "choices": [
-          "Her love for Jason",
-          "Her anger",
-          "Her hunger",
-          "Her fear"
-        ],
-        "a": 0,
-        "why": "Medea is described as being seized by a love that she tries to quench with reason.",
-        "quote": "Medea, seized with fierce desire by reason, strives to quench the raging fire, but strives in vain.",
-        "t": 211
-      },
-      {
-        "q": "What is the main idea of the 'rider-elephant' metaphor?",
-        "choices": [
-          "The elephant is the part of us that moves us",
-          "Reason is always in control",
-          "The rider is the part of us that feels emotion",
-          "The elephant is the part of us that thinks"
-        ],
-        "a": 0,
-        "why": "Haidt uses the elephant to represent our drives and instincts which provide the impetus for action.",
-        "quote": "Hume's suggestion in the passage that we read, he says, reason is and ought to be the slave of the passions.",
-        "t": 440
-      },
-      {
-        "q": "What is the 'rider' in Jonathan Haidt's metaphor?",
-        "choices": [
-          "The elephant",
-          "The horse",
-          "The charioteer",
-          "The rider"
+          "A man who is perfectly calm",
+          "A man who hates his city",
+          "A man who is very brave",
+          "A man struggling with his own desires"
         ],
         "a": 3,
-        "why": "Haidt uses the rider and elephant to show how we try to control our instincts.",
-        "quote": "he suggests we can understand as an elephant, which we seek to control through whatever mechanisms are possible.",
-        "t": 556
+        "why": "Leontius felt a desire to look at something but was also disgusted by it.",
+        "quote": "He had, says Socrates using Plato's terminology of appetite, he had an appetite to look at them, but at the same time he was disgusted and turned away.",
+        "t": 64
       },
       {
-        "q": "How does Freud describe the 'ego'?",
+        "q": "How does Medea feel about her love for Jason?",
         "choices": [
-          "The part of the soul that feels honor",
-          "A bundle of incoherent desires",
-          "The part of the brain that handles language",
-          "A part of the self that is sensitive to reality"
+          "She loves him and wants nothing else",
+          "She is angry at him",
+          "She is happy with her choice",
+          "She thinks it is a mistake but cannot stop"
         ],
         "a": 3,
-        "why": "Freud defines the ego as the part of the self that recognizes reality and regulates behavior.",
+        "why": "Medea knows the love is against her better judgment but feels overtaken by a force.",
+        "quote": "Meanwhile Medea, seized with fierce desire by reason, strives to quench the raging fire, but strives in vain.",
+        "t": 210
+      },
+      {
+        "q": "What is the role of the 'ego' in Freud's theory?",
+        "choices": [
+          "The source of all desires",
+          "The part that follows social norms",
+          "The part that controls the id",
+          "A part sensitive to reality"
+        ],
+        "a": 3,
+        "why": "Freud describes the ego as the part of the self that is sensitive to reality and recognizes what is possible.",
         "quote": "The one, which he calls the ego, is a part of the self that is sensitive to reality.",
         "t": 683
       },
       {
+        "q": "What is the 'rider-elephant' metaphor about?",
+        "choices": [
+          "The relation between reason and drives",
+          "A circus act",
+          "How we control our bodies",
+          "How to train a pet"
+        ],
+        "a": 0,
+        "why": "The rider represents the part of us with conscious control, while the elephant represents our drives.",
+        "quote": "Haidt's first distinction is between what he calls mind and body.",
+        "t": 950
+      },
+      {
         "q": "What is 'confabulation' in the brain study?",
         "choices": [
-          "A type of memory",
-          "A physical seizure",
-          "Making up an explanation",
-          "A visual trick"
+          "A type of memory loss",
+          "A way to speak two languages",
+          "Making up an explanation for an action",
+          "A physical injury"
         ],
         "a": 2,
-        "why": "The subject made up a reason for his actions because his brain's language center didn't have the information.",
+        "why": "The man made up a reason for his actions because his brain's language center did not have the information.",
         "quote": "He comes up with an explanation for why it is that he has chosen as he has chosen.",
         "t": 1391
       },
       {
-        "q": "What part of the brain is linked to self-regulation in Phineas Gage?",
+        "q": "How does the 'old brain' differ from the 'new brain'?",
         "choices": [
-          "The prefrontal cortex",
-          "The spinal cord",
-          "The gut",
-          "The visual field"
+          "It is faster than the new brain",
+          "It is shared with non-human animals",
+          "It is located only in the head",
+          "It is responsible for language"
         ],
-        "a": 0,
-        "why": "The lecture explains that Gage's damage to the prefrontal cortex caused a loss of self-regulation.",
-        "quote": "it's become clear that the damage which the pole did was to an area of Gage's called the ventromedial prefrontal cortex.",
-        "t": 1578
+        "a": 1,
+        "why": "Haidt explains that the old brain is the part we share with non-human animals.",
+        "quote": "Roughly, the parts of our brain, the brain stem and the subcortical regions, that we share with non-human animals",
+        "t": 1491
       },
       {
-        "q": "What did the subjects do when primed with 'elderly' words?",
+        "q": "What happened to Phineas Gage's brain?",
         "choices": [
-          "They walked more slowly to the elevator",
-          "They walked faster to the elevator",
-          "They stayed in the room longer",
-          "They asked for a bingo game"
+          "It damaged his prefrontal cortex",
+          "It was a small scratch",
+          "It did not hurt him at all",
+          "It made him smarter"
         ],
         "a": 0,
-        "why": "The study showed that unconscious priming of certain words slowed down their physical movement.",
-        "quote": "But those who had been given words associated with the elderly went very slowly.",
-        "t": 2018
+        "why": "The damage to his prefrontal cortex caused him to lose his ability to self-regulate.",
+        "quote": "In reconstructing the accident, it's become clear that the damage which the pole did was to an area of Gage's called the ventromedial prefrontal cortex.",
+        "t": 1574
       }
     ],
     "crystal": {
       "speed": 0.3,
       "partials": [
-        "We have internal drives that pull us in different directions.",
-        "Reason can sometimes be overridden by these drives.",
+        "We often feel conflicted within ourselves.",
+        "Some drives are unconscious and hard to control.",
+        "Reason can be overridden by intense desires.",
         "The prefrontal cortex helps us regulate our actions.",
-        "Some parts of our brain work automatically without us knowing.",
-        "We often make up reasons to explain our unconscious actions."
+        "We can train ourselves through associations."
       ],
-      "key": "The human soul is divided into different parts that often conflict with each other.",
+      "key": "Human nature involves a constant internal conflict between different parts of the soul.",
       "decoys": [
         {
           "text": "Reason is always in total control of our actions.",
-          "why": "The lecture shows that appetite and emotion often overpower reason."
+          "why": "The lecture shows that reason is often overridden by appetite or instinct."
         },
         {
-          "text": "The brain works as one single unified unit.",
-          "why": "The lecture describes how different parts of the brain and soul work independently."
+          "text": "We are only one single, unified personality.",
+          "why": "The lecture argues we are a bundle of different drives and parts."
         }
       ],
-      "aha": "By understanding these different parts, we can see why we struggle to act on our best judgment."
+      "aha": "By understanding our internal divisions, we can better navigate the conflicts between our desires and our reason."
     },
     "scene": {
-      "analogy": "A person choosing a snack in a grocery store",
+      "analogy": "A person choosing between a healthy salad and a donut",
       "map": [
         [
-          "The hungry person",
-          "The hungry person"
+          "The healthy choice",
+          "Reason"
         ],
         [
-          "A box of cookies",
-          "A box of cookies"
+          "The sugary treat",
+          "Appetite"
         ],
         [
-          "A diet plan",
-          "A diet plan"
+          "The donut",
+          "Chocolate"
         ]
       ],
       "actors": [
@@ -197,7 +181,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "The hungry person",
+          "label": "The healthy choice",
           "color": "blue",
           "o": 0,
           "size": 18
@@ -209,7 +193,7 @@
           "y": 40,
           "w": 250,
           "h": 100,
-          "label": "A box of cookies",
+          "label": "The sugary treat",
           "color": "blue",
           "o": 0,
           "size": 18
@@ -220,7 +204,7 @@
           "x": 340,
           "y": 20,
           "w": 120,
-          "label": "A DIET PLAN",
+          "label": "THE DONUT",
           "color": "gold",
           "o": 0,
           "s": 0.4,
@@ -243,7 +227,7 @@
           "type": "text",
           "x": 400,
           "y": 325,
-          "label": "I knew I should have stuck to my plan.",
+          "label": "I knew I should have picked the salad.",
           "color": "pink",
           "size": 22,
           "o": 0
@@ -251,7 +235,7 @@
       ],
       "beats": [
         {
-          "say": "The person looks at the cookies.",
+          "say": "A person stands in a bakery.",
           "dur": 2.4,
           "set": {
             "left": {
@@ -267,7 +251,7 @@
           }
         },
         {
-          "say": "They think about their diet.",
+          "say": "They look at a chocolate donut.",
           "dur": 2.4,
           "set": {
             "act": {
@@ -278,19 +262,19 @@
           }
         },
         {
-          "say": "They take a cookie.",
+          "say": "They take a bite of the donut.",
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "Feels guilty"
+              "sub": "Feeling healthy"
             },
             "right": {
-              "sub": "Is empty"
+              "sub": "Feeling guilty"
             }
           }
         },
         {
-          "say": "They feel a bit sad.",
+          "say": "They feel a bit of regret.",
           "dur": 2.6,
           "set": {
             "line": {
@@ -299,21 +283,21 @@
           }
         },
         {
-          "say": "Our inner drives can sometimes overpower our conscious plans.",
+          "say": "We are often conflicted between our desires and our better judgment.",
           "dur": 3.4,
           "set": {
             "left": {
-              "label": "The hungry person",
-              "size": 18,
+              "label": "Reason",
+              "size": 22,
               "color": "gold"
             },
             "right": {
-              "label": "A box of cookies",
-              "size": 18,
+              "label": "Appetite",
+              "size": 22,
               "color": "green"
             },
             "thing": {
-              "label": "A DIET PLAN",
+              "label": "CHOCOLATE",
               "size": 14
             },
             "act": {
@@ -322,8 +306,8 @@
               "color": "pink"
             },
             "line": {
-              "label": "The urge to eat won over the plan to stay healthy.",
-              "size": 18,
+              "label": "The inner struggle of the soul.",
+              "size": 22,
               "color": "green"
             }
           }

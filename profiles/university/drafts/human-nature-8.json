@@ -3,138 +3,105 @@
   "n": 8,
   "title": "Flourishing and detachment",
   "model": "gemma4:12b",
-  "made": "2026-11-19T15:43:27.924Z",
+  "made": "2026-11-19T15:51:27.515Z",
   "ok": true,
   "missing": [],
   "notes": [
-    "round 1: chapter dropped, its opening words are not said in the lecture: The importance of judgment",
-    "round 1: question dropped, its quote is not said word for word: What does Epictetus say is actually harmful?",
-    "round 1: scene: thing is over 11 letters: The bus stop",
-    "round 1: scene: idea.thing is over 11 letters: Your judgment",
-    "round 2: chapter dropped, its opening words are not said in the lecture: Judgment and Reality"
+    "round 1: question dropped, its quote is not said word for word: What is the core of the Serenity Prayer?"
   ],
   "unit": {
     "n": 8,
     "title": "Flourishing and detachment",
-    "needIt": "This helps you stay calm when things go wrong. You can learn to stop worrying about things you cannot change, like the weather or other people's moods.",
-    "why": "Epictetus was a slave who learned to find inner peace by focusing only on his own choices. He taught that we suffer because we try to control the world instead of our own minds.",
-    "outcome": "Distinguish between what you can control and what you cannot.",
+    "needIt": "This helps you stay calm when things go wrong by teaching you to focus only on what you can control. It helps you stop stressing over traffic, the weather, or what other people think of you.",
+    "why": "A man named Epictetus lived as a slave but found freedom by changing how he thought about his life. He taught that we only suffer when we try to control things that are not up to us. By letting go of the outside world, he found a way to stay steady even when life was hard.",
+    "outcome": "Distinguish between things you can change and things you cannot.",
+    "reachesYou": "You feel this when you get stuck in a long line at a store and feel your blood pressure rise. You also feel it when you worry about a mean comment on your phone that you cannot take back.",
+    "do": "Identify one thing today that is bothering you and ask yourself if it is actually under your control.",
     "chapters": [
       {
         "t": 1,
-        "title": "The life of Epictetus",
+        "title": "The Stoic Worldview",
         "words": "So what I want to talk about in today's lecture is a"
       },
       {
-        "t": 298,
-        "title": "The Stoic worldview",
-        "words": "So Stoics held with respect to the underlying metaphysical about reality, that"
+        "t": 501,
+        "title": "The Three Rules",
+        "words": "You need to learn how to respond appropriately to the experience"
       },
       {
         "t": 970,
-        "title": "Two types of things",
-        "words": "Some things are up to us and some things are not up"
+        "title": "Control and Judgment",
+        "words": "Some things are up to us and some things are not up to us."
       },
       {
-        "t": 1595,
-        "title": "Adjusting your desires",
-        "words": "Do not want to have events happen to you as you want"
-      },
-      {
-        "t": 2121,
-        "title": "The story of Stockdale",
-        "words": "This is Admiral James Stockdale, who was, among other things, imprisoned"
+        "t": 2180,
+        "title": "The Stockdale Paradox",
+        "words": "I flew at 500 knots right into a flak trap at"
       }
     ],
     "quiz": [
       {
-        "q": "What was Epictetus's early life like?",
+        "q": "What was the primary goal of the Stoic worldview?",
         "choices": [
-          "A soldier",
-          "A king",
-          "A slave",
-          "A merchant"
+          "To cultivate virtue",
+          "To change the world",
+          "To gain wealth",
+          "To avoid all work"
         ],
-        "a": 2,
-        "why": "The lecture states he spent a significant portion of his life as a slave.",
-        "quote": "He spent the early portion of his life as a slave.",
-        "t": 95
+        "a": 0,
+        "why": "Stoics believed the world has an order and humans should act in accord with reason.",
+        "quote": "And that the responsibility of human beings, given that order, is to cultivate a particular kind of virtue.",
+        "t": 322
       },
       {
-        "q": "What is the Stoic view of the world?",
+        "q": "What does Epictetus suggest we do with our perceptions?",
         "choices": [
-          "Random chaos",
-          "A dream",
-          "A machine",
-          "A divine order"
-        ],
-        "a": 3,
-        "why": "Stoics believed the world is an organic totality governed by divine reason.",
-        "quote": "So Stoics held with respect to the underlying metaphysical about reality, that the world itself is an organic physical totality that's governed by what they called logos or divine reason.",
-        "t": 298
-      },
-      {
-        "q": "What is the 'mistake' Epictetus warns about?",
-        "choices": [
-          "Being lazy",
-          "Confusing what is ours with what is not",
-          "Being too honest",
-          "Being too loud"
+          "Ignore the world",
+          "Alter our perceptions",
+          "Change our desires",
+          "Seek more power"
         ],
         "a": 1,
-        "why": "He says confusing what we can control with what we cannot leads to misery.",
+        "why": "He wants us to see things in a way that does not harm us.",
+        "quote": "You need to alter your perceptions of the world so that you come to apprehend things in such a way that they don't influence you harmfully.",
+        "t": 508
+      },
+      {
+        "q": "What is the 'mistake' Epictetus warns against?",
+        "choices": [
+          "Being too lazy",
+          "Confusing what is ours with what is not",
+          "Being too honest",
+          "Speaking too much"
+        ],
+        "a": 1,
+        "why": "Thinking you can control things you cannot leads to misery.",
         "quote": "The mistake of confusing that over which you have control and that over which you lack control leads to thwarted, upset, miserable, blamingness.",
         "t": 1042
       },
       {
-        "q": "How does Epictetus describe the role of judgment?",
+        "q": "How does Epictetus suggest we handle our desires?",
         "choices": [
-          "Judgment is neutral",
-          "Judgment is a mistake",
-          "Judgment is useless",
-          "Judgment creates value"
-        ],
-        "a": 3,
-        "why": "He argues that things are not good or bad on their own; our judgment gives them that meaning.",
-        "quote": "It is your assessment of the event that gives it that valence.",
-        "t": 1561
-      },
-      {
-        "q": "What does Epictetus say we should do with our desires?",
-        "choices": [
-          "Align them with the world",
-          "Increase them",
-          "Hide them",
-          "Give them up"
+          "Make our desires fit the world",
+          "Make the world fit us",
+          "Have no desires",
+          "Desire only wealth"
         ],
         "a": 0,
-        "why": "He suggests we should want things to happen as they do happen.",
+        "why": "He argues that we should want things to happen as they do happen.",
         "quote": "Do not want to have events happen to you as you want them to, but instead want them to happen as they do happen.",
         "t": 1595
       },
       {
-        "q": "What is the 'direction of fit' example used in the lecture?",
+        "q": "What does Stockdale say is the most harmful thing?",
         "choices": [
-          "A boat voyage",
-          "A prison cell",
-          "A flak trap",
-          "A shopping list"
-        ],
-        "a": 3,
-        "why": "The lecture uses a shopping list to show how shaping desires to fit the world prevents frustration.",
-        "quote": "So because I had some parchment left over from that contract that we signed with the devil a few weeks ago, I thought I'd use it for my shopping list.",
-        "t": 1636
-      },
-      {
-        "q": "What did Stockdale say was the most harmful thing?",
-        "choices": [
-          "Physical torture",
-          "Loss of freedom",
-          "Betraying one's self",
+          "Physical pain",
+          "Losing property",
+          "Betraying oneself",
           "Being alone"
         ],
         "a": 2,
-        "why": "Stockdale felt that destroying his internal character was the greatest harm.",
+        "why": "He argues that destroying your internal character is the true harm.",
         "quote": "Epictetus, look not for any greater harm than this, destroying the trustworthy, self-respecting, well-behaved man inside you.",
         "t": 2384
       }
@@ -142,24 +109,24 @@
     "crystal": {
       "speed": 0.3,
       "partials": [
-        "Focus on your own choices.",
-        "Accept what you cannot change.",
-        "Judgment creates our suffering.",
-        "Align desires with reality.",
-        "Internal character is your power."
+        "Some things are up to us.",
+        "Some things are not up to us.",
+        "We should moderate our desires.",
+        "We should avoid excess emotion.",
+        "We should act in accord with reason."
       ],
-      "key": "True flourishing comes from distinguishing what is within your power from what is not.",
+      "key": "Focus only on what is within your power and accept everything else.",
       "decoys": [
         {
-          "text": "Stoicism means ignoring all feelings.",
+          "text": "Stoicism means having no feelings.",
           "why": "The lecture says it is about acting in accord with reason, not just suppressing emotion."
         },
         {
-          "text": "Epictetus believed social ties don't matter.",
-          "why": "Stockdale's story shows that human connection is still very important."
+          "text": "You should ignore your social relations.",
+          "why": "Stockdale's text shows that human connection is still very important."
         }
       ],
-      "aha": "By narrowing your focus to your own will, you become invincible to external misfortune."
+      "aha": "By separating what you can control from what you cannot, you find peace."
     },
     "scene": {
       "analogy": "A person waiting for a bus in the rain",
@@ -170,7 +137,7 @@
         ],
         [
           "The rain",
-          "The world"
+          "The weather"
         ],
         [
           "A bus stop",
@@ -287,7 +254,7 @@
           }
         },
         {
-          "say": "Control your inner response to things you cannot change.",
+          "say": "Focus on your reaction rather than trying to change the world.",
           "dur": 3.4,
           "set": {
             "left": {
@@ -296,7 +263,7 @@
               "color": "gold"
             },
             "right": {
-              "label": "The world",
+              "label": "The weather",
               "size": 22,
               "color": "green"
             },
@@ -310,8 +277,8 @@
               "color": "pink"
             },
             "line": {
-              "label": "Focus on your inner choice, not the outer world.",
-              "size": 18,
+              "label": "Control your inner world, not the outer one.",
+              "size": 22,
               "color": "green"
             }
           }
