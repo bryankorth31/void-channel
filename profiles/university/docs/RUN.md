@@ -219,6 +219,18 @@ node scripts\uni.js lectures how-the-country-began
 The second line makes one unit to do for each lecture in the Archive item and says how long listening will take.
 Then step 4 (Listen), then `draft how-the-country-began all`, then read and keep. This is how Human nature is made.
 
+## 12. The look
+
+The preview header has a **Look** picker: Navy and brass (the first look), Bright night, Daylight. It changes the
+look on your screen only, so you can judge each one on the real pages. To build the site with a look, set this
+line in `profiles\university\profile.json`:
+
+```
+"look": "bright"
+```
+
+The words are `classic`, `bright` and `daylight`. Then build and deploy (step 8).
+
 ## Rules that keep it legal
 
 - No ads, sponsor listings, fees or email sign-up anywhere on the University. Open Yale and MIT allow their courses

@@ -122,3 +122,16 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   six courses and books the header folds them into one "All courses" list by area, so it stays one row (the live
   site, with four courses, keeps its plain links); the header's own links are no longer caught by the unit list's
   sticky rule. Checked at 1920, 1316 and 821 wide.
+- 19 Nov 2026, Bryan in this chat: "now that we have full usage we can really upgrade and update the explainers and
+  content and really fill out the info and useability of this", then "also need to revamp the esthetic and overall
+  look of university as it is quite dusty looking". Done that day, all in the preview, nothing live:
+  - Usability: Find a course or a lesson; Pick up where you left off; Mark this unit done with ticks and counts
+    (kept in the reader's browser only); a class unit's chapter is read inside the unit; no empty folds.
+  - Explainers: a second scene layout (steps in a row); the 31 class units given plain titles, a Why you need this
+    and a hand-written scene each.
+  - Look: the colours are settings now, and there are three looks: Navy and brass (the first look), Bright night
+    (near black, white type, the voidtv.net cyan, gold and pink, sans headings, brighter photos) and Daylight (light
+    page, dark type, blue accent). The picture stages stay dark in every look. The preview header has a Look picker
+    (kept per browser); `"look"` in profile.json sets the look the site is built with (classic until Bryan picks).
+    Both new looks passed a contrast check on the front page, a course, a class, the mechanisms, a book and the
+    credits at 1316 wide, and no sideways scroll at 1920, 1316 and 821.

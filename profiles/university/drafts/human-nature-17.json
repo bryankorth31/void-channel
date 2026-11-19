@@ -1,0 +1,338 @@
+{
+  "slug": "human-nature",
+  "n": 17,
+  "title": "Punishment I",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T17:07:27.910Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, it needs 4 different choices: What is the first characteristic of punishment?",
+    "round 1: question dropped, its quote is not said word for word: What is a backward-looking justification for punis",
+    "round 1: question dropped, its quote is not said word for word: What is the difference between retribution and rev",
+    "round 1: scene: line is over 56 letters: The fine makes the neighbor pay for the ",
+    "round 1: scene: idea.line is over 56 letters: Restitution aims to return the victim to",
+    "round 2: question dropped, its quote is not said word for word: What does Kant say about the goal of punishment?",
+    "round 2: scene: thing is over 11 letters: Broken glass",
+    "round 2: scene: line is over 56 letters: The school is safe again, and the studen",
+    "round 2: scene: idea.thing is over 11 letters: Broken glass"
+  ],
+  "unit": {
+    "n": 17,
+    "title": "Punishment I",
+    "needIt": "This helps you understand why we feel some people deserve to be punished while others do not. It helps you think about whether a rule is fair because it stops future harm or because it balances the scales of justice.",
+    "why": "A man hits a child while texting. Most people think he deserves punishment. The lecture explores why we feel this way and whether punishment should be about stopping him from doing it again or making him pay for what he did.",
+    "outcome": "Evaluate different reasons for why a society chooses to punish people.",
+    "reachesYou": "You see this when you think about why a person gets a speeding ticket or a fine. You feel it when you wonder if a criminal should be in jail to protect others or just to pay for their crime.",
+    "do": "Think about a time you felt someone deserved a consequence. Ask yourself if you wanted them to suffer because they did wrong or to make sure they never do it again.",
+    "chapters": [
+      {
+        "t": 1,
+        "title": "Moving to punishment",
+        "words": "OK, so what I want to do in today's lecture is to"
+      },
+      {
+        "t": 555,
+        "title": "The harm's way case",
+        "words": "Is the difference that in the case of the workers, it"
+      },
+      {
+        "t": 1154,
+        "title": "Defining civil punishment",
+        "words": "So the first thing, the first characteristic, the one perhaps most"
+      },
+      {
+        "t": 1928,
+        "title": "Retribution and desert",
+        "words": "The retributivist outlook. That's the outlook, roughly, that when somebody does"
+      },
+      {
+        "t": 2284,
+        "title": "Retribution vs revenge",
+        "words": "One axis along which you might contrast retribution and revenge is"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How does the lecture describe the 'harm's way' case?",
+        "choices": [
+          "A trolley problem",
+          "A statistical harm",
+          "A personal choice",
+          "A natural disaster"
+        ],
+        "a": 1,
+        "why": "The lecture suggests that the prime minister case feels more like a statistical harm.",
+        "quote": "Is the difference that in the case of the workers, it feels more like a statistical harm?",
+        "t": 555
+      },
+      {
+        "q": "What is the first characteristic of punishment?",
+        "choices": [
+          "It is a legal rule",
+          "It involves unpleasantness",
+          "It is done by a state",
+          "It is a public act"
+        ],
+        "a": 1,
+        "why": "The lecture states that punishment involves a certain kind of unpleasantness or suffering.",
+        "quote": "So the first thing, the first characteristic, the one perhaps most salient when we think about punishment, is that punishment is something that involves a certain kind of unpleasantness or suffering.",
+        "t": 1154
+      },
+      {
+        "q": "What is the second characteristic of punishment?",
+        "choices": [
+          "It must be painful",
+          "It must be public",
+          "It must be by a friend",
+          "It must be a response to an offense"
+        ],
+        "a": 3,
+        "why": "The lecture states that punishment is not just random pain but must be in response to a specific offense.",
+        "quote": "It's the infliction of pain or suffering on an individual in response to a particular offense, either a legal offense in the case of legal punishment, or if you think that punishment is also something that can be carried out with regard to moral trespasses in response to a moral offense.",
+        "t": 1258
+      },
+      {
+        "q": "What is a forward-looking justification for punishment?",
+        "choices": [
+          "It is about desert",
+          "It is about avoiding future harm",
+          "It is about the past",
+          "It is about revenge"
+        ],
+        "a": 1,
+        "why": "Forward-looking justifications focus on preventing future crimes.",
+        "quote": "The basic motivation for the forward-looking justification of punishment is that punishment is an effective means of avoiding future harm.",
+        "t": 1484
+      },
+      {
+        "q": "What does restitution aim to do?",
+        "choices": [
+          "Punish the offender",
+          "Stop future crimes",
+          "Rehabilitate the offender",
+          "Make the victim whole"
+        ],
+        "a": 3,
+        "why": "Restitution is about restoring the victim to their pre-harm state.",
+        "quote": "The notion behind restitution is that the goal in which the has legitimate reason to be engaged is that of taking the innocent party and making sure that they are no worse off after having suffered a crime than before having suffered it.",
+        "t": 1767
+      },
+      {
+        "q": "What did Kant say about the justification for punishment?",
+        "choices": [
+          "It is for the future",
+          "It is for the state",
+          "It is for the victim",
+          "It is for the criminal's desert"
+        ],
+        "a": 3,
+        "why": "Kant argues that punishment is only justified because the person committed a crime.",
+        "quote": "Judicial punishment, says Kant, can be imposed only because the individual on whom it is inflicted has committed a crime.",
+        "t": 2016
+      },
+      {
+        "q": "What is a key difference between retribution and revenge?",
+        "choices": [
+          "Retribution is personal",
+          "Retribution is impersonal",
+          "Revenge is by the state",
+          "Revenge is for a code"
+        ],
+        "a": 1,
+        "why": "The lecture explains that retribution is carried out by the state and is impersonal.",
+        "quote": "In terms of the personality involved, the degree of personalization, retribution is impersonal. It's carried out by the state.",
+        "t": 2331
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Punishment involves suffering.",
+        "It must be an intentional act.",
+        "It must be by a legal authority.",
+        "It can be for future safety.",
+        "It can be for moral desert."
+      ],
+      "key": "Punishment is a state-sanctioned infliction of suffering justified by either future safety or past desert.",
+      "decoys": [
+        {
+          "text": "Punishment is always about revenge.",
+          "why": "The lecture distinguishes retribution from revenge, noting retribution is impersonal and state-led."
+        },
+        {
+          "text": "Punishment is only about stopping future crimes.",
+          "why": "The lecture also presents retributivism, which focuses on desert rather than future outcomes."
+        }
+      ],
+      "aha": "Punishment is a tool of the state that balances the scales of justice or protects the future by causing intentional suffering."
+    },
+    "scene": {
+      "analogy": "A referee giving a red card to a player",
+      "map": [
+        [
+          "The Referee",
+          "The State"
+        ],
+        [
+          "The Player",
+          "The Offender"
+        ],
+        [
+          "Red Card",
+          "Punishment"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The Referee",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The Player",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "RED CARD",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "REFEREES",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "The rules must be followed for the game to be fair.",
+          "color": "pink",
+          "size": 18,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "A player breaks a rule.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The referee sees the foul.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The player is sent off.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Maintains the game rules"
+            },
+            "right": {
+              "sub": "Leaves the field"
+            }
+          }
+        },
+        {
+          "say": "The game stays fair.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "Punishment is a formal response to a violation of social rules.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "The State",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "The Offender",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "PUNISHMENT",
+              "size": 14
+            },
+            "act": {
+              "label": "JUSTICE",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Punishment is a response to a violation of a code.",
+              "size": 18,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 17: Punishment I",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "17. Punishment I.mp4",
+      "seconds": 2677,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  }
+}

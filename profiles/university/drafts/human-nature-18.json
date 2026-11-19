@@ -1,0 +1,327 @@
+{
+  "slug": "human-nature",
+  "n": 18,
+  "title": "Punishment II",
+  "model": "gemma4:12b",
+  "made": "2026-11-19T17:08:06.552Z",
+  "ok": true,
+  "missing": [],
+  "notes": [
+    "round 1: question dropped, its quote is not said word for word: Why does the consequentialist argument 'under-gene",
+    "round 1: question dropped, its quote is not said word for word: What is 'tellishment'?",
+    "round 2: scene: idea.line is missing"
+  ],
+  "unit": {
+    "n": 18,
+    "title": "Punishment II",
+    "needIt": "Understanding why we feel some actions deserve more punishment than others helps you judge fairness in your own life. It helps you see why we focus on a person's intent rather than just the final result.",
+    "why": "A person might think that if a crime fails, it shouldn't be punished. But if we only looked at results, a person who tried to hurt someone but got lucky and failed would go free. This shows that our sense of justice is tied to what a person intended to do, not just what happened.",
+    "outcome": "Evaluate whether a punishment is fair based on intent versus outcome.",
+    "reachesYou": "You see this when you decide how much to scold a friend for a mistake. You also see it when you judge a coworker who tried to help but accidentally caused a mess.",
+    "do": "Next time a friend makes a mistake, ask yourself if you are reacting to their intent or just the result.",
+    "chapters": [
+      {
+        "t": 185,
+        "title": "The Consequentialist View",
+        "words": "So what the harm reduction or consequentialist outlook says is that"
+      },
+      {
+        "t": 954,
+        "title": "The Two-Level Theory",
+        "words": "And what he suggests is that we think about the question of"
+      },
+      {
+        "t": 1375,
+        "title": "Psychology of Punishment",
+        "words": "And in exploring these questions, John Darley, from whom we've read"
+      },
+      {
+        "t": 2560,
+        "title": "The Role of Luck",
+        "words": "So here's our standard bad guy, who shows up in town, where"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the sole goal of punishment in a consequentialist view?",
+        "choices": [
+          "To punish the past",
+          "To provide restitution",
+          "To deter future wrongdoing",
+          "To satisfy moral outrage"
+        ],
+        "a": 2,
+        "why": "The lecture states that consequentialism is interested solely in the maximization of utility from that moment onwards.",
+        "quote": "The sole goal of punishment is to prevent or deter future wrongdoing, and the sole justification for punishment is to prevent or deter future wrongdoing.",
+        "t": 241
+      },
+      {
+        "q": "What is a major problem with a pure consequentialist view of punishment?",
+        "choices": [
+          "It is too expensive",
+          "It ignores the law",
+          "It is too harsh",
+          "It under-generates reasons"
+        ],
+        "a": 3,
+        "why": "The lecture explains that if the only goal is to stop future crime, there might be non-punitive ways to do it that don't involve suffering.",
+        "quote": "The first problem is that the consequentialist justification seems to under-generate reasons for punishment if we remember that punishment involves the deliberate bringing about of a harm.",
+        "t": 471
+      },
+      {
+        "q": "What does the lecture say about 'tellishment'?",
+        "choices": [
+          "It focuses on the process",
+          "It is a type of law",
+          "It is a form of luck",
+          "It focuses on the goal"
+        ],
+        "a": 3,
+        "why": "Tellishment refers to focusing on the end goal rather than the process of how we get there.",
+        "quote": "So it seems, and we read about this in the John Rawls piece that we read for last class, to license what's sometimes tellishment, where tellishment means focusing on the telos, focusing on the goal, focusing on the end, rather than focusing on the process.",
+        "t": 719
+      },
+      {
+        "q": "How does John Rawls suggest we justify the practice of punishment?",
+        "choices": [
+          "Through retribution",
+          "Through luck",
+          "Through moral outrage",
+          "Through societal utility"
+        ],
+        "a": 3,
+        "why": "Rawls suggests that the practice itself is justified by its general utility to society.",
+        "quote": "And the suggestion is that what justifies the practice itself is that having such a practice in place is something of societal utility.",
+        "t": 976
+      },
+      {
+        "q": "How does the lecture describe 'altruistic' or 'costly' third-party punishment?",
+        "choices": [
+          "It helps the punisher",
+          "It costs the punisher",
+          "It is a legal requirement",
+          "It is a form of luck"
+        ],
+        "a": 1,
+        "why": "This happens when someone punishes a rule-breaker even if it hurts the punisher and doesn't help them directly.",
+        "quote": "So these are cases where an individual, A, punishes, that is, brings about harms and costs to another individual in in a way that, first of all, brings a cost to A, brings no direct benefits to A, and concerns a norm violation that didn't affect A in the first place.",
+        "t": 1608
+      },
+      {
+        "q": "What does moral outrage direct our attention to?",
+        "choices": [
+          "The victim",
+          "The result",
+          "The perpetrator",
+          "The law"
+        ],
+        "a": 2,
+        "why": "When an act is seen as intentional, we focus on the person who did it.",
+        "quote": "In the case where the act that violates the moral norm is seen as having been intentional, there is a tendency to focus not merely on compensation, but also on punishment.",
+        "t": 2061
+      },
+      {
+        "q": "What does David Lewis suggest about the 'unlucky shooter'?",
+        "choices": [
+          "He should be punished more",
+          "He should be punished less",
+          "He should be punished the same",
+          "He should not be punished"
+        ],
+        "a": 3,
+        "why": "Lewis argues that punishing the successful shooter more than the failed one is like a lottery.",
+        "quote": "The question is why we punish this one more seriously than this one. What sort of justification could possibly underlie this?",
+        "t": 2653
+      }
+    ],
+    "crystal": {
+      "speed": 0.3,
+      "partials": [
+        "Consequentialism focuses on future results.",
+        "Punishment can be justified by utility.",
+        "Intent changes our moral outrage.",
+        "Luck can make a crime succeed or fail.",
+        "Retribution helps us feel satisfied."
+      ],
+      "key": "Human justice balances future consequences with the intent of the person.",
+      "decoys": [
+        {
+          "text": "Punishment is only about the past.",
+          "why": "The lecture discusses both backward-looking and forward-looking views."
+        },
+        {
+          "text": "Luck should determine the severity of punishment.",
+          "why": "Lewis argues that letting luck decide is like a penal lottery."
+        }
+      ],
+      "aha": "We use utility to set the rules, but we use intent to judge the person."
+    },
+    "scene": {
+      "analogy": "A chef accidentally burns a cake",
+      "map": [
+        [
+          "The Chef",
+          "The Chef"
+        ],
+        [
+          "The Customer",
+          "The Customer"
+        ],
+        [
+          "Burnt Cake",
+          "Burnt Cake"
+        ]
+      ],
+      "actors": [
+        {
+          "id": "left",
+          "type": "card",
+          "x": 40,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The Chef",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "right",
+          "type": "card",
+          "x": 510,
+          "y": 40,
+          "w": 250,
+          "h": 100,
+          "label": "The Customer",
+          "color": "blue",
+          "o": 0,
+          "size": 22
+        },
+        {
+          "id": "thing",
+          "type": "stamp",
+          "x": 340,
+          "y": 20,
+          "w": 120,
+          "label": "BURNT CAKE",
+          "color": "gold",
+          "o": 0,
+          "s": 0.4,
+          "size": 14
+        },
+        {
+          "id": "act",
+          "type": "stamp",
+          "x": 340,
+          "y": 160,
+          "w": 120,
+          "label": "SERVE",
+          "color": "fg",
+          "o": 0,
+          "s": 0.4,
+          "size": 18
+        },
+        {
+          "id": "line",
+          "type": "text",
+          "x": 400,
+          "y": 325,
+          "label": "It was a mistake, but it still tastes bad.",
+          "color": "pink",
+          "size": 22,
+          "o": 0
+        }
+      ],
+      "beats": [
+        {
+          "say": "The chef prepares a cake.",
+          "dur": 2.4,
+          "set": {
+            "left": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1,
+              "s": 1
+            }
+          }
+        },
+        {
+          "say": "The cake burns in the oven.",
+          "dur": 2.4,
+          "set": {
+            "act": {
+              "o": 1,
+              "s": 1,
+              "shake": true
+            }
+          }
+        },
+        {
+          "say": "The customer eats the cake.",
+          "dur": 2.6,
+          "set": {
+            "left": {
+              "sub": "Chef feels guilty"
+            },
+            "right": {
+              "sub": "Customer is sad"
+            }
+          }
+        },
+        {
+          "say": "The customer feels disappointed.",
+          "dur": 2.6,
+          "set": {
+            "line": {
+              "o": 1
+            }
+          }
+        },
+        {
+          "say": "We judge the chef by his goal, not just the burnt cake.",
+          "dur": 3.4,
+          "set": {
+            "left": {
+              "label": "The Chef",
+              "size": 22,
+              "color": "gold"
+            },
+            "right": {
+              "label": "The Customer",
+              "size": 22,
+              "color": "green"
+            },
+            "thing": {
+              "label": "BURNT CAKE",
+              "size": 14
+            },
+            "act": {
+              "label": "SERVE",
+              "size": 18,
+              "color": "pink"
+            },
+            "line": {
+              "label": "Intent matters more than the final result.",
+              "size": 22,
+              "color": "green"
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "role": "watch",
+      "title": "Lecture 18: Punishment II",
+      "by": "Tamar Gendler, Yale University, spring 2011",
+      "item": "philosophy-and-the-science-of-human-nature",
+      "file": "18. Punishment II.mp4",
+      "seconds": 2912,
+      "licence": "CC BY-NC-SA 3.0. Open Yale Courses, Yale University. Our scene, quiz and notes are shared under the same licence.",
+      "note": "A full lecture. Use the chapters to watch it in pieces."
+    }
+  }
+}
