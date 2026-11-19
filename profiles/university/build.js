@@ -166,7 +166,7 @@ function unit(u, voices, c) {
 function page(c, all) {
   const others = '<a href="index.html">Home</a>' + all.map((o) => o.slug === c.slug ? '<b>' + esc(o.name) + '</b>' : '<a href="' + esc(o.slug) + '.html">' + esc(o.name) + '</a>').join('');
   const toc = c.units.map((u) => '<a href="#u' + u.n + '"><span>' + u.n + '</span>' + esc(u.title) + '</a>').join('');
-  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}
 <title>${esc(c.name)} · Void University</title>
 ${FONTS}
 <style>
@@ -411,6 +411,24 @@ html[data-look="daylight"] .arrow{background:#fff;color:#141926;border-color:var
 html[data-look="bright"] .hero::after{background:linear-gradient(180deg,rgba(11,12,18,.1) 0%,rgba(11,12,18,.6) 60%,var(--bg) 100%)}
 html[data-look="bright"] .hero .kick{color:var(--acc)}
 `;
+// Install on a phone or tablet (Bryan, 19 Nov 2026: "the whole pwa"; "Yes, do it here"). Every page names the manifest and the
+// home-screen icons (img/, drawn by make-icons.js), so iPhone and iPad Safari add it as an app with the crest, and Chrome and
+// Edge can offer to install it. The Install button in the header (INSTALL below) shows the steps on iPhone and iPad, which have
+// no install prompt of their own. sw.js only shows an offline note; nothing is cached.
+const APPHEAD = '<link rel="manifest" href="/manifest.webmanifest"><link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png"><link rel="apple-touch-icon" href="/img/apple-touch-icon.png"><meta name="theme-color" content="#07080c"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Void University"><meta name="apple-mobile-web-app-status-bar-style" content="black">';
+const MANIFEST = { name: 'Void University', short_name: 'Void University', description: 'Free courses in plain words: learn from people who did it.', start_url: '/', scope: '/', display: 'standalone', background_color: '#0b0c12', theme_color: '#07080c',
+  icons: [{ src: '/img/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/img/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' }, { src: '/img/icon-512-maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }] };
+const APPICONS = ['apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'icon-512-maskable.png'];
+const SW = "self.addEventListener('install',()=>self.skipWaiting());\nself.addEventListener('activate',(e)=>e.waitUntil(self.clients.claim()));\nself.addEventListener('fetch',(e)=>{if(e.request.mode!=='navigate')return;e.respondWith(fetch(e.request).catch(()=>new Response('<!doctype html><meta name=viewport content=\"width=device-width\"><body style=\"background:#0b0c12;color:#f6f7fb;font-family:sans-serif;padding:24px\"><h1>Void University</h1><p>You are offline. Connect and reload.</p>',{headers:{'content-type':'text/html; charset=utf-8'}})))});\n";
+const INSTALL = '<button type="button" class="inst" id="inst" hidden>Install</button><div class="instnote" id="instnote" hidden><b>Add Void University to your home screen</b><p>Tap the Share button <span aria-hidden="true">(the square with an arrow)</span>, then <b>Add to Home Screen</b>.</p><button type="button" id="instok">Got it</button></div>'
+  + '<script>(function(){var b=document.getElementById("inst"),n=document.getElementById("instnote"),P=null;'
+  + 'var ios=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);'
+  + 'var done=function(){return matchMedia("(display-mode: standalone)").matches||navigator.standalone===true};'
+  + 'var show=function(){b.hidden=done()||!(P||ios)};'
+  + 'addEventListener("beforeinstallprompt",function(e){e.preventDefault();P=e;show()});addEventListener("appinstalled",function(){P=null;show()});'
+  + 'b.onclick=function(){if(P){P.prompt();P.userChoice.then(function(){P=null;show()},function(){});return}n.hidden=!n.hidden};'
+  + 'document.getElementById("instok").onclick=function(){n.hidden=true};show();'
+  + 'if("serviceWorker" in navigator&&location.protocol==="https:")addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})})()</script>';
 const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">';
 const CARDCSS = `.card{flex:0 0 auto;display:flex;flex-direction:column;border-radius:8px;overflow:hidden;background:var(--panel);border:1px solid var(--line);text-decoration:none;color:var(--fg);transition:transform .18s ease,border-color .18s ease}
 .card:hover,.card:focus-visible{transform:translateY(-3px);border-color:var(--gold);outline:none}
@@ -439,6 +457,10 @@ header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:
 .nav a:hover{color:var(--fg);background:var(--panel2)}.nav b{color:var(--gold);font-weight:600}
 .lookpick{font-size:12px;color:var(--dim);display:flex;align-items:center;gap:6px}.lookpick select{font:inherit;font-size:12px;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:3px 8px}
 .draft{font-size:12px;color:var(--gold);border:1px solid #5a4a24;padding:3px 9px;border-radius:999px}
+.inst{font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1px solid var(--gold);background:transparent;color:var(--gold);cursor:pointer}.inst:hover{background:var(--panel2)}
+.instnote{position:absolute;right:16px;top:calc(100% + 8px);z-index:40;width:min(340px,calc(100vw - 32px));padding:16px 18px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.5);font-size:15px}.instnote p{margin:8px 0 12px;color:var(--soft)}
+.instnote button{font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}
+header.top{position:relative}
 footer{max-width:1400px;margin:0 auto;padding:30px 32px 44px;color:var(--dim);font-size:14px;border-top:1px solid var(--line)}
 footer a{color:var(--gold)}`;
 const CREST = '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 L36 8 V20 C36 30 28 36 20 38 C12 36 4 30 4 20 V8 Z" fill="#132038" stroke="#d4b06a" stroke-width="1.6"/><path d="M11 15 h18 M11 20 h18 M11 25 h12" stroke="#d4b06a" stroke-width="1.6" stroke-linecap="round"/><circle cx="27" cy="26" r="3" fill="none" stroke="#efe9dc" stroke-width="1.4"/></svg>';
@@ -464,7 +486,7 @@ function shelfPage(b, all) {
     + c.passages.map((p) => '<div class="pair"><div class="plain"><p>' + esc(p.plain) + '</p>'
       + (p.warnings || []).map((w) => '<p class="warn"><b>Do not follow this part as written.</b> ' + esc(w.text) + ' <a href="' + esc(w.url) + '" target="_blank" rel="noopener">' + esc(w.source) + '</a></p>').join('')
       + '</div><details class="old"><summary>As printed in ' + esc(String(b.year)) + '</summary><p>' + esc(p.old) + '</p></details></div>').join('') + '</section>').join('');
-  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(b.title)} · Void University</title>${FONTS}<style>${BASE}
+  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>${esc(b.title)} · Void University</title>${FONTS}<style>${BASE}
 .swrap{display:grid;grid-template-columns:250px minmax(0,1fr);gap:34px;max-width:1500px;margin:0 auto;padding:26px 32px 60px}
 .swrap nav{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;display:flex;flex-direction:column;gap:2px}
 .swrap nav h4{margin:0 0 8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
@@ -515,7 +537,7 @@ function top(current, all) {
       + (SHELFBOOKS.length ? '<div><h5>Old books in plain English</h5>' + SHELFBOOKS.map(link).join('') + '</div>' : '');
     links = home + (here ? '<b>' + esc(here.name) + '</b>' : '') + '<details class="navall"><summary>All courses</summary><div class="navlist">' + groups + '</div></details>';
   }
-  return '<header class="top"><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + DRAFT + '</header>';
+  return '<header class="top"><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + INSTALL + DRAFT + '</header>';
 }
 const IMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'img', 'images.json'), 'utf8')); } catch (e) { return {}; } })();
 const img = (name) => IMG[name] ? IMG[name].file : '';
@@ -551,7 +573,7 @@ function home(all, list) {
     const n = full.filter((c) => c.domain === t).length; // same count as the row: the mechanisms shelf is not a course
     return '<div class="area' + (n ? ' has' : '') + '"><img loading="lazy" src="' + img('a-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""><div><b>' + esc(t) + '</b><small>' + (n ? n + (n === 1 ? ' course' : ' courses') : 'coming') + '</small></div></div>';
   }).join('');
-  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}
 <title>Void University</title>
 ${FONTS}
 <style>
@@ -648,7 +670,7 @@ find.addEventListener('input', function () {
 }
 function credits(all) {
   const rows = Object.keys(IMG).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
-  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Photo credits · Void University</title>${FONTS}<style>${BASE}
+  return `<!doctype html><html lang="en" data-look="${LOOK}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Photo credits · Void University</title>${FONTS}<style>${BASE}
 main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}${LOOKCSS}</style></head><body>
 ${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
@@ -691,6 +713,9 @@ MECH = loaded.find((c) => c.shelf === 'supplement') || null;
 for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });
 fs.mkdirSync(path.join(OUT, 'img'), { recursive: true });
 for (const k of Object.keys(IMG)) fs.copyFileSync(path.join(DIR, IMG[k].file), path.join(OUT, IMG[k].file));
+for (const f of APPICONS) fs.copyFileSync(path.join(DIR, 'img', f), path.join(OUT, 'img', f)); // home-screen icons (make-icons.js)
+fs.writeFileSync(path.join(OUT, 'manifest.webmanifest'), JSON.stringify(MANIFEST));
+fs.writeFileSync(path.join(OUT, 'sw.js'), SW);
 fs.writeFileSync(path.join(OUT, 'credits.html'), credits(loaded));
 fs.writeFileSync(path.join(OUT, 'index.html'), home(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
 for (const b of SHELFBOOKS) {
