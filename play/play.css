@@ -186,8 +186,8 @@ a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--f
 html,body{height:100%;overflow:hidden;overscroll-behavior:none}
 .cover .credits{font-size:12px;color:var(--dim);max-width:520px;margin:14px auto 0}.cover .credits a{color:var(--dim)}
 .menu .credits{font-size:12px;color:var(--dim);margin-top:12px}.menu .credits a{color:var(--dim)}
-/* The donation: a small cross at the bottom of the game picture, outside every touch key's area; dim while playing. */
-.give{position:fixed;left:50%;bottom:4px;transform:translateX(-50%);z-index:4;width:44px;height:44px;border:0;border-radius:50%;
+/* The donation: a small cross at the end of the top bar, where no game key ever is (Bryan: away from the buttons). */
+.give{flex:none;width:44px;height:44px;border:0;border-radius:50%;
   background:transparent;opacity:.55;display:grid;place-items:center;cursor:pointer;padding:0}
 .give img{width:28px;height:auto;filter:drop-shadow(0 1px 3px rgba(0,0,0,.8))}
 .give:hover,.give:focus-visible{opacity:1;outline:none;border-color:var(--pink)}
@@ -199,8 +199,6 @@ html,body{height:100%;overflow:hidden;overscroll-behavior:none}
 body.padmode .bar{transform:translateY(-100%);transition:transform .2s}
 body.padmode.showbar .bar,body.padmode .bar:focus-within{transform:none}
 /* The cross is never on the picture (it covered Tetris's own text): place() puts it in free room off the picture. */
-body.padmode:not(.showbar) .give{display:none}
-.stage:has(.pkeyboard.open) .give{display:none}
 /* ---- The handheld shell (Bryan, 20 Nov 2026: lexROM's original Game Boy look, "Phones, both ways"). ----
    A phone with the touch keys on, while a game plays (body.shell, set in place()). The look follows lexROM's reader:
    a plastic body lit from the top left, a deep screen bezel, raised keys with a dark under-edge that press down, a
@@ -246,3 +244,5 @@ body.shell .pdpad .pdir{position:absolute;z-index:1;color:#1a1825}
 .stage .phones,.stage .phones *,.stage .cover,.stage .cover *{touch-action:manipulation}
 .cover-turn{margin:4px 0 0;font-size:14px;color:var(--acc);text-shadow:0 1px 6px #000}
 .cover-turn[hidden]{display:none}
+/* With the cross in the bar, a narrow phone keeps every tool on one line: "voidtv" without ".net", and Games as its arrow. */
+@media (max-width:430px){.bar .mark .n{display:none}.bar #b-games .w{display:none}.bar{gap:8px;padding-left:calc(8px + env(safe-area-inset-left,0px));padding-right:calc(8px + env(safe-area-inset-right,0px))}.tools{gap:4px}}

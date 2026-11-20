@@ -14,16 +14,18 @@
   <span class="tag">PLAY</span>
   <h1 id="title" class="title">Loading</h1>
   <nav class="tools" aria-label="Game controls">
-    <a id="b-games" class="tool" href="./" title="Back to the shelf of games">&larr; Games</a>
+    <a id="b-games" class="tool" href="./" title="Back to the shelf of games" aria-label="Back to the games">&larr;<span class="w"> Games</span></a>
     <button type="button" id="b-pause" class="tool" title="Pause, save and load (Back and Start together on a gamepad)">Pause</button>
     <button type="button" id="b-phones" class="tool" aria-expanded="false" title="Play with phones as gamepads: scan the code on this screen">Phones</button>
     <button type="button" id="b-touch" class="tool" aria-pressed="false" title="Show or hide the touch controls">Touch</button>
     <button type="button" id="b-full" class="tool" title="Fullscreen">Full</button>
+    <!-- The donation cross lives in the bar, away from every game key (Bryan, 20 Nov 2026: it was "right by the buttons
+         where they press it ... so it needs to be in a different area"). -->
+    <button type="button" id="give" class="give donate" aria-label="Donate to CASH" title="Donate to CASH"><img src="/assets/brand/cash-cross.png" alt="" width="28"></button>
   </nav>
 </header>
 
 <main id="stage" class="stage">
-  <button type="button" id="give" class="give donate" aria-label="Donate to CASH" title="Donate to CASH"><img src="/assets/brand/cash-cross.png" alt="" width="28"></button>
   <!-- Phones as gamepads (Bryan, 20 Nov 2026: "Yes, phone controllers"): scan the code, the phone becomes a gamepad. -->
   <section id="phones" class="phones" hidden aria-label="Phones as gamepads">
     <div id="phones-qr" class="phones-qr"></div>

@@ -60,10 +60,6 @@
     if ($('cover-turn')) $('cover-turn').hidden = !(card && isPhone() && innerHeight > innerWidth && PlayCards.isPad(card));
     document.body.classList.toggle('padmode', padMode);
     document.body.classList.toggle('shell', shell);
-    // The donation cross, never on the picture (audit: it covered Tetris's text): upright, the bottom centre of the keys'
-    // room (between the arrows and the buttons); sideways, the top of the left column, above its keys; on a computer,
-    // beside the picture's lower right; in controller mode, just under the bar while the bar shows.
-    placeGive.L = L;
     document.body.dataset.mode = L.mode;
     const set = (el, r) => { if (!r) { el.hidden = true; return; } el.hidden = false; Object.assign(el.style, { left: r.x + 'px', top: r.y + 'px', width: r.w + 'px', height: r.h + 'px' }); };
     // A console pad floats in one layer: the whole stage sideways, the room under the picture upright.
@@ -77,34 +73,6 @@
       if (place.sig !== sig) { pad = PlayTouch.build(zones, card, hub); place.sig = sig; }
     } else place.sig = '';
     $('b-touch').setAttribute('aria-pressed', String(touch));
-    placeGive();
-  }
-
-  // The donation cross never sits on the picture or a key (audit: it covered Tetris's own text). After the keys are laid
-  // out, it takes the first free spot of a short list for the layout: upright, along the bottom of the keys' room;
-  // sideways, the tops and bottoms of the side columns; on a computer, beside the picture; in controller mode, under
-  // the bar while the bar shows.
-  // Not on the start screen (audit: sideways it lay over the credits; the start screen has its own donation line), and
-  // when no spot is free (a DOS game's full key set), not at all: the pause menu carries the donation line instead.
-  // Every spot keeps out of the phone's safe-area edges with a 10 px margin.
-  function placeGive() {
-    const give = $('give'), L = placeGive.L;
-    if (!give || !L) return;
-    if (!started) { give.hidden = true; return; }
-    const S = 44, M = 10, I = L.inset || { t: 0, r: 0, b: 0, l: 0 }, sc = L.screen;
-    const x0 = I.l + M, x1 = innerWidth - I.r - M, y0 = I.t, y1 = innerHeight - I.b - M, W = x1 - x0, T = PlayLayout.HEADER + I.t;
-    const mid = x0 + (W - S) / 2, under = sc.y + sc.h + 6;
-    const spots = L.mode === 'portrait' ? [[mid, y1 - S], [mid, under], [x0, y1 - S], [x1 - S, y1 - S], [x0, under], [x1 - S, under]]
-      : L.mode === 'bare' ? [[mid, T + 4]]
-      : L.mode === 'plain' ? [[sc.x + sc.w + 10, sc.y + sc.h - S], [sc.x - S - 10, sc.y + sc.h - S], [mid, y1 - S]]
-      : [[(x0 + sc.x - S) / 2, T + 6], [(sc.x + sc.w + x1 - S) / 2, T + 6], [(x0 + sc.x - S) / 2, y1 - S], [(sc.x + sc.w + x1 - S) / 2, y1 - S]];
-    const keys = [...document.querySelectorAll('.pk, .pdpad')].filter((k) => k.offsetParent).map((k) => k.getBoundingClientRect()).filter((r) => r.width > 0);
-    const free = ([x, y]) => x >= x0 - M && y >= y0 && x + S <= x1 + M && y + S <= y1 + M
-      && ![...keys, { left: sc.x, top: sc.y, right: sc.x + sc.w, bottom: sc.y + sc.h }].some((r) => x < r.right && r.left < x + S && y < r.bottom && r.top < y + S);
-    const spot = L.mode === 'bare' ? spots[0] : spots.find(free);
-    give.hidden = !spot;
-    if (!spot) { if (!$('give-card').hidden) showGive(false); return; }
-    Object.assign(give.style, { left: Math.round(spot[0]) + 'px', top: Math.round(spot[1]) + 'px', bottom: 'auto', transform: 'none' });
   }
 
   // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.
@@ -708,7 +676,7 @@
   // still works, two fast ones cannot zoom.
   let lastEnd = 0;
   const guard = (e) => { const now = e.timeStamp || Date.now(); if (now - lastEnd < 350) e.preventDefault(); lastEnd = now; };
-  for (const el of [document.querySelector('.bar'), $('give')]) if (el) el.addEventListener('touchend', guard, { passive: false });
+  document.querySelector('.bar').addEventListener('touchend', guard, { passive: false });   // the cross is in the bar
 
   // Cheats (Bryan, 20 Nov 2026: "add toggle for cheats"): a console game whose engine takes cheats lists them in the pause
   // menu, each a switch; the ones switched on are kept for the game in this browser and set again when it starts. The

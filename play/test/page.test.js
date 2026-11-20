@@ -95,7 +95,7 @@ test('whole-site audit A24 and A25: the shelf has a visible way back and to TV, 
   for (const bit of ['&larr; Back', 'href="/me"', 'href="/trivia/"', 'Donate to CASH']) assert.ok(shelf.includes(bit), bit);
   const site = read(ROOT, '..', 'scripts', 'lib', 'app.js').match(/const DONATE_URL = '([^']+)'/)[1];
   assert.ok(shelf.includes('href="' + site + '"'), 'the shelf gives the same donation link as the site');
-  assert.ok(read(ROOT, 'game.html').includes('&larr; Games'));
+  assert.ok(read(ROOT, 'game.html').includes('&larr;<span class="w"> Games</span>'));
   const css = read(ROOT, 'shelf.css');
   assert.ok(css.includes('@media (max-height:640px){') && css.includes('.intro p:not(.pad-hint){display:none}'), 'a short window folds the intro away');
 });
@@ -136,15 +136,12 @@ test('controller mode (Bryan, 20 Nov 2026): with a gamepad in hand the picture f
   assert.ok(js.includes("addEventListener('orientationchange', () => { if (hub) hub.releaseAll(); PlayTouch.releaseAll(); });"), 'turning the phone lets go of every key');
 });
 
-test('the donation cross is never on the picture or a key: after the keys are laid out it takes the first free spot for the layout', () => {
-  const js = read(ROOT, 'src', 'play.js');
-  assert.ok(js.includes('    placeGive();\n  }'), 'placed after the keys');
-  // Audit, Oregon Trail: no free spot means no cross over the keys (the pause menu has the donation line); none on the start screen.
-  assert.ok(js.includes("const spot = L.mode === 'bare' ? spots[0] : spots.find(free);") && js.includes('give.hidden = !spot;'));
-  assert.ok(js.includes('if (!started) { give.hidden = true; return; }'));
-  assert.ok(read(ROOT, 'game.html').includes('<p class="donate"><span id="donate-line"></span>'), 'the pause menu keeps the donation line');
-  assert.ok(!/<div id="screen"[\s\S]{0,200}id="give"/.test(read(ROOT, 'game.html')), 'not inside the picture any more');
-  assert.ok(read(ROOT, 'play.css').includes('.stage:has(.pkeyboard.open) .give{display:none}'), 'out of the way of the DOS keyboard');
+test('the donation cross is never by a game key: it lives in the top bar (Bryan, 20 Nov 2026: "so it needs to be in a different area")', () => {
+  const html = read(ROOT, 'game.html');
+  assert.match(html, /<nav class="tools"[\s\S]*id="give" class="give donate"[\s\S]*<\/nav>/, 'in the bar');
+  assert.ok(!/<main id="stage"[\s\S]*id="give"[\s\S]*<\/main>/.test(html), 'not in the game area');
+  assert.ok(!read(ROOT, 'src', 'play.js').includes('placeGive'), 'no placing among the keys');
+  assert.ok(html.includes('<p class="donate"><span id="donate-line"></span>'), 'the pause menu keeps the donation line');
 });
 
 test('battery saves (the audit, 20 Nov 2026): a game\'s own save RAM is kept per game apart from save states, read before the game can start and written back before its first frame', () => {
