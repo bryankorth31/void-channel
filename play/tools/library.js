@@ -53,7 +53,7 @@ function build(rows, taken) {
 // Pure (tested): whether a row is a finished game the shelf may take. Not: unfinished homebrew (WIP), demos,
 // prototypes, betas, test builds, picture cartridges, hacks (the assistant's hack screen); and, until Bryan says,
 // gambling and horror. Bryan's Keep on his weed-down page (r.weed === 'keep') lets a doubtful game in; Drop never.
-const UNFINISHED = /\b(wip|demo|proto(type)?|beta|test|kernel|sample|pd|pda)\b|\bv0 \d|\b19xx\b|point-of-purchase|greeting cart|^image\b|\(hack\)|\bhack\b/i;
+const UNFINISHED = /\b(wip|demo|beta|test|kernel|sample|pd|pda)\b|proto(type)?\b|\bv0 \d|\b19xx\b|point-of-purchase|greeting cart|^image\b|\(hack\)|\bhack\b/i;
 const HELD = /casino|poker|slots?\b|blackjack|black jack|roulette|gambl|halloween|chainsaw/i;   // gambling and horror: Bryan's call
 // Each machine's last commercial year: a later date is a homebrew, a hack or an upload date (the audit).
 const LAST = { a2600: 1992, nes: 1995, snes: 1999, gameboy: 2003, gbcolor: 2003, gba: 2008, lynx: 1995, genesis: 1998, sms: 1998, gamegear: 1997 };   // the Master System lived on in Brazil (Tec Toy) to 1998

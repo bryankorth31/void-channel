@@ -109,3 +109,7 @@ test('the audit: an adult word in the title, or a personal upload with no year a
   assert.equal(Lib.build([row({ source: 'personal upload', year: undefined, publisher: '', maker: '' })], { ids: [], items: [] }).length, 0);
   assert.ok(!fs.readdirSync(path.join(__dirname, '..', 'library')).some((d) => d.startsWith('adult-')), 'no 18+ bundle in the tree');
 });
+
+test('the audit: a prototype named at the end of its Archive item ("...InfogramesM4proto") stays off', () => {
+  assert.equal(Lib.build([row({ system: 'gamegear', title: 'Spirou', item: 'gg_Spirou_1996InfogramesM4proto', file: 'Spirou 1996InfogramesM4proto.bin', size: 524288, year: 1996 })], { ids: [], items: [] }).length, 0);
+});
